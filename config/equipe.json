@@ -67,6 +67,31 @@
       "cle_env": "GROQ_API_KEY",
       "max_appels": 6,
       "json_mode": true
+    },
+    "gemma": {
+      "nom": "Gemma 4 31B",
+      "marque": "Google (ouvert)",
+      "base_url": "https://openrouter.ai/api/v1",
+      "modele": "google/gemma-4-31b-it:free",
+      "cle_env": "OPENROUTER_API_KEY",
+      "max_appels": 4
+    },
+    "glm45": {
+      "nom": "GLM-4.5-Flash",
+      "marque": "Z.ai",
+      "base_url": "https://api.z.ai/api/paas/v4",
+      "modele": "glm-4.5-flash",
+      "cle_env": "ZAI_API_KEY",
+      "max_appels": 8
+    },
+    "nemotron_nv": {
+      "nom": "Nemotron 3.5 Super (NVIDIA direct)",
+      "marque": "NVIDIA",
+      "base_url": "https://integrate.api.nvidia.com/v1",
+      "modele": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+      "cle_env": "NVIDIA_API_KEY",
+      "max_appels": 6,
+      "timeout": 90
     }
   },
   "remplacants": {

@@ -65,9 +65,15 @@ class Agent:
                     time.sleep(20)
                     continue
                 self.erreurs.append(f"HTTP {e.code}: {detail}")
+                if self.reussites == 0 and (e.code >= 500 or e.code in (401, 403, 404, 429)):
+                    self.erreurs.append("coupé pour ce passage")
+                    self.appels = 10**6
                 return None
             except Exception as e:
                 self.erreurs.append(f"{type(e).__name__}: {e}"[:200])
+                if self.reussites == 0:  # injoignable dès le départ : on le coupe pour ce passage
+                    self.erreurs.append("coupé pour ce passage (aucune réponse)")
+                    self.appels = 10**6
                 return None
         return None
 

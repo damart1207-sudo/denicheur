@@ -1,11 +1,11 @@
 {
-  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut). remplacants : si un analyste ne répond pas du tout pendant un passage, le premier remplaçant libre de sa liste reprend exactement les mêmes bons plans (un seul remplacement par passage). modeles_secours : modèles essayés si le principal est saturé. json_mode : force une réponse JSON propre. taille_lot / pause : lots plus petits et pause entre deux appels pour les IA limitées en débit (Groq).",
+  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut). remplacants : si un analyste ne répond pas du tout pendant un passage, le premier remplaçant libre de sa liste reprend exactement les mêmes bons plans (un seul remplacement par passage). modeles_secours : modèles essayés si le principal est saturé. json_mode : force une réponse JSON propre. taille_lot / pause : lots plus petits et pause entre deux appels pour les IA limitées en débit (Groq). verificateur : l'IA qui vérifie les prix sur Google (Gemini), seulement au passage europe, pour garder son quota gratuit.",
   "trieur": "glm",
   "analystes": [
-    "gemini",
     "qwen",
+    "gptoss",
     "nemotron",
-    "gptoss"
+    "glm45"
   ],
   "agents": {
     "gemini": {
@@ -102,25 +102,25 @@
     }
   },
   "remplacants": {
-    "gemini": [
-      "gemma",
-      "nemotron_nv"
-    ],
     "qwen": [
-      "gemma",
-      "nemotron_nv"
-    ],
-    "nemotron": [
-      "gemma",
-      "nemotron_nv"
+      "nemotron_nv",
+      "gemma"
     ],
     "gptoss": [
-      "gemma",
-      "nemotron_nv"
+      "nemotron_nv",
+      "gemma"
+    ],
+    "nemotron": [
+      "nemotron_nv",
+      "gemma"
+    ],
+    "glm45": [
+      "nemotron_nv",
+      "gemma"
     ]
   },
   "reserve_hors_equipe": [
-    "deepseek",
-    "glm45"
-  ]
+    "deepseek"
+  ],
+  "verificateur": "gemini"
 }

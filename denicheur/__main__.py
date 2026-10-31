@@ -124,7 +124,14 @@ def passage(nom, test=False):
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
 
     # vérification des prix sur Google (Gemini + recherche), puis marge recalculée au prix prudent
-    bilan_verif = {"faits": 0, "erreurs": ["mode test"]} if test else verif.verifier_prix(retenus)
+    if test:
+        bilan_verif = {"faits": 0, "erreurs": ["mode test"]}
+    elif nom != "europe":
+        bilan_verif = {"faits": 0, "erreurs": ["vérification réservée au passage europe (quota gratuit)"]}
+    else:
+        conf_v = conf_eq["agents"][conf_eq.get("verificateur", "gemini")]
+        modeles_v = [conf_v["modele"]] + list(conf_v.get("modeles_secours", []))[:2]
+        bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=12)
     s_ = regles["seuils"]
     for c in retenus:
         v = c.get("verification")

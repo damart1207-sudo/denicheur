@@ -48,6 +48,9 @@ def verifier_prix(candidats, cle=None, modeles=("gemini-3.8-flash", "gemini-flas
                     bilan["erreurs"].append(f"HTTP {e.code} : vérification arrêtée")
                     return bilan
                 bilan["erreurs"].append(f"HTTP {e.code} ({modele})")
+                if e.code == 429 and modele == modeles[-1] and bilan["faits"] == 0:
+                    bilan["erreurs"].append("quota Google épuisé : vérification reportée")
+                    return bilan
                 continue
             except Exception as e:
                 bilan["erreurs"].append(f"{type(e).__name__} ({modele})")

@@ -1,18 +1,15 @@
 {
- "date": "31/10/2026 15:48",
+ "date": "31/10/2026 15:53",
  "resultats": [
-  "❌ Gemini 3.8 Flash (GEMINI_API_KEY) : HTTP 404 (gemini-2.5-flash): [{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features ; coupé pour ce passage",
-  "   modèles disponibles proches : ['models/gemini-2.5-flash', 'models/gemini-2.5-pro', 'models/gemini-2.5-flash-preview-tts', 'models/gemini-2.5-pro-preview-tts', 'models/gemini-flash-latest', 'models/gemini-flash-lite-latest', 'models/gemini-pro-latest', 'models/gemini-2.5-flash-lite', 'models/gemini-2.5-flash-image', 'models/gemini-3-flash-preview', 'models/gemini-3.1-pro-preview', 'models/gemini-3.1-pro-preview-customtools', 'models/gemini-3.1-flash-lite-preview', 'models/gemini-3.1-flash-lite', 'models/gemini-3-pro-image-preview', 'models/gemini-3-pro-image', 'models/gemini-3.1-flash-image-preview', 'models/gemini-3.1-flash-image', 'models/gemini-3.1-flash-lite-image', 'models/gemini-nano-banana-2.1', 'models/gemini-3.5-flash', 'models/gemini-3.5-flash-lite', 'models/gemini-omni-flash-preview', 'models/gemini-omni-1.1-flash', 'models/gemini-3.5-transcribe']",
-  "❌ DeepSeek V4.1 Flash (NVIDIA_API_KEY) : HTTP 500 (deepseek-ai/deepseek-v4.1-flash): {\"message\":\"Internal server error\",\"type\":\"Internal Server Error\",\"code\":500,\"details\":{\"backend_status\":500}}; coupé pour ce passage",
+  "✅ Gemini 3.8 Flash (GEMINI_API_KEY) : fonctionne — réponse « {\"etat\": \"OK\"} »",
+  "❌ DeepSeek V4.1 Flash (NVIDIA_API_KEY) : TimeoutError: The read operation timed out; coupé pour ce passage (aucune réponse)",
   "   modèles disponibles proches : ['deepseek-ai/deepseek-coder-6.7b-instruct', 'deepseek-ai/deepseek-v4.1-flash']",
-  "✅ Nemotron 3 Ultra (OPENROUTER_API_KEY) : fonctionne — réponse « OK »",
-  "✅ GLM-4.7-Flash (ZAI_API_KEY) : fonctionne — réponse « OK »",
-  "❌ gpt-oss-120b (GROQ_API_KEY) : HTTP 400 (openai/gpt-oss-120b): {\"error\":{\"message\":\"'messages' must contain the word 'json' in some form, to use 'response_format' of type 'json_object'.\",\"type\":\"invalid_request_error\"}}\n",
-  "   modèles disponibles proches : ['openai/gpt-oss-safeguard-20b', 'openai/gpt-oss-20b', 'openai/gpt-oss-120b']",
-  "❌ Qwen 3.8 27B (GROQ_API_KEY) : HTTP 400 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"'messages' must contain the word 'json' in some form, to use 'response_format' of type 'json_object'.\",\"type\":\"invalid_request_error\"}}\n",
-  "   modèles disponibles proches : ['qwen/qwen3.8-27b']",
-  "✅ Gemma 4 31B (OPENROUTER_API_KEY) : fonctionne — réponse « OK »",
-  "✅ GLM-4.5-Flash (ZAI_API_KEY) : fonctionne — réponse « OK »",
-  "✅ Nemotron 3.5 Super (NVIDIA direct) (NVIDIA_API_KEY) : fonctionne — réponse « OK »"
+  "✅ Nemotron 3 Ultra (OPENROUTER_API_KEY) : fonctionne — réponse « {\"etat\": \"OK\"} »",
+  "✅ GLM-4.7-Flash (ZAI_API_KEY) : fonctionne — réponse « ```json\n{\"etat\": \"OK\"}\n``` »",
+  "✅ gpt-oss-120b (GROQ_API_KEY) : fonctionne — réponse « {\"etat\":\"OK\"} »",
+  "✅ Qwen 3.8 27B (GROQ_API_KEY) : fonctionne — réponse « {\"etat\": \"OK\"} »",
+  "✅ Gemma 4 31B (OPENROUTER_API_KEY) : fonctionne — réponse « ```json\n{\"etat\": \"OK\"}\n``` »",
+  "✅ GLM-4.5-Flash (ZAI_API_KEY) : fonctionne — réponse « ```json\n{\"etat\": \"OK\"}\n``` »",
+  "✅ Nemotron 3.5 Super (NVIDIA direct) (NVIDIA_API_KEY) : fonctionne — réponse « {\"etat\": \"OK\"} »"
  ]
 }

@@ -1,12 +1,12 @@
 {
- "date": "31/10/2026 14:35",
+ "date": "31/10/2026 14:40",
  "resultats": [
   "❌ Gemini 3.8 Flash (GEMINI_API_KEY) : secret GEMINI_API_KEY absent",
-  "❌ DeepSeek V4.1 Flash (NVIDIA_API_KEY) : TimeoutError: The read operation timed out",
+  "❌ DeepSeek V4.1 Flash (NVIDIA_API_KEY) : RemoteDisconnected: Remote end closed connection without response",
   "   modèles disponibles proches : ['deepseek-ai/deepseek-coder-6.7b-instruct', 'deepseek-ai/deepseek-v4.1-flash']",
   "✅ Nemotron 3 Ultra (OPENROUTER_API_KEY) : fonctionne — réponse « OK »",
-  "✅ GLM-4.7-Flash (ZAI_API_KEY) : fonctionne — réponse « OK »",
-  "❌ gpt-oss-120b (GROQ_API_KEY) : HTTP 403: error code: 1010\n",
-  "   liste des modèles impossible : HTTPError: HTTP Error 403: Forbidden"
+  "❌ GLM-4.7-Flash (ZAI_API_KEY) : HTTP 429: {\"error\":{\"code\":\"1305\",\"message\":\"The service may be temporarily overloaded, please try again later\"}}",
+  "   modèles disponibles proches : ['glm-4.5', 'glm-4.5-air', 'glm-4.6', 'glm-4.7', 'glm-5', 'glm-5-turbo', 'glm-5.1', 'glm-5.2', 'glm-5.3', 'glm-5.3-flash', 'glm-5.3-flashx']",
+  "✅ gpt-oss-120b (GROQ_API_KEY) : fonctionne — réponse « OK »"
  ]
 }

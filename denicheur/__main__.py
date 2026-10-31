@@ -152,13 +152,19 @@ def verifier():
     """Envoie un tout petit message à chaque IA (gratuit) et affiche OK ou l'erreur. N'affiche jamais les clés."""
     import urllib.request
     conf_eq = charger("config/equipe.json")
+    lignes = []
+
+    def dire(texte):  # affiche et garde une copie pour le fichier de résultat
+        lignes.append(texte)
+        print(texte)
+
     for k, conf in conf_eq["agents"].items():
         a = Agent(k, {**conf, "max_appels": 1})
         rep = a.demander("Tu réponds en un mot.", "Réponds simplement : OK")
         if rep is not None:
-            print(f"✅ {conf['nom']} ({conf['cle_env']}) : fonctionne — réponse « {rep.strip()[:30]} »")
+            dire(f"✅ {conf['nom']} ({conf['cle_env']}) : fonctionne — réponse « {rep.strip()[:30]} »")
             continue
-        print(f"❌ {conf['nom']} ({conf['cle_env']}) : {'; '.join(a.erreurs)[:300]}")
+        dire(f"❌ {conf['nom']} ({conf['cle_env']}) : {'; '.join(a.erreurs)[:300]}")
         if a.cle:  # clé présente : on liste les modèles disponibles pour corriger le nom si besoin
             try:
                 req = urllib.request.Request(conf["base_url"].rstrip("/") + "/models",
@@ -167,9 +173,11 @@ def verifier():
                     ids = [m.get("id", "") for m in json.loads(r.read()).get("data", [])]
                 mot = conf["modele"].split("/")[-1].split("-")[0]
                 proches = [i for i in ids if mot.lower() in i.lower()][:25]
-                print(f"   modèles disponibles proches : {proches or ids[:25]}")
+                dire(f"   modèles disponibles proches : {proches or ids[:25]}")
             except Exception as e:
-                print(f"   liste des modèles impossible : {type(e).__name__}: {str(e)[:150]}")
+                dire(f"   liste des modèles impossible : {type(e).__name__}: {str(e)[:150]}")
+    heure = datetime.now(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y %H:%M")
+    ecrire("data/verification.json", {"date": heure, "resultats": lignes})
 
 
 def main():

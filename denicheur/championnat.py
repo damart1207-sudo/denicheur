@@ -50,4 +50,33 @@ def classement(dossier_champ, dossier_audits):
                     elif v == -1:
                         s["rejetees"] += 1
                         s["points"] -= 1
+    fiab = fiabilite(dossier_champ)
+    for agent, f in fiab.items():
+        stats.setdefault(agent, {})["fiabilite"] = f
+    return stats
+
+
+def enregistrer_fiabilite(dossier, date, essais):
+    """essais : {agent: (appels_tentes, appels_reussis)}"""
+    os.makedirs(dossier, exist_ok=True)
+    with open(os.path.join(dossier, "fiabilite.jsonl"), "a", encoding="utf-8") as f:
+        for agent, (tentes, reussis) in essais.items():
+            f.write(json.dumps({"date": date, "agent": agent, "tentes": tentes, "reussis": reussis}) + "\n")
+
+
+def fiabilite(dossier):
+    stats = {}
+    chemin = os.path.join(dossier, "fiabilite.jsonl")
+    if os.path.exists(chemin):
+        with open(chemin, encoding="utf-8") as f:
+            for ligne in f:
+                try:
+                    p = json.loads(ligne)
+                except json.JSONDecodeError:
+                    continue
+                s = stats.setdefault(p["agent"], {"tentes": 0, "reussis": 0})
+                s["tentes"] += p["tentes"]
+                s["reussis"] += p["reussis"]
+    for s in stats.values():
+        s["taux"] = round(100 * s["reussis"] / s["tentes"]) if s["tentes"] else 0
     return stats

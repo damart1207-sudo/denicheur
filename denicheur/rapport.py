@@ -1,7 +1,7 @@
 """Page HTML du tableau (provisoire avant audit, puis remplacée par la version validée par Claude)."""
 import html
 
-NOMS = {"gemini": "Gemini", "deepseek": "DeepSeek", "nemotron": "Nemotron", "glm": "GLM", "gptoss": "gpt-oss", "qwen": "Qwen"}
+NOMS = {"gemini": "Gemini", "deepseek": "DeepSeek", "nemotron": "Nemotron", "glm": "GLM", "gptoss": "gpt-oss", "qwen": "Qwen", "gemma": "Gemma", "glm45": "GLM 4.5", "nemotron_nv": "Nemotron Super"}
 
 
 def _e(x):
@@ -30,7 +30,8 @@ def page(resultat, classement):
     champ = []
     for agent, s in sorted(classement.items(), key=lambda kv: -kv[1].get("global", {}).get("points", 0)):
         g = s.get("global", {})
-        champ.append(f"<tr><td>{_e(NOMS.get(agent, agent))}</td><td>{g.get('points', 0)}</td><td>{g.get('proposees', 0)}</td>"
+        fi = s.get("fiabilite", {})
+        champ.append(f"<tr><td>{_e(NOMS.get(agent, agent))}</td><td>{str(fi['taux']) + ' %' if fi else '–'}</td><td>{g.get('points', 0)}</td><td>{g.get('proposees', 0)}</td>"
                      f"<td>{g.get('validees', 0)}</td><td>{g.get('rejetees', 0)}</td></tr>")
 
     return f"""<!doctype html><html lang="fr"><head><meta charset="utf-8">
@@ -54,8 +55,8 @@ ul{{padding-left:18px}}
 <th>Rentabilité</th><th>Demande</th><th>Concurrence</th><th>Trouvé par</th></tr></thead><tbody>
 {tableau}</tbody></table></div>
 <h2>Championnat des IA</h2>
-<div class="table"><table><thead><tr><th>IA</th><th>Points</th><th>Proposées</th><th>Validées</th><th>Rejetées</th></tr></thead>
-<tbody>{''.join(champ) or "<tr><td colspan='5'>Pas encore de résultats.</td></tr>"}</tbody></table></div>
+<div class="table"><table><thead><tr><th>IA</th><th>Fiabilité</th><th>Points</th><th>Proposées</th><th>Validées</th><th>Rejetées</th></tr></thead>
+<tbody>{''.join(champ) or "<tr><td colspan='6'>Pas encore de résultats.</td></tr>"}</tbody></table></div>
 <h2>Fonctionnement du passage « {_e(resultat['passage'])} »</h2>
 <p class="petit">{resultat['nb_annonces']} bons plans lus · {resultat['nb_prefiltres']} après filtre · {resultat['nb_tries']} après tri</p>
 <ul>{sources}</ul><ul>{agents}</ul>

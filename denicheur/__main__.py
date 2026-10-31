@@ -110,15 +110,23 @@ def passage(nom, test=False):
     tous_choix, remplacements = [], {}
     for nom_a in conf_eq["analystes"]:
         tous_choix += equipe.analyser(agents[nom_a], tries, methode, regles["taille_lot"])
-        remp = conf_eq.get("remplacants", {}).get(nom_a)
-        if tries and agents[nom_a].reussites == 0 and remp and remp in agents and not remplacements.get(remp):
-            remplacements[remp] = nom_a  # le remplaçant joue à sa place, avec les mêmes bons plans
-            tous_choix += equipe.analyser(agents[remp], tries, methode, regles["taille_lot"])
+        if tries and agents[nom_a].reussites == 0:
+            liste = conf_eq.get("remplacants", {}).get(nom_a) or []
+            liste = [liste] if isinstance(liste, str) else liste
+            for remp in liste:  # le premier remplaçant libre joue à sa place, avec les mêmes bons plans
+                if remp in agents and remp not in remplacements and remp not in conf_eq["analystes"]:
+                    remplacements[remp] = nom_a
+                    tous_choix += equipe.analyser(agents[remp], tries, methode, regles["taille_lot"])
+                    if agents[remp].reussites:
+                        break
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
 
     base = "data/test" if test else "data"
     championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
+    championnat.enregistrer_fiabilite(os.path.join(RACINE, base, "championnat"), horodatage,
+                                      {k: (a.appels if a.appels < 10**6 else a.reussites + 1, a.reussites)
+                                       for k, a in agents.items() if a.appels})
     classement = championnat.classement(os.path.join(RACINE, base, "championnat"), os.path.join(RACINE, base, "audits"))
 
     resultat = {
@@ -171,7 +179,7 @@ def verifier():
 
     for k, conf in conf_eq["agents"].items():
         a = Agent(k, {**conf, "max_appels": 1})
-        rep = a.demander("Tu réponds en un mot.", "Réponds simplement : OK")
+        rep = a.demander("Tu réponds uniquement en JSON.", 'Réponds avec ce JSON : {"etat": "OK"}')
         if rep is not None:
             dire(f"✅ {conf['nom']} ({conf['cle_env']}) : fonctionne — réponse « {rep.strip()[:30]} »")
             continue

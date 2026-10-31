@@ -1,0 +1,11 @@
+{
+  "_info": "Flux de bons plans lus à chaque passage. type=pepper : réseau Pepper (Dealabs & co), qui donne marchand + prix. Mettre actif=false pour couper une source.",
+  "sources": [
+    {"id": "dealabs-tendance", "pays": "FR", "type": "pepper", "actif": true, "url": "https://www.dealabs.com/rss/tendance"},
+    {"id": "dealabs-nouveaux", "pays": "FR", "type": "pepper", "actif": true, "url": "https://www.dealabs.com/rss/nouveaux"},
+    {"id": "mydealz-hot", "pays": "DE", "type": "pepper", "actif": true, "url": "https://www.mydealz.de/rss/hot"},
+    {"id": "hotukdeals-hot", "pays": "UK", "type": "pepper", "actif": true, "url": "https://www.hotukdeals.com/rss/hot"},
+    {"id": "chollometro-hot", "pays": "ES", "type": "pepper", "actif": true, "url": "https://www.chollometro.com/rss/hot"},
+    {"id": "lesnumeriques-bonsplans", "pays": "FR", "type": "rss", "actif": true, "url": "https://www.lesnumeriques.com/rss-gooddeals.xml"}
+  ]
+}

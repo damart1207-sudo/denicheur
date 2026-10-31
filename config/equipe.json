@@ -1,0 +1,12 @@
+{
+  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou).",
+  "trieur": "glm",
+  "analystes": ["gemini", "deepseek", "nemotron", "gptoss"],
+  "agents": {
+    "gemini":   {"nom": "Gemini 3.8 Flash",     "marque": "Google",   "base_url": "https://generativelanguage.googleapis.com/v1beta/openai", "modele": "gemini-3.8-flash", "cle_env": "GEMINI_API_KEY", "max_appels": 6},
+    "deepseek": {"nom": "DeepSeek V4.1 Flash",  "marque": "DeepSeek", "base_url": "https://integrate.api.nvidia.com/v1", "modele": "deepseek-ai/deepseek-v4.1-flash", "cle_env": "NVIDIA_API_KEY", "max_appels": 6},
+    "nemotron": {"nom": "Nemotron 3 Ultra",     "marque": "NVIDIA",   "base_url": "https://openrouter.ai/api/v1", "modele": "nvidia/nemotron-3-ultra-550b-a55b:free", "cle_env": "OPENROUTER_API_KEY", "max_appels": 4},
+    "glm":      {"nom": "GLM-4.7-Flash",        "marque": "Z.ai",     "base_url": "https://api.z.ai/api/paas/v4", "modele": "glm-4.7-flash", "cle_env": "ZAI_API_KEY", "max_appels": 8},
+    "gptoss":   {"nom": "gpt-oss-120b",         "marque": "OpenAI",   "base_url": "https://api.groq.com/openai/v1", "modele": "openai/gpt-oss-120b", "cle_env": "GROQ_API_KEY", "max_appels": 6}
+  }
+}

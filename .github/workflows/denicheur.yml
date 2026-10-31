@@ -1,0 +1,63 @@
+name: Dénicheur
+
+# Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
+#  16:30 UTC = 00:30 à Pékin = 17:30 à Paris l'hiver  -> passage "asie" (nouvelles promos du jour chinois)
+#  02:00 UTC = 10:00 à Pékin = 03:00 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
+on:
+  schedule:
+    - cron: "30 16 * * *"
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      passage:
+        description: "asie ou europe"
+        default: "europe"
+      test:
+        description: "true = mode test gratuit (aucune IA appelée)"
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: denicheur
+  cancel-in-progress: false
+
+jobs:
+  passage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25   # garde-fou : jamais plus de 25 min par passage
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Lancer le passage
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: |
+          PASSAGE="${{ github.event.inputs.passage }}"
+          if [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then PASSAGE=asie; fi
+          if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
+          [ -z "$PASSAGE" ] && PASSAGE=europe
+          if [ "${{ github.event.inputs.test }}" = "true" ]; then
+            python -m denicheur --passage "$PASSAGE" --test
+          else
+            python -m denicheur --passage "$PASSAGE"
+          fi
+
+      - name: Enregistrer les résultats
+        run: |
+          git config user.name "denicheur-bot"
+          git config user.email "denicheur-bot@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
+          git commit -m "Passage du $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase origin main
+          git push origin HEAD:main

@@ -1,0 +1,51 @@
+{
+  "_info": "Règles de calcul de marge et seuils. Modifiables sans toucher au code. taux_gbp_eur : taux approximatif livre -> euro.",
+  "prix_min": 8,
+  "prix_max": 600,
+  "taille_lot": 40,
+  "plateformes_revente": {
+    "amazon": {
+      "commission": 0.15,
+      "frais_fixes": 3.5,
+      "port": 0.0,
+      "note": "logistique Amazon estimée"
+    },
+    "vinted": {
+      "commission": 0.0,
+      "frais_fixes": 0.0,
+      "port": 0.0,
+      "note": "frais payés par l'acheteur"
+    },
+    "leboncoin": {
+      "commission": 0.0,
+      "frais_fixes": 0.0,
+      "port": 0.0,
+      "note": "remise en main propre ou port payé par l'acheteur"
+    },
+    "ebay": {
+      "commission": 0.13,
+      "frais_fixes": 0.35,
+      "port": 6.0,
+      "note": "port moyen estimé"
+    },
+    "etsy": {
+      "commission": 0.11,
+      "frais_fixes": 0.2,
+      "port": 6.0,
+      "note": "transaction + paiement"
+    },
+    "backmarket": {
+      "commission": 0.12,
+      "frais_fixes": 0.0,
+      "port": 6.0,
+      "note": "vendeur reconditionneur"
+    }
+  },
+  "port_achat_defaut": 5.0,
+  "seuils": {
+    "marge_nette_min": 8,
+    "rentabilite_min": 0.3,
+    "consensus_min": 1
+  },
+  "taux_gbp_eur": 1.15
+}

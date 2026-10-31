@@ -1,0 +1,158 @@
+"""Lancement : python -m denicheur --passage asie|europe [--test]
+
+--test : aucune connexion, aucune IA appelée (données d'exemple) -> gratuit, pour vérifier le code.
+"""
+import argparse
+import json
+import os
+import random
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+from . import championnat, collecte, equipe, rapport
+from .ia import Agent
+
+RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def charger(rel):
+    with open(os.path.join(RACINE, rel), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def ecrire(rel, contenu):
+    chemin = os.path.join(RACINE, rel)
+    os.makedirs(os.path.dirname(chemin), exist_ok=True)
+    with open(chemin, "w", encoding="utf-8") as f:
+        if isinstance(contenu, str):
+            f.write(contenu)
+        else:
+            json.dump(contenu, f, ensure_ascii=False, indent=1)
+
+
+# ---------- mode test (gratuit, hors ligne) ----------
+EXEMPLES = [
+    ("Lames robot tondeuse Dreame A1 x36", 9.99, "AliExpress", "Jardin", 150),
+    ("Étui de transport Insta360 X6", 6.50, "AliExpress", "High-tech", 80),
+    ("Protection écran verre trempé Thermomix TM7 (x2)", 3.99, "Amazon", "Maison", 210),
+    ("Forfait mobile 100 Go à 9,99€/mois", 9.99, "Free", "Forfaits", 400),
+    ("Cocotte fonte émaillée 24 cm", 39.90, "Cdiscount", "Cuisine", 300),
+    ("Écouteurs sans fil marque X", 14.99, "Amazon", "High-tech", 500),
+]
+
+
+def lecteur_test(source):
+    if source["id"] != "dealabs-tendance":
+        return [], None
+    out = []
+    for i, (t, p, m, c, temp) in enumerate(EXEMPLES):
+        out.append({"id": f"test{i}", "titre": t, "temperature": temp, "categorie": c, "marchand": m, "prix": p,
+                    "devise": "EUR", "lien": f"https://exemple.test/{i}", "date": "", "source": source["id"],
+                    "pays": "FR", "description": ""})
+    return out, None
+
+
+class FauxAgent:
+    def __init__(self, ident, conf):
+        self.id, self.conf, self.nom = ident, conf, conf["nom"]
+        self.appels, self.erreurs, self.duree = 0, [], 0.0
+        self.alea = random.Random(ident)
+
+    def disponible(self):
+        return self.appels < self.conf.get("max_appels", 5)
+
+    def demander(self, systeme, message):
+        self.appels += 1
+        ids = [l.split(" | ")[0] for l in message.splitlines() if " | " in l]
+        if '{"garder"' in systeme:
+            return json.dumps({"garder": ids})
+        choix = [{"id": i, "domaine": "tech", "plateforme_revente": "amazon", "etat_revente": "neuf",
+                  "prix_revente_estime": self.alea.choice([15, 25, 35, 60]), "demande": 4, "concurrence": 2,
+                  "mode": "stock", "confiance": 0.7, "erreur_prix": False, "raison": "test"}
+                 for i in ids if self.alea.random() < 0.6]
+        return "```json\n" + json.dumps({"choix": choix}) + "\n```"
+
+
+# ---------- passage ----------
+def passage(nom, test=False):
+    maintenant = datetime.now(timezone.utc)
+    paris = maintenant.astimezone(ZoneInfo("Europe/Paris"))
+    horodatage = paris.strftime("%Y-%m-%d_%H%M")
+    regles, conf_eq = charger("config/regles.json"), charger("config/equipe.json")
+    with open(os.path.join(RACINE, "skills/methode.md"), encoding="utf-8") as f:
+        methode = f.read()
+    sources = charger("config/sources.json")["sources"]
+
+    annonces, etat_sources = collecte.collecter(sources, lecteur_test if test else collecte.lire_flux)
+
+    # ne réanalyser que les nouveautés
+    chemin_vus = "data/etat/vus.json" if not test else "data/test/vus.json"
+    try:
+        vus = charger(chemin_vus)
+    except (OSError, json.JSONDecodeError):
+        vus = []
+    deja = set(vus)
+    nouvelles = [a for a in annonces if a["id"] not in deja]
+
+    prefiltrees = equipe.prefiltre(nouvelles, regles)
+    Classe = FauxAgent if test else Agent
+    agents = {k: Classe(k, v) for k, v in conf_eq["agents"].items()}
+
+    trieur = agents[conf_eq["trieur"]]
+    tries, tri_ok = equipe.trier(trieur, prefiltrees, regles["taille_lot"]) if prefiltrees else ([], True)
+    capacite = regles["taille_lot"] * min(agents[a].conf.get("max_appels", 5) for a in conf_eq["analystes"])
+    tries = tries[:capacite]  # les plus populaires d'abord (déjà triés par température)
+
+    tous_choix = []
+    for nom_a in conf_eq["analystes"]:
+        tous_choix += equipe.analyser(agents[nom_a], tries, methode, regles["taille_lot"])
+
+    retenus, candidats = equipe.consolider(tries, tous_choix, regles)
+
+    base = "data/test" if test else "data"
+    championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
+    classement = championnat.classement(os.path.join(RACINE, base, "championnat"), os.path.join(RACINE, base, "audits"))
+
+    resultat = {
+        "passage": nom,
+        "horodatage": horodatage,
+        "date_affichee": paris.strftime("%d/%m/%Y à %H h %M"),
+        "statut": "Provisoire : en attente de l’audit de Claude",
+        "test": test,
+        "sources": etat_sources,
+        "nb_annonces": len(annonces),
+        "nb_nouvelles": len(nouvelles),
+        "nb_prefiltres": len(prefiltrees),
+        "nb_tries": len(tries),
+        "tri_ok": tri_ok,
+        "agents": {k: {"appels": a.appels, "erreurs": a.erreurs, "choix": sum(1 for c in tous_choix if c["agent"] == k)}
+                   for k, a in agents.items()},
+        "candidats": retenus[:40],
+        "ecartes_sous_seuil": len(candidats) - len(retenus),
+        "annonces_analysees": tries,
+    }
+    ecrire(f"{base}/passages/{horodatage}_{nom}.json", resultat)
+    ecrire(f"{base}/dernier_passage.json", resultat)
+    ecrire(f"{base}/classement.json", classement)
+    ecrire(f"{base}/rapport.html", rapport.page(resultat, classement))
+    ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
+
+    print(f"Passage {nom} ({horodatage}) : {len(annonces)} lus, {len(nouvelles)} nouveaux, {len(prefiltrees)} filtrés, "
+          f"{len(tries)} triés, {len(retenus)} affaires retenues.")
+    for k, v in resultat["agents"].items():
+        print(f"  {k}: {v['appels']} appel(s), {v['choix']} choix, erreurs: {v['erreurs'][:2]}")
+    for k, v in etat_sources.items():
+        print(f"  source {k}: {'OK ' + str(v['nb']) if v['ok'] else 'ERREUR ' + str(v['erreur'])}")
+    return resultat
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--passage", choices=["asie", "europe"], default="europe")
+    p.add_argument("--test", action="store_true")
+    a = p.parse_args()
+    passage(a.passage, a.test)
+
+
+if __name__ == "__main__":
+    main()

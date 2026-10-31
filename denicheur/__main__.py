@@ -135,7 +135,9 @@ def passage(nom, test=False):
     ecrire(f"{base}/dernier_passage.json", resultat)
     ecrire(f"{base}/classement.json", classement)
     ecrire(f"{base}/rapport.html", rapport.page(resultat, classement))
-    ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
+    # si aucun analyste n'a pu travailler (clés absentes, pannes), on garde les bons plans pour le passage suivant
+    if any(resultat["agents"][a]["appels"] and not resultat["agents"][a]["erreurs"] for a in conf_eq["analystes"]):
+        ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
 
     print(f"Passage {nom} ({horodatage}) : {len(annonces)} lus, {len(nouvelles)} nouveaux, {len(prefiltrees)} filtrés, "
           f"{len(tries)} triés, {len(retenus)} affaires retenues.")

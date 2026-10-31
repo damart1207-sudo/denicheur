@@ -148,12 +148,40 @@ def passage(nom, test=False):
     return resultat
 
 
+def verifier():
+    """Envoie un tout petit message à chaque IA (gratuit) et affiche OK ou l'erreur. N'affiche jamais les clés."""
+    import urllib.request
+    conf_eq = charger("config/equipe.json")
+    for k, conf in conf_eq["agents"].items():
+        a = Agent(k, {**conf, "max_appels": 1})
+        rep = a.demander("Tu réponds en un mot.", "Réponds simplement : OK")
+        if rep is not None:
+            print(f"✅ {conf['nom']} ({conf['cle_env']}) : fonctionne — réponse « {rep.strip()[:30]} »")
+            continue
+        print(f"❌ {conf['nom']} ({conf['cle_env']}) : {'; '.join(a.erreurs)[:300]}")
+        if a.cle:  # clé présente : on liste les modèles disponibles pour corriger le nom si besoin
+            try:
+                req = urllib.request.Request(conf["base_url"].rstrip("/") + "/models",
+                                             headers={"Authorization": f"Bearer {a.cle}"})
+                with urllib.request.urlopen(req, timeout=30) as r:
+                    ids = [m.get("id", "") for m in json.loads(r.read()).get("data", [])]
+                mot = conf["modele"].split("/")[-1].split("-")[0]
+                proches = [i for i in ids if mot.lower() in i.lower()][:25]
+                print(f"   modèles disponibles proches : {proches or ids[:25]}")
+            except Exception as e:
+                print(f"   liste des modèles impossible : {type(e).__name__}: {str(e)[:150]}")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--passage", choices=["asie", "europe"], default="europe")
     p.add_argument("--test", action="store_true")
+    p.add_argument("--verifier", action="store_true", help="tester les 5 clés")
     a = p.parse_args()
-    passage(a.passage, a.test)
+    if a.verifier:
+        verifier()
+    else:
+        passage(a.passage, a.test)
 
 
 if __name__ == "__main__":

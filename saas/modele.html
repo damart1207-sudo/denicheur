@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-/* Mise en page : un poste de veille d'acheteur — bandeau de synthèse, puis la liste des affaires comme des étiquettes de prix, puis l'état des machines. */
+/* Mise en page : poste de veille d'acheteur. Barre de navigation sticky, vues (aujourd'hui, toutes les affaires, championnat, système, méthode), affaires présentées comme des étiquettes de prix. */
 :root{
   --fond:#eef1f0; --papier:#ffffff; --encre:#14201d; --doux:#5d6b67; --trait:#d5dcda;
   --signal:#0f6b5c; --signal-doux:#d9ece7; --etiquette:#f6c945; --etiquette-encre:#3b2c00;
@@ -21,23 +21,31 @@
   --signal:#4fc2a8; --signal-doux:#173a32; --etiquette:#e9bd3a; --etiquette-encre:#2a1f00;
   --ok:#5ccc8b; --ok-fond:#163525; --alerte:#e7ad4f; --alerte-fond:#3a2a0e; --ko:#ff8a80; --ko-fond:#3d1916; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--fond);color:var(--encre);font:16px/1.5 var(--f-texte);
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
-.cadre{max-width:1180px;margin:0 auto;display:grid;gap:28px}
-a{color:inherit} a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+body{background:var(--fond);color:var(--encre);font:16px/1.5 var(--f-texte);padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--encre)}
+.large{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.cadre{max-width:1180px;margin:0 auto;display:grid;gap:26px}
+a{color:inherit} :focus-visible{outline:2px solid var(--signal);outline-offset:2px}
 .chiffre{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums}
 .petit{font-size:13px;color:var(--doux)}
-.etiq{font:600 11px/1 var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+.etiq{font:600 11px/1.2 var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+h2{font:800 24px/1.1 var(--f-titre);font-stretch:80%;text-transform:uppercase;margin:0;text-wrap:balance}
+h3{margin:0}
 
-/* en-tête */
-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
-.marque{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-h1{font:900 clamp(34px,6vw,54px)/.9 var(--f-titre);font-stretch:68%;letter-spacing:-.01em;margin:0;text-transform:uppercase}
-.proto{font:600 12px var(--f-texte);padding:3px 8px;border-radius:4px;background:var(--etiquette);color:var(--etiquette-encre)}
-.passage{display:grid;gap:4px;text-align:right}
-@media (max-width:640px){.passage{text-align:left}}
-.statut{display:inline-flex;gap:6px;align-items:center;font-weight:600;font-size:14px;padding:4px 10px;border-radius:99px;justify-self:end}
-@media (max-width:640px){.statut{justify-self:start}}
+/* barre */
+.barre-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--encre);color:var(--papier)}
+.barre-nav .cadre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding-block:10px}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo b{font:900 26px/1 var(--f-titre);font-stretch:68%;text-transform:uppercase;letter-spacing:.01em}
+.proto{font:600 11px var(--f-texte);padding:2px 7px;border-radius:4px;background:var(--etiquette);color:var(--etiquette-encre)}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{font:600 14px var(--f-texte);text-decoration:none;padding:6px 10px;border-radius:6px;color:var(--papier);opacity:.78}
+nav a[aria-current="page"]{opacity:1;background:var(--signal);color:#fff}
+nav a:hover{opacity:1}
+
+.vue{display:grid;gap:22px;padding-top:22px}
+.tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px}
+.statut{display:inline-flex;font-weight:600;font-size:14px;padding:4px 10px;border-radius:99px}
 .statut.ok{background:var(--ok-fond);color:var(--ok)} .statut.att{background:var(--alerte-fond);color:var(--alerte)}
 
 /* synthèse */
@@ -46,28 +54,28 @@ h1{font:900 clamp(34px,6vw,54px)/.9 var(--f-titre);font-stretch:68%;letter-spaci
 .synthese>div{padding:14px 16px;border-right:1px solid var(--trait);display:grid;gap:2px;min-width:0}
 .synthese>div:last-child{border-right:0}
 @media (max-width:760px){.synthese>div:nth-child(2){border-right:0}.synthese>div:nth-child(-n+2){border-bottom:1px solid var(--trait)}}
-.synthese b{font:800 30px/1.1 var(--f-titre);font-stretch:80%}
-.synthese .chiffre b{font-family:var(--f-chiffre);font-weight:600;font-size:26px}
+.synthese b{font:800 28px/1.1 var(--f-titre);font-stretch:80%;overflow-wrap:anywhere}
+.synthese .chiffre b{font-family:var(--f-chiffre);font-weight:600;font-size:24px}
 
-/* barre d'outils */
-.outils{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
-.onglets{display:flex;gap:0;border:1px solid var(--encre);border-radius:6px;overflow:hidden}
-.onglets button{font:600 14px var(--f-texte);padding:8px 14px;border:0;background:var(--papier);color:var(--encre);cursor:pointer;border-right:1px solid var(--encre)}
+/* outils */
+.outils{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.onglets{display:flex;border:1px solid var(--encre);border-radius:6px;overflow:hidden}
+.onglets button{font:600 14px var(--f-texte);padding:7px 12px;border:0;background:var(--papier);color:var(--encre);cursor:pointer;border-right:1px solid var(--encre)}
 .onglets button:last-child{border-right:0}
 .onglets button[aria-pressed="true"]{background:var(--encre);color:var(--papier)}
-.filtres{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px solid var(--trait);background:var(--papier);color:var(--encre)}
+select,input[type=search]{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px solid var(--trait);background:var(--papier);color:var(--encre)}
+input[type=search]{min-width:0;flex:1 1 200px}
 .puces{display:flex;flex-wrap:wrap;gap:6px}
 .puce{font:600 13px var(--f-texte);padding:5px 10px;border-radius:99px;border:1px solid var(--trait);background:var(--papier);color:var(--encre);cursor:pointer}
-.puce[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--papier)}
+.puce[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:#fff}
 
-/* affaires */
+/* étiquettes d'affaires */
 .affaires{display:grid;gap:12px}
-.affaire{background:var(--papier);border:1px solid var(--trait);border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0}
-.affaire.rejete{opacity:.78}
+.affaire{background:var(--papier);border:1px solid var(--trait);border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr) auto}
+.affaire.rejete{opacity:.8}
 .corps{padding:16px 18px;display:grid;gap:10px;min-width:0}
 .ligne-titre{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-.ligne-titre h3{margin:0;font:700 18px/1.25 var(--f-texte);text-wrap:balance;min-width:0}
+.ligne-titre h3{font:700 18px/1.25 var(--f-texte);text-wrap:balance;min-width:0}
 .ligne-titre h3 a{text-decoration:none} .ligne-titre h3 a:hover{text-decoration:underline}
 .verdict{font:700 12px var(--f-texte);padding:4px 9px;border-radius:99px;white-space:nowrap}
 .verdict.valide{background:var(--ok-fond);color:var(--ok)} .verdict.rejete{background:var(--ko-fond);color:var(--ko)} .verdict.attente{background:var(--alerte-fond);color:var(--alerte)}
@@ -77,13 +85,13 @@ select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px so
 .trajet .prix{font:600 20px var(--f-chiffre);font-variant-numeric:tabular-nums}
 .barre{text-decoration:line-through;color:var(--doux);font-size:14px;margin-left:6px;font-family:var(--f-chiffre)}
 .notes{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--doux)}
-.notes span b{color:var(--encre);font-weight:600}
-.ia{display:inline-flex;gap:4px;flex-wrap:wrap}
+.notes b{color:var(--encre);font-weight:600}
+.ia{display:inline-flex;gap:4px;flex-wrap:wrap;align-items:center}
 .ia i{font-style:normal;font:600 12px var(--f-texte);padding:2px 7px;border-radius:4px;background:var(--signal-doux);color:var(--signal)}
-.audit{font-size:14px;border-left:3px solid var(--trait);padding-left:10px}
-.audit.valide{border-color:var(--ok)} .audit.rejete{border-color:var(--ko)}
+.encart{font-size:14px;border-left:3px solid var(--trait);padding-left:10px;overflow-wrap:anywhere}
+.encart.valide{border-color:var(--ok)} .encart.rejete{border-color:var(--ko)} .encart.google{border-color:var(--signal)}
 .marge{background:var(--etiquette);color:var(--etiquette-encre);padding:16px 18px;display:grid;align-content:center;justify-items:center;gap:2px;min-width:132px;border-radius:0 7px 7px 0;
-  -webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000) ;mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000)}
+  -webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000);mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000)}
 .affaire.rejete .marge{background:var(--trait);color:var(--doux)}
 .marge b{font:600 26px/1 var(--f-chiffre);font-variant-numeric:tabular-nums}
 .marge span{font-size:12px;font-weight:600}
@@ -91,183 +99,291 @@ select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px so
   .trajet{grid-template-columns:1fr;gap:4px}.fleche{display:none}}
 .vide{padding:28px;border:1px dashed var(--trait);border-radius:8px;text-align:center;color:var(--doux)}
 details.rejets>summary{cursor:pointer;font-weight:600;padding:6px 0}
-details.rejets[open]>summary{margin-bottom:10px}
 
-/* bas de page : championnat + machines */
-.deux{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px}
-@media (max-width:860px){.deux{grid-template-columns:1fr}}
-h2{font:800 22px/1.1 var(--f-titre);font-stretch:80%;text-transform:uppercase;letter-spacing:.01em;margin:0 0 10px}
+/* tableaux */
 .tableau{overflow-x:auto;background:var(--papier);border:1px solid var(--trait);border-radius:8px}
-table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
-th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait)}
-th{font:600 11px var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
-td.n{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums;text-align:right} th.n{text-align:right}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait);vertical-align:top}
+th{font:600 11px var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux);white-space:nowrap}
+td.n,th.n{text-align:right} td.n{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums;white-space:nowrap}
 tr:last-child td{border-bottom:0}
+td a{text-decoration:none} td a:hover{text-decoration:underline}
+.pastille{font:700 11px var(--f-texte);padding:2px 7px;border-radius:99px;white-space:nowrap}
+.pastille.valide,.pastille.ok{background:var(--ok-fond);color:var(--ok)} .pastille.rejete,.pastille.ko{background:var(--ko-fond);color:var(--ko)} .pastille.attente,.pastille.att{background:var(--alerte-fond);color:var(--alerte)}
 .jauge{display:inline-block;width:56px;height:6px;border-radius:3px;background:var(--trait);vertical-align:middle;margin-right:6px;overflow:hidden}
 .jauge i{display:block;height:100%;background:var(--signal)}
-.machines{display:grid;gap:14px}
-.machines ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.machines li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;background:var(--papier);border:1px solid var(--trait);border-radius:6px;padding:8px 12px;font-size:14px;min-width:0}
-.machines li span:first-child{min-width:0;overflow-wrap:anywhere}
-.etat{font:700 12px var(--f-texte);padding:2px 8px;border-radius:99px;white-space:nowrap}
-.etat.ok{background:var(--ok-fond);color:var(--ok)} .etat.ko{background:var(--ko-fond);color:var(--ko)} .etat.att{background:var(--alerte-fond);color:var(--alerte)}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.bloc{background:var(--papier);border:1px solid var(--trait);border-radius:8px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.bloc ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.bloc li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:14px;min-width:0}
+.bloc li span:first-child{min-width:0;overflow-wrap:anywhere}
+.texte{max-width:70ch;display:grid;gap:12px}
+.texte p{margin:0}
+.etapes{counter-reset:e;list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start}
+.etapes li::before{content:counter(e);font:700 15px var(--f-chiffre);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--encre);color:var(--papier)}
 footer{font-size:13px;color:var(--doux);border-top:1px solid var(--trait);padding-top:14px}
 @media (prefers-reduced-motion:no-preference){.affaire{transition:transform .15s ease}.affaire:hover{transform:translateY(-1px)}}
 </style>
 
+<div class="barre-nav large">
+  <div class="cadre">
+    <div class="logo"><b>Dénicheur</b><span class="proto">Prototype</span></div>
+    <nav aria-label="Sections">
+      <a href="#aujourdhui">Aujourd’hui</a>
+      <a href="#affaires">Toutes les affaires</a>
+      <a href="#championnat">Championnat</a>
+      <a href="#systeme">Système</a>
+      <a href="#methode">Méthode</a>
+    </nav>
+  </div>
+</div>
+
+<main class="large">
 <div class="cadre">
-  <header>
-    <div class="marque"><h1>Dénicheur</h1><span class="proto">Prototype</span></div>
-    <div class="passage">
-      <span class="etiq">Passage analysé</span>
-      <span id="date-passage" class="chiffre">–</span>
-      <span id="statut" class="statut att">En attente de l’audit</span>
+
+  <!-- AUJOURD'HUI -->
+  <section class="vue" id="v-aujourdhui" aria-labelledby="t-auj">
+    <div class="tete">
+      <div><span class="etiq">Dernier passage</span><h2 id="t-auj">Affaires du jour</h2><span class="petit chiffre" id="auj-date">–</span></div>
+      <span id="auj-statut" class="statut att">En attente de l’audit</span>
     </div>
-  </header>
-
-  <section class="synthese" aria-label="Synthèse du passage">
-    <div><span class="etiq">Affaires validées</span><b id="s-valides">0</b><span class="petit" id="s-valides-sous">–</span></div>
-    <div class="chiffre"><span class="etiq">Marge nette totale</span><b id="s-marge">0 €</b><span class="petit">si une unité de chaque est vendue</span></div>
-    <div class="chiffre"><span class="etiq">Meilleure affaire</span><b id="s-meilleure">–</b><span class="petit" id="s-meilleure-sous">–</span></div>
-    <div><span class="etiq">IA en tête</span><b id="s-champion">–</b><span class="petit" id="s-champion-sous">–</span></div>
-  </section>
-
-  <section aria-label="Affaires du jour" style="display:grid;gap:14px">
+    <div class="synthese" aria-label="Synthèse">
+      <div><span class="etiq">Affaires validées</span><b id="s-valides">0</b><span class="petit" id="s-valides-sous">–</span></div>
+      <div class="chiffre"><span class="etiq">Marge nette totale</span><b id="s-marge">0 €</b><span class="petit">une unité de chaque</span></div>
+      <div class="chiffre"><span class="etiq">Meilleure affaire</span><b id="s-meilleure">–</b><span class="petit" id="s-meilleure-sous">–</span></div>
+      <div><span class="etiq">IA en tête</span><b id="s-champion">–</b><span class="petit" id="s-champion-sous">–</span></div>
+    </div>
     <div class="outils">
       <div class="onglets" role="group" aria-label="Mode de vente">
         <button type="button" data-mode="tous" aria-pressed="true">Toutes</button>
         <button type="button" data-mode="stock" aria-pressed="false">Avec stock</button>
         <button type="button" data-mode="dropshipping" aria-pressed="false">Dropshipping</button>
       </div>
-      <div class="filtres">
-        <label class="petit" for="tri">Trier par</label>
-        <select id="tri">
-          <option value="marge">Marge nette</option>
-          <option value="rentabilite">Rentabilité</option>
-          <option value="score">Score de l’équipe</option>
-        </select>
-      </div>
+      <label class="petit" for="auj-tri">Trier par</label>
+      <select id="auj-tri"><option value="marge">Marge nette</option><option value="rentabilite">Rentabilité</option><option value="score">Score de l’équipe</option></select>
     </div>
-    <div class="puces" id="domaines" role="group" aria-label="Domaines"></div>
-    <div class="affaires" id="liste"></div>
-    <details class="rejets" id="bloc-rejets"><summary id="titre-rejets">Affaires rejetées à l’audit</summary><div class="affaires" id="liste-rejets"></div></details>
+    <div class="puces" id="auj-domaines" role="group" aria-label="Domaines"></div>
+    <div class="affaires" id="auj-liste"></div>
+    <details class="rejets" id="auj-bloc-rejets"><summary id="auj-titre-rejets">Affaires rejetées</summary><div class="affaires" id="auj-rejets"></div></details>
   </section>
 
-  <div class="deux">
-    <section aria-label="Championnat des IA">
-      <h2>Championnat des IA</h2>
-      <div class="tableau"><table>
-        <thead><tr><th>IA</th><th>Fiabilité</th><th class="n">Proposées</th><th class="n">Validées</th><th class="n">Rejetées</th><th class="n">Points</th></tr></thead>
-        <tbody id="champ"></tbody>
-      </table></div>
-      <p class="petit">+3 points par affaire validée à l’audit, −1 par affaire rejetée. La fiabilité est la part des appels où l’IA a vraiment répondu.</p>
-    </section>
-    <section class="machines" aria-label="État du système">
-      <h2>Ce qui fonctionne</h2>
-      <div><span class="etiq">Sources de bons plans</span><ul id="sources"></ul></div>
-      <div><span class="etiq">Équipe d’IA</span><ul id="equipe"></ul></div>
-    </section>
-  </div>
+  <!-- TOUTES LES AFFAIRES -->
+  <section class="vue" id="v-affaires" aria-labelledby="t-aff" hidden>
+    <div class="tete"><div><span class="etiq">Historique complet</span><h2 id="t-aff">Toutes les affaires</h2></div><span class="petit" id="aff-compte">–</span></div>
+    <div class="outils">
+      <input type="search" id="aff-recherche" placeholder="Chercher un produit, un marchand…" aria-label="Chercher">
+      <select id="aff-verdict" aria-label="Verdict"><option value="">Tous les verdicts</option><option value="valide">Validées</option><option value="rejete">Rejetées</option><option value="attente">À vérifier</option></select>
+      <select id="aff-domaine" aria-label="Domaine"><option value="">Tous les domaines</option></select>
+      <select id="aff-pays" aria-label="Pays d’achat"><option value="">Tous les pays</option></select>
+      <select id="aff-mode" aria-label="Mode"><option value="">Stock et dropshipping</option><option value="stock">Avec stock</option><option value="dropshipping">Dropshipping</option></select>
+    </div>
+    <div class="tableau"><table>
+      <thead><tr><th>Produit</th><th>Achat</th><th class="n">Prix</th><th>Revente</th><th class="n">Marge</th><th class="n">Rentab.</th><th>Trouvé par</th><th>Audit</th><th>Passage</th></tr></thead>
+      <tbody id="aff-corps"></tbody>
+    </table></div>
+  </section>
 
-  <footer id="pied">Prototype : données réelles du dernier passage, mises à jour après chaque audit.</footer>
+  <!-- CHAMPIONNAT -->
+  <section class="vue" id="v-championnat" aria-labelledby="t-ch" hidden>
+    <div class="tete"><div><span class="etiq">Qui trouve les meilleures affaires</span><h2 id="t-ch">Championnat des IA</h2></div></div>
+    <div class="tableau"><table>
+      <thead><tr><th>IA</th><th>Marque</th><th>Rôle</th><th>Fiabilité</th><th class="n">Proposées</th><th class="n">Validées</th><th class="n">Rejetées</th><th class="n">Taux de réussite</th><th class="n">Points</th></tr></thead>
+      <tbody id="ch-corps"></tbody>
+    </table></div>
+    <h3 class="etiq">Meilleure IA par domaine</h3>
+    <div class="grille" id="ch-domaines"></div>
+    <p class="petit">Barème : +3 points par affaire validée à l’audit, −1 par affaire rejetée. Fiabilité : part des appels où l’IA a réellement répondu.</p>
+  </section>
+
+  <!-- SYSTÈME -->
+  <section class="vue" id="v-systeme" aria-labelledby="t-sys" hidden>
+    <div class="tete"><div><span class="etiq">Ce qui fonctionne</span><h2 id="t-sys">État du système</h2></div></div>
+    <div class="grille">
+      <div class="bloc"><span class="etiq">Sources (dernier passage)</span><ul id="sys-sources"></ul></div>
+      <div class="bloc"><span class="etiq">Équipe d’IA (dernier passage)</span><ul id="sys-equipe"></ul></div>
+      <div class="bloc"><span class="etiq">Vérificateur de prix Google</span><ul id="sys-verif"></ul></div>
+    </div>
+    <h3 class="etiq">Historique des passages</h3>
+    <div class="tableau"><table>
+      <thead><tr><th>Passage</th><th>Type</th><th class="n">Bons plans lus</th><th class="n">Nouveaux</th><th class="n">Étudiés</th><th class="n">Proposés</th><th>Audit</th></tr></thead>
+      <tbody id="sys-passages"></tbody>
+    </table></div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section class="vue" id="v-methode" aria-labelledby="t-met" hidden>
+    <div class="tete"><div><span class="etiq">Comment une affaire arrive ici</span><h2 id="t-met">La méthode</h2></div></div>
+    <div class="texte">
+      <ol class="etapes">
+        <li><div><b>Collecte.</b> Deux fois par jour, réglé sur l’heure de Pékin (0 h 30 et 10 h là-bas), les bons plans de Dealabs, mydealz, hotukdeals, chollometro et Les Numériques sont lus.</div></li>
+        <li><div><b>Filtre.</b> Prix hors fourchette, abonnements, forfaits, codes promo et offres locales sont écartés.</div></li>
+        <li><div><b>Tri.</b> Le trieur garde les produits physiques revendables.</div></li>
+        <li><div><b>Analyse.</b> Quatre IA de marques différentes étudient exactement les mêmes bons plans et proposent chacune leurs affaires.</div></li>
+        <li><div><b>Marge nette.</b> Le programme calcule lui-même la marge : commission de la plateforme, port, TVA et droit de douane de 3 € pour les achats hors UE.</div></li>
+        <li><div><b>Vérification Google.</b> Gemini cherche le prix neuf le plus bas et la fourchette d’occasion, avec les sources. Le prix de revente le plus prudent est retenu.</div></li>
+        <li><div><b>Audit de Claude.</b> Chaque affaire est validée ou rejetée avec un motif. Les verdicts donnent les points du championnat.</div></li>
+      </ol>
+      <div class="bloc"><span class="etiq">Seuils actuels</span><ul id="met-seuils"></ul></div>
+    </div>
+  </section>
+
+  <footer id="pied">Prototype · données réelles des passages du Dénicheur.</footer>
 </div>
+</main>
 
 <script>
 const DATA = /*DONNEES*/null/*FIN*/;
 
-const NOMS = {gemini:"Gemini",deepseek:"DeepSeek",nemotron:"Nemotron",glm:"GLM",gptoss:"gpt-oss",qwen:"Qwen",gemma:"Gemma",glm45:"GLM 4.5",nemotron_nv:"Nemotron Super"};
+const NOMS = Object.fromEntries(Object.entries(DATA?.equipe||{}).map(([k,v])=>[k,v.nom.replace(/ \(.*\)$/,"")]));
+const COURT = {gemini:"Gemini",deepseek:"DeepSeek",nemotron:"Nemotron",glm:"GLM 4.7",glm45:"GLM 4.5",gptoss:"gpt-oss",qwen:"Qwen",gemma:"Gemma",nemotron_nv:"Nemotron Super"};
+const nom = k => COURT[k]||NOMS[k]||k;
 const PLATEFORMES = {amazon:"Amazon",vinted:"Vinted",leboncoin:"Leboncoin",ebay:"eBay",etsy:"Etsy",backmarket:"Back Market"};
 const DOMAINES = {"tech":"Tech","gaming":"Jeux vidéo","maison":"Maison","cuisine":"Cuisine","jardin-bricolage":"Jardin & bricolage","sport":"Sport","auto-moto":"Auto-moto","mode":"Mode","puericulture-jouets":"Enfants & jouets","beaute-sante":"Beauté & santé","animaux":"Animaux","vintage-collection":"Vintage & collection","autre":"Autre"};
 const PAYS = {FR:"France",DE:"Allemagne",UK:"Royaume-Uni",ES:"Espagne"};
-const euro = n => (n==null||isNaN(n)) ? "–" : n.toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
-const prix = (n,dev) => (n==null) ? "–" : n.toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
+const VERDICTS = {valide:"Validée",rejete:"Rejetée",attente:"À vérifier"};
+const euro = n => (n==null||isNaN(n)) ? "–" : Number(n).toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
+const prix = (n,dev) => (n==null) ? "–" : Number(n).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $ = id => document.getElementById(id);
+const margeDe = a => a.audit?.marge_nette_verifiee ?? a.marge_verifiee ?? a.marge_nette;
+const reventeDe = a => a.audit?.prix_revente_verifie ?? a.verification?.prix_revente_prudent ?? a.prix_revente_estime;
+const dateCourte = h => h ? `${h.slice(8,10)}/${h.slice(5,7)} ${h.slice(11,13)}h${h.slice(13,15)}` : "–";
 
+const P = DATA?.passages||[], DER = P[P.length-1];
+const TOUTES = DATA?.affaires||[];
+const DUJOUR = DER ? TOUTES.filter(a=>a.passage===DER.horodatage) : [];
 let etat = {mode:"tous", tri:"marge", domaine:null};
 try { const m = localStorage.getItem("den_mode"); if (m) etat.mode = m; } catch(e) {}
 
-function affaire(a){
-  const v = a.audit || {verdict:"attente"};
-  const libV = {valide:"Validée", rejete:"Rejetée", attente:"À vérifier"}[v.verdict] || "À vérifier";
-  const marge = v.marge_nette_verifiee ?? a.marge_verifiee ?? a.marge_nette;
-  const rev = v.prix_revente_verifie ?? a.prix_revente_estime;
-  const ia = (a.agents||[]).map(x=>`<i>${esc(NOMS[x]||x)}</i>`).join("");
+function etiquette(a){
+  const v = a.audit || {verdict:"attente"}, g = a.verification;
+  const rev = reventeDe(a), marge = margeDe(a);
   return `<article class="affaire ${v.verdict==="rejete"?"rejete":""}">
     <div class="corps">
-      <div class="ligne-titre"><h3><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a></h3><span class="verdict ${esc(v.verdict)}">${libV}</span></div>
+      <div class="ligne-titre"><h3><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a></h3><span class="verdict ${esc(v.verdict)}">${VERDICTS[v.verdict]||"À vérifier"}</span></div>
       <div class="trajet">
         <div><span class="etiq">Acheter chez ${esc(a.marchand||"?")} · ${esc(PAYS[a.pays]||a.pays)}</span><div class="prix">${prix(a.prix,a.devise)}</div></div>
         <div class="fleche" aria-hidden="true">→</div>
         <div><span class="etiq">Revendre sur ${esc(PLATEFORMES[v.plateforme_verifiee||a.plateforme_revente]||a.plateforme_revente)}</span>
-          <div class="prix">${euro(rev)}${v.prix_revente_verifie!=null && Math.abs(v.prix_revente_verifie-a.prix_revente_estime)>=1 ? `<span class="barre" title="Estimation de l’IA">${euro(a.prix_revente_estime)}</span>`:""}</div></div>
+          <div class="prix">${euro(rev)}${Math.abs(rev-a.prix_revente_estime)>=1?`<span class="barre" title="Estimation de l’équipe">${euro(a.prix_revente_estime)}</span>`:""}</div></div>
       </div>
       <div class="notes">
         <span>Domaine <b>${esc(DOMAINES[a.domaine]||a.domaine)}</b></span>
         <span>Demande <b class="chiffre">${a.demande}/5</b></span>
         <span>Concurrence <b class="chiffre">${a.concurrence}/5</b></span>
         <span>Mode <b>${a.mode==="dropshipping"?"Dropshipping":"Avec stock"}</b></span>
-        <span class="ia">Trouvé par ${ia}</span>
+        <span class="ia">Trouvé par ${(a.agents||[]).map(x=>`<i>${esc(nom(x))}</i>`).join("")}</span>
       </div>
-      ${a.verification?`<div class="audit"><span class="etiq">Vérifié sur Google</span><br>${a.verification.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(a.verification.prix_neuf_min)}</b>${a.verification.marchand_neuf_min?" ("+esc(a.verification.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${a.verification.occasion_haut?` · occasion <b class="chiffre">${euro(a.verification.occasion_bas)}–${euro(a.verification.occasion_haut)}</b>`:""}${a.verification.sources?.length?` · sources : ${a.verification.sources.slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
-      ${v.commentaire?`<div class="audit ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
+      ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
+      ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>
   </article>`;
 }
 
-function rendre(){
-  if (!DATA){ document.getElementById("liste").innerHTML = `<div class="vide">Aucune donnée chargée.</div>`; return; }
-  const toutes = DATA.affaires||[];
-  const visibles = toutes.filter(a => (etat.mode==="tous"||a.mode===etat.mode) && (!etat.domaine||a.domaine===etat.domaine));
-  const cle = {marge:a=>(a.audit?.marge_nette_verifiee ?? a.marge_nette), rentabilite:a=>a.rentabilite, score:a=>a.score}[etat.tri];
-  visibles.sort((x,y)=>cle(y)-cle(x));
-  const ok = visibles.filter(a=>a.audit?.verdict!=="rejete"), ko = visibles.filter(a=>a.audit?.verdict==="rejete");
-  document.getElementById("liste").innerHTML = ok.map(affaire).join("") || `<div class="vide">Aucune affaire validée dans cette sélection. Change de mode ou de domaine.</div>`;
-  document.getElementById("liste-rejets").innerHTML = ko.map(affaire).join("");
-  document.getElementById("bloc-rejets").hidden = !ko.length;
-  document.getElementById("titre-rejets").textContent = `Affaires rejetées à l’audit (${ko.length})`;
+function rendreAujourdhui(){
+  const vis = DUJOUR.filter(a => (etat.mode==="tous"||a.mode===etat.mode) && (!etat.domaine||a.domaine===etat.domaine));
+  const cle = {marge:margeDe, rentabilite:a=>margeDe(a)/(a.cout_achat||1), score:a=>a.score}[etat.tri];
+  vis.sort((x,y)=>cle(y)-cle(x));
+  const ok = vis.filter(a=>a.audit?.verdict!=="rejete"), ko = vis.filter(a=>a.audit?.verdict==="rejete");
+  $("auj-liste").innerHTML = ok.map(etiquette).join("") || `<div class="vide">Aucune affaire dans cette sélection. Change de mode ou de domaine.</div>`;
+  $("auj-rejets").innerHTML = ko.map(etiquette).join("");
+  $("auj-bloc-rejets").hidden = !ko.length;
+  $("auj-titre-rejets").textContent = `Affaires rejetées à l’audit (${ko.length})`;
   document.querySelectorAll(".onglets button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.mode===etat.mode));
-  document.querySelectorAll("#domaines .puce").forEach(b=>b.setAttribute("aria-pressed", (b.dataset.d||null)===etat.domaine));
+  document.querySelectorAll("#auj-domaines .puce").forEach(b=>b.setAttribute("aria-pressed", (b.dataset.d||null)===etat.domaine));
 }
 
-function initialiser(){
-  if (!DATA) { rendre(); return; }
-  document.getElementById("date-passage").textContent = DATA.date_affichee || "–";
-  const st = document.getElementById("statut");
-  if (DATA.audit_fait){ st.className="statut ok"; st.textContent="Audité par Claude"; }
-  const valides = (DATA.affaires||[]).filter(a=>a.audit?.verdict==="valide");
-  document.getElementById("s-valides").textContent = valides.length;
-  document.getElementById("s-valides-sous").textContent = `sur ${(DATA.affaires||[]).length} proposées par l’équipe`;
-  const marges = valides.map(a=>a.audit.marge_nette_verifiee ?? a.marge_nette);
-  document.getElementById("s-marge").textContent = euro(marges.reduce((s,x)=>s+x,0));
-  const best = valides.slice().sort((x,y)=>(y.audit.marge_nette_verifiee??y.marge_nette)-(x.audit.marge_nette_verifiee??x.marge_nette))[0];
-  document.getElementById("s-meilleure").textContent = best ? euro(best.audit.marge_nette_verifiee ?? best.marge_nette) : "–";
-  document.getElementById("s-meilleure-sous").textContent = best ? best.titre.slice(0,48)+(best.titre.length>48?"…":"") : "aucune pour l’instant";
-  const champ = Object.entries(DATA.classement||{}).sort((x,y)=>(y[1].global?.points||0)-(x[1].global?.points||0));
-  if (champ.length && champ[0][1].global){ document.getElementById("s-champion").textContent = NOMS[champ[0][0]]||champ[0][0];
-    document.getElementById("s-champion-sous").textContent = `${champ[0][1].global.points} points`; }
+function initAujourdhui(){
+  if (!DER){ $("auj-liste").innerHTML = `<div class="vide">Aucun passage enregistré pour l’instant.</div>`; return; }
+  $("auj-date").textContent = `${DER.date_affichee} · passage ${DER.passage}`;
+  if (DER.audite){ $("auj-statut").className="statut ok"; $("auj-statut").textContent="Audité par Claude"; }
+  const val = DUJOUR.filter(a=>a.audit?.verdict==="valide");
+  $("s-valides").textContent = val.length;
+  $("s-valides-sous").textContent = `sur ${DUJOUR.length} proposées`;
+  $("s-marge").textContent = euro(val.reduce((s,a)=>s+margeDe(a),0));
+  const best = val.slice().sort((x,y)=>margeDe(y)-margeDe(x))[0];
+  $("s-meilleure").textContent = best ? euro(margeDe(best)) : "–";
+  $("s-meilleure-sous").textContent = best ? best.titre.slice(0,46)+(best.titre.length>46?"…":"") : "aucune pour l’instant";
+  const champ = classement();
+  if (champ.length){ $("s-champion").textContent = nom(champ[0][0]); $("s-champion-sous").textContent = `${champ[0][1].global?.points||0} points`; }
+  const doms = [...new Set(DUJOUR.map(a=>a.domaine))];
+  $("auj-domaines").innerHTML = `<button type="button" class="puce" data-d="">Tous les domaines</button>` + doms.map(d=>`<button type="button" class="puce" data-d="${esc(d)}">${esc(DOMAINES[d]||d)}</button>`).join("");
+  document.querySelectorAll(".onglets button").forEach(b=>b.addEventListener("click",()=>{etat.mode=b.dataset.mode;try{localStorage.setItem("den_mode",etat.mode)}catch(e){}rendreAujourdhui();}));
+  $("auj-domaines").addEventListener("click",e=>{const b=e.target.closest(".puce");if(!b)return;etat.domaine=b.dataset.d||null;rendreAujourdhui();});
+  $("auj-tri").addEventListener("change",e=>{etat.tri=e.target.value;rendreAujourdhui();});
+  rendreAujourdhui();
+}
 
-  const doms = [...new Set((DATA.affaires||[]).map(a=>a.domaine))];
-  document.getElementById("domaines").innerHTML = `<button type="button" class="puce" data-d="">Tous les domaines</button>` +
-    doms.map(d=>`<button type="button" class="puce" data-d="${esc(d)}">${esc(DOMAINES[d]||d)}</button>`).join("");
-
-  document.getElementById("champ").innerHTML = champ.map(([k,s])=>{
-    const g=s.global||{proposees:0,validees:0,rejetees:0,points:0}, f=s.fiabilite;
-    return `<tr><td>${esc(NOMS[k]||k)}</td><td>${f?`<span class="jauge"><i style="width:${f.taux}%"></i></span><span class="chiffre">${f.taux} %</span>`:"–"}</td>
-      <td class="n">${g.proposees}</td><td class="n">${g.validees}</td><td class="n">${g.rejetees}</td><td class="n"><b>${g.points}</b></td></tr>`;}).join("")
-    || `<tr><td colspan="6" class="petit">Le championnat démarre au premier audit.</td></tr>`;
-
-  document.getElementById("sources").innerHTML = Object.entries(DATA.sources||{}).map(([k,v])=>
-    `<li><span>${esc(k)}</span><span class="etat ${v.ok&&v.nb?"ok":(v.ok?"att":"ko")}">${v.ok?(v.nb?v.nb+" bons plans":"vide"):"bloquée"}</span></li>`).join("");
-  document.getElementById("equipe").innerHTML = Object.entries(DATA.agents||{}).map(([k,v])=>{
-    const ok = v.reussites>0, rem = v.remplace?` (remplace ${NOMS[v.remplace]||v.remplace})`:"";
-    return `<li><span>${esc(NOMS[k]||k)}${esc(rem)}</span><span class="etat ${ok?"ok":"ko"}">${ok?v.choix+" choix":"n’a pas répondu"}</span></li>`;}).join("");
-  document.getElementById("pied").textContent = `Prototype · ${DATA.nb_annonces} bons plans lus, ${DATA.nb_tries} étudiés par l’équipe · audit : ${DATA.audit_resume||"en attente"}`;
-
-  document.querySelectorAll(".onglets button").forEach(b=>b.addEventListener("click",()=>{etat.mode=b.dataset.mode;try{localStorage.setItem("den_mode",etat.mode)}catch(e){}rendre();}));
-  document.getElementById("domaines").addEventListener("click",e=>{const b=e.target.closest(".puce");if(!b)return;etat.domaine=b.dataset.d||null;rendre();});
-  document.getElementById("tri").addEventListener("change",e=>{etat.tri=e.target.value;rendre();});
+function initAffaires(){
+  const remplir = (id, valeurs, libelle) => { $(id).insertAdjacentHTML("beforeend", valeurs.map(v=>`<option value="${esc(v)}">${esc(libelle[v]||v)}</option>`).join("")); };
+  remplir("aff-domaine", [...new Set(TOUTES.map(a=>a.domaine))], DOMAINES);
+  remplir("aff-pays", [...new Set(TOUTES.map(a=>a.pays))], PAYS);
+  const rendre = () => {
+    const q = $("aff-recherche").value.trim().toLowerCase(), v = $("aff-verdict").value, d = $("aff-domaine").value, p = $("aff-pays").value, m = $("aff-mode").value;
+    const l = TOUTES.filter(a => (!q || (a.titre+" "+(a.marchand||"")).toLowerCase().includes(q)) && (!v || (a.audit?.verdict||"attente")===v)
+      && (!d || a.domaine===d) && (!p || a.pays===p) && (!m || a.mode===m));
+    $("aff-compte").textContent = `${l.length} affaire${l.length>1?"s":""} sur ${TOUTES.length}`;
+    $("aff-corps").innerHTML = l.map(a=>{ const ve=a.audit?.verdict||"attente";
+      return `<tr><td><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a><div class="petit">${esc(DOMAINES[a.domaine]||a.domaine)}</div></td>
+      <td>${esc(a.marchand||"?")}<div class="petit">${esc(PAYS[a.pays]||a.pays)}</div></td><td class="n">${prix(a.prix,a.devise)}</td>
+      <td>${esc(PLATEFORMES[a.audit?.plateforme_verifiee||a.plateforme_revente]||a.plateforme_revente)}<div class="petit chiffre">${euro(reventeDe(a))}</div></td>
+      <td class="n"><b>${euro(margeDe(a))}</b></td><td class="n">${a.cout_achat?Math.round(100*margeDe(a)/a.cout_achat):0} %</td>
+      <td>${(a.agents||[]).map(nom).join(", ")}</td>
+      <td><span class="pastille ${ve}" title="${esc(a.audit?.commentaire||"")}">${VERDICTS[ve]}</span></td><td class="petit chiffre">${dateCourte(a.passage)}</td></tr>`;}).join("")
+      || `<tr><td colspan="9" class="petit">Aucune affaire ne correspond à ces filtres.</td></tr>`;
+  };
+  ["aff-recherche","aff-verdict","aff-domaine","aff-pays","aff-mode"].forEach(id=>$(id).addEventListener("input",rendre));
   rendre();
 }
-initialiser();
+
+function classement(){ return Object.entries(DATA?.classement||{}).filter(([,s])=>s.global).sort((x,y)=>(y[1].global.points)-(x[1].global.points)); }
+function role(k){ const r=DATA?.roles||{}; if (r.trieur===k) return "Trieur"; if (r.verificateur===k) return "Vérificateur Google"; if ((r.analystes||[]).includes(k)) return "Analyste";
+  if (Object.values(r.remplacants||{}).some(l=>(Array.isArray(l)?l:[l]).includes(k))) return "Remplaçant"; return "Réserve"; }
+
+function initChampionnat(){
+  const toutes = Object.entries(DATA?.classement||{}).sort((x,y)=>(y[1].global?.points??-99)-(x[1].global?.points??-99));
+  $("ch-corps").innerHTML = toutes.map(([k,s])=>{ const g=s.global||{proposees:0,validees:0,rejetees:0,points:0}, f=s.fiabilite, tx=(g.validees+g.rejetees)?Math.round(100*g.validees/(g.validees+g.rejetees)):null;
+    return `<tr><td><b>${esc(nom(k))}</b></td><td>${esc(DATA.equipe?.[k]?.marque||"")}</td><td>${role(k)}</td>
+      <td>${f?`<span class="jauge"><i style="width:${f.taux}%"></i></span><span class="chiffre">${f.taux} %</span>`:"–"}</td>
+      <td class="n">${g.proposees}</td><td class="n">${g.validees}</td><td class="n">${g.rejetees}</td><td class="n">${tx==null?"–":tx+" %"}</td><td class="n"><b>${g.points}</b></td></tr>`;}).join("")
+    || `<tr><td colspan="9" class="petit">Le championnat démarre au premier audit.</td></tr>`;
+  const parDom = {};
+  for (const [k,s] of Object.entries(DATA?.classement||{})) for (const [cle,v] of Object.entries(s)) if (cle.startsWith("domaine/")) {
+    const d=cle.slice(8); (parDom[d] ||= []).push([k,v]); }
+  $("ch-domaines").innerHTML = Object.entries(parDom).map(([d,l])=>{ l.sort((x,y)=>y[1].points-x[1].points);
+    return `<div class="bloc"><span class="etiq">${esc(DOMAINES[d]||d)}</span><ul>${l.slice(0,3).map(([k,v],i)=>`<li><span>${i===0?"<b>":""}${esc(nom(k))}${i===0?"</b>":""}</span><span class="chiffre">${v.points} pt · ${v.validees}/${v.proposees}</span></li>`).join("")}</ul></div>`;}).join("")
+    || `<div class="vide">Pas encore de domaine noté.</div>`;
+}
+
+function initSysteme(){
+  if (!DER) return;
+  $("sys-sources").innerHTML = Object.entries(DER.sources).map(([k,v])=>`<li><span>${esc(k)}</span><span class="pastille ${v.ok&&v.nb?"ok":(v.ok?"att":"ko")}">${v.ok?(v.nb?v.nb+" bons plans":"vide"):"bloquée"}</span></li>`).join("");
+  $("sys-equipe").innerHTML = Object.entries(DER.agents).map(([k,v])=>`<li><span>${esc(nom(k))}${v.remplace?` <span class="petit">(remplace ${esc(nom(v.remplace))})</span>`:""}</span><span class="pastille ${v.reussites>0?"ok":"ko"}">${v.reussites>0?v.choix+" choix":"pas de réponse"}</span></li>`).join("");
+  const vf = DER.verification;
+  $("sys-verif").innerHTML = vf ? `<li><span>Produits vérifiés</span><span class="chiffre">${vf.faits}</span></li>${(vf.erreurs||[]).slice(-2).map(e=>`<li><span class="petit">${esc(e)}</span></li>`).join("")}` : `<li><span class="petit">Pas encore utilisé</span></li>`;
+  $("sys-passages").innerHTML = P.slice().reverse().map(p=>`<tr><td class="chiffre">${esc(p.date_affichee)}</td><td>${esc(p.passage)}</td><td class="n">${p.nb_annonces}</td><td class="n">${p.nb_nouvelles??"–"}</td><td class="n">${p.nb_tries}</td><td class="n">${p.nb_candidats}</td>
+    <td>${p.audite?`<span class="pastille ok">Audité</span>`:`<span class="pastille att">En attente</span>`}</td></tr>`).join("");
+}
+
+function initMethode(){
+  const r = DATA?.regles||{}, s = r.seuils||{};
+  $("met-seuils").innerHTML = [
+    ["Marge nette minimum", euro(s.marge_nette_min)], ["Rentabilité minimum", Math.round(100*(s.rentabilite_min||0))+" %"],
+    ["Prix d’achat étudiés", `${euro(r.prix_min)} à ${euro(r.prix_max)}`], ["Port d’achat estimé", euro(r.port_achat_defaut)],
+    ["Commission Amazon", Math.round(100*(r.plateformes_revente?.amazon?.commission||0))+" % + "+euro(r.plateformes_revente?.amazon?.frais_fixes)],
+    ["Vinted et Leboncoin", "pas de frais vendeur"]].map(([k,v])=>`<li><span>${k}</span><span class="chiffre">${v}</span></li>`).join("");
+}
+
+const VUES = ["aujourdhui","affaires","championnat","systeme","methode"];
+function router(){
+  const h = location.hash.slice(1), v = VUES.includes(h) ? h : "aujourdhui";
+  VUES.forEach(x=>{ $("v-"+x).hidden = x!==v; });
+  document.querySelectorAll("nav a").forEach(a=>{ if (a.getAttribute("href")==="#"+v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+}
+
+if (DATA){ initAujourdhui(); initAffaires(); initChampionnat(); initSysteme(); initMethode();
+  $("pied").textContent = `Prototype · ${P.length} passage${P.length>1?"s":""}, ${TOUTES.length} affaires proposées par l’équipe · mis à jour le ${DATA.genere||"–"}`; }
+window.addEventListener("hashchange", router); router();
 </script>

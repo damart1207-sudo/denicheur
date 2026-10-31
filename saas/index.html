@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-/* Mise en page : un poste de veille d'acheteur — bandeau de synthèse, puis la liste des affaires comme des étiquettes de prix, puis l'état des machines. */
+/* Mise en page : poste de veille d'acheteur. Barre de navigation sticky, vues (aujourd'hui, toutes les affaires, championnat, système, méthode), affaires présentées comme des étiquettes de prix. */
 :root{
   --fond:#eef1f0; --papier:#ffffff; --encre:#14201d; --doux:#5d6b67; --trait:#d5dcda;
   --signal:#0f6b5c; --signal-doux:#d9ece7; --etiquette:#f6c945; --etiquette-encre:#3b2c00;
@@ -21,23 +21,31 @@
   --signal:#4fc2a8; --signal-doux:#173a32; --etiquette:#e9bd3a; --etiquette-encre:#2a1f00;
   --ok:#5ccc8b; --ok-fond:#163525; --alerte:#e7ad4f; --alerte-fond:#3a2a0e; --ko:#ff8a80; --ko-fond:#3d1916; color-scheme:dark}
 *{box-sizing:border-box}
-body{background:var(--fond);color:var(--encre);font:16px/1.5 var(--f-texte);
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 48px}
-.cadre{max-width:1180px;margin:0 auto;display:grid;gap:28px}
-a{color:inherit} a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+body{background:var(--fond);color:var(--encre);font:16px/1.5 var(--f-texte);padding-block:0 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--encre)}
+.large{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.cadre{max-width:1180px;margin:0 auto;display:grid;gap:26px}
+a{color:inherit} :focus-visible{outline:2px solid var(--signal);outline-offset:2px}
 .chiffre{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums}
 .petit{font-size:13px;color:var(--doux)}
-.etiq{font:600 11px/1 var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+.etiq{font:600 11px/1.2 var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
+h2{font:800 24px/1.1 var(--f-titre);font-stretch:80%;text-transform:uppercase;margin:0;text-wrap:balance}
+h3{margin:0}
 
-/* en-tête */
-header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 24px}
-.marque{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-h1{font:900 clamp(34px,6vw,54px)/.9 var(--f-titre);font-stretch:68%;letter-spacing:-.01em;margin:0;text-transform:uppercase}
-.proto{font:600 12px var(--f-texte);padding:3px 8px;border-radius:4px;background:var(--etiquette);color:var(--etiquette-encre)}
-.passage{display:grid;gap:4px;text-align:right}
-@media (max-width:640px){.passage{text-align:left}}
-.statut{display:inline-flex;gap:6px;align-items:center;font-weight:600;font-size:14px;padding:4px 10px;border-radius:99px;justify-self:end}
-@media (max-width:640px){.statut{justify-self:start}}
+/* barre */
+.barre-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--encre);color:var(--papier)}
+.barre-nav .cadre{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding-block:10px}
+.logo{display:flex;align-items:baseline;gap:10px}
+.logo b{font:900 26px/1 var(--f-titre);font-stretch:68%;text-transform:uppercase;letter-spacing:.01em}
+.proto{font:600 11px var(--f-texte);padding:2px 7px;border-radius:4px;background:var(--etiquette);color:var(--etiquette-encre)}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+nav a{font:600 14px var(--f-texte);text-decoration:none;padding:6px 10px;border-radius:6px;color:var(--papier);opacity:.78}
+nav a[aria-current="page"]{opacity:1;background:var(--signal);color:#fff}
+nav a:hover{opacity:1}
+
+.vue{display:grid;gap:22px;padding-top:22px}
+.tete{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px}
+.statut{display:inline-flex;font-weight:600;font-size:14px;padding:4px 10px;border-radius:99px}
 .statut.ok{background:var(--ok-fond);color:var(--ok)} .statut.att{background:var(--alerte-fond);color:var(--alerte)}
 
 /* synthèse */
@@ -46,28 +54,28 @@ h1{font:900 clamp(34px,6vw,54px)/.9 var(--f-titre);font-stretch:68%;letter-spaci
 .synthese>div{padding:14px 16px;border-right:1px solid var(--trait);display:grid;gap:2px;min-width:0}
 .synthese>div:last-child{border-right:0}
 @media (max-width:760px){.synthese>div:nth-child(2){border-right:0}.synthese>div:nth-child(-n+2){border-bottom:1px solid var(--trait)}}
-.synthese b{font:800 30px/1.1 var(--f-titre);font-stretch:80%}
-.synthese .chiffre b{font-family:var(--f-chiffre);font-weight:600;font-size:26px}
+.synthese b{font:800 28px/1.1 var(--f-titre);font-stretch:80%;overflow-wrap:anywhere}
+.synthese .chiffre b{font-family:var(--f-chiffre);font-weight:600;font-size:24px}
 
-/* barre d'outils */
-.outils{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
-.onglets{display:flex;gap:0;border:1px solid var(--encre);border-radius:6px;overflow:hidden}
-.onglets button{font:600 14px var(--f-texte);padding:8px 14px;border:0;background:var(--papier);color:var(--encre);cursor:pointer;border-right:1px solid var(--encre)}
+/* outils */
+.outils{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.onglets{display:flex;border:1px solid var(--encre);border-radius:6px;overflow:hidden}
+.onglets button{font:600 14px var(--f-texte);padding:7px 12px;border:0;background:var(--papier);color:var(--encre);cursor:pointer;border-right:1px solid var(--encre)}
 .onglets button:last-child{border-right:0}
 .onglets button[aria-pressed="true"]{background:var(--encre);color:var(--papier)}
-.filtres{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px solid var(--trait);background:var(--papier);color:var(--encre)}
+select,input[type=search]{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px solid var(--trait);background:var(--papier);color:var(--encre)}
+input[type=search]{min-width:0;flex:1 1 200px}
 .puces{display:flex;flex-wrap:wrap;gap:6px}
 .puce{font:600 13px var(--f-texte);padding:5px 10px;border-radius:99px;border:1px solid var(--trait);background:var(--papier);color:var(--encre);cursor:pointer}
-.puce[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:var(--papier)}
+.puce[aria-pressed="true"]{background:var(--signal);border-color:var(--signal);color:#fff}
 
-/* affaires */
+/* étiquettes d'affaires */
 .affaires{display:grid;gap:12px}
-.affaire{background:var(--papier);border:1px solid var(--trait);border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0}
-.affaire.rejete{opacity:.78}
+.affaire{background:var(--papier);border:1px solid var(--trait);border-radius:8px;display:grid;grid-template-columns:minmax(0,1fr) auto}
+.affaire.rejete{opacity:.8}
 .corps{padding:16px 18px;display:grid;gap:10px;min-width:0}
 .ligne-titre{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap}
-.ligne-titre h3{margin:0;font:700 18px/1.25 var(--f-texte);text-wrap:balance;min-width:0}
+.ligne-titre h3{font:700 18px/1.25 var(--f-texte);text-wrap:balance;min-width:0}
 .ligne-titre h3 a{text-decoration:none} .ligne-titre h3 a:hover{text-decoration:underline}
 .verdict{font:700 12px var(--f-texte);padding:4px 9px;border-radius:99px;white-space:nowrap}
 .verdict.valide{background:var(--ok-fond);color:var(--ok)} .verdict.rejete{background:var(--ko-fond);color:var(--ko)} .verdict.attente{background:var(--alerte-fond);color:var(--alerte)}
@@ -77,13 +85,13 @@ select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px so
 .trajet .prix{font:600 20px var(--f-chiffre);font-variant-numeric:tabular-nums}
 .barre{text-decoration:line-through;color:var(--doux);font-size:14px;margin-left:6px;font-family:var(--f-chiffre)}
 .notes{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px;color:var(--doux)}
-.notes span b{color:var(--encre);font-weight:600}
-.ia{display:inline-flex;gap:4px;flex-wrap:wrap}
+.notes b{color:var(--encre);font-weight:600}
+.ia{display:inline-flex;gap:4px;flex-wrap:wrap;align-items:center}
 .ia i{font-style:normal;font:600 12px var(--f-texte);padding:2px 7px;border-radius:4px;background:var(--signal-doux);color:var(--signal)}
-.audit{font-size:14px;border-left:3px solid var(--trait);padding-left:10px}
-.audit.valide{border-color:var(--ok)} .audit.rejete{border-color:var(--ko)}
+.encart{font-size:14px;border-left:3px solid var(--trait);padding-left:10px;overflow-wrap:anywhere}
+.encart.valide{border-color:var(--ok)} .encart.rejete{border-color:var(--ko)} .encart.google{border-color:var(--signal)}
 .marge{background:var(--etiquette);color:var(--etiquette-encre);padding:16px 18px;display:grid;align-content:center;justify-items:center;gap:2px;min-width:132px;border-radius:0 7px 7px 0;
-  -webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000) ;mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000)}
+  -webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000);mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000)}
 .affaire.rejete .marge{background:var(--trait);color:var(--doux)}
 .marge b{font:600 26px/1 var(--f-chiffre);font-variant-numeric:tabular-nums}
 .marge span{font-size:12px;font-weight:600}
@@ -91,182 +99,291 @@ select{font:15px var(--f-texte);padding:7px 10px;border-radius:6px;border:1px so
   .trajet{grid-template-columns:1fr;gap:4px}.fleche{display:none}}
 .vide{padding:28px;border:1px dashed var(--trait);border-radius:8px;text-align:center;color:var(--doux)}
 details.rejets>summary{cursor:pointer;font-weight:600;padding:6px 0}
-details.rejets[open]>summary{margin-bottom:10px}
 
-/* bas de page : championnat + machines */
-.deux{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:28px}
-@media (max-width:860px){.deux{grid-template-columns:1fr}}
-h2{font:800 22px/1.1 var(--f-titre);font-stretch:80%;text-transform:uppercase;letter-spacing:.01em;margin:0 0 10px}
+/* tableaux */
 .tableau{overflow-x:auto;background:var(--papier);border:1px solid var(--trait);border-radius:8px}
-table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
-th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait)}
-th{font:600 11px var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux)}
-td.n{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums;text-align:right} th.n{text-align:right}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--trait);vertical-align:top}
+th{font:600 11px var(--f-texte);letter-spacing:.08em;text-transform:uppercase;color:var(--doux);white-space:nowrap}
+td.n,th.n{text-align:right} td.n{font-family:var(--f-chiffre);font-variant-numeric:tabular-nums;white-space:nowrap}
 tr:last-child td{border-bottom:0}
+td a{text-decoration:none} td a:hover{text-decoration:underline}
+.pastille{font:700 11px var(--f-texte);padding:2px 7px;border-radius:99px;white-space:nowrap}
+.pastille.valide,.pastille.ok{background:var(--ok-fond);color:var(--ok)} .pastille.rejete,.pastille.ko{background:var(--ko-fond);color:var(--ko)} .pastille.attente,.pastille.att{background:var(--alerte-fond);color:var(--alerte)}
 .jauge{display:inline-block;width:56px;height:6px;border-radius:3px;background:var(--trait);vertical-align:middle;margin-right:6px;overflow:hidden}
 .jauge i{display:block;height:100%;background:var(--signal)}
-.machines{display:grid;gap:14px}
-.machines ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
-.machines li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;background:var(--papier);border:1px solid var(--trait);border-radius:6px;padding:8px 12px;font-size:14px;min-width:0}
-.machines li span:first-child{min-width:0;overflow-wrap:anywhere}
-.etat{font:700 12px var(--f-texte);padding:2px 8px;border-radius:99px;white-space:nowrap}
-.etat.ok{background:var(--ok-fond);color:var(--ok)} .etat.ko{background:var(--ko-fond);color:var(--ko)} .etat.att{background:var(--alerte-fond);color:var(--alerte)}
+.grille{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:16px}
+.bloc{background:var(--papier);border:1px solid var(--trait);border-radius:8px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.bloc ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.bloc li{display:flex;justify-content:space-between;gap:10px;align-items:baseline;font-size:14px;min-width:0}
+.bloc li span:first-child{min-width:0;overflow-wrap:anywhere}
+.texte{max-width:70ch;display:grid;gap:12px}
+.texte p{margin:0}
+.etapes{counter-reset:e;list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.etapes li{counter-increment:e;display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:start}
+.etapes li::before{content:counter(e);font:700 15px var(--f-chiffre);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--encre);color:var(--papier)}
 footer{font-size:13px;color:var(--doux);border-top:1px solid var(--trait);padding-top:14px}
 @media (prefers-reduced-motion:no-preference){.affaire{transition:transform .15s ease}.affaire:hover{transform:translateY(-1px)}}
 </style>
 
+<div class="barre-nav large">
+  <div class="cadre">
+    <div class="logo"><b>Dénicheur</b><span class="proto">Prototype</span></div>
+    <nav aria-label="Sections">
+      <a href="#aujourdhui">Aujourd’hui</a>
+      <a href="#affaires">Toutes les affaires</a>
+      <a href="#championnat">Championnat</a>
+      <a href="#systeme">Système</a>
+      <a href="#methode">Méthode</a>
+    </nav>
+  </div>
+</div>
+
+<main class="large">
 <div class="cadre">
-  <header>
-    <div class="marque"><h1>Dénicheur</h1><span class="proto">Prototype</span></div>
-    <div class="passage">
-      <span class="etiq">Passage analysé</span>
-      <span id="date-passage" class="chiffre">–</span>
-      <span id="statut" class="statut att">En attente de l’audit</span>
+
+  <!-- AUJOURD'HUI -->
+  <section class="vue" id="v-aujourdhui" aria-labelledby="t-auj">
+    <div class="tete">
+      <div><span class="etiq">Dernier passage</span><h2 id="t-auj">Affaires du jour</h2><span class="petit chiffre" id="auj-date">–</span></div>
+      <span id="auj-statut" class="statut att">En attente de l’audit</span>
     </div>
-  </header>
-
-  <section class="synthese" aria-label="Synthèse du passage">
-    <div><span class="etiq">Affaires validées</span><b id="s-valides">0</b><span class="petit" id="s-valides-sous">–</span></div>
-    <div class="chiffre"><span class="etiq">Marge nette totale</span><b id="s-marge">0 €</b><span class="petit">si une unité de chaque est vendue</span></div>
-    <div class="chiffre"><span class="etiq">Meilleure affaire</span><b id="s-meilleure">–</b><span class="petit" id="s-meilleure-sous">–</span></div>
-    <div><span class="etiq">IA en tête</span><b id="s-champion">–</b><span class="petit" id="s-champion-sous">–</span></div>
-  </section>
-
-  <section aria-label="Affaires du jour" style="display:grid;gap:14px">
+    <div class="synthese" aria-label="Synthèse">
+      <div><span class="etiq">Affaires validées</span><b id="s-valides">0</b><span class="petit" id="s-valides-sous">–</span></div>
+      <div class="chiffre"><span class="etiq">Marge nette totale</span><b id="s-marge">0 €</b><span class="petit">une unité de chaque</span></div>
+      <div class="chiffre"><span class="etiq">Meilleure affaire</span><b id="s-meilleure">–</b><span class="petit" id="s-meilleure-sous">–</span></div>
+      <div><span class="etiq">IA en tête</span><b id="s-champion">–</b><span class="petit" id="s-champion-sous">–</span></div>
+    </div>
     <div class="outils">
       <div class="onglets" role="group" aria-label="Mode de vente">
         <button type="button" data-mode="tous" aria-pressed="true">Toutes</button>
         <button type="button" data-mode="stock" aria-pressed="false">Avec stock</button>
         <button type="button" data-mode="dropshipping" aria-pressed="false">Dropshipping</button>
       </div>
-      <div class="filtres">
-        <label class="petit" for="tri">Trier par</label>
-        <select id="tri">
-          <option value="marge">Marge nette</option>
-          <option value="rentabilite">Rentabilité</option>
-          <option value="score">Score de l’équipe</option>
-        </select>
-      </div>
+      <label class="petit" for="auj-tri">Trier par</label>
+      <select id="auj-tri"><option value="marge">Marge nette</option><option value="rentabilite">Rentabilité</option><option value="score">Score de l’équipe</option></select>
     </div>
-    <div class="puces" id="domaines" role="group" aria-label="Domaines"></div>
-    <div class="affaires" id="liste"></div>
-    <details class="rejets" id="bloc-rejets"><summary id="titre-rejets">Affaires rejetées à l’audit</summary><div class="affaires" id="liste-rejets"></div></details>
+    <div class="puces" id="auj-domaines" role="group" aria-label="Domaines"></div>
+    <div class="affaires" id="auj-liste"></div>
+    <details class="rejets" id="auj-bloc-rejets"><summary id="auj-titre-rejets">Affaires rejetées</summary><div class="affaires" id="auj-rejets"></div></details>
   </section>
 
-  <div class="deux">
-    <section aria-label="Championnat des IA">
-      <h2>Championnat des IA</h2>
-      <div class="tableau"><table>
-        <thead><tr><th>IA</th><th>Fiabilité</th><th class="n">Proposées</th><th class="n">Validées</th><th class="n">Rejetées</th><th class="n">Points</th></tr></thead>
-        <tbody id="champ"></tbody>
-      </table></div>
-      <p class="petit">+3 points par affaire validée à l’audit, −1 par affaire rejetée. La fiabilité est la part des appels où l’IA a vraiment répondu.</p>
-    </section>
-    <section class="machines" aria-label="État du système">
-      <h2>Ce qui fonctionne</h2>
-      <div><span class="etiq">Sources de bons plans</span><ul id="sources"></ul></div>
-      <div><span class="etiq">Équipe d’IA</span><ul id="equipe"></ul></div>
-    </section>
-  </div>
+  <!-- TOUTES LES AFFAIRES -->
+  <section class="vue" id="v-affaires" aria-labelledby="t-aff" hidden>
+    <div class="tete"><div><span class="etiq">Historique complet</span><h2 id="t-aff">Toutes les affaires</h2></div><span class="petit" id="aff-compte">–</span></div>
+    <div class="outils">
+      <input type="search" id="aff-recherche" placeholder="Chercher un produit, un marchand…" aria-label="Chercher">
+      <select id="aff-verdict" aria-label="Verdict"><option value="">Tous les verdicts</option><option value="valide">Validées</option><option value="rejete">Rejetées</option><option value="attente">À vérifier</option></select>
+      <select id="aff-domaine" aria-label="Domaine"><option value="">Tous les domaines</option></select>
+      <select id="aff-pays" aria-label="Pays d’achat"><option value="">Tous les pays</option></select>
+      <select id="aff-mode" aria-label="Mode"><option value="">Stock et dropshipping</option><option value="stock">Avec stock</option><option value="dropshipping">Dropshipping</option></select>
+    </div>
+    <div class="tableau"><table>
+      <thead><tr><th>Produit</th><th>Achat</th><th class="n">Prix</th><th>Revente</th><th class="n">Marge</th><th class="n">Rentab.</th><th>Trouvé par</th><th>Audit</th><th>Passage</th></tr></thead>
+      <tbody id="aff-corps"></tbody>
+    </table></div>
+  </section>
 
-  <footer id="pied">Prototype : données réelles du dernier passage, mises à jour après chaque audit.</footer>
+  <!-- CHAMPIONNAT -->
+  <section class="vue" id="v-championnat" aria-labelledby="t-ch" hidden>
+    <div class="tete"><div><span class="etiq">Qui trouve les meilleures affaires</span><h2 id="t-ch">Championnat des IA</h2></div></div>
+    <div class="tableau"><table>
+      <thead><tr><th>IA</th><th>Marque</th><th>Rôle</th><th>Fiabilité</th><th class="n">Proposées</th><th class="n">Validées</th><th class="n">Rejetées</th><th class="n">Taux de réussite</th><th class="n">Points</th></tr></thead>
+      <tbody id="ch-corps"></tbody>
+    </table></div>
+    <h3 class="etiq">Meilleure IA par domaine</h3>
+    <div class="grille" id="ch-domaines"></div>
+    <p class="petit">Barème : +3 points par affaire validée à l’audit, −1 par affaire rejetée. Fiabilité : part des appels où l’IA a réellement répondu.</p>
+  </section>
+
+  <!-- SYSTÈME -->
+  <section class="vue" id="v-systeme" aria-labelledby="t-sys" hidden>
+    <div class="tete"><div><span class="etiq">Ce qui fonctionne</span><h2 id="t-sys">État du système</h2></div></div>
+    <div class="grille">
+      <div class="bloc"><span class="etiq">Sources (dernier passage)</span><ul id="sys-sources"></ul></div>
+      <div class="bloc"><span class="etiq">Équipe d’IA (dernier passage)</span><ul id="sys-equipe"></ul></div>
+      <div class="bloc"><span class="etiq">Vérificateur de prix Google</span><ul id="sys-verif"></ul></div>
+    </div>
+    <h3 class="etiq">Historique des passages</h3>
+    <div class="tableau"><table>
+      <thead><tr><th>Passage</th><th>Type</th><th class="n">Bons plans lus</th><th class="n">Nouveaux</th><th class="n">Étudiés</th><th class="n">Proposés</th><th>Audit</th></tr></thead>
+      <tbody id="sys-passages"></tbody>
+    </table></div>
+  </section>
+
+  <!-- MÉTHODE -->
+  <section class="vue" id="v-methode" aria-labelledby="t-met" hidden>
+    <div class="tete"><div><span class="etiq">Comment une affaire arrive ici</span><h2 id="t-met">La méthode</h2></div></div>
+    <div class="texte">
+      <ol class="etapes">
+        <li><div><b>Collecte.</b> Deux fois par jour, réglé sur l’heure de Pékin (0 h 30 et 10 h là-bas), les bons plans de Dealabs, mydealz, hotukdeals, chollometro et Les Numériques sont lus.</div></li>
+        <li><div><b>Filtre.</b> Prix hors fourchette, abonnements, forfaits, codes promo et offres locales sont écartés.</div></li>
+        <li><div><b>Tri.</b> Le trieur garde les produits physiques revendables.</div></li>
+        <li><div><b>Analyse.</b> Quatre IA de marques différentes étudient exactement les mêmes bons plans et proposent chacune leurs affaires.</div></li>
+        <li><div><b>Marge nette.</b> Le programme calcule lui-même la marge : commission de la plateforme, port, TVA et droit de douane de 3 € pour les achats hors UE.</div></li>
+        <li><div><b>Vérification Google.</b> Gemini cherche le prix neuf le plus bas et la fourchette d’occasion, avec les sources. Le prix de revente le plus prudent est retenu.</div></li>
+        <li><div><b>Audit de Claude.</b> Chaque affaire est validée ou rejetée avec un motif. Les verdicts donnent les points du championnat.</div></li>
+      </ol>
+      <div class="bloc"><span class="etiq">Seuils actuels</span><ul id="met-seuils"></ul></div>
+    </div>
+  </section>
+
+  <footer id="pied">Prototype · données réelles des passages du Dénicheur.</footer>
 </div>
+</main>
 
 <script>
-const DATA = {"date_affichee": "31/10/2026 à 15 h 57", "nb_annonces": 150, "nb_tries": 94, "sources": {"dealabs-tendance": {"ok": true, "nb": 30, "erreur": null}, "dealabs-nouveaux": {"ok": true, "nb": 30, "erreur": null}, "mydealz-hot": {"ok": true, "nb": 30, "erreur": null}, "hotukdeals-hot": {"ok": true, "nb": 30, "erreur": null}, "chollometro-hot": {"ok": true, "nb": 30, "erreur": null}, "lesnumeriques-bonsplans": {"ok": true, "nb": 0, "erreur": null}}, "agents": {"gemini": {"appels": 3, "reussites": 1, "erreurs": ["TimeoutError: The read operation timed out", "TimeoutError: The read operation timed out"], "choix": 2}, "nemotron": {"appels": 3, "reussites": 3, "erreurs": [], "choix": 15}, "glm": {"appels": 1000000, "reussites": 0, "erreurs": ["TimeoutError: The read operation timed out", "coupé pour ce passage (aucune réponse)", "plafond d'appels atteint"], "choix": 0}, "gptoss": {"appels": 3, "reussites": 1, "erreurs": ["HTTP 400 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}", "HTTP 400 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Failed to validate JSON. Please adjust your prompt. See 'failed_generation' for more details.\",\"type\":\"invalid_request_error\",\"code\":\"json_validate_failed\",\"failed_generation\":\"\"}"], "choix": 8}, "qwen": {"appels": 3, "reussites": 2, "erreurs": ["HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 999,"], "choix": 9}}, "classement": {"qwen": {"global": {"proposees": 16, "validees": 2, "rejetees": 3, "points": 3}, "domaine/tech": {"proposees": 7, "validees": 2, "rejetees": 0, "points": 6}, "domaine/puericulture-jouets": {"proposees": 5, "validees": 0, "rejetees": 1, "points": -1}, "domaine/mode": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/jardin-bricolage": {"proposees": 2, "validees": 0, "rejetees": 2, "points": -2}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 3, "reussis": 2, "taux": 67}}, "nemotron": {"global": {"proposees": 27, "validees": 4, "rejetees": 7, "points": 5}, "domaine/mode": {"proposees": 6, "validees": 1, "rejetees": 3, "points": 0}, "domaine/jardin-bricolage": {"proposees": 4, "validees": 0, "rejetees": 2, "points": -2}, "domaine/sport": {"proposees": 3, "validees": 0, "rejetees": 0, "points": 0}, "domaine/auto-moto": {"proposees": 2, "validees": 1, "rejetees": 0, "points": 3}, "domaine/tech": {"proposees": 5, "validees": 2, "rejetees": 0, "points": 6}, "domaine/puericulture-jouets": {"proposees": 4, "validees": 0, "rejetees": 2, "points": -2}, "domaine/beaute-sante": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/maison": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 3, "reussis": 3, "taux": 100}}, "gptoss": {"global": {"proposees": 11, "validees": 1, "rejetees": 3, "points": 0}, "domaine/jardin-bricolage": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/sport": {"proposees": 2, "validees": 0, "rejetees": 0, "points": 0}, "domaine/mode": {"proposees": 4, "validees": 1, "rejetees": 3, "points": 0}, "domaine/cuisine": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/tech": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/maison": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 3, "reussis": 1, "taux": 33}}, "gemini": {"global": {"proposees": 2, "validees": 0, "rejetees": 2, "points": -2}, "domaine/sport": {"proposees": 1, "validees": 0, "rejetees": 1, "points": -1}, "domaine/jardin-bricolage": {"proposees": 1, "validees": 0, "rejetees": 1, "points": -1}, "fiabilite": {"tentes": 3, "reussis": 1, "taux": 33}}, "glm": {"fiabilite": {"tentes": 1, "reussis": 0, "taux": 0}}}, "affaires": [{"id": "44cfb4780a", "titre": "Maillot Swingman Nike Icon Edition Memphis Grizzlies - Ja Morant", "prix": 28.8, "devise": "EUR", "marchand": "Fanatics", "lien": "https://www.dealabs.com/bons-plans/maillot-swingman-nike-icon-edition-memphis-grizzlies-ja-morant-3442733", "pays": "FR", "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 67.5, "cout_achat": 33.8, "marge_nette": 33.7, "rentabilite": 0.997, "demande": 4.0, "concurrence": 3.0, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 111.7, "erreur_prix": false, "audit": {"id": "44cfb4780a", "verdict": "valide", "commentaire": "Sur Vinted, les maillots Swingman neufs se vendent surtout entre 40 et 65 €. J'ai retenu 45 € et non 67 € comme l'IA : marge faible mais réelle. Tailles M et L uniquement.", "prix_revente_verifie": 45, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 11.2}}, {"id": "d8109a2904", "titre": "Maillot Domicile adidas de l'équipe nationale d'Allemagne 2026", "prix": 32.0, "devise": "EUR", "marchand": "Fanatics", "lien": "https://www.dealabs.com/bons-plans/maillot-domicile-adidas-de-lequipe-nationale-dallemagne-2026-3442732", "pays": "FR", "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 67.5, "cout_achat": 37.0, "marge_nette": 30.5, "rentabilite": 0.824, "demande": 4.0, "concurrence": 3.0, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 84.0, "erreur_prix": true, "audit": {"id": "d8109a2904", "verdict": "rejete", "commentaire": "Demande en forte baisse depuis la fin de la Coupe du monde 2026 et prix de revente non confirmé. Écart insuffisant pour prendre le risque."}}, {"id": "77ac2397e3", "titre": "ADIDAS TERREX AGRAVIC SPEED 2 - Zapatillas de trail. Tallas 38 a 50. Descuento aplicable a miembros plus", "prix": 69.21, "devise": "EUR", "marchand": "Privé by Zalando", "lien": "https://www.chollometro.com/ofertas/adidas-terrex-agravic-speed-2-zapatillas-de-trail-tallas-38-a-50-descuento-aplicable-a-miembros-plus-2050487", "pays": "ES", "domaine": "sport", "plateforme_revente": "vinted", "prix_revente_estime": 120.0, "cout_achat": 74.21, "marge_nette": 45.79, "rentabilite": 0.617, "demande": 4.0, "concurrence": 2.0, "agents": ["gemini"], "mode": "stock", "score": 61.5, "erreur_prix": false, "audit": {"id": "77ac2397e3", "verdict": "rejete", "commentaire": "Neuve à 119 € chez i-Run : on ne la revendra pas plus de 90-95 € sur Vinted. Il reste environ 20 €, soit moins de 30 % de rentabilité.", "prix_revente_verifie": 95, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 20.79}}, {"id": "2315c99274", "titre": "Lego City 60454 Le Camping Car d'Aventures (Via 5€ sur la Carte de Fidélité)", "prix": 14.99, "devise": "EUR", "marchand": "Auchan", "lien": "https://www.dealabs.com/bons-plans/jouet-lego-city-60454-le-camping-car-daventures-via-5eur-cagnottes-3441741", "pays": "FR", "domaine": "puericulture-jouets", "plateforme_revente": "vinted", "prix_revente_estime": 32.0, "cout_achat": 19.99, "marge_nette": 12.01, "rentabilite": 0.601, "demande": 4.0, "concurrence": 2.0, "agents": ["nemotron"], "mode": "stock", "score": 59.9, "erreur_prix": false, "audit": {"id": "2315c99274", "verdict": "rejete", "commentaire": "Le même set est à 17,99 € livré sur Amazon.fr. Le prix de 14,99 € demande en plus la carte fidélité Auchan. Revente à 32 € impossible."}}, {"id": "323e1c2c6d", "titre": "Calendrier de l’Avent Makita 2026 en coffret Makpac - P-84888", "prix": 101.99, "devise": "EUR", "marchand": "ManoMano", "lien": "https://www.dealabs.com/bons-plans/calendrier-de-lavent-makita-2026-en-coffret-makpac-p-84888-3442541", "pays": "FR", "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 145.0, "cout_achat": 106.99, "marge_nette": 38.01, "rentabilite": 0.355, "demande": 4.5, "concurrence": 2.0, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 52.7, "erreur_prix": false, "audit": {"id": "323e1c2c6d", "verdict": "rejete", "commentaire": "Le calendrier se trouve neuf entre 93 et 107 € en Europe. Personne ne l'achètera 145 € d'occasion."}}, {"id": "a64c6f93b7", "titre": "Bosch Schlagschrauber 18v-350 UniversalImpactDrive + Gratis Akku Starter Set", "prix": 88.98, "devise": "EUR", "marchand": "Amazon", "lien": "https://www.mydealz.de/deals/bosch-schlagschrauber-18v-350-universalimpactdrive-2862151", "pays": "DE", "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 130.0, "cout_achat": 93.98, "marge_nette": 36.02, "rentabilite": 0.383, "demande": 4.0, "concurrence": 3.0, "agents": ["gemini", "nemotron"], "mode": "stock", "score": 43.4, "erreur_prix": false, "audit": {"id": "a64c6f93b7", "verdict": "rejete", "commentaire": "Prix de revente non confirmé pour ce kit allemand (batterie et chargeur offerts). À revoir avec une vraie vérification Leboncoin."}}, {"id": "3a0484ec3b", "titre": "Processeur AMD Ryzen 7 9700X - 8 cœurs, 16 threads, boost 5.5GHz, 32Mo L3, AM5, 65W, sans ventirad", "prix": 164.64, "devise": "EUR", "marchand": "AliExpress", "lien": "https://www.dealabs.com/bons-plans/processeur-amd-ryzen-7-9700x-8-coeurs-16-threads-boost-55ghz-32mo-l3-am5-65w-sans-ventirad-3441353", "pays": "FR", "domaine": "tech", "plateforme_revente": "leboncoin", "prix_revente_estime": 270.0, "cout_achat": 169.64, "marge_nette": 100.36, "rentabilite": 0.592, "demande": 4.5, "concurrence": 3.0, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 42.2, "erreur_prix": true, "audit": {"id": "3a0484ec3b", "verdict": "valide", "commentaire": "Le moins cher en neuf en France est à 314-320 €. Revendu neuf sous blister vers 250 € sur Leboncoin, il reste nettement sous le neuf. Acheter chez le vendeur officiel AMD sur AliExpress (facture et garantie).", "prix_revente_verifie": 250, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 80.36}}, {"id": "3b086a43e2", "titre": "Veste Tommy Hilfiger L - Vert Olive", "prix": 58.06, "devise": "EUR", "marchand": "Amazon", "lien": "https://www.dealabs.com/bons-plans/veste-tommy-hilfiger-l-vert-olive-3442710", "pays": "FR", "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 95.0, "cout_achat": 63.06, "marge_nette": 31.94, "rentabilite": 0.507, "demande": 3.0, "concurrence": 3.0, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 38.5, "erreur_prix": false, "audit": {"id": "3b086a43e2", "verdict": "rejete", "commentaire": "Une seule taille (L) et la revente Vinted d'une veste Tommy neuve tourne autour de 60 à 80 €. Marge trop faible et trop incertaine."}}, {"id": "937385219d", "titre": "Veste The North Face Zaneck - Tailles S à XL", "prix": 167.49, "devise": "EUR", "marchand": "TradeInn", "lien": "https://www.dealabs.com/bons-plans/veste-the-north-face-zaneck-tailles-s-a-xl-3442705", "pays": "FR", "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 230.0, "cout_achat": 172.49, "marge_nette": 57.51, "rentabilite": 0.333, "demande": 4.0, "concurrence": 3.0, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 36.6, "erreur_prix": false, "audit": {"id": "937385219d", "verdict": "rejete", "commentaire": "Neuve vers 300-320 € en boutique, revendable vers 210 € sur Vinted : environ 38 € de marge, soit 22 %, sous le seuil de 30 %.", "prix_revente_verifie": 210, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 37.51}}, {"id": "d5c2fdf35c", "titre": "Monopoly Mega Gold Edition bei Thomas Philipps", "prix": 19.99, "devise": "EUR", "marchand": "Thomas Philipps", "lien": "https://www.mydealz.de/deals/monopoly-mega-gold-edition-bei-thomas-philipps-2862159", "pays": "DE", "domaine": "puericulture-jouets", "plateforme_revente": "vinted", "prix_revente_estime": 38.0, "cout_achat": 24.99, "marge_nette": 13.01, "rentabilite": 0.521, "demande": 3.0, "concurrence": 3.0, "agents": ["nemotron"], "mode": "stock", "score": 29.2, "erreur_prix": false, "audit": {"id": "d5c2fdf35c", "verdict": "rejete", "commentaire": "Thomas Philipps vend en magasin en Allemagne : impossible à acheter depuis la France."}}, {"id": "ad3c910311", "titre": "Processeur AMD Ryzen 7 7700 - 8 cœurs, 16 threads, 4.5GHz, 32Mo L3, AM5, DDR5, sans ventirad", "prix": 120.2, "devise": "EUR", "marchand": "AliExpress", "lien": "https://www.dealabs.com/bons-plans/processeur-amd-ryzen-7-7700-8-coeurs-16-threads-45ghz-32mo-l3-am5-ddr5-sans-ventirad-3441825", "pays": "FR", "domaine": "tech", "plateforme_revente": "leboncoin", "prix_revente_estime": 185.0, "cout_achat": 125.2, "marge_nette": 59.8, "rentabilite": 0.478, "demande": 4.0, "concurrence": 3.0, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 28.7, "erreur_prix": true, "audit": {"id": "ad3c910311", "verdict": "valide", "commentaire": "Une seule offre neuve en France ce jour, à 293,71 €. Revente prudente à 180 € en neuf scellé. Même précaution : vendeur officiel AliExpress.", "prix_revente_verifie": 180, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 54.8}}, {"id": "e80814f2df", "titre": "Casco de moto modular PREMIER Legacy GT | FIBRA (Carbono/Dyneema/Aramida) | ECE22.06 doble P/J | Con PinLock |Tallas de XS a 2XL", "prix": 177.47, "devise": "EUR", "marchand": "OutletMoto.eu", "lien": "https://www.chollometro.com/ofertas/casco-de-moto-modular-premier-legacy-gt-fibra-carbonodyneemaaramida-ece2206-doble-pj-con-pinlock-tallas-de-xs-a-2xl-2050423", "pays": "ES", "domaine": "auto-moto", "plateforme_revente": "leboncoin", "prix_revente_estime": 260.0, "cout_achat": 182.47, "marge_nette": 77.53, "rentabilite": 0.425, "demande": 3.0, "concurrence": 2.0, "agents": ["nemotron"], "mode": "stock", "score": 28.1, "erreur_prix": false, "audit": {"id": "e80814f2df", "verdict": "valide", "commentaire": "Prix public chez Dafy : 533,94 €. Ici à 177,47 €. Revente neuf avec étiquette vers 300 € reste très attractive. Attention à la taille : prendre les tailles M et L, les plus demandées.", "prix_revente_verifie": 300, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 117.53}}], "audit_fait": true, "audit_resume": "4 validées sur 12. Les 2 processeurs AMD et le casque Premier offrent les meilleures marges. 8 rejets : prix de revente surestimés, produits trouvables neufs moins cher, ou impossibles à acheter depuis la France."};
+const DATA = {"genere": "31/10/2026 à 16 h 27", "passages": [{"horodatage": "2026-10-31_1525", "passage": "europe", "date_affichee": "31/10/2026 à 15 h 25", "nb_annonces": 150, "nb_nouvelles": 150, "nb_tries": 97, "nb_candidats": 7, "sources": {"dealabs-tendance": {"ok": true, "nb": 30}, "dealabs-nouveaux": {"ok": true, "nb": 30}, "mydealz-hot": {"ok": true, "nb": 30}, "hotukdeals-hot": {"ok": true, "nb": 30}, "chollometro-hot": {"ok": true, "nb": 30}, "lesnumeriques-bonsplans": {"ok": true, "nb": 0}}, "agents": {"gemini": {"appels": 99, "reussites": 0, "choix": 0, "remplace": null}, "deepseek": {"appels": 99, "reussites": 0, "choix": 0, "remplace": null}, "nemotron": {"appels": 3, "reussites": 3, "choix": 20, "remplace": null}, "glm": {"appels": 99, "reussites": 0, "choix": 0, "remplace": null}, "gptoss": {"appels": 3, "reussites": 3, "choix": 7, "remplace": null}, "qwen": {"appels": 3, "reussites": 2, "choix": 9, "remplace": "gemini"}}, "verification": null, "audite": false, "audit_resume": null}, {"horodatage": "2026-10-31_1557", "passage": "europe", "date_affichee": "31/10/2026 à 15 h 57", "nb_annonces": 150, "nb_nouvelles": 150, "nb_tries": 94, "nb_candidats": 12, "sources": {"dealabs-tendance": {"ok": true, "nb": 30}, "dealabs-nouveaux": {"ok": true, "nb": 30}, "mydealz-hot": {"ok": true, "nb": 30}, "hotukdeals-hot": {"ok": true, "nb": 30}, "chollometro-hot": {"ok": true, "nb": 30}, "lesnumeriques-bonsplans": {"ok": true, "nb": 0}}, "agents": {"gemini": {"appels": 3, "reussites": 1, "choix": 2, "remplace": null}, "nemotron": {"appels": 3, "reussites": 3, "choix": 15, "remplace": null}, "glm": {"appels": 99, "reussites": 0, "choix": 0, "remplace": null}, "gptoss": {"appels": 3, "reussites": 1, "choix": 8, "remplace": null}, "qwen": {"appels": 3, "reussites": 2, "choix": 9, "remplace": null}}, "verification": null, "audite": true, "audit_resume": "4 validées sur 12. Les 2 processeurs AMD et le casque Premier offrent les meilleures marges. 8 rejets : prix de revente surestimés, produits trouvables neufs moins cher, ou impossibles à acheter depuis la France."}, {"horodatage": "2026-10-31_1627", "passage": "europe", "date_affichee": "31/10/2026 à 16 h 27", "nb_annonces": 190, "nb_nouvelles": 80, "nb_tries": 16, "nb_candidats": 5, "sources": {"dealabs-tendance": {"ok": true, "nb": 30}, "dealabs-nouveaux": {"ok": true, "nb": 30}, "mydealz-hot": {"ok": true, "nb": 30}, "hotukdeals-hot": {"ok": true, "nb": 30}, "chollometro-hot": {"ok": true, "nb": 30}, "lesnumeriques-bonsplans": {"ok": true, "nb": 40}}, "agents": {"gemini": {"appels": 99, "reussites": 0, "choix": 0, "remplace": null}, "nemotron": {"appels": 1, "reussites": 1, "choix": 4, "remplace": null}, "glm": {"appels": 1, "reussites": 1, "choix": 0, "remplace": null}, "gptoss": {"appels": 2, "reussites": 2, "choix": 8, "remplace": null}, "qwen": {"appels": 2, "reussites": 2, "choix": 4, "remplace": null}, "gemma": {"appels": 99, "reussites": 0, "choix": 0, "remplace": "gemini"}, "nemotron_nv": {"appels": 1, "reussites": 1, "choix": 3, "remplace": "gemini"}}, "verification": {"faits": 0, "erreurs": ["HTTP 429 (gemini-3.8-flash)", "HTTP 429 (gemini-flash-latest)", "HTTP 429 (gemini-3.5-flash)", "HTTP 429 (gemini-3.8-flash)", "HTTP 429 (gemini-flash-latest)", "HTTP 429 (gemini-3.5-flash)", "HTTP 429 (gemini-3.8-flash)", "HTTP 429 (gemini-flash-latest)", "HTTP 429 (gemini-3.5-flash)", "HTTP 429 (gemini-3.8-flash)", "HTTP 429 (gemini-flash-latest)", "HTTP 429 (gemini-3.5-flash)", "HTTP 429 (gemini-3.8-flash)", "HTTP 429 (gemini-flash-latest)", "HTTP 429 (gemini-3.5-flash)"]}, "audite": false, "audit_resume": null}], "affaires": [{"id": "0fd05b7be5", "titre": "FitVille Herren Rebound Neo V2 Wanderschuhe in Breit/Extra Breit (2E/4E) für 26,99€ statt 86,90€", "prix": 26.99, "devise": "EUR", "marchand": "FitVille", "lien": "https://www.mydealz.de/deals/fitville-herren-rebound-neo-v2-wanderschuhe-in-breitextra-breit-2e4e-fur-2699eur-statt-8690eur-2861867", "pays": "DE", "source": "mydealz-hot", "temperature": 101, "domaine": "sport", "plateforme_revente": "leboncoin", "prix_revente_estime": 70.0, "cout_achat": 31.99, "marge_nette": 38.01, "rentabilite": 1.188, "demande": 4.0, "concurrence": 2.0, "consensus": 1, "agents": ["gptoss"], "mode": "stock", "score": 125.5, "erreur_prix": false, "raisons": {"gptoss": "Chaussures de randonnée à prix promotionnel, marge nette élevée sur Leboncoin."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1627", "audit": {"verdict": "attente"}}, {"id": "c7c3f856a7", "titre": "Baskets Tommy Hilfiger - Bicolores Homme à Drapeau Ton sur Ton", "prix": 32.0, "devise": "EUR", "marchand": "Tommy Hilfiger", "lien": "https://www.dealabs.com/bons-plans/tommy-hilfiger-baskets-bicolores-homme-a-drapeau-ton-sur-ton-3442768", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 60.0, "cout_achat": 37.0, "marge_nette": 23.0, "rentabilite": 0.622, "demande": 3.3, "concurrence": 3.0, "consensus": 3, "agents": ["gptoss", "nemotron", "nemotron_nv"], "mode": "stock", "score": 60.8, "erreur_prix": false, "raisons": {"nemotron_nv": "Tommy Hilfiger à prix cassé, marque identifiable, revente rapide sur Vinted.", "nemotron": "Baskets Tommy Hilfiger homme neuves à 32€ (prix public 100€+), revente 55-65€ sur Vinted, tailles dispo, marge correcte malgré concurrence outlet.", "gptoss": "Prix d'achat très inférieur au prix de revente moyen sur Vinted pour des baskets Tommy Hilfiger neuves."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1627", "audit": {"verdict": "attente"}}, {"id": "a9b5279715", "titre": "Adidas Zapatillas de running Ultraboost 5X Mujer- Tallas- 36, 37 1/3, 42 2/3", "prix": 62.99, "devise": "EUR", "marchand": "Private Sport Shop", "lien": "https://www.chollometro.com/ofertas/adidas-zapatillas-de-running-ultraboost-5x-mujer-tallas-36-37-13-42-23-2050673", "pays": "ES", "source": "chollometro-hot", "temperature": 201, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 102.5, "cout_achat": 67.99, "marge_nette": 34.51, "rentabilite": 0.508, "demande": 4.5, "concurrence": 3.5, "consensus": 2, "agents": ["gptoss", "nemotron_nv"], "mode": "stock", "score": 57.9, "erreur_prix": false, "raisons": {"nemotron_nv": "Adidas Ultraboost à -60% du prix public, marque recherchée, revente facile sur Vinted.", "gptoss": "Chaussures Adidas très demandées, prix d'achat bien inférieur au prix de revente Vinted."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1627", "audit": {"verdict": "attente"}}, {"id": "98ad6c1f6a", "titre": "Sony INZONE Mouse-A Gaming-Maus (PixArt PAW 3950 bis 30.000dpi, 8.000Hz, 2.4GHz-Empfänger, USB-C, ~90h Akku, 48g)", "prix": 52.98, "devise": "EUR", "marchand": "Saturn", "lien": "https://www.mydealz.de/deals/sony-inzone-mouse-a-gaming-maus-pixart-paw-3950-bis-30000dpi-8000hz-24ghz-empfanger-usb-c-90h-akku-48g-2862224", "pays": "DE", "source": "mydealz-hot", "temperature": 117, "domaine": "tech", "plateforme_revente": "ebay", "prix_revente_estime": 97.5, "cout_achat": 57.98, "marge_nette": 20.5, "rentabilite": 0.354, "demande": 4.5, "concurrence": 2.5, "consensus": 2, "agents": ["nemotron", "nemotron_nv"], "mode": "stock", "score": 47.4, "erreur_prix": false, "raisons": {"nemotron_nv": "Souris gaming Sony haut de gamme bradée chez Saturn, forte demande et envoi simple.", "nemotron": "Souris gaming Sony INZONE M1 neuve à 53€ (prix marché 85-95€), modèle récent ultra-léger très recherché, revente facile sans frais sur LBC/eBay."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1627", "audit": {"verdict": "attente"}}, {"id": "1083010ac2", "titre": "Jouet Lego City 60367 L'avion de ligne (via coupon)", "prix": 49.42, "devise": "EUR", "marchand": "Amazon", "lien": "https://www.dealabs.com/bons-plans/lego-city-40367-lavion-de-ligne-3442663", "pays": "FR", "source": "dealabs-tendance", "temperature": 109, "domaine": "puericulture-jouets", "plateforme_revente": "leboncoin", "prix_revente_estime": 80.0, "cout_achat": 54.42, "marge_nette": 25.58, "rentabilite": 0.47, "demande": 3.5, "concurrence": 2.5, "consensus": 2, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 43.2, "erreur_prix": false, "raisons": {"qwen": "Les sets Lego City de grande taille sont très recherchés par les collectionneurs et les parents, offrant une marge de revente stable.", "nemotron": "Lego City 60367 (avion) à 49€ via coupon vs 90-100€ revente neuf, set populaire en fin de vie, marge nette ~40€ après port LBC."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1627", "audit": {"verdict": "attente"}}, {"id": "44cfb4780a", "titre": "Maillot Swingman Nike Icon Edition Memphis Grizzlies - Ja Morant", "prix": 28.8, "devise": "EUR", "marchand": "Fanatics", "lien": "https://www.dealabs.com/bons-plans/maillot-swingman-nike-icon-edition-memphis-grizzlies-ja-morant-3442733", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 67.5, "cout_achat": 33.8, "marge_nette": 33.7, "rentabilite": 0.997, "demande": 4.0, "concurrence": 3.0, "consensus": 2, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 111.7, "erreur_prix": false, "raisons": {"nemotron": "Maillot NBA Swingman Nike joueur star (Ja Morant) à 28,80 €, se revend 60-75 € neuf sur Vinted/eBay ; léger, forte demande fans, marge nette ~25 € après port.", "gptoss": "Bonne marge nette sur un maillot NBA limité, forte demande et faible concurrence."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "44cfb4780a", "verdict": "valide", "commentaire": "Sur Vinted, les maillots Swingman neufs se vendent surtout entre 40 et 65 €. J'ai retenu 45 € et non 67 € comme l'IA : marge faible mais réelle. Tailles M et L uniquement.", "prix_revente_verifie": 45, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 11.2, "audit_du": "2026-10-31_1557"}}, {"id": "d8109a2904", "titre": "Maillot Domicile adidas de l'équipe nationale d'Allemagne 2026", "prix": 32.0, "devise": "EUR", "marchand": "Fanatics", "lien": "https://www.dealabs.com/bons-plans/maillot-domicile-adidas-de-lequipe-nationale-dallemagne-2026-3442732", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 67.5, "cout_achat": 37.0, "marge_nette": 30.5, "rentabilite": 0.824, "demande": 4.0, "concurrence": 3.0, "consensus": 2, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 84.0, "erreur_prix": true, "raisons": {"nemotron": "Maillot domicile Allemagne 2026 adidas à 32 € (prix public ~90 €) : marge énorme si commande honorée, mais risque fort d'erreur de prix ou d'annulation Fanatics.", "gptoss": "Maillot national allemand 2026, bonne marge et forte demande saisonnière."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "d8109a2904", "verdict": "rejete", "commentaire": "Demande en forte baisse depuis la fin de la Coupe du monde 2026 et prix de revente non confirmé. Écart insuffisant pour prendre le risque.", "audit_du": "2026-10-31_1557"}}, {"id": "3b086a43e2", "titre": "Veste Tommy Hilfiger L - Vert Olive", "prix": 58.06, "devise": "EUR", "marchand": "Amazon", "lien": "https://www.dealabs.com/bons-plans/veste-tommy-hilfiger-l-vert-olive-3442710", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 95.0, "cout_achat": 63.06, "marge_nette": 31.94, "rentabilite": 0.507, "demande": 3.0, "concurrence": 3.0, "consensus": 2, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 38.5, "erreur_prix": false, "raisons": {"nemotron": "Veste Tommy Hilfiger taille L vert olive à 58 €, revente 90-110 € neuf sur Vinted ; marge ~35 €, mais taille unique limite les acheteurs.", "gptoss": "Veste Tommy Hilfiger populaire, marge correcte et revente facile."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "3b086a43e2", "verdict": "rejete", "commentaire": "Une seule taille (L) et la revente Vinted d'une veste Tommy neuve tourne autour de 60 à 80 €. Marge trop faible et trop incertaine.", "audit_du": "2026-10-31_1557"}}, {"id": "323e1c2c6d", "titre": "Calendrier de l’Avent Makita 2026 en coffret Makpac - P-84888", "prix": 101.99, "devise": "EUR", "marchand": "ManoMano", "lien": "https://www.dealabs.com/bons-plans/calendrier-de-lavent-makita-2026-en-coffret-makpac-p-84888-3442541", "pays": "FR", "source": "dealabs-tendance", "temperature": 216, "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 145.0, "cout_achat": 106.99, "marge_nette": 38.01, "rentabilite": 0.355, "demande": 4.5, "concurrence": 2.0, "consensus": 2, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 52.7, "erreur_prix": false, "raisons": {"qwen": "Le calendrier de l'Avent Makita est un produit de niche très recherché par les bricoleurs, souvent introuvable en stock à ce prix, permettant une marge confortable sur Leboncoin.", "nemotron": "Calendrier Makita 2026 très recherché, rupture rapide, revente 150-180€ sur LBC sans frais, marge nette ~50€."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "323e1c2c6d", "verdict": "rejete", "commentaire": "Le calendrier se trouve neuf entre 93 et 107 € en Europe. Personne ne l'achètera 145 € d'occasion.", "audit_du": "2026-10-31_1557"}}, {"id": "77ac2397e3", "titre": "ADIDAS TERREX AGRAVIC SPEED 2 - Zapatillas de trail. Tallas 38 a 50. Descuento aplicable a miembros plus", "prix": 69.21, "devise": "EUR", "marchand": "Privé by Zalando", "lien": "https://www.chollometro.com/ofertas/adidas-terrex-agravic-speed-2-zapatillas-de-trail-tallas-38-a-50-descuento-aplicable-a-miembros-plus-2050487", "pays": "ES", "source": "chollometro-hot", "temperature": 189, "domaine": "sport", "plateforme_revente": "vinted", "prix_revente_estime": 120.0, "cout_achat": 74.21, "marge_nette": 45.79, "rentabilite": 0.617, "demande": 4.0, "concurrence": 2.0, "consensus": 1, "agents": ["gemini"], "mode": "stock", "score": 61.5, "erreur_prix": false, "raisons": {"gemini": "Modèle trail performant très demandé (prix public ~180 €) avec revente facile et sans commission vendeur sur Vinted."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "77ac2397e3", "verdict": "rejete", "commentaire": "Neuve à 119 € chez i-Run : on ne la revendra pas plus de 90-95 € sur Vinted. Il reste environ 20 €, soit moins de 30 % de rentabilité.", "prix_revente_verifie": 95, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 20.79, "audit_du": "2026-10-31_1557"}}, {"id": "2315c99274", "titre": "Lego City 60454 Le Camping Car d'Aventures (Via 5€ sur la Carte de Fidélité)", "prix": 14.99, "devise": "EUR", "marchand": "Auchan", "lien": "https://www.dealabs.com/bons-plans/jouet-lego-city-60454-le-camping-car-daventures-via-5eur-cagnottes-3441741", "pays": "FR", "source": "dealabs-tendance", "temperature": 123, "domaine": "puericulture-jouets", "plateforme_revente": "vinted", "prix_revente_estime": 32.0, "cout_achat": 19.99, "marge_nette": 12.01, "rentabilite": 0.601, "demande": 4.0, "concurrence": 2.0, "consensus": 1, "agents": ["nemotron"], "mode": "stock", "score": 59.9, "erreur_prix": false, "raisons": {"nemotron": "Lego City Campervan à 14,99 € (avec carte fidélité) vs 39,99 € prix public, petit, léger, forte demande, revente facile sur Vinted/LBC."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "2315c99274", "verdict": "rejete", "commentaire": "Le même set est à 17,99 € livré sur Amazon.fr. Le prix de 14,99 € demande en plus la carte fidélité Auchan. Revente à 32 € impossible.", "audit_du": "2026-10-31_1557"}}, {"id": "a64c6f93b7", "titre": "Bosch Schlagschrauber 18v-350 UniversalImpactDrive + Gratis Akku Starter Set", "prix": 88.98, "devise": "EUR", "marchand": "Amazon", "lien": "https://www.mydealz.de/deals/bosch-schlagschrauber-18v-350-universalimpactdrive-2862151", "pays": "DE", "source": "mydealz-hot", "temperature": 161, "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 130.0, "cout_achat": 93.98, "marge_nette": 36.02, "rentabilite": 0.383, "demande": 4.0, "concurrence": 3.0, "consensus": 2, "agents": ["gemini", "nemotron"], "mode": "stock", "score": 43.4, "erreur_prix": false, "raisons": {"gemini": "Pack visseuse à choc 18V avec kit batterie/chargeur inclus, matériel Bosch très recherché se revendant sans frais sur Leboncoin.", "nemotron": "Pack Bosch Perceuse à choc + batterie offerte à 89€, kit revendu 120-135€, forte demande bricolage, marge nette ~35€."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "a64c6f93b7", "verdict": "rejete", "commentaire": "Prix de revente non confirmé pour ce kit allemand (batterie et chargeur offerts). À revoir avec une vraie vérification Leboncoin.", "audit_du": "2026-10-31_1557"}}, {"id": "3a0484ec3b", "titre": "Processeur AMD Ryzen 7 9700X - 8 cœurs, 16 threads, boost 5.5GHz, 32Mo L3, AM5, 65W, sans ventirad", "prix": 164.64, "devise": "EUR", "marchand": "AliExpress", "lien": "https://www.dealabs.com/bons-plans/processeur-amd-ryzen-7-9700x-8-coeurs-16-threads-boost-55ghz-32mo-l3-am5-65w-sans-ventirad-3441353", "pays": "FR", "source": "dealabs-tendance", "temperature": 140, "domaine": "tech", "plateforme_revente": "leboncoin", "prix_revente_estime": 270.0, "cout_achat": 169.64, "marge_nette": 100.36, "rentabilite": 0.592, "demande": 4.5, "concurrence": 3.0, "consensus": 2, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 42.2, "erreur_prix": true, "raisons": {"qwen": "Le Ryzen 7 9700X se vend couramment autour de 230-250 € en France, offrant une marge nette confortable après frais de douane et commission, avec une forte demande pour la plateforme AM5.", "nemotron": "Ryzen 7 9700X à 164 € sur AliExpress (prix public ~360 €) : prix anormalement bas, risque fort d'erreur de prix, pas de garantie UE, douane/TVA à l'import."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "3a0484ec3b", "verdict": "valide", "commentaire": "Le moins cher en neuf en France est à 314-320 €. Revendu neuf sous blister vers 250 € sur Leboncoin, il reste nettement sous le neuf. Acheter chez le vendeur officiel AMD sur AliExpress (facture et garantie).", "prix_revente_verifie": 250, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 80.36, "audit_du": "2026-10-31_1557"}}, {"id": "937385219d", "titre": "Veste The North Face Zaneck - Tailles S à XL", "prix": 167.49, "devise": "EUR", "marchand": "TradeInn", "lien": "https://www.dealabs.com/bons-plans/veste-the-north-face-zaneck-tailles-s-a-xl-3442705", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "mode", "plateforme_revente": "vinted", "prix_revente_estime": 230.0, "cout_achat": 172.49, "marge_nette": 57.51, "rentabilite": 0.333, "demande": 4.0, "concurrence": 3.0, "consensus": 2, "agents": ["gptoss", "nemotron"], "mode": "stock", "score": 36.6, "erreur_prix": false, "raisons": {"nemotron": "Veste The North Face Zaneck à 167 € (prix public 250-300 €) ; se revend 200-220 € neuf sur Vinted sans frais vendeur, marge nette ~35 €.", "gptoss": "Veste The North Face recherchée, forte marge nette sans frais."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "937385219d", "verdict": "rejete", "commentaire": "Neuve vers 300-320 € en boutique, revendable vers 210 € sur Vinted : environ 38 € de marge, soit 22 %, sous le seuil de 30 %.", "prix_revente_verifie": 210, "plateforme_verifiee": "vinted", "marge_nette_verifiee": 37.51, "audit_du": "2026-10-31_1557"}}, {"id": "d5c2fdf35c", "titre": "Monopoly Mega Gold Edition bei Thomas Philipps", "prix": 19.99, "devise": "EUR", "marchand": "Thomas Philipps", "lien": "https://www.mydealz.de/deals/monopoly-mega-gold-edition-bei-thomas-philipps-2862159", "pays": "DE", "source": "mydealz-hot", "temperature": 117, "domaine": "puericulture-jouets", "plateforme_revente": "vinted", "prix_revente_estime": 38.0, "cout_achat": 24.99, "marge_nette": 13.01, "rentabilite": 0.521, "demande": 3.0, "concurrence": 3.0, "consensus": 1, "agents": ["nemotron"], "mode": "stock", "score": 29.2, "erreur_prix": false, "raisons": {"nemotron": "Monopoly Mega Gold à 19,99 € vs ~45 € prix public, jeu de société populaire, marge nette ~15 € après frais de port acheteur."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "d5c2fdf35c", "verdict": "rejete", "commentaire": "Thomas Philipps vend en magasin en Allemagne : impossible à acheter depuis la France.", "audit_du": "2026-10-31_1557"}}, {"id": "ad3c910311", "titre": "Processeur AMD Ryzen 7 7700 - 8 cœurs, 16 threads, 4.5GHz, 32Mo L3, AM5, DDR5, sans ventirad", "prix": 120.2, "devise": "EUR", "marchand": "AliExpress", "lien": "https://www.dealabs.com/bons-plans/processeur-amd-ryzen-7-7700-8-coeurs-16-threads-45ghz-32mo-l3-am5-ddr5-sans-ventirad-3441825", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "tech", "plateforme_revente": "leboncoin", "prix_revente_estime": 185.0, "cout_achat": 125.2, "marge_nette": 59.8, "rentabilite": 0.478, "demande": 4.0, "concurrence": 3.0, "consensus": 2, "agents": ["nemotron", "qwen"], "mode": "stock", "score": 28.7, "erreur_prix": true, "raisons": {"qwen": "Le Ryzen 7 7700 est un processeur très recherché pour les builds AM5, se revendant facilement autour de 180-190 €, ce qui permet une marge saine sur le prix d'achat AliExpress.", "nemotron": "Ryzen 7 7700 à 120 € sur AliExpress (prix marché ~180-200 €) : même risque d'erreur de prix / marché gris sans garantie UE."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "ad3c910311", "verdict": "valide", "commentaire": "Une seule offre neuve en France ce jour, à 293,71 €. Revente prudente à 180 € en neuf scellé. Même précaution : vendeur officiel AliExpress.", "prix_revente_verifie": 180, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 54.8, "audit_du": "2026-10-31_1557"}}, {"id": "e80814f2df", "titre": "Casco de moto modular PREMIER Legacy GT | FIBRA (Carbono/Dyneema/Aramida) | ECE22.06 doble P/J | Con PinLock |Tallas de XS a 2XL", "prix": 177.47, "devise": "EUR", "marchand": "OutletMoto.eu", "lien": "https://www.chollometro.com/ofertas/casco-de-moto-modular-premier-legacy-gt-fibra-carbonodyneemaaramida-ece2206-doble-pj-con-pinlock-tallas-de-xs-a-2xl-2050423", "pays": "ES", "source": "chollometro-hot", "temperature": 205, "domaine": "auto-moto", "plateforme_revente": "leboncoin", "prix_revente_estime": 260.0, "cout_achat": 182.47, "marge_nette": 77.53, "rentabilite": 0.425, "demande": 3.0, "concurrence": 2.0, "consensus": 1, "agents": ["nemotron"], "mode": "stock", "score": 28.1, "erreur_prix": false, "raisons": {"nemotron": "Casque modulaire Premier Carbone ECE22.06 + Pinlock à 177€, prix marché 280-320€, marge ~50€ malgré encombrement, spécifications haut de gamme."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1557", "audit": {"id": "e80814f2df", "verdict": "valide", "commentaire": "Prix public chez Dafy : 533,94 €. Ici à 177,47 €. Revente neuf avec étiquette vers 300 € reste très attractive. Attention à la taille : prendre les tailles M et L, les plus demandées.", "prix_revente_verifie": 300, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 117.53, "audit_du": "2026-10-31_1557"}}, {"id": "4be6fe7860", "titre": "Dolce Gusto Krups Piccolo XS YY4556FD - Rouge, Noire", "prix": 29.99, "devise": "EUR", "marchand": "Boulanger", "lien": "https://www.dealabs.com/bons-plans/dolce-gusto-krups-piccolo-xs-rouge-noire-yy4556fd-3442704", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "cuisine", "plateforme_revente": "leboncoin", "prix_revente_estime": 55.0, "cout_achat": 34.99, "marge_nette": 20.01, "rentabilite": 0.572, "demande": 3.0, "concurrence": 3.0, "consensus": 1, "agents": ["gptoss"], "mode": "stock", "score": 36.6, "erreur_prix": false, "raisons": {"gptoss": "Le Dolce Gusto Krups Piccolo XS se vend neuf autour de 80 €, ce qui laisse une marge de ~20 € après les frais de vente."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1525", "audit": {"verdict": "attente"}}, {"id": "a89fb77a51", "titre": "Cric hydraulique Ultimate Speed - 2T", "prix": 34.99, "devise": "EUR", "marchand": "Lidl", "lien": "https://www.dealabs.com/bons-plans/cric-hydraulique-ultimate-speed-2t-3442726", "pays": "FR", "source": "dealabs-nouveaux", "temperature": null, "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 60.0, "cout_achat": 39.99, "marge_nette": 20.01, "rentabilite": 0.5, "demande": 3.0, "concurrence": 3.0, "consensus": 1, "agents": ["gptoss"], "mode": "stock", "score": 32.0, "erreur_prix": false, "raisons": {"gptoss": "Le cric hydraulique Ultimate Speed se vend neuf autour de 70 €, ce qui laisse une marge nette intéressante même après les frais de plateforme."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1525", "audit": {"verdict": "attente"}}, {"id": "d90d09112c", "titre": "[Kaufland] Parkside Akku 4 Ah »PAP 204«", "prix": 19.99, "devise": "EUR", "marchand": "Kaufland", "lien": "https://www.mydealz.de/deals/kaufland-parkside-akku-4-ah-pap-204-2862069", "pays": "DE", "source": "mydealz-hot", "temperature": 138, "domaine": "jardin-bricolage", "plateforme_revente": "leboncoin", "prix_revente_estime": 35.0, "cout_achat": 24.99, "marge_nette": 10.01, "rentabilite": 0.401, "demande": 4.0, "concurrence": 3.0, "consensus": 1, "agents": ["nemotron"], "mode": "stock", "score": 29.9, "erreur_prix": false, "raisons": {"nemotron": "Batterie Parkside 4Ah introuvable en France à ce prix, forte demande sur LBC pour l'écosystème PAP 20V, marge nette ~10€ après port."}, "verification": null, "marge_verifiee": null, "rentabilite_verifiee": null, "passe_verif": null, "passage": "2026-10-31_1525", "audit": {"verdict": "attente"}}], "classement": {"qwen": {"global": {"proposees": 20, "validees": 2, "rejetees": 3, "points": 3}, "domaine/tech": {"proposees": 8, "validees": 2, "rejetees": 0, "points": 6}, "domaine/puericulture-jouets": {"proposees": 7, "validees": 0, "rejetees": 1, "points": -1}, "domaine/mode": {"proposees": 2, "validees": 0, "rejetees": 0, "points": 0}, "domaine/jardin-bricolage": {"proposees": 2, "validees": 0, "rejetees": 2, "points": -2}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 5, "reussis": 4, "taux": 80}}, "nemotron": {"global": {"proposees": 31, "validees": 4, "rejetees": 7, "points": 5}, "domaine/mode": {"proposees": 7, "validees": 1, "rejetees": 3, "points": 0}, "domaine/jardin-bricolage": {"proposees": 4, "validees": 0, "rejetees": 2, "points": -2}, "domaine/sport": {"proposees": 4, "validees": 0, "rejetees": 0, "points": 0}, "domaine/auto-moto": {"proposees": 2, "validees": 1, "rejetees": 0, "points": 3}, "domaine/tech": {"proposees": 5, "validees": 2, "rejetees": 0, "points": 6}, "domaine/puericulture-jouets": {"proposees": 5, "validees": 0, "rejetees": 2, "points": -2}, "domaine/beaute-sante": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/maison": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/gaming": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 4, "reussis": 4, "taux": 100}}, "gptoss": {"global": {"proposees": 19, "validees": 1, "rejetees": 3, "points": 0}, "domaine/jardin-bricolage": {"proposees": 2, "validees": 0, "rejetees": 0, "points": 0}, "domaine/sport": {"proposees": 5, "validees": 0, "rejetees": 0, "points": 0}, "domaine/mode": {"proposees": 6, "validees": 1, "rejetees": 3, "points": 0}, "domaine/cuisine": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/tech": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/maison": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/vintage-collection": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/gaming": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "domaine/beaute-sante": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 5, "reussis": 3, "taux": 60}}, "gemini": {"global": {"proposees": 2, "validees": 0, "rejetees": 2, "points": -2}, "domaine/sport": {"proposees": 1, "validees": 0, "rejetees": 1, "points": -1}, "domaine/jardin-bricolage": {"proposees": 1, "validees": 0, "rejetees": 1, "points": -1}, "fiabilite": {"tentes": 4, "reussis": 1, "taux": 25}}, "nemotron_nv": {"global": {"proposees": 3, "validees": 0, "rejetees": 0, "points": 0}, "domaine/mode": {"proposees": 2, "validees": 0, "rejetees": 0, "points": 0}, "domaine/tech": {"proposees": 1, "validees": 0, "rejetees": 0, "points": 0}, "fiabilite": {"tentes": 1, "reussis": 1, "taux": 100}}, "glm": {"fiabilite": {"tentes": 2, "reussis": 1, "taux": 50}}, "gemma": {"fiabilite": {"tentes": 1, "reussis": 0, "taux": 0}}}, "regles": {"_info": "Règles de calcul de marge et seuils. Modifiables sans toucher au code. taux_gbp_eur : taux approximatif livre -> euro.", "prix_min": 8, "prix_max": 600, "taille_lot": 40, "plateformes_revente": {"amazon": {"commission": 0.15, "frais_fixes": 3.5, "port": 0.0, "note": "logistique Amazon estimée"}, "vinted": {"commission": 0.0, "frais_fixes": 0.0, "port": 0.0, "note": "frais payés par l'acheteur"}, "leboncoin": {"commission": 0.0, "frais_fixes": 0.0, "port": 0.0, "note": "remise en main propre ou port payé par l'acheteur"}, "ebay": {"commission": 0.13, "frais_fixes": 0.35, "port": 6.0, "note": "port moyen estimé"}, "etsy": {"commission": 0.11, "frais_fixes": 0.2, "port": 6.0, "note": "transaction + paiement"}, "backmarket": {"commission": 0.12, "frais_fixes": 0.0, "port": 6.0, "note": "vendeur reconditionneur"}}, "port_achat_defaut": 5.0, "seuils": {"marge_nette_min": 8, "rentabilite_min": 0.3, "consensus_min": 1}, "taux_gbp_eur": 1.15}, "equipe": {"gemini": {"nom": "Gemini 3.8 Flash", "marque": "Google"}, "deepseek": {"nom": "DeepSeek V4.1 Flash", "marque": "DeepSeek"}, "nemotron": {"nom": "Nemotron 3 Ultra", "marque": "NVIDIA"}, "glm": {"nom": "GLM-4.7-Flash", "marque": "Z.ai"}, "gptoss": {"nom": "gpt-oss-120b", "marque": "OpenAI"}, "qwen": {"nom": "Qwen 3.8 27B", "marque": "Alibaba"}, "gemma": {"nom": "Gemma 4 31B", "marque": "Google (ouvert)"}, "glm45": {"nom": "GLM-4.5-Flash", "marque": "Z.ai"}, "nemotron_nv": {"nom": "Nemotron 3.5 Super (NVIDIA direct)", "marque": "NVIDIA"}}, "roles": {"trieur": "glm", "analystes": ["qwen", "gptoss", "nemotron", "glm45"], "remplacants": {"qwen": ["nemotron_nv", "gemma"], "gptoss": ["nemotron_nv", "gemma"], "nemotron": ["nemotron_nv", "gemma"], "glm45": ["nemotron_nv", "gemma"]}, "verificateur": "gemini"}};
 
-const NOMS = {gemini:"Gemini",deepseek:"DeepSeek",nemotron:"Nemotron",glm:"GLM",gptoss:"gpt-oss",qwen:"Qwen",gemma:"Gemma",glm45:"GLM 4.5",nemotron_nv:"Nemotron Super"};
+const NOMS = Object.fromEntries(Object.entries(DATA?.equipe||{}).map(([k,v])=>[k,v.nom.replace(/ \(.*\)$/,"")]));
+const COURT = {gemini:"Gemini",deepseek:"DeepSeek",nemotron:"Nemotron",glm:"GLM 4.7",glm45:"GLM 4.5",gptoss:"gpt-oss",qwen:"Qwen",gemma:"Gemma",nemotron_nv:"Nemotron Super"};
+const nom = k => COURT[k]||NOMS[k]||k;
 const PLATEFORMES = {amazon:"Amazon",vinted:"Vinted",leboncoin:"Leboncoin",ebay:"eBay",etsy:"Etsy",backmarket:"Back Market"};
 const DOMAINES = {"tech":"Tech","gaming":"Jeux vidéo","maison":"Maison","cuisine":"Cuisine","jardin-bricolage":"Jardin & bricolage","sport":"Sport","auto-moto":"Auto-moto","mode":"Mode","puericulture-jouets":"Enfants & jouets","beaute-sante":"Beauté & santé","animaux":"Animaux","vintage-collection":"Vintage & collection","autre":"Autre"};
 const PAYS = {FR:"France",DE:"Allemagne",UK:"Royaume-Uni",ES:"Espagne"};
-const euro = n => (n==null||isNaN(n)) ? "–" : n.toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
-const prix = (n,dev) => (n==null) ? "–" : n.toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
+const VERDICTS = {valide:"Validée",rejete:"Rejetée",attente:"À vérifier"};
+const euro = n => (n==null||isNaN(n)) ? "–" : Number(n).toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
+const prix = (n,dev) => (n==null) ? "–" : Number(n).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $ = id => document.getElementById(id);
+const margeDe = a => a.audit?.marge_nette_verifiee ?? a.marge_verifiee ?? a.marge_nette;
+const reventeDe = a => a.audit?.prix_revente_verifie ?? a.verification?.prix_revente_prudent ?? a.prix_revente_estime;
+const dateCourte = h => h ? `${h.slice(8,10)}/${h.slice(5,7)} ${h.slice(11,13)}h${h.slice(13,15)}` : "–";
 
+const P = DATA?.passages||[], DER = P[P.length-1];
+const TOUTES = DATA?.affaires||[];
+const DUJOUR = DER ? TOUTES.filter(a=>a.passage===DER.horodatage) : [];
 let etat = {mode:"tous", tri:"marge", domaine:null};
 try { const m = localStorage.getItem("den_mode"); if (m) etat.mode = m; } catch(e) {}
 
-function affaire(a){
-  const v = a.audit || {verdict:"attente"};
-  const libV = {valide:"Validée", rejete:"Rejetée", attente:"À vérifier"}[v.verdict] || "À vérifier";
-  const marge = v.marge_nette_verifiee ?? a.marge_nette;
-  const rev = v.prix_revente_verifie ?? a.prix_revente_estime;
-  const ia = (a.agents||[]).map(x=>`<i>${esc(NOMS[x]||x)}</i>`).join("");
+function etiquette(a){
+  const v = a.audit || {verdict:"attente"}, g = a.verification;
+  const rev = reventeDe(a), marge = margeDe(a);
   return `<article class="affaire ${v.verdict==="rejete"?"rejete":""}">
     <div class="corps">
-      <div class="ligne-titre"><h3><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a></h3><span class="verdict ${esc(v.verdict)}">${libV}</span></div>
+      <div class="ligne-titre"><h3><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a></h3><span class="verdict ${esc(v.verdict)}">${VERDICTS[v.verdict]||"À vérifier"}</span></div>
       <div class="trajet">
         <div><span class="etiq">Acheter chez ${esc(a.marchand||"?")} · ${esc(PAYS[a.pays]||a.pays)}</span><div class="prix">${prix(a.prix,a.devise)}</div></div>
         <div class="fleche" aria-hidden="true">→</div>
         <div><span class="etiq">Revendre sur ${esc(PLATEFORMES[v.plateforme_verifiee||a.plateforme_revente]||a.plateforme_revente)}</span>
-          <div class="prix">${euro(rev)}${v.prix_revente_verifie!=null && Math.abs(v.prix_revente_verifie-a.prix_revente_estime)>=1 ? `<span class="barre" title="Estimation de l’IA">${euro(a.prix_revente_estime)}</span>`:""}</div></div>
+          <div class="prix">${euro(rev)}${Math.abs(rev-a.prix_revente_estime)>=1?`<span class="barre" title="Estimation de l’équipe">${euro(a.prix_revente_estime)}</span>`:""}</div></div>
       </div>
       <div class="notes">
         <span>Domaine <b>${esc(DOMAINES[a.domaine]||a.domaine)}</b></span>
         <span>Demande <b class="chiffre">${a.demande}/5</b></span>
         <span>Concurrence <b class="chiffre">${a.concurrence}/5</b></span>
         <span>Mode <b>${a.mode==="dropshipping"?"Dropshipping":"Avec stock"}</b></span>
-        <span class="ia">Trouvé par ${ia}</span>
+        <span class="ia">Trouvé par ${(a.agents||[]).map(x=>`<i>${esc(nom(x))}</i>`).join("")}</span>
       </div>
-      ${v.commentaire?`<div class="audit ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
+      ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
+      ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>
   </article>`;
 }
 
-function rendre(){
-  if (!DATA){ document.getElementById("liste").innerHTML = `<div class="vide">Aucune donnée chargée.</div>`; return; }
-  const toutes = DATA.affaires||[];
-  const visibles = toutes.filter(a => (etat.mode==="tous"||a.mode===etat.mode) && (!etat.domaine||a.domaine===etat.domaine));
-  const cle = {marge:a=>(a.audit?.marge_nette_verifiee ?? a.marge_nette), rentabilite:a=>a.rentabilite, score:a=>a.score}[etat.tri];
-  visibles.sort((x,y)=>cle(y)-cle(x));
-  const ok = visibles.filter(a=>a.audit?.verdict!=="rejete"), ko = visibles.filter(a=>a.audit?.verdict==="rejete");
-  document.getElementById("liste").innerHTML = ok.map(affaire).join("") || `<div class="vide">Aucune affaire validée dans cette sélection. Change de mode ou de domaine.</div>`;
-  document.getElementById("liste-rejets").innerHTML = ko.map(affaire).join("");
-  document.getElementById("bloc-rejets").hidden = !ko.length;
-  document.getElementById("titre-rejets").textContent = `Affaires rejetées à l’audit (${ko.length})`;
+function rendreAujourdhui(){
+  const vis = DUJOUR.filter(a => (etat.mode==="tous"||a.mode===etat.mode) && (!etat.domaine||a.domaine===etat.domaine));
+  const cle = {marge:margeDe, rentabilite:a=>margeDe(a)/(a.cout_achat||1), score:a=>a.score}[etat.tri];
+  vis.sort((x,y)=>cle(y)-cle(x));
+  const ok = vis.filter(a=>a.audit?.verdict!=="rejete"), ko = vis.filter(a=>a.audit?.verdict==="rejete");
+  $("auj-liste").innerHTML = ok.map(etiquette).join("") || `<div class="vide">Aucune affaire dans cette sélection. Change de mode ou de domaine.</div>`;
+  $("auj-rejets").innerHTML = ko.map(etiquette).join("");
+  $("auj-bloc-rejets").hidden = !ko.length;
+  $("auj-titre-rejets").textContent = `Affaires rejetées à l’audit (${ko.length})`;
   document.querySelectorAll(".onglets button").forEach(b=>b.setAttribute("aria-pressed", b.dataset.mode===etat.mode));
-  document.querySelectorAll("#domaines .puce").forEach(b=>b.setAttribute("aria-pressed", (b.dataset.d||null)===etat.domaine));
+  document.querySelectorAll("#auj-domaines .puce").forEach(b=>b.setAttribute("aria-pressed", (b.dataset.d||null)===etat.domaine));
 }
 
-function initialiser(){
-  if (!DATA) { rendre(); return; }
-  document.getElementById("date-passage").textContent = DATA.date_affichee || "–";
-  const st = document.getElementById("statut");
-  if (DATA.audit_fait){ st.className="statut ok"; st.textContent="Audité par Claude"; }
-  const valides = (DATA.affaires||[]).filter(a=>a.audit?.verdict==="valide");
-  document.getElementById("s-valides").textContent = valides.length;
-  document.getElementById("s-valides-sous").textContent = `sur ${(DATA.affaires||[]).length} proposées par l’équipe`;
-  const marges = valides.map(a=>a.audit.marge_nette_verifiee ?? a.marge_nette);
-  document.getElementById("s-marge").textContent = euro(marges.reduce((s,x)=>s+x,0));
-  const best = valides.slice().sort((x,y)=>(y.audit.marge_nette_verifiee??y.marge_nette)-(x.audit.marge_nette_verifiee??x.marge_nette))[0];
-  document.getElementById("s-meilleure").textContent = best ? euro(best.audit.marge_nette_verifiee ?? best.marge_nette) : "–";
-  document.getElementById("s-meilleure-sous").textContent = best ? best.titre.slice(0,48)+(best.titre.length>48?"…":"") : "aucune pour l’instant";
-  const champ = Object.entries(DATA.classement||{}).sort((x,y)=>(y[1].global?.points||0)-(x[1].global?.points||0));
-  if (champ.length && champ[0][1].global){ document.getElementById("s-champion").textContent = NOMS[champ[0][0]]||champ[0][0];
-    document.getElementById("s-champion-sous").textContent = `${champ[0][1].global.points} points`; }
+function initAujourdhui(){
+  if (!DER){ $("auj-liste").innerHTML = `<div class="vide">Aucun passage enregistré pour l’instant.</div>`; return; }
+  $("auj-date").textContent = `${DER.date_affichee} · passage ${DER.passage}`;
+  if (DER.audite){ $("auj-statut").className="statut ok"; $("auj-statut").textContent="Audité par Claude"; }
+  const val = DUJOUR.filter(a=>a.audit?.verdict==="valide");
+  $("s-valides").textContent = val.length;
+  $("s-valides-sous").textContent = `sur ${DUJOUR.length} proposées`;
+  $("s-marge").textContent = euro(val.reduce((s,a)=>s+margeDe(a),0));
+  const best = val.slice().sort((x,y)=>margeDe(y)-margeDe(x))[0];
+  $("s-meilleure").textContent = best ? euro(margeDe(best)) : "–";
+  $("s-meilleure-sous").textContent = best ? best.titre.slice(0,46)+(best.titre.length>46?"…":"") : "aucune pour l’instant";
+  const champ = classement();
+  if (champ.length){ $("s-champion").textContent = nom(champ[0][0]); $("s-champion-sous").textContent = `${champ[0][1].global?.points||0} points`; }
+  const doms = [...new Set(DUJOUR.map(a=>a.domaine))];
+  $("auj-domaines").innerHTML = `<button type="button" class="puce" data-d="">Tous les domaines</button>` + doms.map(d=>`<button type="button" class="puce" data-d="${esc(d)}">${esc(DOMAINES[d]||d)}</button>`).join("");
+  document.querySelectorAll(".onglets button").forEach(b=>b.addEventListener("click",()=>{etat.mode=b.dataset.mode;try{localStorage.setItem("den_mode",etat.mode)}catch(e){}rendreAujourdhui();}));
+  $("auj-domaines").addEventListener("click",e=>{const b=e.target.closest(".puce");if(!b)return;etat.domaine=b.dataset.d||null;rendreAujourdhui();});
+  $("auj-tri").addEventListener("change",e=>{etat.tri=e.target.value;rendreAujourdhui();});
+  rendreAujourdhui();
+}
 
-  const doms = [...new Set((DATA.affaires||[]).map(a=>a.domaine))];
-  document.getElementById("domaines").innerHTML = `<button type="button" class="puce" data-d="">Tous les domaines</button>` +
-    doms.map(d=>`<button type="button" class="puce" data-d="${esc(d)}">${esc(DOMAINES[d]||d)}</button>`).join("");
-
-  document.getElementById("champ").innerHTML = champ.map(([k,s])=>{
-    const g=s.global||{proposees:0,validees:0,rejetees:0,points:0}, f=s.fiabilite;
-    return `<tr><td>${esc(NOMS[k]||k)}</td><td>${f?`<span class="jauge"><i style="width:${f.taux}%"></i></span><span class="chiffre">${f.taux} %</span>`:"–"}</td>
-      <td class="n">${g.proposees}</td><td class="n">${g.validees}</td><td class="n">${g.rejetees}</td><td class="n"><b>${g.points}</b></td></tr>`;}).join("")
-    || `<tr><td colspan="6" class="petit">Le championnat démarre au premier audit.</td></tr>`;
-
-  document.getElementById("sources").innerHTML = Object.entries(DATA.sources||{}).map(([k,v])=>
-    `<li><span>${esc(k)}</span><span class="etat ${v.ok&&v.nb?"ok":(v.ok?"att":"ko")}">${v.ok?(v.nb?v.nb+" bons plans":"vide"):"bloquée"}</span></li>`).join("");
-  document.getElementById("equipe").innerHTML = Object.entries(DATA.agents||{}).map(([k,v])=>{
-    const ok = v.reussites>0, rem = v.remplace?` (remplace ${NOMS[v.remplace]||v.remplace})`:"";
-    return `<li><span>${esc(NOMS[k]||k)}${esc(rem)}</span><span class="etat ${ok?"ok":"ko"}">${ok?v.choix+" choix":"n’a pas répondu"}</span></li>`;}).join("");
-  document.getElementById("pied").textContent = `Prototype · ${DATA.nb_annonces} bons plans lus, ${DATA.nb_tries} étudiés par l’équipe · audit : ${DATA.audit_resume||"en attente"}`;
-
-  document.querySelectorAll(".onglets button").forEach(b=>b.addEventListener("click",()=>{etat.mode=b.dataset.mode;try{localStorage.setItem("den_mode",etat.mode)}catch(e){}rendre();}));
-  document.getElementById("domaines").addEventListener("click",e=>{const b=e.target.closest(".puce");if(!b)return;etat.domaine=b.dataset.d||null;rendre();});
-  document.getElementById("tri").addEventListener("change",e=>{etat.tri=e.target.value;rendre();});
+function initAffaires(){
+  const remplir = (id, valeurs, libelle) => { $(id).insertAdjacentHTML("beforeend", valeurs.map(v=>`<option value="${esc(v)}">${esc(libelle[v]||v)}</option>`).join("")); };
+  remplir("aff-domaine", [...new Set(TOUTES.map(a=>a.domaine))], DOMAINES);
+  remplir("aff-pays", [...new Set(TOUTES.map(a=>a.pays))], PAYS);
+  const rendre = () => {
+    const q = $("aff-recherche").value.trim().toLowerCase(), v = $("aff-verdict").value, d = $("aff-domaine").value, p = $("aff-pays").value, m = $("aff-mode").value;
+    const l = TOUTES.filter(a => (!q || (a.titre+" "+(a.marchand||"")).toLowerCase().includes(q)) && (!v || (a.audit?.verdict||"attente")===v)
+      && (!d || a.domaine===d) && (!p || a.pays===p) && (!m || a.mode===m));
+    $("aff-compte").textContent = `${l.length} affaire${l.length>1?"s":""} sur ${TOUTES.length}`;
+    $("aff-corps").innerHTML = l.map(a=>{ const ve=a.audit?.verdict||"attente";
+      return `<tr><td><a href="${esc(a.lien)}" target="_blank" rel="noopener">${esc(a.titre)}</a><div class="petit">${esc(DOMAINES[a.domaine]||a.domaine)}</div></td>
+      <td>${esc(a.marchand||"?")}<div class="petit">${esc(PAYS[a.pays]||a.pays)}</div></td><td class="n">${prix(a.prix,a.devise)}</td>
+      <td>${esc(PLATEFORMES[a.audit?.plateforme_verifiee||a.plateforme_revente]||a.plateforme_revente)}<div class="petit chiffre">${euro(reventeDe(a))}</div></td>
+      <td class="n"><b>${euro(margeDe(a))}</b></td><td class="n">${a.cout_achat?Math.round(100*margeDe(a)/a.cout_achat):0} %</td>
+      <td>${(a.agents||[]).map(nom).join(", ")}</td>
+      <td><span class="pastille ${ve}" title="${esc(a.audit?.commentaire||"")}">${VERDICTS[ve]}</span></td><td class="petit chiffre">${dateCourte(a.passage)}</td></tr>`;}).join("")
+      || `<tr><td colspan="9" class="petit">Aucune affaire ne correspond à ces filtres.</td></tr>`;
+  };
+  ["aff-recherche","aff-verdict","aff-domaine","aff-pays","aff-mode"].forEach(id=>$(id).addEventListener("input",rendre));
   rendre();
 }
-initialiser();
+
+function classement(){ return Object.entries(DATA?.classement||{}).filter(([,s])=>s.global).sort((x,y)=>(y[1].global.points)-(x[1].global.points)); }
+function role(k){ const r=DATA?.roles||{}; if (r.trieur===k) return "Trieur"; if (r.verificateur===k) return "Vérificateur Google"; if ((r.analystes||[]).includes(k)) return "Analyste";
+  if (Object.values(r.remplacants||{}).some(l=>(Array.isArray(l)?l:[l]).includes(k))) return "Remplaçant"; return "Réserve"; }
+
+function initChampionnat(){
+  const toutes = Object.entries(DATA?.classement||{}).sort((x,y)=>(y[1].global?.points??-99)-(x[1].global?.points??-99));
+  $("ch-corps").innerHTML = toutes.map(([k,s])=>{ const g=s.global||{proposees:0,validees:0,rejetees:0,points:0}, f=s.fiabilite, tx=(g.validees+g.rejetees)?Math.round(100*g.validees/(g.validees+g.rejetees)):null;
+    return `<tr><td><b>${esc(nom(k))}</b></td><td>${esc(DATA.equipe?.[k]?.marque||"")}</td><td>${role(k)}</td>
+      <td>${f?`<span class="jauge"><i style="width:${f.taux}%"></i></span><span class="chiffre">${f.taux} %</span>`:"–"}</td>
+      <td class="n">${g.proposees}</td><td class="n">${g.validees}</td><td class="n">${g.rejetees}</td><td class="n">${tx==null?"–":tx+" %"}</td><td class="n"><b>${g.points}</b></td></tr>`;}).join("")
+    || `<tr><td colspan="9" class="petit">Le championnat démarre au premier audit.</td></tr>`;
+  const parDom = {};
+  for (const [k,s] of Object.entries(DATA?.classement||{})) for (const [cle,v] of Object.entries(s)) if (cle.startsWith("domaine/")) {
+    const d=cle.slice(8); (parDom[d] ||= []).push([k,v]); }
+  $("ch-domaines").innerHTML = Object.entries(parDom).map(([d,l])=>{ l.sort((x,y)=>y[1].points-x[1].points);
+    return `<div class="bloc"><span class="etiq">${esc(DOMAINES[d]||d)}</span><ul>${l.slice(0,3).map(([k,v],i)=>`<li><span>${i===0?"<b>":""}${esc(nom(k))}${i===0?"</b>":""}</span><span class="chiffre">${v.points} pt · ${v.validees}/${v.proposees}</span></li>`).join("")}</ul></div>`;}).join("")
+    || `<div class="vide">Pas encore de domaine noté.</div>`;
+}
+
+function initSysteme(){
+  if (!DER) return;
+  $("sys-sources").innerHTML = Object.entries(DER.sources).map(([k,v])=>`<li><span>${esc(k)}</span><span class="pastille ${v.ok&&v.nb?"ok":(v.ok?"att":"ko")}">${v.ok?(v.nb?v.nb+" bons plans":"vide"):"bloquée"}</span></li>`).join("");
+  $("sys-equipe").innerHTML = Object.entries(DER.agents).map(([k,v])=>`<li><span>${esc(nom(k))}${v.remplace?` <span class="petit">(remplace ${esc(nom(v.remplace))})</span>`:""}</span><span class="pastille ${v.reussites>0?"ok":"ko"}">${v.reussites>0?v.choix+" choix":"pas de réponse"}</span></li>`).join("");
+  const vf = DER.verification;
+  $("sys-verif").innerHTML = vf ? `<li><span>Produits vérifiés</span><span class="chiffre">${vf.faits}</span></li>${(vf.erreurs||[]).slice(-2).map(e=>`<li><span class="petit">${esc(e)}</span></li>`).join("")}` : `<li><span class="petit">Pas encore utilisé</span></li>`;
+  $("sys-passages").innerHTML = P.slice().reverse().map(p=>`<tr><td class="chiffre">${esc(p.date_affichee)}</td><td>${esc(p.passage)}</td><td class="n">${p.nb_annonces}</td><td class="n">${p.nb_nouvelles??"–"}</td><td class="n">${p.nb_tries}</td><td class="n">${p.nb_candidats}</td>
+    <td>${p.audite?`<span class="pastille ok">Audité</span>`:`<span class="pastille att">En attente</span>`}</td></tr>`).join("");
+}
+
+function initMethode(){
+  const r = DATA?.regles||{}, s = r.seuils||{};
+  $("met-seuils").innerHTML = [
+    ["Marge nette minimum", euro(s.marge_nette_min)], ["Rentabilité minimum", Math.round(100*(s.rentabilite_min||0))+" %"],
+    ["Prix d’achat étudiés", `${euro(r.prix_min)} à ${euro(r.prix_max)}`], ["Port d’achat estimé", euro(r.port_achat_defaut)],
+    ["Commission Amazon", Math.round(100*(r.plateformes_revente?.amazon?.commission||0))+" % + "+euro(r.plateformes_revente?.amazon?.frais_fixes)],
+    ["Vinted et Leboncoin", "pas de frais vendeur"]].map(([k,v])=>`<li><span>${k}</span><span class="chiffre">${v}</span></li>`).join("");
+}
+
+const VUES = ["aujourdhui","affaires","championnat","systeme","methode"];
+function router(){
+  const h = location.hash.slice(1), v = VUES.includes(h) ? h : "aujourdhui";
+  VUES.forEach(x=>{ $("v-"+x).hidden = x!==v; });
+  document.querySelectorAll("nav a").forEach(a=>{ if (a.getAttribute("href")==="#"+v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+}
+
+if (DATA){ initAujourdhui(); initAffaires(); initChampionnat(); initSysteme(); initMethode();
+  $("pied").textContent = `Prototype · ${P.length} passage${P.length>1?"s":""}, ${TOUTES.length} affaires proposées par l’équipe · mis à jour le ${DATA.genere||"–"}`; }
+window.addEventListener("hashchange", router); router();
 </script>

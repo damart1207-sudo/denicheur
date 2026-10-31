@@ -1,0 +1,126 @@
+{
+ "horodatage": "2026-10-31_1557",
+ "date": "31/10/2026",
+ "auditeur": "Claude",
+ "resume": "4 validées sur 12. Les 2 processeurs AMD et le casque Premier offrent les meilleures marges. 8 rejets : prix de revente surestimés, produits trouvables neufs moins cher, ou impossibles à acheter depuis la France.",
+ "verdicts": [
+  {
+   "id": "3a0484ec3b",
+   "verdict": "valide",
+   "commentaire": "Le moins cher en neuf en France est à 314-320 €. Revendu neuf sous blister vers 250 € sur Leboncoin, il reste nettement sous le neuf. Acheter chez le vendeur officiel AMD sur AliExpress (facture et garantie).",
+   "prix_revente_verifie": 250,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 80.36
+  },
+  {
+   "id": "ad3c910311",
+   "verdict": "valide",
+   "commentaire": "Une seule offre neuve en France ce jour, à 293,71 €. Revente prudente à 180 € en neuf scellé. Même précaution : vendeur officiel AliExpress.",
+   "prix_revente_verifie": 180,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 54.8
+  },
+  {
+   "id": "e80814f2df",
+   "verdict": "valide",
+   "commentaire": "Prix public chez Dafy : 533,94 €. Ici à 177,47 €. Revente neuf avec étiquette vers 300 € reste très attractive. Attention à la taille : prendre les tailles M et L, les plus demandées.",
+   "prix_revente_verifie": 300,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 117.53
+  },
+  {
+   "id": "44cfb4780a",
+   "verdict": "valide",
+   "commentaire": "Sur Vinted, les maillots Swingman neufs se vendent surtout entre 40 et 65 €. J'ai retenu 45 € et non 67 € comme l'IA : marge faible mais réelle. Tailles M et L uniquement.",
+   "prix_revente_verifie": 45,
+   "plateforme_verifiee": "vinted",
+   "marge_nette_verifiee": 11.2
+  },
+  {
+   "id": "d8109a2904",
+   "verdict": "rejete",
+   "commentaire": "Demande en forte baisse depuis la fin de la Coupe du monde 2026 et prix de revente non confirmé. Écart insuffisant pour prendre le risque."
+  },
+  {
+   "id": "77ac2397e3",
+   "verdict": "rejete",
+   "commentaire": "Neuve à 119 € chez i-Run : on ne la revendra pas plus de 90-95 € sur Vinted. Il reste environ 20 €, soit moins de 30 % de rentabilité.",
+   "prix_revente_verifie": 95,
+   "plateforme_verifiee": "vinted",
+   "marge_nette_verifiee": 20.79
+  },
+  {
+   "id": "2315c99274",
+   "verdict": "rejete",
+   "commentaire": "Le même set est à 17,99 € livré sur Amazon.fr. Le prix de 14,99 € demande en plus la carte fidélité Auchan. Revente à 32 € impossible."
+  },
+  {
+   "id": "323e1c2c6d",
+   "verdict": "rejete",
+   "commentaire": "Le calendrier se trouve neuf entre 93 et 107 € en Europe. Personne ne l'achètera 145 € d'occasion."
+  },
+  {
+   "id": "a64c6f93b7",
+   "verdict": "rejete",
+   "commentaire": "Prix de revente non confirmé pour ce kit allemand (batterie et chargeur offerts). À revoir avec une vraie vérification Leboncoin."
+  },
+  {
+   "id": "3b086a43e2",
+   "verdict": "rejete",
+   "commentaire": "Une seule taille (L) et la revente Vinted d'une veste Tommy neuve tourne autour de 60 à 80 €. Marge trop faible et trop incertaine."
+  },
+  {
+   "id": "937385219d",
+   "verdict": "rejete",
+   "commentaire": "Neuve vers 300-320 € en boutique, revendable vers 210 € sur Vinted : environ 38 € de marge, soit 22 %, sous le seuil de 30 %.",
+   "prix_revente_verifie": 210,
+   "plateforme_verifiee": "vinted",
+   "marge_nette_verifiee": 37.51
+  },
+  {
+   "id": "d5c2fdf35c",
+   "verdict": "rejete",
+   "commentaire": "Thomas Philipps vend en magasin en Allemagne : impossible à acheter depuis la France."
+  }
+ ],
+ "valides": [
+  "3a0484ec3b",
+  "ad3c910311",
+  "e80814f2df",
+  "44cfb4780a"
+ ],
+ "rejetes": [
+  {
+   "id": "d8109a2904",
+   "motif": "Demande en forte baisse depuis la fin de la Coupe du monde 2026 et prix de revente non confirmé. Écart insuffisant pour prendre le risque."
+  },
+  {
+   "id": "77ac2397e3",
+   "motif": "Neuve à 119 € chez i-Run : on ne la revendra pas plus de 90-95 € sur Vinted. Il reste environ 20 €, soit moins de 30 % de rentabilité."
+  },
+  {
+   "id": "2315c99274",
+   "motif": "Le même set est à 17,99 € livré sur Amazon.fr. Le prix de 14,99 € demande en plus la carte fidélité Auchan. Revente à 32 € impossible."
+  },
+  {
+   "id": "323e1c2c6d",
+   "motif": "Le calendrier se trouve neuf entre 93 et 107 € en Europe. Personne ne l'achètera 145 € d'occasion."
+  },
+  {
+   "id": "a64c6f93b7",
+   "motif": "Prix de revente non confirmé pour ce kit allemand (batterie et chargeur offerts). À revoir avec une vraie vérification Leboncoin."
+  },
+  {
+   "id": "3b086a43e2",
+   "motif": "Une seule taille (L) et la revente Vinted d'une veste Tommy neuve tourne autour de 60 à 80 €. Marge trop faible et trop incertaine."
+  },
+  {
+   "id": "937385219d",
+   "motif": "Neuve vers 300-320 € en boutique, revendable vers 210 € sur Vinted : environ 38 € de marge, soit 22 %, sous le seuil de 30 %."
+  },
+  {
+   "id": "d5c2fdf35c",
+   "motif": "Thomas Philipps vend en magasin en Allemagne : impossible à acheter depuis la France."
+  }
+ ]
+}

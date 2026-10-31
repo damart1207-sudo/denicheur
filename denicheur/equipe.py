@@ -3,6 +3,7 @@ import json
 import math
 import re
 import statistics
+import time
 
 from .ia import extraire_json
 
@@ -10,7 +11,7 @@ EXCLUS = re.compile(
     r"gratuit|offert|abonnement|forfait|carte sim|\bsim\b|code promo|cashback|remboursement|"
     r"carte cadeau|e-carte|bon d'achat|jeu concours|concours|sample|téléchargement|dématérialis|"
     r"steam key|clé steam|epic games|game pass|ps plus|netflix|spotify|disney\+|deezer|canal\+|"
-    r"assurance|crédit|banque|parrainage|voyage|hôtel|vol |billet|restaurant|livraison offerte",
+    r"assurance|crédit|banque|parrainage|voyage|hôtel|vol |billet|restaurant|livraison offerte|par mois|/mois|freebox|box internet",
     re.I,
 )
 
@@ -62,9 +63,12 @@ def analyser(agent, annonces, methode, taille_lot):
     """Un analyste étudie les mêmes lots que les autres. Retourne la liste de ses choix validés."""
     ids_valides = {a["id"] for a in annonces}
     choix = []
-    for lot in lots(annonces, taille_lot):
+    taille = agent.conf.get("taille_lot", taille_lot)  # certaines IA (Groq) acceptent moins de texte par minute
+    for n, lot in enumerate(lots(annonces, taille)):
         if not agent.disponible():
             break
+        if n and agent.conf.get("pause"):
+            time.sleep(agent.conf["pause"])
         rep = agent.demander(methode, "Bons plans du jour (id | titre | prix | marchand | catégorie | pays | popularité) :\n"
                              + "\n".join(_ligne(a) for a in lot))
         data = extraire_json(rep)

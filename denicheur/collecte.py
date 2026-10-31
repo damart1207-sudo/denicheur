@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
 
 UA = "Mozilla/5.0 (compatible; Denicheur/1.0; usage personnel)"
 NS_PEPPER = "{http://www.pepper.com/rss}merchant"
+ATOM = "{http://www.w3.org/2005/Atom}"
 
 
 def _prix(texte):
@@ -53,7 +54,9 @@ def lire_flux(source, timeout=25):
         racine = ET.fromstring(brut)
     except ET.ParseError as e:
         return [], f"XML illisible: {e}"[:200]
-    return [a for a in (_item(i, source) for i in racine.iter("item")) if a], None
+    items = [a for a in (_item(i, source) for i in racine.iter("item")) if a]
+    items += [a for a in (_entree_atom(e, source) for e in racine.iter(ATOM + "entry")) if a]
+    return items, None
 
 
 def _item(item, source):
@@ -87,6 +90,26 @@ def _item(item, source):
         "source": source["id"],
         "pays": source["pays"],
         "description": description,
+    }
+
+
+def _entree_atom(e, source):
+    """Flux au format Atom (ex. Les Numériques) : <entry><title/><link href/><summary/></entry>."""
+    titre = (e.findtext(ATOM + "title") or "").strip()
+    lien_el = e.find(ATOM + "link")
+    lien = (lien_el.get("href") if lien_el is not None else "") or ""
+    if not titre or not lien:
+        return None
+    resume = _nettoyer(e.findtext(ATOM + "summary") or e.findtext(ATOM + "content"))
+    m = re.search(r"(\d[\d\s.,]*)\s?€", titre) or re.search(r"(\d[\d\s.,]*)\s?€", resume)
+    cat = e.find(ATOM + "category")
+    return {
+        "id": hashlib.sha1(lien.encode()).hexdigest()[:10],
+        "titre": titre[:180], "temperature": None,
+        "categorie": cat.get("term", "") if cat is not None else "",
+        "marchand": None, "prix": _prix(m.group(0)) if m else None, "devise": "EUR",
+        "lien": lien, "date": (e.findtext(ATOM + "updated") or "").strip(),
+        "source": source["id"], "pays": source["pays"], "description": resume,
     }
 
 

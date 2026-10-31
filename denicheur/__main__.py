@@ -9,7 +9,7 @@ import random
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import championnat, collecte, equipe, rapport
+from . import championnat, collecte, equipe, rapport, verif
 from .ia import Agent
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -104,7 +104,8 @@ def passage(nom, test=False):
 
     trieur = agents[conf_eq["trieur"]]
     tries, tri_ok = equipe.trier(trieur, prefiltrees, regles["taille_lot"]) if prefiltrees else ([], True)
-    capacite = regles["taille_lot"] * min(agents[a].conf.get("max_appels", 5) for a in conf_eq["analystes"])
+    capacite = min(agents[a].conf.get("taille_lot", regles["taille_lot"]) * agents[a].conf.get("max_appels", 5)
+                   for a in conf_eq["analystes"])
     tries = tries[:capacite]  # les plus populaires d'abord (déjà triés par température)
 
     tous_choix, remplacements = [], {}
@@ -121,6 +122,20 @@ def passage(nom, test=False):
                         break
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
+
+    # vérification des prix sur Google (Gemini + recherche), puis marge recalculée au prix prudent
+    bilan_verif = {"faits": 0, "erreurs": ["mode test"]} if test else verif.verifier_prix(retenus)
+    s_ = regles["seuils"]
+    for c in retenus:
+        v = c.get("verification")
+        if not v:
+            continue
+        cout = c["cout_achat"]
+        c["marge_verifiee"] = equipe.marge_nette(v["prix_revente_prudent"], c["plateforme_revente"], cout, regles)
+        c["rentabilite_verifiee"] = round(c["marge_verifiee"] / cout, 3) if cout else 0
+        c["passe_verif"] = (c["marge_verifiee"] >= s_["marge_nette_min"] and c["rentabilite_verifiee"] >= s_["rentabilite_min"]
+                            and not v["deja_moins_cher_ailleurs"])
+    retenus.sort(key=lambda c: (c.get("passe_verif", True), c["score"]), reverse=True)
 
     base = "data/test" if test else "data"
     championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
@@ -147,6 +162,7 @@ def passage(nom, test=False):
                    for k, a in agents.items() if a.appels or k in conf_eq["analystes"]},
         "remplacements": remplacements,
         "candidats": retenus[:40],
+        "verification": bilan_verif,
         "ecartes_sous_seuil": len(candidats) - len(retenus),
         "annonces_analysees": tries,
     }
@@ -158,6 +174,7 @@ def passage(nom, test=False):
     if any(a.reussites for k, a in agents.items() if k in conf_eq["analystes"] or k in remplacements):
         ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
 
+    print(f"  vérification Google : {bilan_verif['faits']} produit(s), erreurs {bilan_verif['erreurs'][:3]}")
     print(f"Passage {nom} ({horodatage}) : {len(annonces)} lus, {len(nouvelles)} nouveaux, {len(prefiltrees)} filtrés, "
           f"{len(tries)} triés, {len(retenus)} affaires retenues.")
     for k, v in resultat["agents"].items():

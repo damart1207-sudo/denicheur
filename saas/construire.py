@@ -25,7 +25,8 @@ def main():
     for c in passage.get("candidats", []):
         a = {k: c.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "domaine",
                                    "plateforme_revente", "prix_revente_estime", "cout_achat", "marge_nette",
-                                   "rentabilite", "demande", "concurrence", "agents", "mode", "score", "erreur_prix")}
+                                   "rentabilite", "demande", "concurrence", "agents", "mode", "score", "erreur_prix",
+                                   "verification", "marge_verifiee", "rentabilite_verifiee", "passe_verif")}
         a["audit"] = verdicts.get(c["id"], {"verdict": "attente"})
         affaires.append(a)
     donnees = {

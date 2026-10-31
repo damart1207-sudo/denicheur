@@ -189,7 +189,7 @@ try { const m = localStorage.getItem("den_mode"); if (m) etat.mode = m; } catch(
 function affaire(a){
   const v = a.audit || {verdict:"attente"};
   const libV = {valide:"Validée", rejete:"Rejetée", attente:"À vérifier"}[v.verdict] || "À vérifier";
-  const marge = v.marge_nette_verifiee ?? a.marge_nette;
+  const marge = v.marge_nette_verifiee ?? a.marge_verifiee ?? a.marge_nette;
   const rev = v.prix_revente_verifie ?? a.prix_revente_estime;
   const ia = (a.agents||[]).map(x=>`<i>${esc(NOMS[x]||x)}</i>`).join("");
   return `<article class="affaire ${v.verdict==="rejete"?"rejete":""}">
@@ -208,6 +208,7 @@ function affaire(a){
         <span>Mode <b>${a.mode==="dropshipping"?"Dropshipping":"Avec stock"}</b></span>
         <span class="ia">Trouvé par ${ia}</span>
       </div>
+      ${a.verification?`<div class="audit"><span class="etiq">Vérifié sur Google</span><br>${a.verification.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(a.verification.prix_neuf_min)}</b>${a.verification.marchand_neuf_min?" ("+esc(a.verification.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${a.verification.occasion_haut?` · occasion <b class="chiffre">${euro(a.verification.occasion_bas)}–${euro(a.verification.occasion_haut)}</b>`:""}${a.verification.sources?.length?` · sources : ${a.verification.sources.slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
       ${v.commentaire?`<div class="audit ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>

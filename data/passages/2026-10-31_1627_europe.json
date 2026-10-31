@@ -1,0 +1,504 @@
+{
+ "passage": "europe",
+ "horodatage": "2026-10-31_1627",
+ "date_affichee": "31/10/2026 à 16 h 27",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 190,
+ "nb_nouvelles": 80,
+ "nb_prefiltres": 55,
+ "nb_tries": 16,
+ "tri_ok": true,
+ "agents": {
+  "gemini": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 404 (gemini-2.5-flash): [{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features ",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 4
+  },
+  "glm": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 0
+  },
+  "gptoss": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 8
+  },
+  "qwen": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 4
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate you",
+    "coupé pour ce passage"
+   ],
+   "choix": 0,
+   "remplace": "gemini"
+  },
+  "nemotron_nv": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 3,
+   "remplace": "gemini"
+  }
+ },
+ "remplacements": {
+  "gemma": "gemini",
+  "nemotron_nv": "gemini"
+ },
+ "candidats": [
+  {
+   "id": "0fd05b7be5",
+   "titre": "FitVille Herren Rebound Neo V2 Wanderschuhe in Breit/Extra Breit (2E/4E) für 26,99€ statt 86,90€",
+   "prix": 26.99,
+   "devise": "EUR",
+   "marchand": "FitVille",
+   "lien": "https://www.mydealz.de/deals/fitville-herren-rebound-neo-v2-wanderschuhe-in-breitextra-breit-2e4e-fur-2699eur-statt-8690eur-2861867",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 101,
+   "domaine": "sport",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 31.99,
+   "marge_nette": 38.01,
+   "rentabilite": 1.188,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussures de randonnée à prix promotionnel, marge nette élevée sur Leboncoin."
+   },
+   "score": 125.5
+  },
+  {
+   "id": "c7c3f856a7",
+   "titre": "Baskets Tommy Hilfiger - Bicolores Homme à Drapeau Ton sur Ton",
+   "prix": 32.0,
+   "devise": "EUR",
+   "marchand": "Tommy Hilfiger",
+   "lien": "https://www.dealabs.com/bons-plans/tommy-hilfiger-baskets-bicolores-homme-a-drapeau-ton-sur-ton-3442768",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "mode",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 60.0,
+   "cout_achat": 37.0,
+   "marge_nette": 23.0,
+   "rentabilite": 0.622,
+   "demande": 3.3,
+   "concurrence": 3.0,
+   "consensus": 3,
+   "agents": [
+    "gptoss",
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Tommy Hilfiger à prix cassé, marque identifiable, revente rapide sur Vinted.",
+    "nemotron": "Baskets Tommy Hilfiger homme neuves à 32€ (prix public 100€+), revente 55-65€ sur Vinted, tailles dispo, marge correcte malgré concurrence outlet.",
+    "gptoss": "Prix d'achat très inférieur au prix de revente moyen sur Vinted pour des baskets Tommy Hilfiger neuves."
+   },
+   "score": 60.8
+  },
+  {
+   "id": "a9b5279715",
+   "titre": "Adidas Zapatillas de running Ultraboost 5X Mujer- Tallas- 36, 37 1/3, 42 2/3",
+   "prix": 62.99,
+   "devise": "EUR",
+   "marchand": "Private Sport Shop",
+   "lien": "https://www.chollometro.com/ofertas/adidas-zapatillas-de-running-ultraboost-5x-mujer-tallas-36-37-13-42-23-2050673",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 201,
+   "domaine": "mode",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 102.5,
+   "cout_achat": 67.99,
+   "marge_nette": 34.51,
+   "rentabilite": 0.508,
+   "demande": 4.5,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Adidas Ultraboost à -60% du prix public, marque recherchée, revente facile sur Vinted.",
+    "gptoss": "Chaussures Adidas très demandées, prix d'achat bien inférieur au prix de revente Vinted."
+   },
+   "score": 57.9
+  },
+  {
+   "id": "98ad6c1f6a",
+   "titre": "Sony INZONE Mouse-A Gaming-Maus (PixArt PAW 3950 bis 30.000dpi, 8.000Hz, 2.4GHz-Empfänger, USB-C, ~90h Akku, 48g)",
+   "prix": 52.98,
+   "devise": "EUR",
+   "marchand": "Saturn",
+   "lien": "https://www.mydealz.de/deals/sony-inzone-mouse-a-gaming-maus-pixart-paw-3950-bis-30000dpi-8000hz-24ghz-empfanger-usb-c-90h-akku-48g-2862224",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 117,
+   "domaine": "tech",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 97.5,
+   "cout_achat": 57.98,
+   "marge_nette": 20.5,
+   "rentabilite": 0.354,
+   "demande": 4.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Souris gaming Sony haut de gamme bradée chez Saturn, forte demande et envoi simple.",
+    "nemotron": "Souris gaming Sony INZONE M1 neuve à 53€ (prix marché 85-95€), modèle récent ultra-léger très recherché, revente facile sans frais sur LBC/eBay."
+   },
+   "score": 47.4
+  },
+  {
+   "id": "1083010ac2",
+   "titre": "Jouet Lego City 60367 L'avion de ligne (via coupon)",
+   "prix": 49.42,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.dealabs.com/bons-plans/lego-city-40367-lavion-de-ligne-3442663",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 109,
+   "domaine": "puericulture-jouets",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 54.42,
+   "marge_nette": 25.58,
+   "rentabilite": 0.47,
+   "demande": 3.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "qwen": "Les sets Lego City de grande taille sont très recherchés par les collectionneurs et les parents, offrant une marge de revente stable.",
+    "nemotron": "Lego City 60367 (avion) à 49€ via coupon vs 90-100€ revente neuf, set populaire en fin de vie, marge nette ~40€ après port LBC."
+   },
+   "score": 43.2
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)"
+  ]
+ },
+ "ecartes_sous_seuil": 7,
+ "annonces_analysees": [
+  {
+   "id": "23d94b599a",
+   "titre": "Switch - Persona 5 Tactica",
+   "temperature": 230,
+   "categorie": "Gaming",
+   "marchand": "AliExpress",
+   "prix": 11.44,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/switch-persona-5-tactica-2050403",
+   "date": "Sat, 31 Oct 2026 15:57:00 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,44€ - AliExpress Envío desde España con muy buenas opiniones."
+  },
+  {
+   "id": "a9b5279715",
+   "titre": "Adidas Zapatillas de running Ultraboost 5X Mujer- Tallas- 36, 37 1/3, 42 2/3",
+   "temperature": 201,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Private Sport Shop",
+   "prix": 62.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/adidas-zapatillas-de-running-ultraboost-5x-mujer-tallas-36-37-13-42-23-2050673",
+   "date": "Sat, 31 Oct 2026 16:12:00 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "62,99€ - Private Sport Shop DESCRIPCIÓN LO ESENCIAL Superficie: carretera Pisada: universal Drop: 10 ..."
+  },
+  {
+   "id": "17d2e6a2cc",
+   "titre": "[Prime] Oral-B iO Series 2 ink. Reise-Etui Night Black",
+   "temperature": 135,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-oral-b-io-series-2-ink-reise-etui-night-black-2862200",
+   "date": "Sat, 31 Oct 2026 16:09:04 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "39,99€ - Amazon Habe ich grade auf amazon gefunden. Vgp. ist von Idealo. beschreibung: Die Oral-B iO Series 2 in der eleganten Farbe <st..."
+  },
+  {
+   "id": "bb43ccf596",
+   "titre": "Schwalbe G one RS pro 40 622 Skinwall Gravelreifen",
+   "temperature": 124,
+   "categorie": "Sport & Outdoor",
+   "marchand": "fahrrad-teile.shop",
+   "prix": 44.89,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kurze-beschreibung-da-ich-unterwegs-bin-top-gravel-reifen-mit-ordentlich-speed-2862177",
+   "date": "Sat, 31 Oct 2026 15:56:37 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,89€ - fahrrad-teile.shop Kurze Beschreibung, da ich unterwegs bin. Top gravelreifen mit ordentlich Speed. • Faltreifen • Größe: 40-622 • Semi-Slick-Profil<br /..."
+  },
+  {
+   "id": "98ad6c1f6a",
+   "titre": "Sony INZONE Mouse-A Gaming-Maus (PixArt PAW 3950 bis 30.000dpi, 8.000Hz, 2.4GHz-Empfänger, USB-C, ~90h Akku, 48g)",
+   "temperature": 117,
+   "categorie": "Gaming",
+   "marchand": "Saturn",
+   "prix": 52.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/sony-inzone-mouse-a-gaming-maus-pixart-paw-3950-bis-30000dpi-8000hz-24ghz-empfanger-usb-c-90h-akku-48g-2862224",
+   "date": "Sat, 31 Oct 2026 16:23:37 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "52,98€ - Saturn Saturn und <a href=\"htt..."
+  },
+  {
+   "id": "1b6ffb4f67",
+   "titre": "Baskets Nike Air Max 90 - noires, Tailles 41 à 48,5",
+   "temperature": 115,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Zalando",
+   "prix": 95.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/baskets-nike-air-max-90-noires-tailles-41-a-48-3442512",
+   "date": "Sat, 31 Oct 2026 16:09:22 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "95,95€ - Zalando La Nike Air Max 90 LTR est une basket basse dont la silhouette reprend des codes du modèle de running d’origine. Sa tige associe cuir et imitation cuir en su..."
+  },
+  {
+   "id": "9afdadf1d5",
+   "titre": "[Via PayPal] Smartphone 6.83\" POCO X8 Pro Max - 12/512Go, 120Hz, 8500mAh, 100W, 5G, IP68",
+   "temperature": 110,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 316.01,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-smartphone-683-poco-x8-pro-max-12512go-120hz-8500mah-100w-5g-ip68-3441471",
+   "date": "Sat, 31 Oct 2026 16:15:05 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "316,01€ - AliExpress Très bon prix :) Code promo à indiquer au panier. Payez avec PayPal pour obtenir la réduction finale. ..."
+  },
+  {
+   "id": "fa1fab3df5",
+   "titre": "Parka Imperméable et Chaude de Randonnée Regatta Yewbank - Bleu, Tailles du S au XL",
+   "temperature": 110,
+   "categorie": "Sports & Plein air",
+   "marchand": "Decathlon",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/parka-impermeable-et-chaude-de-randonnee-regatta-yewbank-bleu-tailles-du-s-au-xl-3442460",
+   "date": "Sat, 31 Oct 2026 16:02:21 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "69,99€ - Decathlon En randonnée ou en sortie, cette parka vous apporte chaleur et confort. Restez au sec grâce aux coutures 100% étanchées, à son imperméabilité et aux entrées de ..."
+  },
+  {
+   "id": "1083010ac2",
+   "titre": "Jouet Lego City 60367 L'avion de ligne (via coupon)",
+   "temperature": 109,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 49.42,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-city-40367-lavion-de-ligne-3442663",
+   "date": "Sat, 31 Oct 2026 16:13:51 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "49,42€ - Amazon Super prix en remise directe pour cette boîte, 50% du prix Lego ! Livraison gratuite en point relais et à domicile. 99.99 euros chez Lego. ..."
+  },
+  {
+   "id": "728e103ccd",
+   "titre": "Bosch Professional Akku-Heckenschere GHE 18V-60 (II) Bauhaus TPG",
+   "temperature": 109,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "BAUHAUS",
+   "prix": 149.49,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bosch-professional-akku-heckenschere-ghe-18v-60-ii-bauhaus-tpg-2862209",
+   "date": "Sat, 31 Oct 2026 16:25:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "149,49€ - BAUHAUS Habe mir gerade die Bosch Heckenschere GHE 18V-60 (II) bei Bauhaus mit Tiefpreisgarantie für unter 150,00 Euro geholt. Beobachte die schon länger und ist seit l..."
+  },
+  {
+   "id": "0a63e469d9",
+   "titre": "TCL 50V6D-UK (2026) LED HDR 4K Ultra HD Smart Fire Freely TV with Dolby Atmos, 50 inch, Black - 5 Year Warranty - With Code",
+   "temperature": 102,
+   "categorie": "Electronics",
+   "marchand": "John Lewis &amp; Partners",
+   "prix": 259.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tcl-50v6d-uk-2026-led-hdr-4k-ultra-hd-smart-fire-freely-tv-with-dolby-atmos-50-inch-black-5-year-warranty-with-code-5018433",
+   "date": "Sat, 31 Oct 2026 15:25:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£259 - John Lewis & Partners Product description Product code: 82443503 The TCL V6D Fire TV Series combines 4K HDR, HDR10+, Dolby Atmos, a slim bezel-less contemporary..."
+  },
+  {
+   "id": "0fd05b7be5",
+   "titre": "FitVille Herren Rebound Neo V2 Wanderschuhe in Breit/Extra Breit (2E/4E) für 26,99€ statt 86,90€",
+   "temperature": 101,
+   "categorie": "Sport & Outdoor",
+   "marchand": "FitVille",
+   "prix": 26.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/fitville-herren-rebound-neo-v2-wanderschuhe-in-breitextra-breit-2e4e-fur-2699eur-statt-8690eur-2861867",
+   "date": "Sat, 31 Oct 2026 16:21:19 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "26,99€ - FitVille Bei FitVille bekommt ihr aktuell die Herren Rebound Neo V2 Wanderschuhe in den Passformen Breit (2E) und Extra Breit (4E) für 26,99€ statt 86,90€. Prod..."
+  },
+  {
+   "id": "27fadbf507",
+   "titre": "Gucci Guilty For Him Eau de Toilette 50ml - Free C&C",
+   "temperature": 101,
+   "categorie": "Health & Beauty",
+   "marchand": "Boots",
+   "prix": 38.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gucci-guilty-for-him-eau-de-toilette-50ml-free-acc-5017545",
+   "date": "Sat, 31 Oct 2026 15:19:47 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£38 - Boots Fragrance Family: Fougere Fragrance Notes: Top Notes: Lavender, Italian Lemon Heart Notes: Orange blossom Base Notes: Cedarwo..."
+  },
+  {
+   "id": "7c1edfde60",
+   "titre": "Beatrice II Rutland Stripe Fixed Loose Cover Snuggle Chair",
+   "temperature": 100,
+   "categorie": "Home & Living",
+   "marchand": "Dunelm",
+   "prix": 199.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/beatrice-ii-rutland-stripe-fixed-loose-cover-snuggle-chair-5018032",
+   "date": "Sat, 31 Oct 2026 15:22:47 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£199.50 - Dunelm Now Half Price Down from £399 with a 10year Guarentee Re‑imagined Beatrice range Fixed loose cover design Curved ..."
+  },
+  {
+   "id": "c7c3f856a7",
+   "titre": "Baskets Tommy Hilfiger - Bicolores Homme à Drapeau Ton sur Ton",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Tommy Hilfiger",
+   "prix": 32.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/tommy-hilfiger-baskets-bicolores-homme-a-drapeau-ton-sur-ton-3442768",
+   "date": "Sat, 31 Oct 2026 16:24:00 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "32€ - Tommy Hilfiger Adoptez un style décontracté et élégant avec ces baskets bicolores Tommy Hilfiger ! Leur design épuré est sublimé par le célèbre drapeau de la marque ton sur ton, pour une finition discrète et raffinée. Faciles à porter au quotidien, elles apportent une touche sportive à toutes "
+  },
+  {
+   "id": "2a619d6349",
+   "titre": "Jouet Lego Les robots titan jumeaux 71870",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/les-robots-titan-jumeaux-71870-3442762",
+   "date": "Sat, 31 Oct 2026 16:12:21 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "89,99€ - Amazon JOUETS ROBOTS POUR GARÇON OU FILLE DÈS 12 ANS – Les ados fans de la nouvelle série peuvent recréer des scènes de combats épiques avec le set Les robots Titan jumeaux, un jeu de construction détaillé inspiré de NINJAGO Legends : Le Crépuscule MAQUETTES ENTIÈREMENT ARTICULÉES – Chaque "
+  }
+ ]
+}

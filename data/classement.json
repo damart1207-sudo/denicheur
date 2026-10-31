@@ -1,25 +1,25 @@
 {
  "qwen": {
   "global": {
-   "proposees": 16,
+   "proposees": 20,
    "validees": 2,
    "rejetees": 3,
    "points": 3
   },
   "domaine/tech": {
-   "proposees": 7,
+   "proposees": 8,
    "validees": 2,
    "rejetees": 0,
    "points": 6
   },
   "domaine/puericulture-jouets": {
-   "proposees": 5,
+   "proposees": 7,
    "validees": 0,
    "rejetees": 1,
    "points": -1
   },
   "domaine/mode": {
-   "proposees": 1,
+   "proposees": 2,
    "validees": 0,
    "rejetees": 0,
    "points": 0
@@ -37,20 +37,20 @@
    "points": 0
   },
   "fiabilite": {
-   "tentes": 3,
-   "reussis": 2,
-   "taux": 67
+   "tentes": 5,
+   "reussis": 4,
+   "taux": 80
   }
  },
  "nemotron": {
   "global": {
-   "proposees": 27,
+   "proposees": 31,
    "validees": 4,
    "rejetees": 7,
    "points": 5
   },
   "domaine/mode": {
-   "proposees": 6,
+   "proposees": 7,
    "validees": 1,
    "rejetees": 3,
    "points": 0
@@ -62,7 +62,7 @@
    "points": -2
   },
   "domaine/sport": {
-   "proposees": 3,
+   "proposees": 4,
    "validees": 0,
    "rejetees": 0,
    "points": 0
@@ -80,7 +80,7 @@
    "points": 6
   },
   "domaine/puericulture-jouets": {
-   "proposees": 4,
+   "proposees": 5,
    "validees": 0,
    "rejetees": 2,
    "points": -2
@@ -103,33 +103,39 @@
    "rejetees": 0,
    "points": 0
   },
-  "fiabilite": {
-   "tentes": 3,
-   "reussis": 3,
-   "taux": 100
-  }
- },
- "gptoss": {
-  "global": {
-   "proposees": 11,
-   "validees": 1,
-   "rejetees": 3,
-   "points": 0
-  },
-  "domaine/jardin-bricolage": {
+  "domaine/gaming": {
    "proposees": 1,
    "validees": 0,
    "rejetees": 0,
    "points": 0
   },
-  "domaine/sport": {
+  "fiabilite": {
+   "tentes": 4,
+   "reussis": 4,
+   "taux": 100
+  }
+ },
+ "gptoss": {
+  "global": {
+   "proposees": 19,
+   "validees": 1,
+   "rejetees": 3,
+   "points": 0
+  },
+  "domaine/jardin-bricolage": {
    "proposees": 2,
    "validees": 0,
    "rejetees": 0,
    "points": 0
   },
+  "domaine/sport": {
+   "proposees": 5,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
   "domaine/mode": {
-   "proposees": 4,
+   "proposees": 6,
    "validees": 1,
    "rejetees": 3,
    "points": 0
@@ -158,10 +164,22 @@
    "rejetees": 0,
    "points": 0
   },
+  "domaine/gaming": {
+   "proposees": 1,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
+  "domaine/beaute-sante": {
+   "proposees": 1,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
   "fiabilite": {
-   "tentes": 3,
-   "reussis": 1,
-   "taux": 33
+   "tentes": 5,
+   "reussis": 3,
+   "taux": 60
   }
  },
  "gemini": {
@@ -184,12 +202,44 @@
    "points": -1
   },
   "fiabilite": {
-   "tentes": 3,
+   "tentes": 4,
    "reussis": 1,
-   "taux": 33
+   "taux": 25
+  }
+ },
+ "nemotron_nv": {
+  "global": {
+   "proposees": 3,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
+  "domaine/mode": {
+   "proposees": 2,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
+  "domaine/tech": {
+   "proposees": 1,
+   "validees": 0,
+   "rejetees": 0,
+   "points": 0
+  },
+  "fiabilite": {
+   "tentes": 1,
+   "reussis": 1,
+   "taux": 100
   }
  },
  "glm": {
+  "fiabilite": {
+   "tentes": 2,
+   "reussis": 1,
+   "taux": 50
+  }
+ },
+ "gemma": {
   "fiabilite": {
    "tentes": 1,
    "reussis": 0,

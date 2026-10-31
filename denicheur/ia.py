@@ -35,25 +35,30 @@ class Agent:
             self.erreurs.append("plafond d'appels atteint")
             return None
         self.appels += 1
-        corps = {
-            "model": self.conf["modele"],
-            "messages": [{"role": "system", "content": systeme}, {"role": "user", "content": message}],
-            "temperature": 0.2,
-        }
+        modeles = [self.conf["modele"]] + list(self.conf.get("modeles_secours", []))
         url = self.conf["base_url"].rstrip("/") + "/chat/completions"
-        req = urllib.request.Request(
-            url,
-            data=json.dumps(corps).encode(),
-            headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.cle}",
-                     "User-Agent": "denicheur/1.0 (python)"},
-        )
         t0 = time.time()
-        for essai in (1, 2):  # au plus 1 seule relance, uniquement si surcharge
+        for i, modele in enumerate(modeles):  # si le modèle est saturé, on essaie le suivant (une fois chacun)
+            corps = {
+                "model": modele,
+                "messages": [{"role": "system", "content": systeme}, {"role": "user", "content": message}],
+                "temperature": 0.2,
+            }
+            if self.conf.get("json_mode"):
+                corps["response_format"] = {"type": "json_object"}
+            req = urllib.request.Request(
+                url,
+                data=json.dumps(corps).encode(),
+                headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.cle}",
+                         "User-Agent": "denicheur/1.0 (python)"},
+            )
             try:
                 with urllib.request.urlopen(req, timeout=self.conf.get("timeout", TIMEOUT)) as r:
                     data = json.loads(r.read())
                 self.duree += time.time() - t0
                 self.reussites += 1
+                if i:
+                    self.modele_utilise = modele
                 return data["choices"][0]["message"].get("content") or ""
             except urllib.error.HTTPError as e:
                 detail = e.read()[:200].decode(errors="replace")
@@ -61,10 +66,10 @@ class Agent:
                     self.erreurs.append("402 paiement exigé : agent coupé pour ce passage")
                     self.appels = 10**6
                     return None
-                if e.code in (429, 503) and essai == 1:
-                    time.sleep(20)
+                if e.code in (429, 503) and i + 1 < len(modeles):
+                    time.sleep(5)
                     continue
-                self.erreurs.append(f"HTTP {e.code}: {detail}")
+                self.erreurs.append(f"HTTP {e.code} ({modele}): {detail}")
                 if self.reussites == 0 and (e.code >= 500 or e.code in (401, 403, 404, 429)):
                     self.erreurs.append("coupé pour ce passage")
                     self.appels = 10**6

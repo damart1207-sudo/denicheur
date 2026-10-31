@@ -1,5 +1,5 @@
 {
-  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut). remplacants : si un analyste ne répond pas du tout pendant un passage, son remplaçant reprend exactement les mêmes bons plans (un seul remplacement par passage).",
+  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut). remplacants : si un analyste ne répond pas du tout pendant un passage, son remplaçant reprend exactement les mêmes bons plans (un seul remplacement par passage). modeles_secours : modèles essayés si le principal est saturé. json_mode : force une réponse JSON propre.",
   "trieur": "glm",
   "analystes": [
     "gemini",
@@ -9,12 +9,18 @@
   ],
   "agents": {
     "gemini": {
-      "nom": "Gemini Flash (dernière version)",
+      "nom": "Gemini 3.8 Flash",
       "marque": "Google",
       "base_url": "https://generativelanguage.googleapis.com/v1beta/openai",
-      "modele": "gemini-flash-latest",
+      "modele": "gemini-3.8-flash",
       "cle_env": "GEMINI_API_KEY",
-      "max_appels": 6
+      "max_appels": 6,
+      "modeles_secours": [
+        "gemini-flash-latest",
+        "gemini-3.5-flash",
+        "gemini-2.5-flash"
+      ],
+      "json_mode": true
     },
     "deepseek": {
       "nom": "DeepSeek V4.1 Flash",
@@ -39,7 +45,10 @@
       "base_url": "https://api.z.ai/api/paas/v4",
       "modele": "glm-4.7-flash",
       "cle_env": "ZAI_API_KEY",
-      "max_appels": 8
+      "max_appels": 8,
+      "modeles_secours": [
+        "glm-4.5-flash"
+      ]
     },
     "gptoss": {
       "nom": "gpt-oss-120b",
@@ -47,7 +56,8 @@
       "base_url": "https://api.groq.com/openai/v1",
       "modele": "openai/gpt-oss-120b",
       "cle_env": "GROQ_API_KEY",
-      "max_appels": 6
+      "max_appels": 6,
+      "json_mode": true
     },
     "qwen": {
       "nom": "Qwen 3.8 27B",
@@ -55,7 +65,8 @@
       "base_url": "https://api.groq.com/openai/v1",
       "modele": "qwen/qwen3.8-27b",
       "cle_env": "GROQ_API_KEY",
-      "max_appels": 6
+      "max_appels": 6,
+      "json_mode": true
     }
   },
   "remplacants": {

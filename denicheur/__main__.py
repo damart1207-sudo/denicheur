@@ -168,7 +168,7 @@ def verifier():
         if a.cle:  # clé présente : on liste les modèles disponibles pour corriger le nom si besoin
             try:
                 req = urllib.request.Request(conf["base_url"].rstrip("/") + "/models",
-                                             headers={"Authorization": f"Bearer {a.cle}"})
+                                             headers={"Authorization": f"Bearer {a.cle}", "User-Agent": "denicheur/1.0 (python)"})
                 with urllib.request.urlopen(req, timeout=30) as r:
                     ids = [m.get("id", "") for m in json.loads(r.read()).get("data", [])]
                 mot = conf["modele"].split("/")[-1].split("-")[0]

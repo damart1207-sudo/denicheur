@@ -43,12 +43,13 @@ class Agent:
         req = urllib.request.Request(
             url,
             data=json.dumps(corps).encode(),
-            headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.cle}"},
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {self.cle}",
+                     "User-Agent": "denicheur/1.0 (python)"},
         )
         t0 = time.time()
         for essai in (1, 2):  # au plus 1 seule relance, uniquement si surcharge
             try:
-                with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                with urllib.request.urlopen(req, timeout=self.conf.get("timeout", TIMEOUT)) as r:
                     data = json.loads(r.read())
                 self.duree += time.time() - t0
                 return data["choices"][0]["message"].get("content") or ""

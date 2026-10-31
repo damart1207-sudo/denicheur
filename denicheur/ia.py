@@ -15,6 +15,7 @@ class Agent:
         self.conf = conf
         self.nom = conf["nom"]
         self.appels = 0
+        self.reussites = 0
         self.erreurs = []
         self.duree = 0.0
 
@@ -52,6 +53,7 @@ class Agent:
                 with urllib.request.urlopen(req, timeout=self.conf.get("timeout", TIMEOUT)) as r:
                     data = json.loads(r.read())
                 self.duree += time.time() - t0
+                self.reussites += 1
                 return data["choices"][0]["message"].get("content") or ""
             except urllib.error.HTTPError as e:
                 detail = e.read()[:200].decode(errors="replace")

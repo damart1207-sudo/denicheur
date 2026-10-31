@@ -55,7 +55,7 @@ def lecteur_test(source):
 class FauxAgent:
     def __init__(self, ident, conf):
         self.id, self.conf, self.nom = ident, conf, conf["nom"]
-        self.appels, self.erreurs, self.duree = 0, [], 0.0
+        self.appels, self.reussites, self.erreurs, self.duree = 0, 0, [], 0.0
         self.alea = random.Random(ident)
 
     def disponible(self):
@@ -63,6 +63,10 @@ class FauxAgent:
 
     def demander(self, systeme, message):
         self.appels += 1
+        if self.conf.get("panne_test"):
+            self.erreurs.append("panne simulée")
+            return None
+        self.reussites += 1
         ids = [l.split(" | ")[0] for l in message.splitlines() if " | " in l]
         if '{"garder"' in systeme:
             return json.dumps({"garder": ids})
@@ -103,9 +107,13 @@ def passage(nom, test=False):
     capacite = regles["taille_lot"] * min(agents[a].conf.get("max_appels", 5) for a in conf_eq["analystes"])
     tries = tries[:capacite]  # les plus populaires d'abord (déjà triés par température)
 
-    tous_choix = []
+    tous_choix, remplacements = [], {}
     for nom_a in conf_eq["analystes"]:
         tous_choix += equipe.analyser(agents[nom_a], tries, methode, regles["taille_lot"])
+        remp = conf_eq.get("remplacants", {}).get(nom_a)
+        if tries and agents[nom_a].reussites == 0 and remp and remp in agents and not remplacements.get(remp):
+            remplacements[remp] = nom_a  # le remplaçant joue à sa place, avec les mêmes bons plans
+            tous_choix += equipe.analyser(agents[remp], tries, methode, regles["taille_lot"])
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
 
@@ -125,8 +133,11 @@ def passage(nom, test=False):
         "nb_prefiltres": len(prefiltrees),
         "nb_tries": len(tries),
         "tri_ok": tri_ok,
-        "agents": {k: {"appels": a.appels, "erreurs": a.erreurs, "choix": sum(1 for c in tous_choix if c["agent"] == k)}
-                   for k, a in agents.items()},
+        "agents": {k: {"appels": a.appels, "reussites": a.reussites, "erreurs": a.erreurs,
+                       "choix": sum(1 for c in tous_choix if c["agent"] == k),
+                       **({"remplace": remplacements[k]} if k in remplacements else {})}
+                   for k, a in agents.items() if a.appels or k in conf_eq["analystes"]},
+        "remplacements": remplacements,
         "candidats": retenus[:40],
         "ecartes_sous_seuil": len(candidats) - len(retenus),
         "annonces_analysees": tries,
@@ -136,7 +147,7 @@ def passage(nom, test=False):
     ecrire(f"{base}/classement.json", classement)
     ecrire(f"{base}/rapport.html", rapport.page(resultat, classement))
     # si aucun analyste n'a pu travailler (clés absentes, pannes), on garde les bons plans pour le passage suivant
-    if any(resultat["agents"][a]["appels"] and not resultat["agents"][a]["erreurs"] for a in conf_eq["analystes"]):
+    if any(a.reussites for k, a in agents.items() if k in conf_eq["analystes"] or k in remplacements):
         ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
 
     print(f"Passage {nom} ({horodatage}) : {len(annonces)} lus, {len(nouvelles)} nouveaux, {len(prefiltrees)} filtrés, "

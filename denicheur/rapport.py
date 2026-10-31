@@ -1,7 +1,7 @@
 """Page HTML du tableau (provisoire avant audit, puis remplacée par la version validée par Claude)."""
 import html
 
-NOMS = {"gemini": "Gemini", "deepseek": "DeepSeek", "nemotron": "Nemotron", "glm": "GLM", "gptoss": "gpt-oss"}
+NOMS = {"gemini": "Gemini", "deepseek": "DeepSeek", "nemotron": "Nemotron", "glm": "GLM", "gptoss": "gpt-oss", "qwen": "Qwen"}
 
 
 def _e(x):
@@ -24,7 +24,7 @@ def page(resultat, classement):
 
     sources = "".join(f"<li>{_e(k)} : {'✅ ' + str(v['nb']) if v['ok'] else '❌ ' + _e(v['erreur'])}</li>"
                       for k, v in resultat["sources"].items())
-    agents = "".join(f"<li>{_e(NOMS.get(k, k))} : {v['appels']} appel(s), {v['choix']} choix"
+    agents = "".join(f"<li>{_e(NOMS.get(k, k))}{' (remplaçant de ' + _e(NOMS.get(v['remplace'], v['remplace'])) + ')' if v.get('remplace') else ''} : {v['appels']} appel(s), {v['choix']} choix"
                      f"{' — ⚠️ ' + _e('; '.join(v['erreurs'][:2])) if v['erreurs'] else ''}</li>"
                      for k, v in resultat["agents"].items())
     champ = []

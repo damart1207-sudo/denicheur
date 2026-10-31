@@ -1,5 +1,5 @@
 {
-  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut).",
+  "_info": "Les 5 IA de l'équipe. Toutes gratuites. La clé de chacune est lue dans le secret GitHub indiqué par cle_env. max_appels = plafond par passage (garde-fou). timeout = délai max d'une réponse en secondes (120 par défaut). remplacants : si un analyste ne répond pas du tout pendant un passage, son remplaçant reprend exactement les mêmes bons plans (un seul remplacement par passage).",
   "trieur": "glm",
   "analystes": [
     "gemini",
@@ -48,6 +48,20 @@
       "modele": "openai/gpt-oss-120b",
       "cle_env": "GROQ_API_KEY",
       "max_appels": 6
+    },
+    "qwen": {
+      "nom": "Qwen 3.8 27B",
+      "marque": "Alibaba",
+      "base_url": "https://api.groq.com/openai/v1",
+      "modele": "qwen/qwen3.8-27b",
+      "cle_env": "GROQ_API_KEY",
+      "max_appels": 6
     }
+  },
+  "remplacants": {
+    "deepseek": "qwen",
+    "gemini": "qwen",
+    "nemotron": "qwen",
+    "gptoss": "qwen"
   }
 }

@@ -1,12 +1,12 @@
 name: Dénicheur
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
-#  chaque heure (à :15) -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
+#  toutes les 10 min -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
 #  02:00 UTC = 10:00 à Pékin = 03:00 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
 on:
   schedule:
     - cron: "0 2 * * *"
-    - cron: "15 * * * *"
+    - cron: "*/10 * * * *"
   workflow_dispatch:
     inputs:
       passage:
@@ -62,7 +62,7 @@ jobs:
           PASSAGE="${{ github.event.inputs.passage }}"
           if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
-          if [ "${{ github.event.schedule }}" = "15 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
+          if [ "${{ github.event.schedule }}" = "*/10 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
             python -m denicheur.veille
             exit 0
           fi

@@ -116,6 +116,11 @@ def main():
     js = json.dumps(donnees, ensure_ascii=False).replace("</", "<\\/")
     with open(os.path.join(RACINE, "saas/index.html"), "w", encoding="utf-8") as f:
         f.write(modele.replace("/*DONNEES*/null/*FIN*/", js))
+    try:
+        import runpy
+        runpy.run_path(os.path.join(RACINE, "saas/construire_site.py"), run_name="__main__")
+    except Exception as ex:
+        print("site public non construit :", ex)
     print(f"saas/index.html : {len(passages)} passages, {len(affaires)} affaires, {len(audits)} audit(s)")
 
 

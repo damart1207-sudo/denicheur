@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{NOM}} : les vraies bonnes affaires, vérifiées une par une</title>
+<meta name="description" content="Les bons plans vérifiés : chaque prix est comparé au prix neuf le plus bas en France avant d'être publié. Mis à jour chaque heure.">
+<style>
+:root{
+  --papier:#ffffff; --encre:#1b2a41; --gris:#5e6b7a; --trait:#d9dee5;
+  --rayon:#ffd84d; --rayon-encre:#2b2200; --gain:#1f7a45; --barre:#b3322a; --fond:#f3f5f8;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --papier:#141c28; --encre:#e8edf4; --gris:#9aa7b6; --trait:#2b3646; --rayon:#f2c934; --rayon-encre:#211a00;
+  --gain:#5fd18e; --barre:#ff8a80; --fond:#0e141d; color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.6 "Atkinson Hyperlegible",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rayon);outline-offset:3px}
+.page{max-width:1040px;margin:0 auto;padding:0 20px}
+header.haut{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding:22px 0 8px}
+.marque{font:800 30px/1 "Barlow Condensed","Roboto Condensed","Arial Narrow","Helvetica Neue",sans-serif;letter-spacing:.01em;text-decoration:none}
+.marque b{background:var(--rayon);color:var(--rayon-encre);padding:0 6px;margin-left:2px}
+.maj{color:var(--gris);font-size:15px;margin:0}
+h1{font:800 clamp(38px,6vw,64px)/1.02 "Barlow Condensed","Roboto Condensed","Arial Narrow","Helvetica Neue",sans-serif;margin:28px 0 12px;max-width:16ch}
+.chapo{font-size:19px;max-width:60ch;margin:0 0 28px;color:var(--gris)}
+h2{font:700 30px/1.1 "Barlow Condensed","Roboto Condensed","Arial Narrow","Helvetica Neue",sans-serif;margin:56px 0 16px}
+/* l'étiquette de rayon : l'élément signature */
+.etiquette{display:grid;grid-template-columns:1fr minmax(220px,300px);background:var(--papier);border:1px solid var(--trait);border-left:6px solid var(--encre)}
+.etiquette .produit{padding:18px 20px}
+.etiquette h3{font:700 22px/1.2 "Barlow Condensed","Roboto Condensed","Arial Narrow","Helvetica Neue",sans-serif;margin:0 0 6px}
+.origine,.etat{margin:0;color:var(--gris);font-size:15px}
+.etiquette .prix{background:var(--rayon);color:var(--rayon-encre);padding:16px 20px;display:flex;flex-direction:column;gap:2px}
+.prix p{margin:0}
+.montant{white-space:nowrap;font:800 44px/1 "Barlow Condensed","Roboto Condensed","Arial Narrow","Helvetica Neue",sans-serif;letter-spacing:-.01em}
+.ailleurs{font-size:15px}
+.ailleurs s{white-space:nowrap;text-decoration-color:var(--barre);text-decoration-thickness:2px}
+.gain{font-weight:700}
+.voir{margin-top:10px;align-self:flex-start;background:var(--rayon-encre);color:var(--rayon);text-decoration:none;font-weight:700;padding:8px 14px}
+.voir:hover{text-decoration:underline}
+.grande{border-left-width:10px}
+.grande h3{font-size:32px}
+.grande{grid-template-columns:1fr minmax(260px,360px)}
+.grande .montant{font-size:60px}
+.ancienne{opacity:.72}
+ul.liste{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.vide{color:var(--gris);padding:18px 0}
+.tendances{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.tendances li{background:var(--papier);border:1px solid var(--trait);padding:8px 12px;display:flex;gap:10px;align-items:baseline}
+.tendances .h{color:var(--gain);font-weight:700;font-size:14px}
+ol.methode{margin:0;padding-left:22px;max-width:62ch}
+ol.methode li{margin:0 0 10px}
+footer{margin:64px 0 0;padding:24px 0 40px;border-top:1px solid var(--trait);color:var(--gris);font-size:15px}
+footer p{max-width:70ch}
+@media (max-width:640px){
+  .etiquette{grid-template-columns:1fr}
+  .grande .montant{font-size:52px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+<header class="haut">
+  <a class="marque" href="./">Déni<b>cheur</b></a>
+  <p class="maj">Mis à jour le {{MAJ}}</p>
+</header>
+
+<main>
+<h1>Les vraies bonnes affaires, vérifiées une par une</h1>
+<p class="chapo">Chaque offre est comparée au prix neuf le plus bas en France avant d'être publiée. Si elle n'est pas vraiment moins chère, elle n'apparaît pas ici.</p>
+
+{{UNE}}
+
+<h2>Les autres affaires vérifiées ({{NB}} au total)</h2>
+<ul class="liste">
+{{LISTE}}
+</ul>
+
+<h2>Ce que les gens cherchent en ce moment</h2>
+<p class="chapo">Les recherches qui montent le plus en France sur les comparateurs de prix, cette semaine.</p>
+<ul class="tendances">
+{{TENDANCES}}
+</ul>
+
+<h2>Comment chaque affaire est vérifiée</h2>
+<ol class="methode">
+  <li>Des milliers d'offres sont lues chaque heure sur les sites de bons plans en France et en Europe.</li>
+  <li>Le produit exact est identifié : modèle, capacité, version.</li>
+  <li>Son prix est comparé au prix neuf le plus bas en France, sur les principaux comparateurs.</li>
+  <li>Seules les offres nettement moins chères, encore actives et livrables en France sont publiées.</li>
+</ol>
+</main>
+
+<footer>
+  <p>Certains liens de ce site peuvent être des liens partenaires : si vous achetez après avoir cliqué, nous pouvons recevoir une commission, sans surcoût pour vous. Les prix changent vite : vérifiez toujours le prix final chez le marchand avant d'acheter.</p>
+  <p><a href="mentions-legales.html">Mentions légales</a></p>
+</footer>
+</div>
+</body>
+</html>

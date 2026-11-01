@@ -80,6 +80,7 @@ jobs:
           fi
           if [ "${{ github.event.schedule }}" = "*/10 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
             python -m denicheur.veille
+            python saas/construire_site.py || true
             exit 0
           fi
           pip install -q pytrends "urllib3<2" || true
@@ -102,7 +103,7 @@ jobs:
           git config user.name "denicheur-bot"
           git config user.email "denicheur-bot@users.noreply.github.com"
           mkdir -p data
-          git add -A data
+          git add -A data docs
           if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
           git commit -q -m "Passage du $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main

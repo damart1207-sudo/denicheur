@@ -1192,7 +1192,7 @@
   "ecart_vs_neuf_min": 0.627,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T23:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -1260,6 +1260,16 @@
     "rentabilite": 0.002
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T00:52",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Mais l'affaire ne passera probablement pas : coût 38,83 € (33,83 € + 5 € de port estimé). Le neuf le moins cher connu est 53,99 € sur achatmoinscher (autre coloris, noir) ; Sports Direct France l'affiche à 73 €. Revente plafonnée à 85 % de 53,99 €, soit 45,89 € : marge ~7 €, sous le seuil de 8 €. Il faudrait un neuf au moins à ~59,40 € pour viser 30 %. Offre Amazon Espagne : page Chollometro illisible, donc offre active et livraison en France non prouvées. Coloris gris et tailles limitées (37, 37,5, 38, 41). Aucune annonce de revente réelle trouvée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 45.89,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 7.06,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

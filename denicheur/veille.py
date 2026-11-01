@@ -17,7 +17,7 @@ from .ia import Agent, extraire_json
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEUIL_ECART = 0.75          # prix d'achat <= 75 % du neuf le moins cher en France
 MAXI_PRODUITS = 12          # produits vérifiés par tour (rythme poli pour les comparateurs)
-SIGNAUX = re.compile(r"erreur de prix|price error|preisfehler|error de precio|-[5-9]\d ?%|gratuit|offert|\bgratis\b", re.I)
+SIGNAUX = re.compile(r"erreur de prix|price error|pricing error|preisfehler|error de precio|errore di prezzo|b[łl][aą]d cenowy|prijsfout", re.I)
 
 
 def _lire(rel, defaut):
@@ -84,7 +84,7 @@ def tour():
         ecart = round(a["prix"] / pmin, 3) if pmin else None
         if a["id"] in deja:
             continue
-        if (ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (a.get("temperature") or 0) >= 100):
+        if (ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85)):
             x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
                  "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
                  "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),

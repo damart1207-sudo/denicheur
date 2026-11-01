@@ -45,7 +45,7 @@
   "ecart_vs_neuf_min": 0.686,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T17:55+00:00",
-  "statut": "a_verifier",
+  "statut": "bon",
   "canaux": [
    {
     "profil": "confiance",
@@ -111,7 +111,16 @@
     "marge_nette": 59.41,
     "rentabilite": 0.195
    }
-  ]
+  ],
+  "verdict": {
+   "commentaire": "Offre active (853°, finit dans ~17 jours). 299 € sur PcComponentes ESPAGNE ; le même robot est à 649,98 € sur PcComponentes France. idealo : neuf dès 435,76 € en France. Revente Leboncoin ~383 € (≈ +79 € net, 26 %). CONDITION : vérifier au panier que la livraison en France est proposée (le site espagnol livre normalement l'Espagne) ; sinon non achetable.",
+   "prix_neuf_min_idealo": 435.76,
+   "prix_revente_verifie": 383.5,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 79.5,
+   "duree_offre": "~17 jours"
+  },
+  "verifie_le": "2026-11-01T19:10"
  },
  {
   "id": "4ebb6c99e5",
@@ -129,8 +138,12 @@
   "ecart_vs_neuf_min": null,
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-01T17:55+00:00",
-  "statut": "a_verifier",
-  "canaux": null
+  "statut": "rejete",
+  "canaux": null,
+  "verdict": {
+   "commentaire": "Commode chez XXXLutz Autriche : livraison Autriche seulement, meuble lourd."
+  },
+  "verifie_le": "2026-11-01T19:10"
  },
  {
   "id": "b216b8b336",
@@ -165,7 +178,7 @@
   "ecart_vs_neuf_min": 0.684,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T17:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "canaux": [
    {
     "profil": "confiance",
@@ -231,7 +244,11 @@
     "marge_nette": 27.6,
     "rentabilite": 0.164
    }
-  ]
+  ],
+  "verdict": {
+   "commentaire": "idealo : Ryzen 7 9700X dès 150,17 € en France, moins cher que l'offre."
+  },
+  "verifie_le": "2026-11-01T19:10"
  },
  {
   "id": "90a0c46c74",
@@ -285,7 +302,7 @@
   "ecart_vs_neuf_min": 0.398,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T17:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "canaux": [
    {
     "profil": "petit_budget",
@@ -351,6 +368,10 @@
     "marge_nette": 10.38,
     "rentabilite": 0.42
    }
-  ]
+  ],
+  "verdict": {
+   "commentaire": "idealo : DOOM The Dark Ages PS5 dès 12 € en France."
+  },
+  "verifie_le": "2026-11-01T19:10"
  }
 ]

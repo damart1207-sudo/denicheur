@@ -8,6 +8,7 @@ import xml.etree.ElementTree as ET
 UA = "Mozilla/5.0 (compatible; Denicheur/1.0; usage personnel)"
 NS_PEPPER = "{http://www.pepper.com/rss}merchant"
 ATOM = "{http://www.w3.org/2005/Atom}"
+TAUX_PLN_EUR = 0.235
 
 
 def _prix(texte):
@@ -73,10 +74,13 @@ def _item(item, source):
     if pm is not None:
         marchand, prix_txt = pm.get("name"), pm.get("price")
     description = _nettoyer(item.findtext("description"))
-    if prix_txt is None:  # flux classique : chercher un prix dans le titre
-        m2 = re.search(r"(\d+[.,]?\d*)\s?€|£\s?(\d+[.,]?\d*)", titre)
+    if prix_txt is None:  # flux classique : chercher un prix dans le titre, sinon dans le texte
+        motif = r"(\d[\d\s.,]*)\s?€|£\s?(\d+[.,]?\d*)"
+        m2 = re.search(motif, titre) or re.search(motif, description)
         prix_txt = m2.group(0) if m2 else None
     prix = _prix(prix_txt)
+    if source["pays"] == "PL" and prix:  # złoty -> euros (taux prudent)
+        prix = round(prix * TAUX_PLN_EUR, 2)
     return {
         "id": hashlib.sha1(lien.encode()).hexdigest()[:10],
         "titre": titre[:180],

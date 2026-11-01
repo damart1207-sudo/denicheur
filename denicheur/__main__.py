@@ -305,6 +305,8 @@ def tester_comparateurs():
         "123comparer_recherche": "https://www.123comparer.fr/recherche/?q=0195951030784",
         "achatmoinscher": "https://www.achatmoinscher.com/recherche.php?q=0195951030784",
         "achatmoinscher_nom": "https://www.achatmoinscher.com/recherche.php?q=apple%20iphone%2017e%20256%20go%20blanc&etat=2",
+        "amc_promos_smartphone": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/?tri=5&etat=2",
+        "amc_deals": "https://www.achatmoinscher.com/deals.php",
         "google_shopping": "https://www.google.com/search?tbm=shop&q=0195951030784",
         "leboncoin": "https://www.leboncoin.fr/recherche?text=iphone%2017e%20256",
         "vinted": "https://www.vinted.fr/catalog?search_text=iphone%2017e",
@@ -318,6 +320,10 @@ def tester_comparateurs():
                 h = r.read().decode("utf-8", errors="replace")
             prix = _re.findall(r"(\d{2,4}[,.]\d{2})\s?(?:€|&euro;|&nbsp;€)", h)[:8]
             res[nom] = {"ok": True, "taille": len(h), "prix_vus": prix, "ean_present": "0195951030784" in h}
+            if nom in ("amc_promos_smartphone", "123comparer", "ledenicheur_produit", "achatmoinscher_nom"):
+                os.makedirs("data/echantillons", exist_ok=True)
+                with open(f"data/echantillons/{nom}.html", "w", encoding="utf-8") as f:
+                    f.write(h[:400000])
         except Exception as e:
             res[nom] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:120]}"}
         print(nom, res[nom])

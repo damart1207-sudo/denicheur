@@ -126,6 +126,22 @@ def marge_nette(prix_revente, plateforme, cout, regles):
     return round(net_vente - cout, 2)
 
 
+def canaux_de_vente(c, regles):
+    """Prix et marge nette par profil d'acheteur et par canal, à partir du neuf le moins cher (prix plancher)."""
+    pmin = (c.get("prix_plancher") or {}).get("prix_min")
+    if not pmin:
+        return None
+    res = []
+    for cle, prof in regles.get("profils_acheteurs", {}).items():
+        prix = round(pmin * prof["prix_vs_neuf_min"], 2)
+        for canal in prof["canaux"]:
+            m = marge_nette(prix, canal, c["cout_achat"], regles)
+            res.append({"profil": cle, "profil_nom": prof["nom"], "canal": canal, "prix_vente": prix,
+                        "marge_nette": m, "rentabilite": round(m / c["cout_achat"], 3) if c["cout_achat"] else 0})
+    res.sort(key=lambda x: -x["marge_nette"])
+    return res
+
+
 def consolider(annonces, tous_choix, regles):
     par_id = {a["id"]: a for a in annonces}
     groupes = {}

@@ -285,6 +285,14 @@ function rapportDemande(r){
     ${r.temperature_dealabs!=null?`<div><b>Température Dealabs :</b> ${r.temperature_dealabs}°</div>`:""}
     <div class="petit">Pas de volume exact (type Semrush) : ce chiffre n'existe que dans des outils payants.</div></details>`;
 }
+const CANAUX = {leboncoin:"Leboncoin",vinted:"Vinted",facebook:"Facebook Marketplace",amazon:"Amazon",cdiscount:"Cdiscount",fnac:"Fnac",ebay:"eBay",tiktok:"TikTok Shop"};
+function tableCanaux(a){
+  if(!a.canaux||!a.canaux.length) return "";
+  const pm=a.prix_plancher||{};
+  return `<details class="rapport"><summary>Où vendre et à quel prix : meilleur canal ${esc(CANAUX[a.canaux[0].canal]||a.canaux[0].canal)} (${euro(a.canaux[0].marge_nette)} net)</summary>
+    <div class="petit">Neuf le moins cher en France : <b>${euro(pm.prix_min)}</b>${pm.lien?` (<a href="${esc(pm.lien)}" target="_blank" rel="noopener">${esc(pm.ou)}</a>)`:""}. Prix de vente estimés par type d'acheteur, frais de chaque plateforme déduits.</div>
+    <table><tr><th>Acheteurs</th><th>Canal</th><th>Prix de vente</th><th>Net pour toi</th></tr>${a.canaux.map(x=>`<tr><td>${esc(x.profil_nom)}</td><td>${esc(CANAUX[x.canal]||x.canal)}</td><td class="chiffre">${euro(x.prix_vente)}</td><td class="chiffre">${euro(x.marge_nette)} <span class="petit">(${Math.round(100*x.rentabilite)} %)</span></td></tr>`).join("")}</table></details>`;
+}
 function etiquette(a){
   const v = a.audit || {verdict:"attente"}, g = a.verification;
   const rev = reventeDe(a), marge = margeDe(a);
@@ -308,7 +316,7 @@ function etiquette(a){
       ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
       ${a.ebay&&(a.ebay.occasion||a.ebay.neuf)?`<div class="encart google"><span class="etiq">Annonces eBay en cours</span><br>${a.ebay.occasion?`Occasion : <b class="chiffre">${euro(a.ebay.occasion.p25)}</b> à <b class="chiffre">${euro(a.ebay.occasion.mediane)}</b> (${a.ebay.occasion.nb} annonces)`:""}${a.ebay.occasion&&a.ebay.neuf?" · ":""}${a.ebay.neuf?`Neuf : <b class="chiffre">${euro(a.ebay.neuf.p25)}</b> à <b class="chiffre">${euro(a.ebay.neuf.mediane)}</b> (${a.ebay.neuf.nb} annonces)`:""}${(a.ebay.exemples||[]).length?` · ${a.ebay.exemples.slice(0,2).map((x,i)=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">exemple ${i+1}</a>`).join(", ")}`:""}</div>`:""}
       ${a.ebay&&a.ebay.neuf_par_pays?`<div class="encart google"><span class="etiq">Revente neuve sur eBay par pays (prix bas)</span><br>${Object.entries(a.ebay.neuf_par_pays).map(([k,x])=>`${esc(PAYS[k]||k)} <b class="chiffre">${x?euro(x):"—"}</b>`).join(" · ")}${a.ebay.meilleur_pays?` · le plus cher : <b>${esc(PAYS[a.ebay.meilleur_pays]||a.ebay.meilleur_pays)}</b>`:""}</div>`:""}
-      ${rapportDemande(a.rapport_demande)}${rapportConcurrence(a.rapport_concurrence)}
+      ${tableCanaux(a)}${rapportDemande(a.rapport_demande)}${rapportConcurrence(a.rapport_concurrence)}
       ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>

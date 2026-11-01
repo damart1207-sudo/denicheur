@@ -149,6 +149,8 @@ def passage(nom, test=False):
                     c["prix_plancher"] = {"erreur": type(e).__name__}
     s_ = regles["seuils"]
     for c in retenus:
+        c["canaux"] = equipe.canaux_de_vente(c, regles)
+    for c in retenus:
         v, plaf_ebay = c.get("verification"), ebay.plafond(c)
         pmin = (c.get("prix_plancher") or {}).get("prix_min")
         if not v and plaf_ebay is None and not pmin:

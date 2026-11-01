@@ -11,7 +11,7 @@ CHAMPS = ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source",
           "plateforme_revente", "prix_revente_estime", "cout_achat", "marge_nette", "rentabilite", "demande",
           "concurrence", "consensus", "agents", "mode", "score", "erreur_prix", "raisons",
           "verification", "ebay", "prix_revente_prudent", "marge_verifiee", "rentabilite_verifiee", "passe_verif",
-          "nom_produit", "rapport_demande", "rapport_concurrence", "prix_plancher")
+          "nom_produit", "rapport_demande", "rapport_concurrence", "prix_plancher", "canaux")
 
 
 def lire(chemin, defaut=None):

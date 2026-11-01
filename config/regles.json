@@ -6,27 +6,31 @@
   "plateformes_revente": {
     "amazon": {
       "commission": 0.15,
-      "frais_fixes": 3.5,
-      "port": 0.0,
-      "note": "logistique Amazon estimée"
+      "frais_fixes": 0.99,
+      "port": 6.0,
+      "profil": "confiance",
+      "note": "offre Individuel : 0,99 € HT/article, commission 8-15 % (15 % retenu par prudence), envoi par le vendeur"
     },
     "vinted": {
       "commission": 0.0,
       "frais_fixes": 0.0,
       "port": 0.0,
-      "note": "frais payés par l'acheteur"
+      "note": "frais payés par l'acheteur",
+      "profil": "petit_budget"
     },
     "leboncoin": {
       "commission": 0.0,
       "frais_fixes": 0.0,
       "port": 0.0,
-      "note": "remise en main propre ou port payé par l'acheteur"
+      "note": "remise en main propre ou port payé par l'acheteur",
+      "profil": "petit_budget"
     },
     "ebay": {
       "commission": 0.13,
       "frais_fixes": 0.35,
       "port": 6.0,
-      "note": "port moyen estimé"
+      "note": "port moyen estimé",
+      "profil": "confiance"
     },
     "etsy": {
       "commission": 0.11,
@@ -39,6 +43,34 @@
       "frais_fixes": 0.0,
       "port": 6.0,
       "note": "vendeur reconditionneur"
+    },
+    "cdiscount": {
+      "commission": 0.08,
+      "frais_fixes": 2.0,
+      "port": 6.0,
+      "profil": "confiance",
+      "note": "39,99 € HT/mois (≈2 €/vente sur 20 ventes), high-tech 5-8 %"
+    },
+    "fnac": {
+      "commission": 0.07,
+      "frais_fixes": 2.0,
+      "port": 6.0,
+      "profil": "confiance",
+      "note": "39,99 € HT/mois (1 mois d'essai), high-tech 5-7 %"
+    },
+    "tiktok": {
+      "commission": 0.09,
+      "frais_fixes": 0.0,
+      "port": 6.0,
+      "profil": "impulsion",
+      "note": "9 % (7 % électronique, 4 % les 60 premiers jours)"
+    },
+    "facebook": {
+      "commission": 0.0,
+      "frais_fixes": 0.0,
+      "port": 0.0,
+      "profil": "petit_budget",
+      "note": "Marketplace, remise en main propre"
     }
   },
   "port_achat_defaut": 5.0,
@@ -47,5 +79,36 @@
     "rentabilite_min": 0.3,
     "consensus_min": 1
   },
-  "taux_gbp_eur": 1.15
+  "taux_gbp_eur": 1.15,
+  "profils_acheteurs": {
+    "petit_budget": {
+      "nom": "Petit budget (occasion)",
+      "canaux": [
+        "leboncoin",
+        "vinted",
+        "facebook"
+      ],
+      "prix_vs_neuf_min": 0.88,
+      "note": "neuf sous blister vendu un peu moins cher que le neuf le moins cher"
+    },
+    "confiance": {
+      "nom": "Acheteurs prudents (gros sites)",
+      "canaux": [
+        "amazon",
+        "cdiscount",
+        "fnac",
+        "ebay"
+      ],
+      "prix_vs_neuf_min": 1.0,
+      "note": "paient pour la garantie de la plateforme : au prix du neuf le moins cher, parfois plus"
+    },
+    "impulsion": {
+      "nom": "Achat coup de cœur (vidéo)",
+      "canaux": [
+        "tiktok"
+      ],
+      "prix_vs_neuf_min": 1.0,
+      "note": "vendu par la vidéo, pas par le prix"
+    }
+  }
 }

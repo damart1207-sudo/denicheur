@@ -36,13 +36,36 @@ def _budget():
 
 def _noter(b, cout):
     b["depense_estimee_usd"] = round(b["depense_estimee_usd"] + cout, 4)
+    b["depense_ce_tour"] = round(b.get("depense_ce_tour", 0) + cout, 4)
+    b["depense_reelle_usd"] = _reel.get("usd")
     b["appels"] += 1
     os.makedirs(os.path.dirname(F_BUDGET), exist_ok=True)
     json.dump(b, open(F_BUDGET, "w"), indent=1)
 
 
+_reel = {}
+
+
+def depense_reelle():
+    """Dépense réelle du mois lue chez Apify (appel gratuit), une fois par lancement."""
+    if "usd" not in _reel:
+        try:
+            req = urllib.request.Request("https://api.apify.com/v2/users/me/limits",
+                                         headers={"Authorization": f"Bearer {os.environ['APIFY_TOKEN'].strip()}"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                _reel["usd"] = float(json.loads(r.read())["data"]["current"]["monthlyUsageUsd"])
+        except Exception:
+            _reel["usd"] = None
+    return _reel["usd"]
+
+
 def disponible():
-    return bool(os.environ.get("APIFY_TOKEN", "").strip()) and _budget()["depense_estimee_usd"] < BUDGET_MOIS_USD
+    if not os.environ.get("APIFY_TOKEN", "").strip():
+        return False
+    reel = depense_reelle()
+    if reel is None:  # impossible de lire la dépense : prudence, on s'arrête
+        return False
+    return reel + _budget().get("depense_ce_tour", 0) < BUDGET_MOIS_USD
 
 
 def lancer(robot, entree, maxi=10):

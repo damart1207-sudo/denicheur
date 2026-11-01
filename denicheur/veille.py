@@ -63,6 +63,10 @@ def nommer(annonces):
 
 def tour():
     maintenant = datetime.now(timezone.utc)
+    b = apify._budget()
+    b["depense_ce_tour"] = 0
+    os.makedirs(os.path.dirname(apify.F_BUDGET), exist_ok=True)
+    json.dump(b, open(apify.F_BUDGET, "w"), indent=1)
     sources = [s for s in _lire("config/sources.json", {})["sources"] if s.get("actif", True)]
     regles = _lire("config/regles.json", {})
     annonces, etat = collecte.collecter(sources)

@@ -540,7 +540,7 @@
   "ecart_vs_neuf_min": 0.755,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T18:51+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {
    "vinted": {
     "nb": 2,
@@ -625,7 +625,17 @@
     "marge_nette": -77.23,
     "rentabilite": -0.223
    }
-  ]
+  ],
+  "verifie_le": "2026-11-01T20:53",
+  "verdict": {
+   "commentaire": "Bon produit (A57 128 Go), mais prix idealo non lu : idealo inaccessible depuis cette vérification. À ce stade l'affaire est perdante : coût 346,46 € (245,26 £ + frais) alors qu'un comparateur français affiche ~325 € en neuf, et Dealabs/Amazon ont déjà montré 324 €. Revente plafonnée à 85 % du neuf (~276 €) : perte ~70 €. Même à la plus haute annonce Vinted (380 €) : +33,54 € soit 9,7 %, sous les 15 %. AliExpress vendeur Fone Central Store : code requis, durée et livraison en France non confirmées. Demande : figure dans data/demande.json (Espagne), mais suggestions Google bloquées ici.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 276.22,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -70.24,
+   "duree_offre": "inconnue (code AliExpress)",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "dc40575e57",
@@ -648,7 +658,7 @@
   "ecart_vs_neuf_min": 0.264,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T19:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "idealo": {
    "prix_min": 69.51,
    "nb_offres": 47,
@@ -736,7 +746,17 @@
     "rentabilite": 0.373
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-01T20:53",
+  "verdict": {
+   "commentaire": "Dans le doute, rejeté : livraison en France non prouvée. Offre Joybuy Pays-Bas ; Joybuy a un site par pays (dont joybuy.fr) et rien ne montre que joybuy.nl livre la France, ni que ce prix existe sur joybuy.fr. Pages Pepper et Joybuy illisibles : offre active et référence exacte (carton ou coffret) non confirmées. Sur le papier c'était intéressant : idealo 69,51 € (Lidl NL 65,99 €), revente plafonnée 59,08 €, soit ~21 € de marge (56 %) si achetable et livrable. Leboncoin : 30 à 60 €, peu d'écart possible.",
+   "prix_neuf_min_idealo": 69.51,
+   "prix_revente_verifie": 59.08,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "non confirmée",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "4fc656af07",
@@ -779,7 +799,7 @@
   "ecart_vs_neuf_min": 0.613,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T19:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {
    "vinted": {
     "nb": 4,
@@ -865,6 +885,16 @@
     "rentabilite": 0.282
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-01T20:53",
+  "verdict": {
+   "commentaire": "Offre expirée : mydealz indique « Deal abgelaufen ». Vendeur eBay, référence et état non précisés. Aujourd'hui le disque est à ~200 € en Allemagne (Geizhals, reichelt 199,90 €) et ~212 € en France, donc plus d'écart. idealo non lu, inutile vu l'offre morte. Demande : « hdd » figure dans data/demande.json (Italie) mais recherche générale, pas ce modèle ; suggestions Google bloquées ici.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": "non"
+  }
  }
 ]

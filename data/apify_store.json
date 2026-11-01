@@ -1,0 +1,5812 @@
+{
+ "idealo": [
+  {
+   "id": "pricepirate/idealo-price-data-api",
+   "titre": "Idealo Scraper & Price Data API",
+   "users": 124,
+   "users30": 54,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "query-result": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0039
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0039
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0039
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-10-16T12:12:38.176Z",
+    "createdAt": "2026-10-16T12:12:38.505Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-10-16T12:30:35.922Z"
+   }
+  },
+  {
+   "id": "s-r/idealo-scraper",
+   "titre": "Idealo Scraper & Price API: EAN Lookup and Merchant Offers",
+   "users": 38,
+   "users30": 4,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-31T10:20:47.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.002
+      },
+      "result": {
+       "eventTitle": "Result",
+       "eventDescription": "One delivered dataset item (a product found on idealo).",
+       "eventPriceUsd": 0.004,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "createdAt": "2026-08-31T10:20:47.912Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-08-31T10:35:49.399Z"
+   }
+  },
+  {
+   "id": "memo23/idealo-scraper",
+   "titre": "idealo Scraper — Prices, Shop Offers & Specs, 6 Countries",
+   "users": 22,
+   "users30": 18,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "apifyMarginPercentage": 0.2,
+    "minimalMaxTotalChargeUsd": null,
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.0005
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Product",
+       "eventDescription": "One idealo product row in the dataset (lowest price, offer count, cheapest shop, specs, ratings).",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.002
+      },
+      "offer-list": {
+       "eventTitle": "Shop offers",
+       "eventDescription": "One product's shop offer list (up to 20 offers with item price, total incl. shipping, delivery and payment methods). Charged only when Fetch shop offers is on, or for product URLs, and offers come back.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "createdAt": "2026-10-03T11:38:35.033Z",
+    "startedAt": "2026-10-03T11:38:35.033Z"
+   }
+  },
+  {
+   "id": "logiover/idealo-de-price-comparison-scraper",
+   "titre": "Idealo.de Scraper — German Product Prices & Offer Counts",
+   "users": 4,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0035
+        }
+       }
+      }
+     }
+    },
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-09-02T09:36:43.454Z",
+    "startedAt": "2026-09-02T09:36:43.454Z"
+   }
+  },
+  {
+   "id": "tubetext/idealo-price-scraper",
+   "titre": "Idealo Price API & Scraper – Shop Offers in 6 European Markets",
+   "users": 1,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "product-market": {
+       "eventTitle": "Price check",
+       "eventDescription": "One product on one idealo market: the summary row (lowest/median/highest price, shops, cheapest shop) plus all its shop offers up to your limit.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0028
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0022
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0022
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0022
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-10-12T12:04:33.416Z",
+    "startedAt": "2026-10-12T12:04:33.416Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "saswave/idealo-scraper",
+   "titre": "Idealo Product Scraper",
+   "users": 184,
+   "users30": 6,
+   "note": 1.85928400072862,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "startedAt": "2026-10-18T12:47:38.375Z",
+    "createdAt": "2026-10-18T12:47:38.583Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-10-18T13:00:37.339Z"
+   }
+  },
+  {
+   "id": "powerai/idealo-listing-scraper",
+   "titre": "Idealo Listing Scraper",
+   "users": 47,
+   "users30": 0,
+   "note": 1,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00499,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.09
+      }
+     }
+    },
+    "startedAt": "2026-05-16T06:09:45.507Z",
+    "createdAt": "2026-05-02T06:09:47.189Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-05-02T06:10:07.467Z"
+   }
+  },
+  {
+   "id": "ahmed_jasarevic/idealo-scraper",
+   "titre": "Idealo Scraper $2.5/1K💰 | Offers | Price History | 6 Markets",
+   "users": 23,
+   "users30": 9,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTitle": "Actor Start",
+       "eventPriceUsd": 0.0005
+      },
+      "price-history": {
+       "eventDescription": "Additional 3-month price history",
+       "isOneTimeEvent": false,
+       "eventTitle": "Price history",
+       "eventPriceUsd": 0.001
+      },
+      "product": {
+       "isOneTimeEvent": false,
+       "eventDescription": "Product scraped (one record).",
+       "eventTieredPricingUsd": {
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00247
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00248
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00247
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00249
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00247
+        }
+       },
+       "eventTitle": "Product scraped",
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "isPriceChangeNotificationSuppressed": false,
+    "startedAt": "2026-09-14T13:59:07.952Z",
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-09-14T13:59:36.620Z",
+    "pricingModel": "PAY_PER_EVENT",
+    "notifiedAboutChangeAt": "2026-09-14T14:05:45.311Z"
+   }
+  },
+  {
+   "id": "studio-amba/idealo-scraper",
+   "titre": "Idealo Scraper - German Price Comparison & Deals",
+   "users": 19,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-07-27T11:36:32.000Z",
+    "reasonForChange": "Pricing adjusted to reflect infrastructure cost",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventPriceUsd": 0.01,
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event)."
+      },
+      "apify-default-dataset-item": {
+       "eventPriceUsd": 0.005,
+       "eventTitle": "Result scraped",
+       "eventDescription": "Charged for each scraped item in the dataset",
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "minimalMaxTotalChargeUsd": 5,
+    "createdAt": "2026-07-13T10:36:32.602Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-13T10:36:52.903Z",
+    "notifiedAboutChangeAt": "2026-07-27T12:05:45.672Z"
+   }
+  },
+  {
+   "id": "abotapi/idealo-de-price-comparison-scraper",
+   "titre": "Idealo.de - Prices, Offers, Specs & Reviews",
+   "users": 10,
+   "users30": 0,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "Product result",
+       "eventDescription": "Charged for each product returned in the dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0012
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0009
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "detail-enrichment": {
+       "eventTitle": "Detail enrichment",
+       "eventDescription": "Charged once per product when full detail (merchant offers, specs, reviews) is fetched.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0007
+        }
+       }
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.06
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.05
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.04
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.03
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.03
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.03
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-10-31T11:54:03.513Z",
+    "createdAt": "2026-10-31T11:54:04.471Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-10-31T12:00:29.700Z"
+   }
+  },
+  {
+   "id": "saswave/idealo-trending-search-scraper",
+   "titre": "Idealo Trending Search Scraper",
+   "users": 8,
+   "users30": 0,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.0005
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventPriceUsd": 0.005,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-02-25T19:00:22.881Z",
+    "createdAt": "2026-02-25T19:00:23.238Z",
+    "apifyMarginPercentage": 0.2
+   }
+  }
+ ],
+ "leboncoin": [
+  {
+   "id": "clearpath/leboncoin-api",
+   "titre": "Leboncoin Scraper (API) Pro 🇫🇷 - Annonces & Prix",
+   "users": 721,
+   "users30": 114,
+   "note": 4.957178230954819,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-04T00:00:00.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.009
+      },
+      "scraped-ad": {
+       "eventTitle": "Annonce",
+       "eventDescription": "Annonce extraite depuis Leboncoin.fr",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00129
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00099
+        }
+       }
+      },
+      "scraped-ad-detail": {
+       "eventTitle": "Annonce (URL directe)",
+       "eventDescription": "Annonce extraite a partir d'une URL d'annonce fournie.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00499
+      },
+      "seller-profile": {
+       "eventTitle": "Profil vendeur",
+       "eventDescription": "Profil vendeur detaille recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00299
+      },
+      "phone-number": {
+       "eventTitle": "Numero de telephone",
+       "eventDescription": "Numero de telephone du vendeur recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00999
+      }
+     }
+    },
+    "createdAt": "2026-07-21T09:09:05.527Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-21T09:09:26.239Z",
+    "notifiedAboutChangeAt": "2026-08-05T15:06:31.970Z"
+   }
+  },
+  {
+   "id": "saswave/advanced-leboncoin-scraper",
+   "titre": "Leboncoin Monitoring Scraper",
+   "users": 802,
+   "users30": 29,
+   "note": 4.999999999999999,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0008
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-09-25T13:48:22.799Z",
+    "createdAt": "2026-09-11T13:48:23.001Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutRentalToPpePriceChangeAt": "2026-09-11T13:48:43.454Z",
+    "notifiedAboutFutureChangeAt": "2026-09-11T13:48:43.687Z",
+    "notifiedAboutChangeAt": "2026-09-25T14:05:59.393Z"
+   }
+  },
+  {
+   "id": "clearpath/leboncoin-immobilier",
+   "titre": "Leboncoin Immobilier - Annonces + Numeros de Telephone",
+   "users": 178,
+   "users30": 61,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-04T00:00:00.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.009
+      },
+      "scraped-ad": {
+       "eventTitle": "Annonce",
+       "eventDescription": "Annonce extraite depuis Leboncoin.fr",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00129
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00099
+        }
+       }
+      },
+      "scraped-ad-detail": {
+       "eventTitle": "Annonce (URL directe)",
+       "eventDescription": "Annonce extraite a partir d'une URL d'annonce fournie.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00499
+      },
+      "seller-profile": {
+       "eventTitle": "Profil vendeur",
+       "eventDescription": "Profil vendeur detaille recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00299
+      },
+      "phone-number": {
+       "eventTitle": "Numero de telephone",
+       "eventDescription": "Numero de telephone du vendeur recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00999
+      }
+     }
+    },
+    "createdAt": "2026-07-21T09:09:08.251Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-21T09:09:28.614Z",
+    "notifiedAboutChangeAt": "2026-08-05T15:06:32.010Z"
+   }
+  },
+  {
+   "id": "clearpath/leboncoin-phone-scraper",
+   "titre": "Leboncoin Phone Scraper - Numéros de Téléphone en Masse",
+   "users": 109,
+   "users30": 18,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-04T00:00:00.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.009
+      },
+      "phone-number": {
+       "eventTitle": "Numero de telephone",
+       "eventDescription": "Numero de telephone du vendeur recupere.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.00999
+      }
+     }
+    },
+    "createdAt": "2026-07-21T09:09:09.312Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-21T09:09:29.889Z",
+    "notifiedAboutChangeAt": "2026-08-05T15:06:31.999Z"
+   }
+  },
+  {
+   "id": "fatihtahta/leboncoin-fr-scraper",
+   "titre": "Leboncoin.fr Scraper | $1 / 1k | Fast & Reliable",
+   "users": 713,
+   "users30": 115,
+   "note": 3.649807850787291,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "outputrecord": {
+       "eventTitle": "Results",
+       "eventDescription": "Price per 1000 outputs is $1",
+       "eventPriceUsd": 0.001,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-04-16T02:29:47.352Z",
+    "createdAt": "2026-04-16T02:29:47.352Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "clearpath/leboncoin-acheteur",
+   "titre": "Leboncoin Acheteur API - Messages & Inbox",
+   "users": 43,
+   "users30": 7,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "minimalMaxTotalChargeUsd": null,
+    "reasonForChange": "Dès le 31/10 : 0,07 $ par message envoyé, 0,007 $ par lecture, 10 de chaque offerts. Pass en cours honoré.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "message-sent": {
+       "eventTitle": "Message sent",
+       "eventDescription": "Charged once per message actually delivered to a seller. Failed, skipped or blocked sends are free. The first 10 per Apify user are free.",
+       "eventPriceUsd": 0.07,
+       "isPrimaryEvent": true
+      },
+      "inbox-read": {
+       "eventTitle": "Inbox or conversation read",
+       "eventDescription": "Charged once per successful inbox or conversation fetch, however many conversations or messages it returns. The first 10 per Apify user are free.",
+       "eventPriceUsd": 0.007
+      }
+     }
+    },
+    "startedAt": "2026-10-31T00:00:00.000Z",
+    "createdAt": "2026-10-16T10:48:44.641Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-10-16T10:49:04.933Z",
+    "notifiedAboutChangeAt": "2026-10-31T00:30:17.707Z"
+   }
+  },
+  {
+   "id": "silentflow/leboncoin-scraper-ppr",
+   "titre": "Leboncoin Scraper | Classified Ads, Prices and Sellers",
+   "users": 465,
+   "users30": 39,
+   "note": 5.000000000000001,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00133
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00117
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.001
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "startedAt": "2026-03-23T11:43:00.436Z",
+    "createdAt": "2026-03-09T11:43:00.682Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-03-09T11:43:21.300Z"
+   }
+  },
+  {
+   "id": "memo23/leboncoin-scraper",
+   "titre": "Leboncoin.fr ·Only $0.79💰· Any Category· Full Listings + GPS",
+   "users": 61,
+   "users30": 20,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00079,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "additional-data": {
+       "eventTitle": "Additional Data",
+       "eventDescription": "Charged for additional data",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "startedAt": "2026-10-18T16:11:16.000Z",
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-10-18T16:11:16.715Z"
+   }
+  },
+  {
+   "id": "leadsbrary/leboncoin-real-estate-scraper",
+   "titre": "Leboncoin Real Estate Scraper",
+   "users": 275,
+   "users30": 18,
+   "note": 4.999999999999999,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00233
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00167
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.001
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-03-06T01:29:36.047Z",
+    "createdAt": "2026-03-06T01:29:37.163Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "clearpath/leboncoin-api-ppe",
+   "titre": "Scraper Leboncoin.fr (API) Rapide - Extraction d'Annonces",
+   "users": 143,
+   "users30": 17,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-04T00:00:00.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.009
+      },
+      "scraped-ad": {
+       "eventTitle": "Annonce",
+       "eventDescription": "Annonce extraite depuis Leboncoin.fr",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00149
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00129
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00099
+        }
+       }
+      },
+      "scraped-ad-detail": {
+       "eventTitle": "Annonce (URL directe)",
+       "eventDescription": "Annonce extraite a partir d'une URL d'annonce fournie.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00499
+      },
+      "seller-profile": {
+       "eventTitle": "Profil vendeur",
+       "eventDescription": "Profil vendeur detaille recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00299
+      },
+      "phone-number": {
+       "eventTitle": "Numero de telephone",
+       "eventDescription": "Numero de telephone du vendeur recupere.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00999
+      }
+     }
+    },
+    "createdAt": "2026-07-21T09:09:06.982Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-21T09:09:28.294Z",
+    "notifiedAboutChangeAt": "2026-08-05T15:06:31.980Z"
+   }
+  },
+  {
+   "id": "scrapifier/leboncoin-scraper",
+   "titre": "Leboncoin Scraper API - Annonces, Prix, Vendeurs & Tel",
+   "users": 178,
+   "users30": 12,
+   "note": 2.733580264342563,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00089
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0006
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-07-19T11:43:03.435Z",
+    "createdAt": "2026-07-19T11:43:03.828Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-07-19T12:05:45.240Z"
+   }
+  },
+  {
+   "id": "dz_omar/leboncoin-scraper",
+   "titre": "Leboncoin.fr Scraper",
+   "users": 70,
+   "users30": 8,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Platform usage is free: you pay a flat rate per ad saved instead of unpredictable compute and proxy bills. Duplicate ads are never charged twice, interrupted runs resume without re-charging, and runs that return nothing cost nothing.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "push-success-result": {
+       "eventTitle": "Ad Data Extraction",
+       "eventDescription": "Charged per ad successfully extracted and saved to the dataset — title, price, location, photos, seller, publication dates, and every category-specific attribute (surface, rooms, energy rating, mileage, fuel type). Duplicates are never charged twice.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0006
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "push-detailed-result": {
+       "eventTitle": "Full Ad Description (add-on)",
+       "eventDescription": "Additional charge, on top of the base ad, when the full ad description is included. Leboncoin omits descriptions from search results, so each one requires opening the ad individually. Applies only when 'Fetch Full Ad Details' is enabled, and only for ads whose description was successfully retrieved.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0009
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-08-10T20:53:14.923Z",
+    "createdAt": "2026-07-27T20:53:15.709Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-27T20:53:36.284Z",
+    "notifiedAboutChangeAt": "2026-08-10T21:05:42.556Z"
+   }
+  }
+ ],
+ "vinted": [
+  {
+   "id": "alkausari_mujahid/vinted-products-crawler",
+   "titre": "Vinted Products Crawler",
+   "users": 98,
+   "users30": 21,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "product",
+       "eventDescription": "Charged once for every listing saved to the default dataset: title, price and total with fees, currency, brand, size, condition, main photo, favourites count, and links to the listing and seller profile.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0015,
+       "isPrimaryEvent": true
+      },
+      "item-details": {
+       "eventTitle": "Full product details",
+       "eventDescription": "Applies only when \"Fetch full product details\" is on, for additional details on top of the default result: description, colour, material, measurements, upload date, shipping, every photo, and the seller's username, rating and last-seen time.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0085
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "startedAt": "2026-09-27T17:22:25.741Z",
+    "createdAt": "2026-09-27T17:22:49.630Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "epicscrapers/vinted-search-scraper",
+   "titre": "Vinted Scraper | From $0.75/1k 💙",
+   "users": 918,
+   "users30": 132,
+   "note": 4.848916749191652,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "product",
+       "eventDescription": "Single product in the dataset",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00075
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00075
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00075
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "tracked-search": {
+       "eventTitle": "Tracked Search",
+       "eventDescription": "One charge per tracked search, even with no new listings or price drops. Each start URL is one search; each keyword is one search per country (2 keywords x 3 countries = 6). We price it like this because we do not charge extra for arbitrage check",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.04
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.035
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.03
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.025
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.025
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.025
+        }
+       }
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.01
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.01
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.005
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-10-23T21:58:56.158Z",
+    "createdAt": "2026-10-23T21:58:58.229Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-10-23T22:00:19.847Z"
+   }
+  },
+  {
+   "id": "omkar-cloud/vinted-scraper",
+   "titre": "🚀 Vinted Scraper · 5,000 Free Listings/Month",
+   "users": 2,
+   "users30": 2,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Listing scraped",
+       "eventDescription": "One listing row pushed to the dataset: title, brand, size, condition, price, Buyer Protection fee, photo and seller. An item is billed once per run.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001,
+       "isPrimaryEvent": true
+      },
+      "details": {
+       "eventTitle": "Full item details",
+       "eventDescription": "Charged on top of the listing for every full item: each item you list, and each search hit when Include full item details is on — description, every photo, colours, materials, category, availability, delivery price and the seller's rating, location and badges.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "startedAt": "2026-10-06T06:46:28.342Z",
+    "createdAt": "2026-10-06T06:46:40.312Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "scrape.badger/vinted-scraper",
+   "titre": "Vinted Scraper: Search, Items, Prices & Profiles",
+   "users": 274,
+   "users30": 96,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-04-15T22:34:23.000Z",
+    "apifyMarginPercentage": 0.2,
+    "isPriceChangeNotificationSuppressed": true,
+    "reasonForChange": "Initial PPE pricing for Vinted Scraper",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "createdAt": "2026-03-31T22:34:23.560Z"
+   }
+  },
+  {
+   "id": "kazkn/vinted-smart-scraper",
+   "titre": "Vinted Smart Scraper - Cross-Country Arbitrage Scanner",
+   "users": 1077,
+   "users30": 55,
+   "note": 5,
+   "prix": {
+    "apifyMarginPercentage": 0.2,
+    "forceContainsSignificantPriceChange": true,
+    "isPriceChangeNotificationSuppressed": false,
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.018
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.017
+        }
+       },
+       "eventTitle": "Actor Start",
+       "isOneTimeEvent": true
+      },
+      "apify-default-dataset-item": {
+       "eventDescription": "Single result in the default dataset.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00225
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.001875
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.001875
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.001875
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002125
+        }
+       },
+       "eventTitle": "result",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true
+      },
+      "arbitrage-check": {
+       "eventDescription": "One cross-country arbitrage workflow run comparing Vinted prices across selected markets.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.18
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.15
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.2
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.15
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.15
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.17
+        }
+       },
+       "eventTitle": "Cross-country arbitrage check",
+       "isOneTimeEvent": false
+      },
+      "monitor-check": {
+       "eventDescription": "One scheduled deal-monitor workflow run for new matching listings in selected markets.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.045
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0375
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.05
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0375
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0375
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0425
+        }
+       },
+       "eventTitle": "Daily monitor check",
+       "isOneTimeEvent": false
+      },
+      "price-track-check": {
+       "eventDescription": "One persistent price-tracking workflow run for watched item URLs and price history updates.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.054
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.045
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.06
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.045
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.045
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.051
+        }
+       },
+       "eventTitle": "Price tracking persistence",
+       "isOneTimeEvent": false
+      },
+      "sell-through-check": {
+       "eventDescription": "One sell-through tracker workflow run comparing current listings with previous snapshots.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.072
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.06
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.08
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.06
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.06
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.068
+        }
+       },
+       "eventTitle": "Sell-through check",
+       "isOneTimeEvent": false
+      },
+      "seller-enriched": {
+       "eventDescription": "One seller enrichment workflow run adding seller profile, ratings, inventory, and trust signals when available.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.09
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.075
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.1
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.075
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.075
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.085
+        }
+       },
+       "eventTitle": "Seller details",
+       "isOneTimeEvent": false
+      },
+      "sold-signal-check": {
+       "eventDescription": "One sold-signal workflow run checking whether explicit sold listings are publicly visible.",
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.018
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.017
+        }
+       },
+       "eventTitle": "Sold signal check",
+       "isOneTimeEvent": false
+      }
+     }
+    },
+    "reasonForChange": "Result prices increase by 25% across all subscription tiers on September 20, 2026 (UTC). Bronze: $2.25 per 1,000 results. Existing tier discounts are preserved. Actor-start and premium workflow event prices remain unchanged.",
+    "startedAt": "2026-09-20T00:00:00.000Z",
+    "createdAt": "2026-09-05T17:42:13.174Z",
+    "notifiedAboutFutureChangeAt": "2026-09-05T17:42:37.318Z",
+    "notifiedAboutChangeAt": "2026-09-21T12:36:33.245Z"
+   }
+  },
+  {
+   "id": "automation-lab/vinted-scraper",
+   "titre": "Vinted Scraper",
+   "users": 198,
+   "users30": 14,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-25T20:08:24.121Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "start": {
+       "eventTitle": "Run started",
+       "eventDescription": "One-time charge when the scraper starts",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00475
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00425
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00375
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0025
+        }
+       },
+       "isOneTimeEvent": true
+      },
+      "item-scraped": {
+       "eventTitle": "Item scraped",
+       "eventDescription": "Charge per item scraped",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00195
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0012
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-08-25T20:08:24.206Z"
+   }
+  },
+  {
+   "id": "axlymxp/vinted-search-scraper",
+   "titre": "Vinted Search Scraper",
+   "users": 5,
+   "users30": 2,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.01
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Dataset item",
+       "eventDescription": "Charged automatically for each item pushed to the default dataset.",
+       "eventPriceUsd": 0.003,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "createdAt": "2026-07-28T08:46:25.411Z",
+    "startedAt": "2026-07-28T08:46:25.411Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "kazkn/vinted-turbo-scraper",
+   "titre": "⚡ Vinted Turbo Scraper",
+   "users": 327,
+   "users30": 11,
+   "note": 4.999999999999999,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Reliability rewrite: country-bound proxies, Datadome recovery, no more silent empty runs. Pricing rebalanced — start fee dropped from $0.30 to $0.08 so small batches are ~50% cheaper, per-result raised to keep the actor sustainable.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0035,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.04
+      }
+     }
+    },
+    "startedAt": "2026-05-19T01:32:46.980Z",
+    "createdAt": "2026-05-05T01:32:47.229Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-05-05T01:33:08.059Z"
+   }
+  },
+  {
+   "id": "deltaspider/vinted-scraper",
+   "titre": "Vinted Scraper",
+   "users": 189,
+   "users30": 20,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Switching from rental to pay-per-event pricing model",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "listing": {
+       "eventTitle": "Listing",
+       "eventDescription": "One Vinted listing delivered to the dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00075
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0007
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-09-14T13:02:19.413Z",
+    "createdAt": "2026-08-31T13:02:19.673Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-08-31T13:02:39.923Z",
+    "notifiedAboutChangeAt": "2026-09-14T13:06:05.241Z"
+   }
+  },
+  {
+   "id": "sourabhbgp/vinted-scraper",
+   "titre": "Vinted Scraper: Paste a URL, Search, Closets & Item Details",
+   "users": 42,
+   "users30": 8,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-10-07T17:53:19.057Z",
+    "startedAt": "2026-10-21T18:03:18.000Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "result": {
+       "eventTitle": "Listing result",
+       "eventDescription": "One listing row from search, a seller closet or brand lookup.",
+       "eventPriceUsd": 0.001,
+       "isPrimaryEvent": true
+      },
+      "detailed-result": {
+       "eventTitle": "Detailed result (listing + full item details)",
+       "eventDescription": "One full item record: description, colour, category, seller feedback, fees and shipping. Charged instead of Listing result when Include full item details is on, and in Item detail mode.",
+       "eventPriceUsd": 0.005
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.002,
+       "isOneTimeEvent": true
+      }
+     }
+    },
+    "notifiedAboutFutureChangeAt": "2026-10-07T17:53:39.475Z",
+    "notifiedAboutChangeAt": "2026-10-21T18:30:34.559Z"
+   }
+  },
+  {
+   "id": "thescrappa/vinted-search-scraper",
+   "titre": "Vinted Search Scraper",
+   "users": 23,
+   "users30": 4,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "item-result": {
+       "eventTitle": "Item result",
+       "eventDescription": "Single Vinted listing saved to the default dataset.",
+       "eventPriceUsd": 0.0002,
+       "isPrimaryEvent": true,
+       "isOneTimeEvent": false
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "minimalMaxTotalChargeUsd": null,
+    "startedAt": "2026-10-24T15:17:56.000Z",
+    "createdAt": "2026-10-10T14:22:27.403Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-10-10T14:22:47.686Z",
+    "notifiedAboutChangeAt": "2026-10-24T15:30:27.604Z"
+   }
+  },
+  {
+   "id": "webdatalabs/vinted-scraper-pro",
+   "titre": "Vinted Scraper - Listings, Prices, Brands & Sizes",
+   "users": 24,
+   "users30": 2,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "listing-scraped": {
+       "eventTitle": "Listing Scraped",
+       "eventDescription": "Charged per listing scraped",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-07-01T20:46:33.156Z",
+    "createdAt": "2026-07-01T20:46:33.381Z",
+    "apifyMarginPercentage": 0.2
+   }
+  }
+ ],
+ "kleinanzeigen": [
+  {
+   "id": "clearpath/kleinanzeigen-immobilien-api-pro",
+   "titre": "Kleinanzeigen Immobilien Scraper Pro - 1000/Min",
+   "users": 65,
+   "users30": 37,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Apify beendet das Rental-Modell. Künftig zahlst du pro Inserat und Start, inklusive Plattformkosten und ohne Monatsmiete.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.002
+      },
+      "result": {
+       "eventTitle": "Listing",
+       "eventDescription": "Cost per listing",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00149,
+       "isPrimaryEvent": true
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 1e-05
+      }
+     }
+    },
+    "startedAt": "2026-09-29T11:57:08.214Z",
+    "createdAt": "2026-09-15T11:57:08.705Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-15T11:57:28.910Z",
+    "notifiedAboutChangeAt": "2026-09-29T12:06:01.597Z"
+   }
+  },
+  {
+   "id": "memo23/kleinanzeigen-search-scraper-ppe",
+   "titre": "Kleinanzeigen.de | $1.5💰 | Scraper (Richest output)[PPE]",
+   "users": 360,
+   "users30": 111,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventPriceUsd": 0.0015,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-01-06T22:46:10.002Z",
+    "createdAt": "2026-01-06T22:46:10.384Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "beatanalytics/kleinanzeigen-scraper",
+   "titre": "Kleinanzeigen Scraper",
+   "users": 203,
+   "users30": 74,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "post",
+       "eventDescription": "Single post in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0015,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-05-19T07:25:59.961Z",
+    "createdAt": "2026-05-19T07:26:00.176Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "clearpath/immobilien-export-pro",
+   "titre": "Immobilien Export Pro - ImmoScout24, Kleinanzeigen, Immowelt",
+   "users": 156,
+   "users30": 28,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventPriceUsd": 1e-05
+      },
+      "listing-exported": {
+       "eventTitle": "Inserat",
+       "eventDescription": "Kosten pro exportiertem Inserat inkl. der kompletten Daten",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.01999
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.01799
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.01699
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.01599
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.01599
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.01599
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-03-01T08:19:58.207Z",
+    "createdAt": "2026-03-01T08:19:58.405Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "memo23/kleinanzeigen-search-cheerio",
+   "titre": "Kleinanzeigen.de Scraper (Richest output)",
+   "users": 151,
+   "users30": 11,
+   "note": 5,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "apifyMarginPercentage": 0.2,
+    "minimalMaxTotalChargeUsd": null,
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventPriceUsd": 0.0015,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-09-30T06:28:51.527Z",
+    "createdAt": "2026-09-16T05:58:51.962Z",
+    "notifiedAboutRentalToPpePriceChangeAt": "2026-09-16T05:59:12.430Z",
+    "notifiedAboutFutureChangeAt": "2026-09-16T05:59:12.476Z",
+    "notifiedAboutChangeAt": "2026-09-30T06:35:56.713Z"
+   }
+  },
+  {
+   "id": "ivanvs/kleinanzeigen-scraper",
+   "titre": "Kleinanzeigen Scraper",
+   "users": 129,
+   "users30": 9,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.0005
+      },
+      "ad_details": {
+       "eventTitle": "Listing",
+       "eventDescription": "Scraped listing details",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00267
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00233
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-02-04T18:01:15.615Z",
+    "createdAt": "2026-02-04T18:01:15.868Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "lowlanddata/kleinanzeigen-scraper",
+   "titre": "Kleinanzeigen.de Scraper",
+   "users": 7,
+   "users30": 2,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": 0.1,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00179
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00169
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00159
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "createdAt": "2026-09-10T20:59:35.808Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-04T12:05:49.628Z",
+    "startedAt": "2026-09-10T20:59:35.000Z"
+   }
+  },
+  {
+   "id": "webdatalabs/ebay-kleinanzeigen-scraper",
+   "titre": "Kleinanzeigen Scraper",
+   "users": 174,
+   "users30": 10,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "listing-scraped": {
+       "eventTitle": "Listing Scraped",
+       "eventDescription": "Price per listing scraped from eBay Kleinanzeigen",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.01
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.009
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.008
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.007
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.007
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.007
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.001
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-07-29T11:41:18.947Z",
+    "createdAt": "2026-07-29T11:41:19.192Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "unfenced-group/kleinanzeigen-classifieds-scraper",
+   "titre": "Kleinanzeigen Scraper [$0.39/1K 💰] — All Categories",
+   "users": 8,
+   "users30": 5,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "listing": {
+       "eventTitle": "Listing",
+       "eventDescription": "One classified listing extracted from search results and saved to the dataset.",
+       "isPrimaryEvent": true,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00039
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00039
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00039
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00039
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00039
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00039
+        }
+       }
+      },
+      "listing-with-details": {
+       "eventTitle": "Listing with details",
+       "eventDescription": "One listing whose detail page was also opened for the full description, exact publish date, condition and full image gallery.",
+       "isPrimaryEvent": false,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00099
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00099
+        }
+       }
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 5e-05
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 5e-05
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 5e-05
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 5e-05
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 5e-05
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 5e-05
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-09-07T16:58:05.691Z",
+    "startedAt": "2026-09-07T16:58:05.691Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "yogen48-owner/kleinanzeigen-real-estate-crawler",
+   "titre": "Kleinanzeigen Real Estate Crawler",
+   "users": 13,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "createdAt": "2026-03-03T15:07:45.302Z",
+    "startedAt": "2026-03-03T15:07:45.302Z",
+    "apifyMarginPercentage": 0.2,
+    "isPriceChangeNotificationSuppressed": true,
+    "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "unit",
+       "eventDescription": "Single unit in the default dataset.",
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.03
+      }
+     }
+    },
+    "forceContainsSignificantPriceChange": false
+   }
+  },
+  {
+   "id": "clearpath/kleinanzeigen-message-api",
+   "titre": "Kleinanzeigen Nachrichten API - Senden & Empfangen",
+   "users": 4,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "send": {
+       "eventTitle": "Nachrichtenversand",
+       "eventDescription": "Wird pro erfolgreich an ein Inserat gesendeter Nachricht berechnet.",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.49
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.49
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.39
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.29
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.29
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.29
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "login": {
+       "eventTitle": "Login",
+       "eventDescription": "Wird pro erfolgreicher Anmeldung eines Kleinanzeigen-Kontos berechnet. Die weitere Nutzung eines bereits angemeldeten Kontos wird nicht erneut berechnet.",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 2.99
+      },
+      "lookup": {
+       "eventTitle": "Nachrichtenabruf",
+       "eventDescription": "Wird pro Abruf berechnet: Postfach lesen, eine Konversation abrufen oder ein Monitoring-Abruf.",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.01
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "startedAt": "2026-07-16T08:54:12.759Z",
+    "createdAt": "2026-07-16T08:54:13.199Z",
+    "apifyMarginPercentage": 0.2
+   }
+  }
+ ],
+ "wallapop": [
+  {
+   "id": "rastriq/wallapop-cars-scraper",
+   "titre": "Wallapop Cars Scraper — Used Cars & Vans in Spain",
+   "users": 51,
+   "users30": 6,
+   "note": 4.999999999999999,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "Car-Wallapo": {
+       "eventTitle": "Listing scraped",
+       "eventDescription": "One used car or van listing saved to the dataset. Unchanged listings in incremental mode are not charged.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0008
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "apifyMarginPercentage": 0.2,
+    "isPriceChangeNotificationSuppressed": true,
+    "isPPEPlatformUsagePaidByUser": true,
+    "createdAt": "2026-10-12T21:31:55.498Z",
+    "startedAt": "2026-10-12T21:31:55.498Z"
+   }
+  },
+  {
+   "id": "fayoussef/wallapop-scraper",
+   "titre": "Wallapop Scraper: Deal Alerts, New Listings & Price Drops",
+   "users": 202,
+   "users30": 39,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00025
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00025
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00024
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00023
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00023
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00023
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "startedAt": "2026-09-09T15:34:49.455Z",
+    "createdAt": "2026-09-09T15:34:48.408Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-09T15:35:47.031Z"
+   }
+  },
+  {
+   "id": "blackfalcondata/wallapop-scraper",
+   "titre": "Wallapop [Just 💰$0.25] — Listings, Cars & Sellers",
+   "users": 62,
+   "users30": 37,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00025,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-09-17T00:00:00.000Z",
+    "createdAt": "2026-09-02T16:16:23.295Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-02T16:16:43.695Z",
+    "notifiedAboutChangeAt": "2026-09-17T00:06:05.913Z"
+   }
+  },
+  {
+   "id": "igolaizola/wallapop-scraper",
+   "titre": "Wallapop Scraper",
+   "users": 131,
+   "users30": 23,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.01
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.003
+        }
+       }
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0003
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "fetch-detail": {
+       "eventTitle": "Fetch Detail",
+       "eventDescription": "Fetch details for a result (fetchDetails: true)",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0003
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-03-18T22:09:14.081Z",
+    "createdAt": "2026-03-18T22:09:14.308Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "alvaraaz/wallapop-product-search",
+   "titre": "Wallapop Product Search",
+   "users": 46,
+   "users30": 2,
+   "note": 0,
+   "prix": {
+    "pricingModel": "FREE",
+    "createdAt": "2026-10-13T16:50:36.438Z",
+    "startedAt": "2026-10-27T16:50:36.188Z",
+    "apifyMarginPercentage": 0,
+    "notifiedAboutFutureChangeAt": "2026-10-13T16:50:56.801Z",
+    "notifiedAboutChangeAt": "2026-10-27T17:00:21.782Z"
+   }
+  },
+  {
+   "id": "automation-lab/wallapop-marketplace-scraper",
+   "titre": "Wallapop Spain Marketplace Listings Scraper",
+   "users": 22,
+   "users30": 10,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "start": {
+       "eventTitle": "Run started",
+       "eventDescription": "One-time fee charged when a run starts. Covers fixed startup cost (init, proxy warmup, first HTTP setup).",
+       "eventPriceUsd": 0.005,
+       "isOneTimeEvent": true
+      },
+      "item": {
+       "eventTitle": "Item extracted",
+       "eventDescription": "Charged per item extracted.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 4.0449e-05
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 3.5173e-05
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 2.7435e-05
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 2.1104e-05
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 1.4069e-05
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 1e-05
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-08-25T20:08:29.439Z",
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-08-25T20:08:29.530Z"
+   }
+  },
+  {
+   "id": "ivanvs/wallapop-scraper",
+   "titre": "Wallapop Scraper",
+   "users": 10,
+   "users30": 2,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "ad_details": {
+       "eventTitle": "Listing",
+       "eventDescription": "Listing with the all details from Wallapop site",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0013
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0013
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0013
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-04-26T12:15:02.197Z",
+    "createdAt": "2026-04-26T12:15:02.439Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "rastriq/wallapop-scraper",
+   "titre": "Wallapop Scraper — All Categories",
+   "users": 7,
+   "users30": 2,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "Item-Wallapo": {
+       "eventTitle": "Result",
+       "eventDescription": "One scraped Wallapop listing.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00115
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00115
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.001035
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00092
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00092
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00092
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.025
+      }
+     }
+    },
+    "createdAt": "2026-08-18T17:34:15.330Z",
+    "startedAt": "2026-08-18T17:34:15.330Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "studio-amba/wallapop-scraper",
+   "titre": "Wallapop Scraper — Spanish Classifieds & Marketplace",
+   "users": 3,
+   "users30": 0,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-07-27T11:42:14.000Z",
+    "reasonForChange": "Pricing adjusted to reflect infrastructure cost",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventPriceUsd": 0.005,
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event)."
+      },
+      "apify-default-dataset-item": {
+       "eventPriceUsd": 0.002,
+       "eventTitle": "Result scraped",
+       "eventDescription": "Charged for each scraped item in the dataset",
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "minimalMaxTotalChargeUsd": 5,
+    "createdAt": "2026-07-13T10:42:14.962Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-13T10:42:35.094Z",
+    "notifiedAboutChangeAt": "2026-07-27T12:05:48.359Z"
+   }
+  }
+ ],
+ "subito": [
+  {
+   "id": "emastra/subito-it-motori",
+   "titre": "Subito.it Automotive Scraper",
+   "users": 129,
+   "users30": 10,
+   "note": 4.003081000726038,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "V2 Updates:\n• Base price cut 50% to $2.50/1k (+ subscriber discounts)\n• Faster runs & optional flat output format\n• Optional phone extraction (pay only if found, capped at current rates)\n• Fully opt-in: existing saved tasks won't break",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0022
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0018
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "phone-number-extracted": {
+       "eventTitle": "Phone number found",
+       "eventDescription": "Charged only when a private advertiser's phone number is successfully found and returned.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0016
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0015
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-10-14T09:51:44.700Z",
+    "createdAt": "2026-09-30T09:51:45.408Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-30T09:52:05.871Z",
+    "notifiedAboutChangeAt": "2026-10-14T10:00:24.784Z"
+   }
+  },
+  {
+   "id": "emastra/subito-it-immobili",
+   "titre": "Subito.it Real Estate Scraper",
+   "users": 205,
+   "users30": 38,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "V2 Updates:\n• Base price cut 50% to $2.50/1k (+ subscriber discounts)\n• Faster runs & optional flat output format\n• Optional phone extraction: disable to pay base rate, or pay only if found (capped at old rates)\n• Existing saved tasks won't break",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0022
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0018
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "phone-number-extracted": {
+       "eventTitle": "Phone number found",
+       "eventDescription": "Charged only when a private advertiser's phone number is successfully found and returned.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0016
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0015
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-10-14T09:59:12.989Z",
+    "createdAt": "2026-09-30T09:59:13.535Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-30T09:59:34.655Z",
+    "notifiedAboutChangeAt": "2026-10-14T10:00:24.804Z"
+   }
+  },
+  {
+   "id": "azzouzana/subito-scraper-pro-by-search-url",
+   "titre": "Subito.it Universal Scraper",
+   "users": 119,
+   "users30": 19,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "startedAt": "2026-09-16T14:59:48.587Z",
+    "createdAt": "2026-09-02T14:59:49.583Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-02T15:00:10.311Z",
+    "notifiedAboutChangeAt": "2026-09-16T15:06:05.667Z"
+   }
+  },
+  {
+   "id": "nogards95/subito-scraper",
+   "titre": "Subito.it 🧡 Scraper⚡",
+   "users": 60,
+   "users30": 17,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "No overprice, just adding price discount based on account tiers!",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00179
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "BRONZE": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-09-09T01:12:14.871Z",
+    "createdAt": "2026-08-26T01:12:15.523Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-08-26T01:12:35.894Z",
+    "notifiedAboutChangeAt": "2026-09-09T01:35:58.371Z"
+   }
+  },
+  {
+   "id": "emastra/subito-it-lavoro",
+   "titre": "Subito.it Jobs Scraper",
+   "users": 43,
+   "users30": 8,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Major update for Subito.it Jobs!\n\n* Fixed HTML breakages\n* Added Lazy Pagination (prevents over-queuing)\n* Squashed bugs\n\nPricing Update: Lower-tier rates adjusted to support ongoing maintenance and ensure fair resource allocation for all users.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-05-06T17:34:36.927Z",
+    "createdAt": "2026-04-22T17:34:37.744Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-04-22T17:34:57.972Z"
+   }
+  },
+  {
+   "id": "memo23/subito-cars-scraper",
+   "titre": "Subito.it Cars Scraper [$1.2💰] Auto · Moto · Vans & Campers",
+   "users": 25,
+   "users30": 8,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "apifyMarginPercentage": 0.2,
+    "minimalMaxTotalChargeUsd": null,
+    "isPriceChangeNotificationSuppressed": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "Result",
+       "eventDescription": "One scraped listing in the default dataset.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0012
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0009
+        }
+       }
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "additional-data": {
+       "eventTitle": "Additional Data",
+       "eventDescription": "Charged for additional data",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "startedAt": "2026-09-29T20:29:50.000Z",
+    "createdAt": "2026-09-29T20:29:50.893Z"
+   }
+  },
+  {
+   "id": "memo23/subito-scraper",
+   "titre": "Subito.it Scraper [$0.9/1K 💰] Cars · Property · Jobs & More",
+   "users": 25,
+   "users30": 6,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "Result",
+       "eventDescription": "One scraped listing in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0007
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      },
+      "additional-data": {
+       "eventTitle": "Additional Data",
+       "eventDescription": "Charged for additional data",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "startedAt": "2026-10-14T20:30:02.000Z",
+    "apifyMarginPercentage": 0.2,
+    "createdAt": "2026-09-29T20:30:03.256Z",
+    "notifiedAboutFutureChangeAt": "2026-09-29T20:30:23.614Z",
+    "notifiedAboutChangeAt": "2026-10-14T20:30:27.636Z"
+   }
+  },
+  {
+   "id": "powerai/subito-search-scraper",
+   "titre": "Subito Search Scraper",
+   "users": 22,
+   "users30": 0,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00499,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.09
+      }
+     }
+    },
+    "startedAt": "2026-05-18T03:00:00.341Z",
+    "createdAt": "2026-05-04T03:00:01.100Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-05-04T03:00:21.409Z"
+   }
+  },
+  {
+   "id": "nogards95/subito-scraper-real-estate",
+   "titre": "Subito.it 🧡 🏡 Real Estate Scraper",
+   "users": 4,
+   "users30": 1,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0019
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00179
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00159
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 1e-05
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 1e-05
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-08-28T14:14:33.960Z",
+    "createdAt": "2026-08-28T14:14:34.258Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-08-28T14:35:51.934Z"
+   }
+  },
+  {
+   "id": "axery/subito-it-search-scraper",
+   "titre": "Subito.it Scraper — All Categories, Cleaned & Typed JSON",
+   "users": 2,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.000801
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.000699
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0006
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "startedAt": "2026-09-12T19:36:14.450Z",
+    "createdAt": "2026-09-12T19:36:15.151Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-12T20:05:48.846Z"
+   }
+  },
+  {
+   "id": "emastra/subito-it-negozi-e-aziende",
+   "titre": "Subito.it Company Lead Scraper",
+   "users": 28,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "createdAt": "2026-02-16T15:05:28.772Z",
+    "startedAt": "2026-02-16T15:05:28.772Z",
+    "apifyMarginPercentage": 0.2,
+    "isPriceChangeNotificationSuppressed": true,
+    "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "forceContainsSignificantPriceChange": false
+   }
+  }
+ ],
+ "mercari": [
+  {
+   "id": "fatihtahta/mercari-japan-scraper",
+   "titre": "Mercari Japan Scraper | Fast & Reliable",
+   "users": 270,
+   "users30": 40,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": 1,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "outputrecord": {
+       "eventTitle": "Results",
+       "eventDescription": "Charged per listing saved to the dataset",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00399
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00299
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00199
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-07-20T05:18:00.052Z",
+    "createdAt": "2026-07-20T05:18:00.528Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-07-20T05:35:44.039Z"
+   }
+  },
+  {
+   "id": "piotrv1001/mercari-listings-scraper",
+   "titre": "Mercari Japan Scraper | Listings, Prices & Sold Items",
+   "users": 128,
+   "users30": 18,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Add seller-profile event for the new seller mode (sellerUrls)",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "listing-result": {
+       "eventTitle": "Listing result",
+       "eventDescription": "Brand listing from search (name, price, status, thumbnails, brand)",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.004,
+       "isPrimaryEvent": true
+      },
+      "item-detail": {
+       "eventTitle": "Item detail",
+       "eventDescription": "Full detail fetch (description, seller ratings, high-res photos)",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.008
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "seller-profile": {
+       "eventTitle": "Seller profile",
+       "eventDescription": "One Mercari Japan seller profile row (ratings, star score, identity-verified badge, inventory completeness) in seller mode",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.01
+      }
+     }
+    },
+    "startedAt": "2026-10-11T00:00:00.000Z",
+    "createdAt": "2026-09-26T16:28:34.399Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-26T16:28:54.839Z",
+    "notifiedAboutChangeAt": "2026-10-11T00:00:20.620Z"
+   }
+  },
+  {
+   "id": "abotapi/mercari-jp-scraper",
+   "titre": "Mercari Japan Scraper - Products, Sellers & Reviews",
+   "users": 38,
+   "users30": 11,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0014
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00133
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0008
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "item-detail-enrichment": {
+       "eventTitle": "Item detail enrichment",
+       "eventDescription": "Charged once per listing when the actor fetches that listing's detail page to add full description, all photos, comment count, like count, and seller rating breakdown. Only triggered when Fetch Item Details is enabled.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0005
+        }
+       }
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.05
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.04
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.03
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.02
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-10-21T06:18:52.833Z",
+    "createdAt": "2026-10-21T06:18:53.684Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-10-21T06:30:30.066Z"
+   }
+  },
+  {
+   "id": "datalab-jp/mercari-japan-listings-scraper",
+   "titre": "Mercari Japan Scraper – Listings & Item Details",
+   "users": 22,
+   "users30": 8,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "Listing result",
+       "eventDescription": "Charged for each listing row saved to the dataset. Zero results cost nothing.",
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       }
+      },
+      "item-detail": {
+       "eventTitle": "Item detail",
+       "eventDescription": "Charged once per listing successfully enriched from its item page (description, original-size photos, seller ratings, shipping details). Not charged when the detail page cannot be fetched.",
+       "eventPriceUsd": 0.008
+      }
+     }
+    },
+    "createdAt": "2026-09-09T08:19:16.889Z",
+    "startedAt": "2026-09-09T08:19:16.889Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "parsebird/mercari-us-scraper",
+   "titre": "Mercari US Scraper",
+   "users": 8,
+   "users30": 7,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "listing-scraped": {
+       "eventTitle": "Listing",
+       "eventDescription": "Charged once per unique listing saved to the dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00179
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00159
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00139
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00139
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00139
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "search-performed": {
+       "eventTitle": "Search performed",
+       "eventDescription": "Charged once each time the Actor runs a search on Mercari (one per search/category start URL, or per Keyword search), including a search that returns no matches. Never fired for individual item URLs.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.039
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.037
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.035
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.033
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.033
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.033
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-09-19T23:49:25.204Z",
+    "createdAt": "2026-09-19T23:49:25.824Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "logiover/mercari-japan-scraper",
+   "titre": "Mercari Japan Scraper — Listings, Prices & Sold Data",
+   "users": 64,
+   "users30": 14,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00199
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00199
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-06-07T05:04:17.802Z",
+    "createdAt": "2026-06-07T05:04:18.324Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "datalab-jp/mercari-scraper",
+   "titre": "Mercari Japan Scraper – Listings & Sold Comps",
+   "users": 30,
+   "users30": 5,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventPriceUsd": 5e-05,
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event)."
+      },
+      "apify-default-dataset-item": {
+       "eventPriceUsd": 0.004,
+       "eventTitle": "Result",
+       "eventDescription": "Charged for each listing returned.",
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "createdAt": "2026-10-10T15:29:47.369Z",
+    "startedAt": "2026-10-10T15:29:46.000Z",
+    "apifyMarginPercentage": 0.2,
+    "minimalMaxTotalChargeUsd": 0.01,
+    "notifiedAboutChangeAt": "2026-10-10T15:30:19.663Z"
+   }
+  },
+  {
+   "id": "getascraper/buyee-scraper",
+   "titre": "Buyee Scraper: Yahoo Auctions & Mercari Japan Data",
+   "users": 29,
+   "users30": 11,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Item listing",
+       "eventDescription": "One Yahoo Auction or Mercari item listing.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00412
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00375
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00337
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00337
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00337
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "detail-enrichment": {
+       "eventTitle": "Detail enrichment",
+       "eventDescription": "Extra visit for full item detail fields.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0065
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00596
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00542
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00488
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00488
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00488
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-07-17T01:39:17.518Z",
+    "createdAt": "2026-07-17T01:39:18.057Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "getascraper/mercari-us-scraper",
+   "titre": "Mercari US Scraper: Active & Sold Listings, Price & Seller Data",
+   "users": 63,
+   "users30": 27,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Added a small fee per search to cover the ones that come back empty — we used to eat that cost. Dropped the per-listing price to balance it out, so if you're pulling a few hundred+ listings a run you'll actually pay less than before.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "Listing",
+       "eventDescription": "One US listing with seller, condition, pricing, and images.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00275
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00252
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00228
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00205
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00205
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00205
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "search-request": {
+       "eventTitle": "Search request",
+       "eventDescription": "Charged once each time the Actor runs a search on Mercari, including a search that returns no matches.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.04
+      }
+     }
+    },
+    "startedAt": "2026-09-16T02:13:04.018Z",
+    "createdAt": "2026-09-02T02:13:04.531Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-02T02:13:24.885Z",
+    "notifiedAboutChangeAt": "2026-09-16T02:35:56.781Z"
+   }
+  },
+  {
+   "id": "jpmarketdata/mercari-japan-price-checker",
+   "titre": "Mercari Japan Price Summary — Sold Out & Live",
+   "users": 18,
+   "users30": 5,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "keyword-analyzed": {
+       "eventTitle": "Keyword market analysis",
+       "eventDescription": "One price summary (median, quartiles, days-to-sell) per keyword",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.02,
+       "isPrimaryEvent": true
+      },
+      "item-scraped": {
+       "eventTitle": "Individual listing",
+       "eventDescription": "One sampled listing pushed to the dataset",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.002
+      }
+     }
+    },
+    "startedAt": "2026-07-03T00:44:11.930Z",
+    "createdAt": "2026-07-03T00:44:12.641Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "automation_craft/mercari-us-scraper",
+   "titre": "Mercari US Scraper: Listings, Sold Prices",
+   "users": 7,
+   "users30": 4,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "minimalMaxTotalChargeUsd": null,
+    "reasonForChange": "Text update: seller fields only with includePersonalData",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.006
+      },
+      "listing": {
+       "eventTitle": "Listing",
+       "eventDescription": "One Mercari US listing delivered as a row: title, price in dollars, original price and discount, status, condition, brand, size, colour, category, photos and the search it came from. Every listing is billed once per run. With a monitor, a listing is billed when it is new to that monitor; with monitorChanges also when its price or status changed, with monitorDeliverUnchanged also when it is delivered again unchanged, and with checkRemovedListings for each sold, changed or removed listing its re-checks deliver. Listings left out by your filters, listings already delivered, searches Mercari did not apply as sent and listing links that no longer exist are free status rows or counters.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00133
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00122
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00095
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00095
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00095
+        }
+       }
+      },
+      "listing-details": {
+       "eventTitle": "Listing detail",
+       "eventDescription": "A delivered listing's detail, read and added to its row: description (as the seller wrote it), likes, shipping payer, fee, class, ships from state and delivery estimate, Buyer Protection fee and total, offers, people with it in their cart, Mercari Authenticate, the moment of the sale and days to sell, and the seller's rating with its count, sales count and number of listings. The seller's public id, display name and profile link come only with includePersonalData on. Charged only when the detail was read and the listing delivered.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0014
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0013
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.001
+        }
+       }
+      },
+      "results-page": {
+       "eventTitle": "Results page",
+       "eventDescription": "One search results page read by a monitor run (a run with a monitor name), whatever it held. Runs without a monitor never pay it.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0006
+        }
+       }
+      },
+      "price-summary": {
+       "eventTitle": "Price summary",
+       "eventDescription": "One summary row per search (priceSummary): the count, lowest, highest, average and median price, the quartiles, the share sold, the median days to sell of the listings whose detail was read and, with targetMarginPercent, a suggested highest buy price. Charged only when the row holds at least one price.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0016
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0016
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0016
+        }
+       }
+      },
+      "listing-check": {
+       "eventTitle": "Listing check",
+       "eventDescription": "A change monitor's re-read of a listing it delivered before and its searches did not show this run (checkRemovedListings), to learn whether it sold, changed its price or was removed. Charged only when Mercari answered the read; a listing found sold, changed or removed is also delivered as a row and billed as a Listing.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0006
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00054
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00048
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00048
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00048
+        }
+       }
+      }
+     }
+    },
+    "isPriceChangeNotificationSuppressed": true,
+    "createdAt": "2026-10-19T07:11:49.787Z",
+    "startedAt": "2026-10-19T07:11:49.787Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "dtrungtin/mercari-com-scraper",
+   "titre": "Mercari.com Scraper",
+   "users": 35,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.02,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.08
+      }
+     }
+    },
+    "startedAt": "2026-10-10T05:25:33.458Z",
+    "createdAt": "2026-09-26T05:25:34.995Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-26T05:25:55.306Z",
+    "notifiedAboutChangeAt": "2026-10-10T05:30:26.077Z"
+   }
+  }
+ ],
+ "1688": [
+  {
+   "id": "zen-studio/1688-wholesale-scraper",
+   "titre": "1688 Wholesale Products Scraper - 50+ Fields from 1688.com",
+   "users": 8448,
+   "users30": 1577,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "We've added an optional Supplier Intelligence add-on (dropship volume, fulfillment rates, distributor counts, resale channels), billed only when you turn it on. Standard pricing is unchanged. Detailed newsletter coming shortly.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "item-scraped": {
+       "eventTitle": "Product",
+       "eventDescription": "Cost per fully enriched product scraped",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00499
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00479
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00449
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00399
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00399
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00399
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 1e-05
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.0049
+      },
+      "supplier-intelligence": {
+       "eventTitle": "Add-on: Supplier intelligence (per product)",
+       "eventDescription": "Adds the supplier's dropshipping performance: 7- and 30-day dropship order volume, 24h and 48h fulfillment rates and more.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.00299
+      }
+     }
+    },
+    "startedAt": "2026-07-03T07:17:30.974Z",
+    "createdAt": "2026-06-19T07:17:31.549Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-06-19T07:17:55.355Z"
+   }
+  },
+  {
+   "id": "devcake/scraper-by-image",
+   "titre": "Scraper by Image - 1688 / Alibaba / AliExpress",
+   "users": 589,
+   "users30": 173,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00433
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00367
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.003
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-06-25T15:19:25.566Z",
+    "createdAt": "2026-06-25T15:19:26.126Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "datacach/1688-search-scraper",
+   "titre": "1688.com Search Scraper",
+   "users": 235,
+   "users30": 85,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Product scraped",
+       "eventDescription": "Product scraped (one record).",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0005
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-07-06T07:51:15.600Z",
+    "createdAt": "2026-07-06T07:51:15.419Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "crawleast/1688-image-search-scraper",
+   "titre": "1688 Image Search — Find Suppliers & Factories by Photo",
+   "users": 3883,
+   "users30": 473,
+   "note": 4.999999999999999,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "minimalMaxTotalChargeUsd": 0.04,
+    "apifyMarginPercentage": 0.2,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "image-search": {
+       "eventTitle": "Image search",
+       "eventDescription": "One 1688 image search that returned at least one matching supplier listing.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0048
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0045
+        }
+       }
+      },
+      "detail-item": {
+       "eventTitle": "Enriched product detail",
+       "eventDescription": "One fully enriched product detail (translation, dropship score, landed cost, compliance) actually delivered.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0021
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0021
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0021
+        }
+       }
+      },
+      "run-base-fee": {
+       "eventTitle": "Run base fee",
+       "eventDescription": "Charged once at run completion when image mode delivers at least one matched image, or offerIds mode delivers at least one enriched product detail. Runs with no successful delivery are not charged this fee.",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.01
+      }
+     }
+    },
+    "startedAt": "2026-10-14T05:23:59.080Z",
+    "createdAt": "2026-10-14T05:23:59.997Z"
+   }
+  },
+  {
+   "id": "webdata_labs/1688-scraper",
+   "titre": "1688 Product Scraper API - Prices, MOQ & Suppliers",
+   "users": 422,
+   "users30": 117,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Pricing is updated to match the market rate for comparable 1688 scrapers and the real cost of reliable extraction via residential proxies. All tiers remain well below typical pricing for equivalent 1688 data.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "product-scraped": {
+       "eventTitle": "1688 product scraped",
+       "eventDescription": "One successfully extracted 1688 product with pricing, MOQ, and supplier data.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0045
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0035
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-09-17T14:08:06.183Z",
+    "createdAt": "2026-09-03T14:08:14.378Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-03T14:08:36.305Z",
+    "notifiedAboutChangeAt": "2026-09-17T14:35:49.755Z"
+   }
+  },
+  {
+   "id": "devcake/1688-com-products-scraper",
+   "titre": "1688.com Products Scraper",
+   "users": 5163,
+   "users30": 736,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0015
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "startedAt": "2026-08-12T23:14:05.427Z",
+    "createdAt": "2026-08-12T23:14:05.925Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-08-19T08:06:11.747Z"
+   }
+  },
+  {
+   "id": "dev00/alibaba-1688-aliexpress-reverse-image-search-api",
+   "titre": "Alibaba, 1688, AliExpress & Global Reverse Image Search API",
+   "users": 597,
+   "users30": 118,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "isPPEPlatformUsagePaidByUser": true,
+    "startedAt": "2026-10-14T16:43:52.372Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "search-lookup": {
+       "eventTitle": "Reverse Image Search",
+       "eventDescription": "Charges per successful image search request executed across Alibaba, 1688, AliExpress, or Global catalogs.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.1
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.006
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.006
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.006
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.006
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.006
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-09-30T15:43:58.376Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-30T15:44:21.247Z",
+    "notifiedAboutChangeAt": "2026-10-14T17:00:18.061Z"
+   }
+  },
+  {
+   "id": "blueskyscraper/1688-scraper",
+   "titre": "1688 Scraper",
+   "users": 95,
+   "users30": 43,
+   "note": 4.999999999999999,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "product": {
+       "eventTitle": "Product",
+       "eventDescription": "One 1688 product from keyword or image search: title with English translation, price in CNY and USD, units sold, supplier. Error rows are free.",
+       "isPrimaryEvent": true,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.001
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0008
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0007
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0007
+        }
+       }
+      },
+      "imageMatch": {
+       "eventTitle": "Image match",
+       "eventDescription": "One 1688 product that matches your photo: title with English translation, price in CNY and USD, units sold, supplier. Error rows are free.",
+       "isPrimaryEvent": false,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00045
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00035
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00035
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00035
+        }
+       }
+      },
+      "productDetail": {
+       "eventTitle": "Product page",
+       "eventDescription": "One full 1688 product page: price range, MOQ, stock, variants with images, specifications, weight, services, with English translations.",
+       "isPrimaryEvent": false,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0021
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0021
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0021
+        }
+       }
+      },
+      "supplier": {
+       "eventTitle": "Supplier",
+       "eventDescription": "One 1688 factory or wholesaler: English name, type, province, years, repeat-buyer rate, factory audit, price range, sample products.",
+       "isPrimaryEvent": false,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0018
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0016
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0014
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0014
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0014
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-10-05T12:14:35.677Z",
+    "startedAt": "2026-10-05T12:14:35.677Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "unitbytes/1688-scraper",
+   "titre": "1688 Scraper & Price Monitor: Wholesale & Product API 🇨🇳",
+   "users": 46,
+   "users30": 23,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.0001
+      },
+      "search-item": {
+       "eventTitle": "Search Product Listing",
+       "eventDescription": "Charged per product listing scraped in search mode (title, wholesale price, MOQ, seller, location, photo).",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0015
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0013
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0009
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0009
+        }
+       }
+      },
+      "detail-item": {
+       "eventTitle": "Full B2B Product Detail & Spec Matrix",
+       "eventDescription": "Charged per listing enriched with tiered wholesale volume discounts, complete SKU variant matrices, packaging weights/dimensions, fulfillment SLA, and enterprise supplier audit.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0023
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0021
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.002
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-09-23T06:44:42.007Z",
+    "startedAt": "2026-09-23T06:44:42.007Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-23T07:05:53.883Z"
+   }
+  },
+  {
+   "id": "parsebird/1688-wholesale-scraper",
+   "titre": "1688 Products Wholesale Scraper - Full Supplier Details",
+   "users": 4328,
+   "users30": 345,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "result": {
+       "eventTitle": "Result",
+       "eventDescription": "Each result event means one dataset item was saved.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 1e-05,
+       "isPrimaryEvent": true
+      },
+      "product": {
+       "eventTitle": "Product",
+       "eventDescription": "Each product event means one 1688 product was successfully enriched.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.00799
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00779
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00749
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00699
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00699
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00699
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-07-20T14:32:49.505Z",
+    "createdAt": "2026-07-20T14:32:50.458Z",
+    "apifyMarginPercentage": 0.2
+   }
+  }
+ ],
+ "amazon price": [
+  {
+   "id": "wilico/amazon-price-scraper",
+   "titre": "Amazon Price Scraper",
+   "users": 65,
+   "users30": 5,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "product_scraped": {
+       "eventTitle": "product_scraped",
+       "eventDescription": "Charged for each successfully scraped product from Amazon.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0035
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0032
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.003
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2025-11-25T10:37:50.244Z",
+    "createdAt": "2025-11-25T10:37:50.997Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "radeance/amazon-price-history-api",
+   "titre": "Amazon Price History API",
+   "users": 203,
+   "users30": 26,
+   "note": 5.000000000000001,
+   "prix": {
+    "minimalMaxTotalChargeUsd": 0.25,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "RESULT": {
+       "eventTitle": "Result",
+       "eventDescription": "Cost per result item returned.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.006
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.003
+        }
+       },
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.001
+      }
+     }
+    },
+    "startedAt": "2026-09-26T19:23:59.740Z",
+    "createdAt": "2026-09-26T19:24:00.181Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-26T19:36:03.023Z"
+   }
+  },
+  {
+   "id": "datahamster/amazon-product-monitor",
+   "titre": "Amazon Price Tracker: Product Scraper by ASIN, Buy Box, Stock",
+   "users": 8,
+   "users30": 4,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "result": {
+       "eventTitle": "Result item",
+       "eventDescription": "One validated, deduplicated item pushed to the dataset",
+       "isPrimaryEvent": true,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0024
+        }
+       }
+      },
+      "monitor-check": {
+       "eventTitle": "Monitor check",
+       "eventDescription": "One monitor-mode run (comparison against previous state)",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.009
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.009
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0081
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0072
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0072
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0072
+        }
+       }
+      },
+      "change": {
+       "eventTitle": "Changed item",
+       "eventDescription": "One new or changed item returned in monitor mode",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0024
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0024
+        }
+       }
+      }
+     }
+    },
+    "apifyMarginPercentage": 0.2,
+    "startedAt": "2026-09-18T22:16:51.000Z",
+    "createdAt": "2026-09-18T22:14:51.616Z",
+    "notifiedAboutFutureChangeAt": "2026-09-18T22:15:11.842Z",
+    "notifiedAboutChangeAt": "2026-09-21T12:36:28.244Z"
+   }
+  },
+  {
+   "id": "dev00/amazon-price-history-title-lookup-api",
+   "titre": "Amazon Price History & Title Lookup API",
+   "users": 20,
+   "users30": 6,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "isPPEPlatformUsagePaidByUser": true,
+    "startedAt": "2026-10-14T16:43:52.372Z",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "amazon-price-scan": {
+       "eventTitle": "Amazon Price History Lookup",
+       "eventDescription": "Charged for each successful retrieval of product titles, current pricing, and historical price graph URLs.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.1
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.005
+        }
+       }
+      }
+     }
+    },
+    "createdAt": "2026-09-30T15:44:00.076Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-09-30T15:44:20.362Z",
+    "notifiedAboutChangeAt": "2026-10-14T17:00:18.281Z"
+   }
+  },
+  {
+   "id": "khadinakbar/amazon-competitor-price-tracker",
+   "titre": "Amazon Competitor Price Tracker",
+   "users": 15,
+   "users30": 3,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.001
+      },
+      "asin-tracked": {
+       "eventTitle": "ASIN tracked",
+       "eventDescription": "Charged for each ASIN successfully scraped and pushed to the dataset (reference + each competitor). Includes priceDelta vs reference, Buy Box winner, FBA/FBM, and stock state.",
+       "eventPriceUsd": 0.02,
+       "isPrimaryEvent": true
+      },
+      "alert-dispatched": {
+       "eventTitle": "Alert dispatched",
+       "eventDescription": "Charged for each successful webhook POST when a competitor undercut crosses the alert threshold.",
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "reasonForChange": "Wave-0-20 margin: disable PPE platform usage pass-through (worst usage/total <20% from 2026-09-25 audit); event prices unchanged",
+    "createdAt": "2026-09-25T18:26:02.234Z",
+    "startedAt": "2026-09-25T18:26:02.234Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-25T18:36:06.752Z"
+   }
+  },
+  {
+   "id": "inexhaustible_glass/amazon-product-scraper",
+   "titre": "📦 Amazon Scraper — Prices, Reviews & Dropship Score",
+   "users": 15,
+   "users30": 2,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.002,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.01
+      }
+     }
+    },
+    "startedAt": "2026-06-25T17:44:01.626Z",
+    "createdAt": "2026-06-25T17:44:03.225Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "truefetch/amazon-price-tracker",
+   "titre": "Amazon Price Tracker",
+   "users": 14,
+   "users30": 0,
+   "note": 5,
+   "prix": {
+    "apifyMarginPercentage": 0.2,
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Amazon storefront search keeps 55-field records without PA API keys; explicit Result billing adds discounts up to 25% below FREE.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.01
+      },
+      "result": {
+       "eventTitle": "Result",
+       "eventDescription": "Single result in the default dataset.",
+       "isPrimaryEvent": true,
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0093
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00837
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00744
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00698
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00698
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00698
+        }
+       }
+      }
+     }
+    },
+    "startedAt": "2026-09-07T14:09:19.273Z",
+    "createdAt": "2026-08-24T13:59:22.172Z",
+    "notifiedAboutFutureChangeAt": "2026-08-24T13:59:42.355Z",
+    "notifiedAboutChangeAt": "2026-09-07T14:35:51.674Z"
+   }
+  },
+  {
+   "id": "oneary/amazon-product-and-price-tracker-scraper",
+   "titre": "Amazon Product & Price Tracker — Monitor Prices",
+   "users": 9,
+   "users30": 1,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0042,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.1
+      }
+     }
+    },
+    "startedAt": "2026-09-09T15:40:44.358Z",
+    "createdAt": "2026-09-09T15:40:44.541Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-09T16:05:56.304Z"
+   }
+  },
+  {
+   "id": "khadinakbar/amazon-price-history-scraper",
+   "titre": "Amazon Price History Scraper - ASIN Price Alerts",
+   "users": 8,
+   "users30": 3,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.001
+      },
+      "product-tracked": {
+       "eventTitle": "Product tracked",
+       "eventDescription": "Charged for each Amazon product successfully scraped, written to the dataset, and appended to the persistent price history store.",
+       "eventPriceUsd": 0.012,
+       "isPrimaryEvent": true
+      },
+      "alert-dispatched": {
+       "eventTitle": "Alert dispatched",
+       "eventDescription": "Charged for each successful price-drop webhook POST when a configured threshold is crossed.",
+       "eventPriceUsd": 0.005
+      }
+     }
+    },
+    "reasonForChange": "Wave-0-20 margin: disable PPE platform usage pass-through (worst usage/total <20% from 2026-09-25 audit); event prices unchanged",
+    "createdAt": "2026-09-25T18:16:26.929Z",
+    "startedAt": "2026-09-25T18:16:26.929Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutChangeAt": "2026-09-25T18:36:06.452Z"
+   }
+  }
+ ],
+ "google shopping": [
+  {
+   "id": "s-r/free-google-shopping-scraper---extract-offers-from-any-ean-sku",
+   "titre": "Free Google Shopping Scraper - Extract offers from any EAN/SKU",
+   "users": 598,
+   "users30": 40,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": 0.02,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Changes at Google to keep actor stable",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "google-sku",
+       "eventDescription": "Single google-sku in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.018
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.017
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.015
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.015
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-07-27T13:52:45.025Z",
+    "createdAt": "2026-07-13T13:52:45.589Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-07-13T13:53:07.171Z",
+    "notifiedAboutChangeAt": "2026-07-27T14:05:36.302Z"
+   }
+  },
+  {
+   "id": "damilo/google-shopping-apify",
+   "titre": "✨ Google Shopping Scraper",
+   "users": 1247,
+   "users30": 273,
+   "note": 4.586068649822817,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "createdAt": "2026-03-03T15:07:46.400Z",
+    "startedAt": "2026-03-03T15:07:46.400Z",
+    "apifyMarginPercentage": 0.2,
+    "isPriceChangeNotificationSuppressed": true,
+    "reasonForChange": "Migration from Pay Per Result to Pay Per Event with apify-default-dataset-item event",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isPrimaryEvent": true,
+       "eventPriceUsd": 0.0035
+      }
+     }
+    },
+    "forceContainsSignificantPriceChange": false
+   }
+  },
+  {
+   "id": "burbn/google-shopping-scraper",
+   "titre": "Google Shopping Scraper",
+   "users": 1130,
+   "users30": 129,
+   "note": 5,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.008
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.005
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2025-12-15T12:43:30.992Z",
+    "createdAt": "2025-12-15T12:43:30.917Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "automation-lab/google-shopping-scraper",
+   "titre": "Google Shopping Scraper — Product Prices & Merchants",
+   "users": 507,
+   "users30": 62,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "startedAt": "2026-08-25T20:04:14.722Z",
+    "apifyMarginPercentage": 0.2,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "start": {
+       "eventTitle": "Run started",
+       "eventDescription": "One-time charge when the scraper starts. Covers browser initialization.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.035
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0333
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0298
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0263
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.021
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0175
+        }
+       },
+       "isOneTimeEvent": true
+      },
+      "product-scraped": {
+       "eventTitle": "Product scraped",
+       "eventDescription": "Charged for each product listing extracted.",
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.011364
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.009881
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.007707
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.005929
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.003953
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.002767
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "notifiedAboutFutureChangeAt": "2026-04-30T05:23:39.150Z",
+    "createdAt": "2026-08-25T20:04:14.824Z"
+   }
+  },
+  {
+   "id": "epctex/google-shopping-scraper",
+   "titre": "Google Shopping Insights",
+   "users": 2426,
+   "users30": 85,
+   "note": 4.931797013867571,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "reasonForChange": "Hello! Apify is deprecating rental pricing, so we're switching this actor to pay-per-event in 15 days. You'll pay per result, plus a very small actor start fee. This helps us keep the actor stable and continuously improve it.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.0044,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-10-01T14:54:57.217Z",
+    "createdAt": "2026-09-17T14:54:57.657Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutRentalToPpePriceChangeAt": "2026-09-17T14:55:18.052Z",
+    "notifiedAboutFutureChangeAt": "2026-09-17T14:55:19.075Z",
+    "notifiedAboutChangeAt": "2026-10-01T15:05:52.720Z"
+   }
+  },
+  {
+   "id": "johnvc/google-shopping-api-google-shopping-products-prices-deals",
+   "titre": "Google Shopping API | Google Shopping Products, Prices & Deals",
+   "users": 218,
+   "users30": 61,
+   "note": 5.000000000000001,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 1e-05,
+       "isPrimaryEvent": false
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "Dataset item stored",
+       "eventDescription": "Platform accounting charge, applied per row stored in the dataset.",
+       "eventPriceUsd": 1e-05,
+       "isPrimaryEvent": false,
+       "isOneTimeEvent": false
+      },
+      "setup": {
+       "eventTitle": "Setup",
+       "eventDescription": "One-time setup fee per Actor run. Covers initialization and API provisioning costs.",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 0.02,
+       "isPrimaryEvent": false
+      },
+      "page_processed": {
+       "eventTitle": "Page Processed",
+       "eventDescription": "Fee per page of shopping results processed. Each page returns approximately 40 product listings.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.02
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0198
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.019602
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.019406
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.019406
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.019406
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "reasonForChange": "Clearer pricing display: the headline now shows the event this Actor actually charges for. No prices were changed.",
+    "createdAt": "2026-08-25T21:29:39.021Z",
+    "startedAt": "2026-08-25T21:29:39.021Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "pricepirate/google-shopping-ean-gtin-price-data-api",
+   "titre": "Google Shopping EAN/GTIN Price Data API",
+   "users": 34,
+   "users30": 19,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "query-result": {
+       "eventTitle": "Result",
+       "eventDescription": "Single result in the default dataset.",
+       "isOneTimeEvent": false,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.003
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0025
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0025
+        }
+       },
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-10-30T12:56:01.324Z",
+    "createdAt": "2026-10-16T11:56:01.647Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-10-16T11:56:21.987Z",
+    "notifiedAboutChangeAt": "2026-10-30T13:00:36.484Z"
+   }
+  },
+  {
+   "id": "maximedupre/google-shopping-ads-scraper",
+   "titre": "Google Shopping Ads Scraper",
+   "users": 45,
+   "users30": 14,
+   "note": 5,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "shopping-ad-scraped": {
+       "eventTitle": "Shopping ad",
+       "eventDescription": "One paid Shopping ad saved from a buyer keyword search.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.00265
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.00265
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.00265
+        }
+       }
+      }
+     }
+    },
+    "isPriceChangeNotificationSuppressed": true,
+    "createdAt": "2026-10-20T01:01:53.898Z",
+    "startedAt": "2026-10-20T01:01:53.898Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "scrape.badger/google-shopping-scraper",
+   "titre": "Google Shopping Scraper — Prices, Ratings, Offers",
+   "users": 85,
+   "users30": 32,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": false,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      },
+      "apify-default-dataset-item": {
+       "eventTitle": "result",
+       "eventDescription": "Single result in the default dataset.",
+       "eventPriceUsd": 1e-05
+      },
+      "shopping-page": {
+       "eventTitle": "Shopping page",
+       "eventDescription": "One Google Shopping results page (~30-50 product tiles).",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.003,
+       "isPrimaryEvent": true
+      }
+     }
+    },
+    "startedAt": "2026-04-29T22:44:34.336Z",
+    "createdAt": "2026-04-29T22:44:34.555Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "khadinakbar/google-shopping-scraper",
+   "titre": "Google Shopping Scraper — Prices, Sellers & Deals",
+   "users": 72,
+   "users30": 14,
+   "note": 0,
+   "prix": {
+    "minimalMaxTotalChargeUsd": null,
+    "isPPEPlatformUsagePaidByUser": true,
+    "pricingModel": "PAY_PER_EVENT",
+    "isPriceChangeNotificationSuppressed": true,
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "result-item": {
+       "eventTitle": "Product Scraped",
+       "eventDescription": "Charged once per product listing extracted from Google Shopping. Each search result with title, price, merchant, rating, and shipping info counts as one event.",
+       "isOneTimeEvent": false,
+       "eventPriceUsd": 0.003,
+       "isPrimaryEvent": true
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "isOneTimeEvent": true,
+       "eventPriceUsd": 5e-05
+      }
+     }
+    },
+    "createdAt": "2026-07-27T04:30:29.305Z",
+    "startedAt": "2026-07-27T04:30:29.305Z",
+    "apifyMarginPercentage": 0.2
+   }
+  },
+  {
+   "id": "scrapewise/google-shopping",
+   "titre": "Google Shopping Scraper - Prices, Offers & EAN Lookup",
+   "users": 52,
+   "users30": 18,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "reasonForChange": "New price: US$ 5 per 1,000 products on Free, down to US$ 4 on Gold and above; Actor start event at US$ 0.01 per run. Failed and blocked items stay free.",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "resultado-entregue": {
+       "eventTitle": "Google Shopping product delivered",
+       "eventDescription": "Charged once per unique product saved to the dataset. Searches with no products, products outside your filters, duplicates and blocked requests are free.",
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.005
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.0046
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.0042
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.004
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.004
+        }
+       }
+      },
+      "ofertas-entregues": {
+       "eventTitle": "Store offers loaded for a product",
+       "eventDescription": "Charged only when you turn on 'Include store offers', use product links or set 'Max stores': once per Google page of store offers that brought at least one new store (up to 10 stores per page).",
+       "eventPriceUsd": 0.02
+      },
+      "apify-actor-start": {
+       "eventTitle": "Actor Start",
+       "eventDescription": "Charged when the Actor starts running. Number of events charged depends on Actor memory (one event per GB, minimum one event).",
+       "eventPriceUsd": 0.01
+      }
+     }
+    },
+    "startedAt": "2026-11-01T13:01:42.000Z",
+    "createdAt": "2026-10-17T13:01:43.037Z",
+    "apifyMarginPercentage": 0.2,
+    "notifiedAboutFutureChangeAt": "2026-10-17T13:02:03.586Z"
+   }
+  },
+  {
+   "id": "maximedupre/google-shopping-offers-scraper",
+   "titre": "Google Shopping Scraper - Prices & Offers",
+   "users": 3,
+   "users30": 3,
+   "note": 0,
+   "prix": {
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingPerEvent": {
+     "actorChargeEvents": {
+      "google-shopping-offer": {
+       "eventTitle": "Shopping offer",
+       "eventDescription": "One offer saved for a submitted keyword or identifier.",
+       "isOneTimeEvent": false,
+       "isPrimaryEvent": true,
+       "eventTieredPricingUsd": {
+        "FREE": {
+         "tieredEventPriceUsd": 0.0027
+        },
+        "BRONZE": {
+         "tieredEventPriceUsd": 0.00215
+        },
+        "SILVER": {
+         "tieredEventPriceUsd": 0.00165
+        },
+        "GOLD": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "DIAMOND": {
+         "tieredEventPriceUsd": 0.0011
+        },
+        "PLATINUM": {
+         "tieredEventPriceUsd": 0.0011
+        }
+       }
+      }
+     }
+    },
+    "isPriceChangeNotificationSuppressed": true,
+    "createdAt": "2026-09-30T20:03:12.868Z",
+    "startedAt": "2026-09-30T20:03:12.868Z",
+    "apifyMarginPercentage": 0.2
+   }
+  }
+ ]
+}

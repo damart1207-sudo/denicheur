@@ -137,12 +137,25 @@ def passage(nom, test=False):
         bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=12)
     # prix réels des annonces eBay (API officielle, gratuite) : tous les passages
     bilan_ebay = {"faits": 0, "erreurs": ["mode test"]} if test else ebay.controler(retenus)
+    # prix plancher automatique sur les comparateurs (prix neuf le plus bas en France, produit exact)
+    if not test:
+        from . import comparateurs
+        for c in retenus[:25]:
+            nom = c.get("nom_produit")
+            if nom:
+                try:
+                    c["prix_plancher"] = comparateurs.prix_plancher(nom)
+                except Exception as e:
+                    c["prix_plancher"] = {"erreur": type(e).__name__}
     s_ = regles["seuils"]
     for c in retenus:
         v, plaf_ebay = c.get("verification"), ebay.plafond(c)
-        if not v and plaf_ebay is None:
+        pmin = (c.get("prix_plancher") or {}).get("prix_min")
+        if not v and plaf_ebay is None and not pmin:
             continue
         plafonds = [c["prix_revente_estime"]]
+        if pmin:
+            plafonds.append(round(pmin * 0.9, 2))  # un acheteur ne paie pas plus que 90 % du neuf le moins cher
         if v:
             plafonds.append(v["prix_revente_prudent"])
         if plaf_ebay is not None:
@@ -154,7 +167,8 @@ def passage(nom, test=False):
         neuf_ebay = ((c.get("ebay") or {}).get("neuf") or {}).get("p25")
         c["passe_verif"] = (c["marge_verifiee"] >= s_["marge_nette_min"] and c["rentabilite_verifiee"] >= s_["rentabilite_min"]
                             and not (v and v["deja_moins_cher_ailleurs"])
-                            and not (neuf_ebay and neuf_ebay <= c["prix"]))
+                            and not (neuf_ebay and neuf_ebay <= c["prix"])
+                            and not (pmin and c["prix"] >= pmin * 0.92))
     retenus.sort(key=lambda c: (c.get("passe_verif", True), c["score"]), reverse=True)
     # rapports Demande / Concurrence (gratuits) pour les 10 meilleures affaires
     if not test:
@@ -311,7 +325,10 @@ def tester_comparateurs():
         "leboncoin": "https://www.leboncoin.fr/recherche?text=iphone%2017e%20256",
         "vinted": "https://www.vinted.fr/catalog?search_text=iphone%2017e",
     }
-    res = {}
+    from . import comparateurs
+    res = {"prix_plancher": {n: comparateurs.prix_plancher(n) for n in (
+        "Apple iPhone 17e 256 Go Blanc", "Apple iPhone 17 256 Go Blanc", "Garmin Forerunner 165", "AMD Ryzen 7 9800X3D")}}
+    print(json.dumps(res, ensure_ascii=False)[:2500])
     for nom, u in urls.items():
         try:
             req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",

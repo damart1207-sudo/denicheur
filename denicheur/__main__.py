@@ -9,7 +9,7 @@ import random
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import championnat, collecte, equipe, rapport, verif
+from . import championnat, collecte, ebay, equipe, rapport, verif
 from .ia import Agent
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -132,16 +132,26 @@ def passage(nom, test=False):
         conf_v = conf_eq["agents"][conf_eq.get("verificateur", "gemini")]
         modeles_v = [conf_v["modele"]] + list(conf_v.get("modeles_secours", []))[:2]
         bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=12)
+    # prix réels des annonces eBay (API officielle, gratuite) : tous les passages
+    bilan_ebay = {"faits": 0, "erreurs": ["mode test"]} if test else ebay.controler(retenus)
     s_ = regles["seuils"]
     for c in retenus:
-        v = c.get("verification")
-        if not v:
+        v, plaf_ebay = c.get("verification"), ebay.plafond(c)
+        if not v and plaf_ebay is None:
             continue
+        plafonds = [c["prix_revente_estime"]]
+        if v:
+            plafonds.append(v["prix_revente_prudent"])
+        if plaf_ebay is not None:
+            plafonds.append(plaf_ebay)
+        c["prix_revente_prudent"] = min(plafonds)
         cout = c["cout_achat"]
-        c["marge_verifiee"] = equipe.marge_nette(v["prix_revente_prudent"], c["plateforme_revente"], cout, regles)
+        c["marge_verifiee"] = equipe.marge_nette(c["prix_revente_prudent"], c["plateforme_revente"], cout, regles)
         c["rentabilite_verifiee"] = round(c["marge_verifiee"] / cout, 3) if cout else 0
+        neuf_ebay = ((c.get("ebay") or {}).get("neuf") or {}).get("p25")
         c["passe_verif"] = (c["marge_verifiee"] >= s_["marge_nette_min"] and c["rentabilite_verifiee"] >= s_["rentabilite_min"]
-                            and not v["deja_moins_cher_ailleurs"])
+                            and not (v and v["deja_moins_cher_ailleurs"])
+                            and not (neuf_ebay and neuf_ebay <= c["prix"]))
     retenus.sort(key=lambda c: (c.get("passe_verif", True), c["score"]), reverse=True)
 
     base = "data/test" if test else "data"
@@ -170,6 +180,7 @@ def passage(nom, test=False):
         "remplacements": remplacements,
         "candidats": retenus[:40],
         "verification": bilan_verif,
+        "verification_ebay": bilan_ebay,
         "ecartes_sous_seuil": len(candidats) - len(retenus),
         "annonces_analysees": tries,
     }
@@ -181,6 +192,7 @@ def passage(nom, test=False):
     if any(a.reussites for k, a in agents.items() if k in conf_eq["analystes"] or k in remplacements):
         ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])
 
+    print(f"  prix eBay : {bilan_ebay['faits']} produit(s), erreurs {bilan_ebay['erreurs'][:3]}")
     print(f"  vérification Google : {bilan_verif['faits']} produit(s), erreurs {bilan_verif['erreurs'][:3]}")
     print(f"Passage {nom} ({horodatage}) : {len(annonces)} lus, {len(nouvelles)} nouveaux, {len(prefiltrees)} filtrés, "
           f"{len(tries)} triés, {len(retenus)} affaires retenues.")
@@ -219,6 +231,13 @@ def verifier():
                 dire(f"   modèles disponibles proches : {proches or ids[:25]}")
             except Exception as e:
                 dire(f"   liste des modèles impossible : {type(e).__name__}: {str(e)[:150]}")
+    try:
+        tok = ebay.jeton()
+        prix, ex = ebay.chercher(tok, "ryzen 7 7700", neuf=True, limite=10)
+        dire(f"✅ eBay (EBAY_CLIENT_ID / EBAY_CLIENT_SECRET) : fonctionne — {len(prix)} annonces trouvées pour « ryzen 7 7700 »")
+    except Exception as e:
+        detail = e.read()[:200].decode(errors="replace") if hasattr(e, "read") else str(e)[:200]
+        dire(f"❌ eBay : {type(e).__name__} {detail}")
     heure = datetime.now(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y %H:%M")
     ecrire("data/verification.json", {"date": heure, "resultats": lignes})
 

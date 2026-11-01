@@ -247,7 +247,7 @@ const prix = (n,dev) => (n==null) ? "–" : Number(n).toLocaleString("fr-FR",{mi
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const $ = id => document.getElementById(id);
 const margeDe = a => a.audit?.marge_nette_verifiee ?? a.marge_verifiee ?? a.marge_nette;
-const reventeDe = a => a.audit?.prix_revente_verifie ?? a.verification?.prix_revente_prudent ?? a.prix_revente_estime;
+const reventeDe = a => a.audit?.prix_revente_verifie ?? a.prix_revente_prudent ?? a.verification?.prix_revente_prudent ?? a.prix_revente_estime;
 const dateCourte = h => h ? `${h.slice(8,10)}/${h.slice(5,7)} ${h.slice(11,13)}h${h.slice(13,15)}` : "–";
 
 const P = DATA?.passages||[], DER = P[P.length-1];
@@ -276,6 +276,7 @@ function etiquette(a){
         <span class="ia">Trouvé par ${(a.agents||[]).map(x=>`<i>${esc(nom(x))}</i>`).join("")}</span>
       </div>
       ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
+      ${a.ebay&&(a.ebay.occasion||a.ebay.neuf)?`<div class="encart google"><span class="etiq">Annonces eBay en cours</span><br>${a.ebay.occasion?`Occasion : <b class="chiffre">${euro(a.ebay.occasion.p25)}</b> à <b class="chiffre">${euro(a.ebay.occasion.mediane)}</b> (${a.ebay.occasion.nb} annonces)`:""}${a.ebay.occasion&&a.ebay.neuf?" · ":""}${a.ebay.neuf?`Neuf : <b class="chiffre">${euro(a.ebay.neuf.p25)}</b> à <b class="chiffre">${euro(a.ebay.neuf.mediane)}</b> (${a.ebay.neuf.nb} annonces)`:""}${(a.ebay.exemples||[]).length?` · ${a.ebay.exemples.slice(0,2).map((x,i)=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">exemple ${i+1}</a>`).join(", ")}`:""}</div>`:""}
       ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>

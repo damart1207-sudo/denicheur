@@ -10,7 +10,7 @@ RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CHAMPS = ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "domaine",
           "plateforme_revente", "prix_revente_estime", "cout_achat", "marge_nette", "rentabilite", "demande",
           "concurrence", "consensus", "agents", "mode", "score", "erreur_prix", "raisons",
-          "verification", "marge_verifiee", "rentabilite_verifiee", "passe_verif")
+          "verification", "ebay", "prix_revente_prudent", "marge_verifiee", "rentabilite_verifiee", "passe_verif")
 
 
 def lire(chemin, defaut=None):

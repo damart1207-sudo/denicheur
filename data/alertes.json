@@ -944,7 +944,7 @@
   "ecart_vs_neuf_min": 0.646,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T20:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "mando ps5",
@@ -1018,7 +1018,17 @@
     "rentabilite": 0.079
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-01T21:58",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Mais l'affaire ne passera probablement pas : le produit exact est la DualSense Hyperpop (Rhythm Blue, Remix Green ou Techno Red) et elle est neuve à 79,99 € chez Boulanger en France (comparateur-gamer du 01/11 ; PcComponentes 82,31 €, Fnac 84,99 €). Revente plafonnée à 85 % du neuf (67,99 €) : +10,65 € soit 18,6 %. Même à 88 % : +13,05 € soit 22,8 %. Au prix plein sur Fnac : ~+9 €. Aucun canal n'atteint 30 % ni 20 €. Aucune annonce Vinted/Leboncoin réelle (champ vide). Offre AliExpress à 52,34 € affichée sur Chollometro (Spécial 11/11), mais vendeur, envoi et livraison en France non confirmés ; page AliExpress non consultée. Demande : « mando ps5 » figure bien dans data/demande.json (Espagne, +92 %), mais c'est une recherche générale, pas ce modèle Hyperpop, et les suggestions Google sont bloquées ici.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Quelques jours (Spécial 11/11 AliExpress), durée non confirmée",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "015738de2b",
@@ -1061,7 +1071,7 @@
   "ecart_vs_neuf_min": 0.694,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T20:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -1129,6 +1139,16 @@
     "rentabilite": 0.19
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-01T21:58",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Attention, l'alerte compare au mauvais modèle : l'écart de 538,99 € vient du TV S Mini LED 55 2026, alors que l'offre correspond très probablement au modèle 2025 (année non écrite sur Pepper ; même nom, référence L55MA-SPLEU sur une offre polonaise précédente). Pour le 2025, Bonne-Promo donne 499 € chez Amazon le 01/11 et un plus bas de 449 € sur 30 jours. Au mieux sur Leboncoin : 424 € (85 %) soit +45 € et 11,8 %, trop juste ; à 88 % : +60 € et 15,8 %. Si le neuf est à 449 €, il reste ~+16 €. Livraison en France NON confirmée : offre polonaise, page sans vendeur ni entrepôt, et un téléviseur 55 pouces coûte cher à renvoyer. Offre sans doute réelle : AliExpress propose le même modèle à 340,59 € avec un code espagnol le 01/11, et les acheteurs français ont vu ~380 € en août et septembre. Aucune annonce de revente réelle (champ vide).",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Jusqu'au 11/11 environ (soldes AliExpress), durée non confirmée",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

@@ -30,6 +30,9 @@ on:
       veille:
         description: "true = un tour de veille"
         default: "false"
+      playwright:
+        description: "true = tester un vrai navigateur sur les sites bloqués"
+        default: "false"
 
 permissions:
   contents: write
@@ -62,6 +65,11 @@ jobs:
           PASSAGE="${{ github.event.inputs.passage }}"
           if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
+          if [ "${{ github.event.inputs.playwright }}" = "true" ]; then
+            pip install -q playwright && python -m playwright install --with-deps chromium > /dev/null
+            python outils/test_playwright.py
+            exit 0
+          fi
           if [ "${{ github.event.schedule }}" = "*/10 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
             python -m denicheur.veille
             exit 0

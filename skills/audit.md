@@ -15,7 +15,10 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
    - Si `verification` (Gemini + Google) existe déjà dans l'affaire, s'en servir et la contrôler.
 3. **Marge nette** = prix de revente retenu − `cout_achat` (déjà frais de port et taxes compris),
    moins la commission de la plateforme (voir `config/regles.json`).
-   - Valider seulement si marge ≥ 8 € ET marge ≥ 30 % du coût.
+   - Deux niveaux (la marge est calculée sur le MEILLEUR canal de vente, voir `canaux`) :
+     * « valide » (sûr) : marge ≥ 8 € ET ≥ 30 % du coût ;
+     * « bon » (à tenter en petite quantité) : marge ≥ 20 € ET ≥ 15 % du coût.
+     Le prix neuf le plus bas d'idealo est OBLIGATOIRE avant tout « valide » ou « bon ».
 4. **Rejets automatiques** : achat impossible depuis la France (magasin physique étranger, carte de
    fidélité obligatoire), batterie seule, alimentaire, produit sous licence douteuse, demande en chute
    (après un événement), taille unique pour un vêtement, « erreur de prix » probable (le dire).
@@ -33,7 +36,7 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 ```json
 {"horodatage": "...", "date": "JJ/MM/AAAA", "auditeur": "Claude",
  "resume": "N validées sur M. <2 phrases sur les meilleures et les motifs de rejet>",
- "verdicts": [{"id": "...", "verdict": "valide|rejete", "commentaire": "...",
+ "verdicts": [{"id": "...", "verdict": "valide|bon|rejete", "commentaire": "...",
                "prix_revente_verifie": 0, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 0,
                "mode": "stock|dropshipping|les_deux", "ou_vendre": "Leboncoin (France)"}],
  "valides": ["id", "..."],

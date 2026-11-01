@@ -15,7 +15,7 @@ from . import collecte, comparateurs, equipe
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SEUIL_ECART = 0.75          # prix d'achat <= 75 % du neuf le moins cher en France
+SEUIL_ECART = 0.80          # prix d'achat <= 80 % du neuf le moins cher en France
 MAXI_PRODUITS = 12          # produits vérifiés par tour (rythme poli pour les comparateurs)
 SIGNAUX = re.compile(r"erreur de prix|price error|pricing error|preisfehler|error de precio|errore di prezzo|b[łl][aą]d cenowy|prijsfout", re.I)
 

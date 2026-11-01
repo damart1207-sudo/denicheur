@@ -2,7 +2,7 @@
  "horodatage": "2026-11-01_1227",
  "date": "01/11/2026",
  "auditeur": "Claude",
- "resume": "0 validée sur 28. Le prix plancher automatique (achatmoinscher) a écarté la plupart des affaires d'office.",
+ "resume": "1 bonne(s) affaire(s) (niveau « bon », petite quantité) après vérification idealo ; le reste est rejeté.",
  "verdicts": [
   {
    "id": "d173b0153a",
@@ -126,8 +126,12 @@
   },
   {
    "id": "e26f85ea10",
-   "verdict": "rejete",
-   "commentaire": "Écran Xiaomi G34WQi : neuf dès 256 € en France, marge ~2 €."
+   "verdict": "bon",
+   "commentaire": "Écran Xiaomi G34WQi version 2026 à 185,10 € (AliExpress, expédié d'Espagne). idealo : version 2026 dès 299,99 €, mais l'ancienne version est à 229,99 €. Revente prudente ~230 € (≈ +40 € net, 21 %). Lourd : remise en main propre.",
+   "prix_revente_verifie": 230.0,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 39.9,
+   "mode": "stock"
   },
   {
    "id": "b5f6de99bf",
@@ -145,7 +149,9 @@
    "commentaire": "Pas assez sous le prix neuf le plus bas en France, ou prix de revente non confirmé."
   }
  ],
- "valides": [],
+ "valides": [
+  "e26f85ea10"
+ ],
  "rejetes": [
   {
    "id": "d173b0153a",
@@ -242,10 +248,6 @@
   {
    "id": "36afdde53b",
    "motif": "Pas assez sous le prix neuf le plus bas en France, ou prix de revente non confirmé."
-  },
-  {
-   "id": "e26f85ea10",
-   "motif": "Écran Xiaomi G34WQi : neuf dès 256 € en France, marge ~2 €."
   },
   {
    "id": "b5f6de99bf",

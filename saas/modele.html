@@ -78,7 +78,7 @@ input[type=search]{min-width:0;flex:1 1 200px}
 .ligne-titre h3{font:700 18px/1.25 var(--f-texte);text-wrap:balance;min-width:0}
 .ligne-titre h3 a{text-decoration:none} .ligne-titre h3 a:hover{text-decoration:underline}
 .verdict{font:700 12px var(--f-texte);padding:4px 9px;border-radius:99px;white-space:nowrap}
-.verdict.valide{background:var(--ok-fond);color:var(--ok)} .verdict.rejete{background:var(--ko-fond);color:var(--ko)} .verdict.attente{background:var(--alerte-fond);color:var(--alerte)}
+.verdict.valide,.verdict.bon{background:var(--ok-fond);color:var(--ok)} .verdict.rejete{background:var(--ko-fond);color:var(--ko)} .verdict.attente{background:var(--alerte-fond);color:var(--alerte)}
 .trajet{display:grid;grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);align-items:center;gap:8px}
 .trajet>div{min-width:0}
 .fleche{text-align:center;color:var(--doux);font-size:20px}
@@ -95,7 +95,7 @@ input[type=search]{min-width:0;flex:1 1 200px}
 .courbe{display:flex;align-items:flex-end;gap:2px;height:40px;margin:6px 0}
 .courbe i{flex:1;background:var(--signal);min-height:1px;border-radius:1px 1px 0 0}
 .encart{font-size:14px;border-left:3px solid var(--trait);padding-left:10px;overflow-wrap:anywhere}
-.encart.valide{border-color:var(--ok)} .encart.rejete{border-color:var(--ko)} .encart.google{border-color:var(--signal)}
+.encart.valide,.encart.bon{border-color:var(--ok)} .encart.rejete{border-color:var(--ko)} .encart.google{border-color:var(--signal)}
 .marge{background:var(--etiquette);color:var(--etiquette-encre);padding:16px 18px;display:grid;align-content:center;justify-items:center;gap:2px;min-width:132px;border-radius:0 7px 7px 0;
   -webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000);mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000)}
 .affaire.rejete .marge{background:var(--trait);color:var(--doux)}
@@ -247,7 +247,7 @@ const nom = k => COURT[k]||NOMS[k]||k;
 const PLATEFORMES = {amazon:"Amazon",vinted:"Vinted",leboncoin:"Leboncoin",ebay:"eBay",etsy:"Etsy",backmarket:"Back Market"};
 const DOMAINES = {"tech":"Tech","gaming":"Jeux vidéo","maison":"Maison","cuisine":"Cuisine","jardin-bricolage":"Jardin & bricolage","sport":"Sport","auto-moto":"Auto-moto","mode":"Mode","puericulture-jouets":"Enfants & jouets","beaute-sante":"Beauté & santé","animaux":"Animaux","vintage-collection":"Vintage & collection","autre":"Autre"};
 const PAYS = {FR:"France",DE:"Allemagne",UK:"Royaume-Uni",ES:"Espagne",IT:"Italie",PL:"Pologne",AT:"Autriche",NL:"Pays-Bas",US:"États-Unis"};
-const VERDICTS = {valide:"Validée",rejete:"Rejetée",attente:"À vérifier"};
+const VERDICTS = {valide:"Validée",bon:"Bonne (petite quantité)",rejete:"Rejetée",attente:"À vérifier"};
 const euro = n => (n==null||isNaN(n)) ? "–" : Number(n).toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
 const prix = (n,dev) => (n==null) ? "–" : Number(n).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
 const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -340,7 +340,7 @@ function initAujourdhui(){
   if (!DER){ $("auj-liste").innerHTML = `<div class="vide">Aucun passage enregistré pour l’instant.</div>`; return; }
   $("auj-date").textContent = `${DER.date_affichee} · passage ${DER.passage}`;
   if (DER.audite){ $("auj-statut").className="statut ok"; $("auj-statut").textContent="Audité par Claude"; }
-  const val = DUJOUR.filter(a=>a.audit?.verdict==="valide");
+  const val = DUJOUR.filter(a=>a.audit?.verdict==="valide"||a.audit?.verdict==="bon");
   $("s-valides").textContent = val.length;
   $("s-valides-sous").textContent = `sur ${DUJOUR.length} proposées`;
   $("s-marge").textContent = euro(val.reduce((s,a)=>s+margeDe(a),0));

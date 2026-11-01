@@ -2,7 +2,7 @@
  "horodatage": "2026-11-01_1129",
  "date": "01/11/2026",
  "auditeur": "Claude",
- "resume": "0 validée sur 27. Les vérifications sur idealo ont éliminé de faux bons plans, par exemple le Ryzen 7 9800X3D, déjà à 289 € en France alors que les IA voyaient +97 €. Le plus proche du seuil est l'écran Xiaomi G Pro 27i (marge ~21 %).",
+ "resume": "2 bonne(s) affaire(s) (niveau « bon », petite quantité) après vérification idealo ; le reste est rejeté.",
  "verdicts": [
   {
    "id": "fd95358721",
@@ -36,8 +36,12 @@
   },
   {
    "id": "4950f5c45c",
-   "verdict": "rejete",
-   "commentaire": "idealo : 274,62 € en France. Revente prudente ~233 €, marge ~40 € (21 %), sous le seuil. Écran lourd à expédier. Presque bon."
+   "verdict": "bon",
+   "commentaire": "Écran Xiaomi G Pro 27i à 184,88 € (AliExpress, expédié d'Espagne). idealo : neuf dès 274,62 € en France. Revente Leboncoin ~241 € (≈ +52 € net, 27 %), ou Fnac/Cdiscount ~270 €. Peu de vendeurs sur eBay. Risques : écran lourd (remise en main propre conseillée) et vérifier que l'offre est livrable en France.",
+   "prix_revente_verifie": 241.7,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 51.8,
+   "mode": "stock"
   },
   {
    "id": "5ed5937ba5",
@@ -96,8 +100,12 @@
   },
   {
    "id": "cf0499de6a",
-   "verdict": "rejete",
-   "commentaire": "idealo : 234,57 € en France. Revente prudente ~200 €, marge ~29 € (17 %), sous le seuil de 30 %."
+   "verdict": "bon",
+   "commentaire": "Redmi Note 14 Pro+ 8/256 à 166,13 € (AliExpress, expédié d'Espagne). idealo : neuf dès 234,57 €. Revente Leboncoin ~206 € (≈ +35 € net, 21 %). Concurrence forte sur les smartphones : vendre vite.",
+   "prix_revente_verifie": 206.4,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 35.3,
+   "mode": "stock"
   },
   {
    "id": "a1836036c1",
@@ -140,7 +148,10 @@
    "commentaire": "Aspirateur Laresar : se revend ~25-30 € neuf sur eBay, marge négative."
   }
  ],
- "valides": [],
+ "valides": [
+  "4950f5c45c",
+  "cf0499de6a"
+ ],
  "rejetes": [
   {
    "id": "fd95358721",
@@ -165,10 +176,6 @@
   {
    "id": "dbd2278892",
    "motif": "Royaume-Uni : TVA + douane à l'import, et demande en baisse."
-  },
-  {
-   "id": "4950f5c45c",
-   "motif": "idealo : 274,62 € en France. Revente prudente ~233 €, marge ~40 € (21 %), sous le seuil. Écran lourd à expédier. Presque bon."
   },
   {
    "id": "5ed5937ba5",
@@ -213,10 +220,6 @@
   {
    "id": "d4572f7573",
    "motif": "Prix de revente non confirmé (pas assez d'annonces comparables)."
-  },
-  {
-   "id": "cf0499de6a",
-   "motif": "idealo : 234,57 € en France. Revente prudente ~200 €, marge ~29 € (17 %), sous le seuil de 30 %."
   },
   {
    "id": "a1836036c1",

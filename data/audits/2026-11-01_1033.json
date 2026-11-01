@@ -2,7 +2,7 @@
  "horodatage": "2026-11-01_1033",
  "date": "01/11/2026",
  "auditeur": "Claude",
- "resume": "2 validées sur 32 (488 annonces lues sur 17 sources). Les meilleures sont la Garmin Forerunner 165 à 88,66 € (environ +36 € net) et les Nike Air Max Dn à 50 € (environ +18 € net par paire). La plupart des rejets viennent de produits déjà aussi peu chers en France, ou de boutiques étrangères qui ne livrent pas la France.",
+ "resume": "1 validée sur 32 après correction : Nike Air Max Dn (petite quantité). Garmin Forerunner 165 rejetée après vérification idealo (97,64 € neuf).",
  "verdicts": [
   {
    "id": "ae59303893",
@@ -111,13 +111,8 @@
   },
   {
    "id": "ebf1ba174a",
-   "verdict": "valide",
-   "commentaire": "Garmin Forerunner 165 neuve à 88,66 € (AliExpress, expédiée d'Espagne). Ailleurs en France elle est autour de 150-180 €. Revente prudente 130 € neuve sous blister sur Leboncoin (0 € de frais vendeur).",
-   "prix_revente_verifie": 130,
-   "plateforme_verifiee": "leboncoin",
-   "marge_nette_verifiee": 36.34,
-   "mode": "stock",
-   "ou_vendre": "Leboncoin (France) ou eBay (France, Allemagne)"
+   "verdict": "rejete",
+   "commentaire": "CORRIGÉ à 13h50 : idealo la montre neuve dès 97,64 € en France (89 offres). Revente à 130 € impossible."
   },
   {
    "id": "1379d9d22b",
@@ -176,7 +171,6 @@
   }
  ],
  "valides": [
-  "ebf1ba174a",
   "369cef21e4"
  ],
  "rejetes": [
@@ -299,6 +293,10 @@
   {
    "id": "a3f52f14b9",
    "motif": "Cafetière Trebs : revente faible, marge < 8 €."
+  },
+  {
+   "id": "ebf1ba174a",
+   "motif": "Neuve dès 97,64 € sur idealo (corrigé)."
   }
  ]
 }

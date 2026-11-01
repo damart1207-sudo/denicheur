@@ -1,6 +1,6 @@
 """DEMANDE : ce que les gens cherchent en ce moment (recherches en forte hausse sur idealo FR, DE, ES, IT).
 
-- tendances() : toutes les 6 h, met à jour data/demande.json (robot Apify saswave, plafond 0,10 $).
+- tendances() : toutes les 12 h, met à jour data/demande.json (robot Apify saswave, plafond 0,10 $).
 - est_demande(titre) : le titre d'un bon plan correspond-il à une recherche en hausse ? (gratuit)
 - chasse_ciblee() : 1 fois par jour, pour les 3 recherches qui montent le plus en France, cherche sur
   Leboncoin et Vinted des annonces NEUVES nettement sous le prix idealo (occasion sous-cotée).
@@ -37,7 +37,7 @@ def _age(iso):
 
 def tendances(force=False):
     d = _lire()
-    if not force and _age(d.get("maj")) < timedelta(hours=6):
+    if not force and _age(d.get("maj")) < timedelta(hours=12):
         return d
     apify.CONTEXTE["denicheur"] = "B"
     items = apify.lancer("idealo_tendances", {"domains": ["idealo.fr", "idealo.de", "idealo.es", "idealo.it"]}, maxi=200)
@@ -73,11 +73,11 @@ def _annonces_A():
 
 
 def chasse_ciblee(regles, n=3):
-    """Dénicheur C, toutes les 6 h après la mise à jour de la demande (B) :
+    """Dénicheur C, une fois par jour après la mise à jour de la demande (B) :
     pour les n produits les plus demandés en France, regarde d'abord si le dénicheur A a déjà vu un bon plan ;
     sinon cherche lui-même (idealo + Leboncoin + Vinted)."""
     d = _lire()
-    if _age(d.get("chasse_maj")) < timedelta(hours=6):
+    if _age(d.get("chasse_maj")) < timedelta(hours=24):
         return []
     apify.CONTEXTE["denicheur"] = "C"
     trouves = []

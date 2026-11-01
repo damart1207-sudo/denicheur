@@ -15,6 +15,9 @@ from . import comparateurs, journal
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUDGET_MOIS_USD = 4.0
+# plafonds par jour (estimés d'après les tarifs) pour que le crédit gratuit tienne tout le mois :
+# A (vérifications idealo/Leboncoin/Vinted des alertes) 0,07 $ ; B (tendances) 0,03 $ ; C (chasse ciblée) 0,03 $
+PLAFOND_JOUR_USD = {"A": 0.07, "B": 0.03, "C": 0.03}
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005)}
@@ -62,8 +65,17 @@ def depense_reelle():
     return _reel["usd"]
 
 
+def depense_du_jour(denicheur):
+    return sum(l.get("cout_usd", 0) for l in journal.lire(1)
+               if l.get("jour") == datetime.now(timezone.utc).strftime("%Y-%m-%d")
+               and l["denicheur"] == denicheur and l["source"].startswith("apify:"))
+
+
 def disponible():
     if not os.environ.get("APIFY_TOKEN", "").strip():
+        return False
+    den = CONTEXTE["denicheur"]
+    if depense_du_jour(den) >= PLAFOND_JOUR_USD.get(den, 0.03):
         return False
     reel = depense_reelle()
     if reel is None:  # impossible de lire la dépense : prudence, on s'arrête

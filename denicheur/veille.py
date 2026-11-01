@@ -164,8 +164,8 @@ def tour():
         al_cat[k] = al_cat.get(k, 0) + 1
     for (src, cat), n in par_source.items():
         journal.noter("A", "flux:" + src, "", 0.0, n, al_cat.get((src, cat), 0), categorie=cat)
-    journal = _lire("data/veille_journal.json", [])
-    _ecrire("data/veille_journal.json", (journal + [bilan])[-200:])
+    jv = _lire("data/veille_journal.json", [])
+    _ecrire("data/veille_journal.json", (jv + [bilan])[-200:])
     print(json.dumps(bilan, ensure_ascii=False))
     for x in nouvelles_alertes:
         print("ALERTE", x["titre"][:80], x["prix"], "neuf min", (x["prix_plancher"] or {}).get("prix_min"))

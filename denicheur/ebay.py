@@ -82,7 +82,7 @@ def controler(candidats, maxi=15):
         bilan["erreurs"].append(f"jeton eBay : {type(e).__name__}: {str(e)[:150]}")
         return bilan
     for c in candidats[:maxi]:
-        q = requete(c["titre"])
+        q = c.get("nom_produit") or requete(c["titre"])
         try:
             neuf, ex_n = chercher(tok, q, neuf=True)
             occ, ex_o = chercher(tok, q, neuf=False)

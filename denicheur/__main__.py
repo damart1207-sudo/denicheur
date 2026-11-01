@@ -156,6 +156,21 @@ def passage(nom, test=False):
                             and not (v and v["deja_moins_cher_ailleurs"])
                             and not (neuf_ebay and neuf_ebay <= c["prix"]))
     retenus.sort(key=lambda c: (c.get("passe_verif", True), c["score"]), reverse=True)
+    # rapports Demande / Concurrence (gratuits) pour les 10 meilleures affaires
+    if not test:
+        from . import rapports
+        try:
+            tok_r = ebay.jeton()
+        except Exception:
+            tok_r = None
+        for c in retenus[:10]:
+            q = c.get("nom_produit") or ebay.requete(c["titre"])
+            if tok_r:
+                try:
+                    c["rapport_concurrence"] = rapports.concurrence(tok_r, q, c["prix"])
+                except Exception as e:
+                    c["rapport_concurrence"] = {"erreur": type(e).__name__}
+            c["rapport_demande"] = rapports.demande(q, c.get("temperature"))
 
     base = "data/test" if test else "data"
     championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
@@ -258,14 +273,37 @@ def tester_sources():
     ecrire("data/test_sources.json", res)
 
 
+def tester_rapports():
+    """Teste les rapports Demande/Concurrence sur 2 produits connus + l'accès à idealo."""
+    import urllib.request
+    from . import rapports
+    res = {"produits": []}
+    tok = ebay.jeton()
+    for q, prix in (("Garmin Forerunner 165", 88.66), ("Nike Air Max Dn", 50.0)):
+        res["produits"].append({"produit": q, "concurrence": rapports.concurrence(tok, q, prix),
+                                "demande": rapports.demande(q)})
+    try:
+        req = urllib.request.Request("https://www.idealo.fr/prix/207673478/apple-iphone-17-256-go-blanc.html",
+                                     headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            res["idealo"] = {"code": r.status, "taille": len(r.read())}
+    except Exception as e:
+        res["idealo"] = {"erreur": f"{type(e).__name__}: {str(e)[:150]}"}
+    ecrire("data/test_rapports.json", res)
+    print(json.dumps(res, ensure_ascii=False)[:3000])
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--passage", choices=["asie", "europe"], default="europe")
     p.add_argument("--test", action="store_true")
     p.add_argument("--verifier", action="store_true", help="tester les 5 clés")
     p.add_argument("--sources", action="store_true", help="tester les sources candidates")
+    p.add_argument("--rapports", action="store_true", help="tester les rapports demande/concurrence")
     a = p.parse_args()
-    if a.sources:
+    if a.rapports:
+        tester_rapports()
+    elif a.sources:
         tester_sources()
     elif a.verifier:
         verifier()

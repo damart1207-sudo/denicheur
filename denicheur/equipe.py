@@ -88,13 +88,14 @@ def analyser(agent, annonces, methode, taille_lot):
             choix.append({
                 "id": str(c["id"]),
                 "agent": agent.id,
+                "nom_produit": str(c.get("nom_produit") or "")[:60].strip(),
                 "domaine": c.get("domaine") if c.get("domaine") in DOMAINES else "autre",
                 "plateforme_revente": str(c.get("plateforme_revente") or "amazon").lower(),
                 "etat_revente": c.get("etat_revente") or "neuf",
                 "prix_revente_estime": prix_rev,
                 "demande": _borne(c.get("demande"), 1, 5, 3),
                 "concurrence": _borne(c.get("concurrence"), 1, 5, 3),
-                "mode": c.get("mode") if c.get("mode") in ("stock", "dropshipping") else "stock",
+                "mode": c.get("mode") if c.get("mode") in ("stock", "dropshipping", "les_deux") else "stock",
                 "confiance": _borne(c.get("confiance"), 0, 1, 0.5),
                 "erreur_prix": bool(c.get("erreur_prix")),
                 "raison": str(c.get("raison") or "")[:240],
@@ -146,6 +147,7 @@ def consolider(annonces, tous_choix, regles):
         candidats.append({
             **{k: a[k] for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
             "domaine": statistics.mode(c["domaine"] for c in choix),
+            "nom_produit": (statistics.mode([c["nom_produit"] for c in choix if c.get("nom_produit")] or [""])),
             "plateforme_revente": plateforme,
             "prix_revente_estime": round(prix_rev, 2),
             "cout_achat": cout,

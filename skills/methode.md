@@ -40,13 +40,14 @@ beaute-sante, animaux, vintage-collection, autre
 Réponds **uniquement** avec un objet JSON, sans texte autour :
 {"choix": [
   {"id": "<id exact du bon plan>",
+   "nom_produit": "<marque + modèle exact, 2 à 5 mots, sans couleur, taille ni texte promo>",
    "domaine": "<un domaine de la liste>",
    "plateforme_revente": "amazon|vinted|leboncoin|ebay|etsy|backmarket",
    "etat_revente": "neuf|occasion",
    "prix_revente_estime": <nombre en euros>,
    "demande": <1 à 5>,
    "concurrence": <1 à 5, 5 = très forte>,
-   "mode": "stock|dropshipping",
+   "mode": "stock|dropshipping|les_deux",
    "confiance": <0 à 1>,
    "erreur_prix": <true|false>,
    "raison": "<une phrase en français>"}

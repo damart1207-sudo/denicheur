@@ -15,9 +15,9 @@ from . import ebay
 MARCHES = {"FR": "EBAY_FR", "DE": "EBAY_DE", "IT": "EBAY_IT", "ES": "EBAY_ES"}
 
 
-def _annonces(tok, q, marche, limite=200):
-    params = urllib.parse.urlencode({"q": q, "limit": limite, "sort": "price",
-                                     "filter": "buyingOptions:{FIXED_PRICE},conditionIds:{1000},priceCurrency:EUR"})
+def _annonces(tok, q, marche, mini, maxi, limite=200, tri="price"):
+    params = urllib.parse.urlencode({"q": q, "limit": limite, "sort": tri,
+                                     "filter": f"buyingOptions:{{FIXED_PRICE}},conditionIds:{{1000}},priceCurrency:EUR,price:[{mini:.0f}..{maxi:.0f}]"})
     req = urllib.request.Request(f"{ebay.SEARCH_URL}?{params}", headers={
         "Authorization": f"Bearer {tok}", "X-EBAY-C-MARKETPLACE-ID": marche,
         "Accept-Language": ebay.LANGUES.get(marche, "en-GB")})
@@ -42,14 +42,15 @@ def concurrence(tok, q, prix_achat):
     rapport = {"requete": q, "pays": {}}
     for code, marche in MARCHES.items():
         try:
-            total, items = _annonces(tok, q, marche)
+            total, items = _annonces(tok, q, marche, prix_achat * 0.6, prix_achat * 4, limite=3)
+            haut = _annonces(tok, q, marche, prix_achat * 0.6, prix_achat * 4, limite=1, tri="-price")[1] if total > 3 else []
         except Exception as e:
             rapport["pays"][code] = {"erreur": f"{type(e).__name__}"}
             continue
-        utiles = [i for i in items if i["prix"] >= prix_achat * 0.6]  # écarte accessoires et pièces
+        utiles = list(items) + list(haut)  # le filtre de prix écarte déjà accessoires et annonces farfelues
         utiles.sort(key=lambda i: i["prix"])
         rapport["pays"][code] = {
-            "nb_annonces": len(utiles), "total_ebay": total, "niveau": niveau(len(utiles)),
+            "nb_annonces": total, "total_ebay": total, "niveau": niveau(total),
             "moins_cher": utiles[0] if utiles else None, "plus_cher": utiles[-1] if utiles else None}
     nbs = [p["nb_annonces"] for p in rapport["pays"].values() if "nb_annonces" in p]
     rapport["niveau_global"] = niveau(max(nbs)) if nbs else None

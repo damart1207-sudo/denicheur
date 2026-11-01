@@ -57,7 +57,7 @@ jobs:
           if [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then PASSAGE=asie; fi
           if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
-          pip install -q pytrends || true
+          pip install -q pytrends "urllib3<2" || true
           if [ "${{ github.event.inputs.rapports }}" = "true" ]; then
             python -m denicheur --rapports
           elif [ "${{ github.event.inputs.sources }}" = "true" ]; then

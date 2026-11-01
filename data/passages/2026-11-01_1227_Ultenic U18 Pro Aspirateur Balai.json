@@ -1,0 +1,3924 @@
+{
+ "passage": "Ultenic U18 Pro Aspirateur Balai",
+ "horodatage": "2026-11-01_1227",
+ "date_affichee": "01/11/2026 à 12 h 27",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "frandroid-bonsplans": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "journaldugeek-bonplan": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "clubic-bonsplans": {
+   "ok": true,
+   "nb": 50,
+   "erreur": null
+  },
+  "01net-bonsplans": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 491,
+ "nb_nouvelles": 204,
+ "nb_prefiltres": 144,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 24
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 35
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 13
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "d173b0153a",
+   "titre": "Baskets Femme Puma Softride Enzo 4 - Noir, Taille 35.5",
+   "prix": 14.99,
+   "devise": "EUR",
+   "marchand": "Espace des marques",
+   "lien": "https://www.dealabs.com/bons-plans/baskets-puma-softride-enzo-4-noires-femme-1499-eur-3443300",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "mode",
+   "nom_produit": "Puma Softride Enzo",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 19.99,
+   "marge_nette": 35.01,
+   "rentabilite": 1.751,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussures neuves à 15 €, revendues à plus de 50 € sur Vinted, forte demande et faible concurrence."
+   },
+   "score": 119.1,
+   "ebay": {
+    "requete": "Puma Softride Enzo",
+    "neuf": {
+     "nb": 50,
+     "min": 47.37,
+     "p25": 57.77,
+     "mediane": 70.2,
+     "max": 93.59
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "CHAUSSURE BASQUET PUMA taille EUR 42 UK 8 Softride Enzo Evo 377048-01 37704801",
+      "prix": "24.99",
+      "url": "https://www.ebay.fr/itm/155984415130?_skw=Puma+Softride+Enzo&hash=item245165499a:g:ywYAAeSwd-5qE9hU"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 57.77,
+     "DE": 49.99,
+     "IT": 63.67,
+     "ES": 79.67
+    },
+    "meilleur_pays": "ES"
+   },
+   "prix_plancher": {
+    "nom": "Puma Softride Enzo",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "prix_revente_prudent": 55.0,
+   "marge_verifiee": 35.01,
+   "rentabilite_verifiee": 1.751,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Puma Softride Enzo",
+    "pays": {
+     "FR": {
+      "nb_annonces": 13,
+      "total_ebay": 14,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 47.37,
+       "titre": "Buty sportowe dziecięce Puma SOFTRIDE ENZO 5 JR czerwone 40151002 r 37.5",
+       "lien": "https://www.ebay.fr/itm/880062985034?_skw=Puma+Softride+Enzo&hash=itemcce7d7734a:g:akkAAeSwb35q4-DO",
+       "vendeur": "topoffers_eu",
+       "avis_vendeur": 56329
+      },
+      "plus_cher": {
+       "prix": 57.9,
+       "titre": "PUMA Softride Enzo 5 baskets running respirantes mesh noir EU 43 US 10 311098-01",
+       "lien": "https://www.ebay.fr/itm/188966690082?_skw=Puma+Softride+Enzo&hash=item2bff4add22:g:~h4AAeSwPGFqvRp4",
+       "vendeur": "gal.02.5",
+       "avis_vendeur": 168
+      }
+     },
+     "DE": {
+      "nb_annonces": 28,
+      "total_ebay": 43,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 28.95,
+       "titre": "PUMA Softride Enzo 5 Laufschuhe",
+       "lien": "https://www.ebay.de/itm/206615371892?_skw=Puma+Softride+Enzo&hash=item301b3c6074:g:WPQAAOSw75lnTPrg",
+       "vendeur": "puma-europe",
+       "avis_vendeur": 117965
+      },
+      "plus_cher": {
+       "prix": 60.0,
+       "titre": "Puma Softride Enzo Evo Rot - Größe 42,5 [8,5 US 27,5cm] Herrenschuhe Sneaker",
+       "lien": "https://www.ebay.de/itm/166739531824?_skw=Puma+Softride+Enzo&hash=item26d2735830:g:WXQAAeSwGNFqv6ZR",
+       "vendeur": "modadistrict",
+       "avis_vendeur": 9188
+      }
+     },
+     "IT": {
+      "nb_annonces": 129,
+      "total_ebay": 153,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 21.81,
+       "titre": "PUMA Softride Enzo 5.0 Rose Running Ragazze Rosa, Bianco Sneakers Atletiche S",
+       "lien": "https://www.ebay.it/itm/407300574266?_skw=Puma+Softride+Enzo&hash=item5ed5018c3a:g:xdcAAeSwtYNq5fd7",
+       "vendeur": "official_shoebacca",
+       "avis_vendeur": 574849
+      },
+      "plus_cher": {
+       "prix": 60.0,
+       "titre": "Puma Softride Enzo Evo Rosso - Taglia 42.5 [8.5 US 27.5cm] Scarpe Uomo Sneakers",
+       "lien": "https://www.ebay.it/itm/166739531824?_skw=Puma+Softride+Enzo&hash=item26d2735830:g:WXQAAeSwGNFqv6ZR",
+       "vendeur": "modadistrict",
+       "avis_vendeur": 9188
+      }
+     },
+     "ES": {
+      "nb_annonces": 109,
+      "total_ebay": 143,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 21.63,
+       "titre": "Tenis deportivos PUMA Softride Enzo 5.0 rosa para correr jóvenes niñas rosa, blanco S",
+       "lien": "https://www.ebay.es/itm/407300574266?_skw=Puma+Softride+Enzo&hash=item5ed5018c3a:g:xdcAAeSwtYNq5fd7",
+       "vendeur": "official_shoebacca",
+       "avis_vendeur": 574849
+      },
+      "plus_cher": {
+       "prix": 60.0,
+       "titre": "Zapatillas de hombre Puma Softride Enzo Evo Rosso - talla 42,5 [8,5 EE. UU. 27,5 cm]",
+       "lien": "https://www.ebay.es/itm/166739531824?_skw=Puma+Softride+Enzo&hash=item26d2735830:g:WXQAAeSwGNFqv6ZR",
+       "vendeur": "modadistrict",
+       "avis_vendeur": 9188
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Puma Softride Enzo",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "puma softride enzo 5",
+     "puma softride enzo",
+     "puma softride enzo evo",
+     "puma softride enzo nxt",
+     "puma softride enzo 6",
+     "puma softride enzo 5 slip tech",
+     "puma softride enzo 5 desert dust",
+     "puma softride enzo 5 review",
+     "puma softride enzo 5 hype",
+     "puma softride enzo evo slip"
+    ]
+   }
+  },
+  {
+   "id": "ca21c40c0e",
+   "titre": "Pala de padel SIUX ELECTRA PRO ST42025",
+   "prix": 89.74,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/pala-de-padel-siux-electra-pro-st42025-2051230",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 182,
+   "domaine": "sport",
+   "nom_produit": "Siux Electra Pro ST42025",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 160.0,
+   "cout_achat": 94.74,
+   "marge_nette": 65.26,
+   "rentabilite": 0.689,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Raquette padel haut de gamme Siux sous les 90€, cote occasion 140-160€, forte demande en France.",
+    "gptoss": "Marge nette ~30 €, forte demande padel en France."
+   },
+   "score": 73.5,
+   "ebay": {
+    "requete": "Siux Electra Pro ST42025",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Siux Electra Pro ST42025",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "Siux Electra Pro ST42025",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Siux Electra Pro ST42025",
+    "temperature_dealabs": 182,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "siux electra pro st4 2025 review",
+     "siux electra pro st4 2025",
+     "siux electra stupa pro st4 2025",
+     "siux electra pro st4 2025 franco stupaczuk",
+     "siux electra pro st4 2025 vs 2026",
+     "siux electra pro st4 2025 padel nuestro",
+     "siux electra pro st4 2025 franco stupaczuk racket",
+     "pala siux electra pro st4 2025",
+     "siux electra pro st4 2025 recensioni",
+     "siux electra pro st4 2025 harga"
+    ]
+   }
+  },
+  {
+   "id": "b30cdf1694",
+   "titre": "KOSMOS - CATAN - Big Box",
+   "prix": 37.99,
+   "devise": "EUR",
+   "marchand": "Müller",
+   "lien": "https://www.mydealz.de/deals/kosmos-catan-big-box-2862709",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "autre",
+   "nom_produit": "Catan Big Box",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 42.99,
+   "marge_nette": 42.01,
+   "rentabilite": 0.977,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de vente habituel (≈100 €)."
+   },
+   "score": 72.9,
+   "ebay": {
+    "requete": "Catan Big Box",
+    "neuf": {
+     "nb": 10,
+     "min": 57.84,
+     "p25": 59.97,
+     "mediane": 70.55,
+     "max": 97.01
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Catan Big Box 2025 Francais Kosmos Nouvelle editionKOSCATBB0202FR",
+      "prix": "57.84",
+      "url": "https://www.ebay.fr/itm/128015572506?_skw=Catan+Big+Box&hash=item1dce529e1a:g:OggAAeSwavdo2WCu"
+     },
+     {
+      "titre": "Jeu - Catan : Big Box 2025",
+      "prix": "86.99",
+      "url": "https://www.ebay.fr/itm/227394683548?_skw=Catan+Big+Box&hash=item34f1c7829c:i:227394683548"
+     },
+     {
+      "titre": "I Coloni di Catan : Jeu de Table Big Box - ITALIANO",
+      "prix": "67.88",
+      "url": "https://www.ebay.fr/itm/407314252012?_skw=Catan+Big+Box&hash=item5ed5d240ec:g:ej4AAeSwRHhq5soJ"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 59.97,
+     "DE": 58.86,
+     "IT": 59.99,
+     "ES": 59.9
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Catan Big Box",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "prix_revente_prudent": 59.97,
+   "marge_verifiee": 16.98,
+   "rentabilite_verifiee": 0.395,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Catan Big Box",
+    "pays": {
+     "FR": {
+      "nb_annonces": 10,
+      "total_ebay": 10,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 57.84,
+       "titre": "Catan Big Box 2025 Francais Kosmos Nouvelle editionKOSCATBB0202FR",
+       "lien": "https://www.ebay.fr/itm/128015572506?_skw=Catan+Big+Box&hash=item1dce529e1a:g:OggAAeSwavdo2WCu",
+       "vendeur": "antrejeu",
+       "avis_vendeur": 3972
+      },
+      "plus_cher": {
+       "prix": 97.01,
+       "titre": "KOSMOS Jeu de société avec extensions CATAN BIG BOX 2025",
+       "lien": "https://www.ebay.fr/itm/188992349939?_skw=Catan+Big+Box&hash=item2c00d266f3:g:q48AAeSwTy1quIwq",
+       "vendeur": "sobreruedas-spain",
+       "avis_vendeur": 56402
+      }
+     },
+     "DE": {
+      "nb_annonces": 39,
+      "total_ebay": 52,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 34.0,
+       "titre": "CATAN Die Erste Insel NEU OVP SEALED IBM PC Spiel Big Box Ravensburger 1999 RAR",
+       "lien": "https://www.ebay.de/itm/298643734138?_skw=Catan+Big+Box&hash=item45888dbe7a:g:QVsAAOSwlw5nn6zv",
+       "vendeur": "rotar.damia",
+       "avis_vendeur": 1508
+      },
+      "plus_cher": {
+       "prix": 99.99,
+       "titre": "DIE SIEDLER VON CATAN BIG BOX 2019 AUTOGRAMM KLAUS  & BENJAMIN TEUBER NEU & UNBE",
+       "lien": "https://www.ebay.de/itm/206577400445?_skw=Catan+Big+Box&hash=item3018f8fa7d:g:nkUAAeSw4CRqtB7J",
+       "vendeur": "silvesterhu",
+       "avis_vendeur": 261
+      }
+     },
+     "IT": {
+      "nb_annonces": 30,
+      "total_ebay": 36,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 57.84,
+       "titre": "Catan Big Box 2025 francese Kosmos nuova edizioneKOSCATBB0202FR",
+       "lien": "https://www.ebay.it/itm/128015572506?_skw=Catan+Big+Box&hash=item1dce529e1a:g:OggAAeSwavdo2WCu",
+       "vendeur": "antrejeu",
+       "avis_vendeur": 3972
+      },
+      "plus_cher": {
+       "prix": 101.75,
+       "titre": "Kosmos Catan Big Box 2025: Spiel yjpm",
+       "lien": "https://www.ebay.it/itm/860035578565?_skw=Catan+Big+Box&hash=itemc83e1d7ac5:g:1nYAAeSwG3dqzIXj",
+       "vendeur": "jet-market",
+       "avis_vendeur": 7943
+      }
+     },
+     "ES": {
+      "nb_annonces": 21,
+      "total_ebay": 31,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 57.84,
+       "titre": "Catan Big Box 2025 Inglés Kosmos Nueva Edición KOSCATBB0202EN",
+       "lien": "https://www.ebay.es/itm/128015572506?_skw=Catan+Big+Box&hash=item1dce529e1a:g:OggAAeSwavdo2WCu",
+       "vendeur": "antrejeu",
+       "avis_vendeur": 3972
+      },
+      "plus_cher": {
+       "prix": 99.99,
+       "titre": "LOS COLONOS DE CATAN BIG BOX 2019 AUTÓGRAFO KLAUS & BENJAMIN TEUBER NUEVO Y SIN USAR",
+       "lien": "https://www.ebay.es/itm/206577400445?_skw=Catan+Big+Box&hash=item3018f8fa7d:g:nkUAAeSw4CRqtB7J",
+       "vendeur": "silvesterhu",
+       "avis_vendeur": 261
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Catan Big Box",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 25,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "catan big box",
+     "catan big box cultura",
+     "catan big box français",
+     "catan big box occasion",
+     "catan big box leclerc",
+     "catan big box amazon",
+     "catan big box fnac",
+     "catan big box organization",
+     "catan big box 2024",
+     "catan big box pdf"
+    ]
+   }
+  },
+  {
+   "id": "0f9fceba3d",
+   "titre": "ELITEWHEELS ENT 2.0 Carbon-Laufradsatz 700C, 50mm Tiefe, Center Lock Scheibenbremse, UCI-zugelassen, Gutschein + Paypal",
+   "prix": 263.37,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/elitewheels-ent-20-carbon-laufradsatz-700c-50mm-tiefe-center-lock-scheibenbremse-uci-zugelassen-gutschein-paypal-2833376",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 681,
+   "domaine": "sport",
+   "nom_produit": "EliteWheels ENT 2.0",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 650.0,
+   "cout_achat": 268.37,
+   "marge_nette": 290.78,
+   "rentabilite": 1.084,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge brute importante, mais risque d'authenticité réduit la confiance."
+   },
+   "score": 63.6,
+   "ebay": {
+    "requete": "EliteWheels ENT 2.0",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "EliteWheels ENT 2.0",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "EliteWheels ENT 2.0",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "EliteWheels ENT 2.0",
+    "temperature_dealabs": 681,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "elitewheels ent 2.0",
+     "elitewheels ent 2.0 avis",
+     "elitewheels ent 2.0 disc",
+     "elitewheels ent 2.0 rim brake",
+     "elitewheels ent 2.0 poids",
+     "elitewheels ent 2.0 weight",
+     "elitewheels ent 2.0 review",
+     "elitewheels ent 2.0 50mm weight",
+     "elitewheels ent 2.0 38mm",
+     "elitewheels ent 2.0 vs edge"
+    ]
+   }
+  },
+  {
+   "id": "0b5b723245",
+   "titre": "COTIAR Winbot W10 Fensterputzroboter mit 9000Pa Saugkraft",
+   "prix": 63.99,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/cotiar-winbot-w10-fensterputzroboter-mit-9000pa-saugkraft-2862705",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "maison",
+   "nom_produit": "COTIAR Winbot W10",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 68.99,
+   "marge_nette": 61.01,
+   "rentabilite": 0.884,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit peu présent en France, prix de revente moyen 130 € contre 64 € d'achat."
+   },
+   "score": 62.2,
+   "ebay": {
+    "requete": "COTIAR Winbot W10",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "COTIAR Winbot W10",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "COTIAR Winbot W10",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "COTIAR Winbot W10",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "b7dd01698e",
+   "titre": "Growatt NEXA 2000 Solarspeicher für Balkonkraftwerke | 2048Wh LiFePO4, 800W AC, 4x MPPT, erweit. auf 8192Wh",
+   "prix": 274.95,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/growatt-nexa-2000-solarspeicher-fur-balkonkraftwerke-2048wh-lifepo4-800w-ac-4x-mppt-erweit-auf-8192wh-versand-aus-de-40eur-cb-mgl-2820866",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 1241,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Growatt NEXA 2000",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 435.0,
+   "cout_achat": 279.95,
+   "marge_nette": 155.05,
+   "rentabilite": 0.554,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Batterie solaire LiFePO4 2kWh très demandée pour autoconsommation, prix bien sous le marché français.",
+    "gptoss": "Marge nette estimée d'environ 15 € après TVA et droits, produit niche avec forte demande."
+   },
+   "score": 60.1,
+   "ebay": {
+    "requete": "Growatt NEXA 2000",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 474.0,
+     "IT": 581.72,
+     "ES": 558.96
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Growatt NEXA 2000",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "Growatt NEXA 2000",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 19,
+      "total_ebay": 20,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 389.0,
+       "titre": "Growatt NEXA 2000 Erweiterungsbatterie Speicher für Balkonkraftwerke",
+       "lien": "https://www.ebay.de/itm/117412616898?_skw=Growatt+NEXA+2000&hash=item1b56565ac2:g:GmYAAeSwzkdqqFA1",
+       "vendeur": "disy1",
+       "avis_vendeur": 1472
+      },
+      "plus_cher": {
+       "prix": 899.0,
+       "titre": "Growatt NEXA 2000 + 2x 500W Bifazial Solarmodule – Neu, versandkostenfrei",
+       "lien": "https://www.ebay.de/itm/920010731732?_skw=Growatt+NEXA+2000&hash=itemd634e9b0d4:g:9-0AAeSwj~lqw8o4",
+       "vendeur": "ouy480",
+       "avis_vendeur": 27
+      }
+     },
+     "IT": {
+      "nb_annonces": 2,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 558.96,
+       "titre": "Growatt NEXA 2000 batteria di espansione 2,048kWh 51,2V LiFePO4 accumulo 800W",
+       "lien": "https://www.ebay.it/itm/257692195303?_skw=Growatt+NEXA+2000&hash=item3bffa6d9e7:g:aYsAAeSwR7pqhrFX",
+       "vendeur": "basba-batterien-de",
+       "avis_vendeur": 29085
+      },
+      "plus_cher": {
+       "prix": 692.61,
+       "titre": "Growatt NEXA 2000 2kWh Balcone Centrale Accumulatore 800W Inverter LiFePO4",
+       "lien": "https://www.ebay.it/itm/267762422875?_skw=Growatt+NEXA+2000&hash=item3e57e2545b:g:jG0AAeSwbp5qhrOg",
+       "vendeur": "basba-batterien-de",
+       "avis_vendeur": 29085
+      }
+     },
+     "ES": {
+      "nb_annonces": 2,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 558.96,
+       "titre": "Batería de expansión Growatt NEXA 2000 2,048kWh 51,2V LiFePO4 memoria 800W",
+       "lien": "https://www.ebay.es/itm/257692195303?_skw=Growatt+NEXA+2000&hash=item3bffa6d9e7:g:aYsAAeSwR7pqhrFX",
+       "vendeur": "basba-batterien-de",
+       "avis_vendeur": 29085
+      },
+      "plus_cher": {
+       "prix": 692.61,
+       "titre": "Growatt NEXA 2000 2kWh Balcón Central Eléctrica Almacenamiento 800W Inversor LiFePO4",
+       "lien": "https://www.ebay.es/itm/267762422875?_skw=Growatt+NEXA+2000&hash=item3e57e2545b:g:jG0AAeSwbp5qhrOg",
+       "vendeur": "basba-batterien-de",
+       "avis_vendeur": 29085
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Growatt NEXA 2000",
+    "temperature_dealabs": 1241,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "growatt nexa 2000",
+     "growatt nexa 2000 batterie",
+     "growatt nexa 2000 probleme",
+     "growatt nexa 2000 test",
+     "growatt nexa 2000 speicher für balkonkraftwerke",
+     "growatt nexa 2000 set",
+     "growatt nexa 2000 smart meter",
+     "growatt nexa 2000 all in one",
+     "growatt nexa 2000 app",
+     "growatt nexa 2000 home assistant"
+    ]
+   }
+  },
+  {
+   "id": "19befd46a9",
+   "titre": "Projektor Magcubic HY450C | €52.64 | 900ANSI | 1080p | 2/16GB | Android 14 | (wysyłka z Polski)",
+   "prix": 54.28,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.pepper.pl/promocje/projektor-magcubic-hy450c-900ansi-1080p-216gb-android-14-wysylka-z-polski-1379607",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 221,
+   "domaine": "tech",
+   "nom_produit": "Projektor Magcubic HY450C",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 59.28,
+   "marge_nette": 47.72,
+   "rentabilite": 0.805,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon écart prix, marge nette ~38 €, produit populaire pour home‑cinéma."
+   },
+   "score": 58.0,
+   "ebay": {
+    "requete": "Projektor Magcubic HY450C",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 153.2,
+     "IT": null,
+     "ES": 71.96
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Projektor Magcubic HY450C",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "Projektor Magcubic HY450C",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Projektor Magcubic HY450C",
+    "temperature_dealabs": 221,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "projektor magcubic hy450c",
+     "projecteur magcubic hy450c",
+     "magcubic projector hy450c",
+     "projektor magcubic hy450",
+     "projektor magcubic hy450 max",
+     "projektor magcubic hy450 opinie",
+     "projektor magcubic hy450 pro"
+    ]
+   }
+  },
+  {
+   "id": "90bfd0660b",
+   "titre": "E-scooter mit Sitz und Straßenzulassung",
+   "prix": 396.0,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/e-roller-mit-sitz-und-strassenzulassung-2862707",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "sport",
+   "nom_produit": "E-scooter avec siège",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 650.0,
+   "cout_achat": 401.0,
+   "marge_nette": 249.0,
+   "rentabilite": 0.621,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge brute de plus de 200 € après TVA, droits et frais de mise en ligne."
+   },
+   "score": 53.0,
+   "ebay": {
+    "requete": "E-scooter avec siège",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "E-scooter avec siège",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "E-scooter avec siège",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 76,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 121,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "E-scooter avec siège",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "e scooter avec siege",
+     "e scooter avec selle",
+     "trottinette e scooter avec siege"
+    ]
+   }
+  },
+  {
+   "id": "d53ec0362a",
+   "titre": "Swarovski Chroma Halskette mit birnenförmigem Anhänger, grüner Kristall & Zirkonia, Goldlegierungsschicht",
+   "prix": 69.0,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.mydealz.de/deals/swarovski-chroma-halskette-mit-birnenformigem-anhanger-gruner-kristall-zirkonia-goldlegierungsschicht-2862701",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "mode",
+   "nom_produit": "Swarovski Chroma Collier Perle Verte",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 112.5,
+   "cout_achat": 74.0,
+   "marge_nette": 38.5,
+   "rentabilite": 0.52,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Bijou Swarovski neuf étiqueté 69 € vs 90-100 € Vinted/Etsy, petit, léger, rotation ultra-rapide, marge nette ~15 €.",
+    "gptoss": "Bijou de marque vendu 69 €, revente possible autour de 130 € sur Vinted."
+   },
+   "score": 52.0,
+   "ebay": {
+    "requete": "Swarovski Chroma Collier Perle Verte",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Swarovski Chroma Collier Perle Verte",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "Swarovski Chroma Collier Perle Verte",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Swarovski Chroma Collier Perle Verte",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "e245833ec6",
+   "titre": "Electric Large Teppanyaki Grill Table Top Smokeless Grill, Hot Plate - W/code - Sold by Zhitaozhang Tool Store (30% Possible Cash Back TCB)",
+   "prix": 13.38,
+   "devise": "GBP",
+   "marchand": "AliExpress",
+   "lien": "https://www.hotukdeals.com/deals/electric-large-teppanyaki-grill-table-top-smokeless-grill-portable-bbq-barbecue-griddle-non-stick-hot-plate-w-code-zhitaozhang-tool-store-5019022",
+   "pays": "UK",
+   "source": "hotukdeals-hot",
+   "temperature": 116,
+   "domaine": "cuisine",
+   "nom_produit": "Teppanyaki Grill Table Top",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 26.46,
+   "marge_nette": 18.54,
+   "rentabilite": 0.701,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût d'achat très bas, revente à prix de marché donne une bonne marge."
+   },
+   "score": 44.9,
+   "ebay": {
+    "requete": "Teppanyaki Grill Table Top",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 39.26,
+     "IT": 42.07,
+     "ES": 37.28
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Teppanyaki Grill Table Top",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "rapport_concurrence": {
+    "requete": "Teppanyaki Grill Table Top",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 16,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 19,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 23,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Teppanyaki Grill Table Top",
+    "temperature_dealabs": 116,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "teppanyaki grill table top",
+     "hibachi grill table top",
+     "hibachi grill counter top",
+     "mini hibachi grill table top square"
+    ]
+   }
+  },
+  {
+   "id": "7285084269",
+   "titre": "Friteuse sans huile Philips NA211/00 Série 2000 - Airfryer 3,2L, avec Fenêtre de Cuisson, Noir & Argent",
+   "prix": 54.99,
+   "devise": "EUR",
+   "marchand": "Boulanger",
+   "lien": "https://www.dealabs.com/bons-plans/airfryer-philips-na21100-serie-2000-32-l-avec-fenetre-de-cuisson-noirargent-3443334",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "cuisine",
+   "nom_produit": "Philips Airfryer NA211/00",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 59.99,
+   "marge_nette": 20.01,
+   "rentabilite": 0.334,
+   "demande": 4.0,
+   "concurrence": 3.3,
+   "consensus": 3,
+   "agents": [
+    "gptoss",
+    "nemotron",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Boulanger FR fiable, 55 € vs 75-80 € occasion récente, forte demande rentrée/cadeaux, encombrement modéré.",
+    "gptoss": "Achat à 55 € et revente à 80 € génère une marge nette d’environ 20 €.",
+    "qwen": "Promo exceptionnelle sur une marque de référence, écart de prix significatif par rapport au prix de vente courant."
+   },
+   "score": 43.9,
+   "ebay": {
+    "requete": "Philips Airfryer NA211/00",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Philips Airfryer NA211/00",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "494c4b3114",
+   "titre": "Marstek B2500D Balkonkraftwerk-Speicher - 2240Wh LiFePo4 Akku",
+   "prix": 221.03,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/marstek-b2500d-balkonkraftwerk-speicher-2240wh-lifepo4-akku-2862576",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 168,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Marstek B2500D",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 350.0,
+   "cout_achat": 226.03,
+   "marge_nette": 123.97,
+   "rentabilite": 0.548,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Stockage solaire 2,2kWh LiFePO4 plug-and-play, pénurie en France, revente facile en local."
+   },
+   "score": 43.8,
+   "ebay": {
+    "requete": "Marstek B2500D",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 295.75,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Marstek B2500D",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "ce35490ded",
+   "titre": "Bono Heißluftfritteuse Elke (9 l, 2.200 Watt, Sichtfenster) - neuer Bestpreis - inkl Versand",
+   "prix": 42.95,
+   "devise": "EUR",
+   "marchand": "Möbelix",
+   "lien": "https://www.preisjaeger.at/deals/bono-heissluftfritteuse-elke-9-l-2200-watt-sichtfenster-neuer-bestpreis-inkl-versand-371665",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 122,
+   "domaine": "cuisine",
+   "nom_produit": "Bono Heißluftfritteuse Elke",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 47.95,
+   "marge_nette": 32.05,
+   "rentabilite": 0.668,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût total ~53 €, revente à 80 € sans frais vendeur, marge nette d’environ 25 €."
+   },
+   "score": 40.1,
+   "prix_plancher": {
+    "nom": "Bono Heißluftfritteuse Elke",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "ce69213189",
+   "titre": "(Juwelier-Bektas@Amazon) Swarovski Una Ohrringe, Sparkling Dance Tropfenohrringe mit rosa Kristall, Roségold-Legierungsschicht",
+   "prix": 99.11,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.mydealz.de/deals/swarovski-una-ohrringe-sparkling-dance-tropfenohrringe-mit-rosa-kristall-rosegold-legierungsschicht-2862696",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "mode",
+   "nom_produit": "Swarovski Una Boucles d'Oreilles Rose",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 145.0,
+   "cout_achat": 104.11,
+   "marge_nette": 40.89,
+   "rentabilite": 0.393,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle Sparkling Dance neuf 99 € vs 115-130 € revente Vinted, forte demande cadeaux, logistique simple.",
+    "gptoss": "Prix d'achat 99 €, revente estimée 170 € sur le marché de la bijouterie d'occasion."
+   },
+   "score": 39.3,
+   "prix_plancher": {
+    "nom": "Swarovski Una Boucles d'Oreilles Rose",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "eace9937f7",
+   "titre": "Sneakers Puma Club II Era Bleu Et Rose - Tailles 36 et 37",
+   "prix": 29.99,
+   "devise": "EUR",
+   "marchand": "Espace des marques",
+   "lien": "https://www.dealabs.com/bons-plans/sneakers-puma-club-ii-era-bleu-et-rose-3440611",
+   "pays": "FR",
+   "source": "dealabs-hot",
+   "temperature": 101,
+   "domaine": "mode",
+   "nom_produit": "Puma Club II Sneakers",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 34.99,
+   "marge_nette": 20.01,
+   "rentabilite": 0.572,
+   "demande": 4.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Sneakers limitées, revente à 55 €, marge d'environ 15 € après frais de port, forte demande saisonnière."
+   },
+   "score": 38.4,
+   "prix_plancher": {
+    "nom": "Puma Club II Sneakers",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "79fc9b1c5d",
+   "titre": "SOYO S4 PLUS AMD Ryzen 7 H255 LPDDR5 24GB RAM 512GB PCIe3.0 NVMe SSD WiFi6 BT5.2",
+   "prix": 305.28,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/soyo-s4-plus-amd-ryzen-7-h255-lpddr5-24gb-ram-512gb-pcie30-nvme-ssd-wifi6-bt52-2051309",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 232,
+   "domaine": "tech",
+   "nom_produit": "SOYO S4 PLUS Ryzen 7",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 450.0,
+   "cout_achat": 310.28,
+   "marge_nette": 139.72,
+   "rentabilite": 0.45,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Mini PC Ryzen 7 24Go/512Go à prix cassé, forte demande bureautique/serveur domestique."
+   },
+   "score": 36.0,
+   "prix_plancher": {
+    "nom": "SOYO S4 PLUS Ryzen 7",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "01942d6419",
+   "titre": "JOYOR S5 ABE E-Scooter für 269,63 € – 500 W, Federung & Straßenzulassung",
+   "prix": 269.63,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/joyor-s5-abe-e-scooter-fur-26963-eur-500-w-federung-strassenzulassung-2862716",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "sport",
+   "nom_produit": "JOYOR S5 E-Scooter",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 380.0,
+   "cout_achat": 274.63,
+   "marge_nette": 105.37,
+   "rentabilite": 0.384,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "E‑scooter populaire à 269 € + TVA, revendu ~380 € en France, bonne marge et demande saisonnière."
+   },
+   "score": 32.8,
+   "prix_plancher": {
+    "nom": "JOYOR S5 E-Scooter",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "8fe6866067",
+   "titre": "Ecouteur sans fil CMF by Nothing Buds Pro 2 - Gris",
+   "prix": 25.88,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.dealabs.com/bons-plans/cmf-by-nothing-buds-pro-2-3443316",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "tech",
+   "nom_produit": "CMF by Nothing Buds Pro 2",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 30.88,
+   "marge_nette": 14.12,
+   "rentabilite": 0.457,
+   "demande": 3.5,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "AliExpress (probable CN), 26 € + TVA/douane ~31 € vs 45-50 € Vinted, marge ~14 € mais incertitude frais import 2026.",
+    "qwen": "Marque émergente mais populaire, prix très bas permettant une petite marge sur un produit léger et facile à expédier."
+   },
+   "score": 31.7,
+   "prix_plancher": {
+    "nom": "CMF by Nothing Buds Pro 2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "3a32afe1cf",
+   "titre": "CREATE - Freidora de aire de cristal sin vaporizador 4.2L - AIR FRYER STUDIO CRYSTAL",
+   "prix": 42.96,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/create-freidora-de-aire-de-cristal-sin-vaporizador-42l-air-fryer-studio-crystal-2051511",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 226,
+   "domaine": "cuisine",
+   "nom_produit": "Freidora Aire Cristal 4.2L",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 47.96,
+   "marge_nette": 16.54,
+   "rentabilite": 0.345,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge nette d’environ 9 € après frais, produit léger et forte demande."
+   },
+   "score": 31.3,
+   "prix_plancher": {
+    "nom": "Freidora Aire Cristal 4.2L",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   }
+  },
+  {
+   "id": "2dbf6a1d01",
+   "titre": "[Zalando+] Casio ABL-100WE-7AEF • Casio ABL-100WE-1A • Bluetooth • Dualzeit • Schrittzähler",
+   "prix": 51.16,
+   "devise": "EUR",
+   "marchand": "Zalando",
+   "lien": "https://www.mydealz.de/deals/zalando-casio-abl-100we-7aef-casio-abl-100we-1a-bluetooth-dualzeit-schrittzahler-2862429",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 118,
+   "domaine": "mode",
+   "nom_produit": "Casio ABL-100WE",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 75.0,
+   "cout_achat": 56.16,
+   "marge_nette": 18.84,
+   "rentabilite": 0.335,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat bien inférieur au prix de revente moyen sur Leboncoin, marge nette raisonnable."
+   },
+   "score": 22.8
+  },
+  {
+   "id": "4c03eea108",
+   "titre": "Mould King 17015 Liebherr LR13000 Raupenkran, 4.318 Teile, RC & App-Steuerung, 6 Motoren, z.B. als \"Kinder-Weihnachtsgeschenk\"",
+   "prix": 110.32,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/mould-king-17015-liebherr-lr13000-raupenkran-4318-teile-rc-app-steuerung-6-motoren-kinder-weihnachtsgeschenk-2839673",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 213,
+   "domaine": "vintage-collection",
+   "nom_produit": "Liebherr LR13000 RC Crane",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 180.0,
+   "cout_achat": 115.32,
+   "marge_nette": 34.93,
+   "rentabilite": 0.303,
+   "demande": 2.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge raisonnable ~30 €, niche hobby avec peu de concurrence."
+   },
+   "score": 14.2
+  },
+  {
+   "id": "bbaa0aadf0",
+   "titre": "Metroid Prime 4: Beyond sur Nintendo Switch (version française)",
+   "prix": 30.39,
+   "devise": "EUR",
+   "marchand": "JoyBuy",
+   "lien": "https://www.dealabs.com/bons-plans/nintendo-switch-metroid-prime-4-beyond-version-francaise-3039-eur-livre-chez-joybuy-3443337",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "gaming",
+   "nom_produit": "Metroid Prime 4 Beyond",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 65.0,
+   "cout_achat": 35.39,
+   "marge_nette": 29.61,
+   "rentabilite": 0.837,
+   "demande": 5,
+   "concurrence": 1,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix 30 € pour préco Switch (sortie 2025) vs 60-70 € standard : erreur de prix quasi certaine, commande sera annulée."
+   },
+   "score": 13.4
+  },
+  {
+   "id": "9e782304f2",
+   "titre": "GEOID CC700 GPS-Fahrradcomputer - 2,8\" Farbdisplay, Routennavigation, GPX-Import, WLAN, ANT+/Bluetooth, IPX7, Multi-GNSS",
+   "prix": 27.59,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/geoid-cc700-gps-fahrradcomputer-28-farbdisplay-routennavigation-gpx-import-wlan-antbluetooth-ipx7-multi-gnss-2862230",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 138,
+   "domaine": "sport",
+   "nom_produit": "GEOID CC700",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 90.0,
+   "cout_achat": 32.59,
+   "marge_nette": 57.41,
+   "rentabilite": 1.762,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Compteur GPS vélo cartographie complète à prix entrée de gamme, niche cyclistes connectés."
+   },
+   "score": 91.6,
+   "ebay": {
+    "requete": "GEOID CC700",
+    "neuf": {
+     "nb": 9,
+     "min": 13.98,
+     "p25": 13.99,
+     "mediane": 15.95,
+     "max": 159.82
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "GPS GEOID CC700",
+      "prix": "48.99",
+      "url": "https://www.ebay.fr/itm/407280999178?_skw=GEOID+CC700&hash=item5ed3d6db0a:g:u8YAAeSwGb1qqZlx"
+     },
+     {
+      "titre": "Compteur Vélo GPS GEOID CC700 Écran Couleur 2.8\" Navigation Wi-Fi VTT Route",
+      "prix": "75.90",
+      "url": "https://www.ebay.fr/itm/800486724077?_skw=GEOID+CC700&hash=itemba60ba11ed:g:6eQAAeSwaRZqeeuz&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kZ1WXhA%2BJ7S8KiusVRgfC4GJAzShIxo0Ig6wp85UbrZ6ZHaMdtBJ64AqvMQTNxlwTumBHAmT0V2mW2yfOLYLBXajx%2FDJof8iiYSj1lyboMClkhT5KlmkJJn50%2FFCx89a7vttpqhVvDR1gCVzt6tvaCQebIchbYu7nOzgvTWpaDSUd%2FMXPtG1xmFS8tZvPV9NKCYuDI5FPwo4uRPZWgH%2BLINPKfU8O2fa9UpuMXVj%2FKNCD7EjH%2BikGPI4iRfHTf2yf926MUQc0VCgvNlYj7QExjkW2YHUcSx7XH3mndHNtsBg%3D%3D"
+     },
+     {
+      "titre": "GEOID CC700 Pro Compteur GPS vélo Smart GPS Bike Computer câble USB accessoires",
+      "prix": "83.89",
+      "url": "https://www.ebay.fr/itm/237109623391?_skw=GEOID+CC700&hash=item3734d5ba5f:g:UP0AAeSwdcdqxLpX"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 13.99,
+     "DE": 91.49,
+     "IT": 63.89,
+     "ES": 17.49
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "GEOID CC700",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "prix_revente_prudent": 13.99,
+   "marge_verifiee": -18.6,
+   "rentabilite_verifiee": -0.571,
+   "passe_verif": false
+  },
+  {
+   "id": "36afdde53b",
+   "titre": "Xiaomi Buds 5 Pro",
+   "prix": 58.38,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/xiaomi-buds-5-pro-2051348",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 234,
+   "domaine": "tech",
+   "nom_produit": "Xiaomi Buds 5 Pro",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 110.0,
+   "cout_achat": 63.38,
+   "marge_nette": 46.62,
+   "rentabilite": 0.736,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Écouteurs ANC haut de gamme Xiaomi à prix bien inférieur au reconditionné Back Market."
+   },
+   "score": 62.8,
+   "ebay": {
+    "requete": "Xiaomi Buds 5 Pro",
+    "neuf": {
+     "nb": 23,
+     "min": 41.26,
+     "p25": 75.0,
+     "mediane": 252.83,
+     "max": 425.05
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 30.39,
+     "p25": 30.39,
+     "mediane": 37.1,
+     "max": 83.9
+    },
+    "exemples": [
+     {
+      "titre": "Xiaomi Buds 3T Pro Blanc M2115E1 ANC Bluetooth 5.2 Qi",
+      "prix": "37.10",
+      "url": "https://www.ebay.fr/itm/800744156630?_skw=Xiaomi+Buds+5+Pro&hash=itemba70122dd6:g:cvMAAeSwusxqvpCg"
+     },
+     {
+      "titre": "Xiaomi Redmi Buds 4 Pro, Bluetooth 5.3, Charge Sans Fil Moon White",
+      "prix": "30.39",
+      "url": "https://www.ebay.fr/itm/278439530214?_skw=Xiaomi+Buds+5+Pro&hash=item40d44a0ee6:g:4rsAAeSwM2tq5ceo&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7ltWbDWA1M8OhCTfPsbRaxGDinPRgna6SwaS3F7VLBrvqSASj1aKCkISMYEEHXwpvIdeHUMKt5VgrWHZMhMhOMYqv1XQR%2BCYkgzZDdJysRWtUae%2FbP8vnM8d2LMyEgR2DFqtjDr1W1AGq4hJ%2BlD%2FVADh3lpqEtpfeI0e4hRTpi7c43%2Bzmn1S1Sl6i8jV0W1NQaBLrxcIbwKI6zb0QVYAURsSzzxxY3GO%2FYlGzS0fDGK0q4wLYxGDhpCB0%2BaEpq7wpJmxgzA0frOBf5kidBQIM3q790chcqgLqwJYRKOdwTUUQ%3D%3D"
+     },
+     {
+      "titre": "Xiaomi Redmi Watch 5 Active + Buds 6 Active + Film Note 15 Pro 5G + Accessoires",
+      "prix": "83.90",
+      "url": "https://www.ebay.fr/itm/137134705357?_skw=Xiaomi+Buds+5+Pro&hash=item1feddd8acd:g:kcgAAeSwu6hptsY7"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 75.0,
+     "DE": 59.77,
+     "IT": 47.49,
+     "ES": 56.97
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Xiaomi Buds 5 Pro",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 4,
+      "meilleur": {
+       "titre": "XIAOMI  Ecouteurs True Wireless REDMI Buds 5 Pro White",
+       "prix": 33.99,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/xiaomi-ecouteurs-true-wireless-redmi-buds-5-pro-white.html"
+      },
+      "autres": [
+       {
+        "titre": "XIAOMI  Redmi Buds 5 Pro True Wireless Midnight Black",
+        "prix": 34.99,
+        "nb_boutiques": 10,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/xiaomi-redmi-buds-5-pro-true-wireless-midnight-black.html"
+       },
+       {
+        "titre": "XIAOMI  Redmi Buds 5 Pro, Casque/Écouteur",
+        "prix": 34.99,
+        "nb_boutiques": 8,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/xiaomi-redmi-buds-5-pro-casque-ecouteur.html"
+       },
+       {
+        "titre": "XIAOMI  Buds 5 Pro Noir （Wifi）",
+        "prix": 179.99,
+        "nb_boutiques": 5,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/xiaomi-buds-5-pro-noir-wifi.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 33.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/xiaomi-ecouteurs-true-wireless-redmi-buds-5-pro-white.html"
+   },
+   "prix_revente_prudent": 30.39,
+   "marge_verifiee": -32.99,
+   "rentabilite_verifiee": -0.521,
+   "passe_verif": false
+  },
+  {
+   "id": "e26f85ea10",
+   "titre": "Oficial | Monitor curvo para juegos Xiaomi G34WQi 2026, HDR 400, pantalla ultraancha WQHD de 34”",
+   "prix": 185.1,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/oficial-monitor-curvo-para-juegos-xiaomi-g34wqi-2026-hdr-400-pantalla-ultraancha-wqhd-de-34-2051444",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 217,
+   "domaine": "tech",
+   "nom_produit": "Xiaomi G34WQi 34\"",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 330.0,
+   "cout_achat": 190.1,
+   "marge_nette": 86.9,
+   "rentabilite": 0.457,
+   "demande": 4.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Moniteur gaming 34\" WQHD HDR400 sous la cote Amazon, marge nette après frais FBA.",
+    "gptoss": "Marge nette >100 €, forte demande pour moniteurs ultra‑wide."
+   },
+   "score": 56.6,
+   "ebay": {
+    "requete": "Xiaomi G34WQi 34\"",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Moniteur de jeu incurv Xiaomi G34WQi 2026 de 34 pouces avec rsolution 2K",
+      "prix": "305.50",
+      "url": "https://www.ebay.fr/itm/137522373137?_skw=Xiaomi+G34WQi+34%22&hash=item2004f8e211:g:wdsAAeSwjF1qWlA7"
+     },
+     {
+      "titre": "Ecran PC XIAOMI G34WQI WQHD 34'' incurvé VA 180 Hz",
+      "prix": "299.99",
+      "url": "https://www.ebay.fr/itm/820069938675?_skw=Xiaomi+G34WQi+34%22&hash=itembeeffa35f3:i:820069938675"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 310.94,
+     "IT": 301.2,
+     "ES": 305.5
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Xiaomi G34WQi 34\"",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "XIAOMI Ecran PC Gaming  G34WQi 34\"\" Incurvé WQHD Noir",
+       "prix": 255.99,
+       "nb_boutiques": 9,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Moniteur/ecran-pc-gaming-xiaomi-g34wqi-34-incurve-wqhd-noir.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 255.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Moniteur/ecran-pc-gaming-xiaomi-g34wqi-34-incurve-wqhd-noir.html"
+   },
+   "prix_revente_prudent": 230.39,
+   "marge_verifiee": 2.23,
+   "rentabilite_verifiee": 0.012,
+   "passe_verif": false
+  },
+  {
+   "id": "b5f6de99bf",
+   "titre": "Smartphone 6,77\" Honor 400 Smart 4G - RAM 6 Go, 128 Go",
+   "prix": 98.51,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-677-honor-400-smart-4g-ram-6-go-128-go-3443302",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "domaine": "tech",
+   "nom_produit": "Honor 400 Smart",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 150.0,
+   "cout_achat": 103.51,
+   "marge_nette": 46.49,
+   "rentabilite": 0.449,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de revente moyen en France, marge nette intéressante après TVA et frais."
+   },
+   "score": 38.3,
+   "prix_plancher": {
+    "nom": "Honor 400 Smart",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 5,
+      "meilleur": {
+       "titre": "HONOR Smartphone  400 Smart 6,77\"\" Double nano SIM 128 Go Velvet Black",
+       "prix": 129.0,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/smartphone-honor-400-smart-6-77-double-nano-sim-128-go-velvet-black.html"
+      },
+      "autres": [
+       {
+        "titre": "HONOR  400 Smart 4G 6/128 Desert Gold",
+        "prix": 144.0,
+        "nb_boutiques": 8,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/honor-400-smart-4g-6-128-desert-gold.html"
+       },
+       {
+        "titre": "HONOR Smartphone  400 Smart 4G 8Go RAM 256Go Doré",
+        "prix": 175.0,
+        "nb_boutiques": 6,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/smartphone-honor-400-smart-4g-8go-ram-256go-dore.html"
+       },
+       {
+        "titre": "HONOR Smartphone  400 Smart 4G 8Go RAM 256Go Noir",
+        "prix": 179.0,
+        "nb_boutiques": 5,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/smartphone-honor-400-smart-4g-8go-ram-256go-noir.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 129.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Smartphone/smartphone-honor-400-smart-6-77-double-nano-sim-128-go-velvet-black.html"
+   },
+   "prix_revente_prudent": 116.1,
+   "marge_verifiee": 12.59,
+   "rentabilite_verifiee": 0.122,
+   "passe_verif": false
+  },
+  {
+   "id": "13e597bc90",
+   "titre": "Montre connectée OnePlus Watch 4 - Écran 1,5\", Wear OS by Google, Snapdragon W5, Autonomie jusqu'à 16 jours",
+   "prix": 155.41,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.dealabs.com/bons-plans/montre-connectee-oneplus-watch-4-ecran-15-wear-os-by-google-snapdragon-w5-autonomie-jusqua-16-jours-3442123",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 133,
+   "domaine": "tech",
+   "nom_produit": "OnePlus Watch 4",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 220.0,
+   "cout_achat": 160.41,
+   "marge_nette": 59.59,
+   "rentabilite": 0.371,
+   "demande": 3.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Montre Wear OS Snapdragon W5 expédiée depuis la France, pas de douane, marge confortable.",
+    "qwen": "Prix AliExpress inférieur au prix de vente courant en France, permettant une marge raisonnable sur un produit de marque connu."
+   },
+   "score": 32.5,
+   "prix_plancher": {
+    "nom": "OnePlus Watch 4",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "ONEPLUS Montre Connectée  Watch 4 46mm Noir",
+       "prix": 222.0,
+       "nb_boutiques": 4,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Montre-connectee-sportive/montre-connectee-oneplus-watch-4-46mm-noir.html"
+      },
+      "autres": [
+       {
+        "titre": "ONEPLUS Montre Connectée  Watch 4 46mm Vert",
+        "prix": 222.99,
+        "nb_boutiques": 4,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Montre-connectee-sportive/montre-connectee-oneplus-watch-4-46mm-vert.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 222.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Montre-connectee-sportive/montre-connectee-oneplus-watch-4-46mm-noir.html"
+   },
+   "prix_revente_prudent": 199.8,
+   "marge_verifiee": 39.39,
+   "rentabilite_verifiee": 0.246,
+   "passe_verif": false
+  },
+  {
+   "id": "e6b5a3d596",
+   "titre": "Flüsterleise & 80 Min. Laufzeit: Ultenic U18 Pro Akku-Staubsauger für 93,31 €",
+   "prix": 93.31,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/flusterleise-80-min-laufzeit-ultenic-u18-pro-akku-staubsauger-fur-9331-eur-2862714",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "domaine": "maison",
+   "nom_produit": "Ultenic U18 Pro Aspirateur Balai",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 157.5,
+   "cout_achat": 98.31,
+   "marge_nette": 32.06,
+   "rentabilite": 0.326,
+   "demande": 3.5,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Aspirateur balai 80 min autonomie, prix DE warehouse ~93 € vs 160-180 € Amazon FR, marge nette ~30 € après frais FBA.",
+    "gptoss": "Marge nette estimée d'environ 30 € après TVA, droits et frais de vente."
+   },
+   "score": 23.5,
+   "prix_plancher": {
+    "nom": "Ultenic U18 Pro Aspirateur Balai",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "ULTENIC Aspirateur Balai Sans Fil -  - U18 Pro - Ultra Puissant - Autonomie 80min - Batterie Amovible",
+       "prix": 107.99,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Aspirateur-balai/aspirateur-balai-sans-fil-ultenic-u18-pro-ultra-puissant-autonomie-80min-batterie-amovible.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 107.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Aspirateur-balai/aspirateur-balai-sans-fil-ultenic-u18-pro-ultra-puissant-autonomie-80min-batterie-amovible.html"
+   },
+   "prix_revente_prudent": 97.19,
+   "marge_verifiee": -19.2,
+   "rentabilite_verifiee": -0.195,
+   "passe_verif": false
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "quota Google épuisé : vérification reportée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 15,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 23,
+ "annonces_analysees": [
+  {
+   "id": "b7dd01698e",
+   "titre": "Growatt NEXA 2000 Solarspeicher für Balkonkraftwerke | 2048Wh LiFePO4, 800W AC, 4x MPPT, erweit. auf 8192Wh",
+   "temperature": 1241,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "AliExpress",
+   "prix": 274.95,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/growatt-nexa-2000-solarspeicher-fur-balkonkraftwerke-2048wh-lifepo4-800w-ac-4x-mppt-erweit-auf-8192wh-versand-aus-de-40eur-cb-mgl-2820866",
+   "date": "Sun, 01 Nov 2026 11:49:52 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "274,95€ - AliExpress Update 1.11.26 Jetzt wird es ein echter Schnapper :) Mit Gutscheincode DED1140 und Paypal in 30 Tagen gehts runter auf 274,95€ <hr /..."
+  },
+  {
+   "id": "0f9fceba3d",
+   "titre": "ELITEWHEELS ENT 2.0 Carbon-Laufradsatz 700C, 50mm Tiefe, Center Lock Scheibenbremse, UCI-zugelassen, Gutschein + Paypal",
+   "temperature": 681,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 263.37,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/elitewheels-ent-20-carbon-laufradsatz-700c-50mm-tiefe-center-lock-scheibenbremse-uci-zugelassen-gutschein-paypal-2833376",
+   "date": "Sun, 01 Nov 2026 12:00:52 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "263,37€ - AliExpress Update 1.11.26 Jetzt wirds nochmal deutlich günstiger! Mit dem Gutscheincode DED1140 und dem Einsatz von Paypal in 30 Tagen landet ihr ..."
+  },
+  {
+   "id": "c3ee72a055",
+   "titre": "Consola nintendo switch 2 + juego descargable mario kart world + suscripción 3 meses nintendo switch online versión esp",
+   "temperature": 353,
+   "categorie": "Gaming",
+   "marchand": "AliExpress",
+   "prix": 398.15,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/consola-nintendo-switch-2-juego-descargable-mario-kart-world-suscripcion-3-meses-nintendo-switch-online-version-esp-2051592",
+   "date": "Sun, 01 Nov 2026 11:56:16 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "398,15€ - AliExpress Nintendo Switch 2 incluye: • Una consola Nintendo Switch 2 • Mandos Joy-Con 2 (izquierdo y derecho) • Un soporte para mandos Joy-Con ..."
+  },
+  {
+   "id": "aef9c917df",
+   "titre": "Latarka kieszonkowa Sofirn SE1 i SE1 Pro od $11.22 (możliwe ~18zł) - moc 300lm, dioda UV 120mW, USB-C, magnes + klips (wysyłka z Polski)",
+   "temperature": 343,
+   "categorie": "Sport i turystyka",
+   "marchand": "AliExpress",
+   "prix": 10.41,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/latarka-kieszonkowa-sofirn-se1-i-se1-pro-od-1122-mozliwe-18zl-moc-300lm-dioda-uv-120mw-usb-c-magnes-klips-wysylka-z-polski-1379636",
+   "date": "Sun, 01 Nov 2026 11:43:34 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "44,29zł - AliExpress Latarka Sofirn SE1 / SE1 Pro w promocji z Polski. Zastosuj kupon sklepu CEYELIQ5 oraz kod PLD1103 $1..."
+  },
+  {
+   "id": "e57b89d719",
+   "titre": "LONCHAS DE JAMON CURADO GRAN RESERVA ESPUÑA 1K + QUESO DE REGALO cuentas con la ventaja",
+   "temperature": 290,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "AliExpress",
+   "prix": 8.69,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lonchas-de-jamon-curado-gran-reserva-espuna-1k-queso-de-regalo-cuentas-con-la-ventaja-2051581",
+   "date": "Sun, 01 Nov 2026 11:56:28 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,69€ - AliExpress Un buen surtido para los amantes del jamón: 1 kg de lonchas de Jamón Curado Espuña Gran Reserva acompañado de una cuña de queso de regalo. ..."
+  },
+  {
+   "id": "082abc4d17",
+   "titre": "Play-Doh Zestaw Ciastoliny 20 Tub Kolorowa Walizka Kreatywna Zabawa, 1.6kg",
+   "temperature": 289,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Amazon.de",
+   "prix": 10.66,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/play-doh-zestaw-ciastoliny-20-tub-kolorowa-walizka-kreatywna-zabawa-16kg-1379586",
+   "date": "Sun, 01 Nov 2026 11:49:13 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "45,36zł - Amazon.de Wysyła i sprzedaje Amazon. Cena w EUR: 10.32 ( Darmowa dostawa do InPost Paczkomat lub Automat DHL BOX lub DHL POP Żabka) ..."
+  },
+  {
+   "id": "301acff8a6",
+   "titre": "(Start od 1 Listopada) Kamera 70mai Dash Cam A810lite 4K HDR Night Vision – 61,1€",
+   "temperature": 270,
+   "categorie": "Motoryzacja",
+   "marchand": "AliExpress",
+   "prix": 63.24,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/start-od-1-listopadakamera-70mai-dash-cam-a810lite-4k-hdr-night-vision-611eur-1377815",
+   "date": "Sun, 01 Nov 2026 11:29:42 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "269,10zł - AliExpress Kamera 70mai Dash Cam A810lite to urządzenie rejestrujące obraz w jakości 4K HDR, wyposażone w tryb nocny i superkondensator. Obsługuje sterowanie głosowe, ł..."
+  },
+  {
+   "id": "3c69717391",
+   "titre": "Call of Duty: Modern Warfare 4 - PlayStation 5 | Disco",
+   "temperature": 253,
+   "categorie": "Gaming",
+   "marchand": "AliExpress",
+   "prix": 47.02,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/call-of-duty-modern-warfare-4-playstation-5-disco-2051582",
+   "date": "Sun, 01 Nov 2026 12:08:17 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "47,02€ - AliExpress Call of Duty: Modern Warfare La guerra estalla en la península coreana cuando Corea del Norte lanza una invasión a gran escala que ame..."
+  },
+  {
+   "id": "9f4b8fc41c",
+   "titre": "Smartwatch oneplus watch 4 za 159.85$, możliwe 155$ z zen",
+   "temperature": 248,
+   "categorie": "Elektronika",
+   "marchand": "AliExpress",
+   "prix": 148.05,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/smartwatch-oneplus-watch-4-za-175-mozliwe-169-z-zen-1378622",
+   "date": "Sun, 01 Nov 2026 11:34:36 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "629,99zł - AliExpress Smartwatch oneplus watch 4 za ok 690$, możliwość cashback zen natychmiastowy lub inne platformy. Kody które działają PLD1125, AFPLD1125 Aktualizacja, ..."
+  },
+  {
+   "id": "f0cf636171",
+   "titre": "Gra planszowa Weirdwood Manor Edycja Deluxe",
+   "temperature": 240,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "RTV Euro AGD",
+   "prix": 31.72,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/gra-planszowa-weirdwood-manor-edycja-deluxe-1379123",
+   "date": "Sun, 01 Nov 2026 12:11:19 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "134,99zł - RTV Euro AGD Ostatnio było po 139,99 teraz 5 zł taniej. BGG: 7.2 https://b..."
+  },
+  {
+   "id": "36afdde53b",
+   "titre": "Xiaomi Buds 5 Pro",
+   "temperature": 234,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 58.38,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/xiaomi-buds-5-pro-2051348",
+   "date": "Sun, 01 Nov 2026 11:47:30 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "58,38€ - AliExpress Xiaomi Buds 5 Pro, Diafragmas coaxiales triples de doble amplificador para un sonido preciso, Audio sin pérdidas Qualcomm® aptX™, Ajuste Harman AudioEFX con dos..."
+  },
+  {
+   "id": "3eb99e44cd",
+   "titre": "Munich Rush 05 ZapatillasUnisex Adulto",
+   "temperature": 233,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 34.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/munich-rush-05-zapatillasunisex-adulto-2051424",
+   "date": "Sun, 01 Nov 2026 11:44:05 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "34,50€ - Amazon Descripción La RUSH es una zapatilla de lifestyle creada para quienes buscan un diseño moderno sin renunciar a la comodidad. Su upper combina serraje sinté..."
+  },
+  {
+   "id": "798ac24bf3",
+   "titre": "Caja de arena inteligente para gatos, (Desde Francia) (69,29€ con cupon ventajas)",
+   "temperature": 232,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "AliExpress",
+   "prix": 74.29,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/caja-de-arena-inteligente-para-gatos-desde-francia-2051178",
+   "date": "Sun, 01 Nov 2026 11:59:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "74,29€ - AliExpress Caja de arena inteligente para gatos, completamente automática, gran capacidad, semicerrada, inodoro inteligente para gatos, Control remoto por aplic..."
+  },
+  {
+   "id": "79fc9b1c5d",
+   "titre": "SOYO S4 PLUS AMD Ryzen 7 H255 LPDDR5 24GB RAM 512GB PCIe3.0 NVMe SSD WiFi6 BT5.2",
+   "temperature": 232,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 305.28,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/soyo-s4-plus-amd-ryzen-7-h255-lpddr5-24gb-ram-512gb-pcie30-nvme-ssd-wifi6-bt52-2051309",
+   "date": "Sun, 01 Nov 2026 11:35:41 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "305,28€ - AliExpress Descripción report<..."
+  },
+  {
+   "id": "3a32afe1cf",
+   "titre": "CREATE - Freidora de aire de cristal sin vaporizador 4.2L - AIR FRYER STUDIO CRYSTAL",
+   "temperature": 226,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 42.96,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/create-freidora-de-aire-de-cristal-sin-vaporizador-42l-air-fryer-studio-crystal-2051511",
+   "date": "Sun, 01 Nov 2026 11:31:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "42,96€ - AliExpress CREATE - Freidora de aire de cristal sin vaporizador 4.2L - AIR FRYER STUDIO CRYSTAL"
+  },
+  {
+   "id": "19befd46a9",
+   "titre": "Projektor Magcubic HY450C | €52.64 | 900ANSI | 1080p | 2/16GB | Android 14 | (wysyłka z Polski)",
+   "temperature": 221,
+   "categorie": "Elektronika",
+   "marchand": "AliExpress",
+   "prix": 54.28,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/projektor-magcubic-hy450c-900ansi-1080p-216gb-android-14-wysylka-z-polski-1379607",
+   "date": "Sun, 01 Nov 2026 12:18:16 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "230,99zł - AliExpress Solidny projektor w bardzo dobrej cenie Najniższa cena w Euro z kodem $8/45 €52.64 ~ 230.99zł po kursie Zen Kody: <a href=\"https://www.a..."
+  },
+  {
+   "id": "e26f85ea10",
+   "titre": "Oficial | Monitor curvo para juegos Xiaomi G34WQi 2026, HDR 400, pantalla ultraancha WQHD de 34”",
+   "temperature": 217,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 185.1,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oficial-monitor-curvo-para-juegos-xiaomi-g34wqi-2026-hdr-400-pantalla-ultraancha-wqhd-de-34-2051444",
+   "date": "Sun, 01 Nov 2026 11:30:04 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "185,10€ - AliExpress Oficial | Monitor curvo para juegos Xiaomi G34WQi 2026, HDR 400, pantalla ultraancha WQHD de 34”, alta frecuencia de actualización de 180 Hz, curvatura óptima d..."
+  },
+  {
+   "id": "4c03eea108",
+   "titre": "Mould King 17015 Liebherr LR13000 Raupenkran, 4.318 Teile, RC & App-Steuerung, 6 Motoren, z.B. als \"Kinder-Weihnachtsgeschenk\"",
+   "temperature": 213,
+   "categorie": "Family & Kids",
+   "marchand": "AliExpress",
+   "prix": 110.32,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/mould-king-17015-liebherr-lr13000-raupenkran-4318-teile-rc-app-steuerung-6-motoren-kinder-weihnachtsgeschenk-2839673",
+   "date": "Sun, 01 Nov 2026 11:32:01 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "110,32€ - AliExpress Update 1.11.26 Mit dem Gutscheincode DED1113 gehts jetzt runter auf 110,32€ Hi zusammen, der Mould K..."
+  },
+  {
+   "id": "a4e8cc2a7d",
+   "titre": "SKECHERS - Zapatillas GO RUN ELEVATE - gris - talla 41 hasta 44",
+   "temperature": 211,
+   "categorie": "Moda y accesorios",
+   "marchand": "Privalia",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/skechers-zapatillas-go-run-elevate-gris-talla-41-hasta-44-2050870",
+   "date": "Sun, 01 Nov 2026 11:28:54 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "34,99€ - Privalia Descripción Zapatillas \"GO RUN ELEVATE\" DYNASTY Zapatillas de punto técnico de atletismo con detalle de cuello acolchado Colores ..."
+  },
+  {
+   "id": "88990fe89d",
+   "titre": "PS5 Little Nightmares III",
+   "temperature": 198,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ps5-little-nightmares-iii-2051414",
+   "date": "Sun, 01 Nov 2026 12:09:45 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,99€ - Amazon Emprende una nueva aventura en el singular universo de Little Nightmares. Atrapados en la Espiral, una vorágine de lugares perturbadores, Low y Al..."
+  },
+  {
+   "id": "35828b6e0f",
+   "titre": "Masajeador biomimético para cuello y hombros",
+   "temperature": 197,
+   "categorie": "Salud y belleza",
+   "marchand": "AliExpress",
+   "prix": 15.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/masajeador-biomimetico-para-cuello-y-hombros-2051509",
+   "date": "Sun, 01 Nov 2026 11:59:12 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "15,90€ - AliExpress 1. Mejora, prolonga y amplía el masaje con los dedos. Zonificación científica: masajea la cabeza según la distribución de los puntos de acupuntura en el cuel..."
+  },
+  {
+   "id": "cb63a95a3b",
+   "titre": "PS5 - Marvel Lobezno",
+   "temperature": 196,
+   "categorie": "Gaming",
+   "marchand": "AliExpress",
+   "prix": 53.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ps5-marvel-lobezno-2051049",
+   "date": "Sun, 01 Nov 2026 12:04:53 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "53,50€ - AliExpress Envio desde España. Lobezno hará lo que sea necesario para encontrar respuestas sobre su pasado, demostrando la brutalidad de sus garras en combate, un..."
+  },
+  {
+   "id": "c13df2df75",
+   "titre": "Nike Sudadera de Chandál Academy Pro, con cierre para hombre, Amarillo fluorescente, Azul y Negra",
+   "temperature": 184,
+   "categorie": "Moda y accesorios",
+   "marchand": "Miravia",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nike-sudadera-de-chandal-academy-pro-con-cierre-para-hombre-amarillo-fluorescente-azul-y-negra-2051066",
+   "date": "Sun, 01 Nov 2026 12:13:57 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,99€ - Miravia Lleva tu entrenamiento al siguiente nivel con la sudadera deportiva Nike Academy Pro para hombre, diseñada para combinar comodidad, funcionalidad y e..."
+  },
+  {
+   "id": "ca21c40c0e",
+   "titre": "Pala de padel SIUX ELECTRA PRO ST42025",
+   "temperature": 182,
+   "categorie": "Deportes y aire libre",
+   "marchand": "AliExpress",
+   "prix": 89.74,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pala-de-padel-siux-electra-pro-st42025-2051230",
+   "date": "Sun, 01 Nov 2026 11:37:37 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "89,74€ - AliExpress La Siux Electra ST4 Pro 2025 es la pala de gama alta desarrollada para el jugador profesional Franco Stupaczuk. Es un modelo de rendimiento profesional pensado ..."
+  },
+  {
+   "id": "494c4b3114",
+   "titre": "Marstek B2500D Balkonkraftwerk-Speicher - 2240Wh LiFePo4 Akku",
+   "temperature": 168,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "AliExpress",
+   "prix": 221.03,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/marstek-b2500d-balkonkraftwerk-speicher-2240wh-lifepo4-akku-2862576",
+   "date": "Sun, 01 Nov 2026 11:28:33 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "221,03€ - AliExpress Bei AliExpress gibt es aktuell den Marstek B2500D Balkonkraftwerk-Speicher 2.240 Wh (LiFePO4) für 229 € inkl. Versand mit dem Code DED1140 Preisverglei..."
+  },
+  {
+   "id": "ce7d8c1a76",
+   "titre": "Strivo Acoustic Slat Panel, Natural Ash, 600mm x 2400mm - Sold & Shipped by The Panel Company",
+   "temperature": 153,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "B&amp;Q",
+   "prix": 26.95,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/strivo-acoustic-slat-panel-natural-ash-600mm-x-2400mm-5019148",
+   "date": "Sun, 01 Nov 2026 11:00:55 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£26.95 - B&Q The STRIVO Acoustic Slat Panel in Natural Ash (600mm x 2400mm) is down to £26.95 at B&Q in their Black Friday event, saving £3 on the us..."
+  },
+  {
+   "id": "bd968c72b3",
+   "titre": "AMD Ryzen 7 9800X3D CPU Processor ( 8C / Socket AM5 / 3D VCache / Tray ) w/code - £215.90 with PayPal @ UK Tech Authorized [UK stock]",
+   "temperature": 145,
+   "categorie": "Electronics",
+   "marchand": "AliExpress",
+   "prix": 223.9,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/amd-ryzen-7-9800x3d-cpu-processor-8c-socket-am5-3d-vcache-tray-wcode-ps21590-with-paypal-at-uk-tech-authorized-uk-stock-5019465",
+   "date": "Sun, 01 Nov 2026 10:46:22 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£223.90 - AliExpress Credit goes to @KITTYBOTS seller change, same deal as <a href=\"https://www.hotukdeals.com/deals..."
+  },
+  {
+   "id": "9e782304f2",
+   "titre": "GEOID CC700 GPS-Fahrradcomputer - 2,8\" Farbdisplay, Routennavigation, GPX-Import, WLAN, ANT+/Bluetooth, IPX7, Multi-GNSS",
+   "temperature": 138,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 27.59,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/geoid-cc700-gps-fahrradcomputer-28-farbdisplay-routennavigation-gpx-import-wlan-antbluetooth-ipx7-multi-gnss-2862230",
+   "date": "Sun, 01 Nov 2026 11:37:19 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "27,59€ - AliExpress Bei AliExpress bekommt ihr gerade im Singles' Day den GEOID CC700 GPS-Fahrradcomputer für 27,59 € inkl. VSK durch Code <str..."
+  },
+  {
+   "id": "4f433be9fe",
+   "titre": "HUAWEI Watch D2 Smartwatch | Ambulante Blutdruckmessung via Luftkissen-Manschette (ABPM zertifiziert) | 1,82\" AMOLED-Display, iOS & Android",
+   "temperature": 137,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 237.58,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/huawei-watch-d2-smartwatch-ambulante-blutdruckmessung-via-luftkissen-manschette-abpm-zertifiziert-182-amoled-display-ios-android-2861801",
+   "date": "Sun, 01 Nov 2026 11:38:17 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "237,58€ - AliExpress Hallo zusammen. :) Zugegeben, die HUAWEI Watch D2 ist eher nichts für die breite Masse, aber wer z.B. Probleme mit seinem Blutdruck hat und diese..."
+  },
+  {
+   "id": "8cddce39eb",
+   "titre": "Gigabyte GO27Q24A 27\" QHD 240Hz QD-OLED Gaming Monitor",
+   "temperature": 135,
+   "categorie": "Elektronica",
+   "marchand": "Megekko",
+   "prix": 299.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/gigabyte-go27q24a-27-qhd-240hz-qd-oled-gaming-monitor-424544",
+   "date": "Sun, 01 Nov 2026 12:06:56 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€299 - Megekko Laagste prijs op dit moment volgens Tweakers voor een 240Hz QHD OLED monitor. Let op: Deze monitor heeft een lagere helderheid (200 nit SDR, 400 nit HD..."
+  },
+  {
+   "id": "13e597bc90",
+   "titre": "Montre connectée OnePlus Watch 4 - Écran 1,5\", Wear OS by Google, Snapdragon W5, Autonomie jusqu'à 16 jours",
+   "temperature": 133,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 155.41,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-connectee-oneplus-watch-4-ecran-15-wear-os-by-google-snapdragon-w5-autonomie-jusqua-16-jours-3442123",
+   "date": "Sun, 01 Nov 2026 11:38:33 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "155,41€ - AliExpress Bon prix sur cette OnePlus Watch 4 (y) Code promo à indiquer au panier. → Livraison gratuite ..."
+  },
+  {
+   "id": "1ea0b88872",
+   "titre": "HONOR 600 5G (EU) 8GB+256GB Smartphone - Snapdragon 7 Gen 4, 6,57\" AMOLED 120Hz, 200MP OIS, 6400mAh, 80W, IP68/IP69/IP69K",
+   "temperature": 133,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 316.53,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/honor-600-5g-eu-8gb256gb-smartphone-snapdragon-7-gen-4-657-amoled-120hz-200mp-ois-6400mah-80w-ip68ip69ip69k-2862218",
+   "date": "Sun, 01 Nov 2026 11:38:10 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "316,53€ - AliExpress Bei AliExpress bekommt ihr im Singles' Day gerade das HONOR 600 5G mit 8/256 GB für 316,53 € inkl. VSK dur..."
+  },
+  {
+   "id": "308540a78c",
+   "titre": "LEGO Icons Williams Racing FW14B & Nigel Mansell 10353 - w/Voucher",
+   "temperature": 132,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 45.89,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-icons-williams-racing-fw14b-nigel-mansell-10353-wvoucher-5019293",
+   "date": "Sun, 01 Nov 2026 10:51:51 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£45.89 - Amazon Click the voucher to save £2.70 off to bring the price down to £45.89 Celebrate the history of Formula 1 innovation <br /..."
+  },
+  {
+   "id": "128034a2fb",
+   "titre": "TOPUMP TB2 PRO elektrische Mini-Reifenpumpe - kabellos, bis 120 PSI, 450 mAh Akku, LED-Display, Auto-Stop, USB-C, für Fahrrad & Bälle",
+   "temperature": 129,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/topump-tb2-pro-elektrische-mini-reifenpumpe-kabellos-bis-120-psi-450-mah-akku-led-display-auto-stop-usb-c-fur-fahrrad-balle-2862225",
+   "date": "Sun, 01 Nov 2026 12:00:06 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "24,99€ - AliExpress Bei AliExpress bekommt ihr die TOPUMP TB2 PRO j etzt im Singles' Day für 24,99 € inkl. VSK durch Code MYDEALZ03</st..."
+  },
+  {
+   "id": "ce35490ded",
+   "titre": "Bono Heißluftfritteuse Elke (9 l, 2.200 Watt, Sichtfenster) - neuer Bestpreis - inkl Versand",
+   "temperature": 122,
+   "categorie": "Elektronik",
+   "marchand": "Möbelix",
+   "prix": 42.95,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/bono-heissluftfritteuse-elke-9-l-2200-watt-sichtfenster-neuer-bestpreis-inkl-versand-371665",
+   "date": "Sun, 01 Nov 2026 11:39:00 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "42,95€ - Möbelix Preischeck : damals um <a href=\"https://www.preisjaeger.at/deals/bono-dual-heissluftfritteuse-elke-9l-bei-mobelix-im-sale-367143\" target=\"_bl..."
+  },
+  {
+   "id": "624e834fd7",
+   "titre": "Sèche linge pompe à chaleur Haier HD100-C367U1-FR 10kg (via ODR 50€)",
+   "temperature": 120,
+   "categorie": "Maison & Habitat",
+   "marchand": "Boulanger",
+   "prix": 549.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/seche-linge-pompe-a-chaleur-haier-hd100-c367u1-fr-10kg-odr-50eur-3442668",
+   "date": "Sun, 01 Nov 2026 11:52:08 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "549€ - Boulanger • Sèche-linge à pompe à chaleur / moteur induction • Capacité de 10 kg • 14 programmes, dont coton, laine et vêtements de sport • Fonction ION A..."
+  },
+  {
+   "id": "c18dcb02fd",
+   "titre": "[Zalando Plus & CB] Birkenstock Sammeldeal | Birkenstock Narrow pure sage, Regular pink clay, Madrid braun, Clogs Corgs Cork Brown",
+   "temperature": 120,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Zalando",
+   "prix": 57.56,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/zalando-plus-cb-birkenstock-sammeldeal-birkenstock-narrow-pure-sage-regular-pink-clay-madrid-braun-clogs-corgs-cork-brown-2862568",
+   "date": "Sun, 01 Nov 2026 11:41:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "57,56€ - Zalando Bei Zalando sind aktuell viele verschiedene Birkenstock Modelle zu attraktiven Preisen erhältlich. Ich habe hier beispielhaft die Arizona in Schwarz und Blau..."
+  },
+  {
+   "id": "1cbb313077",
+   "titre": "C.K T2271A Non-Contact Voltage Detector with Visual Indicator,Red",
+   "temperature": 119,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 8.4,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ck-t2271a-non-contact-voltage-detector-with-visual-indicatorred-5018029",
+   "date": "Sun, 01 Nov 2026 11:16:57 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.40 - Amazon High sensitivity tester Bright red LED illumination on detection of AC voltage Double insulated to ensure safe use near..."
+  },
+  {
+   "id": "20b582c2b8",
+   "titre": "Manette sans fil Turtle Beach Rematch Glow Grand Prix Mario pour Nintendo Switch 1/2",
+   "temperature": 118,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Fnac",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/manette-sans-fil-turtle-beach-rematch-glow-grand-prix-mario-pour-nintendo-switch-12-3442975",
+   "date": "Sun, 01 Nov 2026 12:01:41 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,99€ - Fnac Manette sans fil Turtle Beach Rematch Glow Grand Prix Mario pour Nintendo Switch et Nintendo Switch (modèle OLED) La manette sans fil TURTLE BE..."
+  },
+  {
+   "id": "2dbf6a1d01",
+   "titre": "[Zalando+] Casio ABL-100WE-7AEF • Casio ABL-100WE-1A • Bluetooth • Dualzeit • Schrittzähler",
+   "temperature": 118,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Zalando",
+   "prix": 51.16,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/zalando-casio-abl-100we-7aef-casio-abl-100we-1a-bluetooth-dualzeit-schrittzahler-2862429",
+   "date": "Sun, 01 Nov 2026 11:37:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "51,16€ - Zalando Servus, durch die 20% mit dem Code 20MEMBER gibt es die <a href=\"https://www.zalando.de/casio-unisex-digitaluhr-silver-coloure..."
+  },
+  {
+   "id": "1fae038d00",
+   "titre": "iGPSPORT BSC300T GPS-Fahrradcomputer | 2,4\"-Farb-Touchscreen - 32-GB-Speicher - bis 20 Std. Akkulaufzeit - ANT+ & Bluetooth - 130+ Fahrdaten",
+   "temperature": 117,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 73.39,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/igpsport-bsc300t-gps-fahrradcomputer-24-farb-touchscreen-32-gb-speicher-bis-20-std-akkulaufzeit-ant-bluetooth-130-fahrdaten-2861765",
+   "date": "Sun, 01 Nov 2026 12:19:05 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "73,39€ - AliExpress Hallo meine lieben Zweiradfahrer. :) Ihr seid auf der Suche nach einem soliden Fahrradcomputer? Den iGPSPORT BSC300T GPS-Fahrradcomputer mit alle..."
+  },
+  {
+   "id": "e245833ec6",
+   "titre": "Electric Large Teppanyaki Grill Table Top Smokeless Grill, Hot Plate - W/code - Sold by Zhitaozhang Tool Store (30% Possible Cash Back TCB)",
+   "temperature": 116,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "AliExpress",
+   "prix": 13.38,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/electric-large-teppanyaki-grill-table-top-smokeless-grill-portable-bbq-barbecue-griddle-non-stick-hot-plate-w-code-zhitaozhang-tool-store-5019022",
+   "date": "Sun, 01 Nov 2026 10:43:36 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£13.38 - AliExpress Free shipping Use code to get the price Estimated delivery of November 3-5 Currently possible to get 30% TCB cashback on Alie..."
+  },
+  {
+   "id": "8ac3c552e6",
+   "titre": "Xiaomi Mijia Portable Electric Air Compressor 2D",
+   "temperature": 115,
+   "categorie": "Elektronica",
+   "marchand": "AliExpress",
+   "prix": 30.65,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/xiaomi-mijia-portable-electric-air-compressor-2d-424609",
+   "date": "Sun, 01 Nov 2026 12:07:33 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€30,65 - AliExpress Specificaties: Model : Xiaomi Mijia Portable Electric Air Compressor 2D (2nd Generation) Max. luchtdruk<..."
+  },
+  {
+   "id": "5b35bb4a2c",
+   "titre": "HONOR MagicPad3 WiFi Tablet 13.3\" 165Hz,16GB+512GB, Starry Grey, Western EU Version, No Charger - w/Code, Sold By SamsEuro A Store",
+   "temperature": 112,
+   "categorie": "Electronics",
+   "marchand": "AliExpress",
+   "prix": 291.01,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/honor-magicpad3-wifi-tablet-133-165hz-eyecomfort-lcd-snapdragon-8-gen316gb512gb-starry-grey-western-eu-version-no-charger-5019321",
+   "date": "Sun, 01 Nov 2026 10:52:16 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£291.01 - AliExpress Model:HONOR MagicPad3 (Western Europe version) Operating system: MagicOS 9.0.1 (Android 15) CPU/GPU: CPU model:Snapdragon®..."
+  },
+  {
+   "id": "c8f5c41ed4",
+   "titre": "[AliExpress] DJI Osmo Action 5 Pro (Single), 1/1,3\" Sensor, 4K/120fps, 40MP, bis 20m wasserdicht, 4h Akku",
+   "temperature": 111,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 206.13,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aliexpress-dji-osmo-action-5-pro-single-113-sensor-4k120fps-40mp-bis-20m-wasserdicht-4h-akku-2841863",
+   "date": "Sun, 01 Nov 2026 12:16:26 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "206,13€ - AliExpress Update 1.11.26 Ihr könnt hier nochmal zu einem deutlich besseren Preis zuschlagen. Mit Gutscheincode DED1140 sowie Pay..."
+  },
+  {
+   "id": "233437d4c8",
+   "titre": "(AliExpress ELITE + Paypal Rabatt + Gutschein) Zendure SolarFlow AB2000L Erweiterungsakku 1920Wh",
+   "temperature": 108,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "AliExpress",
+   "prix": 193.7,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aliexpress-elite-zendure-solarflow-ab2000l-erweiterungsakku-1920wh-2862678",
+   "date": "Sun, 01 Nov 2026 12:11:34 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "193,70€ - AliExpress Bei AliExpress kann man mit Elite Rabatt geraden den Zendure SolarFlow AB2000L Erweiterungsakku mit 1920Wh zu einem super Kurs bestellen. Ich denke das ..."
+  },
+  {
+   "id": "d3bf545b4e",
+   "titre": "Solo - 7 Nights All Inclusive - Marhaba Royal Salem Sousse, Tunisia - Gatwick Nov 13 - (Full Tui Package, Cases + Transfers Inc)",
+   "temperature": 108,
+   "categorie": "Travel",
+   "marchand": "Holiday Hypermarket",
+   "prix": 391.88,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/solo-7nts-all-inclusive-marhaba-royal-salem-sousse-tunisia-gatwick-nov-13-full-tui-package-cases-transfers-inc-5019313",
+   "date": "Sun, 01 Nov 2026 11:21:35 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£391.88 - Holiday Hypermarket Under £400 for a solo AI holiday is pretty good, theres a few hotel options a this price or a bit more so do look at the options. <..."
+  },
+  {
+   "id": "f15847c52b",
+   "titre": "8Bitdo Ultimate 2C Wired Controller for Windows PC and Android, with 1000Hz Polling Rate - Green/Purple",
+   "temperature": 108,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/8bitdo-ultimate-2c-wired-controller-for-windows-pc-and-android-with-1000hz-polling-rate-hall-effect-joysticks-and-hall-triggers-5017949",
+   "date": "Sun, 01 Nov 2026 11:03:47 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£14.99 - Amazon 8Bitdo Ultimate 2C Wired Controller for Windows PC and Android, with 1000Hz Polling Rate, Hall Effect Joysticks and Hall Triggers, and Remappable L4/R4 Bumpe..."
+  },
+  {
+   "id": "a73cd2a55c",
+   "titre": "[Rec] Special Edition Blu-ray | Arrow Video Free C&C",
+   "temperature": 107,
+   "categorie": "Culture & Leisure",
+   "marchand": "HMV",
+   "prix": 8.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/rec-special-edition-blu-ray-arrow-video-5017406",
+   "date": "Sun, 01 Nov 2026 10:47:12 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.99 - HMV Seems to be around £14.99~ on Amazon/eBay SPECIAL EDITION CONTENTS - High Definition Blu-ray presentation with two viewing ..."
+  },
+  {
+   "id": "9358370308",
+   "titre": "ghd \"Curve Creative Curl Wand\" konischer Lockenstab (28–23 mm, 185 °C) - neuer Bestpreis",
+   "temperature": 107,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 87.04,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/ghd-curve-creative-curl-wand-konischer-lockenstab-28-23-mm-185-c-neuer-bestpreis-371655",
+   "date": "Sun, 01 Nov 2026 12:20:57 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "87,04€ - Amazon Profi-Locken zum halben Preis: Der konische Lockenstab ghd Curve Creative Curl Wand kommt ohne Klammer aus und zaubert lockere Beach Waves und definierte Loc..."
+  },
+  {
+   "id": "ac5f951637",
+   "titre": "STAR WARS Empire at War: Gold Pack (GOG)",
+   "temperature": 106,
+   "categorie": "Gaming",
+   "marchand": "GOG.com",
+   "prix": 9.75,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/star-wars-empire-at-war-gold-pack-gog-371645",
+   "date": "Sun, 01 Nov 2026 12:22:56 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "9,75€ - GOG.com Beschreibung Star Wars™ Empire at War: Gold Pack enthält Star Wars™ Empire at War und die Erweiterung Star Wars™ Empire at War..."
+  },
+  {
+   "id": "ed94d0987e",
+   "titre": "WOLFBOX DF100 Rechargeable Electric Air Duster W/ 3-Gear Brushless Motor - W/code - Sold by WOLFBOX AUTO Store",
+   "temperature": 105,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 34.94,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/wolfbox-df100-rechargeable-electric-air-duster-w-3-gear-brushless-motor-5019132",
+   "date": "Sun, 01 Nov 2026 11:13:05 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£34.94 - AliExpress FREE UK SHIPPING DISCOUNT CODE - UKJUNEBDX7 (£7 OFF) WOLFBOX DF100 Electric Air Duster Air Blower-150000RPM Super Power, Rechargeable 3..."
+  },
+  {
+   "id": "44c6eaa0c3",
+   "titre": "HEX BOTS Ferngesteuerter Tausendfüßler mit LED-Augen – RC-Spielzeug für Kinder ab 4 Jahren | Amazon Prime",
+   "temperature": 102,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/hex-bots-ferngesteuerter-tausendfussler-mit-led-augen-rc-spielzeug-fur-kinder-ab-4-jahren-amazon-prime-2862466",
+   "date": "Sun, 01 Nov 2026 12:23:35 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "14,99€ - Amazon Bei Amazon bekommt ihr aktuell folgendes Angebot! :) HEX BOTS Ferngesteuerter Tausendfüßler mit LED-Augen – RC-Spielzeug für ..."
+  },
+  {
+   "id": "eace9937f7",
+   "titre": "Sneakers Puma Club II Era Bleu Et Rose - Tailles 36 et 37",
+   "temperature": 101,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Espace des marques",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sneakers-puma-club-ii-era-bleu-et-rose-3440611",
+   "date": "Sun, 01 Nov 2026 12:25:38 +0100",
+   "source": "dealabs-hot",
+   "pays": "FR",
+   "description": "29,99€ - Espace des marques Ce modèle en cuir et suède texturé est équipé d'une semelle en gomme marron pour conserver son look vintage authentique. Tailles disponibles : 36 au 39..."
+  },
+  {
+   "id": "fabe39b4c2",
+   "titre": "Robot Aspirateur Laveur Dreame L40 Ultra AE - 19000 Pa, MopExtend, Brosse TriCut, Station 75°C (Vendeur Tiers)",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Cdiscount",
+   "prix": 359.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/aspirateur-robot-laveur-dreame-l40-ultra-ae-19-000-pa-mopextend-brosse-tricut-station-75c-vendeur-tiers-3443344",
+   "date": "Sun, 01 Nov 2026 12:25:21 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "359€ - Cdiscount À propos de cet article Version améliorée du L10s Pro Ultra Heat [ Capture facilement la poussière fine et les gros débris ] La puissante aspiration de 19 000 Pa capture les gros débris, tels que les flocons d'avoine ou les aliments pour chat, sur les sols durs, tapis et moquettes; "
+  },
+  {
+   "id": "c33a167a0d",
+   "titre": "Smartphone realme GT 8 Pro 5G 16GB+512GB Version Européenne",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 527.68,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-realme-gt-8-pro-5g-16gb512gb-version-europeenne-3443345",
+   "date": "Sun, 01 Nov 2026 12:24:43 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "527,68€ - AliExpress Spécifications: Modèle --------------realme GT 8 Pro Processeur ----------------- Qualcomm Snapdragon 8 Elite Gen 5 8 cœurs, 3nm, GPU : Adreno 840 @1200MHZ Affichage -------------6,79 pouces AMOLED (écran flexible), QHD+ 3136×1440 Résolution des pixels Taux de rafraîchissement j"
+  },
+  {
+   "id": "69a0f3e9ed",
+   "titre": "Lot de 3 Ventilateurs 120mm DeepCool FL12 SE - ARGB, 20 LEDs, PWM, Blanc",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Galaxus",
+   "prix": 25.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pack-3-ventilateurs-120mm-deepcool-fl12-se-blanc-argb-20-leds-pwm-3443340",
+   "date": "Sun, 01 Nov 2026 12:21:09 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "25,90€ - Galaxus Description FL12 SE WH 3en1 Le DeepCool FL12 SE WH offre des effets lumineux époustouflants grâce à ses 20 LED RGB adressables individuellement, alliant couleurs éclatantes et performances de refroidissement exceptionnelles. Trois ventilateurs FL12 SE WH sont inclus dans l'emballage"
+  },
+  {
+   "id": "e1cef7295f",
+   "titre": "Bundle Gaming Nacon - Clavier Optique et Tapis, Noir",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Cultura",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/clavier-optique-et-tapis-nacon-noir-3443338",
+   "date": "Sun, 01 Nov 2026 12:20:03 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,99€ - Cultura Descriptif du fournisseur PACK SOURIS + TAPIS DE SOURIS Souris de jeu avec capteur optique 6 boutons Éléments illuminés. Résolution : 800/1600/2000/2400 DPI Surface douce au toucher Longueur du câble: 1,5 m. USB Plug'n'Play Compatible avec Windows® XP/Vista®/7/8/10 Tapis de souris p"
+  },
+  {
+   "id": "1c0f686680",
+   "titre": "Montre Pac-Man Rétro - Heure & Alarme, Noir & Jaune (Vendeur Tiers)",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 30.3,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-pac-man-retro-jeu-pac-man-integre-heure-alarme-noir-et-jaune-3443342",
+   "date": "Sun, 01 Nov 2026 12:19:46 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "30,30€ - Cdiscount Pour le plaisir decm la nostalgie..."
+  },
+  {
+   "id": "15fff2eb33",
+   "titre": "Smartphone 6,83\" Xiaomi Poco X8 Pro Max - RAM 12 Go, 256 Go, Version Globale",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 354.68,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-683-xiaomi-poco-x8-pro-max-ram-12-go-256-go-3443339",
+   "date": "Sun, 01 Nov 2026 12:19:39 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "354,68€ - AliExpress Le POCO X8 Pro Max 5G - Version Globale est un smartphone conçu pour les amateurs de puissance et d’endurance. Équipé d’une batterie impressionnante de 8500 mAh, il offre une autonomie exceptionnelle qui permet de profiter de toutes vos activités sans interruption, que ce soit p"
+  },
+  {
+   "id": "f5fb1adb30",
+   "titre": "Aspirateur Robot Laveur Dreame L10s Pro Ultra Heat - 7000 Pa, MopExtend, Séchage air chaud (Vendeur Tiers)",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Cdiscount",
+   "prix": 379.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/aspirateur-robot-laveur-dreame-l10s-pro-ultra-heat-7000-pa-mopextend-sechage-air-chaud-vendeur-tiers-3443336",
+   "date": "Sun, 01 Nov 2026 12:16:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "379€ - Cdiscount Description Le Dreame L10S Pro Ultra est un robot aspirateur et laveur avancé, conçu pour un nettoyage en profondeur des sols. Avec une puissance d'aspiration maximale de 7000 Pascal, il élimine sans effort la poussière et la saleté de diverses surfaces. Le robot est équipé d'un rés"
+  },
+  {
+   "id": "bbaa0aadf0",
+   "titre": "Metroid Prime 4: Beyond sur Nintendo Switch (version française)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 30.39,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nintendo-switch-metroid-prime-4-beyond-version-francaise-3039-eur-livre-chez-joybuy-3443337",
+   "date": "Sun, 01 Nov 2026 12:16:36 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "30,39€ - JoyBuy Metroid Prime 4: Beyond sur Nintendo Switch à 30,39 € , livraison gratuite chez Joybuy. Détails de l’offre : Prix : 30,39 € Prix conseillé : 59,99 € Réduction : -49 % Version française Jeu physique Nintendo Switch Livraison gratuite Retours gratuits sous 30 jours annoncés par Joybuy "
+  },
+  {
+   "id": "7285084269",
+   "titre": "Friteuse sans huile Philips NA211/00 Série 2000 - Airfryer 3,2L, avec Fenêtre de Cuisson, Noir & Argent",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Boulanger",
+   "prix": 54.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/airfryer-philips-na21100-serie-2000-32-l-avec-fenetre-de-cuisson-noirargent-3443334",
+   "date": "Sun, 01 Nov 2026 12:15:19 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "54,99€ - Boulanger • Capacité de 3,2 L • Technologie RapidAir • Écran tactile • 13 modes de cuisson • Fenêtre de cuisson intégrée • Fonctions : frire, rôtir, griller et cuire"
+  },
+  {
+   "id": "e662c8a11c",
+   "titre": "Lego City 60494 Le Camion-Benne & la Chargeuse Frontale (Via Coupon)",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 63.74,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-city-60494-le-camion-benne-et-la-chargeuse-frontale-via-coupon-3441129",
+   "date": "Sun, 01 Nov 2026 12:09:47 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "63,74€ - Amazon [ x ] (confused) Coupon à cocher pour avoir le prix :o Description du set JEU DE CONSTRUCTION AVEC JOUETS CAMIONS POUR GARÇON OU FILLE DÈS 8 ANS – Stimulez l'imagination des enfants avec le set Le camion-benne et la chargeuse frontale LEGO City UN CHANTIER POUR JOUER – Inspirez des h"
+  },
+  {
+   "id": "2eee5a006a",
+   "titre": "Caméra d'Action Insta360 X5 - Vidéo 8K, 360°",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 289.53,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/camera-daction-360-insta360-x5-video-8k-3443332",
+   "date": "Sun, 01 Nov 2026 12:07:47 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "289,53€ - AliExpress 【Vidéo 360° 8K à 30 ips avec double capteur 1/1,28\"】 : Capturez des détails époustouflants grâce à deux capteurs 1/1,28\" permettant un enregistrement jusqu'à 8K à 30 ips. Filmez vos aventures épiques, les moments du quotidien et bien plus encore, le tout en vidéo 360° nette et i"
+  },
+  {
+   "id": "06c476ef0c",
+   "titre": "Aspirateur laveur 3-en-1 Dreame H15 Mix - Aspirateur balai, Shampouineuse",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Boulanger",
+   "prix": 499.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/aspirateur-laveur-3-en-1-dreame-h15-mix-aspirateur-balai-shampouineuse-3443327",
+   "date": "Sun, 01 Nov 2026 12:07:44 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "499€ - Boulanger À propos de cet article Polyvalence et efficacité au rendez-vous L'aspirateur laveur DREAME H15 Mix 3-en-1 est conçu pour répondre à tous vos besoins de nettoyage avec une efficacité remarquable. Ce dispositif innovant combine trois fonctions essentielles : l'aspiration, le lavage e"
+  },
+  {
+   "id": "4b6736684c",
+   "titre": "Vélo Électrique UcityS - avec Batterie, Pneus de 26\", Moteur 250W, 36V, 13Ah",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "AliExpress",
+   "prix": 430.01,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/velo-electrique-adulte-ucitys-avec-batterie-pneus-de-26-pouces-moteur-250w-velo-electrique-36v-13ah-3443331",
+   "date": "Sun, 01 Nov 2026 12:06:34 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "430,01€ - AliExpress Bon prix pour ce vélo électrique urbain classique. Tester les différents codes, Paypal, cashback Igraal pour cumuler les promos... (y)"
+  },
+  {
+   "id": "36940be74c",
+   "titre": "Vélo Électrique Pliable Urlife F1L - Moteur 250W, Batterie 48V, 7,5Ah, Pneus 14\"",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "AliExpress",
+   "prix": 299.55,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/velo-electrique-pliable-urlife-f1l-moteur-250w-batterie-48v-75ah-pneus-14-3443328",
+   "date": "Sun, 01 Nov 2026 12:03:53 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "299,55€ - AliExpress Vélo électrique Urlife F1L 14 pouces pliable 48 V 7,5 Ah, batterie amovible et charge rapide, autonomie de 40 km, suspension avant hydraulique, freins à disque doubles, vélos électriques Naviga pour trajets domicile-travail Système d'alimentation fiable et polyvalent Elle offre "
+  },
+  {
+   "id": "535e93b41c",
+   "titre": "Nettoyeur de Terrasses Kärcher PCL 6 - Max. 10 Bar, Débit d'eau Max. 180 l/h",
+   "temperature": null,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Amazon",
+   "prix": 148.41,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nettoyeur-de-terrasses-karcher-pcl-6-3443323",
+   "date": "Sun, 01 Nov 2026 11:58:46 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "148,41€ - Amazon Le Kärcher PCL 6 est un nettoyeur électrique conçu pour les terrasses et balcons en bois, en bois composite WPC, en carrelage et en dalles de pierre lisses. Quatre brosses cylindriques, disposées par paires et tournant en sens inverse, décollent les salissures sur une largeur de tra"
+  },
+  {
+   "id": "96be5e9282",
+   "titre": "Robe Rouge Femme Guess Mock - Taille XS",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Espace des marques",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robe-rouge-femme-guess-mock-3443319",
+   "date": "Sun, 01 Nov 2026 11:53:42 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Espace des marques Robe Guess Mock rouge femme – Élégance et féminité au rendez-vous ! Craquez pour cette robe Guess au style chic et féminin. Son coloris rouge apporte une touche de caractère et d'élégance à votre look. Une pièce idéale pour vos sorties, vos occasions spéciales ou simpleme"
+  },
+  {
+   "id": "d2eba4506e",
+   "titre": "Smartphone 6,7\" Samsung Galaxy A57 - RAM 8 Go, 128 Go",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 276.82,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-67-samsung-galaxy-a57-5g-128-go-3443306",
+   "date": "Sun, 01 Nov 2026 11:46:52 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "276,82€ - AliExpress Découvrez le Samsung Galaxy A57 5G AI, un smartphone conçu pour vous offrir des performances exceptionnelles et une expérience mobile fluide. Propulsé par le puissant processeur Exynos 1680, il garantit rapidité et réactivité, que ce soit pour le multitâche ou vos applications f"
+  },
+  {
+   "id": "8fe6866067",
+   "titre": "Ecouteur sans fil CMF by Nothing Buds Pro 2 - Gris",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 25.88,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/cmf-by-nothing-buds-pro-2-3443316",
+   "date": "Sun, 01 Nov 2026 11:44:58 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "25,88€ - AliExpress Principales caractéristiques CMF BUDS PRO 2 Molette intelligente pour un contrôle intuitif Son HiFi alimenté par deux haut-parleurs Réduction active intelligente du bruit à 50 dB 6 micros HD avec technologie Clear Voice Jusqu'à 11 heures de musique non-stop Effet audio spatial SO"
+  },
+  {
+   "id": "b5f6de99bf",
+   "titre": "Smartphone 6,77\" Honor 400 Smart 4G - RAM 6 Go, 128 Go",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 98.51,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-677-honor-400-smart-4g-ram-6-go-128-go-3443302",
+   "date": "Sun, 01 Nov 2026 11:44:58 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "98,51€ - AliExpress Découvrez le HONOR 400 Smart 4G, un smartphone ultra-performant conçu pour offrir une expérience mobile fluide et immersive. Doté d’un grand écran de 6,77 pouces avec un taux de rafraîchissement de 120Hz, il garantit des images nettes, des couleurs éclatantes et une fluidité exce"
+  },
+  {
+   "id": "c1d0da6d38",
+   "titre": "Trottinette Électrique iScooter W9 - Roues de 10\", 48V, 14 Ah, Autonomie 35-45 km",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "AliExpress",
+   "prix": 244.48,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/trottinette-electrique-iscooter-w9-roues-de-10-48v-14-ah-autonomie-35-45-km-3443315",
+   "date": "Sun, 01 Nov 2026 11:42:18 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "244,48€ - AliExpress aliexpress Item 3/7  Trottinette électrique iScooter W9, 10 pouces, 48V14Ah, autonomie de 35 à 45 km, vitesse maximale de 45 km/h, pneus tout-terrain, transmission arrière, freins à disque doubles, trottinette électrique.            4.9 ౹ Ce vendeur : 2 ventes | Vent"
+  },
+  {
+   "id": "d173b0153a",
+   "titre": "Baskets Femme Puma Softride Enzo 4 - Noir, Taille 35.5",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Espace des marques",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/baskets-puma-softride-enzo-4-noires-femme-1499-eur-3443300",
+   "date": "Sun, 01 Nov 2026 11:41:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,99€ - Espace des marques Baskets Puma Softride Enzo 4 noires femme – Alliez confort et style au quotidien ! Craquez pour ces baskets Puma au design sportif et moderne. Leur coloris noir intemporel permet de les associer facilement à toutes vos tenues, pour vos sorties comme pour vos activités quo"
+  },
+  {
+   "id": "63f5779f3c",
+   "titre": "Chaussure de Running Adidas Adizero Evo SL - Tailles du 36 au 39 1/3",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Size?",
+   "prix": 75.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussure-de-running-adidas-adizero-evo-sl-femme-du-36-au-3913-3443313",
+   "date": "Sun, 01 Nov 2026 11:40:30 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "75€ - Size? • Empeigne en mesh tissé • Trois bandes de couleur • Languette personnalisée • Semelle intermédiaire en mousse LIGHTSTRIKE PRO • Zones en caoutchouc Continental sous la semelle pour l’adhérence en hiver Honorez le roi du reggae avec la collection adidas x Bob Marley basée sur ses tenues "
+  },
+  {
+   "id": "a9c3531df6",
+   "titre": "Lot 4 Tasses Expresso Illiano - Grès Émail Réactif",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "La Redoute",
+   "prix": 16.19,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-4-tasses-expresso-gres-email-reactif-illiano-3443312",
+   "date": "Sun, 01 Nov 2026 11:40:21 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "16,19€ - La Redoute Chaque tasse à expresso de ce lot, fabriquée en grès réactif au Portugal, a une coloration spécifique qui lui donne un aspect unique. La palette seventies de l’émail, chaude et terreuse, se marie parfaitement à la couleur du café. Description • En grès émail réactif • Vendues par"
+  },
+  {
+   "id": "3f3bd01950",
+   "titre": "Smartphone 6,67\" Nothing Phone (3) - RAM 12 Go, 256 Go, Snapdragon 8s Gen 4, AMOLED 120Hz, Version Globale",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 449.15,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/smartphone-667-nothing-phone-3-12-go-256-go-snapdragon-8s-gen-4-amoled-120-hz-3443293",
+   "date": "Sun, 01 Nov 2026 11:40:03 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "449,15€ - AliExpress Le Nothing Phone (3) est un smartphone haut de gamme alliant design élégant et performances de pointe. Équipé du puissant processeur Qualcomm Snapdragon 8S Gen 4, il offre une fluidité exceptionnelle et une expérience multitâche sans compromis. Son grand écran de 6,77 pouces pro"
+  },
+  {
+   "id": "64f3c20f7d",
+   "titre": "Dreame MOVA S70 Ultra Roller Robot Aspirateur Noir",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "MOVA",
+   "prix": 579.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/dreame-mova-s70-ultra-roller-robot-aspirateur-noir-3443311",
+   "date": "Sun, 01 Nov 2026 11:39:40 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "579€ - MOVA • Aspiration de 32 000 Pa • Lavage à haute pression avec eau courante • Lavage des serpillières à 100 °C • Technologie AutoShield™ compatible avec les tapis • Système anti-emmêlement à double élément avec brosse CleanChop™ 3.0 • Navigation CovertSense™ • Hauteur de 90 mm • Extension de l"
+  },
+  {
+   "id": "9463ee42f3",
+   "titre": "Actualité : Ce smartphone présente le meilleur rapport qualité / prix de notre comparatif",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 369.0,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/telephone-portable/ce-smartphone-presente-le-meilleur-rapport-qualite-prix-de-notre-comparatif-n266611.html",
+   "date": "2026-11-01T12:19:37+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Le smartphone Samsung Galaxy A57 5G s'affiche aujourd'hui à 369,00 € chez Joybuy. C'est actuellement le meilleur rapport qualité / prix de notre comparatif, selon les 239 modèles testés dans notre laboratoire."
+  },
+  {
+   "id": "8280cf6c2b",
+   "titre": "Philips Hue Iris Tischlampe White Color Ambiance schwarz",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy",
+   "prix": 71.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/philips-hue-iris-tischlampe-white-color-ambiance-schwarz-2862722",
+   "date": "Sun, 01 Nov 2026 12:25:28 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "71,99€ - Joybuy • LED-Tischleuchte • Projiziert indirektes Farblicht auf Wände und Möbel • Bis unter 1 % dimmbar • Steuerung per Bluetooth-App oder Sprachassistent • Hue Bridge separat erhältlich"
+  },
+  {
+   "id": "d95d988041",
+   "titre": "Autel MaxiCOM MK808BT PRO kabelloser OBD2-Diagnosescanner",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 234.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/autel-maxicom-mk808bt-pro-kabelloser-obd2-diagnosescanner-2862717",
+   "date": "Sun, 01 Nov 2026 12:24:54 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "234,99€ - AliExpress ODB Stecker und Tablet sind getrennt von einander und somit kabellos nutzbar. Funktionen sind sehr umfangreich und Fahrzeugabdeckung universal. Wer öfter mal was macht und auch mit verschiedenen Fahrzeugen könnte es gut nutzen. Hardware & Betriebssystem: Android 11, schneller Co"
+  },
+  {
+   "id": "26a36cec1f",
+   "titre": "[Notino] Mercedes-Benz Club Black Eau de Toilette Geschenkset: 100ml EdT +10ml Travelspray +100ml Duschgel",
+   "temperature": null,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Notino",
+   "prix": 46.32,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/notino-mercedes-benz-club-black-eau-de-toilette-geschenkset-100ml-edt-10ml-travelspray-100ml-duschgel-2862720",
+   "date": "Sun, 01 Nov 2026 12:24:48 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "46,32€ - Notino Bei Notino gibt es das Mercedes-Benz Club Black Eau de Toilette Geschenkset: 100ml EdT +10ml EdT Travelspray +100ml Duschgel für 46,32 € durch den Rabattcode SALE Der Duft ist süß-gourmandig und auf Platz 47 der Herren Parfüms auf Parfumo. Weitere Duftinfos unten. Die Aura einer unve"
+  },
+  {
+   "id": "01942d6419",
+   "titre": "JOYOR S5 ABE E-Scooter für 269,63 € – 500 W, Federung & Straßenzulassung",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 269.63,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/joyor-s5-abe-e-scooter-fur-26963-eur-500-w-federung-strassenzulassung-2862716",
+   "date": "Sun, 01 Nov 2026 12:19:07 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "269,63€ - AliExpress JOYOR S5 ABE E-Scooter für 269,63 € – 500 W, Federung & Straßenzulassung Bei AliExpress bekommt ihr aktuell den JOYOR S5 mit deutscher Straßenzulassung (ABE) für nur 269,63 € . Der Preis ergibt sich durch die Kombination aus dem AliExpress-Gutscheincode 11DE40 (40 € Rabatt) und "
+  },
+  {
+   "id": "e6b5a3d596",
+   "titre": "Flüsterleise & 80 Min. Laufzeit: Ultenic U18 Pro Akku-Staubsauger für 93,31 €",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 93.31,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/flusterleise-80-min-laufzeit-ultenic-u18-pro-akku-staubsauger-fur-9331-eur-2862714",
+   "date": "Sun, 01 Nov 2026 12:15:21 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "93,31€ - AliExpress Wer Haustiere hat oder einfach nur eine lange Mähne, weiß: Staubsaugen kann manchmal echt nerven. Ich bin auf den Ultenic U18 Pro gestoßen – ein leichter, extrem leiser Sauger mit ordentlich Power. Aktuell bekommt ihr ihn bei AliExpress mit den Codes DED1113 oder MYDEALZ13 für 93"
+  },
+  {
+   "id": "5b071dac73",
+   "titre": "[Prime] Carcassonne - Brettspiel - Spiel des Jahres 2001 - BGG 7.4",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-carcassonne-brettspiel-spiel-des-jahres-2001-bgg-74-2862712",
+   "date": "Sun, 01 Nov 2026 12:12:55 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "17,99€ - Amazon Das beliebte Spiel des Jahres, Carcassonne gibt es aktuell günstig bei Amazon mit Prime-Versand zu haben. Es handelt sich um die Version 3.0 die seit 2021 produziert wird. https://www.hans-im-glueck.de/game/carcassonne-grundspiel-3-0/ Das Brettspiel Carcassonne , erhältlich bei Amazo"
+  },
+  {
+   "id": "aff63315d5",
+   "titre": "[AliExpress/PayPal] Realme 16 Pro Plus 5G, 12/512GB, 6.8\" OLED, 144Hz, 1.800Nits, 200MP, 50MP Periskop Tele, 7.000mAh, 80W, IP69, EU Versand",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 310.56,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aliexpresspaypal-realme-16-pro-plus-5g-12512gb-68-oled-144hz-1800nits-200mp-50mp-periskop-tele-7000mah-80w-ip69-eu-versand-2862710",
+   "date": "Sun, 01 Nov 2026 12:10:05 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "310,56€ - AliExpress Zum Singles Day Event gibt es das Realme 16 Pro+ 5G in der großen Version mit 12GB RAM und 512GB Speicher in Schwarz und Gold zum guten Kurs mit schnellem Versand aus Polen, also auch ohne Einfuhrgebühren. Der Preis ergibt sich aus 60€ Abzug durch DED1160 und 33€ Abzug bei Zahlu"
+  },
+  {
+   "id": "b30cdf1694",
+   "titre": "KOSMOS - CATAN - Big Box",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Müller",
+   "prix": 37.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kosmos-catan-big-box-2862709",
+   "date": "Sun, 01 Nov 2026 12:09:55 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "37,99€ - Müller Müller bietet vom 1.-7.11. die KOSMOS - CATAN - Big Box für 37,99€ an. Lasst es kostenlos in die Filiale liefern oder packt noch etwas drauf um ab 49€ den kostenlosen Versand zu bekommen. Die „CATAN – Big Box“ von KOSMOS bietet ein umfangreiches Spielerlebnis für alle Fans des belieb"
+  },
+  {
+   "id": "90bfd0660b",
+   "titre": "E-scooter mit Sitz und Straßenzulassung",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 396.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/e-roller-mit-sitz-und-strassenzulassung-2862707",
+   "date": "Sun, 01 Nov 2026 12:06:05 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "396€ - AliExpress Ich habe das hier gerade auf AliExpress gefunden: TWOFISH M5 Elite-E Elektroroller für Erwachsene, 14-Zoll-Reifen, 48V13AH Akku, City-Pendler-Elektroroller, abnehmbarer Sitz https://a.aliexpress.com/_EHx4LDY Bei AliExpress heute den Twofish M5 Elite mit Straßenzulassung für einen s"
+  },
+  {
+   "id": "0b5b723245",
+   "titre": "COTIAR Winbot W10 Fensterputzroboter mit 9000Pa Saugkraft",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 63.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/cotiar-winbot-w10-fensterputzroboter-mit-9000pa-saugkraft-2862705",
+   "date": "Sun, 01 Nov 2026 12:02:19 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "63,99€ - AliExpress Hier gibts gerade einen Fensterreinigungsroboter mit 9.000 Pa Saugkraft, Dual-Sprühsystem (60-ml-Tank für 100 m²) und Lasersensorik für rahmenlose Scheiben. Reinigung: 5 Modi (N/Z-Form, Spot), automatische Leistungsanpassung. Sicherheit: 600-mAh-USV (30 Min. Notstrom), 5-m-Sicher"
+  },
+  {
+   "id": "52e18abbac",
+   "titre": "Hagstrom Swede Limited Tiger Burst, E-Gitarre, Gitarre",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Musikhaus Steiner",
+   "prix": 488.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/hagstrom-swede-limited-tiger-burst-e-gitarre-gitarre-2862704",
+   "date": "Sun, 01 Nov 2026 11:58:02 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "488€ - Musikhaus Steiner Beim Musikhaus Steiner erhaltet ihr die \"Hagstrom Swede Ltd Tiger Burst\" zu einem wirklich hervorragenden Preis. Der Vergleichspreis ist etwas schwierig da das Swede-Modell scheinbar bei Hagstrom ausläuft und nur wenige Gitarren am Markt sind. Nächstbester Preis liegt nach m"
+  },
+  {
+   "id": "6ef65aec6c",
+   "titre": "Levi's Aktion bei Amazon: Levi's Herren Long-Sleeve Original Housemark ab 11,40€, Original HM Tee ab 11€, Sunset Hemd ab 26,10€, Polos",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 12.87,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/levis-aktion-bei-amazon-levis-herren-long-sleeve-original-housemark-ab-1140eur-original-hm-tee-ab-11eur-sunset-hemd-ab-2610eur-polos-2862703",
+   "date": "Sun, 01 Nov 2026 11:56:56 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "12,87€ - Amazon Amazon hat aktuell eine Levi's Aktion, Danke @Dopeman mit seinem Doppelpack Shirts für 9€ Deal hier gehts zur Übersicht Levi's Herren Long-Sleeve Original Housemark Shirt für 11,40 bis 12,87€ S bis XXL - Idealo The Perfect Tee ab 11€ bis 12,35€ müßte für Männer sein, siehe auch Ideal"
+  },
+  {
+   "id": "9833df4bfa",
+   "titre": "[Freenet + CB] Freenet Telekom-Tarife mit CB-Vorteil, z.B. 100 GB 5G für 14,99 €/Monat, 24 Monate LZ",
+   "temperature": null,
+   "categorie": "Telefon- & Internet-Verträge",
+   "marchand": null,
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/freenet-cb-freenet-telekom-tarife-mit-cb-vorteil-zb-100-gb-5g-fur-1499-eurmonat-24-monate-lz-2862702",
+   "date": "Sun, 01 Nov 2026 11:51:48 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "Im November gibt es bei Freenet folgende Angebote im Telekom-Netz für CB-Mitglieder. Alle Verträge haben 24 Monate Mindestvertragslaufzeit. Alle Verträge ohne Anschlussgebühr. EU-Roaming inklusive. Schweiz-Roaming ist NICHT enthalten. Flat Telefonie und SMS deutschlandweit inklusive. Der rabattierte"
+  },
+  {
+   "id": "d53ec0362a",
+   "titre": "Swarovski Chroma Halskette mit birnenförmigem Anhänger, grüner Kristall & Zirkonia, Goldlegierungsschicht",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 69.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/swarovski-chroma-halskette-mit-birnenformigem-anhanger-gruner-kristall-zirkonia-goldlegierungsschicht-2862701",
+   "date": "Sun, 01 Nov 2026 11:51:10 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "69€ - Amazon Swarovski Chroma Halskette für 69 €: Echter Bestpreis mit über 21 % Rabatt zum Markt! Verkauf und Versand erfolgen direkt durch Amazon. Die beliebte Chroma-Halskette mit dem tropfenförmig geschliffenen grünen Kristall ist bei anderen etablierten Händlern und im Preisvergleich sonst erst"
+  },
+  {
+   "id": "9865470e3a",
+   "titre": "(Prime) Levis Poloshirt Gr. L",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 16.02,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-levis-poloshirt-gr-l-2862699",
+   "date": "Sun, 01 Nov 2026 11:49:32 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "16,02€ - Amazon Klassisches Poloshirt in Gr. L zu einem top Preis. 100% Baumwolle Eventuell auch andere Größen und Farben zu guten Preisen. Das Levi's Poloshirt in Größe L , erhältlich bei Amazon für 16,02 € , bietet ein klassisches Design, das sich durch seine Vielseitigkeit auszeichnet. Gefertigt "
+  },
+  {
+   "id": "ce69213189",
+   "titre": "(Juwelier-Bektas@Amazon) Swarovski Una Ohrringe, Sparkling Dance Tropfenohrringe mit rosa Kristall, Roségold-Legierungsschicht",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 99.11,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/swarovski-una-ohrringe-sparkling-dance-tropfenohrringe-mit-rosa-kristall-rosegold-legierungsschicht-2862696",
+   "date": "Sun, 01 Nov 2026 11:49:02 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "99,11€ - Amazon Swarovski Sparkling Dance Tropfenohrringe für unter 100 €: Über 23 % unter dem aktuellen Marktbestpreis! Verkauf und Versand erfolgen direkt durch Amazon. Die Ohrhänger aus der beliebten Una-Kollektion mit dem klassischen Sparkling-Dance-Konzept sind im Preisvergleich sonst erst ab m"
+  }
+ ]
+}

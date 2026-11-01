@@ -395,7 +395,7 @@
   "ecart_vs_neuf_min": 0.701,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-01T18:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "idealo": {
    "prix_min": 141.69,
    "nb_offres": 12,
@@ -476,6 +476,15 @@
     "marge_nette": 9.12,
     "rentabilite": 0.088
    }
-  ]
+  ],
+  "verifie_le": "2026-11-01T19:49",
+  "verdict": {
+   "commentaire": "Bon produit (TCL 25G54, 25 pouces, 144 Hz), mais marge trop faible. idealo : neuf dès 141,69 € en France (confirmé par Topbiz 141,69 € ; Boulanger et Amazon.fr 145,99 €). Prix de revente plafonné à 85 % du neuf, soit 120,44 € au mieux ; la seule annonce réelle Leboncoin est à 90 €. Même dans le meilleur cas : 120,44 − 104 = 16,44 € (15,8 %), sous le seuil de 20 €. Attention : le titre du bon plan dit 109 € et pas 99 € (coût alors ~114 €, marge ~6 €). Page Amazon.de illisible : prix actuel et livraison en France non confirmés.",
+   "prix_neuf_min_idealo": 141.69,
+   "prix_revente_verifie": 90.0,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -14.0,
+   "duree_offre": "inconnue (page Amazon.de non lisible)"
+  }
  }
 ]

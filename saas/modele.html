@@ -139,6 +139,7 @@ footer{font-size:13px;color:var(--doux);border-top:1px solid var(--trait);paddin
       <a href="#aujourdhui">Aujourd’hui</a>
       <a href="#affaires">Toutes les affaires</a>
       <a href="#championnat">Championnat</a>
+      <a href="#recherches">Recherches et coûts</a>
       <a href="#systeme">Système</a>
       <a href="#methode">Méthode</a>
     </nav>
@@ -200,6 +201,26 @@ footer{font-size:13px;color:var(--doux);border-top:1px solid var(--trait);paddin
     <h3 class="etiq">Meilleure IA par domaine</h3>
     <div class="grille" id="ch-domaines"></div>
     <p class="petit">Barème : +3 points par affaire validée à l’audit, −1 par affaire rejetée. Fiabilité : part des appels où l’IA a réellement répondu.</p>
+  </section>
+
+  <!-- RECHERCHES ET COÛTS -->
+  <section class="vue" id="v-recherches" aria-labelledby="t-rec" hidden>
+    <div class="tete"><div><span class="etiq">Ce qu'on cherche, où, et ce que ça coûte</span><h2 id="t-rec">Recherches et coûts</h2></div>
+      <div><label class="petit">Période <select id="rec-periode"><option value="j10">10 derniers jours</option><option value="j30">30 derniers jours</option></select></label></div></div>
+    <p class="petit" id="rec-budget"></p>
+    <h3 class="etiq">Par dénicheur</h3>
+    <div class="tableau"><table><thead><tr><th>Dénicheur</th><th class="n">Recherches</th><th class="n">Coût</th><th class="n">Annonces lues</th><th class="n">Alertes</th><th class="n">Validées</th></tr></thead><tbody id="rec-den"></tbody></table></div>
+    <h3 class="etiq">Par source</h3>
+    <div class="tableau"><table><thead><tr><th>Source</th><th class="n">Recherches</th><th class="n">Coût</th><th class="n">Annonces lues</th><th class="n">Alertes</th><th class="n">Validées</th><th>Conseil</th></tr></thead><tbody id="rec-src"></tbody></table></div>
+    <h3 class="etiq">Par catégorie de produits</h3>
+    <div class="tableau"><table><thead><tr><th>Catégorie</th><th class="n">Annonces lues</th><th class="n">Alertes</th><th class="n">Validées</th><th>Conseil</th></tr></thead><tbody id="rec-cat"></tbody></table></div>
+    <h3 class="etiq">Produits cherchés par les robots payants (Apify)</h3>
+    <div class="tableau"><table><thead><tr><th>Produit ou recherche</th><th class="n">Recherches</th><th class="n">Coût</th><th class="n">Résultats</th><th class="n">Validées</th></tr></thead><tbody id="rec-cib"></tbody></table></div>
+    <h3 class="etiq">Ce que les gens cherchent en ce moment (dénicheur B)</h3>
+    <div class="tableau"><table><thead><tr><th>Recherche</th><th>Pays</th><th class="n">Popularité</th><th class="n">Hausse</th></tr></thead><tbody id="rec-dem"></tbody></table></div>
+    <h3 class="etiq">Résultats de la chasse ciblée (dénicheur C)</h3>
+    <ul id="rec-chasse"></ul>
+    <p class="petit">Conseil automatique : une source ou une catégorie qui coûte de l'argent sans aucune alerte sur la période est marquée « à couper ».</p>
   </section>
 
   <!-- SYSTÈME -->
@@ -417,14 +438,34 @@ function initMethode(){
     ["Vinted et Leboncoin", "pas de frais vendeur"]].map(([k,v])=>`<li><span>${k}</span><span class="chiffre">${v}</span></li>`).join("");
 }
 
-const VUES = ["aujourdhui","affaires","championnat","systeme","methode"];
+const NOMS_DEN = {A:"A · fouille tous les sites", B:"B · détecte la demande", C:"C · chasse ciblée"};
+function initRecherches(){
+  const R = DATA?.recherches; if (!R) return;
+  const usd = n => (n||0).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+" $";
+  const b = R.budget||{};
+  $("rec-budget").textContent = `Robots payants ce mois-ci : ${usd(b.depense_reelle_usd)} dépensés réellement (crédit gratuit : 5 $, arrêt automatique à 4 $).`;
+  const conseil = x => x.cout_usd>0 && !x.alertes ? `<span class="pastille ko">à couper</span>` : (x.validees?`<span class="pastille ok">rentable</span>`:(x.alertes?`<span class="pastille att">à surveiller</span>`:`<span class="petit">gratuit</span>`));
+  const conseilCat = x => x.resultats>=50 && !x.alertes ? `<span class="pastille ko">aucune affaire</span>` : (x.validees?`<span class="pastille ok">rentable</span>`:(x.alertes?`<span class="pastille att">à surveiller</span>`:"–"));
+  const remplir = () => {
+    const P_ = R[$("rec-periode").value]||{};
+    $("rec-den").innerHTML = (P_.denicheurs||[]).map(x=>`<tr><td>${esc(NOMS_DEN[x.cle]||x.cle)}</td><td class="n">${x.recherches}</td><td class="n">${usd(x.cout_usd)}</td><td class="n">${x.resultats}</td><td class="n">${x.alertes}</td><td class="n">${x.validees}</td></tr>`).join("");
+    $("rec-src").innerHTML = (P_.sources||[]).map(x=>`<tr><td>${esc(x.cle.replace("flux:","flux · ").replace("apify:","robot · "))}</td><td class="n">${x.recherches}</td><td class="n">${usd(x.cout_usd)}</td><td class="n">${x.resultats}</td><td class="n">${x.alertes}</td><td class="n">${x.validees}</td><td>${conseil(x)}</td></tr>`).join("");
+    $("rec-cat").innerHTML = (P_.categories||[]).map(x=>`<tr><td>${esc(x.cle)}</td><td class="n">${x.resultats}</td><td class="n">${x.alertes}</td><td class="n">${x.validees}</td><td>${conseilCat(x)}</td></tr>`).join("");
+    $("rec-cib").innerHTML = (P_.cibles||[]).map(x=>`<tr><td>${esc(x.cle)}</td><td class="n">${x.recherches}</td><td class="n">${usd(x.cout_usd)}</td><td class="n">${x.resultats}</td><td class="n">${x.validees}</td></tr>`).join("") || `<tr><td colspan=5 class="petit">Aucune recherche payante sur la période.</td></tr>`;
+  };
+  $("rec-periode").addEventListener("change", remplir); remplir();
+  const D = R.demande||{};
+  $("rec-dem").innerHTML = (D.top||[]).map(x=>`<tr><td>${esc(x.recherche)}</td><td>${esc(PAYS[x.pays]||x.pays)}</td><td class="n">${x.popularite??"–"}</td><td class="n">${x.nouveau?"nouveau":(x.hausse_pct??"–")+" %"}</td></tr>`).join("") || `<tr><td colspan=4 class="petit">Pas encore de données.</td></tr>`;
+  $("rec-chasse").innerHTML = (D.chasse||[]).map(t=>`<li><span>${esc(t.recherche)} · ${esc(t.canal)} à <b class="chiffre">${euro(t.annonce_min)}</b> (idealo ${euro(t.idealo?.prix_min)})</span>${t.lien?` <a href="${esc(t.lien)}" target="_blank" rel="noopener">voir</a>`:""}</li>`).join("") || `<li class="petit">Rien d'assez intéressant à la dernière chasse${D.chasse_maj?" ("+esc(D.chasse_maj.replace("T"," à ").slice(0,19))+")":""}.</li>`;
+}
+const VUES = ["aujourdhui","affaires","recherches","championnat","systeme","methode"];
 function router(){
   const h = location.hash.slice(1), v = VUES.includes(h) ? h : "aujourdhui";
   VUES.forEach(x=>{ $("v-"+x).hidden = x!==v; });
   document.querySelectorAll("nav a").forEach(a=>{ if (a.getAttribute("href")==="#"+v) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
 }
 
-if (DATA){ initAujourdhui(); initAffaires(); initChampionnat(); initSysteme(); initMethode();
+if (DATA){ initAujourdhui(); initAffaires(); initChampionnat(); initSysteme(); initMethode(); try{ initRecherches(); }catch(e){ console.error(e); }
   $("pied").textContent = `Prototype · ${P.length} passage${P.length>1?"s":""}, ${TOUTES.length} affaires proposées par l’équipe · mis à jour le ${DATA.genere||"–"}`; }
 window.addEventListener("hashchange", router); router();
 </script>

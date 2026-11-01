@@ -11,11 +11,14 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-from . import comparateurs
+from . import comparateurs, journal
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUDGET_MOIS_USD = 4.0
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
+# coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
+TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005)}
+CONTEXTE = {"denicheur": "A"}  # qui appelle (A, B ou C), pour le journal
 ROBOTS = {
     "idealo": ("memo23~idealo-scraper", 0.03),
     "leboncoin": ("fatihtahta~leboncoin-fr-scraper", 0.03),
@@ -84,6 +87,11 @@ def lancer(robot, entree, maxi=10):
     except Exception:
         items = None
     _noter(b, plafond)  # on compte le plafond (estimation prudente)
+    n = len(items) if isinstance(items, list) else 0
+    dep, unit = TARIFS.get(robot, (0.0, plafond / max(maxi, 1)))
+    journal.noter(CONTEXTE["denicheur"], "apify:" + robot, entree.get("searchQuery") or entree.get("query")
+                  or ",".join(entree.get("domains", [])) or ",".join(entree.get("startUrls", []))[:80],
+                  cout_usd=dep + unit * n, resultats=n)
     return items if isinstance(items, list) else None
 
 

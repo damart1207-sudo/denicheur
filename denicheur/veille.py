@@ -8,10 +8,10 @@ python -m denicheur.veille
 import json
 import os
 import re
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from . import apify, collecte, comparateurs, demande, equipe
+from . import apify, collecte, comparateurs, demande, equipe, journal
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -113,13 +113,15 @@ def tour():
             if dm:
                 x["demande_forte"] = dm
             x["canaux"] = equipe.canaux_de_vente(x, regles)
+            x["denicheur"] = "A"
             nouvelles_alertes.append(x)
     # chasse ciblée quotidienne sur les produits les plus demandés (occasion neuve sous-cotée)
     for t in demande.chasse_ciblee(regles):
         ident = "chasse-" + t["recherche"][:30].replace(" ", "-") + "-" + t["canal"]
         if ident not in deja:
             nouvelles_alertes.append({"id": ident, "titre": f'{t["recherche"]} : annonce {t["canal"]} à {t["annonce_min"]} € (idealo {t["idealo"]["prix_min"]} €)',
-                                      "prix": t["annonce_min"], "devise": "EUR", "marchand": t["canal"], "lien": None,
+                                      "prix": t["annonce_min"], "devise": "EUR", "marchand": t["canal"], "lien": t.get("lien"),
+                                      "denicheur": t.get("par", "C"),
                                       "pays": "FR", "source": "chasse_ciblee", "nom_produit": t["recherche"],
                                       "cout_achat": t["annonce_min"] + 5, "idealo": t["idealo"], "demande_forte": t,
                                       "trouve_le": maintenant.isoformat(timespec="minutes"), "statut": "a_verifier"})
@@ -145,6 +147,23 @@ def tour():
     for x in nouvelles_alertes:
         stats.setdefault((x.get("categorie") or "?").strip()[:60] or "?", {"annonces": 0, "alertes": 0, "temperature_totale": 0})["alertes"] += 1
     _ecrire("data/stats_categories.json", stats)
+    # mémoire des annonces vues par A (3 jours) pour le dénicheur C
+    limite = (maintenant - timedelta(days=3)).isoformat(timespec="minutes")
+    recentes = [r for r in _lire("data/etat/annonces_recentes.json", []) if r.get("t", "") >= limite]
+    recentes += [{"titre": a["titre"][:100], "prix": a.get("prix"), "devise": a.get("devise"), "lien": a.get("lien"), "marchand": a.get("marchand"),
+                  "source": a.get("source"), "t": maintenant.isoformat(timespec="minutes")} for a in nouvelles if a.get("prix")]
+    _ecrire("data/etat/annonces_recentes.json", recentes[-1500:])
+    # journal des recherches gratuites de A : une ligne par source et par catégorie
+    par_source = {}
+    for a in nouvelles:
+        k = (a.get("source") or "?", (a.get("categorie") or "?")[:60])
+        par_source[k] = par_source.get(k, 0) + 1
+    al_cat = {}
+    for x in nouvelles_alertes:
+        k = (x.get("source") or "?", (x.get("categorie") or "?")[:60])
+        al_cat[k] = al_cat.get(k, 0) + 1
+    for (src, cat), n in par_source.items():
+        journal.noter("A", "flux:" + src, "", 0.0, n, al_cat.get((src, cat), 0), categorie=cat)
     journal = _lire("data/veille_journal.json", [])
     _ecrire("data/veille_journal.json", (journal + [bilan])[-200:])
     print(json.dumps(bilan, ensure_ascii=False))

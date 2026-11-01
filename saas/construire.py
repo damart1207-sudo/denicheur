@@ -3,6 +3,7 @@
 python saas/construire.py
 """
 import glob
+from datetime import datetime, timedelta, timezone
 import json
 import os
 
@@ -20,6 +21,49 @@ def lire(chemin, defaut=None):
             return json.load(f)
     except (OSError, json.JSONDecodeError):
         return defaut
+
+
+def rapport_recherches():
+    """Rapport « Recherches et coûts » sur 10 et 30 jours, à partir de data/journal/ et data/alertes.json."""
+    import sys
+    sys.path.insert(0, RACINE)
+    from denicheur import journal
+    alertes = lire(os.path.join(RACINE, "data/alertes.json"), []) or []
+    ok = [a for a in alertes if a.get("statut") in ("valide", "bon")]
+    out = {}
+    for jours in (10, 30):
+        lignes = journal.lire(jours)
+        def agreger(cle):
+            g = {}
+            for l in lignes:
+                k = cle(l)
+                if not k:
+                    continue
+                x = g.setdefault(k, {"cle": k, "recherches": 0, "cout_usd": 0.0, "resultats": 0, "alertes": 0, "validees": 0})
+                for c in ("recherches", "resultats", "alertes"):
+                    x[c] += l.get(c, 0)
+                x["cout_usd"] = round(x["cout_usd"] + l.get("cout_usd", 0), 4)
+            return g
+        par_den, par_src = agreger(lambda l: l["denicheur"]), agreger(lambda l: l["source"])
+        par_cat = agreger(lambda l: l["categorie"] if l["source"].startswith("flux:") else None)
+        par_cible = agreger(lambda l: l["cible"] if l["source"].startswith("apify:") else None)
+        for a in ok:
+            t = a.get("trouve_le", "")
+            if t and t[:10] < (datetime.now(timezone.utc) - timedelta(days=jours)).strftime("%Y-%m-%d"):
+                continue
+            for g, k in ((par_den, a.get("denicheur") or "A"), (par_src, "flux:" + (a.get("source") or "?")),
+                         (par_cat, (a.get("categorie") or "?")[:60]), (par_cible, a.get("nom_produit"))):
+                if k in g:
+                    g[k]["validees"] += 1
+        tri = lambda g: sorted(g.values(), key=lambda x: (-x["cout_usd"], -x["resultats"]))
+        out[f"j{jours}"] = {"denicheurs": tri(par_den), "sources": tri(par_src), "categories": tri(par_cat)[:60],
+                            "cibles": tri(par_cible)[:60]}
+    dm = lire(os.path.join(RACINE, "data/demande.json"), {}) or {}
+    out["demande"] = {"maj": dm.get("maj"), "top": dm.get("liste", [])[:40], "chasse": dm.get("chasse_resultats", []),
+                      "chasse_maj": dm.get("chasse_maj")}
+    out["alertes"] = sorted(alertes, key=lambda a: a.get("trouve_le", ""), reverse=True)[:40]
+    out["budget"] = lire(os.path.join(RACINE, "data/etat/apify_budget.json"), {})
+    return out
 
 
 def main():
@@ -59,6 +103,7 @@ def main():
         "genere": passages[-1]["date_affichee"] if passages else None,
         "passages": passages,
         "affaires": sorted(affaires.values(), key=lambda a: a["passage"], reverse=True),
+        "recherches": rapport_recherches(),
         "classement": lire(os.path.join(RACINE, "data/classement.json"), {}),
         "regles": lire(os.path.join(RACINE, "config/regles.json"), {}),
         "equipe": {k: {"nom": v["nom"], "marque": v["marque"]}

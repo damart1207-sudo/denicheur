@@ -39,7 +39,9 @@ def tendances(force=False):
     d = _lire()
     if not force and _age(d.get("maj")) < timedelta(hours=6):
         return d
+    apify.CONTEXTE["denicheur"] = "B"
     items = apify.lancer("idealo_tendances", {"domains": ["idealo.fr", "idealo.de", "idealo.es", "idealo.it"]}, maxi=200)
+    apify.CONTEXTE["denicheur"] = "A"
     if not items:
         return d
     # idealo met 2147483647 quand la recherche est toute nouvelle : on plafonne à 1000 % (« nouveau »)
@@ -63,21 +65,41 @@ def est_demande(titre, d=None):
     return None
 
 
-def chasse_ciblee(regles, n=3):
-    """Une fois par jour : bons plans d'occasion (neufs) sur les produits les plus demandés en France."""
-    d = _lire()
-    if _age(d.get("chasse_maj")) < timedelta(hours=24):
+def _annonces_A():
+    try:
+        return json.load(open(os.path.join(RACINE, "data/etat/annonces_recentes.json"), encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
         return []
+
+
+def chasse_ciblee(regles, n=3):
+    """Dénicheur C, toutes les 6 h après la mise à jour de la demande (B) :
+    pour les n produits les plus demandés en France, regarde d'abord si le dénicheur A a déjà vu un bon plan ;
+    sinon cherche lui-même (idealo + Leboncoin + Vinted)."""
+    d = _lire()
+    if _age(d.get("chasse_maj")) < timedelta(hours=6):
+        return []
+    apify.CONTEXTE["denicheur"] = "C"
     trouves = []
+    vus_A = _annonces_A()
     for x in [x for x in d.get("liste", []) if x["pays"] == "FR"][:n]:
-        pi = apify.prix_idealo(x["recherche"])
+        q = x["recherche"]
+        deja_A = [a for a in vus_A if a.get("prix") and comparateurs.correspond(a["titre"], q)]
+        pi = apify.prix_idealo(q)
         if not pi:
             continue
-        rr = apify.revente_reelle(x["recherche"], pi["prix_min"] * 0.4)
+        if deja_A:  # A l'a déjà vu : on vérifie juste si son prix bat idealo
+            for a in deja_A:
+                if a["prix"] <= pi["prix_min"] * 0.85:
+                    trouves.append({"recherche": q, "hausse_pct": x["hausse_pct"], "canal": "dénicheur A : " + (a.get("marchand") or a.get("source") or "?"),
+                                    "annonce_min": a["prix"], "lien": a.get("lien"), "nb_annonces": 1, "idealo": pi, "par": "A"})
+            continue
+        rr = apify.revente_reelle(q, pi["prix_min"] * 0.4)
         for canal, r in rr.items():
             if r["min"] <= pi["prix_min"] * 0.75:
-                trouves.append({"recherche": x["recherche"], "hausse_pct": x["hausse_pct"], "canal": canal,
-                                "annonce_min": r["min"], "nb_annonces": r["nb"], "idealo": pi})
+                trouves.append({"recherche": q, "hausse_pct": x["hausse_pct"], "canal": canal, "annonce_min": r["min"],
+                                "lien": r.get("lien_min"), "nb_annonces": r["nb"], "idealo": pi, "par": "C"})
+    apify.CONTEXTE["denicheur"] = "A"
     d["chasse_maj"] = datetime.now(timezone.utc).isoformat(timespec="minutes")
     d["chasse_resultats"] = trouves
     _ecrire(d)

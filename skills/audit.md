@@ -6,6 +6,7 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 ## Règles de vérification (pour chaque affaire de `data/dernier_passage.json` → `candidats`)
 1. **Prix neuf le plus bas en France aujourd'hui** : vérifier sur **idealo.fr** dans le navigateur intégré
    (recherche `idealo.fr/prechcat.html?q=<nom_produit>`, à rythme humain, jamais en masse), puis recherche web.
+   Si le navigateur intégré est injoignable (ordinateur de David éteint) : recherche web seulement, et le dire.
    Les prix eBay sont des prix DEMANDÉS : ils ne remplacent jamais idealo.
    - Si le produit est déjà moins cher ou au même prix ailleurs en neuf → **rejet**.
 2. **Prix de revente réaliste** sur la plateforme visée :

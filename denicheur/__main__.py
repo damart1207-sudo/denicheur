@@ -293,6 +293,37 @@ def tester_rapports():
     print(json.dumps(res, ensure_ascii=False)[:3000])
 
 
+def tester_comparateurs():
+    """Teste quels comparateurs un programme peut lire (statut HTTP, taille, prix trouvés)."""
+    import re as _re
+    import urllib.request
+    urls = {
+        "idealo": "https://www.idealo.fr/prechcat.html?q=0195951030784",
+        "ledenicheur": "https://ledenicheur.fr/search?search=0195951030784",
+        "ledenicheur_produit": "https://ledenicheur.fr/product.php?p=16169305",
+        "123comparer": "https://www.123comparer.fr/smartphones/gyau1pj3gwauyc3oghhde.html",
+        "123comparer_recherche": "https://www.123comparer.fr/recherche/?q=0195951030784",
+        "achatmoinscher": "https://www.achatmoinscher.com/recherche.php?q=0195951030784",
+        "achatmoinscher_nom": "https://www.achatmoinscher.com/recherche.php?q=apple%20iphone%2017e%20256%20go%20blanc&etat=2",
+        "google_shopping": "https://www.google.com/search?tbm=shop&q=0195951030784",
+        "leboncoin": "https://www.leboncoin.fr/recherche?text=iphone%2017e%20256",
+        "vinted": "https://www.vinted.fr/catalog?search_text=iphone%2017e",
+    }
+    res = {}
+    for nom, u in urls.items():
+        try:
+            req = urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+                                                     "Accept-Language": "fr-FR,fr;q=0.9", "Accept": "text/html,application/xhtml+xml"})
+            with urllib.request.urlopen(req, timeout=25) as r:
+                h = r.read().decode("utf-8", errors="replace")
+            prix = _re.findall(r"(\d{2,4}[,.]\d{2})\s?(?:€|&euro;|&nbsp;€)", h)[:8]
+            res[nom] = {"ok": True, "taille": len(h), "prix_vus": prix, "ean_present": "0195951030784" in h}
+        except Exception as e:
+            res[nom] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:120]}"}
+        print(nom, res[nom])
+    ecrire("data/test_comparateurs.json", res)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--passage", choices=["asie", "europe"], default="europe")
@@ -300,8 +331,11 @@ def main():
     p.add_argument("--verifier", action="store_true", help="tester les 5 clés")
     p.add_argument("--sources", action="store_true", help="tester les sources candidates")
     p.add_argument("--rapports", action="store_true", help="tester les rapports demande/concurrence")
+    p.add_argument("--comparateurs", action="store_true", help="tester l'accès aux comparateurs")
     a = p.parse_args()
-    if a.rapports:
+    if a.comparateurs:
+        tester_comparateurs()
+    elif a.rapports:
         tester_rapports()
     elif a.sources:
         tester_sources()

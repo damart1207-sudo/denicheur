@@ -42,7 +42,9 @@ def tendances(force=False):
     items = apify.lancer("idealo_tendances", {"domains": ["idealo.fr", "idealo.de", "idealo.es", "idealo.it"]}, maxi=200)
     if not items:
         return d
-    liste = [{"recherche": i["query"], "popularite": i.get("popularity"), "hausse_pct": i.get("percentIncrease"),
+    # idealo met 2147483647 quand la recherche est toute nouvelle : on plafonne à 1000 % (« nouveau »)
+    liste = [{"recherche": i["query"], "popularite": i.get("popularity"), "hausse_pct": min(i.get("percentIncrease") or 0, 1000),
+              "nouveau": (i.get("percentIncrease") or 0) >= 1000000,
               "pays": (i.get("domain") or "").split(".")[-1].upper()} for i in items if isinstance(i, dict) and i.get("query")]
     liste.sort(key=lambda x: -((x["popularite"] or 0) * (1 + (x["hausse_pct"] or 0) / 100)))
     d.update({"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "liste": liste})

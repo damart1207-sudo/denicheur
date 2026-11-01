@@ -102,8 +102,11 @@ def passage(nom, test=False):
     Classe = FauxAgent if test else Agent
     agents = {k: Classe(k, v) for k, v in conf_eq["agents"].items()}
 
-    trieur = agents[conf_eq["trieur"]]
-    tries, tri_ok = equipe.trier(trieur, prefiltrees, regles["taille_lot"]) if prefiltrees else ([], True)
+    trieur = agents.get(conf_eq.get("trieur") or "")
+    if conf_eq.get("trieur"):
+        tries, tri_ok = equipe.trier(trieur, prefiltrees, regles["taille_lot"]) if prefiltrees else ([], True)
+    else:  # pas d'IA pour le tri : le filtre du programme suffit (plus fiable)
+        tries, tri_ok = prefiltrees, True
     capacite = min(agents[a].conf.get("taille_lot", regles["taille_lot"]) * agents[a].conf.get("max_appels", 5)
                    for a in conf_eq["analystes"])
     tries = tries[:capacite]  # les plus populaires d'abord (déjà triés par température)

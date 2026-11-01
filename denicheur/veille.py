@@ -11,7 +11,7 @@ import re
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import apify, collecte, comparateurs, equipe
+from . import apify, collecte, comparateurs, demande, equipe
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -35,8 +35,13 @@ def _ecrire(rel, d):
         json.dump(d, f, ensure_ascii=False, indent=1)
 
 
+DEMANDE = {}
+
+
 def priorite(a):
     p = (a.get("temperature") or 0)
+    if demande.est_demande(a["titre"], DEMANDE):
+        p += 300  # produit que les gens cherchent en ce moment : examiné en premier
     if SIGNAUX.search(a["titre"] + " " + (a.get("description") or "")):
         p += 500
     return p
@@ -69,6 +74,7 @@ def tour():
     json.dump(b, open(apify.F_BUDGET, "w"), indent=1)
     sources = [s for s in _lire("config/sources.json", {})["sources"] if s.get("actif", True)]
     regles = _lire("config/regles.json", {})
+    DEMANDE.update(demande.tendances())
     annonces, etat = collecte.collecter(sources)
     vus = set(_lire("data/etat/vus_veille.json", []))
     nouvelles = [a for a in annonces if a["id"] not in vus]
@@ -103,8 +109,20 @@ def tour():
                 x["prix_plancher"] = {"prix_min": min(pi["prix_min"], pmin or 1e9), "ou": "idealo", "lien": pi["lien"]}
             if nom:
                 x["revente_reelle"] = apify.revente_reelle(nom, a["prix"])
+            dm = demande.est_demande(a["titre"], DEMANDE)
+            if dm:
+                x["demande_forte"] = dm
             x["canaux"] = equipe.canaux_de_vente(x, regles)
             nouvelles_alertes.append(x)
+    # chasse ciblée quotidienne sur les produits les plus demandés (occasion neuve sous-cotée)
+    for t in demande.chasse_ciblee(regles):
+        ident = "chasse-" + t["recherche"][:30].replace(" ", "-") + "-" + t["canal"]
+        if ident not in deja:
+            nouvelles_alertes.append({"id": ident, "titre": f'{t["recherche"]} : annonce {t["canal"]} à {t["annonce_min"]} € (idealo {t["idealo"]["prix_min"]} €)',
+                                      "prix": t["annonce_min"], "devise": "EUR", "marchand": t["canal"], "lien": None,
+                                      "pays": "FR", "source": "chasse_ciblee", "nom_produit": t["recherche"],
+                                      "cout_achat": t["annonce_min"] + 5, "idealo": t["idealo"], "demande_forte": t,
+                                      "trouve_le": maintenant.isoformat(timespec="minutes"), "statut": "a_verifier"})
     # ne marquer « vu » que ce qui a été examiné (le reste sera revu au prochain tour)
     vus.update(a["id"] for a in nouvelles if a not in candidates or a in lot)
     _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
@@ -115,7 +133,8 @@ def tour():
              "nommees": len(noms), "alertes": len(nouvelles_alertes),
              "ia": {"appels": agent.appels, "reussites": agent.reussites, "erreurs": agent.erreurs[:2]} if agent else None,
              "sources_ko": [k for k, v in etat.items() if not v["ok"]],
-             "apify_budget": apify._budget()}
+             "apify_budget": apify._budget(),
+             "demande_top_fr": [x["recherche"] for x in DEMANDE.get("liste", []) if x["pays"] == "FR"][:8]}
     # statistiques par catégorie (pour, dans quelques semaines, se concentrer sur les plus rentables)
     stats = _lire("data/stats_categories.json", {})
     for a in nouvelles:

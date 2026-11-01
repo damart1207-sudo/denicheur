@@ -107,7 +107,7 @@ def prix_idealo(nom):
             "gtin": b.get("gtin")}
 
 
-def revente_reelle(nom, prix_achat):
+def revente_reelle(nom, prix_achat, avec_liens=False):
     """Prix des annonces réelles en cours (neuf ou comme neuf) sur Vinted et Leboncoin."""
     res = {}
     v = lancer("vinted", {"mode": "Search Items", "query": nom, "market": "fr", "max_results": 15}, maxi=15) or []
@@ -115,7 +115,8 @@ def revente_reelle(nom, prix_achat):
           and comparateurs.correspond(i.get("title", ""), nom) and "neuf" in (i.get("status") or "").lower()]
     pv = [p for p in pv if p >= prix_achat * 0.5]
     if pv:
-        res["vinted"] = {"nb": len(pv), "min": min(pv), "mediane": statistics.median(pv)}
+        res["vinted"] = {"nb": len(pv), "min": min(pv), "mediane": statistics.median(pv),
+                         "lien_min": next((i.get("url") for i in v if isinstance(i, dict) and i.get("price_amount") and float(i["price_amount"]) == min(pv)), None)}
     lb = lancer("leboncoin", {"startUrls": ["https://www.leboncoin.fr/recherche?text=" + urllib.parse.quote(nom)], "limit": 15}, maxi=15) or []
     pl = []
     for i in lb:

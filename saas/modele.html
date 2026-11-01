@@ -88,6 +88,12 @@ input[type=search]{min-width:0;flex:1 1 200px}
 .notes b{color:var(--encre);font-weight:600}
 .ia{display:inline-flex;gap:4px;flex-wrap:wrap;align-items:center}
 .ia i{font-style:normal;font:600 12px var(--f-texte);padding:2px 7px;border-radius:4px;background:var(--signal-doux);color:var(--signal)}
+.rapport{font-size:14px;border:1px solid var(--trait);border-radius:6px;padding:6px 10px}
+.rapport summary{cursor:pointer;font-weight:600}
+.rapport table{width:100%;border-collapse:collapse;margin-top:6px;font-size:13px}
+.rapport td,.rapport th{text-align:left;padding:3px 4px;border-top:1px solid var(--trait);vertical-align:top}
+.courbe{display:flex;align-items:flex-end;gap:2px;height:40px;margin:6px 0}
+.courbe i{flex:1;background:var(--signal);min-height:1px;border-radius:1px 1px 0 0}
 .encart{font-size:14px;border-left:3px solid var(--trait);padding-left:10px;overflow-wrap:anywhere}
 .encart.valide{border-color:var(--ok)} .encart.rejete{border-color:var(--ko)} .encart.google{border-color:var(--signal)}
 .marge{background:var(--etiquette);color:var(--etiquette-encre);padding:16px 18px;display:grid;align-content:center;justify-items:center;gap:2px;min-width:132px;border-radius:0 7px 7px 0;
@@ -257,6 +263,28 @@ let etat = {mode:"tous", tri:"marge", domaine:null};
 try { const m = localStorage.getItem("den_mode"); if (m) etat.mode = m; } catch(e) {}
 
 const MODES = {dropshipping:"Dropshipping", stock:"Avec stock", les_deux:"Stock ou dropshipping"};
+const NIV = {peu:"Peu de vendeurs", moyen:"Concurrence moyenne", nombreux:"Beaucoup de vendeurs"};
+function annonceLien(x){return x?`<a href="${esc(x.lien)}" target="_blank" rel="noopener">${euro(x.prix)}</a> <span class="petit">${esc((x.titre||"").slice(0,60))}</span>`:"—";}
+function rapportConcurrence(r){
+  if(!r||!r.pays) return "";
+  const lignes = Object.entries(r.pays).map(([k,p])=>p.erreur?`<tr><td>${esc(PAYS[k]||k)}</td><td colspan=3>indisponible</td></tr>`:
+    `<tr><td>${esc(PAYS[k]||k)}</td><td class="chiffre">${p.nb_annonces} <span class="petit">(${esc(NIV[p.niveau]||p.niveau)})</span></td><td>${annonceLien(p.moins_cher)}</td><td>${annonceLien(p.plus_cher)}</td></tr>`).join("");
+  return `<details class="rapport"><summary>Rapport concurrence : ${esc(NIV[r.niveau_global]||"?")}</summary>
+    <div class="petit">Annonces neuves en cours sur eBay pour « ${esc(r.requete)} » (accessoires écartés).</div>
+    <table><tr><th>Pays</th><th>Vendeurs</th><th>Le moins cher</th><th>Le plus cher</th></tr>${lignes}</table></details>`;
+}
+function rapportDemande(r){
+  if(!r) return "";
+  const g = r.google_trends||{}, sg = Array.isArray(r.suggestions_google)?r.suggestions_google:[];
+  const courbe = (g.courbe||[]).map(v=>`<i style="height:${Math.max(2,v)}%" title="${v}"></i>`).join("");
+  const resume = g.erreur?"Google Trends indisponible":`intérêt ${g.interet_moyen??"?"}/100, ${esc(g.tendance||"?")}`;
+  return `<details class="rapport"><summary>Rapport demande : ${resume}</summary>
+    ${g.erreur?"":`<div class="petit">Google Trends, France, 90 derniers jours (100 = pic de recherches). Récent : ${g.interet_recent??"?"}/100.</div><div class="courbe" aria-hidden="true">${courbe}</div>`}
+    ${(g.recherches_liees||[]).length?`<div><b>Recherches liées :</b> ${g.recherches_liees.map(x=>esc(x.query)).join(", ")}</div>`:""}
+    ${sg.length?`<div><b>Ce que les gens tapent sur Google :</b> ${sg.map(esc).join(", ")}</div>`:""}
+    ${r.temperature_dealabs!=null?`<div><b>Température Dealabs :</b> ${r.temperature_dealabs}°</div>`:""}
+    <div class="petit">Pas de volume exact (type Semrush) : ce chiffre n'existe que dans des outils payants.</div></details>`;
+}
 function etiquette(a){
   const v = a.audit || {verdict:"attente"}, g = a.verification;
   const rev = reventeDe(a), marge = margeDe(a);
@@ -280,6 +308,7 @@ function etiquette(a){
       ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
       ${a.ebay&&(a.ebay.occasion||a.ebay.neuf)?`<div class="encart google"><span class="etiq">Annonces eBay en cours</span><br>${a.ebay.occasion?`Occasion : <b class="chiffre">${euro(a.ebay.occasion.p25)}</b> à <b class="chiffre">${euro(a.ebay.occasion.mediane)}</b> (${a.ebay.occasion.nb} annonces)`:""}${a.ebay.occasion&&a.ebay.neuf?" · ":""}${a.ebay.neuf?`Neuf : <b class="chiffre">${euro(a.ebay.neuf.p25)}</b> à <b class="chiffre">${euro(a.ebay.neuf.mediane)}</b> (${a.ebay.neuf.nb} annonces)`:""}${(a.ebay.exemples||[]).length?` · ${a.ebay.exemples.slice(0,2).map((x,i)=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">exemple ${i+1}</a>`).join(", ")}`:""}</div>`:""}
       ${a.ebay&&a.ebay.neuf_par_pays?`<div class="encart google"><span class="etiq">Revente neuve sur eBay par pays (prix bas)</span><br>${Object.entries(a.ebay.neuf_par_pays).map(([k,x])=>`${esc(PAYS[k]||k)} <b class="chiffre">${x?euro(x):"—"}</b>`).join(" · ")}${a.ebay.meilleur_pays?` · le plus cher : <b>${esc(PAYS[a.ebay.meilleur_pays]||a.ebay.meilleur_pays)}</b>`:""}</div>`:""}
+      ${rapportDemande(a.rapport_demande)}${rapportConcurrence(a.rapport_concurrence)}
       ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>

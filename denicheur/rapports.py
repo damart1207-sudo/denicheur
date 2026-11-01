@@ -35,7 +35,7 @@ def _annonces(tok, q, marche, mini, maxi, limite=200, tri="price"):
     return d.get("total", len(items)), items
 
 
-ACCESSOIRES = re.compile(r"bracelet|bride|lunette|bezel|bisel|lunetta|l[üu]nette|r[ae]hmen|camicia|chemise|hemd|\\bLC\\b|ringke|sangle|strap|band\b|armband|cinturino|correa|coque|h[uü]lle|case\b|cover|funda|custodia|chargeur|charger|ladekabel|cargador|caricatore|c[aâ]ble|kabel|cable|film|protect|schutz|glas\b|verre|pellicola|protector|support|halter|soporte|supporto|t-?shirt|maglia|camis|shirt|top\b|tee\b|chaussettes|socken|lacets|schn[uü]rsenkel|semelle|insole|sticker|autocollant|pi[eè]ce|ersatz|repuesto|ricambio|bo[iî]te vide|leerkarton|\bGS\b|enfant|kinder|junior|bambino|ni[nñ]o|\bPS\b|\bTD\b", re.I)
+ACCESSOIRES = re.compile(r"bracelet|bride|lunette|bezel|bisel|lunetta|l[üu]nette|r[ae]hmen|camicia|chemise|hemd|\bLC\b|ringke|sangle|strap|band\b|armband|cinturino|correa|coque|h[uü]lle|case\b|cover|funda|custodia|chargeur|charger|ladekabel|cargador|caricatore|c[aâ]ble|kabel|cable|film|protect|schutz|glas\b|verre|pellicola|protector|support|halter|soporte|supporto|t-?shirt|maglia|camis|shirt|top\b|tee\b|chaussettes|socken|lacets|schn[uü]rsenkel|semelle|insole|sticker|autocollant|pi[eè]ce|ersatz|repuesto|ricambio|bo[iî]te vide|leerkarton|\bGS\b|enfant|kinder|junior|bambino|ni[nñ]o|\bPS\b|\bTD\b", re.I)
 
 
 def _garder(items, q):

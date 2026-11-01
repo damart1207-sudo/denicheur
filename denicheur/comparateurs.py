@@ -58,7 +58,7 @@ def correspond(titre, nom):
 
 def achatmoinscher(nom, neuf=True):
     url = "https://www.achatmoinscher.com/recherche.php?" + urllib.parse.urlencode(
-        {"q": nom, "pMin": 0, "pMax": 9999, "etat": 1 if neuf else 0, "date": 1, "typeRech": 1, "onlyTitle": 1})
+        {"q": nom, "pMin": 0, "pMax": 9999, "etat": 1 if neuf else 0, "date": 1, "typeRech": 0, "onlyTitle": 0})
     h = _lire(url)
     res = []
     for bloc in h.split('<div class="product-body">')[1:]:

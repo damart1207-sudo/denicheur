@@ -4,7 +4,9 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 **validée** ou **rejetée** avec un motif court, en français simple.
 
 ## Règles de vérification (pour chaque affaire de `data/dernier_passage.json` → `candidats`)
-1. **Prix neuf le plus bas en France aujourd'hui** (recherche web : comparateurs, grands marchands).
+1. **Prix neuf le plus bas en France aujourd'hui** : vérifier sur **idealo.fr** dans le navigateur intégré
+   (recherche `idealo.fr/prechcat.html?q=<nom_produit>`, à rythme humain, jamais en masse), puis recherche web.
+   Les prix eBay sont des prix DEMANDÉS : ils ne remplacent jamais idealo.
    - Si le produit est déjà moins cher ou au même prix ailleurs en neuf → **rejet**.
 2. **Prix de revente réaliste** sur la plateforme visée :
    - Vinted / Leboncoin / eBay : fourchette des annonces comparables (neuf ou très bon état).

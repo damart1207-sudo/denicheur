@@ -1,0 +1,1468 @@
+{
+ "jeton": true,
+ "credit": {
+  "limite_usd": 5,
+  "utilise_usd": 0
+ },
+ "robots": {
+  "pricepirate~idealo-price-data-api": {
+   "operation": {
+    "type": "string",
+    "titre": "Operation",
+    "defaut": "search-by-gtin",
+    "enum": [
+     "search-by-gtin",
+     "search-by-id",
+     "search-by-term",
+     "search-by-url",
+     "shop-info"
+    ]
+   },
+   "values": {
+    "type": "array",
+    "titre": "Values",
+    "defaut": [
+     "4009803341163"
+    ],
+    "enum": null
+   },
+   "country": {
+    "type": "string",
+    "titre": "Country",
+    "defaut": "de",
+    "enum": [
+     "de",
+     "at",
+     "es",
+     "fr",
+     "it",
+     "uk"
+    ]
+   }
+  },
+  "memo23~idealo-scraper": {
+   "startUrls": {
+    "type": "array",
+    "titre": "Start URLs",
+    "defaut": [
+     {
+      "url": "https://www.idealo.de/preisvergleich/ProductCategory/19116F1827447.html"
+     }
+    ],
+    "enum": null
+   },
+   "searchQuery": {
+    "type": "string",
+    "titre": "Search query",
+    "defaut": null,
+    "enum": null
+   },
+   "country": {
+    "type": "string",
+    "titre": "Country site",
+    "defaut": "DE",
+    "enum": [
+     "DE",
+     "AT",
+     "UK",
+     "FR",
+     "IT",
+     "ES"
+    ]
+   },
+   "maxItems": {
+    "type": "integer",
+    "titre": "Max results",
+    "defaut": 100,
+    "enum": null
+   },
+   "maxPages": {
+    "type": "integer",
+    "titre": "Max pages per URL",
+    "defaut": 0,
+    "enum": null
+   },
+   "fetchOffers": {
+    "type": "boolean",
+    "titre": "Fetch shop offers",
+    "defaut": false,
+    "enum": null
+   },
+   "fetchMode": {
+    "type": "string",
+    "titre": "Fetch mode",
+    "defaut": "geonode",
+    "enum": [
+     "geonode",
+     "unblocker"
+    ]
+   },
+   "geonodeProxyType": {
+    "type": "string",
+    "titre": "Scraping API proxy type",
+    "defaut": "datacenter",
+    "enum": [
+     "datacenter",
+     "residential"
+    ]
+   },
+   "proxy": {
+    "type": "object",
+    "titre": "Proxy configuration",
+    "defaut": null,
+    "enum": null
+   }
+  },
+  "fatihtahta~leboncoin-fr-scraper": {
+   "startUrls": {
+    "type": "array",
+    "titre": "Add Leboncoin URLs",
+    "defaut": [
+     "https://www.leboncoin.fr/recherche?category=9&locations=Lorraine_53300__48.34594_-0.56243_5000_5000&real_estate_type=2"
+    ],
+    "enum": null
+   },
+   "limit": {
+    "type": "integer",
+    "titre": "Set Maximum Listings",
+    "defaut": 100,
+    "enum": null
+   }
+  },
+  "epicscrapers~vinted-search-scraper": {
+   "startUrls": {
+    "type": "array",
+    "titre": "Vinted URLs",
+    "defaut": [
+     {
+      "url": "https://www.vinted.com/catalog?referrer=item-crumbs&catalog[]=2632&order=newest_first&brand_ids[]=53&page=1"
+     }
+    ],
+    "enum": null
+   },
+   "keywords": {
+    "type": "array",
+    "titre": "Keywords",
+    "defaut": null,
+    "enum": null
+   },
+   "minPrice": {
+    "type": "number",
+    "titre": "Minimum price",
+    "defaut": null,
+    "enum": null
+   },
+   "maxPrice": {
+    "type": "number",
+    "titre": "Maximum price",
+    "defaut": null,
+    "enum": null
+   },
+   "country": {
+    "type": "string",
+    "titre": "Main country",
+    "defaut": "it",
+    "enum": [
+     "at",
+     "be",
+     "hr",
+     "cz",
+     "dk",
+     "ee",
+     "fi",
+     "fr",
+     "de",
+     "gr",
+     "hu",
+     "ie",
+     "it",
+     "lv",
+     "lt",
+     "lu",
+     "nl",
+     "pl",
+     "pt",
+     "ro",
+     "sk",
+     "si",
+     "es",
+     "se",
+     "gb",
+     "us"
+    ]
+   },
+   "compareCountries": {
+    "type": "array",
+    "titre": "Also search in",
+    "defaut": null,
+    "enum": null
+   },
+   "maxProducts": {
+    "type": "integer",
+    "titre": "Products per search",
+    "defaut": 20,
+    "enum": null
+   },
+   "includeDetails": {
+    "type": "boolean",
+    "titre": "Include item details",
+    "defaut": false,
+    "enum": null
+   },
+   "trackPriceChanges": {
+    "type": "boolean",
+    "titre": "Track new listings and price drops",
+    "defaut": false,
+    "enum": null
+   },
+   "saveOnly": {
+    "type": "string",
+    "titre": "Save only",
+    "defaut": "all",
+    "enum": [
+     "all",
+     "new",
+     "priceDrops",
+     "newOrPriceDrops"
+    ]
+   },
+   "discordWebhookUrls": {
+    "type": "array",
+    "titre": "Discord webhook URLs",
+    "defaut": null,
+    "enum": null
+   },
+   "webhookUrls": {
+    "type": "array",
+    "titre": "Webhook URLs",
+    "defaut": null,
+    "enum": null
+   }
+  },
+  "scrape.badger~vinted-scraper": {
+   "mode": {
+    "type": "string",
+    "titre": "Mode",
+    "defaut": "Search Items",
+    "enum": [
+     "Search Items",
+     "Search by Image",
+     "Get Item Details",
+     "Get User Profile",
+     "Get User Items",
+     "Search Brands",
+     "List Colors",
+     "List Conditions",
+     "List Markets",
+     "Mobile Data",
+     "List Mobile Operations"
+    ]
+   },
+   "query": {
+    "type": "string",
+    "titre": "Search Query",
+    "defaut": "nike air force 1",
+    "enum": null
+   },
+   "item_id": {
+    "type": "integer",
+    "titre": "Item ID",
+    "defaut": null,
+    "enum": null
+   },
+   "user_id": {
+    "type": "integer",
+    "titre": "User ID",
+    "defaut": null,
+    "enum": null
+   },
+   "market": {
+    "type": "string",
+    "titre": "Market",
+    "defaut": "fr",
+    "enum": [
+     "fr",
+     "de",
+     "uk",
+     "it",
+     "es",
+     "pl",
+     "nl",
+     "be",
+     "cz",
+     "lt",
+     "pt",
+     "at",
+     "lu",
+     "sk",
+     "dk",
+     "fi",
+     "se",
+     "ro",
+     "hu",
+     "hr",
+     "gr",
+     "us",
+     "ca",
+     "au",
+     "lv",
+     "ee"
+    ]
+   },
+   "price_from": {
+    "type": "string",
+    "titre": "Min Price",
+    "defaut": null,
+    "enum": null
+   },
+   "price_to": {
+    "type": "string",
+    "titre": "Max Price",
+    "defaut": null,
+    "enum": null
+   },
+   "brand_ids": {
+    "type": "string",
+    "titre": "Brand IDs",
+    "defaut": null,
+    "enum": null
+   },
+   "color_ids": {
+    "type": "string",
+    "titre": "Color IDs",
+    "defaut": null,
+    "enum": null
+   },
+   "status_ids": {
+    "type": "string",
+    "titre": "Condition IDs",
+    "defaut": null,
+    "enum": null
+   },
+   "order": {
+    "type": "string",
+    "titre": "Sort Order",
+    "defaut": "relevance",
+    "enum": [
+     "relevance",
+     "price_low_to_high",
+     "price_high_to_low",
+     "newest_first"
+    ]
+   },
+   "max_results": {
+    "type": "integer",
+    "titre": "Max Results",
+    "defaut": 100,
+    "enum": null
+   },
+   "catalog_ids": {
+    "type": "string",
+    "titre": "Catalog Ids",
+    "defaut": null,
+    "enum": null
+   },
+   "size_ids": {
+    "type": "string",
+    "titre": "Size Ids",
+    "defaut": null,
+    "enum": null
+   },
+   "material_ids": {
+    "type": "string",
+    "titre": "Material Ids",
+    "defaut": null,
+    "enum": null
+   },
+   "mobile_operation": {
+    "type": "string",
+    "titre": "Mobile operation",
+    "defaut": "sold-comparables",
+    "enum": null
+   },
+   "mobile_parameters": {
+    "type": "object",
+    "titre": "Mobile parameters",
+    "defaut": {
+     "catalog_id": "1242",
+     "brand_id": "53",
+     "status_id": "2"
+    },
+    "enum": null
+   },
+   "image_url": {
+    "type": "string",
+    "titre": "Image URL",
+    "defaut": null,
+    "enum": null
+   },
+   "image_base64": {
+    "type": "string",
+    "titre": "Base64 image",
+    "defaut": null,
+    "enum": null
+   }
+  },
+  "kazkn~vinted-smart-scraper": {
+   "workflowPreset": {
+    "type": "string",
+    "titre": "🎯 Choose Your Workflow",
+    "defaut": "ARBITRAGE_SCANNER",
+    "enum": [
+     "ARBITRAGE_SCANNER",
+     "DEAL_ALERTS",
+     "SELLER_WATCHLIST"
+    ]
+   },
+   "query": {
+    "type": "string",
+    "titre": "🔍 Search Query",
+    "defaut": "nike air force 1",
+    "enum": null
+   },
+   "countries": {
+    "type": "array",
+    "titre": "🌍 Countries",
+    "defaut": [
+     "fr",
+     "de",
+     "nl",
+     "it",
+     "es"
+    ],
+    "enum": null
+   },
+   "maxItems": {
+    "type": "integer",
+    "titre": "📊 Max Results / Daily Budget Cap",
+    "defaut": 100,
+    "enum": null
+   },
+   "mode": {
+    "type": "string",
+    "titre": "🧩 Advanced Mode Override",
+    "defaut": "",
+    "enum": [
+     "",
+     "CROSS_COUNTRY",
+     "SEARCH",
+     "SELLER_PROFILE",
+     "PRICE_TRACK",
+     "SELL_THROUGH_TRACKER",
+     "ITEM_DETAIL",
+     "SOLD_ITEMS",
+     "TRENDING"
+    ]
+   },
+   "itemUrls": {
+    "type": "array",
+    "titre": "📦 Item URLs",
+    "defaut": [],
+    "enum": null
+   },
+   "sellerUrls": {
+    "type": "array",
+    "titre": "👤 Seller URLs",
+    "defaut": [],
+    "enum": null
+   },
+   "condition": {
+    "type": "array",
+    "titre": "✨ Condition",
+    "defaut": null,
+    "enum": null
+   },
+   "priceMin": {
+    "type": "number",
+    "titre": "💶 Min Price",
+    "defaut": null,
+    "enum": null
+   },
+   "priceMax": {
+    "type": "number",
+    "titre": "💶 Max Price",
+    "defaut": null,
+    "enum": null
+   },
+   "sortBy": {
+    "type": "string",
+    "titre": "📈 Sort By",
+    "defaut": "relevance",
+    "enum": [
+     "relevance",
+     "price_low_to_high",
+     "price_high_to_low",
+     "newest_first"
+    ]
+   },
+   "categoryId": {
+    "type": "integer",
+    "titre": "📁 Category ID",
+    "defaut": null,
+    "enum": null
+   },
+   "brandIds": {
+    "type": "array",
+    "titre": "🏷️ Brand IDs",
+    "defaut": null,
+    "enum": null
+   },
+   "sizeIds": {
+    "type": "array",
+    "titre": "📏 Size IDs",
+    "defaut": null,
+    "enum": null
+   },
+   "includeSellerDetails": {
+    "type": "boolean",
+    "titre": "👤 Seller details ($)",
+    "defaut": false,
+    "enum": null
+   },
+   "includePhotos": {
+    "type": "boolean",
+    "titre": "📸 Include Photo URLs",
+    "defaut": false,
+    "enum": null
+   },
+   "trackingStoreName": {
+    "type": "string",
+    "titre": "🧠 Tracking Store Name",
+    "defaut": "vinted-sell-through-tracker",
+    "enum": null
+   },
+   "trackerId": {
+    "type": "string",
+    "titre": "🏷️ Tracker ID",
+    "defaut": null,
+    "enum": null
+   },
+   "missingRunsThreshold": {
+    "type": "integer",
+    "titre": "📉 Missing Runs Before Likely Sold",
+    "defaut": 2,
+    "enum": null
+   },
+   "emitActiveItems": {
+    "type": "boolean",
+    "titre": "📤 Output Active Items Too",
+    "defaut": true,
+    "enum": null
+   },
+   "emitRunSummary": {
+    "type": "boolean",
+    "titre": "📋 Output Daily Summary Row",
+    "defaut": true,
+    "enum": null
+   },
+   "proxyConfiguration": {
+    "type": "object",
+    "titre": "🛡️ Proxy",
+    "defaut": null,
+    "enum": null
+   },
+   "maxConcurrency": {
+    "type": "integer",
+    "titre": "⚡ Parallel Requests",
+    "defaut": 5,
+    "enum": null
+   },
+   "maxRequestRetries": {
+    "type": "integer",
+    "titre": "🔄 Max Retries",
+    "defaut": 3,
+    "enum": null
+   },
+   "requestDelayMs": {
+    "type": "integer",
+    "titre": "⏱️ Delay Between Requests (ms)",
+    "defaut": 500,
+    "enum": null
+   }
+  },
+  "memo23~kleinanzeigen-search-scraper-ppe": {
+   "startUrls": {
+    "type": "array",
+    "titre": "Search or listing URLs",
+    "defaut": [
+     {
+      "url": "https://www.kleinanzeigen.de/s-aachen/iphone/k0l1921"
+     }
+    ],
+    "enum": null
+   },
+   "searchQueries": {
+    "type": "array",
+    "titre": "Search keywords",
+    "defaut": null,
+    "enum": null
+   },
+   "category": {
+    "type": "string",
+    "titre": "Category (keyword searches only)",
+    "defaut": "",
+    "enum": [
+     "",
+     "161",
+     "173",
+     "216",
+     "223",
+     "211",
+     "217",
+     "305",
+     "306",
+     "276",
+     "280",
+     "220",
+     "241",
+     "195",
+     "199",
+     "402",
+     "196",
+     "275",
+     "197",
+     "277",
+     "207",
+     "208",
+     "205",
+     "203",
+     "403",
+     "238",
+     "198",
+     "80",
+     "91",
+     "93",
+     "246",
+     "239",
+     "89",
+     "90",
+     "84",
+     "86",
+     "82",
+     "81",
+     "88",
+     "87",
+     "153",
+     "224",
+     "154",
+     "159",
+     "160",
+     "158",
+     "156",
+     "157",
+     "155",
+     "172",
+     "226",
+     "245",
+     "176",
+     "408",
+     "279",
+     "278",
+     "228",
+     "225",
+     "285",
+     "407",
+     "175",
+     "227",
+     "405",
+     "406",
+     "168",
+     "130",
+     "138",
+     "134",
+     "136",
+     "132",
+     "135",
+     "139",
+     "133",
+     "283",
+     "243",
+     "313",
+     "17",
+     "236",
+     "22",
+     "19",
+     "258",
+     "21",
+     "237",
+     "25",
+     "20",
+     "23",
+     "18",
+     "102",
+     "118",
+     "111",
+     "114",
+     "110",
+     "105",
+     "107",
+     "125",
+     "123",
+     "247",
+     "117",
+     "109",
+     "185",
+     "232",
+     "248",
+     "187",
+     "282",
+     "240",
+     "191",
+     "249",
+     "233",
+     "234",
+     "230",
+     "250",
+     "189",
+     "242",
+     "73",
+     "76",
+     "281",
+     "284",
+     "77",
+     "79",
+     "78",
+     "74",
+     "75",
+     "231",
+     "286",
+     "254",
+     "287",
+     "252",
+     "255",
+     "257",
+     "251",
+     "256",
+     "297",
+     "288",
+     "289",
+     "290",
+     "293",
+     "291",
+     "292",
+     "294",
+     "295",
+     "296",
+     "298",
+     "272",
+     "273",
+     "274",
+     "192",
+     "235",
+     "269",
+     "260",
+     "265",
+     "263",
+     "264",
+     "262",
+     "268",
+     "261",
+     "271",
+     "267",
+     "266",
+     "270",
+     "400",
+     "401"
+    ]
+   },
+   "location": {
+    "type": "string",
+    "titre": "Location (keyword searches only)",
+    "defaut": null,
+    "enum": null
+   },
+   "radiusKm": {
+    "type": "string",
+    "titre": "Radius around the location (keyword searches only)",
+    "defaut": "",
+    "enum": [
+     "",
+     "5",
+     "10",
+     "20",
+     "30",
+     "50",
+     "100",
+     "150",
+     "200",
+     "500"
+    ]
+   },
+   "minPrice": {
+    "type": "integer",
+    "titre": "Min price (€, keyword searches only)",
+    "defaut": null,
+    "enum": null
+   },
+   "maxPrice": {
+    "type": "integer",
+    "titre": "Max price (€, keyword searches only)",
+    "defaut": null,
+    "enum": null
+   },
+   "sortBy": {
+    "type": "string",
+    "titre": "Sort order (keyword searches only)",
+    "defaut": "newest",
+    "enum": [
+     "newest",
+     "price_asc",
+     "distance",
+     "recommended"
+    ]
+   },
+   "sellerType": {
+    "type": "string",
+    "titre": "Seller type (keyword searches only)",
+    "defaut": "all",
+    "enum": [
+     "all",
+     "private",
+     "commercial"
+    ]
+   },
+   "offerType": {
+    "type": "string",
+    "titre": "Offer type (keyword searches only)",
+    "defaut": "all",
+    "enum": [
+     "all",
+     "offered",
+     "wanted"
+    ]
+   },
+   "shipping": {
+    "type": "string",
+    "titre": "Shipping (keyword searches only)",
+    "defaut": "all",
+    "enum": [
+     "all",
+     "shippable",
+     "pickup"
+    ]
+   },
+   "buyNowOnly": {
+    "type": "boolean",
+    "titre": "Direkt kaufen only (keyword searches only)",
+    "defaut": false,
+    "enum": null
+   },
+   "photosOnly": {
+    "type": "boolean",
+    "titre": "With photos only",
+    "defaut": false,
+    "enum": null
+   },
+   "monitoringMode": {
+    "type": "boolean",
+    "titre": "Monitoring mode",
+    "defaut": false,
+    "enum": null
+   },
+   "maxItems": {
+    "type": "integer",
+    "titre": "Max listings in total",
+    "defaut": 100,
+    "enum": null
+   },
+   "includeListingDetails": {
+    "type": "boolean",
+    "titre": "Include full details and seller info",
+    "defaut": false,
+    "enum": null
+   },
+   "downloadImages": {
+    "type": "boolean",
+    "titre": "Download images into the run's key-value store",
+    "defaut": false,
+    "enum": null
+   },
+   "storeName": {
+    "type": "string",
+    "titre": "Key-value store name for downloaded images",
+    "defaut": "kleinanzeigen-images",
+    "enum": null
+   },
+   "maxConcurrency": {
+    "type": "integer",
+    "titre": "Max concurrency",
+    "defaut": 10,
+    "enum": null
+   },
+   "minConcurrency": {
+    "type": "integer",
+    "titre": "Min concurrency",
+    "defaut": 1,
+    "enum": null
+   },
+   "maxRequestRetries": {
+    "type": "integer",
+    "titre": "Max request retries",
+    "defaut": 3,
+    "enum": null
+   },
+   "proxy": {
+    "type": "object",
+    "titre": "Proxy configuration",
+    "defaut": null,
+    "enum": null
+   }
+  },
+  "damilo~google-shopping-apify": {
+   "query": {
+    "type": "string",
+    "titre": "Search query",
+    "defaut": "wireless earbuds",
+    "enum": null
+   },
+   "queries": {
+    "type": "array",
+    "titre": "Search queries",
+    "defaut": [],
+    "enum": null
+   },
+   "country": {
+    "type": "string",
+    "titre": "Country",
+    "defaut": "us",
+    "enum": [
+     "af",
+     "al",
+     "dz",
+     "as",
+     "ad",
+     "ao",
+     "ai",
+     "aq",
+     "ag",
+     "ar",
+     "am",
+     "aw",
+     "au",
+     "at",
+     "az",
+     "bs",
+     "bh",
+     "bd",
+     "bb",
+     "by",
+     "be",
+     "bz",
+     "bj",
+     "bm",
+     "bt",
+     "bo",
+     "ba",
+     "bw",
+     "bv",
+     "br",
+     "io",
+     "bn",
+     "bg",
+     "bf",
+     "bi",
+     "kh",
+     "cm",
+     "ca",
+     "cv",
+     "ky",
+     "cf",
+     "td",
+     "cl",
+     "cn",
+     "cx",
+     "cc",
+     "co",
+     "km",
+     "cg",
+     "cd",
+     "ck",
+     "cr",
+     "ci",
+     "hr",
+     "cu",
+     "cy",
+     "cz",
+     "dk",
+     "dj",
+     "dm",
+     "do",
+     "ec",
+     "eg",
+     "sv",
+     "gq",
+     "er",
+     "ee",
+     "et",
+     "fk",
+     "fo",
+     "fj",
+     "fi",
+     "fr",
+     "gf",
+     "pf",
+     "tf",
+     "ga",
+     "gm",
+     "ge",
+     "de",
+     "gh",
+     "gi",
+     "gr",
+     "gl",
+     "gd",
+     "gp",
+     "gu",
+     "gt",
+     "gn",
+     "gw",
+     "gy",
+     "ht",
+     "hm",
+     "va",
+     "hn",
+     "hk",
+     "hu",
+     "is",
+     "in",
+     "id",
+     "ir",
+     "iq",
+     "ie",
+     "il",
+     "it",
+     "jm",
+     "jp",
+     "jo",
+     "kz",
+     "ke",
+     "ki",
+     "kp",
+     "kr",
+     "kw",
+     "kg",
+     "la",
+     "lv",
+     "lb",
+     "ls",
+     "lr",
+     "ly",
+     "li",
+     "lt",
+     "lu",
+     "mo",
+     "mk",
+     "mg",
+     "mw",
+     "my",
+     "mv",
+     "ml",
+     "mt",
+     "mh",
+     "mq",
+     "mr",
+     "mu",
+     "yt",
+     "mx",
+     "fm",
+     "md",
+     "mc",
+     "mn",
+     "ms",
+     "ma",
+     "mz",
+     "mm",
+     "na",
+     "nr",
+     "np",
+     "nl",
+     "an",
+     "nc",
+     "nz",
+     "ni",
+     "ne",
+     "ng",
+     "nu",
+     "nf",
+     "mp",
+     "no",
+     "om",
+     "pk",
+     "pw",
+     "ps",
+     "pa",
+     "pg",
+     "py",
+     "pe",
+     "ph",
+     "pn",
+     "pl",
+     "pt",
+     "pr",
+     "qa",
+     "re",
+     "ro",
+     "ru",
+     "rw",
+     "sh",
+     "kn",
+     "lc",
+     "pm",
+     "vc",
+     "ws",
+     "sm",
+     "st",
+     "sa",
+     "sn",
+     "rs",
+     "sc",
+     "sl",
+     "sg",
+     "sk",
+     "si",
+     "sb",
+     "so",
+     "za",
+     "gs",
+     "es",
+     "lk",
+     "sd",
+     "sr",
+     "sj",
+     "sz",
+     "se",
+     "ch",
+     "sy",
+     "tw",
+     "tj",
+     "tz",
+     "th",
+     "tl",
+     "tg",
+     "tk",
+     "to",
+     "tt",
+     "tn",
+     "tr",
+     "tm",
+     "tc",
+     "tv",
+     "ug",
+     "ua",
+     "ae",
+     "gb",
+     "us",
+     "um",
+     "uy",
+     "uz",
+     "vu",
+     "ve",
+     "vn",
+     "vg",
+     "vi",
+     "wf",
+     "eh",
+     "ye",
+     "zm",
+     "zw"
+    ]
+   },
+   "language": {
+    "type": "string",
+    "titre": "Language",
+    "defaut": "en",
+    "enum": [
+     "af",
+     "ak",
+     "sq",
+     "am",
+     "ar",
+     "hy",
+     "az",
+     "eu",
+     "be",
+     "bem",
+     "bn",
+     "bh",
+     "bs",
+     "br",
+     "bg",
+     "km",
+     "ca",
+     "chr",
+     "ny",
+     "zh-cn",
+     "zh-tw",
+     "co",
+     "hr",
+     "cs",
+     "da",
+     "nl",
+     "en",
+     "eo",
+     "et",
+     "ee",
+     "fo",
+     "tl",
+     "fi",
+     "fr",
+     "fy",
+     "gaa",
+     "gl",
+     "ka",
+     "de",
+     "el",
+     "gn",
+     "gu",
+     "ht",
+     "ha",
+     "haw",
+     "iw",
+     "hi",
+     "hu",
+     "is",
+     "ig",
+     "id",
+     "ia",
+     "ga",
+     "it",
+     "ja",
+     "jw",
+     "kn",
+     "kk",
+     "rw",
+     "rn",
+     "kg",
+     "ko",
+     "kri",
+     "ku",
+     "ckb",
+     "ky",
+     "lo",
+     "la",
+     "lv",
+     "ln",
+     "lt",
+     "loz",
+     "lg",
+     "ach",
+     "mk",
+     "mg",
+     "ms",
+     "ml",
+     "mt",
+     "mi",
+     "mr",
+     "mfe",
+     "mo",
+     "mn",
+     "sr-ME",
+     "ne",
+     "pcm",
+     "nso",
+     "no",
+     "nn",
+     "oc",
+     "or",
+     "om",
+     "ps",
+     "fa",
+     "pl",
+     "pt",
+     "pt-br",
+     "pt-pt",
+     "pa",
+     "qu",
+     "ro",
+     "rm",
+     "nyn",
+     "ru",
+     "gd",
+     "sr",
+     "sh",
+     "st",
+     "tn",
+     "crs",
+     "sn",
+     "sd",
+     "si",
+     "sk",
+     "sl",
+     "so",
+     "es",
+     "es-419",
+     "su",
+     "sw",
+     "sv",
+     "tg",
+     "ta",
+     "tt",
+     "te",
+     "th",
+     "ti",
+     "to",
+     "lua",
+     "tum",
+     "tr",
+     "tk",
+     "tw",
+     "ug",
+     "uk",
+     "ur",
+     "uz",
+     "vi",
+     "cy",
+     "wo",
+     "xh",
+     "yi",
+     "yo",
+     "zu"
+    ]
+   },
+   "num": {
+    "type": "string",
+    "titre": "Number of results per page to scrape",
+    "defaut": "10",
+    "enum": [
+     "10",
+     "20",
+     "30",
+     "40",
+     "50",
+     "100"
+    ]
+   },
+   "max_pages": {
+    "type": "integer",
+    "titre": "Max pages to scrape",
+    "defaut": 1,
+    "enum": null
+   },
+   "date_range": {
+    "type": "string",
+    "titre": "Date range",
+    "defaut": "anytime",
+    "enum": [
+     "anytime",
+     "qdr:h",
+     "qdr:d",
+     "qdr:w",
+     "qdr:m"
+    ]
+   }
+  },
+  "zen-studio~1688-wholesale-scraper": {
+   "keywords": {
+    "type": "array",
+    "titre": "Search keywords (English or Chinese) 🔍",
+    "defaut": [
+     "wireless earbuds"
+    ],
+    "enum": null
+   },
+   "offerIds": {
+    "type": "array",
+    "titre": "Offer IDs",
+    "defaut": [],
+    "enum": null
+   },
+   "maxResults": {
+    "type": "integer",
+    "titre": "Max results (set 10000 for unlimited)",
+    "defaut": 100,
+    "enum": null
+   },
+   "sortBy": {
+    "type": "string",
+    "titre": "Sort order",
+    "defaut": "relevance",
+    "enum": [
+     "relevance",
+     "bestSelling",
+     "priceAsc",
+     "priceDesc"
+    ]
+   },
+   "includeSkuDetails": {
+    "type": "boolean",
+    "titre": "Include SKU variants",
+    "defaut": false,
+    "enum": null
+   },
+   "includeDescriptionHtml": {
+    "type": "boolean",
+    "titre": "Include full description HTML",
+    "defaut": false,
+    "enum": null
+   },
+   "includeSupplierIntelligence": {
+    "type": "boolean",
+    "titre": "Supplier Intelligence (paid add-on)",
+    "defaut": false,
+    "enum": null
+   },
+   "excludeKeywords": {
+    "type": "array",
+    "titre": "Exclude keywords 🚫",
+    "defaut": null,
+    "enum": null
+   },
+   "priceMin": {
+    "type": "integer",
+    "titre": "Minimum price (CNY)",
+    "defaut": null,
+    "enum": null
+   },
+   "priceMax": {
+    "type": "integer",
+    "titre": "Maximum price (CNY)",
+    "defaut": null,
+    "enum": null
+   },
+   "minOrderQuantity": {
+    "type": "integer",
+    "titre": "Minimum order quantity",
+    "defaut": null,
+    "enum": null
+   },
+   "merchantType": {
+    "type": "string",
+    "titre": "Merchant type",
+    "defaut": "any",
+    "enum": [
+     "any",
+     "superFactory",
+     "verifiedMerchant"
+    ]
+   },
+   "province": {
+    "type": "string",
+    "titre": "Supplier province",
+    "defaut": null,
+    "enum": null
+   },
+   "city": {
+    "type": "string",
+    "titre": "Supplier city",
+    "defaut": null,
+    "enum": null
+   },
+   "proxyCountryMode": {
+    "type": "string",
+    "titre": "Proxy country",
+    "defaut": "rotate",
+    "enum": [
+     "rotate",
+     "CN",
+     "HK"
+    ]
+   },
+   "feedback": {
+    "type": "string",
+    "titre": "Feedback to the maintainers",
+    "defaut": null,
+    "enum": null
+   }
+  }
+ }
+}

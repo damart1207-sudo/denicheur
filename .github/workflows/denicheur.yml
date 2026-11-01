@@ -1,12 +1,12 @@
 name: Dénicheur
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
-#  16:30 UTC = 00:30 à Pékin = 17:30 à Paris l'hiver  -> passage "asie" (nouvelles promos du jour chinois)
+#  toutes les 30 min -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
 #  02:00 UTC = 10:00 à Pékin = 03:00 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
 on:
   schedule:
-    - cron: "30 16 * * *"
     - cron: "0 2 * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
     inputs:
       passage:
@@ -26,6 +26,9 @@ on:
         default: "false"
       comparateurs:
         description: "true = tester l'accès aux comparateurs"
+        default: "false"
+      veille:
+        description: "true = un tour de veille"
         default: "false"
 
 permissions:
@@ -57,9 +60,12 @@ jobs:
           EBAY_CLIENT_SECRET: ${{ secrets.EBAY_CLIENT_SECRET }}
         run: |
           PASSAGE="${{ github.event.inputs.passage }}"
-          if [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then PASSAGE=asie; fi
           if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
+          if [ "${{ github.event.schedule }}" = "*/30 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
+            python -m denicheur.veille
+            exit 0
+          fi
           pip install -q pytrends "urllib3<2" || true
           if [ "${{ github.event.inputs.comparateurs }}" = "true" ]; then
             python -m denicheur --comparateurs
@@ -82,6 +88,6 @@ jobs:
           mkdir -p data
           git add -A data
           if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
-          git commit -m "Passage du $(date -u +%Y-%m-%dT%H:%MZ)"
+          git commit -q -m "Passage du $(date -u +%Y-%m-%dT%H:%MZ)"
           git pull --rebase origin main
           git push origin HEAD:main

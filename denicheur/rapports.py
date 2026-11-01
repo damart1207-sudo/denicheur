@@ -7,6 +7,7 @@ Demande     : Google Trends (intérêt relatif 0-100 sur 90 jours en France, ten
               Pas de volume exact type Semrush : ce chiffre n'existe que dans des outils payants.
 """
 import json
+import re
 import urllib.parse
 import urllib.request
 
@@ -34,6 +35,15 @@ def _annonces(tok, q, marche, mini, maxi, limite=200, tri="price"):
     return d.get("total", len(items)), items
 
 
+ACCESSOIRES = re.compile(r"bracelet|sangle|strap|band\b|armband|cinturino|correa|coque|h[uü]lle|case\b|cover|funda|custodia|chargeur|charger|ladekabel|cargador|caricatore|c[aâ]ble|kabel|cable|film|protect|schutz|glas\b|verre|pellicola|protector|support|halter|soporte|supporto|t-?shirt|maglia|camis|shirt|top\b|tee\b|chaussettes|socken|lacets|schn[uü]rsenkel|semelle|insole|sticker|autocollant|pi[eè]ce|ersatz|repuesto|ricambio|bo[iî]te vide|leerkarton|\bGS\b|enfant|kinder|junior|bambino|ni[nñ]o|\bPS\b|\bTD\b", re.I)
+
+
+def _garder(items, q):
+    mots = [m.lower() for m in re.findall(r"\w+", q) if len(m) > 1]
+    return [i for i in items if i["titre"] and all(m in i["titre"].lower() for m in mots)
+            and not ACCESSOIRES.search(i["titre"])]
+
+
 def niveau(nb):
     return "peu" if nb < 10 else ("moyen" if nb <= 50 else "nombreux")
 
@@ -42,16 +52,18 @@ def concurrence(tok, q, prix_achat):
     rapport = {"requete": q, "pays": {}}
     for code, marche in MARCHES.items():
         try:
-            total, items = _annonces(tok, q, marche, prix_achat * 0.6, prix_achat * 4, limite=3)
-            haut = _annonces(tok, q, marche, prix_achat * 0.6, prix_achat * 4, limite=1, tri="-price")[1] if total > 3 else []
+            total, bas = _annonces(tok, q, marche, prix_achat * 0.5, prix_achat * 4)
+            bas_ok = _garder(bas, q)
+            haut_ok = _garder(_annonces(tok, q, marche, prix_achat * 0.5, prix_achat * 4, tri="-price")[1], q) if total > len(bas) else []
         except Exception as e:
             rapport["pays"][code] = {"erreur": f"{type(e).__name__}"}
             continue
-        utiles = list(items) + list(haut)  # le filtre de prix écarte déjà accessoires et annonces farfelues
-        utiles.sort(key=lambda i: i["prix"])
+        # nombre estimé de vraies annonces du produit (part des annonces gardées x total eBay)
+        nb = round(total * len(bas_ok) / len(bas)) if bas else 0
+        tous = sorted(bas_ok + haut_ok, key=lambda i: i["prix"])
         rapport["pays"][code] = {
-            "nb_annonces": total, "total_ebay": total, "niveau": niveau(total),
-            "moins_cher": utiles[0] if utiles else None, "plus_cher": utiles[-1] if utiles else None}
+            "nb_annonces": nb, "total_ebay": total, "niveau": niveau(nb),
+            "moins_cher": tous[0] if tous else None, "plus_cher": tous[-1] if tous else None}
     nbs = [p["nb_annonces"] for p in rapport["pays"].values() if "nb_annonces" in p]
     rapport["niveau_global"] = niveau(max(nbs)) if nbs else None
     return rapport

@@ -245,13 +245,29 @@ def verifier():
     ecrire("data/verification.json", {"date": heure, "resultats": lignes})
 
 
+def tester_sources():
+    """Teste chaque source candidate (gratuit) et écrit data/test_sources.json."""
+    cands = charger("config/sources_candidates.json")["candidates"]
+    res = []
+    for s_ in cands:
+        items, err = collecte.lire_flux(s_)
+        avec_prix = sum(1 for a in items if a.get("prix"))
+        res.append({**s_, "ok": err is None and len(items) > 0, "nb": len(items), "avec_prix": avec_prix,
+                    "erreur": err, "exemple": items[0]["titre"][:90] if items else None})
+        print(("✅" if items else "❌"), s_["id"], len(items), "annonces,", avec_prix, "avec prix", err or "")
+    ecrire("data/test_sources.json", res)
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--passage", choices=["asie", "europe"], default="europe")
     p.add_argument("--test", action="store_true")
     p.add_argument("--verifier", action="store_true", help="tester les 5 clés")
+    p.add_argument("--sources", action="store_true", help="tester les sources candidates")
     a = p.parse_args()
-    if a.verifier:
+    if a.sources:
+        tester_sources()
+    elif a.verifier:
         verifier()
     else:
         passage(a.passage, a.test)

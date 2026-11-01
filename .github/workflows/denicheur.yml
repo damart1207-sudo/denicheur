@@ -18,6 +18,9 @@ on:
       verifier:
         description: "true = vérifier seulement les 5 clés (1 petit message par IA)"
         default: "false"
+      sources:
+        description: "true = tester les sources candidates"
+        default: "false"
 
 permissions:
   contents: write
@@ -51,7 +54,9 @@ jobs:
           if [ "${{ github.event.schedule }}" = "30 16 * * *" ]; then PASSAGE=asie; fi
           if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
-          if [ "${{ github.event.inputs.verifier }}" = "true" ]; then
+          if [ "${{ github.event.inputs.sources }}" = "true" ]; then
+            python -m denicheur --sources
+          elif [ "${{ github.event.inputs.verifier }}" = "true" ]; then
             python -m denicheur --verifier
           elif [ "${{ github.event.inputs.test }}" = "true" ]; then
             python -m denicheur --passage "$PASSAGE" --test

@@ -16,6 +16,9 @@ import urllib.request
 TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token"
 SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 SCOPE = "https://api.ebay.com/oauth/api_scope"
+LANGUES = {"EBAY_FR": "fr-FR", "EBAY_DE": "de-DE", "EBAY_IT": "it-IT", "EBAY_ES": "es-ES", "EBAY_GB": "en-GB"}
+# Pays de revente comparés (tous en euros, livrables depuis la France sans douane)
+MARCHES_EUROPE = {"EBAY_DE": "DE", "EBAY_IT": "IT", "EBAY_ES": "ES"}
 MOTS_VIDES = re.compile(r"\[.*?\]|\(.*?\)|via .*$|\b(bei|chez|sur|at|en|de|la|le|les|pour|für|mit|avec|offert|gratis|gratuit|livraison|tailles?|talla|taille)\b", re.I)
 
 
@@ -49,7 +52,7 @@ def chercher(tok, q, marche="EBAY_FR", neuf=None, limite=50):
     params = urllib.parse.urlencode({"q": q, "limit": limite, "filter": ",".join(filtres)})
     req = urllib.request.Request(f"{SEARCH_URL}?{params}", headers={
         "Authorization": f"Bearer {tok}", "X-EBAY-C-MARKETPLACE-ID": marche,
-        "Accept-Language": "fr-FR" if marche == "EBAY_FR" else "en-GB"})
+        "Accept-Language": LANGUES.get(marche, "en-GB")})
     with urllib.request.urlopen(req, timeout=30) as r:
         items = json.loads(r.read()).get("itemSummaries", [])
     prix = []
@@ -93,6 +96,18 @@ def controler(candidats, maxi=15):
             continue
         c["ebay"] = {"requete": q, "neuf": resume(neuf, c["prix"]), "occasion": resume(occ, c["prix"]),
                      "exemples": (ex_o or ex_n)[:3]}
+        # Même recherche dans les autres pays d'Europe : où le produit se revend-il le plus cher ?
+        pays = {"FR": (c["ebay"]["neuf"] or {}).get("p25")}
+        for marche, code in MARCHES_EUROPE.items():
+            try:
+                pn, _ = chercher(tok, q, marche=marche, neuf=True, limite=30)
+                r = resume(pn, c["prix"])
+                pays[code] = r["p25"] if r else None
+            except Exception:
+                pays[code] = None
+        c["ebay"]["neuf_par_pays"] = pays
+        connus = {k: v for k, v in pays.items() if v}
+        c["ebay"]["meilleur_pays"] = max(connus, key=connus.get) if connus else None
         bilan["faits"] += 1
     return bilan
 

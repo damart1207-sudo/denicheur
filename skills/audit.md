@@ -16,7 +16,14 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 4. **Rejets automatiques** : achat impossible depuis la France (magasin physique étranger, carte de
    fidélité obligatoire), batterie seule, alimentaire, produit sous licence douteuse, demande en chute
    (après un événement), taille unique pour un vêtement, « erreur de prix » probable (le dire).
-5. En cas de doute sans preuve → **rejet** (motif : « prix de revente non confirmé »). Mieux vaut
+5. **Mode et canal de vente** (pour chaque affaire validée) :
+   - `mode` : `stock` (acheter, recevoir, revendre), `dropshipping` (vendre d'abord, le marchand livre
+     directement le client) ou `les_deux`. Dropshipping seulement si : l'offre dure (pas une vente flash),
+     le marchand livre le pays du client avec suivi, et le canal l'autorise (jamais Leboncoin ni Vinted :
+     il faut avoir l'objet en main ; eBay : seulement depuis un grossiste, pas depuis un magasin).
+   - `ou_vendre` : canal + pays, ex. « Leboncoin (France) », « Vinted (France, Italie, Espagne) »,
+     « eBay Allemagne ». Se servir de `ebay.neuf_par_pays` / `meilleur_pays` pour choisir le pays.
+6. En cas de doute sans preuve → **rejet** (motif : « prix de revente non confirmé »). Mieux vaut
    rater une affaire que d'en valider une fausse.
 
 ## Fichier d'audit à écrire : `data/audits/<horodatage du passage>.json`
@@ -24,7 +31,8 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 {"horodatage": "...", "date": "JJ/MM/AAAA", "auditeur": "Claude",
  "resume": "N validées sur M. <2 phrases sur les meilleures et les motifs de rejet>",
  "verdicts": [{"id": "...", "verdict": "valide|rejete", "commentaire": "...",
-               "prix_revente_verifie": 0, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 0}],
+               "prix_revente_verifie": 0, "plateforme_verifiee": "leboncoin", "marge_nette_verifiee": 0,
+               "mode": "stock|dropshipping|les_deux", "ou_vendre": "Leboncoin (France)"}],
  "valides": ["id", "..."],
  "rejetes": [{"id": "...", "motif": "..."}]}
 ```

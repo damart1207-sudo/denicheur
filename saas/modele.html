@@ -240,7 +240,7 @@ const COURT = {gemini:"Gemini",deepseek:"DeepSeek",nemotron:"Nemotron",glm:"GLM 
 const nom = k => COURT[k]||NOMS[k]||k;
 const PLATEFORMES = {amazon:"Amazon",vinted:"Vinted",leboncoin:"Leboncoin",ebay:"eBay",etsy:"Etsy",backmarket:"Back Market"};
 const DOMAINES = {"tech":"Tech","gaming":"Jeux vidéo","maison":"Maison","cuisine":"Cuisine","jardin-bricolage":"Jardin & bricolage","sport":"Sport","auto-moto":"Auto-moto","mode":"Mode","puericulture-jouets":"Enfants & jouets","beaute-sante":"Beauté & santé","animaux":"Animaux","vintage-collection":"Vintage & collection","autre":"Autre"};
-const PAYS = {FR:"France",DE:"Allemagne",UK:"Royaume-Uni",ES:"Espagne"};
+const PAYS = {FR:"France",DE:"Allemagne",UK:"Royaume-Uni",ES:"Espagne",IT:"Italie",PL:"Pologne",AT:"Autriche",NL:"Pays-Bas",US:"États-Unis"};
 const VERDICTS = {valide:"Validée",rejete:"Rejetée",attente:"À vérifier"};
 const euro = n => (n==null||isNaN(n)) ? "–" : Number(n).toLocaleString("fr-FR",{maximumFractionDigits:0})+" €";
 const prix = (n,dev) => (n==null) ? "–" : Number(n).toLocaleString("fr-FR",{minimumFractionDigits:2,maximumFractionDigits:2})+(dev==="GBP"?" £":" €");
@@ -256,6 +256,7 @@ const DUJOUR = DER ? TOUTES.filter(a=>a.passage===DER.horodatage) : [];
 let etat = {mode:"tous", tri:"marge", domaine:null};
 try { const m = localStorage.getItem("den_mode"); if (m) etat.mode = m; } catch(e) {}
 
+const MODES = {dropshipping:"Dropshipping", stock:"Avec stock", les_deux:"Stock ou dropshipping"};
 function etiquette(a){
   const v = a.audit || {verdict:"attente"}, g = a.verification;
   const rev = reventeDe(a), marge = margeDe(a);
@@ -272,11 +273,13 @@ function etiquette(a){
         <span>Domaine <b>${esc(DOMAINES[a.domaine]||a.domaine)}</b></span>
         <span>Demande <b class="chiffre">${a.demande}/5</b></span>
         <span>Concurrence <b class="chiffre">${a.concurrence}/5</b></span>
-        <span>Mode <b>${a.mode==="dropshipping"?"Dropshipping":"Avec stock"}</b></span>
+        <span>Mode <b>${MODES[v.mode||a.mode]||"Avec stock"}</b></span>
+        ${v.ou_vendre?`<span>Où vendre <b>${esc(v.ou_vendre)}</b></span>`:""}
         <span class="ia">Trouvé par ${(a.agents||[]).map(x=>`<i>${esc(nom(x))}</i>`).join("")}</span>
       </div>
       ${g?`<div class="encart google"><span class="etiq">Vérifié sur Google</span><br>${g.prix_neuf_min?`Neuf dès <b class="chiffre">${euro(g.prix_neuf_min)}</b>${g.marchand_neuf_min?" ("+esc(g.marchand_neuf_min)+")":""}`:"Prix neuf non trouvé"}${g.occasion_haut?` · occasion <b class="chiffre">${euro(g.occasion_bas)}–${euro(g.occasion_haut)}</b>`:""}${(g.sources||[]).length?` · ${(g.sources||[]).slice(0,3).map((s,i)=>`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre||"source "+(i+1))}</a>`).join(", ")}`:""}</div>`:""}
       ${a.ebay&&(a.ebay.occasion||a.ebay.neuf)?`<div class="encart google"><span class="etiq">Annonces eBay en cours</span><br>${a.ebay.occasion?`Occasion : <b class="chiffre">${euro(a.ebay.occasion.p25)}</b> à <b class="chiffre">${euro(a.ebay.occasion.mediane)}</b> (${a.ebay.occasion.nb} annonces)`:""}${a.ebay.occasion&&a.ebay.neuf?" · ":""}${a.ebay.neuf?`Neuf : <b class="chiffre">${euro(a.ebay.neuf.p25)}</b> à <b class="chiffre">${euro(a.ebay.neuf.mediane)}</b> (${a.ebay.neuf.nb} annonces)`:""}${(a.ebay.exemples||[]).length?` · ${a.ebay.exemples.slice(0,2).map((x,i)=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">exemple ${i+1}</a>`).join(", ")}`:""}</div>`:""}
+      ${a.ebay&&a.ebay.neuf_par_pays?`<div class="encart google"><span class="etiq">Revente neuve sur eBay par pays (prix bas)</span><br>${Object.entries(a.ebay.neuf_par_pays).map(([k,x])=>`${esc(PAYS[k]||k)} <b class="chiffre">${x?euro(x):"—"}</b>`).join(" · ")}${a.ebay.meilleur_pays?` · le plus cher : <b>${esc(PAYS[a.ebay.meilleur_pays]||a.ebay.meilleur_pays)}</b>`:""}</div>`:""}
       ${v.commentaire?`<div class="encart ${esc(v.verdict)}"><span class="etiq">Audit de Claude</span><br>${esc(v.commentaire)}</div>`:""}
     </div>
     <div class="marge"><span>Marge nette</span><b>${euro(marge)}</b><span>${a.cout_achat?Math.round(100*marge/a.cout_achat):0} % du coût</span></div>

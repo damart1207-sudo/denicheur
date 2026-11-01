@@ -85,7 +85,7 @@ def tour():
         if a["id"] in deja:
             continue
         if (ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85)):
-            x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
+            x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie")},
                  "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
                  "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),
                  "statut": "a_verifier"}
@@ -101,6 +101,16 @@ def tour():
              "nommees": len(noms), "alertes": len(nouvelles_alertes),
              "ia": {"appels": agent.appels, "reussites": agent.reussites, "erreurs": agent.erreurs[:2]} if agent else None,
              "sources_ko": [k for k, v in etat.items() if not v["ok"]]}
+    # statistiques par catégorie (pour, dans quelques semaines, se concentrer sur les plus rentables)
+    stats = _lire("data/stats_categories.json", {})
+    for a in nouvelles:
+        cat = (a.get("categorie") or "?").strip()[:60] or "?"
+        st = stats.setdefault(cat, {"annonces": 0, "alertes": 0, "temperature_totale": 0})
+        st["annonces"] += 1
+        st["temperature_totale"] += max(0, a.get("temperature") or 0)
+    for x in nouvelles_alertes:
+        stats.setdefault((x.get("categorie") or "?").strip()[:60] or "?", {"annonces": 0, "alertes": 0, "temperature_totale": 0})["alertes"] += 1
+    _ecrire("data/stats_categories.json", stats)
     journal = _lire("data/veille_journal.json", [])
     _ecrire("data/veille_journal.json", (journal + [bilan])[-200:])
     print(json.dumps(bilan, ensure_ascii=False))

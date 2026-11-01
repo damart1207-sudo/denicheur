@@ -11,7 +11,7 @@ import re
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
 
-from . import collecte, comparateurs, equipe
+from . import apify, collecte, comparateurs, equipe
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -89,6 +89,16 @@ def tour():
                  "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
                  "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),
                  "statut": "a_verifier"}
+            # contre-vérification automatique sur idealo (Apify) + prix réels Vinted / Leboncoin
+            pi = apify.prix_idealo(nom) if nom else None
+            if pi:
+                x["idealo"] = pi
+                x["ecart_vs_idealo"] = round(a["prix"] / pi["prix_min"], 3)
+                if x["ecart_vs_idealo"] > 0.85 and not signal:
+                    continue  # idealo montre que ce n'est pas une vraie affaire : on n'alerte pas
+                x["prix_plancher"] = {"prix_min": min(pi["prix_min"], pmin or 1e9), "ou": "idealo", "lien": pi["lien"]}
+            if nom:
+                x["revente_reelle"] = apify.revente_reelle(nom, a["prix"])
             x["canaux"] = equipe.canaux_de_vente(x, regles)
             nouvelles_alertes.append(x)
     # ne marquer « vu » que ce qui a été examiné (le reste sera revu au prochain tour)
@@ -100,7 +110,8 @@ def tour():
              "annonces": len(annonces), "nouvelles": len(nouvelles), "examinees": len(lot),
              "nommees": len(noms), "alertes": len(nouvelles_alertes),
              "ia": {"appels": agent.appels, "reussites": agent.reussites, "erreurs": agent.erreurs[:2]} if agent else None,
-             "sources_ko": [k for k, v in etat.items() if not v["ok"]]}
+             "sources_ko": [k for k, v in etat.items() if not v["ok"]],
+             "apify_budget": apify._budget()}
     # statistiques par catégorie (pour, dans quelques semaines, se concentrer sur les plus rentables)
     stats = _lire("data/stats_categories.json", {})
     for a in nouvelles:

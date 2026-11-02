@@ -1,0 +1,205 @@
+{
+ "verites": {
+  "a1": {
+   "produit": "iPhone 17",
+   "capacite_annonce": "256 Go",
+   "capacite_photo": "128 Go (contradiction)",
+   "prix": 549,
+   "pieges": [
+    "capacité de la boîte (128GB) ≠ titre (256 Go)",
+    "paiement par virement uniquement hors plateforme",
+    "contact par e-mail hors plateforme",
+    "compte créé récemment, 0 avis",
+    "prix ~25 % sous le neuf"
+   ],
+   "verdict": "arnaque probable"
+  },
+  "a2": {
+   "produit": "PS5 Slim",
+   "prix": 299,
+   "pieges": [
+    "l'étiquette de la photo indique DIGITAL EDITION (sans lecteur) alors que la description dit avec lecteur"
+   ],
+   "verdict": "prudence (contradiction à clarifier)"
+  },
+  "a3": {
+   "produit": "Dyson V15 Detect Absolute",
+   "prix": 320,
+   "pieges": [],
+   "verdict": "achat sûr (annonce cohérente)"
+  },
+  "a4": {
+   "produit": "écouteurs type AirPods Pro 2",
+   "prix": 89,
+   "pieges": [
+    "prix ~65 % sous le neuf",
+    "boîte « AirPod Pro » mal orthographiée, mention « Compatible / High Quality » = contrefaçon",
+    "10 pièces en stock + livraison étranger 15-20 j"
+   ],
+   "verdict": "contrefaçon probable"
+  },
+  "a5": {
+   "produit": "Samsung Galaxy S25 Ultra 512 Go",
+   "prix": 780,
+   "pieges": [
+    "écran fissuré (visible sur la photo et indiqué)",
+    "version Hong Kong (import, garantie FR absente)",
+    "chargeur non fourni"
+   ],
+   "verdict": "prudence (défauts réels, prix à revoir)"
+  }
+ },
+ "modeles": {
+  "gemini:gemini-2.5-flash-lite": {
+   "a1": {
+    "erreur": "HTTP 404 [{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash-lite is no longer available to new users. Please update your code "
+   }
+  },
+  "gemini:gemini-2.5-flash": {
+   "a1": {
+    "erreur": "HTTP 404 [{\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to us"
+   }
+  },
+  "openrouter:nvidia/nemotron-3.5-super-vl:free": {
+   "a1": {
+    "s": 15.7,
+    "rep": "{\n  \"produit\": \"iPhone 17\",\n  \"capacite\": \"256 Go\",\n  \"couleur\": \"Blanc\",\n  \"prix\": 549,\n  \"etat\": \"Neuf\",\n  \"contradictions\": [\n    \"Le texte sur l'image indique 128GB alors que le titre et la description indiquent 256 Go\",\n    \"Le modèle iPhone 17 n'existe pas encore\",\n    \"La date d'inscription du membre est octobre 2026, une date future\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour un iPhone neuf\",\n    \"Paiement par virement bancaire uniquement sans protection acheteur\",\n    \"Pas de remise en main propre\",\n    \"Adresse email Gmail générique\",\n    \"Modèle d'iPhone inexistant\"\n  ],\n  \"defauts\": [\n    \"Incohérence de capacité entre la photo et le texte\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente des contradictions majeures sur la capacité de stockage et propose un modèle d'iPhone qui n'existe pas encore. Les conditions de paiement par virement uniquement et l'absence de remise en main propre confirment qu'il s'agit très probablement d'une arnaque.\"\n}"
+   },
+   "a2": {
+    "s": 66.3,
+    "rep": "{\n  \"produit\": \"PS5 Slim\",\n  \"capacite\": null,\n  \"couleur\": \"Blanc\",\n  \"prix\": 299,\n  \"etat\": \"très bon état\",\n  \"contradictions\": [\n    \"L'image indique 'PS5 Slim DIGITAL EDITION (sans lecteur disque)' alors que le titre annonce 'avec lecteur disque'\",\n    \"Le texte superposé sur la photo contredit le titre de l'annonce concernant la présence d'un lecteur\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix de 299 € bien en dessous du prix du marché pour une PS5 Slim\",\n    \"Date d'achat annoncée en 2025, incohérente ou future\",\n    \"Incohérence majeure entre le visuel (Digital) et la description (avec lecteur)\",\n    \"Mention 'paiement sécurisé' pour un envoi pouvant cacher un lien de phishing\"\n  ],\n  \"defauts\": [\n    \"Contradiction sur le modèle (Digital vs Lecteur disque)\",\n    \"Prix suspectement bas\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente une contradiction majeure entre l'image qui indique une PS5 Slim Digital Edition sans lecteur et le titre qui annonce une version avec lecteur disque. De plus, le prix de 299 € est anormalement bas et la date d'achat de 2025 rend l'offre peu crédible.\"\n}"
+   },
+   "a3": {
+    "s": 37.6,
+    "rep": "{\n  \"produit\": \"Dyson V15 Detect Absolute\",\n  \"capacite\": null,\n  \"couleur\": \"Violet/Jaune\",\n  \"prix\": 320,\n  \"etat\": \"Occasion (batterie en parfait état)\",\n  \"contradictions\": [\n    \"L'image affiche 'Dyson V15 Detect' alors que le titre précise 'Absolute'\",\n    \"L'image est une illustration vectorielle générique et non une photo de l'objet vendu\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas (320 €) pour un modèle haut de gamme acheté en mars 2025\",\n    \"Absence de photos réelles de l'appareil\",\n    \"Mention 'Paiement sécurisé via le site' typique des tentatives de phishing\",\n    \"Vendeur particulier avec avis élogieux pouvant être faux\"\n  ],\n  \"defauts\": [\n    \"Aucune photo réelle de l'aspirateur\",\n    \"Capacité du bac à poussière non mentionnée\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 320 € est suspectement bas pour un Dyson V15 Detect Absolute acheté récemment en mars 2025. L'utilisation d'une image générique et la mention d'un paiement sécurisé via le site sont des indicateurs forts d'arnaque.\"\n}"
+   },
+   "a4": {
+    "s": 28.5,
+    "rep": "{\n  \"produit\": \"AirPods Pro 2\",\n  \"capacite\": null,\n  \"couleur\": \"blanc\",\n  \"prix\": 89,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"L'image affiche 'AirPod Pro' générique alors que le titre annonce 'AirPods Pro 2'\",\n    \"La localisation est Paris mais la livraison se fait depuis l'étranger\",\n    \"Le vendeur est membre depuis septembre 2026 (date future)\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas (89 € vs ~279 € officiel)\",\n    \"Livraison depuis l'étranger malgré localisation Paris\",\n    \"Image générique/icône au lieu de photo réelle du produit\",\n    \"Date d'inscription membre dans le futur\",\n    \"Mention 'Compatible iPhone et Android' typique des clones\"\n  ],\n  \"defauts\": [\n    \"Aucune photo réelle du produit\",\n    \"Description vague ('qualité premium')\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 89 € pour des AirPods Pro 2 neufs scellés est irréaliste et la livraison depuis l'étranger contredit la localisation Paris. De plus, l'image est une icône générique et la date d'inscription du vendeur est dans le futur, confirmant le caractère frauduleux.\"\n}"
+   },
+   "a5": {
+    "s": 13.8,
+    "rep": "{\n  \"produit\": \"Samsung Galaxy S25 Ultra\",\n  \"capacite\": \"512 Go\",\n  \"couleur\": \"Titane Noir\",\n  \"prix\": 780,\n  \"etat\": \"très peu servi\",\n  \"contradictions\": [\n    \"La photo indique une 'Boîte scellée' alors que la description mentionne un appareil 'très peu servi' avec une fissure.\",\n    \"Le modèle Galaxy S25 Ultra n'est pas encore commercialisé à ce jour.\",\n    \"Le prix de 780 € est incohérent avec un flagship neuf sous scellé.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour un modèle Ultra.\",\n    \"Version Hong Kong sans garantie locale probable.\",\n    \"Mention 'Paiement sécurisé accepté' vague typique des arnaques.\",\n    \"Incohérence entre état neuf (scellé) et état occasion (fissure).\"\n  ],\n  \"defauts\": [\n    \"Petite fissure dans le coin en bas de l'écran\",\n    \"Chargeur non fourni\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce affiche une boîte scellée sur la photo mais décrit un appareil d'occasion avec une fissure à l'écran. De plus, le prix de 780 € pour un Galaxy S25 Ultra, modèle non commercialisé, est incohérent et signe une probable arnaque.\"\n}"
+   }
+  },
+  "openrouter:nvidia/nemotron-3.5-content-safety:free": {
+   "a1": {
+    "erreur": "HTTP 404 {\"error\":{\"message\":\"Provider returned error\",\"code\":404,\"metadata\":{\"raw\":\"{\\\"status\\\":404,\\\"title\\\":\\\"Not Found\\\",\\\"detail\\\":\\\"Function id '3e84ff75"
+   }
+  },
+  "openrouter:nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+   "a1": {
+    "s": 22.4,
+    "rep": "{\n  \"produit\": \"iPhone 17\",\n  \"capacite\": 128,\n  \"couleur\": \"White\",\n  \"prix\": 549,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"Capacité indiquée sur la photo : 128 GB alors que le titre et la description mentionnent 256 GB.\",\n    \"La photo indique une « Boîte scellée » alors que le titre précise « sous blister », créant une incohérence sur l’état d’ouverture.\",\n    \"La date d’inscription du membre est « octobre 2026 », soit une date future, contrairement à « Aujourd’hui/hui ».\",\n    \"Aucun avis (0 avis) pour un article haut de gamme, ce qui est inhabituel.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Paiement uniquement par virement bancaire, sans possibilité de paiement en espèces ou de rencontre en personne.\",\n    \"Absence de photos réelles du produit, uniquement des images génériques.\",\n    \"Contact fourni par email externe (bonplan.tel77@gmail.com) plutôt que via la plateforme.\",\n    \"Promesse de « cadeau en double » et de « paiement rapide » sans garantie de livraison.\"\n  ],\n  \"defauts\": [\n    \"Incohérence de capacité (128 GB vs 256 GB) qui peut induire en erreur l’acheteur.\",\n    \"Description contradictoire entre « boîte scellée » et « sous blister », rendant incertain l’état réel du produit.\",\n    \"Absence de retours ou de garantie, et exigence de virement bancaire uniquement, limitant la protection de l’acheteur.\",\n    \"Date d’inscription future et aucun avis, signe d’un profil suspect.\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L’annonce comporte de nombreuses contradictions (capacité, description de l’emballage, date de membre future) et ne propose aucun moyen de vérifier le produit en personne, ce qui est typique d’une arnaque. Le要求 de virement bancaire uniquement et l’absence d’avis ou de photos réelles renforcent le risque de fraude.\"\n}"
+   },
+   "a2": {
+    "s": 14.7,
+    "rep": "{\n  \"produit\": \"PS5 Slim\",\n  \"capacite\": \"non spécifiée\",\n  \"couleur\": \"non spécifiée\",\n  \"prix\": 299,\n  \"etat\": \"très bon état\",\n  \"contradictions\": [\n    \"La photo indique « DIGITAL EDITION (sans lecteur disque) » alors que le titre et la description affirment « avec lecteur disque ».\",\n    \"Le titre mentionne « PS5 Slim avec lecteur disque + 1 manette », contrairement à la photo qui montre la version digitale sans lecteur.\",\n    \"La description affirme « Version avec lecteur disque, parfaite pour les jeux physiques », ce qui contredit l’image du modèle digital.\",\n    \"L'annonce indique « achetée en 2025 », une date future impossible pour une transaction actuelle.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix de 299 € largement inférieur au prix habituel d’une PS5 Slim (environ 450‑500 €).\",\n    \"Promesse d’un achat en 2025, incohérent avec le contexte actuel.\",\n    \"Nombre très faible d’avis (37) malgré une note élevée de 4,8, signe potentiel de manipulation.\",\n    \"Absence de précisions sur la capacité de stockage et la couleur, informations habituellement fournies.\",\n    \"Formulation vague « envoi avec paiement sécurisé » sans préciser le mode de paiement.\"\n  ],\n  \"defauts\": [\n    \"Incohérence entre la photo (digital edition) et la description (lecteur disque).\",\n    \"Prix suspectément bas pour le modèle annoncé.\",\n    \"Manque de détails sur la capacité et la couleur du produit.\",\n    \"Date d'achat future (2025) impossible.\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente une PS5 Slim à 299 €, prix bien en dessous du marché, et indique qu'elle possède un lecteur disque alors que la photo montre clairement la version digitale sans lecteur. De plus, la mention d'un achat en 2025 rend l'annonce incohérente et suspecte, signe d'une possible arnaque.\"\n}"
+   },
+   "a3": {
+    "s": 43.1,
+    "rep": "{\n  \"produit\": \"Dyson V15 Detect Absolute\",\n  \"capacite\": \"60 min\",\n  \"couleur\": \"purple\",\n  \"prix\": 320,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"Le modèle indiqué sur la photo est « Dyson V15 Detect » alors que le titre et la description précisent « Dyson V15 Detect Absolute ».\",\n    \"La photo montre une icône générique plutôt qu’une vraie photo du produit, ce qui contredit l’affirmation de « Facture + accessoires ».\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix très bas (320 €) comparé à la valeur habituelle d’un Dyson V15 neuf (> 800 €).\",\n    \"Image générique (icône) au lieu d’une photo réelle du produit.\",\n    \"Demande de paiement « via le site ou main propre », hors plateforme, typique des arnaques.\",\n    \"Garantie constructeur jusqu’en 2027 alors que le produit a été acheté en mars 2025, ce qui peut être trompeur.\"\n  ],\n  \"defauts\": [],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 320 € est bien en dessous du prix habituel d’un Dyson V15 neuf, ce qui est suspect. L’absence de photo réelle du produit et la demande de paiement hors plateforme sont des indices classiques d’une arnaque.\"\n}"
+   },
+   "a4": {
+    "s": 21.8,
+    "rep": "{\n  \"produit\": \"AirPods Pro 2\",\n  \"capacite\": \"non indiqué\",\n  \"couleur\": \"non indiqué\",\n  \"prix\": 89,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"Photo indique \\\"AirPod Pro\\\" (singulier) alors que le titre et la description mentionnent \\\"AirPods Pro 2\\\"\",\n    \"Le titre précise \\\"boîte scellée\\\" alors que la photo ne montre aucune boîte\",\n    \"Le prix de 89 € est bien inférieur au prix habituel des AirPods Pro 2, ce qui est incohérent avec la description de \\\"qualité premium\\\"\",\n    \"La description indique une livraison depuis l’étranger de 15‑20 jours alors que la photo ne mentionne aucune provenance\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix très bas pour un produit haut de gamme\",\n    \"Image générique/placeholder sans le produit réel\",\n    \"Date d’adhésion du membre future (septembre 2026) impossible\",\n    \"Promesse de livraison longue depuis l’étranger\",\n    \"Stock limité à 10 pièces avec prix suspect\"\n  ],\n  \"defauts\": [\n    \"Absence de capacité et de couleur indiquées\",\n    \"Photo de mauvaise qualité / image de stock\",\n    \"Prix incohérent avec le produit\",\n    \"Informations contradictoires entre titre, description et photo\",\n    \"Date d’adhésion du vendeur future, indice de compte factice\"\n  ],\n  \"verdict\": \"contrefaçon probable\",\n  \"explication\": \"Le prix de 89 € est bien en dessous du marché pour des AirPods Pro 2 neufs, et l’image utilisée est un simple placeholder sans le produit réel. De plus, le vendeur indique une date d’adhésion future et promet une livraison longue depuis l’étranger, signes forts d’une contrefaçon.\"\n}"
+   },
+   "a5": {
+    "s": 20.9,
+    "rep": "{\n  \"produit\": \"Samsung Galaxy S25 Ultra 512 Go\",\n  \"capacite\": 512,\n  \"couleur\": \"Titane Noir\",\n  \"prix\": 780,\n  \"etat\": \"très peu servi avec petite fissure\",\n  \"contradictions\": [\n    \"La photo indique une boîte scellée alors que la description précise que le chargeur n’est pas fourni.\",\n    \"La photo montre une fissure visible sur l’écran alors que la description ne mentionne qu’une petite fissure et affirme qu’elle n’affecte pas l’utilisation.\",\n    \"Le titre indique « Titane Noir » alors que la description évoque une version « Hong Kong double SIM », ce qui est incohérent.\",\n    \"Le prix de 780 € est nettement inférieur au prix du marché pour un S25 Ultra 512 Go, ce qui est très suspect.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix très bas par rapport à la valeur du produit.\",\n    \"Promesse de boîte scellée alors que le chargeur manque.\",\n    \"Absence de photos supplémentaires du téléphone hors boîte.\",\n    \"Vendeur particulier avec un nombre limité d’avis.\"\n  ],\n  \"defauts\": [\n    \"Petite fissure dans le coin inférieur de l’écran.\",\n    \"Chargeur non fourni (seul le câble fourni).\",\n    \"Possibilité de non-conformité de la version (Hong Kong) non indiquée.\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 780 € est bien en dessous de la valeur normale d’un Samsung Galaxy S25 Ultra 512 Go, ce qui est très suspect. Les affirmations contradictoires sur la boîte scellée, le chargeur manquant et la fissure visible montrent que l’annonce cache des risques d’arnaque.\"\n}"
+   }
+  },
+  "openrouter:google/gemma-4-26b-a4b-it:free": {
+   "a1": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a2": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a3": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a4": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a5": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   }
+  },
+  "openrouter:google/gemma-4-31b-it:free": {
+   "a1": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a2": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a3": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a4": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a5": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   }
+  },
+  "nvidia:meta/llama-3.2-11b-vision-instruct": {
+   "a1": {
+    "erreur": "HTTP 404 {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function id '9fa6fd04-ba2c-4bb3-90b7-ede407a9290f' version 'null': Specified function in account '6Z8o4qaa"
+   }
+  },
+  "nvidia:meta/llama-3.2-90b-vision-instruct": {
+   "a1": {
+    "s": 29.4,
+    "rep": "{\"produit\": \"iPhone 17\", \"capacite\": \"128GB\", \"couleur\": \"blanc\", \"prix\": 549, \"etat\": \"neuf sous blister\", \"contradictions\": [\"le titre indique un iPhone 17 256 Go blanc neuf sous blister, mais la photo montre un iPhone 17 128GB blanc boite scellee\"], \"signaux_arnaque\": [\"l'annonce est trop bonne pour etre vraie\", \"le prix est trop bas pour un produit neuf sous blister\"], \"defauts\": [\"aucun defaut visible sur la photo\"], \"verdict\": \"arnaque probable\", \"explication\": \"L'annonce presente un produit neuf sous blister a un prix trop bas, ce qui est suspect. De plus, la photo montre un produit different de celui decrit dans le titre, ce qui est une contradiction.\"}"
+   },
+   "a2": {
+    "s": 40.3,
+    "rep": "{\n    \"produit\": \"PS5 Slim\",\n    \"capacite\": \"non spécifiée\",\n    \"couleur\": \"non spécifiée\",\n    \"prix\": 299,\n    \"etat\": \"neuf\",\n    \"contradictions\": [\n        \"Le titre mentionne un manette inclus, mais la photo ne montre qu'une console.\"\n    ],\n    \"signaux_arnaque\": [\n        \"Le prix est très bas par rapport au prix normal d'une PS5 Slim.\",\n        \"L'annonce ne fournit pas d'informations sur la garantie ou la politique de retour.\"\n    ],\n    \"defauts\": [\n        \"L'annonce ne fournit pas d'informations sur la capacité de stockage de la console.\",\n        \"L'annonce ne fournit pas d'informations sur la couleur de la console.\"\n    ],\n    \"verdict\": \"arnaque probable\",\n    \"explication\": \"L'annonce semble être une arnaque en raison du prix très bas et du manque d'informations sur la garantie et la politique de retour. Il est recommandé d'être prudent et de ne pas acheter cette console sans vérifier les détails avec le vendeur.\"\n}"
+   },
+   "a3": {
+    "s": 41.8,
+    "rep": "{\"produit\": \"Dyson V15 Detect Absolute\", \"capacite\": \"inconnue\", \"couleur\": \"inconnue\", \"prix\": 320, \"etat\": \"neuf\", \"contradictions\": [\"La photo montre un produit Dyson V15 Detect, mais le titre et la description mentionnent un Dyson V15 Detect Absolute\"], \"signaux_arnaque\": [\"Le prix est très bas pour un produit de cette qualité\", \"La description est très vague et ne fournit pas d'informations précises sur le produit\"], \"defauts\": [\"La photo ne montre pas clairement le produit\", \"La description ne mentionne pas la capacité du produit\"], \"verdict\": \"arnaque probable\", \"explication\": \"Cette annonce présente plusieurs signaux d'arnaque, notamment un prix très bas pour un produit de cette qualité et une description vague qui ne fournit pas d'informations précises sur le produit. De plus, la photo ne montre pas clairement le produit, ce qui peut être un signe de contrefaçon.\"}"
+   },
+   "a4": {
+    "s": 20.2,
+    "rep": "{\"produit\": \"AirPods Pro 2\", \"capacite\": null, \"couleur\": null, \"prix\": 89, \"etat\": null, \"contradictions\": [], \"signaux_arnaque\": [\"prix trop bas\", \"annonce trop vague\"], \"defauts\": [], \"verdict\": \"arnaque probable\", \"explication\": \"L'annonce est trop vague et le prix est trop bas pour être vrai. Il est probable que l'annonce soit une arnaque.\"}"
+   },
+   "a5": {
+    "s": 22.9,
+    "rep": "{\"produit\": \"Samsung Galaxy S25 Ultra\", \"capacite\": \"512 Go\", \"couleur\": \"Noir\", \"prix\": 780, \"etat\": \"neuf\", \"contradictions\": [\"le titre mentionne un Galaxy S25 Ultra 512 Go Titane Noir, mais la photo montre un Galaxy S25 Ultra 512 Go\"], \"signaux_arnaque\": [\"le prix est trop bas pour un produit neuf\", \"l'annonce ne fournit pas d'informations sur l'expédition ou la garantie\"], \"defauts\": [\"aucun\"], \"verdict\": \"arnaque probable\", \"explication\": \"L'annonce semble être une arnaque en raison du prix trop bas pour un produit neuf et du manque d'informations sur l'expédition ou la garantie. Il est recommandé d'être prudent et de ne pas acheter ce produit.\"}"
+   }
+  },
+  "nvidia:microsoft/phi-3-vision-128k-instruct": {
+   "a1": {
+    "erreur": "HTTP 404 {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function '20f2537e-8593-4eb9-ad40-60eee3bbaa55': Not found for account '6Z8o4qaaZnTSD5vx2iSr587jRuWq8o1IZY"
+   }
+  },
+  "nvidia:nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1": {
+   "a1": {
+    "erreur": "HTTP 404 404 page not found\n"
+   }
+  }
+ },
+ "listes": {
+  "gemini": [
+   "gemini-2.5-flash-lite",
+   "gemini-2.5-flash"
+  ],
+  "groq": [],
+  "openrouter": [
+   "nvidia/nemotron-3.5-super-vl:free",
+   "nvidia/nemotron-3.5-content-safety:free",
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "google/gemma-4-26b-a4b-it:free",
+   "google/gemma-4-31b-it:free"
+  ],
+  "nvidia": [
+   "meta/llama-3.2-11b-vision-instruct",
+   "meta/llama-3.2-90b-vision-instruct",
+   "microsoft/phi-3-vision-128k-instruct",
+   "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1"
+  ],
+  "zai": []
+ }
+}

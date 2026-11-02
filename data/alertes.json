@@ -3358,7 +3358,7 @@
   "ecart_vs_neuf_min": 0.543,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T10:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -3426,7 +3426,17 @@
     "rentabilite": 0.484
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. L'alerte compare au mauvais modèle (Nord CE 6 à 329,99 €, alors que l'offre est le Nord CE 5). Pour le bon modèle 8/256 Go, le neuf le moins cher relevé en France est 258,75 € chez AliExpress (blanc, 123comparer, 01/11), puis 328,49 € chez Techinn (achatmoinscher) ; reconditionné 239 € à Fnac et Darty. Revente plafonnée à 85 % de 258,75 €, soit environ 220 € : environ 35 € net (19 %), niveau « bon » au mieux, si le prix de 179,30 € est bien obtenu depuis la France. Non prouvé : page mydealz non lisible, prix allemand, conditions et lieu d'expédition inconnus, et AliExpress affiche 258,75 € en France (l'écart peut donc venir d'un code réservé à l'Allemagne). Garantie France à vérifier (« version globale »).",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page non lisible)",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T12:00"
  },
  {
   "id": "7c8f080b87",
@@ -3462,7 +3472,7 @@
   "ecart_vs_neuf_min": 0.438,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T10:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ssd ps5",
@@ -3537,7 +3547,17 @@
     "rentabilite": 0.833
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Pas d'écart de prix, quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). L'alerte compare à une carte microSD Lexar à 342,45 €, pas au SSD. Pour le bon produit (Lexar Play 2280 1 To pour PS5), le neuf le moins cher est 149,99 € livré chez Fnac, Darty et Cdiscount Marketplace (KultureGeek et comparateur-gamer, 02/11). Même prix que l'offre, donc revente plafonnée à 127 € environ : perte d'environ 22 €. Demande : « ssd ps5 » figure bien dans data/demande.json (229, +84 %), mais les suggestions Google n'ont pas pu être relues ici.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 127.49,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -22.5,
+   "duree_offre": "inconnue (page Dealabs non lisible)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-02T12:00"
  },
  {
   "id": "643b83a58b",
@@ -3586,7 +3606,7 @@
   "ecart_vs_neuf_min": 0.523,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T10:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -3654,7 +3674,17 @@
     "rentabilite": 0.544
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Bon modèle (Galaxy Watch Ultra 2025 LTE 47 mm). Neuf le moins cher relevé en France : 337,90 € livré chez Alternate (relevé du 27/09, ancien), 345,99 € chez Fnac Marketplace (02/11). Reconditionné dès 289,99 € (Cdiscount, 02/11). Attention : les 183,10 € ne sont obtenus qu'avec un code espagnol (ESD1139 ou AEES39) plus une réduction PayPal, soit environ 242 € sans ces réductions. L'offre est présentée « depuis l'Espagne », et rien ne prouve que le code marche avec une adresse française, ni qu'AliExpress Espagne livre la France. En plus, le code indique un minimum de 230 €. À 183 €, l'affaire serait très bonne (environ 100 € net si revente à 290 €). À 242 € + port, elle tomberait à environ 43 € net (17 %). La revente reste à confirmer sur Vinted et Leboncoin.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "AliExpress 11.11 : jusqu'au 13 ou 18/11 selon la source",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T12:00"
  },
  {
   "id": "a9f58caabd",
@@ -3709,7 +3739,7 @@
   "ecart_vs_neuf_min": 0.706,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T10:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -3777,6 +3807,16 @@
     "rentabilite": 0.048
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejet quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). « Magenta Moments » est un avantage de l'opérateur autrichien Magenta, normalement réservé à ses clients ; page Preisjäger non lisible, donc rien ne montre un achat possible depuis la France. Marge insuffisante de toute façon : au mieux environ 14 € (17 %) avec le neuf à 111,84 €, et environ 11 € (13 %) avec le plafond de 85 %. Il faudrait 20 € et 15 %, ou 8 € et 30 %.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 95.06,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 11.06,
+   "duree_offre": "inconnue (page non lisible)",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T12:00"
  }
 ]

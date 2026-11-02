@@ -2888,7 +2888,7 @@
     "ecart_vs_neuf_min": 0.717,
     "signal_erreur_prix": false,
     "trouve_le": "2026-11-02T06:41+00:00",
-    "statut": "a_reverifier",
+    "statut": "rejete",
     "revente_reelle": {},
     "demande_forte": {
       "recherche": "ssd",
@@ -2963,7 +2963,7 @@
       }
     ],
     "denicheur": "A",
-    "verifie_le": "2026-11-02T20:51+00:00",
+    "verifie_le": "2026-11-02T21:48+00:00",
     "type": "bon_plan",
     "ancien_verdict": {
       "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification, et le relevé automatique n'a rien donné. Page Dealabs lue en partie seulement : 278,93 € chez AliExpress (258,93 € via PayPal d'après le titre, conditions, entrepôt et date de fin non lisibles). Le prix de comparaison de 388,99 € n'est pas fiable : sa fiche mélange 16/512 Go et 32 Go/1 To, et elle n'a que 4 boutiques. Dodeal (01/11) donne 518,82 € chez PC Componentes, sans garantir la même configuration, et le modèle a déjà été vu sur Dealabs à des prix proches. Revente non confirmée : aucune annonce Vinted/Leboncoin relevée. Si idealo confirme ~389 €, revente ~342 € sur Leboncoin, soit ~58 € de marge (20,6 %). Demande non réelle : le signal porte sur « ssd » en Espagne, pas sur ce mini PC.",
@@ -2975,14 +2975,14 @@
       "demande_confirmee": "non (recherche « ssd » en Espagne, sans rapport avec ce produit)"
     },
     "verdict": {
-      "commentaire": "Pas de prix de référence fiable : la fiche à 388,99 € mélange 16/512 Go et 32 Go/1 To, et les pages de prix français n'ont pas pu être lues. Offre AliExpress à 278,93 €, modèle déjà vu à des prix proches.",
-      "prix_neuf_min_idealo": null,
-      "source_prix_ref": null,
+      "commentaire": "Offre à 278,93 € non confirmée : la page ne s'ouvre pas, et une annonce Dealabs plus récente donne le même Chuwi AuBox 16 Go/512 Go à 374,45 € via PayPal (407,45 € sans) sur AliExpress. Le prix bas semble terminé. En France, le neuf est à 518,82 € chez PcComponentes (Dodeal, 01/11).",
+      "prix_neuf_min_idealo": 374.45,
+      "source_prix_ref": "Dealabs, titre de l'annonce AliExpress lu le 02/11 (518,82 € PcComponentes via Dodeal le 01/11)",
       "economie_pct": null,
       "prix_revente_verifie": null,
       "canal": null,
       "marge_nette_verifiee": null,
-      "duree_offre": "inconnue",
+      "duree_offre": "probablement terminée",
       "demande_confirmee": "non"
     }
   },

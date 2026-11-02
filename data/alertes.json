@@ -1650,7 +1650,7 @@
   "ecart_vs_neuf_min": 0.235,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T02:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -1718,7 +1718,17 @@
     "rentabilite": 1.56
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T03:53",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Mais l'affaire ne passera probablement pas : l'alerte compare au mauvais produit (un chargeur 2 ports USB-C à 79,90 €, chez seulement 2 boutiques, alors que l'offre est un USB-C + USB-A). Un UGREEN Nexode 65W 3 ports a été vu à 24,69 € sur Amazon en France (bon plan Dealabs de plus de 2 semaines, à confirmer). Avec un coût de 23,80 €, il ne resterait alors rien à la revente. De plus l'offre vient d'Amazon Pologne et sa page n'a pas pu être lue : livraison en France non vérifiée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "4ac9b96d5c",
@@ -1761,7 +1771,7 @@
   "ecart_vs_neuf_min": 0.764,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T02:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -1829,7 +1839,17 @@
     "rentabilite": -0.135
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T03:53",
+  "verdict": {
+   "commentaire": "MediaMarkt Pologne : livraison en France non vérifiée (page de l'offre non lisible) et clavier sans doute à disposition polonaise (QWERTY), alors que le prix de comparaison de 59,99 € est celui du modèle AZERTY. Même avec ce prix, le meilleur canal laisse 1,94 € de marge pour 50,85 € de coût : très loin du minimum, quel que soit le prix idealo.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "faa7c19cba",
@@ -1872,7 +1892,7 @@
   "ecart_vs_neuf_min": 0.717,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T02:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -1940,7 +1960,17 @@
     "rentabilite": 0.109
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T03:53",
+  "verdict": {
+   "commentaire": "Offre en magasin physique seulement (« Carrefour stacjonarnie » veut dire en magasin, en Pologne) : achat impossible depuis la France. Rejet automatique, quel que soit le prix idealo.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "085b300165",
@@ -1989,7 +2019,7 @@
   "ecart_vs_neuf_min": 0.724,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T02:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -2057,6 +2087,16 @@
     "rentabilite": 0.126
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T03:53",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification. Le prix de comparaison de 359 € vient d'achatmoinscher (3 boutiques seulement) et n'est pas confirmé. Si ce prix tient, la revente plafonnée à 85 % donne 305 € sur Leboncoin, soit environ 40 € de marge pour 264,84 € de coût (15 %), tout juste au seuil. Mais ce téléphone a déjà été vu à 208,72 € sur AliExpress (offre expirée), donc la vraie valeur peut être plus basse. Page de l'offre non lisible : vendeur, version globale, garantie et livraison en France par AliExpress non vérifiés. Aucune annonce de revente réelle disponible.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

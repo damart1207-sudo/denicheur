@@ -3853,7 +3853,7 @@
   "ecart_vs_neuf_min": 0.572,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T11:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -3921,6 +3921,16 @@
     "rentabilite": 0.119
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T12:50",
+  "verdict": {
+   "commentaire": "Rejet quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). Bon modèle, offre encore affichée par Time Trend (Pologne) à 172 zł, soit environ 40 €, alors que l'alerte compte 34,31 € (environ 146 zł, prix non retrouvé). Le problème est la livraison : les conditions de vente disent Pologne seulement, la FAQ dit Union européenne pour 69 à 109 zł (environ 16 à 26 €), contre 5 € comptés dans l'alerte. Coût réel pour la France : au moins 50 €, plutôt 56 à 66 € au prix affiché. Neuf en France dès 55,93 € hors port chez David & Philly (en stock), donc revente plafonnée à environ 47,50 € (85 %). Aucune marge, même en partant des 59,99 € de l'alerte (50,99 €).",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 47.54,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -3,
+   "duree_offre": "inconnue (page Pepper sans date de fin ; promotion Time Trend encore affichée le 02/11)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

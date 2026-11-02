@@ -2368,7 +2368,7 @@
   "ecart_vs_neuf_min": 0.319,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T05:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -2436,6 +2436,16 @@
     "rentabilite": 1.473
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T06:53",
+  "verdict": {
+   "commentaire": "Achat impossible depuis la France : les conditions de vente de PcComponentes.com disent « entrega pedidos en todo el territorio nacional de España », et rien sur la France. Sur PcComponentes France, ce robot (Q10VF52-00) est « non disponible », et l'autre version vient d'un vendeur tiers à 389,66 €. Le prix de 99 € n'est pas confirmé non plus : page de l'offre (Chollometro) non lisible, et la fiche PcComponentes.es lue affichait 139,99 € sans date. Idealo non lu. L'alerte compare aussi à un neuf trop haut : 310,75 € (ManoMano, prix inchangé depuis le 23/10), alors que ce même modèle est à 209 € chez Galaxus France (1 pièce, livraison du 10 au 14/11) et 250,86 € chez Powerplanet. Le Q10 VF+ avec base de vidage est même affiché 199,99 € chez BUT (stock pas clair). Marge de 177 € de l'alerte fausse.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

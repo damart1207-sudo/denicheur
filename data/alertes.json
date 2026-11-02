@@ -2888,7 +2888,7 @@
   "ecart_vs_neuf_min": 0.717,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T06:41+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ssd",
@@ -2963,7 +2963,7 @@
    }
   ],
   "denicheur": "A",
-  "verifie_le": "2026-11-02T20:51+00:00",
+  "verifie_le": "2026-11-02T22:54+00:00",
   "type": "bon_plan",
   "ancien_verdict": {
    "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification, et le relevé automatique n'a rien donné. Page Dealabs lue en partie seulement : 278,93 € chez AliExpress (258,93 € via PayPal d'après le titre, conditions, entrepôt et date de fin non lisibles). Le prix de comparaison de 388,99 € n'est pas fiable : sa fiche mélange 16/512 Go et 32 Go/1 To, et elle n'a que 4 boutiques. Dodeal (01/11) donne 518,82 € chez PC Componentes, sans garantir la même configuration, et le modèle a déjà été vu sur Dealabs à des prix proches. Revente non confirmée : aucune annonce Vinted/Leboncoin relevée. Si idealo confirme ~389 €, revente ~342 € sur Leboncoin, soit ~58 € de marge (20,6 %). Demande non réelle : le signal porte sur « ssd » en Espagne, pas sur ce mini PC.",
@@ -2975,9 +2975,9 @@
    "demande_confirmee": "non (recherche « ssd » en Espagne, sans rapport avec ce produit)"
   },
   "verdict": {
-   "commentaire": "Pas de prix de référence fiable : la fiche à 388,99 € mélange 16/512 Go et 32 Go/1 To, et les pages de prix français n'ont pas pu être lues. Offre AliExpress à 278,93 €, modèle déjà vu à des prix proches.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
+   "commentaire": "Offre 16 Go / 512 Go non confirmée : sur la liste Dealabs, cette annonce est maintenant titrée « barebone », donc sans mémoire ni SSD ; sa page reste illisible. Ce n'est plus le produit annoncé. Référence 16 Go / 512 Go : 518,82 € chez PcComponentes (dodeal, 01/11), et une autre offre Dealabs active à 374,45 € via PayPal, marchand non précisé.",
+   "prix_neuf_min_idealo": 374.45,
+   "source_prix_ref": "offre Dealabs active ; 518,82 € hors promo (dodeal)",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
@@ -6235,7 +6235,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T21:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6304,7 +6304,19 @@
     "rentabilite": 0.238
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T22:54+00:00",
+  "verdict": {
+   "commentaire": "Trop proche du prix français : 217,71 zł (51,16 €) sur Amazon.pl, soit environ 56 € avec port, contre 59,99 € livré gratuitement chez Joybuy (123comparer et leDénicheur, 02/11). Seulement 6 % d'écart, sous les 15 %, et livraison en France depuis Amazon.pl non prouvée.",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "Joybuy via 123comparer et leDénicheur ; idealo non consulté",
+   "economie_pct": 6.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "9ad1361e74",
@@ -6342,7 +6354,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T22:11+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6411,7 +6423,19 @@
     "rentabilite": 0.781
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T22:54+00:00",
+  "verdict": {
+   "commentaire": "Offre Dealabs à 420 € chez Planète Technologie (marchand français), non signalée expirée. Le titre indique 80 € d'ODR : sans doute 500 € à payer puis 80 € remboursés. Ailleurs : 825,57 € Rue du Commerce Marketplace, 899,99 € Darty et Fnac. Même sans ODR, l'offre reste environ 39 % sous le neuf. À vérifier avant de payer : prix et stock sur planetetechnologie.com (page illisible ici), frais de livraison (5 € supposés) et participation du marchand à l'ODR Hisense (opération Black Friday en cours, conditions non lues). Pas de revente : aucune annonce réelle relevée, et produit de 68 kg difficile à revendre.",
+   "prix_neuf_min_idealo": 825.57,
+   "source_prix_ref": "123comparer et leDénicheur, 02/11 (Rue du Commerce Marketplace) ; idealo non consulté",
+   "economie_pct": 48.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue, stock et ODR à vérifier",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "23d55485e1",

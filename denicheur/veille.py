@@ -71,20 +71,10 @@ def meme_produit(titre_annonce, titre_comparateur):
     Évite les fausses affaires (ex. SSD 1 To comparé à un 4 To). True / False / None (IA indisponible)."""
     if not titre_comparateur:
         return None
-    import urllib.request
-    cle = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not cle:
-        return None
-    q = ("Réponds uniquement OUI ou NON. Ces deux titres désignent-ils exactement le même produit neuf "
-         "(même marque, même modèle, même capacité/taille, même version ; la couleur peut différer) ?\n"
-         f"A : {titre_annonce}\nB : {titre_comparateur}")
-    corps = {"model": "gemini-flash-lite-latest", "temperature": 0, "messages": [{"role": "user", "content": q}]}
-    req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
-                                 data=json.dumps(corps).encode(),
-                                 headers={"Authorization": f"Bearer {cle}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=40) as r:
-        t = (json.loads(r.read())["choices"][0]["message"].get("content") or "").strip().upper()
-    return True if t.startswith("OUI") else False if t.startswith("NON") else None
+    from .ia import gemini_oui_non
+    return gemini_oui_non("Ces deux titres désignent-ils exactement le même produit neuf (même marque, même modèle, "
+                          "même capacité/taille, même version ; la couleur peut différer) ?\n"
+                          f"A : {titre_annonce}\nB : {titre_comparateur}")
 
 
 def examiner(a, nom, maintenant, regles, deja):

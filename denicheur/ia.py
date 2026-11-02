@@ -100,3 +100,25 @@ def extraire_json(texte):
         except json.JSONDecodeError:
             continue
     return None
+
+
+def gemini_oui_non(question, timeout=40):
+    """Pose une question fermée à Gemini (rapide). True / False / None si l'IA ne répond pas."""
+    cle = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not cle:
+        return None
+    corps = {"model": "gemini-flash-lite-latest", "temperature": 0,
+             "messages": [{"role": "user", "content": "Réponds uniquement OUI ou NON.\n" + question}]}
+    req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+                                 data=json.dumps(corps).encode(),
+                                 headers={"Authorization": f"Bearer {cle}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        t = (json.loads(r.read())["choices"][0]["message"].get("content") or "").strip().upper()
+    return True if t.startswith("OUI") else False if t.startswith("NON") else None
+
+
+def est_le_produit(titre, recherche):
+    """Le titre d'une offre est-il LE produit recherché lui-même (pas un jeu, accessoire, carte cadeau, pièce) ?"""
+    return gemini_oui_non(
+        f"Les gens recherchent : « {recherche} ». Cette offre est-elle CE produit lui-même (et non un jeu, "
+        f"un accessoire, une carte cadeau, une pièce détachée, un abonnement ou un autre modèle) ?\nOffre : {titre}")

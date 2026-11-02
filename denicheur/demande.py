@@ -9,6 +9,7 @@ import json
 import os
 from datetime import datetime, timedelta, timezone
 
+from .ia import est_le_produit
 from . import apify, comparateurs
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -88,15 +89,26 @@ def chasse_ciblee(regles, n=3):
         pi = apify.prix_idealo(q)
         if not pi:
             continue
+        # le prix idealo doit concerner le produit recherché lui-même (pas un jeu ou un accessoire)
+        try:
+            if est_le_produit(pi.get("titre") or "", q) is not True:
+                continue
+        except Exception:
+            continue
         if deja_A:  # A l'a déjà vu : on vérifie juste si son prix bat idealo
             for a in deja_A:
-                if a["prix"] <= pi["prix_min"] * 0.85:
+                if a["prix"] <= pi["prix_min"] * 0.85 and a["prix"] >= pi["prix_min"] * 0.3:
+                    try:
+                        if est_le_produit(a["titre"], q) is not True:
+                            continue  # jeu, accessoire, carte… : ce n'est pas le produit recherché
+                    except Exception:
+                        continue
                     trouves.append({"recherche": q, "hausse_pct": x["hausse_pct"], "canal": "dénicheur A : " + (a.get("marchand") or a.get("source") or "?"),
                                     "annonce_min": a["prix"], "lien": a.get("lien"), "nb_annonces": 1, "idealo": pi, "par": "A"})
             continue
         rr = apify.revente_reelle(q, pi["prix_min"] * 0.4)
         for canal, r in rr.items():
-            if r["min"] <= pi["prix_min"] * 0.75:
+            if pi["prix_min"] * 0.3 <= r["min"] <= pi["prix_min"] * 0.75:
                 trouves.append({"recherche": q, "hausse_pct": x["hausse_pct"], "canal": canal, "annonce_min": r["min"],
                                 "lien": r.get("lien_min"), "nb_annonces": r["nb"], "idealo": pi, "par": "C"})
     apify.CONTEXTE["denicheur"] = "A"

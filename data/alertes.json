@@ -2869,7 +2869,7 @@
   "ecart_vs_neuf_min": 0.729,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T07:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "xiaomi pad 7",
@@ -2944,6 +2944,16 @@
     "rentabilite": 0.102
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T08:45",
+  "verdict": {
+   "commentaire": "Pas une affaire : la même tablette (Xiaomi Pad 7 8/256 Go) est vendue moins cher en France que notre coût de 201,24 €. AliExpress l'affiche à 242,35 € expédiée de France, livraison gratuite (123comparer, 01/11), et 182,35 € avec le code PHD40 et le paiement en 4 fois PayPal (Phonandroid, 01/11 ; Dealabs affiche 202,35 € / 182,35 € via PayPal). Le prix de 269,10 € de l'alerte oublie donc AliExpress. Revente non confirmée : la seule annonce exacte lue sur Leboncoin est à 190 € (très bon état), sous notre coût. Idealo non lu (inaccessible depuis cette vérification) : le rejet tient sans lui, car le produit est déjà moins cher ailleurs en neuf. Page de l'offre Pepper Pays-Bas lue en partie seulement : code, entrepôt et livraison en France non confirmés. Demande : la recherche figure bien dans data/demande.json (France, +107 %), mais les suggestions Google n'ont pas pu être lues, donc non confirmée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 190,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -11.24,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "non"
+  }
  }
 ]

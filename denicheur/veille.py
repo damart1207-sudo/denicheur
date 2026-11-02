@@ -16,7 +16,7 @@ from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEUIL_ECART = 0.85          # bon plan : prix <= 85 % du neuf le moins cher en France (au moins 15 % d'économie)
-MAXI_PRODUITS = 12          # produits vérifiés par tour (rythme poli pour les comparateurs)
+MAXI_PRODUITS = 25          # produits vérifiés par tour (≈ 10 s chacun, tour < 8 min)
 SIGNAUX = re.compile(r"erreur de prix|price error|pricing error|preisfehler|error de precio|errore di prezzo|b[łl][aą]d cenowy|prijsfout", re.I)
 
 

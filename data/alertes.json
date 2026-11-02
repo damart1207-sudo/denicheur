@@ -3009,7 +3009,7 @@
   "ecart_vs_neuf_min": 0.776,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T08:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ryzen 7 5700x",
@@ -3084,7 +3084,17 @@
     "rentabilite": -0.004
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Marge trop faible, quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification, et la page de l'offre Pepper Pays-Bas non plus). En France, le moins cher relevé aujourd'hui sur achatmoinscher est 155 € (Fnac, livraison gratuite). Revente plafonnée à 85 %, soit 131,75 € sur Leboncoin : 6,48 € de bénéfice pour 125,27 € de coût (5 %). Même à 136,40 € (prix de l'alerte), 11,13 € seulement (8,9 %), loin des 15 % requis. Il faudrait revendre au moins 145 € pour une affaire « bonne ». En plus, c'est une version tray (sans boîte ni ventilateur), plus dure à revendre, et AliExpress le vend déjà aussi sur Dealabs à 116,10 € (date non lue). Demande : la recherche figure bien dans data/demande.json (France, +102 %), mais les suggestions Google n'ont pas pu être lues, donc demande non confirmée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 131.75,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 6.48,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-02T10:03"
  },
  {
   "id": "eab96756ec",
@@ -3120,7 +3130,7 @@
   "ecart_vs_neuf_min": 0.75,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T08:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -3188,6 +3198,16 @@
     "rentabilite": -0.229
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Pas assez de marge, quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). Offre confirmée sur Auchan.fr : 39,90 € à payer, dont 25 % (9,98 €) rendus en cagnotte fidélité, à dépenser ensuite chez Auchan, donc pas de l'argent réel tout de suite. Le prix affiché par Amazon est le même, 39,90 € (achatmoinscher, ce jour). Revente plafonnée à 85 %, soit 33,92 € : perte de 1 € avec le coût de 34,92 €, et 4 € au mieux en retrait gratuit en magasin (coût 29,92 €), bien sous les 8 €. Sur les gros sites, les commissions font perdre de l'argent.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 33.92,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -1.0,
+   "duree_offre": "jusqu'au 09/11/2026 (cagnotte Auchan)",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T10:03"
  }
 ]

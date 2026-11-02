@@ -58,8 +58,14 @@ def affaires():
                         "marchand": c.get("marchand"), "pays": c.get("pays"), "lien": c.get("lien"), "ref": ref,
                         "verifie": a.get("horodatage", "")[:10], "commentaire": v.get("commentaire")})
     for x in lire("data/alertes.json", []) or []:
-        if x.get("statut") not in ("valide", "bon"):
+        if x.get("statut") not in ("valide", "bon", "bon_plan"):
             continue
+        # un bon plan vérifié reste affiché 3 jours (les promos expirent vite)
+        try:
+            if (datetime.now(timezone.utc) - datetime.fromisoformat(x.get("verifie_le") or x.get("trouve_le"))).days >= 3:
+                continue
+        except (TypeError, ValueError):
+            pass
         vd = x.get("verdict") or {}
         ref = vd.get("prix_neuf_min_idealo") or (x.get("idealo") or {}).get("prix_min") or (x.get("prix_plancher") or {}).get("prix_min")
         out.append({"nom": x.get("nom_produit") or x["titre"], "titre": x["titre"], "prix": x["prix"] * TAUX.get(x.get("devise"), 1),

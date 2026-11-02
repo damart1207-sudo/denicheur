@@ -11,11 +11,11 @@ import re
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from . import apify, collecte, comparateurs, demande, equipe, journal
+from . import apify, base, collecte, comparateurs, demande, equipe, journal, sante
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SEUIL_ECART = 0.80          # prix d'achat <= 80 % du neuf le moins cher en France
+SEUIL_ECART = 0.85          # bon plan : prix <= 85 % du neuf le moins cher en France (au moins 15 % d'économie)
 MAXI_PRODUITS = 12          # produits vérifiés par tour (rythme poli pour les comparateurs)
 SIGNAUX = re.compile(r"erreur de prix|price error|pricing error|preisfehler|error de precio|errore di prezzo|b[łl][aą]d cenowy|prijsfout", re.I)
 
@@ -66,6 +66,73 @@ def nommer(annonces):
     return noms, agent
 
 
+def meme_produit(titre_annonce, titre_comparateur):
+    """Contrôle par l'IA (Gemini) : l'offre et le prix de référence parlent-ils du MÊME produit exact ?
+    Évite les fausses affaires (ex. SSD 1 To comparé à un 4 To). True / False / None (IA indisponible)."""
+    if not titre_comparateur:
+        return None
+    import urllib.request
+    cle = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not cle:
+        return None
+    q = ("Réponds uniquement OUI ou NON. Ces deux titres désignent-ils exactement le même produit neuf "
+         "(même marque, même modèle, même capacité/taille, même version ; la couleur peut différer) ?\n"
+         f"A : {titre_annonce}\nB : {titre_comparateur}")
+    corps = {"model": "gemini-flash-lite-latest", "temperature": 0, "messages": [{"role": "user", "content": q}]}
+    req = urllib.request.Request("https://generativelanguage.googleapis.com/v1beta/openai/chat/completions",
+                                 data=json.dumps(corps).encode(),
+                                 headers={"Authorization": f"Bearer {cle}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=40) as r:
+        t = (json.loads(r.read())["choices"][0]["message"].get("content") or "").strip().upper()
+    return True if t.startswith("OUI") else False if t.startswith("NON") else None
+
+
+def examiner(a, nom, maintenant, regles, deja):
+    """Examine UNE offre. Renvoie l'alerte (dict) ou None. Une erreur ici n'arrête jamais le tour."""
+    signal = bool(SIGNAUX.search(a["titre"] + " " + (a.get("description") or "")))
+    pp = sante.protege("comparateur", comparateurs.prix_plancher, nom) if nom else None
+    pmin = (pp or {}).get("prix_min")
+    if pmin:
+        base.noter_prix(nom, pmin, pays="FR", site=(pp or {}).get("ou", ""), lien=(pp or {}).get("lien", ""), source="comparateur", denicheur="A")
+    if a.get("prix") and a.get("devise", "EUR") and nom:
+        base.noter_prix(nom, a["prix"], pays=a.get("pays", ""), site=a.get("marchand") or "", lien=a.get("lien") or "",
+                        devise=a.get("devise") or "EUR", source=a.get("source", ""), denicheur="A")
+    cout = equipe.cout_achat(a, regles)
+    ecart = round(a["prix"] / pmin, 3) if pmin else None
+    if a["id"] in deja:
+        return None
+    if not ((ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85))):
+        return None
+    x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie")},
+         "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
+         "economie_pct": round((1 - ecart) * 100) if ecart else None,
+         "type": "bon_plan", "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),
+         "statut": "a_verifier"}
+    # même produit ? (contrôle IA du prix de référence)
+    ref = ((((pp or {}).get("sources") or {}).get("achatmoinscher") or {}).get("meilleur") or {}).get("titre")
+    mp = sante.protege("ia_meme_produit", meme_produit, a["titre"], ref)
+    x["meme_produit_ia"] = mp
+    if mp is False and not signal:
+        return None  # le prix de référence concerne un autre produit : fausse affaire écartée
+    # contre-vérification automatique sur idealo (Apify) + prix réels Vinted / Leboncoin
+    pi = sante.protege("apify_idealo", apify.prix_idealo, nom) if nom else None
+    if pi:
+        x["idealo"] = pi
+        x["ecart_vs_idealo"] = round(a["prix"] / pi["prix_min"], 3)
+        base.noter_prix(nom, pi["prix_min"], pays="FR", site="idealo", lien=pi.get("lien", ""), source="apify:idealo", denicheur="A")
+        if x["ecart_vs_idealo"] > 0.85 and not signal:
+            return None  # idealo montre que ce n'est pas une vraie affaire : on n'alerte pas
+        x["prix_plancher"] = {"prix_min": min(pi["prix_min"], pmin or 1e9), "ou": "idealo", "lien": pi["lien"]}
+    if nom:
+        x["revente_reelle"] = sante.protege("apify_revente", apify.revente_reelle, nom, a["prix"])
+    dm = demande.est_demande(a["titre"], DEMANDE)
+    if dm:
+        x["demande_forte"] = dm
+    x["canaux"] = sante.protege("canaux", equipe.canaux_de_vente, x, regles, defaut=[])
+    x["denicheur"] = "A"
+    return x
+
+
 def tour():
     maintenant = datetime.now(timezone.utc)
     b = apify._budget()
@@ -74,57 +141,37 @@ def tour():
     json.dump(b, open(apify.F_BUDGET, "w"), indent=1)
     sources = [s for s in _lire("config/sources.json", {})["sources"] if s.get("actif", True)]
     regles = _lire("config/regles.json", {})
-    DEMANDE.update(demande.tendances())
-    annonces, etat = collecte.collecter(sources)
+    DEMANDE.update(sante.protege("demande_B", demande.tendances, defaut={}) or {})
+    annonces, etat = sante.protege("collecte", collecte.collecter, sources, defaut=([], {}))
     vus = set(_lire("data/etat/vus_veille.json", []))
     nouvelles = [a for a in annonces if a["id"] not in vus]
     candidates = equipe.prefiltre(nouvelles, regles)
     candidates.sort(key=priorite, reverse=True)
     lot = candidates[:MAXI_PRODUITS]
-    noms, agent = nommer(lot) if lot else ({}, None)
+    noms, agent = (sante.protege("ia_noms", nommer, lot, defaut=({}, None)) if lot else ({}, None))
     alertes = _lire("data/alertes.json", [])
     deja = {x["id"] for x in alertes}
     nouvelles_alertes = []
     for a in lot:
-        nom = noms.get(a["id"])
-        signal = bool(SIGNAUX.search(a["titre"] + " " + (a.get("description") or "")))
-        pp = comparateurs.prix_plancher(nom) if nom else None
-        pmin = (pp or {}).get("prix_min")
-        cout = equipe.cout_achat(a, regles)
-        ecart = round(a["prix"] / pmin, 3) if pmin else None
-        if a["id"] in deja:
-            continue
-        if (ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85)):
-            x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie")},
-                 "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
-                 "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),
-                 "statut": "a_verifier"}
-            # contre-vérification automatique sur idealo (Apify) + prix réels Vinted / Leboncoin
-            pi = apify.prix_idealo(nom) if nom else None
-            if pi:
-                x["idealo"] = pi
-                x["ecart_vs_idealo"] = round(a["prix"] / pi["prix_min"], 3)
-                if x["ecart_vs_idealo"] > 0.85 and not signal:
-                    continue  # idealo montre que ce n'est pas une vraie affaire : on n'alerte pas
-                x["prix_plancher"] = {"prix_min": min(pi["prix_min"], pmin or 1e9), "ou": "idealo", "lien": pi["lien"]}
-            if nom:
-                x["revente_reelle"] = apify.revente_reelle(nom, a["prix"])
-            dm = demande.est_demande(a["titre"], DEMANDE)
-            if dm:
-                x["demande_forte"] = dm
-            x["canaux"] = equipe.canaux_de_vente(x, regles)
-            x["denicheur"] = "A"
-            nouvelles_alertes.append(x)
+        try:
+            x = examiner(a, noms.get(a["id"]), maintenant, regles, deja)
+            if x:
+                nouvelles_alertes.append(x)
+        except Exception as e:
+            sante.noter("erreur", "examen offre", f"{a.get('titre', '')[:60]} : {type(e).__name__}: {e}")
     # chasse ciblée quotidienne sur les produits les plus demandés (occasion neuve sous-cotée)
-    for t in demande.chasse_ciblee(regles):
-        ident = "chasse-" + t["recherche"][:30].replace(" ", "-") + "-" + t["canal"]
-        if ident not in deja:
-            nouvelles_alertes.append({"id": ident, "titre": f'{t["recherche"]} : annonce {t["canal"]} à {t["annonce_min"]} € (idealo {t["idealo"]["prix_min"]} €)',
-                                      "prix": t["annonce_min"], "devise": "EUR", "marchand": t["canal"], "lien": t.get("lien"),
-                                      "denicheur": t.get("par", "C"),
-                                      "pays": "FR", "source": "chasse_ciblee", "nom_produit": t["recherche"],
-                                      "cout_achat": t["annonce_min"] + 5, "idealo": t["idealo"], "demande_forte": t,
-                                      "trouve_le": maintenant.isoformat(timespec="minutes"), "statut": "a_verifier"})
+    for t in (sante.protege("chasse_C", demande.chasse_ciblee, regles, defaut=[]) or []):
+        try:
+            ident = "chasse-" + t["recherche"][:30].replace(" ", "-") + "-" + t["canal"]
+            if ident not in deja:
+                nouvelles_alertes.append({"id": ident, "titre": f'{t["recherche"]} : annonce {t["canal"]} à {t["annonce_min"]} € (idealo {t["idealo"]["prix_min"]} €)',
+                                          "prix": t["annonce_min"], "devise": "EUR", "marchand": t["canal"], "lien": t.get("lien"),
+                                          "denicheur": t.get("par", "C"),
+                                          "pays": "FR", "source": "chasse_ciblee", "nom_produit": t["recherche"],
+                                          "cout_achat": t["annonce_min"] + 5, "idealo": t["idealo"], "demande_forte": t,
+                                          "trouve_le": maintenant.isoformat(timespec="minutes"), "statut": "a_verifier"})
+        except Exception as e:
+            sante.noter("erreur", "alerte C", f"{type(e).__name__}: {e}")
     # ne marquer « vu » que ce qui a été examiné (le reste sera revu au prochain tour)
     vus.update(a["id"] for a in nouvelles if a not in candidates or a in lot)
     _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
@@ -164,8 +211,12 @@ def tour():
         al_cat[k] = al_cat.get(k, 0) + 1
     for (src, cat), n in par_source.items():
         journal.noter("A", "flux:" + src, "", 0.0, n, al_cat.get((src, cat), 0), categorie=cat)
+    sante.protege("base", base.sauver)
     jv = _lire("data/veille_journal.json", [])
     _ecrire("data/veille_journal.json", (jv + [bilan])[-200:])
+    if not annonces or len(bilan["sources_ko"]) > len(sources) // 2:
+        sante.noter("erreur", "sources", f"{len(bilan['sources_ko'])} sources sur {len(sources)} illisibles, {len(annonces)} annonces lues")
+    sante.tour_ok({k: bilan[k] for k in ("heure", "annonces", "nouvelles", "examinees", "alertes")})
     print(json.dumps(bilan, ensure_ascii=False))
     for x in nouvelles_alertes:
         try:

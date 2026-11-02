@@ -47,7 +47,8 @@ concurrency:
 jobs:
   passage:
     runs-on: ubuntu-latest
-    timeout-minutes: 25   # garde-fou : jamais plus de 25 min par passage
+    # garde-fou : 58 min pour la veille en boucle (5 tours espacés de 10 min), 25 min pour le reste
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '*/10 * * * *') && 58 || 25 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -79,8 +80,22 @@ jobs:
             exit 0
           fi
           if [ "${{ github.event.schedule }}" = "*/10 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
-            python -m denicheur.veille
-            python saas/construire_site.py || true
+            pip install -q pytrends "urllib3<2" || true
+            git config user.name "denicheur-bot"
+            git config user.email "denicheur-bot@users.noreply.github.com"
+            # 5 tours espacés d'environ 10 minutes ; un tour qui plante n'arrête JAMAIS les suivants,
+            # et chaque tour est enregistré tout de suite (rien n'est perdu).
+            for i in 1 2 3 4 5; do
+              DEBUT=$(date +%s)
+              timeout 480 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $?"
+              python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
+              git add -A data docs
+              if ! git diff --cached --quiet; then
+                git commit -q -m "Veille $(date -u +%H:%M) (tour $i)"
+                for essai in 1 2 3; do git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break; sleep 10; done
+              fi
+              [ $i -lt 5 ] && sleep $(( 600 - ($(date +%s) - DEBUT) > 30 ? 600 - ($(date +%s) - DEBUT) : 30 ))
+            done
             exit 0
           fi
           pip install -q pytrends "urllib3<2" || true
@@ -99,6 +114,7 @@ jobs:
           fi
 
       - name: Enregistrer les résultats
+        if: always()
         run: |
           git config user.name "denicheur-bot"
           git config user.email "denicheur-bot@users.noreply.github.com"

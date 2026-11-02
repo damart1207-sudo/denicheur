@@ -6473,7 +6473,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T22:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6542,7 +6542,19 @@
     "rentabilite": 0.329
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Livraison en France non confirmée. L'offre vient d'AliExpress Espagne (« Chollos desde España ») et les codes de l'opération 11.11 valent pour les envois vers l'Espagne (Nintenduo, 01/11). Sans code pour la France, le prix n'est pas connu : 15,32 € n'est pas atteignable à coup sûr. Neuf en France : 42,98 € livré chez Techinn (prix daté du 01/10), 44,66 € livré à la Fnac (prix du 01/11).",
+   "prix_neuf_min_idealo": 42.98,
+   "source_prix_ref": "achatmoinscher, Techinn, port inclus ; idealo non consulté",
+   "economie_pct": null,
+   "duree_offre": "1er au 18/11, codes pour l'Espagne",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "a2a0760cbd",
@@ -6580,7 +6592,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T22:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6649,7 +6661,19 @@
     "rentabilite": -0.444
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Trop cher une fois converti. 43,19 £ avec le code casio, soit environ 49,67 € avant frais de port, contre 52,45 € neuf en France : à peine 5 % de moins, sous le seuil de 15 %. Le port vers la France, calculé à la commande, réduit encore l'écart. La page Rubicon affiche aussi « In Stock » et « Sold out ». Revente perdante.",
+   "prix_neuf_min_idealo": 52.45,
+   "source_prix_ref": "achatmoinscher (6 boutiques), relevé du dénicheur ; idealo non consulté",
+   "economie_pct": 5.3,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "c57f71df83",
@@ -6687,7 +6711,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T22:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6756,7 +6780,19 @@
     "rentabilite": 0.292
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Offre non vérifiable : la page Dealabs n'a pas pu être ouverte et aucun autre site ne confirme 189 € ce soir. Le prix était déjà sorti chez AliExpress depuis l'Allemagne (189,07 € sur mydealz), offre expirée. Livraison en France et prix actuel non confirmés. Si l'offre existe vraiment, ce serait environ 38 % sous le neuf (303 €) : à regarder de nouveau si elle revient.",
+   "prix_neuf_min_idealo": 303.0,
+   "source_prix_ref": "achatmoinscher, relevé du dénicheur 02/11, non relu ; 349 € lus chez Amazon (Bigshopper 02/11) et Boulanger ; idealo non consulté",
+   "economie_pct": null,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "b2675fa699",
@@ -6801,7 +6837,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:01+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6870,7 +6906,19 @@
     "rentabilite": -0.076
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Prix de référence pas fiable : l'annonce ne donne pas la référence exacte. Le comparateur compare au RH6821WO (119,99 €), alors qu'Amazon vend aussi le RH6831EO et le RH6836EO, et ces modèles n'ont pas le même prix. Page Amazon non lisible. Amazon a déjà affiché ce type de modèle à 94,99 € avec coupon, 99,99 € et 103,99 € (RH6836EO, 23/10) : ce prix semble habituel en promo.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune référence fiable pour le modèle exact ; idealo non consulté",
+   "economie_pct": null,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "1ea3e80fb8",
@@ -6915,7 +6963,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6984,7 +7032,19 @@
     "rentabilite": 0.033
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Offre non vérifiable : marchand inconnu et article Les Numériques impossible à ouvrir. Aucun site lu ne montre 399 € : Boulanger est à 649 €, Darty à 699 €, et le dernier prix promo trouvé est 449 € chez Boulanger (09/10). Sans marchand, ni l'offre active ni la livraison ne peuvent être confirmées. Si elle existe, ce serait environ 20 % sous 499 €.",
+   "prix_neuf_min_idealo": 499.0,
+   "source_prix_ref": "achatmoinscher (7 boutiques), relevé du dénicheur, non relu ; 649 € lus chez Boulanger ; idealo non consulté",
+   "economie_pct": null,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "fd3e9d6ab5",
@@ -7041,7 +7101,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7110,7 +7170,19 @@
     "rentabilite": -0.014
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Pas une vraie affaire : 99,99 € est déjà le prix neuf le plus bas en France, chez Boulanger et Electro Dépôt, en noir et port gratuit (KultureGeek, 01/11). Boulanger affiche ce prix depuis au moins août. Pas d'économie par rapport au marché, et marge de revente sous les seuils.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "KultureGeek comparateur : Boulanger 01/11, Electro Dépôt 29/10 ; idealo non consulté",
+   "economie_pct": 0,
+   "duree_offre": "prix durable depuis août",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "ad9057a14a",
@@ -7148,7 +7220,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7217,7 +7289,19 @@
     "rentabilite": -0.098
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Offre polonaise : RTV Euro AGD est un magasin polonais qui vend et livre en Pologne, pas de livraison en France confirmée. Prix en zlotys d'origine, port de 5 € seulement supposé. Revente trop faible (5,82 € au mieux).",
+   "prix_neuf_min_idealo": 30.99,
+   "source_prix_ref": "achatmoinscher (4 boutiques), relevé du dénicheur, non relu ; idealo non consulté",
+   "economie_pct": null,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "7d1abe7ffd",
@@ -7255,7 +7339,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7324,6 +7408,18 @@
     "rentabilite": -0.304
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T23:55+00:00",
+  "verdict": {
+   "commentaire": "Faux prix : 30,75 € n'est pas ce qu'on paie. Le titre indique 10,25 € cagnottés chez E.Leclerc, soit environ 41 € à payer, avec carte de fidélité, et une cagnotte à dépenser plus tard chez Leclerc. C'est plus cher que le neuf à 37,49 €. Revente perdante.",
+   "prix_neuf_min_idealo": 37.49,
+   "source_prix_ref": "achatmoinscher (18 boutiques), relevé du dénicheur, non relu ; idealo non consulté",
+   "economie_pct": 0,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

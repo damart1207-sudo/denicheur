@@ -13,7 +13,7 @@ from zoneinfo import ZoneInfo
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(RACINE, "docs")
-NOM_SITE = "Sousprix"
+NOM_SITE = "Rebifftout"
 TAUX = {"GBP": 1.15, "EUR": 1.0}
 PAYS = {"FR": "France", "DE": "Allemagne", "ES": "Espagne", "IT": "Italie", "UK": "Royaume-Uni", "PL": "Pologne",
         "AT": "Autriche", "NL": "Pays-Bas"}

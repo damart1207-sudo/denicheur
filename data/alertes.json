@@ -3967,7 +3967,7 @@
   "ecart_vs_neuf_min": 0.438,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T14:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ssd ps5",
@@ -4042,7 +4042,17 @@
     "rentabilite": 0.833
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T15:21",
+  "verdict": {
+   "commentaire": "Pas d'écart de prix, quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). L'alerte compare à une carte microSD Lexar à 342,45 €, pas au SSD (même erreur que l'alerte 7c8f080b87). Pour le bon produit (Lexar Play 2280 1 To pour PS5), le neuf le moins cher est 149,99 € port offert chez Fnac, Darty et Cdiscount Marketplace, en stock (KultureGeek, 02/11). L'offre est donc au même prix que partout ailleurs. Revente plafonnée à 85 % du neuf, soit 127,49 € : perte de 27,50 € avec le coût de 154,99 € (22,50 € si le port est offert). Demande : « ssd ps5 » figure bien dans data/demande.json (229, +84 %), mais les suggestions Google n'ont pas pu être relues (accès bloqué).",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 127.49,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -27.5,
+   "duree_offre": "inconnue (page Dealabs non lisible)",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "a953868f99",
@@ -4078,7 +4088,7 @@
   "ecart_vs_neuf_min": 0.573,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T14:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -4146,6 +4156,16 @@
     "rentabilite": 0.291
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T15:21",
+  "verdict": {
+   "commentaire": "Rejet quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification). Bon modèle (Ninja MAX PRO AF180EUCYD, bleu foncé), prix confirmé par Pepper : 297,49 zł chez SharkNinja, boutique polonaise. Le problème est la livraison : les seules informations trouvées parlent de livraison en Pologne, rien ne montre un envoi en France, et les conditions de vente de sharkninja.pl n'ont pas pu être lues. Dans le doute, rejet. Prix neuf en France : 121,99 € pour le modèle blanc (achatmoinscher, chiffre de l'alerte, non relu), 127,64 € chez PcComponentes pour l'AF180EU (livraison 9-16/11), 134,99 € chez SharkNinja pour ce coloris (02/11). Marge seulement théorique si l'achat était possible : environ 20 € (annonces Leboncoin « état neuf » à 90-100 €, modèle exact non confirmé), avec un coût réel sans doute plus élevé car le port depuis la Pologne n'est pas connu.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 95.0,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 20.09,
+   "duree_offre": "inconnue (page Pepper ne dit rien)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

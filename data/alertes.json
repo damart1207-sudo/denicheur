@@ -4489,7 +4489,7 @@
   "ecart_vs_neuf_min": 0.702,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T16:43+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "pixel 10a",
@@ -4564,7 +4564,17 @@
     "rentabilite": 0.168
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T17:56",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo inaccessible depuis cette vérification, et le relevé automatique n'a rien donné (plafond du jour Apify probablement atteint). Bon modèle (Pixel 10a 128 Go). Neuf le moins cher relevé ailleurs : 418,98 € livré (Carrefour Marketplace, 123comparer, relevé non daté précisément, entre le 04/10 et le 01/11), 426,99 € sur achatmoinscher, 449 € chez Boulanger, Fnac, Darty et Amazon (Boulanger lu aujourd'hui, coloris Acier disponible). Attention : le prix AliExpress est de 385,76 € sans réduction. Les presses citent 325,76 € avec code (PHD60 ou 11FR60, valables jusqu'au 18/11, premiers arrivés), et jusqu'à 292,76 € avec en plus PayPal en 4 fois ; Dealabs indique 299,76 € « via Paypal ». Vendeur exact, version (Europe ou non), garantie et livraison en France non confirmés : page Dealabs presque vide. Revente non confirmée : aucune annonce Vinted ou Leboncoin relevée, Back Market illisible, reconditionné dès 394,99 € sur Fnac Marketplace (123comparer). À 356 € maximum (85 % du neuf le moins cher), il resterait environ 51 € net (17 %) sans commission, mais ce chiffre n'est pas vérifié. Les acheteurs peuvent aussi obtenir ce téléphone à 325 € sur AliExpress, ce qui peut freiner la revente.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "Codes valables jusqu'au 18/11 d'après Phonandroid et Clubic, mais limités aux premiers arrivés",
+   "demande_confirmee": "non (« pixel 10a » figure bien dans data/demande.json, mais en Italie, pas en France ; suggestions Google non lues)"
+  }
  },
  {
   "id": "3fe320fe1b",
@@ -4600,7 +4610,7 @@
   "ecart_vs_neuf_min": 0.438,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T16:43+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ssd ps5",
@@ -4675,7 +4685,17 @@
     "rentabilite": 0.833
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T17:56",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo inaccessible depuis cette vérification, et le relevé automatique n'a rien donné (plafond du jour Apify probablement atteint). L'alerte compare au mauvais produit : les 342,45 € sont ceux d'une carte microSD Express Lexar Play Pro, pas de ce SSD Lexar Play 2280 1 To. Le vrai prix neuf le plus bas est 149,99 € livré, chez Fnac, Darty et Cdiscount (labonneconfig et 123comparer, relevés du 02/11). Il n'y a donc aucun écart : c'est le prix normal du moment, partout. Cette affaire sera rejetée dès qu'idealo sera lu, sauf surprise.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": "aucun",
+   "marge_nette_verifiee": null,
+   "duree_offre": "Promo Black November, fin non indiquée",
+   "demande_confirmee": "non (« ssd ps5 » figure bien dans data/demande.json en France, +84 %, et le produit correspond ; suggestions Google non lues)"
+  }
  },
  {
   "id": "5933d53489",
@@ -4730,7 +4750,7 @@
   "ecart_vs_neuf_min": 0.492,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T16:43+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "écran oled",
@@ -4805,6 +4825,16 @@
     "rentabilite": 0.682
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-02T17:56",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo inaccessible depuis cette vérification, et le relevé automatique n'a rien donné (plafond du jour Apify probablement atteint). L'alerte compare au mauvais produit : les 710,76 € sont ceux d'un LG 32 pouces (32GX850A-B). Le produit de l'offre est le LG 27GX704A-B, 27 pouces, déjà à ce prix chez Amazon depuis le 12/10. Le vrai prix neuf le plus bas est 349,99 € chez Fnac, Darty, Cdiscount et Amazon (labonneconfig, relevé du 02/11). Il n'y a donc aucun écart : pas de marge possible. Cette affaire sera rejetée dès qu'idealo sera lu, sauf surprise.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": "aucun",
+   "marge_nette_verifiee": null,
+   "duree_offre": "Fin non indiquée",
+   "demande_confirmee": "non (« écran oled » figure bien dans data/demande.json en France, +69 %, mais recherche générale ; suggestions Google non lues)"
+  }
  }
 ]

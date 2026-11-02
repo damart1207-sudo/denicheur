@@ -4890,7 +4890,7 @@
   "ecart_vs_neuf_min": 0.752,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T17:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "xiaomi pad 7",
@@ -4965,7 +4965,17 @@
     "rentabilite": 0.069
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejet quel que soit le prix idealo (idealo non lu : inaccessible depuis cette vérification, et le relevé automatique n'a rien donné). Produit exact : Xiaomi Pad 7 8/256 Go. Offre confirmée par Clubic (02/11) : 202,35 € avec le code CLU40 chez MixTech Europe Store sur AliExpress, expédiée de France. Mais c'est un code public : tout le monde a ce prix. Le neuf le moins cher en France n'est donc pas 269,10 € comme le dit l'alerte : AliExpress l'affiche à 242,35 € sans code (123comparer, 01/11). Revente plafonnée à 85 % de ce prix, soit 206 €, sous notre coût de 207,35 €. Les annonces lues sur Leboncoin pour ce modèle sont plus basses : 180 € (256 Go, très bon état) et 150 € (capacité non précisée) ; une annonce à 260 € est la version 12 Go, un autre modèle. Marge retenue : -27,35 €. Même avec 269,10 € comme référence, la marge resterait à 21 € soit 10 %, sous les seuils. Même tablette déjà rejetée ce matin (alerte 630709a7fc). Demande : « xiaomi pad 7 » figure bien dans data/demande.json (France, +107 %) et le produit correspond, mais les suggestions Google n'ont pas pu être lues, donc non confirmée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 180,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -27.35,
+   "duree_offre": "Pendant le 11.11 AliExpress, fin exacte non indiquée",
+   "demande_confirmee": "non (« xiaomi pad 7 » figure bien dans data/demande.json en France, +107 %, et le produit correspond ; suggestions Google non lues)"
+  },
+  "verifie_le": "2026-11-02T18:53"
  },
  {
   "id": "3cbdda8dcc",
@@ -5008,7 +5018,7 @@
   "ecart_vs_neuf_min": 0.604,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T17:50+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "canaux": [
    {
@@ -5076,6 +5086,16 @@
     "rentabilite": -0.029
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo inaccessible depuis cette vérification, et le relevé automatique n'a rien donné. Bon modèle (CMF Watch Pro 2, AMOLED 1,32 pouce). Offre AliExpress vue sur Chollometro (site espagnol) : 27,20 € avec un avantage de 5 € dont la condition n'est pas expliquée, sinon 32,20 €, expédiée d'Espagne. Livraison en France non confirmée, à vérifier avant tout achat. Neuf le moins cher relevé aujourd'hui : 49,99 € livré chez Cdiscount (45 € + 4,99 € de port), puis 68,99 € chez Rue du Commerce ; une offre d'occasion Fnac est à 39,99 € livrée. L'alerte oublie les 4,99 € de port. Revente : plafond de 85 % du neuf, soit 42,49 €. Une seule annonce exacte lue sur Leboncoin : 45 € (neuve, Nantes), c'est un prix demandé, pas une vente. Vinted : 54 annonces CMF de 10 à 79 € mais modèle non indiqué, donc non exploitables. Marge provisoire : 10,29 € soit 32 % du coût de 32,20 €, à peine au-dessus du seuil de 30 %. Le verdict dépend donc d'idealo : à re-vérifier, avec la livraison en France.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": 42.49,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 10.29,
+   "duree_offre": "Inconnue (Spécial 11/11 AliExpress, page Chollometro sans date de fin)",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T18:53"
  }
 ]

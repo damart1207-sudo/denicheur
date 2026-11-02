@@ -2501,7 +2501,7 @@
   "ecart_vs_neuf_min": 0.748,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T06:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "insta360",
@@ -2575,7 +2575,17 @@
     "rentabilite": 0.093
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification, et le relevé automatique n'a rien donné. Page de l'offre (Pepper Pays-Bas) non lisible, donc version et conditions non confirmées. Attention : ce n'est pas un écart de prix entre pays, c'est AliExpress, où la même caméra se trouve aussi côté France : 289,53 € (Dealabs) et 269 € avec code PHD60 + PayPal (Phonandroid, 01/11). Le prix de comparaison de 382,99 € vient d'achatmoinscher. Si idealo le confirme, revente ~337 € sur Leboncoin, soit ~46 € de marge (15,7 %), tout juste au seuil. Mais un acheteur peut l'avoir à 269 € sur AliExpress, donc revente non confirmée : aucune annonce Vinted/Leboncoin relevée.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "promos AliExpress 11.11 jusqu'au 18/11 ; durée de ce prix exact inconnue",
+   "demande_confirmee": "non (« insta360 » figure bien dans data/demande.json, mais recherche de marque en Allemagne, pas ce modèle en France ; suggestions Google non lues)"
+  },
+  "verifie_le": "2026-11-02T07:49"
  },
  {
   "id": "0ae12f7ef0",
@@ -2611,7 +2621,7 @@
   "ecart_vs_neuf_min": 0.698,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T06:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "revente_reelle": {},
   "canaux": [
    {
@@ -2679,7 +2689,17 @@
     "rentabilite": 0.141
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Pas une affaire : idealo affichait ce processeur dès 150,17 € en France hier (relevé du 01/11, non relu aujourd'hui), et Dealabs donne le même prix de 150,17 € chez AliExpress. L'offre coûte 171,87 € avec le port estimé, donc plus cher. Le prix de 239 € de l'alerte est trompeur. Revente plafonnée à 85 % de 150,17 €, soit 127,64 € : perte d'environ 44 €.",
+   "prix_neuf_min_idealo": 150.17,
+   "prix_revente_verifie": 127.64,
+   "canal": null,
+   "marge_nette_verifiee": -44.23,
+   "duree_offre": "inconnue (page de l'offre non lisible)",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-02T07:49"
  },
  {
   "id": "90cd729f50",
@@ -2722,7 +2742,7 @@
   "ecart_vs_neuf_min": 0.717,
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T06:41+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "revente_reelle": {},
   "demande_forte": {
    "recherche": "ssd",
@@ -2796,6 +2816,16 @@
     "rentabilite": 0.14
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix idealo non lu : idealo est inaccessible depuis cette vérification, et le relevé automatique n'a rien donné. Page Dealabs lue en partie seulement : 278,93 € chez AliExpress (258,93 € via PayPal d'après le titre, conditions, entrepôt et date de fin non lisibles). Le prix de comparaison de 388,99 € n'est pas fiable : sa fiche mélange 16/512 Go et 32 Go/1 To, et elle n'a que 4 boutiques. Dodeal (01/11) donne 518,82 € chez PC Componentes, sans garantir la même configuration, et le modèle a déjà été vu sur Dealabs à des prix proches. Revente non confirmée : aucune annonce Vinted/Leboncoin relevée. Si idealo confirme ~389 €, revente ~342 € sur Leboncoin, soit ~58 € de marge (20,6 %). Demande non réelle : le signal porte sur « ssd » en Espagne, pas sur ce mini PC.",
+   "prix_neuf_min_idealo": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (promos AliExpress 11.11 jusqu'au 18/11 ; ce prix exact non confirmé)",
+   "demande_confirmee": "non (recherche « ssd » en Espagne, sans rapport avec ce produit)"
+  },
+  "verifie_le": "2026-11-02T07:49"
  }
 ]

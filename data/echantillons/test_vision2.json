@@ -1,0 +1,647 @@
+{
+ "tous": {
+  "gemini": [
+   "models/gemini-2.5-flash",
+   "models/gemini-2.5-pro",
+   "models/gemini-2.5-flash-preview-tts",
+   "models/gemini-2.5-pro-preview-tts",
+   "models/gemma-4-26b-a4b-it",
+   "models/gemma-4-31b-it",
+   "models/gemini-flash-latest",
+   "models/gemini-flash-lite-latest",
+   "models/gemini-pro-latest",
+   "models/gemini-2.5-flash-lite",
+   "models/gemini-2.5-flash-image",
+   "models/gemini-3-flash-preview",
+   "models/gemini-3.1-pro-preview",
+   "models/gemini-3.1-pro-preview-customtools",
+   "models/gemini-3.1-flash-lite-preview",
+   "models/gemini-3.1-flash-lite",
+   "models/gemini-3-pro-image-preview",
+   "models/gemini-3-pro-image",
+   "models/nano-banana-pro-preview",
+   "models/gemini-3.1-flash-image-preview",
+   "models/gemini-3.1-flash-image",
+   "models/gemini-3.1-flash-lite-image",
+   "models/gemini-nano-banana-2.1",
+   "models/gemini-3.5-flash",
+   "models/gemini-3.5-flash-lite",
+   "models/gemini-omni-flash-preview",
+   "models/gemini-omni-1.1-flash",
+   "models/gemini-3.5-transcribe",
+   "models/gemini-3.6-flash",
+   "models/gemini-3.7-flash",
+   "models/gemini-3.8-flash",
+   "models/gemini-4-argon",
+   "models/lyria-3-clip-preview",
+   "models/lyria-3-pro-preview",
+   "models/lyria-3.5",
+   "models/gemini-3.1-flash-tts-preview",
+   "models/gemini-3.8-flash-tts",
+   "models/gemini-3.8-flash-lite-tts",
+   "models/gemini-robotics-er-2-preview",
+   "models/gemini-2.5-computer-use-preview-10-2025",
+   "models/antigravity-preview-05-2026",
+   "models/antigravity-preview-09-2026",
+   "models/antigravity-preview-latest",
+   "models/deep-research-max-preview-04-2026",
+   "models/deep-research-preview-04-2026",
+   "models/deep-research-pro-preview-12-2025",
+   "models/gemini-embedding-001",
+   "models/gemini-embedding-2-preview",
+   "models/gemini-embedding-2",
+   "models/aqa",
+   "models/gemini-3.5-transcribe-live",
+   "models/gemini-2.5-flash-native-audio-latest",
+   "models/gemini-2.5-flash-native-audio-preview-09-2025",
+   "models/gemini-2.5-flash-native-audio-preview-12-2025",
+   "models/gemini-3.1-flash-live-preview",
+   "models/gemini-3.8-live",
+   "models/gemini-3.8-live-extended-thinking",
+   "models/gemini-robotics-er-2-streaming-preview",
+   "models/gemini-3.5-live-translate-preview",
+   "models/lyria-realtime-exp"
+  ],
+  "groq": [
+   "whisper-large-v3",
+   "meta-llama/llama-prompt-guard-2-86m",
+   "whisper-large-v3-turbo",
+   "meta-llama/llama-prompt-guard-2-22m",
+   "openai/gpt-oss-safeguard-20b",
+   "openai/gpt-oss-120b",
+   "canopylabs/orpheus-arabic-saudi",
+   "allam-2-7b",
+   "openai/gpt-oss-20b",
+   "qwen/qwen3.8-27b",
+   "canopylabs/orpheus-v1-english"
+  ],
+  "openrouter": [
+   "z-ai/glm-5.3-flashx-legal",
+   "particle-ai/particle-1",
+   "openai/gpt-6.1-terra-pro",
+   "openai/gpt-6.1-terra-pro:batch",
+   "openai/gpt-6.1-terra",
+   "openai/gpt-6.1-terra:batch",
+   "moonshotai/kimi-k3.1-pro",
+   "recursive/flint-v1.0:free",
+   "minimax/minimax-m3.1-flash",
+   "deepseek/deepseek-v4.1-flash-1017",
+   "elorian/glimpse",
+   "xingchen-agi/xing4.0-29b-a4b:free",
+   "reflection/beam-1.0-501b-a23b",
+   "inception/mercury-3",
+   "prism-ml/ternary-bonsai-2-9b",
+   "moondream/moondream3-preview",
+   "moondream/moondream3.1-9b-a2b",
+   "meta/muse-spark-open",
+   "nvidia/nemotron-3.5-super-vl",
+   "nvidia/nemotron-3.5-super-vl:free",
+   "unbiased/pareto-26.10",
+   "~unbiased/pareto-latest",
+   "unbiased/pareto-26.9",
+   "liquid/lfm-2.5-24b-a2b",
+   "google/gemini-4-argon",
+   "google/gemini-4-argon:batch",
+   "scaledown/summarize",
+   "scaledown/extract",
+   "meta/muse-wonder",
+   "stepfun/step-5-preview",
+   "anthropic/claude-haiku-5.5",
+   "anthropic/claude-haiku-5.5:batch",
+   "google/gemini-nano-banana-2.1",
+   "mistralai/mistral-large-4-0",
+   "inclusionai/ling-3.1-flash",
+   "openai/gpt-6.1-sol-pro",
+   "openai/gpt-6.1-sol-pro:batch",
+   "openai/gpt-6.1-sol",
+   "openai/gpt-6.1-sol:batch",
+   "anthropic/claude-sonnet-5.5",
+   "anthropic/claude-sonnet-5.5:batch",
+   "perceptron/perceptron-mk1.5",
+   "fireworks/ember-1",
+   "z-ai/glm-5.3-prime",
+   "qwen/qwen3.8-max-prime",
+   "aion-labs/aion-3.5-mini",
+   "aion-labs/aion-3.5",
+   "upstage/solar-mini4",
+   "cohere/command-a-plus",
+   "openai/gpt-6-luna-pro",
+   "openai/gpt-6-luna-pro:batch",
+   "openai/gpt-6-luna",
+   "openai/gpt-6-luna:batch",
+   "openai/gpt-6-sol-pro",
+   "openai/gpt-6-sol-pro:batch",
+   "openai/gpt-6-sol",
+   "openai/gpt-6-sol:batch",
+   "anthropic/claude-opus-5.5",
+   "anthropic/claude-opus-5.5:batch",
+   "xiaomi/mimo-v2.6-pro-ultraspeed",
+   "xiaomi/mimo-v2.6-flash",
+   "xiaomi/mimo-v2.6-pro",
+   "x-ai/grok-4.7",
+   "qwen/qwen3.8-omni-flash",
+   "prism-ml/ternary-bonsai-2-27b",
+   "z-ai/glm-5.3-flashx",
+   "~deepseek/deepseek-pro-latest",
+   "~deepseek/deepseek-flash-latest",
+   "inference-net/schematron-v2-turbo",
+   "inference-net/schematron-v2-small",
+   "~openai/gpt-astra-latest",
+   "~openai/gpt-sol-latest",
+   "~openai/gpt-terra-latest",
+   "~openai/gpt-luna-latest",
+   "sakana/fugu-ultra-v2",
+   "sakana/fugu-max",
+   "inclusionai/ling-3.0-flash-vl",
+   "deepseek/deepseek-v4.1-flash",
+   "deepseek/deepseek-v4.1-flash:batch",
+   "inception/mercury-2.5",
+   "nex-agi/nex-n2.5-mini",
+   "nex-agi/nex-n2.5-pro",
+   "openai/gpt-6-astra",
+   "openai/gpt-6-astra:batch",
+   "openai/gpt-6-astra-pro",
+   "openai/gpt-6-astra-pro:batch",
+   "qwen/qwen3.8-max-0902",
+   "meta/muse-spark-1.3",
+   "google/gemini-3.8-flash",
+   "google/gemini-3.8-flash:batch",
+   "anthropic/claude-fable-5.1",
+   "anthropic/claude-fable-5.1:batch",
+   "ibm-granite/granite-4.2-8b",
+   "tencent/hy4-preview",
+   "~z-ai/glm-flash-latest",
+   "qwen/qwen3.8-flash",
+   "z-ai/glm-5.3-flash",
+   "z-ai/glm-5.3-flash:batch",
+   "deepseek/deepseek-v4-flash-vision-exp",
+   "tencent/hy-mt2-1.8b",
+   "tencent/hy-mt2-30b-a3b",
+   "~z-ai/glm-latest",
+   "tencent/hy-mt2-7b",
+   "z-ai/glm-5.3",
+   "z-ai/glm-5.3:batch",
+   "qwen/qwen3.8-27b",
+   "dots-studio/dots-3-note-preview:free",
+   "google/gemini-3.7-flash",
+   "google/gemini-3.7-flash:batch",
+   "bytedance-seed/seed-2-1-turbo",
+   "qwen/qwen3.8-2.4t-a95b",
+   "bytedance-seed/seed-2.0-code",
+   "deepseek/deepseek-v4-pro-0813",
+   "x-ai/grok-4.6",
+   "liquid/lfm-2.5-2.6b:free",
+   "nvidia/nemotron-3.5-lightning",
+   "nvidia/nemotron-3.5-lightning:free",
+   "upstage/solar-pro4",
+   "meta/muse-glimmer-30b",
+   "meta/muse-spark-1.2",
+   "~deepseek/deepseek-v4-flash-latest",
+   "deepseek/deepseek-v4-flash-0731",
+   "thinkingmachines/inkling-small",
+   "thinkingmachines/inkling-small:free",
+   "qwen/qwen3.7-flash",
+   "anthropic/claude-opus-5",
+   "anthropic/claude-opus-5:batch",
+   "inclusionai/ling-3.0-flash",
+   "google/gemini-3.6-flash",
+   "google/gemini-3.6-flash:batch",
+   "google/gemini-3.5-flash-lite",
+   "google/gemini-3.5-flash-lite:batch",
+   "meituan/longcat-2.0",
+   "thinkingmachines/inkling",
+   "thinkingmachines/inkling:free",
+   "moonshotai/kimi-k3",
+   "moonshotai/kimi-k3:batch",
+   "meta/muse-spark-1.1",
+   "openai/gpt-5.6-luna-pro",
+   "openai/gpt-5.6-luna-pro:batch",
+   "openai/gpt-5.6-luna",
+   "openai/gpt-5.6-luna:batch",
+   "openai/gpt-5.6-terra-pro",
+   "openai/gpt-5.6-terra-pro:batch",
+   "openai/gpt-5.6-terra",
+   "openai/gpt-5.6-terra:batch",
+   "openai/gpt-5.6-sol-pro",
+   "openai/gpt-5.6-sol-pro:batch",
+   "openai/gpt-5.6-sol",
+   "openai/gpt-5.6-sol:batch",
+   "x-ai/grok-4.5",
+   "~x-ai/grok-latest",
+   "aion-labs/aion-3.0-mini",
+   "aion-labs/aion-3.0",
+   "tencent/hy3",
+   "anthropic/claude-sonnet-5",
+   "google/gemini-3.1-flash-lite-image",
+   "sakana/fugu-ultra",
+   "google/gemini-3.1-flash-image",
+   "google/gemini-3-pro-image",
+   "cohere/north-mini-code:free",
+   "z-ai/glm-5.2",
+   "moonshotai/kimi-k2.7-code",
+   "~anthropic/claude-fable-latest",
+   "anthropic/claude-fable-5",
+   "nvidia/nemotron-3.5-content-safety",
+   "nvidia/nemotron-3.5-content-safety:free",
+   "nvidia/nemotron-3-ultra-550b-a55b",
+   "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "qwen/qwen3.7-plus",
+   "qwen/qwen3.7-plus:batch",
+   "minimax/minimax-m3",
+   "stepfun/step-3.7-flash",
+   "anthropic/claude-opus-4.8",
+   "qwen/qwen3.7-max",
+   "x-ai/grok-build-0.1",
+   "google/gemini-3.5-flash",
+   "google/gemini-3.5-flash:batch",
+   "perceptron/perceptron-mk1",
+   "google/gemini-3.1-flash-lite",
+   "google/gemini-3.1-flash-lite:batch",
+   "openai/gpt-chat-latest",
+   "x-ai/grok-4.3",
+   "x-ai/grok-4.3:batch",
+   "mistralai/mistral-medium-3-5",
+   "mistralai/mistral-medium-3-5:batch",
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "~anthropic/claude-haiku-latest",
+   "~openai/gpt-mini-latest",
+   "~google/gemini-pro-latest",
+   "~moonshotai/kimi-latest",
+   "~google/gemini-flash-latest",
+   "~anthropic/claude-sonnet-latest",
+   "qwen/qwen3.5-plus-20260420",
+   "qwen/qwen3.6-flash",
+   "qwen/qwen3.6-35b-a3b",
+   "qwen/qwen3.6-27b",
+   "openai/gpt-5.5-pro",
+   "openai/gpt-5.5",
+   "deepseek/deepseek-v4-pro"
+  ],
+  "nvidia": [
+   "01-ai/yi-large",
+   "adept/fuyu-8b",
+   "ai21labs/jamba-1.5-large-instruct",
+   "aisingapore/sea-lion-7b-instruct",
+   "bigcode/starcoder2-15b",
+   "databricks/dbrx-instruct",
+   "deepseek-ai/deepseek-coder-6.7b-instruct",
+   "deepseek-ai/deepseek-v4.1-flash",
+   "google/codegemma-1.1-7b",
+   "google/codegemma-7b",
+   "google/deplot",
+   "google/diffusiongemma-26b-a4b-it",
+   "google/gemma-2b",
+   "google/gemma-3-12b-it",
+   "google/gemma-3-4b-it",
+   "google/gemma-4-31b-it",
+   "google/recurrentgemma-2b",
+   "ibm/granite-3.0-3b-a800m-instruct",
+   "ibm/granite-3.0-8b-instruct",
+   "ibm/granite-34b-code-instruct",
+   "ibm/granite-8b-code-instruct",
+   "meta/codellama-70b",
+   "meta/llama-3.2-11b-vision-instruct",
+   "meta/llama-3.2-90b-vision-instruct",
+   "meta/llama-guard-4-12b",
+   "meta/llama2-70b",
+   "meta/muse-glimmer-30b",
+   "microsoft/kosmos-2",
+   "microsoft/phi-3-vision-128k-instruct",
+   "microsoft/phi-3.5-moe-instruct",
+   "minimaxai/minimax-m3.1-flash",
+   "mistralai/codestral-22b-instruct-v0.1",
+   "mistralai/mistral-7b-instruct-v0.3",
+   "mistralai/mistral-large",
+   "mistralai/mistral-large-2-instruct",
+   "mistralai/mistral-large-4-1t-a52b",
+   "mistralai/mixtral-8x22b-v0.1",
+   "moonshotai/kimi-k2.6",
+   "nv-mistralai/mistral-nemo-12b-instruct",
+   "nvidia/ai-synthetic-video-detector",
+   "nvidia/cosmos-reason2-8b",
+   "nvidia/embed-qa-4",
+   "nvidia/ising-calibration-1.5-31b",
+   "nvidia/llama-3.1-nemoguard-8b-content-safety",
+   "nvidia/llama-3.1-nemoguard-8b-topic-control",
+   "nvidia/llama-3.1-nemotron-51b-instruct",
+   "nvidia/llama-3.1-nemotron-70b-instruct",
+   "nvidia/llama-3.1-nemotron-safety-guard-8b-v3",
+   "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+   "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1",
+   "nvidia/llama-3.2-nv-embedqa-1b-v1",
+   "nvidia/llama-nemotron-embed-vl-1b-v2",
+   "nvidia/llama3-chatqa-1.5-70b",
+   "nvidia/mistral-nemo-minitron-8b-8k-instruct",
+   "nvidia/nemotron-3-embed-1b",
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+   "nvidia/nemotron-3-super-120b-a12b",
+   "nvidia/nemotron-3-ultra-550b-a55b",
+   "nvidia/nemotron-3.5-bolt-e4b",
+   "nvidia/nemotron-3.5-content-safety",
+   "nvidia/nemotron-3.5-embed-1b",
+   "nvidia/nemotron-3.5-embed-8b",
+   "nvidia/nemotron-3.5-lightning-30b-a3b",
+   "nvidia/nemotron-3.5-super-vl-120b-a12b",
+   "nvidia/nemotron-4-340b-instruct",
+   "nvidia/nemotron-4-340b-reward",
+   "nvidia/nemotron-nano-3-30b-a3b",
+   "nvidia/nemotron-parse",
+   "nvidia/nemotron-parse-2.0",
+   "nvidia/neva-22b",
+   "nvidia/nv-embedqa-mistral-7b-v2",
+   "nvidia/nvclip",
+   "nvidia/riva-translate-4b-instruct",
+   "nvidia/riva-translate-4b-instruct-v2",
+   "nvidia/vila",
+   "openai/gpt-oss-20b",
+   "poolside/laguna-xs-2.1",
+   "snowflake/arctic-embed-l",
+   "stepfun-ai/step-5-preview",
+   "writer/palmyra-creative-122b",
+   "writer/palmyra-fin-70b-32k",
+   "writer/palmyra-med-70b",
+   "writer/palmyra-med-70b-32k",
+   "z-ai/glm-5.3-flash",
+   "zyphra/zamba2-7b-instruct"
+  ],
+  "zai": [
+   "glm-4.5",
+   "glm-4.5-air",
+   "glm-4.6",
+   "glm-4.7",
+   "glm-5",
+   "glm-5-turbo",
+   "glm-5.1",
+   "glm-5.2",
+   "glm-5.3",
+   "glm-5.3-flash",
+   "glm-5.3-flashx",
+   "glm-5.3-flashx-legal"
+  ]
+ },
+ "verites": {
+  "a1": {
+   "produit": "iPhone 17",
+   "capacite_annonce": "256 Go",
+   "capacite_photo": "128 Go (contradiction)",
+   "prix": 549,
+   "pieges": [
+    "capacité de la boîte (128GB) ≠ titre (256 Go)",
+    "paiement par virement uniquement hors plateforme",
+    "contact par e-mail hors plateforme",
+    "compte créé récemment, 0 avis",
+    "prix ~25 % sous le neuf"
+   ],
+   "verdict": "arnaque probable"
+  },
+  "a2": {
+   "produit": "PS5 Slim",
+   "prix": 299,
+   "pieges": [
+    "l'étiquette de la photo indique DIGITAL EDITION (sans lecteur) alors que la description dit avec lecteur"
+   ],
+   "verdict": "prudence (contradiction à clarifier)"
+  },
+  "a3": {
+   "produit": "Dyson V15 Detect Absolute",
+   "prix": 320,
+   "pieges": [],
+   "verdict": "achat sûr (annonce cohérente)"
+  },
+  "a4": {
+   "produit": "écouteurs type AirPods Pro 2",
+   "prix": 89,
+   "pieges": [
+    "prix ~65 % sous le neuf",
+    "boîte « AirPod Pro » mal orthographiée, mention « Compatible / High Quality » = contrefaçon",
+    "10 pièces en stock + livraison étranger 15-20 j"
+   ],
+   "verdict": "contrefaçon probable"
+  },
+  "a5": {
+   "produit": "Samsung Galaxy S25 Ultra 512 Go",
+   "prix": 780,
+   "pieges": [
+    "écran fissuré (visible sur la photo et indiqué)",
+    "version Hong Kong (import, garantie FR absente)",
+    "chargeur non fourni"
+   ],
+   "verdict": "prudence (défauts réels, prix à revoir)"
+  }
+ },
+ "modeles": {
+  "gemini:gemini-omni-flash-preview": {
+   "a1": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a2": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a3": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a4": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a5": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   }
+  },
+  "gemini:gemini-omni-1.1-flash": {
+   "a1": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a2": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a3": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a4": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   },
+   "a5": {
+    "erreur": "HTTP 429 [{\n  \"error\": {\n    \"code\": 429,\n    \"message\": \"You exceeded your current quota, please check your plan and billing details. For more information on "
+   }
+  },
+  "gemini:gemini-flash-lite-latest": {
+   "a1": {
+    "s": 2.4,
+    "rep": "```json\n{\n  \"produit\": \"iPhone 17\",\n  \"capacite\": \"256 Go\",\n  \"couleur\": \"Blanc\",\n  \"prix\": 549,\n  \"etat\": \"Neuf sous blister\",\n  \"contradictions\": [\n    \"La photo indique 128GB alors que le titre et la description mentionnent 256 Go.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour un iPhone récent neuf\",\n    \"Paiement par virement bancaire uniquement sans remise en main propre\",\n    \"Adresse mail personnelle dans la description (bonplan.tel77@gmail.com)\",\n    \"Compte récent sans avis (octobre 2026)\"\n  ],\n  \"defauts\": [],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Cette annonce présente de multiples signaux d'alerte classiques, notamment l'exigence d'un virement sans remise en main propre et une incohérence flagrante de capacité entre la photo et le texte. De plus, le profil récent et le prix très attractif confirment la forte probabilité d'une escroquerie.\"\n}\n```"
+   },
+   "a2": {
+    "s": 2.9,
+    "rep": "```json\n{\n  \"produit\": \"PlayStation 5 Slim\",\n  \"capacite\": \"1 To\",\n  \"couleur\": \"Blanc\",\n  \"prix\": 299,\n  \"etat\": \"Très bon état\",\n  \"contradictions\": [\n    \"L'image indique explicitement 'DIGITAL EDITION (sans lecteur disque)', alors que le titre et la description mentionnent une version avec lecteur de disque.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Incohérence majeure entre le texte de l'illustration (Digital Edition sans lecteur) et le texte de l'annonce (avec lecteur).\",\n    \"Utilisation d'une image générique ou illustrée au lieu d'une photo réelle du produit mis en vente.\"\n  ],\n  \"defauts\": [],\n  \"verdict\": \"prudence\",\n  \"explication\": \"Il existe une contradiction flagrante entre l'illustration qui indique une version sans lecteur et le texte qui en annonce un avec lecteur. Cette incohérence couplée à l'absence de photos réelles nécessite de demander des précisions au vendeur avant tout achat.\"\n}\n```"
+   },
+   "a3": {
+    "s": 3.0,
+    "rep": "```json\n{\n  \"produit\": \"Dyson V15 Detect Absolute\",\n  \"capacite\": \"N/C\",\n  \"couleur\": \"N/C\",\n  \"prix\": 320,\n  \"etat\": \"Occasion - Très bon état\",\n  \"contradictions\": [\n    \"Le texte sur l'image indique 'Dyson V15 Detect' alors que le titre de l'annonce mentionne la version 'Absolute'.\"\n  ],\n  \"signaux_arnaque\": [],\n  \"defauts\": [],\n  \"verdict\": \"prudence\",\n  \"explication\": \"L'annonce semble correcte avec un profil bien noté et un prix cohérent pour de l'occasion, mais une légère discordance existe entre le texte de la photo (V15 Detect) et le titre (V15 Detect Absolute). Il est conseillé de vérifier la facture et les accessoires exacts avant l'achat.\"\n}\n```"
+   },
+   "a4": {
+    "s": 2.6,
+    "rep": "```json\n{\n  \"produit\": \"AirPods Pro 2\",\n  \"capacite\": \"Non applicable\",\n  \"couleur\": \"Blanc\",\n  \"prix\": 89,\n  \"etat\": \"Neuf\",\n  \"contradictions\": [\n    \"L'image indique 'High Quality - Compatible', ce qui suggère une imitation ou une contrefaçon.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour des AirPods Pro 2 neufs\",\n    \"Mention 'compatible' sur l'image typique des fausses copies\",\n    \"Stock multiple (10 pièces) avec livraison depuis l'étranger\",\n    \"Vendeur professionnel récent avec de mauvaises notes\"\n  ],\n  \"defauts\": [\n    \"Contrefaçon évidente suggérée par le texte de l'image ('Compatible')\"\n  ],\n  \"verdict\": \"contrefaçon probable\",\n  \"explication\": \"Cette annonce présente tous les marqueurs d'une vente de fausses répliques d'AirPods Pro, notamment le prix cassé et la mention suspecte 'compatible' sur l'illustration. De plus, l'envoi depuis l'étranger par un vendeur professionnel mal évalué renforce fortement le risque d'arnaque.\"\n}\n```"
+   },
+   "a5": {
+    "s": 2.3,
+    "rep": "```json\n{\n  \"produit\": \"Samsung Galaxy S25 Ultra\",\n  \"capacite\": \"512 Go\",\n  \"couleur\": \"Titane Noir\",\n  \"prix\": 780,\n  \"etat\": \"Occasion avec défaut\",\n  \"contradictions\": [\n    \"La photo montre une boîte scellée (neuf) alors que la description indique un téléphone déballé avec une fissure sur l'écran.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Utilisation d'une photo de boîte scellée générique pour un produit décrit comme endommagé.\",\n    \"Prix très bas pour un modèle récent de 512 Go.\"\n  ],\n  \"defauts\": [\n    \"Petite fissure dans le coin en bas de l'écran.\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente une contradiction flagrante entre l'illustration d'une boîte scellée et la description mentionnant un écran fissuré. De plus, le profil du vendeur et le prix bas combinés à des photos génériques invitent à la plus grande méfiance.\"\n}\n```"
+   }
+  },
+  "gemini:gemini-flash-latest": {
+   "a1": {
+    "erreur": "HTTP 503 [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try "
+   },
+   "a2": {
+    "erreur": "HTTP 503 [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try "
+   },
+   "a3": {
+    "erreur": "HTTP 503 [{\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try "
+   },
+   "a4": {
+    "erreur": "The read operation timed out"
+   },
+   "a5": {
+    "erreur": "The read operation timed out"
+   }
+  },
+  "openrouter:nvidia/nemotron-3.5-super-vl:free": {
+   "a1": {
+    "s": 14.2,
+    "rep": "{\n  \"produit\": \"iPhone 17\",\n  \"capacite\": \"256 Go\",\n  \"couleur\": \"Blanc\",\n  \"prix\": 549,\n  \"etat\": \"Neuf\",\n  \"contradictions\": [\n    \"L'image indique 128GB alors que le titre et la description indiquent 256 Go\",\n    \"Le prix de 549€ est incohérent avec la valeur marchande d'un iPhone 17 neuf\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour un iPhone 17 neuf\",\n    \"Paiement par virement bancaire uniquement\",\n    \"Pas de remise en main propre\",\n    \"Compte vendeur créé en octobre 2026 (très récent)\",\n    \"0 avis\",\n    \"Adresse email Gmail personnelle\"\n  ],\n  \"defauts\": [\n    \"Incohérence de capacité de stockage entre le visuel et le texte\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente des contradictions majeures sur la capacité (128GB sur l'image vs 256Go dans le titre) et un prix suspectement bas pour un modèle neuf. Les modalités de paiement (virement uniquement, envoi sans remise en main propre) et l'ancienneté du compte vendeur confirment un risque élevé d'arnaque.\"\n}"
+   },
+   "a2": {
+    "s": 17.1,
+    "rep": "{\n  \"produit\": \"PS5 Slim\",\n  \"capacite\": null,\n  \"couleur\": \"Blanc\",\n  \"prix\": 299,\n  \"etat\": \"très bon état\",\n  \"contradictions\": [\n    \"L'image indique 'PS5 Slim DIGITAL EDITION (sans lecteur disque)' alors que le titre et la description précisent une version 'avec lecteur disque'\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas (299 €) pour une PS5 Slim avec lecteur disque\",\n    \"Utilisation d'une illustration générique au lieu d'une photo réelle de l'objet\",\n    \"Proposition d'envoi avec 'paiement sécurisé' (risque de lien de paiement frauduleux)\"\n  ],\n  \"defauts\": [\n    \"Incohérence majeure entre le visuel (édition digitale) et l'article vendu (lecteur disque)\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'image affiche clairement une PS5 Slim Digital Edition sans lecteur disque, contredisant le texte qui propose une version avec lecteur disque. Ce désaccord majeur, combiné à un prix très inférieur au marché, indique une annonce trompeuse ou une tentative d'arnaque.\"\n}"
+   },
+   "a3": {
+    "s": 13.9,
+    "rep": "{\n  \"produit\": \"Dyson V15 Detect Absolute\",\n  \"capacite\": null,\n  \"couleur\": \"Violet et jaune\",\n  \"prix\": 320,\n  \"etat\": \"Occasion\",\n  \"contradictions\": [\n    \"L'image indique 'Dyson V15 Detect' alors que le titre précise 'Absolute'\",\n    \"Prix incohérent avec un modèle de 2025 encore sous garantie constructeur\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas (320 €) pour un Dyson V15 récent\",\n    \"Mention 'Paiement sécurisé via le site' souvent utilisée pour le phishing\"\n  ],\n  \"defauts\": [\n    \"Aucun défaut technique mentionné par le vendeur\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 320 € est suspectement bas pour un aspirateur Dyson V15 Detect Absolute acheté en 2025 et encore sous garantie jusqu'en 2027. Cette incohérence tarifaire suggère fortement une arnaque ou un produit avec des défauts cachés non déclarés.\"\n}"
+   },
+   "a4": {
+    "s": 12.0,
+    "rep": "{\n  \"produit\": \"AirPods Pro 2\",\n  \"capacite\": null,\n  \"couleur\": \"blanc\",\n  \"prix\": 89,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"L'image affiche le texte 'AirPod Pro' générique alors que le titre précise 'AirPods Pro 2'\",\n    \"Le titre annonce une 'boîte scellée' mais l'image est une icône sans boîte visible\",\n    \"Le texte sur l'image mentionne 'Compatible' de manière générique, contrairement à un produit Apple officiel\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas (89 €) pour des AirPods Pro 2 neufs\",\n    \"Livraison depuis l'étranger (15-20 jours) malgré une localisation indiquée à Paris\",\n    \"Compte vendeur récent (membre depuis septembre 2026) avec seulement 3 avis\",\n    \"Mention 'compatible iPhone et Android' typique des contrefaçons\"\n  ],\n  \"defauts\": [\n    \"Absence de photo réelle du produit\",\n    \"Aucune preuve visuelle de l'état 'scellé'\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 89 € est suspectement bas pour des AirPods Pro 2 neufs sous scellé. La combinaison d'une localisation Paris avec une livraison depuis l'étranger et une image générique confirme le caractère frauduleux de l'annonce.\"\n}"
+   },
+   "a5": {
+    "s": 17.8,
+    "rep": "{\n  \"produit\": \"Samsung Galaxy S25 Ultra\",\n  \"capacite\": \"512 Go\",\n  \"couleur\": \"Titane Noir\",\n  \"prix\": 780,\n  \"etat\": \"Occasion avec fissure\",\n  \"contradictions\": [\n    \"L'image indique 'Boîte scellée' (neuf) alors que la description mentionne un produit 'très peu servi' avec une fissure\",\n    \"Le titre indique 'Titane Noir' mais l'image montre une boîte blanche\",\n    \"L'image montre un écran fissuré incompatible avec l'état 'Boîte scellée'\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix anormalement bas pour un Galaxy S25 Ultra 512 Go scellé\",\n    \"Version Hong Kong (garantie incertaine en France)\",\n    \"Contradiction majeure entre l'état 'scellé' et l'état 'utilisé/fissuré'\"\n  ],\n  \"defauts\": [\n    \"Fissure dans le coin de l'écran\",\n    \"Chargeur non fourni\",\n    \"Version import Hong Kong\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente des contradictions majeures entre une boîte scellée et un produit utilisé avec un écran fissuré. Le prix de 780 € pour un Galaxy S25 Ultra 512 Go neuf scellé est suspectement bas, signe probable d'une arnaque.\"\n}"
+   }
+  },
+  "openrouter:nvidia/nemotron-3.5-content-safety:free": {
+   "a1": {
+    "erreur": "HTTP 404 {\"error\":{\"message\":\"Provider returned error\",\"code\":404,\"metadata\":{\"raw\":\"{\\\"status\\\":404,\\\"title\\\":\\\"Not Found\\\",\\\"detail\\\":\\\"Function id '3e84ff75"
+   }
+  },
+  "openrouter:nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
+   "a1": {
+    "erreur": "HTTP 503 {\"error\":{\"message\":\"Provider returned error\",\"code\":503,\"metadata\":{\"raw\":\"{\\\"error\\\": {\\\"message\\\": \\\"content safety screening is temporarily unavai"
+   },
+   "a2": {
+    "s": 49.6,
+    "rep": "{\n  \"produit\": \"PS5 Slim\",\n  \"capacite\": \"non spécifié\",\n  \"couleur\": \"non spécifié\",\n  \"prix\": 299,\n  \"etat\": \"très bon état\",\n  \"contradictions\": [\n    \"La photo indique 'DIGITAL EDITION (sans lecteur disque)' alors que le titre et la description précisent 'avec lecteur disque'.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix de 299 € bien en dessous du prix habituel du PS5 Slim\",\n    \"Contradiction entre l'indication 'sans lecteur disque' sur la photo et 'avec lecteur disque' dans le titre/description\",\n    \"Informations incomplètes sur la capacité et la couleur du produit\"\n  ],\n  \"defauts\": [\n    \"Absence de lecteur disque malgré la description\",\n    \"Prix suspectément bas\",\n    \"Absence de précisions sur la capacité et la couleur\",\n    \"Photos simplifiées sans preuve du produit réel\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"L'annonce présente une contradiction claire entre la mention 'DIGITAL EDITION (sans lecteur disque)' sur la photo et la description affirmant qu'il s'agit d'une version avec lecteur disque. De plus, le prix de 299 € est largement inférieur au prix habituel du PS5 Slim, ce qui indique un risque élevé d'arnaque.\"\n}"
+   },
+   "a3": {
+    "s": 58.4,
+    "rep": "{\n  \"produit\": \"Dyson V15 Detect Absolute\",\n  \"capacite\": \"60 min\",\n  \"couleur\": \"non indiqué\",\n  \"prix\": 320,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"Le modèle indiqué sur la photo (Dyson V15 Detect) diffère du titre (Dyson V15 Detect Absolute)\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix très bas (320 €) pour un Dyson V15, bien en dessous du prix du marché\",\n    \"Garantie constructeur jusqu'en mars 2027, durée suspecte pour un achat de mars 2025\",\n    \"Mention de 'Facture + accessoires' sur la photo alors que le titre ne les précise pas\",\n    \"Vendeur particulier avec 124 avis et note de 4,9, profil potentiellement douteux\"\n  ],\n  \"defauts\": [],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 320 € est largement inférieur à la valeur réelle d'un Dyson V15, ce qui constitue un signal d’alarme. De plus, la photo indique un modèle différent du titre, suggérant une mauvaise description et une possible arnaque.\"\n}"
+   },
+   "a4": {
+    "s": 31.0,
+    "rep": "{\n  \"produit\": \"AirPods Pro 2\",\n  \"capacite\": \"non spécifié\",\n  \"couleur\": \"non spécifié\",\n  \"prix\": 89,\n  \"etat\": \"neuf\",\n  \"contradictions\": [\n    \"La photo indique « AirPod Pro » alors que le titre et la description parlent d’« AirPods Pro 2 ».\",\n    \"Le texte de la photo ne mentionne pas que le produit est « neuf » ni qu’il s’agit d’une boîte scellée.\",\n    \"Le prix de 89 € est largement inférieur au prix du marché pour des AirPods Pro 2 neufs.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Prix très bas par rapport à la valeur réelle du produit.\",\n    \"Membre professionnel depuis moins d’un an avec seulement 3 avis et une note moyenne de 3,1.\",\n    \"Délais de livraison de 15-20 jours depuis l’étranger, typiques des produits non originaux.\",\n    \"Stock limité à 10 pièces alors que le produit est décrit comme « neuf » et « boîte scellée ».\"\n  ],\n  \"defauts\": [\n    \"Capacité du produit non indiquée.\",\n    \"Couleur du produit non indiquée.\",\n    \"Incohérence entre l’image (AirPod Pro) et le titre/discription (AirPods Pro 2).\",\n    \"Absence de preuve d’authenticité (photos du produit réel, numéro de série, etc.).\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le prix de 89 € est bien en dessous du prix habituel des AirPods Pro 2 neufs, ce qui est un indice fort de fraude. De plus, la photo affiche « AirPod Pro » alors que le titre indique « AirPods Pro 2 », créant une incohérence qui suggère une annonce trompeuse.\"\n}"
+   },
+   "a5": {
+    "s": 10.5,
+    "rep": "{\n  \"produit\": \"Samsung Galaxy S25 Ultra\",\n  \"capacite\": \"512 Go\",\n  \"couleur\": \"Titane Noir\",\n  \"prix\": 780,\n  \"etat\": \"utilisé, très peu servi avec petite fissure au coin inférieur de l'écran\",\n  \"contradictions\": [\n    \"La photo indique \\\"Boîte scellée\\\" alors que la description précise que le chargeur n’est pas fourni.\",\n    \"Le prix de 780 € est nettement inférieur au prix habituel d’un S25 Ultra neuf.\",\n    \"La mention \\\"Version Hong Kong double SIM\\\" n’apparaît ni dans la photo ni dans le titre.\"\n  ],\n  \"signaux_arnaque\": [\n    \"Promesse de boîte scellée sans accessoires inclus.\",\n    \"Version importée (Hong Kong) sans garantie locale.\",\n    \"Paiement sécurisé non détaillé, typique des arnaques.\",\n    \"Prix suspectement bas pour le modèle annoncé.\"\n  ],\n  \"defauts\": [\n    \"Petite fissure dans le coin en bas de l’écran.\",\n    \"Chargeur non fourni (câble seul).\",\n    \"Possibilité d’un appareil reconditionné ou contrefaçon.\"\n  ],\n  \"verdict\": \"arnaque probable\",\n  \"explication\": \"Le vendeur affirme avoir une boîte scellée alors que le chargeur est absent, ce qui est contradictoire. De plus, le prix et la mention d’une version Hong Kong suggèrent un risque de fraude.\"\n}"
+   }
+  },
+  "openrouter:google/gemma-4-26b-a4b-it:free": {
+   "a1": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a2": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a3": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a4": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   },
+   "a5": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-26b-a4b-it:free is temporarily rate-limited upstream. Pleas"
+   }
+  },
+  "openrouter:google/gemma-4-31b-it:free": {
+   "a1": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a2": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a3": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a4": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   },
+   "a5": {
+    "erreur": "HTTP 429 {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please re"
+   }
+  },
+  "nvidia:meta/llama-3.2-11b-vision-instruct": {
+   "a1": {
+    "erreur": "HTTP 404 {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function id '9fa6fd04-ba2c-4bb3-90b7-ede407a9290f' version 'null': Specified function in account '6Z8o4qaa"
+   }
+  },
+  "nvidia:meta/llama-3.2-90b-vision-instruct": {
+   "a1": {
+    "s": 61.3,
+    "rep": "{\"produit\": \"iPhone 17\", \"capacite\": \"256 Go\", \"couleur\": \"blanc\", \"prix\": 549, \"etat\": \"neuf sous blister\", \"contradictions\": [], \"signaux_arnaque\": [\"annonce trop récente\", \"prix trop bas\", \"adresse mail peu professionnelle\"], \"defauts\": [], \"verdict\": \"arnaque probable\", \"explication\": \"L'annonce semble trop bonne pour être vraie, avec un prix très bas pour un produit récent et un état neuf sous blister. De plus, l'adresse mail peu professionnelle et la récence de l'annonce laissent penser qu'il s'agit d'une arnaque.\"}"
+   },
+   "a2": {
+    "erreur": "The read operation timed out"
+   },
+   "a3": {
+    "s": 53.0,
+    "rep": "{\n    \"produit\": \"Dyson V15 Detect Absolute\",\n    \"capacite\": \"non spécifiée\",\n    \"couleur\": \"non spécifiée\",\n    \"prix\": 320,\n    \"etat\": \"neuf\",\n    \"contradictions\": [],\n    \"signaux_arnaque\": [\"garantie jusqu'en mars 2027\", \"paiement sécurisé via le site ou main propre\"],\n    \"defauts\": [],\n    \"verdict\": \"arnaque probable\",\n    \"explication\": \"L'annonce semble trop bonne pour être vraie, avec une garantie de plus de 2 ans et un paiement sécurisé via le site ou main propre. Il est probable que l'annonce soit une arnaque pour obtenir de l'argent ou des informations personnelles.\"\n}"
+   },
+   "a4": {
+    "erreur": "HTTP 500 {\"type\":\"urn:inference-connection:problem-details:internal-server-error\", \"title\":\"Internal Server Error\", \"status\":500, \"detail\":\"Inference connectio"
+   },
+   "a5": {
+    "s": 27.8,
+    "rep": "{\n    \"produit\": \"Samsung Galaxy S25 Ultra\",\n    \"capacite\": \"512 Go\",\n    \"couleur\": \"Noir\",\n    \"prix\": 780,\n    \"etat\": \"d'occasion\",\n    \"contradictions\": [\n        \"Le titre mentionne un Galaxy S25 Ultra 512 Go, mais la photo montre un Galaxy S25 Ultra 512 Go Titan Noir.\"\n    ],\n    \"signaux_arnaque\": [\n        \"Le prix est très bas par rapport au marché.\",\n        \"L'annonce ne fournit pas d'informations sur l'état du produit.\"\n    ],\n    \"defauts\": [\n        \"Le produit est d'occasion et peut avoir des défauts non visibles.\"\n    ],\n    \"verdict\": \"arnaque probable\",\n    \"explication\": \"L'annonce présente plusieurs signaux d'arnaque, notamment un prix très bas et un manque d'informations sur l'état du produit. Il est probable que l'annonce soit une arnaque.\"\n}"
+   }
+  },
+  "nvidia:microsoft/phi-3-vision-128k-instruct": {
+   "a1": {
+    "erreur": "HTTP 404 {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function '20f2537e-8593-4eb9-ad40-60eee3bbaa55': Not found for account '6Z8o4qaaZnTSD5vx2iSr587jRuWq8o1IZY"
+   }
+  },
+  "nvidia:nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1": {
+   "a1": {
+    "erreur": "HTTP 404 404 page not found\n"
+   }
+  }
+ },
+ "listes": {
+  "gemini": [
+   "gemini-omni-flash-preview",
+   "gemini-omni-1.1-flash",
+   "gemini-flash-lite-latest",
+   "gemini-flash-latest"
+  ],
+  "groq": [],
+  "openrouter": [
+   "nvidia/nemotron-3.5-super-vl:free",
+   "nvidia/nemotron-3.5-content-safety:free",
+   "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+   "google/gemma-4-26b-a4b-it:free",
+   "google/gemma-4-31b-it:free"
+  ],
+  "nvidia": [
+   "meta/llama-3.2-11b-vision-instruct",
+   "meta/llama-3.2-90b-vision-instruct",
+   "microsoft/phi-3-vision-128k-instruct",
+   "nvidia/llama-3.2-nemoretriever-1b-vlm-embed-v1"
+  ],
+  "zai": []
+ }
+}

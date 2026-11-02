@@ -168,7 +168,10 @@ def tour():
     _ecrire("data/veille_journal.json", (jv + [bilan])[-200:])
     print(json.dumps(bilan, ensure_ascii=False))
     for x in nouvelles_alertes:
-        print("ALERTE", x["titre"][:80], x["prix"], "neuf min", (x["prix_plancher"] or {}).get("prix_min"))
+        try:
+            print("ALERTE", str(x.get("titre", ""))[:80], x.get("prix"), "neuf min", (x.get("prix_plancher") or {}).get("prix_min"))
+        except Exception:
+            pass
 
 
 if __name__ == "__main__":

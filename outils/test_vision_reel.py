@@ -12,9 +12,8 @@ CONSIGNE = ("Nous sommes le 2 novembre 2026. Voici une VRAIE annonce de petites 
             "explication (3 phrases en français).\n\nANNONCE :\n")
 FOURN = {
     "gemini": ("https://generativelanguage.googleapis.com/v1beta/openai", "GEMINI_API_KEY",
-               ["gemini-flash-lite-latest", "gemini-3.5-flash-lite", "gemini-3.1-flash-lite"]),
+               ["gemini-flash-lite-latest", "gemini-3.5-flash-lite"]),
     "openrouter": ("https://openrouter.ai/api/v1", "OPENROUTER_API_KEY", ["nvidia/nemotron-3.5-super-vl:free"]),
-    "nvidia": ("https://integrate.api.nvidia.com/v1", "NVIDIA_API_KEY", ["meta/llama-3.2-90b-vision-instruct"]),
 }
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36",
       "Referer": "https://www.vinted.fr/"}
@@ -31,6 +30,12 @@ def charger(url):
 
 
 res = {"images": {}, "modeles": {}}
+DEBUT = time.time()
+
+
+def sauver():
+    os.makedirs("data/echantillons", exist_ok=True)
+    json.dump(res, open("data/echantillons/test_vision_reel.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 images = {}
 for a in A:
     images[a["id"]] = []
@@ -44,6 +49,9 @@ for nom, (base, env, mods) in FOURN.items():
     for m in mods:
         r = res["modeles"][f"{nom}:{m}"] = {}
         for a in A:
+            if time.time() - DEBUT > 19 * 60:
+                r[a["id"]] = {"erreur": "temps max atteint"}
+                continue
             imgs = images[a["id"]] if nom != "nvidia" else images[a["id"]][:1]  # llama 3.2 : 1 image max
             contenu = [{"type": "text", "text": CONSIGNE + a["texte"]}] + [{"type": "image_url", "image_url": {"url": i}} for i in imgs]
             corps = {"model": m, "temperature": 0.1, "messages": [{"role": "user", "content": contenu}]}
@@ -63,6 +71,7 @@ for nom, (base, env, mods) in FOURN.items():
             except Exception as e:
                 r[a["id"]] = {"erreur": str(e)[:150]}
             time.sleep(4)
+            sauver()
 os.makedirs("data/echantillons", exist_ok=True)
 json.dump(res, open("data/echantillons/test_vision_reel.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print(json.dumps(res["images"]))

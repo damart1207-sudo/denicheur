@@ -1,24 +1,54 @@
 {
  "keepa": {
   "AMD Ryzen 7 7800X3D": {
-   "erreur": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+   "asin": "B0CKKY9743",
+   "titre": "AMD Ryzen 7 7800X3D Processor 4.2 Ghz 96 MB L3 Box, W128303129 (Ghz 96 MB L3 Box)",
+   "ean": "0730143314930",
+   "pays": "FR",
+   "prix_neuf": 373.89,
+   "prix_amazon": null,
+   "prix_tiers": 373.89,
+   "moyenne_90j": 376.28,
+   "plus_bas_90j": 337.97,
+   "occasion": 356.83,
+   "rang_ventes": null,
+   "chutes_rang_30j": 0,
+   "chutes_rang_90j": 0,
+   "ventes_estimees_30j": 0,
+   "remise_sincere": false,
+   "lien": "https://www.amazon.fr/dp/B0CKKY9743",
+   "jetons_restants": 1198
   },
-  "Garmin Forerunner 265 noir": {
-   "erreur": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
-  },
+  "Garmin Forerunner 265 noir": null,
   "Casio G-Shock GA-2100-1A1ER": {
-   "erreur": "UnicodeDecodeError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte"
+   "asin": "B07WGJ1JNW",
+   "titre": "Casio Montre Quartz Homme 45.40mm avec Cadran Noir analogique/numérique et Bracelet en Plastic/Resin Strap Noir GA-2100-1A1ER",
+   "ean": "4549526241642",
+   "pays": "FR",
+   "prix_neuf": 97.13,
+   "prix_amazon": null,
+   "prix_tiers": 97.13,
+   "moyenne_90j": 88.6,
+   "plus_bas_90j": 49.95,
+   "occasion": null,
+   "rang_ventes": 21941,
+   "chutes_rang_30j": 32,
+   "chutes_rang_90j": 103,
+   "ventes_estimees_30j": 32,
+   "remise_sincere": false,
+   "lien": "https://www.amazon.fr/dp/B07WGJ1JNW",
+   "jetons_restants": 1194
   }
  },
  "dataforseo": {
   "volumes": {
-   "exception": "HTTPError: HTTP Error 403: Forbidden"
+   "exception": "RuntimeError: HTTP 403 : {\n    \"version\": \"0.1.20261103\",\n    \"status_code\": 40104,\n    \"status_message\": \"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\n    \"time\": \"0 sec.\",\n    \"cost\": 0,\n    \"tasks_count\": 0,\n "
   },
   "tendances": {
-   "exception": "HTTPError: HTTP Error 403: Forbidden"
+   "exception": "RuntimeError: HTTP 403 : {\"version\":\"0.1.20261103\",\"status_code\":40104,\"status_message\":\"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tasks_error\":0,\"tasks\":null}"
   },
   "decalage_hype": {
-   "exception": "HTTPError: HTTP Error 403: Forbidden"
+   "exception": "RuntimeError: HTTP 403 : {\"version\":\"0.1.20261103\",\"status_code\":40104,\"status_message\":\"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tasks_error\":0,\"tasks\":null}"
   }
  }
 }

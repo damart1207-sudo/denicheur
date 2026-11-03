@@ -16062,7 +16062,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T19:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -16138,7 +16138,19 @@
     "rentabilite": 0.271
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T20:47+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (HP Smart Tank 5106), mais rejet : le titre Mydealz indique une offre à 104 € chez Lidl, peut-être seulement en magasin à Berlin (Pistoriusstraße). Page Mydealz illisible : aucune preuve d'une vente en ligne ni d'une livraison en France, et un magasin allemand n'est pas achetable depuis la France. Une ancienne offre Lidl en ligne (janvier 2026, ~109-114 €) ne prouve rien pour aujourd'hui. Le neuf français est en plus plus bas que le relevé du robot : 149,90 € livré chez Boulanger (Bonne Promo, 03/11), et non 171,19 €. Pas de revente : achat impossible à distance.",
+   "prix_neuf_min_idealo": 149.9,
+   "source_prix_ref": "Bonne Promo, 03/11 : Boulanger 149,90 €, livraison gratuite ; idealo non consulté",
+   "economie_pct": 27.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (stock local possible)",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "191be617eb",
@@ -16163,7 +16175,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T20:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 44.77,
@@ -16240,6 +16252,18 @@
     "rentabilite": -0.03
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T20:47+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (Cooler Master MasterFan SF240R ARGB, référence MFX-B2D2-18NPA-R1, 2 ventilateurs de 120 mm sur cadre 240 mm). Prix neuf France : 44,77 € sur idealo (robot, même code-barres 4719512087671, 42,42 € au plancher), soit ~33 % d'économie sur le papier. Rejet : pages Chollometro et Amazon Espagne illisibles, offre active, vendeur et livraison en France non prouvés (même règle que les autres offres Amazon étrangères). LDLC ne le vend plus. Revente : bénéfice estimé 7,35 €, sous les 8 €.",
+   "prix_neuf_min_idealo": 44.77,
+   "source_prix_ref": "idealo.fr (relevé du robot, 03/11, 5 offres)",
+   "economie_pct": 33.0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (offre Amazon Espagne postée ce soir)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

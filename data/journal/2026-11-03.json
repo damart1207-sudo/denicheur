@@ -9,34 +9,44 @@
 "resultats": 200,
 "alertes": 0
 },
-"A | apify:idealo | LEGO Marvel 76294 | ": {
+"A | flux:dealabs-tendance |  | Consoles & Jeux vidéo": {
 "denicheur": "A",
-"source": "apify:idealo",
-"cible": "LEGO Marvel 76294",
-"categorie": "",
+"source": "flux:dealabs-tendance",
+"cible": "",
+"categorie": "Consoles & Jeux vidéo",
 "recherches": 1,
-"cout_usd": 0.0035,
+"cout_usd": 0.0,
 "resultats": 1,
 "alertes": 0
 },
-"A | apify:vinted | LEGO Marvel 76294 | ": {
+"A | flux:dealabs-tendance |  | Mode & Accessoires": {
 "denicheur": "A",
-"source": "apify:vinted",
-"cible": "LEGO Marvel 76294",
-"categorie": "",
-"recherches": 1,
-"cout_usd": 0.015,
-"resultats": 15,
-"alertes": 0
-},
-"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20Marvel%2076294 | ": {
-"denicheur": "A",
-"source": "apify:leboncoin",
-"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20Marvel%2076294",
-"categorie": "",
+"source": "flux:dealabs-tendance",
+"cible": "",
+"categorie": "Mode & Accessoires",
 "recherches": 1,
 "cout_usd": 0.0,
-"resultats": 0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:dealabs-tendance |  | High-Tech": {
+"denicheur": "A",
+"source": "flux:dealabs-tendance",
+"cible": "",
+"categorie": "High-Tech",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "Consoles & Jeux vidéo",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Sports & Plein air": {
@@ -57,7 +67,37 @@
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
-"alertes": 1
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | Auto-Moto": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "Auto-Moto",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | Maison & Habitat": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "Maison & Habitat",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | High-Tech": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "High-Tech",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
 },
 "A | flux:mydealz-hot |  | Elektronik": {
 "denicheur": "A",
@@ -69,181 +109,11 @@
 "resultats": 1,
 "alertes": 0
 },
-"A | flux:hotukdeals-hot |  | Health & Beauty": {
+"A | flux:hotukdeals-hot |  | Home & Living": {
 "denicheur": "A",
 "source": "flux:hotukdeals-hot",
 "cible": "",
-"categorie": "Health & Beauty",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:chollometro-hot |  | Hogar, vivienda y oficina": {
-"denicheur": "A",
-"source": "flux:chollometro-hot",
-"cible": "",
-"categorie": "Hogar, vivienda y oficina",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 2,
-"alertes": 0
-},
-"A | flux:hotukdeals-new |  | Electronics": {
-"denicheur": "A",
-"source": "flux:hotukdeals-new",
-"cible": "",
-"categorie": "Electronics",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 5,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Deportes y aire libre": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Deportes y aire libre",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 5,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Electrónica": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Electrónica",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 4,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Jardín y bricolaje": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Jardín y bricolaje",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Gaming": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Gaming",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Coches y motos": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Coches y motos",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 3,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Juguetes, familia e hijos": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Juguetes, familia e hijos",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 7,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Moda y accesorios": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Moda y accesorios",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 5,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Hogar, vivienda y oficina": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Hogar, vivienda y oficina",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 4,
-"alertes": 0
-},
-"A | flux:chollometro-nuevos |  | Salud y belleza": {
-"denicheur": "A",
-"source": "flux:chollometro-nuevos",
-"cible": "",
-"categorie": "Salud y belleza",
-"recherches": 2,
-"cout_usd": 0.0,
-"resultats": 3,
-"alertes": 0
-},
-"A | flux:pepper-nl-hot |  | Familie & Kinderen": {
-"denicheur": "A",
-"source": "flux:pepper-nl-hot",
-"cible": "",
-"categorie": "Familie & Kinderen",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:frandroid-bonsplans |  | Bons plans": {
-"denicheur": "A",
-"source": "flux:frandroid-bonsplans",
-"cible": "",
-"categorie": "Bons plans",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 13,
-"alertes": 1
-},
-"A | flux:journaldugeek-bonplan |  | Bons plans": {
-"denicheur": "A",
-"source": "flux:journaldugeek-bonplan",
-"cible": "",
-"categorie": "Bons plans",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 12,
-"alertes": 0
-},
-"A | flux:clubic-bonsplans |  | ?": {
-"denicheur": "A",
-"source": "flux:clubic-bonsplans",
-"cible": "",
-"categorie": "?",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 27,
-"alertes": 0
-},
-"A | flux:01net-bonsplans |  | Bons Plans": {
-"denicheur": "A",
-"source": "flux:01net-bonsplans",
-"cible": "",
-"categorie": "Bons Plans",
-"recherches": 3,
-"cout_usd": 0.0,
-"resultats": 9,
-"alertes": 0
-},
-"A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
-"denicheur": "A",
-"source": "flux:dealabs-nouveaux",
-"cible": "",
-"categorie": "Consoles & Jeux vidéo",
+"categorie": "Home & Living",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
@@ -276,6 +146,26 @@
 "categorie": "Electronics",
 "recherches": 1,
 "cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-hot |  | Health & Beauty": {
+"denicheur": "A",
+"source": "flux:hotukdeals-hot",
+"cible": "",
+"categorie": "Health & Beauty",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-hot |  | Gaming": {
+"denicheur": "A",
+"source": "flux:hotukdeals-hot",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
 "resultats": 1,
 "alertes": 0
 },
@@ -284,6 +174,26 @@
 "source": "flux:chollometro-hot",
 "cible": "",
 "categorie": "Juguetes, familia e hijos",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-hot |  | Hogar, vivienda y oficina": {
+"denicheur": "A",
+"source": "flux:chollometro-hot",
+"cible": "",
+"categorie": "Hogar, vivienda y oficina",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:chollometro-hot |  | Salud y belleza": {
+"denicheur": "A",
+"source": "flux:chollometro-hot",
+"cible": "",
+"categorie": "Salud y belleza",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
@@ -299,11 +209,71 @@
 "resultats": 3,
 "alertes": 0
 },
+"A | flux:mydealz-new |  | Elektronik": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Elektronik",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
 "A | flux:mydealz-new |  | Gaming": {
 "denicheur": "A",
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Sports & Outdoors": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Sports & Outdoors",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Gaming": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Fashion & Accessories": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Fashion & Accessories",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 5,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Electronics": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Electronics",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 5,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Travel": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Travel",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
@@ -316,7 +286,137 @@
 "categorie": "Home & Living",
 "recherches": 1,
 "cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Family & Kids": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Family & Kids",
+"recherches": 1,
+"cout_usd": 0.0,
 "resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Groceries": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Groceries",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Car & Motorcycle": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Car & Motorcycle",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Supermercado y alimentación": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Supermercado y alimentación",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Juguetes, familia e hijos": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Juguetes, familia e hijos",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 3,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Moda y accesorios": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Moda y accesorios",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Electrónica": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Electrónica",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Deportes y aire libre": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Deportes y aire libre",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 3,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Hogar, vivienda y oficina": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Hogar, vivienda y oficina",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Salud y belleza": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Salud y belleza",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Coches y motos": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Coches y motos",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Jardín y bricolaje": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Jardín y bricolaje",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Gaming": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 5,
 "alertes": 0
 },
 "A | flux:pepper-pl-hot |  | Elektronika": {
@@ -339,104 +439,54 @@
 "resultats": 1,
 "alertes": 0
 },
-"A | apify:idealo | Dyson Spot+Scrub AI | ": {
+"A | flux:pepper-nl-hot |  | Familie & Kinderen": {
 "denicheur": "A",
-"source": "apify:idealo",
-"cible": "Dyson Spot+Scrub AI",
-"categorie": "",
-"recherches": 1,
-"cout_usd": 0.0035,
-"resultats": 1,
-"alertes": 0
-},
-"A | apify:vinted | Dyson Spot+Scrub AI | ": {
-"denicheur": "A",
-"source": "apify:vinted",
-"cible": "Dyson Spot+Scrub AI",
-"categorie": "",
-"recherches": 1,
-"cout_usd": 0.015,
-"resultats": 15,
-"alertes": 0
-},
-"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Dyson%20Spot%2BScrub%20AI | ": {
-"denicheur": "A",
-"source": "apify:leboncoin",
-"cible": "https://www.leboncoin.fr/recherche?text=Dyson%20Spot%2BScrub%20AI",
-"categorie": "",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 0,
-"alertes": 0
-},
-"A | flux:dealabs-tendance |  | Consoles & Jeux vidéo": {
-"denicheur": "A",
-"source": "flux:dealabs-tendance",
+"source": "flux:pepper-nl-hot",
 "cible": "",
-"categorie": "Consoles & Jeux vidéo",
+"categorie": "Familie & Kinderen",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
 "alertes": 0
 },
-"A | flux:hotukdeals-hot |  | Home & Living": {
+"A | flux:frandroid-bonsplans |  | Bons plans": {
 "denicheur": "A",
-"source": "flux:hotukdeals-hot",
+"source": "flux:frandroid-bonsplans",
 "cible": "",
-"categorie": "Home & Living",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:mydealz-new |  | Elektronik": {
-"denicheur": "A",
-"source": "flux:mydealz-new",
-"cible": "",
-"categorie": "Elektronik",
-"recherches": 1,
-"cout_usd": 0.0,
-"resultats": 1,
-"alertes": 0
-},
-"A | flux:hotukdeals-new |  | Fashion & Accessories": {
-"denicheur": "A",
-"source": "flux:hotukdeals-new",
-"cible": "",
-"categorie": "Fashion & Accessories",
+"categorie": "Bons plans",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 5,
 "alertes": 0
 },
-"A | flux:hotukdeals-new |  | Travel": {
+"A | flux:journaldugeek-bonplan |  | Bons plans": {
 "denicheur": "A",
-"source": "flux:hotukdeals-new",
+"source": "flux:journaldugeek-bonplan",
 "cible": "",
-"categorie": "Travel",
+"categorie": "Bons plans",
 "recherches": 1,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 4,
 "alertes": 0
 },
-"A | flux:hotukdeals-new |  | Gaming": {
+"A | flux:clubic-bonsplans |  | ?": {
 "denicheur": "A",
-"source": "flux:hotukdeals-new",
+"source": "flux:clubic-bonsplans",
 "cible": "",
-"categorie": "Gaming",
+"categorie": "?",
 "recherches": 1,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 9,
 "alertes": 0
 },
-"A | flux:chollometro-nuevos |  | Supermercado y alimentación": {
+"A | flux:01net-bonsplans |  | Bons Plans": {
 "denicheur": "A",
-"source": "flux:chollometro-nuevos",
+"source": "flux:01net-bonsplans",
 "cible": "",
-"categorie": "Supermercado y alimentación",
+"categorie": "Bons Plans",
 "recherches": 1,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 3,
 "alertes": 0
 }
 }

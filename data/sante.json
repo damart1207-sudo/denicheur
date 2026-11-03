@@ -1,20 +1,32 @@
 {
- "tours_ok": 94,
+ "tours_ok": 95,
  "tours_echec": 0,
- "dernier_ok": "03/11 17:54",
+ "dernier_ok": "03/11 18:05",
  "evenements": [
   {
    "heure": "03/11 15:26",
    "niveau": "erreur",
    "etape": "ia_meme_produit",
    "message": "TimeoutError: The read operation timed out | duit neuf (même marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
+  },
+  {
+   "heure": "03/11 18:04",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "TimeoutError: The read operation timed out | duit neuf (même marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
+  },
+  {
+   "heure": "03/11 18:05",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "TimeoutError: The read operation timed out | duit neuf (même marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
   }
  ],
  "dernier_resume": {
-  "heure": "03/11 17:52",
-  "annonces": 362,
-  "nouvelles": 72,
+  "heure": "03/11 18:02",
+  "annonces": 363,
+  "nouvelles": 65,
   "examinees": 25,
-  "alertes": 0
+  "alertes": 2
  }
 }

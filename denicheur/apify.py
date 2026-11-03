@@ -1,7 +1,7 @@
 """Robots Apify (testés le 01/11/2026) : idealo, Leboncoin, Vinted. Budget plafonné.
 
 Garde-fous : plafond par appel (maxTotalChargeUsd), et budget mensuel suivi dans data/etat/apify_budget.json :
-au-delà de BUDGET_MOIS_USD (4 $ sur les 5 $ offerts), plus aucun appel jusqu'au mois suivant.
+au-delà de BUDGET_MOIS_USD (35 $ sur le plan Starter), plus aucun appel jusqu'au mois suivant.
 """
 import json
 import os
@@ -14,10 +14,10 @@ from datetime import datetime, timezone
 from . import comparateurs, journal
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BUDGET_MOIS_USD = 4.0
+BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafond Apify côté compte : 40 $/mois
 # plafonds par jour (estimés d'après les tarifs) pour que le crédit gratuit tienne tout le mois :
-# A (vérifications idealo/Leboncoin/Vinted des alertes) 0,07 $ ; B (tendances) 0,03 $ ; C (chasse ciblée) 0,03 $
-PLAFOND_JOUR_USD = {"A": 0.07, "B": 0.03, "C": 0.03}
+# A (vérifications idealo/Leboncoin/Vinted des alertes + passage) 0,55 $ ; B (tendances) 0,15 $ ; C (chasse ciblée) 0,30 $ ; D (Vinted inter-pays) 0,10 $
+PLAFOND_JOUR_USD = {"A": 0.55, "B": 0.15, "C": 0.30, "D": 0.10}  # ≈ 1,10 $/jour, soit ~33 $/mois
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005)}

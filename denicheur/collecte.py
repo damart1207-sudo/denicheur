@@ -117,7 +117,15 @@ def _entree_atom(e, source):
     }
 
 
-def collecter(sources, lecteur=lire_flux):
+def lire_source(source, timeout=25):
+    """Lecteur par défaut : API GraphQL pour le réseau Pepper (plus riche, RSS en secours), flux RSS sinon."""
+    if source.get("type") == "pepper" and source.get("graphql", True):
+        from . import pepper
+        return pepper.lire(source, timeout)
+    return lire_flux(source, timeout)
+
+
+def collecter(sources, lecteur=lire_source):
     annonces, etat = [], {}
     vus = set()
     for s in sources:

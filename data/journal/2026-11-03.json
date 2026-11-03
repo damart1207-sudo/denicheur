@@ -114,9 +114,9 @@
 "source": "flux:hotukdeals-hot",
 "cible": "",
 "categorie": "Home & Living",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 4,
 "alertes": 0
 },
 "A | flux:hotukdeals-hot |  | Groceries": {
@@ -244,9 +244,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 3,
+"recherches": 4,
 "cout_usd": 0.0,
-"resultats": 4,
+"resultats": 5,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Fashion & Accessories": {
@@ -294,10 +294,10 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Family & Kids",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 6,
-"alertes": 0
+"resultats": 7,
+"alertes": 1
 },
 "A | flux:hotukdeals-new |  | Groceries": {
 "denicheur": "A",
@@ -524,9 +524,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Kultur & Freizeit",
-"recherches": 3,
+"recherches": 4,
 "cout_usd": 0.0,
-"resultats": 4,
+"resultats": 6,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Forfaits mobiles et internet": {
@@ -614,6 +614,46 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Health & Beauty",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | LEGO Concorde 10318 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "LEGO Concorde 10318",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | LEGO Concorde 10318 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "LEGO Concorde 10318",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20Concorde%2010318 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20Concorde%2010318",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:pepper-pl-hot |  | Gaming": {
+"denicheur": "A",
+"source": "flux:pepper-pl-hot",
+"cible": "",
+"categorie": "Gaming",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

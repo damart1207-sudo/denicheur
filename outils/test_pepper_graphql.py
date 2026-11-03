@@ -9,6 +9,21 @@ sources = [s for s in json.load(open("config/sources.json", encoding="utf-8"))["
 res = {}
 for s in sources:
     r = {"url": s["url"]}
+    import urllib.parse
+    dom = urllib.parse.urlparse(s["url"]).netloc
+    for liste in ("hot", "new"):
+        try:
+            th = pepper.requete(dom, liste)
+            r[f"graphql_{liste}"] = {"nb": len(th), "exemple": th[0] if th else None}
+        except Exception as e:
+            msg = f"{type(e).__name__}: {e}"
+            if hasattr(e, "read"):
+                try:
+                    msg += " | " + e.read()[:400].decode("utf-8", "replace")
+                except Exception:
+                    pass
+            r[f"graphql_{liste}"] = {"erreur": msg[:700]}
+        print("  GRAPHQL", s["id"], liste, json.dumps(r[f"graphql_{liste}"], ensure_ascii=False)[:600])
     try:
         items, err = pepper.lire(s)
         r.update({"nb": len(items), "erreur": err, "lecture": items[0]["lecture"] if items else None,

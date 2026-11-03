@@ -1,0 +1,4487 @@
+{
+ "passage": "europe",
+ "horodatage": "2026-11-03_2201",
+ "date_affichee": "03/11/2026 à 22 h 01",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 357,
+ "nb_nouvelles": 328,
+ "nb_prefiltres": 207,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 23
+  },
+  "gptoss": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 198984, Re",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 5
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0,
+   "remplace": "gptoss"
+  },
+  "nemotron_nv": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 21,
+   "remplace": "gptoss"
+  }
+ },
+ "remplacements": {
+  "gemma": "gptoss",
+  "nemotron_nv": "gptoss"
+ },
+ "candidats": [
+  {
+   "id": "e3d1848240",
+   "titre": "ADIDAS Adizero Adios OG -",
+   "prix": 36.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.chollometro.com/ofertas/adidas-adizero-adios-og-2054620",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 228,
+   "domaine": "mode",
+   "nom_produit": "Adidas Adizero Adios OG",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 41.9,
+   "marge_nette": 78.1,
+   "rentabilite": 1.864,
+   "demande": 4.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Chaussure running Adidas Adizero Adios OG, coloris rare, forte demande sur Vinted/StockX, marge ~80 €.",
+    "nemotron_nv": "Chaussures Adidas Adizero Adios OG à 37 €, valeur neuve autour de 120 €, excellente marge sur Vinted."
+   },
+   "score": 234.9,
+   "verification": {
+    "produit": "Adidas Adizero Adios OG",
+    "prix_neuf_min": 65.0,
+    "marchand_neuf_min": "Adidas",
+    "occasion_bas": 35.0,
+    "occasion_haut": 70.0,
+    "revente_facile": false,
+    "remarque": "À 36,90 € l'achat est très intéressant pour un usage personnel face au prix catalogue (120 €), mais la marge nette à la revente reste mince car ce modèle lifestyle rétro suscite une demande modérée sur le marché de la seconde main.",
+    "prix_revente_prudent": 55.25,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Adidas Adizero Adios OG",
+    "neuf": {
+     "nb": 9,
+     "min": 103.2,
+     "p25": 136.95,
+     "mediane": 235.97,
+     "max": 501.71
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "adidas Adizero Adios OG Cloud White Solar Red Core Black Men Unisex Shoes IH0971",
+      "prix": "103.20",
+      "url": "https://www.ebay.fr/itm/257725671716?_skw=Adidas+Adizero+Adios+OG&hash=item3c01a5a924:g:rx0AAeSw7SlqnF3x"
+     },
+     {
+      "titre": "KJ3197 adidas Adizero Adios OG Noir (Billy's Exclusive) (Hommes)",
+      "prix": "183.58",
+      "url": "https://www.ebay.fr/itm/257578284448?_skw=Adidas+Adizero+Adios+OG&hash=item3bf8dcb5a0:g:h8sAAeSwSdhqF7mE"
+     },
+     {
+      "titre": "KJ3196 adidas Adizero Adios OG Beige (BILLY'S Exclusive) (Homme)",
+      "prix": "166.90",
+      "url": "https://www.ebay.fr/itm/257578305269?_skw=Adidas+Adizero+Adios+OG&hash=item3bf8dd06f5:g:eCkAAeSwG~lqF7oq"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 136.95,
+     "DE": 50.94,
+     "IT": 43.85,
+     "ES": 43.49
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Adidas Adizero Adios OG",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 67.99,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/209751497/adidas-adizero-adios-og-shoe-lucid-pink-core-black-cloud-white.html"
+   },
+   "idealo": {
+    "prix_min": 67.99,
+    "nb_offres": 1,
+    "lien": "https://www.idealo.fr/prix/209751497/adidas-adizero-adios-og-shoe-lucid-pink-core-black-cloud-white.html",
+    "titre": "Adidas Adizero Adios OG Shoe lucid pink/core black/cloud white",
+    "gtin": "4067904989844"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 59.83,
+     "marge_nette": 17.93,
+     "rentabilite": 0.428
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 59.83,
+     "marge_nette": 17.93,
+     "rentabilite": 0.428
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 59.83,
+     "marge_nette": 17.93,
+     "rentabilite": 0.428
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 67.99,
+     "marge_nette": 13.97,
+     "rentabilite": 0.333
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 67.99,
+     "marge_nette": 13.33,
+     "rentabilite": 0.318
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 67.99,
+     "marge_nette": 12.65,
+     "rentabilite": 0.302
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 67.99,
+     "marge_nette": 10.9,
+     "rentabilite": 0.26
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 67.99,
+     "marge_nette": 8.9,
+     "rentabilite": 0.212
+    }
+   ],
+   "prix_revente_prudent": 55.25,
+   "marge_verifiee": 13.35,
+   "rentabilite_verifiee": 0.319,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Adidas Adizero Adios OG",
+    "pays": {
+     "FR": {
+      "nb_annonces": 2,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 103.2,
+       "titre": "adidas Adizero Adios OG Cloud White Solar Red Core Black Men Unisex Shoes IH0971",
+       "lien": "https://www.ebay.fr/itm/257725671716?_skw=Adidas+Adizero+Adios+OG&hash=item3c01a5a924:g:rx0AAeSw7SlqnF3x",
+       "vendeur": "acrossports_fr",
+       "avis_vendeur": 4035
+      },
+      "plus_cher": {
+       "prix": 107.0,
+       "titre": "Chaussures Adidas Adizero Adios OG JQ9306",
+       "lien": "https://www.ebay.fr/itm/860049916880?_skw=Adidas+Adizero+Adios+OG&hash=itemc83ef843d0:g:w-0AAeSwXhxq6XGn",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3941
+      }
+     },
+     "DE": {
+      "nb_annonces": 35,
+      "total_ebay": 40,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 39.86,
+       "titre": "Adidas Adizero Adios OG Lace Up Rainbow Damen Sneaker weiß UK 5,5 JI2684",
+       "lien": "https://www.ebay.de/itm/158139274293?_skw=Adidas+Adizero+Adios+OG&hash=item24d1d5d435:g:DDoAAeSwZnFqbLH6",
+       "vendeur": "bmwcollector88",
+       "avis_vendeur": 1335
+      },
+      "plus_cher": {
+       "prix": 139.77,
+       "titre": "adidas Adizero Adios OG Prebrn Earstr White JQ4276 Herren Gr.",
+       "lien": "https://www.ebay.de/itm/317146848618?_skw=Adidas+Adizero+Adios+OG&hash=item49d76cdd6a:g:4moAAeSwLQ1p5ZMC",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18512
+      }
+     },
+     "IT": {
+      "nb_annonces": 186,
+      "total_ebay": 197,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 32.6,
+       "titre": "Nuove con scatola📦 Adidas Adizero Adios OG Core nere argento gialle - taglia UK 5 | US 6,5",
+       "lien": "https://www.ebay.it/itm/336686499681?_skw=Adidas+Adizero+Adios+OG&hash=item4e64144761:g:158AAeSw3H1pMidy",
+       "vendeur": "jh_direct",
+       "avis_vendeur": 812
+      },
+      "plus_cher": {
+       "prix": 143.58,
+       "titre": "Adidas Adizero Adios Og Prebrn Earst White JQ4276 taglia uomo",
+       "lien": "https://www.ebay.it/itm/820250443621?_skw=Adidas+Adizero+Adios+OG&hash=itembefabc7f65:g:4moAAeSwLQ1p5ZMC",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18512
+      }
+     },
+     "ES": {
+      "nb_annonces": 191,
+      "total_ebay": 201,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 32.41,
+       "titre": "Adidas Adizero Adios OG 'Core Negro Amarillo JP7635 Zapatos para Mujer Talla 5.5 EE. UU. Nuevos",
+       "lien": "https://www.ebay.es/itm/128114568148?_skw=Adidas+Adizero+Adios+OG&hash=item1dd4392bd4:g:7bEAAeSwDqdpEOW9",
+       "vendeur": "antoiner1967",
+       "avis_vendeur": 20169
+      },
+      "plus_cher": {
+       "prix": 143.12,
+       "titre": "Adidas Adizero Adios Og Prebrn Earstr Blanco JQ4276 Hombre Talla",
+       "lien": "https://www.ebay.es/itm/860053255666?_skw=Adidas+Adizero+Adios+OG&hash=itemc83f2b35f2:g:4moAAeSwLQ1p5ZMC",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18512
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Adizero Adios OG",
+    "temperature_dealabs": 228,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "adidas adizero adios og",
+     "adidas adizero adios og avis",
+     "adidas adizero adios og sneakers",
+     "adidas adizero adios og leopard",
+     "adidas adizero adios og green",
+     "adidas adizero adios og unisex",
+     "adidas adizero adios og running",
+     "adidas adizero adios og yellow",
+     "adidas adizero adios og on feet",
+     "adidas adizero adios og pour femmes"
+    ]
+   }
+  },
+  {
+   "id": "c9e8aaeb01",
+   "titre": "Ogrzewanie postojowe SUNSTER TP1 8kW 12/24V | Wysyłka z DE | $45.69 @ AliExpress",
+   "prix": 42.4,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.pepper.pl/promocje/ogrzewanie-postojowe-sunster-tp1-8kw-1224v-wysylka-z-de-4569-at-aliexpress-1381368",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 401,
+   "domaine": "auto-moto",
+   "nom_produit": "SUNSTER TP1 chauffage stationnaire",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 90.0,
+   "cout_achat": 47.4,
+   "marge_nette": 24.55,
+   "rentabilite": 0.518,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Chauffage stationnaire 8 kW pour véhicule, niche camping-car/poids lourd, peu de concurrence, revente ~90 € sur eBay."
+   },
+   "score": 27.4,
+   "verification": {
+    "produit": "Chauffage autonome stationnaire diesel 8 kW 12V/24V (Sunster TP1 / équivalent générique)",
+    "prix_neuf_min": 93.9,
+    "marchand_neuf_min": "Castorama",
+    "occasion_bas": 40.0,
+    "occasion_haut": 90.0,
+    "revente_facile": true,
+    "remarque": "Acheté à 42,40 €, ce modèle tout-en-un se revend très vite entre 60 € et 80 € sur Leboncoin pour équiper vans, camping-cars ou ateliers.",
+    "prix_revente_prudent": 79.81,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "SUNSTER TP1 chauffage stationnaire",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "SUNSTER TP1 chauffage stationnaire",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 79.81,
+   "marge_verifiee": 15.68,
+   "rentabilite_verifiee": 0.331,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "SUNSTER TP1 chauffage stationnaire",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "SUNSTER TP1 chauffage stationnaire",
+    "temperature_dealabs": 401,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "0e0815000f",
+   "titre": "Pied d’atelier vélo pliable Bike Original Easywork III - Charge max. 30kg",
+   "prix": 28.99,
+   "devise": "EUR",
+   "marchand": "Decathlon",
+   "lien": "https://www.dealabs.com/bons-plans/pied-datelier-velo-pliable-bike-original-easywork-iii-charge-max-30-kg-3444900",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 143,
+   "domaine": "sport",
+   "nom_produit": "Pied d'atelier vélo Easywork III",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 49.0,
+   "cout_achat": 33.99,
+   "marge_nette": 15.01,
+   "rentabilite": 0.442,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Prix Decathlon bien en dessous du marché de l'occasion, facile à revendre localement aux cyclistes."
+   },
+   "score": 27.2,
+   "ebay": {
+    "requete": "Pied d'atelier vélo Easywork III",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Pied d'atelier vélo Easywork III",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 49.95,
+    "ou": "idealo",
+    "lien": null
+   },
+   "idealo": {
+    "prix_min": 49.95,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "BIKE ORIGINAL - Pied de Réparation Vélo Pliable EASYWORK III - Atelier Complet pour Vélo de Route, VTT, VAE - Capacité 30 KG, Pince 360°, Acier Robuste - Idéal Pro et Particulier - Compact et Stable",
+    "gtin": null
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.96,
+     "marge_nette": 9.97,
+     "rentabilite": 0.293
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.96,
+     "marge_nette": 9.97,
+     "rentabilite": 0.293
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.96,
+     "marge_nette": 9.97,
+     "rentabilite": 0.293
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.95,
+     "marge_nette": 5.46,
+     "rentabilite": 0.161
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.95,
+     "marge_nette": 4.46,
+     "rentabilite": 0.131
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.95,
+     "marge_nette": 3.96,
+     "rentabilite": 0.117
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.95,
+     "marge_nette": 3.12,
+     "rentabilite": 0.092
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.95,
+     "marge_nette": 1.48,
+     "rentabilite": 0.044
+    }
+   ],
+   "prix_revente_prudent": 44.96,
+   "marge_verifiee": 10.97,
+   "rentabilite_verifiee": 0.323,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Pied d'atelier vélo Easywork III",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Pied d'atelier vélo Easywork III",
+    "temperature_dealabs": 143,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "pied d atelier velo pliable easywork iii noir",
+     "pied d atelier velo pliable easywork iii"
+    ]
+   }
+  },
+  {
+   "id": "b62b5093cd",
+   "titre": "Adidas Terrex Multi Light Down Hooded Jacket (Gr. S bis 2XL) Neukunden für 40,60",
+   "prix": 51.0,
+   "devise": "EUR",
+   "marchand": "Best Secret",
+   "lien": "https://www.mydealz.de/deals/adidas-terrex-multi-light-down-hooded-jacket-gr-s-bis-2xl-neukunden-fur-4799-2863883",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 279,
+   "domaine": "mode",
+   "nom_produit": "Adidas Terrex Multi Light Down",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 155.0,
+   "cout_achat": 56.0,
+   "marge_nette": 99.0,
+   "rentabilite": 1.768,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Doudoune Adidas Terrex légère, prix club Best Secret imbattable, revente 150-180 € sur Vinted.",
+    "nemotron_nv": "Veste Adidas Terrex en duvet à 51 €, valeur réelle supérieure à 150 €, facile à revendre sur Vinted."
+   },
+   "score": 191.8,
+   "verification": {
+    "produit": "Adidas Terrex Multi Light Down Hooded Jacket",
+    "prix_neuf_min": 67.5,
+    "marchand_neuf_min": "Atmosfera Sport",
+    "occasion_bas": 35.0,
+    "occasion_haut": 70.0,
+    "revente_facile": true,
+    "remarque": "La gamme Terrex est très recherchée en saison fraîche, mais la marge reste modérée à la revente face à un prix d'achat de 51 €.",
+    "prix_revente_prudent": 57.38,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Adidas Terrex Multi Light Down",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "adidas Veste Matelassée Terrex Multi Light Down Imperméable Gris Isolée Outdoor",
+      "prix": "100.39",
+      "url": "https://www.ebay.fr/itm/227586030076?_skw=Adidas+Terrex+Multi+Light+Down&hash=item34fd2f39fc:g:g4cAAeSwFRdq4IBh"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 73.99,
+     "IT": 80.46,
+     "ES": 65.18
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Adidas Terrex Multi Light Down",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 78.99,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/206251225/adidas-terrex-multi-light-hooded-down-jacket-warm-clay-burgundy-jd8412.html"
+   },
+   "idealo": {
+    "prix_min": 78.99,
+    "nb_offres": 10,
+    "lien": "https://www.idealo.fr/prix/206251225/adidas-terrex-multi-light-hooded-down-jacket-warm-clay-burgundy-jd8412.html",
+    "titre": "Adidas Terrex Multi Light Hooded Down Jacket Warm Clay/Burgundy (JD8412)",
+    "gtin": "4067901124088"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 69.51,
+     "marge_nette": 13.51,
+     "rentabilite": 0.241
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 69.51,
+     "marge_nette": 13.51,
+     "rentabilite": 0.241
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 69.51,
+     "marge_nette": 13.51,
+     "rentabilite": 0.241
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 78.99,
+     "marge_nette": 9.88,
+     "rentabilite": 0.176
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 78.99,
+     "marge_nette": 9.46,
+     "rentabilite": 0.169
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 78.99,
+     "marge_nette": 8.67,
+     "rentabilite": 0.155
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 78.99,
+     "marge_nette": 6.37,
+     "rentabilite": 0.114
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 78.99,
+     "marge_nette": 4.15,
+     "rentabilite": 0.074
+    }
+   ],
+   "prix_revente_prudent": 57.38,
+   "marge_verifiee": 1.38,
+   "rentabilite_verifiee": 0.025,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Adidas Terrex Multi Light Down",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 100.39,
+       "titre": "adidas Veste Matelassée Terrex Multi Light Down Imperméable Gris Isolée Outdoor",
+       "lien": "https://www.ebay.fr/itm/227586030076?_skw=Adidas+Terrex+Multi+Light+Down&hash=item34fd2f39fc:g:g4cAAeSwFRdq4IBh",
+       "vendeur": "viaductclothing",
+       "avis_vendeur": 6972
+      },
+      "plus_cher": {
+       "prix": 100.39,
+       "titre": "adidas Veste Matelassée Terrex Multi Light Down Imperméable Gris Isolée Outdoor",
+       "lien": "https://www.ebay.fr/itm/227586030076?_skw=Adidas+Terrex+Multi+Light+Down&hash=item34fd2f39fc:g:g4cAAeSwFRdq4IBh",
+       "vendeur": "viaductclothing",
+       "avis_vendeur": 6972
+      }
+     },
+     "DE": {
+      "nb_annonces": 4,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 73.99,
+       "titre": "Adidas Terrex Multi Light Down Hooded Jacket Size SMALL Light Blue 🔵",
+       "lien": "https://www.ebay.de/itm/366377265707?_skw=Adidas+Terrex+Multi+Light+Down&hash=item554dc96a2b:g:KiMAAeSwUJFnt5aX",
+       "vendeur": "thespezialist",
+       "avis_vendeur": 1442
+      },
+      "plus_cher": {
+       "prix": 106.95,
+       "titre": "Adidas Terrex Multi Light Essential Climawarm Down Hooded Jacket UVP 130£ L XL",
+       "lien": "https://www.ebay.de/itm/307166428154?_skw=Adidas+Terrex+Multi+Light+Down&hash=item47848bbbfa:g:2JMAAeSwI0FprG55",
+       "vendeur": "originaldiscountclothing",
+       "avis_vendeur": 2706
+      }
+     },
+     "IT": {
+      "nb_annonces": 9,
+      "total_ebay": 18,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 86.98,
+       "titre": "Adidas Uomo Terrex Multi Light Down Puffer Jacket Nero Cappotto da Escursionismo Isolato",
+       "lien": "https://www.ebay.it/itm/198711896232?_skw=Adidas+Terrex+Multi+Light+Down&hash=item2e4426e8a8:g:m8wAAeSwdOxqzgu4",
+       "vendeur": "og_trainers",
+       "avis_vendeur": 450
+      },
+      "plus_cher": {
+       "prix": 197.98,
+       "titre": "(TG. XS) adidas Donna Terrex Multi Light Down Hooded Parka 2.0, Earth Strata, XS",
+       "lien": "https://www.ebay.it/itm/278445673466?_skw=Adidas+Terrex+Multi+Light+Down&hash=item40d4a7cbfa:g:a10AAeSwa2BqyCrB",
+       "vendeur": "sempre.utile",
+       "avis_vendeur": 14006
+      }
+     },
+     "ES": {
+      "nb_annonces": 4,
+      "total_ebay": 13,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 73.99,
+       "titre": "Chaqueta con Capucha Adidas Terrex Multi Light Down Talla PEQUEÑA Azul Claro 🔵",
+       "lien": "https://www.ebay.es/itm/366377265707?_skw=Adidas+Terrex+Multi+Light+Down&hash=item554dc96a2b:g:KiMAAeSwUJFnt5aX",
+       "vendeur": "thespezialist",
+       "avis_vendeur": 1442
+      },
+      "plus_cher": {
+       "prix": 89.65,
+       "titre": "Nuevo con etiquetas Adidas Terrex Multi Light Down Chaqueta con Capucha Grande Nuevo con Etiquetas Abrigo Negro",
+       "lien": "https://www.ebay.es/itm/336861054599?_skw=Adidas+Terrex+Multi+Light+Down&hash=item4e6e7bc687:g:13kAAeSwRHhq3N6P",
+       "vendeur": "deltacoreuk",
+       "avis_vendeur": 108
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Terrex Multi Light Down",
+    "temperature_dealabs": 279,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 25,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "adidas terrex multi light down hooded jacket",
+     "adidas terrex multi light down",
+     "adidas terrex multi light down jacket",
+     "adidas terrex multi light down climawarm",
+     "adidas terrex multi light down hooded",
+     "adidas terrex multi light down hooded parka 2.0",
+     "adidas terrex multi light down hooded jacket women's",
+     "adidas terrex multi light down climawarm erkek mont",
+     "adidas terrex multi light down jacket review",
+     "adidas terrex multi light down hooded jacket mens"
+    ]
+   }
+  },
+  {
+   "id": "262fdb5bf5",
+   "titre": "LEGO Harry Potter Zamek Hogwart: Ceremonia przydziału 76460",
+   "prix": 8.69,
+   "devise": "EUR",
+   "marchand": "Amazon.pl",
+   "lien": "https://www.pepper.pl/promocje/lego-harry-potter-zamek-hogwart-ceremonia-przydzialu-76460-1381608",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 320,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "LEGO Harry Potter 76460",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 13.69,
+   "marge_nette": 89.82,
+   "rentabilite": 6.561,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix anormalement bas (8,69 € vs 130 € prix public), probable erreur de saisie sur Amazon.pl, risque d'annulation de commande."
+   },
+   "score": 175.0,
+   "verification": {
+    "produit": "LEGO Harry Potter 76460 Le Château de Poudlard : la cérémonie du Choixpeau magique",
+    "prix_neuf_min": 10.59,
+    "marchand_neuf_min": "Amazon.fr",
+    "occasion_bas": 8.0,
+    "occasion_haut": 15.0,
+    "revente_facile": true,
+    "remarque": "Ce petit set Harry Potter se revend rapidement grâce à ses 4 figurines emblématiques et son Patronus collector, mais le gain net reste modeste après frais d'envoi et de commission.",
+    "prix_revente_prudent": 9.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "LEGO Harry Potter 76460",
+    "neuf": {
+     "nb": 13,
+     "min": 11.87,
+     "p25": 17.85,
+     "mediane": 24.14,
+     "max": 48.94
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Lego Harry Potter 76460 Neuf",
+      "prix": "11.87",
+      "url": "https://www.ebay.fr/itm/307260643938?_skw=LEGO+Harry+Potter+76460&hash=item478a295a62:g:aSUAAeSwOfxq53X5"
+     },
+     {
+      "titre": "76460 LEGO® HARRY POTTER™",
+      "prix": "22.20",
+      "url": "https://www.ebay.fr/itm/336796590202?_skw=LEGO+Harry+Potter+76460&hash=item4e6aa4207a:g:sVcAAeSwEXhq0jN3"
+     },
+     {
+      "titre": "LEGO Harry Potter 76460 - Le Chateau de Poudlard : La cérémonie du choixpeau mag",
+      "prix": "16.79",
+      "url": "https://www.ebay.fr/itm/128146652135?_skw=LEGO+Harry+Potter+76460&hash=item1dd622bbe7:g:KXEAAeSw0BpqkUbW"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 17.85,
+     "DE": 12.25,
+     "IT": 13.41,
+     "ES": 8.29
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "LEGO Harry Potter 76460",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 10.59,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/208656403/lego-harry-potter-le-chateau-de-poudlard-la-ceremonie-du-choixpeau-magique-76460.html"
+   },
+   "idealo": {
+    "prix_min": 10.59,
+    "nb_offres": 18,
+    "lien": "https://www.idealo.fr/prix/208656403/lego-harry-potter-le-chateau-de-poudlard-la-ceremonie-du-choixpeau-magique-76460.html",
+    "titre": "LEGO Harry Potter - Le château de Poudlard : la cérémonie du Choixpeau magique (76460)",
+    "gtin": "5702018063378"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 9.32,
+     "marge_nette": -4.37,
+     "rentabilite": -0.319
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 9.32,
+     "marge_nette": -4.37,
+     "rentabilite": -0.319
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 9.32,
+     "marge_nette": -4.37,
+     "rentabilite": -0.319
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 10.59,
+     "marge_nette": -10.05,
+     "rentabilite": -0.734
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 10.59,
+     "marge_nette": -10.83,
+     "rentabilite": -0.791
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 10.59,
+     "marge_nette": -11.68,
+     "rentabilite": -0.853
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 10.59,
+     "marge_nette": -11.84,
+     "rentabilite": -0.865
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 10.59,
+     "marge_nette": -11.95,
+     "rentabilite": -0.873
+    }
+   ],
+   "prix_revente_prudent": 9.0,
+   "marge_verifiee": -13.03,
+   "rentabilite_verifiee": -0.952,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "LEGO Harry Potter 76460",
+    "pays": {
+     "FR": {
+      "nb_annonces": 11,
+      "total_ebay": 12,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 11.87,
+       "titre": "Lego Harry Potter 76460 Neuf",
+       "lien": "https://www.ebay.fr/itm/307260643938?_skw=LEGO+Harry+Potter+76460&hash=item478a295a62:g:aSUAAeSwOfxq53X5",
+       "vendeur": "chrisevr-80",
+       "avis_vendeur": 245
+      },
+      "plus_cher": {
+       "prix": 33.01,
+       "titre": "LEGO Set de construction La cérémonie du Choixpeau magique HARRY POTTER 76460",
+       "lien": "https://www.ebay.fr/itm/298710027319?_skw=LEGO+Harry+Potter+76460&hash=item458c814c37:i:298710027319",
+       "vendeur": "storetic",
+       "avis_vendeur": 34763
+      }
+     },
+     "DE": {
+      "nb_annonces": 104,
+      "total_ebay": 119,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 4.27,
+       "titre": "1 x Lego Harry Potter Teil - Translucent Pearl CAT PATRONUS aus 76460 Set",
+       "lien": "https://www.ebay.de/itm/397939366891?_skw=LEGO+Harry+Potter+76460&hash=item5ca708dbeb:g:GdQAAeSwtZBqAwj3",
+       "vendeur": "very_big_child",
+       "avis_vendeur": 29957
+      },
+      "plus_cher": {
+       "prix": 31.4,
+       "titre": "LEGO Harry Potter 76460 Schloss Hogwarts™: Sprechende Hutzeremonie™",
+       "lien": "https://www.ebay.de/itm/397458323460?_skw=LEGO+Harry+Potter+76460&hash=item5c8a5cb804:g:p4UAAeSwS0BqaGCv",
+       "vendeur": "vendiloshop_it",
+       "avis_vendeur": 33582
+      }
+     },
+     "IT": {
+      "nb_annonces": 212,
+      "total_ebay": 238,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 4.37,
+       "titre": "1 pezzo Lego Harry Potter - perla traslucida GATTO PATRONUS da set 76460",
+       "lien": "https://www.ebay.it/itm/397939366891?_skw=LEGO+Harry+Potter+76460&hash=item5ca708dbeb:g:GdQAAeSwtZBqAwj3",
+       "vendeur": "very_big_child",
+       "avis_vendeur": 29957
+      },
+      "plus_cher": {
+       "prix": 34.32,
+       "titre": "Lego 76460 Harry Potter Castello di Hogwarts: Cappello Ordinamento Rituale Giocattolo Regalo Compleanno",
+       "lien": "https://www.ebay.it/itm/287508084214?_skw=LEGO+Harry+Potter+76460&hash=item42f0d135f6:g:e4oAAeSwaO5qsk39",
+       "vendeur": "ozonetoyscom",
+       "avis_vendeur": 54367
+      }
+     },
+     "ES": {
+      "nb_annonces": 210,
+      "total_ebay": 241,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 4.34,
+       "titre": "1 x Lego Harry Potter parte - perla translúcida CAT PATRONUS de 76460 set",
+       "lien": "https://www.ebay.es/itm/397939366891?_skw=LEGO+Harry+Potter+76460&hash=item5ca708dbeb:g:GdQAAeSwtZBqAwj3",
+       "vendeur": "very_big_child",
+       "avis_vendeur": 29957
+      },
+      "plus_cher": {
+       "prix": 34.04,
+       "titre": "Lego 76460 Harry Potter Castillo de Hogwarts: Sombrero Clasificador Ritual Juguete Regalo de Cumpleaños",
+       "lien": "https://www.ebay.es/itm/287508084214?_skw=LEGO+Harry+Potter+76460&hash=item42f0d135f6:g:e4oAAeSwaO5qsk39",
+       "vendeur": "ozonetoyscom",
+       "avis_vendeur": 54367
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "LEGO Harry Potter 76460",
+    "temperature_dealabs": 320,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "lego harry potter 76460",
+     "lego harry potter 76460 le château de poudlard",
+     "lego harry potter 76460 hogwarts castle sorting hat ceremony set",
+     "lego harry potter 76460 hogwarts castle sorting hat ceremony",
+     "lego harry potter 76460 amazon",
+     "lego harry potter 76460 schloss hogwarts auswahlzeremonie sprechenden",
+     "lego harry potter 76460 bradavický hrad ceremoniál s moudrým kloboukem",
+     "lego harry potter 76460 instructions",
+     "lego harry potter 76460 hogwarts castle",
+     "lego harry potter tm 76460"
+    ]
+   }
+  },
+  {
+   "id": "b7dffe4f74",
+   "titre": "Robot sprzątający ILIFE V30 10000Pa | LiDAR (odkurzacz + mop) - €60.95 || możliwe uzyskanie ceny €51.77 = ~229zł (czytaj opis)",
+   "prix": 63.33,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.pepper.pl/promocje/robot-sprzatajacy-ilife-v30-10000pa-lidar-odkurzacz-mop-eur6095-mozliwe-uzyskanie-ceny-eur5177-229zl-czytaj-opis-1381403",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 258,
+   "domaine": "tech",
+   "nom_produit": "ILIFE V30 robot aspirateur",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 155.0,
+   "cout_achat": 68.33,
+   "marge_nette": 56.43,
+   "rentabilite": 0.826,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Robot aspirateur LiDAR 10000 Pa, prix AliExpress très bas, revente ~180 € sur Amazon/Back Market, attention garantie.",
+    "nemotron_nv": "Robot aspirateur ILIFE V30 avec LiDAR à 63 €, se revend 120-140 €, marge intéressante malgré marque secondaire."
+   },
+   "score": 68.8,
+   "verification": {
+    "produit": "ILIFE V30 Aspirateur Robot Laveur (10000Pa, LiDAR)",
+    "prix_neuf_min": 134.99,
+    "marchand_neuf_min": "Cdiscount",
+    "occasion_bas": 45.0,
+    "occasion_haut": 70.0,
+    "revente_facile": false,
+    "remarque": "Modèle d'entrée de gamme méconnu du grand public face à des marques comme Roborock ou iRobot, ce qui rend sa revente d'occasion assez lente.",
+    "prix_revente_prudent": 70.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "ILIFE V30 robot aspirateur",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Aspirateur Robot ILIFE V30 Navigation Laser 10000Pa Autonomie 150min filtre HEPA",
+      "prix": "146.99",
+      "url": "https://www.ebay.fr/itm/147649442952?_skw=ILIFE+V30+robot+aspirateur&hash=item226097b488:g:FswAAeSwgmNq2~op"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "ILIFE V30 robot aspirateur",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 77.7,
+    "ou": "idealo",
+    "lien": null
+   },
+   "idealo": {
+    "prix_min": 77.7,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Aspirateur robot ILIFE V30, navigation laser, aspiration de 10000 Pa, autonomie jusqu'à 150 min, contrôle par application, nettoyage personnalisable",
+    "gtin": null
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 68.38,
+     "marge_nette": 0.05,
+     "rentabilite": 0.001
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 68.38,
+     "marge_nette": 0.05,
+     "rentabilite": 0.001
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 68.38,
+     "marge_nette": 0.05,
+     "rentabilite": 0.001
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 77.7,
+     "marge_nette": -3.62,
+     "rentabilite": -0.053
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 77.7,
+     "marge_nette": -4.07,
+     "rentabilite": -0.06
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 77.7,
+     "marge_nette": -4.85,
+     "rentabilite": -0.071
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 77.7,
+     "marge_nette": -7.08,
+     "rentabilite": -0.104
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 77.7,
+     "marge_nette": -9.27,
+     "rentabilite": -0.136
+    }
+   ],
+   "prix_revente_prudent": 69.93,
+   "marge_verifiee": -15.88,
+   "rentabilite_verifiee": -0.232,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "ILIFE V30 robot aspirateur",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 146.99,
+       "titre": "Aspirateur Robot ILIFE V30 Navigation Laser 10000Pa Autonomie 150min filtre HEPA",
+       "lien": "https://www.ebay.fr/itm/147649442952?_skw=ILIFE+V30+robot+aspirateur&hash=item226097b488:g:FswAAeSwgmNq2~op",
+       "vendeur": "shoprebirths",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 146.99,
+       "titre": "Aspirateur Robot ILIFE V30 Navigation Laser 10000Pa Autonomie 150min filtre HEPA",
+       "lien": "https://www.ebay.fr/itm/147649442952?_skw=ILIFE+V30+robot+aspirateur&hash=item226097b488:g:FswAAeSwgmNq2~op",
+       "vendeur": "shoprebirths",
+       "avis_vendeur": 0
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "ILIFE V30 robot aspirateur",
+    "temperature_dealabs": 258,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "ilife v30 robot vacuum cleaner"
+    ]
+   }
+  },
+  {
+   "id": "af85fcaef3",
+   "titre": "Kurtka puchowa Rab Microlight Alpine w Skalniku za 538,99 do 4.11",
+   "prix": 126.66,
+   "devise": "EUR",
+   "marchand": "Skalnik",
+   "lien": "https://www.pepper.pl/promocje/kurtka-puchowa-rab-microlight-alpine-w-skalniku-za-53899-do-411-1381829",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 287,
+   "domaine": "mode",
+   "nom_produit": "Rab Microlight Alpine",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 220.0,
+   "cout_achat": 131.66,
+   "marge_nette": 88.34,
+   "rentabilite": 0.671,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Veste en duvet technique Rab très prisée, taille unique dispo, marge ~80 € sur Vinted sans frais vendeur."
+   },
+   "score": 63.0,
+   "verification": {
+    "produit": "Doudoune en duvet Rab Microlight Alpine Jacket",
+    "prix_neuf_min": 173.99,
+    "marchand_neuf_min": "Alpiniste.fr",
+    "occasion_bas": 80.0,
+    "occasion_haut": 140.0,
+    "revente_facile": true,
+    "remarque": "Modèle incontournable et très prisé dans le milieu outdoor, votre prix d'achat à 126,66 € permet une revente sans risque de perte, voire avec une petite marge.",
+    "prix_revente_prudent": 140.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Rab Microlight Alpine",
+    "neuf": {
+     "nb": 4,
+     "min": 235.84,
+     "p25": 238.19,
+     "mediane": 245.24,
+     "max": 247.54
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 94.85,
+     "p25": 94.85,
+     "mediane": 96.78,
+     "max": 208.7
+    },
+    "exemples": [
+     {
+      "titre": "Doudoune femme RAB « Microlight Alpine Jacket » - Taille EU38 / UK10 / S",
+      "prix": "96.78",
+      "url": "https://www.ebay.fr/itm/205798772104?_skw=Rab+Microlight+Alpine&hash=item2fea900d88:g:dNsAAeSwkIFo948q"
+     },
+     {
+      "titre": "Veste matelassée à capuche RAB Microlight Alpine Down pour femme taille EU 40...",
+      "prix": "94.85",
+      "url": "https://www.ebay.fr/itm/116937705035?_skw=Rab+Microlight+Alpine&hash=item1b3a07c64b:g:TFIAAeSwG~VqeaBo"
+     },
+     {
+      "titre": "Duvet doudoune Microlight Alpine RAB Jacket Femme",
+      "prix": "208.70",
+      "url": "https://www.ebay.fr/itm/365906286167?_skw=Rab+Microlight+Alpine&hash=item5531b6d657:g:CpUAAeSwz~Vo5Bmm"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 238.19,
+     "DE": 161.78,
+     "IT": 186.29,
+     "ES": 160.44
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Rab Microlight Alpine",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 124.9,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/203721468/rab-microlight-alpine-down-jacket-men.html"
+   },
+   "idealo": {
+    "prix_min": 124.9,
+    "nb_offres": 13,
+    "lien": "https://www.idealo.fr/prix/203721468/rab-microlight-alpine-down-jacket-men.html",
+    "titre": "Rab Microlight Alpine Down Jacket Men",
+    "gtin": null
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 109.91,
+     "marge_nette": -21.75,
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 109.91,
+     "marge_nette": -21.75,
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 109.91,
+     "marge_nette": -21.75,
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 124.9,
+     "marge_nette": -23.5,
+     "rentabilite": -0.178
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 124.9,
+     "marge_nette": -24.0,
+     "rentabilite": -0.182
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 124.9,
+     "marge_nette": -24.75,
+     "rentabilite": -0.188
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 124.9,
+     "marge_nette": -29.35,
+     "rentabilite": -0.223
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 124.9,
+     "marge_nette": -32.48,
+     "rentabilite": -0.247
+    }
+   ],
+   "prix_revente_prudent": 94.85,
+   "marge_verifiee": -36.81,
+   "rentabilite_verifiee": -0.28,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Rab Microlight Alpine",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 235.84,
+       "titre": "5059913008578 Kurtka microlight alpine women-orion blue-citadel-12 (m) RAB No na",
+       "lien": "https://www.ebay.fr/itm/178069832858?_skw=Rab+Microlight+Alpine&hash=item2975ca049a:i:178069832858",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32031
+      },
+      "plus_cher": {
+       "prix": 247.54,
+       "titre": "Kurtka microlight alpine-black-s RAB No name",
+       "lien": "https://www.ebay.fr/itm/158031909626?_skw=Rab+Microlight+Alpine&hash=item24cb6f92fa:i:158031909626",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32031
+      }
+     },
+     "DE": {
+      "nb_annonces": 12,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 144.0,
+       "titre": "Rab Microlight Alpine Jacke m's - col.Beluga",
+       "lien": "https://www.ebay.de/itm/286992775671?_skw=Rab+Microlight+Alpine&hash=item42d21a39f7:g:WdkAAeSw1MxpM90k",
+       "vendeur": "outdoorstoreitalia",
+       "avis_vendeur": 5835
+      },
+      "plus_cher": {
+       "prix": 246.65,
+       "titre": "Jacke microlight alpine-tempest blau-l RAB No name",
+       "lien": "https://www.ebay.de/itm/178402234106?_skw=Rab+Microlight+Alpine&hash=item29899a0efa:i:178402234106",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32031
+      }
+     },
+     "IT": {
+      "nb_annonces": 61,
+      "total_ebay": 77,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 144.0,
+       "titre": "Rab Microlight Alpine Jacket m's - col.Beluga",
+       "lien": "https://www.ebay.it/itm/286992775671?_skw=Rab+Microlight+Alpine&hash=item42d21a39f7:g:WdkAAeSw1MxpM90k",
+       "vendeur": "outdoorstoreitalia",
+       "avis_vendeur": 5835
+      },
+      "plus_cher": {
+       "prix": 354.43,
+       "titre": "Rab Microlight Alpine Hoody Giacca Invernale Donna, Ciottolo Scuro, Small",
+       "lien": "https://www.ebay.it/itm/267820063632?_skw=Rab+Microlight+Alpine&hash=item3e5b51db90:g:lSoAAeSwJshq4jYd",
+       "vendeur": "gloliquidation",
+       "avis_vendeur": 14895
+      }
+     },
+     "ES": {
+      "nb_annonces": 66,
+      "total_ebay": 79,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 161.78,
+       "titre": "Chaqueta RAB Microlight Alpine Softie para hombre talla pequeña, SAS, UKSF, MTP, multicámara",
+       "lien": "https://www.ebay.es/itm/366624283623?_skw=Rab+Microlight+Alpine&hash=item555c829be7:g:Y8gAAeSwicFqizgc",
+       "vendeur": "gulfsupplies",
+       "avis_vendeur": 2419
+      },
+      "plus_cher": {
+       "prix": 290.52,
+       "titre": "Chaqueta de invierno Rab Microlight Alpine con capucha para mujer, guijarro oscuro, pequeña",
+       "lien": "https://www.ebay.es/itm/267820063632?_skw=Rab+Microlight+Alpine&hash=item3e5b51db90:g:lSoAAeSwJshq4jYd",
+       "vendeur": "gloliquidation",
+       "avis_vendeur": 14895
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Rab Microlight Alpine",
+    "temperature_dealabs": 287,
+    "google_trends": {
+     "interet_moyen": 11,
+     "interet_recent": 66,
+     "tendance": "stable",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      72,
+      0,
+      81,
+      78,
+      100,
+      92,
+      75,
+      75,
+      0,
+      83,
+      93,
+      0,
+      100,
+      89,
+      76
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "rab microlight alpine",
+     "rab microlight alpine jacket",
+     "rab microlight alpine jacket femme",
+     "rab microlight alpine jacket homme",
+     "rab microlight alpine homme",
+     "rab microlight alpine femme",
+     "rab microlight alpine hoody",
+     "rab microlight alpine jacket women",
+     "rab microlight alpine review",
+     "rab microlight alpine women"
+    ]
+   }
+  },
+  {
+   "id": "fdc3df792e",
+   "titre": "Nike Air Max 90 - Verde agua",
+   "prix": 74.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.chollometro.com/ofertas/nike-air-max-90-verde-agua-2053683",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 246,
+   "domaine": "mode",
+   "nom_produit": "Nike Air Max 90",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 125.0,
+   "cout_achat": 79.9,
+   "marge_nette": 45.1,
+   "rentabilite": 0.564,
+   "demande": 4.5,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Nike Air Max 90 coloris 'Verde agua', taille dispo, revente 120-140 € sur Vinted.",
+    "nemotron_nv": "Nike Air Max 90 à 75 €, se revend 110-130 € sur Vinted, demande sneakers très forte."
+   },
+   "score": 58.3,
+   "verification": {
+    "produit": "Nike Air Max 90 (coloris Vert d'eau / Turquoise)",
+    "prix_neuf_min": 100.0,
+    "marchand_neuf_min": "Foot Locker",
+    "occasion_bas": 35.0,
+    "occasion_haut": 85.0,
+    "revente_facile": true,
+    "remarque": "Silhouette emblématique très facile à écouler sur Vinted et Leboncoin, bien que la marge bénéficiaire nette reste faible par rapport au prix d'achat de 74,90 €.",
+    "prix_revente_prudent": 85.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Nike Air Max 90",
+    "neuf": {
+     "nb": 50,
+     "min": 57.35,
+     "p25": 99.99,
+     "mediane": 130.8,
+     "max": 1026.7
+    },
+    "occasion": {
+     "nb": 48,
+     "min": 37.1,
+     "p25": 68.3,
+     "mediane": 78.7,
+     "max": 618.7
+    },
+    "exemples": [
+     {
+      "titre": "Nike Air Max 90 Homme baskets sportif blanc noir jaune à lacets EU 43",
+      "prix": "68.30",
+      "url": "https://www.ebay.fr/itm/206668161019?_skw=Nike+Air+Max+90&hash=item301e61dffb:g:kyAAAeSwb6Bq52Rd"
+     },
+     {
+      "titre": "Nike Air Max 90 Homme baskets gris noir blanc DC9388-003 EU 42 US 8,5",
+      "prix": "68.30",
+      "url": "https://www.ebay.fr/itm/206667941973?_skw=Nike+Air+Max+90&hash=item301e5e8855:g:PikAAeSwgmNq50Qu&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7m48uGcXW%2FBTWKngO8tl5BwPQ5Lb6LsKSmV70Ilq%2FIHUSJfeZqyniULdSG24LSeU19FwMETRu5453VEgNnKxIr9Y5VcKx5abSCW19GefQHpnrRN3qCerKdQByKZYxL0Q3799gzStq6EfyYrDJyr5yv23FP8ArgHdI0xZg%2FmK3LKWFvylID6rvVnmzE6V%2FvchKk3gd5RvzputxEutMauReA6nRbCoYUdl2Wh2zWaN7HNJmlLnjIMRAC7oktxzjw2WR6ZNh3bvU91Ta19jfFE0%2BAnikjL%2FV7Slk7Apz8fC7zbUw%3D%3D"
+     },
+     {
+      "titre": "Nike Air Max 90 Homme baskets gris orange respirant à lacets EU 42",
+      "prix": "68.30",
+      "url": "https://www.ebay.fr/itm/206668242241?_skw=Nike+Air+Max+90&hash=item301e631d41:g:QhQAAeSwGkdq53DW&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lcGvQZe39S9zahTvkwpoEi4NYEy1GMxvNU6z9WIwJd9sxYWB3WitpssQLz5EmXVPdcHm09qV8M8NgXmPW8%2F3eP8%2BHUeOQd4uPjSjOQZvsGGDqZf1SOVYrbSeUdgy7Zw7ZqC2nLqZTK2HiAd2W9jiDnD6AHBEYIS6NFRsbejSpgHKMXGQfCVROpfcasCPiETg%2BzONx6YiqHVXyeypZE8aVhQW1Xf4euVnC8%2BSjiaBpz4EB3Hj33Ydmdh2V4j1QY5zZeSscFcJHee2oMaTgei%2BeTaGRLo5tnkzYlQT8OYUxdnw%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 99.99,
+     "DE": 109.25,
+     "IT": 104.0,
+     "ES": 106.48
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Nike Air Max 90",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 90.0,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/204744565/nike-air-max-90-drift.html"
+   },
+   "idealo": {
+    "prix_min": 90.0,
+    "nb_offres": 125,
+    "lien": "https://www.idealo.fr/prix/204744565/nike-air-max-90-drift.html",
+    "titre": "Nike Air Max 90 Drift",
+    "gtin": null
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 79.2,
+     "marge_nette": -0.7,
+     "rentabilite": -0.009
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 79.2,
+     "marge_nette": -0.7,
+     "rentabilite": -0.009
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 79.2,
+     "marge_nette": -0.7,
+     "rentabilite": -0.009
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 90.0,
+     "marge_nette": -4.0,
+     "rentabilite": -0.05
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 90.0,
+     "marge_nette": -4.2,
+     "rentabilite": -0.053
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 90.0,
+     "marge_nette": -5.1,
+     "rentabilite": -0.064
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 90.0,
+     "marge_nette": -7.95,
+     "rentabilite": -0.099
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 90.0,
+     "marge_nette": -10.39,
+     "rentabilite": -0.13
+    }
+   ],
+   "prix_revente_prudent": 68.3,
+   "marge_verifiee": -11.6,
+   "rentabilite_verifiee": -0.145,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Nike Air Max 90",
+    "pays": {
+     "FR": {
+      "nb_annonces": 422,
+      "total_ebay": 497,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 37.28,
+       "titre": "Portfel Nike Icon Air Max 90 Card Wallet 92800648583 Portfel Nike Icon Air Max 9",
+       "lien": "https://www.ebay.fr/itm/178301374846?_skw=Nike+Air+Max+90&hash=item298397117e:g:CrwAAeSwfQ9qUbgm",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32031
+      },
+      "plus_cher": {
+       "prix": 300.0,
+       "titre": "Nike Air Max 90 Infrared 2010 Eu 46 Us 12 New DS Excellent Condition 325018 107",
+       "lien": "https://www.ebay.fr/itm/204940739980?_skw=Nike+Air+Max+90&hash=item2fb76b858c:g:BPwAAOSwOC5mvJiD",
+       "vendeur": "nicolasb1451",
+       "avis_vendeur": 267
+      }
+     },
+     "DE": {
+      "nb_annonces": 786,
+      "total_ebay": 3833,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.25,
+       "titre": "NIKE NIKE 32 ICON AIR MAX 90 KARTEN GELDBÖRSE",
+       "lien": "https://www.ebay.de/itm/397569577805?_skw=Nike+Air+Max+90&hash=item5c90fe534d:g:E4EAAeSwz0Zq2NPM",
+       "vendeur": "ngworld",
+       "avis_vendeur": 4421
+      },
+      "plus_cher": {
+       "prix": 300.0,
+       "titre": "Nike Air Max 90  / 537384-610 / Grösse 42,5",
+       "lien": "https://www.ebay.de/itm/336859423001?_skw=Nike+Air+Max+90&hash=item4e6e62e119:g:yjQAAeSw6r9q25mx",
+       "vendeur": "flasher4imma",
+       "avis_vendeur": 2167
+      }
+     },
+     "IT": {
+      "nb_annonces": 484,
+      "total_ebay": 9677,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.16,
+       "titre": "MAGLIETTA EFFETTO SNEAKER da abbinare Nike Air Max 90 Reverse Duck Camo Infrarossi",
+       "lien": "https://www.ebay.it/itm/305774116714?_skw=Nike+Air+Max+90&hash=item47318ebf6a:g:5KUAAOSwqRRm31rL",
+       "vendeur": "sneaker_effect",
+       "avis_vendeur": 314
+      },
+      "plus_cher": {
+       "prix": 299.9,
+       "titre": "Nike Air Max 90 Limited G NRG Eastside Golf ⛳️ Nero Oro Scarpe da Golf Uomo 10.5",
+       "lien": "https://www.ebay.it/itm/960146752965?_skw=Nike+Air+Max+90&hash=itemdf8d34c5c5:g:F~IAAeSwhUhq6SoO",
+       "vendeur": "premiumpullscollective101",
+       "avis_vendeur": 49
+      }
+     },
+     "ES": {
+      "nb_annonces": 424,
+      "total_ebay": 10599,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.9,
+       "titre": "CARTERA TARJETA NIKE NKNIKE32 ICON AIR MAX 90",
+       "lien": "https://www.ebay.es/itm/397569577805?_skw=Nike+Air+Max+90&hash=item5c90fe534d:g:E4EAAeSwz0Zq2NPM",
+       "vendeur": "ngworld",
+       "avis_vendeur": 4421
+      },
+      "plus_cher": {
+       "prix": 300.0,
+       "titre": "Nike Air Max 90 Infrarrojos completamente nuevo en caja en EE. UU. 9,5 años 2010",
+       "lien": "https://www.ebay.es/itm/168039016395?_skw=Nike+Air+Max+90&hash=item271fe7e7cb:g:fxUAAeSwA3xpUWaM",
+       "vendeur": "fabsneakers",
+       "avis_vendeur": 5
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Nike Air Max 90",
+    "temperature_dealabs": 246,
+    "google_trends": {
+     "interet_moyen": 16,
+     "interet_recent": 34,
+     "tendance": "stable",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      60,
+      0,
+      0,
+      69,
+      86,
+      0,
+      0,
+      58,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      85,
+      0,
+      62,
+      0,
+      0,
+      0,
+      77,
+      100,
+      0,
+      0,
+      70,
+      0,
+      0,
+      0,
+      58,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      86,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      94,
+      0,
+      0,
+      68,
+      0,
+      0,
+      0,
+      0,
+      0,
+      29,
+      36,
+      40,
+      34,
+      41,
+      42,
+      28,
+      31,
+      32,
+      37,
+      40,
+      45,
+      38,
+      28,
+      23
+     ],
+     "recherches_liees": [
+      {
+       "query": "air max 90 homme",
+       "value": 100
+      },
+      {
+       "query": "nike air max homme",
+       "value": 93
+      },
+      {
+       "query": "air max homme",
+       "value": 91
+      },
+      {
+       "query": "nike air 90 homme",
+       "value": 90
+      },
+      {
+       "query": "nike 90 homme",
+       "value": 90
+      },
+      {
+       "query": "air max 95",
+       "value": 52
+      },
+      {
+       "query": "nike air max femme 90",
+       "value": 47
+      },
+      {
+       "query": "nike air max 95",
+       "value": 44
+      }
+     ]
+    },
+    "suggestions_google": [
+     "nike air max 90",
+     "nike air max 90 homme",
+     "nike air max 90 femme",
+     "nike air max 90 drift",
+     "nike air max 90 noir",
+     "nike air max 90 blanche",
+     "nike air max 90 drift homme",
+     "nike air max 90 femme soldes",
+     "nike air max 90 premium",
+     "nike air max 90 homme blanche"
+    ]
+   }
+  },
+  {
+   "id": "1ab3c99c87",
+   "titre": "Philips draadloze koptelefoon met ANC, tot 50 uur accuduur en dynamische bas",
+   "prix": 18.95,
+   "devise": "EUR",
+   "marchand": "Action",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-draadloze-koptelefoon-met-active-noise-cancelling-tot-50-uur-accuduur-en-dynamische-bas-425095",
+   "pays": "NL",
+   "source": "pepper-nl-hot",
+   "temperature": 210,
+   "domaine": "tech",
+   "nom_produit": "Philips casque sans fil ANC",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 23.95,
+   "marge_nette": 21.05,
+   "rentabilite": 0.879,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Casque Philips ANC à 18,95 € chez Action, revendu facilement 40-45 € sur Leboncoin."
+   },
+   "score": 56.3,
+   "verification": {
+    "produit": "Philips H2500 (TAH2500)",
+    "prix_neuf_min": 49.99,
+    "marchand_neuf_min": "MM Phone",
+    "occasion_bas": 15.0,
+    "occasion_haut": 30.0,
+    "revente_facile": false,
+    "remarque": "Référence d'entrée de gamme conçue pour le circuit de déstockage Action, sans réelle demande sur le marché de la seconde main.",
+    "prix_revente_prudent": 30.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Philips casque sans fil ANC",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Philips H6509 Casque circum-auriculaire Bluetooth sans fil ANC Hi-Res noir",
+      "prix": "63.10",
+      "url": "https://www.ebay.fr/itm/188890635799?_skw=Philips+casque+sans+fil+ANC&hash=item2bfac25e17:g:hvoAAeSwWoVqnFqt"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Philips casque sans fil ANC",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 30.0,
+   "marge_verifiee": 6.05,
+   "rentabilite_verifiee": 0.253,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Philips casque sans fil ANC",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 63.1,
+       "titre": "Philips H6509 Casque circum-auriculaire Bluetooth sans fil ANC Hi-Res noir",
+       "lien": "https://www.ebay.fr/itm/188890635799?_skw=Philips+casque+sans+fil+ANC&hash=item2bfac25e17:g:hvoAAeSwWoVqnFqt",
+       "vendeur": "dim175248",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 63.1,
+       "titre": "Philips H6509 Casque circum-auriculaire Bluetooth sans fil ANC Hi-Res noir",
+       "lien": "https://www.ebay.fr/itm/188890635799?_skw=Philips+casque+sans+fil+ANC&hash=item2bfac25e17:g:hvoAAeSwWoVqnFqt",
+       "vendeur": "dim175248",
+       "avis_vendeur": 0
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 259,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 272,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips casque sans fil ANC",
+    "temperature_dealabs": 210,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 25,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "5f4511f6ca",
+   "titre": "Komplet walizek z ABS-u z żebrowaniem",
+   "prix": 74.95,
+   "devise": "EUR",
+   "marchand": "Wittchen",
+   "lien": "https://www.pepper.pl/promocje/komplet-walizek-z-abs-u-z-zebrowaniem-1381422",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 272,
+   "domaine": "mode",
+   "nom_produit": "Wittchen valises ABS",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 150.0,
+   "cout_achat": 79.95,
+   "marge_nette": 70.05,
+   "rentabilite": 0.876,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Lot de valises ABS Wittchen, marque polonaise reconnue, revente facile sur Leboncoin/Vinted ~150 €."
+   },
+   "score": 49.1,
+   "verification": {
+    "produit": "Set de valises rigides en ABS à rainures WITTCHEN Groove Line (réf. 56-3A-31K)",
+    "prix_neuf_min": 119.99,
+    "marchand_neuf_min": "Amazon.fr",
+    "occasion_bas": 50.0,
+    "occasion_haut": 90.0,
+    "revente_facile": false,
+    "remarque": "Bien que le prix d'achat soit avantageux, la marque Wittchen est peu connue en France et le gabarit encombrant d'un lot complet rend l'expédition difficile et restreint la revente aux remises en main propre.",
+    "prix_revente_prudent": 90.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Wittchen valises ABS",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Wittchen valises ABS",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 90.0,
+   "marge_verifiee": 10.05,
+   "rentabilite_verifiee": 0.126,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Wittchen valises ABS",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 238,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 240,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Wittchen valises ABS",
+    "temperature_dealabs": 272,
+    "google_trends": {
+     "erreur": "RetryError: HTTPSConnectionPool(host='trends.google.com', port=443): Max retries exceeded with url: /trends/api/widgetdata/multiline"
+    },
+    "suggestions_google": [
+     "wittchen suitcase from abs",
+     "wittchen cabin suitcase abs",
+     "wittchen large suitcase abs",
+     "wittchen luggage set abs"
+    ]
+   }
+  },
+  {
+   "id": "07fa582121",
+   "titre": "Bugatti Leagro Herren Schnürschuhe in verschiedenen Größen",
+   "prix": 39.8,
+   "devise": "EUR",
+   "marchand": "Zalando Lounge",
+   "lien": "https://www.preisjaeger.at/deals/bugatti-leagro-herren-schnurschuhe-in-verschiedenen-grossen-371790",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 243,
+   "domaine": "mode",
+   "nom_produit": "Bugatti Leagro chaussures",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 44.8,
+   "marge_nette": 35.2,
+   "rentabilite": 0.786,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Chaussures cuir Bugatti, marque allemande, revente ~80 € sur Vinted, marge correcte."
+   },
+   "score": 40.9,
+   "verification": {
+    "produit": "Chaussures de ville à lacets / Derbies Bugatti Leagro pour homme",
+    "prix_neuf_min": 64.53,
+    "marchand_neuf_min": "Kaufland.fr",
+    "occasion_bas": 15.0,
+    "occasion_haut": 35.0,
+    "revente_facile": false,
+    "remarque": "Une bonne affaire pour un usage personnel, mais pas pour la revente car les chaussures de ville Bugatti décotent fortement et peinent à dépasser 25-30 € sur les plateformes de seconde main.",
+    "prix_revente_prudent": 35.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Bugatti Leagro chaussures",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Bugatti Leagro chaussures",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 35.0,
+   "marge_verifiee": -9.8,
+   "rentabilite_verifiee": -0.219,
+   "passe_verif": false
+  },
+  {
+   "id": "41e53b2137",
+   "titre": "Robot aspirador Roborock Qrevo 5AE (friegasuelos, base autovaciado y autolavado, mopa giratoria, Negro)",
+   "prix": 359.0,
+   "devise": "EUR",
+   "marchand": "PcComponentes",
+   "lien": "https://www.chollometro.com/ofertas/robot-aspirador-roborock-qrevo-5ae-friegasuelos-base-autovaciado-y-autolavado-mopa-giratoria-negro-black-friday-2026-mediamarkt-2054267",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 200,
+   "domaine": "maison",
+   "nom_produit": "Roborock Qrevo 5AE",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 480.0,
+   "cout_achat": 364.0,
+   "marge_nette": 116.0,
+   "rentabilite": 0.319,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Robot aspirateur haut de gamme très demandé, forte décote chez PcComponentes, revente aisée en main propre sans frais."
+   },
+   "score": 34.0,
+   "verification": {
+    "produit": "Roborock Qrevo 5AE Noir",
+    "prix_neuf_min": 349.0,
+    "marchand_neuf_min": "Cdiscount",
+    "occasion_bas": 250.0,
+    "occasion_haut": 370.0,
+    "revente_facile": true,
+    "remarque": "Bien que la gamme Roborock Qrevo soit très recherchée et liquide sur le marché de l'occasion, le modèle se trouve actuellement neuf dès 349 € chez Cdiscount, limitant toute marge pour de l'achat-revente.",
+    "prix_revente_prudent": 296.65,
+    "sources": [],
+    "deja_moins_cher_ailleurs": true
+   },
+   "ebay": {
+    "requete": "Roborock Qrevo 5AE",
+    "neuf": {
+     "nb": 3,
+     "min": 504.06,
+     "p25": 504.06,
+     "mediane": 541.71,
+     "max": 551.42
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Roborock Qrevo 5AE Saugroboter Wi-Fi Blanc",
+      "prix": "541.71",
+      "url": "https://www.ebay.fr/itm/327389945904?_skw=Roborock+Qrevo+5AE&hash=item4c39f62030:g:bmUAAeSwumhq0HcY"
+     },
+     {
+      "titre": "Fit for ( Roborock Qrevo Curv / S5V / S5X / 5A1 / 5XC / 5AE / Curvc / Qrevo C / ",
+      "prix": "9.89",
+      "url": "https://www.ebay.fr/itm/157943897858?_skw=Roborock+Qrevo+5AE&hash=item24c6309f02:g:o3sAAeSwU9BqFded&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lhgSIBFUnas5Lj8%2FK4VBBKom%2FsW1ZRE0Kj0nfbEiy3oqFMLtDz%2FbpAEvVM0vhUfd5zCVUNVF%2FBNeQLEXZofUxgI%2B4wa0T1oKGu88is00%2FZTERGU%2FoSLjsVq6r%2Bz29sxxb%2FJ%2FflG4lPbtA1IpDnBthtN3LkXXNz9H6WJoD0oUddlWzCmSx7Jw47KVIxJOSxKgxOXvi8ySYmXBt97lLFZdswwZbL5UrrBgNLeUGxIjhxnFf9mtynQSFAxqXccaNbUDXRtvyFvcXqZGT7AFLp7RmBgqVcWiQo8meUqQW5MVg%2FNw%3D%3D"
+     },
+     {
+      "titre": "Accessoires 28 Qrevo S5V Edge S5A 5AE pour Roborock Qrevo Polyester",
+      "prix": "49.50",
+      "url": "https://www.ebay.fr/itm/137895426890?_skw=Roborock+Qrevo+5AE&hash=item201b353b4a:g:jFMAAeSwn3Nq6K7U&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nOJzNmU6VcGL7tHXeCqLpBzX4fI2qTgTzeC2pR5zvS8pDzKrndG1NEIU8eQRDLFX%2BQcv3fGP5LzsqggIx0x3fuym9K9VWThKxhLnaGaBly6I9zWowKTm%2Bu4uJLdfZ6kUBmkA5vu5ghZigCBiWKFsA8ikXrvUUnX9G5JGEGpblfgi0gDCmI0KKYzptdhus4Vnds7kh7mNUsGthH2j9FXIHuvgHWAzJztCT1rEcM8BFlwTUp4DdwEPyjIQEJCbH0z5pO0knoWEM3fb1jhEcpEGktb0xxTrwXrqh1qs1JsuP9ew%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 504.06,
+     "DE": 472.98,
+     "IT": 457.43,
+     "ES": 426.62
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Roborock Qrevo 5AE",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "ROBOROCK Aspirateur robot et serpillière  Qrevo 5AE avec base autovidante, noir",
+       "prix": 349.0,
+       "nb_boutiques": 13,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Robot-nettoyeur/aspirateur-robot-et-serpilliere-roborock-qrevo-5ae-avec-base-autovidante-noir.html"
+      },
+      "autres": [
+       {
+        "titre": "ROBOROCK  Robot Aspirateur Qrevo 5ae",
+        "prix": 508.29,
+        "nb_boutiques": 4,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Robot-nettoyeur/roborock-robot-aspirateur-qrevo-5ae.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 349.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Robot-nettoyeur/aspirateur-robot-et-serpilliere-roborock-qrevo-5ae-avec-base-autovidante-noir.html"
+   },
+   "idealo": {
+    "prix_min": 349.0,
+    "nb_offres": 16,
+    "lien": "https://www.idealo.fr/prix/211704693/roborock-qrevo-5ae.html",
+    "titre": "Roborock Qrevo 5AE",
+    "gtin": null
+   },
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 349.0,
+     "marge_nette": -47.43,
+     "rentabilite": -0.13
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 349.0,
+     "marge_nette": -50.92,
+     "rentabilite": -0.14
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 349.0,
+     "marge_nette": -52.41,
+     "rentabilite": -0.144
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 307.12,
+     "marge_nette": -56.88,
+     "rentabilite": -0.156
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 307.12,
+     "marge_nette": -56.88,
+     "rentabilite": -0.156
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 307.12,
+     "marge_nette": -56.88,
+     "rentabilite": -0.156
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 349.0,
+     "marge_nette": -66.72,
+     "rentabilite": -0.183
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 349.0,
+     "marge_nette": -74.34,
+     "rentabilite": -0.204
+    }
+   ],
+   "prix_revente_prudent": 296.65,
+   "marge_verifiee": -67.35,
+   "rentabilite_verifiee": -0.185,
+   "passe_verif": false
+  },
+  {
+   "id": "2cba8e7e3a",
+   "titre": "DALI IO-6 draadloze over-ear koptelefoon met noise cancelling (zwart) @ Smits Arnhem",
+   "prix": 179.0,
+   "devise": "EUR",
+   "marchand": "Smits Arnhem",
+   "lien": "https://nl.pepper.com/aanbiedingen/dali-io-6-draadloze-over-ear-koptelefoon-met-noise-cancelling-zwart-at-smits-arnhem-424971",
+   "pays": "NL",
+   "source": "pepper-nl-hot",
+   "temperature": 142,
+   "domaine": "tech",
+   "nom_produit": "Casque DALI IO-6",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 259.0,
+   "cout_achat": 184.0,
+   "marge_nette": 75.0,
+   "rentabilite": 0.408,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Casque audiophile à -40% vs prix marché, achat UE sans frais d'import supplémentaires."
+   },
+   "score": 32.6,
+   "verification": {
+    "produit": "DALI IO-6 (Noir)",
+    "prix_neuf_min": 240.0,
+    "marchand_neuf_min": "Cobra.fr",
+    "occasion_bas": 120.0,
+    "occasion_haut": 180.0,
+    "revente_facile": false,
+    "remarque": "Bien qu'il s'agisse d'un bon prix par rapport au neuf, la demande en occasion reste confidentielle face aux références grand public de Sony ou Bose, ce qui limite la marge et la rapidité de revente.",
+    "prix_revente_prudent": 180.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Casque DALI IO-6",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Casque DALI IO-6",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "DALI Casque Audio  IO-6 Sans Fil Bluetooth Microphone Réduction Active du Bruit Pliable Noir",
+       "prix": 199.0,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casque-audio-dali-io-6-sans-fil-bluetooth-microphone-reduction-active-du-bruit-pliable-noir.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 199.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casque-audio-dali-io-6-sans-fil-bluetooth-microphone-reduction-active-du-bruit-pliable-noir.html"
+   },
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 199.0,
+     "marge_nette": -6.93,
+     "rentabilite": -0.038
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 175.12,
+     "marge_nette": -8.88,
+     "rentabilite": -0.048
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 175.12,
+     "marge_nette": -8.88,
+     "rentabilite": -0.048
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 175.12,
+     "marge_nette": -8.88,
+     "rentabilite": -0.048
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 199.0,
+     "marge_nette": -8.91,
+     "rentabilite": -0.048
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 199.0,
+     "marge_nette": -8.92,
+     "rentabilite": -0.048
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 199.0,
+     "marge_nette": -17.22,
+     "rentabilite": -0.094
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 199.0,
+     "marge_nette": -21.84,
+     "rentabilite": -0.119
+    }
+   ],
+   "prix_revente_prudent": 179.1,
+   "marge_verifiee": -4.9,
+   "rentabilite_verifiee": -0.027,
+   "passe_verif": false
+  }
+ ],
+ "verification": {
+  "faits": 12,
+  "erreurs": []
+ },
+ "verification_ebay": {
+  "faits": 13,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 22,
+ "annonces_analysees": [
+  {
+   "id": "efd7579235",
+   "titre": "Spodnie męskie Wrangler. Szeroki wybór rozmiarów",
+   "temperature": 478,
+   "categorie": "Moda",
+   "marchand": "Allegro",
+   "prix": 35.25,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/spodnie-meskie-wrangler-szeroki-wybor-rozmiarow-1381860",
+   "date": "Tue, 03 Nov 2026 20:44:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "149,99zł - Allegro 30/30 30/32 31/30 31/32 31/34 32/30 32/32 32/34 33/30 33/32 33/34 34/30 34/32 34/34 36/30<..."
+  },
+  {
+   "id": "16bab0a092",
+   "titre": "Klocki LEGO Speed Champions 77256 Wehikuł czasu z Powrotu do przyszłości [start 4.11 o 19:00]",
+   "temperature": 465,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Allegro",
+   "prix": 16.45,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/klocki-lego-speed-champions-77256-wehikul-czasu-z-powrotu-do-przyszlosci-start-411-o-1900-1381354",
+   "date": "Tue, 03 Nov 2026 19:53:24 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "69,99zł - Allegro LEGO Speed Champions 77256 Wehikuł czasu z Powrotu do przyszłości za 65,99 zł <a href=\"https://www.mediaexpert.pl/zabawki/lego/lego/leg..."
+  },
+  {
+   "id": "ff7e6676f5",
+   "titre": "Flüge nach Johannesburg / Südafrika ab 410€ inkl Rückflug (Frankfurt nonstop / Berlin, Prag, Wien, Zürich 1 Stopp)(Condor, Nov-Feb)",
+   "temperature": 421,
+   "categorie": "Urlaub & Reisen",
+   "marchand": "SkyExplorer",
+   "prix": 409.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/fluge-nach-johannesburg-sudafrika-ab-470eur-inkl-ruckflug-frankfurt-nonstop-berlin-prag-wien-zurich-1-stoppcondor-nov-feb-2845895",
+   "date": "Tue, 03 Nov 2026 21:03:54 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "409,98€ - SkyExplorer Tolle Preise für Flüge nach Johannesburg. Mit Condor fliegt ihr bereits ab rund 410€ von Deutschland (Berlin, München, Hamburg und Frankfurt), Prag, Wien ode..."
+  },
+  {
+   "id": "c9e8aaeb01",
+   "titre": "Ogrzewanie postojowe SUNSTER TP1 8kW 12/24V | Wysyłka z DE | $45.69 @ AliExpress",
+   "temperature": 401,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "AliExpress",
+   "prix": 42.4,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/ogrzewanie-postojowe-sunster-tp1-8kw-1224v-wysylka-z-de-4569-at-aliexpress-1381368",
+   "date": "Tue, 03 Nov 2026 19:36:44 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "180,43zł - AliExpress Ogrzewanie postojowe SUNSTER TP1 8kW 12/24V za $45.69 / 180,43 zł w AliExpress Korzystamy z jednego z kodów rabatowych: <stron..."
+  },
+  {
+   "id": "14bc57ef56",
+   "titre": "Zegarek Citizen Promaster Diver NY0120-01Z (automat, 200 m, pomarańczowa tarcza)",
+   "temperature": 369,
+   "categorie": "Moda",
+   "marchand": "CrazyTime",
+   "prix": 197.16,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zegarek-citizen-promaster-diver-ny0120-01z-automat-200-m-pomaranczowa-tarcza-1381901",
+   "date": "Tue, 03 Nov 2026 20:48:51 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "839zł - CrazyTime Citizen Promaster Marine oferuje idealne połączenie techniki i stylu. Profesjonalne parametry nurkowe spotykają się tu z absolutnie genialną kolorystyką tarczy,..."
+  },
+  {
+   "id": "e195b95959",
+   "titre": "Głośnik mobilny JBL Flip 7 Tomorrowland w @media Expert G- City Reduta Warszawa",
+   "temperature": 367,
+   "categorie": "Elektronika",
+   "marchand": "Media Expert",
+   "prix": 70.27,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/glosnik-mobilny-jbl-flip-7-tomorrowland-w-at-media-expert-g-city-reduta-warszawa-1381689",
+   "date": "Tue, 03 Nov 2026 19:24:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "299zł - Media Expert Głośnik mobilny JBL Flip 7 Tomorrowland w @media Expert G- City Reduta Warszawa (y)"
+  },
+  {
+   "id": "4a7e9f5601",
+   "titre": "Kawa Eduscho Espresso Classic 1kg lub Cafe Crema 1kg lub Crema Gold 1kg + 100g Crema Gold",
+   "temperature": 358,
+   "categorie": "Artykuły spożywcze",
+   "marchand": "InPost",
+   "prix": 8.59,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kawa-eduscho-espresso-classic-1kg-lub-crema-gold-1kg-100g-crema-gold-1380790",
+   "date": "Tue, 03 Nov 2026 19:27:45 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "36,54zł - InPost W aplikacji InPost przy zakupach z asystentem VonHalsky można kupić w niezłej cenie kawę Eduscho: - Espresso Classic 1kg - 39,09 zł - Crema Gold 1k..."
+  },
+  {
+   "id": "cf997ce47a",
+   "titre": "Tenacious D: Tenacious D - 2 LP, 2 płyty winylowe, gatefold",
+   "temperature": 343,
+   "categorie": "Kultura i rozrywka",
+   "marchand": "Amazon.pl",
+   "prix": 27.22,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/tenacious-d-tenacious-d-2-lp-2-plyty-winylowe-gatefold-1381779",
+   "date": "Tue, 03 Nov 2026 19:41:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "115,83zł - Amazon.pl Najlepsza cena na rynku, darmowa dostawa. https://www.discogs..."
+  },
+  {
+   "id": "9f695ee219",
+   "titre": "WALENCJA ( Hiszpania) na 3 pełne dni z weekendem! 4* hotel Senator (oceny 8,1/10) + śniadania + loty z Krakowa. Styczeń | Luty",
+   "temperature": 340,
+   "categorie": "Podróże",
+   "marchand": "eSky.pl",
+   "prix": 220.66,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/walencja-hiszpania-na-3-pelne-dni-z-weekendem-4-hotel-senator-oceny-8110-sniadania-loty-z-krakowa-styczen-luty-1381801",
+   "date": "Tue, 03 Nov 2026 20:48:23 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "939zł - eSky.pl Siemano! Dzisiaj przychodzę z super ofertą na wyjazd do Walencji. Fajne miasto na city break. Wylot w sobotę rano a powrót wieczorem w poniedziałek. ..."
+  },
+  {
+   "id": "a44b095742",
+   "titre": "Kawa ziarnista 100% arabica 2x1kg Sul De Minas Nuno kraftowana",
+   "temperature": 321,
+   "categorie": "Artykuły spożywcze",
+   "marchand": "Allegro",
+   "prix": 27.96,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kawa-ziarnista-100-arabica-2x1kg-sul-de-minas-nuno-kraftowana-1381076",
+   "date": "Tue, 03 Nov 2026 20:17:40 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "119zł - Allegro Jeśli ktoś pije dużo kawy, warto zerknąć. 2 kg brazylijskiej arabiki od polskiej palarni Nuno. Łagodna, czekoladowo-orzechowa, bez przesadnej kwasowości."
+  },
+  {
+   "id": "262fdb5bf5",
+   "titre": "LEGO Harry Potter Zamek Hogwart: Ceremonia przydziału 76460",
+   "temperature": 320,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Amazon.pl",
+   "prix": 8.69,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lego-harry-potter-zamek-hogwart-ceremonia-przydzialu-76460-1381608",
+   "date": "Tue, 03 Nov 2026 20:00:28 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "36,99zł - Amazon.pl Darmowa dostawa z Amazon prime. LEGO Harry Potter Zamek Hogwart: Ceremonia przydziału to zestaw konstrukcyjny dostępny na Amazon za 36.99, który..."
+  },
+  {
+   "id": "4e12201270",
+   "titre": "Boss im Sale | Boss Langarmshirt, Kurze Sporthose, Badeshorts, T-Shirt uvm",
+   "temperature": 319,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Lounge by Zalando",
+   "prix": 33.65,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/boss-im-sale-boss-langarmshirt-kurze-sporthose-badeshorts-t-shirt-uvm-2845797",
+   "date": "Tue, 03 Nov 2026 21:53:58 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "33,65€ - Lounge by Zalando Bei Lounge by Zalando gibt es gerade gerade viele BOSS Produkte im Sale. Es ist einiges dabei, von Hosen und T Shirts über Pullover und weitere Kleidung bis ..."
+  },
+  {
+   "id": "bd897a5fab",
+   "titre": "Smartwatch HUAWEI WATCH GT 5 PRO ACTIVE 46mm (możliwe 747zł) + Drugi Pasek Huawei (o wartości 169zł) GRATIS I Oficjalny sklep Huawei",
+   "temperature": 310,
+   "categorie": "Elektronika",
+   "marchand": "Huawei",
+   "prix": 194.81,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/smartwatch-huawei-watch-gt-5-pro-active-46mm-mozliwe-747zl-drugi-pasek-huawei-o-wartosci-169zl-gratis-i-oficjalny-sklep-huawei-1380657",
+   "date": "Tue, 03 Nov 2026 19:58:46 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "829zł - Huawei Jeszcze lepsza niż ostatnio okazja na Smartwatch HUAWEI WATCH GT 5 PRO ACTIVE 46 mm w kolorze czarnym + GRATIS <a href=\"https://www.pepper.p..."
+  },
+  {
+   "id": "b05986e999",
+   "titre": "Paraguas Plegable de Viaje, Automático y Antiviento, Tejido 210T, Compacto y Portátil",
+   "temperature": 309,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/paraguas-plegable-de-viaje-automatico-y-antiviento-tejido-210t-compacto-y-portatil-2054350",
+   "date": "Tue, 03 Nov 2026 20:46:42 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "12,99€ - Amazon Paraguas Plegable de Viaje, Automático y Antiviento, Tejido 210T, Compacto y Portátil. Precio: 12,99 €. Referencia de Amazon: 16,99 €. Ahor..."
+  },
+  {
+   "id": "0332d9aff1",
+   "titre": "PARKSIDE Zestaw klucza dynamometrycznego 1/2,40-210NM 5-elementowy",
+   "temperature": 306,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Lidl",
+   "prix": 16.43,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/parkside-zestaw-klucza-dynamometrycznego-5-elementowy-1381165",
+   "date": "Tue, 03 Nov 2026 20:14:30 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "69,90zł - Lidl PARKSIDE® Zestaw klucza dynamometrycznego, 5-elementowy Opis produktu kontrolowane dokręcanie połączeń śrubowych z gwintem prawoskrętnym<b..."
+  },
+  {
+   "id": "b09504b442",
+   "titre": "Aqara Präsenz-Multisensor FP300, inkl. Befestigungskit",
+   "temperature": 292,
+   "categorie": "Elektronik",
+   "marchand": "alza",
+   "prix": 28.27,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/aqara-prasenz-multisensor-fp300-inkl-befestigungskit-370125",
+   "date": "Tue, 03 Nov 2026 14:36:00 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "28,27€ - alza Hey PJ Bei alza bekommt ihr gerade das Aqara Präsenz-Multisensor FP300, inkl. Befestigungskit für 31,42€ bei Abholung in der Wiener Fi..."
+  },
+  {
+   "id": "af85fcaef3",
+   "titre": "Kurtka puchowa Rab Microlight Alpine w Skalniku za 538,99 do 4.11",
+   "temperature": 287,
+   "categorie": "Moda",
+   "marchand": "Skalnik",
+   "prix": 126.66,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kurtka-puchowa-rab-microlight-alpine-w-skalniku-za-53899-do-411-1381829",
+   "date": "Tue, 03 Nov 2026 21:22:11 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "538,99zł - Skalnik W skalniku startują okazje Black Month. Dzisiaj i jutro na początek w dobrej cenie kurtka puchowa (z naturalnego puchu ) Rab Microlight Alpine. Dostępna w ró..."
+  },
+  {
+   "id": "b62b5093cd",
+   "titre": "Adidas Terrex Multi Light Down Hooded Jacket (Gr. S bis 2XL) Neukunden für 40,60",
+   "temperature": 279,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Best Secret",
+   "prix": 51.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/adidas-terrex-multi-light-down-hooded-jacket-gr-s-bis-2xl-neukunden-fur-4799-2863883",
+   "date": "Tue, 03 Nov 2026 22:01:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "51€ - Best Secret Wer noch eine leichte und gut sichtbare Daunenjacke z.B für die Laufrunde am Morgen sucht, kann sich ja mal diese von Terrex für 59,99 angucken. Pv..."
+  },
+  {
+   "id": "a513086d46",
+   "titre": "Especial 11/11 AliExpress: chollos desde ESPAÑA para motor, ciclismo y hogar",
+   "temperature": 276,
+   "categorie": "Deportes y aire libre",
+   "marchand": "AliExpress",
+   "prix": 13.87,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/especial-1111-aliexpress-chollos-desde-espana-para-motor-ciclismo-y-hogar-2054597",
+   "date": "Tue, 03 Nov 2026 20:44:14 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,87€ - AliExpress ¡Especial 11/11 en AliExpress! Una selección de chollos que se envían desde España , sin aranceles y a su..."
+  },
+  {
+   "id": "205dc92d05",
+   "titre": "GRANADA Hotel 4* desde 41€ noche, 21€ por persona ¡También en findes y festivos! Noviembre",
+   "temperature": 274,
+   "categorie": "Viajes",
+   "marchand": "ViajerosPiratas",
+   "prix": 41.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/granada-hotel-4-desde-41eur-noche-21eur-por-persona-tambien-en-findes-y-festivos-noviembre-2054584",
+   "date": "Tue, 03 Nov 2026 21:00:49 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "41€ - ViajerosPiratas Atento al ofertón a Granada que te traemos: un hotel 4* desde solo 41€ por noche, 21€ por persona . ¿Qué te..."
+  },
+  {
+   "id": "2935df1234",
+   "titre": "Cecotec Parrilla Eléctrica Rock’nGrill 1500 Stone Ceramic Mix&Grill. 1500 W, Grill, Parrilla, Plancha y Sandwichera, Revestimiento Cerámico",
+   "temperature": 274,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 29.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cecotec-parrilla-electrica-rockngrill-1500-stone-ceramic-mixgrill-1500-w-grill-parrilla-plancha-y-sandwichera-revestimiento-ceramico-2054328",
+   "date": "Tue, 03 Nov 2026 20:57:55 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "29,90€ - Amazon Parrilla eléctrica Contact Grill con 1500 W de potencia y revestimiento de piedra RockStone Cerámico que asegura la máxima antiadherencia y la mejor limpieza.<b..."
+  },
+  {
+   "id": "5f4511f6ca",
+   "titre": "Komplet walizek z ABS-u z żebrowaniem",
+   "temperature": 272,
+   "categorie": "Moda",
+   "marchand": "Wittchen",
+   "prix": 74.95,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/komplet-walizek-z-abs-u-z-zebrowaniem-1381422",
+   "date": "Tue, 03 Nov 2026 21:22:29 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "318,93zł - Wittchen Komplet walizek z ABS-u z żebrowaniem to praktyczne rozwiązanie na rodzinne wyjazdy i częste podróże, gdy potrzebujesz spójnego zestawu na różne długości tra..."
+  },
+  {
+   "id": "4e316c594f",
+   "titre": "Carafe filtrante Brita Aluna - 2,4L avec 1 Filtre",
+   "temperature": 270,
+   "categorie": "Maison & Habitat",
+   "marchand": "PcComponentes",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/brita-aluna-carafe-a-eau-24-l-avec-1-filtre-3433861",
+   "date": "Tue, 03 Nov 2026 20:19:36 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "11,99€ - PcComponentes Carafe compacte 2,4 L (1,4 L filtrée) en plastique transparent/blanc avec couvercle rabattable. Technologie MAXTRA, cartouche remplaçable 150 L et indicateur de..."
+  },
+  {
+   "id": "2f3babbad8",
+   "titre": "Kartusz gazowy Alpen Camping 400 ml butan 12 szt.",
+   "temperature": 268,
+   "categorie": "Sport i turystyka",
+   "marchand": "Allegro",
+   "prix": 10.96,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kartusz-gazowy-gwintowy-alpen-camping-400-ml-butan-12-szt-1381402",
+   "date": "Tue, 03 Nov 2026 19:30:28 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "46,63zł - Allegro Jest jeszcze na Erli https://www.pepper.pl/share-deal-from-app/1381912 Ciut drożej."
+  },
+  {
+   "id": "7274c5babb",
+   "titre": "Ventilador de Techo con Luz LED 70W y Bluetooth 2.4G, Motor DC 30W, 6 Velocidades, Temporizador, Luz Regulable y Modo Noche (Desde España)",
+   "temperature": 265,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 28.15,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ventilador-de-techo-con-luz-led-70w-y-bluetooth-24g-motor-dc-30w-6-velocidades-temporizador-luz-regulable-y-modo-noche-desde-espana-2054594",
+   "date": "Tue, 03 Nov 2026 21:13:55 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "28,15€ - AliExpress ExtraHouse-Ventilador de Techo con Luz LED 70W y Bluetooth 2. 23€ si tienes el cupón ventajas Puntos destacados para imágenes de..."
+  },
+  {
+   "id": "d79f331c9d",
+   "titre": "LEGO 11373 Icons El Señor de los Anillos: Casco de Sauron Kit de Construcción y Decoración Coleccionable con Base de Exposición",
+   "temperature": 263,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Miravia",
+   "prix": 43.84,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-11373-icons-el-senor-de-los-anillos-casco-de-sauron-kit-de-construccion-y-decoracion-coleccionable-con-base-de-exposicion-2054590",
+   "date": "Tue, 03 Nov 2026 20:49:04 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "43,84€ - Miravia Réplica auténtica: Detalles fielmente recreados del casco de Sauron™ tal como aparece en la trilogía Minifigura exclusiva: Incluye a S..."
+  },
+  {
+   "id": "b5249911ab",
+   "titre": "SSD NVMe Ediloca EN870 1TB PCIe 4.0 – Hasta 7400/6300 MB/s, M.2 2280, Compatible con PS5",
+   "temperature": 259,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 117.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ssd-nvme-ediloca-en870-1tb-pcie-40-hasta-74006300-mbs-m2-2280-compatible-con-ps5-2054677",
+   "date": "Tue, 03 Nov 2026 21:28:54 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "117,90€ - AliExpress 1 TB de almacenamiento NVMe PCIe 4.0 con velocidades de hasta 7400 MB/s de lectura y 6300 MB/s de escritura , pensado para gaming, eq..."
+  },
+  {
+   "id": "b7dffe4f74",
+   "titre": "Robot sprzątający ILIFE V30 10000Pa | LiDAR (odkurzacz + mop) - €60.95 || możliwe uzyskanie ceny €51.77 = ~229zł (czytaj opis)",
+   "temperature": 258,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "AliExpress",
+   "prix": 63.33,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/robot-sprzatajacy-ilife-v30-10000pa-lidar-odkurzacz-mop-eur6095-mozliwe-uzyskanie-ceny-eur5177-229zl-czytaj-opis-1381403",
+   "date": "Tue, 03 Nov 2026 21:28:14 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "269,50zł - AliExpress Super cena na popularny robot ILIFE V30. Z kodem PLD1108 do zapłaty €60.95 (~269zł) Jak masz \"dodatek na cło 5€\"..."
+  },
+  {
+   "id": "4ca3516d1b",
+   "titre": "Łopata do śniegu + GRATIS Skrobak CELLFAST CELLPRO 140cm 40-340 (Darmowa dostawa smart)",
+   "temperature": 257,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Allegro",
+   "prix": 18.23,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lopata-do-sniegu-gratis-skrobak-cellfast-cellpro-140cm-40-340-darmowa-dostawa-smart-1380974",
+   "date": "Tue, 03 Nov 2026 19:17:40 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "77,58zł - Allegro Specyfikacja techniczna Przeznaczenie: Odśnieżanie Długość: 1400 mm Szerokość głowicy: 490 mm Mate..."
+  },
+  {
+   "id": "2404c8071d",
+   "titre": "PARKSIDE PERFORMANCE Klucz udarowy 20 V PPDSSA 20-Li B2 600Nm (bez akumulatora i bez ładowarki) @Kaufland",
+   "temperature": 254,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Kaufland",
+   "prix": 46.77,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/parkside-performance-klucz-udarowy-20-v-ppdssa-20-li-b2-bez-akumulatora-i-bez-ladowarki-1381252",
+   "date": "Tue, 03 Nov 2026 21:30:53 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "199zł - Kaufland Analogiczna promocja do Lidla - klucz udarowy PARKSIDE PERFORMANCE PPDSSA 20-Li B2 na promocji w Kaufland od czwartku 05.11. Moment 600 Nm, w zestawie z walizką..."
+  },
+  {
+   "id": "893fd566cd",
+   "titre": "Convector eléctrico inteligente Xiaomi Mi Smart Space Heater S (2200 W)",
+   "temperature": 247,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Miravia",
+   "prix": 72.74,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/convector-electrico-inteligente-xiaomi-mi-smart-space-heater-s-2200-w-2054539",
+   "date": "Tue, 03 Nov 2026 21:01:18 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "72,74€ - Miravia El Xiaomi Mi Smart Space Heater S es un calefactor convector inteligente de 2200 W de potencia diseñado para calentar rápidamente estancias ..."
+  },
+  {
+   "id": "51ee80a08b",
+   "titre": "NIVEA MEN Zestaw Męskich Żeli pod prysznic 5 x 500 ml | Black Weeks",
+   "temperature": 247,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Allegro",
+   "prix": 10.57,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/nivea-men-zestaw-meskich-zeli-pod-prysznic-5-x-500-ml-black-weeks-1380959",
+   "date": "Tue, 03 Nov 2026 21:39:45 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "45zł - Allegro Okazja będzie dostępna jutro o 19:00 (03.11.26). NIVEA MEN Zestaw Męskich Żeli pod prysznic 5 x 500 ml <strong..."
+  },
+  {
+   "id": "fdc3df792e",
+   "titre": "Nike Air Max 90 - Verde agua",
+   "temperature": 246,
+   "categorie": "Moda y accesorios",
+   "marchand": "Showroomprivé",
+   "prix": 74.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nike-air-max-90-verde-agua-2053683",
+   "date": "Tue, 03 Nov 2026 21:35:06 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "74,90€ - Showroomprivé Color : verde agua y gris Exterior : sintético Suela : caucho"
+  },
+  {
+   "id": "07fa582121",
+   "titre": "Bugatti Leagro Herren Schnürschuhe in verschiedenen Größen",
+   "temperature": 243,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Zalando Lounge",
+   "prix": 39.8,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/bugatti-leagro-herren-schnurschuhe-in-verschiedenen-grossen-371790",
+   "date": "Tue, 03 Nov 2026 16:33:08 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "39,80€ - Zalando Lounge Hallo Leute, Bei Zalando Lounge erhaltet ihr derzeit den Bugatti Leagro Herren Schnürschuhe in verschiedenen Größen um 39,80€ inklusive Versand. ..."
+  },
+  {
+   "id": "376d210598",
+   "titre": "Canasta de Baloncesto Infantil, Mini Canasta para Habitación Con Puntuación Automática, Luces LED de 7 Colores, Juego de Juguetes Deportivos",
+   "temperature": 241,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 30.59,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/canasta-de-baloncesto-infantil-mini-canasta-para-habitacion-con-puntuacion-automatica-luces-led-de-7-colores-juego-de-juguetes-deportivos-2053399",
+   "date": "Tue, 03 Nov 2026 20:45:14 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "30,59€ - Amazon Canasta de Baloncesto Infantil, Mini Canasta para Habitación Con Puntuación Automática, Luces LED de 7 Colores, Juego de Juguetes Deportivos para Niños Interior..."
+  },
+  {
+   "id": "341ba1f0d4",
+   "titre": "Kubek termiczny Contigo Huron Snapseal Różowy/Czarny, 470 ml (jasnoniebieski w opisie) (RedVelvet, CenterEurope)",
+   "temperature": 238,
+   "categorie": "Sport i turystyka",
+   "marchand": "Allegro",
+   "prix": 9.82,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kubek-termiczny-contigo-huron-snapseal-rozowyczarny-470-ml-jasnoniebieski-w-opisie-redvelvet-centereurope-1380176",
+   "date": "Tue, 03 Nov 2026 21:35:57 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "41,80zł - Allegro Ta sama cena Kubek termiczny Contigo Huro..."
+  },
+  {
+   "id": "e3d1848240",
+   "titre": "ADIDAS Adizero Adios OG -",
+   "temperature": 228,
+   "categorie": "Moda y accesorios",
+   "marchand": "Showroomprivé",
+   "prix": 36.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/adidas-adizero-adios-og-2054620",
+   "date": "Tue, 03 Nov 2026 21:17:16 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "36,90€ - Showroomprivé Tenis. Bandas en contraste en los laterales. Logo en relieve detrás. Modelo cómodo y ligero. Mesh: e..."
+  },
+  {
+   "id": "d13c217268",
+   "titre": "WE Fashion heren fijngebreide trui met embroidery (2 kleuren, XS t/m 2XL) @ Bol",
+   "temperature": 226,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Bol",
+   "prix": 15.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/we-fashion-heren-fijngebreide-trui-met-embroidery-2-kleuren-xs-tm-2xl-at-bol-425016",
+   "date": "Tue, 03 Nov 2026 18:16:23 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€15 - Bol Bij Bol is deze fijngebreide herentrui van WE Fashion afgeprijsd naar €15, terwijl de adviesprijs €39 is. Het is een regular fit trui met een geribde ronde h..."
+  },
+  {
+   "id": "0a617e5103",
+   "titre": "Ninja Küchengeräte im Blackfriday Early Access stark reduziert. Bspw. Wasserkocher",
+   "temperature": 224,
+   "categorie": "Home & Living",
+   "marchand": "SharkNinja",
+   "prix": 55.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ninja-kuchengerate-im-blackfriday-early-access-stark-reduziert-bspw-wasserkocher-2864354",
+   "date": "Tue, 03 Nov 2026 20:56:29 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "55,99€ - SharkNinja Beispielhaftes Angebot: Der Wasserkocher ist knapp 44% günstiger als normaler Weise, wenn man 2 Artikel kauft. So funktioniert's: <..."
+  },
+  {
+   "id": "a7634826c0",
+   "titre": "Maletín de Herramientas Profesional 1299 Piezas - Carro con Asa Telescópica y Ruedas",
+   "temperature": 224,
+   "categorie": "Jardín y bricolaje",
+   "marchand": "AliExpress",
+   "prix": 58.32,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/maletin-de-herramientas-profesional-1299-piezas-carro-con-asa-telescopica-y-ruedas-2054374",
+   "date": "Tue, 03 Nov 2026 20:46:02 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "58,32€ - AliExpress Máxima Eficiencia en Cada Proyecto: Descubre la solución definitiva para todos tus trabajos con nuestro maletín de herramientas profesional de 1299 piezas...."
+  },
+  {
+   "id": "2b70bd4394",
+   "titre": "La Roche Posay - Protector Solar, SPF50+, Previene el Estrés Oxidativo,Fórmula con Mexoryl 400, Fluido Invisible,Anthelios UV-MUNE 400,50 ml",
+   "temperature": 224,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 11.42,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/la-roche-posay-protector-solar-spf50-previene-el-estres-oxidativoformula-con-mexoryl-400-fluido-invisibleanthelios-uv-mune-40050-ml-2053075",
+   "date": "Tue, 03 Nov 2026 20:41:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,42€ - Amazon La Roche Posay - Protector Solar, SPF50+, Previene el Estrés Oxidativo, Resistente al Agua, Sudor y Arena, Fórmula con Mexoryl 400, Fluido Invisible, Anthelios ..."
+  },
+  {
+   "id": "7f137260c2",
+   "titre": "Bluza sportowa męska adidas entrada jkt hb0573 / dwa kolory",
+   "temperature": 223,
+   "categorie": "Moda",
+   "marchand": "Allegro",
+   "prix": 19.88,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/bluza-sportowa-meska-adidas-entrada-jkt-hb0573-dwa-kolory-1381611",
+   "date": "Tue, 03 Nov 2026 21:55:26 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "84,58zł - Allegro Czarna: https://allegro.pl/oferta/bluza-sporto..."
+  },
+  {
+   "id": "59dbe6cab3",
+   "titre": "Przenośna stacja zasilania OSCAL PowerMax1800SE 1800W, generator solarny 1024Wh, bateria Lifepo4 @Aliexpress - $310.86",
+   "temperature": 222,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "AliExpress",
+   "prix": 288.56,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/przenosna-stacja-zasilania-oscal-powermax1800se-1800w-generator-solarny-1024wh-bateria-lifepo4-at-aliexpress-1380366",
+   "date": "Tue, 03 Nov 2026 21:50:17 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 227,90zł - AliExpress OSCAL PowerMax 1800 SE oferuje 1800 W mocy znamionowej oraz do 3600 W mocy szczytowej , dzięki czemu może zasilać zarówno urządzenia elektron..."
+  },
+  {
+   "id": "e704264560",
+   "titre": "SSD Interne M.2 NVMe Netac NV7000- t - 1 To, 7400 mo/s, Compatible PS5",
+   "temperature": 217,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 113.56,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ssd-interne-m2-nvme-netac-nv7000-t-1-to-7400-mos-compatible-ps5-3445486",
+   "date": "Tue, 03 Nov 2026 20:15:16 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "113,56€ - AliExpress Perf..."
+  },
+  {
+   "id": "aa8a704c89",
+   "titre": "motorola moto g77, Black Olive, 256 GB, 8 GB RAM, 6.78 \" Extreme AMOLED, MediaTek Dimensity 6400 (6 nm), 5200 mAh, Incluye Buds 2",
+   "temperature": 216,
+   "categorie": "Electrónica",
+   "marchand": "MediaMarkt",
+   "prix": 229.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/motorola-moto-g77-black-olive-256-gb-8-gb-ram-678-extreme-amoled-mediatek-dimensity-6400-6-nm-5200-mah-incluye-buds-2-2054409",
+   "date": "Tue, 03 Nov 2026 21:03:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "229€ - MediaMarkt Puntos fuertes Pantalla: AMOLED de 120 Hz, muy buena para vídeos, películas y navegación. Cámara: sensor principal de 108 MP con..."
+  },
+  {
+   "id": "8ea3ec5a4c",
+   "titre": "Logitech Desk Mat Studio Series Multifuncional, Alfombrilla de Ratón Grande, Protector de Escritorio, Base Antideslizante, Resiste",
+   "temperature": 211,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/logitech-desk-mat-studio-series-multifuncional-alfombrilla-de-raton-grande-protector-de-escritorio-base-antideslizante-resiste-2054309",
+   "date": "Tue, 03 Nov 2026 20:50:36 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "9,99€ - Amazon Logitech Desk Mat - Studio Series Multifuncional, Alfombrilla de Ratón Grande, Protector de Escritorio, Base Antideslizante, Resiste Salpicaduras - Rosa<hr..."
+  },
+  {
+   "id": "1ab3c99c87",
+   "titre": "Philips draadloze koptelefoon met ANC, tot 50 uur accuduur en dynamische bas",
+   "temperature": 210,
+   "categorie": "Elektronica",
+   "marchand": "Action",
+   "prix": 18.95,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-draadloze-koptelefoon-met-active-noise-cancelling-tot-50-uur-accuduur-en-dynamische-bas-425095",
+   "date": "Tue, 03 Nov 2026 19:05:09 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€18,95 - Action Nieuw bij Action: deze Philips draadloze koptelefoon met active noise cancelling - tot 50 uur accuduur en dynamische bas voor €18,99! ..."
+  },
+  {
+   "id": "a7be3ab61d",
+   "titre": "Plaque de Cuisson à Induction Samsung NZ63M3707AK - 3 Foyers, 7200W",
+   "temperature": 206,
+   "categorie": "Maison & Habitat",
+   "marchand": "PcComponentes",
+   "prix": 169.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/plaque-de-cuisson-a-induction-samsung-nz63m3707ak-3-foyers-7200-w-3445051",
+   "date": "Tue, 03 Nov 2026 20:08:32 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "169,90€ - PcComponentes Pour ceux qui cherchent une plaque à induction encastrable de 59 cm, la plaque NZ63M3707AK est à regarder de près. Chacune de ses trois zones peut passer en ..."
+  },
+  {
+   "id": "2fa25b8679",
+   "titre": "LEGO 21370 Ideas E.T. the Extra-Terrestrial",
+   "temperature": 205,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Miravia",
+   "prix": 82.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-21370-ideas-et-the-extra-terrestrial-2054588",
+   "date": "Tue, 03 Nov 2026 21:11:41 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "82€ - Miravia Figura articulada: Inclina y gira a E.T. 360 grados con movimientos realistas. Corazón brillante: Activa la luz del corazón con un int..."
+  },
+  {
+   "id": "0f36ffc5b7",
+   "titre": "LEGO 60510 City Calendario de Adviento 2026 – Taller de Papá Noel Navideño",
+   "temperature": 202,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Miravia",
+   "prix": 19.56,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-60510-city-calendario-de-adviento-2026-taller-de-papa-noel-navideno-2054579",
+   "date": "Tue, 03 Nov 2026 21:41:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,56€ - Miravia Cuenta atrás festiva: 24 sorpresas diarias con juguetes y personajes navideños para celebrar la Navidad. Taller de Papá Noel desplegab..."
+  },
+  {
+   "id": "aa165347cd",
+   "titre": "(prime) Tefal C38804 Hard Titanium Essential Bratpfanne 24cm, kein Induktion",
+   "temperature": 202,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 19.64,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/prime-tefal-c38804-hard-titanium-essential-bratpfanne-24cm-kein-induktion-371772",
+   "date": "Tue, 03 Nov 2026 13:53:15 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "19,64€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit die Tefal C38804 Hard Titanium Essential Bratpfanne 24cm um 19,64€ inklusive Paketsteuer. Der Preisv..."
+  },
+  {
+   "id": "43a31a4777",
+   "titre": "Samsung 55\" UE55U7000FK Smart 4K UHD HDR LED TV (Free C&C / Limited Stores)",
+   "temperature": 200,
+   "categorie": "Electronics",
+   "marchand": "Argos",
+   "prix": 299.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/samsung-55-ue55u7000fk-smart-4k-uhd-hdr-led-tv-5021925",
+   "date": "Tue, 03 Nov 2026 19:47:23 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£299 - Argos The Samsung 55-inch UE55U7000FK Smart 4K UHD HDR LED TV is £299 at Argos. It uses Samsung's Crystal 4K processor to upscale what you watch to 4K, and H..."
+  },
+  {
+   "id": "41e53b2137",
+   "titre": "Robot aspirador Roborock Qrevo 5AE (friegasuelos, base autovaciado y autolavado, mopa giratoria, Negro)",
+   "temperature": 200,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "PcComponentes",
+   "prix": 359.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/robot-aspirador-roborock-qrevo-5ae-friegasuelos-base-autovaciado-y-autolavado-mopa-giratoria-negro-black-friday-2026-mediamarkt-2054267",
+   "date": "Tue, 03 Nov 2026 21:35:48 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "359€ - PcComponentes El robot aspirador y friegasuelos de alta gama con estación automatizada concebido para hogares que buscan olvidarse del mantenimiento diario del suelo duran..."
+  },
+  {
+   "id": "41a8b7b898",
+   "titre": "DREAME X50 Ultra Complete Saugroboter mit Wischfunktion",
+   "temperature": 196,
+   "categorie": "Home & Living",
+   "marchand": "MediaMarkt",
+   "prix": 599.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/dreame-x50-ultra-complete-saugroboter-mit-wischfunktion-371788",
+   "date": "Tue, 03 Nov 2026 17:16:59 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "599€ - MediaMarkt Statt € 999,- ist der Saugroboter mit Wischfunktion nun um € 599,- verfügbar. Vor einem Jahr war er im Black Friday Deal um € 7..."
+  },
+  {
+   "id": "691aac270e",
+   "titre": "Soporte Monitor Coolbox M02D Doble hasta 32\" – Brazo Neumático con Resorte de Gas, VESA 75/100 y Ajuste Ergonómico",
+   "temperature": 193,
+   "categorie": "Electrónica",
+   "marchand": "Coolmod",
+   "prix": 22.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/soporte-monitor-coolbox-m02d-doble-hasta-32-brazo-neumatico-con-resorte-de-gas-vesa-75100-y-ajuste-ergonomico-2054652",
+   "date": "Tue, 03 Nov 2026 21:53:14 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "22,95€ - Coolmod Mejora la ergonomía del escritorio y libera espacio con este soporte doble Coolbox M02D. Sus brazos con regulación neumática permiten ajustar la posición de ..."
+  },
+  {
+   "id": "1d81ece6a3",
+   "titre": "Keter Store It Out Max 1200L garden storage, grey",
+   "temperature": 189,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "B&amp;Q",
+   "prix": 110.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/seems-like-a-decent-price-5021887",
+   "date": "Tue, 03 Nov 2026 20:02:50 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£110 - B&Q • Storage capacity of up to 1200 litres • Dry, ventilated storage • Fits two 240-litre rubbish bins • Includes a bin opening kit • Can be fi..."
+  },
+  {
+   "id": "3c804dca2a",
+   "titre": "Hubo Feestbox Airfryer, Contactgrill, Plancha Grill (Grensdeal)",
+   "temperature": 189,
+   "categorie": "Home & Living",
+   "marchand": "Hubo",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/hubo-feestbox-airfryer-contactgrill-plancha-grill-grensdeal-425060",
+   "date": "Tue, 03 Nov 2026 18:16:30 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€69,99 - Hubo Hubo FEESTBOX Samen bakken, grillen en genieten? Dat doe je met de Hubo FEESTBOX! Van krokante snacks en gegrilde panini's tot gezellig samen bakken aa..."
+  },
+  {
+   "id": "a86581b33f",
+   "titre": "[CB]+[BG Berufsgenossenschaft] ADAC Fahrsicherheitstraining Recklinghausen / Haltern am See z.B. -75€ Zuschuss & -10€ ADAC & -18% vom Rest",
+   "temperature": 185,
+   "categorie": "Auto & Motorrad",
+   "marchand": "ADAC",
+   "prix": 8.2,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/cbbg-berufsgenossenschaftadac-fahrsicherheitstraining-recklinghausen-haltern-am-see-zb-75eur-zuschuss-10eur-adac-18-vom-rest-2864382",
+   "date": "Tue, 03 Nov 2026 21:44:52 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "8,20€ - ADAC Wie in einem anderen Deal ( Fahrs..."
+  },
+  {
+   "id": "cc22c7a2e8",
+   "titre": "VASAGLE Puff Almacenaje, con 2 Bisagras de Seguridad, 80 x 40 x 46 cm",
+   "temperature": 184,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 38.24,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/vasagle-puff-almacenaje-con-2-bisagras-de-seguridad-80-x-40-x-46-cm-2054087",
+   "date": "Tue, 03 Nov 2026 21:54:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "38,24€ - Amazon Calidez campestre, encanto para cada día: La Colección HAINS mezcla siluetas cuadradas, diseño tipo mueble de suelo y elementos de puerta de granero ..."
+  },
+  {
+   "id": "98d3815d7c",
+   "titre": "Juego de 4 recipientes rectangulares de vidrio borosilicato",
+   "temperature": 183,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 12.68,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/juego-de-4-recipientes-rectangulares-de-vidrio-borosilicato-2054158",
+   "date": "Tue, 03 Nov 2026 21:59:52 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "12,68€ - AliExpress Incluye 4 recipientes rectangulares de vidrio borosilicato. Capacidades: 200, 370, 640 y 1000 ml. ♨️ Aptos para usar en el horno microondas, ..."
+  },
+  {
+   "id": "721662a9a7",
+   "titre": "Cooler Master MasterFrame 400 Mesh Mini Tower",
+   "temperature": 182,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 113.22,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/cooler-master-masterframe-400-mesh-mini-tower-371776",
+   "date": "Tue, 03 Nov 2026 14:52:08 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "113,22€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit den Cooler Master MasterFrame 400 Mesh Mini Tower um 113,22€ inklusive Paketsteuer. Der Preisvergle..."
+  },
+  {
+   "id": "7573d0e7fc",
+   "titre": "Auxmir Nachtlampje met Touch Dimbaar, 4000mAh Oplaadbaar",
+   "temperature": 181,
+   "categorie": "Home & Living",
+   "marchand": "Amazon.nl",
+   "prix": 12.73,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/auxmir-nachtlampje-met-touch-dimbaar-4000mah-oplaadbaar-425061",
+   "date": "Tue, 03 Nov 2026 17:21:21 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€12,73 - Amazon.nl Laagste prijs elders: <a href=\"https://www.kieskeurig.nl/monitorarm/product/52165848-auxmir-bedlampje-met-rgb-aanraakfunctie-dimbaar-led-nachtlichtje-met-instel..."
+  },
+  {
+   "id": "41ff5a9f23",
+   "titre": "Rasoir électrique Braun Series 52-N1500sF1",
+   "temperature": 180,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Boulanger",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/rasoir-electrique-braun-series-52-n1500sf1-3445467",
+   "date": "Tue, 03 Nov 2026 20:34:50 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "59,99€ - Boulanger Un bon plan sympa pour renouveler son matériel de rasage sans se ruiner. Boulanger propose en ce moment le rasoir électrique Braun Series 5 (modèle 52-N1500s) à..."
+  },
+  {
+   "id": "90f42a78bf",
+   "titre": "Eufy Türklingel Mit Kamera E340 – Dual‑Kamera Und 2K FHD",
+   "temperature": 175,
+   "categorie": "Elektronik",
+   "marchand": "0815.at",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/eufy-turklingel-mit-kamera-e340-dualkamera-und-2k-fhd-371781",
+   "date": "Tue, 03 Nov 2026 14:24:57 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "89,99€ - 0815.at Hey PJ Bei 0815 bekommt ihr gerade die Eufy Türklingel Mit Kamera E340 – Dual‑Kamera Und 2K FHD für 89,99€ inkl. Versand. Preisvergleich beginnt ..."
+  },
+  {
+   "id": "95a03e1908",
+   "titre": "Sharkoon REV300 Gaming-Gehäuse in Weiß | 7 vorinstallierte RGB-Lüfter",
+   "temperature": 174,
+   "categorie": "Gaming",
+   "marchand": "eBay DE",
+   "prix": 61.89,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/sharkoon-rev300-gaming-gehause-in-weiss-7-vorinstallierte-rgb-lufter-371779",
+   "date": "Tue, 03 Nov 2026 14:08:58 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "61,89€ - eBay DE Hey PJ Bei ebay bekommt ihr gerade den Sharkoon REV300 Gaming-Gehäuse in Weiß | 7 vorinstallierte RGB-Lüfter für 61,89€ inkl. Versand...."
+  },
+  {
+   "id": "a88b17a17a",
+   "titre": "Montre Casio Edifice EFK-100D-3AER automatique - verre saphir, cadran vert, antimagnétique",
+   "temperature": 170,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Monting",
+   "prix": 195.3,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-casio-edifice-efk-100d-3aer-automatique-verre-saphir-cadran-vert-antimagnetique-3445434",
+   "date": "Tue, 03 Nov 2026 20:31:39 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "195,30€ - Monting ⌚ La Casio Edifice EFK-100D-3AER, cadran vert, est à 195,30 € chez Monting (Paris) au lieu de 279 €, le prix public affiché par Casio et par la plupart des b..."
+  },
+  {
+   "id": "c32b03e1bc",
+   "titre": "Poco M8 Pro 512/12GB in drei verschiedenen Farben",
+   "temperature": 169,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 276.75,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/poco-m8-pro-51212gb-in-drei-verschiedenen-farben-371792",
+   "date": "Tue, 03 Nov 2026 16:00:24 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "276,75€ - AliExpress Hallo Leute, Bei AliExpress erhaltet ihr derzeit das Poco M8 Pro 512/12GB um 276,75€. Der Versand erfolgt aus Polen. Somit besteht keinerlei ..."
+  },
+  {
+   "id": "a989631914",
+   "titre": "LEGO Friends Adventskalender 2026 - Kerst Speelgoed voor Kinderen 42698",
+   "temperature": 158,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Bol",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-friends-adventskalender-2026-kerst-speelgoed-voor-kinderen-42698-425073",
+   "date": "Tue, 03 Nov 2026 18:16:15 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€18,99 - Bol Ontdek een betoverend winterwonderland met de LEGO Friends Adventskalender 2026 (42698). Dit LEGO kerst bouwpakket voor kinderen biedt 24 dagen vol avontuur waa..."
+  },
+  {
+   "id": "f80d71eb59",
+   "titre": "Brettspiel Kosmos Ubongo! Classic, Der beliebte Action- und Knobelspaß (Prime)",
+   "temperature": 156,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 11.73,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/brettspiel-kosmos-ubongo-classic-der-beliebte-action-und-knobelspass-prime-2864370",
+   "date": "Tue, 03 Nov 2026 21:31:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "11,73€ - Amazon Info zu diesem Artikel Bei Ubongo lautet die Devise: Schnell aufgebaut. Schnell losgespielt Lege auf Zeit, rufe „Ubongo “ und ge..."
+  },
+  {
+   "id": "0db629e1df",
+   "titre": "Jeu de construction Lego Speed Champions 77240 - Hypercar Bugatti Centodieci (via 4.38€ sur la carte de fidélité)",
+   "temperature": 155,
+   "categorie": "Famille & Enfants",
+   "marchand": "E.Leclerc",
+   "prix": 13.12,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-speed-champions-77240-hypercar-bugatti-centodieci-via-438eur-sur-la-carte-de-fidelite-3445466",
+   "date": "Tue, 03 Nov 2026 20:49:43 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "13,12€ - E.Leclerc Meilleur prix de revient constaté sur Dealabs pour ce modèle (moitié prix par rapport au tarif catalogue Lego, pour d'autres références également cités plus ..."
+  },
+  {
+   "id": "61e4494dec",
+   "titre": "Smartphone 6,7\" Samsung Galaxy S25 FE - RAM 8 Go, 256 Go (Via Paiement PayPal)",
+   "temperature": 155,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 377.65,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-smartphone-67-samsung-galaxy-s26-fe-ram-8-go-256-go-3444943",
+   "date": "Tue, 03 Nov 2026 20:30:27 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "377,65€ - AliExpress Très bon prix pour la version 256 Go ! en passant par PayPal pour le S25FE. Expédié depuis la France, livraison rapide et gratuite Remarqu..."
+  },
+  {
+   "id": "fdf5a48f95",
+   "titre": "LEGO Harry Potter betoverde vliegende Ford Anglia 76470",
+   "temperature": 155,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Intertoys",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-harry-potter-betoverde-vliegende-ford-anglia-76470-425088",
+   "date": "Tue, 03 Nov 2026 17:58:58 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€44,99 - Intertoys • LEGO Harry Potter bouwset • Model van de Ford Anglia van de familie Wemel • LEGO-nummer 76470"
+  },
+  {
+   "id": "0f82feda20",
+   "titre": "Tamaris TT-0026-MQ Damenuhr in Rosegold",
+   "temperature": 154,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Zalando Lounge",
+   "prix": 33.8,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tamaris-tt-0026-mq-damenuhr-in-rosegold-371786",
+   "date": "Tue, 03 Nov 2026 17:06:36 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "33,80€ - Zalando Lounge Hallo Leute, Bei Zalando Lounge erhaltet ihr derzeit die Tamaris TT-0026-MQ Damenuhr in Rosegold um 33,80€ inklusive Versand. Der Preisvergleic..."
+  },
+  {
+   "id": "dce674f94e",
+   "titre": "[Nintendo eShop] OCTOPATH TRAVELER 0 für Switch 1 + 2 | metacritic 79 / 7,3 | auch als DELUXE EDITION für 34,99€",
+   "temperature": 151,
+   "categorie": "Gaming",
+   "marchand": "Nintendo eShop",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/nintendo-eshop-octopath-traveler-0-fur-switch-1-2-metacritic-79-73-auch-als-deluxe-edition-fur-3499eur-2864369",
+   "date": "Tue, 03 Nov 2026 21:43:12 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "29,99€ - Nintendo eShop Hallo zusammen, zum neuen Bestpreis erhältlich das Spiel OCTOPATH TRAVELER 0 für <a href=\"https://www.nintendo.com/de-de/Spiele/..."
+  },
+  {
+   "id": "c20015b3d5",
+   "titre": "Prime Bosch PRO Akku-Winkelschleifer GWS 18V-8",
+   "temperature": 151,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 76.03,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-bosch-pro-akku-winkelschleifer-gws-18v-8-2864367",
+   "date": "Tue, 03 Nov 2026 21:38:20 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "76,03€ - Amazon Hallo zusammen, hier gibt's den kleinen Bosch 18V GWS im Angebot. Top Preis für den kleinen. Leistung entspricht etwa einem 800Watt Gerät was ich so ..."
+  },
+  {
+   "id": "9651322829",
+   "titre": "CONCEPT RM3300 Küchenmaschine 1000 W",
+   "temperature": 150,
+   "categorie": "Home & Living",
+   "marchand": "alza",
+   "prix": 47.96,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/concept-rm3300-kuchenmaschine-1000-w-371775",
+   "date": "Tue, 03 Nov 2026 16:15:28 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "47,96€ - alza Zur Ausstattung gehört ein Glasbehälter mit zwei Litern Volumen. Dazu kommen 1000 Watt Leistung und vier Geschwindigkeitsstufen für unterschiedliche Zutaten...."
+  },
+  {
+   "id": "317c06234c",
+   "titre": "dé 3kW Electric Car Charger with APP Type 2 to 3 Pin Plug 10m for Electric Vehicles with code at Depow Europe Store",
+   "temperature": 149,
+   "categorie": "Car & Motorcycle",
+   "marchand": "AliExpress",
+   "prix": 65.59,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/de-3kw-electric-car-charger-with-app-type-2-to-3-pin-plug-10m-for-electric-vehicles-with-code-at-depow-europe-store-5020807",
+   "date": "Tue, 03 Nov 2026 19:18:00 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£65.59 - AliExpress We worked with Aliexpress to get this exclusive code for the community. Join our cashback team <a href=\"https://www.hotukdeals.com/vouchers/ps5ps15ps20..."
+  },
+  {
+   "id": "a5c3607d91",
+   "titre": "Montre connectée Garmin Forerunner 255",
+   "temperature": 148,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 166.33,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-garmin-forerunner-255-46mm-3444181",
+   "date": "Tue, 03 Nov 2026 20:05:46 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "166,33€ - AliExpress Montre connectée Garmin Forerunner 255 Forme : ronde Piles incluses : Oui Écran : 1,3\" Caméra : Non Radio FM : non Comprend : Minu..."
+  },
+  {
+   "id": "ae684c79f0",
+   "titre": "Samsung Odyssey G5 32\" QHD Monitor mit 180hz",
+   "temperature": 147,
+   "categorie": "Elektronik",
+   "marchand": "alza",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/samsung-odyssey-g5-32-qhd-monitor-mit-180hz-371795",
+   "date": "Tue, 03 Nov 2026 17:40:15 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "169€ - alza Hallo Leute, Bei Alza erhaltet ihr derzeit den Samsung Odyssey G5 32\" QHD Monitor mit 180hz um 169€ bei Abholung in Wien. Für den Versand fallen ..."
+  },
+  {
+   "id": "b09261b832",
+   "titre": "TP-LINK Tapo D235 Video-Türklingelkamera",
+   "temperature": 146,
+   "categorie": "Elektronik",
+   "marchand": "MediaMarkt",
+   "prix": 88.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tp-link-tapo-d235-video-turklingelkamera-371789",
+   "date": "Tue, 03 Nov 2026 17:44:00 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "88€ - MediaMarkt Hey PJ Bei MediaMarkt bekommt ihr gerade die TP-LINK Tapo D235 Video-Türklingelkamera für 88€ inkl. Versand. Preisvergleich beginnt bei <a href=..."
+  },
+  {
+   "id": "0e0815000f",
+   "titre": "Pied d’atelier vélo pliable Bike Original Easywork III - Charge max. 30kg",
+   "temperature": 143,
+   "categorie": "Sports & Plein air",
+   "marchand": "Decathlon",
+   "prix": 28.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pied-datelier-velo-pliable-bike-original-easywork-iii-charge-max-30-kg-3444900",
+   "date": "Tue, 03 Nov 2026 20:49:28 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "28,99€ - Decathlon Le pied d’atelier Bike Original Easywork III permet de maintenir un vélo pour effectuer des réglages et travaux d’entretien à hauteur confortable. <br ..."
+  },
+  {
+   "id": "e591ed8778",
+   "titre": "Lego Technic 42207 F1 Ferrari SF-24 (Via 32,83€ sur la Carte de Fidélité)",
+   "temperature": 143,
+   "categorie": "Famille & Enfants",
+   "marchand": "E.Leclerc",
+   "prix": 131.33,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-technic-f1-ferrari-sf-24-42207-20-carte-leclerl-3444917",
+   "date": "Tue, 03 Nov 2026 20:03:08 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "131,33€ - E.Leclerc Construisez ce set LEGO. • 1361 pièces pour les 18 ans et plus. • Toutes les gammes sont compatibles avec les autres ensembles de construction LEGO pour une exp..."
+  },
+  {
+   "id": "ba0ccaabf6",
+   "titre": "Fire Emblem: Fortune's Weave - Nintendo Switch 2 Game",
+   "temperature": 142,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 49.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/fire-emblem-fortunes-weave-nintendo-switch-2-game-5021802",
+   "date": "Tue, 03 Nov 2026 20:25:11 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£49.99 - Amazon Fire Emblem: Fortune's Weave - Nintendo Switch 2 Game"
+  },
+  {
+   "id": "2cba8e7e3a",
+   "titre": "DALI IO-6 draadloze over-ear koptelefoon met noise cancelling (zwart) @ Smits Arnhem",
+   "temperature": 142,
+   "categorie": "Elektronica",
+   "marchand": "Smits Arnhem",
+   "prix": 179.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/dali-io-6-draadloze-over-ear-koptelefoon-met-noise-cancelling-zwart-at-smits-arnhem-424971",
+   "date": "Tue, 03 Nov 2026 18:49:24 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€179 - Smits Arnhem Deze DALI IO-6 kost nu €179 bij Smits Arnhem, nieuw en gratis verzonden. De laagste prijs elders voor een nieuwe is <a href=\"https://tweakers.net/pricewatch/..."
+  },
+  {
+   "id": "654b09b1e5",
+   "titre": "Chaussures Nike Air Max 90 SE Mercurial Vapor 1 - Tailles du 38,5 au 47,5",
+   "temperature": 141,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Showroomprivé",
+   "prix": 74.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nike-air-max-90-se-mercurial-vapor-1-taille-du-385-au-475-3445095",
+   "date": "Tue, 03 Nov 2026 20:29:44 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "74,90€ - Showroomprivé La Nike Air Max 90 se Mercurial Vapor 1 propose une fusion entre l'heritage running et l'univers football de Nike. Cette iteration du modele classique des annee..."
+  },
+  {
+   "id": "545283602f",
+   "titre": "Xenoblade Chronicles 2 - Nintendo Switch 2 Edition",
+   "temperature": 140,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 44.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/xenoblade-chronicles-2-nintendo-switch-2-edition-5021893",
+   "date": "Tue, 03 Nov 2026 20:25:06 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£44.99 - Amazon About this item Nintendo Switch 2 Edition features Includes: Support for 4K resolution in TV mode* Improved performance at 60 ..."
+  },
+  {
+   "id": "1048439cac",
+   "titre": "COTIAR R11 500W draadloze stofzuigers",
+   "temperature": 140,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 39.19,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/cotiar-r11-500w-draadloze-stofzuigers-425074",
+   "date": "Tue, 03 Nov 2026 17:55:37 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€39,19 - AliExpress 1. Krachtige zuigkracht voor het verwijderen van dierenharen.Deze draadloze stofzuiger is uitgerust met een vermogen van 500 W en een krachtige zuigkracht va..."
+  },
+  {
+   "id": "5603017c0f",
+   "titre": "Pokémon: Let's Go, Pikachu! - Nintendo Switch Game - Used - Sold by O'Neill's Deals UK",
+   "temperature": 139,
+   "categorie": "Gaming",
+   "marchand": "eBay",
+   "prix": 26.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/pokemon-lets-go-pikachu-nintendo-switch-game-used-sold-by-oneills-deals-uk-5010130",
+   "date": "Tue, 03 Nov 2026 19:26:41 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£26.99 - eBay Each of them has a worn case/cover art. The cartridges work fine. Fast dispatch with tracking Return to the Kanto region and experience a cla..."
+  },
+  {
+   "id": "eef8336872",
+   "titre": "3 Monate WOW Filme & Serien um 3€ für 3Ös",
+   "temperature": 139,
+   "categorie": "Kultur & Freizeit",
+   "marchand": null,
+   "prix": 27.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/gutschein/3-monate-wow-filme-serien-um-3eur-fur-3os-371818",
+   "date": "Tue, 03 Nov 2026 21:24:13 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "Im heutigen Billa Flugblatt gefunden: 3 Monate WOW Filme & Serien um 3€ für 3Ös. Gültig von 05.11.2026 bis 31.12.2026</stro..."
+  },
+  {
+   "id": "7523dc9ef6",
+   "titre": "Mafia The Old Country, Yakuza 6, The Outer Worlds 2, SHINOBI: Art of Vengeance uvm. | Steam/Battle.net | Humble Choice November",
+   "temperature": 138,
+   "categorie": "Gaming",
+   "marchand": "Steam",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/mafia-the-old-country-yakuza-6-the-outer-worlds-2-steam-humble-choice-november-371813",
+   "date": "Tue, 03 Nov 2026 20:37:01 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "12,99€ - Steam Hallo zusammen, das neue Humble Choice Bundle für November 2026 ist verfügbar. Es beinhaltet auch:<..."
+  },
+  {
+   "id": "272d212bff",
+   "titre": "Dreft Platinum vaatwastabletten 66 stuks (€0,15 per tab) bij Lidl",
+   "temperature": 138,
+   "categorie": "Boodschappen",
+   "marchand": "Lidl",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/dreft-platinum-vaatwastabs-425036",
+   "date": "Tue, 03 Nov 2026 17:20:22 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€9,99 - Lidl Per tablet cost 0.1513 Cent which is all time low with Platinum Tablets from Dreft in Lidil supermarket!"
+  },
+  {
+   "id": "4b95e94a84",
+   "titre": "EliteWheels ENT 700C Carbon-Laufradsatz - 50mm Felgentiefe, UD-Finish, Tubeless Ready, Pillar 1423 Speichen, Felgenbremse",
+   "temperature": 136,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "AliExpress",
+   "prix": 260.31,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/elitewheels-ent-700c-carbon-laufradsatz-50mm-felgentiefe-ud-finish-tubeless-ready-pillar-1423-speichen-felgenbremse-2864261",
+   "date": "Tue, 03 Nov 2026 21:13:48 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "260,31€ - AliExpress <a href=\"https://www.mydealz.de/deals/aliexpress-1111-sale-3eur-ab-18eur-8eur-ab-45eur-13eur-ab-75eur-24eur-ab-139eur-40eur-ab-229eur-60eur-ab-349eur-80eur-a..."
+  },
+  {
+   "id": "fb95b59213",
+   "titre": "[Flaconi/Parfumdreams] Jean Paul Gaultier La Belle Eau de Parfum 100ml | o. 30ml 37,11€ | Parfumo Damendüfte-Topliste Platz 28",
+   "temperature": 135,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "flaconi",
+   "prix": 64.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/flaconiparfumdreams-jean-paul-gaultier-la-belle-eau-de-parfum-100ml-o-30ml-3711eur-parfumo-damendufte-topliste-platz-28-2864327",
+   "date": "Tue, 03 Nov 2026 21:23:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "64,90€ - flaconi Moin. Bei Flaconi bekommt ihr aktuell das Jean Paul Gaultier La Belle Eau de Parfum 100ml für 64,90€ (inkl VS..."
+  },
+  {
+   "id": "51cbf9f951",
+   "titre": "Xiaomi Watch S5 46mm Schwarz oder Silber",
+   "temperature": 135,
+   "categorie": "Elektronik",
+   "marchand": "alza",
+   "prix": 134.9,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/xiaomi-watch-s5-46mm-schwarz-oder-silber-371799",
+   "date": "Tue, 03 Nov 2026 20:57:23 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "134,90€ - alza Hallo Leute, Bei Alza erhaltet ihr derzeit die Xiaomi Watch S5 46mm Schwarz oder Silber um 134,90€ bei Abholung in Wien. Für den Österreichweiten ..."
+  },
+  {
+   "id": "9554779e47",
+   "titre": "Couteau suisse Victorinox - Evolution 10 Grip, 13 fonctions, Jaune/Noir, avec lame, tire-bouchon, tournevis, ouvre-boîtes",
+   "temperature": 134,
+   "categorie": "Sports & Plein air",
+   "marchand": "Amazon",
+   "prix": 29.52,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/couteau-suisse-victorinox-evolution-10-grip-13-fonctions-jaunenoir-outil-multifonction-avec-lame-tire-bouchon-tournevis-3445330",
+   "date": "Tue, 03 Nov 2026 21:42:04 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "29,52€ - Amazon 13 FONCTIONS : Grande lame, tire-bouchon, ouvre-boîtes, décapsuleur, tournevis (3 et 6 mm), dénudeur de fils, lime à ongles avec cure-ongles, poinçon alésoir et..."
+  },
+  {
+   "id": "72c03b688d",
+   "titre": "BenQ RD240Q, 24.1\", WQXGA (2560x1600), IPS, 120Hz, HDMI, DP, USB-C, Pivot, höhenverstellbar, USB-C (PD 90W)",
+   "temperature": 134,
+   "categorie": "Elektronik",
+   "marchand": "1AShop.at",
+   "prix": 279.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/benq-rd240q-241-wqxga-2560x1600-ips-120hz-hdmi-dp-usb-c-pivot-hohenverstellbar-usb-c-pd-90w-371761",
+   "date": "Tue, 03 Nov 2026 16:15:48 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "279€ - 1AShop.at Man wird nie zu alt, um was neues zu lernen! z.B. dass es eigene Monitore für Programmierer gibt!? :D Bin zufällig darüber gestolpert, als ich na..."
+  }
+ ]
+}

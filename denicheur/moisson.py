@@ -182,9 +182,11 @@ def radar(etat):
         return 0
     trouves = []
     for type_prix, nom in ((1, "neuf"), (9, "seconde_main")):
-        sel = {"page": 0, "domainId": 4, "priceTypes": [type_prix], "dateRange": 0, "isFilterEnabled": True,
-               "deltaPercentRange": [20, 95], "currentRange": [PRIX_MIN_CENT, PRIX_MAX_CENT], "salesRankRange": [1, 60000],
-               "singleVariation": True, "filterErotic": True, "hasReviews": True}
+        cats = [c for c, _ in categories_fr()]
+        sel = {"page": 0, "domainId": 4, "priceTypes": [type_prix], "dateRange": 3, "isFilterEnabled": True, "isRangeEnabled": True,
+               "deltaPercentRange": [20, 95], "currentRange": [PRIX_MIN_CENT, PRIX_MAX_CENT], "salesRankRange": [1, 80000],
+               "singleVariation": True, "filterErotic": True, "hasReviews": True,
+               **({"includeCategories": cats[:500]} if cats and cats != [c for c, _ in CATEGORIES_FR] else {})}
         try:
             d = _appel("deal", {"domain": 4}, corps=sel)
         except Exception as e:
@@ -195,14 +197,17 @@ def radar(etat):
             prix = _prix(cur[type_prix]) if len(cur) > type_prix else None
             if not prix:
                 continue
-            try:  # avg[intervalle][type] ; 2 = mois, 3 = 90 jours
+            try:  # avg[intervalle][type] ; 2 = mois, 3 = 90 jours (-1/-2 = inconnu)
                 moy_mois, moy_90 = _prix(avg[2][type_prix]), _prix(avg[3][type_prix])
-                baisse = delta_pct[3][type_prix] if len(delta_pct) > 3 else delta_pct[0][type_prix]
             except (IndexError, TypeError):
-                moy_mois = moy_90 = baisse = None
+                moy_mois = moy_90 = None
+            ref = moy_90 or moy_mois
+            baisse = round((ref - prix) / ref * 100) if ref and ref > prix else None  # calculée par nous, jamais par le champ delta
+            if not baisse or baisse < 15:
+                continue  # pas une vraie baisse (le prix du jour n'est pas sous la moyenne)
             rang = cur[I_RANG] if len(cur) > I_RANG and isinstance(cur[I_RANG], int) and cur[I_RANG] > 0 else None
             trouves.append({"asin": x.get("asin"), "titre": (x.get("title") or "")[:100], "type": nom, "prix": prix,
-                            "moyenne_mois": moy_mois, "moyenne_90j": moy_90, "baisse_pct": abs(baisse) if isinstance(baisse, (int, float)) else None,
+                            "moyenne_mois": moy_mois, "moyenne_90j": moy_90, "baisse_pct": baisse,
                             "rang": rang, "etat_seconde_main": x.get("warehouseCondition"),
                             "lien": f"https://www.amazon.fr/dp/{x.get('asin')}", "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")})
     if trouves:
@@ -274,11 +279,19 @@ def etagere(etat, nb_cats=4):
 
 
 # ---------- 3. HYPE ÉTRANGÈRE ----------
+# identifiants des catégories racine (lus sur Keepa le 04/11/2026) : les noms de groupe renvoient une liste vide
 CATEGORIES_HYPE = {
-    "US": [("Electronics", "High-tech"), ("Toys & Games", "Jouets"), ("Home & Kitchen", "Maison"), ("Sports & Outdoors", "Sport"),
-           ("Beauty & Personal Care", "Beauté"), ("Tools & Home Improvement", "Bricolage"), ("Video Games", "Jeux vidéo")],
-    "JP": [("Electronics", "High-tech"), ("Toys & Games", "Jouets"), ("Home & Kitchen", "Maison"), ("Beauty", "Beauté"), ("Video Games", "Jeux vidéo")],
+    "US": [(172282, "High-tech"), (165793011, "Jouets"), (1055398, "Maison"), (3375251, "Sport"), (3760911, "Beauté"),
+           (228013, "Bricolage"), (468642, "Jeux vidéo"), (2335752011, "Téléphonie"), (165796011, "Bébé"), (2619533011, "Animaux")],
+    "JP": [(3210981, "High-tech"), (13299531, "Jouets"), (3828871, "Maison"), (52374051, "Beauté"), (637394, "Jeux vidéo"),
+           (14304371, "Sport"), (2127209051, "Informatique"), (2277721051, "Hobby")],
 }
+
+
+def _international(titre):
+    """Un produit japonais n'est intéressant que si son titre est lisible ici (marque mondiale) : ≥ 60 % de lettres latines."""
+    lettres = [c for c in (titre or "") if c.isalpha()]
+    return bool(lettres) and sum(1 for c in lettres if c.isascii()) / len(lettres) >= 0.6
 
 
 def hype(etat):
@@ -293,8 +306,10 @@ def hype(etat):
     etat["hype_suivante"] = i + 1
     cat, cat_fr = cats[i]
     try:
-        d = _appel("bestsellers", {"domain": DOMAINES[pays], "category": cat, "range": 30})
+        d = _appel("bestsellers", {"domain": DOMAINES[pays], "category": cat})
         asins = ((d.get("bestSellersList") or {}).get("asinList") or [])[:100]
+        if not asins:
+            sante.noter("erreur", "moisson hype", f"{pays} {cat_fr} : liste des meilleures ventes vide")
         if not asins:
             return 0
         labas = {r["asin"]: r for r in fiches(asins, pays)}
@@ -305,7 +320,7 @@ def hype(etat):
     trouves = []
     for rang_labas, asin in enumerate(asins, 1):
         a, b = labas.get(asin), ici.get(asin)
-        if not a:
+        if not a or (pays == "JP" and not _international(a.get("t"))):
             continue
         absent = not b or not b.get("neuf")
         faible = bool(b and b.get("rang") and b["rang"] > 20000)

@@ -94,9 +94,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "High-Tech",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 4,
 "alertes": 0
 },
 "A | flux:mydealz-hot |  | Elektronik": {
@@ -584,10 +584,10 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Family & Kids",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 6,
-"alertes": 0
+"resultats": 8,
+"alertes": 1
 },
 "A | flux:hotukdeals-new |  | Services & Contracts": {
 "denicheur": "A",
@@ -784,6 +784,46 @@
 "source": "flux:dealabs-tendance",
 "cible": "",
 "categorie": "Maison & Habitat",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | LEGO One Piece 75646 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "LEGO One Piece 75646",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | LEGO One Piece 75646 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "LEGO One Piece 75646",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20One%20Piece%2075646 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20One%20Piece%2075646",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:pepper-pl-hot |  | Sport i turystyka": {
+"denicheur": "A",
+"source": "flux:pepper-pl-hot",
+"cible": "",
+"categorie": "Sport i turystyka",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

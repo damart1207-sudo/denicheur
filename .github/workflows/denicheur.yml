@@ -98,6 +98,8 @@ jobs:
             for i in 1 2 3 4 5; do
               DEBUT=$(date +%s)
               timeout 480 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $?"
+              # moissonneur Keepa : vide la réserve de jetons (ils expirent au bout d'une heure) -> radar Amazon, étagère, hype
+              timeout 300 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
               python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
               git add -A data docs
               if ! git diff --cached --quiet; then

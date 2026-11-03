@@ -1,0 +1,154 @@
+"""BINGO : produits TRÈS recherchés par les gens et PEU vendus (peu de concurrence) -> partent très vite.
+
+Une fois par jour (passage de la nuit) :  python -m denicheur.bingo
+1. Candidats = produits qui se vendent (base Keepa moissonnée, chutes de classement) + hype étrangère + radar Amazon.
+2. Demande = volume de recherche Google France (DataForSEO, 1 appel ≈ 0,09 $ pour 1 000 mots, dans le plafond du jour).
+3. Concurrence = nombre d'offres neuves sur Amazon.fr (déjà dans la base, gratuit) + annonces eBay.fr (API gratuite)
+   pour les meilleurs.
+4. Score bingo = recherches mensuelles / (1 + vendeurs). Carte « bingo » quand ≥ 1 000 recherches/mois et ≤ 5 vendeurs.
+5. Hype qui monte à l'étranger : Google Trends USA / Japon / Allemagne (DataForSEO, 0,011 $ par appel) sur les 8
+   meilleurs produits de la hype Keepa -> « vague à venir en France » quand ça monte là-bas et pas ici.
+
+-> data/bingo.json (lu par l'audit du matin et par le rapport) + data/base/demande/AAAA-MM-JJ.json
+Coût : ≈ 0,20 $ par jour au plus, dans le plafond DataForSEO de 0,70 $/jour. Aucun achat.
+"""
+import json
+import os
+import re
+from datetime import datetime, timezone
+
+from . import base, dataforseo, sante
+
+RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+F_INDEX = os.path.join(RACINE, "data/base/keepa_index.json")
+F_HYPE = os.path.join(RACINE, "data/hype_etranger.json")
+F_RADAR = os.path.join(RACINE, "data/radar_amazon.json")
+F_BINGO = os.path.join(RACINE, "data/bingo.json")
+VOLUME_MIN = 1000      # recherches Google France par mois
+VENDEURS_MAX = 5       # offres neuves sur Amazon.fr (au-delà : trop de concurrence)
+BRUIT = re.compile(r"\b(pour|avec|sans|de|des|et|le|la|les|un|une|du|en|à|noir|blanc|bleu|rouge|gris|vert|rose|"
+                   r"compatible|lot|pack|pcs|pièces|set|kit|cm|mm|go|to|version|édition|nouveau|new|original|"
+                   r"for|with|and|the|black|white|inch|pouces|\d+(?:[.,]\d+)?\s?(?:cm|mm|go|to|gb|tb|w|kg|g|ml|l|mah|hz|v))\b", re.I)
+
+
+def _lire(f, defaut):
+    try:
+        with open(f, encoding="utf-8") as g:
+            return json.load(g)
+    except (OSError, json.JSONDecodeError):
+        return defaut
+
+
+def mot_cle(titre, marque=None):
+    """Titre Amazon (long) -> mot-clé court tel que les gens le tapent : marque + 2-3 mots du modèle."""
+    t = re.split(r"[,(|\[\-–:]", titre or "", maxsplit=1)[0]
+    t = BRUIT.sub(" ", t)
+    mots = [m for m in re.sub(r"[^\w' ]+", " ", t).split() if len(m) > 1 or m.isdigit()]
+    if marque and mots and mots[0].lower() != marque.lower():
+        mots = [marque] + [m for m in mots if m.lower() != marque.lower()]
+    return " ".join(mots[:4]).strip().lower()
+
+
+def candidats():
+    """Produits qui se vendent, avec leur nombre de vendeurs Amazon.fr. {mot_cle: {...}}"""
+    idx = _lire(F_INDEX, {})
+    out = {}
+    for k, r in idx.items():
+        if not k.endswith(":FR") or not r.get("t") or (r.get("ch30") or 0) < 15:
+            continue
+        mc = mot_cle(r["t"])
+        if len(mc) < 6 or mc in out:
+            continue
+        out[mc] = {"asin": k.split(":")[0], "titre": r["t"], "ean": r.get("ean"), "prix": r.get("neuf"),
+                   "ventes_30j": r.get("ch30"), "vendeurs": r.get("offres"), "origine": "etagere"}
+    for h in _lire(F_HYPE, {}).get("produits", [])[-300:]:
+        mc = mot_cle(h.get("titre"), h.get("marque"))
+        if len(mc) >= 6 and mc not in out:
+            out[mc] = {"asin": h["asin"], "titre": h.get("titre"), "prix": h.get("prix_fr") or h.get("prix_labas"),
+                       "ventes_30j": h.get("ventes_30j_labas"), "vendeurs": 0 if h.get("en_france") == "absent" else None,
+                       "origine": f"hype {h.get('pays')}", "pays_hype": h.get("pays")}
+    for a in _lire(F_RADAR, {}).get("affaires", [])[:150]:
+        mc = mot_cle(a.get("titre"))
+        if len(mc) >= 6 and mc not in out:
+            out[mc] = {"asin": a["asin"], "titre": a.get("titre"), "prix": a.get("prix"), "vendeurs": None, "origine": "radar amazon"}
+    return out
+
+
+def _ebay_vendeurs(mots, maxi=30):
+    """Nombre d'annonces neuves sur eBay.fr (gratuit) pour les meilleurs candidats. {mot: nb}"""
+    from . import ebay
+    try:
+        tok = ebay.jeton()
+    except Exception:
+        return {}
+    res = {}
+    for m in mots[:maxi]:
+        try:
+            prix, _ = ebay.chercher(tok, m, neuf=True, limite=50)
+            res[m] = len(prix)
+        except Exception:
+            continue
+    return res
+
+
+def jour():
+    cands = candidats()
+    if not cands:
+        print("bingo : aucun candidat (la base Keepa est vide pour l'instant)")
+        return
+    mots = list(cands)[:1000]
+    vols = sante.protege("bingo volumes", dataforseo.volumes, mots, "FR", defaut={})
+    lignes = []
+    for m, c in cands.items():
+        v = vols.get(m) or vols.get(m.lower()) or {}
+        vol = v.get("volume_mensuel") or 0
+        if not vol:
+            continue
+        vend = c.get("vendeurs")
+        score = round(vol / (1 + (vend if isinstance(vend, int) else 10)), 1)
+        lignes.append({**c, "mot_cle": m, "recherches_mois": vol, "concurrence_google": v.get("concurrence"),
+                       "trois_derniers_mois": v.get("trois_derniers_mois"), "score": score})
+    lignes.sort(key=lambda x: -x["score"])
+    # concurrence eBay (gratuit) sur les 30 meilleurs
+    eb = _ebay_vendeurs([x["mot_cle"] for x in lignes[:30]])
+    for x in lignes:
+        if x["mot_cle"] in eb:
+            x["annonces_ebay"] = eb[x["mot_cle"]]
+            x["score"] = round(x["recherches_mois"] / (1 + (x.get("vendeurs") or 0) + eb[x["mot_cle"]] / 5), 1)
+        x["bingo"] = (x["recherches_mois"] >= VOLUME_MIN and (x.get("vendeurs") or 0) <= VENDEURS_MAX
+                      and x.get("annonces_ebay", 0) <= 15)
+    lignes.sort(key=lambda x: (x["bingo"], x["score"]), reverse=True)
+    # hype qui monte à l'étranger (Google Trends) sur les 8 premiers produits venus de la hype Keepa
+    vagues = []
+    for x in [l for l in lignes if l.get("pays_hype")][:8]:
+        d = sante.protege("bingo tendances", dataforseo.decalage_hype, x["mot_cle"], ("US", "JP", "DE"), "FR", defaut=None)
+        if d:
+            x["hype"] = d
+            if d.get("verdict") == "vague à venir en France":
+                vagues.append({"mot_cle": x["mot_cle"], "titre": x["titre"], "monte_dans": d.get("monte_dans"), "asin": x["asin"]})
+    bingos = [x for x in lignes if x["bingo"]]
+    res = {"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "nb_candidats": len(cands), "nb_avec_volume": len(lignes),
+           "bingos": bingos[:60], "vagues": vagues, "meilleurs": lignes[:150]}
+    os.makedirs(os.path.dirname(F_BINGO), exist_ok=True)
+    json.dump(res, open(F_BINGO, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    base.noter_demande([{"pays": "FR", "rang": i + 1, "produit": x["mot_cle"], "source": "google-ads",
+                         "volume": x["recherches_mois"], "vendeurs": x.get("vendeurs")} for i, x in enumerate(bingos[:40])], origine="bingo")
+    print(f"bingo : {len(cands)} candidats, {len(lignes)} avec volume Google, {len(bingos)} BINGO, {len(vagues)} vague(s) à venir")
+    for x in bingos[:5]:
+        print(f"  {x['mot_cle']} : {x['recherches_mois']} recherches/mois, {x.get('vendeurs')} vendeurs Amazon, {x.get('annonces_ebay', '?')} annonces eBay")
+
+
+if __name__ == "__main__":
+    jour()
+
+
+def est_bingo(nom):
+    """Pour le passage : ce produit est-il dans les bingos du jour ? Renvoie la ligne bingo ou None."""
+    k = base.cle(nom)
+    if not k:
+        return None
+    for x in _lire(F_BINGO, {}).get("bingos", []):
+        kb = base.cle(x.get("mot_cle"))
+        if kb and (kb in k or k in kb):
+            return {"mot_cle": x["mot_cle"], "recherches_mois": x["recherches_mois"], "vendeurs": x.get("vendeurs"), "annonces_ebay": x.get("annonces_ebay")}
+    return None

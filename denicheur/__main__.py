@@ -88,6 +88,11 @@ def passage(nom, test=False):
     sources = charger("config/sources.json")["sources"]
 
     annonces, etat_sources = collecte.collecter(sources, lecteur_test if test else collecte.lire_flux)
+    if not test:  # + les baisses de prix Amazon.fr du radar Keepa (moissonneur), en amont de Dealabs
+        from . import moisson, sante
+        radar = sante.protege("radar amazon", moisson.annonces_radar, defaut=[])
+        annonces += radar
+        etat_sources["keepa-radar"] = {"ok": True, "nb": len(radar), "erreur": None}
 
     # ne réanalyser que les nouveautés
     chemin_vus = "data/etat/vus.json" if not test else "data/test/vus.json"
@@ -236,6 +241,12 @@ def passage(nom, test=False):
                     c["rapport_concurrence"] = {"erreur": type(e).__name__}
             c["rapport_demande"] = rapports.demande(q, c.get("temperature"))
 
+    # BINGO (une fois par jour) : très recherché + peu de vendeurs, et vagues de hype à l'étranger
+    if not test and nom == "europe":
+        from . import bingo, sante
+        sante.protege("bingo", bingo.jour)
+        for c in retenus:
+            c["bingo"] = bingo.est_bingo(c.get("nom_produit") or c["titre"])
     base = "data/test" if test else "data"
     championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
     championnat.enregistrer_fiabilite(os.path.join(RACINE, base, "championnat"), horodatage,

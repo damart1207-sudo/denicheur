@@ -60,3 +60,5 @@ def protege(etape, fonction, *args, defaut=None, **kw):
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "echec":
         noter("echec", "tour", " ".join(sys.argv[2:]))
+    elif len(sys.argv) >= 3 and sys.argv[1] == "erreur":
+        noter("erreur", sys.argv[2].split(" ")[0], " ".join(sys.argv[2:]))

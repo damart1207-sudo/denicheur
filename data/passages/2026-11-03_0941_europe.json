@@ -1,0 +1,4426 @@
+{
+ "passage": "europe",
+ "horodatage": "2026-11-03_0941",
+ "date_affichee": "03/11/2026 à 09 h 41",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "frandroid-bonsplans": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "journaldugeek-bonplan": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "clubic-bonsplans": {
+   "ok": true,
+   "nb": 50,
+   "erreur": null
+  },
+  "01net-bonsplans": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 487,
+ "nb_nouvelles": 297,
+ "nb_prefiltres": 189,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 18
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 44
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 13
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "9f775af3d3",
+   "titre": "Oral-B iO 6S Negro Mate Navidad (5 modos, pantalla, seguimiento app, 4 cabezales, sensor presion, oferta 50% reembolso, MediaMarkt)",
+   "prix": 64.98,
+   "devise": "EUR",
+   "marchand": "MediaMarkt",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-io-6s-negro-mate-navidad-5-modos-pantalla-seguimiento-app-4-cabezales-sensor-presion-oferta-50-reembolso-mediamarkt-2053705",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 320,
+   "domaine": "beaute-sante",
+   "nom_produit": "Oral-B iO 6S Toothbrush",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 230.0,
+   "cout_achat": 69.98,
+   "marge_nette": 160.02,
+   "rentabilite": 2.287,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit premium avec forte demande, marge nette importante."
+   },
+   "score": 274.4,
+   "ebay": {
+    "requete": "Oral-B iO 6S Toothbrush",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Oral-B iO 6S Toothbrush",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Oral-B iO 6S Toothbrush",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Oral-B iO 6S Toothbrush",
+    "temperature_dealabs": 320,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "toothbrush oral b io 6",
+     "oral b io 6 toothbrush heads",
+     "oral b io 6 brush",
+     "oral b io 6 electric toothbrush",
+     "oral b io series 6 toothbrush",
+     "oral b io 6 electric toothbrush pink",
+     "oral b io 6 electric toothbrush review",
+     "oral b io 6 electric toothbrush black",
+     "oral b io 6 series rechargeable toothbrush",
+     "oral b io 6 series electric toothbrush black"
+    ]
+   }
+  },
+  {
+   "id": "de768393b7",
+   "titre": "Ducky Project D Tinker 65 RGB Mechanical Gaming Keyboard Cherry MX Brown - Black",
+   "prix": 14.99,
+   "devise": "GBP",
+   "marchand": "Overclockers",
+   "lien": "https://www.hotukdeals.com/deals/ducky-project-d-tinker-65-rgb-mechanical-gaming-keyboard-cherry-mx-brown-black-5021124",
+   "pays": "UK",
+   "source": "hotukdeals-hot",
+   "temperature": 139,
+   "domaine": "tech",
+   "nom_produit": "Ducky Project D Tinker 65 RGB",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 28.69,
+   "marge_nette": 69.36,
+   "rentabilite": 2.418,
+   "demande": 3.7,
+   "concurrence": 2.0,
+   "consensus": 3,
+   "agents": [
+    "gptoss",
+    "nemotron",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix 14,99£ anormalement bas pour un clavier mécanique haut de gamme à 150€+, probable erreur de référence (keycaps seulement).",
+    "gptoss": "Clavier mécanique très demandé, prix d'achat 14,99 £ donne une marge nette confortable une fois revendu à ≈80 €.",
+    "qwen": "Clavier mécanique Ducky très recherché par les gamers, prix d'achat anormalement bas (15£) par rapport au prix de marché (~100-120€), marge nette confortable après frais."
+   },
+   "score": 244.5,
+   "ebay": {
+    "requete": "Ducky Project D Tinker 65 RGB",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Ducky Project D Tinker 65 RGB",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Ducky Project D Tinker 65 RGB",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Ducky Project D Tinker 65 RGB",
+    "temperature_dealabs": 139,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "ducky projectd tinker 65 rgb",
+     "ducky projectd tinker 65 rgb hot swap barebone keyboard black",
+     "ducky projectd tinker 65 rgb mechanical keyboard"
+    ]
+   }
+  },
+  {
+   "id": "a6d82c2f2b",
+   "titre": "Xiaomi TV F 65\" 2026. 4K 120hz + Altavoz Bluetooth Xiaomi Sound GRATIS",
+   "prix": 386.1,
+   "devise": "EUR",
+   "marchand": "Mi",
+   "lien": "https://www.chollometro.com/ofertas/xiaomi-tv-f-65-2026-4k-120hz-altavoz-bluetooth-xiaomi-sound-gratis-2053741",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 345,
+   "domaine": "tech",
+   "nom_produit": "Xiaomi 65\" Smart TV",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 850.0,
+   "cout_achat": 391.1,
+   "marge_nette": 458.9,
+   "rentabilite": 1.173,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très attractif pour une TV 65\" haut de gamme, bonne marge même après frais de transport."
+   },
+   "score": 100.1,
+   "ebay": {
+    "requete": "Xiaomi 65\" Smart TV",
+    "neuf": {
+     "nb": 18,
+     "min": 203.99,
+     "p25": 644.74,
+     "mediane": 785.99,
+     "max": 1690.51
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Xiaomi TV F 65\" 4K UHD Smart TV Fire OS 8 HDR10 Alexa 2025",
+      "prix": "686.99",
+      "url": "https://www.ebay.fr/itm/198746723955?_skw=Xiaomi+65%22+Smart+TV&hash=item2e463a5673:g:-FEAAeSwLipq3y8M"
+     },
+     {
+      "titre": "Xiaomi TV F 65\" 4K UHD Smart TV Fire OS 8 HDR10 Alexa 2025",
+      "prix": "686.99",
+      "url": "https://www.ebay.fr/itm/377601184767?_skw=Xiaomi+65%22+Smart+TV&hash=item57eac8d3ff:g:2oQAAeSw73tq4KpO"
+     },
+     {
+      "titre": "Xiaomi TV 4K UHD Smart TV Fire OS 43 Pouces LED HDR10 Alexa",
+      "prix": "686.99",
+      "url": "https://www.ebay.fr/itm/198746724526?_skw=Xiaomi+65%22+Smart+TV&hash=item2e463a58ae:g:-1oAAeSwdzJq3y9C"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 644.74,
+     "DE": 493.0,
+     "IT": 496.82,
+     "ES": 642.07
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Xiaomi 65\" Smart TV",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 644.74,
+   "marge_verifiee": 253.64,
+   "rentabilite_verifiee": 0.649,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Xiaomi 65\" Smart TV",
+    "pays": {
+     "FR": {
+      "nb_annonces": 11,
+      "total_ebay": 20,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 245.99,
+       "titre": "Xiaomi TV F 65\" 4K UHD Smart TV Fire OS 8 HDR10 Alexa 2025",
+       "lien": "https://www.ebay.fr/itm/198746723955?_skw=Xiaomi+65%22+Smart+TV&hash=item2e463a5673:g:-FEAAeSwLipq3y8M",
+       "vendeur": "legrandbazar49",
+       "avis_vendeur": 39
+      },
+      "plus_cher": {
+       "prix": 1374.95,
+       "titre": "Xiaomi 65\" 4K UHD Mini LED Smart Fire TV FX",
+       "lien": "https://www.ebay.fr/itm/206611424199?_skw=Xiaomi+65%22+Smart+TV&hash=item301b0023c7:g:FUMAAeSwlyRqw76E",
+       "vendeur": "soundsolutions_worldwide",
+       "avis_vendeur": 4620
+      }
+     },
+     "DE": {
+      "nb_annonces": 15,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 450.86,
+       "titre": "Xiaomi TV F 65 (2026) 65 Zoll 4K UHD HDR10 LED Smart TV mit Fire TV",
+       "lien": "https://www.ebay.de/itm/298644044314?_skw=Xiaomi+65%22+Smart+TV&hash=item4588927a1a:g:ttcAAeSw6xpqmntO",
+       "vendeur": "sergebries",
+       "avis_vendeur": 9
+      },
+      "plus_cher": {
+       "prix": 1408.76,
+       "titre": "Xiaomi 65\" 4K UHD Mini LED Smart Google TV S Dolby Vision",
+       "lien": "https://www.ebay.de/itm/206611423934?_skw=Xiaomi+65%22+Smart+TV&hash=item301b0022be:g:-e8AAeSwsSdqw76P",
+       "vendeur": "soundsolutions_worldwide",
+       "avis_vendeur": 4620
+      }
+     },
+     "IT": {
+      "nb_annonces": 11,
+      "total_ebay": 11,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 460.59,
+       "titre": "XIAOMI TV F 65 2025, 65 pollici (165 cm),4K UHD,Smart TV, Fire TV,Triple Tuner",
+       "lien": "https://www.ebay.it/itm/336836643728?_skw=Xiaomi+65%22+Smart+TV&hash=item4e6d074b90:g:56gAAeSwbaxqyOq9",
+       "vendeur": "fabiocorvis91",
+       "avis_vendeur": 111
+      },
+      "plus_cher": {
+       "prix": 1408.76,
+       "titre": "Xiaomi 65\" 4K UHD Mini LED Smart Google TV S Dolby Vision",
+       "lien": "https://www.ebay.it/itm/206611461158?_skw=Xiaomi+65%22+Smart+TV&hash=item301b00b426:g:-e8AAeSwsSdqw76P",
+       "vendeur": "soundsolutions_worldwide",
+       "avis_vendeur": 4620
+      }
+     },
+     "ES": {
+      "nb_annonces": 5,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 482.3,
+       "titre": "Xiaomi TV F 65 pulgadas (165 cm), 4K UHD, Smart TV, Fire OS8, HDR10, 65\", 65\"",
+       "lien": "https://www.ebay.es/itm/307144308648?_skw=Xiaomi+65%22+Smart+TV&hash=item47833a37a8:g:TjkAAeSw0zlqjLDr",
+       "vendeur": "alexmassimo",
+       "avis_vendeur": 2758
+      },
+      "plus_cher": {
+       "prix": 1408.76,
+       "titre": "Xiaomi 65\" 4K UHD Mini LED Smart Google TV S Dolby Vision",
+       "lien": "https://www.ebay.es/itm/206611432550?_skw=Xiaomi+65%22+Smart+TV&hash=item301b004466:g:-e8AAeSwsSdqw76P",
+       "vendeur": "soundsolutions_worldwide",
+       "avis_vendeur": 4620
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Xiaomi 65\" Smart TV",
+    "temperature_dealabs": 345,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "xiaomi 65 smart tv",
+     "smart tv xiaomi 65 4k",
+     "xiaomi 65 smart tv review",
+     "xiaomi 65 smart tv price",
+     "xiaomi 65 smart android tv 4k",
+     "xiaomi smart tv 65 prix maroc",
+     "xiaomi smart tv 65 2026",
+     "xiaomi smart tv 65 pouces",
+     "xiaomi mi smart tv 65",
+     "xiaomi tv f 65 4k uhd smart tv"
+    ]
+   }
+  },
+  {
+   "id": "4e01b1a9bf",
+   "titre": "Panasonic SC-HTB600EGK – soundbar 2.1 / Dolby Atmos / DTS:X / 360 W RMS / eARC",
+   "prix": 117.26,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/panasonic-sc-htb600egk-soundbar-21-dolby-atmos-dtsx-360-w-rms-earc-1380217",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 245,
+   "domaine": "maison",
+   "nom_produit": "Panasonic SC-HTB600EGK Soundbar",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 250.0,
+   "cout_achat": 122.26,
+   "marge_nette": 127.74,
+   "rentabilite": 1.045,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Offre Allegro nettement inférieure au prix français, bonne marge."
+   },
+   "score": 89.2,
+   "ebay": {
+    "requete": "Panasonic SC-HTB600EGK Soundbar",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 66.49,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Panasonic SC-HTB600EGK Soundbar",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Panasonic SC-HTB600EGK Soundbar",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Panasonic SC-HTB600EGK Soundbar",
+    "temperature_dealabs": 245,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "panasonic sc htb600egk soundbar",
+     "panasonic sc htb600egk 2.1 soundbar test",
+     "panasonic sc htb600egk 2.1 soundbar",
+     "panasonic sc htb600egk 2.1 soundbar mit kabellosem subwoofer"
+    ]
+   }
+  },
+  {
+   "id": "2b3a73e235",
+   "titre": "New Balance Zapatilla de Running de Hombre FreshFoam Arishi v4 Tiralux",
+   "prix": 40.0,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/new-balance-zapatilla-de-running-de-hombre-freshfoam-arishi-v4-tiralux-2053654",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 240,
+   "domaine": "sport",
+   "nom_produit": "New Balance FreshFoam Arishi v4",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 45.0,
+   "marge_nette": 40.0,
+   "rentabilite": 0.889,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix El Corte Inglés attractif, marge nette intéressante sur Vinted."
+   },
+   "score": 80.6,
+   "ebay": {
+    "requete": "New Balance FreshFoam Arishi v4",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 70.58,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "New Balance FreshFoam Arishi v4",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "New Balance FreshFoam Arishi v4",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 20,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 606,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 605,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "New Balance FreshFoam Arishi v4",
+    "temperature_dealabs": 240,
+    "google_trends": {
+     "erreur": "RetryError: HTTPSConnectionPool(host='trends.google.com', port=443): Max retries exceeded with url: /trends/api/widgetdata/multiline"
+    },
+    "suggestions_google": [
+     "new balance fresh foam arishi v4 tiralux",
+     "new balance fresh foam arishi v4",
+     "new balance fresh foam arishi v4 gtx",
+     "new balance fresh foam arishi v4 feminino",
+     "new balance fresh foam arishi v4 review",
+     "new balance fresh foam arishi v4 running shoe women's",
+     "new balance fresh foam arishi v4 women's shoes",
+     "new balance fresh foam arishi v4 sneaker kids",
+     "new balance fresh foam arishi v4 kids",
+     "new balance fresh foam arishi v4 women's running"
+    ]
+   }
+  },
+  {
+   "id": "b21f37a881",
+   "titre": "Écran PC 27\" Lenovo L27-4r - Full HD, 165 Hz, 1 ms, AMD FreeSync, 99% sRGB, Haut-parleurs",
+   "prix": 99.0,
+   "devise": "EUR",
+   "marchand": "Lenovo",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-27-lenovo-l27-4r-full-hd-165-hz-1-ms-amd-freesync-99-srgb-haut-parleurs-3444781",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 178,
+   "domaine": "tech",
+   "nom_produit": "Lenovo L27-4r",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 160.0,
+   "cout_achat": 104.0,
+   "marge_nette": 56.0,
+   "rentabilite": 0.538,
+   "demande": 4.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de marché (≈200 €) pour un moniteur recherché, marge nette intéressante après frais.",
+    "qwen": "Écran gaming 165Hz Lenovo à 99€ alors que le prix de marché neuf est souvent supérieur à 130€, offrant une marge nette correcte après frais de port."
+   },
+   "score": 69.4,
+   "ebay": {
+    "requete": "Lenovo L27-4r",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Lenovo L27-4r",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Lenovo L27-4r",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Lenovo L27-4r",
+    "temperature_dealabs": 178,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "lenovo l27-4r",
+     "lenovo l27-4r 27 fhd 165hz monitor",
+     "lenovo l27 4r monitor",
+     "lenovo l27 4 c",
+     "lenovo l27 4",
+     "lenovo l27 4 e"
+    ]
+   }
+  },
+  {
+   "id": "aedda86a6c",
+   "titre": "Coffre de Rangement Hespéride - 100L, en Acacia, Étanche, avec Housse Intérieure",
+   "prix": 29.99,
+   "devise": "EUR",
+   "marchand": "Hespéride",
+   "lien": "https://www.dealabs.com/bons-plans/coffre-de-rangement-100-l-en-acacia-hesperide-etanche-housse-interieure-3444898",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 274,
+   "domaine": "maison",
+   "nom_produit": "Coffre Rangement Acacia 100L",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 34.99,
+   "marge_nette": 35.01,
+   "rentabilite": 1.001,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit à 30 €, revente possible à ~70 € sans frais sur Leboncoin → marge brute d’environ 40 €."
+   },
+   "score": 60.1,
+   "ebay": {
+    "requete": "Coffre Rangement Acacia 100L",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Coffre Rangement Acacia 100L",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "HESPERIDE Coffre De Rangement 100l Avec Assise Lodgia Beige Acacia - Hespéride",
+       "prix": 167.99,
+       "nb_boutiques": 2,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Coffre-et-rangement/coffre-de-rangement-100l-avec-assise-lodgia-beige-acacia-hesperide.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 167.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Coffre-et-rangement/coffre-de-rangement-100l-avec-assise-lodgia-beige-acacia-hesperide.html"
+   },
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 167.99,
+     "marge_nette": 113.24,
+     "rentabilite": 3.236
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 147.83,
+     "marge_nette": 112.84,
+     "rentabilite": 3.225
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 147.83,
+     "marge_nette": 112.84,
+     "rentabilite": 3.225
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 147.83,
+     "marge_nette": 112.84,
+     "rentabilite": 3.225
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 167.99,
+     "marge_nette": 111.88,
+     "rentabilite": 3.197
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 167.99,
+     "marge_nette": 111.56,
+     "rentabilite": 3.188
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 167.99,
+     "marge_nette": 104.81,
+     "rentabilite": 2.995
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 167.99,
+     "marge_nette": 100.81,
+     "rentabilite": 2.881
+    }
+   ],
+   "prix_revente_prudent": 70.0,
+   "marge_verifiee": 35.01,
+   "rentabilite_verifiee": 1.001,
+   "passe_verif": true,
+   "rapport_concurrence": {
+    "requete": "Coffre Rangement Acacia 100L",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Coffre Rangement Acacia 100L",
+    "temperature_dealabs": 274,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 25,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "4f6cd42e59",
+   "titre": "Home trainer intelligent ThinkRider X2-MAX - direct drive, 2000W, pente 18%, précision ±2%, ANT+/Bluetooth",
+   "prix": 156.39,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.dealabs.com/bons-plans/home-trainer-intelligent-thinkrider-x2-max-direct-drive-2000w-pente-18-precision-2-antbluetooth-3444034",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 196,
+   "domaine": "sport",
+   "nom_produit": "ThinkRider X2-MAX Home Trainer",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 250.0,
+   "cout_achat": 161.39,
+   "marge_nette": 88.61,
+   "rentabilite": 0.549,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "qwen": "Le home trainer direct drive est un produit de niche à forte valeur ajoutée, souvent vendu autour de 250-300 € en France, offrant une marge nette confortable malgré les frais de douane et la logistique AliExpress."
+   },
+   "score": 54.8,
+   "ebay": {
+    "requete": "ThinkRider X2-MAX Home Trainer",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "ThinkRider X2-MAX Home Trainer",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "ThinkRider X2-MAX Home Trainer",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "ThinkRider X2-MAX Home Trainer",
+    "temperature_dealabs": 196,
+    "google_trends": {
+     "erreur": "RetryError: HTTPSConnectionPool(host='trends.google.com', port=443): Max retries exceeded with url: /trends/api/widgetdata/multiline"
+    },
+    "suggestions_google": [
+     "home trainer thinkrider x2 max",
+     "home trainer thinkrider x2 max test",
+     "home trainer thinkrider x2 max avis",
+     "thinkrider x2 max interactive home trainer"
+    ]
+   }
+  },
+  {
+   "id": "761f3d28a2",
+   "titre": "Horno Pizzas 420 ℃",
+   "prix": 27.19,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.chollometro.com/ofertas/horno-pizzas-420-2053615",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 285,
+   "domaine": "cuisine",
+   "nom_produit": "Pizza Oven 420°C",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 32.19,
+   "marge_nette": 20.32,
+   "rentabilite": 0.631,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût total (incl. TVA et droits) ~35,5 €, prix de revente estimé 70 € sur Amazon → marge nette d’environ 20 € après commissions."
+   },
+   "score": 53.8,
+   "ebay": {
+    "requete": "Pizza Oven 420°C",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 85.2,
+     "IT": 89.91,
+     "ES": 89.17
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Pizza Oven 420°C",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Pizza Oven 420°C",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Pizza Oven 420°C",
+    "temperature_dealabs": 285,
+    "google_trends": {
+     "erreur": "RetryError: HTTPSConnectionPool(host='trends.google.com', port=443): Max retries exceeded with url: /trends/api/widgetdata/multiline"
+    },
+    "suggestions_google": []
+   }
+  },
+  {
+   "id": "cbf0035c6e",
+   "titre": "Odkurzacz uniwersalny Karcher WD 4 V-20/5/22 1.628-209.0 1100W 20L",
+   "prix": 75.55,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/odkurzacz-uniwersalny-karcher-wd-4-v-20522-1628-2090-1100w-20l-1381119",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 309,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Karcher WD 4 Vacuum",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 80.55,
+   "marge_nette": 39.45,
+   "rentabilite": 0.49,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon rapport qualité/prix, facile à revendre en ligne.",
+    "qwen": "L'aspirateur eau/poussière Karcher se revend facilement autour de 100-120 € en France, ce qui laisse une marge nette de plus de 30 € après frais."
+   },
+   "score": 53.2,
+   "prix_plancher": {
+    "nom": "Karcher WD 4 Vacuum",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "rapport_concurrence": {
+    "requete": "Karcher WD 4 Vacuum",
+    "pays": {
+     "FR": {
+      "nb_annonces": 2,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 113.97,
+       "titre": "Universal vacuum cleaner WD 3 V-15/4/20 Car (YYY) EU 1.628-121.0 Karcher",
+       "lien": "https://www.ebay.fr/itm/178354085667?_skw=Karcher+WD+4+Vacuum&hash=item2986bb5f23:g:OSIAAeSw7RNqafqm",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32003
+      },
+      "plus_cher": {
+       "prix": 195.21,
+       "titre": "4066529086877 Vacuum cleaner WD 4 P V-20/5/22 EU 1.628-272.0 Karcher",
+       "lien": "https://www.ebay.fr/itm/157909964117?_skw=Karcher+WD+4+Vacuum&hash=item24c42ad555:g:3DUAAeSw9NpqBccj",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32003
+      }
+     },
+     "DE": {
+      "nb_annonces": 2,
+      "total_ebay": 21,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 113.97,
+       "titre": "Universal vacuum cleaner WD 3 V-15/4/20 Car (YYY) EU 1.628-121.0 Karcher",
+       "lien": "https://www.ebay.de/itm/178368932123?_skw=Karcher+WD+4+Vacuum&hash=item29879de91b:g:OSIAAeSw7RNqafqm",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32003
+      },
+      "plus_cher": {
+       "prix": 195.21,
+       "titre": "4066529086877 Vacuum cleaner WD 4 P V-20/5/22 EU 1.628-272.0 Karcher",
+       "lien": "https://www.ebay.de/itm/177058618693?_skw=Karcher+WD+4+Vacuum&hash=item2939841d45:g:h74AAeSwaKdoE3La",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32003
+      }
+     },
+     "IT": {
+      "nb_annonces": 2,
+      "total_ebay": 54,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 121.95,
+       "titre": "Karcher FryUniversal Vacuum Cleaner WD 3 V-15/4/20 Car Aspirapolvere 1.628-121.0",
+       "lien": "https://www.ebay.it/itm/407275850047?_skw=Karcher+WD+4+Vacuum&hash=item5ed388493f:g:e~gAAeSw1Apq52ey",
+       "vendeur": "eeeshop",
+       "avis_vendeur": 29500
+      },
+      "plus_cher": {
+       "prix": 173.95,
+       "titre": "Karcher Kärcher WD 3 P V-19/4/20 wet and dry workshop vacuum cleaner 1.628-176.0",
+       "lien": "https://www.ebay.it/itm/940008270415?_skw=Karcher+WD+4+Vacuum&hash=itemdadcdbea4f:g:FdAAAeSwHy1q6Z7J",
+       "vendeur": "eeeshop",
+       "avis_vendeur": 29500
+      }
+     },
+     "ES": {
+      "nb_annonces": 3,
+      "total_ebay": 278,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.08,
+       "titre": "Vacuum Cleaner Car Kit Suit Karcher WD 6 P Premium DS5.800 WD3.5 WD4 WD5 MV 3",
+       "lien": "https://www.ebay.es/itm/175369241122?_skw=Karcher+WD+4+Vacuum&hash=item28d4d24222:g:C3IAAOSw~xJi5yZp",
+       "vendeur": "dta_vacs",
+       "avis_vendeur": 113873
+      },
+      "plus_cher": {
+       "prix": 42.41,
+       "titre": "Vacuum Hose for Karcher WD 6 P NT20 30 WD1 WD2 WD3 WD4 WD5 WD6 WD 6 P Premium",
+       "lien": "https://www.ebay.es/itm/206444020612?_skw=Karcher+WD+4+Vacuum&hash=item301105c384:g:4DEAAeSw-DtqZrhg",
+       "vendeur": "flyhigher",
+       "avis_vendeur": 1326
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Karcher WD 4 Vacuum",
+    "temperature_dealabs": 309,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "karcher wd 4 vacuum cleaner",
+     "karcher wd 4 vacuum bags",
+     "kärcher wd 4 multi purpose vacuum cleaner hardware electronic",
+     "karcher wd 4 premium vacuum cleaner",
+     "karcher wd 4 v wet dry vacuum",
+     "karcher wd 4 wet & dry vacuum cleaner",
+     "karcher wd 4 s wet & dry vacuum",
+     "karcher wd 4 multi purpose vacuum cleaner",
+     "karcher wd 4 v wet dry vacuum reviews",
+     "karcher wd 4 1000w 20ltr wet & dry vacuum 240v"
+    ]
+   }
+  },
+  {
+   "id": "35770f41f3",
+   "titre": "ASMAX S1 Motorrad-Intercom - Bluetooth 5.4, bis 8 Fahrer (3 km) & CloudTalk bis 50 Fahrer, Sprachsteuerung, HD-Audio, ENC-Mikrofon, FM, IPX7",
+   "prix": 58.25,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/asmax-s1-motorrad-intercom-bluetooth-54-bis-8-fahrer-3-km-cloudtalk-bis-50-fahrer-sprachsteuerung-hd-audio-enc-mikrofon-fm-ipx7-2854292",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 149,
+   "domaine": "tech",
+   "nom_produit": "ASMAX S1 Intercom",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 63.25,
+   "marge_nette": 34.8,
+   "rentabilite": 0.55,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de revente habituel (≈120 €) avec une marge nette intéressante après frais et TVA."
+   },
+   "score": 52.8,
+   "prix_plancher": {
+    "nom": "ASMAX S1 Intercom",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "41b17726e7",
+   "titre": "VERTICAL STUDIO Koffer Silkström Trolley für 22,22€ + 4,95€ VSK (63 × 42 × 26 cm, 54.3 Liter, Inkl. Koffer-Gurt)",
+   "prix": 27.17,
+   "devise": "EUR",
+   "marchand": "SportSpar",
+   "lien": "https://www.mydealz.de/deals/vertical-studio-koffer-silkstrom-trolley-fur-2222eur-495eur-vsk-63-42-26-cm-543-liter-inkl-koffer-gurt-2856957",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 446,
+   "domaine": "mode",
+   "nom_produit": "VERTICAL STUDIO Silkström Trolley",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 32.17,
+   "marge_nette": 22.83,
+   "rentabilite": 0.71,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Le prix d'achat est bien inférieur au prix du marché français, marge nette intéressante."
+   },
+   "score": 51.2,
+   "prix_plancher": {
+    "nom": "VERTICAL STUDIO Silkström Trolley",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "26c5747a51",
+   "titre": "[Kaufland] Timberland Herren 6inch Stiefel",
+   "prix": 99.99,
+   "devise": "EUR",
+   "marchand": "Kaufland",
+   "lien": "https://www.mydealz.de/deals/kaufland-timberland-herren-stiefel-2863190",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 117,
+   "domaine": "mode",
+   "nom_produit": "Timberland 6-inch Premium Boots",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 155.0,
+   "cout_achat": 104.99,
+   "marge_nette": 50.01,
+   "rentabilite": 0.476,
+   "demande": 4.0,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Classique intemporel, prix outlet sous côte occasion, revente sûre sur Vinted.",
+    "gptoss": "Bottes Timberland très recherchées, prix d'achat bien en dessous du prix du marché, marge élevée sans frais de plateforme."
+   },
+   "score": 50.3,
+   "prix_plancher": {
+    "nom": "Timberland 6-inch Premium Boots",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "cff189e495",
+   "titre": "Zapatillas Adidas Galaxy 8",
+   "prix": 32.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-adidas-galaxy-8-2053556",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 247,
+   "domaine": "mode",
+   "nom_produit": "Adidas Galaxy 8",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 37.99,
+   "marge_nette": 32.01,
+   "rentabilite": 0.843,
+   "demande": 3.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon prix sur Amazon ES, revente possible à +30 € sur Vinted."
+   },
+   "score": 48.6,
+   "prix_plancher": {
+    "nom": "Adidas Galaxy 8",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "e7e84f6da7",
+   "titre": "Vaude Paar Ontour Front Fahrradtaschen (2x16 Liter / inkl. Regenhüllen) Neukunden für 46,39",
+   "prix": 57.99,
+   "devise": "EUR",
+   "marchand": "Best Secret",
+   "lien": "https://www.mydealz.de/deals/vaude-paar-ontour-front-fahrradtaschen-2x16-liter-inkl-regenhullen-neukunden-fur-4639-2863909",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 123,
+   "domaine": "sport",
+   "nom_produit": "Sacoches vélo Vaude Ontour Front",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 97.5,
+   "cout_achat": 62.99,
+   "marge_nette": 34.51,
+   "rentabilite": 0.548,
+   "demande": 3.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Marque outdoor réputée, prix bien sous côte occasion/neuf, revente aisée en local sur Leboncoin.",
+    "gptoss": "Produit sport de niche, prix d'achat bien inférieur au prix de revente moyen sur eBay, bonne marge après frais."
+   },
+   "score": 47.5,
+   "prix_plancher": {
+    "nom": "Sacoches vélo Vaude Ontour Front",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "c1beb7d595",
+   "titre": "Nike Zoom Vomero Roam de nobuk - Negro",
+   "prix": 71.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.chollometro.com/ofertas/nike-zoom-vomero-roam-de-nobuk-negro-2053667",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 196,
+   "domaine": "mode",
+   "nom_produit": "Nike Zoom Vomero Roam",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 115.0,
+   "cout_achat": 76.9,
+   "marge_nette": 38.1,
+   "rentabilite": 0.495,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge nette intéressante après frais de revente."
+   },
+   "score": 47.5,
+   "prix_plancher": {
+    "nom": "Nike Zoom Vomero Roam",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "fe8c84d17e",
+   "titre": "Soundbar TH-E343B JVC | CARREFOUR stacjonarnie",
+   "prix": 82.02,
+   "devise": "EUR",
+   "marchand": "Carrefour",
+   "lien": "https://www.pepper.pl/promocje/soundbar-th-e343b-jvc-carrefour-stacjonarnie-1379740",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 247,
+   "domaine": "maison",
+   "nom_produit": "JVC TH-E343B Soundbar",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 150.0,
+   "cout_achat": 87.02,
+   "marge_nette": 62.98,
+   "rentabilite": 0.724,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix Carrefour très attractif, marge nette correcte après TVA et frais."
+   },
+   "score": 43.4,
+   "prix_plancher": {
+    "nom": "JVC TH-E343B Soundbar",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "e7a1b08bf6",
+   "titre": "Cafetière Expresso Manuelle Krups Authentic XP381810 (via 40€ sur la carte)",
+   "prix": 54.99,
+   "devise": "EUR",
+   "marchand": "E.Leclerc",
+   "lien": "https://www.dealabs.com/bons-plans/cafetiere-expresso-manuelle-krups-authentic-xp381810-via-40-euros-sur-la-carte-3444575",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 164,
+   "domaine": "cuisine",
+   "nom_produit": "Krups Authentic XP3818",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 59.99,
+   "marge_nette": 25.01,
+   "rentabilite": 0.417,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Cafetière manuelle à bon prix (55 €) alors que le marché tourne autour de 90‑100 €, marge nette correcte."
+   },
+   "score": 39.1,
+   "prix_plancher": {
+    "nom": "Krups Authentic XP3818",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null
+  },
+  {
+   "id": "29469fe5d3",
+   "titre": "RCB KIDS R9X Kinder-Elektromotorrad / Crossbike | Blau o. Rot | 25km/h max., 15km Reichweite, 36V/5,2Ah Akku, 12\" Luftreifen, Trommelbremsen",
+   "prix": 165.35,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/rcb-kids-r9x-kinder-elektromotorrad-crossbike-blau-o-rot-25kmh-max-15km-reichweite-36v52ah-akku-12-luftreifen-trommelbremsen-2863312",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 120,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "RCB KIDS R9X Electromotorrad",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 300.0,
+   "cout_achat": 170.35,
+   "marge_nette": 84.3,
+   "rentabilite": 0.495,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Véhicule électrique pour enfants, prix d'achat incluant TVA et droit de douane reste bien inférieur au prix de revente moyen en Europe."
+   },
+   "score": 37.0,
+   "canaux": null
+  },
+  {
+   "id": "056809f87d",
+   "titre": "Buty damskie Nike Air Max 90 rozm: 36-42.5",
+   "prix": 86.69,
+   "devise": "EUR",
+   "marchand": "Lounge by Zalando",
+   "lien": "https://www.pepper.pl/promocje/buty-damskie-nike-air-max-90-rozm-36-425-1379850",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 243,
+   "domaine": "mode",
+   "nom_produit": "Nike Air Max 90",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 91.69,
+   "marge_nette": 38.31,
+   "rentabilite": 0.418,
+   "demande": 4.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix Zalando compétitif, revente à +40 € sur Vinted."
+   },
+   "score": 34.1,
+   "canaux": null
+  },
+  {
+   "id": "4cf85a2d82",
+   "titre": "Zapatillas running New Balance Fresh Foam X EVOZ v4 para mujer - Tallas 36, 38, 39, 40 y 41",
+   "prix": 52.0,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-running-new-balance-fresh-foam-x-evoz-v4-para-mujer-tallas-36-38-39-40-y-41-2053658",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 184,
+   "domaine": "mode",
+   "nom_produit": "New Balance Fresh Foam X",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 57.0,
+   "marge_nette": 28.0,
+   "rentabilite": 0.491,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussures de running recherchées, marge correcte."
+   },
+   "score": 31.4,
+   "canaux": null
+  },
+  {
+   "id": "e0bccc43df",
+   "titre": "[Aliexpress] Anker SOLIX Power Dock Multisystem bis zu 64,4kWh - Versand aus Deutschland!",
+   "prix": 192.06,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/aliexpress-anker-solix-power-dock-multisystem-bis-zu-644kwh-versand-aus-deutschland-2853451",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 422,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Anker SOLIX Power Dock",
+   "plateforme_revente": "backmarket",
+   "prix_revente_estime": 300.0,
+   "cout_achat": 197.06,
+   "marge_nette": 60.94,
+   "rentabilite": 0.309,
+   "demande": 3.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût total (TVA + droits) reste largement inférieur au prix de revente d'un système similaire.",
+    "qwen": "Le prix de 192 € pour un système de stockage d'énergie Anker est très inférieur au marché (souvent >300 €), offrant une marge nette confortable malgré les frais de douane potentiels."
+   },
+   "score": 29.9,
+   "canaux": null
+  },
+  {
+   "id": "13cd2d7bea",
+   "titre": "Anker Solix V1 wallbox 11kw mit 5 m kabel",
+   "prix": 350.48,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.mydealz.de/deals/anker-solix-v1-wallbox-11kw-mit-5-m-kabel-2854610",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 233,
+   "domaine": "tech",
+   "nom_produit": "Anker Solix V1 Wallbox 11kW",
+   "plateforme_revente": "backmarket",
+   "prix_revente_estime": 550.0,
+   "cout_achat": 355.48,
+   "marge_nette": 122.52,
+   "rentabilite": 0.345,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de revente moyen d'un chargeur EV en France, marge nette intéressante après frais."
+   },
+   "score": 28.7,
+   "canaux": null
+  },
+  {
+   "id": "da644dda60",
+   "titre": "Pralka Gorenje WG2P84A32G/PL (8 kg, 1400 obr./min, klasa A, para, 15 programów, gł. 51 cm) @ Media Markt",
+   "prix": 312.78,
+   "devise": "EUR",
+   "marchand": "MediaMarkt",
+   "lien": "https://www.pepper.pl/promocje/pralka-gorenje-wg2p84a32gpl-8-kg-1400-obrmin-klasa-a-para-15-programow-gl-51-cm-at-media-markt-1380445",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 278,
+   "domaine": "maison",
+   "nom_produit": "Gorenje WG2P84A32G Washing Machine",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 450.0,
+   "cout_achat": 317.78,
+   "marge_nette": 132.22,
+   "rentabilite": 0.416,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût total (incl. TVA et droits) ~378 €, revente d’occasion à ~450 € sur Leboncoin → marge d’environ 70 € après prise en compte du transport."
+   },
+   "score": 26.6,
+   "canaux": null
+  },
+  {
+   "id": "f4392e1d7c",
+   "titre": "Parka déperlante Devred à capuche - Vert (du S au XXL)",
+   "prix": 69.0,
+   "devise": "EUR",
+   "marchand": "BAZARCHIC",
+   "lien": "https://www.dealabs.com/bons-plans/parka-deperlante-devred-a-capuche-vert-du-s-au-xxl-3444223",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 126,
+   "domaine": "mode",
+   "nom_produit": "Parka déperlante Devred",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 100.0,
+   "cout_achat": 74.0,
+   "marge_nette": 26.0,
+   "rentabilite": 0.351,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Marque française reconnue, prix privé bien en dessous du neuf, revente facile sur Vinted sans frais vendeur."
+   },
+   "score": 21.1,
+   "canaux": null
+  },
+  {
+   "id": "4638b3c21a",
+   "titre": "Sharkoon REV300 Gaming-Gehäuse in Weiß | 7 vorinstallierte RGB-Lüfter | Gutscheinfehler?",
+   "prix": 49.99,
+   "devise": "EUR",
+   "marchand": "eBay",
+   "lien": "https://www.mydealz.de/deals/sharkoon-rev300-gaming-gehause-in-weiss-7-vorinstallierte-rgb-lufter-gutscheinfehler-2863936",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 122,
+   "domaine": "tech",
+   "nom_produit": "Sharkoon REV300 White RGB 7 fans",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 77.5,
+   "cout_achat": 54.99,
+   "marge_nette": 22.51,
+   "rentabilite": 0.409,
+   "demande": 2.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix anormalement bas (probable erreur coupon), si honoré belle marge sur boîtier gaming complet.",
+    "gptoss": "Boîtier PC à prix réduit, marge modeste mais viable pour revendre sur eBay où la demande reste stable."
+   },
+   "score": 20.5,
+   "canaux": null
+  },
+  {
+   "id": "e143050589",
+   "titre": "Oral-B iO 2 Pack Duo (2 unidades) Negro y Verde Bosque (2 recambios, estuche, 3 modos, sensor presion, 50% reembolso a 19€ ud, MediaMarkt)",
+   "prix": 39.98,
+   "devise": "EUR",
+   "marchand": "MediaMarkt",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-io-2-pack-duo-2-unidades-negro-y-verde-bosque-2-recambios-estuche-3-modos-sensor-presion-50-reembolso-a-19eur-ud-mediamarkt-2053712",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 396,
+   "domaine": "beaute-sante",
+   "nom_produit": "Oral-B iO 2 Pack",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 200.0,
+   "cout_achat": 44.98,
+   "marge_nette": 155.02,
+   "rentabilite": 3.446,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Marge très élevée sur un produit de santé très recherché."
+   },
+   "score": 413.5,
+   "ebay": {
+    "requete": "Oral-B iO 2 Pack",
+    "neuf": {
+     "nb": 7,
+     "min": 16.14,
+     "p25": 21.99,
+     "mediane": 64.37,
+     "max": 96.45
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "NEUF Oral B iO Kids Spiderman pack de 2 extra doux 6+",
+      "prix": "14.95",
+      "url": "https://www.ebay.fr/itm/327338240729?_skw=Oral-B+iO+2+Pack&hash=item4c36e12ad9:g:ZzIAAeSwAnRqmASA"
+     },
+     {
+      "titre": "4 8 12 Pack Toothbrushes Head, Compatible with Oral B Io 2/3/4/5/6/7/8/9/10 Seri",
+      "prix": "10.72",
+      "url": "https://www.ebay.fr/itm/157948164940?_skw=Oral-B+iO+2+Pack&hash=item24c671bb4c:g:35AAAeSwpHRqF9W7&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nPgGhimPEMMn0Qb2VDUb%2Bvy%2F5DiUBqSXDfIql6LVEP35JcWBPQa%2BS%2FjaBnyVcR12Za5Dlh8%2BfKmSt1GzbzspX8KVEODHZ%2BXzrfQf%2FAzXOY7vkjCajBq5VimwpZ3OzKxDIxP12%2B8Tm8LI4GXL6yiwpahmAkIBd%2BwllCl6gLw13KxN6SgMwHcPeJkcQY37lw8HkzHsGbY7ICWLWbNSwukB2U7lGvTwNfxYFs%2Bw1DzthY%2FvVJb%2BgRbfH24a3%2F9Y8FxG9P%2BB%2FGtNa7eUYp09eX4L3gxtJYsT7X8CLdYkAjPFSK%2Fw%3D%3D"
+     },
+     {
+      "titre": "Oral-B Io Ultimate Clean Replacement Heads 2 Pack",
+      "prix": "69.59",
+      "url": "https://www.ebay.fr/itm/820186295264?_skw=Oral-B+iO+2+Pack&hash=itembef6e9abe0:g:A84AAeSwpG5qvsis&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7ksVtqQTWa7VPv%2FrEOwv7PTwxMju1exPAQIfnOHvcIcOXcaBb5M%2FEV3cUkLT%2FokPFh3a7iLGw68FnXNPkaiY%2Fdr3lyJ%2BDfuKA%2FybNmYZFCzsiybRTE2VQdsnxXQTZ8aoIOyfQ7q7Db6MoWWsarP9HjpFpprlzuZhSl45vqCWd5cEvJI2KI2i5oieW%2BmOGNLR0CbrEaUubigGDdJmQ8mRH%2FPs93T1%2BByCMfERdzvTCniHxiHkHxtfncL8ucPYDWuzU2vdpxTGSVNaiNM%2BcraTBXgkjz6Ir745nGZzFJKAXZ0Og%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 21.99,
+     "DE": 26.99,
+     "IT": 26.3,
+     "ES": 30.28
+    },
+    "meilleur_pays": "ES"
+   },
+   "prix_plancher": {
+    "nom": "Oral-B iO 2 Pack",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 3,
+      "meilleur": {
+       "titre": "ORAL B Pack de 2 brossettes  iO Ultimate Clean Noir",
+       "prix": 19.0,
+       "nb_boutiques": 5,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-brosse-a-dents/pack-de-2-brossettes-oral-b-io-ultimate-clean-noir.html"
+      },
+      "autres": [
+       {
+        "titre": "ORAL B Pack de 2 brossettes  iO Ultimate Clean Blanc",
+        "prix": 21.19,
+        "nb_boutiques": 4,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-brosse-a-dents/pack-de-2-brossettes-oral-b-io-ultimate-clean-blanc.html"
+       },
+       {
+        "titre": "ORAL B Pack de brosse à dents électrique Oral-B iO 2 Noir et Vert",
+        "prix": 69.6,
+        "nb_boutiques": 7,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Brosse-a-dents-electrique/pack-de-brosse-a-dents-electrique-oral-b-io-2-noir-et-vert.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 19.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-brosse-a-dents/pack-de-2-brossettes-oral-b-io-ultimate-clean-noir.html"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 16.72,
+     "marge_nette": -28.26,
+     "rentabilite": -0.628
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 16.72,
+     "marge_nette": -28.26,
+     "rentabilite": -0.628
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 16.72,
+     "marge_nette": -28.26,
+     "rentabilite": -0.628
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 19.0,
+     "marge_nette": -33.69,
+     "rentabilite": -0.749
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 19.0,
+     "marge_nette": -34.8,
+     "rentabilite": -0.774
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 19.0,
+     "marge_nette": -35.31,
+     "rentabilite": -0.785
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 19.0,
+     "marge_nette": -35.5,
+     "rentabilite": -0.789
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 19.0,
+     "marge_nette": -35.82,
+     "rentabilite": -0.796
+    }
+   ],
+   "prix_revente_prudent": 17.1,
+   "marge_verifiee": -27.88,
+   "rentabilite_verifiee": -0.62,
+   "passe_verif": false
+  },
+  {
+   "id": "5924f77f7f",
+   "titre": "Chaussures Nike Pegasus Trail 5, 2 coloris - Tailles du 40 au 47.5",
+   "prix": 55.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-pegasus-trail-5-deuc-coloris-tailles-41-au-47-3444963",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 120,
+   "domaine": "mode",
+   "nom_produit": "Nike Pegasus Trail 5",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 100.0,
+   "cout_achat": 60.9,
+   "marge_nette": 39.1,
+   "rentabilite": 0.642,
+   "demande": 4.5,
+   "concurrence": 4.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle de trail très demandé, prix privé bien sous marché, revente rapide sur Vinted.",
+    "gptoss": "Chaussures de running populaires, prix d'achat très bas par rapport au prix du marché, aucune commission sur Vinted."
+   },
+   "score": 77.1,
+   "ebay": {
+    "requete": "Nike Pegasus Trail 5",
+    "neuf": {
+     "nb": 50,
+     "min": 73.5,
+     "p25": 90.0,
+     "mediane": 109.99,
+     "max": 256.6
+    },
+    "occasion": {
+     "nb": 10,
+     "min": 63.09,
+     "p25": 70.9,
+     "mediane": 84.4,
+     "max": 154.62
+    },
+    "exemples": [
+     {
+      "titre": "Nike Pegasus Trail 5 Gortex",
+      "prix": "78.70",
+      "url": "https://www.ebay.fr/itm/406993467292?_skw=Nike+Pegasus+Trail+5&hash=item5ec2b3779c:g:rSAAAeSwDSdqKu3a"
+     },
+     {
+      "titre": "Basket Nike React Pegasus Trail 4 Black Grey 14 US Men - 48.5 EUR - DJ6158-001",
+      "prix": "84.90",
+      "url": "https://www.ebay.fr/itm/126958496025?_skw=Nike+Pegasus+Trail+5&hash=item1d8f50e919:g:hNcAAOSwBxpnu6cg&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7m21O0YJlvRbX8UZnx5cSi1bPDLYHgFnAFERPJlaCiC9lEH%2FoRv4%2FkUlFuOSyxveEt0ndR1UDztB49pHBDYGPNp6EwdTRzyY%2BNGkHY8WP1kzeKUJk3Abrf85fpbmvagK75dFHpL1UZkvrHo63skJJ3q%2FqS%2BXVDkKE%2Fjn6hJSRmihLDYhO6e6zMVm9%2BjNHgmzTMM9GMh%2FC6%2FGDkkoI5KmYp8P8WitWl6TQuXU2sEKGvXYSt5LB0QfPiVYquvUOTmLlo5v0BcqezceYtnEcyyjj4JUkwrnYQiz3Eoa3h36%2F11Pg%3D%3D"
+     },
+     {
+      "titre": "Nike Pegasus trail 3 37",
+      "prix": "63.10",
+      "url": "https://www.ebay.fr/itm/404715922769?_skw=Nike+Pegasus+Trail+5&hash=item5e3af2e551:g:F54AAOSwCURlkPpA&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lK%2FdPM391AyRxAAvMxuJ9SR5xAQL01NrCFamDUgpqfDDaulTLbxww2U%2BmlLWf18bzqInSD2usK0ut8jywTUFBZpAVTZH8FbiUw1rVI7agys9KqG25RpQPA%2FXL8SyU8yg6sicH%2FhIeIs8UBvf%2FzV1CbMyAZAJ9fOXdoJuIechcLy7Ml5hagOa46zh42fqXrOQrT9CT5jrlcqenET3fXnfDWlCSqywr3bA8syp1VJmlLAvg20YJRk%2B9YBWlO3feNk%2F78jHz2jm2%2BTVRNy3VOVfoAnUVA%2Brh1uXyAvSZ%2Fso0pcA%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 90.0,
+     "DE": 96.75,
+     "IT": 85.0,
+     "ES": 85.0
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Nike Pegasus Trail 5",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 70.9,
+   "marge_verifiee": 10.0,
+   "rentabilite_verifiee": 0.164,
+   "passe_verif": false
+  },
+  {
+   "id": "9dc50edd0d",
+   "titre": "LEGO Star Wars 75456 Kalendarz adwentowy na 2026 rok",
+   "prix": 21.15,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/lego-star-wars-75456-kalendarz-adwentowy-na-2026-rok-1380947",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 296,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "LEGO Star Wars Calendrier Avent 2026",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 26.15,
+   "marge_nette": 18.85,
+   "rentabilite": 0.721,
+   "demande": 5,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Calendrier LEGO Star Wars très recherché à Noël, acheté 21 € + port (~12 €) depuis la Pologne, revente 45 € net sur Vinted en novembre/décembre ; boîte compacte, facile à stocker 5 mois."
+   },
+   "score": 68.7,
+   "ebay": {
+    "requete": "LEGO Star Wars Calendrier Avent 2026",
+    "neuf": {
+     "nb": 12,
+     "min": 9.95,
+     "p25": 20.69,
+     "mediane": 39.61,
+     "max": 67.28
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "LEGO STAR WARS  SET 75456 CALENDRIER DE L’AVENT 2026 NEUF SCELLÉ ",
+      "prix": "31.90",
+      "url": "https://www.ebay.fr/itm/206665920141?_skw=LEGO+Star+Wars+Calendrier+Avent+2026&hash=item301e3fae8d:g:sxEAAeSwWuJq5hzn"
+     },
+     {
+      "titre": "LEGO Star Wars sw1542 Offworld Jawa Calendrier Avent 75456 (2026) Minifigure",
+      "prix": "9.95",
+      "url": "https://www.ebay.fr/itm/278417553794?_skw=LEGO+Star+Wars+Calendrier+Avent+2026&hash=item40d2fab982:g:K2IAAeSwBN5quo1t"
+     },
+     {
+      "titre": "LEGO Star Wars TM 75456 Le calendrier de l’Avent 2026",
+      "prix": "35.90",
+      "url": "https://www.ebay.fr/itm/168781165179?_skw=LEGO+Star+Wars+Calendrier+Avent+2026&hash=item274c24327b:g:be4AAeSw3NFqyRRU"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 20.69,
+     "DE": null,
+     "IT": 9.95,
+     "ES": 9.21
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "LEGO Star Wars Calendrier Avent 2026",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "Lego Star Wars Calendrier de l''Avent 2026, Jouets de construction",
+       "prix": 27.99,
+       "nb_boutiques": 11,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-calendrier-de-l-avent-2026-jouets-de-construction.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 27.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-calendrier-de-l-avent-2026-jouets-de-construction.html"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 24.63,
+     "marge_nette": -1.52,
+     "rentabilite": -0.058
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 24.63,
+     "marge_nette": -1.52,
+     "rentabilite": -0.058
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 24.63,
+     "marge_nette": -1.52,
+     "rentabilite": -0.058
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 27.99,
+     "marge_nette": -6.68,
+     "rentabilite": -0.255
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 27.99,
+     "marge_nette": -8.12,
+     "rentabilite": -0.311
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 27.99,
+     "marge_nette": -8.15,
+     "rentabilite": -0.312
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 27.99,
+     "marge_nette": -8.4,
+     "rentabilite": -0.321
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 27.99,
+     "marge_nette": -9.35,
+     "rentabilite": -0.358
+    }
+   ],
+   "prix_revente_prudent": 20.69,
+   "marge_verifiee": -5.46,
+   "rentabilite_verifiee": -0.209,
+   "passe_verif": false
+  },
+  {
+   "id": "771ecc8af7",
+   "titre": "One Piece Odyssey - PS5 - PEGI 12",
+   "prix": 11.99,
+   "devise": "EUR",
+   "marchand": "Veepee",
+   "lien": "https://www.chollometro.com/ofertas/one-piece-odyssey-ps5-pegi-12-2053731",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 226,
+   "domaine": "gaming",
+   "nom_produit": "One Piece Odyssey PS5",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 30.0,
+   "cout_achat": 16.99,
+   "marge_nette": 13.01,
+   "rentabilite": 0.766,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Jeu très recherché, achat à prix promo permet une bonne marge même en revendant d'occasion."
+   },
+   "score": 68.6,
+   "ebay": {
+    "requete": "One Piece Odyssey PS5",
+    "neuf": {
+     "nb": 34,
+     "min": 16.15,
+     "p25": 23.75,
+     "mediane": 32.52,
+     "max": 252.14
+    },
+    "occasion": {
+     "nb": 10,
+     "min": 19.36,
+     "p25": 20.0,
+     "mediane": 29.62,
+     "max": 365.58
+    },
+    "exemples": [
+     {
+      "titre": "Lot de 4 jeux PS5 One Piece Odyssey Sword Art Online Jujutsu Kaisen Slime Japan",
+      "prix": "79.85",
+      "url": "https://www.ebay.fr/itm/307161486503?_skw=One+Piece+Odyssey+PS5&hash=item47844054a7:g:fCIAAeSw8NRqmXjA"
+     },
+     {
+      "titre": "Jeu PS5 ONE PIECE ODYSSEY",
+      "prix": "26.99",
+      "url": "https://www.ebay.fr/itm/237091700926?_skw=One+Piece+Odyssey+PS5&hash=item3733c440be:g:EUYAAeSwGTZqt52a&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nVdvzf3G04rCeea0ZYBjGaPRefuT8rcmuOq8rTFsyYq0JKYlLI3pj3r59zrwmtv%2FBwCuLvV8KzWucAe26Q3rYXDI2JAilVgpRclVMsORG%2B7TyWgyx5PwpWX1ILgnq0J%2FJfkr68tQp%2B5NjyuyDPbI8074kx7PZQJ7S%2B0yjF4SodEG0TyrNkl8UYolUS0o3IofabBPZy0zerl6hmsiXDoX8Vv3vA0I4jvGXHXS4%2BidDga2Ti2Fr0mvlQn%2BeG%2B2d1z3HP9ndmYLkm4Gou0GCGEsvknSly8mULfneaCbOh9KMz2w%3D%3D"
+     },
+     {
+      "titre": "ONE PIECE ODYSSEY PS5 FR",
+      "prix": "21.50",
+      "url": "https://www.ebay.fr/itm/407189059852?_skw=One+Piece+Odyssey+PS5&hash=item5ece5bf90c:g:Kc8AAeSw6SNqFKV1"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 23.75,
+     "DE": 25.0,
+     "IT": 21.87,
+     "ES": 23.92
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "One Piece Odyssey PS5",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "One Piece Odyssey Jeu PS5",
+       "prix": 19.99,
+       "nb_boutiques": 12,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/one-piece-odyssey-jeu-ps5.html"
+      },
+      "autres": [
+       {
+        "titre": "One Piece Odyssey Collector's Edition Ps5",
+        "prix": 219.95,
+        "nb_boutiques": 4,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/one-piece-odyssey-collector-s-edition-ps5.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 19.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/one-piece-odyssey-jeu-ps5.html"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 17.59,
+     "marge_nette": 0.6,
+     "rentabilite": 0.035
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 17.59,
+     "marge_nette": 0.6,
+     "rentabilite": 0.035
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 17.59,
+     "marge_nette": 0.6,
+     "rentabilite": 0.035
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 19.99,
+     "marge_nette": -4.8,
+     "rentabilite": -0.283
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 19.99,
+     "marge_nette": -5.95,
+     "rentabilite": -0.35
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 19.99,
+     "marge_nette": -6.4,
+     "rentabilite": -0.377
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 19.99,
+     "marge_nette": -6.6,
+     "rentabilite": -0.388
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 19.99,
+     "marge_nette": -6.99,
+     "rentabilite": -0.411
+    }
+   ],
+   "prix_revente_prudent": 17.99,
+   "marge_verifiee": 1.0,
+   "rentabilite_verifiee": 0.059,
+   "passe_verif": false
+  },
+  {
+   "id": "f8b5ef00ef",
+   "titre": "Opony 4x 205/55R16 Pirelli Cinturato All Season SF3 (crna z kuponem i darmowa przesyłka allegro smart)",
+   "prix": 292.86,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/opony-4x-20555r16-pirelli-cinturato-all-season-sf3-crna-z-kuponem-i-darmowa-przesylka-allegro-smart-1380600",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 254,
+   "domaine": "auto-moto",
+   "nom_produit": "Pirelli Cinturato All Season SF3 205/55R16",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 480.0,
+   "cout_achat": 297.86,
+   "marge_nette": 182.14,
+   "rentabilite": 0.611,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Lot de 4 pneus à prix très compétitif, forte marge sur le prix français moyen."
+   },
+   "score": 60.9,
+   "ebay": {
+    "requete": "Pirelli Cinturato All Season SF3 205/55R16",
+    "neuf": {
+     "nb": 9,
+     "min": 117.6,
+     "p25": 119.75,
+     "mediane": 124.0,
+     "max": 384.4
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "PNEUS USAGÉS PIÈCES 1 PIRELLI ALL SEASON SF3 CINTURATO 205/55 R16 94V 4 STAGIONI",
+      "prix": "50.00",
+      "url": "https://www.ebay.fr/itm/298720782189?fits=Rapport+d%27aspect%3A55%7CLargeur+de+pneu%3A205%7CDiam%C3%A8tre%3A16&_skw=Pirelli+Cinturato+All+Season+SF3+205%2F55R16&hash=item458d25676d:g:2U0AAeSwJS9qvSib"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 119.75,
+     "DE": 171.7,
+     "IT": 119.0,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Pirelli Cinturato All Season SF3 205/55R16",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "canaux": null,
+   "prix_revente_prudent": 119.75,
+   "marge_verifiee": -178.11,
+   "rentabilite_verifiee": -0.598,
+   "passe_verif": false
+  },
+  {
+   "id": "ad5bb2694b",
+   "titre": "Columbia Męska hybrydowa kurtka z kapturem Powder Pass, kurtka puchowa z kapturem",
+   "prix": 70.26,
+   "devise": "EUR",
+   "marchand": "Amazon.pl",
+   "lien": "https://www.pepper.pl/promocje/columbia-meska-hybrydowa-kurtka-z-kapturem-powder-pass-kurtka-puchowa-z-kapturem-1380971",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 260,
+   "domaine": "mode",
+   "nom_produit": "Columbia Powder Pass",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 75.26,
+   "marge_nette": 44.74,
+   "rentabilite": 0.594,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix très bas sur Amazon.pl, marge nette intéressante sur le marché français."
+   },
+   "score": 57.0,
+   "ebay": {
+    "requete": "Columbia Powder Pass",
+    "neuf": {
+     "nb": 10,
+     "min": 75.23,
+     "p25": 79.61,
+     "mediane": 112.3,
+     "max": 189.48
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Columbia Powder Pass Sans Manches chalk floricult, veste doudoune sans manche...",
+      "prix": "89.95",
+      "url": "https://www.ebay.fr/itm/285201639310?_skw=Columbia+Powder+Pass&hash=item426757a78e:g:DRoAAOSwmddkHeLI"
+     },
+     {
+      "titre": "Gilets Femme, Columbia Powder Pass Vest, Blanc",
+      "prix": "75.23",
+      "url": "https://www.ebay.fr/itm/296699510684?_skw=Columbia+Powder+Pass&hash=item4514ab3f9c:g:JQgAAOSwMnFm6og-&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7mQdDVldE010V%2B06cVoPXE%2Bnf4dbPVhPyzUXhfqoiIigix%2FJecxIcEF3Aw7IcP5SpwtjBA%2FIZBWGxVju1S1BGYbtLTRO5TQHXeyx991Z32VRayoSdgUqn4pkRmoSo4FACaj3sqtwIWA6Iu6NuJWxehH%2Bzehcr1qsIAQq%2FIIvlB8N6aeOtZfkRFg%2FI4pNMUcb9LLvtn7IA4d59Br5S3hSzTHp23N97s6z7mK1cDJoQFohIRN4ajiCJh6pP9eoTOZZdNBjIWO936U%2Fw6yHGvyhhEd13ua2o5Bx507Tr2Q%2F75JXQ%3D%3D"
+     },
+     {
+      "titre": "Kamizelka Columbia Powder Pass Vest W 1832222125 Kamizelka Columbia Powder Pass",
+      "prix": "79.61",
+      "url": "https://www.ebay.fr/itm/158073144405?_skw=Columbia+Powder+Pass&hash=item24cde4c455:g:Hr0AAeSwp~hqUPSa"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 79.61,
+     "DE": 79.61,
+     "IT": 67.05,
+     "ES": 54.05
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Columbia Powder Pass",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "COLUMBIA Veste sans manche  powder pass noir femme",
+       "prix": 48.99,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Vetements-de-running-femme/veste-sans-manche-columbia-powder-pass-noir-femme.html"
+      },
+      "autres": [
+       {
+        "titre": "COLUMBIA  Femme Powder Pass Doudoune avec capuche, Black 010, S EU",
+        "prix": 68.49,
+        "nb_boutiques": 5,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Vetements-de-running-femme/columbia-femme-powder-pass-doudoune-avec-capuche-black-010-s-eu.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 48.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Vetements-de-running-femme/veste-sans-manche-columbia-powder-pass-noir-femme.html"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.11,
+     "marge_nette": -32.15,
+     "rentabilite": -0.427
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.11,
+     "marge_nette": -32.15,
+     "rentabilite": -0.427
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.11,
+     "marge_nette": -32.15,
+     "rentabilite": -0.427
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 48.99,
+     "marge_nette": -36.68,
+     "rentabilite": -0.487
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 48.99,
+     "marge_nette": -37.7,
+     "rentabilite": -0.501
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 48.99,
+     "marge_nette": -38.19,
+     "rentabilite": -0.507
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 48.99,
+     "marge_nette": -38.99,
+     "rentabilite": -0.518
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 48.99,
+     "marge_nette": -40.61,
+     "rentabilite": -0.54
+    }
+   ],
+   "prix_revente_prudent": 44.09,
+   "marge_verifiee": -31.17,
+   "rentabilite_verifiee": -0.414,
+   "passe_verif": false
+  },
+  {
+   "id": "5a0894b725",
+   "titre": "ASUS Prime B760M-A WiFi 6 Mainboard Sockel Intel LGA 1700, mATX, DDR5, PCIe 4.0, 2x M.2, Aura Sync (Lieferung 0,98€ Packstation)",
+   "prix": 63.88,
+   "devise": "EUR",
+   "marchand": "Alza",
+   "lien": "https://www.mydealz.de/deals/asus-prime-b760m-a-wifi-6-mainboard-sockel-intel-lga-1700-matx-ddr5-pcie-40-2x-m2-aura-sync-lieferung-098eur-packstation-2863891",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 130,
+   "domaine": "tech",
+   "nom_produit": "ASUS Prime B760M-A",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 68.88,
+   "marge_nette": 37.87,
+   "rentabilite": 0.55,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Carte mère neuve à 63,88 € + TVA/droits, revendue à ≈130 € sur eBay, marge nette solide pour le marché PC."
+   },
+   "score": 52.8,
+   "prix_plancher": {
+    "nom": "ASUS Prime B760M-A",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 11,
+      "meilleur": {
+       "titre": "ASUS  Prime B760M-K, Intel B760 Mainboard, Sockel 1700, DDR5",
+       "prix": 82.97,
+       "nb_boutiques": 11,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-mere/asus-prime-b760m-k-intel-b760-mainboard-sockel-1700-ddr5.html"
+      },
+      "autres": [
+       {
+        "titre": "ASUS  PRIME B760M-K LGA 1700 2xDDR5 micro",
+        "prix": 89.0,
+        "nb_boutiques": 4,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-mere/asus-prime-b760m-k-lga-1700-2xddr5-micro.html"
+       },
+       {
+        "titre": "ASUS Placa Base  PRIME B760M-F Socket 1700- Micro ATX",
+        "prix": 94.49,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-mere/placa-base-asus-prime-b760m-f-socket-1700-micro-atx.html"
+       },
+       {
+        "titre": "ASUS  PRIME B760M-K D4 Intel B760 LGA 1700 micro ATX",
+        "prix": 99.9,
+        "nb_boutiques": 11,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-mere/asus-prime-b760m-k-d4-intel-b760-lga-1700-micro-atx.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 82.97,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-mere/asus-prime-b760m-k-intel-b760-mainboard-sockel-1700-ddr5.html"
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 73.01,
+     "marge_nette": 4.13,
+     "rentabilite": 0.06
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 73.01,
+     "marge_nette": 4.13,
+     "rentabilite": 0.06
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 73.01,
+     "marge_nette": 4.13,
+     "rentabilite": 0.06
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 82.97,
+     "marge_nette": 0.62,
+     "rentabilite": 0.009
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 82.97,
+     "marge_nette": 0.28,
+     "rentabilite": 0.004
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 82.97,
+     "marge_nette": -0.55,
+     "rentabilite": -0.008
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 82.97,
+     "marge_nette": -3.05,
+     "rentabilite": -0.044
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 82.97,
+     "marge_nette": -5.35,
+     "rentabilite": -0.078
+    }
+   ],
+   "prix_revente_prudent": 74.67,
+   "marge_verifiee": -10.27,
+   "rentabilite_verifiee": -0.149,
+   "passe_verif": false
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 429 (gemini-3.8-flash)",
+   "HTTP 429 (gemini-flash-latest)",
+   "HTTP 429 (gemini-3.5-flash)",
+   "quota Google épuisé : vérification reportée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 15,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 22,
+ "annonces_analysees": [
+  {
+   "id": "41b17726e7",
+   "titre": "VERTICAL STUDIO Koffer Silkström Trolley für 22,22€ + 4,95€ VSK (63 × 42 × 26 cm, 54.3 Liter, Inkl. Koffer-Gurt)",
+   "temperature": 446,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "SportSpar",
+   "prix": 27.17,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/vertical-studio-koffer-silkstrom-trolley-fur-2222eur-495eur-vsk-63-42-26-cm-543-liter-inkl-koffer-gurt-2856957",
+   "date": "Tue, 03 Nov 2026 09:21:33 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "27,17€ - SportSpar Bei SportSpar bekommt ihr heute den VERTICAL STUDIO Koffer Silkström Trolley (63 × 42 × 26 cm) in grün für 22,22€.<..."
+  },
+  {
+   "id": "e0bccc43df",
+   "titre": "[Aliexpress] Anker SOLIX Power Dock Multisystem bis zu 64,4kWh - Versand aus Deutschland!",
+   "temperature": 422,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "AliExpress",
+   "prix": 192.06,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aliexpress-anker-solix-power-dock-multisystem-bis-zu-644kwh-versand-aus-deutschland-2853451",
+   "date": "Tue, 03 Nov 2026 09:39:59 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "192,06€ - AliExpress Versand aus Deutschland, von daher eigentlich ein sehr guter Deal. Vgl. Preis, bei deutschen Händlern, rund 40€ höher. (siehe Geizhals o.Ä.) ..."
+  },
+  {
+   "id": "e143050589",
+   "titre": "Oral-B iO 2 Pack Duo (2 unidades) Negro y Verde Bosque (2 recambios, estuche, 3 modos, sensor presion, 50% reembolso a 19€ ud, MediaMarkt)",
+   "temperature": 396,
+   "categorie": "Salud y belleza",
+   "marchand": "MediaMarkt",
+   "prix": 39.98,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-io-2-pack-duo-2-unidades-negro-y-verde-bosque-2-recambios-estuche-3-modos-sensor-presion-50-reembolso-a-19eur-ud-mediamarkt-2053712",
+   "date": "Tue, 03 Nov 2026 08:40:10 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "39,98€ - MediaMarkt El pack Oral-B iO 2 incluye dos cepillos recargables, dos cabezales, cargador, soporte y estuche; sin Bluetooth ni app . Su cabezal r..."
+  },
+  {
+   "id": "a6d82c2f2b",
+   "titre": "Xiaomi TV F 65\" 2026. 4K 120hz + Altavoz Bluetooth Xiaomi Sound GRATIS",
+   "temperature": 345,
+   "categorie": "Electrónica",
+   "marchand": "Mi",
+   "prix": 386.1,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/xiaomi-tv-f-65-2026-4k-120hz-altavoz-bluetooth-xiaomi-sound-gratis-2053741",
+   "date": "Tue, 03 Nov 2026 09:04:59 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "386,10€ - Mi • Resolución 4K de 3840 × 2160 • Profundidad de color de 1070 millones de colores • Frecuencia de actualización de 60 Hz • MEMC 4K a 60 Hz •..."
+  },
+  {
+   "id": "9f775af3d3",
+   "titre": "Oral-B iO 6S Negro Mate Navidad (5 modos, pantalla, seguimiento app, 4 cabezales, sensor presion, oferta 50% reembolso, MediaMarkt)",
+   "temperature": 320,
+   "categorie": "Salud y belleza",
+   "marchand": "MediaMarkt",
+   "prix": 64.98,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-io-6s-negro-mate-navidad-5-modos-pantalla-seguimiento-app-4-cabezales-sensor-presion-oferta-50-reembolso-mediamarkt-2053705",
+   "date": "Tue, 03 Nov 2026 08:49:52 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "64,98€ - MediaMarkt El cepillo de dientes eléctrico de gama alta con inteligencia artificial y pantalla interactiva concebido para usuarios exigentes que buscan un seguimiento p..."
+  },
+  {
+   "id": "ee39322a84",
+   "titre": "14,17 zł/szt Filtry/wkłady do dzbanka filtrującego Brita MAXTRA PRO Hard Water Expert x4",
+   "temperature": 314,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "InPost",
+   "prix": 13.32,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/1417-zlszt-filtrywklady-do-dzbanka-filtrujacego-brita-maxtra-pro-hard-water-expert-x4-1381025",
+   "date": "Tue, 03 Nov 2026 08:13:23 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "56,69zł - InPost W aplikacji InPost po naciśnięciu \"kupuj\" (wizerunek żółtego psa, na dole) wpisać po pytaniu \"co dziś kupujemy?\" - \"Brita Hard Water\". Po wyszukaniu, pojawi się..."
+  },
+  {
+   "id": "789b69fa7c",
+   "titre": "Rue Broca Theoreme Pour Homme | woda perfumowana dla mężczyzn 90ml (darmowa dostawa Smart)",
+   "temperature": 310,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Allegro",
+   "prix": 15.27,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/rue-broca-theoreme-pour-homme-woda-perfumowana-90ml-darmowa-dostawa-smart-1381235",
+   "date": "Tue, 03 Nov 2026 08:57:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "64,99zł - Allegro Znana i lubiana inspiracja Bvlgari Tygar. Okazja z racji darmowej dostawy Allegro Smart która konkuruje z ostatnimi ofertami na ten zapaszek. Sprawdzo..."
+  },
+  {
+   "id": "cbf0035c6e",
+   "titre": "Odkurzacz uniwersalny Karcher WD 4 V-20/5/22 1.628-209.0 1100W 20L",
+   "temperature": 309,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Allegro",
+   "prix": 75.55,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/odkurzacz-uniwersalny-karcher-wd-4-v-20522-1628-2090-1100w-20l-1381119",
+   "date": "Tue, 03 Nov 2026 07:51:02 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "321,47zł - Allegro Odkurzacz do garażu, auta badz do lekkiej budowlanki w bardzo dobrej cenie na allegro"
+  },
+  {
+   "id": "c840b0e3fe",
+   "titre": "Ekspres ciśnieniowy Philips Series 800 EP0820/00",
+   "temperature": 304,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Max Elektro",
+   "prix": 187.76,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/ekspres-cisnieniowy-philips-series-800-ep082000-1380694",
+   "date": "Tue, 03 Nov 2026 07:46:47 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "799zł - Max Elektro W sklepie Max Electro ekspres ciśnieniowy Philips Series 800 EP0820/00 za 799 z darmową dostawą. Limit to 1 sztuka na zamówienie. Ekspres PHILIP..."
+  },
+  {
+   "id": "a0ed2363d3",
+   "titre": "Oral-B Vitality Pro Negro (1 recambio, 3 modos de limpieza, temporizador 2 min, disenado Braun, oferta 50% reembolso, MediaMarkt)",
+   "temperature": 298,
+   "categorie": "Salud y belleza",
+   "marchand": "MediaMarkt",
+   "prix": 10.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-vitality-pro-negro-1-recambio-3-modos-de-limpieza-temporizador-2-min-disenado-braun-oferta-50-reembolso-mediamarkt-2053708",
+   "date": "Tue, 03 Nov 2026 08:48:27 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,50€ - MediaMarkt El cepillo de dientes eléctrico recargable esencial concebido para usuarios que buscan mejorar su rutina de higiene bucal diaria con la máxima sencillez, efi..."
+  },
+  {
+   "id": "a59a0014c3",
+   "titre": "Flintlock: The Siege of Dawn - Deluxe Edition - PS5",
+   "temperature": 297,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 21.21,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/flintlock-the-siege-of-dawn-deluxe-edition-ps5-2053755",
+   "date": "Tue, 03 Nov 2026 09:16:12 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "21,21€ - Amazon Flintlock: The Siege of Dawn - Deluxe Edition - PS5 Ponte en la piel de Nor Vanek, miembro distinguida del ejército de la Coalición a la que le..."
+  },
+  {
+   "id": "995a7c65bb",
+   "titre": "WMF - Set de 6 vasos de espresso de doble pared - vidrio de borosilicato - 80 ml",
+   "temperature": 296,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Veepee",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/wmf-set-de-6-vasos-de-espresso-de-doble-pared-vidrio-de-borosilicato-80-ml-2053544",
+   "date": "Tue, 03 Nov 2026 08:25:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "24,99€ - Veepee Descripción 6 vasos de espresso con aislamiento térmico de doble pared Diseño de doble pared con efecto térmico: los vasos térmicos de doble pared est..."
+  },
+  {
+   "id": "9dc50edd0d",
+   "titre": "LEGO Star Wars 75456 Kalendarz adwentowy na 2026 rok",
+   "temperature": 296,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Allegro",
+   "prix": 21.15,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lego-star-wars-75456-kalendarz-adwentowy-na-2026-rok-1380947",
+   "date": "Tue, 03 Nov 2026 08:46:37 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "89,99zł - Allegro Już jutro o 9.00 Sprzedaje Oficjalny Sklep Allegro"
+  },
+  {
+   "id": "ec028a207b",
+   "titre": "50 Hot Wheels",
+   "temperature": 296,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Bol",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/50-hot-wheels-424949",
+   "date": "Tue, 03 Nov 2026 06:51:57 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€39,99 - Bol 50 Hot Wheels. Not niet vaak zo goedkoop gezien. Gratis verzending met Select"
+  },
+  {
+   "id": "2537f61ba2",
+   "titre": "[start 2/11 o 19:00] Maszynka do golenia dla mężczyzn Gillette ProGlide + 12 ostrzy wymiennych @Allegro",
+   "temperature": 294,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Allegro",
+   "prix": 28.2,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/start-211-o-1900-maszynka-do-golenia-dla-mezczyzn-gillette-proglide-12-ostrzy-wymiennych-at-allegro-1378638",
+   "date": "Tue, 03 Nov 2026 07:58:42 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "119,99zł - Allegro Okazja startuje 2/11 o 19:00 Maszynka do golenia dla mężczyzn Gillette ProGlide + 12 ostrzy wymiennych za 119.99 zł w oficjalnym sklepie ..."
+  },
+  {
+   "id": "761f3d28a2",
+   "titre": "Horno Pizzas 420 ℃",
+   "temperature": 285,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 27.19,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/horno-pizzas-420-2053615",
+   "date": "Tue, 03 Nov 2026 08:27:18 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "27,19€ - AliExpress KLAIF Horno Eléctrico para Pizza 420 °C, calor superior e inferior regulables por separado, piedra para pizza de cerámica 31 cm, 1200 W. RED Sin los 5..."
+  },
+  {
+   "id": "fa10647df4",
+   "titre": "Kij baseballowy HIDETOSHI WAKASHIMA „Tokyo” / dostepne 3 kolory",
+   "temperature": 282,
+   "categorie": "Sport i turystyka",
+   "marchand": "SportRabat",
+   "prix": 8.08,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kij-baseballowy-hidetoshi-wakashima-tokyo-dostepne-3-kolory-1380323",
+   "date": "Tue, 03 Nov 2026 08:09:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "34,40zł - SportRabat Dostępne dwa kolory w cenie 34,40 Kolor srebrny w cenie 36,35 Marka: HIDETOSHI WAKASHIMA Materiał: Stal (stal stopowa) Logo ..."
+  },
+  {
+   "id": "da644dda60",
+   "titre": "Pralka Gorenje WG2P84A32G/PL (8 kg, 1400 obr./min, klasa A, para, 15 programów, gł. 51 cm) @ Media Markt",
+   "temperature": 278,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "MediaMarkt",
+   "prix": 312.78,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/pralka-gorenje-wg2p84a32gpl-8-kg-1400-obrmin-klasa-a-para-15-programow-gl-51-cm-at-media-markt-1380445",
+   "date": "Tue, 03 Nov 2026 08:12:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 330,99zł - MediaMarkt Pralka Gorenje WG2P84A32G/PL w Media Markt w obniżonej cenie 1499 zł. W promocji „60 za 500” cena spada o kolejne 60 zł za każde wydane 500 zł, przy ..."
+  },
+  {
+   "id": "7b84126f6a",
+   "titre": "The Legend of Zelda: Ocarina of Time ►49,98€ | Physisches Modul | Nintendo Switch 2 | Vorbestellen | Neukunde / Bestandskunden ►59,98€",
+   "temperature": 276,
+   "categorie": "Gaming",
+   "marchand": "Cdiscount",
+   "prix": 49.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/the-legend-of-zelda-ocarina-of-time-4998eur-physisches-modul-nintendo-switch-2-vorbestellen-neukunde-bestandskunden-5998eur-2863935",
+   "date": "Tue, 03 Nov 2026 09:04:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "49,98€ - Cdiscount Hallo zusammen, am Donnerstag ist es endlich soweit: Dann kommt The Legend of Zelda: Ocarina of Time auf den Markt bei Cdiscount erhaltet ih..."
+  },
+  {
+   "id": "8805a54bba",
+   "titre": "5 EUR ab 50 EUR Rabatt bei Penny",
+   "temperature": 275,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Penny",
+   "prix": 45.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/5-eur-ab-50-eur-rabatt-bei-penny-371748",
+   "date": "Tue, 03 Nov 2026 07:00:32 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "45€ - Penny Bei Penny gibt es mit dem Barcode aus dem Prospekt (gibt's notfalls im Eingangsbereich der Filiale) oder der Penny App 5 EUR Rabatt ab einem Einkaufswert von..."
+  },
+  {
+   "id": "aedda86a6c",
+   "titre": "Coffre de Rangement Hespéride - 100L, en Acacia, Étanche, avec Housse Intérieure",
+   "temperature": 274,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Hespéride",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/coffre-de-rangement-100-l-en-acacia-hesperide-etanche-housse-interieure-3444898",
+   "date": "Tue, 03 Nov 2026 09:00:41 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "29,99€ - Hespéride Ce coffre de rangement Hespéride en acacia est conçu pour optimiser un balcon ou une petite terrasse. Avec ses dimensions extérieures de 60 × 50 × 58 cm et s..."
+  },
+  {
+   "id": "93673de8b9",
+   "titre": "Almohada Fibra y Viscoelástica Pack 2 x 75 cm",
+   "temperature": 273,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 13.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/almohada-fibra-y-viscoelastica-pack-x2-75-cm-2053120",
+   "date": "Tue, 03 Nov 2026 08:59:16 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,49€ - Amazon ALMOHADA FIBRA Y VISCOELASTICA UNICA - Almohadas viscoelasticas únicas en el mercado al estar combinar 20% de copos 100% viscoelásticos y 80% de fibra hueca sil..."
+  },
+  {
+   "id": "306d6039a0",
+   "titre": "HARIBO Zestaw świec zapachowych - Winterland 3x85g",
+   "temperature": 267,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Lounge by Zalando",
+   "prix": 8.46,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/haribo-zestaw-swiec-zapachowych-winterland-3x85g-1379569",
+   "date": "Tue, 03 Nov 2026 08:05:20 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "36zł - Lounge by Zalando Zestaw świec zapachowych - Winterland Świece Haribo o zapachu: Winter Cherry, Fluffy Clouds, Vanilla Waffle ..."
+  },
+  {
+   "id": "fcf1de4adf",
+   "titre": "Karta pamięci SAMSUNG T9 microSDXC 128GB, odczyt 200 MB/s, zapis 130 MB/s, MB-MH128T/WW",
+   "temperature": 265,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.de",
+   "prix": 32.3,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/karta-pamieci-samsung-t9-microsdxc-128gb-odczyt-200-mbs-zapis-130-mbs-mb-mh128tww-1381124",
+   "date": "Tue, 03 Nov 2026 08:31:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "137,46zł - Amazon.de Wysyła i sprzedaje Amazon. Cena w EUR: 31.11 ( Darmowa dostawa do InPost Paczkomat lub Automat DHL BOX lub DHL POP Żabka) <..."
+  },
+  {
+   "id": "ad5bb2694b",
+   "titre": "Columbia Męska hybrydowa kurtka z kapturem Powder Pass, kurtka puchowa z kapturem",
+   "temperature": 260,
+   "categorie": "Moda",
+   "marchand": "Amazon.pl",
+   "prix": 70.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/columbia-meska-hybrydowa-kurtka-z-kapturem-powder-pass-kurtka-puchowa-z-kapturem-1380971",
+   "date": "Tue, 03 Nov 2026 08:11:05 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "298,99zł - Amazon.pl Columbia Powder Pass – męska kurtka hybrydowa z kapturem Stylowa i funkcjonalna kurtka męska renomowanej marki Columbia. Model Powder ..."
+  },
+  {
+   "id": "f8b5ef00ef",
+   "titre": "Opony 4x 205/55R16 Pirelli Cinturato All Season SF3 (crna z kuponem i darmowa przesyłka allegro smart)",
+   "temperature": 254,
+   "categorie": "Motoryzacja",
+   "marchand": "Allegro",
+   "prix": 292.86,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/opony-4x-20555r16-pirelli-cinturato-all-season-sf3-crna-z-kuponem-i-darmowa-przesylka-allegro-smart-1380600",
+   "date": "Tue, 03 Nov 2026 09:22:57 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 246,22zł - Allegro Opony wielosezonowe chyba z dobrymi opiniami :) Cena z kodem ZIMA100 i darmowa przesyłka chyba nie tylko dla posiadaczy allegro Informacja z regulaminu: Sw..."
+  },
+  {
+   "id": "61a99db2fe",
+   "titre": "Tablet Xiaomi Pad 7 8/256GB €201.92",
+   "temperature": 250,
+   "categorie": "Elektronika",
+   "marchand": "AliExpress",
+   "prix": 209.69,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/tablet-xiaomi-pad-7-8256gb-eur20192-1380749",
+   "date": "Tue, 03 Nov 2026 08:57:34 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "892,28zł - AliExpress Cena w ojro najepiej wychodzi, wysylka z PL"
+  },
+  {
+   "id": "cff189e495",
+   "titre": "Zapatillas Adidas Galaxy 8",
+   "temperature": 247,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 32.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-adidas-galaxy-8-2053556",
+   "date": "Tue, 03 Nov 2026 09:06:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "32,99€ - Amazon Las Adidas Galaxy 8 son unas zapatillas deportivas para hombre diseñadas para ofrecer máxima comodidad y amortiguación tanto en entrenamientos diarios de run..."
+  },
+  {
+   "id": "f56727e23e",
+   "titre": "Black Weeks (np. Powerbank JoyRoom Powerbank Star Series Mini 10000mAh 22,5W za 39 zł) – więcej w opisie @ x-kom",
+   "temperature": 247,
+   "categorie": "Elektronika",
+   "marchand": "x-kom",
+   "prix": 9.16,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/black-weeks-np-powerbank-joyroom-powerbank-star-series-mini-10000mah-225w-za-39-zl-wiecej-w-opisie-at-x-kom-1380728",
+   "date": "Tue, 03 Nov 2026 09:08:42 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "39zł - x-kom W x-kom wystartował Black Weeks. Co tydzień czekają nowe produkty, a przez pierwsze dwie godziny ceny promocyjne obowiązują tylko w aplikacji mobilne..."
+  },
+  {
+   "id": "fe8c84d17e",
+   "titre": "Soundbar TH-E343B JVC | CARREFOUR stacjonarnie",
+   "temperature": 247,
+   "categorie": "Elektronika",
+   "marchand": "Carrefour",
+   "prix": 82.02,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/soundbar-th-e343b-jvc-carrefour-stacjonarnie-1379740",
+   "date": "Tue, 03 Nov 2026 09:01:32 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "349zł - Carrefour W Carrefour oferta na soundbar JVC JVC TH-E434B za 349 zł. Poprzednai cena 499 zł. Oferta stacjoanrna od 2 do 14.11.2026 OPIS Potężna..."
+  },
+  {
+   "id": "4e01b1a9bf",
+   "titre": "Panasonic SC-HTB600EGK – soundbar 2.1 / Dolby Atmos / DTS:X / 360 W RMS / eARC",
+   "temperature": 245,
+   "categorie": "Elektronika",
+   "marchand": "Allegro",
+   "prix": 117.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/panasonic-sc-htb600egk-soundbar-21-dolby-atmos-dtsx-360-w-rms-earc-1380217",
+   "date": "Tue, 03 Nov 2026 09:02:54 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "499zł - Allegro Sprzedaje oficjalny sklep Panasonic na Allegro. Zbiera dobre opinie i recenzje. HDTV - https://hdtvpolska.com/sprawdzamy-swietnie-wyposazony-soundbar-pana..."
+  },
+  {
+   "id": "056809f87d",
+   "titre": "Buty damskie Nike Air Max 90 rozm: 36-42.5",
+   "temperature": 243,
+   "categorie": "Moda",
+   "marchand": "Lounge by Zalando",
+   "prix": 86.69,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-damskie-nike-air-max-90-rozm-36-425-1379850",
+   "date": "Tue, 03 Nov 2026 08:53:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "368,90zł - Lounge by Zalando Oznaczenie modelu: IM4613-002 Czas wolny Trening Fitness Materiał cholewki: Skóra I materiał tekstylny Podeszwa: tworzywo sztuczne ..."
+  },
+  {
+   "id": "a271049a28",
+   "titre": "Tablet Poco Pad X1 8/512-203.20€",
+   "temperature": 243,
+   "categorie": "Elektronika",
+   "marchand": "AliExpress",
+   "prix": 211.03,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/tablet-poco-pad-x1-8512-20320eur-1381011",
+   "date": "Tue, 03 Nov 2026 08:45:19 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "898zł - AliExpress -Ekran: IPS TFT 11,2 cala o wysokiej rozdzielczości 3200 x 2136 px, odświeżaniu 144 Hz i jasności do 800 nitów (proporcje 3:2) -Procesor: ośmiordzeniowy Qu..."
+  },
+  {
+   "id": "2b3a73e235",
+   "titre": "New Balance Zapatilla de Running de Hombre FreshFoam Arishi v4 Tiralux",
+   "temperature": 240,
+   "categorie": "Moda y accesorios",
+   "marchand": "El Corte Inglés",
+   "prix": 40.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/new-balance-zapatilla-de-running-de-hombre-freshfoam-arishi-v4-tiralux-2053654",
+   "date": "Tue, 03 Nov 2026 08:32:10 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "40€ - El Corte Inglés Tallas 40.5, 41.5, 44.5, 45.5 y 46.5 La Fresh Foam Arishi es una zapatilla versátil que puedes usar en cualquier lugar. Con mediasuela Fresh Foam, un e..."
+  },
+  {
+   "id": "6ff498a6ab",
+   "titre": "Buty Reebok Glide r.35 - 48,5",
+   "temperature": 240,
+   "categorie": "Moda",
+   "marchand": "Lounge by Zalando",
+   "prix": 31.7,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-reebok-glide-r35-485-1378188",
+   "date": "Tue, 03 Nov 2026 08:53:21 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "134,90zł - Lounge by Zalando Kampania Podeszwa: kauczuk naturalny Wkładka: połączenie skóry z materiałem tekstylnym Materiał wewnętrzny: materiał tekstylny Materiał cho..."
+  },
+  {
+   "id": "d9808f0a98",
+   "titre": "Coffret 141 pièces - Scheppach Valise en aluminium, outils Chrome-Vanadium, Garantie 10 ans",
+   "temperature": 239,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Screwfix",
+   "prix": 79.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/black-friday-assortiment-doutils-141-pieces-scheppach-valise-en-aluminium-outils-chrome-vanadium-garantie-10-ans-3444481",
+   "date": "Tue, 03 Nov 2026 06:16:43 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "79€ - Screwfix Superbe offre chez Screwfix pour le Black Friday sur cette mallette d'outillage ultra-complète Scheppach de 141 pièces ! Elle passe à 79,00 € a..."
+  },
+  {
+   "id": "13cd2d7bea",
+   "titre": "Anker Solix V1 wallbox 11kw mit 5 m kabel",
+   "temperature": 233,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 350.48,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/anker-solix-v1-wallbox-11kw-mit-5-m-kabel-2854610",
+   "date": "Tue, 03 Nov 2026 09:32:56 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "350,48€ - AliExpress <a href=\"https://www.ankersolix.com/de/products/a5191?variant=58398006018397&source=aw&utm_source=awin&utm_campaign=88787&utm_content=ppr-de-243..."
+  },
+  {
+   "id": "dad8218f8f",
+   "titre": "Huawei FIT 5 PRO (Negro)",
+   "temperature": 230,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 165.39,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/huawei-fit-5-pro-negro-2053350",
+   "date": "Tue, 03 Nov 2026 09:21:50 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "165,39€ - AliExpress Huawei Watch Fit 5 Pro es un reloj inteligente deportivo de gama alta, diseñado para monitorizar la actividad física, la salud y el rendimiento deportivo, combi..."
+  },
+  {
+   "id": "771ecc8af7",
+   "titre": "One Piece Odyssey - PS5 - PEGI 12",
+   "temperature": 226,
+   "categorie": "Gaming",
+   "marchand": "Veepee",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/one-piece-odyssey-ps5-pegi-12-2053731",
+   "date": "Tue, 03 Nov 2026 09:14:21 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,99€ - Veepee Descripción One Piece Odyssey ONE PIECE ODYSSEY es un proyecto de RPG para conmemorar los 25 años de la marca ONE PIECE, que combina característ..."
+  },
+  {
+   "id": "daa0f9984a",
+   "titre": "Adidas Supernova Rise 3",
+   "temperature": 226,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Private Sport Shop",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/adidas-rise-3-2053622",
+   "date": "Tue, 03 Nov 2026 09:10:01 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "64,99€ - Private Sport Shop @ Adidas Rise 3 </..."
+  },
+  {
+   "id": "be585354bd",
+   "titre": "Lavadora Fagor 9 kg/1.400 rpm, Motor Inverter - 3FE-9712 - Blanco",
+   "temperature": 225,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "El Corte Inglés",
+   "prix": 290.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lavadora-fagor-9-kg1400-rpm-motor-inverter-3fe-9712-blanco-2053647",
+   "date": "Tue, 03 Nov 2026 09:23:43 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "290€ - El Corte Inglés La lavadora Fagor 3FE-9712 es un electrodoméstico de carga frontal, ideal para familias que necesitan lavar grandes cantidades de ropa de forma eficiente.</p..."
+  },
+  {
+   "id": "caef7960ba",
+   "titre": "Oral-B iO 2 Negro (1 recambio, 3 modos, temporizador, sensor presion, tecnologia magnetica, oferta 50% reembolso, MediaMarkt)",
+   "temperature": 222,
+   "categorie": "Salud y belleza",
+   "marchand": "MediaMarkt",
+   "prix": 24.98,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-io-2-negro-1-recambio-3-modos-temporizador-sensor-presion-tecnologia-magnetica-oferta-50-reembolso-mediamarkt-2053701",
+   "date": "Tue, 03 Nov 2026 08:58:34 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "24,98€ - MediaMarkt El cepillo de dientes eléctrico recargable de iniciación a la tecnología magnética concebido para usuarios que buscan dar el salto al cuidado bucal avanzado ..."
+  },
+  {
+   "id": "8f6ffbdddc",
+   "titre": "Teclado Gaming Logitech G G915 X Lightspeed TKL (Inalambrico, perfil bajo, switches tactiles, PBT, aluminio, Negro, oferta Amazon)",
+   "temperature": 219,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 119.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/teclado-gaming-logitech-g-g915-x-lightspeed-tkl-inalambrico-perfil-bajo-switches-tactiles-pbt-aluminio-negro-oferta-amazon-2053681",
+   "date": "Tue, 03 Nov 2026 09:11:45 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "119,99€ - Amazon El teclado mecánico gaming de perfil bajo y formato compacto TKL ( Tenkeyless ) concebido para jugadores competitivos, creadores de contenido y usuari..."
+  },
+  {
+   "id": "b08ce94f50",
+   "titre": "Manta súper Suave con Tacto Sedoso 152x127cm Supernatural",
+   "temperature": 213,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 16.92,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/manta-super-suave-con-tacto-sedoso-152x127cm-supernatural-2053111",
+   "date": "Tue, 03 Nov 2026 08:40:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "16,92€ - Amazon Supernatural SILKY TOUCH BLANKET: Tejido de 300 GSM que proporciona calidez y comodidad sin dejar de ser ligero y transpirable, ideal como complement..."
+  },
+  {
+   "id": "6183bda011",
+   "titre": "Resident Evil Requiem - Deluxe Kit",
+   "temperature": 211,
+   "categorie": "Gaming",
+   "marchand": "PlayStation Store",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/resident-evil-requiem-deluxe-kit-2053412",
+   "date": "Tue, 03 Nov 2026 08:51:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,99€ - PlayStation Store • Incluye atuendos para Grace y Leon. • Incluye filtros Apocalipsis y Cine negro. • Incluye cuatro aspectos de armas. • Incluye los amuletos Mr. ..."
+  },
+  {
+   "id": "2f7d2221b5",
+   "titre": "Jonsbo N4 NAS-Gehäuse (19.56l, bis µATX, 6x 3.5\" & 2x 2.5\" HDD, 120mm-Lüfter hinten, 4x Low Profile-Slots, USB-C, Holz- & Meshfront)",
+   "temperature": 207,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 89.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/jonsbo-n4-nas-gehause-1956l-bis-atx-6x-35-2x-25-hdd-120mm-lufter-hinten-4x-low-profile-slots-usb-c-holzfront-2863916",
+   "date": "Tue, 03 Nov 2026 08:55:05 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "89,90€ - Amazon Wer sich ein NAS selbst bauen möchte, bekommt ein ordentlich dimensioniertes und meiner Meinung nach ziemlich schickes Gehäuse</stro..."
+  },
+  {
+   "id": "bf0dc6f59f",
+   "titre": "Reloj Timex Expedition North Field Solar TW2V64100 con cristal de zafiro antirreflejos, movimiento solar, 100 m y corona roscada",
+   "temperature": 202,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon.fr",
+   "prix": 107.4,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/reloj-timex-expedition-north-field-solar-tw2v64100-con-cristal-de-zafiro-antirreflejos-movimiento-solar-100-m-y-corona-roscada-2053212",
+   "date": "Tue, 03 Nov 2026 08:35:52 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "107,40€ - Amazon.fr Buena oferta para este Timex Expedition North Field Solar , un reloj de estética militar que destaca por incorporar cristal de zafiro..."
+  },
+  {
+   "id": "5d6b3a4e2f",
+   "titre": "Dodot Pañales Bebé Sensitive Talla 3",
+   "temperature": 200,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 57.39,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/dodot-panales-bebe-sensitive-talla-3-2049535",
+   "date": "Tue, 03 Nov 2026 09:18:49 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "57,39€ - Amazon Oferta Flash en pañales Dodot Sensitive Talla 3. Salen a 0,29€ el pañal. Puedes rebajarlo casi 9€ más si haces recurrente. Los Dodot..."
+  },
+  {
+   "id": "1de8a458de",
+   "titre": "Compresseur électrique Cecotec Air Max - 150 psi, 4000 mAh, USB-C, indicateur de batterie",
+   "temperature": 197,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 19.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/compresseur-electrique-cecotec-air-max-150-psi-4000-mah-usb-c-indicateur-de-batterie-3444404",
+   "date": "Tue, 03 Nov 2026 07:17:15 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,90€ - Amazon Plutôt bon prix par rapport aux caractéristiques :) <a href=\"https://www.storececotec.fr/fr/accessoires-mobilite/pompe-a-air-air-max\" target=\"..."
+  },
+  {
+   "id": "4f6cd42e59",
+   "titre": "Home trainer intelligent ThinkRider X2-MAX - direct drive, 2000W, pente 18%, précision ±2%, ANT+/Bluetooth",
+   "temperature": 196,
+   "categorie": "Sports & Plein air",
+   "marchand": "AliExpress",
+   "prix": 156.39,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/home-trainer-intelligent-thinkrider-x2-max-direct-drive-2000w-pente-18-precision-2-antbluetooth-3444034",
+   "date": "Tue, 03 Nov 2026 07:20:37 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "156,39€ - AliExpress Prix intéressant sur le ThinkRider X2-MAX, un home trainer à entraînement direct pensé pour le cyclisme indoor sérieux, avec puissance jusqu’à 2000W, simulat..."
+  },
+  {
+   "id": "c1beb7d595",
+   "titre": "Nike Zoom Vomero Roam de nobuk - Negro",
+   "temperature": 196,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Showroomprivé",
+   "prix": 71.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nike-zoom-vomero-roam-de-nobuk-negro-2053667",
+   "date": "Tue, 03 Nov 2026 09:10:50 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "71,90€ - Showroomprivé Nike Zoom Vomero Roam de nobuk - Negro Tallas de la 35,5 a 44,5"
+  },
+  {
+   "id": "752be3a0c1",
+   "titre": "[IKEA Berlin] All‑You‑Can‑Eat Weihnachtsbuffet für 19€ (Family Mitglieder, ohne: 24,95€) Julbord 2026 verschiedene Einrichtungshäuser",
+   "temperature": 194,
+   "categorie": "Dienstleistungen & Verträge",
+   "marchand": "IKEA",
+   "prix": 19.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/allyoucaneat-weihnachtsbuffet-bei-ikea-fur-19eur-family-mitglieder-ohne-2495eur-julbord-2026-verschiedene-einrichtungshauser-bei-ikea-2863906",
+   "date": "Tue, 03 Nov 2026 08:46:18 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "19€ - IKEA Bei ikea gibt es ein All-You-Can-Eat Weihnachtsbuffet namens Julbord für 19€ für Family-Mitglieder, ohne Family-Card zahlt man 24,95€. Das ganze findet ..."
+  },
+  {
+   "id": "93d5dfaf35",
+   "titre": "Kit de Snorkel CRESSI Seashell Seekers",
+   "temperature": 191,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Amazon",
+   "prix": 25.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/kit-de-snorkel-cressi-seashell-seekers-2053440",
+   "date": "Tue, 03 Nov 2026 08:26:54 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "25,99€ - Amazon La palme Spy est super pour faire du snorkeling, de l'apnée et de longues baignades, parfaite pour les enfants et les ados. L..."
+  },
+  {
+   "id": "b26e855105",
+   "titre": "[Smyths toys] 10€ Rabatt ab 50€ bei Lego Star Wars und Technic",
+   "temperature": 191,
+   "categorie": "Family & Kids",
+   "marchand": "Smyths Toys",
+   "prix": 41.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/smyths-toys-10eur-rabatt-ab-50eur-bei-lego-star-wars-und-technic-371753",
+   "date": "Tue, 03 Nov 2026 08:58:25 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "41,99€ - Smyths Toys Spare 10€ beim Kauf von Lego Star Wars und Technic ab einem Gesamtbetrag von 50€ und gratis Versand ohne Paketsteuer Die Sets können über die beiden Th..."
+  },
+  {
+   "id": "2b98c32db1",
+   "titre": "Disque SSD interne Netac NV3000 NVMe M.2 2280 - 1 To",
+   "temperature": 190,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 113.02,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/disque-ssd-interne-netac-nv3000-nvme-m2-2280-1to-3444172",
+   "date": "Tue, 03 Nov 2026 06:05:16 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "113,02€ - AliExpress Ce disque SSD interne Netac NV3000 est conçu pour améliorer les performances et la réactivité des ordinateurs portables et des ordinateurs de bureau. Grâce à..."
+  },
+  {
+   "id": "667f1d8556",
+   "titre": "Rhinowalk Motorrad-Satteltaschen 2er-Set 100% wasserdicht - 18L/28L/48L, universelle Passform, Rolltop, 3D-Wabenpolsterung, hitzebeständig",
+   "temperature": 186,
+   "categorie": "Auto & Motorrad",
+   "marchand": "AliExpress",
+   "prix": 86.45,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/rhinowalk-motorrad-satteltaschen-2er-set-100-wasserdicht-18l28l48l-universelle-passform-rolltop-3d-wabenpolsterung-hitzebestandig-2854272",
+   "date": "Tue, 03 Nov 2026 09:35:40 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "86,45€ - AliExpress Bei AliExpress bekommt ihr die Rhinowalk 18L Motorradtasche in Orange gerade für 99,42 € inkl. VSK mit Code WODE07<..."
+  },
+  {
+   "id": "8eecb1fcb2",
+   "titre": "POP Funko Games: Metal Gear Solid - Solid Snake",
+   "temperature": 184,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pop-funko-games-metal-gear-solid-solid-snake-2049573",
+   "date": "Tue, 03 Nov 2026 09:35:57 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,99€ - Amazon TAMAÑO COLECCIONABLE IDEAL - Con una altura aproximada de 3,75 pulgadas (9,5 cm), esta minifigura de vinilo complementa otros artículos de colección ..."
+  },
+  {
+   "id": "4cf85a2d82",
+   "titre": "Zapatillas running New Balance Fresh Foam X EVOZ v4 para mujer - Tallas 36, 38, 39, 40 y 41",
+   "temperature": 184,
+   "categorie": "Deportes y aire libre",
+   "marchand": "El Corte Inglés",
+   "prix": 52.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-running-new-balance-fresh-foam-x-evoz-v4-para-mujer-tallas-36-38-39-40-y-41-2053658",
+   "date": "Tue, 03 Nov 2026 09:29:25 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "52€ - El Corte Inglés Buena oferta en El Corte Inglés para estas zapatillas de running New Balance, con amortiguación Fresh Foam X, diseñadas para ofrecer comodidad en entrenamientos..."
+  },
+  {
+   "id": "7399361416",
+   "titre": "Pendrive Sandisk Ultra Shift 128GB USB 3.2 Lectura 100MB/s Compacto Negro",
+   "temperature": 184,
+   "categorie": "Electrónica",
+   "marchand": "PcComponentes",
+   "prix": 13.26,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pendrive-sandisk-ultra-shift-128gb-usb-32-lectura-100mbs-compacto-negro-2053747",
+   "date": "Tue, 03 Nov 2026 09:05:28 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,26€ - PcComponentes • Capacidad de 128 GB • Interfaz USB 3.2 • Velocidad de lectura de 100 MB/s • Diseño compacto • Color negro Pendrive Sandisk Ultra Shif..."
+  },
+  {
+   "id": "14e36920db",
+   "titre": "Franzis: 22% Rabatt auf Adventkalender ab 35€ z.B. Ford Mustang Adventskalender für 71,88€",
+   "temperature": 179,
+   "categorie": "Home & Living",
+   "marchand": "Franzis",
+   "prix": 35.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/gutschein/franzis-22-rabatt-auf-adventkalender-ab-35eur-zb-ford-mustang-adventskalender-fur-7188eur-370555",
+   "date": "Tue, 03 Nov 2026 09:29:39 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "Franzis Hey PJ Bei Francis könnt ihr euch aktuell 22% Rabatt auf Adventkalender ab 35€ Einkauf sichern. Nutzt dazu den Code ADVENT22 im Warenk..."
+  },
+  {
+   "id": "b21f37a881",
+   "titre": "Écran PC 27\" Lenovo L27-4r - Full HD, 165 Hz, 1 ms, AMD FreeSync, 99% sRGB, Haut-parleurs",
+   "temperature": 178,
+   "categorie": "High-Tech",
+   "marchand": "Lenovo",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-27-lenovo-l27-4r-full-hd-165-hz-1-ms-amd-freesync-99-srgb-haut-parleurs-3444781",
+   "date": "Tue, 03 Nov 2026 07:35:51 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "99€ - Lenovo Le moniteur Lenovo L27-4r de 27 pouces allie élégance et performances pour sublimer aussi bien vos sessions de jeu que votre espace de travail. Doté d'un design..."
+  },
+  {
+   "id": "156adb84bf",
+   "titre": "Nationaal Theaterweekend 2027: een voorstelling naar keuze in ruim 80 theaters door heel Nederland (29 t/m 31 januari)",
+   "temperature": 177,
+   "categorie": "Cultuur & Vrije Tijd",
+   "marchand": null,
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/nationaal-theaterweekend-2027-een-voorstelling-naar-keuze-in-ruim-80-theaters-door-heel-nederland-29-tm-31-januari-424962",
+   "date": "Tue, 03 Nov 2026 08:45:08 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€10 Op 29, 30 en 31 januari 2027 is het weer Nationaal Theaterweekend: in ruim 80 theaters door heel Nederland zie je dan een voorstelling naar keuze vanaf €10 p..."
+  },
+  {
+   "id": "e8b58b2312",
+   "titre": "Givenchy Gentleman EDP 100ml",
+   "temperature": 168,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": "Bol",
+   "prix": 55.59,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/givenchy-gentleman-edp-100ml-424947",
+   "date": "Tue, 03 Nov 2026 07:58:57 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€55,59 - Bol Hele nette prijs! Zag hem laatst voorbij komen. Nu volgens mij zelfs een paar euro's goedkoper dan toen! Verkoop door Bol!"
+  },
+  {
+   "id": "51811c18f0",
+   "titre": "Boîte à Montres SONGMICS - 20 Compartiments, Couvercle en Verre, 2 Niveaux (vendeur tiers)",
+   "temperature": 167,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 24.31,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boite-a-montres-songmics-20-compartiments-couvercle-en-verre-2-niveaux-vendeurs-tiers-3444319",
+   "date": "Tue, 03 Nov 2026 07:04:04 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "24,31€ - Amazon Description : Cette boîte à montres SONGMICS de 20 compartiments répartis sur 2 niveaux (10 par niveau) range et met en valeur toute u..."
+  },
+  {
+   "id": "aa4e786c76",
+   "titre": "Philips Hue Play Gradient Lightstrip 55 Zoll für 99 € / 65 Zoll für 109 € (TV-Ambilight-Strip, 16 Mio. Farben)",
+   "temperature": 165,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/philips-hue-play-gradient-lightstrip-55-zoll-tv-ambilight-strip-16-mio-farben-fur-9900-2863915",
+   "date": "Tue, 03 Nov 2026 09:07:28 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "99€ - Amazon Der Gradient-Strip für 55- bis 60-Zoll-TVs kommt hinten an den Fernseher und leuchtet an drei Seiten mit fließenden Farbverläufen. Lieferumfan..."
+  },
+  {
+   "id": "e7a1b08bf6",
+   "titre": "Cafetière Expresso Manuelle Krups Authentic XP381810 (via 40€ sur la carte)",
+   "temperature": 164,
+   "categorie": "Maison & Habitat",
+   "marchand": "E.Leclerc",
+   "prix": 54.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/cafetiere-expresso-manuelle-krups-authentic-xp381810-via-40-euros-sur-la-carte-3444575",
+   "date": "Tue, 03 Nov 2026 07:30:31 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "54,99€ - E.Leclerc Apprenez à préparer un véritable espresso en toute simplicité Préparez votre propre espresso en toute confiance avec une machine espresso manuelle qui prom..."
+  },
+  {
+   "id": "ceb4acc391",
+   "titre": "Black Friday Toys e.g Pokémon Sleeping Mew / Snorlax / Pikachu / Eevee Plush 45cm £24.99 - Free Click & Collect",
+   "temperature": 163,
+   "categorie": "Family & Kids",
+   "marchand": "Smyths",
+   "prix": 24.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/black-friday-toys-eg-pokemon-sleeping-mew-snorlax-pikachu-eevee-plush-45cm-ps2499-free-click-collect-5021173",
+   "date": "Tue, 03 Nov 2026 07:48:46 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "Smyths - Smyths Black Friday toys dropped, some listed below: <a href=\"https://www.smythstoys.com/uk/en-gb/toys/fashion-and-dolls/interactive-pets/star..."
+  },
+  {
+   "id": "33b3639fa9",
+   "titre": "LEGO The Legend of Zelda (77093) - Ocarina of Time : Le Combat Final",
+   "temperature": 162,
+   "categorie": "Famille & Enfants",
+   "marchand": "Cdiscount",
+   "prix": 94.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-the-legend-of-zelda-77093-ocarina-of-time-le-combat-final-3441787",
+   "date": "Tue, 03 Nov 2026 07:46:15 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "94,99€ - Cdiscount Baisse de prix sur ce set Zelda (party) [shortcode id=\"20619770\"/] → Livraison gratuite à domicile. ❖ <strong..."
+  },
+  {
+   "id": "9f063e1a21",
+   "titre": "MSI SSD SPATIUM M461 PCIe 4.0 NVMe M.2 1TB",
+   "temperature": 158,
+   "categorie": "Elektronica",
+   "marchand": "Mega Mobile",
+   "prix": 94.4,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/moederbord-msi-ssd-spatium-m461-pcie-40-nvme-m2-1tb-424951",
+   "date": "Tue, 03 Nov 2026 06:49:40 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€94,40 - Mega Mobile de 1tb is goedkoper dan de 500gb versie!? op het moment van schrijven zijn er nog 82 beschikbaar/op voorraad verzending is gratis v..."
+  },
+  {
+   "id": "9268c0508e",
+   "titre": "Barre de Son TCL Q65H Dolby atmos (Via ODR de 50€)",
+   "temperature": 156,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 149.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/barre-de-son-tcl-q65h-dolby-atmos-3442217",
+   "date": "Tue, 03 Nov 2026 07:34:45 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "149,99€ - Cdiscount Liens ODR : https://www.promotions-tcl.fr/promotion/52623 ODR de 50 € de la..."
+  },
+  {
+   "id": "c662b4ac72",
+   "titre": "Coffret de 103 forets perceuse et embouts visseuse à queue droite Bosch",
+   "temperature": 156,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Screwfix",
+   "prix": 23.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/black-friday-coffret-de-103-forets-perceuse-et-embouts-visseuse-a-queue-droite-bosch-3444473",
+   "date": "Tue, 03 Nov 2026 07:01:17 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "23,99€ - Screwfix Très belle affaire chez Screwfix dans le cadre des ventes Black Friday pour ce coffret complet de 103 pièces signé Bosch ! Il passe à seulement 23,99 €..."
+  },
+  {
+   "id": "6970cfc74a",
+   "titre": "Caméra de surveillance Xiaomi Smart C200 - 1080p, Vision 360°, Infrarouge, Alexa/Google (Vendeur tiers)",
+   "temperature": 149,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/camera-de-surveillance-xiaomi-smart-c200-1080p-vision-360-infrarouge-alexagoogle-vendeur-tiers-3444712",
+   "date": "Tue, 03 Nov 2026 07:51:39 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,99€ - Cdiscount Présentation du produit Caméra de surveillance d’intérieur filaire XIAOMI Smart Camera C200, compacte et facile à installer pour une surveillance..."
+  },
+  {
+   "id": "35770f41f3",
+   "titre": "ASMAX S1 Motorrad-Intercom - Bluetooth 5.4, bis 8 Fahrer (3 km) & CloudTalk bis 50 Fahrer, Sprachsteuerung, HD-Audio, ENC-Mikrofon, FM, IPX7",
+   "temperature": 149,
+   "categorie": "Auto & Motorrad",
+   "marchand": "AliExpress",
+   "prix": 58.25,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/asmax-s1-motorrad-intercom-bluetooth-54-bis-8-fahrer-3-km-cloudtalk-bis-50-fahrer-sprachsteuerung-hd-audio-enc-mikrofon-fm-ipx7-2854292",
+   "date": "Tue, 03 Nov 2026 09:37:45 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "58,25€ - AliExpress Bei AliExpress bekommt ihr aktuell die ASMAX S1 Motorrad-Intercom fü r 72,49 € inkl. VSK mit Code W..."
+  },
+  {
+   "id": "878822dfd2",
+   "titre": "LEGO Speed Champions 77262 Ken Block's '65 Ford Mustang Hoonicorn V1 - Discount At Checkout",
+   "temperature": 143,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 15.19,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-speed-champions-77262-ken-blocks-65-ford-mustang-hoonicorn-v1-discount-at-checkout-5021203",
+   "date": "Tue, 03 Nov 2026 08:13:15 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£15.19 - Amazon Extra 80p discount applied at checkout MUSTANG RACE CAR SET – Build, display and race this LEGO Speed Champions Ken ..."
+  },
+  {
+   "id": "20abd08cd7",
+   "titre": "Xiaomi Redmi Note 15 Pro+ (8GB + 256GB, 5G Global Version)",
+   "temperature": 140,
+   "categorie": "Elektronica",
+   "marchand": "AliExpress",
+   "prix": 276.45,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/xiaomi-redmi-note-15-pro-8gb-256gb-5g-global-version-424945",
+   "date": "Tue, 03 Nov 2026 07:59:05 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€276,45 - AliExpress De Xiaomi Redmi Note 15 Pro+ 5G is nu tijdelijk extra scherp geprijsd tijdens de 11.11-uitverkoop bij AliExpress. Dankzij de kortingscode NLPEPPER40 scoor je di..."
+  },
+  {
+   "id": "d952c4e3b8",
+   "titre": "Pèse-personne Rowenta Premiss 2.0 - Écran LCD, 160 Kg, Argent",
+   "temperature": 139,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Amazon",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/rowenta-pese-personne-premiss-20-3444854",
+   "date": "Tue, 03 Nov 2026 09:12:34 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "9,99€ - Amazon Marque: Rowenta Couleur : Argent À propos de cet article UTILISATION AGRÉAB..."
+  },
+  {
+   "id": "de768393b7",
+   "titre": "Ducky Project D Tinker 65 RGB Mechanical Gaming Keyboard Cherry MX Brown - Black",
+   "temperature": 139,
+   "categorie": "Gaming",
+   "marchand": "Overclockers",
+   "prix": 14.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ducky-project-d-tinker-65-rgb-mechanical-gaming-keyboard-cherry-mx-brown-black-5021124",
+   "date": "Tue, 03 Nov 2026 07:44:03 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£14.99 - Overclockers Mechanical gaming keyboard, Hot-swappable, RGB lighting, PBT double-shot keycaps, Premium materials, Fully customisable. The Ducky ProjectD Tinker6..."
+  },
+  {
+   "id": "adf982585b",
+   "titre": "[Prime] Anker Zolo 10000mAh 30W laden magnetische Powerbank MagSafe schnellladen Apple Iphone AirPods Samsung über Kabel",
+   "temperature": 137,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-anker-zolo-10000mah-30w-laden-magnetische-powerbank-magsafe-schnellladen-apple-iphone-airpods-samsung-uber-kabel-2863893",
+   "date": "Tue, 03 Nov 2026 08:59:45 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "29,99€ - Amazon Hallo MyDealzer. (highfive) Bei Amazon bekommt ihr aktuell die kleine praktische Anker Zolo Powerbank / MagSafe mit 10000mAh für 29,90€. <br /..."
+  },
+  {
+   "id": "2d554ae352",
+   "titre": "Elf [4K Ultra HD]",
+   "temperature": 133,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/elf-4k-ultra-hd-5020824",
+   "date": "Tue, 03 Nov 2026 07:46:02 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£14.99 - Amazon This hilarious Christmas film tells the tale of a young orphan child who mistakenly crawls into Santa's bag of gifts on Christmas Eve and is transported back to..."
+  },
+  {
+   "id": "5a0894b725",
+   "titre": "ASUS Prime B760M-A WiFi 6 Mainboard Sockel Intel LGA 1700, mATX, DDR5, PCIe 4.0, 2x M.2, Aura Sync (Lieferung 0,98€ Packstation)",
+   "temperature": 130,
+   "categorie": "Elektronik",
+   "marchand": "Alza",
+   "prix": 63.88,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/asus-prime-b760m-a-wifi-6-mainboard-sockel-intel-lga-1700-matx-ddr5-pcie-40-2x-m2-aura-sync-lieferung-098eur-packstation-2863891",
+   "date": "Tue, 03 Nov 2026 09:05:06 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "63,88€ - Alza Moin, mit dem ASUS Prime B760M-A WiFi erhältst du ein vielseitiges und leistungsstarkes Mainboard für moderne Intel-PC-Systeme. Ausgest..."
+  },
+  {
+   "id": "1cdc4025f8",
+   "titre": "Heinen Delfts Blauw",
+   "temperature": 129,
+   "categorie": "Home & Living",
+   "marchand": "Heinen Delfts Blauw",
+   "prix": 30.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/heinen-delfts-blauw-424915",
+   "date": "Tue, 03 Nov 2026 07:22:35 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€30 - Heinen Delfts Blauw Een vaas die helemaal bij jouw smaak past? Tijdens Singles Day stel je jouw eigen tulpenvaas samen voor maar €30 in plaats van €99,95 ! <p..."
+  },
+  {
+   "id": "f16dc3d05e",
+   "titre": "Brettspiel - Topp die Torte! - Kinderspiel des Jahres 2025 - Schmidt Spiele 40659 (Prime)",
+   "temperature": 128,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 13.53,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/brettspiel-topp-die-torte-kinderspiel-des-jahres-2025-schmidt-spiele-40659-prime-2863601",
+   "date": "Tue, 03 Nov 2026 08:27:55 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "13,53€ - Amazon Kinderspiel des Jahres 2025 – ausgezeichnet für Spielspaß und Qualität: Eingängiges, schnell erlernbares Spielprinzip, Neuartiger, ungewöhnlicher Spi..."
+  },
+  {
+   "id": "f4392e1d7c",
+   "titre": "Parka déperlante Devred à capuche - Vert (du S au XXL)",
+   "temperature": 126,
+   "categorie": "Mode & Accessoires",
+   "marchand": "BAZARCHIC",
+   "prix": 69.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/parka-deperlante-devred-a-capuche-vert-du-s-au-xxl-3444223",
+   "date": "Tue, 03 Nov 2026 08:47:18 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "69€ - BAZARCHIC Bon prix ! :) Détails : Un modèle vert sauge à la coupe droite, idéal pour la saison automne-hiver. ..."
+  },
+  {
+   "id": "67b30c3c81",
+   "titre": "Marvel’s Wolverine (PS5 Game)",
+   "temperature": 125,
+   "categorie": "Gaming",
+   "marchand": "Freemans",
+   "prix": 41.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/marvels-wolverine-playstation-5-game-5021232",
+   "date": "Tue, 03 Nov 2026 08:23:22 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£41.99 - Freemans Marvel’s Wolverine is an action-packed adventure from Insomniac Games, the acclaimed studio behind the Marvel’s Spider-Man series. Created in collaboration with..."
+  },
+  {
+   "id": "df7c18423d",
+   "titre": "Kirby Star Allies Nintendo Switch - Used - w/Code Student or Graduate Beans",
+   "temperature": 124,
+   "categorie": "Gaming",
+   "marchand": "Music Magpie",
+   "prix": 33.29,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/kirby-star-allies-nintendo-switch-used-wcode-student-or-graduate-beans-5019596",
+   "date": "Tue, 03 Nov 2026 07:04:13 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£33.29 - Music Magpie Kirby is back – and he’s finally on the Nintendo Switch console in HD! But this time, he’s not alone. Recruit enemies by hitting them with hearts, and gather he..."
+  },
+  {
+   "id": "e7e84f6da7",
+   "titre": "Vaude Paar Ontour Front Fahrradtaschen (2x16 Liter / inkl. Regenhüllen) Neukunden für 46,39",
+   "temperature": 123,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Best Secret",
+   "prix": 57.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/vaude-paar-ontour-front-fahrradtaschen-2x16-liter-inkl-regenhullen-neukunden-fur-4639-2863909",
+   "date": "Tue, 03 Nov 2026 09:04:51 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "57,99€ - Best Secret Bei BS bekommt ihr die Fahrradtaschen von Vaude für 57,99. Pvg: 98,45 UVP 149,95 Neukunden bekommen noch einen 20% Gutschein und landen bei 46,39<..."
+  },
+  {
+   "id": "c1ff78ca1e",
+   "titre": "Assassin's Creed Mirage - PC Game Steam",
+   "temperature": 123,
+   "categorie": "Gaming",
+   "marchand": "Steam",
+   "prix": 13.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/assassins-creed-mirage-pc-game-steam-5020585",
+   "date": "Tue, 03 Nov 2026 07:46:11 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£13.49 - Steam VALLEY OF MEMORY Enjoy 6 hours of new gameplay in Valley of Memory, a free major update that expands Basim’s story and introduces the breathtaking new r..."
+  },
+  {
+   "id": "3df60796b3",
+   "titre": "Garmin Forerunner 165, 43mm GPS running smartwatch - Black",
+   "temperature": 123,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 144.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/garmin-forerunner-165-43mm-gps-running-smartwatch-black-5020892",
+   "date": "Tue, 03 Nov 2026 07:21:46 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£144 - Amazon Slightly cheaper than the Argos deal, for those who prefer buying from Amazon. Garmin Forerunner 165, 43mm GPS running smartwatch, lightweight, AMOLED t..."
+  },
+  {
+   "id": "4638b3c21a",
+   "titre": "Sharkoon REV300 Gaming-Gehäuse in Weiß | 7 vorinstallierte RGB-Lüfter | Gutscheinfehler?",
+   "temperature": 122,
+   "categorie": "Elektronik",
+   "marchand": "eBay",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/sharkoon-rev300-gaming-gehause-in-weiss-7-vorinstallierte-rgb-lufter-gutscheinfehler-2863936",
+   "date": "Tue, 03 Nov 2026 09:35:51 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "49,99€ - eBay Das Sharkoon REV300 ist ein geräumiges Gaming-Gehäuse mit auffälliger RGB-Beleuchtung und großzügigen Kühlungsmöglichkeiten. Durch die sieben bereits vorinst..."
+  },
+  {
+   "id": "574ce51618",
+   "titre": "KitKat 4-Finger Milk Chocolate Biscuit Bar | 24x 41.5g Bars (£8.49 / £7.60 max S&S)",
+   "temperature": 122,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 8.94,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/kitkat-4-finger-milk-chocolate-biscuit-bar-24x-415g-bars-ps849-ps760-ss-5021079",
+   "date": "Tue, 03 Nov 2026 07:46:20 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.94 - Amazon KITKAT MILK CHOCOLATE BARS; Multipack of 24 KitKat 4 Finger chocolate biscuit bars with crispy wafer covered in smooth milk chocolate for a satisfying chocol..."
+  },
+  {
+   "id": "5924f77f7f",
+   "titre": "Chaussures Nike Pegasus Trail 5, 2 coloris - Tailles du 40 au 47.5",
+   "temperature": 120,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Showroomprivé",
+   "prix": 55.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-pegasus-trail-5-deuc-coloris-tailles-41-au-47-3444963",
+   "date": "Tue, 03 Nov 2026 09:29:23 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "55,90€ - Showroomprivé Baskets. Motifs ajourés devant. Lettrage et logo sur les côtés. Motifs fantaisie sur le côté. Fermeture à lacets. Mesh..."
+  },
+  {
+   "id": "29469fe5d3",
+   "titre": "RCB KIDS R9X Kinder-Elektromotorrad / Crossbike | Blau o. Rot | 25km/h max., 15km Reichweite, 36V/5,2Ah Akku, 12\" Luftreifen, Trommelbremsen",
+   "temperature": 120,
+   "categorie": "Family & Kids",
+   "marchand": "AliExpress",
+   "prix": 165.35,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/rcb-kids-r9x-kinder-elektromotorrad-crossbike-blau-o-rot-25kmh-max-15km-reichweite-36v52ah-akku-12-luftreifen-trommelbremsen-2863312",
+   "date": "Tue, 03 Nov 2026 09:33:04 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "165,35€ - AliExpress Ahoi Freunde. :) Wenn ihr kleine Nachwuchs-Stefan Everts und Ricky Carmichaels zu Hause sitzen habt, dann bekommt ihr das RCB KIDS R9X zum starke..."
+  },
+  {
+   "id": "c203a2bde5",
+   "titre": "Edifier QR30 Lautsprecher/Monior 30W RMS/ Aux/ BT5.4/ RGB Effekte/ App Einstellung/ Günstiger möglich (Black/White)",
+   "temperature": 119,
+   "categorie": "Elektronik",
+   "marchand": "AliExpress",
+   "prix": 65.39,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/edifier-qr30-lautsprechermonior-30w-rms-aux-bt54-rgb-effekte-app-einstellung-gunstiger-moglich-2863799",
+   "date": "Tue, 03 Nov 2026 09:01:46 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "65,39€ - AliExpress Guten Abend, Diesmal gibt es die QR30 wieder zu einem richtig guten Preis! Ein Pluspunkt im Vergleich zum <a href=\"https://www.mydealz.de/share-deal-..."
+  },
+  {
+   "id": "6be17a5830",
+   "titre": "Hot Wheels City Super Brandweerkazerne met brandweerauto",
+   "temperature": 118,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/hot-wheels-city-super-brandweerkazerne-met-brandweerauto-424756",
+   "date": "Tue, 03 Nov 2026 06:40:22 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€14,99 - Amazon.nl De speelset heeft vier verschillende routes en een uitschuifbare ladder van 40 cm. Met de draaiknop kies je welke route de brandweerauto neemt. Er wor..."
+  },
+  {
+   "id": "26c5747a51",
+   "titre": "[Kaufland] Timberland Herren 6inch Stiefel",
+   "temperature": 117,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Kaufland",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kaufland-timberland-herren-stiefel-2863190",
+   "date": "Tue, 03 Nov 2026 08:14:46 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "99,99€ - Kaufland Angebot bei KAUFLAND vom 09.11.26-14.11.26 Perfekt für den Winter Obermaterial aus Premium-Timberland-Leder > Schmutz- und wasser..."
+  },
+  {
+   "id": "6ab7c0419c",
+   "titre": "Dreamies Mega Pack Cat Treats, Tasty Snacks with Delicious Catnip, 6 Pouches of 200 g (£10.26 / £9.18 max S&S)",
+   "temperature": 116,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 10.8,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/dreamies-mega-pack-cat-treats-tasty-snacks-with-delicious-catnip-6-pouches-of-200-g-5020337",
+   "date": "Tue, 03 Nov 2026 07:45:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.80 - Amazon DREAMIES cat treats with Irresistible Catnip flavour is available in a convenient resealable 200g bag. Deliciously crunchy on the outs..."
+  }
+ ]
+}

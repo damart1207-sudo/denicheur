@@ -12441,7 +12441,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T12:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12510,7 +12510,19 @@
     "rentabilite": 0.249
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T13:49+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle, mais non livrable en France : l'offre vient de la boutique MSI Allemagne, qui livre uniquement l'Allemagne et l'Autriche (page lue le 03/11). Le produit y est affiché 249 € ; les 186,75 € correspondent à 25 % de moins, sans doute un code, mais la page Mydealz n'a pas pu être lue. Revendre n'a donc pas de sens non plus. En France, le neuf le plus bas est à 289,90 € (achatmoinscher) ; le modèle proche MAG 325CQRF QD E2 est à 296,53 € livré chez PcComponentes.",
+   "prix_neuf_min_idealo": 289.9,
+   "source_prix_ref": "achatmoinscher (relevé du 03/11, 5 boutiques) ; idealo non lu",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "7d915b0d06",
@@ -12548,7 +12560,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T13:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12617,7 +12629,19 @@
     "rentabilite": -0.163
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T13:49+00:00",
+  "verdict": {
+   "commentaire": "Doublon : c'est la même offre Amazon France que la fiche Dealabs à 99,74 € (déjà publiée), repérée ici en livres sur HotUKDeals. Le coût calculé de 126,54 € est faux, car il compte une importation depuis le Royaume-Uni alors que le vendeur est Amazon France.",
+   "prix_neuf_min_idealo": 132.8,
+   "source_prix_ref": "Avenue de la Brique, lu le 03/11 ; idealo non lu",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "e57c546439",
@@ -12655,7 +12679,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T13:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12724,7 +12748,19 @@
     "rentabilite": -0.055
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T13:49+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (ATH-M40x noir) à 349 zł, soit environ 82 € (titre Pepper). Rejet car la livraison en France n'est pas prouvée : page Amazon Pologne illisible, frais vers la France inconnus, et Pepper cite aussi deux magasins polonais. Avec 5 € de port comptés, on arrive à 87,02 €, soit 17 % sous les 105 € français : au-delà de 7,23 € de port, l'offre passe sous les 15 %. Dans le doute, rejet (même règle que les offres Amazon Allemagne). Pas de revente : à 89,25 € (85 % du neuf), bénéfice de 2,23 € seulement.",
+   "prix_neuf_min_idealo": 105.0,
+   "source_prix_ref": "Thomann et Woodbrass lus le 03/11 (105 €, en stock) ; achatmoinscher 105 € Amazon ; idealo non lu",
+   "economie_pct": 17.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "64585afd1d",
@@ -12762,7 +12798,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T13:21+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12831,6 +12867,18 @@
     "rentabilite": 0.011
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T13:49+00:00",
+  "verdict": {
+   "commentaire": "LEGO 72050 exact à 99,74 € chez Amazon avec coupon (Dealabs du 03/11 ; même offre vue le même jour sur HotUKDeals à 85,90 £). Sans coupon : 132,80 € livré chez Amazon (Avenue de la Brique, relevé du 03/11 à 12h32). Coupon non lu et page Amazon illisible : vérifier au panier que le prix tombe bien. Port gratuit retenu (Amazon, sans coupon, est affiché livré gratuit). Ailleurs : 132,80 € Cdiscount selon Avenue de la Brique et 137,79 € livré selon Brickfact, 132,99 € Auchan, 137,70 € livré Leclerc, 143,99 € Carrefour, 163,20 € Fnac, 179,99 € LEGO. Pas de revente : à 112,88 € (85 % du neuf), bénéfice de 13,14 € seulement, soit 13 %, sous les seuils ; aucune annonce réelle relevée.",
+   "prix_neuf_min_idealo": 132.8,
+   "source_prix_ref": "Avenue de la Brique, lu le 03/11 (Amazon et Cdiscount) ; Brickfact et achatmoinscher lus le 03/11 ; idealo non lu",
+   "economie_pct": 24.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue, coupon Amazon sans date de fin, il peut s'arrêter à tout moment",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

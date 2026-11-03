@@ -162,6 +162,39 @@ def passage(nom, test=False):
                     pp = c["prix_plancher"]
                     if not pp.get("prix_min") or pi["prix_min"] < pp["prix_min"]:
                         pp["prix_min"], pp["ou"], pp["lien"] = pi["prix_min"], "idealo", pi.get("lien")
+                    if pi.get("gtin"):
+                        c["ean"] = str(pi["gtin"])
+        # 3) Keepa (Amazon.fr) par code EAN : prix neuf, moyenne 90 jours, remise sincère, compteur de ventes
+        from . import keepa
+        for c in retenus[:25]:
+            if not c.get("ean"):
+                continue
+            try:
+                k = keepa.fiche(ean=c["ean"], pays="FR")
+            except Exception as e:
+                k = {"erreur": type(e).__name__}
+            if not k:
+                continue
+            c["keepa"] = k
+            if k.get("prix_neuf"):
+                pp = c.setdefault("prix_plancher", {"nom": c.get("nom_produit"), "sources": {}})
+                if not pp.get("prix_min") or k["prix_neuf"] < pp["prix_min"]:
+                    pp["prix_min"], pp["ou"], pp["lien"] = k["prix_neuf"], "keepa/amazon.fr", k.get("lien")
+                if k.get("moyenne_90j"):
+                    c["remise_sincere"] = round(c["prix"] / k["moyenne_90j"], 3) <= 0.95
+            if k.get("ventes_estimees_30j") is not None:
+                c["ventes_estimees_30j"] = k["ventes_estimees_30j"]
+        # 4) DataForSEO : volume de recherche Google France des produits retenus (un seul appel, ~0,09 $)
+        from . import dataforseo
+        noms = [c["nom_produit"] for c in retenus[:25] if c.get("nom_produit")]
+        try:
+            vols = dataforseo.volumes(noms, "FR") if noms else {}
+        except Exception as e:
+            vols = {"_erreur": type(e).__name__}
+        for c in retenus[:25]:
+            v = vols.get((c.get("nom_produit") or "").lower()) or vols.get(c.get("nom_produit") or "")
+            if v:
+                c["demande_google"] = v
     s_ = regles["seuils"]
     for c in retenus:
         c["canaux"] = equipe.canaux_de_vente(c, regles)

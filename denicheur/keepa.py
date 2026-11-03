@@ -61,9 +61,13 @@ def _lire(params):
     if attente > 0:
         time.sleep(attente)
     _dernier[0] = time.time()
-    req = urllib.request.Request(URL + "?" + urllib.parse.urlencode(params), headers={"User-Agent": "denicheur/1.0"})
+    req = urllib.request.Request(URL + "?" + urllib.parse.urlencode(params), headers={"User-Agent": "denicheur/1.0", "Accept-Encoding": "gzip"})
     with urllib.request.urlopen(req, timeout=40) as r:
-        return json.loads(r.read())
+        brut = r.read()
+    if brut[:2] == b"\x1f\x8b":  # Keepa répond toujours compressé (gzip)
+        import gzip
+        brut = gzip.decompress(brut)
+    return json.loads(brut)
 
 
 def fiche(ean=None, asin=None, pays="FR"):

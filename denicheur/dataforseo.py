@@ -11,6 +11,7 @@ Documentation : https://docs.dataforseo.com/v3/
 import base64
 import json
 import os
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
@@ -58,8 +59,12 @@ def _poster(chemin, taches, cout):
     b = _budget()
     req = urllib.request.Request("https://api.dataforseo.com/v3/" + chemin, data=json.dumps(taches).encode(),
                                  headers={"Authorization": auth, "Content-Type": "application/json", "User-Agent": "denicheur/1.0"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        d = json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            d = json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        corps = e.read()[:300].decode("utf-8", "replace")
+        raise RuntimeError(f"HTTP {e.code} : {corps}") from None
     _noter(b, float(d.get("cost") or cout))
     if d.get("status_code") != 20000:
         raise RuntimeError(f"DataForSEO {d.get('status_code')}: {d.get('status_message')}")

@@ -94,9 +94,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Electronics",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 5,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Deportes y aire libre": {
@@ -174,9 +174,9 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Hogar, vivienda y oficina",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 4,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Salud y belleza": {
@@ -204,19 +204,19 @@
 "source": "flux:frandroid-bonsplans",
 "cible": "",
 "categorie": "Bons plans",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 10,
-"alertes": 0
+"resultats": 13,
+"alertes": 1
 },
 "A | flux:journaldugeek-bonplan |  | Bons plans": {
 "denicheur": "A",
 "source": "flux:journaldugeek-bonplan",
 "cible": "",
 "categorie": "Bons plans",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 8,
+"resultats": 12,
 "alertes": 0
 },
 "A | flux:clubic-bonsplans |  | ?": {
@@ -224,9 +224,9 @@
 "source": "flux:clubic-bonsplans",
 "cible": "",
 "categorie": "?",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 18,
+"resultats": 27,
 "alertes": 0
 },
 "A | flux:01net-bonsplans |  | Bons Plans": {
@@ -234,9 +234,9 @@
 "source": "flux:01net-bonsplans",
 "cible": "",
 "categorie": "Bons Plans",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 6,
+"resultats": 9,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
@@ -334,6 +334,106 @@
 "source": "flux:pepper-nl-hot",
 "cible": "",
 "categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | Dyson Spot+Scrub AI | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Dyson Spot+Scrub AI",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | Dyson Spot+Scrub AI | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Dyson Spot+Scrub AI",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Dyson%20Spot%2BScrub%20AI | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Dyson%20Spot%2BScrub%20AI",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:dealabs-tendance |  | Consoles & Jeux vidéo": {
+"denicheur": "A",
+"source": "flux:dealabs-tendance",
+"cible": "",
+"categorie": "Consoles & Jeux vidéo",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-hot |  | Home & Living": {
+"denicheur": "A",
+"source": "flux:hotukdeals-hot",
+"cible": "",
+"categorie": "Home & Living",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:mydealz-new |  | Elektronik": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Elektronik",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Fashion & Accessories": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Fashion & Accessories",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 5,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Travel": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Travel",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Gaming": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Supermercado y alimentación": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Supermercado y alimentación",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

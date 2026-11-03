@@ -15685,7 +15685,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T18:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -15754,7 +15754,19 @@
     "rentabilite": -0.014
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (JBL Charge 5 noire) et offre active : 99,99 € lus sur la page Boulanger, livraison offerte en France. Mais ce n'est pas une affaire : Electro Dépôt vend la même à 99,99 € avec port gratuit (KultureGeek, relevés jusqu'au 03/11), et elle y a déjà été moins chère (79 € sur 90 jours). Économie 0 % face au neuf le moins cher. Pas de revente : à 85 % du neuf (85 €), on vend sous le prix d'achat. Déjà rejetée hier pour la même raison.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "KultureGeek, 03/11 : Electro Dépôt 99,99 €, port gratuit ; idealo non consulté",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday Boulanger, jusqu'au 30/11",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-03T19:51+00:00"
  },
  {
   "id": "a5c3607d91",
@@ -15805,7 +15817,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T19:11+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -15874,7 +15886,19 @@
     "rentabilite": 0.125
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Garmin Forerunner 255 (46 mm) à 166,33 € sur AliExpress : 190,33 € moins 24 € avec le code PHD24 (ou 11FR24), port gratuit (Phonandroid, 02/11 ; Génération-NT). Codes valables jusqu'au 18/11. Neuf ailleurs : 235 € Cdiscount Marketplace, 239 € Darty et Fnac Marketplace, port gratuit. Page AliExpress illisible : vérifier au panier le prix, le modèle et le lieu d'expédition. ATTENTION : Clubic (03/11, 17h50) annonce la même montre à 125,17 € avec le code CLU24, et Dealabs à 125,12 €, mais avec droits de douane calculés au paiement : prix final inconnu, à comparer au panier avant d'acheter. Pas de revente : prix de revente non confirmé, et cette offre à 125 € tirerait le marché vers le bas.",
+   "prix_neuf_min_idealo": 235.0,
+   "source_prix_ref": "achatmoinscher, KultureGeek et leDénicheur, 03/11 : Cdiscount Marketplace 235 € livré ; idealo non consulté",
+   "economie_pct": 29.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "jusqu'au 18/11 (promo 11.11 AliExpress), prix pouvant changer",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-03T19:51+00:00"
  },
  {
   "id": "9f5b8a5fee",
@@ -15931,7 +15955,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T19:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -16000,6 +16024,18 @@
     "rentabilite": -0.499
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon jeu (Metal Gear Solid Master Collection Vol. 1 PS5), mais rien à gagner : 31,99 £ font déjà environ 36,79 € hors port, soit 5,5 % sous les 38,94 € d'Amazon France (vendu par Amazon, port gratuit), et 52,15 € de coût calculé avec frais. Argos est une enseigne britannique, livraison en France non prouvée ; page de l'offre non lisible ici.",
+   "prix_neuf_min_idealo": 38.94,
+   "source_prix_ref": "achatmoinscher, 03/11 : Amazon 38,94 € livré ; idealo non consulté",
+   "economie_pct": 5.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-03T19:51+00:00"
  }
 ]

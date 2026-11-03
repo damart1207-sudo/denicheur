@@ -6837,7 +6837,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-02T23:01+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -6907,12 +6907,12 @@
    }
   ],
   "denicheur": "A",
-  "verifie_le": "2026-11-03T11:55+00:00",
+  "verifie_le": "2026-11-03T12:50+00:00",
   "verdict": {
-   "commentaire": "Toujours pas de prix de référence fiable. L'annonce Dealabs ne donne pas la référence exacte (probablement RH6831EO, le noir, sans preuve) et aucun prix neuf du jour n'a été trouvé pour ce modèle. Le comparateur compare au RH6821WO (119,99 €), peut-être un autre modèle. Amazon a déjà affiché 94,99 € avec coupon (RH6831EO), 99,99 € (RH6836EO, juillet) et 103,99 € (RH6836EO, 23/10) : ce prix semble habituel en promo. Pas de revente : marge trop faible. Revérifié le 03/11 à 03h50, 05h45 et 06h50 (Paris) : Dealabs et idealo impossibles à ouvrir. Listy affiche 97,83 € chez Amazon pour le RH6831EO noir (sans date), ce qui appuie cette référence, mais aucun prix neuf du jour n'est trouvé pour ce modèle chez un autre marchand. Reste à revérifier. Revérifié le 03/11 à 07h45 (Paris) : la page Dealabs s'ouvre mais ne montre ni référence ni conditions ; Amazon refuse la lecture ; aucun comparateur ne donne le RH6831EO du jour. Dealabs signale aussi d'anciens prix Amazon à 94,99 € et 89,99 € (RH6831EO, offres expirées) : 97,83 € n'a rien d'exceptionnel. Reste à revérifier. Revérifié le 03/11 à 09h (Paris) : toujours aucun prix du jour pour le RH6831EO. Reste à revérifier. Revérifié le 03/11 à 09h50 (Paris) : toujours aucun prix du jour pour le RH6831EO. Reste à revérifier. Revérifié le 03/11 à 11h (Paris) : toujours aucun prix du jour pour le RH6831EO (123comparer sans offre). Reste à revérifier. Revérifié le 03/11 à 11h45 (Paris) : toujours aucun prix du jour pour le RH6831EO (pages Cdiscount et electromenager-compare illisibles). Reste à revérifier. Revérifié le 03/11 à 12h55 (Paris) : toujours aucun prix du jour pour le RH6831EO (seul Clubic donne 99,99 € Amazon pour le RH6836EO en juillet). Reste à revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "aucune référence fiable pour le modèle exact ; idealo non lisible",
-   "economie_pct": null,
+   "commentaire": "Référence enfin trouvée : le X-Pert 6.60 est à partir de 99,99 € en France sur leDénicheur (RH6836 et RH6838, autres coloris). À 97,83 € chez Amazon, l'économie n'est que de 2 %, loin des 15 %. Prix habituel en promo : 94,99 € puis 103,99 € le 23/10 chez Amazon. Page Dealabs toujours illisible, référence exacte du noir non confirmée. Pas de revente : marge trop faible.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "leDénicheur lu le 03/11 : X-Pert 6.60 RH6836 et RH6838 dès 99,99 € (autres coloris)",
+   "economie_pct": 2.2,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
@@ -11594,7 +11594,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T11:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -11663,7 +11663,19 @@
     "rentabilite": -0.301
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Offre Argos (Royaume-Uni), à retirer en magasin d'après le lien : pas de livraison en France prouvée. Rien à gagner en plus : 214,99 € de coût calculé contre 185 € en neuf en France (achatmoinscher). Dealabs affiche même une offre AliExpress à 98,66 € pour cette montre (date non lue). Page HotUKDeals impossible à ouvrir.",
+   "prix_neuf_min_idealo": 185.0,
+   "source_prix_ref": "achatmoinscher (relevé de l'alerte, page non lue)",
+   "economie_pct": -16.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "ca0161d2e3",
@@ -11701,7 +11713,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T11:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -11770,7 +11782,19 @@
     "rentabilite": 0.252
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (NN-GM22QBEPG) et grosse différence sur le papier : 77 € sur Amazon Allemagne (titre Mydealz) contre 129 € en France, soit 36 % avec 5 € de port. Rejet car rien n'est prouvé : Amazon Allemagne refuse la lecture, offre active non confirmée, réservée Prime d'après le titre, livraison en France et frais pour un four de 12 kg inconnus. Dans le doute, rejet. Pas de revente : aucune annonce réelle relevée.",
+   "prix_neuf_min_idealo": 129.0,
+   "source_prix_ref": "achatmoinscher (page lue le 03/11 : Amazon 129 € livré, Conrad 150,78 € livré) ; LeGuide 02/11 : Galaxus.fr 136,74 €, plus bas 123,85 € le 18/09",
+   "economie_pct": 36.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "dc371085d9",
@@ -11808,7 +11832,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T11:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -11877,7 +11901,19 @@
     "rentabilite": 0.272
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (R242INW argent). Offre active : Geizhals affiche 58,77 € en stock chez Amazon Allemagne le 03/11 à 13h47, port gratuit en Allemagne. Moins chère que les 103,67 € français, mais livraison en France non prouvée : page Amazon illisible, frais vers la France inconnus pour un four de 11 kg. Dans le doute, rejet (même règle que Jonsbo D32 PRO). Pas de revente : aucune annonce réelle relevée.",
+   "prix_neuf_min_idealo": 103.67,
+   "source_prix_ref": "achatmoinscher (relevé de l'alerte, 9 boutiques, page non lue) ; KultureGeek lu le 03/11 : Cdiscount Marketplace 107,91 €, Auchan 111,31 €, Amazon France 116,92 €",
+   "economie_pct": 38.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "66406b8bee",
@@ -11934,7 +11970,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T12:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12003,7 +12039,19 @@
     "rentabilite": 0.065
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Offre vue sur Pepper Pologne, page impossible à ouvrir : code, vendeur, entrepôt et livraison en France inconnus. Le 15 % n'est pas prouvé : Dealabs montre le même processeur à 180,24 € sur AliExpress, moins cher que les 212,97 € calculés ici (date non lue), et environ 235 € sur une autre annonce. Les 275 € de l'alerte ne sont donc pas le vrai plus bas.",
+   "prix_neuf_min_idealo": 180.24,
+   "source_prix_ref": "Dealabs (offre AliExpress via PayPal, date non lue) ; ~235 € autre annonce Dealabs ; 275 € achatmoinscher ; 364,32 € Amazon France (02/11)",
+   "economie_pct": -18.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "e70ee950d4",
@@ -12041,7 +12089,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T12:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12110,7 +12158,19 @@
     "rentabilite": 0.119
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Marchand absent de l'alerte. 69,99 € existe bien en Allemagne (Geizhals et billiger.de du 03/11 : Cyberport et computeruniverse + 6,99 € de port, Netto en édition socle blanc, ce n'est peut-être pas le même modèle). Livraison en France non prouvée pour ces trois marchands, page Mydealz sans détail. Attention : couleur argent en Allemagne, « noir » sur la référence française. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 106.93,
+   "source_prix_ref": "achatmoinscher (relevé de l'alerte, 3 boutiques, page non lue)",
+   "economie_pct": 29.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "f573bd59b7",
@@ -12148,7 +12208,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T12:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -12217,7 +12277,19 @@
     "rentabilite": 0.065
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:50+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (Boom 3i), mais offre AliExpress vue sur Mydealz (Allemagne) : page AliExpress illisible, prix déjà passé de 53,10 € à 54,13 € dans le titre, code éventuel, vendeur et livraison en France inconnus. À ce prix avec 5 € de port (59,13 €), économie de 27 % sur le papier, non prouvée depuis la France. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 80.99,
+   "source_prix_ref": "achatmoinscher (relevé de l'alerte, 4 boutiques, page non lue) ; soundcore.com/fr lu le 03/11 : 129,99 € avec code -40 €",
+   "economie_pct": 27.0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "c2f1a1af70",
@@ -12255,7 +12327,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T12:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -12331,6 +12403,18 @@
     "rentabilite": 0.65
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-03T12:51+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (BU1120EU), mais offre eBay Allemagne impossible à contrôler : pages Mydealz et eBay illisibles, vendeur, état (neuf ou reconditionné) et livraison en France inconnus. Écart très fort pour du neuf : 109,04 € contre 209,26 € sur Galaxus.fr, ce qui fait penser à un reconditionné, sans preuve. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 209.26,
+   "source_prix_ref": "Galaxus.fr lu le 03/11 : 209,26 € livré, en stock ; Amazon 219,87 € (achatmoinscher, lu le 03/11) ; Powerplanet 177,52 € + 16,80 € de port, en rupture",
+   "economie_pct": 47.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

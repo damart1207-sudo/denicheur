@@ -6907,16 +6907,16 @@
    }
   ],
   "denicheur": "A",
-  "verifie_le": "2026-11-02T23:55+00:00",
+  "verifie_le": "2026-11-03T00:48+00:00",
   "verdict": {
-   "commentaire": "Prix de référence pas fiable : l'annonce ne donne pas la référence exacte. Le comparateur compare au RH6821WO (119,99 €), alors qu'Amazon vend aussi le RH6831EO et le RH6836EO, et ces modèles n'ont pas le même prix. Page Amazon non lisible. Amazon a déjà affiché ce type de modèle à 94,99 € avec coupon, 99,99 € et 103,99 € (RH6836EO, 23/10) : ce prix semble habituel en promo.",
+   "commentaire": "Toujours pas de prix de référence fiable. L'annonce Dealabs ne donne pas la référence exacte (probablement RH6831EO, le noir, sans preuve) et aucun prix neuf du jour n'a été trouvé pour ce modèle. Le comparateur compare au RH6821WO (119,99 €), peut-être un autre modèle. Amazon a déjà affiché 94,99 € avec coupon (RH6831EO), 99,99 € (RH6836EO, juillet) et 103,99 € (RH6836EO, 23/10) : ce prix semble habituel en promo. Pas de revente : marge trop faible.",
    "prix_neuf_min_idealo": null,
-   "source_prix_ref": "aucune référence fiable pour le modèle exact ; idealo non consulté",
+   "source_prix_ref": "aucune référence fiable pour le modèle exact ; idealo non lisible",
    "economie_pct": null,
-   "duree_offre": "inconnue",
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
    "demande_confirmee": "sans objet"
   }
  },
@@ -7433,7 +7433,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T00:01+00:00",
-  "statut": "a_verifier",
+  "statut": "valide",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 499.0,
@@ -7517,7 +7517,19 @@
     "rentabilite": 0.517
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "LEGO 76294 exact (set complet, exclu Cdiscount) à 269,99 € + 4,99 € de port, soit 274,98 € livré (plus bas relevé par Brickfact). Offre sur Dealabs du 03/11 non signalée expirée et prix confirmé par Chocobonplan (page mise à jour le 02/11). Attention : page Cdiscount illisible ici, stock et vendeur non vus, et 123comparer.be la disait indisponible depuis le 26/10 : à contrôler au panier. Neuf ailleurs : 494,99 € Brickeez (Brickfact), 499 € Amazon (idealo, achatmoinscher, Bonne-Promo). Prix public LEGO 329,99 €, indisponible sur lego.fr, sortie de gamme annoncée 12/2026. Revente prudente 390 € (valeur secondaire Brickfact 391,86 €, Vinted médiane 455 € demandés sur 6 annonces). Risque : tant que Cdiscount vend à 270 €, les acheteurs informés ne paieront pas 390 €, il faudra peut-être attendre la fin du stock. Colis de 4,4 kg.",
+   "prix_neuf_min_idealo": 494.99,
+   "source_prix_ref": "Brickfact (Brickeez, livré) ; 499 € idealo, achatmoinscher et Bonne-Promo (Amazon)",
+   "economie_pct": 44.4,
+   "prix_revente_verifie": 390.0,
+   "canal": "leboncoin / vinted",
+   "marge_nette_verifiee": 115.02,
+   "duree_offre": "inconnue, prix vu dès le 26-27/10, stock non garanti",
+   "demande_confirmee": "partielle (annonces Vinted et estimation Brickfact, pas de ventes réelles lues)"
+  },
+  "verifie_le": "2026-11-03T00:48+00:00"
  },
  {
   "id": "ba8a948c56",
@@ -7542,7 +7554,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T00:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 799.0,
@@ -7626,6 +7638,18 @@
     "rentabilite": 0.66
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Erreur de prix de l'alerte : 400 € est le montant de la remise, pas le prix. Le robot est à 799 € au lieu de 1 199 € chez plusieurs marchands (article repris par Titres Presse ; Boulanger, Fnac, Cdiscount, Carrefour à 799 € sur Clubic ; idealo 799 €). Aucune économie par rapport au neuf le plus bas.",
+   "prix_neuf_min_idealo": 799.0,
+   "source_prix_ref": "idealo et Clubic",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday, sans objet",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-03T00:48+00:00"
  }
 ]

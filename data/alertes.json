@@ -16403,7 +16403,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T22:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 503.0,
@@ -16480,7 +16480,19 @@
     "rentabilite": 0.186
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (Aairsk GT300 26 pouces, 250 W, 36 V 10 Ah) et prix neuf France lu : 466 € livrés chez Darty Marketplace, 523 € Pixmania (idealo 503 €). Mais offre britannique à 231,99 £ avec code et PayPal : page AliExpress illisible, code, entrepôt et livraison en France non confirmés (la page hotukdeals ne les donne pas). Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 466.0,
+   "source_prix_ref": "achatmoinscher lu le 03/11 (Darty Marketplace, livraison gratuite)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (code AliExpress)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-03T23:49+00:00"
  },
  {
   "id": "be739c91b8",
@@ -16501,11 +16513,11 @@
    "lien": "https://www.idealo.fr/prix/205280618/lego-star-wars-le-starcruiser-home-one-75405.html"
   },
   "ecart_vs_neuf_min": 0.78,
-  "economie_pct": 22,
+  "economie_pct": 17,
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T23:12+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 52.79,
@@ -16589,7 +16601,19 @@
     "rentabilite": -0.193
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : LEGO Star Wars 75405 (EAN 5702017817576, même fiche idealo). Fiche E.Leclerc lue : 38,99 € au lieu de 64,99 €, vendu par E.Leclerc, en stock, offre du 04/11 au 10/11/2026. Retrait en magasin offert (38,99 €), point relais dès 4,90 € (43,89 € livrés). Neuf ailleurs : 52,79 € sur idealo (hors port probable), 54,40 € livrés chez BrickPlus (50 € + port), 59,99 € livrés chez Cdiscount (Avenue de la Brique, 03/11 au soir). Économie 17 % livré, 26 % en retrait gratuit, face à 52,79 €. Attention : stock du retrait variable selon le magasin. Pas de revente : à 85 % du neuf (44,87 €), bénéfice de 5,88 € en retrait gratuit, sous le seuil de 8 € ; annonces Vinted de l'alerte mélangées (autre LEGO).",
+   "prix_neuf_min_idealo": 52.79,
+   "source_prix_ref": "idealo (robot, 14 offres), contrôlé avec Avenue de la Brique le 03/11 (BrickPlus 54,40 € livrés)",
+   "economie_pct": 17,
+   "prix_revente_verifie": 44.87,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 5.88,
+   "duree_offre": "jusqu'au 10/11/2026",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-03T23:49+00:00"
  },
  {
   "id": "925aadf3c7",
@@ -16627,7 +16651,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T23:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -16703,6 +16727,18 @@
     "rentabilite": 0.023
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (Dell Pro WL5024). Offre réelle côté Royaume-Uni : PriceSpy UK montre Joybuy à 87,34 £ en stock, coupon à 84,34 £ selon hotukdeals. Mais c'est Joybuy UK : aucune preuve de livraison en France, et aucune offre équivalente trouvée par recherche web sur le site français de Joybuy. Neuf France : 157,92 € (achatmoinscher), 171,82 € PcComponentes, 189,70 € Galaxus. Livraison en France non confirmée : rejet.",
+   "prix_neuf_min_idealo": 157.92,
+   "source_prix_ref": "achatmoinscher (alerte), comparateur-gamer et Galaxus lus le 03/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (coupon Joybuy UK)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-03T23:49+00:00"
  }
 ]

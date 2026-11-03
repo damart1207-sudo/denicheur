@@ -1,12 +1,12 @@
 name: Dénicheur
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
-#  toutes les 10 min -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
+#  toutes les heures (5 tours de 10 min dans un seul lancement) -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
 #  02:00 UTC = 10:00 à Pékin = 03:00 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
 on:
   schedule:
     - cron: "0 2 * * *"
-    - cron: "*/10 * * * *"
+    - cron: "5 * * * *"
   workflow_dispatch:
     inputs:
       passage:
@@ -40,15 +40,17 @@ on:
 permissions:
   contents: write
 
+# Deux files séparées : la veille (en boucle) ne doit JAMAIS annuler le passage quotidien en attente.
+# (Avant le 03/11 : une seule file, et le passage de 2 h UTC était annulé chaque nuit par la veille.)
 concurrency:
-  group: denicheur
+  group: denicheur-${{ (github.event.inputs.veille == 'true' || github.event.schedule == '5 * * * *') && 'veille' || 'passage' }}
   cancel-in-progress: false
 
 jobs:
   passage:
     runs-on: ubuntu-latest
     # garde-fou : 58 min pour la veille en boucle (5 tours espacés de 10 min), 25 min pour le reste
-    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '*/10 * * * *') && 58 || 25 }}
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '5 * * * *') && 58 || 25 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -79,7 +81,7 @@ jobs:
             python outils/test_playwright.py
             exit 0
           fi
-          if [ "${{ github.event.schedule }}" = "*/10 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
+          if [ "${{ github.event.schedule }}" = "5 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
             pip install -q pytrends "urllib3<2" || true
             git config user.name "denicheur-bot"
             git config user.email "denicheur-bot@users.noreply.github.com"

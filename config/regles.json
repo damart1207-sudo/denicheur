@@ -1,5 +1,5 @@
 {
-  "_info": "Règles de calcul de marge et seuils. Modifiables sans toucher au code. taux_gbp_eur : taux approximatif livre -> euro.",
+  "_info": "Règles de calcul de marge et seuils. Modifiables sans toucher au code. taux_gbp_eur : taux approximatif livre -> euro. idealo_passage_max : nombre de meilleures affaires du passage dont le prix neuf est lu sur idealo (robot Apify, ~0,01 $ chacune).",
   "prix_min": 8,
   "prix_max": 600,
   "taille_lot": 40,
@@ -110,5 +110,6 @@
       "prix_vs_neuf_min": 1.0,
       "note": "vendu par la vidéo, pas par le prix"
     }
-  }
+  },
+  "idealo_passage_max": 10
 }

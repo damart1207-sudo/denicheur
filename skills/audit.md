@@ -4,9 +4,13 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 **validée** ou **rejetée** avec un motif court, en français simple.
 
 ## Règles de vérification (pour chaque affaire de `data/dernier_passage.json` → `candidats`)
-1. **Prix neuf le plus bas en France aujourd'hui** : vérifier sur **idealo.fr** dans le navigateur intégré
-   (recherche `idealo.fr/prechcat.html?q=<nom_produit>`, à rythme humain, jamais en masse), puis recherche web.
-   Si le navigateur intégré est injoignable (ordinateur de David éteint) : recherche web seulement, et le dire.
+1. **Prix neuf le plus bas en France aujourd'hui**, dans cet ordre :
+   a. le champ `idealo` de l'affaire (ou `prix_plancher.ou == "idealo"`) : relevé automatiquement par le robot
+      Apify pendant le passage pour les meilleures affaires. **Il compte comme le prix idealo** : contrôler
+      seulement que `idealo.titre` est bien le même produit (même modèle, même capacité).
+   b. sinon **idealo.fr** dans le navigateur intégré, si l'ordinateur de David est joignable
+      (recherche `idealo.fr/prechcat.html?q=<nom_produit>`, à rythme humain, jamais en masse) ;
+   c. sinon recherche web (comparateurs, sites marchands français) : le dire dans le commentaire.
    Les prix eBay sont des prix DEMANDÉS : ils ne remplacent jamais idealo.
    - Si le produit est déjà moins cher ou au même prix ailleurs en neuf → **rejet**.
 2. **Prix de revente réaliste** sur la plateforme visée :
@@ -18,7 +22,8 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
    - Deux niveaux (la marge est calculée sur le MEILLEUR canal de vente, voir `canaux`) :
      * « valide » (sûr) : marge ≥ 8 € ET ≥ 30 % du coût ;
      * « bon » (à tenter en petite quantité) : marge ≥ 20 € ET ≥ 15 % du coût.
-     Le prix neuf le plus bas d'idealo est OBLIGATOIRE avant tout « valide » ou « bon ».
+     Le prix neuf le plus bas d'idealo (robot ou navigateur) est OBLIGATOIRE avant tout « valide » ou « bon ».
+     Sans idealo mais avec un prix neuf français sûr (page marchand lue) : « bon » au maximum, jamais « valide ».
 4. **Rejets automatiques** : achat impossible depuis la France (magasin physique étranger, carte de
    fidélité obligatoire), batterie seule, alimentaire, produit sous licence douteuse, demande en chute
    (après un événement), taille unique pour un vêtement, « erreur de prix » probable (le dire).

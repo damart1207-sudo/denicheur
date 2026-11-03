@@ -137,16 +137,31 @@ def passage(nom, test=False):
         bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=12)
     # prix réels des annonces eBay (API officielle, gratuite) : tous les passages
     bilan_ebay = {"faits": 0, "erreurs": ["mode test"]} if test else ebay.controler(retenus)
-    # prix plancher automatique sur les comparateurs (prix neuf le plus bas en France, produit exact)
+    # prix plancher automatique (prix neuf le plus bas en France, produit exact) :
+    # 1) comparateurs gratuits ; 2) idealo via le robot Apify pour les meilleures affaires (budget plafonné).
+    # NB : la variable s'appelle nom_p, pas nom : « nom » est le nom du passage (europe/asie) et ne doit pas être écrasé.
     if not test:
-        from . import comparateurs
-        for c in retenus[:25]:
-            nom = c.get("nom_produit")
-            if nom:
+        from . import apify, comparateurs
+        nb_idealo = int(regles.get("idealo_passage_max", 10))
+        for i, c in enumerate(retenus[:25]):
+            nom_p = c.get("nom_produit")
+            if not nom_p:
+                continue
+            try:
+                c["prix_plancher"] = comparateurs.prix_plancher(nom_p)
+            except Exception as e:
+                c["prix_plancher"] = {"erreur": type(e).__name__}
+            if i < nb_idealo:
                 try:
-                    c["prix_plancher"] = comparateurs.prix_plancher(nom)
+                    pi = apify.prix_idealo(nom_p)
                 except Exception as e:
-                    c["prix_plancher"] = {"erreur": type(e).__name__}
+                    pi = None
+                    c["idealo_erreur"] = type(e).__name__
+                if pi:
+                    c["idealo"] = pi
+                    pp = c["prix_plancher"]
+                    if not pp.get("prix_min") or pi["prix_min"] < pp["prix_min"]:
+                        pp["prix_min"], pp["ou"], pp["lien"] = pi["prix_min"], "idealo", pi.get("lien")
     s_ = regles["seuils"]
     for c in retenus:
         c["canaux"] = equipe.canaux_de_vente(c, regles)

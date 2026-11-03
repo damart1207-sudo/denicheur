@@ -42,13 +42,100 @@
  },
  "dataforseo": {
   "volumes": {
-   "exception": "RuntimeError: HTTP 403 : {\n    \"version\": \"0.1.20261103\",\n    \"status_code\": 40104,\n    \"status_message\": \"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\n    \"time\": \"0 sec.\",\n    \"cost\": 0,\n    \"tasks_count\": 0,\n "
+   "garmin forerunner 265": {
+    "volume_mensuel": 18100,
+    "concurrence": "HIGH",
+    "cpc": 0.82,
+    "trois_derniers_mois": [
+     22200,
+     27100,
+     18100
+    ]
+   },
+   "ryzen 7 7800x3d": {
+    "volume_mensuel": 12100,
+    "concurrence": "HIGH",
+    "cpc": 0.54,
+    "trois_derniers_mois": [
+     12100,
+     14800,
+     12100
+    ]
+   },
+   "casio ga-2100": {
+    "volume_mensuel": 880,
+    "concurrence": "HIGH",
+    "cpc": 0.25,
+    "trois_derniers_mois": [
+     1000,
+     1000,
+     1000
+    ]
+   },
+   "dyson v12": {
+    "volume_mensuel": 9900,
+    "concurrence": "HIGH",
+    "cpc": 0.51,
+    "trois_derniers_mois": [
+     6600,
+     6600,
+     6600
+    ]
+   },
+   "lego technic": {
+    "volume_mensuel": 74000,
+    "concurrence": "HIGH",
+    "cpc": 0.22,
+    "trois_derniers_mois": [
+     40500,
+     40500,
+     33100
+    ]
+   }
   },
   "tendances": {
-   "exception": "RuntimeError: HTTP 403 : {\"version\":\"0.1.20261103\",\"status_code\":40104,\"status_message\":\"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tasks_error\":0,\"tasks\":null}"
+   "garmin forerunner 265": {
+    "actuel": 48,
+    "moyenne": 27.6,
+    "tendance": "monte",
+    "pays": "FR"
+   },
+   "dyson v12": {
+    "actuel": 46,
+    "moyenne": 21.1,
+    "tendance": "monte",
+    "pays": "FR"
+   }
   },
   "decalage_hype": {
-   "exception": "RuntimeError: HTTP 403 : {\"version\":\"0.1.20261103\",\"status_code\":40104,\"status_message\":\"Please verify your account before using the API. You can complete verification in the user panel: https:\\/\\/app.dataforseo.com\\/ .\",\"time\":\"0 sec.\",\"cost\":0,\"tasks_count\":0,\"tasks_error\":0,\"tasks\":null}"
+   "mot": "cmf watch pro 2",
+   "pays": {
+    "US": {
+     "tendance": "monte",
+     "actuel": 0,
+     "moyenne": 2.2
+    },
+    "DE": {
+     "tendance": "monte",
+     "actuel": 24,
+     "moyenne": 6.9
+    },
+    "ES": {
+     "tendance": "baisse",
+     "actuel": 6,
+     "moyenne": 1.4
+    },
+    "FR": {
+     "tendance": "monte",
+     "actuel": 12,
+     "moyenne": 1.3
+    }
+   },
+   "verdict": "déjà en France",
+   "monte_dans": [
+    "US",
+    "DE"
+   ]
   }
  }
 }

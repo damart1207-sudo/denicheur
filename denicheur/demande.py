@@ -58,9 +58,37 @@ def tendances(force=False):
     return d
 
 
-def est_demande(titre, d=None):
+def liste_de_chasse(d=None, n_bingo=40, n_hype=40):
+    """LISTE DE CHASSE d'Amigo pour Idéfix et Chasseur : recherches idealo en hausse (FR, DE, ES, IT)
+    + produits BINGO (très recherchés sur Google, peu de vendeurs) + hype étrangère (USA/Japon absente ou mal
+    vendue en France). Même format partout : recherche, popularite, hausse_pct, pays, origine."""
     d = d or _lire()
-    for x in d.get("liste", []):
+    liste = list(d.get("liste", []))
+    deja = {x["recherche"].lower() for x in liste}
+
+    def _lire_f(rel, defaut):
+        try:
+            return json.load(open(os.path.join(RACINE, rel), encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return defaut
+
+    for x in _lire_f("data/bingo.json", {}).get("bingos", [])[:n_bingo]:
+        q = x.get("mot_cle") or ""
+        if q and q.lower() not in deja:
+            deja.add(q.lower())
+            liste.append({"recherche": q, "popularite": x.get("recherches_mois"), "hausse_pct": 0, "pays": "FR",
+                          "origine": "bingo", "vendeurs": x.get("vendeurs"), "asin": x.get("asin")})
+    for x in _lire_f("data/hype_etranger.json", {}).get("produits", [])[-n_hype:]:
+        q = (x.get("titre") or "")[:60]
+        if q and q.lower() not in deja:
+            deja.add(q.lower())
+            liste.append({"recherche": q, "popularite": x.get("ventes_30j_labas"), "hausse_pct": 0, "pays": "FR",
+                          "origine": f"hype {x.get('pays')}", "asin": x.get("asin")})
+    return liste
+
+
+def est_demande(titre, d=None):
+    for x in liste_de_chasse(d):
         if comparateurs.correspond(titre, x["recherche"]):
             return x
     return None
@@ -83,7 +111,10 @@ def chasse_ciblee(regles, n=3):
     apify.CONTEXTE["denicheur"] = "C"
     trouves = []
     vus_A = _annonces_A()
-    for x in [x for x in d.get("liste", []) if x["pays"] == "FR"][:n]:
+    # priorité : bingos (très recherchés, peu vendus), puis hype étrangère, puis recherches idealo en hausse
+    chasse = [x for x in liste_de_chasse(d) if x["pays"] == "FR"]
+    chasse.sort(key=lambda x: (0 if x.get("origine") == "bingo" else 1 if str(x.get("origine", "")).startswith("hype") else 2))
+    for x in chasse[:n]:
         q = x["recherche"]
         deja_A = [a for a in vus_A if a.get("prix") and comparateurs.correspond(a["titre"], q)]
         pi = apify.prix_idealo(q)

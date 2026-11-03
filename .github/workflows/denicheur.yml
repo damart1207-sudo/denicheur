@@ -124,5 +124,11 @@ jobs:
           git add -A data docs
           if git diff --cached --quiet; then echo "Rien de nouveau."; exit 0; fi
           git commit -q -m "Passage du $(date -u +%Y-%m-%dT%H:%MZ)"
-          git pull --rebase origin main
-          git push origin HEAD:main
+          # la veille tourne en parallèle et écrit les mêmes fichiers générés : en cas de conflit, la version
+          # du passage gagne (-X theirs), puis la page est reconstruite au tour de veille suivant.
+          for essai in 1 2 3 4 5; do
+            git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 15
+          done
+          echo "Impossible de pousser les résultats après 5 essais" && exit 1

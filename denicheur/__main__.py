@@ -412,10 +412,11 @@ def passage(nom, test=False):
 
     # BINGO (une fois par jour, au passage de la nuit ; les autres passages relisent data/bingo.json)
     if not test:
-        from . import bingo, sante
+        from . import bingo, sante, telegram
         if nom == "nuit":
             etape("bingo")
             sante.protege("bingo", bingo.jour)
+            sante.protege("telegram recherches", telegram.plus_recherches)
             from . import sourceur
             etape("sourceur")
             sante.protege("sourceur", sourceur.jour, 10)

@@ -97,5 +97,29 @@ def alerte(x):
     return envoyer(texte)
 
 
+def plus_recherches(n=15):
+    """Les produits les plus recherchés sur Google en France (volumes DataForSEO, data/bingo.json), avec la concurrence."""
+    try:
+        b = json.load(open(os.path.join(RACINE, "data/bingo.json"), encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    m = sorted([x for x in b.get("meilleurs", []) if x.get("recherches_mois")], key=lambda x: -x["recherches_mois"])[:n]
+    if not m:
+        return False
+    def conc(x):
+        v = x.get("vendeurs")
+        if v is None:
+            return "concurrence inconnue"
+        return ("🟢 peu" if v <= 4 else "🟠 moyenne" if v <= 9 else "🔴 forte") + f" ({v} vendeurs Amazon)"
+    lignes = [f"<b>🔎 Les plus recherchés en France (Google, par mois)</b> — mise à jour du {_e(str(b.get('maj', ''))[:10])}"]
+    for i, x in enumerate(m, 1):
+        lignes.append(f"\n{i}. <b>{_e(x.get('mot_cle'))}</b>{' · 💎 BINGO' if x.get('bingo') else ''}\n"
+                      f"{x['recherches_mois']:,} recherches/mois".replace(",", " ")
+                      + f" · prix Amazon {_eur(x.get('prix'))} · {conc(x)}"
+                      + (f" · ventes Amazon 30 jours ≈ {x['ventes_30j']}" if x.get("ventes_30j") is not None else ""))
+    lignes.append("\n🟢 peu de vendeurs = bonne occasion · 🔴 beaucoup = on évite sauf prix bien plus bas")
+    return envoyer("\n".join(lignes))
+
+
 if __name__ == "__main__":
     print("envoyé" if envoyer(" ".join(sys.argv[1:]) or "Test du robot Dénicheur : ça marche.") else "non envoyé (secrets absents ou erreur)")

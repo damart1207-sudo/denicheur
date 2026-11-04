@@ -204,8 +204,16 @@ def collecter(connexion=False):
     os.makedirs(D_ECH, exist_ok=True)
     resultats, etat = [], {}
     with sync_playwright() as p:
-        ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
-                                                   args=["--disable-blink-features=AutomationControlled"])
+        for essai in range(6):  # profil occupé (un autre tour encore ouvert) : Chrome sort avec le code 21 -> on attend et on réessaie
+            try:
+                ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
+                                                           args=["--disable-blink-features=AutomationControlled"])
+                break
+            except Exception as e:
+                if essai == 5:
+                    raise
+                print("navigateur occupé, nouvel essai dans 1 minute…", type(e).__name__)
+                time.sleep(60)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         if connexion:
             for s in ("https://www.veepee.fr/", "https://www.showroomprive.com/", "https://www.zalando-prive.fr/", "https://www.bazarchic.com/"):

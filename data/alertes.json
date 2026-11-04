@@ -18093,7 +18093,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T07:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -18194,7 +18194,19 @@
     "rentabilite": -0.117
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Casio AE-1200WH-1AVEF), mais l'offre à 27,96 € vient de Pepper Pologne, donc Zalando Pologne : page de l'offre illisible d'ici et livraison en France non confirmée. Sur Zalando France, la fiche lue affiche 39,95 € livrés, sans promotion, soit à peine 6 % sous les 42,45 € d'achatmoinscher. Revente sous le seuil.",
+   "prix_neuf_min_idealo": 42.45,
+   "source_prix_ref": "achatmoinscher (robot) ; Zalando.fr lu le 04/11 : 39,95 € livrés",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "cdbb4acd3a",
@@ -18219,7 +18231,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T07:52+00:00",
-  "statut": "a_verifier",
+  "statut": "bon",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 124.56,
@@ -18328,7 +18340,19 @@
     "rentabilite": 0.105
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : LEGO Super Mario World Mario et Yoshi 71438 (EAN 5702017592770, même fiche idealo). Fiche E.Leclerc lue : 84,49 € au lieu de 129,99 €, vendu par E.Leclerc, en stock, offre du 04/11 au 10/11/2026, remise immédiate sans carte. Retrait en magasin gratuit (84,49 €), point relais dès 4,90 € (89,39 € livrés). Neuf ailleurs : 124,56 € sur idealo (hors port probable), 125,99 € + 4,99 € de port chez Golden Brick, 132,99 € livrés chez Brickeez, Avenue de la Brique lu le 04/11. Économie 28 % livré, 32 % en retrait. Revente : prix retenu 105,88 € (85 % du neuf), sur Vinted de 95 à 127 € (4 annonces). Bénéfice 21,39 € en retrait gratuit, soit 25 % ; seulement 16,49 € si livré en point relais. Risques : déjà vu à 69,68 € sur Amazon en 90 jours, d'autres acheteurs Leclerc revendront aussi, stock du retrait variable selon le magasin.",
+   "prix_neuf_min_idealo": 124.56,
+   "source_prix_ref": "idealo (robot, 8 offres), contrôlé avec Avenue de la Brique le 04/11 (Golden Brick 130,98 € livrés)",
+   "economie_pct": 28.2,
+   "prix_revente_verifie": 105.88,
+   "canal": "vinted / leboncoin",
+   "marge_nette_verifiee": 21.39,
+   "duree_offre": "jusqu'au 10/11/2026",
+   "demande_confirmee": "moyenne (keepa : ~14 ventes par mois sur Amazon ; Vinted 4 annonces)"
+  }
  },
  {
   "id": "43e1deae19",
@@ -18353,7 +18377,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T07:52+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 71.63,
@@ -18462,7 +18486,19 @@
     "rentabilite": -0.084
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : LEGO Animal Crossing 77057 (EAN 5702017815961). Fiche E.Leclerc lue : 48,59 € au lieu de 80,99 €, exclu web, vendu par E.Leclerc, en stock, offre du 04/11 au 10/11/2026. Retrait gratuit (48,59 €), point relais dès 4,90 € (53,49 € livrés). Référence prudente : 65,99 € relevé par le robot sur idealo (71,63 € sur la fiche idealo). Avenue de la Brique lu le 04/11 : 79,48 € livrés chez Galaxus, 79,90 € chez Brickmo. Économie 19 % livré, 26 % en retrait. Pas de revente : à 85 % du neuf (56,09 €), bénéfice de 7,50 € en retrait gratuit, sous le seuil de 8 € ; Vinted à 55 € (1 annonce).",
+   "prix_neuf_min_idealo": 65.99,
+   "source_prix_ref": "idealo (robot) ; Avenue de la Brique lu le 04/11 (Galaxus 79,48 € livrés)",
+   "economie_pct": 18.9,
+   "prix_revente_verifie": 56.09,
+   "canal": "vinted",
+   "marge_nette_verifiee": 7.5,
+   "duree_offre": "jusqu'au 10/11/2026",
+   "demande_confirmee": "non (keepa : ~13 ventes par mois)"
+  }
  },
  {
   "id": "9781016e13",
@@ -18487,7 +18523,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T07:52+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 72.9,
@@ -18589,7 +18625,19 @@
     "rentabilite": -0.099
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : LEGO DREAMZzz 71499. Page de l'opération E.Leclerc lue : 55,99 € au lieu de 79,99 €, vendu par E.Leclerc ; achatmoinscher confirme 55,99 € + 4,90 € de port, soit 60,89 € livrés (relevé du 04/11). Fiche produit du set non lue, opération du 04/11 au 10/11/2026 d'après Hoth Bricks. Neuf ailleurs : 72,90 € sur idealo (Alternate, 82,80 € avec le port), 74,99 € livrés chez Carrefour et Fnac, achatmoinscher lu le 04/11. Économie 16 % livré, 23 % en retrait gratuit. Pas de revente : à 85 % du neuf (61,97 €), bénéfice de 5,98 € en retrait gratuit, sous le seuil de 8 €.",
+   "prix_neuf_min_idealo": 72.9,
+   "source_prix_ref": "idealo (robot, 16 offres), contrôlé avec achatmoinscher le 04/11 (Carrefour et Fnac 74,99 € livrés)",
+   "economie_pct": 16.5,
+   "prix_revente_verifie": 61.97,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 5.98,
+   "duree_offre": "jusqu'au 10/11/2026",
+   "demande_confirmee": "non (keepa : ~15 ventes par mois)"
+  }
  },
  {
   "id": "fbf4e5aa2c",
@@ -18614,7 +18662,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T08:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 42.92,
@@ -18698,7 +18746,19 @@
     "rentabilite": -0.351
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (CMF Buds 2 Plus), mais offre AliExpress avec code britannique (Vertex UK Store) : page de l'offre illisible d'ici, prix et code non confirmés pour la France. Le coût estimé jusqu'en France, 45,41 €, dépasse les 42,92 € d'idealo. Revente perdante.",
+   "prix_neuf_min_idealo": 42.92,
+   "source_prix_ref": "idealo (robot, 8 offres)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "aedd1381f4",
@@ -18723,7 +18783,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T08:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 33.39,
@@ -18807,7 +18867,19 @@
     "rentabilite": -0.282
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO 77037) et offre active : 24,74 € chez E.Leclerc jusqu'au 10/11, soit 29,64 € livrés. Mais Amazon s'est aligné : 24,74 € + 3,99 € de port, soit 28,73 € livrés (Avenue de la Brique, 04/11 à 9 h 31). Moins cher livré qu'E.Leclerc, et même en retrait gratuit l'économie n'est que de 14 %. Revente trop faible.",
+   "prix_neuf_min_idealo": 28.73,
+   "source_prix_ref": "Avenue de la Brique lu le 04/11 (Amazon 28,73 € livrés) ; idealo robot 33,39 €",
+   "economie_pct": -3.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "jusqu'au 10/11/2026 chez E.Leclerc",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "2927a6c644",
@@ -18832,7 +18904,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T08:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 167.39,
@@ -18934,7 +19006,19 @@
     "rentabilite": -0.304
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (MSI PRO MP273U), mais offre chez ao.com, boutique britannique : aucune livraison en France trouvée. Coût estimé 194,30 € une fois importé, plus cher que les 167,39 € d'idealo. Revente perdante.",
+   "prix_neuf_min_idealo": 167.39,
+   "source_prix_ref": "idealo (robot, 9 offres) ; Amazon.fr 169,19 € (keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "c6c2f007b3",
@@ -18959,7 +19043,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T08:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 157.99,
@@ -19075,7 +19159,19 @@
     "rentabilite": 0.035
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Einhell TE-CR 18 Li DAB+, sans batterie), mais voelkner n'annonce des livraisons qu'en Allemagne (page de livraison lue). Offre allemande à 118 €, inachetable directement depuis la France. Prix neuf en France : 157,99 € sur idealo.",
+   "prix_neuf_min_idealo": 157.99,
+   "source_prix_ref": "idealo (robot, 7 offres) ; Bricozor 159,90 € + port lu le 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "03c9732889",
@@ -19100,7 +19196,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T08:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 143.56,
@@ -19184,6 +19280,18 @@
     "rentabilite": -0.021
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T08:51+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Roborock E5), mais prix non confirmé : page Chollometro illisible, et le comparateur kulturegeek affiche Amazon Espagne à 124,46 €, pas 112,01 €. À 124,46 € + port, l'économie tombe sous 15 % face aux 142,97 € français. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 142.97,
+   "source_prix_ref": "idealo (robot, 4 offres, marketplaces) ; kulturegeek lu le 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  }
 ]

@@ -68,7 +68,7 @@ def construire():
             "vendeurs": c.get("vendeurs_amazon"), "concurrence": c.get("concurrence_amazon"),
             "revente": v.get("prix_revente_verifie") or c.get("prix_revente_prudent"), "marge": v.get("marge_nette_verifiee") if v.get("marge_nette_verifiee") is not None else c.get("marge_verifiee"),
             "canal": v.get("ou_vendre") or c.get("plateforme_revente"), "ean": c.get("ean"), "ventes30": k.get("ventes_estimees_30j"),
-            "volume_google": (c.get("demande_google") or {}).get("volume_mensuel"), "bingo": bool(c.get("bingo")),
+            "volume_google": (c.get("demande_google") or {}).get("volume_mensuel"), "bingo": bool(c.get("bingo")), "annonces_ebay": c.get("annonces_ebay"), "mot_cle": c.get("mot_cle"),
             "date": p.get("horodatage", "").replace("_", " ")[:16], "motif": v.get("commentaire") or (c.get("verification") or {}).get("remarque") or "",
         })
 
@@ -190,7 +190,7 @@ function carte(x){const m=x.marge;const cm=typeof m==="number"?`<span class="mar
  return `<div class="carte ${x.feu}"><h3><span class="badge ${x.feu}">${e(x.verdict)}</span><span class="badge den">${e(x.denicheur)}</span>${x.bingo?'<span class="badge orange">BINGO</span>':""}<a href="${e(x.lien)}" target="_blank">${e(x.titre)}</a></h3>
  <div class="ligne"><b>${eur(x.prix)}</b> chez ${e(x.marchand)} (${e(x.pays)})${x.cout?` · coût rendu ${eur(x.cout)}`:""}${x.economie?` · <b>-${x.economie} %</b> vs neuf`:""}</div>
  <div class="ligne">Neuf le moins cher : ${eur(x.neuf_min)}${x.neuf_ou?` (${e(x.neuf_ou)})`:""} · Occasion : ${x.occ_bas||x.occ_haut?`${eur(x.occ_bas)} → ${eur(x.occ_haut)}`:"—"} · Revente retenue : ${eur(x.revente)} sur ${e(x.canal)} · Marge : ${cm}</div>
- <div class="ligne">${x.vendeurs!=null?`vendeurs Amazon : ${x.vendeurs} (concurrence ${e(x.concurrence)}) · `:""}${x.ean?`EAN ${e(x.ean)} · `:""}${x.ventes30!=null?`ventes Amazon 30 j : ${x.ventes30} · `:""}${x.volume_google?`recherches Google : ${x.volume_google}/mois · `:""}${x.duree?`durée : ${e(x.duree)} · `:""}${e(x.date)} · source ${e(x.source)}</div>
+ <div class="ligne">${x.vendeurs!=null?`vendeurs Amazon : ${x.vendeurs} (concurrence ${e(x.concurrence)}) · `:""}${x.ean?`EAN ${e(x.ean)} · `:""}${x.ventes30!=null?`ventes Amazon 30 j : ${x.ventes30} · `:""}${x.volume_google?`recherches Google : ${x.volume_google}/mois (« ${e(x.mot_cle)} ») · `:""}${x.annonces_ebay!=null?`annonces eBay neuves : ${x.annonces_ebay} · `:""}${x.duree?`durée : ${e(x.duree)} · `:""}${e(x.date)} · source ${e(x.source)}</div>
  ${x.motif?`<div class="motif">${e(x.motif)}</div>`:""}</div>`;}
 function rendre(){document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("actif",b.dataset.k===actif));document.querySelectorAll("section").forEach(s=>s.classList.toggle("actif",s.id==="s_"+actif));
  document.getElementById("barre").style.display=["affaires","alertes","radar"].includes(actif)?"flex":"none";let html="",n=0;

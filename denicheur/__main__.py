@@ -307,16 +307,27 @@ def passage(nom, test=False):
             if k.get("ventes_estimees_30j") is not None:
                 c["ventes_estimees_30j"] = k["ventes_estimees_30j"]
         # 4) DataForSEO : volume de recherche Google France des produits retenus (un seul appel, ~0,09 $)
-        from . import dataforseo
-        noms = [c["nom_produit"] for c in retenus[:25] if c.get("nom_produit")]
+        from . import bingo as _bingo, dataforseo
+        # mots-clés tels que les gens les tapent (Gemini, cache) : un titre long n'a aucun volume Google
+        noms = [c["nom_produit"] for c in retenus[:40] if c.get("nom_produit")]
+        cache_mc = _bingo.mots_cles_ia(noms, maxi_appels=3) if noms else {}
+        for c in retenus[:40]:
+            if c.get("nom_produit"):
+                c["mot_cle"] = cache_mc.get(c["nom_produit"]) or _bingo.mot_cle(c["nom_produit"])
+        mots = list(dict.fromkeys(c["mot_cle"] for c in retenus[:40] if c.get("mot_cle")))
         try:
-            vols = dataforseo.volumes(noms, "FR") if noms else {}
+            vols = dataforseo.volumes(mots, "FR") if mots else {}
         except Exception as e:
             vols = {"_erreur": type(e).__name__}
-        for c in retenus[:25]:
-            v = vols.get((c.get("nom_produit") or "").lower()) or vols.get(c.get("nom_produit") or "")
-            if v:
+        for c in retenus[:40]:
+            v = vols.get((c.get("mot_cle") or "").lower()) or vols.get(c.get("mot_cle") or "")
+            if v and v.get("volume_mensuel"):
                 c["demande_google"] = v
+        # concurrence eBay.fr : nombre d'annonces neuves (déjà relevées par le contrôle eBay)
+        for c in retenus[:40]:
+            neuf = (c.get("ebay") or {}).get("neuf")
+            if isinstance(neuf, dict) and neuf.get("n") is not None:
+                c["annonces_ebay"] = neuf["n"]
     s_ = regles["seuils"]
     for c in retenus:
         c["canaux"] = equipe.canaux_de_vente(c, regles)

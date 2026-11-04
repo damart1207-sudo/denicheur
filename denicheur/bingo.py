@@ -167,6 +167,8 @@ def jour():
     apify.CONTEXTE["denicheur"] = "B"
     for x in [l for l in lignes if l["bingo"]][:10]:
         pi = sante.protege("bingo idealo", apify.prix_idealo, x["mot_cle"], defaut=None)
+        if not pi and x.get("titre"):  # « ghd max » seul n'est pas reconnu : essayer avec le début du titre Amazon
+            pi = sante.protege("bingo idealo", apify.prix_idealo, re.split(r"[,(|\[\-–:]", x["titre"], maxsplit=1)[0][:60], defaut=None)
         if not pi:
             continue
         x["idealo"] = pi

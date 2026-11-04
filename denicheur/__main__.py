@@ -234,6 +234,8 @@ def passage(nom, test=False):
         v, plaf_ebay = c.get("verification"), ebay.plafond(c)
         pmin = (c.get("prix_plancher") or {}).get("prix_min")
         if not v and plaf_ebay is None and not pmin:
+            c["feu"], c["concurrence_amazon"] = "rouge", "inconnue"
+            c["marge_verifiee"], c["passe_verif"] = c.get("marge_verifiee", 0), False
             continue
         plafonds = [c["prix_revente_estime"]]
         if pmin:
@@ -251,7 +253,28 @@ def passage(nom, test=False):
                             and not (v and v["deja_moins_cher_ailleurs"])
                             and not (neuf_ebay and neuf_ebay <= c["prix"])
                             and not (pmin and c["prix"] >= pmin * 0.92))
-    retenus.sort(key=lambda c: (c.get("passe_verif", True), c["score"]), reverse=True)
+        # CARTE TROIS FEUX (règles de David, 04/11) : vert = achète N ; orange = achète 1 pour tester ; rouge = passe.
+        vend = c.get("vendeurs_amazon")
+        pmin_ok = bool(pmin)
+        concurrence = "forte" if (vend or 0) >= 10 else "moyenne" if (vend or 0) >= 5 else "faible" if vend is not None else "inconnue"
+        assez_moins_cher = bool(pmin and c["prix"] <= pmin * 0.85)
+        if c["passe_verif"] and pmin_ok and c["marge_verifiee"] >= 20 and concurrence in ("faible", "inconnue"):
+            feu = "vert"
+        elif c["passe_verif"] and (concurrence != "forte") and (concurrence != "moyenne" or assez_moins_cher):
+            feu = "orange"
+        elif c["marge_verifiee"] >= s_["marge_nette_min"] and not pmin_ok:
+            feu = "orange"  # marge probable mais prix neuf de référence non prouvé : à vérifier par l'audit
+        else:
+            feu = "rouge"
+        c["feu"], c["concurrence_amazon"] = feu, concurrence
+        # fourchette d'occasion réellement constatée (Gemini/Google, eBay, Amazon Seconde main)
+        occ = [x for x in ((v or {}).get("occasion_bas"), (v or {}).get("occasion_haut"),
+                           ((c.get("ebay") or {}).get("occasion") or {}).get("p25"), ((c.get("ebay") or {}).get("occasion") or {}).get("mediane"),
+                           (c.get("keepa") or {}).get("occasion")) if isinstance(x, (int, float)) and x > 0]
+        if occ:
+            c["occasion"] = {"bas": min(occ), "haut": max(occ),
+                             "position_neuf": round(c["prix"] / min(occ), 2)}  # < 1 : notre neuf sous l'occasion la moins chère = or
+    retenus.sort(key=lambda c: ({"vert": 3, "orange": 2}.get(c.get("feu"), 0), c["score"]), reverse=True)
     # rapports Demande / Concurrence (gratuits) pour les 10 meilleures affaires
     if not test:
         from . import rapports

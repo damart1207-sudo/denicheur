@@ -118,6 +118,20 @@ def examiner(a, nom, maintenant, regles, deja):
         x["prix_plancher"] = {"prix_min": min(pi["prix_min"], pmin or 1e9), "ou": "idealo", "lien": pi["lien"]}
     if nom:
         x["revente_reelle"] = sante.protege("apify_revente", apify.revente_reelle, nom, a["prix"])
+        # fiche Amazon par Keepa (10 jetons, abonnement) : ASIN, EAN, prix neuf/occasion Amazon, vendeurs, ventes 30 j
+        from . import keepa
+        k = sante.protege("keepa_recherche", keepa.rechercher, nom, "FR", a["prix"])
+        if k and not k.get("erreur"):
+            x["keepa"] = k
+            x["asin"], x["ean"] = k.get("asin"), k.get("ean")
+            x["vendeurs_amazon"], x["ventes_estimees_30j"] = k.get("nb_vendeurs_neuf"), k.get("ventes_estimees_30j")
+            if k.get("prix_neuf"):
+                pp2 = x.get("prix_plancher") or {}
+                if not pp2.get("prix_min") or k["prix_neuf"] < pp2["prix_min"]:
+                    x["prix_plancher"] = {"prix_min": k["prix_neuf"], "ou": "keepa/amazon.fr", "lien": k.get("lien")}
+                    x["ecart_vs_neuf_min"] = round(a["prix"] / k["prix_neuf"], 3)
+                    x["economie_pct"] = round((1 - x["ecart_vs_neuf_min"]) * 100)
+                base.noter_prix(nom, k["prix_neuf"], pays="FR", site="amazon.fr", lien=k.get("lien", ""), source="keepa", denicheur="A")
     dm = demande.est_demande(a["titre"], DEMANDE)
     if dm:
         x["demande_forte"] = dm

@@ -25,3 +25,14 @@
 Titre = mot-clé tapé · prix neuf affiché à côté · facture + garantie restante · une seule pièce visible · réponse < 10 min (message
 préparé) · relance J+3 à -5 %, J+7 à -10 % (prix vivant) · carnet des acheteurs pour les prochains bingos · lots composés quand
 la marge unitaire est faible · jamais de reconditionné vendu comme neuf, jamais de fausse annonce.
+
+## Leçons des 15 fondateurs (document « historiques-grands-vendeurs », 04/11) et nos six innovations
+Constat : aucun n'a gagné par une meilleure technique, tous ont changé de MODÈLE ; ils ont montré au lieu de convaincre ; fait financer
+par le client ; fait parler d'eux pour rien.
+1. Les 250 dénicheurs (Girard/Amway) : canal ouvert, 20 % de la marge à qui apporte une affaire revendue, payé après la vente.
+2. La commande avant l'achat (Jobs/Terrell) : Rebifftout à l'envers, réservation 48 h, on n'achète que le réservé.
+3. Le certificat Rebifftout (Blakely) : page publique par objet vendu (photos datées, facture, série, garantie, avis) ; l'annonce y renvoie.
+4. Contre le leader (Benioff) : heure de détection et prix neuf prouvé sur chaque affaire, « vue X h avant Dealabs ».
+5. La donnée vaut plus que la marge (Kroc/Lütke) : base de prix 4 pays + occasion réelle → SaaS carte trois feux.
+6. Le club 48 h (Granjon) : cartes vertes réservées aux membres, puis disparaissent.
+Ordre de construction : 3 + rédacteur « vente sans question » → 2 + 6 → 1 → 5.

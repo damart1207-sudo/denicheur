@@ -19317,7 +19317,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T09:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 67.25,
@@ -19419,7 +19419,19 @@
     "rentabilite": -0.138
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T09:47+00:00",
+  "verdict": {
+   "commentaire": "Offre active et neuve chez Grosbill (noir, version OEM) : 41,10 € + 4,95 € de port = 46,05 € livrés, opération Black Month. Mais le prix de référence de l'alerte (idealo 67,25 €) est celui du modèle BLANC, un autre produit. Le même modèle noir OEM neuf est à 44,03 € + 4,99 € = 49,02 € livrés chez Cybertek : l'économie réelle n'est que de 6 %, sous les 15 % demandés. Revente impossible : le prix retenu (85 % du neuf, soit 41,67 €) est sous le coût.",
+   "prix_neuf_min_idealo": 49.02,
+   "source_prix_ref": "Cybertek (44,03 € + 4,99 € de port), relevé sur comparateur-gamer.fr le 04/11 et confirmé sur cybertek.fr ; idealo.fr non lisible depuis cette session",
+   "economie_pct": 6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "opération Black Month, fin inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "16d64ead87",

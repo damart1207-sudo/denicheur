@@ -368,8 +368,14 @@ def tour():
     debut = jetons_restants()
     bilan = {"jetons_debut": debut}
     bilan["radar"] = sante.protege("moisson radar", radar, etat, defaut=0)
-    bilan["hype"] = sante.protege("moisson hype", hype, etat, defaut=0)
-    bilan["etagere"] = sante.protege("moisson étagère", etagere, etat, defaut=0)
+    # la réserve ne se remplit que de ≈ 200 jetons entre deux tours (10 min) : un tour sur trois pour la hype
+    # (≈ 250 jetons), les deux autres pour l'étagère ; ce qui reste va à l'autre récolte.
+    if etat["tours"] % 3 == 0:
+        bilan["hype"] = sante.protege("moisson hype", hype, etat, defaut=0)
+        bilan["etagere"] = sante.protege("moisson étagère", etagere, etat, defaut=0)
+    else:
+        bilan["etagere"] = sante.protege("moisson étagère", etagere, etat, defaut=0)
+        bilan["hype"] = sante.protege("moisson hype", hype, etat, defaut=0)
     etat["jetons_jour"] += _jetons["depenses"]
     etat["produits_jour"] = etat.get("produits_jour", 0) + bilan["etagere"]
     etat["tours"] += 1

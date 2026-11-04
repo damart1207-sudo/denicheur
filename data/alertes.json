@@ -19721,7 +19721,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 88.25,
@@ -19823,7 +19823,19 @@
     "rentabilite": 0.13
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Candy CBT6130/3X (EAN 8016361979291). 48,99 € sur Amazon Espagne, vu à 49 € le 03/11 par comprasmartphone ; neuf en France 79,99 € chez Amazon.fr (Keepa 04/11), 88,25 € sur idealo (robot). L'écart serait de 32 %, MAIS livraison en France et frais de port NON confirmés : page Amazon.es et page Chollometro non lisibles ici, et une hotte peut être exclue de l'envoi vers la France. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 79.99,
+   "source_prix_ref": "Keepa/Amazon.fr 04/11 ; idealo 88,25 € (robot)",
+   "economie_pct": 32,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Prix Amazon Espagne, inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "e760e5c87c",
@@ -19861,7 +19873,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -19930,7 +19942,19 @@
     "rentabilite": -0.033
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit, mais offre Argos (Royaume-Uni) : Argos ne livre pas en France, et il faut un code d'inscription marketing. Coût estimé 256,40 € contre 299,99 € en France (achatmoinscher), soit 14,5 % seulement, sous les 15 %. Page HotUKDeals non lisible ici.",
+   "prix_neuf_min_idealo": 299.99,
+   "source_prix_ref": "achatmoinscher (relevé robot)",
+   "economie_pct": 14.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "4ec2ecd462",
@@ -19955,7 +19979,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 149.0,
@@ -20032,7 +20056,19 @@
     "rentabilite": -0.268
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Coût estimé 111,22 € au départ du Royaume-Uni (74,80 £ avec code, plus frais), au-dessus du prix de référence de 103,99 € relevé par le robot. Les 149 € du champ idealo portent sur une « Limited Edition » à une seule offre, pas une référence sûre. Livraison en France chez Secret Sales non confirmée (parfum, douane). Page non lisible ici.",
+   "prix_neuf_min_idealo": 103.99,
+   "source_prix_ref": "prix_plancher du robot (idealo)",
+   "economie_pct": -7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "d48a19ac81",
@@ -20070,7 +20106,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -20139,7 +20175,19 @@
     "rentabilite": -0.082
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre MediaMarkt Autriche : le site autrichien ne livre pas en France, à notre connaissance ; page Preisjäger non lisible ici. Même livrée, 84,99 € estimés contre 99,99 € en France (achatmoinscher), soit 15 % pile sans marge d'erreur sur le port.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "achatmoinscher (relevé robot)",
+   "economie_pct": 15,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "c7be8002ce",
@@ -20184,7 +20232,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:14+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -20285,7 +20333,19 @@
     "rentabilite": -0.076
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre sur Amazon.fr (B0D9PPV1YY) à 97,83 € selon Les Numériques et unbonplan.me du 03/11 ; page Amazon non lisible ici. Référence exacte du modèle inconnue : la gamme X-Pert 6.60 compte beaucoup de références (RH6821, RH6831, RH6836, RH6837...), et les prix de l'alerte portent sur d'autres modèles (RH6821WO à 119,99 € sur achatmoinscher, mais 156,71 € et 163,21 € chez Castorama et Auchan en vendeurs tiers ; version Smart à 179,99 €). Pas de prix de référence fiable pour le bon modèle. À noter : même gamme déjà vue à 94-100 € en mai et juillet. Revente : Vinted médiane 85 €, sous notre coût.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "non fiable (modèle exact inconnu)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Prix Amazon, peut remonter vite",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "0075f621ad",
@@ -20310,7 +20370,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:24+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -20404,7 +20464,19 @@
     "rentabilite": -0.306
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Cecotec Proclean 5130 23 L (EAN 8435782142518). Prix Amazon.fr 66,99 € vendu par Amazon, relevé par le robot Keepa ce 04/11 à 11h24 (Paris), plus bas des 90 jours, moyenne 90 j 107,80 €. Signalé sur Dealabs le 04/11. Attention : page Amazon non ouverte ici, port non vu (gratuit en principe chez Amazon à ce prix). Neuf ailleurs en France : 109 € livraison gratuite chez PcComponentes.fr, vendu et expédié par eux, fiche lue le 04/11 ; idealo non lu. Économie 39 %, et encore 34 % avec 5 € de port au pire. Pas de revente : aucune annonce réelle, et le neuf à 66,99 € plafonne le prix tant que l'offre dure.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "PcComponentes.fr, fiche lue le 04/11 (livraison gratuite) ; idealo non lu ; Keepa moyenne 90 j 107,80 €",
+   "economie_pct": 39,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Prix Amazon, peut remonter vite",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "aab8e95791",
@@ -20429,7 +20501,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 125.68,
@@ -20538,7 +20610,19 @@
     "rentabilite": -0.31
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Very (Royaume-Uni, livraison UK). Coût estimé 144,62 € contre 125,68 € en neuf en France sur idealo (robot, 19 offres) : plus cher qu'en France. Page HotUKDeals non lisible ici.",
+   "prix_neuf_min_idealo": 125.68,
+   "source_prix_ref": "idealo (robot)",
+   "economie_pct": -15,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T10:54+00:00"
  },
  {
   "id": "94642c990d",

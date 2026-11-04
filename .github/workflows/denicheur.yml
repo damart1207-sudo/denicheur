@@ -119,9 +119,9 @@ jobs:
               git add -A data docs && git commit -q -m "Passage $MANQUANT (rattrapage)" || true
               for essai in 1 2 3; do git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break; sleep 10; done
             fi
-            # 5 tours espacés d'environ 10 minutes ; un tour qui plante n'arrête JAMAIS les suivants,
+            # 4 tours espacés d'environ 10 minutes ; un tour qui plante n'arrête JAMAIS les suivants,
             # et chaque tour est enregistré tout de suite (rien n'est perdu).
-            for i in 1 2 3 4 5; do
+            for i in 1 2 3 4; do
               DEBUT=$(date +%s)
               timeout 480 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $?"
               # moissonneur Keepa : vide la réserve de jetons (ils expirent au bout d'une heure) -> radar Amazon, étagère, hype
@@ -134,7 +134,7 @@ jobs:
                 git commit -q -m "Veille $(date -u +%H:%M) (tour $i)"
                 for essai in 1 2 3; do git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break; sleep 10; done
               fi
-              [ $i -lt 5 ] && sleep $(( 600 - ($(date +%s) - DEBUT) > 30 ? 600 - ($(date +%s) - DEBUT) : 30 ))
+              [ $i -lt 4 ] && sleep $(( 600 - ($(date +%s) - DEBUT) > 30 ? 600 - ($(date +%s) - DEBUT) : 30 ))
             done
             exit 0
           fi

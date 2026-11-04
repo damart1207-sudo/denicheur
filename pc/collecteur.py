@@ -184,8 +184,12 @@ def collecter(connexion=False):
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         if connexion:
             for s in ("https://www.veepee.fr/", "https://www.showroomprive.com/", "https://www.zalando-prive.fr/", "https://www.privalia.com/public", "https://www.bazarchic.com/"):
-                page.goto(s, wait_until="domcontentloaded")
-                print(f"Connecte-toi sur {s} puis appuie sur Entrée ici.")
+                try:
+                    page = ctx.new_page()  # un onglet par site : évite « navigation interrompue » (redirections)
+                    page.goto(s, wait_until="commit", timeout=60000)
+                except Exception as e:
+                    print("(chargement lent, ce n'est pas grave :", type(e).__name__, ")")
+                print(f"Connecte-toi sur {s} puis appuie sur Entrée ici (ou Entrée seul pour passer).")
                 input()
             ctx.close()
             print("Connexions gardées dans", PROFIL)

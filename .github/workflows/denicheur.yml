@@ -45,6 +45,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # la veille relance elle-même la veille suivante (GitHub saute la plupart des horaires programmés)
 
 # Deux files séparées : la veille (en boucle) ne doit JAMAIS annuler le passage quotidien en attente.
 # (Avant le 03/11 : une seule file, et le passage de 2 h UTC était annulé chaque nuit par la veille.)
@@ -150,6 +151,19 @@ jobs:
             python -m denicheur --passage "$PASSAGE" --test
           else
             python -m denicheur --passage "$PASSAGE"
+          fi
+
+      - name: Relancer la veille suivante (chaîne continue, indépendante des horaires GitHub)
+        if: always() && (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # une seule veille à la fois : si une autre est déjà en file ou en cours, on ne relance pas
+          EN_COURS=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s in_progress --json databaseId --jq 'length' 2>/dev/null || echo 1)
+          EN_FILE=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s queued --json databaseId --jq 'length' 2>/dev/null || echo 0)
+          echo "en cours: $EN_COURS, en file: $EN_FILE"
+          if [ "$EN_COURS" -le 1 ] && [ "$EN_FILE" -eq 0 ]; then
+            gh workflow run denicheur.yml -R ${{ github.repository }} -f veille=true && echo "veille suivante lancée"
           fi
 
       - name: Rapport de David (page à onglets)

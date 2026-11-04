@@ -6,10 +6,8 @@ name: Dénicheur
 on:
   schedule:
     # minutes décalées : GitHub saute souvent les horaires ronds quand il est chargé (nuit du 3 au 4/11 : passage de 2 h jamais lancé)
-    # Trois rapports par jour, heure de Paris (hiver = UTC+1) : 5 h, 13 h, 18 h. Chaque passage dure ≈ 20 min, l'audit suit.
-    - cron: "33 3 * * *"
-    - cron: "33 11 * * *"
-    - cron: "33 16 * * *"
+    # Les trois passages quotidiens (5 h, 13 h, 18 h Paris) sont lancés par la tâche planifiée Claude « Dénicheur – passages et
+    # rapports » (horaires GitHub trop souvent sautés, 04/11/2026). Ne reste ici que la veille horaire, en secours de la chaîne.
     - cron: "23 * * * *"
     # lundi 05:03 UTC : rapport demande par pays (Amigo, ≈ 0,55 $ DataForSEO par semaine)
     - cron: "3 5 * * 1"

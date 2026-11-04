@@ -14,6 +14,7 @@ Installation (une fois, dans un terminal, dossier du dépôt cloné) :
 Lancement manuel : python pc/collecteur.py          Aucun achat, aucune dépense.
 """
 import argparse
+import glob
 import hashlib
 import html as _html
 import json
@@ -205,8 +206,13 @@ def collecter(connexion=False):
                 ann = extraire(h, source, pays, marchand, base)
                 etat[source] = {"ok": True, "nb": len(ann), "taille": len(h)}
                 resultats += ann
-                with open(os.path.join(D_ECH, source + ".html"), "w", encoding="utf-8") as f:
-                    f.write(h[:1500000])
+                # copie pour le cloud : compressée et nettoyée des clés/jetons que les sites laissent dans leurs pages
+                # (sinon GitHub refuse l'envoi : « push declined due to repository rule violations »)
+                import gzip
+                propre = re.sub(r"AIza[0-9A-Za-z_\-]{30,}|(?:sk|pk|rk)_(?:live|test)_[0-9A-Za-z]{10,}|eyJ[0-9A-Za-z_\-]{20,}\.[0-9A-Za-z_\-.]{20,}|[0-9A-Za-z_\-]{40,}",
+                                "X", h[:1500000])
+                with gzip.open(os.path.join(D_ECH, source + ".html.gz"), "wt", encoding="utf-8") as f:
+                    f.write(propre)
             except Exception as e:
                 etat[source] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:120]}"}
             print(source, etat[source])
@@ -231,7 +237,11 @@ def pousser():
     """git pull + commit + push (identifiants Git du PC). Jamais bloquant : si ça échoue, on réessaie à l'heure suivante."""
     def git(*a):
         return subprocess.run(["git", "-C", RACINE, *a], capture_output=True, text=True, timeout=120)
-    git("pull", "-q", "--rebase", "-X", "theirs", "origin", "main")
+    git("fetch", "-q", "origin", "main")
+    git("reset", "-q", "--soft", "origin/main")   # oublie un envoi raté précédent (ex. page brute refusée par GitHub)
+    git("reset", "-q")
+    for vieux in glob.glob(os.path.join(D_ECH, "*.html")):  # anciennes pages brutes non nettoyées : jamais envoyées
+        os.remove(vieux)
     git("add", "-A", "data/pc", "data/echantillons/pc")
     if git("diff", "--cached", "--quiet").returncode == 0:
         return "rien de nouveau"

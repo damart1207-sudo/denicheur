@@ -107,6 +107,10 @@ def passage(nom, test=False):
         radar = sante.protege("radar amazon", moisson.annonces_radar, defaut=[])
         annonces += radar
         etat_sources["keepa-radar"] = {"ok": True, "nb": len(radar), "erreur": None}
+        from . import arbitrage as _arb
+        arb = sante.protege("arbitrage europe", _arb.annonces_arbitrage, defaut=[])
+        annonces += arb
+        etat_sources["keepa-arbitrage"] = {"ok": True, "nb": len(arb), "erreur": None}
         from . import demande as _dem
         _nv, _et = sante.protege("hype flux", _dem.hype_flux, defaut=([], {}))
         for k, v in (_et or {}).items():
@@ -149,6 +153,26 @@ def passage(nom, test=False):
                         break
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
+    # SCORE MÉCANIQUE : les annonces venues de Keepa (radar, arbitrage) ont déjà un prix de référence France
+    # (ref_fr), des ventes et des vendeurs : on les retient par calcul, sans attendre le tribunal.
+    deja_m = {c["id"] for c in retenus}
+    for a in nouvelles if not test else []:
+        if a["id"] in deja_m or not str(a.get("source", "")).startswith("keepa") or not a.get("ref_fr") or not a.get("prix"):
+            continue
+        cout = equipe.cout_achat(a, regles)
+        prix_rev = round(a["ref_fr"] * regles["profils_acheteurs"]["petit_budget"]["prix_vs_neuf_min"], 2)
+        marge = equipe.marge_nette(prix_rev, "leboncoin", cout, regles)
+        if marge < regles["seuils"]["marge_nette_min"] or (a.get("vendeurs") or 0) > 9:
+            continue
+        retenus.append({**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
+                        "domaine": "autre", "nom_produit": (a["titre"].split(" [")[0])[:70], "plateforme_revente": "leboncoin",
+                        "prix_revente_estime": prix_rev, "cout_achat": cout, "marge_nette": marge,
+                        "rentabilite": round(marge / cout, 3) if cout else 0, "demande": 3, "concurrence": 3, "consensus": 1,
+                        "agents": ["calcul"], "mode": "stock", "erreur_prix": False, "raisons": {"calcul": a.get("description", "")[:160]},
+                        "score": round(marge / cout * 100, 1) if cout else 0, "asin": a.get("asin"), "ean": a.get("ean"),
+                        "vendeurs_amazon": a.get("vendeurs"), "ventes_estimees_30j": a.get("ventes_30j")})
+        deja_m.add(a["id"])
+    retenus.sort(key=lambda c: c["score"], reverse=True)
     etape(f"consolidation : {len(retenus)} retenus")
     # + les bons plans trouvés par la VEILLE (Idéfix) depuis 24 h : ils passent la même vérification complète que les autres
     if not test:

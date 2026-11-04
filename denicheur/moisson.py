@@ -349,7 +349,7 @@ def annonces_radar(maxi=60):
         out.append({"id": f'keepa-{a["asin"]}-{a["type"]}', "titre": (a.get("titre") or "") + etat,
                     "temperature": min(int((a.get("baisse_pct") or 0) * 8), 900), "categorie": "Amazon",
                     "marchand": "Amazon.fr", "prix": a["prix"], "devise": "EUR", "lien": a["lien"], "date": a.get("vu", ""),
-                    "source": "keepa-radar", "pays": "FR",
+                    "source": "keepa-radar", "pays": "FR", "asin": a.get("asin"), "ref_fr": a.get("moyenne_90j"),
                     "description": f'moyenne 90 j {a.get("moyenne_90j")} €, baisse {a.get("baisse_pct")} %, rang {a.get("rang")}'})
         if len(out) >= maxi:
             break
@@ -368,6 +368,8 @@ def tour():
     debut = jetons_restants()
     bilan = {"jetons_debut": debut}
     bilan["radar"] = sante.protege("moisson radar", radar, etat, defaut=0)
+    from . import arbitrage
+    bilan["arbitrage"] = sante.protege("moisson arbitrage", arbitrage.tour, etat, defaut=0)
     # la réserve ne se remplit que de ≈ 200 jetons entre deux tours (10 min) : un tour sur trois pour la hype
     # (≈ 250 jetons), les deux autres pour l'étagère ; ce qui reste va à l'autre récolte.
     if etat["tours"] % 3 == 0:
@@ -383,7 +385,7 @@ def tour():
                        "jetons_depenses": _jetons["depenses"], "jetons_fin": _jetons["restants"]}
     _ecrire(F_ETAT, etat)
     print(f"moisson : {_jetons['depenses']} jetons dépensés ({debut} -> {_jetons['restants']}), "
-          f"radar {bilan['radar']} affaires, hype {bilan['hype']} produits, étagère {bilan['etagere']} fiches gardées")
+          f"radar {bilan['radar']} affaires, arbitrage {bilan.get('arbitrage')} écarts, hype {bilan['hype']} produits, étagère {bilan['etagere']} fiches gardées")
 
 
 if __name__ == "__main__":

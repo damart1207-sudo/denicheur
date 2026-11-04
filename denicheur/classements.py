@@ -51,10 +51,30 @@ def _eur(p, pays):
     return round(p * (100 if pays == "JP" else 1) * TAUX[pays], 2)
 
 
+JETONS_CLASSEMENT = 700   # ≈ 8 catégories × 50 + fiches : à garder en réserve avant chaque photo de 23 h 59
+F_RESERVE_TEST = os.path.join(RACINE, "data/etat/reserve_keepa.json")
+
+
+def reserve_keepa(maintenant=None):
+    """Jetons que la moisson doit laisser : JETONS_CLASSEMENT pendant l'heure qui précède une photo et pendant la fenêtre,
+    tant que le classement du pays n'est pas fait (et pendant un test demandé via data/etat/reserve_keepa.json)."""
+    now = maintenant or datetime.now(timezone.utc)
+    t = _lire(F_RESERVE_TEST, {})
+    if t.get("jusqua", "") > now.isoformat():
+        return int(t.get("jetons", JETONS_CLASSEMENT))
+    etat = _lire(F_ETAT, {})
+    for pays in ("US", "JP", "UK"):
+        for avance in (0, 60):
+            d = jour_a_photographier(pays, now + timedelta(minutes=avance))
+            if d and etat.get(pays) != d:
+                return JETONS_CLASSEMENT
+    return 0
+
+
 def categories(pays):
     from . import moisson
     if pays in moisson.CATEGORIES_HYPE:
-        return moisson.CATEGORIES_HYPE[pays]
+        return moisson.CATEGORIES_HYPE[pays][:8]
     f = os.path.join(RACINE, f"data/base/keepa_categories_{pays}.json")
     cats = _lire(f, None)
     if cats is None:
@@ -62,7 +82,7 @@ def categories(pays):
         cats = [(int(k), v.get("name")) for k, v in (d.get("categories") or {}).items()
                 if any(m in (v.get("name") or "").lower() for m in UK_RACINES)]
         _ecrire(f, cats)
-    return [tuple(c) for c in cats][:10]
+    return [tuple(c) for c in cats][:8]
 
 
 def amazon(pays, n=10, par_cat=10):

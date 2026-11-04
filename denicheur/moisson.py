@@ -110,7 +110,12 @@ def jetons_restants():
 
 def _peut(cout, etat):
     """Assez de jetons pour une récolte qui coûte `cout` ? (réserve, plafond du tour, plafond du jour)"""
-    return (jetons_restants() - cout >= RESERVE_MIN and _jetons["depenses"] + cout <= JETONS_TOUR_MAX
+    try:  # réserve pour les classements de 23 h 59 (USA / Japon / Royaume-Uni)
+        from . import classements
+        reserve = max(RESERVE_MIN, classements.reserve_keepa())
+    except Exception:
+        reserve = RESERVE_MIN
+    return (jetons_restants() - cout >= reserve and _jetons["depenses"] + cout <= JETONS_TOUR_MAX
             and etat["jetons_jour"] + _jetons["depenses"] + cout <= JETONS_JOUR_MAX)
 
 

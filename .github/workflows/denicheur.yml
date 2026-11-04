@@ -2,11 +2,12 @@ name: Dénicheur
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
 #  toutes les heures (5 tours de 10 min dans un seul lancement) -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
-#  02:00 UTC = 10:00 à Pékin = 03:00 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
+#  02:17 UTC = 03:17 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
 on:
   schedule:
-    - cron: "0 2 * * *"
-    - cron: "5 * * * *"
+    # minutes décalées : GitHub saute souvent les horaires ronds quand il est chargé (nuit du 3 au 4/11 : passage de 2 h jamais lancé)
+    - cron: "17 2 * * *"
+    - cron: "23 * * * *"
   workflow_dispatch:
     inputs:
       passage:
@@ -43,14 +44,14 @@ permissions:
 # Deux files séparées : la veille (en boucle) ne doit JAMAIS annuler le passage quotidien en attente.
 # (Avant le 03/11 : une seule file, et le passage de 2 h UTC était annulé chaque nuit par la veille.)
 concurrency:
-  group: denicheur-${{ (github.event.inputs.veille == 'true' || github.event.schedule == '5 * * * *') && 'veille' || 'passage' }}
+  group: denicheur-${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 'veille' || 'passage' }}
   cancel-in-progress: false
 
 jobs:
   passage:
     runs-on: ubuntu-latest
     # garde-fou : 58 min pour la veille en boucle (5 tours espacés de 10 min), 25 min pour le reste
-    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '5 * * * *') && 58 || 25 }}
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 58 || 25 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -78,7 +79,7 @@ jobs:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
         run: |
           PASSAGE="${{ github.event.inputs.passage }}"
-          if [ "${{ github.event.schedule }}" = "0 2 * * *" ]; then PASSAGE=europe; fi
+          if [ "${{ github.event.schedule }}" = "17 2 * * *" ]; then PASSAGE=europe; fi
           [ -z "$PASSAGE" ] && PASSAGE=europe
           if [ -n "${{ github.event.inputs.outil }}" ]; then
             python "outils/${{ github.event.inputs.outil }}.py"
@@ -89,7 +90,7 @@ jobs:
             python outils/test_playwright.py
             exit 0
           fi
-          if [ "${{ github.event.schedule }}" = "5 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
+          if [ "${{ github.event.schedule }}" = "23 * * * *" ] || [ "${{ github.event.inputs.veille }}" = "true" ]; then
             pip install -q pytrends "urllib3<2" || true
             git config user.name "denicheur-bot"
             git config user.email "denicheur-bot@users.noreply.github.com"
@@ -101,6 +102,7 @@ jobs:
               # moissonneur Keepa : vide la réserve de jetons (ils expirent au bout d'une heure) -> radar Amazon, étagère, hype
               timeout 300 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
               python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
+              python saas/rapport_hype.py || true
               git add -A data docs
               if ! git diff --cached --quiet; then
                 git commit -q -m "Veille $(date -u +%H:%M) (tour $i)"

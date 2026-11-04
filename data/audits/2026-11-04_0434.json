@@ -1,0 +1,92 @@
+{
+ "horodatage": "2026-11-04_0434",
+ "date": "04/11/2026",
+ "auditeur": "Claude",
+ "resume": "0 validée sur 9. Aucune affaire ne dégage de marge réaliste : la plus proche, la Nike Air Max SNDR, est déjà à 64,39 € neuve en France. Deux produits étaient mal identifiés (stylos pris pour une montre, ventilateur pris pour un boîtier). Idealo n'était disponible que pour 2 affaires (et sur un autre produit pour l'une d'elles) ; le reste a été vérifié par recherche web.",
+ "verdicts": [
+  {
+   "id": "7ad267ac2d",
+   "verdict": "rejete",
+   "commentaire": "Revente non confirmée. Coût 82,90 €, mais idealo manquant, occasion estimée à 75 € maximum et seulement 4 annonces eBay neuves (86 à 120 €). Déjà vu à 79,90 € en France chez Showroomprivé (offre expirée) : modèle souvent bradé."
+  },
+  {
+   "id": "73a8c19c1b",
+   "verdict": "rejete",
+   "commentaire": "Déjà presque au même prix en France : Footshop.fr vend ce modèle dès 64,39 € (Zalando.fr 80,95 €). Revente plafonnée à 54,70 € (85 % du neuf), marge de 3,80 € seulement. Prix neuf par recherche web, idealo manquant."
+  },
+  {
+   "id": "keepa-B0D426214V-neuf",
+   "verdict": "rejete",
+   "commentaire": "Le prix idealo (32,95 €) porte sur une autre référence sans vente récente. Vendu environ 15 € neuf selon la vérification automatique et 15 € maximum d'occasion : perte d'environ 2 € ou plus. L'offre Amazon semble limitée à une seule taille (S)."
+  },
+  {
+   "id": "731f508cdc",
+   "verdict": "rejete",
+   "commentaire": "Neuf trouvé à 16,11 € (BrickCoast, relevé automatique) et 18,50 € + port en Belgique. Aucun prix français ni annonce d'occasion trouvés, livraison du marchand polonais vers la France non prouvée. Revente 25 € non confirmée."
+  },
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "verdict": "rejete",
+   "commentaire": "Idealo indique 28,31 €, soit la même offre Amazon que l'achat : aucun écart à revendre. Occasion estimée à 25 € maximum, marque générique. Perte d'environ 8 €."
+  },
+  {
+   "id": "e56c759323",
+   "verdict": "rejete",
+   "commentaire": "Occasion estimée à 35 € maximum pour un coût de 44,94 € : perte d'environ 10 €. Idealo manquant, et livraison de SportRabat vers la France non prouvée."
+  },
+  {
+   "id": "8c9c70c834",
+   "verdict": "rejete",
+   "commentaire": "Coût 98,77 € alors qu'une scie à onglet 1500 W de 210 mm (lame légèrement plus petite) est à 99,90 € neuve chez Brico Dépôt. Marque Jula inconnue en France, occasion estimée à 70 € maximum, objet lourd. Prix idealo manquant."
+  },
+  {
+   "id": "keepa-B0GQZ1WSV4-neuf",
+   "verdict": "rejete",
+   "commentaire": "Erreur d'identification : ce sont des stylos, pas une montre connectée, donc la revente à 55 € est fausse. Neuf à 18,50 € sur la boutique de la marque selon la vérification automatique, sous le coût de 23,99 €."
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "verdict": "rejete",
+   "commentaire": "Erreur d'identification : c'est un ventilateur 200 mm, pas un boîtier PC. Affiché 21,09 € chez Alternate.fr (+ 9,90 € de port, délai long). Occasion estimée à 15 € maximum, perte d'environ 26 €."
+  }
+ ],
+ "valides": [],
+ "rejetes": [
+  {
+   "id": "7ad267ac2d",
+   "motif": "prix de revente non confirmé"
+  },
+  {
+   "id": "73a8c19c1b",
+   "motif": "marge trop faible : neuf à 64,39 € en France"
+  },
+  {
+   "id": "keepa-B0D426214V-neuf",
+   "motif": "revente sous le coût, idealo sur un autre produit"
+  },
+  {
+   "id": "731f508cdc",
+   "motif": "prix de revente non confirmé"
+  },
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "motif": "même prix neuf en France, revente sous le coût"
+  },
+  {
+   "id": "e56c759323",
+   "motif": "revente sous le coût"
+  },
+  {
+   "id": "8c9c70c834",
+   "motif": "revente sous le coût"
+  },
+  {
+   "id": "keepa-B0GQZ1WSV4-neuf",
+   "motif": "mauvais produit, déjà moins cher ailleurs"
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "motif": "mauvais produit, revente sous le coût"
+  }
+ ]
+}

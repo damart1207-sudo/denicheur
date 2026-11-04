@@ -87,7 +87,8 @@ def alerte(x):
     canaux = [c for c in (x.get("canaux") or []) if isinstance(c, dict)]
     meilleur = max(canaux, key=lambda c: c.get("marge_nette") or 0, default={})
     pmin = (x.get("prix_plancher") or {}).get("prix_min")
-    texte = (f"🟠 <b>Idéfix</b> — {_e(x.get('nom_produit') or x.get('titre'))}\n"
+    texte = (("🚨 <b>ERREUR DE PRIX PROBABLE</b> — commander 1 unité tout de suite, attendre l'expédition avant d'acheter plus\n" if x.get("erreur_prix_probable") else "")
+             + f"🟠 <b>Idéfix</b> — {_e(x.get('nom_produit') or x.get('titre'))}\n"
              f"achat {_eur(x.get('prix'))} chez {_e(x.get('marchand'))} ({_e(x.get('pays'))}) · neuf le moins cher {_eur(pmin)} · "
              f"économie {_e(x.get('economie_pct'))} %\n"
              + (f"revente {_eur(meilleur.get('prix_vente'))} sur {_e(meilleur.get('canal'))} · marge {_eur(meilleur.get('marge_nette'))}\n" if meilleur else "")

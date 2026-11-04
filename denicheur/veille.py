@@ -189,7 +189,19 @@ def tour():
         from . import telegram
         for x in nouvelles_alertes:  # alerte Idéfix au fil de l'eau (silencieux sans secrets Telegram)
             if x.get("type") == "bon_plan" and (x.get("economie_pct") or 0) >= 15:
+                if (x.get("economie_pct") or 0) >= 60 or x.get("signal_erreur_prix"):
+                    x["erreur_prix_probable"] = True  # sous 40 % du neuf : erreur de prix probable -> commander vite, 1 unité, attendre l'expédition
                 sante.protege("telegram alerte", telegram.alerte, x)
+    # annonces de particuliers trouvées par le Chasseur PC (data/pc/chasse.json) : alerte Telegram une seule fois chacune
+    from . import telegram as _tg
+    chasse = _lire("data/pc/chasse.json", {}).get("annonces", [])
+    deja_c = set(_lire("data/etat/chasse_alertees.json", []))
+    nouvelles_c = [x for x in chasse if x["id"] not in deja_c and "sous-coté" in (x.get("signaux") or []) and (x.get("ecart_pct") or 0) >= 35]
+    for x in nouvelles_c[:10]:
+        sante.protege("telegram chasseur", _tg.envoyer, f"🟠 <b>Chasseur</b> — {x['titre']}\n{x['site']} : <b>{x['prix']} €</b> (référence occasion {x.get('reference')} €, -{x.get('ecart_pct')} %) · {', '.join(x.get('signaux') or [])}\nproduit cherché : {x.get('produit')} ({x.get('origine')})\n{x['lien']}")
+        deja_c.add(x["id"])
+    if nouvelles_c:
+        _ecrire("data/etat/chasse_alertees.json", sorted(deja_c)[-3000:])
     bilan = {"heure": maintenant.astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m %H:%M"),
              "annonces": len(annonces), "nouvelles": len(nouvelles), "examinees": len(lot),
              "nommees": len(noms), "alertes": len(nouvelles_alertes),

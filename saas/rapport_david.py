@@ -120,7 +120,8 @@ def construire():
     dp = lire("data/demande_pays.json", {})
     arb = lire("data/arbitrage.json", {})
     srcg = lire("data/sourcing.json", {})
-    donnees = {"sourcing": list((srcg.get("fiches") or {}).values())[::-1][:40], "sourcing_maj": iso_paris(srcg.get("maj")),"arbitrage": arb.get("ecarts", [])[:200], "arbitrage_maj": iso_paris(arb.get("maj")), "arbitrage_total": arb.get("compares_total", 0),"demande_pays": dp.get("pays", {}), "demande_pays_maj": iso_paris(dp.get("maj")), "genere": datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"), "passage": p.get("date_affichee"), "resume_audit": audit.get("resume"),
+    chs = lire("data/pc/chasse.json", {})
+    donnees = {"chasse": chs.get("annonces", [])[:300], "chasse_maj": iso_paris(chs.get("maj")), "chasse_etat": chs.get("etat", {}),"sourcing": list((srcg.get("fiches") or {}).values())[::-1][:40], "sourcing_maj": iso_paris(srcg.get("maj")),"arbitrage": arb.get("ecarts", [])[:200], "arbitrage_maj": iso_paris(arb.get("maj")), "arbitrage_total": arb.get("compares_total", 0),"demande_pays": dp.get("pays", {}), "demande_pays_maj": iso_paris(dp.get("maj")), "genere": datetime.now(PARIS).strftime("%d/%m/%Y %H:%M"), "passage": p.get("date_affichee"), "resume_audit": audit.get("resume"),
                "affaires": affaires, "alertes": alertes, "radar": radar.get("affaires", [])[:300], "radar_maj": iso_paris(radar.get("maj")),
                "hype": hype.get("produits", []), "hype_maj": iso_paris(hype.get("maj")), "bingo": bingo.get("bingos", []), "bingo_maj": iso_paris(bingo.get("maj")),
                "bingo_info": f"{bingo.get('nb_candidats', 0)} candidats, {bingo.get('nb_avec_volume', 0)} avec volume Google" if bingo else "pas encore calculé",
@@ -166,10 +167,10 @@ table{border-collapse:collapse;width:100%;background:#fff;font-size:.88em}th,td{
 </div>
 <div class="compte" id="compte"></div>
 <section id="s_affaires"></section><section id="s_alertes"></section><section id="s_radar"></section><section id="s_hype"></section>
-<section id="s_bingo"></section><section id="s_demande"></section><section id="s_arbitrage"></section><section id="s_sourceur"></section><section id="s_pays"></section><section id="s_outils"></section>
+<section id="s_bingo"></section><section id="s_demande"></section><section id="s_arbitrage"></section><section id="s_sourceur"></section><section id="s_chasseur"></section><section id="s_pays"></section><section id="s_outils"></section>
 <script>
 const D = __DONNEES__;
-const ONGLETS=[["affaires","Affaires du passage"],["alertes","Alertes Idéfix 24 h"],["radar","Radar Keepa"],["hype","Hype étrangère"],["bingo","Bingo"],["demande","Les plus recherchés"],["arbitrage","Arbitrage Europe"],["sourceur","Sourceur (bingos)"],["pays","Demande par pays"],["outils","Outils"]];
+const ONGLETS=[["affaires","Affaires du passage"],["alertes","Alertes Idéfix 24 h"],["radar","Radar Keepa"],["hype","Hype étrangère"],["bingo","Bingo"],["demande","Les plus recherchés"],["arbitrage","Arbitrage Europe"],["sourceur","Sourceur (bingos)"],["chasseur","Chasseur (particuliers)"],["pays","Demande par pays"],["outils","Outils"]];
 const e=t=>String(t??"—").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const eur=v=>typeof v==="number"?v.toFixed(2).replace(".",",")+" €":"—";
 let actif="affaires";
@@ -213,6 +214,7 @@ function rendre(){document.querySelectorAll("nav button").forEach(b=>b.classList
    <div class="ligne"><b>Risques :</b> ${e((x.risques||[]).join(", "))}</div>
    <div class="motif"><b>Message de négociation :</b><br>${e(x.message_negociation).replace(/\n/g,"<br>")}</div>
    <div class="ligne"><small>Sources : ${(x.sources_google||x.sources||[]).slice(0,6).map(u=>`<a href="${e(u)}" target="_blank">${e(String(u).slice(0,50))}</a>`).join(" · ")}</small></div></div>`).join("");}
+ else if(actif==="chasseur"){const C=D.chasse||[];html=`<div class="vide">Annonces de particuliers (Vinted, Leboncoin) trouvées par le Chasseur sur ton PC : sous-cotées (≤ 65 % du prix d'occasion), invisibles (titre mal écrit, lot) ou vendeur pressé. Mise à jour ${e(D.chasse_maj||"pas encore : attend le collecteur PC")} · ${e((D.chasse_etat||{}).recherches||0)} recherches, ${e((D.chasse_etat||{}).annonces_lues||0)} annonces lues au dernier tour.</div>`+(C.length?`<table><tr><th>Site</th><th>Annonce</th><th>Prix</th><th>Référence occasion</th><th>Écart</th><th>Signaux</th><th>Produit cherché</th><th>Vu</th></tr>`+C.map(x=>`<tr><td>${e(x.site)}</td><td><a href="${e(x.lien)}" target="_blank">${e(x.titre)}</a></td><td><b>${eur(x.prix)}</b></td><td>${eur(x.reference)}</td><td class="pct">${x.ecart_pct!=null?`-${e(x.ecart_pct)} %`:"—"}</td><td>${e((x.signaux||[]).join(", "))}</td><td>${e(x.produit)} <small>(${e(x.origine)})</small></td><td>${e((x.vu||"").slice(5,16).replace("T"," "))}</td></tr>`).join("")+"</table>":"");}
  else if(actif==="pays"){const P=D.demande_pays||{};const noms={FR:"🇫🇷 France",DE:"🇩🇪 Allemagne",ES:"🇪🇸 Espagne",IT:"🇮🇹 Italie",US:"🇺🇸 USA",JP:"🇯🇵 Japon"};
    html=`<div class="vide">Volume de recherches Google par pays (Amigo, DataForSEO, hebdomadaire — ${e(D.demande_pays_maj||"pas encore calculé")}) sur les produits de la base, croisé avec leur prix : qui cherche quoi, et dans quelle tranche de prix.</div>`;
    for(const [p,v] of Object.entries(P)){html+=`<h3>${noms[p]||p} — ${e(v.nb_avec_volume)} produits avec volume</h3><table><tr><th>Tranche de prix</th><th>Produits</th><th>Recherches / mois</th></tr>`+Object.entries(v.tranches||{}).map(([t,x])=>`<tr><td>${e(t)}</td><td>${e(x.produits)}</td><td><b>${e(x.recherches)}</b></td></tr>`).join("")+`</table><table><tr><th>#</th><th>Produit (mot-clé)</th><th>Recherches / mois</th><th>Prix</th><th>Vendeurs Amazon FR</th></tr>`+(v.top||[]).slice(0,30).map((x,i)=>`<tr><td>${i+1}</td><td><b>${e(x.mot_cle)}</b><br><small>${e(x.titre)}</small></td><td><b>${e(x.volume)}</b></td><td>${eur(x.prix)}</td><td>${e(x.vendeurs_amazon_fr)}</td></tr>`).join("")+"</table>";}

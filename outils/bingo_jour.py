@@ -8,5 +8,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from denicheur import bingo  # noqa: E402
 
 bingo.jour()
+from denicheur import sourceur  # noqa: E402
+sourceur.jour()
 subprocess.run([sys.executable, "saas/rapport_hype.py"])
 subprocess.run([sys.executable, "saas/rapport_david.py"])

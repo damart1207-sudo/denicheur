@@ -385,6 +385,9 @@ def passage(nom, test=False):
         if nom == "nuit":
             etape("bingo")
             sante.protege("bingo", bingo.jour)
+            from . import sourceur
+            etape("sourceur")
+            sante.protege("sourceur", sourceur.jour, 10)
         for c in retenus:
             c["bingo"] = bingo.est_bingo(c.get("nom_produit") or c["titre"])
     etape("enregistrement")

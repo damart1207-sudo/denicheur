@@ -103,18 +103,7 @@ jobs:
             git config user.email "denicheur-bot@users.noreply.github.com"
             # RATTRAPAGE : GitHub saute parfois un horaire programmé. Si le passage attendu pour ce créneau
             # (nuit 5 h, midi 13 h, soir 18 h Paris) n'a pas eu lieu, la veille le lance elle-même.
-            MANQUANT=$(python - <<'PY'
-            import json, datetime
-            h = datetime.datetime.utcnow()
-            creneau = "nuit" if 4 <= h.hour <= 9 else "midi" if 12 <= h.hour <= 15 else "soir" if 17 <= h.hour <= 23 else ""
-            try:
-                p = json.load(open("data/dernier_passage.json"))
-                fait = p.get("horodatage", "")[:10] == (h + datetime.timedelta(hours=1)).strftime("%Y-%m-%d") and p.get("passage") == creneau
-            except Exception:
-                fait = False
-            print("" if (not creneau or fait) else creneau)
-            PY
-            )
+            MANQUANT=$(python outils/rattrapage.py)
             if [ -n "$MANQUANT" ]; then
               echo "Passage $MANQUANT manquant : rattrapage"
               timeout 1500 python -m denicheur --passage "$MANQUANT" || python -m denicheur.sante echec "rattrapage $MANQUANT : code $?"

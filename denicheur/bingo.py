@@ -161,6 +161,21 @@ def jour():
         x["bingo"] = (x["recherches_mois"] >= VOLUME_MIN and (x.get("vendeurs") or 0) <= VENDEURS_MAX
                       and x.get("annonces_ebay", 0) <= 15)
     lignes.sort(key=lambda x: (x["bingo"], x["score"]), reverse=True)
+    # concurrence réelle en France (idealo via Apify, ≈ 0,01 $ chacun, budget du dénicheur B) sur les 20 meilleurs bingos :
+    # nombre de marchands qui vendent le produit + prix neuf le plus bas en France = la cible à battre pour Idéfix/Chasseur.
+    from . import apify
+    apify.CONTEXTE["denicheur"] = "B"
+    for x in [l for l in lignes if l["bingo"]][:20]:
+        pi = sante.protege("bingo idealo", apify.prix_idealo, x["mot_cle"], defaut=None)
+        if not pi:
+            continue
+        x["idealo"] = pi
+        x["marchands_france"] = pi.get("nb_offres")
+        x["prix_neuf_france"] = pi.get("prix_min")
+        if isinstance(pi.get("nb_offres"), int) and pi["nb_offres"] >= 10:
+            x["bingo"], x["motif"] = False, f"{pi['nb_offres']} marchands en France sur idealo : trop de concurrence"
+    apify.CONTEXTE["denicheur"] = "A"
+    lignes.sort(key=lambda x: (x["bingo"], x["score"]), reverse=True)
     # hype qui monte à l'étranger (Google Trends) sur les 8 premiers produits venus de la hype Keepa
     vagues = []
     for x in [l for l in lignes if l.get("pays_hype")][:8]:

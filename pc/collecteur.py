@@ -114,6 +114,8 @@ PAGES = [
     ("tiktok-top-produits", "https://ads.tiktok.com/business/creativecenter/top-products/pc/fr", "FR", "TikTok (top produits)"),
     ("leboncoin-tendances", "https://www.leboncoin.fr/", "FR", "Leboncoin (recherches populaires)"),
     ("vinted-tendances", "https://www.vinted.fr/", "FR", "Vinted (tendances)"),
+    ("jd-classement", "https://top.jd.com/", "CN", "JD.com (classement des ventes)"),
+    ("jd-phb", "https://www.jd.com/phb/", "CN", "JD.com (classement des ventes)"),
 ]
 PRIX = re.compile(r"(\d{1,4}(?:[  ]\d{3})?[,.]\d{2})\s?€")
 
@@ -125,8 +127,31 @@ def _num(t):
         return None
 
 
+def extraire_jd(h, source, marchand):
+    """Classement JD.com : produits dans l'ordre de la page (liens item.jd.com/<n>.html), titre, prix en yuans s'il est là."""
+    out, vus = [], set()
+    for m in re.finditer(r'href="(?:https?:)?//item\.jd\.com/(\d+)\.html"[^>]*>(.{0,1500}?)</a>', h, re.S):
+        sku = m.group(1)
+        if sku in vus:
+            continue
+        bloc = m.group(2)
+        t = re.search(r'title="([^"]{6,200})"', m.group(0)) or re.search(r'alt="([^"]{6,200})"', bloc)
+        texte = t.group(1) if t else re.sub(r"<[^>]+>", " ", bloc)
+        texte = " ".join(_html.unescape(texte).split())[:160]
+        if len(texte) < 6:
+            continue
+        p = re.search(r'[¥￥]\s*(\d+(?:\.\d+)?)', h[m.end():m.end() + 1500])
+        vus.add(sku)
+        out.append({"id": hashlib.sha1(("jd" + sku).encode()).hexdigest()[:10], "titre": texte, "temperature": 0, "categorie": "classement",
+                    "marchand": marchand, "prix": float(p.group(1)) if p else None, "devise": "CNY", "lien": f"https://item.jd.com/{sku}.html",
+                    "date": datetime.now().strftime("%Y-%m-%dT%H:%M"), "source": "pc:" + source, "pays": "CN", "description": "", "rang": len(out) + 1})
+    return out[:50]
+
+
 def extraire(h, source, pays, marchand, url_base):
     """Produits de la page : JSON-LD schema.org (Product / ItemList / offers) d'abord, puis blocs HTML avec prix et lien."""
+    if source.startswith("jd-"):
+        return extraire_jd(h, source, marchand)
     out = []
     for m in re.finditer(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
         try:

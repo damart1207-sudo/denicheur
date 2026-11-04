@@ -119,8 +119,15 @@ def amazon(pays, n=10, par_cat=10):
 
 def chine(n=10, date=None):
     """SMZDM : les bons plans les plus récents du jour (pas de chiffres de ventes) ; titres traduits par Gemini."""
-    flux = _lire(os.path.join(RACINE, "data/hype_flux.json"), {}).get("titres", [])
-    lst = [x for x in flux if str(x.get("source", "")).startswith("smzdm")][-n:]
+    pc = _lire(os.path.join(RACINE, "data/pc/annonces.json"), {}).get("annonces", [])
+    jd = sorted([x for x in pc if str(x.get("source", "")).startswith("pc:jd-")], key=lambda x: x.get("rang") or 99)
+    if jd:  # vrai classement des ventes JD.com, lu par le PC de David
+        lst = jd[:n]
+        source = "jd"
+    else:
+        flux = _lire(os.path.join(RACINE, "data/hype_flux.json"), {}).get("titres", [])
+        lst = [x for x in flux if str(x.get("source", "")).startswith("smzdm")][-n:]
+        source = "smzdm"
     if not lst:
         return []
     try:
@@ -133,14 +140,20 @@ def chine(n=10, date=None):
         tr = (extraire_json(rep) or {}).get("t") if rep else None
     except Exception:
         tr = None
-    return [{"titre": (tr[i] if tr and i < len(tr) else x["titre"]), "original": x["titre"], "lien": x.get("lien")} for i, x in enumerate(lst)]
+    return [{"titre": (tr[i] if tr and i < len(tr) else x["titre"]), "original": x["titre"], "lien": x.get("lien"), "source": source,
+             "prix_eur": round(x["prix"] * TAUX["CN"], 2) if source == "jd" and isinstance(x.get("prix"), (int, float)) else None}
+            for i, x in enumerate(lst)]
 
 
 def message(pays, date, top):
     from .telegram import _e, _eur as eur
     if pays == "CN":
-        lignes = [f"<b>{NOMS[pays]} — les 10 bons plans les plus populaires du {date}</b> (SMZDM, pas de chiffres de ventes)"]
-        lignes += [f"{i}. {_e(x['titre'])}\n{_e(x.get('lien'))}" for i, x in enumerate(top, 1)]
+        if top and top[0].get("source") == "jd":
+            lignes = [f"<b>{NOMS[pays]} — top 10 des ventes JD.com du {date}</b> (classement JD lu par ton PC)"]
+        else:
+            lignes = [f"<b>{NOMS[pays]} — les 10 bons plans les plus populaires du {date}</b> (SMZDM, pas de chiffres de ventes)"]
+        lignes += [f"{i}. {_e(x['titre'])}" + (f" · {eur(x['prix_eur'])}" if x.get("prix_eur") else "") + f"\n{_e(x.get('lien'))}"
+                   for i, x in enumerate(top, 1)]
         return "\n".join(lignes)
     lignes = [f"<b>{NOMS[pays]} — top 10 des ventes Amazon du {date}</b> (photo à 23 h 59 heure locale)"]
     for i, x in enumerate(top, 1):

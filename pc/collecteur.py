@@ -179,7 +179,7 @@ def collecter(connexion=False):
     os.makedirs(D_ECH, exist_ok=True)
     resultats, etat = [], {}
     with sync_playwright() as p:
-        ctx = p.chromium.launch_persistent_context(PROFIL, headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
+        ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
                                                    args=["--disable-blink-features=AutomationControlled"])
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         if connexion:

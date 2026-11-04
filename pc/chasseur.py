@@ -121,7 +121,7 @@ def tour():
     vus = _lire(F_VUS, {})
     trouves, etat = [], {"recherches": 0, "annonces_lues": 0}
     with sync_playwright() as p:
-        ctx = p.chromium.launch_persistent_context(PROFIL, headless=True, locale="fr-FR", viewport={"width": 1366, "height": 900},
+        ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=True, locale="fr-FR", viewport={"width": 1366, "height": 900},
                                                    args=["--disable-blink-features=AutomationControlled"])
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         n = 0

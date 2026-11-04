@@ -2,7 +2,7 @@
 (au moins 25 % sous le neuf le moins cher en France, ou erreur de prix probable) et les écrit dans
 data/alertes.json avec le statut « a_verifier ». Claude les vérifie toutes les heures et prévient David.
 
-Rapide et économe : pas d'équipe complète, une seule IA rapide (Groq) pour nommer les produits.
+Rapide et économe : pas d'équipe complète, une seule IA rapide (Gemini) pour nommer les produits.
 python -m denicheur.veille
 """
 import json
@@ -53,8 +53,10 @@ def priorite(a):
 def nommer(annonces):
     """Une IA rapide donne le nom exact (marque + modèle) de chaque produit. Sinon : titre nettoyé."""
     noms = {}
-    conf = _lire("config/equipe.json", {})["agents"]["gptoss"]
-    agent = Agent("gptoss", {**conf, "max_appels": 1})
+    # Gemini (niveau payant, quelques centimes/jour) : les 120 appels quotidiens de la veille vidaient le quota Groq
+    # (200 000 jetons/jour) dont le tribunal de nuit a besoin.
+    conf = _lire("config/equipe.json", {})["agents"]["gemini"]
+    agent = Agent("gemini", {**conf, "max_appels": 2})
     lignes = "\n".join(f'{a["id"]} | {a["titre"]}' for a in annonces)
     rep = agent.demander(
         "Tu identifies des produits. Réponds en json uniquement.",

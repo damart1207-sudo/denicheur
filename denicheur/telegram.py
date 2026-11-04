@@ -32,6 +32,27 @@ def envoyer(texte, html=True):
         return False
 
 
+def envoyer_fichier(chemin, legende=""):
+    """Envoie un fichier (ex. data/rapport_david.html) en pièce jointe : David l'ouvre sur son téléphone."""
+    if not pret() or not os.path.isfile(chemin):
+        return False
+    import uuid
+    limite = uuid.uuid4().hex
+    nom = os.path.basename(chemin)
+    corps = b""
+    for k, v in (("chat_id", os.environ["TELEGRAM_CHAT_ID"].strip()), ("caption", legende[:1000])):
+        corps += f"--{limite}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode()
+    corps += f"--{limite}\r\nContent-Disposition: form-data; name=\"document\"; filename=\"{nom}\"\r\nContent-Type: text/html\r\n\r\n".encode()
+    corps += open(chemin, "rb").read() + f"\r\n--{limite}--\r\n".encode()
+    req = urllib.request.Request(f"https://api.telegram.org/bot{os.environ['TELEGRAM_TOKEN'].strip()}/sendDocument", data=corps,
+                                 headers={"Content-Type": f"multipart/form-data; boundary={limite}", "User-Agent": "denicheur/1.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.loads(r.read()).get("ok", False)
+    except Exception:
+        return False
+
+
 def _e(t):
     return str(t if t is not None else "—").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 

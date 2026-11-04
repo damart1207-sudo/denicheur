@@ -395,10 +395,19 @@ def passage(nom, test=False):
     ecrire(f"{base}/dernier_passage.json", resultat)
     ecrire(f"{base}/classement.json", classement)
     ecrire(f"{base}/rapport.html", rapport.page(resultat, classement))
-    if not test:  # Telegram : seulement s'il y a des cartes vertes ou orange (jamais de message vide)
+    if not test:  # page de David reconstruite, puis Telegram : seulement s'il y a des cartes vertes ou orange (jamais de message vide)
+        import importlib.util
         from . import telegram
-        sante.protege("telegram passage", telegram.rapport_passage, resultat,
-                      "https://github.com/damart1207-sudo/denicheur/blob/main/data/rapport_david.html")
+        try:
+            spec = importlib.util.spec_from_file_location("rapport_david", os.path.join(RACINE, "saas/rapport_david.py"))
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            mod.construire()
+        except Exception as e:
+            sante.noter("erreur", "rapport david", f"{type(e).__name__}: {e}")
+        if sante.protege("telegram passage", telegram.rapport_passage, resultat):
+            sante.protege("telegram fichier", telegram.envoyer_fichier, os.path.join(RACINE, "data/rapport_david.html"),
+                          f"Rapport {nom} du {resultat['date_affichee']} (page à onglets, à ouvrir dans le navigateur)")
     # si aucun analyste n'a pu travailler (clés absentes, pannes), on garde les bons plans pour le passage suivant
     if any(a.reussites for k, a in agents.items() if k in conf_eq["analystes"] or k in remplacements):
         ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])

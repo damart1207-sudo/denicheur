@@ -417,6 +417,8 @@ def passage(nom, test=False):
             etape("bingo")
             sante.protege("bingo", bingo.jour)
             sante.protege("telegram recherches", telegram.plus_recherches)
+            from . import hype_jour
+            sante.protege("telegram hype", hype_jour.jour)
             from . import sourceur
             etape("sourceur")
             sante.protege("sourceur", sourceur.jour, 10)

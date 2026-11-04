@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_BUDGET = os.path.join(RACINE, "data/etat/dataforseo_budget.json")
-PLAFOND_JOUR_USD = 0.70
+PLAFOND_JOUR_USD = 1.00  # accord de David le 04/11 (≈ 30 $/mois au plus)
 PAYS = {"FR": 2250, "DE": 2276, "ES": 2724, "IT": 2380, "US": 2840, "UK": 2826, "NL": 2528, "PL": 2616, "JP": 2392}
 LANGUE = {"FR": "fr", "DE": "de", "ES": "es", "IT": "it", "US": "en", "UK": "en", "NL": "nl", "PL": "pl", "JP": "ja"}
 COUT = {"volumes": 0.09, "tendances": 0.011}

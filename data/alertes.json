@@ -20319,7 +20319,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:14+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -20422,17 +20422,17 @@
   ],
   "denicheur": "A",
   "verdict": {
-   "prix_revente_verifie": null,
-   "canal": null,
+   "commentaire": "Même offre que l'alerte b2675fa699 déjà rejetée le 02/11 : Amazon.fr à 97,83 € d'après Les Numériques (page relue par le robot à 18h24 UTC, active). Référence exacte toujours inconnue (article illisible ici, fiche Amazon bloquée). Le X-Pert 6.60 est vu à partir de 99,99 € en France sur leDénicheur (RH6836 et RH6838, autres coloris, relevé du 02/11) : économie de 2 % seulement, loin des 15 %. Le 179,99 € de Keepa est un prix haut (plus bas 90 j : 99 €) et ne sert pas de référence. Revente : Vinted médiane 85 €, sous notre coût de 102,83 €.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "leDénicheur (relevé du 02/11)",
+   "economie_pct": 2,
+   "prix_revente_verifie": 85,
+   "canal": "vinted",
    "marge_nette_verifiee": null,
-   "demande_confirmee": false,
-   "commentaire": "Offre Amazon.fr à 97,83 € d'après Les Numériques (article du 03/11, relu par le robot à 17h20 UTC : -39 %, 5 % sous le plus bas de 30 jours). Référence exacte inconnue, or la gamme X-Pert 6.60 en a plusieurs : RH6821WO à 119,99 € sur achatmoinscher, fiche Amazon.fr de Keepa à 179,99 € (plus bas 90 j : 99 €), RH6836EO vue à 99,99 € sur Amazon en juillet (prix conseillé 159,99 €). Les 15 % ne sont pas prouvés pour ce modèle précis. Revente : Vinted médiane 85 €, sous notre coût.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "non fiable (modèle exact inconnu)",
-   "economie_pct": null,
-   "duree_offre": "Inconnue"
+   "duree_offre": "Inconnue, prix qui revient souvent chez Amazon (94,98 € en mai, 103,99 € le 23/10)",
+   "demande_confirmee": false
   },
-  "verifie_le": "2026-11-04T17:48+00:00",
+  "verifie_le": "2026-11-04T18:44+00:00",
   "page_offre": {
    "lu_le": "2026-11-04T18:24+00:00",
    "lien_deal": "https://www.lesnumeriques.com/aspirateur-balai/l-aspirateur-balai-rowenta-x-pert-6-60-est-a-97-83-39-n266747.html",
@@ -25660,7 +25660,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T17:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -25790,7 +25790,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T17:51+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T18:44+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Ninja Foodi MAX 9,5 L, AF400UK), mais offre George at ASDA au Royaume-Uni : magasin national, page ASDA illisible (anti-robot), aucune livraison en France prouvée. Et l'affaire est perdante : 159 £ font 182,85 € avant port et douane, 227,42 € au coût robot, contre 179,54 € neuf sur Amazon.fr (Keepa, 04/11 ; plus bas 90 j 149,98 €). Les « 11 % d'économie » du robot viennent d'une comparaison de livres avec des euros (159 / 179,54). Aucune revente possible.",
+   "prix_neuf_min_idealo": 179.54,
+   "source_prix_ref": "Keepa / Amazon.fr (04/11)",
+   "economie_pct": -27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "7bd531e0e3",
@@ -25828,7 +25840,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T18:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -25949,7 +25961,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 18:13 UTC : offre active, 192.5 affiché, marchand 24_4 ; amazon.pl refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T18:44+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Makita HP333DZ, machine seule, sans batterie ni chargeur, EAN 0088381872195). Offre Amazon.pl à 159,99 zł d'après le titre Pepper (37,60 €), mais le robot a lu 192,50 sur la même page et la fiche Amazon.pl est illisible (anti-robot) : prix réel, vendeur et stock non confirmés. Livraison en France depuis Amazon Pologne non prouvée pour cette offre et port inconnu, le « oui » du robot est une règle générale, pas une lecture de la page. Neuf le plus bas en France : 64,21 € + 3,90 € de port, soit 68,11 € chez Rue du Commerce Marketplace (Fnac 68,24 €, Cdiscount 69,27 € livrés). L'écart serait de 37 %, mais sans preuve de livraison et de prix : rejet. À acheter seulement si David constate lui-même sur Amazon.pl le prix et l'envoi vers la France.",
+   "prix_neuf_min_idealo": 68.11,
+   "source_prix_ref": "achatmoinscher (04/11, page lue)",
+   "economie_pct": 37,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue, offre vue sur Pepper le 04/11",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "a60a48b947",
@@ -25987,7 +26011,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T18:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -26083,7 +26107,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:23 UTC : offre active, 54.82 affiché, code 100ml: Sovendus Gutschein | 50ml: Newsletter \\/ DESAVE - siehe Deal, marchand 927_2 ; flaconi.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T18:44+00:00",
+  "verdict": {
+   "commentaire": "Bon parfum (L'Homme Idéal L'Intense EDP 100 ml), mais offre sur flaconi.de : page refusée (403), prix du 100 ml non confirmé (titre mydealz : 50,79 € / 48,54 € pour le 50 ml, robot 54,82, alerte 58,54) et il faut un bon Sovendus allemand. Livraison en France non prouvée : les seuls résultats trouvés sont des services de réexpédition. Parfumdreams.fr, cité aussi, ne montre aucun prix lisible. Neuf le plus bas en France : 83,95 € livrés chez Kapao, en stock (fiche lue le 04/11 ; Notino 93,90 € + 4,99 € ; Sephora 109,50 €). L'écart serait de 24 %, mais sans preuve : rejet.",
+   "prix_neuf_min_idealo": 83.95,
+   "source_prix_ref": "Kapao (fiche lue le 04/11), confirmé par achatmoinscher",
+   "economie_pct": 24,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue, bon Sovendus limité",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "4f36c0b70f",
@@ -26121,7 +26157,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T18:32+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26242,6 +26278,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 18:33 UTC : offre active, 383.99 affiché, marchand 2311_1 ; allegro.pl refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T18:44+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Stanley Fatmax DST 101/8/6, 6 L, 8 bars), mais offre Allegro à 409,99 zł (96,35 €), site polonais : pas de livraison en France, page Allegro refusée (403), vendeur et port inconnus, compresseur lourd donc frais de renvoi élevés. Le robot a lu 383,99 sur la page, prix non confirmé. Neuf en France : 130,99 € sur achatmoinscher (relevé du robot), 145,15 € sur Amazon.fr (Keepa, plus bas 90 j 83,39 €). Rejet.",
+   "prix_neuf_min_idealo": 130.99,
+   "source_prix_ref": "achatmoinscher (relevé du robot, 04/11)",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Vente à partir du 04/11 à 9 h, fin inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

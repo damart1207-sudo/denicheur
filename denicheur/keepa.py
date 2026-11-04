@@ -133,6 +133,51 @@ def _parser(p, domaine, pays="FR", jetons=None):
     }
 
 
+def vendeurs(asin, pays="FR", maxi=10):
+    """Les vendeurs actuels d'un produit Amazon (offres en direct, 6 jetons par page de 10) + fiche de chaque vendeur
+    (1 jeton : nom, pays, raison sociale). Sert au Sourceur : qui vend le moins cher, d'où il vient, comment il se fournit."""
+    if not disponible() or not asin:
+        return []
+    b = _budget()
+    try:
+        d = _lire({"key": cle(), "domain": DOMAINES.get(pays, 4), "asin": asin, "offers": 20, "history": 0, "stats": 0})
+    except Exception as e:
+        _noter(b)
+        return [{"erreur": f"{type(e).__name__}: {str(e)[:80]}"}]
+    _noter(b, d.get("tokensLeft"))
+    prods = d.get("products") or []
+    if not prods:
+        return []
+    offres = []
+    for o in (prods[0].get("offers") or []):
+        if not isinstance(o, dict):
+            continue
+        hist = o.get("offerCSV") or []
+        prix = _prix(hist[-2]) if len(hist) >= 2 else None  # dernier [date, prix, port]
+        port = _prix(hist[-1]) if len(hist) >= 1 and isinstance(hist[-1], (int, float)) and hist[-1] > 0 else 0.0
+        offres.append({"sellerId": o.get("sellerId"), "prix": prix, "port": port, "etat": o.get("condition"), "fba": o.get("isFBA"),
+                       "prime": o.get("isPrime"), "amazon": o.get("isAmazon"), "entrepot": o.get("isWarehouseDeal")})
+    offres = [o for o in offres if o["prix"] and o.get("etat") in (None, 1)]  # 1 = neuf
+    offres.sort(key=lambda o: o["prix"] + (o["port"] or 0))
+    out = []
+    for o in offres[:maxi]:
+        sid = o["sellerId"]
+        nom, pays_v, societe = ("Amazon", "FR", "Amazon") if o.get("amazon") else (None, None, None)
+        if sid and not o.get("amazon") and disponible():
+            try:
+                ds = _lire_url("https://api.keepa.com/seller", {"key": cle(), "domain": DOMAINES.get(pays, 4), "seller": sid})
+                _noter(_budget(), ds.get("tokensLeft"))
+                sv = (ds.get("sellers") or {}).get(sid) or {}
+                nom = sv.get("sellerName")
+                adr = sv.get("address") or []
+                pays_v = adr[-1] if isinstance(adr, list) and adr else None
+                societe = sv.get("businessName")
+            except Exception:
+                pass
+        out.append({**o, "vendeur": nom, "societe": societe, "pays": pays_v, "lien": f"https://www.amazon.fr/sp?seller={sid}" if sid else None})
+    return out
+
+
 def rechercher(nom, pays="FR", prix_attendu=None):
     """Trouve le produit sur Amazon par son NOM (recherche Keepa, 10 jetons) : ASIN, EAN, prix, ventes.
     Garde le meilleur résultat dont le titre correspond au nom (et, si connu, dont le prix est plausible)."""

@@ -34,6 +34,10 @@ Cherche sur Google (en français et en anglais) comment s'en fournir AU PLUS BAS
   "risques": ["contrefaçon", "garantie", "normes CE", "droits de douane", "..."],
   "message_negociation": "<message en français (ou anglais si fournisseur étranger) prêt à envoyer, 5 lignes, sans inventer de prix>",
   "sources": ["url", "..."]}}
+VENDEURS ACTUELS les moins chers sur Amazon.fr (relevés par Keepa, avec le pays de leur société) : {vendeurs}
+Déduis de ces vendeurs COMMENT ils se fournissent (usine qui vend en direct sous son nom, import depuis un pays moins cher,
+déstockage, distributeur) et comment faire pareil : ajoute un champ "comment_font_les_vendeurs": "<2-3 phrases>" et, si un vendeur
+est l'usine ou un fournisseur chinois, mets-le dans usines_ou_fournisseurs avec son nom de société exact pour le retrouver sur Alibaba/1688.
 Règles : n'invente aucun contact ni prix ; si tu ne trouves pas, mets des listes vides et explique dans meilleure_piste. Pour une marque fermée
 (distribution contrôlée), dis-le et oriente vers distributeurs agréés, déstockeurs, achats en gros sur Amazon Business ou ventes privées."""
 
@@ -47,8 +51,17 @@ def _lire():
 
 def fiche(b, cle):
     """Une fiche sourcing pour un bingo (dict de data/bingo.json). Renvoie la fiche ou None."""
+    vend = []
+    if b.get("asin"):
+        from . import keepa
+        try:
+            vend = [v for v in keepa.vendeurs(b["asin"], "FR", 8) if not v.get("erreur")]
+        except Exception:
+            vend = []
+    vend_txt = "; ".join(f"{v.get('vendeur') or v.get('sellerId')} ({v.get('societe') or '?'}, {v.get('pays') or '?'}) à {v.get('prix')} €"
+                         for v in vend) or "aucun relevé"
     texte = CONSIGNE.format(produit=b.get("titre") or b.get("mot_cle"), marque=b.get("marque") or "?",
-                            prix_fr=b.get("prix_neuf_france") or b.get("prix") or "?", ventes=b.get("ventes_30j") or "?")
+                            prix_fr=b.get("prix_neuf_france") or b.get("prix") or "?", ventes=b.get("ventes_30j") or "?", vendeurs=vend_txt)
     corps = {"contents": [{"role": "user", "parts": [{"text": texte}]}], "tools": [{"google_search": {}}]}
     for modele in MODELES:
         req = urllib.request.Request(URL.format(modele=modele) + f"?key={cle}", data=json.dumps(corps).encode(),
@@ -77,6 +90,7 @@ def fiche(b, cle):
     d["mot_cle"], d["titre"], d["asin"] = b.get("mot_cle"), b.get("titre"), b.get("asin")
     d["prix_fr"], d["recherches_mois"], d["vendeurs"] = b.get("prix_neuf_france") or b.get("prix"), b.get("recherches_mois"), b.get("vendeurs")
     d["date"] = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    d["vendeurs_amazon"] = vend
     return d
 
 

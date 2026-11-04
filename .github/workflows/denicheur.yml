@@ -103,6 +103,7 @@ jobs:
               timeout 300 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
               python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
               python saas/rapport_hype.py || true
+              python saas/rapport_david.py || true
               git add -A data docs
               if ! git diff --cached --quiet; then
                 git commit -q -m "Veille $(date -u +%H:%M) (tour $i)"
@@ -126,6 +127,10 @@ jobs:
           else
             python -m denicheur --passage "$PASSAGE"
           fi
+
+      - name: Rapport de David (page à onglets)
+        if: always()
+        run: python saas/rapport_david.py || true
 
       - name: Enregistrer les résultats
         if: always()

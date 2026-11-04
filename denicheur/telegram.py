@@ -75,7 +75,7 @@ def rapport_passage(resultat, lien_rapport=None):
         lignes.append(f"\n{feux[c['feu']]} <b>{_e(c.get('nom_produit') or c.get('titre'))}</b> — {den}{' · BINGO' if c.get('bingo') else ''}\n"
                       f"achat {_eur(c.get('prix'))} chez {_e(c.get('marchand'))} ({_e(c.get('pays'))}) · neuf {_eur(pmin)} · "
                       f"revente {_eur(c.get('prix_revente_prudent'))} · marge <b>{_eur(c.get('marge_verifiee'))}</b>"
-                      + (f" · vendeurs Amazon {c['vendeurs_amazon']}" if c.get('vendeurs_amazon') is not None else "")
+                      + (f" · concurrents Amazon : {c['vendeurs_amazon']} vendeurs" if c.get('vendeurs_amazon') is not None else "")
                       + f"\n{_e(c.get('lien'))}")
     if lien_rapport:
         lignes.append(f"\nRapport complet : {_e(lien_rapport)}")
@@ -92,7 +92,7 @@ def alerte(x):
              f"achat {_eur(x.get('prix'))} chez {_e(x.get('marchand'))} ({_e(x.get('pays'))}) · neuf le moins cher {_eur(pmin)} · "
              f"économie {_e(x.get('economie_pct'))} %\n"
              + (f"revente {_eur(meilleur.get('prix_vente'))} sur {_e(meilleur.get('canal'))} · marge {_eur(meilleur.get('marge_nette'))}\n" if meilleur else "")
-             + (f"vendeurs Amazon {x['vendeurs_amazon']} · ventes 30 j {x.get('ventes_estimees_30j')}\n" if x.get("vendeurs_amazon") is not None else "")
+             + (f"concurrents sur Amazon : {x['vendeurs_amazon']} vendeurs · ventes Amazon sur 30 jours : environ {x.get('ventes_estimees_30j') if x.get('ventes_estimees_30j') is not None else 'inconnu'}\n" if x.get("vendeurs_amazon") is not None else "")
              + f"{_e(x.get('lien'))}")
     return envoyer(texte)
 

@@ -26640,7 +26640,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:04+00:00",
-  "statut": "a_reverifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26765,17 +26765,17 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Le 95,90 € de l'alerte est une bâche de rechange seule, pas une serre. Dealabs relu à 21h11 : actif, 99 € avec le code français 11FR13 sur AliExpress. Serres Outsunny 18 m² en France relevées sur ManoMano le 04/11 : environ 135 à 150 € (6x3x2 et 5,95x3x2 m, 8 fenêtres), à confirmer sur une fiche du même modèle. Si elles se confirment, le gain dépasserait 25 %. À relire.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "Prix de référence à confirmer sur le même modèle",
-   "economie_pct": null,
+   "commentaire": "Bon produit : serre tunnel Outsunny 18 m² (5,95 x 3 x 2 m, acier galvanisé, bâche PE 140 g, 8 fenêtres). Bon plan Dealabs actif à la dernière relecture (21h15 UTC) : 99 € avec le code 11FR13 sur AliExpress, 101,41 € sans. Fiche AliExpress non lisible ici (anti-robot) : vérifier le port et le code au panier ; le calcul compte 5 € de port par prudence, soit 106,41 € livrés. Neuf en France (ledenicheur, 04/11) : 135,90 € chez Amazon.fr et Kaufland pour la version 6 x 3 x 2 m, 139,90 € chez Aosom ; 156,82 € chez Kaufland pour la version 5,95 x 3 x 2 m. Économie d'au moins 22 % sur le moins cher. Pas de revente : à 85 % du neuf (115,52 €), bénéfice d'environ 9 €, et colis très encombrant.",
+   "prix_neuf_min_idealo": 135.9,
+   "source_prix_ref": "ledenicheur.fr (04/11, Amazon.fr et Kaufland)",
+   "economie_pct": 22,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "Inconnue",
+   "duree_offre": "Inconnue, dépend du code 11FR13",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-04T21:00+00:00"
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "0c7d8d4e33",
@@ -28515,7 +28515,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -28665,7 +28665,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (59 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Produit douteux : le titre annonce la ROG Strix X870-I (Mini-ITX), mais le lien du bon plan ouvre une ASUS Prime X870-P (ATX), une carte plus simple. 180,34 £ ne colle pas à la X870-I, vendue au moins 349,99 £ au Royaume-Uni (PriceSpy) et 406,71 € en France (KultureGeek, 7 offres). Le prix Keepa de l'alerte (360,92 €) était celui de la X870-F, autre carte. Livraison en France non confirmée.",
+   "prix_neuf_min_idealo": 406.71,
+   "source_prix_ref": "KultureGeek (Amazon Marketplace), 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "f36eb1d031",
@@ -28703,7 +28715,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -28844,7 +28856,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (15 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit et bon prix (287,99 €, 283,89 € avec le code CLICK2P), mais notebooksbilliger ne livre qu'en Allemagne (ColisExpat le signale et propose un transitaire payant) : non livrable en France. Neuf en France : 348,98 € chez Electro Dépôt, livraison offerte (123comparer et comparez-malin, 04/11), sous les 453 € de l'alerte ; Fnac et Darty 410,91 €. Économie théorique 16 %, annulée par la livraison.",
+   "prix_neuf_min_idealo": 348.98,
+   "source_prix_ref": "123comparer et comparez-malin (Electro Dépôt), 04/11",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Weeks notebooksbilliger jusqu'au 06/11",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "41ef41585b",
@@ -28882,7 +28906,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29025,7 +29049,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Pas une affaire : 49,39 € livrés depuis le Royaume-Uni (29,99 £ et frais) contre 39,99 € en neuf en France (achatmoinscher, 6 boutiques) et 43,58 € sur Amazon.fr (Keepa, 04/11). Plus cher qu'en France.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher, 04/11",
+   "economie_pct": -24,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "d3d51863e5",
@@ -29055,7 +29091,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-04T21:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -29089,7 +29125,19 @@
    "premiere_lecture": "2026-11-04T21:14+00:00",
    "expiree_vue_le": "2026-11-04T21:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre expirée : mydealz indique qu'elle n'est plus disponible. C'était une erreur de prix probable (29,90 € au lieu de 113 €). Aucun prix neuf en France trouvé pour ce modèle exact.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Terminée",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "9669a9e2fa",
@@ -29127,7 +29175,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29268,7 +29316,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Pas une affaire : 37,56 € livrés depuis le Royaume-Uni contre 31,54 € en neuf en France (achatmoinscher, 9 boutiques). Le prix Keepa de l'alerte concerne un livre japonais, sans rapport avec ce jeu Switch.",
+   "prix_neuf_min_idealo": 31.54,
+   "source_prix_ref": "achatmoinscher, 04/11",
+   "economie_pct": -19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "fe84978444",
@@ -29325,7 +29385,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29491,7 +29551,19 @@
     "volume de recherche inconnu"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Téléphone d'occasion, pas neuf : 339,99 € confirmés sur la page Xiaomi d'Easy Cash, garantie 2 ans, mais fiche illisible ici, donc état et port non vus. Le neuf commence à 530,99 € en noir (achatmoinscher) et 599,99 € en gris (KultureGeek), mais la comparaison n'est pas juste : l'occasion se trouve déjà autour de ce prix (noir listé dès 325,99 € sur KultureGeek, gris 375 € chez Fnac Occasion, eBay dès 339 €). Prix normal d'occasion, pas un bon plan. Revente : à 375 € (prix Fnac Occasion, annonces Leboncoin non vues), bénéfice d'environ 30 €, soit 9 %, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 530.99,
+   "source_prix_ref": "achatmoinscher (noir), KultureGeek (gris 599,99 €), 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue, article d'occasion à stock limité",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "24ea43dd34",
@@ -29529,7 +29601,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29698,7 +29770,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (46 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Le prix de 429,99 € n'existe plus : la fiche Easy Cash affiche 559,90 € en bon état (rayures légères, sans boîte) et 599,99 € en parfait état, et la liste PS5 ne descend pas sous 509,99 €. C'est de l'occasion et le neuf s'est déjà vu à 549 € chez Amazon (Dealabs, été 2026, offre expirée) ; les 859,91 € de l'alerte sont faux. Aucune économie.",
+   "prix_neuf_min_idealo": 549.0,
+   "source_prix_ref": "Dealabs (Amazon, été 2026, expiré), prix actuel à confirmer",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T21:54+00:00"
  },
  {
   "id": "14c05a7754",

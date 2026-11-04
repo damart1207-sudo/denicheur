@@ -104,9 +104,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 10,
+"resultats": 12,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Health & Beauty": {
@@ -164,9 +164,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Groceries",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 9,
+"resultats": 10,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Deportes y aire libre": {
@@ -224,9 +224,9 @@
 "source": "flux:pepper-pl-hot",
 "cible": "",
 "categorie": "Artykuły spożywcze",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | flux:dealabs-tendance |  | Épicerie & Courses": {
@@ -244,10 +244,10 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Consoles & Jeux vidéo",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 5,
-"alertes": 0
+"resultats": 6,
+"alertes": 1
 },
 "A | flux:dealabs-nouveaux |  | Jardin & Bricolage": {
 "denicheur": "A",
@@ -494,9 +494,9 @@
 "source": "flux:pepper-nl-hot",
 "cible": "",
 "categorie": "Elektronica",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | apify:idealo | Victorinox Huntsman | ": {
@@ -568,5 +568,85 @@
 "cout_usd": 0.0,
 "resultats": 1,
 "alertes": 0
+},
+"A | apify:idealo | Azzaro The Most Wanted 100ml | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Azzaro The Most Wanted 100ml",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0065,
+"resultats": 2,
+"alertes": 0
+},
+"A | apify:vinted | Azzaro The Most Wanted 100ml | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Azzaro The Most Wanted 100ml",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Azzaro%20The%20Most%20Wanted%20100ml | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Azzaro%20The%20Most%20Wanted%20100ml",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | apify:idealo | Silent Hill 2 PS5 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Silent Hill 2 PS5",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0065,
+"resultats": 2,
+"alertes": 0
+},
+"A | apify:vinted | Silent Hill 2 PS5 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Silent Hill 2 PS5",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Silent%20Hill%202%20PS5 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Silent%20Hill%202%20PS5",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:mydealz-new |  | Dienstleistungen & Verträge": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Dienstleistungen & Verträge",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pepper-nl-hot |  | Beauty & Gezondheid": {
+"denicheur": "A",
+"source": "flux:pepper-nl-hot",
+"cible": "",
+"categorie": "Beauty & Gezondheid",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 1
 }
 }

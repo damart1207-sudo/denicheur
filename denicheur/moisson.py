@@ -144,7 +144,7 @@ def resumer(p, pays="FR"):
         "neuf": neuf, "amazon": v(cur, I_AMAZON), "occ": v(cur, I_OCCASION), "wh": v(cur, I_WAREHOUSE),
         "m90": moy90, "m180": moy180, "min90": min([x for x in (mn(I_AMAZON), mn(I_NEUF)) if x], default=None),
         "rang": rang, "ch30": st.get("salesRankDrops30"), "ch90": st.get("salesRankDrops90"),
-        "offres": nb_neuf, "note": p.get("reviews", {}).get("rating") if isinstance(p.get("reviews"), dict) else None,
+        "offres": nb_neuf, "vendus_mois": p.get("monthlySold") if isinstance(p.get("monthlySold"), int) and p.get("monthlySold") > 0 else None, "note": p.get("reviews", {}).get("rating") if isinstance(p.get("reviews"), dict) else None,
         "vu": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
     }
 

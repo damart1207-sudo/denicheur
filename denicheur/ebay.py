@@ -44,7 +44,7 @@ def requete(titre, mots=7):
 
 
 def chercher(tok, q, marche="EBAY_FR", neuf=None, limite=50):
-    filtres = ["buyingOptions:{FIXED_PRICE}", "priceCurrency:EUR" if marche != "EBAY_GB" else "priceCurrency:GBP"]
+    filtres = ["buyingOptions:{FIXED_PRICE}", "priceCurrency:" + {"EBAY_GB": "GBP", "EBAY_US": "USD"}.get(marche, "EUR")]
     if neuf is True:
         filtres.append("conditionIds:{1000}")
     elif neuf is False:

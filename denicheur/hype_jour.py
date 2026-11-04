@@ -11,6 +11,7 @@ from datetime import datetime, timedelta, timezone
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_SORTIE = os.path.join(RACINE, "data/hype_telegram.json")
 F_VOL = os.path.join(RACINE, "data/base/volumes_hype.json")
+F_VOL_ORIG = os.path.join(RACINE, "data/base/volumes_origine.json")
 TAUX = {"US": 0.90, "JP": 0.0058}       # devise -> euros (prudent)
 PORT = {"US": 15, "JP": 12}             # envoi vers la France, estimation
 IMPORT = 1.25                           # TVA 20 % + droits ≈ 5 %
@@ -58,6 +59,8 @@ def evaluer(x, v):
     pour gagner 20 € (jamais un prix inventé) ; il ne peut pas être vert. Vert seulement si un prix français existe,
     que le bénéfice tient et que les recherches françaises existent."""
     cout = round((x["prix_eur"] + PORT.get(x["pays"], 15)) * IMPORT, 2)
+    if x.get("offres"):
+        cout = min(cout, x["offres"][0]["cout"])  # la source la moins chère (souvent un Amazon européen : pas de douane)
     prix_mini = round((cout + 20) / (1 - FRAIS_VENTE), 2)
     vol = (v or {}).get("volume_mensuel")
     hist = [h for h in (v or {}).get("trois_derniers_mois") or [] if isinstance(h, (int, float))]
@@ -90,6 +93,73 @@ def evaluer(x, v):
     return f
 
 
+PORT_UE = 8                                     # achat dans l'UE : port seul, ni douane ni TVA d'import
+DOMAINES_PRIX = ("FR", "DE", "IT", "ES", "US", "JP")
+
+
+def _eur_keepa(p, pays):
+    if not isinstance(p, (int, float)) or p <= 0:
+        return None
+    if pays == "JP":
+        return round(p * 100 * TAUX["JP"], 2)
+    return round(p * TAUX.get(pays, 1), 2)
+
+
+def enrichir(cands, mots):
+    """Prix le plus bas (Amazon FR/DE/IT/ES/US/JP via Keepa, 1 jeton par produit et par pays ; eBay USA gratuit),
+    ventes du mois sur chaque Amazon (« achetés le mois dernier ») et annonces eBay USA, volume de recherche dans le pays d'origine."""
+    from . import moisson, ebay, dataforseo
+    asins = [c["asin"] for c in cands]
+    par_pays = {}
+    for pays in DOMAINES_PRIX:
+        try:
+            par_pays[pays] = {r["asin"]: r for r in moisson.fiches(asins, pays)}
+        except Exception:
+            par_pays[pays] = {}
+    try:
+        tok = ebay.jeton()
+    except Exception:
+        tok = None
+    for c in cands:
+        offres, ventes = [], {}
+        for pays, d in par_pays.items():
+            r = d.get(c["asin"])
+            if not r:
+                continue
+            p = _eur_keepa(r.get("neuf"), pays)
+            if p:
+                ue = pays in ("FR", "DE", "IT", "ES")
+                offres.append({"ou": f"Amazon {pays}", "prix": p,
+                               "cout": round(p + (0 if pays == "FR" else PORT_UE), 2) if ue else round((p + PORT.get(pays, 15)) * IMPORT, 2)})
+            if r.get("vendus_mois") or r.get("ch30"):
+                ventes[f"Amazon {pays}"] = r.get("vendus_mois") or f"≈{r.get('ch30')}"
+        if tok and c["pays"] == "US":
+            try:
+                pr, _ = ebay.chercher(tok, c.get("mot_cle") or ebay.requete(c["titre"]), marche="EBAY_US", neuf=True)
+                pr = sorted(pr)
+                if pr:
+                    ventes["eBay USA (annonces)"] = len(pr)
+                    p = round(pr[0] * TAUX["US"], 2)
+                    offres.append({"ou": "eBay USA", "prix": p, "cout": round((p + PORT["US"]) * IMPORT, 2)})
+            except Exception:
+                pass
+        c["offres"] = sorted(offres, key=lambda o: o["cout"])
+        c["ventes"] = ventes
+    # volume de recherche dans le pays d'origine (un appel par pays, ≈ 0,09 $ chacun)
+    cache = _lire(F_VOL_ORIG, {})
+    for pays in sorted({c["pays"] for c in cands}):
+        a_faire = sorted({c["mot_cle"] for c in cands if c["pays"] == pays and c.get("mot_cle") and f"{pays}:{c['mot_cle']}" not in cache})
+        if a_faire and dataforseo.disponible(0.09):
+            res = dataforseo.volumes(a_faire, pays=pays)
+            if res:
+                for m in a_faire:
+                    cache[f"{pays}:{m}"] = res.get(m) or {"volume_mensuel": 0}
+    os.makedirs(os.path.dirname(F_VOL_ORIG), exist_ok=True)
+    json.dump(cache, open(F_VOL_ORIG, "w", encoding="utf-8"), ensure_ascii=False)
+    for c in cands:
+        c["volume_origine"] = (cache.get(f"{c['pays']}:{c.get('mot_cle')}") or {}).get("volume_mensuel")
+
+
 def prix_mini_txt(f):
     return f["prix_mini"]
 
@@ -112,6 +182,7 @@ def jour(n_envoi=10, envoyer=True):
                 cache[m] = res.get(m) or {"volume_mensuel": 0, "trois_derniers_mois": []}
         os.makedirs(os.path.dirname(F_VOL), exist_ok=True)
         json.dump(cache, open(F_VOL, "w", encoding="utf-8"), ensure_ascii=False)
+    enrichir(cands, mots)
     for c in cands:
         c["fiche"] = evaluer(c, cache.get(c.get("mot_cle")) if c.get("mot_cle") else None)
     rang = {"vert": 0, "orange": 1, "rouge": 2}
@@ -139,7 +210,12 @@ def jour(n_envoi=10, envoyer=True):
             f"{drapeau.get(c['pays'], c['pays'])} n° {c.get('rang_labas')} des ventes ({telegram._e(c.get('categorie'))}) · prix là-bas {telegram._eur(c['prix_eur'])}\n"
             f"🇫🇷 {fr}\n"
             f"🔎 Recherches Google France : {('inconnu' if vol is None else str(vol))} /mois{tend}\n"
-            f"📦 Coût importé (port + TVA + douane) ≈ {telegram._eur(f['cout_import'])}\n"
+            + (f"🔎 Recherches Google {telegram._e(c['pays'])} : {c['volume_origine']} /mois\n" if c.get("volume_origine") is not None else "")
+            + (f"🛒 Ventes du mois : {telegram._e(' · '.join(f'{k} {v}' for k, v in c['ventes'].items()))}\n" if c.get("ventes") else "")
+            + (f"🏷️ Achat le moins cher rendu chez toi : <b>{telegram._eur(c['offres'][0]['cout'])}</b> sur {telegram._e(c['offres'][0]['ou'])} "
+               f"(affiché {telegram._eur(c['offres'][0]['prix'])})"
+               + (f" · ensuite {telegram._e(c['offres'][1]['ou'])} {telegram._eur(c['offres'][1]['cout'])}" if len(c['offres']) > 1 else "") + "\n"
+               if c.get("offres") else "")
             + (f"🎯 Revente sous le prix Amazon.fr : {telegram._eur(f['revente'])} · 💰 bénéfice estimé <b>{telegram._eur(f['benefice'])}</b>\n"
                if f["revente"] else f"🎯 Pour gagner 20 €, le revendre au moins <b>{telegram._eur(prix_mini_txt(f))}</b>\n")
             + (f"⚠️ {telegram._e(', '.join(f['manque']))}\n" if f["manque"] else "")

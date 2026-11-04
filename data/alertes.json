@@ -29807,7 +29807,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:46+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29930,7 +29930,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T21:47+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Braun Series 7 AIO7540 (Keepa, ASIN B0DQWP1XBB). Fiche Amazon.fr lue par Keepa ce soir : 55,99 €, le prix de l'offre est donc déjà le prix normal du neuf en France, 39 vendeurs neufs, moyenne 90 j 59,55 €, plus bas 90 j 45,38 €. Aucune économie. Revente : perte sur tous les canaux.",
+   "prix_neuf_min_idealo": 55.99,
+   "source_prix_ref": "Keepa / Amazon.fr, 04/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Prix courant",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T22:48+00:00"
  },
  {
   "id": "ce7e68c18b",
@@ -29955,7 +29967,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:46+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -30111,7 +30123,19 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit : Alpina ABL 20 Li Kit (EAN 8008984841123). Neuf en France : 99 € sur Amazon.fr, vendeur tiers (Keepa 04/11, Amazon lui-même 119 €, moyenne 90 j 103,71 €, plus bas 90 j 65 €). Le prix de 61,77 € vient du titre Mydealz (réservé Prime sur Amazon Allemagne) ; le robot relève d'autres chiffres sur cette page à 22h20 UTC et Testsieger voit 68,63 € chez Amazon. Avec 5 € de port, 66,77 € feraient 33 % d'économie, mais le prix, la condition Prime et l'envoi vers la France de ce kit avec batterie ne sont pas prouvés. Dans le doute, rejet. Revente : aucune annonce réelle, 0 vente par mois estimée.",
+   "prix_neuf_min_idealo": 99.0,
+   "source_prix_ref": "Keepa / Amazon.fr, 04/11",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T22:48+00:00"
  },
  {
   "id": "d8ac2d9df0",
@@ -30149,7 +30173,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -30297,7 +30321,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (32 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit : MSI MAG Forge 100M (EAN 4719072676414). Offre Amazon Espagne à 30,95 €, page Chollometro lue par le robot à 22h20 UTC : active. Neuf en France : 45,49 € port gratuit chez Amazon.fr, vendu par Amazon (KultureGeek 04/11 et comparateur-gamer 04/11 ; moyenne 90 j 44,19 €, plus bas 90 j 40,90 €). Avec 5 € de port : 35,95 €, soit 21 %. Rejet : envoi vers la France et frais pour ce gros colis non prouvés (même règle que les autres offres Amazon Espagne) ; au-delà de 7,71 € de port, on passe sous les 15 %. Revente : marge d'environ 3 € au prix plafond (85 % du neuf).",
+   "prix_neuf_min_idealo": 45.49,
+   "source_prix_ref": "KultureGeek et comparateur-gamer (Amazon.fr), 04/11",
+   "economie_pct": 21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T22:48+00:00"
  },
  {
   "id": "1238518343",
@@ -30335,7 +30371,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T21:59+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -30476,7 +30512,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (16 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Levoit Core 300 à 89,99 € sur Amazon Espagne d'après Chollometro (page lue par le robot à 22h32 UTC). Les 204,12 € de l'alerte ne sont pas un prix de référence fiable : seul achatmoinscher les donne, alors que Clubic relevait 96,24 € sur Amazon en France en avril 2025 (prix conseillé 109,99 €). À ces prix, 94,99 € port compris donneraient moins de 15 %. Prix neuf actuel en France à confirmer, de même que l'envoi vers la France.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T22:48+00:00"
  },
  {
   "id": "28ca36ab77",

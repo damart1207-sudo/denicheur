@@ -82,20 +82,31 @@ def rapport_passage(resultat, lien_rapport=None):
     return envoyer("\n".join(lignes))
 
 
-def alerte(x):
-    """Une alerte Idéfix (bon plan vérifié par la veille) : prix, neuf, économie, meilleur canal et marge."""
-    canaux = [c for c in (x.get("canaux") or []) if isinstance(c, dict)]
-    meilleur = max(canaux, key=lambda c: c.get("marge_nette") or 0, default={})
-    pmin = (x.get("prix_plancher") or {}).get("prix_min")
-    texte = (("🚨 <b>ERREUR DE PRIX PROBABLE</b> — commander 1 unité tout de suite, attendre l'expédition avant d'acheter plus\n" if x.get("erreur_prix_probable") else "")
-             + f"🟠 <b>Idéfix</b> — {_e(x.get('nom_produit') or x.get('titre'))}\n"
-             f"achat {_eur(x.get('prix'))} chez {_e(x.get('marchand'))} ({_e(x.get('pays'))}) · neuf le moins cher {_eur(pmin)} · "
-             f"économie {_e(x.get('economie_pct'))} %\n"
-             + (f"revente {_eur(meilleur.get('prix_vente'))} sur {_e(meilleur.get('canal'))} · marge {_eur(meilleur.get('marge_nette'))}\n" if meilleur else "")
-             + (f"concurrents sur Amazon : {x['vendeurs_amazon']} vendeurs · ventes Amazon sur 30 jours : environ {x.get('ventes_estimees_30j') if x.get('ventes_estimees_30j') is not None else 'inconnu'}\n" if x.get("vendeurs_amazon") is not None else "")
+def alerte(x, vol=None):
+    """Une annonce = une fiche de décision complète (denicheur/fiche.py). Rouge : rien n'est envoyé."""
+    from . import fiche
+    f = fiche.evaluer(x, vol)
+    x["fiche"] = f
+    if f["feu"] == "rouge":
+        return False
+    rond = {"vert": "🟢 <b>VERT</b> — tout se croise", "orange": "🟠 <b>ORANGE</b> — à confirmer"}[f["feu"]]
+    def n(v):
+        return f"{v:,}".replace(",", " ") if isinstance(v, int) else "inconnu"
+    conc = f["vendeurs"]
+    conc_t = "inconnue" if conc is None else f"{conc} vendeurs " + ("(faible)" if conc <= 4 else "(moyenne)")
+    texte = (("🚨 <b>ERREUR DE PRIX PROBABLE</b> — commander 1 unité tout de suite\n" if x.get("erreur_prix_probable") else "")
+             + f"{rond}\n<b>{_e(x.get('nom_produit') or x.get('titre'))}</b> — {_e(x.get('denicheur') or 'Idéfix')}\n"
+             f"💶 Prix le plus bas trouvé : <b>{_eur(f['achat'])}</b> chez {_e(x.get('marchand'))} ({_e(x.get('pays'))}), port compris\n"
+             f"🏷️ Neuf le moins cher ailleurs : {_eur(f['neuf_min'])} ({_e(f['neuf_ou'])})"
+             + (f" → {f['ecart_pct']} % moins cher" if f['ecart_pct'] is not None else "") + "\n"
+             f"⚔️ Concurrence : {conc_t}\n"
+             f"🔎 Recherches Google : {n(f['volume'])} /mois · ventes Amazon 30 jours : {n(f['ventes_30j'])}\n"
+             f"♻️ Occasion : " + (f"de {_eur(f['occ_bas'])} à {_eur(f['occ_haut'])}" if f['occ_bas'] is not None else "inconnue") + "\n"
+             f"🎯 Prix d'achat maximum : {_eur(f['achat_max'])} · revendre sur <b>{_e(f['vendre_sur'])}</b> à {_eur(f['prix_vente'])}\n"
+             f"💰 Bénéfice net : <b>{_eur(f['benefice'])}</b>\n"
+             + (f"⚠️ Manque : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
              + f"{_e(x.get('lien'))}")
     return envoyer(texte)
-
 
 def plus_recherches(n=15):
     """Les produits les plus recherchés sur Google en France (volumes DataForSEO, data/bingo.json), avec la concurrence."""

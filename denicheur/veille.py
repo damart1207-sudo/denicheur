@@ -209,12 +209,18 @@ def tour():
     _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
     if nouvelles_alertes:
         _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])
-        from . import telegram
-        for x in nouvelles_alertes:  # alerte Idéfix au fil de l'eau (silencieux sans secrets Telegram)
-            if x.get("type") == "bon_plan" and (x.get("economie_pct") or 0) >= 15:
+        from . import telegram, fiche
+        a_envoyer = [x for x in nouvelles_alertes if x.get("type") == "bon_plan" and (x.get("economie_pct") or 0) >= 15]
+        promet = [x for x in a_envoyer if fiche.evaluer(x, {})["feu"] != "rouge"]
+        from . import ebay  # gratuit : prix d'occasion et annonces neuves sur eBay pour les annonces prometteuses
+        sante.protege("ebay alertes", ebay.controler, [x for x in promet if not x.get("ebay")], maxi=10)
+        vol = sante.protege("volumes alertes", fiche.completer_volumes, promet, defaut=None)
+        for x in a_envoyer:  # fiche de décision complète au fil de l'eau (rouge = rien envoyé)
+            if True:
                 if (x.get("economie_pct") or 0) >= 60 or x.get("signal_erreur_prix"):
                     x["erreur_prix_probable"] = True  # sous 40 % du neuf : erreur de prix probable -> commander vite, 1 unité, attendre l'expédition
-                sante.protege("telegram alerte", telegram.alerte, x)
+                sante.protege("telegram alerte", telegram.alerte, x, vol)
+        _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])  # garde la fiche (feu) de chaque alerte
     # annonces de particuliers trouvées par le Chasseur PC (data/pc/chasse.json) : alerte Telegram une seule fois chacune
     from . import telegram as _tg
     chasse = _lire("data/pc/chasse.json", {}).get("annonces", [])

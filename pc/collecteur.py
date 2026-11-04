@@ -105,6 +105,15 @@ PAGES = [
     ("bonial-catalogues", "https://www.bonial.fr/", "FR", "Bonial (catalogues magasins)"),
     ("tiendeo-catalogues", "https://www.tiendeo.fr/", "FR", "Tiendeo (catalogues)"),
     ("idealo-promos", "https://www.idealo.fr/", "FR", "idealo"),
+    # tendances : ce que le public cherche / achète en ce moment (lisible seulement depuis le PC : Amazon bloque le cloud)
+    ("amazon-hausses-ventes", "https://www.amazon.fr/gp/movers-and-shakers/", "FR", "Amazon (hausses de ventes)"),
+    ("amazon-plus-souhaites", "https://www.amazon.fr/gp/most-wished-for/", "FR", "Amazon (plus souhaités)"),
+    ("amazon-nouveautes", "https://www.amazon.fr/gp/new-releases/", "FR", "Amazon (nouveautés)"),
+    ("amazon-de-hausses", "https://www.amazon.de/gp/movers-and-shakers/", "DE", "Amazon DE (hausses de ventes)"),
+    ("amazon-com-hausses", "https://www.amazon.com/gp/movers-and-shakers/", "US", "Amazon US (hausses de ventes)"),
+    ("tiktok-top-produits", "https://ads.tiktok.com/business/creativecenter/top-products/pc/fr", "FR", "TikTok (top produits)"),
+    ("leboncoin-tendances", "https://www.leboncoin.fr/", "FR", "Leboncoin (recherches populaires)"),
+    ("vinted-tendances", "https://www.vinted.fr/", "FR", "Vinted (tendances)"),
 ]
 PRIX = re.compile(r"(\d{1,4}(?:[  ]\d{3})?[,.]\d{2})\s?€")
 

@@ -176,23 +176,32 @@ def fiches(asins, pays="FR", etat=None):
 
 
 # ---------- 1. RADAR AMAZON ----------
+F_PRIORITE = os.path.join(RACINE, "data/etat/arbitrage_priorite.json")
+
+
 def radar(etat):
-    """Baisses de prix Amazon.fr des dernières 24 h : neuf (prix type 1) et Seconde main Warehouse (type 9)."""
-    if not _peut(10, etat):
+    """Baisses de prix Amazon des dernières 24 h : France (neuf + Seconde main, 3 pages) -> radar ;
+    Allemagne / Italie / Espagne (neuf, 1 page) -> file prioritaire de l'arbitrage (le prix France est comparé au tour suivant)."""
+    if not _peut(60, etat):
         return 0
-    trouves = []
-    for type_prix, nom in ((1, "neuf"), (9, "seconde_main")):
-        cats = [c for c, _ in categories_fr()]
-        sel = {"page": 0, "domainId": 4, "priceTypes": [type_prix], "dateRange": 3, "isFilterEnabled": True, "isRangeEnabled": True,
+    trouves, prioritaires = [], []
+    plans = [(4, 1, "neuf", 0), (4, 1, "neuf", 1), (4, 1, "neuf", 2), (4, 9, "seconde_main", 0), (3, 1, "neuf", 0), (8, 1, "neuf", 0), (9, 1, "neuf", 0)]
+    for domaine, type_prix, nom, page in plans:
+        cats = [c for c, _ in categories_fr()] if domaine == 4 else []
+        sel = {"page": page, "domainId": domaine, "priceTypes": [type_prix], "dateRange": 3, "isFilterEnabled": True, "isRangeEnabled": True,
                "deltaPercentRange": [20, 95], "currentRange": [PRIX_MIN_CENT, PRIX_MAX_CENT], "salesRankRange": [1, 80000],
                "singleVariation": True, "filterErotic": True, "hasReviews": True,
                **({"includeCategories": cats[:500]} if cats and cats != [c for c, _ in CATEGORIES_FR] else {})}
         try:
-            d = _appel("deal", {"domain": 4}, corps=sel)
+            d = _appel("deal", {"domain": domaine}, corps=sel)
         except Exception as e:
-            sante.noter("erreur", "moisson radar", f"{nom}: {type(e).__name__}: {str(e)[:120]}")
+            sante.noter("erreur", "moisson radar", f"{nom} {domaine} p{page}: {type(e).__name__}: {str(e)[:120]}")
             continue
-        for x in (d.get("deals") or {}).get("dr") or []:
+        dr = (d.get("deals") or {}).get("dr") or []
+        if domaine != 4:
+            prioritaires += [x.get("asin") for x in dr if x.get("asin")]
+            continue
+        for x in dr:
             cur, delta_pct, avg = x.get("current") or [], x.get("deltaPercent") or [], x.get("avg") or []
             prix = _prix(cur[type_prix]) if len(cur) > type_prix else None
             if not prix:
@@ -210,6 +219,9 @@ def radar(etat):
                             "moyenne_mois": moy_mois, "moyenne_90j": moy_90, "baisse_pct": baisse,
                             "rang": rang, "etat_seconde_main": x.get("warehouseCondition"),
                             "lien": f"https://www.amazon.fr/dp/{x.get('asin')}", "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")})
+    if prioritaires:
+        anc = _lire(F_PRIORITE, [])
+        _ecrire(F_PRIORITE, list(dict.fromkeys(anc + prioritaires))[-600:], compact=True)
     if trouves:
         anciens = _lire(F_RADAR, {}).get("affaires", [])
         deja = {a["asin"] + a["type"] for a in trouves}

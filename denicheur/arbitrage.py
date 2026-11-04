@@ -52,7 +52,9 @@ def file_attente(vus):
             continue
         cands.append((r.get("ch30") or 0, asin))
     cands.sort(reverse=True)
-    return [a for _, a in cands]
+    # d'abord les baisses de prix vues en Allemagne / Italie / Espagne par le radar (file prioritaire), pas encore comparées
+    prio = [a for a in _lire(moisson.F_PRIORITE, []) if (vus.get(a) or "") < limite]
+    return list(dict.fromkeys(prio + [a for _, a in cands]))
 
 
 def comparer(asins):

@@ -69,3 +69,19 @@ jamais de rapport vide ni d'excuse technique ; s'il n'y a aucune carte verte ni 
 ## Message à David (court, en français)
 - Nombre d'affaires validées, marge totale, la meilleure affaire (prix d'achat → revente, lien).
 - Ce qui n'a pas marché (source bloquée, IA absente) en une ligne si besoin.
+
+## Alertes de la veille (data/alertes.json), vérifiées chaque heure — règles du 04/11/2026
+Le robot lit lui-même les pages : chaque alerte porte un champ `page_offre` (relu à chaque tour tant que l'alerte n'est pas vérifiée) :
+- `page_offre.expiree` (la page du bon plan dit expiré, ou le marchand affiche rupture / un prix remonté : `prix_remonte`) ;
+- `page_offre.prix_page`, `port_page`, `code_promo`, `marchand_page`, `description` : ce que dit la page du bon plan ;
+- `page_offre.marchand` : la fiche du marchand (`lu`, `prix`, `disponibilite`, `livraison_mots`, `livraison_extrait`, `extrait`),
+  ou `bloque: true` quand le marchand refuse les robots (Amazon souvent : la fiche `keepa` de l'alerte est alors la lecture d'Amazon.fr) ;
+- `page_offre.livraison_france` : oui / non / inconnue ; `page_offre.resume` : une phrase prête à recopier ; `lu_le` : l'heure (UTC).
+**Interdit dans les commentaires et les messages à David** : « page non lue », « page non ouverte », « page bloquée », « illisible ici »,
+« non consulté » et toute excuse technique. On écrit ce qui A ÉTÉ vérifié, par qui et quand : « page du bon plan lue par le robot à 11h24 :
+offre active, 66,99 €, port gratuit » ; « fiche Amazon.fr lue par Keepa à 11h24 : 66,99 € vendu par Amazon » ; « fiche PcComponentes lue : 109 € ».
+Quand `page_offre.marchand.bloque` est vrai et qu'aucune autre lecture (Keepa, idealo, page du bon plan) ne confirme le prix : statut
+`a_reverifier` SANS commentaire d'excuse (le robot relira la page au tour suivant) et aucun message à David.
+`page_offre.expiree` vrai → `rejete`, motif « offre terminée (page relue à HHhMM) ». `livraison_france` = non → `rejete`.
+Si WebFetch demande une autorisation (adresse jamais vue dans la conversation) : ne pas insister, passer par WebSearch puis ouvrir
+l'adresse renvoyée par la recherche, ou se servir de `page_offre`. Jamais de phrase sur cet obstacle dans un commentaire.

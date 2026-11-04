@@ -16,7 +16,7 @@ RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_VOL = os.path.join(RACINE, "data/base/volumes.json")
 MARGE_MIN = 20
 VOLUME_MIN = 1000
-RESERVE_BINGO_USD = 0.25
+RESERVE_BINGO_USD = 0.35  # bingo + hype de la nuit
 
 
 def _lire(f, d):

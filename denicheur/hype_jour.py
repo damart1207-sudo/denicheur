@@ -119,6 +119,8 @@ def jour(n_envoi=10, envoyer=True):
     json.dump({"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "produits": cands},
               open(F_SORTIE, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     garder = [c for c in cands if c["fiche"]["feu"] != "rouge"][:n_envoi]
+    if not any(c["fiche"]["volume_fr"] is not None for c in cands):
+        return 0  # sans les recherches France, le message serait incomplet : on n'envoie rien (règle de David)
     if not envoyer or not garder:
         return len(garder)
     drapeau = {"US": "🇺🇸", "JP": "🇯🇵"}

@@ -78,11 +78,19 @@ class FauxAgent:
 
 
 # ---------- passage ----------
+# familles d'IA par passage : une famille par rendez-vous, aucune ne s'épuise (Groq : 200 000 jetons/jour)
+ANALYSTES_PAR_PASSAGE = {"nuit": ["nemotron", "gptoss", "qwen"], "midi": ["nemotron", "nemotron_nv", "gemma"], "soir": ["nemotron_nv", "gemma", "deepseek"]}
+
+
 def passage(nom, test=False):
+    if nom in ("europe", "asie"):
+        nom = "nuit"
     maintenant = datetime.now(timezone.utc)
     paris = maintenant.astimezone(ZoneInfo("Europe/Paris"))
     horodatage = paris.strftime("%Y-%m-%d_%H%M")
     regles, conf_eq = charger("config/regles.json"), charger("config/equipe.json")
+    if nom in ANALYSTES_PAR_PASSAGE:
+        conf_eq["analystes"] = [a for a in ANALYSTES_PAR_PASSAGE[nom] if a in conf_eq["agents"]]
     with open(os.path.join(RACINE, "skills/methode.md"), encoding="utf-8") as f:
         methode = f.read()
     sources = charger("config/sources.json")["sources"]
@@ -93,6 +101,10 @@ def passage(nom, test=False):
         radar = sante.protege("radar amazon", moisson.annonces_radar, defaut=[])
         annonces += radar
         etat_sources["keepa-radar"] = {"ok": True, "nb": len(radar), "erreur": None}
+        from . import demande as _dem
+        _nv, _et = sante.protege("hype flux", _dem.hype_flux, defaut=([], {}))
+        for k, v in (_et or {}).items():
+            etat_sources["hype:" + k] = v
 
     # ne réanalyser que les nouveautés
     chemin_vus = "data/etat/vus.json" if not test else "data/test/vus.json"
@@ -134,12 +146,10 @@ def passage(nom, test=False):
     # vérification des prix sur Google (Gemini + recherche), puis marge recalculée au prix prudent
     if test:
         bilan_verif = {"faits": 0, "erreurs": ["mode test"]}
-    elif nom != "europe":
-        bilan_verif = {"faits": 0, "erreurs": ["vérification réservée au passage europe (quota gratuit)"]}
     else:
         conf_v = conf_eq["agents"][conf_eq.get("verificateur", "gemini")]
         modeles_v = [conf_v["modele"]] + list(conf_v.get("modeles_secours", []))[:2]
-        bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=12)
+        bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=30)
     # prix réels des annonces eBay (API officielle, gratuite) : tous les passages
     bilan_ebay = {"faits": 0, "erreurs": ["mode test"]} if test else ebay.controler(retenus)
     # prix plancher automatique (prix neuf le plus bas en France, produit exact) :
@@ -292,7 +302,7 @@ def passage(nom, test=False):
             c["rapport_demande"] = rapports.demande(q, c.get("temperature"))
 
     # BINGO (une fois par jour) : très recherché + peu de vendeurs, et vagues de hype à l'étranger
-    if not test and nom == "europe":
+    if not test:
         from . import bingo, sante
         sante.protege("bingo", bingo.jour)
         for c in retenus:
@@ -460,7 +470,7 @@ def tester_comparateurs():
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--passage", choices=["asie", "europe"], default="europe")
+    p.add_argument("--passage", choices=["asie", "europe", "nuit", "midi", "soir"], default="nuit")
     p.add_argument("--test", action="store_true")
     p.add_argument("--verifier", action="store_true", help="tester les 5 clés")
     p.add_argument("--sources", action="store_true", help="tester les sources candidates")

@@ -58,6 +58,37 @@ def tendances(force=False):
     return d
 
 
+F_HYPE_FLUX = os.path.join(RACINE, "data/hype_flux.json")
+
+
+def hype_flux():
+    """Amigo lit les flux étrangers (role = hype dans config/sources.json : Chine, Corée, Japon, USA, Australie) et garde
+    les 400 derniers titres avec pays, prix converti et date. Gratuit (RSS). -> data/hype_flux.json"""
+    from . import collecte
+    sources = [s for s in json.load(open(os.path.join(RACINE, "config/sources.json"), encoding="utf-8"))["sources"]
+               if s.get("role") == "hype" and s.get("actif", True)]
+    try:
+        anciens = json.load(open(F_HYPE_FLUX, encoding="utf-8")).get("titres", [])
+    except (OSError, json.JSONDecodeError):
+        anciens = []
+    deja = {x["id"] for x in anciens}
+    nouveaux, etat = [], {}
+    for s in sources:
+        items, err = collecte.lire_flux(s)
+        etat[s["id"]] = {"ok": err is None, "nb": len(items), "erreur": err}
+        for a in items:
+            if a["id"] in deja:
+                continue
+            deja.add(a["id"])
+            nouveaux.append({"id": a["id"], "titre": a["titre"], "pays": a["pays"], "prix_eur": a.get("prix"), "lien": a["lien"],
+                             "source": a["source"], "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")})
+    tout = (anciens + nouveaux)[-400:]
+    os.makedirs(os.path.dirname(F_HYPE_FLUX), exist_ok=True)
+    json.dump({"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "sources": etat, "titres": tout},
+              open(F_HYPE_FLUX, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    return nouveaux, etat
+
+
 def liste_de_chasse(d=None, n_bingo=40, n_hype=40):
     """LISTE DE CHASSE d'Amigo pour Idéfix et Chasseur : recherches idealo en hausse (FR, DE, ES, IT)
     + produits BINGO (très recherchés sur Google, peu de vendeurs) + hype étrangère (USA/Japon absente ou mal

@@ -2,17 +2,20 @@ name: Dénicheur
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
 #  toutes les heures (5 tours de 10 min dans un seul lancement) -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
-#  02:17 UTC = 03:17 à Paris l'hiver  -> passage "europe" (comparaison + tableau)
+#  03:33 / 11:33 / 16:33 UTC -> passages nuit / midi / soir, rapports à 5 h, 13 h, 18 h (Paris, hiver)
 on:
   schedule:
     # minutes décalées : GitHub saute souvent les horaires ronds quand il est chargé (nuit du 3 au 4/11 : passage de 2 h jamais lancé)
-    - cron: "17 2 * * *"
+    # Trois rapports par jour, heure de Paris (hiver = UTC+1) : 5 h, 13 h, 18 h. Chaque passage dure ≈ 20 min, l'audit suit.
+    - cron: "33 3 * * *"
+    - cron: "33 11 * * *"
+    - cron: "33 16 * * *"
     - cron: "23 * * * *"
   workflow_dispatch:
     inputs:
       passage:
-        description: "asie ou europe"
-        default: "europe"
+        description: "nuit, midi, soir (ou europe = nuit)"
+        default: "nuit"
       test:
         description: "true = mode test gratuit (aucune IA appelée)"
         default: "false"
@@ -79,7 +82,11 @@ jobs:
           TELEGRAM_API_HASH: ${{ secrets.TELEGRAM_API_HASH }}
         run: |
           PASSAGE="${{ github.event.inputs.passage }}"
-          if [ "${{ github.event.schedule }}" = "17 2 * * *" ]; then PASSAGE=europe; fi
+          case "${{ github.event.schedule }}" in
+            "33 3 * * *") PASSAGE=nuit ;;
+            "33 11 * * *") PASSAGE=midi ;;
+            "33 16 * * *") PASSAGE=soir ;;
+          esac
           [ -z "$PASSAGE" ] && PASSAGE=europe
           if [ -n "${{ github.event.inputs.outil }}" ]; then
             python "outils/${{ github.event.inputs.outil }}.py"

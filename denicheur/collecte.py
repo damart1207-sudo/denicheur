@@ -9,6 +9,9 @@ UA = "Mozilla/5.0 (compatible; Denicheur/1.0; usage personnel)"
 NS_PEPPER = "{http://www.pepper.com/rss}merchant"
 ATOM = "{http://www.w3.org/2005/Atom}"
 TAUX_PLN_EUR = 0.235
+# devises des sources hors zone euro -> euros (taux prudents, novembre 2026)
+TAUX = {"PL": ("PLN", 0.235), "JP": ("JPY", 0.0058), "KR": ("KRW", 0.00062), "CN": ("CNY", 0.125), "AU": ("AUD", 0.58), "US": ("USD", 0.90), "CA": ("CAD", 0.64)}
+MOTIF_PRIX = {"JP": r"(?:¥|￥)\s?([\d,]+)|([\d,]+)\s?円", "KR": r"([\d,]+)\s?원", "CN": r"(?:¥|￥|元)\s?([\d.,]+)|([\d.,]+)\s?元", "AU": r"\$\s?([\d.,]+)", "US": r"\$\s?([\d.,]+)", "CA": r"\$\s?([\d.,]+)"}
 
 
 def _prix(texte):
@@ -75,12 +78,12 @@ def _item(item, source):
         marchand, prix_txt = pm.get("name"), pm.get("price")
     description = _nettoyer(item.findtext("description"))
     if prix_txt is None:  # flux classique : chercher un prix dans le titre, sinon dans le texte
-        motif = r"(\d[\d\s.,]*)\s?€|£\s?(\d+[.,]?\d*)"
+        motif = MOTIF_PRIX.get(source["pays"]) or r"(\d[\d\s.,]*)\s?€|£\s?(\d+[.,]?\d*)"
         m2 = re.search(motif, titre) or re.search(motif, description)
-        prix_txt = m2.group(0) if m2 else None
+        prix_txt = next((g for g in m2.groups() if g), m2.group(0)) if m2 else None
     prix = _prix(prix_txt)
-    if source["pays"] == "PL" and prix:  # złoty -> euros (taux prudent)
-        prix = round(prix * TAUX_PLN_EUR, 2)
+    if source["pays"] in TAUX and prix:  # devise locale -> euros (taux prudent)
+        prix = round(prix * TAUX[source["pays"]][1], 2)
     return {
         "id": hashlib.sha1(lien.encode()).hexdigest()[:10],
         "titre": titre[:180],
@@ -129,8 +132,8 @@ def collecter(sources, lecteur=lire_source):
     annonces, etat = [], {}
     vus = set()
     for s in sources:
-        if not s.get("actif", True):
-            continue
+        if not s.get("actif", True) or s.get("role") == "hype":
+            continue  # les flux « hype » (Asie, USA) servent à Amigo, pas à l'achat
         items, err = lecteur(s)
         etat[s["id"]] = {"ok": err is None, "nb": len(items), "erreur": err}
         for a in items:

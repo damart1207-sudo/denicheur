@@ -163,7 +163,7 @@ jobs:
           EN_FILE=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s queued --json databaseId --jq 'length' 2>/dev/null || echo 0)
           echo "en cours: $EN_COURS, en file: $EN_FILE"
           if [ "$EN_COURS" -le 1 ] && [ "$EN_FILE" -eq 0 ]; then
-            gh workflow run denicheur.yml -R ${{ github.repository }} -f veille=true && echo "veille suivante lancée"
+            gh api -X POST repos/${{ github.repository }}/actions/workflows/denicheur.yml/dispatches -f ref=main -f "inputs[veille]=true" && echo "veille suivante lancée"
           fi
 
       - name: Rapport de David (page à onglets)

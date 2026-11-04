@@ -36,3 +36,9 @@ par le client ; fait parler d'eux pour rien.
 5. La donnée vaut plus que la marge (Kroc/Lütke) : base de prix 4 pays + occasion réelle → SaaS carte trois feux.
 6. Le club 48 h (Granjon) : cartes vertes réservées aux membres, puis disparaissent.
 Ordre de construction : 3 + rédacteur « vente sans question » → 2 + 6 → 1 → 5.
+
+## Règles des plateformes (vérifiées le 04/11/2026) — à respecter par tous les dénicheurs
+- Leboncoin : interdit de rediriger vers un autre site (direct ou indirect), liens/QR dans les photos, téléphone/email dans le texte. Les professionnels ne peuvent pas y passer d'annonces de produits NEUFS (Multimédia, Maison, Mode, Loisirs). => Leboncoin = occasion sous-cotée seulement.
+- Neuf : Vinted Pro + eBay + Rebifftout. Le certificat est donné APRÈS la vente (message de livraison), jamais dans l'annonce.
+- Dealabs : poster ses propres offres ou un lien vers Rebifftout est interdit (autopromotion). On peut poster seulement des deals de marchands tiers, sans lien à nous.
+- Attirer du monde : message post-vente (certificat + parrainage + canal Telegram), profil Vinted/eBay, canaux Telegram partenaires, Google, vidéos courtes.

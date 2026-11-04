@@ -52,7 +52,6 @@ PAGES = [
     ("veepee", "https://www.veepee.fr/gr/home/default", "FR", "Veepee"),
     ("showroomprive", "https://www.showroomprive.com/", "FR", "Showroomprivé"),
     ("zalando-prive", "https://www.zalando-prive.fr/", "FR", "Zalando Privé"),
-    ("privalia", "https://www.privalia.com/public", "ES", "Privalia"),
     ("bazarchic", "https://www.bazarchic.com/", "FR", "BazarChic"),
     # --- ajoutés le 04/11 (David : « tous les sites, centres commerciaux compris ») ; les adresses qui répondent 404 sont retirées après la première collecte
     ("electrodepot-promos", "https://www.electrodepot.fr/promotions.html", "FR", "Electro Dépôt"),
@@ -183,7 +182,7 @@ def collecter(connexion=False):
                                                    args=["--disable-blink-features=AutomationControlled"])
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         if connexion:
-            for s in ("https://www.veepee.fr/", "https://www.showroomprive.com/", "https://www.zalando-prive.fr/", "https://www.privalia.com/public", "https://www.bazarchic.com/"):
+            for s in ("https://www.veepee.fr/", "https://www.showroomprive.com/", "https://www.zalando-prive.fr/", "https://www.bazarchic.com/"):
                 try:
                     page = ctx.new_page()  # un onglet par site : évite « navigation interrompue » (redirections)
                     page.goto(s, wait_until="commit", timeout=60000)

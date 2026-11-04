@@ -186,6 +186,10 @@ def tour():
     _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
     if nouvelles_alertes:
         _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])
+        from . import telegram
+        for x in nouvelles_alertes:  # alerte Idéfix au fil de l'eau (silencieux sans secrets Telegram)
+            if x.get("type") == "bon_plan" and (x.get("economie_pct") or 0) >= 15:
+                sante.protege("telegram alerte", telegram.alerte, x)
     bilan = {"heure": maintenant.astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m %H:%M"),
              "annonces": len(annonces), "nouvelles": len(nouvelles), "examinees": len(lot),
              "nommees": len(noms), "alertes": len(nouvelles_alertes),

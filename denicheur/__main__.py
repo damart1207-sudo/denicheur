@@ -341,6 +341,10 @@ def passage(nom, test=False):
     ecrire(f"{base}/dernier_passage.json", resultat)
     ecrire(f"{base}/classement.json", classement)
     ecrire(f"{base}/rapport.html", rapport.page(resultat, classement))
+    if not test:  # Telegram : seulement s'il y a des cartes vertes ou orange (jamais de message vide)
+        from . import telegram
+        sante.protege("telegram passage", telegram.rapport_passage, resultat,
+                      "https://github.com/damart1207-sudo/denicheur/blob/main/data/rapport_david.html")
     # si aucun analyste n'a pu travailler (clés absentes, pannes), on garde les bons plans pour le passage suivant
     if any(a.reussites for k, a in agents.items() if k in conf_eq["analystes"] or k in remplacements):
         ecrire(chemin_vus, (vus + [a["id"] for a in nouvelles])[-5000:])

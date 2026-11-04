@@ -1,6 +1,6 @@
 {
  "tours_ok": 155,
- "tours_echec": 0,
+ "tours_echec": 1,
  "dernier_ok": "04/11 07:24",
  "evenements": [
   {
@@ -26,6 +26,12 @@
    "niveau": "erreur",
    "etape": "ia_meme_produit",
    "message": "HTTPError: HTTP Error 503: Service Unavailable | arque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 503: Service Unavailable\n"
+  },
+  {
+   "heure": "04/11 08:42",
+   "niveau": "echec",
+   "etape": "tour",
+   "message": "rattrapage nuit : code 124"
   }
  ],
  "dernier_resume": {

@@ -17096,7 +17096,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T00:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 92.68,
@@ -17180,7 +17180,19 @@
     "rentabilite": -0.192
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T01:51+00:00",
+  "verdict": {
+   "commentaire": "Le prix de référence idealo du robot (92,68 €) est faux : c'est un lot de 2. Pour un seul Ninja Blast (BC151), kulturegeek donne 49,00 € chez Amazon France (noir) et dès 46,99 € selon la couleur ; plus bas sur 90 jours 45,40 €. L'offre Amazon Espagne à 39,99 € + 5 € de port estimés = 44,99 € livrés, soit seulement 8 % d'économie (sous les 15 %), et moins de 1 % sous le plus bas récent. Couleur non précisée et page de l'offre Chollometro non lisible ici. Revente : Vinted min 45 €, marge nulle. Rejeté.",
+   "prix_neuf_min_idealo": 49.0,
+   "source_prix_ref": "kulturegeek.fr 04/11 (Amazon France, BC151EUBK) ; idealo 92,68 € = lot de 2, écarté",
+   "economie_pct": 8,
+   "prix_revente_verifie": 44.88,
+   "canal": "vinted",
+   "marge_nette_verifiee": -0.11,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c1e5afc61b",
@@ -17218,7 +17230,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T01:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -17294,6 +17306,18 @@
     "rentabilite": -0.424
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T01:51+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (MTP-1302PD-3AVEF). Coût réel depuis le Royaume-Uni : 39,92 £ soit 63,09 € avec frais et taxes, plus cher qu'en France : 50,95 € sur achatmoinscher (relevé de l'alerte) et 56,98 € chez Galaxus (lu le 04/11, stock très limité). Même sans port ni taxes, 39,92 £ ≈ 45,91 € ne font que 10 % sous le neuf français. Page de l'offre HotUKDeals non lisible, livraison en France non confirmée. Revente perdante (Vinted min 53 €, marge -18 €). Rejeté.",
+   "prix_neuf_min_idealo": 50.95,
+   "source_prix_ref": "achatmoinscher.com (relevé de l'alerte) ; Galaxus 56,98 € lu le 04/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": 44.84,
+   "canal": "vinted",
+   "marge_nette_verifiee": -18.25,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -16752,7 +16752,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-03T23:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 34.0,
@@ -16836,7 +16836,19 @@
     "rentabilite": -0.147
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T00:47+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Tune 510BT blanc). Page Mydealz ouverte mais sans détails ; le code newsletter JBL fait 10 % et sert à la boutique allemande. Aucune preuve de livraison en France : les conditions de la boutique JBL Allemagne n'ont pas pu être lues. Dans le doute, rejeté. Neuf en France : 34 € (idealo, toutes couleurs), PcComponentes France 47,99 € en blanc. Revente faible de toute façon : ~4 € de marge.",
+   "prix_neuf_min_idealo": 34.0,
+   "source_prix_ref": "idealo (robot, 21 offres)",
+   "economie_pct": 24,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 4.23,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ee9116197e",
@@ -16861,7 +16873,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T00:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 90.73,
@@ -16938,7 +16950,19 @@
     "rentabilite": -0.123
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T00:47+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (EAN 4719331877217). Mais le comparateur français comparateur-gamer affiche ce même écran à 79,33 € chez PcComponentes le 04/11 (hors port), plus bas qu'idealo (90,73 €). L'offre espagnole à 74,96 € n'a donc que 5,5 % d'écart, et 79,96 € avec le port : pas d'économie, loin des 15 %. En plus PcComponentes Espagne ne livre que l'Espagne d'après ses conditions (vu lors d'une vérification précédente), et la page espagnole lue montre 131 € chez un vendeur tiers. Page de l'offre Chollometro non lisible. Rejeté.",
+   "prix_neuf_min_idealo": 79.33,
+   "source_prix_ref": "comparateur-gamer.fr 04/11 (PcComponentes) ; idealo 90,73 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -0.12,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "923d37423f",
@@ -16963,7 +16987,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T00:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 89.99,
@@ -17047,6 +17071,18 @@
     "rentabilite": -0.336
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T00:47+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle (EAN 4549292221411), mais offre Amazon Royaume-Uni : 69,99 £ font déjà environ 80 € avant port et frais d'import, et le coût livré est estimé à 104,59 €. C'est plus cher que le neuf en France (89,99 € sur idealo). Pour atteindre -15 % il faudrait payer 76,49 € livré, impossible. Rejeté.",
+   "prix_neuf_min_idealo": 89.99,
+   "source_prix_ref": "idealo (robot, 23 offres)",
+   "economie_pct": -16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -25.4,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

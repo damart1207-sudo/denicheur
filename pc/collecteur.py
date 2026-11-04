@@ -1,0 +1,190 @@
+"""COLLECTEUR PC (accord de David du 04/11/2026) : lit depuis le PC de David, avec son navigateur et ses comptes, les pages
+que le cloud ne peut pas lire (Fnac, Darty, Boulanger, Cdiscount, Decathlon, Leroy Merlin, ManoMano, But, Conforama, Adidas,
+Back Market, Intersport, Zalando outlet, ventes privées Veepee / Showroomprivé / Zalando Privé / Privalia / BazarChic),
+à rythme humain (une page toutes les quelques secondes, une fois par heure), puis pousse les annonces dans le dépôt
+(data/pc/annonces.json) : les dénicheurs du cloud les lisent comme n'importe quelle source.
+
+Installation (une fois, dans un terminal, dossier du dépôt cloné) :
+    pip install playwright
+    python -m playwright install chromium
+    python pc/collecteur.py --connexion      -> ouvre le navigateur : se connecter à Veepee, Showroomprivé, Zalando Privé,
+                                                Privalia, BazarChic, puis fermer la fenêtre (les connexions sont gardées)
+    python pc/installer.py                   -> crée la tâche planifiée Windows « Denicheur collecteur » (toutes les heures, silencieuse)
+
+Lancement manuel : python pc/collecteur.py          Aucun achat, aucune dépense.
+"""
+import argparse
+import hashlib
+import html as _html
+import json
+import os
+import random
+import re
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+
+RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROFIL = os.path.join(os.environ.get("LOCALAPPDATA") or os.path.expanduser("~"), "Denicheur", "profil")
+F_SORTIE = os.path.join(RACINE, "data", "pc", "annonces.json")
+D_ECH = os.path.join(RACINE, "data", "echantillons", "pc")
+
+PAGES = [
+    ("fnac-bonsplans", "https://www.fnac.com/Bons-plans", "FR", "Fnac"),
+    ("fnac-destockage", "https://www.fnac.com/destockage", "FR", "Fnac"),
+    ("darty-bonsplans", "https://www.darty.com/nav/extra/bons_plans", "FR", "Darty"),
+    ("darty-occasion", "https://www.darty.com/nav/extra/produits_occasion", "FR", "Darty"),
+    ("boulanger-bonsplans", "https://www.boulanger.com/evt/bons-plans", "FR", "Boulanger"),
+    ("boulanger-occasions", "https://www.boulanger.com/c/occasions", "FR", "Boulanger"),
+    ("cdiscount-ventes-flash", "https://www.cdiscount.com/vente-flash", "FR", "Cdiscount"),
+    ("cdiscount-bonsplans", "https://www.cdiscount.com/bons-plans", "FR", "Cdiscount"),
+    ("decathlon-seconde-vie", "https://www.decathlon.fr/seconde-vie", "FR", "Decathlon"),
+    ("decathlon-promos", "https://www.decathlon.fr/all-sports/promotions", "FR", "Decathlon"),
+    ("leroymerlin-promos", "https://www.leroymerlin.fr/promotions/", "FR", "Leroy Merlin"),
+    ("manomano-bonsplans", "https://www.manomano.fr/bons-plans", "FR", "ManoMano"),
+    ("but-promos", "https://www.but.fr/promos/", "FR", "But"),
+    ("conforama-promos", "https://www.conforama.fr/promos", "FR", "Conforama"),
+    ("adidas-outlet", "https://www.adidas.fr/outlet", "FR", "Adidas"),
+    ("intersport-promos", "https://www.intersport.fr/promotions/", "FR", "Intersport"),
+    ("zalando-outlet", "https://www.zalando.fr/outlet/", "FR", "Zalando"),
+    ("backmarket-bonsplans", "https://www.backmarket.fr/fr-fr/l/bons-plans/0d7f5f5d-1d84-4c1e-8d6a-cfa6f2f2b7b2", "FR", "Back Market"),
+    ("veepee", "https://www.veepee.fr/gr/home/default", "FR", "Veepee"),
+    ("showroomprive", "https://www.showroomprive.com/", "FR", "Showroomprivé"),
+    ("zalando-prive", "https://www.zalando-prive.fr/", "FR", "Zalando Privé"),
+    ("privalia", "https://www.privalia.com/public", "ES", "Privalia"),
+    ("bazarchic", "https://www.bazarchic.com/", "FR", "BazarChic"),
+]
+PRIX = re.compile(r"(\d{1,4}(?:[  ]\d{3})?[,.]\d{2})\s?€")
+
+
+def _num(t):
+    try:
+        return round(float(t.replace(" ", "").replace(" ", "").replace(",", ".")), 2)
+    except (ValueError, AttributeError):
+        return None
+
+
+def extraire(h, source, pays, marchand, url_base):
+    """Produits de la page : JSON-LD schema.org (Product / ItemList / offers) d'abord, puis blocs HTML avec prix et lien."""
+    out = []
+    for m in re.finditer(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
+        try:
+            d = json.loads(m.group(1))
+        except json.JSONDecodeError:
+            continue
+
+        def visiter(o):
+            if isinstance(o, dict):
+                offres = o.get("offers")
+                if o.get("@type") in ("Product", "ProductGroup") and offres:
+                    offre = offres[0] if isinstance(offres, list) else offres
+                    prix = _num(str(offre.get("price") or offre.get("lowPrice") or ""))
+                    lien = o.get("url") or offre.get("url") or ""
+                    if prix and o.get("name"):
+                        out.append((o["name"], prix, lien if lien.startswith("http") else url_base + lien, None, (o.get("brand") or {}).get("name") if isinstance(o.get("brand"), dict) else o.get("brand")))
+                for v in o.values():
+                    visiter(v)
+            elif isinstance(o, list):
+                for v in o:
+                    visiter(v)
+        visiter(d)
+    if not out:  # secours : chaque lien de produit avec un prix dans les 600 caractères qui suivent
+        for m in re.finditer(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>(.{0,600}?)(?=<a |$)', h, re.S):
+            texte = _html.unescape(re.sub(r"<[^>]+>", " ", m.group(2))).strip()
+            prix = PRIX.findall(m.group(3)) or PRIX.findall(m.group(2))
+            if len(texte) < 12 or not prix:
+                continue
+            p = _num(prix[0])
+            if p and 5 <= p <= 3000:
+                lien = m.group(1)
+                out.append((texte[:160], p, lien if lien.startswith("http") else url_base + lien, _num(prix[1]) if len(prix) > 1 else None, None))
+    annonces, vus = [], set()
+    for titre, prix, lien, prix2, marque in out:
+        ident = hashlib.sha1(lien.encode()).hexdigest()[:10]
+        if ident in vus:
+            continue
+        vus.add(ident)
+        initial = max(prix, prix2) if prix2 and prix2 > prix else None
+        remise = round((1 - prix / initial) * 100) if initial else None
+        annonces.append({"id": ident, "titre": titre[:180], "temperature": (remise or 0) * 8, "categorie": "", "marchand": marchand,
+                         "prix": prix, "devise": "EUR", "lien": lien, "date": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"),
+                         "source": "pc:" + source, "pays": pays, "description": (f"prix initial {initial} €, -{remise} %. " if remise else "") + (f"marque {marque}" if marque else "")})
+    return annonces
+
+
+def collecter(connexion=False):
+    from playwright.sync_api import sync_playwright
+    os.makedirs(PROFIL, exist_ok=True)
+    os.makedirs(D_ECH, exist_ok=True)
+    resultats, etat = [], {}
+    with sync_playwright() as p:
+        ctx = p.chromium.launch_persistent_context(PROFIL, headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
+                                                   args=["--disable-blink-features=AutomationControlled"])
+        page = ctx.pages[0] if ctx.pages else ctx.new_page()
+        if connexion:
+            for s in ("https://www.veepee.fr/", "https://www.showroomprive.com/", "https://www.zalando-prive.fr/", "https://www.privalia.com/public", "https://www.bazarchic.com/"):
+                page.goto(s, wait_until="domcontentloaded")
+                print(f"Connecte-toi sur {s} puis appuie sur Entrée ici.")
+                input()
+            ctx.close()
+            print("Connexions gardées dans", PROFIL)
+            return
+        for source, url, pays, marchand in PAGES:
+            try:
+                page.goto(url, wait_until="domcontentloaded", timeout=45000)
+                page.wait_for_timeout(2500 + random.randint(0, 2500))
+                for _ in range(3):  # faire défiler : charge les produits des pages à chargement progressif
+                    page.mouse.wheel(0, 2500)
+                    page.wait_for_timeout(700)
+                h = page.content()
+                base = re.match(r"https?://[^/]+", url).group(0)
+                ann = extraire(h, source, pays, marchand, base)
+                etat[source] = {"ok": True, "nb": len(ann), "taille": len(h)}
+                resultats += ann
+                with open(os.path.join(D_ECH, source + ".html"), "w", encoding="utf-8") as f:
+                    f.write(h[:1500000])
+            except Exception as e:
+                etat[source] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:120]}"}
+            print(source, etat[source])
+            time.sleep(3 + random.random() * 5)
+        ctx.close()
+    os.makedirs(os.path.dirname(F_SORTIE), exist_ok=True)
+    anciens = []
+    try:
+        anciens = json.load(open(F_SORTIE, encoding="utf-8")).get("annonces", [])
+    except (OSError, json.JSONDecodeError):
+        pass
+    vus = {a["id"] for a in resultats}
+    limite = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    garde = [a for a in anciens if a["id"] not in vus and a.get("date", "")[:10] >= limite]
+    json.dump({"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "etat": etat, "annonces": (garde + resultats)[-3000:]},
+              open(F_SORTIE, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    print(f"{len(resultats)} annonces lues -> {F_SORTIE}")
+    return resultats
+
+
+def pousser():
+    """git pull + commit + push (identifiants Git du PC). Jamais bloquant : si ça échoue, on réessaie à l'heure suivante."""
+    def git(*a):
+        return subprocess.run(["git", "-C", RACINE, *a], capture_output=True, text=True, timeout=120)
+    git("pull", "-q", "--rebase", "-X", "theirs", "origin", "main")
+    git("add", "-A", "data/pc", "data/echantillons/pc")
+    if git("diff", "--cached", "--quiet").returncode == 0:
+        return "rien de nouveau"
+    git("commit", "-q", "-m", "Collecteur PC " + datetime.now().strftime("%d/%m %H:%M"))
+    r = git("push", "-q", "origin", "HEAD:main")
+    return "poussé" if r.returncode == 0 else "push impossible : " + r.stderr[-200:]
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--connexion", action="store_true", help="ouvrir le navigateur pour se connecter aux ventes privées (une fois)")
+    ap.add_argument("--sans-push", action="store_true")
+    a = ap.parse_args()
+    if a.connexion:
+        collecter(connexion=True)
+    else:
+        collecter()
+        if not a.sans_push:
+            print(pousser())

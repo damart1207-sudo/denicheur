@@ -125,6 +125,16 @@ def lire_source(source, timeout=25):
     if source.get("type") == "pepper" and source.get("graphql", False):  # GraphQL Pepper : seulement avec l'accord de David (en attente)
         from . import pepper
         return pepper.lire(source, timeout)
+    if source.get("type") == "pc":  # annonces lues par le collecteur sur le PC de David (data/pc/annonces.json)
+        import json as _json, os as _os
+        from datetime import datetime, timedelta, timezone
+        f = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "data", "pc", "annonces.json")
+        try:
+            d = _json.load(open(f, encoding="utf-8"))
+        except (OSError, _json.JSONDecodeError):
+            return [], "pas encore de collecte PC"
+        limite = (datetime.now(timezone.utc) - timedelta(hours=26)).strftime("%Y-%m-%dT%H:%M")
+        return [a for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix")], None
     if source.get("type") == "page":
         from . import pages
         return pages.lire(source, timeout)

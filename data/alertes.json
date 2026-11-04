@@ -19456,7 +19456,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T09:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 499.0,
@@ -19565,7 +19565,19 @@
     "rentabilite": 0.3
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T09:56+00:00",
+  "verdict": {
+   "commentaire": "Offre AliExpress à 250,45 € terminée : la page mydealz indique « Leider ist dieser Deal mittlerweile abgelaufen ». Sinon le bon prix de référence serait 399,99 € chez Darty (idealo de l'alerte : 499 €, mais c'est le Gen2, un autre modèle). À noter : Dealabs signale le même robot à 299 € sur AliExpress, offre que je n'ai pas pu ouvrir ni confirmer, donc non retenue.",
+   "prix_neuf_min_idealo": 399.99,
+   "source_prix_ref": "Darty, page lue le 04/11 (livraison gratuite) ; Amazon.fr vendeur tiers 399 € d'après Keepa",
+   "economie_pct": 36,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "b84caf86fc",
@@ -19603,7 +19615,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T09:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -19672,6 +19684,18 @@
     "rentabilite": -0.045
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T09:56+00:00",
+  "verdict": {
+   "commentaire": "Currys (Royaume-Uni) : vente réservée au Royaume-Uni, pas de livraison vers la France à ma connaissance (conditions du site non lisibles depuis cette session). Le prix de 584,97 £ exige en plus une carte de réduction britannique (aidants, Blue Light Card, personnel de santé). Même en comptant l'import (815,26 €), l'économie n'est que de 12 %, sous les 15 % demandés.",
+   "prix_neuf_min_idealo": 923.99,
+   "source_prix_ref": "achatmoinscher (923,99 €) ; ledenicheur.fr affiche à partir de 938 €",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

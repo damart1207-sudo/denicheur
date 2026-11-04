@@ -56,8 +56,9 @@ concurrency:
 jobs:
   passage:
     runs-on: ubuntu-latest
-    # garde-fou : 58 min pour la veille en boucle (5 tours espacés de 10 min), 25 min pour le reste
-    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 58 || 45 }}
+    # garde-fou : la veille (4 tours de 10 min au plus, chacun coupé à 10 min + moisson 4 min) tient dans 70 min ;
+    # un passage complet dure 40 à 45 min (délai interne 45 min) : 58 min pour qu'il ne soit jamais coupé avant d'avoir écrit.
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 70 || 58 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -110,22 +111,26 @@ jobs:
             git config user.name "denicheur-bot"
             git config user.email "denicheur-bot@users.noreply.github.com"
             # RATTRAPAGE : GitHub saute parfois un horaire programmé. Si le passage attendu pour ce créneau
-            # (nuit 5 h, midi 13 h, soir 18 h Paris) n'a pas eu lieu, la veille le lance elle-même.
+            # (nuit 5 h, midi 13 h, soir 18 h Paris) n'a pas eu lieu, la veille le lance À PART (file « passage »,
+            # 58 min) : avant le 04/11 il tournait ici même avec 25 min, était coupé, et la veille dépassait l'heure.
+            # Une seule tentative par créneau et par jour (marque data/etat/rattrapage.json).
             MANQUANT=$(python outils/rattrapage.py)
             if [ -n "$MANQUANT" ]; then
-              echo "Passage $MANQUANT manquant : rattrapage"
-              timeout 1500 python -m denicheur --passage "$MANQUANT" || python -m denicheur.sante echec "rattrapage $MANQUANT : code $?"
-              python saas/rapport_david.py || true
-              git add -A data docs && git commit -q -m "Passage $MANQUANT (rattrapage)" || true
+              echo "Passage $MANQUANT manquant : rattrapage lancé dans une exécution séparée"
+              python outils/rattrapage.py marquer "$MANQUANT"
+              git add -A data/etat && git commit -q -m "Rattrapage $MANQUANT demandé" || true
               for essai in 1 2 3; do git pull -q --rebase -X theirs origin main && git push -q origin HEAD:main && break; sleep 10; done
+              GH_TOKEN="${{ github.token }}" gh api -X POST repos/${{ github.repository }}/actions/workflows/denicheur.yml/dispatches \
+                -f ref=main -f "inputs[passage]=$MANQUANT" || python -m denicheur.sante erreur "rattrapage $MANQUANT : lancement impossible"
             fi
             # 4 tours espacés d'environ 10 minutes ; un tour qui plante n'arrête JAMAIS les suivants,
-            # et chaque tour est enregistré tout de suite (rien n'est perdu).
+            # et chaque tour est enregistré tout de suite (rien n'est perdu). Le tour s'arrête de lui-même
+            # (budget interne 400 s d'examen, 520 s en tout) ; la coupure à 600 s n'est qu'un garde-fou.
             for i in 1 2 3 4; do
               DEBUT=$(date +%s)
-              timeout 480 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $?"
+              timeout -k 15 600 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $? (coupé à 10 min)"
               # moissonneur Keepa : vide la réserve de jetons (ils expirent au bout d'une heure) -> radar Amazon, étagère, hype
-              timeout 300 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
+              timeout -k 15 240 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
               python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
               python saas/rapport_hype.py || true
               python saas/rapport_david.py || true

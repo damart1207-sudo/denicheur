@@ -8,15 +8,18 @@ python -m denicheur.veille
 import json
 import os
 import re
+import time
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
-from . import apify, base, collecte, comparateurs, demande, equipe, journal, sante
+from . import apify, base, collecte, comparateurs, demande, equipe, journal, lecteur, sante
 from .ia import Agent, extraire_json
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEUIL_ECART = 0.85          # bon plan : prix <= 85 % du neuf le moins cher en France (au moins 15 % d'économie)
-MAXI_PRODUITS = 25          # produits vérifiés par tour (≈ 10 s chacun, tour < 8 min)
+MAXI_PRODUITS = 25          # produits vérifiés par tour (≈ 10 s chacun) ; le BUDGET ci-dessous arrête le tour avant la coupure
+BUDGET_EXAMEN_S = 400       # secondes accordées à l'examen des produits (le workflow coupe à 600 s : il reste 3 min pour relire les pages et écrire)
+BUDGET_TOUR_S = 520         # au-delà, plus aucune lecture de page : on écrit et on sort
 SIGNAUX = re.compile(r"erreur de prix|price error|pricing error|preisfehler|error de precio|errore di prezzo|b[łl][aą]d cenowy|prijsfout", re.I)
 
 
@@ -138,12 +141,17 @@ def examiner(a, nom, maintenant, regles, deja):
     if dm:
         x["demande_forte"] = dm
     x["canaux"] = sante.protege("canaux", equipe.canaux_de_vente, x, regles, defaut=[])
+    # lecture de la page du bon plan et du marchand (prix, expirée ?, livraison France, code) : Claude n'a plus à l'ouvrir
+    x["page_offre"] = sante.protege("lecture_page", lecteur.lire_offre, x)
+    if x["page_offre"] and x["page_offre"].get("expiree") and not signal:
+        return None  # déjà expirée : pas d'alerte
     x["denicheur"] = "A"
     return x
 
 
 def tour():
     maintenant = datetime.now(timezone.utc)
+    debut = time.monotonic()
     b = apify._budget()
     b["depense_ce_tour"] = 0
     os.makedirs(os.path.dirname(apify.F_BUDGET), exist_ok=True)
@@ -161,13 +169,26 @@ def tour():
     alertes = _lire("data/alertes.json", [])
     deja = {x["id"] for x in alertes}
     nouvelles_alertes = []
+    examinees = 0
     for a in lot:
+        if time.monotonic() - debut > BUDGET_EXAMEN_S:
+            sante.noter("erreur", "budget temps", f"tour arrêté après {examinees} produits sur {len(lot)} ({int(time.monotonic() - debut)} s) : le reste sera revu au prochain tour")
+            break
+        examinees += 1
         try:
             x = examiner(a, noms.get(a["id"]), maintenant, regles, deja)
             if x:
                 nouvelles_alertes.append(x)
+                deja.add(x["id"])
+                _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])  # écrit tout de suite : une coupure ne perd rien
         except Exception as e:
             sante.noter("erreur", "examen offre", f"{a.get('titre', '')[:60]} : {type(e).__name__}: {e}")
+    lot = lot[:examinees]
+    # relecture des pages des alertes encore à vérifier (expirée ? prix remonté ?), 4 au plus par tour, si le temps le permet
+    if time.monotonic() - debut < BUDGET_TOUR_S - 90:
+        n_relues = sante.protege("relecture_pages", lecteur.relire, alertes, maxi=4, defaut=0) or 0
+        if n_relues:
+            _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])
     # chasse ciblée quotidienne sur les produits les plus demandés (occasion neuve sous-cotée)
     for t in (sante.protege("chasse_C", demande.chasse_ciblee, regles, defaut=[]) or []):
         try:
@@ -182,7 +203,9 @@ def tour():
         except Exception as e:
             sante.noter("erreur", "alerte C", f"{type(e).__name__}: {e}")
     # ne marquer « vu » que ce qui a été examiné (le reste sera revu au prochain tour)
-    vus.update(a["id"] for a in nouvelles if a not in candidates or a in lot)
+    ids_lot = {a["id"] for a in lot}
+    ids_candidates = {a["id"] for a in candidates}
+    vus.update(a["id"] for a in nouvelles if a["id"] not in ids_candidates or a["id"] in ids_lot)
     _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
     if nouvelles_alertes:
         _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])
@@ -203,6 +226,7 @@ def tour():
     if nouvelles_c:
         _ecrire("data/etat/chasse_alertees.json", sorted(deja_c)[-3000:])
     bilan = {"heure": maintenant.astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m %H:%M"),
+             "duree_s": int(time.monotonic() - debut),
              "annonces": len(annonces), "nouvelles": len(nouvelles), "examinees": len(lot),
              "nommees": len(noms), "alertes": len(nouvelles_alertes),
              "ia": {"appels": agent.appels, "reussites": agent.reussites, "erreurs": agent.erreurs[:2]} if agent else None,

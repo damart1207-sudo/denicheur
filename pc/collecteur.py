@@ -263,6 +263,7 @@ def pousser():
     def git(*a):
         return subprocess.run(["git", "-C", RACINE, *a], capture_output=True, text=True, timeout=120)
     git("fetch", "-q", "origin", "main")
+    git("checkout", "origin/main", "--", "pc", "config")  # mise à jour automatique du code du PC (appliquée au tour suivant)
     git("reset", "-q", "--soft", "origin/main")   # oublie un envoi raté précédent (ex. page brute refusée par GitHub)
     git("reset", "-q")
     for vieux in glob.glob(os.path.join(D_ECH, "*.html")):  # anciennes pages brutes non nettoyées : jamais envoyées

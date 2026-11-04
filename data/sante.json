@@ -1,7 +1,7 @@
 {
- "tours_ok": 199,
+ "tours_ok": 200,
  "tours_echec": 4,
- "dernier_ok": "04/11 15:59",
+ "dernier_ok": "04/11 16:10",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -50,13 +50,19 @@
    "niveau": "echec",
    "etape": "tour",
    "message": "tour 2 : code 124"
+  },
+  {
+   "heure": "04/11 16:09",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "TimeoutError: The read operation timed out | duit neuf (même marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
   }
  ],
  "dernier_resume": {
-  "heure": "04/11 15:57",
-  "annonces": 437,
-  "nouvelles": 22,
-  "examinees": 13,
-  "alertes": 0
+  "heure": "04/11 16:07",
+  "annonces": 436,
+  "nouvelles": 21,
+  "examinees": 15,
+  "alertes": 3
  }
 }

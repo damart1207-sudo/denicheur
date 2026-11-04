@@ -175,6 +175,17 @@ def jour():
         if isinstance(pi.get("nb_offres"), int) and pi["nb_offres"] >= 10:
             x["bingo"], x["motif"] = False, f"{pi['nb_offres']} marchands en France sur idealo : trop de concurrence"
     apify.CONTEXTE["denicheur"] = "A"
+    # où l'acheter moins cher ? prix Amazon par pays (Keepa, 4 jetons par produit) sur les 12 meilleurs bingos avec EAN
+    from . import keepa
+    for x in [l for l in lignes if l["bingo"] and l.get("ean")][:12]:
+        pp = sante.protege("bingo pays", keepa.comparer_pays, x["ean"], ("FR", "DE", "IT", "ES"), defaut={})
+        if pp:
+            x["prix_par_pays"] = pp
+            ref = x.get("prix_neuf_france") or pp.get("FR")
+            moins_cher = {p: v for p, v in pp.items() if p != "FR" and ref and v <= ref * 0.85}
+            if moins_cher:
+                p_min = min(moins_cher, key=moins_cher.get)
+                x["ou_acheter"] = f"Amazon {p_min} à {moins_cher[p_min]} € (France {ref} €)"
     lignes.sort(key=lambda x: (x["bingo"], x["score"]), reverse=True)
     # hype qui monte à l'étranger (Google Trends) sur les 8 premiers produits venus de la hype Keepa
     vagues = []

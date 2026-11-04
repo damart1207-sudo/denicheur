@@ -12,6 +12,10 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
       (recherche `idealo.fr/prechcat.html?q=<nom_produit>`, à rythme humain, jamais en masse) ;
    c. sinon recherche web (comparateurs, sites marchands français) : le dire dans le commentaire.
    Les prix eBay sont des prix DEMANDÉS : ils ne remplacent jamais idealo.
+   Depuis le 04/11 : le champ `keepa` (fiche Amazon.fr trouvée par le robot : `prix_neuf`, `moyenne_90j`, `nb_vendeurs_neuf`,
+   `ventes_estimees_30j`, `ean`, `asin`) compte AUSSI comme prix neuf de référence (`prix_plancher.ou == "keepa/amazon.fr"`),
+   à condition que `keepa.titre` soit le même produit. Contrôler l'écart entre `keepa.prix_neuf` et `keepa.moyenne_90j` :
+   un prix Amazon anormalement haut (vendeur tiers) ne doit pas servir de référence ; prendre alors la moyenne 90 j.
    - Si le produit est déjà moins cher ou au même prix ailleurs en neuf → **rejet**.
 2. **Prix de revente réaliste** sur la plateforme visée :
    - Vinted / Leboncoin / eBay : fourchette des annonces comparables (neuf ou très bon état).
@@ -34,6 +38,14 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
      il faut avoir l'objet en main ; eBay : seulement depuis un grossiste, pas depuis un magasin).
    - `ou_vendre` : canal + pays, ex. « Leboncoin (France) », « Vinted (France, Italie, Espagne) »,
      « eBay Allemagne ». Se servir de `ebay.neuf_par_pays` / `meilleur_pays` pour choisir le pays.
+5 bis. **Carte trois feux** (champ `feu` calculé par le robot : vert / orange / rouge) : l'audit confirme ou rétrograde.
+   - Concurrence (`vendeurs_amazon`, `concurrence_amazon`) : ≥ 10 vendeurs → rouge sauf si on est ≥ 15 % sous le moins cher ;
+     5 à 9 → orange ; ≤ 4 → peut être vert. Compter aussi les gros sites (Fnac, Cdiscount, Boulanger) au même prix.
+   - Occasion (`occasion.bas` / `occasion.haut` / `position_neuf`) : si notre coût d'achat dépasse le HAUT de l'occasion → rouge.
+     Si notre prix est sous le BAS de l'occasion → signaler « or » dans le commentaire.
+   - `bingo` (très recherché, peu vendu) : le dire dans le commentaire, c'est prioritaire pour David.
+   - Vert = marge ≥ 20 € ET prix neuf prouvé ET concurrence faible ; orange = marge 8-20 € ou preuve partielle ; sinon rouge.
+   Le verdict écrit : `valide` (vert), `bon` (orange), `rejete` (rouge).
 6. En cas de doute sans preuve → **rejet** (motif : « prix de revente non confirmé »). Mieux vaut
    rater une affaire que d'en valider une fausse.
 
@@ -51,6 +63,8 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 
 ## Après l'audit
 `python -m denicheur.apres_audit` : recalcule le championnat et reconstruit `saas/index.html`.
+Puis `python saas/rapport_david.py` : la page à onglets de David (`data/rapport_david.html`). Lire `skills/rapport.md` :
+jamais de rapport vide ni d'excuse technique ; s'il n'y a aucune carte verte ni orange, ne pas envoyer, réparer et relancer.
 
 ## Message à David (court, en français)
 - Nombre d'affaires validées, marge totale, la meilleure affaire (prix d'achat → revente, lien).

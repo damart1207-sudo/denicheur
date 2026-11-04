@@ -17585,7 +17585,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T05:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 35.9,
@@ -17669,7 +17669,19 @@
     "rentabilite": -0.265
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO 31385), mais l'offre Amazon à 26,98 € est expirée : Dealabs indique « ce deal n'est plus d'actualité » et Amazon est revenu à 35,90 € (Bonne-Promo, lu le 04/11). Le prix le plus bas du moment est 26,99 € livré chez Auchan.fr (remise jusqu'au 09/11), donc rien à 15 % en dessous. Revente non rentable : Vinted ~38 € pour un achat à 27 €, marge sous les seuils et seulement 2 annonces.",
+   "prix_neuf_min_idealo": 26.99,
+   "source_prix_ref": "Bonne-Promo lu le 04/11 (Auchan.fr 26,99 € livré) ; idealo robot 35,90 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T06:54+00:00"
  },
  {
   "id": "c082016071",
@@ -17694,7 +17706,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T06:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 299.9,
@@ -17771,7 +17783,19 @@
     "rentabilite": 0.154
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit et offre bien active : 209,90 € chez Castorama (au lieu de 299,90 €, Black Friday jusqu'au 01/12, page catégorie Castorama lue), soit 214,80 € livré avec 4,90 € de port. Mais Bonne-Promo indique le même modèle à 209,90 € livré gratuitement chez Amazon, vérifié le 04/11 (lien B0799RFYMG, ~4 en stock). Idealo (299,90 €) et achatmoinscher (Amazon 299,90 €, peut-être une autre référence) disent le contraire, et la page Amazon n'a pas pu être lue. Dans le doute : rejet, on ne peut pas garantir 15 % sous le moins cher. Revente non confirmée, aucune annonce réelle.",
+   "prix_neuf_min_idealo": 209.9,
+   "source_prix_ref": "Bonne-Promo lu le 04/11 (Amazon 209,90 € livré), en contradiction avec idealo robot 299,90 € et achatmoinscher 299,90 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Jusqu'au 01/12/2026 (Black Friday Castorama)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T06:54+00:00"
  },
  {
   "id": "92e383cb2a",
@@ -17796,7 +17820,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T06:21+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 61.66,
@@ -17898,7 +17922,19 @@
     "rentabilite": -0.058
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Keter Samoa 270 L anthracite, effet rotin, code-barres identique à idealo (7290112633132). Fiche Castorama lue : 29,90 € au lieu de 46,90 €, vendu et expédié par Castorama, valable jusqu'au 01/12/2026 dans la limite des stocks selon magasin. Livraison à domicile : 4,90 € d'après achatmoinscher, soit 34,80 € livré ; la fiche ne confirme pas la livraison pour ce produit, il faut entrer son code postal (retrait possible à 29,90 €). Référence prudente : 46,90 € hors promo chez Castorama, les autres vendeurs français sont à 61,66 € et plus (idealo). Le prix Amazon de 48,90 € (keepa) concerne le modèle marron, pas celui-ci. Revente : marge ~6 € à 41 € sur Leboncoin, sous les 8 € exigés, et objet très encombrant.",
+   "prix_neuf_min_idealo": 46.9,
+   "source_prix_ref": "Castorama prix hors promo 46,90 € (fiche lue le 04/11) ; idealo robot 61,66 € ; achatmoinscher lu le 04/11",
+   "economie_pct": 25.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Jusqu'au 01/12/2026 ou épuisement des stocks selon magasin",
+   "demande_confirmee": "non (keepa : ~2 ventes par mois)"
+  },
+  "verifie_le": "2026-11-04T06:54+00:00"
  },
  {
   "id": "f27cb8e5a5",
@@ -17923,7 +17959,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T06:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 499.99,
@@ -18007,6 +18043,18 @@
     "rentabilite": -0.235
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO 75397) mais pas d'affaire : 389,99 £ font environ 448 € avant port et taxes, soit seulement 10 % sous les 499,99 € d'idealo, sous les 15 % exigés. Coût estimé 546,19 € une fois importé du Royaume-Uni. Offre Smyths UK : livraison en France non confirmée, et Smyths Irlande affiche 499,99 €. Revente perdante : Vinted ~400 €.",
+   "prix_neuf_min_idealo": 499.99,
+   "source_prix_ref": "idealo (robot, 9 offres)",
+   "economie_pct": -9.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T06:54+00:00"
  }
 ]

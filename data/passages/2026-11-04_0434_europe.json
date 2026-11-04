@@ -1,0 +1,3267 @@
+{
+ "passage": "europe",
+ "horodatage": "2026-11-04_0434",
+ "date_affichee": "04/11/2026 à 04 h 34",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 428,
+ "nb_nouvelles": 357,
+ "nb_prefiltres": 238,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 16
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 4,
+   "erreurs": [
+    "HTTP 429 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199919, Re",
+    "HTTP 429 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199838, Re",
+    "HTTP 429 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199757, Re",
+    "HTTP 429 (openai/gpt-oss-120b): {\"error\":{\"message\":\"Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on tokens per day (TPD): Limit 200000, Used 199675, Re"
+   ],
+   "choix": 19
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 4,
+   "erreurs": [
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested "
+   ],
+   "choix": 0
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "7ad267ac2d",
+   "titre": "Nike Racing Streakfly",
+   "prix": 77.9,
+   "devise": "EUR",
+   "marchand": "Privé by Zalando",
+   "lien": "https://www.chollometro.com/ofertas/nike-racing-streakfly-2054582",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 237,
+   "domaine": "mode",
+   "nom_produit": "Nike Streakfly Chaussures Course",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 140.0,
+   "cout_achat": 82.9,
+   "marge_nette": 57.1,
+   "rentabilite": 0.689,
+   "demande": 5,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle carbone running très demandé, prix outlet 78 € vs revente 130-150 €, marge massive ~40 €, risque tailles dispo limité."
+   },
+   "score": 57.9,
+   "verification": {
+    "produit": "Nike ZoomX Streakfly",
+    "prix_neuf_min": 101.99,
+    "marchand_neuf_min": "Alltricks",
+    "occasion_bas": 35.0,
+    "occasion_haut": 75.0,
+    "revente_facile": false,
+    "remarque": "Bien que le prix d'achat soit avantageux par rapport au neuf, la revente avec marge est compliquée car c'est un modèle très spécifique (5-10 km) qui décote vite d'occasion face aux Vaporfly et Alphafly.",
+    "prix_revente_prudent": 75.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Nike Streakfly Chaussures Course",
+    "neuf": {
+     "nb": 4,
+     "min": 85.98,
+     "p25": 87.8,
+     "mediane": 104.18,
+     "max": 120.0
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Nike Zoomx Streakfly 2 Barely Green",
+      "prix": "120.00",
+      "url": "https://www.ebay.fr/itm/800859933674?_skw=Nike+Streakfly+Chaussures+Course&hash=itemba76f8cbea:g:XGUAAeSwGERq5h-t"
+     },
+     {
+      "titre": "Nike ZoomX Streakfly 2 Blanc Noir /Rouge Course à pied taille 45,5",
+      "prix": "115.10",
+      "url": "https://www.ebay.fr/itm/237150901846?_skw=Nike+Streakfly+Chaussures+Course&hash=item37374b9656:g:nvcAAeSweRpq41l8"
+     },
+     {
+      "titre": "Nike ZoomX Streakfly 2 Chaussures Running Homme Blanc Bleu Rouge Noir – EU 43",
+      "prix": "93.26",
+      "url": "https://www.ebay.fr/itm/237136039383?_skw=Nike+Streakfly+Chaussures+Course&hash=item373668cdd7:g:HAAAAeSwq-9q2M~B"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 87.8,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Nike Streakfly Chaussures Course",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 75.0,
+   "marge_verifiee": -7.9,
+   "rentabilite_verifiee": -0.095,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Nike Streakfly Chaussures Course",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 21,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 21,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Nike Streakfly Chaussures Course",
+    "temperature_dealabs": 237,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "73a8c19c1b",
+   "titre": "Zapatillas Nike Air Max SNDR - Tallas 35,5 hasta 40,5",
+   "prix": 45.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-nike-air-max-sndr-tallas-355-hasta-405-2054556",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 236,
+   "domaine": "mode",
+   "nom_produit": "Nike Air Max SNDR",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 110.0,
+   "cout_achat": 50.9,
+   "marge_nette": 59.1,
+   "rentabilite": 1.161,
+   "demande": 5,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix 46 € anormalement bas (-70 %) pour modèle récent, probable erreur de prix flash Showroomprivé, annulation commande fréquente."
+   },
+   "score": 55.7,
+   "verification": {
+    "produit": "Nike Air Max SNDR (Sunder)",
+    "prix_neuf_min": 76.47,
+    "marchand_neuf_min": "Footshop",
+    "occasion_bas": 50.0,
+    "occasion_haut": 90.0,
+    "revente_facile": true,
+    "remarque": "À 45,90 €, c'est une très bonne opportunité sur une silhouette rétro récemment rééditée et prisée, assurant une marge rapide à la revente.",
+    "prix_revente_prudent": 65.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Nike Air Max SNDR",
+    "neuf": {
+     "nb": 19,
+     "min": 52.7,
+     "p25": 69.9,
+     "mediane": 85.98,
+     "max": 247.21
+    },
+    "occasion": {
+     "nb": 7,
+     "min": 52.7,
+     "p25": 52.7,
+     "mediane": 73.5,
+     "max": 146.3
+    },
+    "exemples": [
+     {
+      "titre": "Nike Air Max Sndr",
+      "prix": "52.70",
+      "url": "https://www.ebay.fr/itm/168707834156?_skw=Nike+Air+Max+SNDR&hash=item2747c5412c:g:kRkAAeSwtjlqsoed"
+     },
+     {
+      "titre": "Nike Air Max SNDR Canyon Gold Yellow Black Metallic 38 US 7W New Neuves Sunder",
+      "prix": "146.30",
+      "url": "https://www.ebay.fr/itm/407271606465?_skw=Nike+Air+Max+SNDR&hash=item5ed34788c1:g:H3oAAeSwAJ5qxPMi"
+     },
+     {
+      "titre": "Nike Air Max SNDR Platinum Violet/Black T42 Neuves",
+      "prix": "125.50",
+      "url": "https://www.ebay.fr/itm/318642359028?_skw=Nike+Air+Max+SNDR&hash=item4a30908af4:g:S3AAAeSwGs1qZ4F2"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 69.9,
+     "DE": 69.79,
+     "IT": 59.67,
+     "ES": 57.36
+    },
+    "meilleur_pays": "FR"
+   },
+   "prix_plancher": {
+    "nom": "Nike Air Max SNDR",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": 1000,
+    "concurrence": "HIGH",
+    "cpc": 0.16,
+    "trois_derniers_mois": [
+     590,
+     720,
+     720
+    ]
+   },
+   "canaux": null,
+   "prix_revente_prudent": 52.7,
+   "marge_verifiee": 1.8,
+   "rentabilite_verifiee": 0.035,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Nike Air Max SNDR",
+    "pays": {
+     "FR": {
+      "nb_annonces": 18,
+      "total_ebay": 19,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 52.7,
+       "titre": "Nike Air Max SNDR Baskets Femme olive blanc noir EU 40 FZ2068-301",
+       "lien": "https://www.ebay.fr/itm/318838547095?_skw=Nike+Air+Max+SNDR&hash=item4a3c422297:g:h08AAeSwmvhqnq4m",
+       "vendeur": "shopursneak59",
+       "avis_vendeur": 1
+      },
+      "plus_cher": {
+       "prix": 170.0,
+       "titre": "Nike Air Max SNDR – Olive Flak / Blue Tint / Black / Gum Med Brown",
+       "lien": "https://www.ebay.fr/itm/377512299659?_skw=Nike+Air+Max+SNDR&hash=item57e57c8c8b:g:3BwAAeSwjBpqq6Oe",
+       "vendeur": "eastsideshoes",
+       "avis_vendeur": 0
+      }
+     },
+     "DE": {
+      "nb_annonces": 158,
+      "total_ebay": 163,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 42.77,
+       "titre": "Nike Air Max SNDR Canyon Gold Deep Ocean Damengröße UK 6,5 neu mit Karton",
+       "lien": "https://www.ebay.de/itm/117436541848?_skw=Nike+Air+Max+SNDR&hash=item1b57c36b98:g:fdQAAeSwEwZqutpu",
+       "vendeur": "ice-*-cube",
+       "avis_vendeur": 4902
+      },
+      "plus_cher": {
+       "prix": 179.74,
+       "titre": "DS 2025 NIKE AIR SNDR MAX UK10,5 EU45,5 PERSIAN OG MX CDG BW 95 97 99 PLUS RARE",
+       "lien": "https://www.ebay.de/itm/377455581356?_skw=Nike+Air+Max+SNDR&hash=item57e21b18ac:g:iWQAAeSwM~Zqkh16",
+       "vendeur": "dylmatic",
+       "avis_vendeur": 3936
+      }
+     },
+     "IT": {
+      "nb_annonces": 410,
+      "total_ebay": 414,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.35,
+       "titre": "Nike Air Max SNDR scarpe da ginnastica basse con zip - nero grigio viola rosa UK 4,5 sneakers",
+       "lien": "https://www.ebay.it/itm/178315946525?_skw=Nike+Air+Max+SNDR&hash=item2984756a1d:g:JcwAAeSwRXVqWNjX",
+       "vendeur": "bluesalecity",
+       "avis_vendeur": 1297
+      },
+      "plus_cher": {
+       "prix": 183.82,
+       "titre": "HJ8080-700 Nike Air Max SNDR Canyon Gold and Deep Ocean (donna)",
+       "lien": "https://www.ebay.it/itm/257602252701?_skw=Nike+Air+Max+SNDR&hash=item3bfa4a6f9d:g:il4AAOSw1-pnCK08",
+       "vendeur": "badsneakersjp",
+       "avis_vendeur": 17045
+      }
+     },
+     "ES": {
+      "nb_annonces": 416,
+      "total_ebay": 427,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 43.49,
+       "titre": "Mujer Nike Air Max SNDR Canyon Gold Deep Ocean Reino Unido Talla 6.5 Nuevo en caja",
+       "lien": "https://www.ebay.es/itm/117436541848?_skw=Nike+Air+Max+SNDR&hash=item1b57c36b98:g:fdQAAeSwEwZqutpu",
+       "vendeur": "ice-*-cube",
+       "avis_vendeur": 4902
+      },
+      "plus_cher": {
+       "prix": 183.82,
+       "titre": "HJ8080-700 Nike Air Max SNDR Canyon Gold y Deep Ocean (para mujer)",
+       "lien": "https://www.ebay.es/itm/257602027786?_skw=Nike+Air+Max+SNDR&hash=item3bfa47010a:g:il4AAOSw1-pnCK08",
+       "vendeur": "badsneakersjp",
+       "avis_vendeur": 17045
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Nike Air Max SNDR",
+    "temperature_dealabs": 236,
+    "google_trends": {
+     "interet_moyen": 2,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      99,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "nike air max sndr",
+     "nike air max sndr homme",
+     "nike air max sndr gore-tex",
+     "nike air max sndr gtx",
+     "nike air max sndr femme",
+     "nike air max sndr jaune",
+     "nike air max sndr noir",
+     "nike air max sndr orange",
+     "nike air max sndr rouge",
+     "nike air max sndr obscura"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0D426214V-neuf",
+   "titre": "New Era Dallas Cowboys NFL Team Logo Gris T-Shirt",
+   "prix": 12.0,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0D426214V",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 552,
+   "domaine": "mode",
+   "nom_produit": "New Era Dallas Cowboys T-Shirt",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 28.0,
+   "cout_achat": 17.0,
+   "marge_nette": 11.0,
+   "rentabilite": 0.647,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Licensed NFL apparel from reputable brand sells well on Vinted above promo price."
+   },
+   "score": 55.2,
+   "verification": {
+    "produit": "T-shirt New Era Dallas Cowboys NFL Team Logo Gris (Réf. 60504515)",
+    "prix_neuf_min": 15.0,
+    "marchand_neuf_min": "New Era Cap Europe",
+    "occasion_bas": 6.0,
+    "occasion_haut": 15.0,
+    "revente_facile": false,
+    "remarque": "Avec un prix neuf soldé à 15 € et une cote d'occasion plafonnant autour de 12 à 15 €, la marge nette après frais est quasi nulle.",
+    "prix_revente_prudent": 12.75,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "New Era Dallas Cowboys T-Shirt",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 19.92,
+     "IT": 16.01,
+     "ES": 18.11
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "New Era Dallas Cowboys T-Shirt",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 32.95,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/209327110/new-era-dallas-cowboys-shirt-with-team-logo-11073672-grey.html"
+   },
+   "idealo": {
+    "prix_min": 32.95,
+    "nb_offres": 2,
+    "lien": "https://www.idealo.fr/prix/209327110/new-era-dallas-cowboys-shirt-with-team-logo-11073672-grey.html",
+    "titre": "New Era Dallas Cowboys shirt with team logo (11073672) grey",
+    "gtin": "0888715771244"
+   },
+   "ean": "0888715771244",
+   "keepa": {
+    "asin": "B00NK2J9QQ",
+    "titre": "New Era 11073672 - T-Shirt - Manches Courtes - Homme - Gris (Heather Grey) - Large (Taille Fabricant: L)",
+    "ean": "0888715771244",
+    "pays": "FR",
+    "prix_neuf": 32.95,
+    "prix_amazon": null,
+    "prix_tiers": 32.95,
+    "moyenne_90j": 32.95,
+    "plus_bas_90j": 9.99,
+    "occasion": null,
+    "rang_ventes": 710317,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B00NK2J9QQ",
+    "jetons_restants": 872
+   },
+   "remise_sincere": true,
+   "ventes_estimees_30j": 0,
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 29.0,
+     "marge_nette": 12.0,
+     "rentabilite": 0.706
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 29.0,
+     "marge_nette": 12.0,
+     "rentabilite": 0.706
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 29.0,
+     "marge_nette": 12.0,
+     "rentabilite": 0.706
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 32.95,
+     "marge_nette": 6.98,
+     "rentabilite": 0.411
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 32.95,
+     "marge_nette": 5.64,
+     "rentabilite": 0.332
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 32.95,
+     "marge_nette": 5.32,
+     "rentabilite": 0.313
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 32.95,
+     "marge_nette": 5.31,
+     "rentabilite": 0.312
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 32.95,
+     "marge_nette": 4.02,
+     "rentabilite": 0.236
+    }
+   ],
+   "prix_revente_prudent": 12.75,
+   "marge_verifiee": -4.25,
+   "rentabilite_verifiee": -0.25,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "New Era Dallas Cowboys T-Shirt",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 14,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 51,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 50,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "New Era Dallas Cowboys T-Shirt",
+    "temperature_dealabs": 552,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "new era dallas cowboys t shirt"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "731f508cdc",
+   "titre": "Klocki Mould King Fiat 126P Outdoor Adventure 24074",
+   "prix": 9.03,
+   "devise": "EUR",
+   "marchand": "RTV Euro AGD",
+   "lien": "https://www.pepper.pl/promocje/klocki-mould-king-fiat-126p-outdoor-adventure-24074-1381228",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 224,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Mould King Fiat 126P 24074",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 25.0,
+   "cout_achat": 14.03,
+   "marge_nette": 10.97,
+   "rentabilite": 0.782,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Prix d'achat très bas (9 €) pour un set de briques sous licence Fiat 126p coté 25-30 € neuf sur le marché français, petit format facile à expédier."
+   },
+   "score": 51.6,
+   "verification": {
+    "produit": "Mould King 24074 Fiat 126P Outdoor Adventure",
+    "prix_neuf_min": 16.11,
+    "marchand_neuf_min": "BrickCoast",
+    "occasion_bas": null,
+    "occasion_haut": null,
+    "revente_facile": false,
+    "remarque": "Modèle de briques alternatives très confidentiel en France, sans annonces d'occasion recensées et avec une demande de revente très faible en dehors des cercles d'initiés.",
+    "prix_revente_prudent": 13.69,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Mould King Fiat 126P 24074",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Mould King Fiat 126P 24074",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 13.69,
+   "marge_verifiee": -0.34,
+   "rentabilite_verifiee": -0.024,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Mould King Fiat 126P 24074",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 19.95,
+       "titre": "Mould King 24074 Fiat 126P Outdoor Adventure NEU OVP | Klassiker Reise",
+       "lien": "https://www.ebay.de/itm/187776814586?_skw=Mould+King+Fiat+126P+24074&hash=item2bb85ecdfa:g:cZsAAeSwVNppJfNY",
+       "vendeur": "brickcoast24",
+       "avis_vendeur": 4392
+      },
+      "plus_cher": {
+       "prix": 19.95,
+       "titre": "Mould King 24074 Fiat 126P Outdoor Adventure NEU OVP | Klassiker Reise",
+       "lien": "https://www.ebay.de/itm/187776814586?_skw=Mould+King+Fiat+126P+24074&hash=item2bb85ecdfa:g:cZsAAeSwVNppJfNY",
+       "vendeur": "brickcoast24",
+       "avis_vendeur": 4392
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Mould King Fiat 126P 24074",
+    "temperature_dealabs": 224,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "klocki fiat 126p mould king model 24074"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "titre": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LED, Respirants, Haute Qualité p",
+   "prix": 28.31,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 760,
+   "domaine": "sport",
+   "nom_produit": "OHMG Rollers LED",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 48.0,
+   "cout_achat": 33.31,
+   "marge_nette": 14.69,
+   "rentabilite": 0.441,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon prix d'achat vs revente possible autour de 48 € sur Leboncoin, marge nette intéressante."
+   },
+   "score": 37.6,
+   "verification": {
+    "produit": "Rollers en ligne / patins réglables avec roues lumineuses LED OHMG",
+    "prix_neuf_min": 41.99,
+    "marchand_neuf_min": "Cdiscount",
+    "occasion_bas": 10.0,
+    "occasion_haut": 25.0,
+    "revente_facile": false,
+    "remarque": "Marque blanche générique difficile à revendre face à la concurrence des modèles Oxelo/Decathlon très abondants en seconde main.",
+    "prix_revente_prudent": 25.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "OHMG Rollers LED",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "OHMG Rollers LED",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 28.31,
+    "ou": "idealo",
+    "lien": null
+   },
+   "idealo": {
+    "prix_min": 28.31,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "OHMG Rollers Adultes à Taille Réglable,Roller en Ligne,Roller Enfants Garçons et Filles à partir,Rollers Femmes et Rollers Hommes,Rollers Haute Qualité pour Débutants,Lumineux LED,Respirant",
+    "gtin": null
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 24.91,
+     "marge_nette": -8.4,
+     "rentabilite": -0.252
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 24.91,
+     "marge_nette": -8.4,
+     "rentabilite": -0.252
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 24.91,
+     "marge_nette": -8.4,
+     "rentabilite": -0.252
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 28.31,
+     "marge_nette": -13.55,
+     "rentabilite": -0.407
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 28.31,
+     "marge_nette": -14.98,
+     "rentabilite": -0.45
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 28.31,
+     "marge_nette": -15.03,
+     "rentabilite": -0.451
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 28.31,
+     "marge_nette": -15.26,
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 28.31,
+     "marge_nette": -16.24,
+     "rentabilite": -0.488
+    }
+   ],
+   "prix_revente_prudent": 25.0,
+   "marge_verifiee": -8.31,
+   "rentabilite_verifiee": -0.249,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "OHMG Rollers LED",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "OHMG Rollers LED",
+    "temperature_dealabs": 760,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "e56c759323",
+   "titre": "Kurtka do biegania z technologią CLIMAWARM ADIDAS",
+   "prix": 39.94,
+   "devise": "EUR",
+   "marchand": "SportRabat",
+   "lien": "https://www.pepper.pl/promocje/kurtka-do-biegania-z-technologia-climawarm-adidas-1381269",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 285,
+   "domaine": "sport",
+   "nom_produit": "Adidas CLIMAWARM Veste Running",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 65.0,
+   "cout_achat": 44.94,
+   "marge_nette": 20.06,
+   "rentabilite": 0.446,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Achat à 39,94 € et revente à 65 € sur Vinted génère une marge nette de ~20 € après frais de port."
+   },
+   "score": 35.7,
+   "verification": {
+    "produit": "Adidas Own The Run Winterized ClimaWarm (JW9647)",
+    "prix_neuf_min": 70.0,
+    "marchand_neuf_min": "Adidas",
+    "occasion_bas": 15.0,
+    "occasion_haut": 35.0,
+    "revente_facile": false,
+    "remarque": "Achetée 39,94 €, la revente avec bénéfice est difficile car les vestes de running Adidas d'occasion dépassent rarement 30 à 35 € sur Vinted ou Leboncoin face aux promotions régulières.",
+    "prix_revente_prudent": 35.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Adidas CLIMAWARM Veste Running",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Veste Adidas Climawarm / Running Hiver Gris Taille L Homme avec tache",
+      "prix": "15.00",
+      "url": "https://www.ebay.fr/itm/287672618971?_skw=Adidas+CLIMAWARM+Veste+Running&hash=item42fa9fcfdb:g:d20AAeSwjgVq29hb"
+     },
+     {
+      "titre": "adidas FreeLift Climawarm Mens Hoody Gym Running Training Workout Hoodie",
+      "prix": "32.18",
+      "url": "https://www.ebay.fr/itm/143442816107?_skw=Adidas+CLIMAWARM+Veste+Running&hash=item2165dbac6b:g:S7YAAOSwYu9dzuTL&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n40qud4xV4kJ1nD9IDrJCpanVg1%2B1ZSsuwyoILNo3AzmtNbVdxCblPomZ6hN2tsN5P0bVekxM%2Bq8m4r3nITui9oSqAJSFeSQMAy8ZSzPTyBf2vTxq0%2FmxfpzPiwJTdpPcdPLKFqb92Irf9iMFY3zOl3aWLqbVLvemzN48hEJEZU3moQiKOLFbfsFYShSDvYoIaL%2FXx6Umv4AHLeJc%2F1W%2FeSDak4JfojTGmy6qqqz5RhO0%2F%2BgsgHTUKEFrvFiatZjjegsQODtQWVosfDncvLjp51h8%2BnjmjgRsdGP2o6%2FlIf2BF9WTfpNTw%2BAeGn7bK9yA%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 59.95,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Adidas CLIMAWARM Veste Running",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 35.0,
+   "marge_verifiee": -9.94,
+   "rentabilite_verifiee": -0.221,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Adidas CLIMAWARM Veste Running",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 34,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 34,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Adidas CLIMAWARM Veste Running",
+    "temperature_dealabs": 285,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "8c9c70c834",
+   "titre": "Pilarka ukosowa 230 V 1500 W Ø216 mm - 3 lata gwarancji",
+   "prix": 93.77,
+   "devise": "EUR",
+   "marchand": "Jula",
+   "lien": "https://www.pepper.pl/promocje/pilarka-ukosowa-230-v-1500-w-o216-mm-1381311",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 281,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Pilarka Ukosowa Miter Saw",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 150.0,
+   "cout_achat": 98.77,
+   "marge_nette": 51.23,
+   "rentabilite": 0.519,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Le prix d'achat 93,77 € permet une revente à 150 € sur Leboncoin, marge nette d’environ 45 €."
+   },
+   "score": 32.0,
+   "verification": {
+    "produit": "Meec Tools - Scie à onglet 230 V 1500 W Ø216 mm (réf. 009460 / Jula)",
+    "prix_neuf_min": null,
+    "marchand_neuf_min": "Aucun (marque distributeur exclusive à Jula, non commercialisée en France)",
+    "occasion_bas": 40.0,
+    "occasion_haut": 70.0,
+    "revente_facile": false,
+    "remarque": "Produit sous marque propre Jula (Meec Tools) totalement absent des circuits de distribution français, ce qui rend sa revente difficile face à des marques reconnues comme Parkside ou Einhell, d'autant que le gabarit complique les expéditions.",
+    "prix_revente_prudent": 70.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": false
+   },
+   "ebay": {
+    "requete": "Pilarka Ukosowa Miter Saw",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Pilarka Ukosowa Miter Saw",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 70.0,
+   "marge_verifiee": -28.77,
+   "rentabilite_verifiee": -0.291,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Pilarka Ukosowa Miter Saw",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Pilarka Ukosowa Miter Saw",
+    "temperature_dealabs": 281,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0GQZ1WSV4-neuf",
+   "titre": "languo 120 Colors Multicolor Ballpoint Pens, 10-in-1 Colored Pen, 0.8mm Tip",
+   "prix": 18.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0GQZ1WSV4",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 440,
+   "domaine": "tech",
+   "nom_produit": "Baolubao Montre Connectée",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 23.99,
+   "marge_nette": 17.51,
+   "rentabilite": 0.73,
+   "demande": 3.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Smartwatch bon marché, revente possible à 55 € sur eBay (après commission) avec marge raisonnable."
+   },
+   "score": 31.5,
+   "verification": {
+    "produit": "Languo BP-102 - Coffret de 12 stylos bille 10-en-1 (120 couleurs, pointe 0,8 mm)",
+    "prix_neuf_min": 18.5,
+    "marchand_neuf_min": "Languoart (boutique officielle)",
+    "occasion_bas": null,
+    "occasion_haut": null,
+    "revente_facile": false,
+    "remarque": "Produit de papeterie importé sans présence chez les marchands traditionnels français et introuvable sur le marché de l'occasion en France, rendant sa revente très peu liquide.",
+    "prix_revente_prudent": 15.72,
+    "sources": [],
+    "deja_moins_cher_ailleurs": true
+   },
+   "ebay": {
+    "requete": "Baolubao Montre Connectée",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Baolubao Montre Connectée",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 15.72,
+   "marge_verifiee": -16.66,
+   "rentabilite_verifiee": -0.694,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Baolubao Montre Connectée",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Baolubao Montre Connectée",
+    "temperature_dealabs": 440,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "montre connectée baolubao"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "titre": "Thermaltake CT200 PC | White | Single Pack",
+   "prix": 35.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 352,
+   "domaine": "tech",
+   "nom_produit": "Thermaltake CT200 Boîtier PC Blanc",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 40.99,
+   "marge_nette": 14.01,
+   "rentabilite": 0.342,
+   "demande": 3.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "SFF case from known brand at clearance price, good margin via local pickup on Leboncoin.",
+    "gptoss": "Bonne marge nette après frais eBay et frais de port"
+   },
+   "score": 28.7,
+   "verification": {
+    "produit": "Thermaltake CT200 PC Cooling Fan White Single Fan Pack (CL-F178-PL20WT-A)",
+    "prix_neuf_min": 21.09,
+    "marchand_neuf_min": "Alternate",
+    "occasion_bas": 10.0,
+    "occasion_haut": 15.0,
+    "revente_facile": false,
+    "remarque": "Ce ventilateur se trouve neuf autour de 21 € chez Alternate, et son format 200 mm très spécifique limite fortement la demande sur le marché de l'occasion.",
+    "prix_revente_prudent": 15.0,
+    "sources": [],
+    "deja_moins_cher_ailleurs": true
+   },
+   "ebay": {
+    "requete": "Thermaltake CT200 Boîtier PC Blanc",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "THERMALTAKE Ventilateur de boîtier PC CT200 ARGB SYNC 200MM",
+      "prix": "57.25",
+      "url": "https://www.ebay.fr/itm/206584608644?_skw=Thermaltake+CT200+Bo%C3%AEtier+PC+Blanc&hash=item301966f784:g:zEwAAeSwvRpquIxL&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7k7FKMiz654Ma5gupz5N227BjaNVeTG4Npu8KIJ8K1jENE3W38EjwEX4UkjiUL1dHQDyxjbtSR2g%2BSf7pT6YdHHdfAPRtuATz6mYVPIPBJza1Cne5cznI9MTN4XaJvUqO5dDrrcjF29mon8z19OwZLNs9VgQX7S7a5ptC71%2FBdRK59XKBb%2FcSFjtu6rEK5045Zt4GKqikyPNOADO7Fe0tWqlUvF1Yx9jtMNHb0JMyftgaA9xE05moXmWY8E5oIKvTe7EzdnXia862si%2FBDImrvYT2bgHDqVrsebkKzEUYrfTo48lXPsfpaLzbuRPrLe9us%3D"
+     },
+     {
+      "titre": "THERMALTAKE Ventilateur de boîtier PC CT200 ARGB SYNC 200MM",
+      "prix": "57.25",
+      "url": "https://www.ebay.fr/itm/298710242522?_skw=Thermaltake+CT200+Bo%C3%AEtier+PC+Blanc&hash=item458c8494da:g:YDgAAeSwiYhquIbR&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lcpC7E3EyjNajqgRoeaO5ZbQl%2B4BKJCWHX754%2BZ%2FgDX62b%2FsEKFPPYkx%2B8Om%2FvVybY7On2BycxkqG8Wp9PAwdg2LLQkzKQ0M%2FtIg8VdeV3PAuiyjSLoE10FKT4qIFBBTl7a7keKC7JMkJGq%2F%2BWD95i3spxbQBxLOs%2FQYZgF9jx76%2BY%2FkzMEPitr1Dge5Q4zGZtikRSn%2Fbn7Mh5%2BsTtH8lOeko23xMNoNREqzxt5zJ7OctdCZOPqYr3HM0ufu1hP0p34ROqB%2BK7LTp1tyxdYu5G0qOLpktrWBoRVRCL8Ff6qiMlyG1a4%2Fb4Wxn0sCmKrOQ%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Thermaltake CT200 Boîtier PC Blanc",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "demande_google": {
+    "volume_mensuel": null,
+    "concurrence": null,
+    "cpc": null,
+    "trois_derniers_mois": []
+   },
+   "canaux": null,
+   "prix_revente_prudent": 15.0,
+   "marge_verifiee": -25.99,
+   "rentabilite_verifiee": -0.634,
+   "passe_verif": false,
+   "rapport_concurrence": {
+    "requete": "Thermaltake CT200 Boîtier PC Blanc",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Thermaltake CT200 Boîtier PC Blanc",
+    "temperature_dealabs": 352,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 9,
+  "erreurs": []
+ },
+ "verification_ebay": {
+  "faits": 9,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 22,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "titre": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LED, Respirants, Haute Qualité p",
+   "temperature": 760,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 28.31,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 608.71 €, baisse 95 %, rang 64866"
+  },
+  {
+   "id": "d6669858f1",
+   "titre": "4 Länder ab 199€ p.P. : 8 Tage Balkan Rundreise inkl. Flug, 4* Hotels, Frühstück & Ausflügen | 21€ Kurtaxe , Einzelzimmer 299€",
+   "temperature": 635,
+   "categorie": "Urlaub & Reisen",
+   "marchand": "Netto Reisen",
+   "prix": 440.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/4-lander-ab-199eur-pp-8-tage-balkan-rundreise-inkl-flug-4-hotels-fruhstuck-ausflugen-21eur-kurtaxe-einzelzimmer-299eur-2841415",
+   "date": "Tue, 03 Nov 2026 23:42:25 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "440€ - Netto Reisen Moin, vier Länder, die Bucht von Kotor und der Ohridsee auf einer Reise: Bei Netto-Reisen bekommt ihr eine 8-tägige Balkan-Rundreise ab 199 € p..."
+  },
+  {
+   "id": "keepa-B0FZ96XHRT-neuf",
+   "titre": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumineuses, Roller Réglable Fille G",
+   "temperature": 560,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 41.8,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FZ96XHRT",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 139.96 €, baisse 70 %, rang 38459"
+  },
+  {
+   "id": "keepa-B0D426214V-neuf",
+   "titre": "New Era Dallas Cowboys NFL Team Logo Gris T-Shirt",
+   "temperature": 552,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D426214V",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 38.19 €, baisse 69 %, rang 6033"
+  },
+  {
+   "id": "keepa-B0F2GJVD1V-neuf",
+   "titre": "Disney Jack et Sally Peluches Couineuses pour Chiens - Lot de 2 - Deux Peluches de 9 cm avec couineu",
+   "temperature": 544,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F2GJVD1V",
+   "date": "2026-11-04T02:03",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 43.54 €, baisse 68 %, rang 74748"
+  },
+  {
+   "id": "keepa-B07R7L4G1Q-neuf",
+   "titre": "C-FUNN Peau Sanglante Stickers Autocollants Cover pour Xbox One S Console De Jeu Et 2 Contrôleurs",
+   "temperature": 528,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.73,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07R7L4G1Q",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 58.35 €, baisse 66 %, rang 62057"
+  },
+  {
+   "id": "keepa-B0FQC7W4GD-neuf",
+   "titre": "Baolubao Militaire Montre Connectée Homme, 2.01\" HD, Batterie 900mAh, Appels Bluetooth, Lampe LED, F",
+   "temperature": 520,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FQC7W4GD",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 115.49 €, baisse 65 %, rang 76391"
+  },
+  {
+   "id": "keepa-B0DL5B5XRQ-neuf",
+   "titre": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cuir synthétique, pour bureau et ",
+   "temperature": 504,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 51.98,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ",
+   "date": "2026-11-04T01:12",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 141.88 €, baisse 63 %, rang 7318"
+  },
+  {
+   "id": "keepa-B01BSTVF5K-neuf",
+   "titre": "LEUCHTTURM1917 349303 Carnet Pocket (A6), couverture souple, 123 pages numérotées, ligné, bleu marin",
+   "temperature": 464,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01BSTVF5K",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 40.81 €, baisse 58 %, rang 1844"
+  },
+  {
+   "id": "keepa-B09B9HX9L5-neuf",
+   "titre": "HASK ACEITE CAPILAR REPARADOR ARGAN OIL 100 ML",
+   "temperature": 448,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 15.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09B9HX9L5",
+   "date": "2026-11-04T01:54",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 36.19 €, baisse 56 %, rang 40006"
+  },
+  {
+   "id": "keepa-B0GQZ1WSV4-neuf",
+   "titre": "languo 120 Colors Multicolor Ballpoint Pens, 10-in-1 Colored Pen, 0.8mm Tip",
+   "temperature": 440,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GQZ1WSV4",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 42.09 €, baisse 55 %, rang 20904"
+  },
+  {
+   "id": "keepa-B0BCJ5SRYL-neuf",
+   "titre": "LEAP Horloge d'échecs avec fonctions de compte à rebours, d'alarme bonus et de délai pour les échecs",
+   "temperature": 424,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BCJ5SRYL",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 63.62 €, baisse 53 %, rang 19416"
+  },
+  {
+   "id": "keepa-B0C5SGLLFH-neuf",
+   "titre": "Hunter Dog Harness Fil Comfort. S-M, Green - (401673969800)",
+   "temperature": 424,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 31.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0C5SGLLFH",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 67.68 €, baisse 53 %, rang 40749"
+  },
+  {
+   "id": "keepa-B019MS3WK0-neuf",
+   "titre": "TROTEC Chauffage électrique 2000W TCH 20 E Radiateur convecteur",
+   "temperature": 400,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 35.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B019MS3WK0",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 71.8 €, baisse 50 %, rang 33659"
+  },
+  {
+   "id": "keepa-B0GGBQ4HM2-neuf",
+   "titre": "AiPliantfis Deep Wave Human Hair Wig 13X4 Lace Perruque Femme Naturelle Glueless Wig Wear and Go Pre",
+   "temperature": 392,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 45.88,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GGBQ4HM2",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 90.57 €, baisse 49 %, rang 9772"
+  },
+  {
+   "id": "keepa-B0GGGTJXV9-neuf",
+   "titre": "AiPliantfis Brown Human Hair Bundles Yaki Straight Cheveux Humain Tissage Cheveux Natural Chocolate ",
+   "temperature": 384,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 30.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GGGTJXV9",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 60.09 €, baisse 48 %, rang 11017"
+  },
+  {
+   "id": "keepa-B0C68M81Q8-neuf",
+   "titre": "Biscpro Paillasson Intérieur Tapis 90x150cm Entrée Intérieur Extérieur Imperméable,Antidérapant,Abso",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 23.96,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0C68M81Q8",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 45.3 €, baisse 47 %, rang 26860"
+  },
+  {
+   "id": "keepa-B08WR6YDKP-neuf",
+   "titre": "JBL Live 460NC Casque Supra-auriculaire sans Fil avec Suppression du Bruit Longue durée de Vie de la",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 119.01,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08WR6YDKP",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 223.29 €, baisse 47 %, rang 48372"
+  },
+  {
+   "id": "keepa-B0CZ7GPM92-neuf",
+   "titre": "Cole & Mason London Moulin à Poivre, Precision+ Broyeur Réglable 22 cm",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CZ7GPM92",
+   "date": "2026-11-04T02:51",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 37.43 €, baisse 47 %, rang 62097"
+  },
+  {
+   "id": "keepa-B01NBXZVR3-neuf",
+   "titre": "Battat 4x4 à démonter, Camion Jouet avec perceuse, Roadster de Take-Apart",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 24.38,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01NBXZVR3",
+   "date": "2026-11-04T02:51",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 45.85 €, baisse 47 %, rang 27992"
+  },
+  {
+   "id": "keepa-B001O8OBQ6-neuf",
+   "titre": "Nordsalz Sel de décongélation | Sac de 25 kg | Pour le service hivernal professionnel | Épandage | D",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.33,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B001O8OBQ6",
+   "date": "2026-11-04T01:54",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 48.12 €, baisse 47 %, rang 22051"
+  },
+  {
+   "id": "0fd38d1342",
+   "titre": "4 x Moussel Gel de Ducha Classique Original Formato Familiar 900ml",
+   "temperature": 374,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 10.73,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/4-x-moussel-gel-de-ducha-classique-original-formato-familiar-900ml-2054800",
+   "date": "Wed, 04 Nov 2026 00:28:58 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,73€ - Amazon Realiza pedido con compra recurrente. Añade 4 unidades para ahorrar el 50% en 2 al comprar 4 y un 5%. Gel de ducha de ori..."
+  },
+  {
+   "id": "1a13aea8b5",
+   "titre": "Jack Daniel's Gentleman Jack Whiskey 70cl (Nectar Price)",
+   "temperature": 371,
+   "categorie": "Groceries",
+   "marchand": "Sainsbury's",
+   "prix": 20.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/jack-daniels-gentleman-jack-whiskey-70cl-nectar-5015687",
+   "date": "Wed, 04 Nov 2026 00:10:04 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£20 - Sainsbury's Reduced to £20 from next Weds (4th Nov) at Sainsbury's. Nectar price offer. Jack Daniel's Gentleman Jack is an exceptionally smooth Tennessee whiskey w..."
+  },
+  {
+   "id": "keepa-B0DSTTW4L6-neuf",
+   "titre": "Lame rotative + accessoires d’assemblage d'entraînement, lame rotative dure et durable pour Cricut M",
+   "temperature": 368,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 31.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DSTTW4L6",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 59.04 €, baisse 46 %, rang 41261"
+  },
+  {
+   "id": "keepa-B0D9S897PT-neuf",
+   "titre": "Livre Pieces de Monnaie Collection 420 Poches,Album Pièces 2 Euros 3.5x3.5/4.5x4.5 cm,Rangement Piec",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.98,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D9S897PT",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 47.07 €, baisse 45 %, rang 62247"
+  },
+  {
+   "id": "keepa-B0049HAUAK-neuf",
+   "titre": "Transcend Go Carte Mémoire 2GB",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0049HAUAK",
+   "date": "2026-11-04T03:01",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 47.19 €, baisse 45 %, rang 19288"
+  },
+  {
+   "id": "keepa-B0CZVNXK9G-neuf",
+   "titre": "Americanflat Cadre Vinyle 42x63,5 cm - Passe-Partout 32x32 - Noir",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 27.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CZVNXK9G",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 50.39 €, baisse 44 %, rang 10536"
+  },
+  {
+   "id": "keepa-B0DMNFWY4S-neuf",
+   "titre": "ROCKBROS Bouteille d'eau, Gourde Inox 550/650/1000/1200ml, Bouteille Isotherme Anti-fuite, Bidon Vél",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DMNFWY4S",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 28.81 €, baisse 44 %, rang 28994"
+  },
+  {
+   "id": "keepa-B0CCNQGBJR-seconde_main",
+   "titre": "dktie Film pour fenêtre intimité en vinyle dépoli sans colle, film pour fenêtre effet vitrail, film  [Seconde main Amazon]",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.52,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CCNQGBJR",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 25.9 €, baisse 44 %, rang 72609"
+  },
+  {
+   "id": "keepa-B0G5Y79SKT-neuf",
+   "titre": "Clastyle Lot de 3 Boite Rangement Tissu Feuille Cube de Rangement Pliable Femmes Panier Kallax pour ",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 15.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0G5Y79SKT",
+   "date": "2026-11-04T01:33",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 28.38 €, baisse 44 %, rang 8923"
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "titre": "Thermaltake CT200 PC | White | Single Pack",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 35.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2",
+   "date": "2026-11-04T00:53",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 64.21 €, baisse 44 %, rang 21850"
+  },
+  {
+   "id": "keepa-B0DK1DFDT6-neuf",
+   "titre": "SUNGBOON EDITOR Tampons Stimulants Au Collagène Profond Et Au Rétinol, 100Ea",
+   "temperature": 328,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.33,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DK1DFDT6",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 49.73 €, baisse 41 %, rang 44719"
+  },
+  {
+   "id": "keepa-B071GYQVCW-neuf",
+   "titre": "Draper 16540 Douille métrique 6 pans 3/8\", taille 14 mm, bleu",
+   "temperature": 328,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.6,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B071GYQVCW",
+   "date": "2026-11-04T02:51",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 31.73 €, baisse 41 %, rang 20585"
+  },
+  {
+   "id": "keepa-B07D3FNGKJ-neuf",
+   "titre": "Amazon Basics Radiateur soufflant en céramique avec thermostat réglable 1800 W, Argenté",
+   "temperature": 328,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 21.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07D3FNGKJ",
+   "date": "2026-11-04T02:03",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 37.33 €, baisse 41 %, rang 72"
+  },
+  {
+   "id": "keepa-B006JQR8J0-neuf",
+   "titre": "Zebra F-301 Retractable Ballpoint Pen",
+   "temperature": 320,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.18,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B006JQR8J0",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 30.41 €, baisse 40 %, rang 18258"
+  },
+  {
+   "id": "keepa-B0H9X1F4QV-neuf",
+   "titre": "Synido Interface audio USB-C portable A20 Pro pour enregistrement de",
+   "temperature": 320,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 80.04,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H9X1F4QV",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 134.18 €, baisse 40 %, rang 5158"
+  },
+  {
+   "id": "keepa-B0BKZ76H3F-neuf",
+   "titre": "SKYSPER Sacoche Bandoulière Homme de Grande Capacité 18L Sling Bag",
+   "temperature": 320,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BKZ76H3F",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 42.18 €, baisse 40 %, rang 30771"
+  },
+  {
+   "id": "keepa-B0CQT8X2KJ-neuf",
+   "titre": "6pk Gants de toilette bébé coton pour nouveau-nés - Gants en mousseline de coton bio doux pour garço",
+   "temperature": 320,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 20.17,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CQT8X2KJ",
+   "date": "2026-11-04T01:54",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 33.42 €, baisse 40 %, rang 19006"
+  },
+  {
+   "id": "keepa-B0CN3C327D-neuf",
+   "titre": "HITZEE Compatible avec Bracelet Apple Watch 49/46/45/44/42/41/40/38mm, Bracelet Magnétique Double Fa",
+   "temperature": 312,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CN3C327D",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 29.53 €, baisse 39 %, rang 23757"
+  },
+  {
+   "id": "091b2058d4",
+   "titre": "European Sleeper last-minute: nachttrein met bed naar Berlijn en Praag (nov/dec)",
+   "temperature": 309,
+   "categorie": "Reizen",
+   "marchand": "European Sleeper",
+   "prix": 40.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/european-sleeper-last-minute-nachttrein-met-bed-naar-berlijn-en-praag-novdec-425124",
+   "date": "Tue, 03 Nov 2026 23:01:37 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€40 - European Sleeper Een nachtreis met European Sleeper voor €40 per persoon, met een bed. Het gaat om de last-minute eindejaarsdeals: geselecteerde nachttreinen die in november ..."
+  },
+  {
+   "id": "keepa-B0F93VG4Z2-neuf",
+   "titre": "BLESWIN Tapis d'alimentation pour Animaux de Compagnie, 43 x 70 cm, Tapis Absorbant pour Nourriture ",
+   "temperature": 296,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F93VG4Z2",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 30.27 €, baisse 37 %, rang 10217"
+  },
+  {
+   "id": "keepa-B0DH2Y1Y21-neuf",
+   "titre": "Lot de 20 cintres en bois pour bébé - Antidérapants - 22,7 cm - Pour bébés et enfants",
+   "temperature": 288,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.44,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DH2Y1Y21",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 19.31 €, baisse 36 %, rang 60153"
+  },
+  {
+   "id": "keepa-B0BGSTBQSX-neuf",
+   "titre": "WINMAU Blackout 21 Gramme Professionnelle Pointe d’Acier Tungstène Fléchettes avec Vols et Tiges (Ar",
+   "temperature": 288,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 35.45,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BGSTBQSX",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 55.72 €, baisse 36 %, rang 41634"
+  },
+  {
+   "id": "keepa-B0CXQ2NNG3-neuf",
+   "titre": "Ferplast Laisse Chien Enrouleur Rèflechissante Flippy One Reflex, Laisse pour Chiens Moyenne jusqu'à",
+   "temperature": 288,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.16,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CXQ2NNG3",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 20.65 €, baisse 36 %, rang 74505"
+  },
+  {
+   "id": "keepa-B094927GNX-neuf",
+   "titre": "Mali’s 43034 – Plaque à Pâtisserie Perforée Plate Aluminium sans Rebords Grise 40x30cm, épaisseur 1.",
+   "temperature": 288,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 15.25,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B094927GNX",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 23.94 €, baisse 36 %, rang 12010"
+  },
+  {
+   "id": "c382ea3914",
+   "titre": "Odkurzacz pionowy Cotiar S25 650W 60kPa | €44.28",
+   "temperature": 286,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "AliExpress",
+   "prix": 45.99,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/odkurzacz-pionowy-cotiar-s25-650w-60kpa-vertical-vacuum-cleaner-handheld-home-appliance-cordless-vacuum-cleaner-1381558",
+   "date": "Tue, 03 Nov 2026 23:39:10 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "195,71zł - AliExpress Mocny silnik o mocy 650 W z siłą ssania 60 kPa] Z łatwością zbiera 99% kurzu, okruchów i uporczywych sierści zwierząt zarówno z twardych podłóg, jak i dywanów, ..."
+  },
+  {
+   "id": "e56c759323",
+   "titre": "Kurtka do biegania z technologią CLIMAWARM ADIDAS",
+   "temperature": 285,
+   "categorie": "Sport i turystyka",
+   "marchand": "SportRabat",
+   "prix": 39.94,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kurtka-do-biegania-z-technologia-climawarm-adidas-1381269",
+   "date": "Tue, 03 Nov 2026 23:30:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "169,95zł - SportRabat rozmiar xs-xl Męska kurtka do biegania adidas Own The Run Winterized została stworzona z myślą o aktywnościach w chłodne dni. Technologia CLIMAWARM zape..."
+  },
+  {
+   "id": "8c9c70c834",
+   "titre": "Pilarka ukosowa 230 V 1500 W Ø216 mm - 3 lata gwarancji",
+   "temperature": 281,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Jula",
+   "prix": 93.77,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/pilarka-ukosowa-230-v-1500-w-o216-mm-1381311",
+   "date": "Tue, 03 Nov 2026 23:21:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "399zł - Jula Z laserem i odciągiem wiórów Mocny silnik – 1500 W/5200 obr./min 3 lata gwara..."
+  },
+  {
+   "id": "keepa-B000VPLI78-neuf",
+   "titre": "Generation CBF Whistle en laiton en Do 6580",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.53,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B000VPLI78",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 19.39 €, baisse 35 %, rang 43326"
+  },
+  {
+   "id": "keepa-B07V2NTS5Z-neuf",
+   "titre": "Bridgestone BLIZZAK LM005-195/45 R16 84H XL - C/A/71 - Pneus hiver (TOURISME & SUV)",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 112.79,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07V2NTS5Z",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 172.75 €, baisse 35 %, rang 19587"
+  },
+  {
+   "id": "keepa-B0FL7SC4R8-neuf",
+   "titre": "OFITURIA Feutrine de Couleurs pour Loisirs Créatifs, Couture, Patchwork, Artisanat, DIY et Décoratio",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FL7SC4R8",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 21.37 €, baisse 35 %, rang 3009"
+  },
+  {
+   "id": "keepa-B0C3NB97HS-seconde_main",
+   "titre": "Speedo Biofuse 2.0 Lunettes de natation unisexes pour adulte [Seconde main Amazon]",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 20.08,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0C3NB97HS",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 31.01 €, baisse 35 %, rang 55821"
+  },
+  {
+   "id": "keepa-B0HGXWT34Y-neuf",
+   "titre": "SWEETFULL Lot de 2 chauffe-mains électriques rechargeables 4000 mAh avec",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HGXWT34Y",
+   "date": "2026-11-04T03:11",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 29.34 €, baisse 35 %, rang 127"
+  },
+  {
+   "id": "keepa-B08RZ5RBJ7-neuf",
+   "titre": "Amscan 9909116 Déguisements Sous Licence Officielle Pat Patrouille Chase Pour Enfants Garçons 4-6 An",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 23.11,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08RZ5RBJ7",
+   "date": "2026-11-04T03:11",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 35.37 €, baisse 35 %, rang 47064"
+  },
+  {
+   "id": "keepa-B0006HBEGG-neuf",
+   "titre": "Maisto - 31640BL - Véhicule Miniature - Chevrolet Corvette Stingray - Echelle 1:18 Couleur aléatoire",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 34.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0006HBEGG",
+   "date": "2026-11-04T01:54",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 53.69 €, baisse 35 %, rang 28086"
+  },
+  {
+   "id": "keepa-B0FPWZRXFL-seconde_main",
+   "titre": "NEEWER Téléobjectif HD 65mm pour téléphone avec Pare-Soleil (Argent), Zoom 1,7X pour Plaque arrière  [Seconde main Amazon]",
+   "temperature": 280,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 49.39,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FPWZRXFL",
+   "date": "2026-11-04T00:53",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 76.19 €, baisse 35 %, rang 50037"
+  },
+  {
+   "id": "9c1d5e6527",
+   "titre": "Odkurzacz przemysłowy Karcher K WD3 1.628-443.0 Mocny Na sucho i mokro",
+   "temperature": 275,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Allegro",
+   "prix": 73.63,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/odkurzacz-przemyslowy-karcher-k-wd3-1628-4430-mocny-na-sucho-i-mokro-1381257",
+   "date": "Tue, 03 Nov 2026 23:46:32 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "313,31zł - Allegro KWD 3 V-17/4/20 z zestawem szczotki ssącej do delikatnych powierzchni oferuje pojemnik z tworzywa sztucznego o pojemności 17 l, przewód o długości 4 m, wąż ssąc..."
+  },
+  {
+   "id": "keepa-B0D1DQCSSX-neuf",
+   "titre": "Carhartt Manteau de corvée Isolant pour Chien, Durable et résistant aux intempéries, Noir, Taille XL",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 73.45,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D1DQCSSX",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 111.05 €, baisse 34 %, rang 11566"
+  },
+  {
+   "id": "keepa-B07GPWZTHZ-neuf",
+   "titre": "XJD Casque de Vélo Enfant Filles Garçons 3-13 Ans Casque Enfant Roller CE en Certification Protectio",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 22.79,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07GPWZTHZ",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 34.68 €, baisse 34 %, rang 2231"
+  },
+  {
+   "id": "keepa-B07JKSPP7H-neuf",
+   "titre": "Barbie Métiers Poupée Professeur Brune, avec 10 Accessoires Éducatifs, Dont Globe Rotatif et Ordinat",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 48.07,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07JKSPP7H",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 73.18 €, baisse 34 %, rang 56018"
+  },
+  {
+   "id": "keepa-B0B8NFB5Q1-neuf",
+   "titre": "Keeeper Funny Farm Siège de Toilette pour Bébé, De 18 Mois à 4 Ans Environ, Anti-Dérapant, Ewa, Nord",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.58,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0B8NFB5Q1",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 22.1 €, baisse 34 %, rang 1899"
+  },
+  {
+   "id": "keepa-B08T755W7Y-neuf",
+   "titre": "Yerbay Plaquettes de Frein Avant/Arrière Kit pour KTM EXC 125 2004-2013/EXC 400 Racing 2004-2007/EXC",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.15,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08T755W7Y",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 24.4 €, baisse 34 %, rang 47796"
+  },
+  {
+   "id": "keepa-B0B1DQZDYZ-neuf",
+   "titre": "UmWelt - Lot de 25 enveloppes - En papier kraft noir - Format C5 - Doublure en soie dorée - À collag",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 20.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0B1DQZDYZ",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 31.86 €, baisse 34 %, rang 53196"
+  },
+  {
+   "id": "keepa-B07GTKDWD8-neuf",
+   "titre": "Schwalbe 11101393, Rapid Rob K-Guard Unisex Adulto, B/WS/B-SK, 57-559 HS425 SBC 50EPI",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 22.56,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07GTKDWD8",
+   "date": "2026-11-04T02:51",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 34.39 €, baisse 34 %, rang 39274"
+  },
+  {
+   "id": "keepa-B086WQRCQ2-neuf",
+   "titre": "FIESTAS GUIRCA | Déguisement Psychopathe Enfant 10-12 ans - Combinaison",
+   "temperature": 272,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 21.48,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B086WQRCQ2",
+   "date": "2026-11-04T01:54",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 32.65 €, baisse 34 %, rang 75804"
+  },
+  {
+   "id": "008cd46bcc",
+   "titre": "VALSOLE Plantillas ortopédicas para mujeres y hombres Soporte de pie alto Plantillas de zapatos funcionales suaves Inserto para pies",
+   "temperature": 270,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 15.21,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/valsole-plantillas-ortopedicas-para-mujeres-y-hombres-soporte-de-pie-alto-plantillas-de-zapatos-funcionales-suaves-inserto-para-pies-2054732",
+   "date": "Wed, 04 Nov 2026 00:24:56 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "15,21€ - Amazon VALSOLE Plantillas ortopédicas para mujeres y hombres Soporte de pie alto Plantillas de zapatos funcionales suaves Inserto para pies. Precio: 15,21 €.<..."
+  },
+  {
+   "id": "4ada72f7ad",
+   "titre": "Oczyszczacz powietrza Xiaomi Smart Air Purifier 4 Compact (do 27 m², CADR 230 m³/h, HEPA, 20 dB, Wi‑Fi) @ Allegro",
+   "temperature": 269,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Allegro",
+   "prix": 51.46,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/oczyszczacz-powietrza-xiaomi-smart-air-purifier-4-compact-do-27-m2-cadr-230-m3h-hepa-20-db-wifi-at-allegro-1380786",
+   "date": "Tue, 03 Nov 2026 23:53:46 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "219zł - Allegro Oczyszczacz powietrza Xiaomi Smart Air Purifier 4 Compact w Allegro za 219 zł. Darmowa dostawa z usługą smart! To kompaktowy model do mniejszych pomi..."
+  },
+  {
+   "id": "252e1dfa12",
+   "titre": "Maskotka interaktywna Miś Cobiś Śpioszek za 59,99zł (darmowy odbiór w salonie) @ Smyk",
+   "temperature": 269,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Smyk",
+   "prix": 14.1,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/maskotka-interaktywna-mis-cobis-spioszek-za-5999zl-darmowy-odbior-w-salonie-at-smyk-1381464",
+   "date": "Tue, 03 Nov 2026 23:36:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "59,99zł - Smyk Maskotka interaktywna Miś Cobiś Śpioszek za 59,99zł. Darmowy odbiór w salonie. W innych sklepach od 110zł (<a h..."
+  },
+  {
+   "id": "5c21771b37",
+   "titre": "Caja Led TV Sincronizada",
+   "temperature": 266,
+   "categorie": "Electrónica",
+   "marchand": "Action",
+   "prix": 26.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/caja-led-tv-sincronizada-2054745",
+   "date": "Wed, 04 Nov 2026 00:39:27 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "26,95€ - Action • Incluye tira LED • Se alimenta mediante otro producto • Fuente de luz: lámpara LED Hasta 65\""
+  },
+  {
+   "id": "keepa-B0D1G3S3X2-neuf",
+   "titre": "5 Minutes Minuteur Toilette, Cadeau Amusant pour Papa et Maman, Cadeau de nouveauté pour la fête des",
+   "temperature": 264,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 31.68,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D1G3S3X2",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 46.94 €, baisse 33 %, rang 8212"
+  },
+  {
+   "id": "keepa-B0FZTBC4RF-neuf",
+   "titre": "TAPEBEAR Film de protection pour moquette 91,4 cm x 61 m, protecteur de moquette",
+   "temperature": 264,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 45.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FZTBC4RF",
+   "date": "2026-11-04T03:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "description": "moyenne 90 j 68.31 €, baisse 33 %, rang 47244"
+  },
+  {
+   "id": "30336817d2",
+   "titre": "Pasta dental Oral-B Advanced Gum Protection, paquete económico de 12 x 75 ml.",
+   "temperature": 257,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 28.4,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pasta-dental-oral-b-advanced-gum-protection-paquete-economico-de-12-x-75-ml-2054672",
+   "date": "Wed, 04 Nov 2026 02:05:44 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "28,40€ - Amazon Pasta dental Oral-B Advanced Gum Protection, paquete económico de 12 x 75 ml. Pasta dental con fluoruro de estaño, cuidado de las encías, protección co..."
+  },
+  {
+   "id": "c67f5e1bee",
+   "titre": "Monitor Acer Nitro KG273UW2bmiippx (27\", QHD 2560 x 1440, 240 Hz, FreeSync Premium) za 499 zł @ Neonet",
+   "temperature": 256,
+   "categorie": "Elektronika",
+   "marchand": "Neonet",
+   "prix": 117.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/monitor-acer-nitro-kg273uw2bmiippx-27-qhd-2560-x-1440-240-hz-freesync-premium-za-499-zl-at-neonet-1381554",
+   "date": "Tue, 03 Nov 2026 23:55:53 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "499zł - Neonet MonitorAcer Nitro KG273UW2bmiippx za..."
+  },
+  {
+   "id": "179a2a0b43",
+   "titre": "Saucony - zapatillas de running Hurricane 25 - running- Tallas- 40, 40.5, 42",
+   "temperature": 252,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Privalia",
+   "prix": 64.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/saucony-zapatillas-de-running-hurricane-25-running-tallas-40-405-42-2054730",
+   "date": "Wed, 04 Nov 2026 00:26:07 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "64,90€ - Privalia Descripción Zapatillas de running \"Hurricane 25\" Colección: 2026 Deporte: running Altura del tacón: 3.8 cm<br ..."
+  },
+  {
+   "id": "7a30e06812",
+   "titre": "Zestaw Akumulatorowy klucz udarowy Parkside PPDSSA 12 A1, 12 V z akumulatorem, 2,5 Ah i ładowarką, 6 A",
+   "temperature": 250,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Lidl",
+   "prix": 44.65,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zestaw-akumulatorowy-klucz-udarowy-12-v-z-akumulatorem-25-ah-i-ladowarka-6-a-1380515",
+   "date": "Tue, 03 Nov 2026 23:40:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "190zł - Lidl PARKSIDE PERFORMANCE® Klucz udarowy akumulatorowy 12 V »PPDSSA 12 A1« Właściwości Silnik bezszc..."
+  },
+  {
+   "id": "e861bbf52b",
+   "titre": "Bosch Professional 260925C090 Set De 8 Brocas Para Martillo Sds Plus Para Hormigón, Accesorios Para Martillo Perforador",
+   "temperature": 249,
+   "categorie": "Jardín y bricolaje",
+   "marchand": "Amazon",
+   "prix": 17.73,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bosch-professional-260925c090-set-de-8-brocas-para-martillo-sds-plus-para-hormigon-accesorios-para-martillo-perforador-2054764",
+   "date": "Wed, 04 Nov 2026 00:26:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "17,73€ - Amazon Bosch Professional 260925C090 Set De 8 Brocas Para Martillo Sds Plus Para Hormigón, Accesorios Para Martillo Perforador. Precio: 17,73 €. Referen..."
+  },
+  {
+   "id": "c068d4445a",
+   "titre": "Taurus Estufa de gas Tropicano Gas Compact, Material Acero (Envio desde España)",
+   "temperature": 244,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 51.84,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/taurus-estufa-de-gas-tropicano-gas-compact-material-acero-envio-desde-espana-2054679",
+   "date": "Wed, 04 Nov 2026 00:55:35 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "51,84€ - AliExpress Taurus - Estufa de gas Tropicano Gas Compact | Material Acero | Potencia 4,20 kW | Triple Sistema Seguridad | Diseño Compacto La estuf..."
+  },
+  {
+   "id": "5a8ffd48c2",
+   "titre": "Wyprzedaż zimowych kurtek Jack & Jones - sporo modeli od 99zł do 200zł",
+   "temperature": 238,
+   "categorie": "Moda",
+   "marchand": "MandM",
+   "prix": 23.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/wyprzedaz-zimowych-kurtek-jack-jones-sporo-modeli-od-99zl-do-200zl-1381835",
+   "date": "Tue, 03 Nov 2026 23:48:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "99zł - MandM Tytułowa: Mężczyź..."
+  },
+  {
+   "id": "7ad267ac2d",
+   "titre": "Nike Racing Streakfly",
+   "temperature": 237,
+   "categorie": "Moda y accesorios",
+   "marchand": "Privé by Zalando",
+   "prix": 77.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nike-racing-streakfly-2054582",
+   "date": "Wed, 04 Nov 2026 00:30:51 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "77,90€ - Privé by Zalando Zapatillas Nike de running Tallas desde 38'5 a"
+  },
+  {
+   "id": "73a8c19c1b",
+   "titre": "Zapatillas Nike Air Max SNDR - Tallas 35,5 hasta 40,5",
+   "temperature": 236,
+   "categorie": "Moda y accesorios",
+   "marchand": "Showroomprivé",
+   "prix": 45.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-nike-air-max-sndr-tallas-355-hasta-405-2054556",
+   "date": "Wed, 04 Nov 2026 00:35:22 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "45,90€ - Showroomprivé Zapatillas de running. Orificios delante. Detalle con orificios en los laterales. Logo en relieve en el lateral. Cierre de cremallera. ..."
+  },
+  {
+   "id": "900fe75404",
+   "titre": "Gel GRATIS para lavavajillas SOMAT (Club Carrefour, Compras +50€)",
+   "temperature": 229,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "Carrefour",
+   "prix": 50.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/gel-gratis-para-lavavajillas-somat-club-carrefour-compras-50eur-2054316",
+   "date": "Wed, 04 Nov 2026 02:01:50 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "Carrefour Por ser socio de El Club Carrefour, llévate un regalo exclusivo con la App Mi Carrefour por compras superiores a 50 € en hipermercados. Solo los días 6..."
+  },
+  {
+   "id": "68257555d1",
+   "titre": "2 noce dla 2+2 (dzieci do lat 12 i 4) w Interferie Sport Hotel Bornit Szklarska Poręba - wyżywienie HB, basen i sauna fińska @ Triverna",
+   "temperature": 228,
+   "categorie": "Podróże",
+   "marchand": "Triverna",
+   "prix": 159.33,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/2-noce-dla-22-dzieci-do-lat-12-i-4-w-interferie-sport-hotel-bornit-szklarska-poreba-wyzywienie-hb-basen-i-sauna-finska-at-triverna-1381714",
+   "date": "Wed, 04 Nov 2026 00:46:03 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "678zł - Triverna Propozycja na rodzinny wyjazd w góry do Interferie Sport Hotel Bornit w Szklarskiej Porębie. Oferta nawet dla 2 dorosłych + 2 dzieci (jedno poniżej 4..."
+  },
+  {
+   "id": "bd7dfb1f12",
+   "titre": "Maquina de limpieza para el hogar",
+   "temperature": 226,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Miravia",
+   "prix": 44.63,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/maquina-de-limpieza-para-el-hogar-2054772",
+   "date": "Wed, 04 Nov 2026 00:54:15 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "44,63€ - Miravia N"
+  },
+  {
+   "id": "731f508cdc",
+   "titre": "Klocki Mould King Fiat 126P Outdoor Adventure 24074",
+   "temperature": 224,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "RTV Euro AGD",
+   "prix": 9.03,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/klocki-mould-king-fiat-126p-outdoor-adventure-24074-1381228",
+   "date": "Wed, 04 Nov 2026 01:23:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "38,44zł - RTV Euro AGD Na Allegro od 48 zł. Darmowy odbiór w salonie RTV Euro AGD. Przenieś się w czasie dzięki temu wyjątkowe..."
+  },
+  {
+   "id": "3f12bede58",
+   "titre": "Buty Męskie Columbia Crestwood Low Ride r 47",
+   "temperature": 224,
+   "categorie": "Sport i turystyka",
+   "marchand": "Amazon.pl",
+   "prix": 42.06,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-meskie-columbia-crestwood-low-ride-r-47-1381242",
+   "date": "Wed, 04 Nov 2026 00:45:57 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "178,99zł - Amazon.pl Może ktoś skorzysta. Buty męskie Columbia Crestwood Low Ride, dostępne na Amazon za 178,99, to solidne obuwie zaprojektowane z myślą o miłośnikach górsk..."
+  },
+  {
+   "id": "ee9116197e",
+   "titre": "Monitor Gigabyte GS24F14 23,8\" FullHD 144 Hz IPS 1 ms FreeSync HDR VESA",
+   "temperature": 223,
+   "categorie": "Gaming",
+   "marchand": "PcComponentes",
+   "prix": 74.96,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/monitor-gigabyte-gs24f14-238-fullhd-144-hz-ips-1-ms-freesync-hdr-vesa-2054563",
+   "date": "Wed, 04 Nov 2026 00:56:15 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "74,96€ - PcComponentes Especificaciones del producto: Pantalla de 23,8 pulgadas Resolución Full HD <li..."
+  },
+  {
+   "id": "482af152dd",
+   "titre": "[Pruébalo Gratis] Pienso para perro Ultima Articular Med Maxi 3kg (100% Reembolso / Bizum hasta 15€) + 5€ Extra por tu opinión",
+   "temperature": 222,
+   "categorie": "Supermercado y alimentación",
+   "marchand": null,
+   "prix": 15.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pruebalo-gratis-pienso-para-perro-ultima-articular-med-maxi-3kg-100-reembolso-bizum-hasta-15eur-5eur-extra-por-tu-opinion-2051644",
+   "date": "Wed, 04 Nov 2026 02:03:19 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "¡Vuelve el \"Pruébalo Gratis\" de Ultima para cuidar las articulaciones de nuestros perros totalmente gratis! Se trata de una nueva camp..."
+  },
+  {
+   "id": "fba9fd6c07",
+   "titre": "Gra Onimusha Way of the Sword I PS5 I Playstation 5 I PL",
+   "temperature": 220,
+   "categorie": "Gaming",
+   "marchand": "Allegro",
+   "prix": 49.17,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/onimusha-way-of-the-sword-i-ps5-i-playstation-5-i-pl-1381955",
+   "date": "Wed, 04 Nov 2026 02:33:40 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "209,25zł - Allegro ONIMUSHA Way of the Sword Stan: Nowa Platforma: Playstation 5 Wersja: Pudełkowa Rodzaj nośnika: Blu-ray Disc (płyta)<..."
+  },
+  {
+   "id": "3d7ca9b014",
+   "titre": "Bezpośredni lot czarterem na Sri Lankę (Colombo) z Warszawy/Katowic/Poznania 05.11 - 16.11 | rainbow",
+   "temperature": 219,
+   "categorie": "Podróże",
+   "marchand": "Rainbow",
+   "prix": 434.51,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/bezposredni-lot-czarterem-na-sri-lanke-colombo-z-poznania-0511-1611-rainbow-1378300",
+   "date": "Wed, 04 Nov 2026 00:44:47 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 849zł - Rainbow Wylot możliwy z Warszawy/Katowic/Poznania Cześć wszystkim! Bardzo dobra okazja na loty czarterowe na egzotyczną Sri Lankę (Kolombo) z biurem podróży ..."
+  },
+  {
+   "id": "3d29e06e6c",
+   "titre": "Olej silnikowy ELF Evolution 900 NF 5W-40 4L",
+   "temperature": 216,
+   "categorie": "Motoryzacja",
+   "marchand": "Allegro",
+   "prix": 24.44,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/olej-silnikowy-elf-evolution-900-nf-5w-40-4l-1381022",
+   "date": "Tue, 03 Nov 2026 23:51:34 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "103,99zł - Allegro Z okazji black weekend znany i lubiany olej 5w40 Elf od oficjalnego sklepu. Darmowa wysyłka tylko z aktywnym allegro smart."
+  },
+  {
+   "id": "05818d5def",
+   "titre": "PUMA LEADCAT 2.0 (37 y 39)",
+   "temperature": 211,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 10.56,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/puma-leadcat-20-37-y-39-2054811",
+   "date": "Wed, 04 Nov 2026 01:09:21 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,56€ - Amazon Deslízate en la temporada de verano con el Leadcat 2.0. Con una correa acolchada y una suela de EVA moldeada para mayor agarre y durabilidad, te mantendrás cómo..."
+  },
+  {
+   "id": "e1f85e579a",
+   "titre": "Sony PS-LX5BT Tocadiscos Inalámbrico Bluetooth Premium con reproducción automática, transmisión por Correa",
+   "temperature": 208,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 299.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sony-ps-lx5bt-tocadiscos-inalambrico-bluetooth-premium-con-reproduccion-automatica-transmision-por-correa-2054253",
+   "date": "Wed, 04 Nov 2026 00:27:25 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "299€ - Amazon Disfruta de una reproducción suave y sencilla, impulsada por un sistema de tracción por correa totalmente automático con funcionamiento de un solo toque. ..."
+  },
+  {
+   "id": "58798d59a5",
+   "titre": "[Gra PS5] Metal Gear Solid Master Collection Vol.2 – Day One Edition | Pudełkowa",
+   "temperature": 207,
+   "categorie": "Gaming",
+   "marchand": "PerfectBlue",
+   "prix": 35.25,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/ps5-metal-gear-solid-master-collection-vol2-day-one-edition-pudelkowa-1380755",
+   "date": "Wed, 04 Nov 2026 02:56:52 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "149,99zł - PerfectBlue Edycja Zawiera : Metal Gear Solid 4: Guns of the Patriots Metal Gear Solid: Peace Walker – wersja HD Metal Ge..."
+  },
+  {
+   "id": "f730b0c775",
+   "titre": "1 Opona zimowa Michelin ALPIN 7 185/65R15 88T - komplet za 1141,84 zł + darmowa dostawa SAMRT",
+   "temperature": 206,
+   "categorie": "Motoryzacja",
+   "marchand": "Allegro",
+   "prix": 67.08,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/1-opona-zimowa-michelin-alpin-7-18565r15-88t-1381935",
+   "date": "Wed, 04 Nov 2026 03:00:14 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "285,46zł - Allegro Dla poszukujących opon zimowych marki premium oferta Michelin Alpin 7 185/65/15 warta rozważenia mimo, ze nie łapie się na nową promocję od allegro -100 zł przy..."
+  },
+  {
+   "id": "686b22b47a",
+   "titre": "Lilliputiens, Joe Sonajero Swing con Ventosa, Desde 6 Meses",
+   "temperature": 204,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lilliputiens-joe-sonajero-swing-con-ventosa-desde-6-meses-2054086",
+   "date": "Wed, 04 Nov 2026 00:36:09 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10€ - Amazon Lilliputiens, Joe Sonajero Swing con Ventosa, Desde 6 Meses Cascabel en la Cabeza, Anillos de Madera de Colores y Ventosa, Para Descubrir Vista, Oído y..."
+  },
+  {
+   "id": "03709f9213",
+   "titre": "2x Voll-Damm | Cerveza Doble Malta | Toque Cítrico y Afrutado | Espuma Consistente | Paquete 24 x 330 ml | Total 7920 ml. (Total 48 latas)",
+   "temperature": 199,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "Amazon",
+   "prix": 29.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/2x-voll-damm-cerveza-doble-malta-toque-citrico-y-afrutado-espuma-consistente-paquete-24-x-330-ml-total-7920-ml-total-48-latas-2054809",
+   "date": "Wed, 04 Nov 2026 02:33:24 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "29€ - Amazon VOLL-DAMM - Cerveza dorada con 7,2 % de alcohol, caracterizada por su sabor especial, con espuma consistente y ligeramente amarga, para experimentar un sabor re..."
+  }
+ ]
+}

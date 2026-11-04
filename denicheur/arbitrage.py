@@ -21,7 +21,7 @@ ECART_MIN = 0.15        # au moins 15 % moins cher à l'étranger, port compris
 VENTES_MIN = 3          # chutes de classement sur 30 jours en France (≈ ventes)
 VENDEURS_MAX = 9
 PRIX_MIN, PRIX_MAX = 25.0, 600.0
-PAR_TOUR = 25           # produits comparés par tour (x 4 pays = 100 jetons)
+PAR_TOUR = 40           # produits comparés par tour (x 4 pays = 160 jetons) : ≈ 4 800 produits par jour
 REVOIR_JOURS = 3        # un produit est recomparé au plus tous les 3 jours
 
 

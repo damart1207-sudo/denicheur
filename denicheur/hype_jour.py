@@ -34,7 +34,7 @@ def prix_eur(x):
     return round(p * TAUX.get(x.get("pays"), 1), 2)
 
 
-def candidats(jours=7, n=40):
+def candidats(jours=7, n=50):
     limite = (datetime.now(timezone.utc) - timedelta(days=jours)).strftime("%Y-%m-%d")
     vus, out = set(), []
     for x in sorted(_lire(os.path.join(RACINE, "data/hype_etranger.json"), {}).get("produits", []),
@@ -143,7 +143,10 @@ def enrichir(cands, mots):
                     offres.append({"ou": "eBay USA", "prix": p, "cout": round((p + PORT["US"]) * IMPORT, 2)})
             except Exception:
                 pass
+        o = par_pays.get(c["pays"], {}).get(c["asin"]) or {}
+        c["croissance_ventes_pct"] = round((o["r90"] / o["r30"] - 1) * 100) if o.get("r30") and o.get("r90") else None
         c["offres"] = sorted(offres, key=lambda o: o["cout"])
+        c["vendeurs_fr"] = (par_pays.get("FR", {}).get(c["asin"]) or {}).get("offres")
         c["ventes"] = ventes
     # volume de recherche dans le pays d'origine (un appel par pays, ≈ 0,09 $ chacun)
     cache = _lire(F_VOL_ORIG, {})
@@ -158,6 +161,77 @@ def enrichir(cands, mots):
     json.dump(cache, open(F_VOL_ORIG, "w", encoding="utf-8"), ensure_ascii=False)
     for c in cands:
         c["volume_origine"] = (cache.get(f"{c['pays']}:{c.get('mot_cle')}") or {}).get("volume_mensuel")
+
+
+CROISSANCE_MIN = 10   # % : le rang de vente moyen des 30 derniers jours meilleur que celui des 90 jours
+
+
+def approfondir(cands, maxi=20):
+    """Règle de David : ventes ET recherches en hausse sur 30 jours (pays d'origine) -> analyse approfondie :
+    prix le moins cher (déjà calculé), livrable en France (eBay, filtre livraison France), concurrents en France
+    sur toutes nos sources (Amazon.fr, eBay France, annonces collectées, idealo)."""
+    from . import dataforseo, ebay
+    montent = [c for c in cands if (c.get("croissance_ventes_pct") or 0) >= CROISSANCE_MIN and c.get("mot_cle")][:maxi]
+    # recherches Google sur 30 jours dans le pays d'origine (Google Trends, 5 mots par appel, ≈ 0,011 $)
+    for pays in sorted({c["pays"] for c in montent}):
+        mots = [c["mot_cle"] for c in montent if c["pays"] == pays]
+        for i in range(0, len(mots), 5):
+            res = dataforseo.tendances(mots[i:i + 5], pays=pays, periode="past_30_days") or {}
+            for c in montent:
+                t = res.get(c["mot_cle"])
+                if c["pays"] == pays and t:
+                    c["recherches_30j"] = t["tendance"]
+    try:
+        tok = ebay.jeton()
+    except Exception:
+        tok = None
+    annonces = []
+    for fch in ("data/etat/annonces_recentes.json", "data/pc/annonces.json"):
+        d = _lire(os.path.join(RACINE, fch), [])
+        annonces += d if isinstance(d, list) else d.get("annonces", [])
+    for c in montent:
+        if c.get("recherches_30j") != "monte":
+            continue
+        c["double_hausse"] = True
+        a = {}
+        q = c["mot_cle"]
+        if tok:
+            for marche, nom in (("EBAY_US", "eBay USA"), ("EBAY_GB", "eBay UK")):
+                try:
+                    pr, ex = ebay.chercher(tok, q, marche=marche, neuf=True, livrable_fr=True, limite=50)
+                    if pr:
+                        a.setdefault("livrable_fr", []).append({"ou": nom, "annonces": len(pr), "prix_min": round(min(pr) * TAUX.get("US", 1) if marche == "EBAY_US" else min(pr) * 1.17, 2),
+                                                                "lien": (ex[0] or {}).get("url") if ex else None})
+                except Exception:
+                    pass
+            try:
+                pr, _ = ebay.chercher(tok, q, marche="EBAY_FR", neuf=True)
+                a["ebay_fr_neuf"] = len(pr)
+            except Exception:
+                pass
+        mots = set(q.lower().split())
+        a["annonces_collectees_fr"] = sum(1 for x in annonces if isinstance(x, dict) and mots <= set(str(x.get("titre", "")).lower().split()))
+        a["vendeurs_amazon_fr"] = c.get("vendeurs_fr")
+        try:
+            from . import apify
+            if apify.disponible():
+                a["idealo"] = apify.prix_idealo(q)
+        except Exception:
+            pass
+        c["analyse"] = a
+    return [c for c in cands if c.get("double_hausse")]
+
+
+def analyse_txt(c, telegram):
+    a = c["analyse"]
+    liv = a.get("livrable_fr") or []
+    t = ("🚚 Livrable en France : " + " · ".join(f"{telegram._e(l['ou'])} {l['annonces']} annonces dès {telegram._eur(l['prix_min'])}" for l in liv)
+         if liv else "🚚 Livrable en France : aucune annonce eBay USA/UK trouvée (voir Amazon DE/ES ci-dessous)") + "\n"
+    conc = [f"Amazon.fr {a['vendeurs_amazon_fr']} vendeurs" if a.get("vendeurs_amazon_fr") is not None else "absent d'Amazon.fr",
+            f"eBay France {a.get('ebay_fr_neuf', '?')} annonces neuves", f"nos sources {a.get('annonces_collectees_fr', 0)} annonces"]
+    if a.get("idealo"):
+        conc.append(f"idealo {a['idealo'].get('nb_offres') or '?'} offres dès {telegram._eur(a['idealo'].get('prix_min'))}")
+    return t + "⚔️ Concurrents en France : " + telegram._e(" · ".join(conc)) + "\n"
 
 
 def prix_mini_txt(f):
@@ -183,10 +257,11 @@ def jour(n_envoi=10, envoyer=True):
         os.makedirs(os.path.dirname(F_VOL), exist_ok=True)
         json.dump(cache, open(F_VOL, "w", encoding="utf-8"), ensure_ascii=False)
     enrichir(cands, mots)
+    approfondir(cands)
     for c in cands:
         c["fiche"] = evaluer(c, cache.get(c.get("mot_cle")) if c.get("mot_cle") else None)
     rang = {"vert": 0, "orange": 1, "rouge": 2}
-    cands.sort(key=lambda c: (rang[c["fiche"]["feu"]], not c["fiche"]["anticiper"], -(c["fiche"]["benefice"] or 0), -(c["fiche"]["volume_fr"] or 0)))
+    cands.sort(key=lambda c: (not c.get("double_hausse"), rang[c["fiche"]["feu"]], not c["fiche"]["anticiper"], -(c["fiche"]["benefice"] or 0), -(c["fiche"]["volume_fr"] or 0)))
     json.dump({"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "produits": cands},
               open(F_SORTIE, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     garder = [c for c in cands if c["fiche"]["feu"] != "rouge"][:n_envoi]
@@ -198,7 +273,7 @@ def jour(n_envoi=10, envoyer=True):
     lignes = [f"<b>🌍 Hype étrangère du jour</b> — {len(garder)} produits qui cartonnent à l'étranger et pas (encore) en France"]
     for c in garder:
         f = c["fiche"]
-        rond = {"vert": "🟢 VERT", "orange": "🟠 ORANGE"}[f["feu"]]
+        rond = ("🔥 VENTES + RECHERCHES EN HAUSSE · " if c.get("double_hausse") else "") + {"vert": "🟢 VERT", "orange": "🟠 ORANGE"}[f["feu"]]
         tend = ("" if f["tendance_fr_pct"] is None else
                 f" ({'📈 +' if f['tendance_fr_pct'] >= 0 else '📉 '}{f['tendance_fr_pct']} % en 3 mois)")
         fr = (f"absent d'Amazon France" if c.get("en_france") == "absent"
@@ -211,6 +286,10 @@ def jour(n_envoi=10, envoyer=True):
             f"🇫🇷 {fr}\n"
             f"🔎 Recherches Google France : {('inconnu' if vol is None else str(vol))} /mois{tend}\n"
             + (f"🔎 Recherches Google {telegram._e(c['pays'])} : {c['volume_origine']} /mois\n" if c.get("volume_origine") is not None else "")
+            + (f"📈 Ventes là-bas : {'+' if c['croissance_ventes_pct'] >= 0 else ''}{c['croissance_ventes_pct']} % (30 j vs 90 j)"
+               + (f" · recherches 30 j : {telegram._e(c['recherches_30j'])}" if c.get("recherches_30j") else "") + "\n"
+               if c.get("croissance_ventes_pct") is not None else "")
+            + (analyse_txt(c, telegram) if c.get("analyse") else "")
             + (f"🛒 Ventes du mois : {telegram._e(' · '.join(f'{k} {v}' for k, v in c['ventes'].items()))}\n" if c.get("ventes") else "")
             + (f"🏷️ Achat le moins cher rendu chez toi : <b>{telegram._eur(c['offres'][0]['cout'])}</b> sur {telegram._e(c['offres'][0]['ou'])} "
                f"(affiché {telegram._eur(c['offres'][0]['prix'])})"

@@ -123,6 +123,7 @@ def resumer(p, pays="FR"):
     """Fiche Keepa -> résumé de ≈ 200 octets : ce qu'il faut pour se passer de Keepa plus tard."""
     st = p.get("stats") or {}
     cur, a90, a180 = st.get("current") or [], st.get("avg90") or [], st.get("avg180") or []
+    a30 = st.get("avg30") or []
 
     def v(serie, i):
         return _prix(serie[i]) if len(serie) > i else None
@@ -143,7 +144,9 @@ def resumer(p, pays="FR"):
         "marque": (p.get("brand") or "")[:30] or None, "cat": p.get("rootCategory"), "pays": pays,
         "neuf": neuf, "amazon": v(cur, I_AMAZON), "occ": v(cur, I_OCCASION), "wh": v(cur, I_WAREHOUSE),
         "m90": moy90, "m180": moy180, "min90": min([x for x in (mn(I_AMAZON), mn(I_NEUF)) if x], default=None),
-        "rang": rang, "ch30": st.get("salesRankDrops30"), "ch90": st.get("salesRankDrops90"),
+        "rang": rang, "r30": a30[I_RANG] if len(a30) > I_RANG and isinstance(a30[I_RANG], int) and a30[I_RANG] > 0 else None,
+        "r90": a90[I_RANG] if len(a90) > I_RANG and isinstance(a90[I_RANG], int) and a90[I_RANG] > 0 else None,
+        "ch30": st.get("salesRankDrops30"), "ch90": st.get("salesRankDrops90"),
         "offres": nb_neuf, "vendus_mois": p.get("monthlySold") if isinstance(p.get("monthlySold"), int) and p.get("monthlySold") > 0 else None, "note": p.get("reviews", {}).get("rating") if isinstance(p.get("reviews"), dict) else None,
         "vu": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
     }

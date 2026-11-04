@@ -16,7 +16,7 @@ import urllib.request
 TOKEN_URL = "https://api.ebay.com/identity/v1/oauth2/token"
 SEARCH_URL = "https://api.ebay.com/buy/browse/v1/item_summary/search"
 SCOPE = "https://api.ebay.com/oauth/api_scope"
-LANGUES = {"EBAY_FR": "fr-FR", "EBAY_DE": "de-DE", "EBAY_IT": "it-IT", "EBAY_ES": "es-ES", "EBAY_GB": "en-GB"}
+LANGUES = {"EBAY_FR": "fr-FR", "EBAY_DE": "de-DE", "EBAY_IT": "it-IT", "EBAY_ES": "es-ES", "EBAY_GB": "en-GB", "EBAY_US": "en-US"}
 # Pays de revente comparés (tous en euros, livrables depuis la France sans douane)
 MARCHES_EUROPE = {"EBAY_DE": "DE", "EBAY_IT": "IT", "EBAY_ES": "ES"}
 MOTS_VIDES = re.compile(r"\[.*?\]|\(.*?\)|via .*$|\b(bei|chez|sur|at|en|de|la|le|les|pour|für|mit|avec|offert|gratis|gratuit|livraison|tailles?|talla|taille)\b", re.I)
@@ -43,8 +43,10 @@ def requete(titre, mots=7):
     return " ".join(t.split()[:mots])
 
 
-def chercher(tok, q, marche="EBAY_FR", neuf=None, limite=50):
+def chercher(tok, q, marche="EBAY_FR", neuf=None, limite=50, livrable_fr=False):
     filtres = ["buyingOptions:{FIXED_PRICE}", "priceCurrency:" + {"EBAY_GB": "GBP", "EBAY_US": "USD"}.get(marche, "EUR")]
+    if livrable_fr:
+        filtres.append("deliveryCountry:FR")
     if neuf is True:
         filtres.append("conditionIds:{1000}")
     elif neuf is False:

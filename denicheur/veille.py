@@ -231,6 +231,9 @@ def tour():
         deja_c.add(x["id"])
     if nouvelles_c:
         _ecrire("data/etat/chasse_alertees.json", sorted(deja_c)[-3000:])
+    # classements du jour USA / Japon / Royaume-Uni / Chine, photographiés à 23 h 59 heure locale (fenêtre 23 h 40 - 1 h)
+    from . import classements
+    sante.protege("classements", classements.tour)
     bilan = {"heure": maintenant.astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m %H:%M"),
              "duree_s": int(time.monotonic() - debut),
              "annonces": len(annonces), "nouvelles": len(nouvelles), "examinees": len(lot),

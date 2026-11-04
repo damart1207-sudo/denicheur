@@ -17351,7 +17351,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T01:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -17427,7 +17427,19 @@
     "rentabilite": -0.198
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (The Most Wanted Eau de Parfum Intense 100 ml), mais prix non confirmé : page Pepper illisible d'ici, et les pages Parfumdreams ne montrent ni le prix ni le stock. Le code COZY11 (-11 %) est bien affiché, port gratuit probable au-dessus de 49,90 € (Savoo, à confirmer). Si les 52,97 € sont vrais en France, l'économie serait de 17,9 % face à 64,48 € livrés chez Flaconi, mais rien ne le prouve pour parfumdreams.fr. Dans le doute, rejeté. Revente perdante : médiane Vinted 42 € pour ~53 € d'achat.",
+   "prix_neuf_min_idealo": 64.48,
+   "source_prix_ref": "achatmoinscher, lu le 04/11 (Flaconi, livré) ; idealo non lu",
+   "economie_pct": 17.9,
+   "prix_revente_verifie": 42.0,
+   "canal": "vinted",
+   "marge_nette_verifiee": -10.97,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T02:53+00:00"
  },
  {
   "id": "4a0f89e2af",
@@ -17452,7 +17464,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T01:52+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 44.6,
@@ -17536,6 +17548,18 @@
     "rentabilite": 0.257
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Silent Hill 2 (remake) sur PS5, version à télécharger sur le PlayStation Store à 19,59 €, sans frais de port. Prix lu sur Dealabs (Black November) et confirmé par GoClecD (PS Store Espagne). Le blog PlayStation France cite bien le jeu dans les soldes Black Friday, du 4 au 30/11, avec changement de prix possible le 16/11. Page du PS Store français non lue, et rien n'indique qu'il faille PS Plus : à contrôler avant de payer. Comparaison avec la boîte : 44,60 € sur idealo (import US, 3 offres), 49,99 € chez Amazon (achatmoinscher, lu le 04/11). Il faut une PS5, et un jeu téléchargé ne se revend pas.",
+   "prix_neuf_min_idealo": 44.6,
+   "source_prix_ref": "idealo (robot, 3 offres, import US) ; Amazon 49,99 € livré sur achatmoinscher, lu le 04/11",
+   "economie_pct": 56.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Jusqu'au 15/11 au moins, peut-être au 30/11 (soldes PS Store)",
+   "demande_confirmee": "sans objet (jeu téléchargé, non revendable)"
+  },
+  "verifie_le": "2026-11-04T02:53+00:00"
  }
 ]

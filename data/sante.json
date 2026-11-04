@@ -1,7 +1,7 @@
 {
- "tours_ok": 245,
+ "tours_ok": 246,
  "tours_echec": 4,
- "dernier_ok": "04/11 22:17",
+ "dernier_ok": "04/11 22:27",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -56,13 +56,43 @@
    "niveau": "erreur",
    "etape": "ia_meme_produit",
    "message": "TimeoutError: The read operation timed out | duit neuf (même marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
+  },
+  {
+   "heure": "04/11 22:28",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "04/11 22:28",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "04/11 22:28",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "04/11 22:28",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "04/11 22:28",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  ],
  "dernier_resume": {
-  "heure": "04/11 22:16",
-  "annonces": 563,
-  "nouvelles": 57,
+  "heure": "04/11 22:26",
+  "annonces": 566,
+  "nouvelles": 73,
   "examinees": 25,
-  "alertes": 1
+  "alertes": 0
  }
 }

@@ -30522,17 +30522,17 @@
    "raison": "concurrence trop forte (16 vendeurs)"
   },
   "verdict": {
-   "commentaire": "Levoit Core 300 à 89,99 € sur Amazon Espagne d'après Chollometro (page lue par le robot à 22h32 UTC). Les 204,12 € de l'alerte ne sont pas un prix de référence fiable : seul achatmoinscher les donne, alors que Clubic relevait 96,24 € sur Amazon en France en avril 2025 (prix conseillé 109,99 €). À ces prix, 94,99 € port compris donneraient moins de 15 %. Prix neuf actuel en France à confirmer, de même que l'envoi vers la France.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
-   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": "Inconnue",
-   "demande_confirmee": "non"
+   "demande_confirmee": false,
+   "commentaire": "Toujours pas de prix neuf actuel fiable pour le Core 300 en France : achatmoinscher dit 204,12 € (une seule fiche), Radins.com affiche à la fois 149,99 € et environ 109 € (avril 2026), Clubic relevait 96,24 € sur Amazon et 109,99 € chez Levoit (avril 2025). Pas de fiche Core 300 chez PcComponentes France. À 94,99 € port compris, l'économie passerait sous 15 % face à 109,99 €. Envoi vers la France non confirmé.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null
   },
-  "verifie_le": "2026-11-04T22:48+00:00"
+  "verifie_le": "2026-11-04T23:48+00:00"
  },
  {
   "id": "28ca36ab77",
@@ -30557,7 +30557,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T22:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -30707,6 +30707,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (22 vendeurs)"
+  },
+  "verifie_le": "2026-11-04T23:48+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Terminée",
+   "demande_confirmee": false,
+   "commentaire": "Offre à 94,90 € vue expirée par le robot sur Chollometro (lecture du 04/11 à 23h14 UTC) ; page non rouverte par Claude, accès refusé à cette heure. Prix de référence 199,99 € sur Amazon.fr (Keepa), mais offre morte : rejet.",
+   "prix_neuf_min_idealo": 199.99,
+   "source_prix_ref": "Keepa/Amazon.fr du 04/11 ; idealo non disponible",
+   "economie_pct": null
   }
  },
  {
@@ -30764,7 +30776,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T22:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -30880,6 +30892,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
+  },
+  "verifie_le": "2026-11-04T23:48+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false,
+   "commentaire": "Argos (Royaume-Uni) ne livre pas la France d'après le robot, et le prix de 33 £ fait environ 38 € hors transport, à peine moins que les 39,99 € du neuf français. Rejet.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher (Oral-B iO2 Marine Blue)",
+   "economie_pct": null
   }
  },
  {
@@ -30918,7 +30942,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T23:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -31076,6 +31100,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
+  },
+  "verifie_le": "2026-11-04T23:48+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false,
+   "commentaire": "Vendu par Miravia, marketplace qui ne livre que l'Espagne d'après le guide ChannelEngine ; page marchand illisible (anti-robot), livraison France non prouvée. Rejet.",
+   "prix_neuf_min_idealo": 44.95,
+   "source_prix_ref": "achatmoinscher (8 boutiques)",
+   "economie_pct": null
   }
  },
  {
@@ -31114,7 +31150,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T23:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -31303,21 +31339,33 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
+  },
+  "verifie_le": "2026-11-04T23:48+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false,
+   "commentaire": "Vendu par Miravia, marketplace qui ne livre que l'Espagne d'après le guide ChannelEngine ; page marchand illisible (anti-robot), livraison France non prouvée. Rejet malgré 172 € contre 279,99 € sur Amazon.fr.",
+   "prix_neuf_min_idealo": 279.99,
+   "source_prix_ref": "Comparateur KultureGeek relu le 05/11 (Amazon, 5 offres) ; Keepa concorde",
+   "economie_pct": null
   }
  },
  {
   "id": "2793b8f1fe",
   "titre": "MotoGP 26 SWITCH 2 CIAB",
-  "prix": 28.21,
+  "prix": 27.97,
   "devise": "EUR",
-  "marchand": "PcComponentes",
-  "lien": "https://www.chollometro.com/ofertas/motogp-26-switch-2-ciab-2055976",
-  "pays": "ES",
+  "marchand": "PcComponentes France",
+  "lien": "https://www.pccomponentes.fr/motogp-26-switch-2-ciab",
+  "pays": "FR",
   "source": "chollometro-nuevos",
   "temperature": null,
   "categorie": "Gaming",
   "nom_produit": "MotoGP 26 Switch 2",
-  "cout_achat": 33.21,
+  "cout_achat": 27.97,
   "prix_plancher": {
    "nom": "MotoGP 26 Switch 2",
    "sources": {
@@ -31337,11 +31385,11 @@
    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/motogp-26-code-in-a-box-nintendo-switch-2.html"
   },
   "ecart_vs_neuf_min": 0.789,
-  "economie_pct": 21,
+  "economie_pct": 22,
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T23:23+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -31480,6 +31528,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
+  },
+  "verifie_le": "2026-11-04T23:48+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Quelques jours (promotion du marchand)",
+   "demande_confirmee": false,
+   "commentaire": "Bon produit : MotoGP 26 Switch 2, code dans la boîte (pas de cartouche). Fiche PcComponentes France lue le 05/11 vers 0h45 : 27,97 €, port et retour gratuits, livraison annoncée du 9 au 11 novembre. On retient ce prix France, pas les 28,21 € de la version espagnole. Neuf ailleurs en France : 35,75 € (Amazon.fr selon Keepa, Leclerc espace culturel + 4,90 € de port), 39,99 € livré à la Fnac (achatmoinscher). Économie 22 % sur 35,75 €. Pas de revente : à 85 % du neuf (30,39 €), bénéfice d'environ 2 €.",
+   "prix_neuf_min_idealo": 35.75,
+   "source_prix_ref": "Keepa/Amazon.fr et achatmoinscher (Leclerc), relus le 05/11 ; idealo non disponible",
+   "economie_pct": 22
   }
  }
 ]

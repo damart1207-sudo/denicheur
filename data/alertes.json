@@ -20335,7 +20335,7 @@
   ],
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Offre sur Amazon.fr (B0D9PPV1YY) à 97,83 € selon Les Numériques et unbonplan.me du 03/11 ; page Amazon non lisible ici. Référence exacte du modèle inconnue : la gamme X-Pert 6.60 compte beaucoup de références (RH6821, RH6831, RH6836, RH6837...), et les prix de l'alerte portent sur d'autres modèles (RH6821WO à 119,99 € sur achatmoinscher, mais 156,71 € et 163,21 € chez Castorama et Auchan en vendeurs tiers ; version Smart à 179,99 €). Pas de prix de référence fiable pour le bon modèle. À noter : même gamme déjà vue à 94-100 € en mai et juillet. Revente : Vinted médiane 85 €, sous notre coût.",
+   "commentaire": "Offre sur Amazon.fr (B0D9PPV1YY) à 97,83 € selon Les Numériques et unbonplan.me du 03/11 ; page Amazon non lisible ici. Référence exacte du modèle inconnue : la gamme X-Pert 6.60 compte beaucoup de références (RH6821, RH6831, RH6836, RH6837...), et les prix de l'alerte portent sur d'autres modèles (RH6821WO à 119,99 € sur achatmoinscher, mais 156,71 € et 163,21 € chez Castorama et Auchan en vendeurs tiers ; version Smart à 179,99 €). Pas de prix de référence fiable pour le bon modèle. À noter : même gamme déjà vue à 94-100 € en mai et juillet. Revente : Vinted médiane 85 €, sous notre coût. Revérifié le 04/11 vers 12h50 : toujours aucune fiche lisible pour B0D9PPV1YY, modèle exact toujours inconnu.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": "non fiable (modèle exact inconnu)",
    "economie_pct": null,
@@ -20345,7 +20345,7 @@
    "duree_offre": "Prix Amazon, peut remonter vite",
    "demande_confirmee": "non"
   },
-  "verifie_le": "2026-11-04T10:54+00:00"
+  "verifie_le": "2026-11-04T11:53+00:00"
  },
  {
   "id": "0075f621ad",
@@ -20673,7 +20673,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T10:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -20774,7 +20774,19 @@
     "rentabilite": 0.219
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon modèle (JBL Live Buds 3 noir) et grosse différence sur le papier : 79,90 € chez Joybuy Allemagne contre 169,25 € livrés en France, soit environ 50 % avec 5 € de port. Rejet : la page Joybuy n'a pas pu être lue, l'offre active n'est pas confirmée, et la livraison en France n'est pas prouvée (Joybuy a un site par pays ; un service de réexpédition affirme qu'il ne livre pas à l'étranger). Aucune offre à ce prix trouvée côté Joybuy France. Revente : Vinted médiane 85 € pour un coût de 84,90 €, donc rien à gagner.",
+   "prix_neuf_min_idealo": 169.25,
+   "source_prix_ref": "achatmoinscher et kulturegeek, lus le 04/11 : Pixmania 169,25 € livrés, PcComponentes 169,34 € livrés, Auchan 169,86 €, Amazon.fr 172,99 € ; idealo non lu",
+   "economie_pct": 50,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue (promo Joybuy Allemagne)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T11:53+00:00"
  },
  {
   "id": "06ff75e35e",
@@ -20804,11 +20816,23 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-04T11:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre floue. Mydealz dit Amazon (Prime), Snipz dit Lidl-Shop.de, au même prix de 177,23 €. Référence exacte inconnue (KMX750BK, AB ou AAB), et le comparateur n'a rien trouvé. Page Amazon illisible. Offre active et livraison en France non prouvées pour un robot de 9 kg. Le prix français est sûr pour le KMX750BK noir : 299,99 € chez Darty et Boulanger, soit environ 39 % d'écart si le modèle était le même. Dans le doute, rejet. Pas de revente : aucune annonce réelle relevée.",
+   "prix_neuf_min_idealo": 299.99,
+   "source_prix_ref": "Darty et Boulanger, fiches KMX750BK lues le 04/11, vendus par eux ; idealo non lu",
+   "economie_pct": 39,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue (offre du 04/11)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T11:53+00:00"
  },
  {
   "id": "a613b36ed3",
@@ -20833,7 +20857,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T11:35+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -20927,6 +20951,18 @@
     "rentabilite": 0.048
    }
   ],
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon modèle (ABL 20 Li Kit, EAN 8008984841123). Offre active : Testsieger affiche 68,63 € chez Amazon Allemagne, livraison du 05 au 07/11 (en Allemagne). Rejet : page Amazon illisible, livraison en France et frais pour ce colis non prouvés (même règle que les autres offres Amazon Allemagne). Réservée Prime d'après le titre. Écart de 26 % au mieux avec 5 € de port contre les 99 € d'Amazon.fr (vendeur tiers), et déjà vu à 65 € en 90 jours. Revente : aucune annonce réelle, 0 vente estimée par mois.",
+   "prix_neuf_min_idealo": 99.0,
+   "source_prix_ref": "Keepa Amazon.fr du 04/11 (vendeur tiers 99 €, Amazon 119 €, moyenne 90 j 103,79 €) ; ManoMano affiche un prix aberrant de 1 160,30 € ; idealo non lu",
+   "economie_pct": 26,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue (prix Amazon, peut remonter vite)",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T11:53+00:00"
  }
 ]

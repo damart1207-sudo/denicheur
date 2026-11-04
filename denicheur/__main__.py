@@ -326,8 +326,8 @@ def passage(nom, test=False):
         # concurrence eBay.fr : nombre d'annonces neuves (déjà relevées par le contrôle eBay)
         for c in retenus[:40]:
             neuf = (c.get("ebay") or {}).get("neuf")
-            if isinstance(neuf, dict) and neuf.get("n") is not None:
-                c["annonces_ebay"] = neuf["n"]
+            if isinstance(neuf, dict) and neuf.get("nb") is not None:
+                c["annonces_ebay"] = neuf["nb"]
     s_ = regles["seuils"]
     for c in retenus:
         c["canaux"] = equipe.canaux_de_vente(c, regles)

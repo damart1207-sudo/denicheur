@@ -79,7 +79,7 @@ def construire():
             continue
         v = a.get("verdict") or {}
         st = a.get("statut")
-        feu = {"valide": "vert", "bon_plan": "orange", "a_verifier": "gris"}.get(st, "rouge")
+        feu = {"valide": "vert", "bon": "orange", "bon_plan": "orange", "a_verifier": "gris"}.get(st, "rouge")
         meilleur = max((x for x in (a.get("canaux") or []) if isinstance(x, dict)), key=lambda x: x.get("marge_nette") or 0, default={})
         alertes.append({
             "titre": a.get("nom_produit") or a.get("titre"), "titre_complet": a.get("titre"), "prix": a.get("prix"), "cout": a.get("cout_achat"),

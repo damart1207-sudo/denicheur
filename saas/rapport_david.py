@@ -68,7 +68,7 @@ def construire():
             "vendeurs": c.get("vendeurs_amazon"), "concurrence": c.get("concurrence_amazon"),
             "revente": v.get("prix_revente_verifie") or c.get("prix_revente_prudent"), "marge": v.get("marge_nette_verifiee") if v.get("marge_nette_verifiee") is not None else c.get("marge_verifiee"),
             "canal": v.get("ou_vendre") or c.get("plateforme_revente"), "ean": c.get("ean"), "ventes30": k.get("ventes_estimees_30j"),
-            "volume_google": (c.get("demande_google") or {}).get("volume_mensuel"), "bingo": bool(c.get("bingo")), "annonces_ebay": c.get("annonces_ebay"), "mot_cle": c.get("mot_cle"),
+            "volume_google": (c.get("demande_google") or {}).get("volume_mensuel"), "bingo": bool(c.get("bingo")), "annonces_ebay": c.get("annonces_ebay"), "mot_cle": c.get("mot_cle"), "score_vente": c.get("score_vente"),
             "date": p.get("horodatage", "").replace("_", " ")[:16], "motif": v.get("commentaire") or (c.get("verification") or {}).get("remarque") or "",
         })
 
@@ -158,7 +158,7 @@ table{border-collapse:collapse;width:100%;background:#fff;font-size:.88em}th,td{
 <header><h1>Le Dénicheur — rapport</h1><div class="note" id="entete"></div></header>
 <nav id="nav"></nav>
 <div class="barre" id="barre">
-  <label>Trier <select id="tri"><option value="pertinence">pertinence</option><option value="prix_asc">prix croissant</option><option value="prix_desc">prix décroissant</option><option value="marge">marge</option><option value="economie">% d'économie</option><option value="date">plus récent</option></select></label>
+  <label>Trier <select id="tri"><option value="pertinence">pertinence</option><option value="score_vente">score de vente</option><option value="prix_asc">prix croissant</option><option value="prix_desc">prix décroissant</option><option value="marge">marge</option><option value="economie">% d'économie</option><option value="date">plus récent</option></select></label>
   <label>Feu <select id="feu"><option value="">tous</option><option value="vert">vert</option><option value="orange">orange</option><option value="rouge">rouge</option><option value="gris">à vérifier</option></select></label>
   <label>Dénicheur <select id="den"><option value="">tous</option><option>Idéfix</option><option>Amigo</option><option>Chasseur</option><option>Radar Keepa</option></select></label>
   <label>Pays <select id="pays"><option value="">tous</option></select></label>
@@ -182,7 +182,7 @@ const paysSel=document.getElementById("pays");[...new Set([...D.affaires,...D.al
 function filtre(liste){const f=document.getElementById("feu").value,d=document.getElementById("den").value,p=document.getElementById("pays").value,pm=parseFloat(document.getElementById("pmax").value),q=document.getElementById("q").value.toLowerCase();
  return liste.filter(x=>(!f||x.feu===f)&&(!d||x.denicheur===d)&&(!p||x.pays===p)&&(isNaN(pm)||(x.prix??0)<=pm)&&(!q||JSON.stringify(x).toLowerCase().includes(q)));}
 function trier(liste){const t=document.getElementById("tri").value;const c=[...liste];
- if(t==="prix_asc")c.sort((a,b)=>(a.prix??1e9)-(b.prix??1e9));else if(t==="prix_desc")c.sort((a,b)=>(b.prix??-1)-(a.prix??-1));
+ if(t==="score_vente")c.sort((a,b)=>(b.score_vente??-1)-(a.score_vente??-1));else if(t==="prix_asc")c.sort((a,b)=>(a.prix??1e9)-(b.prix??1e9));else if(t==="prix_desc")c.sort((a,b)=>(b.prix??-1)-(a.prix??-1));
  else if(t==="marge")c.sort((a,b)=>(b.marge??-1e9)-(a.marge??-1e9));else if(t==="economie")c.sort((a,b)=>(b.economie??b.baisse_pct??-1)-(a.economie??a.baisse_pct??-1));
  else if(t==="date")c.sort((a,b)=>String(b.date_iso||b.vu||b.date||"").localeCompare(String(a.date_iso||a.vu||a.date||"")));
  else c.sort((a,b)=>({vert:0,orange:1,gris:2,rouge:3}[a.feu]??2)-({vert:0,orange:1,gris:2,rouge:3}[b.feu]??2)||(b.marge??-1e9)-(a.marge??-1e9));return c;}
@@ -190,7 +190,7 @@ function carte(x){const m=x.marge;const cm=typeof m==="number"?`<span class="mar
  return `<div class="carte ${x.feu}"><h3><span class="badge ${x.feu}">${e(x.verdict)}</span><span class="badge den">${e(x.denicheur)}</span>${x.bingo?'<span class="badge orange">BINGO</span>':""}<a href="${e(x.lien)}" target="_blank">${e(x.titre)}</a></h3>
  <div class="ligne"><b>${eur(x.prix)}</b> chez ${e(x.marchand)} (${e(x.pays)})${x.cout?` · coût rendu ${eur(x.cout)}`:""}${x.economie?` · <b>-${x.economie} %</b> vs neuf`:""}</div>
  <div class="ligne">Neuf le moins cher : ${eur(x.neuf_min)}${x.neuf_ou?` (${e(x.neuf_ou)})`:""} · Occasion : ${x.occ_bas||x.occ_haut?`${eur(x.occ_bas)} → ${eur(x.occ_haut)}`:"—"} · Revente retenue : ${eur(x.revente)} sur ${e(x.canal)} · Marge : ${cm}</div>
- <div class="ligne">${x.vendeurs!=null?`vendeurs Amazon : ${x.vendeurs} (concurrence ${e(x.concurrence)}) · `:""}${x.ean?`EAN ${e(x.ean)} · `:""}${x.ventes30!=null?`ventes Amazon 30 j : ${x.ventes30} · `:""}${x.volume_google?`recherches Google : ${x.volume_google}/mois (« ${e(x.mot_cle)} ») · `:""}${x.annonces_ebay!=null?`annonces eBay neuves : ${x.annonces_ebay} · `:""}${x.duree?`durée : ${e(x.duree)} · `:""}${e(x.date)} · source ${e(x.source)}</div>
+ <div class="ligne">${x.vendeurs!=null?`vendeurs Amazon : ${x.vendeurs} (concurrence ${e(x.concurrence)}) · `:""}${x.ean?`EAN ${e(x.ean)} · `:""}${x.ventes30!=null?`ventes Amazon 30 j : ${x.ventes30} · `:""}${x.volume_google?`recherches Google : ${x.volume_google}/mois (« ${e(x.mot_cle)} ») · `:""}${x.annonces_ebay!=null?`annonces eBay neuves : ${x.annonces_ebay} · `:""}${x.score_vente!=null?`score de vente : <b>${x.score_vente}</b> · `:""}${x.duree?`durée : ${e(x.duree)} · `:""}${e(x.date)} · source ${e(x.source)}</div>
  ${x.motif?`<div class="motif">${e(x.motif)}</div>`:""}</div>`;}
 function rendre(){document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("actif",b.dataset.k===actif));document.querySelectorAll("section").forEach(s=>s.classList.toggle("actif",s.id==="s_"+actif));
  document.getElementById("barre").style.display=["affaires","alertes","radar"].includes(actif)?"flex":"none";let html="",n=0;

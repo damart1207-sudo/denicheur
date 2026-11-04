@@ -381,7 +381,19 @@ def passage(nom, test=False):
         if occ:
             c["occasion"] = {"bas": min(occ), "haut": max(occ),
                              "position_neuf": round(c["prix"] / min(occ), 2)}  # < 1 : notre neuf sous l'occasion la moins chère = or
-    retenus.sort(key=lambda c: ({"vert": 3, "orange": 2}.get(c.get("feu"), 0), c["score"]), reverse=True)
+    # SCORE DE VENTE (skills/vente.md) : demande x marge x vitesse / concurrence, bonus hype, malus marque fermée / import
+    for c in retenus:
+        vol = (c.get("demande_google") or {}).get("volume_mensuel") or 0
+        v30 = c.get("ventes_estimees_30j") or 0
+        demande = 1 + min(vol, 20000) / 2000 + min(v30, 100) / 20 + (2 if c.get("bingo") else 0)
+        marge = max(c.get("marge_verifiee") or 0, 0)
+        vend = (c.get("vendeurs_amazon") or 0) + (c.get("annonces_ebay") or 0) / 5
+        concurrence = 1 + vend / 3
+        vitesse = 1 + (10 if v30 >= 30 else 5 if v30 >= 10 else 1 if v30 >= 3 else 0.3)
+        malus = 0.5 if (c.get("concurrence_amazon") == "forte") else 1.0
+        malus *= 0.7 if re.search(r"aliexpress|temu|shein", (c.get("marchand") or ""), re.I) else 1.0
+        c["score_vente"] = round(demande * marge * vitesse / concurrence * malus, 1)
+    retenus.sort(key=lambda c: ({"vert": 3, "orange": 2}.get(c.get("feu"), 0), c.get("score_vente", 0), c["score"]), reverse=True)
     # rapports Demande / Concurrence (gratuits) pour les 10 meilleures affaires
     if not test:
         from . import rapports

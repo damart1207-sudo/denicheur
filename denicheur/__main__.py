@@ -3,6 +3,7 @@
 --test : aucune connexion, aucune IA appelée (données d'exemple) -> gratuit, pour vérifier le code.
 """
 import argparse
+import re
 import json
 import os
 import random
@@ -186,6 +187,8 @@ def passage(nom, test=False):
         for x in alertes:
             if x.get("type") != "bon_plan" or (x.get("trouve_le") or "") < limite or x["id"] in deja_ids or x.get("statut") == "rejete":
                 continue
+            if equipe.EXCLUS.search(x.get("titre") or "") or equipe.EXCLUS.search(x.get("marchand") or ""):
+                continue  # dématérialisé, abonnement… : jamais revendable
             canaux = [k for k in (x.get("canaux") or []) if isinstance(k, dict)]
             meilleur = max(canaux, key=lambda k: k.get("marge_nette") or 0, default=None)
             if not meilleur:
@@ -346,7 +349,12 @@ def passage(nom, test=False):
         pmin_ok = bool(pmin)
         concurrence = "forte" if (vend or 0) >= 10 else "moyenne" if (vend or 0) >= 5 else "faible" if vend is not None else "inconnue"
         assez_moins_cher = bool(pmin and c["prix"] <= pmin * 0.85)
-        if c["passe_verif"] and pmin_ok and c["marge_verifiee"] >= 20 and concurrence in ("faible", "inconnue"):
+        # garde-fous avant un vert : marque/demande inconnue (arbitrage sur un produit sans nom, 1 seul vendeur en France,
+        # aucune recherche Google) ou achat sur AliExpress/Temu (import, garantie) -> orange au maximum (1 unité pour tester)
+        demande_ok = bool((c.get("demande_google") or {}).get("volume_mensuel")) or bool(c.get("bingo")) or (c.get("ventes_estimees_30j") or 0) >= 20
+        sans_nom = str(c.get("source", "")).startswith("keepa") and ((c.get("vendeurs_amazon") or 0) <= 1 and not demande_ok)
+        import_risque = bool(re.search(r"aliexpress|temu|shein|banggood|wish", (c.get("marchand") or "") + " " + (c.get("lien") or ""), re.I))
+        if c["passe_verif"] and pmin_ok and c["marge_verifiee"] >= 20 and concurrence in ("faible", "inconnue") and not sans_nom and not import_risque:
             feu = "vert"
         elif c["passe_verif"] and (concurrence != "forte") and (concurrence != "moyenne" or assez_moins_cher):
             feu = "orange"

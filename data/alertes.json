@@ -26305,7 +26305,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T18:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26430,7 +26430,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T18:46+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Amazon Espagne non confirmée. Chollometro lu par le robot à 19h19 UTC : 129 € (126,33 € dans l'alerte), mais son lien mène à une autre fiche (ASIN B0FPF8YXCV, machine REVOTIO sur amazon.com, livraison aux États-Unis), pas à la Cecotec (ASIN B0F1G65CFR). Avec 5 € de port : 134 €, 18 % sous les 163,99 € d'Amazon.fr (Keepa 04/11, plus bas 90 j, moyenne 198,26 €). PcComponentes.fr : 197,36 € port gratuit (fiche lue le 04/11). Mais produit vendu et envoi vers la France non prouvés, comme les autres offres Amazon Espagne. Pas de revente : 13 € au mieux, 10 % du coût.",
+   "prix_neuf_min_idealo": 163.99,
+   "source_prix_ref": "Keepa/Amazon.fr 04/11 ; idealo non lu",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  },
  {
   "id": "75490146eb",
@@ -26468,7 +26480,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T18:54+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26591,7 +26603,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T18:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (Russell Hobbs Honeycomb 27011-56, noir), mais Lidl Espagne : aucune livraison en France prouvée, lien marchand illisible. Prix relevé par le robot : 29,99 € et non 27,99 €. Neuf en France : 40,29 € (achatmoinscher, relevé du robot), 44,83 € sur Amazon.fr, vendeur tiers (Keepa 04/11). Avec 5 € de port : 34,99 €, soit 13 %, sous les 15 %. Pas de revente : marge d'environ 2 €.",
+   "prix_neuf_min_idealo": 40.29,
+   "source_prix_ref": "achatmoinscher (relevé du 04/11) ; idealo non lu",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  },
  {
   "id": "9fc340aa94",
@@ -26616,7 +26640,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:04+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26739,7 +26763,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T19:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix de référence non fiable pour l'instant. Le 95,90 € de l'alerte est faux : c'est une bâche de rechange seule, pas une serre. Dealabs, relu à 19h38 UTC : actif, 99 € avec le code 11FR13 (101,41 € dans l'alerte). Page AliExpress illisible : vendeur, modèle exact, port et stock non vus. Serres Outsunny 18 m² en France : Auchan 305,90 € (autre modèle, 2 portes) ; ManoMano autour de 139 à 206 €, prix mal lus par l'outil. Modèle 5,95 m exact non trouvé en France. À relire avec un prix net sur le même modèle.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "Non trouvé pour ce modèle exact ; idealo non lu",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  },
  {
   "id": "0c7d8d4e33",
@@ -26777,7 +26813,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -26905,7 +26941,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T19:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon modèle (NC701EU), mais offre réservée au site allemand sharkninja.de, avec cashback mydealz : livraison en France non prouvée (aucune page lue ne parle de la France). Le robot lit 212,49 € sur la page du bon plan, 220,99 € dans l'alerte, 349,99 € sur la fiche pour d'autres coloris : prix final flou. Neuf en France : 279,99 € (achatmoinscher, 12 boutiques). Pas de revente : marge au plus 26 €, sans preuve de vente, et la livraison manque.",
+   "prix_neuf_min_idealo": 279.99,
+   "source_prix_ref": "achatmoinscher (relevé du 04/11) ; idealo non lu",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  },
  {
   "id": "15c315b6df",
@@ -26943,7 +26991,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -27082,7 +27130,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 19:18 UTC : offre active, 189.99 affiché, marchand 9497_3 ; fiche costco.co.uk lue : 269.98 GBP, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit, mais Costco UK : carte de membre obligatoire et aucune livraison en France prouvée. La fiche lue par le robot affiche 269,98 £ (189,98 £ seulement sur HotUKDeals). Même à 189,98 £, le coût rendu en France (270,17 € estimés par le robot) dépasse le neuf français : 249 € (achatmoinscher, 7 boutiques). Amazon.fr à 369 € (Keepa) est trop haut pour servir de référence, moyenne 90 j 298 €, plus bas 229 €. Pas de revente : perte.",
+   "prix_neuf_min_idealo": 249.0,
+   "source_prix_ref": "achatmoinscher (relevé du 04/11) ; idealo non lu",
+   "economie_pct": -9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  },
  {
   "id": "b29f2bd62e",
@@ -27120,7 +27180,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -27241,6 +27301,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 19:18 UTC : offre active, 69.0 affiché, code ESD1108, marchand 823_2 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (CREATE Potts, noir, EAN 8435507913850). Neuf en France : 70,95 € livrés chez Amazon, Cdiscount, Fnac et Darty Marketplace (achatmoinscher, lu le 04/11). Rejet : offre AliExpress Espagne avec code espagnol ESD1108, page AliExpress illisible, et le robot relève 69 € sur Chollometro, pas 38,16 € : prix, code et envoi en France non confirmés (le « oui » du robot vient seulement du nom de domaine). Même règle que les autres codes espagnols. Pas de revente sans ces preuves.",
+   "prix_neuf_min_idealo": 70.95,
+   "source_prix_ref": "achatmoinscher, page lue le 04/11 ; idealo non lu",
+   "economie_pct": 39,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-04T19:49+00:00"
  }
 ]

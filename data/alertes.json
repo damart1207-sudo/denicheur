@@ -20432,7 +20432,7 @@
    "duree_offre": "Prix Amazon, peut remonter vite",
    "demande_confirmee": "non"
   },
-  "verifie_le": "2026-11-04T12:48+00:00",
+  "verifie_le": "2026-11-04T13:50+00:00",
   "page_offre": {
    "lu_le": "2026-11-04T13:32+00:00",
    "lien_deal": "https://www.lesnumeriques.com/aspirateur-balai/l-aspirateur-balai-rowenta-x-pert-6-60-est-a-97-83-39-n266747.html",
@@ -21580,7 +21580,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T12:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -21720,7 +21720,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T12:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (MSI PRO A620M-E neuf, garantie 36 mois). Fiche outlet-pc.fr lue : 69,99 €, en stock, plus 6,99 € minimum d'envoi vers la France, soit 76,98 € livrés. Neuf en France : 84,99 € port gratuit chez Rue du Commerce (comparateur-gamer et KultureGeek, 04/11). Économie de 9,4 %, sous les 15 % demandés. Revente perdante : plafond Leboncoin 72,24 €, sous le coût.",
+   "prix_neuf_min_idealo": 84.99,
+   "source_prix_ref": "Rue du Commerce, port gratuit, en stock (comparateur-gamer 04/11, KultureGeek)",
+   "economie_pct": 9.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Stock Outlet PC, durée inconnue",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  },
  {
   "id": "b7aa3b5d22",
@@ -21758,7 +21770,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T13:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -21879,7 +21891,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 13:21 UTC : offre active, 82.06 affiché, code FRD1108, marchand 13_4 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Modèle exact (ASRock B550 Phantom Gaming 4, ATX). Dealabs annonce 73,71 € sur AliExpress ; la page lue par le robot à 14h21 affiche 82,06 € et le code FRD1108. Neuf en France : 92,76 € sur Amazon.fr (vendu par ASRock Europe, Keepa et KultureGeek), 97,52 € chez PcComponentes, 99,99 € chez Grosbill. Rejet : aucune source ne dit que la carte est neuve, ni d'où elle part, ni le port. Sur AliExpress, cette carte est surtout proposée par des vendeurs chinois, souvent en occasion. Avec 5 € de port prudent, l'économie tombe à 15,1 %, tout juste au seuil. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 92.76,
+   "source_prix_ref": "Amazon.fr, vendeur ASRock Europe (Keepa, KultureGeek 04/11)",
+   "economie_pct": 15.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Promos AliExpress 11.11, jusqu'au 18/11 au plus tard",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  },
  {
   "id": "2eb03db254",
@@ -21924,7 +21948,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T13:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -22045,7 +22069,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 13:31 UTC : offre active, 177.11 affiché, code ESD1139, marchand 4198_3 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Modèle exact (Huawei Watch D2). Offre vue uniquement sur Chollometro (Espagne) avec le code espagnol ESD1139 : 209 € dans le titre, 177,11 € sur la page lue par le robot à 14h31, prix à confirmer. Neuf en France : 319,99 € (achatmoinscher), 320,01 € sur Amazon.fr ; Gomibo affiche 302,95 € sur leDénicheur, stock inconnu. L'économie serait de 33 %, mais aucun article français ne reprend cette offre : ni le code ni la livraison en France ne sont prouvés, et la version vendue n'est pas précisée. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 319.99,
+   "source_prix_ref": "achatmoinscher, Amazon.fr à 320,01 € (KultureGeek 04/11)",
+   "economie_pct": 33.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Especial 11/11 AliExpress, durée non confirmée",
+   "demande_confirmee": "non"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  },
  {
   "id": "8661567451",
@@ -22070,7 +22106,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T13:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -22198,7 +22234,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 13:44 UTC : offre active, 10.0 affiché, marchand 1538_1 ; bol.com refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "non",
+   "commentaire": "Modèle exact (Rematch Elite Edition PS5). Offre Bol à 9,99 € vue sur Pepper Pays-Bas, active d'après la page lue par le robot à 14h44. Rejet : bol.com vend aux Pays-Bas et en Belgique, la livraison en France est relevée à non. Neuf en France : 20,97 € sur Amazon.fr (vendeur tiers, KultureGeek et Keepa), proche de sa moyenne de 90 jours, 29,99 € chez Joybuy.",
+   "prix_neuf_min_idealo": 20.97,
+   "source_prix_ref": "Amazon.fr vendeur tiers (Keepa, KultureGeek 04/11)",
+   "economie_pct": 28.5,
+   "duree_offre": "Inconnue"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  },
  {
   "id": "7317a2b151",
@@ -22236,7 +22284,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T13:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -22374,7 +22422,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 13:44 UTC : offre active, 99.0 affiché, marchand 659_1 ; fiche barointeriors.com lue : 209.11 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "non",
+   "commentaire": "Modèle exact (Brother QL-1110NWBc). Fiche barointeriors.com lue : 209,11 €, en stock. Boutique allemande de produits de nettoyage, sans réputation trouvée : marchand peu sûr pour ce produit, livraison en France non prouvée. Neuf en France : 240,82 € sur Amazon.fr (Herbig Handels, KultureGeek 04/11). Avec 5 € de port, économie de 11,1 %, sous les 15 % demandés.",
+   "prix_neuf_min_idealo": 240.82,
+   "source_prix_ref": "Amazon.fr vendeur tiers (KultureGeek 04/11)",
+   "economie_pct": 11.1,
+   "duree_offre": "Inconnue"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  },
  {
   "id": "b9660673cd",
@@ -22412,7 +22472,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T13:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -22508,6 +22568,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 13:44 UTC : offre active, 19.99 affiché, marchand 3_2 ; metro.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": "non",
+   "commentaire": "Modèle exact (KitchenAid 5KEK1222EER, rouge empire). Offre à 47,01 € sur la place de marché METRO Allemagne, vue sur Mydealz. Vendeur inconnu, et rien ne prouve la livraison en France ni la vente à un particulier français. Neuf en France : 94,89 € livrés chez Leclerc (KultureGeek 04/11). Économie théorique de 45 %, non atteignable depuis la France à ce stade. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 94.89,
+   "source_prix_ref": "Leclerc, 89,99 € + 4,90 € de port (KultureGeek 04/11)",
+   "economie_pct": 45.2,
+   "duree_offre": "Inconnue"
+  },
+  "verifie_le": "2026-11-04T13:50+00:00"
  }
 ]

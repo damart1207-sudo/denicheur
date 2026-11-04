@@ -11,6 +11,7 @@ EXCLUS = re.compile(
     r"gratuit|offert|abonnement|forfait|carte sim|\bsim\b|code promo|cashback|remboursement|"
     r"carte cadeau|e-carte|bon d'achat|jeu concours|concours|sample|téléchargement|dématérialis|"
     r"steam key|clé steam|epic games|game pass|ps plus|netflix|spotify|disney\+|deezer|canal\+|"
+    r"playstation store|ps store|nintendo eshop|eshop|xbox store|microsoft store|gog\.com|version numérique|digital|"
     r"assurance|crédit|banque|parrainage|voyage|hôtel|vol |billet|restaurant|livraison offerte|par mois|/mois|freebox|box internet",
     re.I,
 )

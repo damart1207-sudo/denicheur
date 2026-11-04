@@ -209,6 +209,8 @@ def passage(nom, test=False):
             except Exception as e:
                 k = {"erreur": type(e).__name__}
             if k and not k.get("erreur"):
+                if k.get("prix_neuf") and k.get("moyenne_90j") and k["prix_neuf"] > k["moyenne_90j"] * 1.25:
+                    k["prix_neuf_vendeur_tiers"], k["prix_neuf"] = k["prix_neuf"], k.get("plus_bas_90j") or k["moyenne_90j"]
                 c["keepa"] = k
                 c["asin"] = k.get("asin")
                 if k.get("ean"):
@@ -310,7 +312,8 @@ def passage(nom, test=False):
         c["marge_verifiee"] = equipe.marge_nette(c["prix_revente_prudent"], c["plateforme_revente"], cout, regles)
         c["rentabilite_verifiee"] = round(c["marge_verifiee"] / cout, 3) if cout else 0
         neuf_ebay = ((c.get("ebay") or {}).get("neuf") or {}).get("p25")
-        c["passe_verif"] = (c["marge_verifiee"] >= s_["marge_nette_min"] and c["rentabilite_verifiee"] >= s_["rentabilite_min"]
+        # règle du 04/11 : une marge ≥ 20 € suffit même si elle fait moins de 30 % du coût (objectif : 30 € par vente)
+        c["passe_verif"] = (c["marge_verifiee"] >= s_["marge_nette_min"] and (c["rentabilite_verifiee"] >= s_["rentabilite_min"] or c["marge_verifiee"] >= 20)
                             and not (v and v["deja_moins_cher_ailleurs"])
                             and not (neuf_ebay and neuf_ebay <= c["prix"])
                             and not (pmin and c["prix"] >= pmin * 0.92))

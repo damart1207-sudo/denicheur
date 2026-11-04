@@ -26765,9 +26765,9 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Prix de référence non fiable pour l'instant. Le 95,90 € de l'alerte est faux : c'est une bâche de rechange seule, pas une serre. Dealabs, relu à 19h38 UTC : actif, 99 € avec le code 11FR13 (101,41 € dans l'alerte). Page AliExpress illisible : vendeur, modèle exact, port et stock non vus. Serres Outsunny 18 m² en France : Auchan 305,90 € (autre modèle, 2 portes) ; ManoMano autour de 139 à 206 €, prix mal lus par l'outil. Modèle 5,95 m exact non trouvé en France. À relire avec un prix net sur le même modèle.",
+   "commentaire": "Le 95,90 € de l'alerte est une bâche de rechange seule, pas une serre. Dealabs relu à 21h11 : actif, 99 € avec le code français 11FR13 sur AliExpress. Serres Outsunny 18 m² en France relevées sur ManoMano le 04/11 : environ 135 à 150 € (6x3x2 et 5,95x3x2 m, 8 fenêtres), à confirmer sur une fiche du même modèle. Si elles se confirment, le gain dépasserait 25 %. À relire.",
    "prix_neuf_min_idealo": null,
-   "source_prix_ref": "Non trouvé pour ce modèle exact ; idealo non lu",
+   "source_prix_ref": "Prix de référence à confirmer sur le même modèle",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
@@ -26775,7 +26775,7 @@
    "duree_offre": "Inconnue",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-04T19:49+00:00"
+  "verifie_le": "2026-11-04T21:00+00:00"
  },
  {
   "id": "0c7d8d4e33",
@@ -27343,7 +27343,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T19:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -27468,31 +27468,31 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Bon produit (CREATE Potts, noir, EAN 8435507913850). Neuf en France : 70,95 € livrés chez Amazon, Cdiscount, Fnac et Darty Marketplace (achatmoinscher, lu le 04/11). Rejet : offre AliExpress Espagne avec code espagnol ESD1108, page AliExpress illisible, et le robot relève 69 € sur Chollometro, pas 38,16 € : prix, code et envoi en France non confirmés (le « oui » du robot vient seulement du nom de domaine). Même règle que les autres codes espagnols. Pas de revente sans ces preuves.",
-   "prix_neuf_min_idealo": 70.95,
-   "source_prix_ref": "achatmoinscher, page lue le 04/11 ; idealo non lu",
-   "economie_pct": 39,
+   "commentaire": "Bon produit, mais le prix de 52,90 € est celui du site espagnol. Depuis la France, fiche PcComponentes.fr lue le 04/11 : le D32 Pro blanc est à 65,95 € port gratuit ; le noir à 62,95 €. Aucune économie réelle sur le neuf français (achatmoinscher 63,95 € en noir, Amazon 69,99 €). Rejet.",
+   "prix_neuf_min_idealo": 62.95,
+   "source_prix_ref": "PcComponentes.fr lu le 04/11 (noir) ; 65,95 € en blanc",
+   "economie_pct": 0,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": "Inconnue",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-04T19:49+00:00"
+  "verifie_le": "2026-11-04T21:00+00:00"
  },
  {
   "id": "e621b42c38",
   "titre": "Leatherman Rebar silber",
-  "prix": 75.87,
+  "prix": 79.2,
   "devise": "EUR",
   "marchand": "military.eu",
-  "lien": "https://www.mydealz.de/deals/leatherman-rebar-silber-2864938",
+  "lien": "https://military.eu/fr/p/leatherman/multitool-rebar-leatherman-5732",
   "pays": "DE",
   "source": "mydealz-new",
   "temperature": null,
   "categorie": "Sport & Outdoor",
   "nom_produit": "Leatherman Rebar",
-  "cout_achat": 80.87,
+  "cout_achat": 79.2,
   "prix_plancher": {
    "nom": "Leatherman Rebar",
    "sources": {
@@ -27516,7 +27516,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T20:09+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -27639,7 +27639,20 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T20:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : Leatherman Rebar classique avec étui (réf. 831557, EAN 0037447619298). Fiche military.eu en français lue le 04/11 à 21h55, pays de livraison France : 79,20 € au lieu de 99 €, en stock, expédition immédiate, port gratuit. Le prix de 75,87 € de mydealz vaut pour l'Allemagne ; on retient le prix France. Plus bas 30 jours du marchand : 75,23 €. Neuf ailleurs en France : 97,20 € Group Army Store (port en plus), 99 € Amazon.fr (Keepa, 04/11, moyenne 90 j 97,25 €) et achatmoinscher (7 boutiques), 99,90 € Couteaux du Chef ; Le Coin du Pêcheur affiche 86,90 € mais sans achat possible (alerte de retour en stock). Économie 20 %. Pas de revente : à 85 % du neuf (84,15 €), bénéfice 4,95 € seulement.",
+   "prix_neuf_min_idealo": 99.0,
+   "source_prix_ref": "Keepa/Amazon.fr et achatmoinscher, relus le 04/11 ; idealo non disponible",
+   "economie_pct": 20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Quelques jours (promotion du marchand)",
+   "demande_confirmee": true
+  },
+  "prix_alerte": 75.87
  },
  {
   "id": "fbbf29879a",
@@ -27677,7 +27690,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T20:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -27775,7 +27788,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-04T20:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Bon modèle, mais offre britannique : Hotukdeals, relu à 21h11, affiche 289 £ avec le code UKJUNEBD53, réservé au site du Royaume-Uni. Prix avec code et envoi en France sans preuve (le « oui » du robot vient du nom de domaine). Neuf en France : 504 € achatmoinscher, 609,50 € Darty, 624,65 € Boulanger (vendeur tiers), relevés du 04/11. Même règle que les autres codes étrangers. Rejet.",
+   "prix_neuf_min_idealo": 504.0,
+   "source_prix_ref": "achatmoinscher relevé par le robot le 04/11 ; Darty et Boulanger lus le 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "chasse-xgimi-mogo-2-pro-vinted",
@@ -27813,7 +27838,7 @@
    "par": "C"
   },
   "trouve_le": "2026-11-04T20:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "page_offre": {
    "lu_le": "2026-11-04T20:33+00:00",
    "lien_deal": "https://www.vinted.fr/items/10647452731-xgimi-mogo-2-pro-full-hd-1080p-come-nuovo-ancora-in-garanzia-roma",
@@ -27848,6 +27873,18 @@
    "resume": "fiche vinted.fr lue : 250.0 EUR, InStock ; livraison France : oui",
    "lectures": 1,
    "premiere_lecture": "2026-11-04T20:33+00:00"
+  },
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Annonce d'occasion d'un particulier à Rome : 250 € plus port et protection acheteur Vinted, soit environ 270 € livrés en France. Le 358,24 € d'idealo n'est pas le plus bas (1 seule offre) : le MoGo 2 Pro Gen 2 est à 299 € livraison gratuite chez Auchan selon achatmoinscher (lu le 04/11), 409 € chez Galaxus pour le modèle d'origine. Environ 10 % d'écart seulement, sur de l'occasion, et génération exacte non prouvée. Revente : à 85 % du neuf (254 €), perte. Rejet.",
+   "prix_neuf_min_idealo": 299.0,
+   "source_prix_ref": "achatmoinscher lu le 04/11 (Auchan, neuf)",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -27886,7 +27923,7 @@
    "par": "C"
   },
   "trouve_le": "2026-11-04T20:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "page_offre": {
    "lu_le": "2026-11-04T20:33+00:00",
    "lien_deal": "https://www.vinted.fr/items/10665513780-piastra-ghd-max",
@@ -27904,6 +27941,18 @@
    "resume": "fiche vinted.fr lue ; livraison France : oui",
    "lectures": 1,
    "premiere_lecture": "2026-11-04T20:33+00:00"
+  },
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Annonce d'occasion d'un particulier (titre italien « Piastra ghd max ») : fiche Vinted relue par le robot à 21h33, seul le titre en ressort ; prix de 80 €, état, âge et version du lisseur non confirmés. Lisseur usagé non comparable au neuf à 161,15 € (idealo). Dans le doute : rejet.",
+   "prix_neuf_min_idealo": 161.15,
+   "source_prix_ref": "idealo relevé par le robot le 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -27942,7 +27991,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T20:32+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -28058,6 +28107,18 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
+  },
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Bon plan retiré de Dealabs (adresse disparue, relevé à 21h32) et aucun marchand indiqué : prix de 9,99 € sans preuve, et 93 % sous le comparateur n'est pas crédible sans fiche marchand. Rejet.",
+   "prix_neuf_min_idealo": 140.18,
+   "source_prix_ref": "achatmoinscher relevé par le robot le 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -28083,7 +28144,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T20:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -28243,6 +28304,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
+  },
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Makita DGA452Z sans batterie), mais vendeur britannique ITS : fiche lue à 21h43, 65,99 £ en stock, click & collect au Royaume-Uni, livraison en France sans preuve. Avec port et frais d'import, coût estimé 99 €, plus cher que le neuf français : 84,91 € sur Amazon.fr (Keepa, 04/11, 20 vendeurs). Rejet.",
+   "prix_neuf_min_idealo": 84.91,
+   "source_prix_ref": "Keepa/Amazon.fr, 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -28281,7 +28354,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T20:54+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -28420,6 +28493,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
+  },
+  "verifie_le": "2026-11-04T21:00+00:00",
+  "verdict": {
+   "commentaire": "Bon produit, mais offre AO au Royaume-Uni (Hotukdeals relu à 21h55 : 369 £ affichés, adhésion AO pour le prix le plus bas) : livraison en France sans preuve. Coût estimé 489,62 € livré depuis le Royaume-Uni, au-dessus de la moyenne Amazon.fr sur 90 jours (432,79 €, plus bas 389 €, Keepa). Pas d'économie réelle. Rejet.",
+   "prix_neuf_min_idealo": 432.79,
+   "source_prix_ref": "Keepa/Amazon.fr, moyenne 90 jours, 04/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
   }
  }
 ]

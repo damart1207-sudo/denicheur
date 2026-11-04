@@ -11,6 +11,8 @@ on:
     - cron: "33 11 * * *"
     - cron: "33 16 * * *"
     - cron: "23 * * * *"
+    # lundi 05:03 UTC : rapport demande par pays (Amigo, ≈ 0,55 $ DataForSEO par semaine)
+    - cron: "3 5 * * 1"
   workflow_dispatch:
     inputs:
       passage:
@@ -89,6 +91,10 @@ jobs:
             "33 16 * * *") PASSAGE=soir ;;
           esac
           [ -z "$PASSAGE" ] && PASSAGE=europe
+          if [ "${{ github.event.schedule }}" = "3 5 * * 1" ]; then
+            python -m denicheur.demande_pays && python saas/rapport_david.py
+            exit 0
+          fi
           if [ -n "${{ github.event.inputs.outil }}" ]; then
             python "outils/${{ github.event.inputs.outil }}.py"
             exit 0

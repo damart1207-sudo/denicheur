@@ -198,6 +198,23 @@ def extraire(h, source, pays, marchand, url_base):
     return annonces
 
 
+def liberer_profil(profil):
+    """Ferme les Chrome du robot restés ouverts sur CE profil (tour planté, fenêtre de connexion oubliée).
+    Ton Chrome personnel n'est jamais touché (autre profil)."""
+    if os.name != "nt":
+        return
+    motif = "*" + profil.replace("'", "") + " --*"
+    ps = ("Get-CimInstance Win32_Process -Filter \"name='chrome.exe'\" | Where-Object { $_.CommandLine -like '" + motif + "' } "
+          "| ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }")
+    subprocess.run(["powershell", "-NoProfile", "-Command", ps], capture_output=True, timeout=60)
+    for verrou in ("SingletonLock", "SingletonCookie", "SingletonSocket", "lockfile"):
+        try:
+            os.remove(os.path.join(profil, verrou))
+        except OSError:
+            pass
+    print("anciens navigateurs du robot fermés")
+
+
 def collecter(connexion=False):
     from playwright.sync_api import sync_playwright
     os.makedirs(PROFIL, exist_ok=True)
@@ -213,6 +230,8 @@ def collecter(connexion=False):
                 if essai == 5:
                     raise
                 print("navigateur occupé, nouvel essai dans 1 minute…", type(e).__name__)
+                if essai == 1:
+                    liberer_profil(PROFIL)
                 time.sleep(60)
         page = ctx.pages[0] if ctx.pages else ctx.new_page()
         if connexion:

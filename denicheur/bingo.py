@@ -165,7 +165,7 @@ def jour():
     # nombre de marchands qui vendent le produit + prix neuf le plus bas en France = la cible à battre pour Idéfix/Chasseur.
     from . import apify
     apify.CONTEXTE["denicheur"] = "B"
-    for x in [l for l in lignes if l["bingo"]][:20]:
+    for x in [l for l in lignes if l["bingo"]][:10]:
         pi = sante.protege("bingo idealo", apify.prix_idealo, x["mot_cle"], defaut=None)
         if not pi:
             continue

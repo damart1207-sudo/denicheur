@@ -86,6 +86,11 @@ def passage(nom, test=False):
     if nom in ("europe", "asie"):
         nom = "nuit"
     maintenant = datetime.now(timezone.utc)
+    import time as _time
+    _t0 = _time.time()
+
+    def etape(nom_etape):
+        print(f"[{int(_time.time() - _t0):4d} s] {nom_etape}", flush=True)
     paris = maintenant.astimezone(ZoneInfo("Europe/Paris"))
     horodatage = paris.strftime("%Y-%m-%d_%H%M")
     regles, conf_eq = charger("config/regles.json"), charger("config/equipe.json")
@@ -95,6 +100,7 @@ def passage(nom, test=False):
         methode = f.read()
     sources = charger("config/sources.json")["sources"]
 
+    etape("collecte des sources")
     annonces, etat_sources = collecte.collecter(sources, lecteur_test if test else collecte.lire_flux)
     if not test:  # + les baisses de prix Amazon.fr du radar Keepa (moissonneur), en amont de Dealabs
         from . import moisson, sante
@@ -129,6 +135,7 @@ def passage(nom, test=False):
     tries = tries[:capacite]  # les plus populaires d'abord (déjà triés par température)
 
     tous_choix, remplacements = [], {}
+    etape(f"tribunal : {len(tries)} annonces, analystes {conf_eq['analystes']}")
     for nom_a in conf_eq["analystes"]:
         tous_choix += equipe.analyser(agents[nom_a], tries, methode, regles["taille_lot"])
         if tries and agents[nom_a].reussites == 0:
@@ -142,6 +149,7 @@ def passage(nom, test=False):
                         break
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
+    etape(f"consolidation : {len(retenus)} retenus")
     # + les bons plans trouvés par la VEILLE (Idéfix) depuis 24 h : ils passent la même vérification complète que les autres
     if not test:
         from datetime import timedelta
@@ -176,14 +184,17 @@ def passage(nom, test=False):
     else:
         conf_v = conf_eq["agents"][conf_eq.get("verificateur", "gemini")]
         modeles_v = [conf_v["modele"]] + list(conf_v.get("modeles_secours", []))[:2]
-        bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=30)
+        etape("vérification Gemini")
+        bilan_verif = verif.verifier_prix(retenus, cle=os.environ.get(conf_v["cle_env"], "").strip(), modeles=modeles_v, maxi=20)
     # prix réels des annonces eBay (API officielle, gratuite) : tous les passages
+    etape("prix eBay")
     bilan_ebay = {"faits": 0, "erreurs": ["mode test"]} if test else ebay.controler(retenus)
     # prix plancher automatique (prix neuf le plus bas en France, produit exact) :
     # 1) comparateurs gratuits ; 2) idealo via le robot Apify pour les meilleures affaires (budget plafonné).
     # NB : la variable s'appelle nom_p, pas nom : « nom » est le nom du passage (europe/asie) et ne doit pas être écrasé.
     if not test:
         from . import apify, comparateurs, keepa
+        etape("identification Keepa")
         # 0) IDENTIFICATION D'ABORD (Keepa, 10 jetons par produit, compris dans l'abonnement) : ASIN + EAN + prix Amazon
         #    + nombre de vendeurs + ventes 30 j. Le radar Amazon connaît déjà son ASIN (id = keepa-<ASIN>-<type>).
         for c in retenus[:40]:
@@ -215,6 +226,7 @@ def passage(nom, test=False):
             elif k and k.get("erreur"):
                 c["keepa_erreur"] = k["erreur"]
         nb_idealo = int(regles.get("idealo_passage_max", 10))
+        etape("comparateurs + idealo")
         for i, c in enumerate(retenus[:25]):
             nom_p = c.get("nom_produit")
             if not nom_p:
@@ -340,12 +352,15 @@ def passage(nom, test=False):
                     c["rapport_concurrence"] = {"erreur": type(e).__name__}
             c["rapport_demande"] = rapports.demande(q, c.get("temperature"))
 
-    # BINGO (une fois par jour) : très recherché + peu de vendeurs, et vagues de hype à l'étranger
+    # BINGO (une fois par jour, au passage de la nuit ; les autres passages relisent data/bingo.json)
     if not test:
         from . import bingo, sante
-        sante.protege("bingo", bingo.jour)
+        if nom == "nuit":
+            etape("bingo")
+            sante.protege("bingo", bingo.jour)
         for c in retenus:
             c["bingo"] = bingo.est_bingo(c.get("nom_produit") or c["titre"])
+    etape("enregistrement")
     base = "data/test" if test else "data"
     championnat.enregistrer(os.path.join(RACINE, base, "championnat"), horodatage, nom, tous_choix)
     championnat.enregistrer_fiabilite(os.path.join(RACINE, base, "championnat"), horodatage,

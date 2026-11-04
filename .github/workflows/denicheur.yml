@@ -54,7 +54,7 @@ jobs:
   passage:
     runs-on: ubuntu-latest
     # garde-fou : 58 min pour la veille en boucle (5 tours espacés de 10 min), 25 min pour le reste
-    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 58 || 25 }}
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 58 || 45 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -64,6 +64,7 @@ jobs:
 
       - name: Lancer le passage
         env:
+          PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.DEEPSEEK }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.OPENROUTER }}

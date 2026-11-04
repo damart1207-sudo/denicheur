@@ -132,7 +132,7 @@ def _annonces_A():
         return []
 
 
-def chasse_ciblee(regles, n=3):
+def chasse_ciblee(regles, n=5):
     """Dénicheur C, une fois par jour après la mise à jour de la demande (B) :
     pour les n produits les plus demandés en France, regarde d'abord si le dénicheur A a déjà vu un bon plan ;
     sinon cherche lui-même (idealo + Leboncoin + Vinted)."""

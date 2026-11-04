@@ -101,7 +101,7 @@ def passage(nom, test=False):
     sources = charger("config/sources.json")["sources"]
 
     etape("collecte des sources")
-    annonces, etat_sources = collecte.collecter(sources, lecteur_test if test else collecte.lire_flux)
+    annonces, etat_sources = collecte.collecter(sources, lecteur_test if test else collecte.lire_source)
     if not test:  # + les baisses de prix Amazon.fr du radar Keepa (moissonneur), en amont de Dealabs
         from . import moisson, sante
         radar = sante.protege("radar amazon", moisson.annonces_radar, defaut=[])

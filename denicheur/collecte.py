@@ -122,9 +122,12 @@ def _entree_atom(e, source):
 
 def lire_source(source, timeout=25):
     """Lecteur par défaut : API GraphQL pour le réseau Pepper (plus riche, RSS en secours), flux RSS sinon."""
-    if source.get("type") == "pepper" and source.get("graphql", True):
+    if source.get("type") == "pepper" and source.get("graphql", False):  # GraphQL Pepper : seulement avec l'accord de David (en attente)
         from . import pepper
         return pepper.lire(source, timeout)
+    if source.get("type") == "page":
+        from . import pages
+        return pages.lire(source, timeout)
     return lire_flux(source, timeout)
 
 

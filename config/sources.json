@@ -41,7 +41,7 @@
    "pays": "FR",
    "type": "rss",
    "actif": true,
-   "url": "https://www.lesnumeriques.com/rss-gooddeals.xml"
+   "url": "https://www.lesnumeriques.com/bons-plans/rss.xml"
   },
   {
    "id": "dealabs-hot",
@@ -169,6 +169,30 @@
    "url": "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1",
    "note": "USA : hype avant l'Europe",
    "role": "hype"
+  },
+  {
+   "id": "nike-promos",
+   "pays": "FR",
+   "type": "page",
+   "lecteur": "nike_promos",
+   "url": "https://www.nike.com/fr/w/promotions-3yaep",
+   "categorie": "Mode / sneakers",
+   "note": "validé par David le 04/11 (lecture à rythme humain)"
+  },
+  {
+   "id": "ldlc-promos",
+   "pays": "FR",
+   "type": "page",
+   "lecteur": "ldlc_promos",
+   "url": "https://www.ldlc.com/promotions/",
+   "categorie": "High-tech",
+   "note": "validé par David le 04/11"
+  },
+  {
+   "id": "pepper-it-hot",
+   "pays": "IT",
+   "type": "pepper",
+   "url": "https://www.pepper.it/rss/hot"
   }
  ],
  "_info_role_hype": "role = hype : flux étrangers (Asie, USA, Australie) lus pour repérer les produits qui montent là-bas (Amigo), jamais pour acheter : exclus de la veille et du tribunal."

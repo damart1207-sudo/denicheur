@@ -142,6 +142,33 @@ def passage(nom, test=False):
                         break
 
     retenus, candidats = equipe.consolider(tries, tous_choix, regles)
+    # + les bons plans trouvés par la VEILLE (Idéfix) depuis 24 h : ils passent la même vérification complète que les autres
+    if not test:
+        from datetime import timedelta
+        limite = (maintenant - timedelta(hours=24)).isoformat(timespec="minutes")
+        deja_ids = {c["id"] for c in retenus}
+        try:
+            alertes = charger("data/alertes.json")
+        except (OSError, json.JSONDecodeError):
+            alertes = []
+        for x in alertes:
+            if x.get("type") != "bon_plan" or (x.get("trouve_le") or "") < limite or x["id"] in deja_ids or x.get("statut") == "rejete":
+                continue
+            canaux = [k for k in (x.get("canaux") or []) if isinstance(k, dict)]
+            meilleur = max(canaux, key=lambda k: k.get("marge_nette") or 0, default=None)
+            if not meilleur:
+                continue
+            cout = x.get("cout_achat") or equipe.cout_achat(x, regles)
+            retenus.append({**{k: x.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
+                            "domaine": "autre", "nom_produit": x.get("nom_produit") or x["titre"], "plateforme_revente": meilleur["canal"],
+                            "prix_revente_estime": meilleur["prix_vente"], "cout_achat": cout, "marge_nette": meilleur["marge_nette"],
+                            "rentabilite": meilleur.get("rentabilite", 0), "demande": 3, "concurrence": 3, "consensus": 1, "agents": ["veille"],
+                            "mode": "stock", "erreur_prix": bool(x.get("signal_erreur_prix")), "raisons": {"veille": f"économie {x.get('economie_pct')} % vs neuf le moins cher"},
+                            "score": round((x.get("economie_pct") or 0) * 1.5, 1), "veille": True, "idealo": x.get("idealo"),
+                            "prix_plancher": x.get("prix_plancher"), "keepa": x.get("keepa"), "ean": x.get("ean"), "asin": x.get("asin"),
+                            "vendeurs_amazon": x.get("vendeurs_amazon"), "ventes_estimees_30j": x.get("ventes_estimees_30j")})
+            deja_ids.add(x["id"])
+        retenus.sort(key=lambda c: c["score"], reverse=True)
 
     # vérification des prix sur Google (Gemini + recherche), puis marge recalculée au prix prudent
     if test:
@@ -160,6 +187,8 @@ def passage(nom, test=False):
         # 0) IDENTIFICATION D'ABORD (Keepa, 10 jetons par produit, compris dans l'abonnement) : ASIN + EAN + prix Amazon
         #    + nombre de vendeurs + ventes 30 j. Le radar Amazon connaît déjà son ASIN (id = keepa-<ASIN>-<type>).
         for c in retenus[:40]:
+            if c.get("keepa") and not c["keepa"].get("erreur"):
+                continue
             try:
                 if str(c.get("id", "")).startswith("keepa-"):
                     asin = c["id"].split("-")[1]
@@ -190,11 +219,21 @@ def passage(nom, test=False):
             nom_p = c.get("nom_produit")
             if not nom_p:
                 continue
+            avant = c.get("prix_plancher") or {}
             try:
                 c["prix_plancher"] = comparateurs.prix_plancher(nom_p)
             except Exception as e:
                 c["prix_plancher"] = {"erreur": type(e).__name__}
-            if i < nb_idealo:
+            if avant.get("prix_min") and (not c["prix_plancher"].get("prix_min") or avant["prix_min"] < c["prix_plancher"]["prix_min"]):
+                c["prix_plancher"].update({"prix_min": avant["prix_min"], "ou": avant.get("ou"), "lien": avant.get("lien")})
+            if c.get("idealo") and c["idealo"].get("prix_min"):
+                pi = c["idealo"]
+                pp = c["prix_plancher"]
+                if not pp.get("prix_min") or pi["prix_min"] < pp["prix_min"]:
+                    pp["prix_min"], pp["ou"], pp["lien"] = pi["prix_min"], "idealo", pi.get("lien")
+                if pi.get("gtin") and not c.get("ean"):
+                    c["ean"] = str(pi["gtin"])
+            elif i < nb_idealo:
                 try:
                     pi = apify.prix_idealo(nom_p)
                 except Exception as e:

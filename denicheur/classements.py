@@ -20,7 +20,10 @@ F_ETAT = os.path.join(RACINE, "data/etat/classements.json")
 FUSEAUX = {"US": "America/New_York", "JP": "Asia/Tokyo", "UK": "Europe/London", "CN": "Asia/Shanghai"}
 NOMS = {"US": "🇺🇸 USA", "JP": "🇯🇵 Japon", "UK": "🇬🇧 Royaume-Uni", "CN": "🇨🇳 Chine"}
 TAUX = {"US": 0.90, "JP": 0.0058, "UK": 1.17, "CN": 0.125}
-UK_RACINES = ("electronics", "toys", "video games", "beauty", "home", "kitchen", "sports", "computers", "baby", "pet")
+UK_RACINES = ("electronics", "toys", "video games", "beauty", "home", "kitchen", "sports", "computers", "diy", "garden")
+# consommables sans intérêt pour la revente (litière, lingettes, piles, nourriture…)
+CONSOMMABLES = ("litter", "wipes", "batter", "pile", "nappies", "diaper", "food", "jelly", "toilet", "detergent", "capsule",
+                "refill", "pods", "tissue", "bin bag", "bags", "litière", "lingette", "couche", "おむつ", "電池")
 
 
 def _lire(f, d):
@@ -85,7 +88,7 @@ def categories(pays):
     return [tuple(c) for c in cats][:8]
 
 
-def amazon(pays, n=10, par_cat=10):
+def amazon(pays, n=10, par_cat=15):
     from . import moisson
     pos = {}
     for cat, nom in categories(pays):
@@ -101,7 +104,7 @@ def amazon(pays, n=10, par_cat=10):
     lst = []
     for a, (i, nom) in pos.items():
         r = labas.get(a)
-        if not r:
+        if not r or any(c in (r.get("t") or "").lower() for c in CONSOMMABLES):
             continue
         croissance = round((r["r90"] / r["r30"] - 1) * 100) if r.get("r30") and r.get("r90") else None
         lst.append({"asin": a, "titre": r.get("t"), "categorie": nom, "position": i, "vendus_mois": r.get("vendus_mois"),

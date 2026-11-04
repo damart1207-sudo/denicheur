@@ -17,7 +17,7 @@ from datetime import datetime, timezone
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_BUDGET = os.path.join(RACINE, "data/etat/keepa_budget.json")
-APPELS_JOUR_MAX = 600          # 20 jetons/min = 28 800/jour possibles ; on reste très en dessous
+APPELS_JOUR_MAX = 3000         # fiches/recherches du passage et de la veille (le moissonneur a son propre compteur)
 DOMAINES = {"FR": 4, "DE": 3, "IT": 8, "ES": 9, "UK": 2, "US": 1, "NL": 14, "PL": 17}
 URL = "https://api.keepa.com/product"
 # index des séries Keepa (stats.current / avg90 / min / max)
@@ -57,11 +57,15 @@ def _prix(centimes):
 
 
 def _lire(params):
-    attente = 3.1 - (time.time() - _dernier[0])  # 20 jetons/min : 1 appel toutes les 3 s
+    return _lire_url(URL, params)
+
+
+def _lire_url(url, params):
+    attente = 1.1 - (time.time() - _dernier[0])  # politesse ; le vrai rythme est donné par la réserve de jetons
     if attente > 0:
         time.sleep(attente)
     _dernier[0] = time.time()
-    req = urllib.request.Request(URL + "?" + urllib.parse.urlencode(params), headers={"User-Agent": "denicheur/1.0", "Accept-Encoding": "gzip"})
+    req = urllib.request.Request(url + "?" + urllib.parse.urlencode(params), headers={"User-Agent": "denicheur/1.0", "Accept-Encoding": "gzip"})
     with urllib.request.urlopen(req, timeout=40) as r:
         brut = r.read()
     if brut[:2] == b"\x1f\x8b":  # Keepa répond toujours compressé (gzip)
@@ -89,7 +93,11 @@ def fiche(ean=None, asin=None, pays="FR"):
     prods = d.get("products") or []
     if not prods:
         return None
-    p = prods[0]
+    return _parser(prods[0], params["domain"], pays, d.get("tokensLeft"))
+
+
+def _parser(p, domaine, pays="FR", jetons=None):
+    """Produit Keepa (objet brut) -> fiche lisible."""
     st = p.get("stats") or {}
     cur, avg90, mn = st.get("current") or [], st.get("avg90") or [], st.get("min") or []
     cur_am, cur_neuf = _prix(cur[I_AMAZON]) if len(cur) > I_AMAZON else None, _prix(cur[I_NEUF]) if len(cur) > I_NEUF else None
@@ -108,8 +116,11 @@ def fiche(ean=None, asin=None, pays="FR"):
     sincere = None
     if prix_neuf and moy90:
         sincere = prix_neuf <= moy90 * 0.95  # vraie baisse : au moins 5 % sous la moyenne des 90 derniers jours
-    pays_code = next((k for k, v in DOMAINES.items() if v == params["domain"]), pays)
+    pays_code = next((k for k, v in DOMAINES.items() if v == domaine), pays)
+    nb_neuf = cur[11] if len(cur) > 11 and isinstance(cur[11], int) and cur[11] >= 0 else None
     return {
+        "nb_vendeurs_neuf": nb_neuf,  # concurrence sur Amazon (offres neuves en cours)
+        "marque": p.get("brand"),
         "asin": p.get("asin"), "titre": p.get("title"), "ean": (p.get("eanList") or [None])[0], "pays": pays_code,
         "prix_neuf": prix_neuf, "prix_amazon": cur_am, "prix_tiers": cur_neuf,
         "moyenne_90j": moy90, "plus_bas_90j": min90,
@@ -118,8 +129,37 @@ def fiche(ean=None, asin=None, pays="FR"):
         "ventes_estimees_30j": chutes30,  # une chute de classement ≈ une vente (approximation utilisée par les pros)
         "remise_sincere": sincere,
         "lien": f"https://www.amazon.{ 'fr' if pays_code == 'FR' else 'de' if pays_code == 'DE' else 'it' if pays_code == 'IT' else 'es' if pays_code == 'ES' else 'com'}/dp/{p.get('asin')}",
-        "jetons_restants": d.get("tokensLeft"),
+        "jetons_restants": jetons,
     }
+
+
+def rechercher(nom, pays="FR", prix_attendu=None):
+    """Trouve le produit sur Amazon par son NOM (recherche Keepa, 10 jetons) : ASIN, EAN, prix, ventes.
+    Garde le meilleur résultat dont le titre correspond au nom (et, si connu, dont le prix est plausible)."""
+    if not nom or not disponible():
+        return None
+    from . import comparateurs
+    b = _budget()
+    params = {"key": cle(), "domain": DOMAINES.get(pays, 4), "type": "product", "term": nom[:100], "stats": 90, "history": 0}
+    try:
+        d = _lire_url("https://api.keepa.com/search", params)
+    except Exception as e:
+        _noter(b)
+        return {"erreur": f"{type(e).__name__}: {str(e)[:80]}"}
+    _noter(b, d.get("tokensLeft"))
+    bons = []
+    for p in (d.get("products") or [])[:10]:
+        if not isinstance(p, dict) or not comparateurs.correspond(p.get("title") or "", nom):
+            continue
+        f = _parser(p, params["domain"], pays, d.get("tokensLeft"))
+        if prix_attendu and f.get("prix_neuf") and not (0.4 * prix_attendu <= f["prix_neuf"] <= 4 * prix_attendu):
+            continue  # un accessoire ou un lot, pas le produit
+        bons.append(f)
+    if not bons:
+        return None
+    # le plus vendu d'abord (chutes de classement), puis le mieux classé
+    bons.sort(key=lambda f: (-(f.get("chutes_rang_30j") or 0), f.get("rang_ventes") or 10**9))
+    return bons[0]
 
 
 def comparer_pays(ean, pays=("FR", "DE", "IT", "ES")):

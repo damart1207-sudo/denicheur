@@ -146,7 +146,35 @@ def passage(nom, test=False):
     # 1) comparateurs gratuits ; 2) idealo via le robot Apify pour les meilleures affaires (budget plafonné).
     # NB : la variable s'appelle nom_p, pas nom : « nom » est le nom du passage (europe/asie) et ne doit pas être écrasé.
     if not test:
-        from . import apify, comparateurs
+        from . import apify, comparateurs, keepa
+        # 0) IDENTIFICATION D'ABORD (Keepa, 10 jetons par produit, compris dans l'abonnement) : ASIN + EAN + prix Amazon
+        #    + nombre de vendeurs + ventes 30 j. Le radar Amazon connaît déjà son ASIN (id = keepa-<ASIN>-<type>).
+        for c in retenus[:40]:
+            try:
+                if str(c.get("id", "")).startswith("keepa-"):
+                    asin = c["id"].split("-")[1]
+                    k = keepa.fiche(asin=asin, pays="FR")
+                else:
+                    k = keepa.rechercher(c.get("nom_produit") or c["titre"], "FR", prix_attendu=c.get("prix"))
+            except Exception as e:
+                k = {"erreur": type(e).__name__}
+            if k and not k.get("erreur"):
+                c["keepa"] = k
+                c["asin"] = k.get("asin")
+                if k.get("ean"):
+                    c["ean"] = str(k["ean"])
+                if k.get("nb_vendeurs_neuf") is not None:
+                    c["vendeurs_amazon"] = k["nb_vendeurs_neuf"]
+                if k.get("ventes_estimees_30j") is not None:
+                    c["ventes_estimees_30j"] = k["ventes_estimees_30j"]
+                if k.get("prix_neuf"):
+                    pp = c.setdefault("prix_plancher", {"nom": c.get("nom_produit"), "sources": {}})
+                    if not pp.get("prix_min") or k["prix_neuf"] < pp["prix_min"]:
+                        pp["prix_min"], pp["ou"], pp["lien"] = k["prix_neuf"], "keepa/amazon.fr", k.get("lien")
+                    if k.get("moyenne_90j"):
+                        c["remise_sincere"] = round(c["prix"] / k["moyenne_90j"], 3) <= 0.95
+            elif k and k.get("erreur"):
+                c["keepa_erreur"] = k["erreur"]
         nb_idealo = int(regles.get("idealo_passage_max", 10))
         for i, c in enumerate(retenus[:25]):
             nom_p = c.get("nom_produit")
@@ -170,9 +198,8 @@ def passage(nom, test=False):
                     if pi.get("gtin"):
                         c["ean"] = str(pi["gtin"])
         # 3) Keepa (Amazon.fr) par code EAN : prix neuf, moyenne 90 jours, remise sincère, compteur de ventes
-        from . import keepa
         for c in retenus[:25]:
-            if not c.get("ean"):
+            if not c.get("ean") or c.get("keepa"):
                 continue
             try:
                 k = keepa.fiche(ean=c["ean"], pays="FR")

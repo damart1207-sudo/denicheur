@@ -49,28 +49,71 @@ def mot_cle(titre, marque=None):
     return " ".join(mots[:4]).strip().lower()
 
 
+F_MOTS = os.path.join(RACINE, "data/base/mots_cles.json")
+
+
+def mots_cles_ia(titres, maxi_appels=40):
+    """Titres Amazon -> ce que les gens TAPENT sur Google (ex. « Razer BlackShark V2 Pro », pas « casque gaming sans fil »).
+    Gemini (payant, quelques centimes) par lots de 60 ; chaque titre n'est converti qu'une fois (cache data/base/mots_cles.json).
+    Vérifié le 04/11 : les mots-clés mécaniques tirés des titres n'ont aucun volume Google, les vrais noms de produits si."""
+    from .ia import Agent, extraire_json
+    cache = _lire(F_MOTS, {})
+    a_faire = [t for t in dict.fromkeys(titres) if t and t not in cache]
+    if a_faire:
+        conf = _lire(os.path.join(RACINE, "config/equipe.json"), {}).get("agents", {}).get("gemini")
+        if conf:
+            agent = Agent("gemini", {**conf, "max_appels": maxi_appels, "timeout": 120})
+            for i in range(0, len(a_faire), 60):
+                lot = a_faire[i:i + 60]
+                if not agent.disponible():
+                    break
+                lignes = "\n".join(f"{j} | {t[:120]}" for j, t in enumerate(lot))
+                rep = agent.demander(
+                    "Tu transformes des titres de fiches Amazon en requêtes Google. Réponds en JSON uniquement.",
+                    "Pour chaque ligne « numéro | titre », donne la requête courte qu'un acheteur français taperait sur Google pour "
+                    "trouver CE produit précis : marque + modèle (2 à 4 mots, minuscules, sans couleur, taille, quantité ni mots génériques). "
+                    "Exemples : « Razer BlackShark V2 Pro casque gaming sans fil noir » -> « razer blackshark v2 pro » ; "
+                    "« INIU 100W Chargeur USB C 3 ports » -> « iniu chargeur 100w ». Si le titre n'a pas de marque ni de modèle identifiable "
+                    "(produit générique), mets null.\n"
+                    'Format : {"requetes": [{"n": 0, "q": "..."}]}\n\n' + lignes)
+                d = extraire_json(rep) if rep else None
+                for x in (d or {}).get("requetes", []):
+                    try:
+                        n = int(x.get("n"))
+                        q = x.get("q")
+                        if 0 <= n < len(lot):
+                            cache[lot[n]] = (str(q).strip().lower()[:60] if q else None)
+                    except (TypeError, ValueError):
+                        continue
+            os.makedirs(os.path.dirname(F_MOTS), exist_ok=True)
+            json.dump(cache, open(F_MOTS, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+    return cache
+
+
 def candidats():
     """Produits qui se vendent, avec leur nombre de vendeurs Amazon.fr. {mot_cle: {...}}"""
     idx = _lire(F_INDEX, {})
-    out = {}
+    bruts = []
     for k, r in idx.items():
         if not k.endswith(":FR") or not r.get("t") or (r.get("ch30") or 0) < 15:
             continue
-        mc = mot_cle(r["t"])
-        if len(mc) < 6 or mc in out:
-            continue
-        out[mc] = {"asin": k.split(":")[0], "titre": r["t"], "ean": r.get("ean"), "prix": r.get("neuf"),
-                   "ventes_30j": r.get("ch30"), "vendeurs": r.get("offres"), "origine": "etagere"}
+        bruts.append((r["t"], {"asin": k.split(":")[0], "titre": r["t"], "ean": r.get("ean"), "prix": r.get("neuf"),
+                               "ventes_30j": r.get("ch30"), "vendeurs": r.get("offres"), "origine": "etagere"}))
+    bruts.sort(key=lambda x: -(x[1].get("ventes_30j") or 0))
+    bruts = bruts[:1500]
     for h in _lire(F_HYPE, {}).get("produits", [])[-300:]:
-        mc = mot_cle(h.get("titre"), h.get("marque"))
-        if len(mc) >= 6 and mc not in out:
-            out[mc] = {"asin": h["asin"], "titre": h.get("titre"), "prix": h.get("prix_fr") or h.get("prix_labas"),
-                       "ventes_30j": h.get("ventes_30j_labas"), "vendeurs": 0 if h.get("en_france") == "absent" else None,
-                       "origine": f"hype {h.get('pays')}", "pays_hype": h.get("pays")}
+        bruts.append((h.get("titre"), {"asin": h["asin"], "titre": h.get("titre"), "prix": h.get("prix_fr") or h.get("prix_labas"),
+                                       "ventes_30j": h.get("ventes_30j_labas"), "vendeurs": 0 if h.get("en_france") == "absent" else None,
+                                       "origine": f"hype {h.get('pays')}", "pays_hype": h.get("pays")}))
     for a in _lire(F_RADAR, {}).get("affaires", [])[:150]:
-        mc = mot_cle(a.get("titre"))
-        if len(mc) >= 6 and mc not in out:
-            out[mc] = {"asin": a["asin"], "titre": a.get("titre"), "prix": a.get("prix"), "vendeurs": None, "origine": "radar amazon"}
+        bruts.append((a.get("titre"), {"asin": a["asin"], "titre": a.get("titre"), "prix": a.get("prix"), "vendeurs": None, "origine": "radar amazon"}))
+    cache = mots_cles_ia([t for t, _ in bruts])
+    out = {}
+    for t, c in bruts:
+        mc = cache.get(t) or None
+        if not mc or len(mc) < 5 or mc in out:
+            continue
+        out[mc] = c
     return out
 
 

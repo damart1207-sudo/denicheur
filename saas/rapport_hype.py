@@ -55,6 +55,37 @@ def construire():
          "(rang &gt; 20 000). « Ventes 30 j » = chutes de classement Amazon là-bas (≈ 1 par vente). Ce sont des pistes pour Amigo, pas des affaires vérifiées : "
          "le tribunal et l'audit décident.</div>"]
 
+    # ---- LES PLUS RECHERCHÉS (Amigo) et ce que les dénicheurs ont trouvé dessus
+    dem = lire("data/demande.json", {})
+    recents = lire("data/etat/annonces_recentes.json", [])
+    alertes = lire("data/alertes.json", [])
+    chasse = dem.get("chasse", []) or []
+
+    def mots(t):
+        import re, unicodedata
+        t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode().lower()
+        return set(m for m in re.findall(r"[a-z0-9]+", t) if len(m) > 1)
+
+    top = [x for x in dem.get("liste", []) if x.get("pays") == "FR"][:25]
+    h.append(f"<h2>0. Les plus recherchés en France (idealo, mise à jour {heure(dem.get('maj'))}) et ce qu'on a trouvé</h2>")
+    h.append("<p class='note'>« Recherches en hausse » sur idealo.fr. Pour chacune : les promos vues par Idéfix dont le titre contient tous les mots "
+             "de la recherche, les alertes de veille, et le résultat de la chasse ciblée de Chasseur (idealo + Leboncoin + Vinted, 1 fois par jour sur les 3 premières).</p>")
+    if top:
+        h.append("<table><tr><th>#</th><th>Recherche</th><th>Popularité</th><th>Hausse</th><th>Promos vues (titre complet)</th><th>Alertes</th><th>Chasse ciblée</th></tr>")
+        for i, x in enumerate(top, 1):
+            q = mots(x.get("recherche"))
+            vues = [r for r in recents if q and q <= mots(r.get("titre"))]
+            al = [a for a in alertes if q and q <= mots(a.get("titre"))]
+            ch = [c for c in chasse if (c.get("recherche") or "").lower() == (x.get("recherche") or "").lower()]
+            cell = "<br>".join(f"<a href='{e(r.get('lien'))}' target='_blank'>{euro(r.get('prix'))} — {e((r.get('titre') or '')[:60])}</a>" for r in vues[:3]) or "—"
+            cell_a = "<br>".join(f"{e(a.get('statut'))} : {euro(a.get('prix'))} {e((a.get('titre') or '')[:50])}" for a in al[:3]) or "—"
+            cell_c = "<br>".join(f"{e(c.get('canal'))} {euro(c.get('annonce_min'))}" for c in ch[:3]) or ("rien trouvé" if i <= 3 and chasse is not None else "—")
+            h.append(f"<tr><td>{i}</td><td><b>{e(x.get('recherche'))}</b></td><td>{e(x.get('popularite'))}</td><td>+{e(x.get('hausse_pct'))} %</td>"
+                     f"<td>{cell}</td><td>{cell_a}</td><td>{cell_c}</td></tr>")
+        h.append("</table>")
+    else:
+        h.append("<p>Liste idealo pas encore chargée.</p>")
+
     # ---- HYPE
     prods = hype.get("produits", [])
     h.append(f"<h2>1. Hype étrangère — {len(prods)} produits (mise à jour {heure(hype.get('maj'))})</h2>")

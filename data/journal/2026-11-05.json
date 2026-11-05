@@ -34,9 +34,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 8,
+"recherches": 9,
 "cout_usd": 0.0,
-"resultats": 8,
+"resultats": 10,
 "alertes": 0
 },
 "A | flux:mydealz-new |  | Home & Living": {
@@ -44,9 +44,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Home & Living",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Groceries": {
@@ -54,10 +54,10 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Groceries",
-"recherches": 10,
+"recherches": 11,
 "cout_usd": 0.0,
-"resultats": 23,
-"alertes": 0
+"resultats": 24,
+"alertes": 1
 },
 "A | flux:hotukdeals-new |  | Services & Contracts": {
 "denicheur": "A",
@@ -314,9 +314,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Electronics",
-"recherches": 7,
+"recherches": 8,
 "cout_usd": 0.0,
-"resultats": 8,
+"resultats": 9,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Garden & Do It Yourself": {
@@ -1047,6 +1047,66 @@
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 0,
+"alertes": 0
+},
+"A | apify:idealo | Gourmet Gold Succulent Delights 96x85g | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Gourmet Gold Succulent Delights 96x85g",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0095,
+"resultats": 3,
+"alertes": 0
+},
+"A | apify:vinted | Gourmet Gold Succulent Delights 96x85g | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Gourmet Gold Succulent Delights 96x85g",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.001,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Gourmet%20Gold%20Succulent%20Delights%20 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Gourmet%20Gold%20Succulent%20Delights%20",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:mydealz-new |  | Kultur & Freizeit": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Kultur & Freizeit",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Family & Kids": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Family & Kids",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pepper-pl-hot |  | Dom i mieszkanie": {
+"denicheur": "A",
+"source": "flux:pepper-pl-hot",
+"cible": "",
+"categorie": "Dom i mieszkanie",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
 "alertes": 0
 }
 }

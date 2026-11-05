@@ -47030,7 +47030,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T20:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -47146,7 +47146,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T20:03+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T20:52+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO Ideas 21358), mais pas achetable depuis la France : les conditions de vente de Müller réservent les offres à une adresse de livraison en Allemagne. De plus, la fiche mueller.de lue par le robot à 21h03 affiche 169 € et non 134 € (Pre Singles Day), soit le même niveau que le neuf français : 167,99 € + 2,99 € de port chez Kidinn (170,98 € livrés, achatmoinscher lu le 05/11), puis 196,14 € livrés chez Auchan. Revente : 8 à 9 € de marge au mieux à ce prix, sous les seuils.",
+   "prix_neuf_min_idealo": 167.99,
+   "source_prix_ref": "achatmoinscher lu le 05/11 : Kidinn 167,99 € + 2,99 € de port ; Auchan 196,14 € livrés",
+   "economie_pct": 1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Pre Singles Day Müller, durée inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9d00a28df9",
@@ -47187,7 +47199,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T20:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -47310,7 +47322,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T20:15+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T20:52+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (iLoud Micro Monitor, la paire, pas le modèle Pro), mais pas d'économie pour la France : Thomann vend la même paire 198 € TTC sur son site français, disponible immédiatement (thomann.fr lu le 05/11). C'est le prix neuf le plus bas trouvé en France : Woodbrass 292 €, Amazon.fr 311,02 € (vendeur tiers, Keepa, moyenne 90 j 291,91 €). L'offre britannique à 168 £ revient à 239,84 € avec frais d'importation, donc plus cher que thomann.fr. Revente au prix plafond de 85 % du neuf (168 €) : perte. Le 198 € de thomann.fr reste un bon prix, mais pas 15 % sous le neuf français.",
+   "prix_neuf_min_idealo": 198.0,
+   "source_prix_ref": "thomann.fr lu le 05/11 (198 € TTC, meilleur prix 30 j affiché 239 €) ; Woodbrass 292 € ; Amazon.fr 311,02 € (Keepa)",
+   "economie_pct": -21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "promotion Thomann, durée inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "8e7d6a894d",

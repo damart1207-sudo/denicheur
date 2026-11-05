@@ -37447,7 +37447,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T10:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -37586,7 +37586,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit (JBL Live Pro 2 noir) et prix intéressant : 64,99 € port compris annoncé en Allemagne chez Euronics XXL Corte (page du bon plan lue par le robot à 11h25 : offre active), contre 89,99 € neuf sur Amazon.fr (Keepa ce matin, moyenne 90 j 110,75 €, plus bas 72,99 €) et 103,99 € + 8,99 € de port chez Fnac et Darty Marketplace. Mais offre d'un magasin allemand : les conditions Euronics trouvées ne décrivent que la livraison en Allemagne, aucune livraison en France n'est confirmée. Rejeté dans le doute. Revente faible de toute façon : environ 9 € de bénéfice, 13 %.",
+   "prix_neuf_min_idealo": 89.99,
+   "source_prix_ref": "Keepa / Amazon.fr, 05/11",
+   "economie_pct": 28,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": "oui (environ 36 ventes par mois sur Amazon.fr, Keepa)"
+  },
+  "verifie_le": "2026-11-05T10:48+00:00"
  },
  {
   "id": "b9cf6a45b6",
@@ -37611,7 +37623,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T10:34+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -37719,7 +37731,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 10:35 UTC : offre active, 249.16 affiché ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : Dreame H15 Pro (modèle standard, pas le Heat ni le FoamWash). 249,16 € chez Amazon.fr, livraison gratuite, en stock : fiche Amazon lue par Keepa ce matin, confirmé par Les Numériques (publié à 11h31) et Bonne Promo le 05/11. C'est le plus bas relevé par Keepa sur 90 jours, moyenne 90 j 368,09 €. Neuf ailleurs en France : 295 € Electro Dépôt (page lue le 05/11, retrait 1 h ou livraison gratuite), 299 € Cdiscount et Fnac Marketplace, 299,99 € Fnac, Darty et Boulanger (hors livraison 39 €). Économie 15,5 % par rapport à Electro Dépôt, tout juste au-dessus du seuil. Pas de revente : à 85 % du neuf (250,75 €) aucun bénéfice, perte sur tous les canaux calculés.",
+   "prix_neuf_min_idealo": 295.0,
+   "source_prix_ref": "Electro Dépôt, page lue le 05/11 ; Fnac, Darty, Boulanger, Cdiscount via Bonne Promo le 05/11 ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 15.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue, promo Amazon d'avant Black Friday, peut s'arrêter à tout moment",
+   "demande_confirmee": "oui (environ 52 ventes par mois sur Amazon.fr, Keepa)"
+  },
+  "verifie_le": "2026-11-05T10:48+00:00"
  },
  {
   "id": "a676d9800f",
@@ -37757,7 +37781,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T10:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -37896,6 +37920,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit (JBL Tune 570BT noir). 29,99 € port compris annoncé en Allemagne chez Euronics XXL Corte (page du bon plan lue par le robot à 11h36 : offre active). Neuf en France : 47,07 € achatmoinscher, 56,34 € vendeur tiers sur Amazon.fr (Keepa, moyenne 90 j 51,45 €, plus bas 24,99 €), 59,50 € PcComponentes (05/11). Mais offre d'un magasin allemand : les conditions Euronics trouvées ne décrivent que la livraison en Allemagne, aucune livraison en France n'est confirmée. Rejeté dans le doute. Revente faible : environ 6 € de bénéfice, sous les 8 € demandés, avec 10 vendeurs sur Amazon.",
+   "prix_neuf_min_idealo": 47.07,
+   "source_prix_ref": "achatmoinscher et Keepa / Amazon.fr, 05/11",
+   "economie_pct": 36,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": "oui (environ 41 ventes par mois sur Amazon.fr, Keepa)"
+  },
+  "verifie_le": "2026-11-05T10:48+00:00"
  }
 ]

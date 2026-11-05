@@ -43,7 +43,10 @@ PAGES = [
     ("decathlon-seconde-vie", "https://www.decathlon.fr/seconde-vie", "FR", "Decathlon"),
     ("decathlon-promos", "https://www.decathlon.fr/all-sports/promotions", "FR", "Decathlon"),
     ("leroymerlin-promos", "https://www.leroymerlin.fr/promotions/", "FR", "Leroy Merlin"),
-    ("manomano-bonsplans", "https://www.manomano.fr/bons-plans", "FR", "ManoMano"),
+    ("manomano-bonsplans", "https://www.manomano.fr/", "FR", "ManoMano"),
+    ("manomano-blackfriday", "https://www.manomano.fr/", "FR", "ManoMano"),
+    ("cdiscount-meilleures-offres", "https://www.cdiscount.com/", "FR", "Cdiscount"),
+    ("rakuten-meilleures-offres", "https://fr.shopping.rakuten.com/", "FR", "Rakuten"),
     ("but-promos", "https://www.but.fr/promos/", "FR", "But"),
     ("conforama-promos", "https://www.conforama.fr/promos", "FR", "Conforama"),
     ("adidas-outlet", "https://www.adidas.fr/outlet", "FR", "Adidas"),
@@ -219,7 +222,7 @@ JS_CARTES = r"""
   const feuilles = [...document.querySelectorAll('body *')].filter(e => e.children.length <= 2 && !e.closest('nav,header,footer,[role=navigation],[class*=menu]') && /\d/.test(e.textContent) && /€|EUR/.test(e.textContent) && T(e).length < 40);
   for (const f of feuilles) {
     let c = f, carte = null;
-    for (let i = 0; i < 7 && c; i++) { c = c.parentElement; if (c && c.querySelector('a[href]') && c.querySelector('img,picture,[style*=background-image]') && T(c).length < 900) carte = c; }
+    for (let i = 0; i < 7 && c; i++) { c = c.parentElement; if (c && c.querySelector('a[href]') && c.querySelector('img,picture,[style*=background-image]') && T(c).length < 900) { carte = c; break; } }
     if (!carte) continue;
     const a = [...carte.querySelectorAll('a[href]')].find(x => !/panier|cart|wishlist|compare|login|#/.test(x.getAttribute('href') || '')) || carte.querySelector('a[href]');
     const lien = a ? a.href : null;
@@ -228,14 +231,14 @@ JS_CARTES = r"""
     const titres = [...carte.querySelectorAll('[class*=name],[class*=title],[class*=titre],[class*=libelle],h3,h4,h2')].map(x => T(x)).filter(t => t.length > 8 && t.length < 200);
     let titre = (img && img.alt && img.alt.length > 8 ? img.alt : '') || titres[0] || (a && (a.title || T(a))) || '';
     titre = titre.replace(/\s+/g, ' ').trim();
-    if (titre.length < 8 || /voir tout|€|livraison offerte|coups? de c/i.test(titre)) continue;
+    if (titre.length < 8 || /voir tout|€|livraison offerte|coups? de c|ajouter au panier/i.test(titre)) continue;
     const prix = [];
     for (const m of T(f).matchAll(PRIX)) { const v = num(m[1] || m[2]); if (v && v >= 3 && v <= 20000) prix.push(v); }  // le prix affiché, pas les mensualités
     if (!prix.length || /mois|\/m|par m|x\s?\d|dès/i.test(T(f))) continue;
     vus.add(lien);
     const barre = [...carte.querySelectorAll('s,del,[class*=strike],[class*=barre],[class*=old],[class*=crossed]')].map(x => num((x.textContent.match(/[\d\s\u00a0.,]+/) || [''])[0])).filter(v => v);
     out.push({titre: titre.slice(0, 180), prix: prix[0], initial: barre.length ? Math.max(...barre) : null, lien});
-    if (out.length >= 120) break;
+    if (out.length >= 300) break;
   }
   return out;
 }
@@ -253,14 +256,23 @@ def statut_page(h):
     return "ok"
 
 
-def decouvrir_page_promo(page, url):
-    """L'adresse promo a changé : on part de l'accueil du site et on suit le lien « bons plans / promos / Black Friday »."""
+# Méthode de David (05/11) : depuis l'accueil, cliquer l'onglet « Nos meilleures offres » / « Black Friday » et faire défiler.
+SUIVRE = {"manomano-bonsplans": r"meilleures offres", "manomano-blackfriday": r"black\s*friday",
+          "cdiscount-meilleures-offres": r"meilleures offres|black\s*friday|bons plans|promos?",
+          "rakuten-meilleures-offres": r"meilleures offres|black\s*friday|bons plans|promos?"}
+DEFILEMENTS_LONGS = 18   # pages de meilleures offres : beaucoup de produits chargés au fil du défilement
+
+
+def decouvrir_page_promo(page, url, motif=None):
+    """On part de l'accueil du site et on suit le lien « meilleures offres / bons plans / promos / Black Friday »."""
     base = re.match(r"https?://[^/]+", url).group(0)
     page.goto(base + "/", wait_until="domcontentloaded", timeout=45000)
     page.wait_for_timeout(3000)
     liens = page.evaluate("() => [...document.querySelectorAll('a[href]')].map(a => [a.textContent.trim().slice(0, 60), a.href])")
+    rx = re.compile(motif, re.I) if motif else MOTS_PROMO
+    domaine = base.split("//")[1].replace("www.", "")
     for texte, lien in liens:
-        if lien.startswith(base) and MOTS_PROMO.search(texte or ""):
+        if domaine in lien and rx.search(texte or ""):
             return lien
     return None
 
@@ -330,13 +342,16 @@ def collecter(connexion=False):
             return
         for source, url, pays, marchand in PAGES:
             try:
+                if source in SUIVRE:  # aller sur l'onglet « meilleures offres » comme un visiteur
+                    cible = decouvrir_page_promo(page, url, SUIVRE[source])
+                    url = cible or url
                 page.goto(url, wait_until="domcontentloaded", timeout=45000)
                 try:  # attendre que les produits chargés après coup soient arrivés
                     page.wait_for_load_state("networkidle", timeout=15000)
                 except Exception:
                     pass
                 page.wait_for_timeout(2000 + random.randint(0, 2000))
-                for _ in range(6):  # faire défiler : charge les produits des pages à chargement progressif
+                for _ in range(DEFILEMENTS_LONGS if source in SUIVRE else 6):  # faire défiler : charge les produits progressifs
                     page.mouse.wheel(0, 2000)
                     page.wait_for_timeout(900)
                 h = page.content()

@@ -54,7 +54,10 @@ for a in cands:
     # MÊME PRODUIT ? (quantité, variante, caractéristiques) : on ne garde comme référence que des offres du même produit exact
     verif, vs_ok = [], []
     for v in vs[:4]:
-        r = meme_produit.verifier(a["titre"], v.get("titre") or (f or {}).get("titre") or "", a["prix"], v["total"])
+        tb = (f or {}).get("titre") or ""
+        if v.get("titre") and len(v["titre"]) > 15 and v["titre"].lower() != str(v.get("marchand") or "").lower():
+            tb = v["titre"] if len(v["titre"]) > len(tb) else tb  # le titre du vendeur s'il est plus précis que la fiche
+        r = meme_produit.verifier(a["titre"], tb, a["prix"], v["total"])
         v["meme"] = r
         if r["meme"] is not False:
             vs_ok.append(v)

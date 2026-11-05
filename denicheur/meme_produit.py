@@ -21,37 +21,49 @@ def _n(t):
     return re.sub(r"\s+", " ", (t or "").lower()).strip()
 
 
+DIMS = re.compile(r"\d+(?:[.,]\d+)?\s?[x×]\s?\d+(?:[.,]\d+)?(?:\s?[x×]\s?\d+(?:[.,]\d+)?)?\s?(?:cm|mm|m)?\b", re.I)
+
+
 def quantite(titre):
-    t = _n(titre)
+    """Quantité EXPLICITE du lot (None si rien n'est dit). Les dimensions « 260 x 85 » sont retirées avant."""
+    t = DIMS.sub(" ", _n(titre))
     for m in QTE.finditer(t):
         v = next((g for g in m.groups() if g), None)
         if v and 1 < int(v) <= 500:
             return int(v)
-    return 1
+    return None
 
 
 def mesures(titre):
-    out = set()
+    """(dimensions NxM, valeurs avec unité) trouvées dans le titre."""
+    dims, vals = set(), set()
     for m in MESURES.finditer(_n(titre)):
         if m.group(1):
-            out.add(f"{m.group(1)}x{m.group(2)}")
+            dims.add(f"{m.group(1)}x{m.group(2)}")
         else:
-            out.add(f"{m.group(3)}{m.group(4).lower().rstrip('s')}")
-    return out
+            vals.add(f"{m.group(3)}{m.group(4).lower().rstrip('s')}")
+    return dims, vals
 
 
 def mecanique(titre_a, titre_b):
     """Tests sans IA. Renvoie (verdict, raison) ; verdict None = pas de contradiction trouvée, à confirmer par l'IA."""
     a, b = _n(titre_a), _n(titre_b)
     qa, qb = quantite(a), quantite(b)
-    if qa != qb:
+    if qa and qb and qa != qb:
         return False, f"quantités différentes ({qa} contre {qb})"
+    if (qa or 1) != (qb or 1) and not (qa and qb):
+        pass  # un seul titre précise un lot : on laisse l'IA trancher
     for x, y in OPPOSES:
         if (re.search(x, a) and re.search(y, b) and not re.search(x, b)) or (re.search(x, b) and re.search(y, a) and not re.search(x, a)):
             return False, f"caractéristiques opposées ({x.split('|')[0]} / {y.split('|')[0]})"
-    ma, mb = mesures(a), mesures(b)
-    if ma and mb and not (ma & mb):
-        return False, f"dimensions/capacités différentes ({', '.join(sorted(ma)[:3])} contre {', '.join(sorted(mb)[:3])})"
+    da, va = mesures(a)
+    db, vb = mesures(b)
+    if da and db and not (da & db):
+        return False, f"dimensions différentes ({', '.join(sorted(da)[:2])} contre {', '.join(sorted(db)[:2])})"
+    capa = {x for x in va if re.search(r"(go|gb|to|tb|w|kw|mah|ah|l|ml)$", x)}
+    capb = {x for x in vb if re.search(r"(go|gb|to|tb|w|kw|mah|ah|l|ml)$", x)}
+    if capa and capb and not (capa & capb):
+        return False, f"capacités/puissances différentes ({', '.join(sorted(capa)[:2])} contre {', '.join(sorted(capb)[:2])})"
     return None, ""
 
 
@@ -79,7 +91,9 @@ def ia(titre_a, titre_b, prix_a=None, prix_b=None):
             "couleur si elle change le prix, même quantité dans le lot, même état neuf) ? Réponds strictement en JSON : "
             '{"meme": true|false, "raison": "une phrase courte"}.\n'
             f"Offre A : {titre_a[:200]}" + (f" — {prix_a} €" if prix_a else "") + "\n"
-            f"Offre B : {titre_b[:200]}" + (f" — {prix_b} €" if prix_b else ""))
+            f"Offre B : {titre_b[:200]}" + (f" — {prix_b} €" if prix_b else "") + "\n"
+            "Si une offre annonce un lot (lot de 2, x4…) et pas l'autre, considère que l'autre est à l'unité et réponds false. "
+            "Si le titre B est trop vague pour conclure, réponds false avec la raison « titre B trop vague ».")
         d = extraire_json(rep) if rep else None
         if not isinstance(d, dict) or not isinstance(d.get("meme"), bool):
             return None, ""

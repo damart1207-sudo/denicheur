@@ -30,6 +30,7 @@ print("fiches retenues", len(fiches), "sur", len(produits))
 vend = shopping.vendeurs([f["product_id"] for f in fiches.values()], "FR", attente_max=240)
 heure = datetime.now(ZoneInfo("Europe/Paris")).strftime("%d/%m %H:%M")
 lignes, bingos = [], 0
+occ_info = {}
 for p in produits:
     q = p["mot_cle"]
     f = fiches.get(q)
@@ -43,6 +44,13 @@ for p in produits:
     for v in vs:
         v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
     vs.sort(key=lambda v: v["total"])
+    # OCCASION comparée à l'OCCASION seulement (Leboncoin, eBay, Vinted, Back Market… ou état « used »)
+    occ = [v for v in vend.get(f["product_id"], []) if (v.get("etat") not in (None, "", "new", "neuf"))
+           or re.search(r"leboncoin|ebay|vinted|back ?market|rebuy|beebs|occasion|reconditionn", str(v.get("marchand") or ""), re.I)]
+    for v in occ:
+        v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
+    occ.sort(key=lambda v: v["total"])
+    occ_info[q] = occ
     if len(vs) < 2:
         lignes.append((q, f, vs, None, "moins de 2 vendeurs neufs"))
         continue
@@ -65,16 +73,26 @@ def cel(v):
     return (f"<a href='{H.escape(v.get('lien') or '#')}'>{v['prix']} €{port} = <b>{v['total']} €</b> — {H.escape(str(v.get('marchand')))}</a><br><small>{etat}</small>")
 
 
+def occ_txt(o):
+    if not o:
+        return "—"
+    t = f"{o[0]['total']} € — {H.escape(str(o[0].get('marchand')))}"
+    if len(o) > 1:
+        ec = round((1 - o[0]['total'] / o[1]['total']) * 100)
+        t += f"<br><small>2e occasion : {o[1]['total']} € ({ec} % d'écart){' — <b>BON PLAN OCCASION</b>' if ec >= 20 else ''}</small>"
+    return t
+
+
 rows = "".join(f"<tr style='background:{'#d9f7d9' if v == 'BINGO' else '#fff'}'><td>{H.escape(q)}</td><td>{H.escape((f or {}).get('titre') or '—')}</td>"
                f"<td>{cel(vs[0] if vs else None)}</td><td>{cel(vs[1] if len(vs) > 1 else None)}</td><td>{len(vs)}</td>"
-               f"<td>{(str(e) + ' %') if e is not None else '—'}</td><td><b>{v}</b></td></tr>" for q, f, vs, e, v in lignes)
+               f"<td>{(str(e) + ' %') if e is not None else '—'}</td><td><b>{v}</b></td><td>{occ_txt(occ_info.get(q, []))}</td></tr>" for q, f, vs, e, v in lignes)
 page = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Test méthode 3</title>
 <style>body{{font-family:system-ui;margin:12px;background:#fff;color:#111}}table{{border-collapse:collapse;font-size:13px}}td,th{{border:1px solid #ccc;padding:4px 6px;vertical-align:top}}th{{background:#eee}}</style>
 <h2>Test méthode 3 — fiche produit exacte + vendeurs + contrôle page — {heure} (Paris)</h2>
 <p>Pour chaque produit : la fiche produit Google exacte (pas de pack, pas de version JP/US, pas d'extension), ses vendeurs NEUFS, prix + port.
 Le moins cher et le 2e sont relus sur la page du marchand quand c'est possible (✅ même prix, ❌ prix différent, ⚠️ page bloquée pour le cloud :
-c'est le PC qui la vérifiera). <b>BINGO</b> = le moins cher, port compris, ≥ 15 % sous le 2e. Bingos : <b>{bingos}</b>.</p>
-<table><tr><th>Recherche</th><th>Fiche produit retenue</th><th>Le moins cher (port compris)</th><th>2e moins cher</th><th>Vendeurs neufs</th><th>Écart</th><th>Verdict</th></tr>{rows}</table></html>"""
+c'est le PC qui la vérifiera). <b>BINGO</b> = le moins cher, port compris, ≥ 15 % sous le 2e. Comparaison à état égal : le neuf de professionnel avec le neuf de professionnel uniquement ; l'occasion avec l'occasion uniquement (colonne de droite). Bingos : <b>{bingos}</b>.</p>
+<table><tr><th>Recherche</th><th>Fiche produit retenue</th><th>Le moins cher (port compris)</th><th>2e moins cher</th><th>Vendeurs neufs</th><th>Écart (neuf/neuf)</th><th>Verdict neuf</th><th>Occasion (comparée à l'occasion)</th></tr>{rows}</table></html>"""
 open("data/test_methode3.html", "w", encoding="utf-8").write(page)
 print("BINGOS", bingos)
 telegram.envoyer_fichier("data/test_methode3.html", f"Test méthode 3 ({heure}) : {bingos} bingos sur {len(produits)} — à vérifier")

@@ -104,6 +104,8 @@ def alerte(x, vol=None):
              f"♻️ Occasion : " + (f"de {_eur(f['occ_bas'])} à {_eur(f['occ_haut'])}" if f['occ_bas'] is not None else "inconnue") + "\n"
              f"🎯 Prix d'achat maximum : {_eur(f['achat_max'])} · revendre sur <b>{_e(f['vendre_sur'])}</b> à {_eur(f['prix_vente'])}\n"
              f"💰 Bénéfice net : <b>{_eur(f['benefice'])}</b>\n"
+             + (f"🎯 Probabilité de vendre en 7 jours : <b>{f['proba_vente_7j']} %</b> ({_e(' · '.join(f['proba_detail']))}) — estimation\n"
+                if f.get("proba_vente_7j") is not None else "")
              + (f"⚠️ Manque : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
              + f"{_e(x.get('lien'))}")
     return envoyer(texte)

@@ -115,6 +115,59 @@ def chercher_leboncoin(page, q):
     return out[:40]
 
 
+F_VENTES = os.path.join(RACINE, "data", "pc", "ventes_ebay.json")
+VENTES_PAR_TOUR = 8   # produits dont on relève les dernières ventes eBay à chaque tour
+
+
+def ventes_ebay(page, q):
+    """eBay France, filtre « objets vendus » : les dernières ventes RÉELLES (date + prix). Le signal le plus parlant :
+    combien de fois le produit s'est vendu ces derniers jours, et à quel prix."""
+    page.goto("https://www.ebay.fr/sch/i.html?_nkw=" + urllib.parse.quote(q) + "&LH_Sold=1&LH_Complete=1&_sop=13&_ipg=120",
+              wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(2500 + random.randint(0, 1500))
+    lignes = page.evaluate("""() => [...document.querySelectorAll('li.s-item, li.s-card, .srp-results > li')].map(li => {
+        const t = (li.innerText || '').replace(/\\s+/g, ' ');
+        return t.slice(0, 400);
+    })""")
+    mois = {"janv": 1, "févr": 2, "mars": 3, "avr": 4, "mai": 5, "juin": 6, "juil": 7, "août": 8, "sept": 9, "oct": 10, "nov": 11, "déc": 12}
+    out = []
+    for t in lignes or []:
+        d = re.search(r"Vendu le\s+(\d{1,2})\s+([a-zéû]+)\.?\s+(\d{4})", t, re.I)
+        p = re.search(r"(\d{1,3}(?:[\s\u00a0.]\d{3})*,\d{2})\s?EUR|(\d{1,3}(?:[\s\u00a0.]\d{3})*,\d{2})\s?€", t)
+        if not d or not p:
+            continue
+        m = mois.get(d.group(2).lower()[:4].rstrip("."), mois.get(d.group(2).lower()[:3]))
+        if not m:
+            continue
+        prix = float(re.sub(r"[\s\u00a0.]", "", p.group(1) or p.group(2)).replace(",", "."))
+        out.append({"date": f"{d.group(3)}-{m:02d}-{int(d.group(1)):02d}", "prix": prix, "titre": t[:120]})
+    return out
+
+
+def releve_ventes(page, cib):
+    """Pour quelques cibles : nombre de ventes eBay sur 7 et 30 jours, prix médian payé -> data/pc/ventes_ebay.json."""
+    base = _lire(F_VENTES, {})
+    jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    a_faire = [c for c in cib if (base.get(c["nom"]) or {}).get("releve") != jour][:VENTES_PAR_TOUR]
+    for c in a_faire:
+        try:
+            v = ventes_ebay(page, c["nom"])
+        except Exception:
+            continue
+        mots = set(_ascii(c["nom"]).split())
+        v = [x for x in v if len(mots & set(_ascii(x["titre"]).split())) >= max(1, len(mots) - 1)]
+        j7 = (datetime.now(timezone.utc) - timedelta(days=7)).strftime("%Y-%m-%d")
+        j30 = (datetime.now(timezone.utc) - timedelta(days=30)).strftime("%Y-%m-%d")
+        prix = sorted(x["prix"] for x in v if x["date"] >= j30)
+        base[c["nom"]] = {"releve": jour, "ventes_7j": sum(1 for x in v if x["date"] >= j7), "ventes_30j": len(prix),
+                          "prix_median": prix[len(prix) // 2] if prix else None, "prix_min": prix[0] if prix else None,
+                          "prix_max": prix[-1] if prix else None, "dernieres": v[:15]}
+        time.sleep(3 + random.random() * 4)
+    os.makedirs(os.path.dirname(F_VENTES), exist_ok=True)
+    json.dump(base, open(F_VENTES, "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    return len(a_faire)
+
+
 def tour():
     from playwright.sync_api import sync_playwright
     cib = cibles()
@@ -168,6 +221,10 @@ def tour():
                                         "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"), "denicheur": "C",
                                         "publie_le": a.get("publie_le")})
                     time.sleep(2 + random.random() * 4)
+        try:
+            etat["ventes_ebay_relevees"] = releve_ventes(page, cib)
+        except Exception as e:
+            etat.setdefault("erreurs", []).append(f"ventes eBay : {type(e).__name__}")
         ctx.close()
     etat["recherches"] = n
     anciens = [x for x in _lire(F_SORTIE, {}).get("annonces", []) if x.get("vu", "") >= (datetime.now(timezone.utc).strftime("%Y-%m-%d"))]

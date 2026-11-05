@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_VOL = os.path.join(RACINE, "data/base/volumes.json")
 MARGE_MIN = 20
+MARGE_ENVOI = 10   # sous 10 € de bénéfice, l'alerte n'est pas envoyée (comme le seuil de déclenchement des chasses)
 VOLUME_MIN = 1000
 RESERVE_BINGO_USD = 0.35  # bingo + hype de la nuit
 
@@ -116,8 +117,8 @@ def evaluer(x, vol=None):
          "vendre_sur": best.get("canal") if best else None, "prix_vente": best.get("prix_vente") if best else None,
          "benefice": marge, "achat_max": achat_max, "manque": []}
     # ROUGE : on passe
-    if marge is None or marge <= 0 or (neuf_min and achat >= neuf_min):
-        f["feu"], f["raison"] = "rouge", "pas de bénéfice"
+    if marge is None or marge < MARGE_ENVOI or (neuf_min and achat >= neuf_min):
+        f["feu"], f["raison"] = "rouge", "bénéfice sous 10 €"
         return f
     if isinstance(vendeurs, int) and (vendeurs >= 10 or (vendeurs >= 5 and (ecart or 0) < 15)):
         f["feu"], f["raison"] = "rouge", f"concurrence trop forte ({vendeurs} vendeurs)"
@@ -138,4 +139,45 @@ def evaluer(x, vol=None):
     if neuf_min is None:
         f["manque"].append("prix neuf ailleurs inconnu")
     f["feu"] = "vert" if not f["manque"] else "orange"
+    f.update(probabilite_vente(x, f))
     return f
+
+
+def _ventes_ebay(x):
+    base = _lire(os.path.join(RACINE, "data/pc/ventes_ebay.json"), {})
+    nom = (x.get("nom_produit") or "").strip().lower()
+    for k, v in base.items():
+        if k.strip().lower() == nom:
+            return v
+    return None
+
+
+def probabilite_vente(x, f):
+    """ESTIMATION (règles, pas encore calibrée sur nos ventes) de la probabilité de vendre en moins de 7 jours.
+    Croise : ventes Amazon 30 j, dernières ventes réelles eBay (7 j / 30 j), recherches Google, concurrence, et notre prix
+    face au prix médian réellement payé. Chaque signal présent ajoute ou retire des points ; renvoie aussi le détail."""
+    import math
+    pts, detail = 0.0, []
+    a30 = f.get("ventes_30j")
+    if isinstance(a30, (int, float)) and a30 > 0:
+        pts += min(2.0, math.log10(a30 + 1))          # 10 ventes -> 1 ; 100 -> 2
+        detail.append(f"Amazon {int(a30)}/mois")
+    e = _ventes_ebay(x)
+    if e:
+        pts += min(1.5, (e.get("ventes_7j") or 0) / 4)  # 6 ventes eBay en 7 j -> plein
+        detail.append(f"eBay {e.get('ventes_7j', 0)} vendus en 7 j")
+        if e.get("prix_median") and f.get("prix_vente"):
+            ratio = f["prix_vente"] / e["prix_median"]
+            pts += 0.8 if ratio <= 0.9 else 0.3 if ratio <= 1.0 else -0.8 if ratio > 1.15 else 0
+            detail.append(f"prix payé médian {e['prix_median']:.0f} €")
+    v = f.get("volume")
+    if isinstance(v, (int, float)) and v > 0:
+        pts += min(1.5, math.log10(v) / 3)               # 1 000 -> 1 ; 30 000 -> 1,5
+        detail.append(f"Google {int(v)}/mois")
+    c = f.get("vendeurs")
+    if isinstance(c, int):
+        pts += 0.6 if c <= 4 else 0 if c <= 9 else -0.8
+    if not detail:
+        return {"proba_vente_7j": None, "proba_detail": []}
+    proba = round(100 / (1 + math.exp(-(pts - 2.2))))   # ≈ 50 % quand les signaux sont moyens
+    return {"proba_vente_7j": max(5, min(95, proba)), "proba_detail": detail}

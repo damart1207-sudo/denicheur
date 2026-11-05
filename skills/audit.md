@@ -61,6 +61,12 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 ```
 `prix_revente_verifie`, `plateforme_verifiee` et `marge_nette_verifiee` seulement quand le prix a été vérifié.
 
+## Arbitrage Europe : écarts de 65 % et plus (consigne de David, 05/11/2026)
+À chaque passage, pour chaque ligne de `data/arbitrage.json` avec `ecart_pct` ≥ 65 sans avis dans `data/arbitrage_audit.json` :
+chercher le neuf le moins cher hors Amazon, regarder la moyenne 90 j, la marque, la taille ou pointure, la demande, puis écrire
+`{"<asin>": {"verdict": "à tester|rejeté", "neuf_fr": 0, "neuf_ou": "...", "revente": 0, "marge": 0, "commentaire": "..."}}`.
+Mêmes plafonds que l'audit (85 % du neuf, haut de l'occasion). La page montre ces lignes en tête de l'onglet, avec liens et détails.
+
 ## Après l'audit
 `python -m denicheur.apres_audit` : recalcule le championnat et reconstruit `saas/index.html`.
 Puis `python saas/rapport_david.py` : la page à onglets de David (`data/rapport_david.html`). Lire `skills/rapport.md` :

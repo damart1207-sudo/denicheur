@@ -30520,17 +30520,17 @@
    "raison": "concurrence trop forte (16 vendeurs)"
   },
   "verdict": {
+   "commentaire": "Toujours pas de prix neuf fiable en France pour le Core 300 simple : 123comparer ne montre que des vendeurs marketplace à 216-240 €, Fnac est en rupture, Darty n'a pas de fiche pour ce modèle (le Core 300S Pro, mieux équipé, y est à 129,99 €), et les 109,99 € de levoit.fr viennent d'une page ancienne de Clubic. Face à ce modèle supérieur à 129,99 €, 94,99 € ferait environ 27 % de moins, mais ce n'est pas le même produit. Amazon.es refuse la lecture automatique : prix de 89,99 € et port vers la France non confirmés.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": "Inconnue",
-   "demande_confirmee": false,
-   "commentaire": "Toujours pas de prix neuf actuel fiable pour le Core 300 en France : achatmoinscher dit 204,12 € (une seule fiche), Radins.com affiche à la fois 149,99 € et environ 109 € (avril 2026), Clubic relevait 96,24 € sur Amazon et 109,99 € chez Levoit (avril 2025). Pas de fiche Core 300 chez PcComponentes France. À 94,99 € port compris, l'économie passerait sous 15 % face à 109,99 €. Envoi vers la France non confirmé.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
-   "economie_pct": null
+   "demande_confirmee": false
   },
-  "verifie_le": "2026-11-04T23:48+00:00"
+  "verifie_le": "2026-11-05T00:53+00:00"
  },
  {
   "id": "28ca36ab77",
@@ -31578,7 +31578,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-04T23:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -31723,6 +31723,18 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit (lot de 4 QP240/50), mais le prix de 25,49 € n'est pas confirmé. Il repose sur le code ACCESS15, absent de la page Boulanger lue le 05/11 ; lors de son édition d'août 2025, ce code ne marchait qu'avec l'achat d'un appareil électroménager ou multimédia en plus des accessoires. Sans le code, Boulanger est à 29,99 € (livraison offerte) : c'est le prix neuf le plus bas, donc aucune économie. Même avec le code, on arrive tout juste à 15,0 %, et une annonce eBay de particulier affiche 26,70 € port compris (quantité non précisée). Revente : perte ou gain nul (ne dépasse pas 2 € sur Vinted/Leboncoin).",
+   "prix_neuf_min_idealo": 29.99,
+   "source_prix_ref": "Boulanger 29,99 € livraison offerte (page produit + 123comparer, 05/11) ; Fnac et Darty 35,99 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T00:53+00:00"
  }
 ]

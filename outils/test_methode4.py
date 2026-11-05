@@ -6,7 +6,7 @@ import gzip, html as H, os, re, sys
 from datetime import datetime
 from zoneinfo import ZoneInfo
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from denicheur import shopping, telegram  # noqa: E402
+from denicheur import shopping, telegram, meme_produit  # noqa: E402
 from pc.collecteur import extraire  # noqa: E402
 
 import json
@@ -51,20 +51,30 @@ for a in cands:
                 v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
                 vs.append(v)
     vs.sort(key=lambda v: v["total"])
+    # MÊME PRODUIT ? (quantité, variante, caractéristiques) : on ne garde comme référence que des offres du même produit exact
+    verif, vs_ok = [], []
+    for v in vs[:4]:
+        r = meme_produit.verifier(a["titre"], v.get("titre") or (f or {}).get("titre") or "", a["prix"], v["total"])
+        v["meme"] = r
+        if r["meme"] is not False:
+            vs_ok.append(v)
+        verif.append(f"{v.get('marchand')} : {'✅' if r['meme'] else '❌' if r['meme'] is False else '❓'} {r['raison']}")
+    vs = vs_ok
     ecart = round((1 - a["prix"] / vs[0]["total"]) * 100) if vs else None
-    bingo = ecart is not None and ecart >= 20
+    bingo = ecart is not None and ecart >= 20 and vs[0]["meme"]["meme"] is True
+    a["verif_txt"] = "<br>".join(verif)
     bingos += bingo
     autre = (f"<a href='{H.escape(vs[0].get('lien') or '#')}'>{vs[0]['total']} € — {H.escape(str(vs[0]['marchand']))}</a>"
              + (f"<br><small>2e : {vs[1]['total']} € — {H.escape(str(vs[1]['marchand']))}</small>" if len(vs) > 1 else "")) if vs else "aucun autre marchand français trouvé"
     rows += (f"<tr style='background:{'#d9f7d9' if bingo else '#fff'}'><td>{H.escape(a['titre'][:90])}</td><td><a href='{H.escape(a.get('lien') or '#')}'><b>{a['prix']} €</b> — {H.escape(a.get('marchand') or '')}</a><br><small>{H.escape(a['description'][:60])}</small></td>"
-             f"<td>{H.escape((f or {}).get('titre') or '—')}</td><td>{autre}</td><td>{len(vs)}</td><td>{(str(ecart) + ' %') if ecart is not None else '—'}</td><td><b>{'BINGO' if bingo else ''}</b></td></tr>")
+             f"<td>{H.escape((f or {}).get('titre') or '—')}<br><small>{a.get('verif_txt', '')}</small></td><td>{autre}</td><td>{len(vs)}</td><td>{(str(ecart) + ' %') if ecart is not None else '—'}</td><td><b>{'BINGO' if bingo else ''}</b></td></tr>")
     print(("BINGO " if bingo else "      ") + f"{a['prix']:>8} | {a['titre'][:45]:45s} | autres FR : {vs[0]['total'] if vs else '-'} ({vs[0]['marchand'] if vs else '-'}) | écart {ecart}")
 page = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Test méthode 4</title>
 <style>body{{font-family:system-ui;margin:12px;background:#fff;color:#111}}table{{border-collapse:collapse;font-size:13px}}td,th{{border:1px solid #ccc;padding:4px 6px;vertical-align:top}}th{{background:#eee}}</style>
 <h2>Test méthode 4 — Black Friday ManoMano comparé au marché français — {heure}</h2>
 <p>Prix ManoMano lus dans les données de la page (pas à l'écran). Comparaison avec la fiche produit Google exacte, vendeurs NEUFS français uniquement
-(ManoMano, occasion, revente et comparateurs exclus). <b>BINGO</b> = ManoMano ≥ 20 % moins cher que le moins cher des autres marchands français. Bingos : <b>{bingos}</b> sur {len(cands)}.</p>
-<table><tr><th>Produit ManoMano</th><th>Prix ManoMano</th><th>Fiche Google retenue</th><th>Moins cher ailleurs en France (port compris)</th><th>Marchands FR</th><th>Écart</th><th>Verdict</th></tr>{rows}</table></html>"""
+(ManoMano, occasion, revente et comparateurs exclus). <b>BINGO</b> = ManoMano ≥ 20 % moins cher que le moins cher des autres marchands français, ET même produit confirmé (quantité du lot, variante, caractéristiques ; ✅ confirmé, ❌ différent, ❓ non confirmé). Bingos : <b>{bingos}</b> sur {len(cands)}.</p>
+<table><tr><th>Produit ManoMano</th><th>Prix ManoMano</th><th>Fiche Google retenue + contrôle « même produit »</th><th>Moins cher ailleurs en France (port compris)</th><th>Marchands FR</th><th>Écart</th><th>Verdict</th></tr>{rows}</table></html>"""
 open("data/test_methode4.html", "w", encoding="utf-8").write(page)
 print("BINGOS", bingos)
 telegram.envoyer_fichier("data/test_methode4.html", f"Test méthode 4 ({heure}) : ManoMano Black Friday vs marché français — {bingos} bingos")

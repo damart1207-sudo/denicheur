@@ -49,6 +49,8 @@ def prix_officiel(h):
 
 
 def controler(x, timeout=25):
+    if x.get("prix_verifie") is True:  # déjà relu sur la fiche produit par le PC (sites qui bloquent le cloud, ex. ManoMano)
+        return {"statut": "ok", "prix_page": x.get("prix_page") or x.get("prix")}
     lien = x.get("lien") or ""
     k = x.get("keepa") or {}
     if re.search(r"amazon\.", lien) and k.get("prix_neuf"):

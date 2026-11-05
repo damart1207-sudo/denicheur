@@ -101,7 +101,7 @@ def examiner(a, nom, maintenant, regles, deja):
         return None
     if not ((ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85))):
         return None
-    x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie")},
+    x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie", "prix_verifie", "prix_page", "prix_carte")},
          "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
          "economie_pct": round((1 - ecart) * 100) if ecart else None,
          "type": "bon_plan", "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),

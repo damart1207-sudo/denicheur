@@ -291,6 +291,64 @@ def cartes_vers_annonces(cartes, source, pays, marchand):
     return out
 
 
+JS_PRIX_FICHE = r"""
+() => {
+  const T = e => (e.textContent || '').replace(/\s+/g, ' ').trim();
+  const h1 = document.querySelector('h1');
+  const cands = [...document.querySelectorAll('[itemprop=price],[class*=price],[data-testid*=price],[class*=Price]')]
+     .filter(e => !e.closest('s,del,[class*=strike],[class*=old],[class*=crossed],nav,header,footer,[class*=similar],[class*=recommend],[class*=carousel]'))
+     .filter(e => /\d/.test(T(e)) && /€/.test(T(e)) && T(e).length < 25);
+  if (!cands.length) return null;
+  // le prix le plus gros affiché, le plus proche du titre
+  let best = null, bestScore = -1;
+  for (const e of cands) {
+    const fs = parseFloat(getComputedStyle(e).fontSize) || 0;
+    const d = h1 ? Math.abs(e.getBoundingClientRect().top - h1.getBoundingClientRect().top) : 0;
+    const score = fs * 10 - d / 50;
+    if (score > bestScore) { bestScore = score; best = e; }
+  }
+  const t = T(best).replace(/[\s\u00a0\u202f]/g, '');
+  const m = t.match(/(\d+(?:[.,]\d{3})*)(?:[.,](\d{1,2}))?€/);
+  if (!m) return null;
+  return parseFloat(m[1].replace(/[.,]/g, '') + '.' + (m[2] || '0'));
+}
+"""
+VERIF_MAX = 25        # fiches produit relues par tour (les plus fortes remises d'abord)
+VERIF_REMISE_MIN = 30  # % : on relit la fiche des produits remisés d'au moins 30 %
+
+
+def verifier_fiches(page, annonces):
+    """Relit la fiche de chaque produit fortement remisé : prix des données structurées, sinon le prix principal affiché.
+    Corrige le prix si la carte a été mal lue ; marque prix_verifie (True/False). Incident Makita LS1019L du 05/11."""
+    sys.path.insert(0, RACINE)
+    from denicheur.verif_prix import prix_officiel
+    def remise(a):
+        m = re.search(r"-(\d+) %", a.get("description") or "")
+        return int(m.group(1)) if m else 0
+    cibles = sorted([a for a in annonces if remise(a) >= VERIF_REMISE_MIN and a.get("lien", "").startswith("http")], key=lambda a: -remise(a))[:VERIF_MAX]
+    for a in cibles:
+        try:
+            page.goto(a["lien"], wait_until="domcontentloaded", timeout=40000)
+            page.wait_for_timeout(2500 + random.randint(0, 1500))
+            p = prix_officiel(page.content())
+            if p is None:
+                p = page.evaluate(JS_PRIX_FICHE)
+        except Exception:
+            p = None
+        if not p:
+            a["prix_verifie"] = False
+            continue
+        a["prix_page"] = p
+        if abs(p - a["prix"]) / max(p, 1) <= 0.05:
+            a["prix_verifie"] = True
+        else:
+            a["prix_carte"], a["prix"] = a["prix"], p
+            a["prix_verifie"] = True
+            a["description"] = (a.get("description") or "") + f" (prix corrigé sur la fiche : {p} €, carte lue {a['prix_carte']} €)"
+        time.sleep(1 + random.random() * 2)
+    return len(cibles)
+
+
 def liberer_profil(profil):
     """Ferme les Chrome du robot restés ouverts sur CE profil (tour planté, fenêtre de connexion oubliée).
     Ton Chrome personnel n'est jamais touché (autre profil)."""
@@ -393,6 +451,10 @@ def collecter(connexion=False):
                 etat[source] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:120]}"}
             print(source, etat[source])
             time.sleep(3 + random.random() * 5)
+        try:
+            etat["fiches_verifiees"] = verifier_fiches(page, resultats)
+        except Exception as e:
+            etat["fiches_verifiees"] = f"erreur {type(e).__name__}"
         ctx.close()
     os.makedirs(os.path.dirname(F_SORTIE), exist_ok=True)
     anciens = []

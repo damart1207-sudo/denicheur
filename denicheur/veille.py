@@ -215,7 +215,23 @@ def tour():
         from . import ebay  # gratuit : prix d'occasion et annonces neuves sur eBay pour les annonces prometteuses
         sante.protege("ebay alertes", ebay.controler, [x for x in promet if not x.get("ebay")], maxi=10)
         vol = sante.protege("volumes alertes", fiche.completer_volumes, promet, defaut=None)
+        from . import verif_prix
         for x in a_envoyer:  # fiche de décision complète au fil de l'eau (rouge = rien envoyé)
+            if fiche.evaluer(x, vol or {})["feu"] == "rouge":
+                continue
+            # contrôle du prix sur la fiche du produit AVANT d'alerter (incident Makita LS1019L du 05/11)
+            v = sante.protege("contrôle prix", verif_prix.controler, x, defaut={"statut": "inconnu", "prix_page": None}) or {}
+            x["controle_prix"] = v
+            if v.get("statut") == "different" and v.get("prix_page"):
+                delta = v["prix_page"] - x["prix"]
+                x["prix_annonce_initial"], x["prix"] = x["prix"], v["prix_page"]
+                if x.get("cout_achat"):
+                    x["cout_achat"] = round(x["cout_achat"] + delta, 2)
+                for c in x.get("canaux") or []:
+                    if isinstance(c, dict) and isinstance(c.get("marge_nette"), (int, float)):
+                        c["marge_nette"] = round(c["marge_nette"] - delta, 2)
+            elif v.get("statut") != "ok" and str(x.get("source", "")).startswith("pc:"):
+                continue  # prix lu sur une page par le PC et non confirmé par la fiche produit : pas d'alerte
             if True:
                 if (x.get("economie_pct") or 0) >= 60 or x.get("signal_erreur_prix"):
                     x["erreur_prix_probable"] = True  # sous 40 % du neuf : erreur de prix probable -> commander vite, 1 unité, attendre l'expédition

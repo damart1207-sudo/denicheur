@@ -68,9 +68,14 @@ for r in moisson.fiches([z["asin"] for z in de], "FR"):
         if z["asin"] == r["asin"]:
             z["prix_amazon_fr"] = r.get("neuf")
 
-res = shopping.chercher([z.get("ean") or (z["titre"] or "")[:60] for z in choix], "FR")
+def _req(z):  # requête façon acheteur : marque + début du titre (l'EAN seul ne donne presque rien sur Google Shopping)
+    t = _re.sub(r"[\[\(].*?[\]\)]|[,|–-].*$", "", z["titre"] or "").strip()
+    return " ".join(t.split()[:7])
+res = shopping.chercher([_req(z) for z in choix], "FR")
+print("Google Shopping, offres brutes par requête :", {k[:30]: len(v) for k, v in res.items()})
 for z in choix:
-    q = z.get("ean") or (z["titre"] or "")[:60]
+    q = _req(z)
+    z["requete"] = q
     mots = set(_re.findall(r"[a-z0-9]{3,}", ((z.get("marque") or "") + " " + (z["titre"] or "")[:70]).lower()))
     def _meme(o):  # même produit : au moins la moitié des mots importants en commun, prix plausible (pas un accessoire)
         mo = set(_re.findall(r"[a-z0-9]{3,}", (o["titre"] or "").lower()))

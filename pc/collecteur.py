@@ -115,7 +115,9 @@ PAGES = [
     ("leboncoin-tendances", "https://www.leboncoin.fr/", "FR", "Leboncoin (recherches populaires)"),
     ("vinted-tendances", "https://www.vinted.fr/", "FR", "Vinted (tendances)"),
     ("jd-classement", "https://top.jd.com/", "CN", "JD.com (classement des ventes)"),
-    ("jd-phb", "https://www.jd.com/phb/", "CN", "JD.com (classement des ventes)"),
+    ("jd-rank-m", "https://ranking.m.jd.com/", "CN", "JD.com (classement des ventes)"),
+    ("jd-rank-pc", "https://www.jd.com/rank/", "CN", "JD.com (classement des ventes)"),
+    ("smzdm-top", "https://www.smzdm.com/top/", "CN", "SMZDM (classement)"),
 ]
 PRIX = re.compile(r"(\d{1,4}(?:[  ]\d{3})?[,.]\d{2})\s?€")
 
@@ -130,7 +132,7 @@ def _num(t):
 def extraire_jd(h, source, marchand):
     """Classement JD.com : produits dans l'ordre de la page (liens item.jd.com/<n>.html), titre, prix en yuans s'il est là."""
     out, vus = [], set()
-    for m in re.finditer(r'href="(?:https?:)?//item\.jd\.com/(\d+)\.html"[^>]*>(.{0,1500}?)</a>', h, re.S):
+    for m in re.finditer(r'href="(?:https?:)?//item(?:\.m)?\.jd\.com/(?:product/)?(\d+)\.html[^"]*"[^>]*>(.{0,1500}?)</a>', h, re.S):
         sku = m.group(1)
         if sku in vus:
             continue

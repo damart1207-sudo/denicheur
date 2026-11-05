@@ -275,11 +275,14 @@ def passage(nom, test=False):
                 if pi.get("gtin") and not c.get("ean"):
                     c["ean"] = str(pi["gtin"])
             elif i < nb_idealo:
+                apify.CONTEXTE["denicheur"] = "P"  # budget idealo réservé au passage, indépendant de la veille
                 try:
                     pi = apify.prix_idealo(nom_p)
                 except Exception as e:
                     pi = None
                     c["idealo_erreur"] = type(e).__name__
+                finally:
+                    apify.CONTEXTE["denicheur"] = "A"
                 if pi:
                     c["idealo"] = pi
                     pp = c["prix_plancher"]

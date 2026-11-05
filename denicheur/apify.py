@@ -16,8 +16,9 @@ from . import comparateurs, journal
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafond Apify côté compte : 40 $/mois
 # plafonds par jour (estimés d'après les tarifs) pour que le crédit gratuit tienne tout le mois :
-# A (vérifications idealo/Leboncoin/Vinted des alertes + passage) 0,55 $ ; B (tendances) 0,15 $ ; C (chasse ciblée) 0,30 $ ; D (Vinted inter-pays) 0,10 $
-PLAFOND_JOUR_USD = {"A": 0.55, "B": 0.15, "C": 0.30, "D": 0.10}  # ≈ 1,10 $/jour, soit ~33 $/mois
+# A (vérifications idealo/Leboncoin/Vinted des alertes) 0,55 $ ; P (idealo des trois passages, à part : le 05/11 la veille avait vidé A avant midi) 0,15 $ ;
+# B (tendances) 0,15 $ ; C (chasse ciblée) 0,15 $ ; D (Vinted inter-pays) 0,10 $
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.15, "B": 0.15, "C": 0.15, "D": 0.10}  # ≈ 1,10 $/jour, soit ~33 $/mois
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005)}

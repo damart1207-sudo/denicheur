@@ -112,6 +112,18 @@
     "qwen": [
       "gemma",
       "nemotron_nv"
+    ],
+    "nemotron_nv": [
+      "gptoss",
+      "qwen"
+    ],
+    "gemma": [
+      "qwen",
+      "gptoss"
+    ],
+    "deepseek": [
+      "gptoss",
+      "qwen"
     ]
   },
   "reserve_hors_equipe": [

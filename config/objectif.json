@@ -1,13 +1,26 @@
 {
-  "_note": "Règles de David (05/11/2026) pour la marge dynamique de Rebifftout (chasse et vente directe).",
+  "_note": "Règles de David (05/11/2026) pour le prix de vente Rebifftout (chasse et vente directe).",
   "objectif_mensuel_net_eur": 600,
-  "detail": {"investissement_eur": 300, "benefice_eur": 300},
+  "detail": {
+    "investissement_eur": 300,
+    "benefice_eur": 300
+  },
   "marge_plancher_net_eur": 10,
-  "partage_surplus_client": 0.5,
   "affichage_client": {
     "delai": "nombre de jours seulement, jamais la provenance ni le pays d'expédition",
     "source": "jamais le marchand ni le pays d'achat",
     "prix_reference": "prix le plus bas en France (public, comparateurs)"
   },
-  "douane_hors_ue": "toujours payée par nous à la commande (jamais de frais à la livraison pour le client) ; sinon la source n'est pas utilisée"
+  "douane_hors_ue": "toujours payée par nous à la commande (jamais de frais à la livraison pour le client) ; sinon la source n'est pas utilisée",
+  "prix_client": {
+    "cout_total": "prix d'achat + TVA d'import (hors UE) + port + douane + frais Stripe + cotisations micro-entreprise",
+    "regle": "le client paie MOINS que son prix maximum : prix client = prix max - remise ; remise = part du surplus (prix max - coût total)",
+    "remise_part_du_surplus": {
+      "avant_objectif": 0.3,
+      "apres_objectif": 0.5
+    },
+    "exemple": "max 200 €, coût total 100 € -> surplus 100 € -> remise 30 € -> prix client 170 €, marge 70 €",
+    "declenchement_min_marge_nette_eur": 10
+  },
+  "colis_hors_europe": "acceptés (Chine compris) ; produit authentique obligatoire, vérifié avant achat"
 }

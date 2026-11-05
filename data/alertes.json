@@ -32566,7 +32566,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T06:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 72.88,
@@ -32710,6 +32710,18 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
+  },
+  "verifie_le": "2026-11-05T06:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Le robot a lu la fiche amazon.com à 06h40 : version américaine (US QWERTY, ANSI, sans prix affiché, livraison aux États-Unis), alors que le bon plan annonce la version ISO ; prix de 13,16 à 13,64 € non confirmé sur une fiche Amazon européenne, livraison en France non prouvée, erreur de prix probable. La référence idealo de l'alerte (GMMK Pro TKL) est un autre clavier. Neuf en France pour le vrai modèle : 54,60 € port gratuit sur PcComponentes.fr (vendeur ZOOMICI FR, lu le 05/11). Dernier bon plan Amazon comparable en ISO sur Chollometro : 24,95 €. Revente non confirmée : aucune annonce réelle.",
+   "prix_neuf_min_idealo": 54.6,
+   "source_prix_ref": "PcComponentes.fr, 05/11 : 54,60 € livré (marketplace ZOOMICI FR, GMMK TKL ISO barebone)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -32735,7 +32747,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T06:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 44.14,
@@ -32909,6 +32921,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (34 vendeurs)"
+  },
+  "verifie_le": "2026-11-05T06:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Fiche PlayStation Store Espagne lue par le robot à 06h40 : 9,99 € en téléchargement. C'est un jeu numérique du store espagnol : il ne s'achète pas avec un compte français et ne se revend pas. Aucune preuve du même prix sur le store français aujourd'hui (dernier relevé français daté de septembre : 12,49 €, promo terminée). L'alerte comparait à une boîte PS5 et le champ idealo est le pack Remake + Rebirth, un autre produit. Boîte neuve en France : 36,57 € livré sur Amazon (achatmoinscher, 05/11).",
+   "prix_neuf_min_idealo": 36.57,
+   "source_prix_ref": "achatmoinscher, 05/11 : Amazon 36,57 € livré (boîte PS5, vendeur PROGAMES), Carrefour et Fnac 36,99 €",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

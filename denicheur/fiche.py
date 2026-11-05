@@ -123,21 +123,26 @@ def evaluer(x, vol=None):
     if isinstance(vendeurs, int) and (vendeurs >= 10 or (vendeurs >= 5 and (ecart or 0) < 15)):
         f["feu"], f["raison"] = "rouge", f"concurrence trop forte ({vendeurs} vendeurs)"
         return f
-    # VERT seulement si tout se croise
+    # VERT = l'affaire tient (règle de David, 05/11, cas Dyson V12s) : bénéfice ≥ 20 €, prix neuf France connu et
+    # au moins 15 % au-dessus de notre achat, pas de signal contraire connu. Les données manquantes (concurrence,
+    # volume, occasion) sont affichées « à compléter » mais ne bloquent plus le vert.
+    f["a_completer"] = []
     if marge < MARGE_MIN:
         f["manque"].append(f"bénéfice sous {MARGE_MIN} €")
-    if vendeurs is None:
-        f["manque"].append("concurrence inconnue")
-    if v is None:
-        f["manque"].append("volume de recherche inconnu")
-    elif v < VOLUME_MIN:
-        f["manque"].append(f"peu recherché ({v}/mois)")
-    if occ_bas is None:
-        f["manque"].append("prix d'occasion inconnus")
-    elif f["prix_vente"] and occ_bas and f["vendre_sur"] in ("vinted", "leboncoin", "facebook") and f["prix_vente"] > occ_haut * 1.1:
-        f["manque"].append("revente au-dessus des prix d'occasion vus")
     if neuf_min is None:
         f["manque"].append("prix neuf ailleurs inconnu")
+    elif ecart is not None and ecart < 15:
+        f["manque"].append(f"seulement {ecart} % sous le prix France")
+    if occ_bas is not None and f["prix_vente"] and f["vendre_sur"] in ("vinted", "leboncoin", "facebook") and f["prix_vente"] > occ_haut * 1.1:
+        f["manque"].append("revente au-dessus des prix d'occasion vus")
+    if vendeurs is None:
+        f["a_completer"].append("concurrence")
+    if v is None:
+        f["a_completer"].append("volume de recherche")
+    elif v < 300:
+        f["a_completer"].append(f"peu recherché sous ce nom exact ({v}/mois)")
+    if occ_bas is None:
+        f["a_completer"].append("prix d'occasion")
     f["feu"] = "vert" if not f["manque"] else "orange"
     f.update(probabilite_vente(x, f))
     return f

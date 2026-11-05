@@ -90,7 +90,10 @@ def alerte(x, vol=None):
     x["fiche"] = f
     if f["feu"] == "rouge":
         return False
-    rond = {"vert": "🟢 <b>VERT</b> — tout se croise", "orange": "🟠 <b>ORANGE</b> — à confirmer"}[f["feu"]]
+    if f["feu"] == "vert" and (x.get("controle_prix") or {}).get("statut") not in ("ok", "different"):
+        f["feu"] = "orange"
+        f["manque"] = f["manque"] + ["prix non revérifié sur la fiche"]
+    rond = {"vert": "🟢 <b>VERT</b> — l'affaire tient", "orange": "🟠 <b>ORANGE</b> — à confirmer"}[f["feu"]]
     def n(v):
         return f"{v:,}".replace(",", " ") if isinstance(v, int) else "inconnu"
     conc = f["vendeurs"]
@@ -107,7 +110,8 @@ def alerte(x, vol=None):
              f"💰 Bénéfice net : <b>{_eur(f['benefice'])}</b>\n"
              + (f"🎯 Probabilité de vendre en 7 jours : <b>{f['proba_vente_7j']} %</b> ({_e(' · '.join(f['proba_detail']))}) — estimation\n"
                 if f.get("proba_vente_7j") is not None else "")
-             + (f"⚠️ Manque : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
+             + (f"⚠️ Bloque le vert : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
+             + (f"ℹ️ À compléter (ne bloque pas) : {_e(', '.join(f.get('a_completer') or []))}\n" if f.get('a_completer') else "")
              + ("✅ Prix vérifié sur la fiche du produit\n" if (x.get("controle_prix") or {}).get("statut") == "ok"
                 else f"🔁 Prix corrigé d'après la fiche : {_eur((x.get('controle_prix') or {}).get('prix_page'))} (annoncé {_eur(x.get('prix_annonce_initial'))})\n"
                 if (x.get("controle_prix") or {}).get("statut") == "different"

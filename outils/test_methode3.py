@@ -13,7 +13,7 @@ from denicheur import shopping, telegram, verif_prix  # noqa: E402
 
 N = 20
 VERSIONS = re.compile(r"\b(jp|japon|japan|us|usa|import|uk|asia|asie|hk|cn)\b|version (jp|us|uk|asiatique|japonaise)", re.I)
-PAS_LE_PRODUIT = re.compile(r"\+|pack|bundle|lot de|dlc|extension|expansion|season pass|cl[ée] |code|carte cadeau|occasion|reconditionn|"
+PAS_LE_PRODUIT = re.compile(r"\+|pack|bundle|lot de|dlc|extension|expansion|season pass|organi[sz]er|insert|f[üu]r |\bfor\b|sleeves?|rangement|plateau|cl[ée] |code|carte cadeau|occasion|reconditionn|"
                             r"coque|housse|étui|etui|protège|protege|câble|cable|chargeur|support|sticker|skin|compatible", re.I)
 produits = [p for p in sorted(json.load(open("data/bingo.json"))["meilleurs"], key=lambda p: -(p.get("recherches_mois") or 0)) if p.get("mot_cle")][:N]
 recherche = shopping.chercher([p["mot_cle"] for p in produits], "FR", attente_max=240)

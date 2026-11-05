@@ -34,9 +34,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 6,
+"resultats": 7,
 "alertes": 0
 },
 "A | flux:mydealz-new |  | Home & Living": {
@@ -194,9 +194,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 16,
+"recherches": 17,
 "cout_usd": 0.0,
-"resultats": 22,
+"resultats": 23,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Home & Living": {
@@ -224,10 +224,10 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Maison & Habitat",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 2,
-"alertes": 0
+"resultats": 3,
+"alertes": 1
 },
 "A | flux:lesnumeriques-bonsplans |  | ?": {
 "denicheur": "A",
@@ -344,9 +344,9 @@
 "source": "flux:pepper-nl-hot",
 "cible": "",
 "categorie": "Tuin & Doe-het-zelf",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:ldlc-promos |  | High-tech": {
@@ -1017,6 +1017,36 @@
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 9,
+"alertes": 0
+},
+"A | apify:idealo | Tineco Floor One S7 Stretch Ultra | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Tineco Floor One S7 Stretch Ultra",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | Tineco Floor One S7 Stretch Ultra | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Tineco Floor One S7 Stretch Ultra",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Tineco%20Floor%20One%20S7%20Stretch%20Ul | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Tineco%20Floor%20One%20S7%20Stretch%20Ul",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
 "alertes": 0
 }
 }

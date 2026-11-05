@@ -50,8 +50,21 @@ def _noter(b, cout):
     json.dump(b, open(F_BUDGET, "w"), indent=1)
 
 
+F_EXTRA = os.path.join(os.path.dirname(F_BUDGET), "dataforseo_extra.json")
+
+
+def plafond_du_jour():
+    """Plafond quotidien + dépassement exceptionnel accordé par David pour la journée (data/etat/dataforseo_extra.json)."""
+    try:
+        e = json.load(open(F_EXTRA))
+    except (OSError, json.JSONDecodeError):
+        e = {}
+    jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return PLAFOND_JOUR_USD + (float(e.get("extra_usd", 0)) if e.get("jour") == jour else 0)
+
+
 def disponible(cout=0.1):
-    return _auth() is not None and _budget()["depense_usd"] + cout <= PLAFOND_JOUR_USD
+    return _auth() is not None and _budget()["depense_usd"] + cout <= plafond_du_jour()
 
 
 def _poster(chemin, taches, cout):

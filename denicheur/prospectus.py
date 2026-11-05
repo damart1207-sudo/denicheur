@@ -102,9 +102,15 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
             for i, u in enumerate(urls[:PAGES_MAX], 1):
                 if budget <= 0:
                     break
-                try:
-                    img = _get(u, binaire=True)
-                except Exception:
+                img = None
+                for v in (u, u.split("?")[0] + "?impolicy=SEO-BROCHURE-BOX-VIEWER", u.split("?")[0] + "?impolicy=previews"):
+                    try:
+                        img = _get(v, binaire=True)
+                        break
+                    except Exception:
+                        continue
+                if not img:
+                    bilan["erreurs"].append(f"{ens} page {i} : image refusée")
                     continue
                 budget -= 1
                 bilan["pages"] += 1
@@ -117,7 +123,8 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
                                      "valable_du": p.get("valable_du"), "valable_au": p.get("valable_au"), "conditions": p.get("conditions"),
                                      "marchand": ens.replace("-", " "), "prospectus": cid, "page": i,
                                      "lien": f"https://www.bonial.fr/Enseignes/{ens}", "vu": jour})
-            base["lus"][cid] = {"enseigne": ens, "jour": jour, "pages": min(len(urls), PAGES_MAX)}
+            if bilan["pages"]:  # marqué « lu » seulement si des pages ont vraiment été lues
+                base["lus"][cid] = {"enseigne": ens, "jour": jour, "pages": min(len(urls), PAGES_MAX)}
     bilan["produits"] = len(nouveaux)
     garder = [p for p in base["produits"] if (p.get("valable_au") or p.get("vu", "")) >= jour[:10] or p.get("vu", "") >= jour]
     base = {"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "bilan": bilan,

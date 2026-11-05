@@ -33758,7 +33758,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T07:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -33915,6 +33915,18 @@
     "revente au-dessus des prix d'occasion vus"
    ],
    "feu": "orange"
+  },
+  "verifie_le": "2026-11-05T07:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée (même règle que les autres offres Amazon Espagne). Bon produit (Mars Gaming MC-LCDPRO). Chollometro, lu par le robot à 08h47 : offre active, 69,90 € (68,51 € dans l'alerte), mais son lien mène à la fiche amazon.com et Amazon Espagne refuse la lecture : couleur, envoi vers la France et frais pour ce gros colis inconnus. Neuf en France : 99,49 € (achatmoinscher), 99,75 € livré chez Amazon en blanc, 102,99 € livré chez PcComponentes. Avec 5 € de port : 74,90 €, soit 24,7 % ; il faudrait moins de 84,57 € livrés pour garder 15 %. Revente non retenue : plafond 85 % du neuf (84,57 €), soit 9,67 € et 12,9 % du coût.",
+   "prix_neuf_min_idealo": 99.49,
+   "source_prix_ref": "achatmoinscher 05/11 ; PcComponentes.fr 102,99 € livré ; Keepa/Amazon.fr 101,27 €",
+   "economie_pct": 24.7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue (bon plan déjà ancien)",
+   "demande_confirmee": false
   }
  }
 ]

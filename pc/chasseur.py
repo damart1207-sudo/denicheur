@@ -17,7 +17,7 @@ import sys
 import time
 import unicodedata
 import urllib.parse
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from pc.collecteur import PROFIL, pousser  # noqa: E402
@@ -27,6 +27,7 @@ F_SORTIE = os.path.join(RACINE, "data", "pc", "chasse.json")
 F_VUS = os.path.join(RACINE, "data", "pc", "chasse_vus.json")
 SEUIL = 0.65            # sous-coté : ≤ 65 % du prix de référence
 RECHERCHES_MAX = 40     # par tour (rythme humain)
+AGE_MAX_JOURS = 7       # occasion : annonces de moins d'une semaine seulement (règle de David, 05/11)
 PRESSE = re.compile(r"urgent|d[ée]m[ée]nagement|d[ée]barrass|cause d[ée]part|ne sert plus|n[ée]gociable|vite|rapide|cadeau|double emploi|jamais servi|neuf jamais", re.I)
 
 
@@ -89,8 +90,10 @@ def chercher_vinted(page, q):
     h = page.content()
     out = []
     for m in re.finditer(r'"id":(\d+),"title":"((?:[^"\\]|\\.)*)".{0,400}?"price":\{"amount":"([\d.]+)"', h):
+        ts = re.search(r'"timestamp":(\d{10})', h[m.start():m.start() + 3000])
         out.append({"titre": m.group(2).encode().decode("unicode_escape", "ignore"), "prix": float(m.group(3)),
-                    "lien": f"https://www.vinted.fr/items/{m.group(1)}", "site": "vinted"})
+                    "lien": f"https://www.vinted.fr/items/{m.group(1)}", "site": "vinted",
+                    "publie_le": datetime.fromtimestamp(int(ts.group(1)), timezone.utc).strftime("%Y-%m-%d") if ts else None})
     if not out:  # secours : cartes HTML
         for m in re.finditer(r'href="(https://www\.vinted\.fr/items/\d+[^"]*)"[^>]*title="([^"]+)".{0,800}?(\d+[,.]\d{2})\s?€', h, re.S):
             out.append({"titre": m.group(2), "prix": float(m.group(3).replace(",", ".")), "lien": m.group(1), "site": "vinted"})
@@ -106,8 +109,9 @@ def chercher_leboncoin(page, q):
     i = h.find('"ads":[')
     if i > 0:
         for m in re.finditer(r'"list_id":(\d+),.{0,2500}?"subject":"((?:[^"\\]|\\.)*)".{0,3000}?"price":\[(\d+)\]', h[i:i + 400000], re.S):
+            d = re.search(r'"first_publication_date":"(\d{4}-\d{2}-\d{2})', m.group(0))
             out.append({"titre": m.group(2).encode().decode("unicode_escape", "ignore"), "prix": float(m.group(3)),
-                        "lien": f"https://www.leboncoin.fr/ad/x/{m.group(1)}", "site": "leboncoin"})
+                        "lien": f"https://www.leboncoin.fr/ad/x/{m.group(1)}", "site": "leboncoin", "publie_le": d.group(1) if d else None})
     return out[:40]
 
 
@@ -140,7 +144,10 @@ def tour():
                         etat.setdefault("erreurs", []).append(f"{site} {q}: {type(e).__name__}")
                     n += 1
                     etat["annonces_lues"] += len(ann)
+                    limite_age = (datetime.now(timezone.utc) - timedelta(days=AGE_MAX_JOURS)).strftime("%Y-%m-%d")
                     for a in ann:
+                        if a.get("publie_le") and a["publie_le"] < limite_age:
+                            continue  # annonce de plus d'une semaine : souvent déjà vendue ou vendeur peu sérieux (règle de David)
                         ident = hashlib.sha1(a["lien"].encode()).hexdigest()[:10]
                         if ident in vus:
                             continue
@@ -158,7 +165,8 @@ def tour():
                                         "produit": c["nom"], "origine": c["origine"], "recherche": q, "ref_neuf": c.get("ref_neuf"),
                                         "ref_occasion": c.get("ref_occasion"), "reference": ref, "ecart_pct": round((1 - a["prix"] / ref) * 100) if ref else None,
                                         "signaux": [s for s, v in (("sous-coté", sous_cote), ("vendeur pressé", presse), ("annonce invisible", invisible)) if v],
-                                        "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"), "denicheur": "C"})
+                                        "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"), "denicheur": "C",
+                                        "publie_le": a.get("publie_le")})
                     time.sleep(2 + random.random() * 4)
         ctx.close()
     etat["recherches"] = n

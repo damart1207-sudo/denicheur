@@ -47960,17 +47960,17 @@
    "prix_page": null
   },
   "verdict": {
-   "commentaire": "Prix à confirmer. Le prix de 65 € vient du collecteur StockX pour la pointure US 12 (EU 46) ; frais de traitement variables et livraison StockX en plus (aide StockX lue le 05/11), donc le coût de 70 € de l'alerte n'est pas prouvé. Modèle à confirmer aussi : la fiche Keepa de l'alerte est la version noire, pas la blanche. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, hors promotions (page lue le 05/11), et 119,99 € sur achatmoinscher pour le modèle femme. Prix plus bas possibles chez d'autres revendeurs, à contrôler.",
-   "prix_neuf_min_idealo": 119.99,
-   "source_prix_ref": "Nike.com France lu le 05/11",
-   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "prix StockX variable selon la pointure",
-   "demande_confirmee": false
+   "demande_confirmee": false,
+   "commentaire": "Prix à confirmer. 65 € relevé par le collecteur StockX pour la pointure US 12 (EU 46), sans les frais de traitement et de livraison StockX, donc le coût de 70 € n'est pas prouvé. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, sans promotion (relu le 05/11). La fiche Keepa de l'alerte est la version noire et ne sert pas de référence.",
+   "prix_neuf_min_idealo": 119.99,
+   "source_prix_ref": "Nike.com France, 05/11",
+   "economie_pct": null,
+   "duree_offre": "prix StockX variable selon la pointure"
   },
-  "verifie_le": "2026-11-05T21:52+00:00"
+  "verifie_le": "2026-11-05T22:49+00:00"
  },
  {
   "id": "8c71581d77",
@@ -48018,7 +48018,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -48196,6 +48196,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
+  },
+  "verifie_le": "2026-11-05T22:49+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Le vrai bon plan Mydealz est à 99 € (titre « 99€ bei EURONICS », page lue le 05/11), pas 289,74 € : ce dernier chiffre vient d'une mauvaise lecture de la page. Mais l'offre est celle d'un magasin physique Euronics en Allemagne (Villingen-Schwenningen) et aucune livraison en France n'est prouvée, donc pas achetable depuis la France. Neuf en France : 179 € (fiche Amazon.fr lue par Keepa, cinq vendeurs ; achatmoinscher pareil).",
+   "prix_neuf_min_idealo": 179.0,
+   "source_prix_ref": "Keepa/Amazon.fr et achatmoinscher, 05/11",
+   "economie_pct": null,
+   "duree_offre": "offre de magasin, durée inconnue"
   }
  },
  {
@@ -48244,7 +48256,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:52+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -48401,6 +48413,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T22:49+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "419 € relevé sur ManoMano par le collecteur à 22h11 (prix initial 509 €, -18 %, vendeur Dyson), frais de port à confirmer. Neuf en France : 499 € pour le V12 Detect Slim Absolute chez ManoMano (achatmoinscher lu le 05/11), 649 € chez Boulanger, 699 € chez Darty et Fnac. Soit au mieux 16 % sous le plus bas, à condition que le port soit gratuit, et l'Absolute a plus d'accessoires : il faut encore comparer à l'exacte même version. Le même produit a déjà été vu à 299 € sur Dealabs (offre terminée).",
+   "prix_neuf_min_idealo": 499.0,
+   "source_prix_ref": "achatmoinscher (ManoMano, version Absolute), 05/11",
+   "economie_pct": null,
+   "duree_offre": "vente Black Friday ManoMano"
   }
  },
  {
@@ -48442,7 +48466,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T22:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -48540,7 +48564,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T22:03+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T22:49+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Superdrug livre le Royaume-Uni et l'Irlande (page livraison lue le 05/11) : pas de livraison en France. Et le coût estimé jusqu'en France (39,74 €) dépasse déjà le neuf français à 37,99 € (achatmoinscher, trois boutiques).",
+   "prix_neuf_min_idealo": 37.99,
+   "source_prix_ref": "achatmoinscher, 05/11",
+   "economie_pct": -5,
+   "duree_offre": "inconnue"
+  }
  },
  {
   "id": "b3088a684d",
@@ -48568,7 +48604,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T22:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -48689,7 +48725,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 22:23 UTC : offre active, 148.56 affiché, marchand 202_2 ; pccomponentes.com refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T22:49+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Plus cher qu'en France : 363 € chez PcComponentes (annonce Chollometro), environ 368 € livré, contre 338,90 € neuf sur Amazon.fr (fiche Keepa, moyenne 90 j 339,45 €, 28 vendeurs), même produit LS27DG702EUXEN. Le chiffre 148,56 € relevé sur la page par le robot ne correspond pas à l'annonce et n'a pas été retenu.",
+   "prix_neuf_min_idealo": 338.9,
+   "source_prix_ref": "Keepa/Amazon.fr, 05/11",
+   "economie_pct": -9,
+   "duree_offre": "inconnue"
+  }
  },
  {
   "id": "a77b75a4f7",
@@ -48743,7 +48791,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T22:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -48870,6 +48918,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T22:49+00:00",
+  "verdict": {
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Pas une affaire neuve : annonce Leboncoin d'un particulier à 380 €, rien ne montre que la platine est neuve ni qu'elle est livrable, et le prix ne se compare donc pas au neuf. Neuf en France : 539 € chez Materiel.net (548,95 € livré, achatmoinscher lu le 05/11).",
+   "prix_neuf_min_idealo": 539.0,
+   "source_prix_ref": "achatmoinscher (Materiel.net), 05/11",
+   "economie_pct": null,
+   "duree_offre": "annonce de particulier"
   }
  }
 ]

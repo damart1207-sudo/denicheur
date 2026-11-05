@@ -49519,7 +49519,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T23:40+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -49650,6 +49650,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:41 UTC : offre active, 75.9 affiché, marchand 7530_1 ; fiche amazon.es lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T23:49+00:00",
+  "verdict": {
+   "commentaire": "Prix à confirmer. C'est l'édition drapeau britannique du Leatherman Rebar (Amazon.es, fiche B0GRD5BX7F, en stock), pas le Rebar classique de la fiche Keepa. Page Chollometro relue à 23h41 : 75,90 €, contre 79,20 € dans l'alerte. Aucun prix neuf français trouvé pour cette édition. Repère sur le Rebar classique : 99 € Amazon.fr (Keepa, 05/11), et 79,20 € port gratuit chez military.eu le 04/11, donc l'écart n'est pas acquis.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "pas de référence française pour cette édition ; Rebar classique 99 € Keepa/Amazon.fr, 05/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

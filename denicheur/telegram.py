@@ -93,6 +93,13 @@ def alerte(x, vol=None):
     if f["feu"] == "vert" and x.get("prix_plancher") and (x.get("meme_produit") or {}).get("meme") is not True:
         f["feu"] = "orange"
         f.setdefault("manque", []).append("même produit non confirmé")
+    # écart anormal (≥ 70 % sous le prix France) sans prix confirmé sur la fiche : le plus souvent un prix mal lu
+    # (DJI Osmo « à partir de 275 € » lu 77,56 €, pack Makita 210 € contre 1 639 €) -> jamais vert, pas de bandeau « erreur de prix »
+    if (f.get("ecart_pct") or 0) >= 70 and (x.get("controle_prix") or {}).get("statut") != "ok":
+        x["erreur_prix_probable"] = False
+        if f["feu"] == "vert":
+            f["feu"] = "orange"
+        f.setdefault("manque", []).append(f"écart anormal de {f['ecart_pct']} % : prix probablement mal lu, à vérifier")
     if f["feu"] == "vert" and (x.get("controle_prix") or {}).get("statut") not in ("ok", "different"):
         f["feu"] = "orange"
         f["manque"] = f["manque"] + ["prix non revérifié sur la fiche"]

@@ -9,6 +9,6 @@ for ens in ("Lidl", "Action"):
         print(ens, "prospectus :", [(c, n, len(u), u[:1]) for c, n, u in l[:3]])
     except Exception as e:
         print(ens, "ERREUR", e)
-print(prospectus.tour(["Lidl", "Action"], pages_jour=12))
+print(prospectus.tour(["Lidl", "Action", "E-Leclerc", "Carrefour", "Boulanger", "Darty"], pages_jour=12))
 for p in json.load(open(prospectus.F_SORTIE))["produits"][:25]:
     print(" ", p["marchand"], "|", p["titre"][:60], "|", p["prix"], "| avant", p.get("prix_avant"), "|", p.get("valable_du"), "→", p.get("valable_au"))

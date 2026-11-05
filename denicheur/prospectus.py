@@ -18,7 +18,7 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept-Language": "fr-FR,fr;q=0.9"}
 ENSEIGNES = ["Lidl", "Aldi", "Action", "E-Leclerc", "Carrefour", "Auchan", "Intermarche", "Gifi", "Noz", "Boulanger",
              "Darty", "But", "Conforama", "Brico-Depot", "Leroy-Merlin", "Castorama", "Decathlon", "Intersport", "King-Jouet", "Cultura"]
-PAGES_MAX = 16      # pages lues par prospectus (les premières portent les meilleures affaires)
+PAGES_MAX = 4       # pages accessibles publiquement par prospectus (les premières portent les meilleures affaires)
 PAGES_JOUR = 120    # plafond quotidien de pages envoyées à Gemini
 
 
@@ -35,20 +35,36 @@ def _lire(f, d):
         return d
 
 
-def prospectus_enseigne(enseigne):
-    """[(id, nb_pages, [urls des pages])] des prospectus en cours d'une enseigne."""
-    h = _get(f"https://www.bonial.fr/Enseignes/{enseigne}")
+def page_enseigne(enseigne):
+    return _get(f"https://www.bonial.fr/Enseignes/{enseigne}")
+
+
+def prospectus_enseigne(enseigne, h=None):
+    """[(id, nb_pages, [urls des pages accessibles])] des prospectus en cours (la page publique expose les 1res pages)."""
+    h = h or page_enseigne(enseigne)
     out = []
     for m in re.finditer(r'"contentId":"([0-9a-f-]{36})"', h):
         cid = m.group(1)
-        bloc = h[m.start():m.start() + 20000]
+        bloc = h[m.start():m.start() + 8000]
         n = re.search(r'"pageCount":(\d+)', bloc)
-        urls = list(dict.fromkeys(re.findall(r"https://content-media\.bonial\.biz/" + cid + r"/[^\"'\\\s]+?page_\d+\.jpg", bloc)))
-        nb = int(n.group(1)) if n else len(urls)
-        if not urls and nb:
-            urls = [f"https://content-media.bonial.biz/{cid}/zoomlarge_page_{i}.jpg" for i in range(1, nb + 1)]
-        if cid not in [o[0] for o in out]:
-            out.append((cid, nb, urls))
+        urls = list(dict.fromkeys(re.findall(r'"normal":"(https://content-media\.bonial\.biz/[^"]+)"', bloc)))[:4]
+        if cid not in [o[0] for o in out] and urls:
+            out.append((cid, int(n.group(1)) if n else len(urls), urls))
+    return out
+
+
+def offres_enseigne(enseigne, h=None):
+    """Grille « Promos disponibles dans les catalogues » : marque, produit, prix — déjà structurés (pas besoin d'IA)."""
+    h = h or page_enseigne(enseigne)
+    out = []
+    for m in re.finditer(r'<img alt="Promo ([^"]+?) à ([\d\s ,.]+)\s?€[^"]*"[^>]*src="([^"]+)".*?<p class="text-dark1 truncate text-sm">([^<]*)</p>'
+                         r'<p class="truncate font-semibold">([^<]*)</p>.*?<p class="mr-sm text-primary[^"]*">\s*([\d\s ,.]+)\s?€', h, re.S):
+        marque, produit = m.group(4).strip(), m.group(5).strip()
+        try:
+            prix = float(m.group(6).replace("\u202f", "").replace("\xa0", "").replace(" ", "").replace(",", "."))
+        except ValueError:
+            continue
+        out.append({"nom": produit, "marque": marque, "prix": prix, "image": m.group(3)})
     return out
 
 
@@ -90,11 +106,24 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
         if budget <= 0:
             break
         try:
-            liste = prospectus_enseigne(ens)
+            h = page_enseigne(ens)
+            liste = prospectus_enseigne(ens, h)
+            offres = offres_enseigne(ens, h)
         except Exception as e:
             bilan["erreurs"].append(f"{ens}: {type(e).__name__}")
             continue
         bilan["enseignes"] += 1
+        validite = re.search(r"(\d{2}/\d{2}/\d{4}) - (\d{2}/\d{2}/\d{4})", h)
+        du, au = ((lambda d: f"{d[6:]}-{d[3:5]}-{d[:2]}")(validite.group(1)), (lambda d: f"{d[6:]}-{d[3:5]}-{d[:2]}")(validite.group(2))) if validite else (None, None)
+        for o in offres:
+            if o["prix"] < 15:
+                continue
+            nom = " ".join(x for x in (o["marque"], o["nom"]) if x).strip()
+            nouveaux.append({"id": hashlib.sha1(f"{ens}{nom}{o['prix']}".encode()).hexdigest()[:10], "titre": nom[:160], "prix": o["prix"],
+                             "prix_avant": None, "remise_pct": None, "valable_du": du, "valable_au": au, "conditions": "",
+                             "marchand": ens.replace("-", " "), "prospectus": "offres", "page": 0,
+                             "lien": f"https://www.bonial.fr/Enseignes/{ens}", "vu": jour, "image": o["image"]})
+        bilan["offres_structurees"] = bilan.get("offres_structurees", 0) + len(offres)
         for cid, nb, urls in liste[:3]:
             if cid in base["lus"] or budget <= 0:
                 continue
@@ -103,7 +132,7 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
                 if budget <= 0:
                     break
                 img = None
-                for v in (u, u.split("?")[0] + "?impolicy=SEO-BROCHURE-BOX-VIEWER", u.split("?")[0] + "?impolicy=previews"):
+                for v in (u, u.split("?")[0] + "?impolicy=SEO-BROCHURE-BOX-VIEWER"):
                     try:
                         img = _get(v, binaire=True)
                         break
@@ -125,6 +154,8 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
                                      "lien": f"https://www.bonial.fr/Enseignes/{ens}", "vu": jour})
             if bilan["pages"]:  # marqué « lu » seulement si des pages ont vraiment été lues
                 base["lus"][cid] = {"enseigne": ens, "jour": jour, "pages": min(len(urls), PAGES_MAX)}
+    vus = set()
+    nouveaux = [p for p in nouveaux if not (p["id"] in vus or vus.add(p["id"]))]
     bilan["produits"] = len(nouveaux)
     garder = [p for p in base["produits"] if (p.get("valable_au") or p.get("vu", "")) >= jour[:10] or p.get("vu", "") >= jour]
     base = {"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "bilan": bilan,

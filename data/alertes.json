@@ -47375,7 +47375,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T20:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -47551,7 +47551,19 @@
    "proba_detail": [
     "Google 90/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée (même règle que les autres offres Amazon Espagne). Bon produit (Samsung HW-S60D). Chollometro lu par le robot à 21h07 UTC : offre active à 153,42 €, mais 169 € annoncés au départ, et son lien mène à la fiche amazon.com américaine (HW-S60D/ZA), en stock sans prix affiché. Prix sur Amazon Espagne et envoi vers la France donc non confirmés. Neuf en France : 257,18 € livrés chez Cdiscount, 257,29 € chez PcComponentes (achatmoinscher et fiche PcComponentes lus le 05/11). Sur le papier 38 % sous ce prix, à condition que l'envoi en France existe.",
+   "prix_neuf_min_idealo": 257.18,
+   "source_prix_ref": "achatmoinscher (Cdiscount, livré), 05/11 ; PcComponentes.fr 257,29 € lu le 05/11",
+   "economie_pct": 38.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue, offre Amazon Espagne vue le 05/11",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T21:52+00:00"
  },
  {
   "id": "9c73ea0906",
@@ -47611,7 +47623,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -47736,7 +47748,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T21:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée (même règle que les autres offres Amazon Espagne) et couleur inconnue. Bon produit (Eastpak Padded Pak'r 24L). Chollometro lu par le robot à 21h07 UTC : offre active à 19,99 €, mais son lien mène à la fiche amazon.com américaine, sans prix affiché. Neuf en France : 31,99 € chez Decathlon en noir, bleu marine ou gris (page Decathlon lue le 05/11), 33,50 € sur Amazon.fr, moyenne 90 j 32,46 € (Keepa). Avec 5 € de port estimé : 24,99 €, soit 22 % de moins, mais ce port n'est pas confirmé. Revente : 33 vendeurs sur Amazon.fr, 4 € de marge au mieux, sous les seuils. Amazon.fr est déjà descendu à 19,79 € sur 90 jours.",
+   "prix_neuf_min_idealo": 31.99,
+   "source_prix_ref": "page Decathlon.fr lue le 05/11",
+   "economie_pct": 21.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix qui revient souvent chez Amazon",
+   "demande_confirmee": true
+  },
+  "verifie_le": "2026-11-05T21:52+00:00"
  },
  {
   "id": "fc24e7b6cc",
@@ -47777,7 +47801,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:19+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -47934,7 +47958,19 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
-  }
+  },
+  "verdict": {
+   "commentaire": "Prix à confirmer. Le prix de 65 € vient du collecteur StockX pour la pointure US 12 (EU 46) ; frais de traitement variables et livraison StockX en plus (aide StockX lue le 05/11), donc le coût de 70 € de l'alerte n'est pas prouvé. Modèle à confirmer aussi : la fiche Keepa de l'alerte est la version noire, pas la blanche. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, hors promotions (page lue le 05/11), et 119,99 € sur achatmoinscher pour le modèle femme. Prix plus bas possibles chez d'autres revendeurs, à contrôler.",
+   "prix_neuf_min_idealo": 119.99,
+   "source_prix_ref": "Nike.com France lu le 05/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix StockX variable selon la pointure",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T21:52+00:00"
  },
  {
   "id": "8c71581d77",

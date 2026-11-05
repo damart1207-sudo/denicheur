@@ -135,6 +135,9 @@ def lire_source(source, timeout=25):
             return [], "pas encore de collecte PC"
         limite = (datetime.now(timezone.utc) - timedelta(hours=26)).strftime("%Y-%m-%dT%H:%M")
         return [a for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix")], None
+    if source.get("type") == "telegram":  # chaîne Telegram publique (t.me/s/<chaîne>), sans compte
+        from . import telegram_canaux
+        return telegram_canaux.lire(source, timeout)
     if source.get("type") == "page":
         from . import pages
         return pages.lire(source, timeout)

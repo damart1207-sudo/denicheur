@@ -114,6 +114,7 @@ PAGES = [
     ("tiktok-top-produits", "https://ads.tiktok.com/business/creativecenter/top-products/pc/fr", "FR", "TikTok (top produits)"),
     ("leboncoin-tendances", "https://www.leboncoin.fr/", "FR", "Leboncoin (recherches populaires)"),
     ("vinted-tendances", "https://www.vinted.fr/", "FR", "Vinted (tendances)"),
+    ("ledenicheur-bonsplans", "https://ledenicheur.fr/bons-plans", "FR", "LeDénicheur (baisses de prix)"),
     ("interencheres", "https://www.interencheres.com/", "FR", "Interenchères (enchères)"),
     ("agorastore", "https://www.agorastore.fr/", "FR", "Agorastore (enchères)"),
     ("encheres-domaine", "https://encheres-domaine.gouv.fr/", "FR", "Enchères du Domaine (État)"),

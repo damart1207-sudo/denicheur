@@ -90,9 +90,9 @@ def evaluer(x, vol=None):
     k = x.get("keepa") or {}
     achat = x.get("cout_achat") or x.get("prix")
     pp = x.get("prix_plancher") or {}
-    neufs = [(pp.get("prix_min"), pp.get("ou") or "comparateur"), (k.get("prix_neuf"), "Amazon")]
-    neufs = [(p, o) for p, o in neufs if isinstance(p, (int, float)) and p > 0]
-    neuf_min, neuf_ou = min(neufs) if neufs else (None, None)
+    neufs = [(pp.get("prix_min"), pp.get("ou") or "comparateur", pp.get("lien")), (k.get("prix_neuf"), "Amazon", k.get("lien"))]
+    neufs = [n for n in neufs if isinstance(n[0], (int, float)) and n[0] > 0]
+    neuf_min, neuf_ou, neuf_lien = min(neufs, key=lambda n: n[0]) if neufs else (None, None, None)
     ecart = round((1 - achat / neuf_min) * 100) if achat and neuf_min else None
     vendeurs = x.get("vendeurs_amazon", k.get("nb_vendeurs_neuf"))
     v = (vol.get(cle(x)) or {}).get("v")
@@ -112,7 +112,7 @@ def evaluer(x, vol=None):
     best = max(canaux, key=lambda c: c["marge_nette"], default=None)
     marge = best["marge_nette"] if best else None
     achat_max = round(marge + achat - MARGE_MIN, 2) if best and achat else None
-    f = {"achat": achat, "neuf_min": neuf_min, "neuf_ou": neuf_ou, "ecart_pct": ecart, "vendeurs": vendeurs, "volume": v,
+    f = {"achat": achat, "neuf_min": neuf_min, "neuf_ou": neuf_ou, "neuf_lien": neuf_lien, "ecart_pct": ecart, "vendeurs": vendeurs, "volume": v,
          "occ_bas": occ_bas, "occ_haut": occ_haut, "ventes_30j": x.get("ventes_estimees_30j", k.get("ventes_estimees_30j")),
          "vendre_sur": best.get("canal") if best else None, "prix_vente": best.get("prix_vente") if best else None,
          "benefice": marge, "achat_max": achat_max, "manque": []}

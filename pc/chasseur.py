@@ -61,6 +61,10 @@ def cibles():
     """Produits à chasser : liste de chasse d'Amigo (bingos, hype, idealo) + étagère + arbitrage, avec un prix de référence."""
     cib = {}
     base = _lire(os.path.join(RACINE, "data/base/keepa_index.json"), {})
+    # les produits envoyés par David passent en premier ; liste écrite par Claude : [{"nom": "...", "ref_neuf": 0}]
+    for d in _lire(os.path.join(RACINE, "data/cibles_david.json"), []):
+        if d.get("nom"):
+            cib[d["nom"]] = {"nom": d["nom"], "ref_neuf": d.get("ref_neuf"), "ref_occasion": d.get("ref_occasion"), "origine": "David"}
     for b in _lire(os.path.join(RACINE, "data/bingo.json"), {}).get("bingos", [])[:30]:
         ref = b.get("prix_neuf_france") or b.get("prix")
         if ref:

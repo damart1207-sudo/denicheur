@@ -76,7 +76,8 @@ def rapport_passage(resultat, lien_rapport=None):
                       f"achat {_eur(c.get('prix'))} chez {_e(c.get('marchand'))} ({_e(c.get('pays'))}) · neuf {_eur(pmin)} · "
                       f"revente {_eur(c.get('prix_revente_prudent'))} · marge <b>{_eur(c.get('marge_verifiee'))}</b>"
                       + (f" · concurrents Amazon : {c['vendeurs_amazon']} vendeurs" if c.get('vendeurs_amazon') is not None else "")
-                      + f"\n{_e(c.get('lien'))}")
+                      + f"\n🔗 Annonce la moins chère : {_e(c.get('lien'))}"
+                      + (f"\n🔗 Moins cher en France : {_e((c.get('prix_plancher') or {}).get('lien'))}" if (c.get("prix_plancher") or {}).get("lien") else ""))
     if lien_rapport:
         lignes.append(f"\nRapport complet : {_e(lien_rapport)}")
     return envoyer("\n".join(lignes))
@@ -107,7 +108,8 @@ def alerte(x, vol=None):
              + (f"🎯 Probabilité de vendre en 7 jours : <b>{f['proba_vente_7j']} %</b> ({_e(' · '.join(f['proba_detail']))}) — estimation\n"
                 if f.get("proba_vente_7j") is not None else "")
              + (f"⚠️ Manque : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
-             + f"{_e(x.get('lien'))}")
+             + f"🔗 Annonce la moins chère : {_e(x.get('lien'))}"
+             + (f"\n🔗 Moins cher en France : {_e(f['neuf_lien'])}" if f.get("neuf_lien") else ""))
     return envoyer(texte)
 
 def plus_recherches(n=15):

@@ -30522,7 +30522,7 @@
    "raison": "concurrence trop forte (16 vendeurs)"
   },
   "verdict": {
-   "commentaire": "Toujours pas de prix neuf fiable en France pour le Core 300 simple : 123comparer ne montre que des vendeurs marketplace à 216-240 €, Fnac est en rupture, Darty n'a pas de fiche pour ce modèle (le Core 300S Pro, mieux équipé, y est à 129,99 €), et les 109,99 € de levoit.fr viennent d'une page ancienne de Clubic. Face à ce modèle supérieur à 129,99 €, 94,99 € ferait environ 27 % de moins, mais ce n'est pas le même produit. Amazon.es refuse la lecture automatique : prix de 89,99 € et port vers la France non confirmés.",
+   "commentaire": "Toujours pas de prix neuf fiable en France pour le Core 300 simple : les 204,12 € d'achatmoinscher viennent de vendeurs marketplace, Fnac est en rupture et Darty ne vend que le Core 300S Pro (129,99 €, modèle mieux équipé, donc pas le même produit). Page du bon plan lue par le robot à 02h44 (heure de Paris) : offre encore active. Le prix de 89,99 € et le port vers la France restent à confirmer.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": null,
    "economie_pct": null,
@@ -30532,7 +30532,7 @@
    "duree_offre": "Inconnue",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-05T00:53+00:00"
+  "verifie_le": "2026-11-05T01:58+00:00"
  },
  {
   "id": "28ca36ab77",
@@ -31775,7 +31775,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T01:11+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -31938,7 +31938,19 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit : POCO F8 Pro 12/512 Go. Page du bon plan Dealabs lue par le robot à 02h44 (heure de Paris) : offre active, 361,29 € sur AliExpress avec le code FRD1180. Prix neuf le plus bas en France relevé le 05/11 : 467 € livrés chez Darty Marketplace (512 Go bleu, achatmoinscher) ; Fnac 491,90 € (argent, version européenne) ; Cdiscount 504,98 €. Avec 5 € de port comptés par prudence (366,29 €), l'économie est de 21,6 %. Le prix final livré reste à confirmer : l'entrepôt d'expédition et les taxes ne sont pas indiqués, et une TVA à l'arrivée ferait tomber l'économie sous 15 %. À revoir au prochain tour.",
+   "prix_neuf_min_idealo": 467.0,
+   "source_prix_ref": "achatmoinscher, 05/11 : Darty Marketplace 467 € livraison gratuite (512 Go bleu) ; Fnac 491,90 € (512 Go argent)",
+   "economie_pct": 21.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue (offre publiée le 05/11 vers 2h)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T01:58+00:00"
  },
  {
   "id": "f016d337de",
@@ -31976,7 +31988,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T01:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -32129,6 +32141,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : l'offre à 39,99 € est chez bol.com, magasin néerlandais qui ne livre pas en France (robot, 02h32 heure de Paris). Une fois en France, le jeu est dès 49,99 € neuf (achatmoinscher) ; Amazon.fr 52 € (Keepa), Auchan 59,99 €. Revente impossible : Vinted autour de 38,75 € (6 annonces), sous le coût d'achat.",
+   "prix_neuf_min_idealo": 49.99,
+   "source_prix_ref": "achatmoinscher (robot, 05/11) ; Keepa Amazon.fr 52 €",
+   "economie_pct": null,
+   "prix_revente_verifie": 38.75,
+   "canal": "vinted",
+   "marge_nette_verifiee": null,
+   "duree_offre": "Inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T01:58+00:00"
  }
 ]

@@ -24,9 +24,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "High-Tech",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 5,
+"resultats": 6,
 "alertes": 1
 },
 "A | flux:mydealz-new |  | Gaming": {
@@ -54,9 +54,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Groceries",
-"recherches": 7,
+"recherches": 8,
 "cout_usd": 0.0,
-"resultats": 19,
+"resultats": 20,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Services & Contracts": {
@@ -154,9 +154,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Consoles & Jeux vidéo",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 10,
+"resultats": 11,
 "alertes": 0
 },
 "A | flux:hotukdeals-hot |  | Groceries": {
@@ -194,9 +194,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 11,
+"resultats": 12,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Home & Living": {
@@ -264,9 +264,9 @@
 "source": "flux:pepper-nl-hot",
 "cible": "",
 "categorie": "Elektronica",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Electrónica": {
@@ -424,6 +424,76 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Culture & Leisure",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | Kirby Air Riders Nintendo Switch | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Kirby Air Riders Nintendo Switch",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | Kirby Air Riders Nintendo Switch | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Kirby Air Riders Nintendo Switch",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Kirby%20Air%20Riders%20Nintendo%20Switch | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Kirby%20Air%20Riders%20Nintendo%20Switch",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:pepper-nl-hot |  | Gaming": {
+"denicheur": "A",
+"source": "flux:pepper-nl-hot",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 1
+},
+"A | flux:pepper-nl-hot |  | Mode & Accessoires": {
+"denicheur": "A",
+"source": "flux:pepper-nl-hot",
+"cible": "",
+"categorie": "Mode & Accessoires",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:pepper-nl-hot |  | Home & Living": {
+"denicheur": "A",
+"source": "flux:pepper-nl-hot",
+"cible": "",
+"categorie": "Home & Living",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pepper-nl-hot |  | Cultuur & Vrije Tijd": {
+"denicheur": "A",
+"source": "flux:pepper-nl-hot",
+"cible": "",
+"categorie": "Cultuur & Vrije Tijd",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

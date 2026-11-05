@@ -23,7 +23,9 @@ TAUX = {"US": 0.90, "JP": 0.0058, "UK": 1.17, "CN": 0.125}
 UK_RACINES = ("electronics", "toys", "video games", "beauty", "home", "kitchen", "sports", "computers", "diy", "garden")
 # consommables sans intérêt pour la revente (litière, lingettes, piles, nourriture…)
 CONSOMMABLES = ("litter", "wipes", "batter", "pile", "nappies", "diaper", "food", "jelly", "toilet", "detergent", "capsule",
-                "refill", "pods", "tissue", "bin bag", "bags", "litière", "lingette", "couche", "おむつ", "電池")
+                "refill", "pods", "tissue", "bin bag", "bags", "litière", "lingette", "couche", "おむつ", "電池",
+                "gift card", "digital code", "robux", "cartridge", "ink ", "water filter", "tablets", "lotion", "patch", "shampoo")
+PRIX_MIN_EUR = 15   # sous 15 €, aucune marge possible à la revente
 
 
 def _lire(f, d):
@@ -105,6 +107,8 @@ def amazon(pays, n=10, par_cat=15):
     for a, (i, nom) in pos.items():
         r = labas.get(a)
         if not r or any(c in (r.get("t") or "").lower() for c in CONSOMMABLES):
+            continue
+        if (_eur(r.get("neuf"), pays) or 0) < PRIX_MIN_EUR:
             continue
         croissance = round((r["r90"] / r["r30"] - 1) * 100) if r.get("r30") and r.get("r90") else None
         lst.append({"asin": a, "titre": r.get("t"), "categorie": nom, "position": i, "vendus_mois": r.get("vendus_mois"),

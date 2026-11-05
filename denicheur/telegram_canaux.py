@@ -32,8 +32,14 @@ def lire(source, timeout=25):
             continue
         valeurs = []
         for p in prix:
+            q = p.replace("\u00a0", " ").replace(" ", "")
+            if re.search(r"[.,]\d{1,2}$", q):          # décimales : 25.99 / 25,99
+                entier, dec = re.split(r"[.,](?=\d{1,2}$)", q)
+                q = re.sub(r"[.,]", "", entier) + "." + dec
+            else:                                       # milliers : 1.299 / 1 299
+                q = re.sub(r"[.,]", "", q)
             try:
-                valeurs.append(float(re.sub(r"[  .]", "", p.rsplit(",", 1)[0]) + ("." + p.rsplit(",", 1)[1] if "," in p else "")))
+                valeurs.append(float(q))
             except ValueError:
                 pass
         if not valeurs:

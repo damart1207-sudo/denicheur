@@ -1,206 +1,220 @@
 {
- "_info": "Flux de bons plans lus à chaque passage. type=pepper : réseau Pepper (Dealabs & co), qui donne marchand + prix. Mettre actif=false pour couper une source. type=pepper : lu par l'API GraphQL interne (prix de référence, code promo, marchand), RSS en secours ; graphql=false pour forcer le RSS.",
- "sources": [
-  {
-   "id": "dealabs-tendance",
-   "pays": "FR",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.dealabs.com/rss/tendance"
-  },
-  {
-   "id": "dealabs-nouveaux",
-   "pays": "FR",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.dealabs.com/rss/nouveaux"
-  },
-  {
-   "id": "mydealz-hot",
-   "pays": "DE",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.mydealz.de/rss/hot"
-  },
-  {
-   "id": "hotukdeals-hot",
-   "pays": "UK",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.hotukdeals.com/rss/hot"
-  },
-  {
-   "id": "chollometro-hot",
-   "pays": "ES",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.chollometro.com/rss/hot"
-  },
-  {
-   "id": "lesnumeriques-bonsplans",
-   "pays": "FR",
-   "type": "rss",
-   "actif": true,
-   "url": "https://www.lesnumeriques.com/bons-plans/rss.xml"
-  },
-  {
-   "id": "dealabs-hot",
-   "pays": "FR",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.dealabs.com/rss/hot"
-  },
-  {
-   "id": "mydealz-new",
-   "pays": "DE",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.mydealz.de/rss/new"
-  },
-  {
-   "id": "hotukdeals-new",
-   "pays": "UK",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.hotukdeals.com/rss/new"
-  },
-  {
-   "id": "chollometro-nuevos",
-   "pays": "ES",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.chollometro.com/rss/nuevos"
-  },
-  {
-   "id": "pepper-pl-hot",
-   "pays": "PL",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.pepper.pl/rss/hot"
-  },
-  {
-   "id": "preisjaeger-hot",
-   "pays": "AT",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://www.preisjaeger.at/rss/hot"
-  },
-  {
-   "id": "pepper-nl-hot",
-   "pays": "NL",
-   "type": "pepper",
-   "actif": true,
-   "url": "https://nl.pepper.com/rss/hot"
-  },
-  {
-   "id": "frandroid-bonsplans",
-   "pays": "FR",
-   "type": "rss",
-   "actif": false,
-   "url": "https://www.frandroid.com/bons-plans/feed",
-   "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
-  },
-  {
-   "id": "journaldugeek-bonplan",
-   "pays": "FR",
-   "type": "rss",
-   "actif": false,
-   "url": "https://www.journaldugeek.com/bon-plan/feed/",
-   "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
-  },
-  {
-   "id": "clubic-bonsplans",
-   "pays": "FR",
-   "type": "rss",
-   "actif": false,
-   "url": "https://www.clubic.com/feed/bons-plans.rss",
-   "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
-  },
-  {
-   "id": "01net-bonsplans",
-   "pays": "FR",
-   "type": "rss",
-   "actif": false,
-   "url": "https://www.01net.com/bons-plans/feed/",
-   "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
-  },
-  {
-   "id": "smzdm-haitao",
-   "pays": "CN",
-   "type": "rss",
-   "url": "https://haitao.smzdm.com/feed",
-   "note": "Chine : bons plans import (hype asiatique)",
-   "role": "hype"
-  },
-  {
-   "id": "ppomppu-kr",
-   "pays": "KR",
-   "type": "rss",
-   "url": "https://www.ppomppu.co.kr/rss.php?id=ppomppu",
-   "note": "Corée : forum de bons plans",
-   "role": "hype"
-  },
-  {
-   "id": "ppomppu-kr-etranger",
-   "pays": "KR",
-   "type": "rss",
-   "url": "https://www.ppomppu.co.kr/rss.php?id=ppomppu4",
-   "role": "hype"
-  },
-  {
-   "id": "kakaku-jp",
-   "pays": "JP",
-   "type": "rss",
-   "url": "https://news.kakaku.com/prdnews/rss.asp",
-   "note": "Japon : nouveautés produits kakaku",
-   "role": "hype"
-  },
-  {
-   "id": "ozbargain-au",
-   "pays": "AU",
-   "type": "rss",
-   "url": "https://www.ozbargain.com.au/deals/feed",
-   "role": "hype"
-  },
-  {
-   "id": "slickdeals-us",
-   "pays": "US",
-   "type": "rss",
-   "url": "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1",
-   "note": "USA : hype avant l'Europe",
-   "role": "hype"
-  },
-  {
-   "id": "nike-promos",
-   "pays": "FR",
-   "type": "page",
-   "lecteur": "nike_promos",
-   "url": "https://www.nike.com/fr/w/promotions-3yaep",
-   "categorie": "Mode / sneakers",
-   "note": "validé par David le 04/11 (lecture à rythme humain)"
-  },
-  {
-   "id": "ldlc-promos",
-   "pays": "FR",
-   "type": "page",
-   "lecteur": "ldlc_promos",
-   "url": "https://www.ldlc.com/promotions/",
-   "categorie": "High-tech",
-   "note": "validé par David le 04/11"
-  },
-  {
-   "id": "pepper-it-hot",
-   "pays": "IT",
-   "type": "pepper",
-   "url": "https://www.pepper.it/rss/hot"
-  },
-  {
-   "id": "pc-david",
-   "pays": "FR",
-   "type": "pc",
-   "url": "data/pc/annonces.json",
-   "note": "collecteur sur le PC de David (Fnac, Darty, Boulanger, Cdiscount, Decathlon, ventes privées…), accord du 04/11"
-  }
- ],
- "_info_role_hype": "role = hype : flux étrangers (Asie, USA, Australie) lus pour repérer les produits qui montent là-bas (Amigo), jamais pour acheter : exclus de la veille et du tribunal."
+  "_info": "Flux de bons plans lus à chaque passage. type=pepper : réseau Pepper (Dealabs & co), qui donne marchand + prix. Mettre actif=false pour couper une source. type=pepper : lu par l'API GraphQL interne (prix de référence, code promo, marchand), RSS en secours ; graphql=false pour forcer le RSS.",
+  "sources": [
+    {
+      "id": "dealabs-tendance",
+      "pays": "FR",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.dealabs.com/rss/tendance"
+    },
+    {
+      "id": "dealabs-nouveaux",
+      "pays": "FR",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.dealabs.com/rss/nouveaux"
+    },
+    {
+      "id": "mydealz-hot",
+      "pays": "DE",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.mydealz.de/rss/hot"
+    },
+    {
+      "id": "hotukdeals-hot",
+      "pays": "UK",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.hotukdeals.com/rss/hot"
+    },
+    {
+      "id": "chollometro-hot",
+      "pays": "ES",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.chollometro.com/rss/hot"
+    },
+    {
+      "id": "lesnumeriques-bonsplans",
+      "pays": "FR",
+      "type": "rss",
+      "actif": true,
+      "url": "https://www.lesnumeriques.com/bons-plans/rss.xml"
+    },
+    {
+      "id": "dealabs-hot",
+      "pays": "FR",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.dealabs.com/rss/hot"
+    },
+    {
+      "id": "mydealz-new",
+      "pays": "DE",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.mydealz.de/rss/new"
+    },
+    {
+      "id": "hotukdeals-new",
+      "pays": "UK",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.hotukdeals.com/rss/new"
+    },
+    {
+      "id": "chollometro-nuevos",
+      "pays": "ES",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.chollometro.com/rss/nuevos"
+    },
+    {
+      "id": "pepper-pl-hot",
+      "pays": "PL",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.pepper.pl/rss/hot"
+    },
+    {
+      "id": "preisjaeger-hot",
+      "pays": "AT",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://www.preisjaeger.at/rss/hot"
+    },
+    {
+      "id": "pepper-nl-hot",
+      "pays": "NL",
+      "type": "pepper",
+      "actif": true,
+      "url": "https://nl.pepper.com/rss/hot"
+    },
+    {
+      "id": "frandroid-bonsplans",
+      "pays": "FR",
+      "type": "rss",
+      "actif": false,
+      "url": "https://www.frandroid.com/bons-plans/feed",
+      "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
+    },
+    {
+      "id": "journaldugeek-bonplan",
+      "pays": "FR",
+      "type": "rss",
+      "actif": false,
+      "url": "https://www.journaldugeek.com/bon-plan/feed/",
+      "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
+    },
+    {
+      "id": "clubic-bonsplans",
+      "pays": "FR",
+      "type": "rss",
+      "actif": false,
+      "url": "https://www.clubic.com/feed/bons-plans.rss",
+      "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
+    },
+    {
+      "id": "01net-bonsplans",
+      "pays": "FR",
+      "type": "rss",
+      "actif": false,
+      "url": "https://www.01net.com/bons-plans/feed/",
+      "note": "coupé le 03/11/2026 : articles de médias (liens affiliés), aucune affaire validée"
+    },
+    {
+      "id": "smzdm-haitao",
+      "pays": "CN",
+      "type": "rss",
+      "url": "https://haitao.smzdm.com/feed",
+      "note": "Chine : bons plans import (hype asiatique)",
+      "role": "hype"
+    },
+    {
+      "id": "ppomppu-kr",
+      "pays": "KR",
+      "type": "rss",
+      "url": "https://www.ppomppu.co.kr/rss.php?id=ppomppu",
+      "note": "Corée : forum de bons plans",
+      "role": "hype"
+    },
+    {
+      "id": "ppomppu-kr-etranger",
+      "pays": "KR",
+      "type": "rss",
+      "url": "https://www.ppomppu.co.kr/rss.php?id=ppomppu4",
+      "role": "hype"
+    },
+    {
+      "id": "kakaku-jp",
+      "pays": "JP",
+      "type": "rss",
+      "url": "https://news.kakaku.com/prdnews/rss.asp",
+      "note": "Japon : nouveautés produits kakaku",
+      "role": "hype"
+    },
+    {
+      "id": "ozbargain-au",
+      "pays": "AU",
+      "type": "rss",
+      "url": "https://www.ozbargain.com.au/deals/feed",
+      "role": "hype"
+    },
+    {
+      "id": "slickdeals-us",
+      "pays": "US",
+      "type": "rss",
+      "url": "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1",
+      "note": "USA : hype avant l'Europe",
+      "role": "hype"
+    },
+    {
+      "id": "nike-promos",
+      "pays": "FR",
+      "type": "page",
+      "lecteur": "nike_promos",
+      "url": "https://www.nike.com/fr/w/promotions-3yaep",
+      "categorie": "Mode / sneakers",
+      "note": "validé par David le 04/11 (lecture à rythme humain)"
+    },
+    {
+      "id": "ldlc-promos",
+      "pays": "FR",
+      "type": "page",
+      "lecteur": "ldlc_promos",
+      "url": "https://www.ldlc.com/promotions/",
+      "categorie": "High-tech",
+      "note": "validé par David le 04/11"
+    },
+    {
+      "id": "pepper-it-hot",
+      "pays": "IT",
+      "type": "pepper",
+      "url": "https://www.pepper.it/rss/hot"
+    },
+    {
+      "id": "pc-david",
+      "pays": "FR",
+      "type": "pc",
+      "url": "data/pc/annonces.json",
+      "note": "collecteur sur le PC de David (Fnac, Darty, Boulanger, Cdiscount, Decathlon, ventes privées…), accord du 04/11"
+    },
+    {
+      "id": "tg-promorat",
+      "pays": "FR",
+      "type": "telegram",
+      "actif": true,
+      "chaine": "promorat"
+    },
+    {
+      "id": "tg-bonsplans",
+      "pays": "FR",
+      "type": "telegram",
+      "actif": true,
+      "chaine": "bonsplans"
+    }
+  ],
+  "_info_role_hype": "role = hype : flux étrangers (Asie, USA, Australie) lus pour repérer les produits qui montent là-bas (Amigo), jamais pour acheter : exclus de la veille et du tribunal."
 }

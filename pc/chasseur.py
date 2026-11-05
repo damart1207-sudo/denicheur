@@ -62,7 +62,7 @@ def cibles():
     cib = {}
     base = _lire(os.path.join(RACINE, "data/base/keepa_index.json"), {})
     # les produits envoyés par David passent en premier ; liste écrite par Claude : [{"nom": "...", "ref_neuf": 0}]
-    for d in _lire(os.path.join(RACINE, "data/cibles_david.json"), []):
+    for d in _lire(os.path.join(RACINE, "config/cibles_david.json"), []):
         if d.get("nom"):
             cib[d["nom"]] = {"nom": d["nom"], "ref_neuf": d.get("ref_neuf"), "ref_occasion": d.get("ref_occasion"), "origine": "David"}
     for b in _lire(os.path.join(RACINE, "data/bingo.json"), {}).get("bingos", [])[:30]:
@@ -179,6 +179,7 @@ def tour():
         print("chasseur : aucune cible (bingo/arbitrage/étagère vides)")
         return
     random.shuffle(cib)
+    cib.sort(key=lambda c: c.get("origine") != "David")   # les produits envoyés par David d'abord
     vus = _lire(F_VUS, {})
     trouves, etat = [], {"recherches": 0, "annonces_lues": 0}
     with sync_playwright() as p:

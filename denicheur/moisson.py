@@ -388,10 +388,11 @@ def tour():
     debut = jetons_restants()
     bilan = {"jetons_debut": debut}
     bilan["radar"] = sante.protege("moisson radar", radar, etat, defaut=0)
-    from . import arbitrage
-    bilan["arbitrage"] = sante.protege("moisson arbitrage", arbitrage.tour, etat, defaut=0)
+    # avant l'arbitrage, qui prend presque toute la réserve : ≈ 130 jetons par tour jusqu'à ce que les prix soient à jour
     from . import recherches_prix
     bilan["prix_recherches"] = sante.protege("moisson prix recherches", recherches_prix.tour, etat, defaut=0)
+    from . import arbitrage
+    bilan["arbitrage"] = sante.protege("moisson arbitrage", arbitrage.tour, etat, defaut=0)
     # la réserve ne se remplit que de ≈ 200 jetons entre deux tours (10 min) : un tour sur trois pour la hype
     # (≈ 250 jetons), les deux autres pour l'étagère ; ce qui reste va à l'autre récolte.
     if etat["tours"] % 3 == 0:

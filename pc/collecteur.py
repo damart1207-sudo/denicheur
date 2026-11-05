@@ -428,7 +428,7 @@ def liberer_profil(profil):
     print("anciens navigateurs du robot fermés")
 
 
-def collecter(connexion=False):
+def collecter(connexion=False, seulement=None):
     from playwright.sync_api import sync_playwright
     os.makedirs(PROFIL, exist_ok=True)
     os.makedirs(D_ECH, exist_ok=True)
@@ -460,7 +460,7 @@ def collecter(connexion=False):
             ctx.close()
             print("Connexions gardées dans", PROFIL)
             return
-        for source, url, pays, marchand in PAGES:
+        for source, url, pays, marchand in [p for p in PAGES if not seulement or p[0] in seulement]:
             try:
                 if source in SUIVRE:  # aller sur l'onglet « meilleures offres » comme un visiteur
                     cible = decouvrir_page_promo(page, url, SUIVRE[source])
@@ -555,10 +555,11 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--connexion", action="store_true", help="ouvrir le navigateur pour se connecter aux ventes privées (une fois)")
     ap.add_argument("--sans-push", action="store_true")
+    ap.add_argument("--seulement", default="", help="liste de sources séparées par des virgules (test rapide)")
     a = ap.parse_args()
     if a.connexion:
         collecter(connexion=True)
     else:
-        collecter()
+        collecter(seulement=[x.strip() for x in a.seulement.split(",") if x.strip()] or None)
         if not a.sans_push:
             print(pousser())

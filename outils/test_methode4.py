@@ -9,13 +9,18 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from denicheur import shopping, telegram  # noqa: E402
 from pc.collecteur import extraire  # noqa: E402
 
-h = gzip.open("data/echantillons/pc/manomano-blackfriday.html.gz", "rt", encoding="utf-8", errors="ignore").read()
-cands = [a for a in extraire(h, "manomano-blackfriday", "FR", "ManoMano", "https://www.manomano.fr") if a.get("etat") == "neuf"][:40]
+import json
+pc = json.load(open("data/pc/annonces.json")).get("annonces", [])
+cands = [a for a in pc if a.get("prix_source") == "donnees_integrees" and a.get("etat") == "neuf"
+         and a.get("source") in ("pc:manomano-blackfriday", "pc:manomano-bonsplans", "pc:cdiscount-meilleures-offres")][:60]
+if not cands:  # secours : page enregistrée (liens masqués dans l'échantillon)
+    h = gzip.open("data/echantillons/pc/manomano-blackfriday.html.gz", "rt", encoding="utf-8", errors="ignore").read()
+    cands = [a for a in extraire(h, "manomano-blackfriday", "FR", "ManoMano", "https://www.manomano.fr") if a.get("etat") == "neuf"][:40]
 print("candidats ManoMano", len(cands))
 FR = re.compile(r"\.fr\b|amazon\.fr|cdiscount|fnac|darty|boulanger|leroy ?merlin|castorama|brico ?d[ée]p[ôo]t|bricoman|electro ?d[ée]p[ôo]t|"
                 r"rue ?du ?commerce|ldlc|materiel\.net|carrefour|leclerc|auchan|conforama|\bbut\b|decathlon|micromania|cultura|lidl|"
                 r"maisons du monde|la redoute|but\.fr|gifi|weldom|mr ?bricolage|point\.p|cedeo|leroy", re.I)
-EXCLUS = re.compile(r"manomano|leboncoin|ebay|vinted|stockx|back ?market|beebs|achatmoinscher|idealo|ledenicheur|occasion|reconditionn", re.I)
+EXCLUS = re.compile(r"manomano|cdiscount_meme|leboncoin|ebay|vinted|stockx|back ?market|beebs|achatmoinscher|idealo|ledenicheur|occasion|reconditionn", re.I)
 
 
 def requete(t):
@@ -50,7 +55,7 @@ for a in cands:
     bingos += bingo
     autre = (f"<a href='{H.escape(vs[0].get('lien') or '#')}'>{vs[0]['total']} € — {H.escape(str(vs[0]['marchand']))}</a>"
              + (f"<br><small>2e : {vs[1]['total']} € — {H.escape(str(vs[1]['marchand']))}</small>" if len(vs) > 1 else "")) if vs else "aucun autre marchand français trouvé"
-    rows += (f"<tr style='background:{'#d9f7d9' if bingo else '#fff'}'><td>{H.escape(a['titre'][:90])}</td><td><b>{a['prix']} €</b><br><small>{H.escape(a['description'][:60])}</small></td>"
+    rows += (f"<tr style='background:{'#d9f7d9' if bingo else '#fff'}'><td>{H.escape(a['titre'][:90])}</td><td><a href='{H.escape(a.get('lien') or '#')}'><b>{a['prix']} €</b> — {H.escape(a.get('marchand') or '')}</a><br><small>{H.escape(a['description'][:60])}</small></td>"
              f"<td>{H.escape((f or {}).get('titre') or '—')}</td><td>{autre}</td><td>{len(vs)}</td><td>{(str(ecart) + ' %') if ecart is not None else '—'}</td><td><b>{'BINGO' if bingo else ''}</b></td></tr>")
     print(("BINGO " if bingo else "      ") + f"{a['prix']:>8} | {a['titre'][:45]:45s} | autres FR : {vs[0]['total'] if vs else '-'} ({vs[0]['marchand'] if vs else '-'}) | écart {ecart}")
 page = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Test méthode 4</title>

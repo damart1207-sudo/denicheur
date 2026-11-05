@@ -39793,7 +39793,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -39968,6 +39968,18 @@
    "proba_detail": [
     "Amazon 43/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T12:45+00:00",
+  "verdict": {
+   "commentaire": "Fausse alerte du robot, pas une vraie baisse : les 77,56 € (et « prix initial 199,99 €, -61 % ») appartiennent à un autre article de la page promos idealo. Le titre relevé sur idealo dit lui-même « à partir de 275,00 € » pour la DJI Osmo Action 5 Pro Standard Combo. Fiche Amazon.fr lue par Keepa à 12h49 : 275 € vendu par Amazon (moyenne 90 jours 309 €, plus bas 90 jours 262 €) ; même prix de 275 € sur achatmoinscher (19 boutiques). Prix réel = prix neuf le plus bas : aucune économie, aucune marge.",
+   "prix_neuf_min_idealo": 275.0,
+   "source_prix_ref": "Keepa/Amazon.fr + achatmoinscher (05/11)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": "sans objet"
   }
  }
 ]

@@ -37979,7 +37979,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T10:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -38167,6 +38167,18 @@
     "Amazon 37/mois",
     "Google 880/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : pas de livraison en France. Bon produit (Soundcore Space One Pro blanc), offre vendue sur Allegro, site polonais : page du bon plan lue par le robot à 11h28, offre active, livraison France : non. Neuf en France : 137,85 € achatmoinscher (robot, 6 boutiques), 166,79 € vendeur tiers sur Amazon.fr (Keepa, moyenne 90 j 158,89 €).",
+   "prix_neuf_min_idealo": 137.85,
+   "source_prix_ref": "achatmoinscher (robot), 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -38192,7 +38204,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -38317,7 +38329,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T11:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : économie trop faible une fois livrée. Bon produit (Casio A700WEM-7AEF), 29,99 € sur Amazon.fr (Keepa à 12h07, moyenne 90 j 43,08 €, plus bas 22,50 €). La page du bon plan annonce 37,49 € ailleurs ; autres prix lus : 49,90 € livré chez Ocarat, 63,69 € sur PcComponentes. Sous 35 € le port n'est pas toujours offert : avec 5 € comptés par prudence, 34,99 € livrés, soit 7 % sous 37,49 €. Il faudrait 15 %. Sans revente : Leboncoin environ 26 €, sous le coût.",
+   "prix_neuf_min_idealo": 37.49,
+   "source_prix_ref": "page du bon plan lue par le robot le 05/11 (prix annoncé ailleurs) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte, prix Amazon qui bouge",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "a056164024",
@@ -38355,7 +38379,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -38496,6 +38520,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : plus cher qu'en France. Offre à 66,85 £ au Royaume-Uni, soit 100,25 € livrés avec frais d'importation, contre 88,99 € sur Amazon.fr (Keepa, vendu par Amazon, moyenne 90 j 94,88 €). Le lien lu par le robot mène en plus au modèle BVX1200LI, pas au BVX700LI.",
+   "prix_neuf_min_idealo": 88.99,
+   "source_prix_ref": "Keepa/Amazon.fr, 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": -13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -38534,7 +38570,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -38683,6 +38719,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : économie sous 15 %. Bon produit (Xiaomi X20 Pro, 7000 Pa), 225,42 € via PayPal sur AliExpress avec le code 11FR40 (page du bon plan lue par le robot à 12h18 : offre active). Cette page annonce 259 € ailleurs, achatmoinscher 269,99 € ; plus loin, 356,98 € + port chez PowerPlanet et 385,51 € sur Galaxus (lus le 05/11). Avec 5 € de port par prudence : 230,42 € livrés, 11 % sous 259 € (13 % sans port). Prix réservé au paiement PayPal.",
+   "prix_neuf_min_idealo": 259.0,
+   "source_prix_ref": "page du bon plan lue par le robot le 05/11 (prix annoncé ailleurs) ; achatmoinscher 269,99 € ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 11,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -38734,7 +38782,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -38875,6 +38923,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : plus cher qu'en France. Offre à 34,99 £ au Royaume-Uni, soit 56,29 € livrés avec frais d'importation, contre 47,49 € sur achatmoinscher (Oral-B iO Series 2, 6 boutiques). La fiche Keepa trouvée est un lot de 2, elle ne sert pas de référence.",
+   "prix_neuf_min_idealo": 47.49,
+   "source_prix_ref": "achatmoinscher (robot), 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": -19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -38913,7 +38973,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:27+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -39100,6 +39160,18 @@
    "proba_detail": [
     "Amazon 40/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée. Bon produit (Ninja SL451EU, 9,5 L). Fiche sharkninja.de lue par le robot à 12h27 : 159,99 €, en stock, 143,99 € annoncés avec le code HOME10. Mais c'est la boutique allemande et rien ne confirme une livraison en France. Le prix serait très bon : neuf en France 244,26 € ManoMano Marketplace, 249,99 € Amazon.fr (Keepa, moyenne 90 j 232,39 €), 289,99 € Darty et Fnac, 309 € Galaxus.",
+   "prix_neuf_min_idealo": 244.26,
+   "source_prix_ref": "comparateur KultureGeek (ManoMano Marketplace, port gratuit), lu le 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 39,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -39125,7 +39197,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:27+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -39266,6 +39338,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (11 vendeurs)"
+  },
+  "verifie_le": "2026-11-05T11:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre non confirmée. L'alerte dit ASUS ZenBeam E1R à 111,83 £ sur Amazon au Royaume-Uni, mais le lien lu par le robot mène à une fiche amazon.com d'un autre modèle (ZenBeam Latte L1), et la page du bon plan indique 119 £. Prix, produit exact et livraison en France non prouvés. Neuf en France : 274,80 € sur Amazon.fr (Keepa, moyenne 90 j 319,83 €).",
+   "prix_neuf_min_idealo": 274.8,
+   "source_prix_ref": "Keepa/Amazon.fr, 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 41,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
   }
  },
  {
@@ -39317,7 +39401,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:39+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -39456,6 +39540,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (43 vendeurs)"
+  },
+  "verifie_le": "2026-11-05T11:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : Samsung Galaxy Tab A11 8,7 pouces, 4 Go + 64 Go. 117,67 € sur AliExpress avec le code 11FR13 (130,67 € moins 13 €), page du bon plan Dealabs lue par le robot à 12h40 : offre active, livrable en France. Neuf ailleurs en France : 149 € livrés chez Samsung et Boulanger, 149,99 € Darty et Fnac (Comparez-Malin, 04 et 05/11). Avec 5 € de port par prudence : 122,67 € livrés, soit 18 % de moins. Vérifier au panier que le code passe et que c'est bien la version européenne (SM-X130). Pas de revente : environ 137 € sur Leboncoin, moins de 15 € de bénéfice, trop juste.",
+   "prix_neuf_min_idealo": 149.0,
+   "source_prix_ref": "Comparez-Malin : Samsung et Boulanger 149 € livrés, relevés les 04 et 05/11 ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "quelques jours, code valable pendant le Singles Day",
+   "demande_confirmee": "non confirmée"
   }
  },
  {
@@ -39494,7 +39590,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T11:39+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -39633,6 +39729,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (26 vendeurs)"
+  },
+  "verifie_le": "2026-11-05T11:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit : Meta Quest 3S 128 Go. 225,66 € sur AliExpress avec le code 11FR40 (bon plan Dealabs du 05/11, lu par le robot à 12h41 : offre active, livrable en France). Une offre Dealabs précédente était déjà à 225,64 €. La presse (Journal du Geek, Presse-citron, 03/11) annonce pour ce code 288 €, ou 268 € avec PayPal, port gratuit, jusqu'au 18/11, stock limité : vérifier le prix au panier. Neuf ailleurs en France : 359 € Fnac (03/11), 359,99 € vendu par Amazon.fr (Keepa ce jour, moyenne 90 j 359,64 €). Avec 5 € de port par prudence : 230,66 € livrés, 36 % de moins ; même à 288 €, 20 % de moins. Revente non retenue : prix de revente non confirmé.",
+   "prix_neuf_min_idealo": 359.0,
+   "source_prix_ref": "Fnac 359 € (Presse-citron, 03/11) et Keepa/Amazon.fr 359,99 € (05/11) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 36,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "jusqu'au 18/11 au plus tard, stock limité",
+   "demande_confirmee": "non confirmée"
   }
  }
 ]

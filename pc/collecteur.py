@@ -163,10 +163,72 @@ def extraire_jd(h, source, marchand):
     return out[:50]
 
 
+def extraire_json_integre(h, source, pays, marchand, url_base):
+    """Les produits tels que le site les a envoyés à la page (données __NEXT_DATA__ / état initial) : prix en NOMBRES,
+    jamais lus à l'écran. ManoMano : price.currentPrice.amountWithVat, retailPrice (« le + bas sur 30 j »), vendeur,
+    isSecondHand. Le lien est retrouvé grâce à l'image de la carte (alt = titre)."""
+    out = []
+    for m in re.finditer(r'<script[^>]*id="(?:__NEXT_DATA__|__NUXT_DATA__)"[^>]*>(.*?)</script>', h, re.S):
+        try:
+            d = json.loads(m.group(1))
+        except json.JSONDecodeError:
+            continue
+        pile = [d]
+        while pile:
+            o = pile.pop()
+            if isinstance(o, list):
+                pile += o
+                continue
+            if not isinstance(o, dict):
+                continue
+            pile += [v for v in o.values() if isinstance(v, (dict, list))]
+            titre = o.get("title") or o.get("name")
+            px = o.get("price")
+            if not isinstance(titre, str) or not isinstance(px, dict):
+                continue
+            cur = (px.get("currentPrice") or {}).get("amountWithVat") if isinstance(px.get("currentPrice"), dict) else px.get("amount") or px.get("value")
+            ret = (px.get("retailPrice") or {}).get("amountWithVat") if isinstance(px.get("retailPrice"), dict) else None
+            if not isinstance(cur, (int, float)) or cur <= 0:
+                continue
+            out.append({"titre": titre.strip(), "prix": float(cur), "initial": float(ret) if isinstance(ret, (int, float)) and ret > cur else None,
+                        "occasion": bool(o.get("isSecondHand")), "vendeur": (o.get("seller") or {}).get("name") if isinstance(o.get("seller"), dict) else None,
+                        "marque": (o.get("brand") or {}).get("name") if isinstance(o.get("brand"), dict) else None,
+                        "remise": px.get("discountPercentage"), "note": (o.get("productRating") or {}).get("average") if isinstance(o.get("productRating"), dict) else None})
+    if not out:
+        return []
+    def lien_de(titre):  # le lien produit le plus proche AVANT l'image de la carte (alt = titre)
+        for t in (_html.escape(titre, quote=True), titre):
+            i = h.find('alt="' + t)
+            if i > 0:
+                avant = h[max(0, i - 6000):i]
+                ls = re.findall(r'href="((?:https?://[^"/]+)?/p/[^"]+|(?:https?://[^"/]+)?/[^"]*?(?:produit|product|/fp/|/dp/)[^"]+)"', avant)
+                if ls:
+                    return _html.unescape(ls[-1])
+        return ""
+    annonces, vus = [], set()
+    for p in out:
+        lien = lien_de(p["titre"])
+        lien = lien if lien.startswith("http") else (url_base + lien if lien else "")
+        if not lien or lien in vus:
+            continue
+        vus.add(lien)
+        remise = round((1 - p["prix"] / p["initial"]) * 100) if p["initial"] else None
+        annonces.append({"id": hashlib.sha1(lien.encode()).hexdigest()[:10], "titre": p["titre"][:180], "temperature": (remise or 0) * 8,
+                         "categorie": "", "marchand": marchand + (f" (vendeur {p['vendeur']})" if p.get("vendeur") else ""), "prix": p["prix"],
+                         "devise": "EUR", "lien": lien, "date": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"), "source": "pc:" + source,
+                         "pays": pays, "etat": "occasion" if p["occasion"] else "neuf", "prix_source": "donnees_integrees",
+                         "description": (f"prix initial {p['initial']} €, -{remise} %. " if remise else "") + (f"marque {p['marque']}. " if p.get("marque") else "")
+                                        + ("OCCASION. " if p["occasion"] else "") + (f"note {p['note']}/5" if p.get("note") else "")})
+    return annonces
+
+
 def extraire(h, source, pays, marchand, url_base):
     """Produits de la page : JSON-LD schema.org (Product / ItemList / offers) d'abord, puis blocs HTML avec prix et lien."""
     if source.startswith("jd-"):
         return extraire_jd(h, source, marchand)
+    integre = extraire_json_integre(h, source, pays, marchand, url_base)  # données chiffrées de la page : toujours en premier
+    if len(integre) >= 3:
+        return integre
     out = []
     for m in re.finditer(r'<script[^>]*type="application/ld\+json"[^>]*>(.*?)</script>', h, re.S):
         try:

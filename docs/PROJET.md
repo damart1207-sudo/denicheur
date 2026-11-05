@@ -75,6 +75,27 @@ Nom du service retenu : **« Moins cher que prévu »** (Rebifftout reste la mar
 - **Chaînes Telegram publiques** lues sans compte (promorat, bonsplans).
 - **Sites bloqués pour le cloud** (GitHub) : ManoMano, Cdiscount, Fnac/Darty, Carrefour, La Redoute, Tiendeo → lus par le PC.
 
+## 6 bis. Outils, abonnements et coûts (ce dans quoi David a investi)
+
+| Outil | Usage | Coût / plafond |
+|---|---|---|
+| **Keepa API** (abonnement, 20 jetons/min ≈ 28 800 jetons/jour) | Prix et historiques Amazon dans 6 pays (FR, DE, IT, ES, US, JP), baisses de prix, meilleures ventes, ventes mensuelles, vendeurs, EAN, surveillance de produits | Abonnement mensuel payé ; règle : utiliser la totalité des jetons chaque jour ; données archivées (`data/base/`) pour pouvoir s'en passer plus tard |
+| **DataForSEO** (crédit prépayé) | Volumes de recherche Google (~0,09 $/appel ≤ 1 000 mots), Google Trends (0,011 $), **Google Shopping** (0,002 $/requête : fiche produit exacte, vendeurs, prix + port) | Plafond **1 $/jour** (accord du 05/11), dépassement exceptionnel de 2 $ autorisé le 05/11 pour les tests |
+| **Apify** (crédit) | idealo (prix marchands France), Vinted/Leboncoin (revente réelle), sites qui bloquent tout le reste | Plafond **35 $/mois** |
+| **Gemini (Google AI Studio)** (crédit, ~20 € engagés) | Vérification des affaires, mots-clés, sourcing, lecture des prospectus (vision), verdict « même produit », traduction | Quelques centimes par jour |
+| **eBay Browse API** | Prix neuf/occasion en cours, annonces, Europe et USA | Gratuit |
+| **IA gratuites** (Groq, nemotron, gemma, gpt-oss, qwen) | « Tribunal » de tri des annonces | Gratuit (quota Groq 200 k jetons/jour) |
+| **Telegram Bot** (bot privé Rebifftout_bot) | Alertes, rapports, messages du jour ; plus tard chaîne publique clients | Gratuit |
+| **GitHub** (dépôt + Actions) | Code, données, exécution horaire | Gratuit (limites : horaires sautés, 6 h max par tâche, adresses bloquées par certains sites) |
+| **PC Windows de David** (Chrome piloté, tâches planifiées) | Lecture des ~95 pages de magasins, chasse Vinted/Leboncoin, eBay vendus, relecture des fiches produit, sites bloqués pour le cloud | Électricité seulement ; le PC doit rester allumé |
+| **Hostinger** (hébergement + domaine rebifftout.fr) | Site actuel (liste de bonnes affaires vérifiées) ; future boutique « Moins cher que prévu » (PHP + Stripe) | Déjà payé |
+| **Stripe** | Encaissement des ventes (lien de paiement quand le produit est trouvé) ; mode test d'abord | Frais ~1,5 % + 0,25 € par vente ; passer Radar en version Lite avant janvier 2027 |
+| **API AliExpress** (clés existantes, projet FlipHunter) | Recherche produits, prix, nombre de ventes ; dropshipping si l'API le permet | Gratuit ; clés à poser dans les secrets GitHub |
+| **Hetzner / RunPod** (comptes existants pour Mibisou) | Hetzner : candidat pour héberger le robot en continu ; RunPod : à ne pas utiliser ici (GPU, cher) | 0 € si le serveur Mibisou a de la place |
+| **Micro-entreprise** (SIREN actif, versement libératoire) | Cadre légal des ventes | Cotisations ~12-13 % du chiffre d'affaires |
+
+Budget outils total : **≈ 120-155 €/mois**, à rembourser par les 300 € d'« investissement » de l'objectif mensuel. Règle : aucun nouvel abonnement payant sans accord explicite ; chaque outil payant a un plafond quotidien ou mensuel écrit dans le code.
+
 ## 7. Résultats des tests de méthode du 05/11 (données chiffrées uniquement, aucune lecture d'écran)
 
 - Test 1 (baisses Keepa ≥ 30-40 % sur Amazon FR/DE) : 159 produits, 54 de marques sérieuses, **presque aucun vraiment moins cher que le marché** — une baisse par rapport à l'historique Amazon ≠ moins cher que le marché.

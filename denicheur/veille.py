@@ -232,6 +232,14 @@ def tour():
                         c["marge_nette"] = round(c["marge_nette"] - delta, 2)
             elif v.get("statut") != "ok" and str(x.get("source", "")).startswith("pc:"):
                 continue  # prix lu sur une page par le PC et non confirmé par la fiche produit : pas d'alerte
+            # MÊME PRODUIT ? (piège du 05/11 : lot de 2 roues comparé à un lot de 8) -> sinon pas d'alerte
+            if x.get("prix_plancher"):
+                from . import meme_produit
+                mp = sante.protege("même produit", meme_produit.controler_alerte, x, defaut={"meme": None, "raison": "erreur"}) or {}
+                x["meme_produit"] = mp
+                if mp.get("meme") is False:
+                    print(f"  écartée (pas le même produit) : {str(x.get('titre'))[:60]} <> {str(mp.get('reference'))[:60]} — {mp.get('raison')}")
+                    continue
             if True:
                 if (x.get("economie_pct") or 0) >= 60 or x.get("signal_erreur_prix"):
                     x["erreur_prix_probable"] = True  # sous 40 % du neuf : erreur de prix probable -> commander vite, 1 unité, attendre l'expédition

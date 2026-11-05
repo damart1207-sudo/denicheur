@@ -14,7 +14,8 @@ F_CACHE = os.path.join(RACINE, "data/base/meme_produit.json")
 QTE = re.compile(r"(?:lot|pack|set|boite|boîte|coffret|carton)\s*(?:de|of)?\s*(\d{1,3})\b|\b(\d{1,3})\s*(?:x|×)\s*(?!\d)|\b(\d{1,3})\s*(?:pcs?|pi[èe]ces?|unit[ée]s?|pack|rouleaux|sachets?|capsules|dosettes|ampoules|piles|paires?)\b|\bx\s?(\d{1,3})\b", re.I)
 OPPOSES = [("gonflable", r"plein|increvable|pu\b|mousse"), ("sans fil|wifi|bluetooth|batterie", r"filaire"),
            ("neuf", r"occasion|reconditionn"), ("digital|num[ée]rique", r"disque|lecteur"), ("pro\b", r"\blite\b|\bmini\b")]
-MESURES = re.compile(r"(\d{2,4})\s?[x×]\s?(\d{2,4})|\b(\d{1,4})\s?(go|gb|to|tb|w|kw|mah|ah|l|ml|cl|kg|g|cm|mm|m|pouces?|\")\b", re.I)
+MESURES = re.compile(r"(\d{2,4})\s?[x×]\s?(\d{2,4})|(?<![\d.,])(\d{1,4}(?:[.,]\d{1,2})?)\s?(go|gb|to|tb|w|kw|mah|ah|l|ml|cl|kg|g|cm|mm|m|pouces?|\")(?![a-z])", re.I)
+UNITE = {"go": "gb", "to": "tb", "pouces": "pouce", '"': "pouce"}
 
 
 def _n(t):
@@ -41,7 +42,10 @@ def mesures(titre):
         if m.group(1):
             dims.add(f"{m.group(1)}x{m.group(2)}")
         else:
-            vals.add(f"{m.group(3)}{m.group(4).lower().rstrip('s')}")
+            u = m.group(4).lower()
+            u = UNITE.get(u, u)
+            v = float(m.group(3).replace(",", "."))
+            vals.add(f"{v:g}{u}")
     return dims, vals
 
 
@@ -60,10 +64,18 @@ def mecanique(titre_a, titre_b):
     db, vb = mesures(b)
     if da and db and not (da & db):
         return False, f"dimensions différentes ({', '.join(sorted(da)[:2])} contre {', '.join(sorted(db)[:2])})"
-    capa = {x for x in va if re.search(r"(go|gb|to|tb|w|kw|mah|ah|l|ml)$", x)}
-    capb = {x for x in vb if re.search(r"(go|gb|to|tb|w|kw|mah|ah|l|ml)$", x)}
-    if capa and capb and not (capa & capb):
-        return False, f"capacités/puissances différentes ({', '.join(sorted(capa)[:2])} contre {', '.join(sorted(capb)[:2])})"
+    # capacités / puissances : pour chaque unité citée des DEUX côtés, au moins une valeur commune
+    def par_unite(vals):
+        d = {}
+        for x in vals:
+            u = re.sub(r"^[\d.]+", "", x)
+            if u in ("gb", "tb", "w", "kw", "mah", "ah", "l", "ml", "pouce"):
+                d.setdefault(u, set()).add(x)
+        return d
+    ua, ub = par_unite(va), par_unite(vb)
+    for u in set(ua) & set(ub):
+        if not (ua[u] & ub[u]):
+            return False, f"capacités/puissances différentes ({', '.join(sorted(ua[u])[:2])} contre {', '.join(sorted(ub[u])[:2])})"
     return None, ""
 
 
@@ -114,3 +126,31 @@ def verifier(titre_a, titre_b, prix_a=None, prix_b=None, avec_ia=True):
         if v2 is not None:
             return {"meme": v2, "raison": r2, "qte_a": quantite(titre_a), "qte_b": quantite(titre_b)}
     return {"meme": None, "raison": "non confirmé", "qte_a": quantite(titre_a), "qte_b": quantite(titre_b)}
+
+
+def titre_reference(x):
+    """Titre de l'offre de référence (le prix neuf France le moins cher retenu pour l'alerte), ou None."""
+    pp = x.get("prix_plancher") or {}
+    ou = str(pp.get("ou") or "")
+    m = ((pp.get("sources") or {}).get(ou) or {}).get("meilleur") or {}
+    if m.get("titre"):
+        return m["titre"]
+    if ou.startswith("keepa") and (x.get("keepa") or {}).get("titre"):
+        return x["keepa"]["titre"]
+    lien = pp.get("lien") or ""
+    slug = re.search(r"/([a-z0-9-]{8,})\.html?$", lien.lower())
+    if slug:  # idealo et autres : le nom du produit est dans l'adresse de la page
+        return slug.group(1).replace("-", " ")
+    return None
+
+
+def controler_alerte(x):
+    """Pour une alerte : l'annonce et la référence de prix France sont-elles le même produit ?"""
+    ref = titre_reference(x)
+    titre = x.get("titre") or x.get("nom_produit") or ""
+    if not ref or not titre:
+        return {"meme": None, "raison": "titre de référence absent", "reference": ref}
+    pp = x.get("prix_plancher") or {}
+    r = verifier(titre, ref, x.get("prix"), pp.get("prix_min"))
+    r["reference"] = ref
+    return r

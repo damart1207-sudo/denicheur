@@ -90,6 +90,9 @@ def alerte(x, vol=None):
     x["fiche"] = f
     if f["feu"] == "rouge":
         return False
+    if f["feu"] == "vert" and x.get("prix_plancher") and (x.get("meme_produit") or {}).get("meme") is not True:
+        f["feu"] = "orange"
+        f.setdefault("manque", []).append("même produit non confirmé")
     if f["feu"] == "vert" and (x.get("controle_prix") or {}).get("statut") not in ("ok", "different"):
         f["feu"] = "orange"
         f["manque"] = f["manque"] + ["prix non revérifié sur la fiche"]
@@ -112,6 +115,8 @@ def alerte(x, vol=None):
                 if f.get("proba_vente_7j") is not None else "")
              + (f"⚠️ Bloque le vert : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
              + (f"ℹ️ À compléter (ne bloque pas) : {_e(', '.join(f.get('a_completer') or []))}\n" if f.get('a_completer') else "")
+             + ("✅ Même produit que la référence France\n" if (x.get("meme_produit") or {}).get("meme") is True
+                else "❓ Même produit non confirmé\n" if x.get("prix_plancher") else "")
              + ("✅ Prix vérifié sur la fiche du produit\n" if (x.get("controle_prix") or {}).get("statut") == "ok"
                 else f"🔁 Prix corrigé d'après la fiche : {_eur((x.get('controle_prix') or {}).get('prix_page'))} (annoncé {_eur(x.get('prix_annonce_initial'))})\n"
                 if (x.get("controle_prix") or {}).get("statut") == "different"

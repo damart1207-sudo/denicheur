@@ -38,6 +38,27 @@ def _cache():
     return vol
 
 
+F_DERNIER = os.path.join(RACINE, "data/etat/volumes_alertes.json")
+INTERVALLE_MIN = 120   # un appel groupé toutes les 2 heures au plus (≈ 12 appels/jour max, en pratique bien moins)
+
+
+def _reserve():
+    """La réserve ne sert qu'à garantir le bingo et la hype de la nuit : une fois faits aujourd'hui, plus de réserve."""
+    jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    hype = _lire(os.path.join(RACINE, "data/hype_telegram.json"), {}).get("maj", "")
+    return 0 if hype[:10] == jour else RESERVE_BINGO_USD
+
+
+def _intervalle_ok():
+    d = _lire(F_DERNIER, {}).get("dernier")
+    return not d or (datetime.now(timezone.utc) - datetime.fromisoformat(d)).total_seconds() >= INTERVALLE_MIN * 60
+
+
+def _noter_appel():
+    os.makedirs(os.path.dirname(F_DERNIER), exist_ok=True)
+    json.dump({"dernier": datetime.now(timezone.utc).isoformat(timespec="minutes")}, open(F_DERNIER, "w"))
+
+
 def completer_volumes(annonces):
     """Un appel DataForSEO pour tous les noms sans volume connu (si le budget le permet). Renvoie le cache."""
     vol = _cache()
@@ -45,8 +66,9 @@ def completer_volumes(annonces):
     if manquants:
         try:
             from . import dataforseo
-            if dataforseo.disponible(0.09 + RESERVE_BINGO_USD):
+            if dataforseo.disponible(0.09 + _reserve()) and _intervalle_ok():
                 res = dataforseo.volumes(manquants)
+                _noter_appel()
                 jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
                 for m in manquants:
                     r = res.get(m) or next((v for k, v in res.items() if k.lower() == m), None)

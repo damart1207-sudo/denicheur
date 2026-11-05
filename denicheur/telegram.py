@@ -108,6 +108,10 @@ def alerte(x, vol=None):
              + (f"🎯 Probabilité de vendre en 7 jours : <b>{f['proba_vente_7j']} %</b> ({_e(' · '.join(f['proba_detail']))}) — estimation\n"
                 if f.get("proba_vente_7j") is not None else "")
              + (f"⚠️ Manque : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
+             + ("✅ Prix vérifié sur la fiche du produit\n" if (x.get("controle_prix") or {}).get("statut") == "ok"
+                else f"🔁 Prix corrigé d'après la fiche : {_eur((x.get('controle_prix') or {}).get('prix_page'))} (annoncé {_eur(x.get('prix_annonce_initial'))})\n"
+                if (x.get("controle_prix") or {}).get("statut") == "different"
+                else "⚠️ Prix non revérifié sur la fiche : contrôle-le avant d'acheter\n")
              + f"🔗 Annonce la moins chère : {_e(x.get('lien'))}"
              + (f"\n🔗 Moins cher en France : {_e(f['neuf_lien'])}" if f.get("neuf_lien") else ""))
     return envoyer(texte)

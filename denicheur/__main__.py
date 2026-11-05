@@ -422,6 +422,8 @@ def passage(nom, test=False):
             sante.protege("telegram recherches", telegram.plus_recherches)
             from . import hype_jour
             sante.protege("telegram hype", hype_jour.jour)
+            from . import prospectus
+            sante.protege("prospectus", prospectus.tour)
             from . import sourceur
             etape("sourceur")
             sante.protege("sourceur", sourceur.jour, 10)

@@ -23,7 +23,7 @@ ALIMENTAIRE = re.compile(r"saumon|poulet|viande|fromage|jambon|lait|café|dosett
                          r"yaourt|beurre|pain|pâtes|riz|huile|lessive|papier hygi|essuie|couche|croquette|pâtée|surgel|légume|fruit|poisson|"
                          r"crevette|foie gras|whisky|rhum|vodka|apéritif|granul|bois de chauffage|fioul|pétrole", re.I)
 PAGES_MAX = 2       # pages lues par Gemini par prospectus (les 2 premières, accessibles publiquement)
-PAGES_JOUR = 120    # plafond quotidien de pages envoyées à Gemini
+PAGES_JOUR = 40     # plafond quotidien de pages envoyées à Gemini (≈ quelques centimes)
 
 
 def _get(url, binaire=False, timeout=40):
@@ -162,7 +162,9 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
             if bilan["pages"]:  # marqué « lu » seulement si des pages ont vraiment été lues
                 base["lus"][cid] = {"enseigne": ens, "jour": jour, "pages": min(len(urls), PAGES_MAX)}
     vus = set()
-    nouveaux = [p for p in nouveaux if not (p["id"] in vus or vus.add(p["id"]))]
+    def _cle(p):  # même produit lu deux fois (grille d'offres + page lue par Gemini)
+        return re.sub(r"[^a-z0-9]", "", (p["titre"] or "").lower())[:40] + str(round(p["prix"]))
+    nouveaux = [p for p in nouveaux if not (_cle(p) in vus or vus.add(_cle(p)))]
     bilan["produits"] = len(nouveaux)
     garder = [p for p in base["produits"] if (p.get("valable_au") or p.get("vu", "")) >= jour[:10] or p.get("vu", "") >= jour]
     base = {"maj": datetime.now(timezone.utc).isoformat(timespec="minutes"), "bilan": bilan,

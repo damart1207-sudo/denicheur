@@ -199,6 +199,75 @@ def extraire(h, source, pays, marchand, url_base):
                          "source": "pc:" + source, "pays": pays, "description": (f"prix initial {initial} €, -{remise} %. " if remise else "") + (f"marque {marque}" if marque else "")})
     return annonces
 
+JS_CARTES = r"""
+() => {
+  const PRIX = /(\d{1,3}(?:[\s\u00a0\u202f.]\d{3})*(?:[,.]\d{1,2})?)\s?(?:€|EUR)|(?:€)\s?(\d{1,3}(?:[\s\u00a0\u202f.]\d{3})*(?:[,.]\d{1,2})?)/g;
+  const num = t => { if (!t) return null; t = t.replace(/[\s\u00a0\u202f]/g, '');
+    if (/\.\d{3}(?!\d)/.test(t) && !/,/.test(t)) t = t.replace(/\./g, ''); t = t.replace(',', '.'); const v = parseFloat(t); return isNaN(v) ? null : v; };
+  const vus = new Set(), out = [];
+  const T = e => (e.textContent || '').replace(/\s+/g, ' ').trim();
+  const feuilles = [...document.querySelectorAll('body *')].filter(e => e.children.length <= 2 && !e.closest('nav,header,footer,[role=navigation],[class*=menu]') && /\d/.test(e.textContent) && /€|EUR/.test(e.textContent) && T(e).length < 40);
+  for (const f of feuilles) {
+    let c = f, carte = null;
+    for (let i = 0; i < 7 && c; i++) { c = c.parentElement; if (c && c.querySelector('a[href]') && c.querySelector('img,picture,[style*=background-image]') && T(c).length < 900) carte = c; }
+    if (!carte) continue;
+    const a = [...carte.querySelectorAll('a[href]')].find(x => !/panier|cart|wishlist|compare|login|#/.test(x.getAttribute('href') || '')) || carte.querySelector('a[href]');
+    const lien = a ? a.href : null;
+    if (!lien || vus.has(lien)) continue;
+    const img = carte.querySelector('img');
+    const titres = [...carte.querySelectorAll('[class*=name],[class*=title],[class*=titre],[class*=libelle],h3,h4,h2')].map(x => T(x)).filter(t => t.length > 8 && t.length < 200);
+    let titre = (img && img.alt && img.alt.length > 8 ? img.alt : '') || titres[0] || (a && (a.title || T(a))) || '';
+    titre = titre.replace(/\s+/g, ' ').trim();
+    if (titre.length < 8 || /voir tout|€|livraison offerte|coups? de c/i.test(titre)) continue;
+    const prix = [];
+    for (const m of T(f).matchAll(PRIX)) { const v = num(m[1] || m[2]); if (v && v >= 3 && v <= 20000) prix.push(v); }  // le prix affiché, pas les mensualités
+    if (!prix.length || /mois|\/m|par m|x\s?\d|dès/i.test(T(f))) continue;
+    vus.add(lien);
+    const barre = [...carte.querySelectorAll('s,del,[class*=strike],[class*=barre],[class*=old],[class*=crossed]')].map(x => num((x.textContent.match(/[\d\s\u00a0.,]+/) || [''])[0])).filter(v => v);
+    out.push({titre: titre.slice(0, 180), prix: prix[0], initial: barre.length ? Math.max(...barre) : null, lien});
+    if (out.length >= 120) break;
+  }
+  return out;
+}
+"""
+MOTS_PROMO = re.compile(r"bons?[\s-]*plans?|promo|destockage|déstockage|black\s*friday|soldes|outlet|offres?\s+du\s+moment|ventes?\s+flash", re.I)
+
+
+def statut_page(h):
+    """Bloqué par une protection anti-robot ? page introuvable ? (pour le tri des sites)"""
+    t = re.sub(r"<[^>]+>", " ", re.sub(r"<script.*?</script>|<style.*?</style>", "", h[:300000], flags=re.S))
+    if re.search(r"Accès bloqué|Access denied|WAF Block|Vérifions ensemble que vous n.êtes pas un robot|Enable JavaScript and cookies to continue|captcha|site n'est actuellement pas disponible", t, re.I):
+        return "bloqué"
+    if re.search(r"\b404\b|Page introuvable|page n'existe pas|Not Found", t[:3000], re.I):
+        return "introuvable"
+    return "ok"
+
+
+def decouvrir_page_promo(page, url):
+    """L'adresse promo a changé : on part de l'accueil du site et on suit le lien « bons plans / promos / Black Friday »."""
+    base = re.match(r"https?://[^/]+", url).group(0)
+    page.goto(base + "/", wait_until="domcontentloaded", timeout=45000)
+    page.wait_for_timeout(3000)
+    liens = page.evaluate("() => [...document.querySelectorAll('a[href]')].map(a => [a.textContent.trim().slice(0, 60), a.href])")
+    for texte, lien in liens:
+        if lien.startswith(base) and MOTS_PROMO.search(texte or ""):
+            return lien
+    return None
+
+
+def cartes_vers_annonces(cartes, source, pays, marchand):
+    out = []
+    for c in cartes or []:
+        if not c.get("lien") or not c.get("prix"):
+            continue
+        initial = c.get("initial") if c.get("initial") and c["initial"] > c["prix"] else None
+        remise = round((1 - c["prix"] / initial) * 100) if initial else None
+        out.append({"id": hashlib.sha1(c["lien"].encode()).hexdigest()[:10], "titre": c["titre"][:180], "temperature": (remise or 0) * 8,
+                    "categorie": "", "marchand": marchand, "prix": round(c["prix"], 2), "devise": "EUR", "lien": c["lien"],
+                    "date": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M"), "source": "pc:" + source, "pays": pays,
+                    "description": f"prix initial {initial} €, -{remise} %." if remise else ""})
+    return out
+
 
 def liberer_profil(profil):
     """Ferme les Chrome du robot restés ouverts sur CE profil (tour planté, fenêtre de connexion oubliée).
@@ -225,8 +294,9 @@ def collecter(connexion=False):
     with sync_playwright() as p:
         for essai in range(6):  # profil occupé (un autre tour encore ouvert) : Chrome sort avec le code 21 -> on attend et on réessaie
             try:
-                ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=not connexion, locale="fr-FR", viewport={"width": 1366, "height": 900},
-                                                           args=["--disable-blink-features=AutomationControlled"])
+                ctx = p.chromium.launch_persistent_context(PROFIL, channel="chrome", headless=False, locale="fr-FR", viewport={"width": 1366, "height": 900},
+                                                           args=["--disable-blink-features=AutomationControlled"]
+                                                           + ([] if connexion else ["--window-position=-32000,-32000"]))  # fenêtre hors écran : invisible pour toi
                 break
             except Exception as e:
                 if essai == 5:
@@ -251,14 +321,41 @@ def collecter(connexion=False):
         for source, url, pays, marchand in PAGES:
             try:
                 page.goto(url, wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_timeout(2500 + random.randint(0, 2500))
-                for _ in range(3):  # faire défiler : charge les produits des pages à chargement progressif
-                    page.mouse.wheel(0, 2500)
-                    page.wait_for_timeout(700)
+                try:  # attendre que les produits chargés après coup soient arrivés
+                    page.wait_for_load_state("networkidle", timeout=15000)
+                except Exception:
+                    pass
+                page.wait_for_timeout(2000 + random.randint(0, 2000))
+                for _ in range(6):  # faire défiler : charge les produits des pages à chargement progressif
+                    page.mouse.wheel(0, 2000)
+                    page.wait_for_timeout(900)
                 h = page.content()
+                statut = statut_page(h)
+                if statut == "bloqué":  # protection anti-robot qui vérifie : on lui laisse le temps (comme un humain)
+                    page.wait_for_timeout(12000)
+                    h = page.content()
+                    statut = statut_page(h)
+                if statut == "introuvable" and not source.startswith(("jd-", "amazon")):
+                    nouvelle = decouvrir_page_promo(page, url)
+                    if nouvelle:
+                        page.goto(nouvelle, wait_until="domcontentloaded", timeout=45000)
+                        page.wait_for_timeout(3000)
+                        for _ in range(3):
+                            page.mouse.wheel(0, 2500)
+                            page.wait_for_timeout(700)
+                        h = page.content()
+                        statut = statut_page(h) + " (adresse trouvée : " + nouvelle[:80] + ")"
                 base = re.match(r"https?://[^/]+", url).group(0)
                 ann = extraire(h, source, pays, marchand, base)
-                etat[source] = {"ok": True, "nb": len(ann), "taille": len(h)}
+                if len(ann) < 5 and statut.startswith("ok") and not source.startswith("jd-"):
+                    try:  # lecture des cartes produit directement dans la page affichée
+                        cartes = page.evaluate(JS_CARTES)
+                        ann2 = cartes_vers_annonces(cartes, source, pays, marchand)
+                        if len(ann2) > len(ann):
+                            ann = ann2
+                    except Exception:
+                        pass
+                etat[source] = {"ok": True, "nb": len(ann), "taille": len(h), "statut": statut}
                 resultats += ann
                 # copie pour le cloud : compressée et nettoyée des clés/jetons que les sites laissent dans leurs pages
                 # (sinon GitHub refuse l'envoi : « push declined due to repository rule violations »)

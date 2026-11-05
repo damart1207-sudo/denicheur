@@ -16,9 +16,13 @@ RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_SORTIE = os.path.join(RACINE, "data/prospectus.json")
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
       "Accept-Language": "fr-FR,fr;q=0.9"}
-ENSEIGNES = ["Lidl", "Aldi", "Action", "E-Leclerc", "Carrefour", "Auchan", "Intermarche", "Gifi", "Noz", "Boulanger",
-             "Darty", "But", "Conforama", "Brico-Depot", "Leroy-Merlin", "Castorama", "Decathlon", "Intersport", "King-Jouet", "Cultura"]
-PAGES_MAX = 4       # pages accessibles publiquement par prospectus (les premières portent les meilleures affaires)
+# non alimentaire d'abord (c'est ce qu'on revend) ; les hypermarchés ensuite
+ENSEIGNES = ["Boulanger", "Darty", "Action", "Gifi", "Noz", "But", "Conforama", "Brico-Depot", "Leroy-Merlin", "Castorama",
+             "Decathlon", "Intersport", "King-Jouet", "Cultura", "Lidl", "Aldi", "E-Leclerc", "Carrefour", "Auchan", "Intermarche"]
+ALIMENTAIRE = re.compile(r"saumon|poulet|viande|fromage|jambon|lait|café|dosette|vin |champagne|bière|eau |jus |chocolat|biscuit|"
+                         r"yaourt|beurre|pain|pâtes|riz|huile|lessive|papier hygi|essuie|couche|croquette|pâtée|surgel|légume|fruit|poisson|"
+                         r"crevette|foie gras|whisky|rhum|vodka|apéritif|granul|bois de chauffage|fioul|pétrole", re.I)
+PAGES_MAX = 2       # pages lues par Gemini par prospectus (les 2 premières, accessibles publiquement)
 PAGES_JOUR = 120    # plafond quotidien de pages envoyées à Gemini
 
 
@@ -116,7 +120,7 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
         validite = re.search(r"(\d{2}/\d{2}/\d{4}) - (\d{2}/\d{2}/\d{4})", h)
         du, au = ((lambda d: f"{d[6:]}-{d[3:5]}-{d[:2]}")(validite.group(1)), (lambda d: f"{d[6:]}-{d[3:5]}-{d[:2]}")(validite.group(2))) if validite else (None, None)
         for o in offres:
-            if o["prix"] < 15:
+            if o["prix"] < 15 or ALIMENTAIRE.search(o["nom"] + " " + o["marque"]):
                 continue
             nom = " ".join(x for x in (o["marque"], o["nom"]) if x).strip()
             nouveaux.append({"id": hashlib.sha1(f"{ens}{nom}{o['prix']}".encode()).hexdigest()[:10], "titre": nom[:160], "prix": o["prix"],
@@ -124,7 +128,7 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
                              "marchand": ens.replace("-", " "), "prospectus": "offres", "page": 0,
                              "lien": f"https://www.bonial.fr/Enseignes/{ens}", "vu": jour, "image": o["image"]})
         bilan["offres_structurees"] = bilan.get("offres_structurees", 0) + len(offres)
-        for cid, nb, urls in liste[:3]:
+        for cid, nb, urls in liste[:2]:
             if cid in base["lus"] or budget <= 0:
                 continue
             bilan["prospectus"] += 1
@@ -146,6 +150,9 @@ def tour(enseignes=None, pages_jour=PAGES_JOUR):
                 for p in lire_page(img, ens):
                     if not isinstance(p, dict) or not isinstance(p.get("prix"), (int, float)) or p["prix"] < 15:
                         continue
+                    if ALIMENTAIRE.search(f"{p.get('nom', '')} {p.get('marque', '')}"):
+                        continue
+                    p["valable_du"], p["valable_au"] = du or p.get("valable_du"), au or p.get("valable_au")  # dates de Bonial, plus sûres
                     nom = " ".join(x for x in (p.get("marque"), p.get("nom")) if x).strip()
                     nouveaux.append({"id": hashlib.sha1(f"{cid}{i}{nom}".encode()).hexdigest()[:10], "titre": nom[:160],
                                      "prix": float(p["prix"]), "prix_avant": p.get("prix_avant"), "remise_pct": p.get("remise_pct"),

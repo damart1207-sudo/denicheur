@@ -43247,7 +43247,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -43373,6 +43373,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Fausse alerte : le robot a mal lu le prix. La page ManoMano sépare les chiffres : le relevé brut dit « prix initial 3020,99 € », la même erreur que sur les autres fiches ManoMano du 05/11, ce qui donne environ 302,99 €, pas 20,99 €. Bon produit (DUN500WZ, machine nue, sans batterie). Le plus bas relevé en France est 310,25 € (achatmoinscher, 05/11) : à peine 2 % de moins, loin des 15 %. Pas de revente : à ce prix, aucune marge.",
+   "prix_neuf_min_idealo": 310.25,
+   "source_prix_ref": "achatmoinscher (05/11, 9 boutiques) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 2,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
   }
  },
  {
@@ -43414,7 +43426,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -43518,6 +43530,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Fausse alerte : le robot a mal lu le prix. Le relevé brut dit « prix initial 15210,61 € », ce qui donne environ 1 521,61 € sur ManoMano, pas 210,61 €. Ce même pack y était à 1 631,62 € en février (France Verif). Bon produit (DLX7014PTJ, 7 machines, 5 batteries 5 Ah). Le plus bas relevé en France est 1 639,27 € (achatmoinscher, 05/11), Bricozor 2 269,90 € : environ 7 % de moins, sous les 15 %. Pas de revente : prix de revente non confirmé.",
+   "prix_neuf_min_idealo": 1639.27,
+   "source_prix_ref": "achatmoinscher (05/11, 2 boutiques), recoupé Bricozor 2 269,90 € (05/11) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 7,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
   }
  },
  {
@@ -43559,7 +43583,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -43699,6 +43723,18 @@
    "feu": "vert",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (TCL 65P6K, 65 pouces) et offre active : page mydealz lue par le robot à 17h09, 400,90 € sur Joybuy.de avec le code CBFKA (394 € au titre de l'alerte). Mais pas livrable en France : Joybuy a un site par pays et Geizhals indique pour ces offres une livraison en Allemagne uniquement. En France, le neuf le moins cher est à 479,90 € chez Cdiscount (achatmoinscher, et KultureGeek au 02/11, plus 30 € de port selon l'option). L'économie aurait été de 16 % avec une livraison en France. Rien trouvé à ce prix sur Joybuy.fr.",
+   "prix_neuf_min_idealo": 479.9,
+   "source_prix_ref": "Cdiscount 479,90 € (achatmoinscher et KultureGeek, 02/11) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 16,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
   }
  },
  {
@@ -43740,7 +43776,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -43881,7 +43917,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T16:09+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO Icons 11380), mais achat impossible depuis la France : prix de 59,96 £ en magasin Costco à Watford (Royaume-Uni), carte de membre obligatoire. Sur le site Costco UK, fiche lue par le robot à 17h09 : 86,98 £, soit plus cher que le neuf en France. Neuf en France : 92,90 € (achatmoinscher, 15 boutiques), 95,99 € vendu par Amazon.fr (Keepa, moyenne 90 j 96,71 €). Coût de revient calculé 90,74 €, soit 2 % de moins seulement. L'écart de 36 % de l'alerte comparait des livres à des euros.",
+   "prix_neuf_min_idealo": 92.9,
+   "source_prix_ref": "achatmoinscher (05/11), recoupé Keepa/Amazon.fr 95,99 € (05/11) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 2,
+   "duree_offre": "inconnue, magasin de Watford uniquement",
+   "demande_confirmee": "47 ventes estimées par mois sur Amazon.fr, mais 78 vendeurs",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
+  }
  },
  {
   "id": "8ac1ffd82a",
@@ -43929,7 +43977,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -44052,7 +44100,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T16:09+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Gaggia Classic Evo E24), offre active sur hotukdeals (code BF27), mais pas intéressante depuis la France : 426,55 £ au Royaume-Uni donnent environ 596,64 € avec les frais et taxes d'importation. En France, le neuf est à 526,40 €, soit 531,39 € livrés (Darty Marketplace via achatmoinscher, 05/11) : l'achat au Royaume-Uni coûterait 12 % de plus. Livraison en France non confirmée par le marchand. L'écart de 19 % de l'alerte comparait des livres à des euros.",
+   "prix_neuf_min_idealo": 531.39,
+   "source_prix_ref": "Darty Marketplace 526,40 € + 4,99 € de port (achatmoinscher, 05/11), recoupé Keepa/Amazon.fr 618,17 € (moyenne 90 j 593,41 €) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": -12,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non (2 ventes estimées par mois sur Amazon.fr)",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
+  }
  },
  {
   "id": "f86f6a75ff",
@@ -44093,7 +44153,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -44219,7 +44279,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 16:41 UTC : offre active, 119.99 affiché, marchand 42_4 ; fiche ruralmaster.fr lue, livraison : click & collect, retrait en magasin ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Makita VC2512L, réf. 670588) et vrai prix : fiche Rural Master lue le 05/11, 126,50 € au lieu de 142,30 €, jusqu'au 21/11/2026, en stock au magasin de Cugnaux (31). Mais pas livrable en France : l'enseigne ne fait que du retrait dans le magasin choisi, pas d'expédition. Seule exception, une livraison locale à moins de 25 km du magasin, dès 15 €, soit 141,50 € livrés au mieux : 13 % sous le neuf le moins cher (162,35 €, achatmoinscher), sous les 15 %. En retrait seul, 22 % de moins, mais stock selon magasin. Pas de revente : marge sous les seuils (revente plafonnée à 138 €).",
+   "prix_neuf_min_idealo": 162.35,
+   "source_prix_ref": "achatmoinscher (05/11, 10 boutiques), recoupé Galaxus.fr 193,10 € et Keepa/Amazon.fr 199,22 € (moyenne 90 j 180,54 €) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 13,
+   "duree_offre": "jusqu'au 21/11/2026",
+   "demande_confirmee": "22 ventes estimées par mois sur Amazon.fr, 31 vendeurs",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
+  }
  },
  {
   "id": "b49e63e8d1",
@@ -44260,7 +44332,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -44450,6 +44522,18 @@
    "feu": "vert",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Fausse alerte sur le prix : 33,59 £ n'est pas le prix. Fiche Overclockers UK lue par le robot à 17h42 : 119,99 £, en stock (c'est aussi le prix du lien hotukdeals). Et pas livrable en France : la fiche ne parle que du Royaume-Uni et de l'Irlande. Sinon, environ 173,59 € avec frais et taxes contre 230,20 € en France (achatmoinscher), mais l'offre ne peut pas être reçue ici.",
+   "prix_neuf_min_idealo": 230.2,
+   "source_prix_ref": "achatmoinscher (05/11, 5 boutiques), recoupé Keepa/Amazon.fr 247,68 € (moyenne 90 j 239,68 €) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 25,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non (aucune vente estimée sur Amazon.fr)",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
   }
  },
  {
@@ -44510,7 +44594,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -44631,7 +44715,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 16:51 UTC : offre active, 699.0 affiché, code UKJUNEBD42, marchand 6_4 ; aliexpress.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:02+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Ryzen 7 7800X3D) et offre active sur hotukdeals, mais trop chère pour la France : 216,12 £ avec le code UKJUNEBD42 donnent environ 306,25 € avec frais et taxes d'importation, plus cher que le neuf en France à 275 € (achatmoinscher). Même sans taxes, environ 253 € livrés, soit 8 % de moins seulement. La même puce est déjà publiée sur le site à 200 € avec le code français 11FR40, 180 € avec PayPal.",
+   "prix_neuf_min_idealo": 275.0,
+   "source_prix_ref": "achatmoinscher (05/11), recoupé Keepa/Amazon.fr 319,69 € (05/11) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": -11,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "f86f6a75ff",
@@ -44672,7 +44768,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T16:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -44798,6 +44894,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 16:54 UTC : offre active, 119.99 affiché, marchand 42_4 ; fiche ruralmaster.fr lue, livraison : click & collect, retrait en magasin ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:01+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Makita VC2512L, réf. 670588) et vrai prix : fiche Rural Master lue le 05/11, 126,50 € au lieu de 142,30 €, jusqu'au 21/11/2026, en stock au magasin de Cugnaux (31). Mais pas livrable en France : l'enseigne ne fait que du retrait dans le magasin choisi, pas d'expédition. Seule exception, une livraison locale à moins de 25 km du magasin, dès 15 €, soit 141,50 € livrés au mieux : 13 % sous le neuf le moins cher (162,35 €, achatmoinscher), sous les 15 %. En retrait seul, 22 % de moins, mais stock selon magasin. Pas de revente : marge sous les seuils (revente plafonnée à 138 €).",
+   "prix_neuf_min_idealo": 162.35,
+   "source_prix_ref": "achatmoinscher (05/11, 10 boutiques), recoupé Galaxus.fr 193,10 € et Keepa/Amazon.fr 199,22 € (moyenne 90 j 180,54 €) ; idealo non relevé (ordinateur de David non joignable)",
+   "economie_pct": 13,
+   "duree_offre": "jusqu'au 21/11/2026",
+   "demande_confirmee": "22 ventes estimées par mois sur Amazon.fr, 31 vendeurs",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null
+  }
  }
 ]

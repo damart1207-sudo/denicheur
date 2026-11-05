@@ -28,6 +28,7 @@ CONSOMMABLE = re.compile(r"croquette|p[âa]t[ée]e|litière|recharge|cartouche|t
                          r"shampo|cr[èe]me|s[ée]rum|gel douche|dentifrice|savon|lingette|piles?\b|ampoule|sachet|aliment|"
                          r"compl[ée]ment|vitamine|gélule|recharge|encre|papier|stylo|cahier|calendrier de l.avent", re.I)
 JOUR = 24 * 60
+SEUIL = 1.25   # ventes au moins 25 % plus fortes qu'il y a 15 jours
 OCC = re.compile(r"leboncoin|ebay|vinted|back ?market|rakuten|rebuy|occasion|reconditionn|amazon|idealo|ledenicheur|achatmoinscher|kelkoo", re.I)
 
 
@@ -111,7 +112,7 @@ def analyser(p, cat):
         return round(s[i] / 100, 2) if len(s) > i and isinstance(s[i], int) and s[i] > 0 else None
     prix = min([x for x in (c(cur, 0), c(cur, 1)) if x], default=None)
     offres = cur[11] if len(cur) > 11 and isinstance(cur[11], int) and cur[11] >= 0 else None
-    return {"asin": p.get("asin"), "titre": (p.get("title") or "")[:140], "marque": p.get("brand"), "cat": cat,
+    return {"asin": p.get("asin"), "titre": (p.get("title") or "")[:300], "marque": p.get("brand"), "cat": cat,
             "ean": (p.get("eanList") or [None])[0], "prix_amazon": prix, "prix_moy30": min([x for x in (c(a30, 0), c(a30, 1)) if x], default=None),
             "rang_now": r_now, "rang_15j": r_15, "hausse": round(r_15 / r_now, 2) if r_now and r_15 else None,
             "vendus_mois": v_now, "vendus_mois_15j": v_15, "offres_neuves": offres,
@@ -119,17 +120,18 @@ def analyser(p, cat):
 
 
 def requete(t):
-    t = re.sub(r"[\(\[\{].*?[\)\]\}]|[,–\-|:].*$", " ", t)
-    return " ".join(t.split()[:7])
+    """Nom court pour Google : marque + modèle (on coupe à la première virgule, tiret entouré d'espaces, parenthèse…)."""
+    t = re.split(r"\s[-–|]\s|,|\(|\[", t)[0].replace(":", " ")
+    return " ".join(t.split()[:6]).lower()
 
 
 def main():
     asins, cat_de = candidats()
     print("candidats", len(asins))
     prods = [analyser(p, cat_de.get(p.get("asin"))) for p in fiches(asins)]
-    montent = [x for x in prods if x["hausse"] and x["hausse"] >= 1.3 and x["vendus_mois"] and not CONSOMMABLE.search(x["titre"])]
+    montent = [x for x in prods if x["hausse"] and x["hausse"] >= SEUIL and x["vendus_mois"] and not CONSOMMABLE.search(x["titre"])]
     montent.sort(key=lambda x: -(x["hausse"] * min(x["vendus_mois"], 2000)))
-    print("ventes en hausse ≥ 30 % sur 15 jours :", len(montent), "sur", len(prods))
+    print("ventes en hausse ≥ 25 % sur 15 jours :", len(montent), "sur", len(prods))
     top = montent[:30]
     # recherches Google : volume mensuel + courbe 30 jours
     reqs = {x["asin"]: requete(x["titre"]) for x in top}
@@ -141,23 +143,32 @@ def main():
             tend.update(dataforseo.tendances(mots[i:i + 5], periode="past_30_days"))
         except Exception as e:
             print("tendances", str(e)[:120])
-    # chasse : Google Shopping, même produit, vendeurs pros neufs
-    gs = shopping.chercher([x["ean"] or reqs[x["asin"]] for x in top], "FR", attente_max=240) if top else {}
+    # chasse : Google Shopping (recherche par nom), même produit confirmé par l'IA, puis TOUS les vendeurs de la fiche Google
+    gs = shopping.chercher([reqs[x["asin"]] for x in top], "FR", attente_max=240) if top else {}
     for x in top:
         q = reqs[x["asin"]]
         v = vol.get(q) or next((d for k, d in vol.items() if k.lower() == q.lower()), None) or {}
         x["requete"], x["volume"] = q, v.get("volume_mensuel")
         x["tendance"] = (tend.get(q) or {}).get("tendance")
-        offres = [o for o in gs.get(x["ean"] or q, []) if not OCC.search(str(o.get("marchand") or ""))]
-        bons = []
-        for o in offres:
-            r = meme_produit.verifier(x["titre"], o["titre"], x["prix_amazon"], o["prix"])
-            if r["meme"] is not False:
-                o["meme"] = r["meme"]; bons.append(o)
-        bons.sort(key=lambda o: o["prix"])
-        x["vendeurs_gs"] = len({str(o.get("marchand")).lower() for o in bons})
-        x["moins_cher"] = bons[0] if bons else None
-        x["ecart"] = round((1 - bons[0]["prix"] / x["prix_amazon"]) * 100) if bons and x["prix_amazon"] else None
+        fiche = None
+        for o in sorted(gs.get(q, []), key=lambda o: -(o.get("avis") or 0)):
+            if o.get("product_id") and meme_produit.verifier(x["titre"], o["titre"], x["prix_amazon"], o["prix"])["meme"] is True:
+                fiche = o; break
+        x["fiche_google"] = fiche
+    pids = [x["fiche_google"]["product_id"] for x in top if x.get("fiche_google")]
+    vend = shopping.vendeurs(pids, "FR", attente_max=240) if pids else {}
+    for x in top:
+        f = x.get("fiche_google")
+        vs = [v for v in vend.get(f["product_id"], [])] if f else []
+        vs = [v for v in vs if v.get("etat") in (None, "", "new", "neuf") and not OCC.search(str(v.get("marchand") or ""))]
+        for v in vs:
+            v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
+        vs.sort(key=lambda v: v["total"])
+        x["vendeurs_gs"] = len({str(v.get("marchand")).lower() for v in vs}) if f else None
+        x["moins_cher"] = vs[0] if vs else None
+        x["ecart"] = round((1 - vs[0]["total"] / x["prix_amazon"]) * 100) if vs and x["prix_amazon"] else None
+        x["anormal"] = x["ecart"] is not None and x["ecart"] >= 50   # souvent pas la même quantité : jamais gagnant sans vérification
+    json.dump(prods, open("data/winners_tous.json", "w", encoding="utf-8"), ensure_ascii=False)
     rapport(top, len(prods))
 
 
@@ -167,9 +178,10 @@ def rapport(top, n_analyses):
     lignes = ""
     for x in top:
         mc = x.get("moins_cher")
-        chasse = (f"<a href='{e(mc.get('lien'))}'>{mc['prix']} € — {e(mc.get('marchand'))}</a><br><small>{'✅ même produit' if mc.get('meme') else '❓ à confirmer'}"
-                  f"{' · ' + str(x['ecart']) + ' % sous Amazon' if x.get('ecart') is not None else ''}</small>") if mc else "aucun vendeur pro trouvé"
-        winner = (x.get("ecart") or 0) >= 15 and (x.get("offres_neuves") or 99) <= 10
+        chasse = (f"<a href='{e(mc.get('lien'))}'>{mc['total']} € port compris — {e(mc.get('marchand'))}</a><br><small>✅ même produit"
+                  f"{' · ' + str(x['ecart']) + ' % sous Amazon' if x.get('ecart') is not None else ''}"
+                  f"{' · ⚠️ écart anormal, vérifier la quantité' if x.get('anormal') else ''}</small>") if mc else "pas de vendeur pro moins cher trouvé"
+        winner = 15 <= (x.get("ecart") or 0) < 50 and (x.get("offres_neuves") or 99) <= 15
         lignes += (f"<tr style='background:{'#d9f7d9' if winner else '#fff'}'><td>{e(x['cat'])}</td><td><a href='{x['lien']}'>{e(x['titre'])}</a></td>"
                    f"<td>{e(x['prix_amazon'])} €</td><td><b>×{x['hausse']}</b><br><small>rang {int(x['rang_15j'])} → {int(x['rang_now'])}</small></td>"
                    f"<td>{e(x['vendus_mois'])}{' (il y a 15 j : ' + str(x['vendus_mois_15j']) + ')' if x.get('vendus_mois_15j') else ''}</td>"
@@ -180,15 +192,15 @@ def rapport(top, n_analyses):
 <h2>Produits dont les ventes montent — Amazon.fr, 15 derniers jours — {heure}</h2>
 <p><b>Sources :</b> historique du classement des ventes Amazon.fr et « achetés le mois dernier » (Keepa) ; recherches Google (Google Ads, Google Trends 30 j) ;
 vendeurs pros français (Google Shopping, produit contrôlé « même produit »). {n_analyses} produits analysés ; seuls ceux dont le classement de ventes s'est amélioré
-d'au moins 30 % en 15 jours sont listés (×1,5 = se vend environ 1,5 fois plus qu'il y a 15 jours). Consommables exclus.
-<b>🏆</b> = trouvé au moins 15 % sous Amazon chez un pro, et 10 offres neuves ou moins. Prix Google Shopping à confirmer sur la page du vendeur avant tout achat.</p>
+d'au moins 25 % en 15 jours sont listés (×1,5 = se vend environ 1,5 fois plus qu'il y a 15 jours). Consommables exclus.
+<b>🏆</b> = trouvé 15 à 50 % sous Amazon (port compris) chez un vendeur pro français, même produit confirmé, et 15 offres neuves ou moins sur Amazon. Prix Google Shopping à confirmer sur la page du vendeur avant tout achat.</p>
 <table><tr><th>Catégorie</th><th>Produit (Amazon)</th><th>Prix Amazon</th><th>Hausse des ventes 15 j</th><th>Achetés le mois dernier</th><th>Recherches Google /mois</th>
 <th>Offres Amazon / vendeurs Google</th><th>Moins cher trouvé</th><th></th></tr>{lignes}</table></html>"""
     open("data/winners.html", "w", encoding="utf-8").write(page)
     json.dump(top, open("data/winners.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for x in top:
         print(f"×{x['hausse']} | {x['vendus_mois']}/mois | {x['prix_amazon']} € | vol {x.get('volume')} {x.get('tendance')} | offres {x.get('offres_neuves')}/{x.get('vendeurs_gs')} | "
-              f"moins cher {(x.get('moins_cher') or {}).get('prix')} {(x.get('moins_cher') or {}).get('marchand')} ({x.get('ecart')} %) | {x['titre'][:70]}")
+              f"moins cher {(x.get('moins_cher') or {}).get('total')} {(x.get('moins_cher') or {}).get('marchand')} ({x.get('ecart')} %) | {x['titre'][:70]}")
 
 
 if __name__ == "__main__":

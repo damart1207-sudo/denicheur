@@ -18,7 +18,7 @@ for p in produits:
     q = p["mot_cle"]
     mots = set(re.findall(r"[a-z0-9]{2,}", q.lower()))
     ref = p.get("prix") or 0
-    OCCASION = re.compile(r"leboncoin|ebay|vinted|etsy|back ?market|rakuten|label emma|easy ?cash|cash converters|certideal|recommerce|swappie", re.I)
+    OCCASION = re.compile(r"leboncoin|ebay|vinted|etsy|back ?market|rakuten|label emma|easy ?cash|cash converters|certideal|recommerce|swappie|beebs|occasion|gamivo|eneba|instant ?gaming|kinguin|g2a|cdkeys|gameseal|ubuy", re.I)
     PAS_LE_PRODUIT = re.compile(r"occasion|reconditionn|d.occasion|échantillon|echantillon|d[ée]cant|miniature|recharge|protège|protege|sleeve|housse|coque|"
                                 r"support|câble|cable|chargeur|étui|etui|skin|sticker|pièce|piece|bracelet seul|compatible|pour (?!homme|femme)", re.I)
     brutes = [o for o in res.get(q, []) if mots <= set(re.findall(r"[a-z0-9]{2,}", (o["titre"] or "").lower())) and o["prix"] >= ref * 0.35]

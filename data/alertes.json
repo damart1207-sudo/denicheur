@@ -45598,7 +45598,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T17:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -45721,7 +45721,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T17:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (OPPO Enco Buds3 Pro), mais offre espagnole : page Chollometro lue par le robot à 18h30 UTC, active, 19,83 € avec coupon automatique, envoi depuis l'Espagne. Rien ne prouve ce prix ni ce coupon pour un acheteur en France, et aucune offre française équivalente n'a été trouvée. Même règle que les autres offres espagnoles. Neuf en France : 29,90 € vendu par Amazon (Keepa, plus bas sur 90 jours), 37,87 € livrés chez Pixmania, 39,90 € chez PcComponentes. Avec 5 € de port par prudence, l'économie serait de 17 %. Revente : environ 1,50 € de marge au plafond de 85 % du neuf, trop faible.",
+   "prix_neuf_min_idealo": 29.9,
+   "source_prix_ref": "Keepa, fiche Amazon.fr, 05/11 ; achatmoinscher (Pixmania 37,87 € livrés)",
+   "economie_pct": 17,
+   "prix_revente_verifie": 25.41,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 1.43,
+   "duree_offre": "coupon, durée inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "b5b8f1dd90",
@@ -45762,7 +45774,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T17:59+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -45864,6 +45876,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Pas une affaire : annonce Leboncoin à 520 € et rien ne montre que l'ampli est neuf. L'argus Audiofanzine est à 502 € et la plupart des annonces « Blues Junior » sur Leboncoin vont de 400 à 550 €, donc ce prix est le prix normal de l'occasion. Neuf en France : 829 € en stock chez Thomann (fiche lue le 05/11), même prix chez Woodbrass et Star's Music selon Audiofanzine, et non 899 € comme l'alerte. Revente : au mieux 550 €, soit 25 € de marge et moins de 5 % du coût, sous les seuils.",
+   "prix_neuf_min_idealo": 829,
+   "source_prix_ref": "Thomann.fr, fiche lue le 05/11, confirmé par Audiofanzine",
+   "economie_pct": 37,
+   "prix_revente_verifie": 550,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 25,
+   "duree_offre": "annonce sans date de fin",
+   "demande_confirmee": false
   }
  },
  {
@@ -45892,7 +45916,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46002,7 +46026,19 @@
    "livraison_france": "oui",
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Bon produit, offre réelle sur Amazon.fr : 50,99 € lus par Keepa le 05/11, vendu par Amazon, plus bas sur 90 jours (moyenne 69,27 €). Mais cette offre est elle-même le prix neuf le plus bas relevé en France : l'économie est de 0 % par rapport à ce prix, donc pas de bon plan selon la règle des 15 %. Revente perdante : 44,87 € au plafond de 85 % du neuf.",
+   "prix_neuf_min_idealo": 50.99,
+   "source_prix_ref": "Keepa, fiche Amazon.fr, 05/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": 44.87,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -11.12,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "2560e68f8c",
@@ -46062,7 +46098,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46224,6 +46260,18 @@
     "ES": 70.77
    },
    "meilleur_pays": "FR"
+  },
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Nothing Ear (a)), page Chollometro lue par le robot à 18h11 UTC : 38,64 € sur Miravia avec un coupon 11.11 de 4 €. Mais Miravia est un site espagnol et aucune preuve de livraison en France n'a été trouvée : offre écartée. Neuf en France : 62 € (achatmoinscher), 57,38 € au plus bas sur 90 jours sur Amazon.fr (Keepa, moyenne 59,81 €). À noter : Dealabs a montré cet article à 33,62 € sur AliExpress depuis un entrepôt français, offre sans date confirmée et une autre offre Dealabs du même produit est terminée.",
+   "prix_neuf_min_idealo": 62,
+   "source_prix_ref": "achatmoinscher, relevé du robot le 05/11 ; Keepa pour Amazon.fr",
+   "economie_pct": 30,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "coupon 11.11",
+   "demande_confirmee": true
   }
  },
  {
@@ -46252,7 +46300,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46390,7 +46438,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:11 UTC : offre active, 19.95 affiché, marchand 1967_2 ; fiche game.es lue : 19.99 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Pas du neuf : la fiche game.es lue par le robot à 18h11 UTC affiche « Seminuevo desde 19,99 € » (occasion), en stock. Livraison en France non prouvée, port gratuit seulement dès 30 €. Neuf en France : 25 € sur Amazon.fr par un vendeur tiers, version allemande (Keepa, 05/11). Avec le port, aucune économie. Revente perdante.",
+   "prix_neuf_min_idealo": 25,
+   "source_prix_ref": "Keepa, fiche Amazon.fr, 05/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": 22,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -2.99,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "aeb2bb4ac1",
@@ -46438,7 +46498,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46561,7 +46621,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:20 UTC : offre active, 95.03 affiché, marchand 1650_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Offre britannique : 37,49 £, soit environ 43 € avant port, et 59,74 € avec port et frais d'importation. Neuf en France : 44,89 € (achatmoinscher, 7 boutiques), 45,32 € vendu par Amazon.fr (Keepa, 05/11). C'est plus cher qu'en France une fois livré ; même sans frais d'import, l'économie resterait sous 5 %. De plus, le lien du bon plan mène à une fiche amazon.com de la version Xbox, pas Switch 2. Revente perdante, 11 vendeurs déjà sur Amazon.",
+   "prix_neuf_min_idealo": 44.89,
+   "source_prix_ref": "achatmoinscher et Keepa, 05/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": 39.5,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -20.24,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "bd2dfe7e1d",
@@ -46589,7 +46661,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46712,7 +46784,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 18:20 UTC : offre active, 31.0 affiché, marchand 1650_3 ; fiche tesco.com lue : 29.0, en stock (panier) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Fiche Tesco lue par le robot à 18h20 UTC : 29 £ uniquement avec la carte Clubcard, 59 £ sinon, et Tesco ne livre pas en France. Offre impossible depuis la France. Neuf en France : 54,99 € sur Amazon.fr par un vendeur tiers (Keepa, 05/11), moyenne 46,91 € sur 90 jours.",
+   "prix_neuf_min_idealo": 54.99,
+   "source_prix_ref": "Keepa, fiche Amazon.fr, 05/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix Clubcard, durée inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "be9bd4ba16",
@@ -46772,7 +46856,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T18:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -46893,6 +46977,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 18:21 UTC : offre active, 216.12 affiché, code HUKD15, marchand 45020_8 ; aliexpress.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T18:54+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Ryzen 5 8500G), mais offre britannique : code HUKD15 de Hotukdeals, sans preuve qu'il marche depuis la France, et aucune offre française équivalente trouvée. Coût estimé livré en France : 125,36 € avec frais d'importation, soit 12 % de moins que les 141,90 € d'achatmoinscher, sous les 15 %. Autres prix neufs : 134,85 € livrés chez PowerPlanet (stock incertain), 163,94 € port gratuit chez Galaxus, 10 en stock (fiche lue le 05/11), 175,76 € sur Amazon.fr (vendeur tiers, Keepa). Même règle que les autres codes étrangers.",
+   "prix_neuf_min_idealo": 141.9,
+   "source_prix_ref": "achatmoinscher, relevé du robot le 05/11 ; Galaxus lu le 05/11",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "code, durée inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

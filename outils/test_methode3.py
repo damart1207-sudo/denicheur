@@ -36,7 +36,10 @@ for p in produits:
     if not f:
         lignes.append((q, None, [], None, "fiche produit exacte non trouvée"))
         continue
-    vs = [v for v in vend.get(f["product_id"], []) if (v.get("etat") in (None, "", "new", "neuf")) and not VERSIONS.search(v.get("titre") or "")]
+    PAS_MARCHAND = re.compile(r"leboncoin|ebay|vinted|stockx|back ?market|rakuten|beebs|achatmoinscher|idealo|ledenicheur|kelkoo|"
+                              r"cherchons|touslesprix|prixing|occasion|reconditionn", re.I)  # occasion, revente, comparateurs
+    vs = [v for v in vend.get(f["product_id"], []) if (v.get("etat") in (None, "", "new", "neuf")) and not VERSIONS.search(v.get("titre") or "")
+          and not PAS_MARCHAND.search(str(v.get("marchand") or ""))]
     for v in vs:
         v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
     vs.sort(key=lambda v: v["total"])

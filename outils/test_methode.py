@@ -19,8 +19,8 @@ N = 15
 deals = []
 for domaine, pays in ((4, "FR"), (3, "DE")):
     sel = {"page": 0, "domainId": domaine, "priceTypes": [1], "dateRange": 0, "isFilterEnabled": True, "isRangeEnabled": True,
-           "deltaPercentRange": [40, 95], "currentRange": [3000, 150000], "salesRankRange": [1, 50000],
-           "singleVariation": True, "filterErotic": True, "hasReviews": True}
+           "deltaPercentRange": [30, 95], "currentRange": [3000, 150000], "salesRankRange": [1, 20000],
+           "singleVariation": True, "filterErotic": True, "hasReviews": True, "isLowest90": True, "minRating": 40}
     try:
         d = moisson._appel("deal", {"domain": domaine}, corps=sel)
     except Exception as e:
@@ -35,12 +35,26 @@ for domaine, pays in ((4, "FR"), (3, "DE")):
             m90 = None
         if prix and m90 and m90 > prix:
             baisse = round((m90 - prix) / m90 * 100)
-            if baisse >= 40:
+            if baisse >= 30:
                 deals.append({"asin": x["asin"], "titre": x.get("title"), "pays": pays, "prix_keepa": prix, "moy90": m90, "baisse": baisse})
     print("deals", pays, len((d.get("deals") or {}).get("dr") or []), "-> ≥40 % :", sum(1 for z in deals if z["pays"] == pays))
 
 deals.sort(key=lambda z: -z["baisse"])
-choix = deals[:N]
+# fiche Keepa de toutes les baisses : marque connue + note, sinon c'est souvent un faux prix barré d'un produit sans marque
+for pays in ("FR", "DE"):
+    fi = {r["asin"]: r for r in moisson.fiches([z["asin"] for z in deals if z["pays"] == pays][:100], pays)}
+    for z in deals:
+        if z["pays"] == pays and z["asin"] in fi:
+            r = fi[z["asin"]]
+            z["marque"], z["note"], z["m180"] = r.get("marque"), r.get("note"), r.get("m180")
+import re as _re
+def _serieux(z):
+    m = (z.get("marque") or "").strip()
+    return bool(m) and len(m) > 2 and not _re.fullmatch(r"[A-Z]{5,}|generic|générique|unbranded|sans marque", m, _re.I) \
+        and (not z.get("m180") or z["m180"] < z["moy90"] * 1.5)  # moyenne 90 j pas gonflée par rapport aux 180 j
+serieux = [z for z in deals if _serieux(z)]
+print("marques sérieuses :", len(serieux), "sur", len(deals))
+choix = serieux[:N]
 for pays in ("FR", "DE"):
     asins = [z["asin"] for z in choix if z["pays"] == pays]
     for r in moisson.fiches(asins, pays):
@@ -57,7 +71,12 @@ for r in moisson.fiches([z["asin"] for z in de], "FR"):
 res = shopping.chercher([z.get("ean") or (z["titre"] or "")[:60] for z in choix], "FR")
 for z in choix:
     q = z.get("ean") or (z["titre"] or "")[:60]
-    offres = sorted(res.get(q, []), key=lambda o: o["prix"])
+    mots = set(_re.findall(r"[a-z0-9]{3,}", ((z.get("marque") or "") + " " + (z["titre"] or "")[:70]).lower()))
+    def _meme(o):  # même produit : au moins la moitié des mots importants en commun, prix plausible (pas un accessoire)
+        mo = set(_re.findall(r"[a-z0-9]{3,}", (o["titre"] or "").lower()))
+        p = z.get("prix_relu") or z["prix_keepa"]
+        return len(mots & mo) >= max(2, len(mots) // 2) and o["prix"] >= p * 0.4
+    offres = sorted([o for o in res.get(q, []) if _meme(o)], key=lambda o: o["prix"])
     z["gs_nb"] = len(offres)
     amz = [o for o in offres if "amazon" in (o.get("marchand") or "").lower()]
     autres = [o for o in offres if "amazon" not in (o.get("marchand") or "").lower()]

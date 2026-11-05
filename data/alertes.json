@@ -44947,7 +44947,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T17:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -45072,7 +45072,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T17:14+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T17:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : prix et livraison non prouvés. Bon produit (Mars Gaming MCVPRO), mais trois prix différents : 55,54 € dans l'alerte, 52,90 € sur Chollometro (lu par le robot à 18h14), 63,55 € et 63 € sur la fiche Amazon Espagne du modèle noir lue à la même heure. L'offre blanche annoncée à 57,70 € n'y figure pas. Le « oui » pour la France vient du nom de domaine : envoi et frais pour ce gros colis restent à prouver. Neuf en France : 74,98 € sur achatmoinscher (relevé du robot), 79,90 € Amazon.fr en blanc (Keepa, moyenne 90 j 80,77 €), 80,99 € PcComponentes le 05/11. À 63,55 € + 5 € de port : 68,55 €, soit 8,6 % seulement ; il faudrait 63,73 € livrés au maximum. Revente non retenue : 85 % du neuf = 63,73 €, soit 3,19 € au mieux.",
+   "prix_neuf_min_idealo": 74.98,
+   "source_prix_ref": "achatmoinscher (robot), contrôlé avec Keepa Amazon.fr et comparateur-gamer",
+   "economie_pct": 19.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "73b3b640a5",
@@ -45113,7 +45125,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T17:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -45319,6 +45331,18 @@
     "Amazon 29/mois",
     "Google 90/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T17:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : pas livrable en France. Bon produit (Shark FlexStyle HD446SLEU). Fiche sharkninja.de lue par le robot à 18h23 : 149,99 €, en stock, moins 10 % avec le code HOME10, soit 134,99 €. Mais les conditions de vente de SharkNinja Allemagne disent qu'elle livre uniquement en Allemagne et en Autriche. Neuf en France : 220,49 € sur achatmoinscher (9 boutiques), 239,98 € Amazon.fr (Keepa, plus bas 90 j 189,60 €). Le prix aurait été très bon, mais il n'est pas achetable depuis la France sans intermédiaire.",
+   "prix_neuf_min_idealo": 220.49,
+   "source_prix_ref": "achatmoinscher (robot), contrôlé avec Keepa Amazon.fr",
+   "economie_pct": 36.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (code HOME10)",
+   "demande_confirmee": "non"
   }
  },
  {
@@ -45360,7 +45384,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T17:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -45529,6 +45553,18 @@
    "proba_detail": [
     "Google 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T17:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée. Bon produit (MSI MAG A1250GL 1250 W). Chollometro lu par le robot à 18h24 : offre active, 69,99 € chez Coolmod (57,95 € annoncés au départ). L'aide officielle de Coolmod sur les envois ne parle que de l'Espagne et d'Andorre, jamais de la France, et aucun port vers la France n'est connu. Neuf en France : 132,84 € sur achatmoinscher (relevé du robot), 155,97 € sur PcComponentes.fr (vendeur tiers), 189,99 € Fnac livré (comparateur-gamer, 05/11), 209,95 € LDLC. Prix très bas, mais pas de preuve qu'on puisse l'acheter depuis la France.",
+   "prix_neuf_min_idealo": 132.84,
+   "source_prix_ref": "achatmoinscher (robot), contrôlé avec PcComponentes.fr, comparateur-gamer et LDLC",
+   "economie_pct": 43.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
   }
  }
 ]

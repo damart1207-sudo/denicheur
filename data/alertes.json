@@ -35679,7 +35679,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T08:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -35827,7 +35827,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : prix réservé au magasin Sainsbury's de Wandsworth (Londres), impossible à acheter depuis la France. Le neuf est à 33,79 € sur Amazon.fr, moins cher que notre coût de 45,26 €.",
+   "prix_neuf_min_idealo": 33.79,
+   "source_prix_ref": "Keepa/Amazon.fr ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "d24b669a02",
@@ -35865,7 +35877,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -36015,7 +36027,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : économie trop faible. Coût estimé 32,99 € livré depuis l'étranger, contre 34,68 € livrés sur Amazon (achatmoinscher, relu ce matin) et 34,69 € à la Fnac, soit 5 %. Le lien du bon plan pointe vers amazon.com et la livraison en France n'est pas prouvée.",
+   "prix_neuf_min_idealo": 34.68,
+   "source_prix_ref": "achatmoinscher, relu le 05/11 ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "d3752c427a",
@@ -36053,7 +36077,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -36172,7 +36196,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "pas de bénéfice"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : prix non confirmé. Chollometro annonce 27-30 €, mais la fiche Amazon.es relevée par le robot montre 51,87 €. La page Chollometro n'a pas pu être relue. Neuf en France : 38,98 € livrés chez Techinn ; Chocobonplan cite 29,99 € chez Micromania (fiche Deluxe non lue). Sur le papier 17 % sous Techinn, mais rien de sûr.",
+   "prix_neuf_min_idealo": 38.98,
+   "source_prix_ref": "achatmoinscher (Techinn, port compris), relu le 05/11 ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "a2436f34e3",
@@ -36210,7 +36246,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:19+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -36365,7 +36401,19 @@
     "volume de recherche inconnu"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon produit : Fairphone 5 256 Go Transparent, neuf, sans abonnement ni blocage SIM. Page Fairphones de Belsimpel lue ce matin : 349,00 € (étiquette Deal / Black Friday, prix conseillé 579 €), AndroidWorld confirme 349 €. Fiche produit illisible ici (anti-robot) : vérifier le prix au panier. Livraison : la page d'envoi de Belsimpel cite la France métropolitaine et annonce l'envoi gratuit dans l'Union européenne, soit 349 € livrés. Site en néerlandais. Neuf en France : 431,66 € Boulanger (vendeur Electro Network), 432,75 € livrés Cdiscount, 435,48 € PcComponentes, 435,79 € Darty Marketplace, 436,71 € Amazon.fr (Keepa). Économie 19 %. Pas de revente : à 85 % du neuf (366,91 €) bénéfice d'environ 18 €, soit 5 % ; même sur Fnac environ 10 %.",
+   "prix_neuf_min_idealo": 431.66,
+   "source_prix_ref": "Boulanger (page lue le 05/11), recoupé achatmoinscher et Keepa/Amazon.fr ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 19,
+   "prix_revente_verifie": 366.91,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 17.91,
+   "duree_offre": "Black Friday Belsimpel, fin non indiquée",
+   "demande_confirmee": "faible : environ 12 ventes par mois sur Amazon.fr"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "318a77e7fe",
@@ -36390,7 +36438,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -36538,7 +36586,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (21 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : doublon. Même micro AKG Ara et même offre Thomann que l'alerte 09d1e4746f, déjà publiée ce matin en bon plan (19,90 € + port). Rien à publier en plus.",
+   "prix_neuf_min_idealo": 33.69,
+   "source_prix_ref": "Keepa/Amazon.fr, repris de l'alerte 09d1e4746f ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "4014b28414",
@@ -36589,7 +36649,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -36735,7 +36795,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (20 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : version de la montre non prouvée. Bon modèle (Forerunner 265 46 mm) et prix réel : 202,57 € sur mydealz ; Journal du Geek (03/11, offre jusqu'au 18/11) et Presse-citron (05/11) donnent en France 202 € avec le code 11FR24, 182 € avec PayPal, envoi depuis la France. Mais Dealabs propose à 201,82 € sur AliExpress une montre marquée « version chinoise », presque le même prix, et aucune page ne dit quelle version est vendue ici. Fiche AliExpress illisible (anti-robot), vendeur et entrepôt non confirmés. Sur le papier : 41 % sous les 341,84 € d'Auchan (achatmoinscher) ; Amazon.fr 348,90 € (Keepa). Revente possible si version européenne : Vinted médiane 260 €, environ 52 € de bénéfice. À regarder à la main : si la fiche dit Global/EU avec envoi de France, l'affaire devient très bonne.",
+   "prix_neuf_min_idealo": 341.84,
+   "source_prix_ref": "achatmoinscher (Auchan, relu le 05/11) et Keepa/Amazon.fr ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 41,
+   "prix_revente_verifie": 260.0,
+   "canal": "vinted",
+   "marge_nette_verifiee": 52.43,
+   "duree_offre": "jusqu'au 18/11 selon Journal du Geek, stock limité",
+   "demande_confirmee": "oui : environ 45 ventes par mois sur Amazon.fr"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "0be57f4c8c",
@@ -36760,7 +36832,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:30+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 569.0,
@@ -36940,7 +37012,19 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : livraison en France non prouvée. Bon modèle (Bolero Wash&Dry 10680 Inverter Steel A), mais c'est du gros électroménager sur Amazon.es : le « oui » du robot vient du nom de domaine, pas de la fiche. Prix non confirmé aussi : 379 € sur l'alerte, 399 € sur la page Chollometro au passage du robot. Neuf en France : 528,73 € livrés chez ManoMano, 569 € idealo (variante non précisée). Le 448,99 € de Techinn ne compte pas : 129,49 € de port en plus.",
+   "prix_neuf_min_idealo": 528.73,
+   "source_prix_ref": "achatmoinscher (ManoMano, port compris), relu le 05/11",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "06dd515ca4",
@@ -36965,7 +37049,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 143.56,
@@ -37131,7 +37215,19 @@
    "manque": [],
    "feu": "rouge",
    "raison": "concurrence trop forte (12 vendeurs)"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : offre non confirmée. L'alerte dit Roborock E5 à environ 100 € sur Amazon, mais le lien lu par le robot mène à une fiche amazon.com « Q7 L5 ... Side Brushes Replacement Bundle », pas à cet aspirateur. Prix, produit exact et livraison en France non prouvés. Neuf en France : 143,56 € sur idealo (robot, 4 offres).",
+   "prix_neuf_min_idealo": 143.56,
+   "source_prix_ref": "idealo (robot), 05/11",
+   "economie_pct": 26,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  },
  {
   "id": "01041c4a96",
@@ -37169,7 +37265,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T09:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -37318,6 +37414,18 @@
     "prix d'occasion inconnus"
    ],
    "feu": "orange"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : Rossmann.pl est un site polonais, aucune preuve de livraison en France. Bon produit (Gentleman Réserve Privée 60 ml, fiche lue : 174,99 PLN, en stock). Neuf en France : 55,99 € sur achatmoinscher (hors port, non relu). Sans revente possible : bénéfice d'environ 3 €.",
+   "prix_neuf_min_idealo": 55.99,
+   "source_prix_ref": "achatmoinscher (robot), non relu ; idealo non lu (ordinateur de David non joignable)",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "sans objet"
+  },
+  "verifie_le": "2026-11-05T09:55+00:00"
  }
 ]

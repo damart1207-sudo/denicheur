@@ -14,12 +14,15 @@
   "douane_hors_ue": "toujours payée par nous à la commande (jamais de frais à la livraison pour le client) ; sinon la source n'est pas utilisée",
   "prix_client": {
     "cout_total": "prix d'achat + TVA d'import (hors UE) + port + douane + frais Stripe + cotisations micro-entreprise",
-    "regle": "le client paie MOINS que son prix maximum : prix client = prix max - remise ; remise = part du surplus (prix max - coût total)",
-    "remise_part_du_surplus": {
+    "marge_visee": "calculée chaque jour pour atteindre en priorité les 600 € du mois : (reste à gagner) / (ventes encore attendues)",
+    "regle_normale": "surplus (prix max - coût total) inférieur à 2 x marge visée -> le client paie son prix max ; toute la marge va à l'objectif",
+    "regle_gros_ecart": "surplus >= 2 x marge visée -> on garde la marge visée + une part du reste, le client paie moins que son prix max",
+    "remise_part_du_reste": {
       "avant_objectif": 0.3,
       "apres_objectif": 0.5
     },
-    "exemple": "max 200 €, coût total 100 € -> surplus 100 € -> remise 30 € -> prix client 170 €, marge 70 €",
+    "exemple_normal": "max 200 €, coût 160 €, marge visée 30 € -> surplus 40 € < 60 € -> prix client 200 €, marge 40 €",
+    "exemple_gros_ecart": "max 200 €, coût 100 €, marge visée 30 € -> surplus 100 € >= 60 € -> reste 70 €, remise 30 % = 21 € -> prix client 179 €, marge 79 €",
     "declenchement_min_marge_nette_eur": 10
   },
   "colis_hors_europe": "acceptés (Chine compris) ; produit authentique obligatoire, vérifié avant achat"

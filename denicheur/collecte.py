@@ -134,7 +134,7 @@ def lire_source(source, timeout=25):
         except (OSError, _json.JSONDecodeError):
             return [], "pas encore de collecte PC"
         limite = (datetime.now(timezone.utc) - timedelta(hours=26)).strftime("%Y-%m-%dT%H:%M")
-        return [a for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix")], None
+        return [a for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix") and not carte_collee(a)], None
     if source.get("type") == "prospectus":  # promos des prospectus de magasins (Bonial), lues chaque nuit
         from . import prospectus
         return prospectus.annonces(), None
@@ -145,6 +145,14 @@ def lire_source(source, timeout=25):
         from . import pages
         return pages.lire(source, timeout)
     return lire_flux(source, timeout)
+
+
+def carte_collee(a):
+    """Carte de promo mal lue : le « prix initial » finit par le prix (« 3090.9 » pour 90,90 €, 05/11). Le vrai prix est inconnu :
+    l'annonce n'est gardée que si le PC a relu la fiche produit."""
+    m = re.search(r"prix initial ([\d.]+) €", a.get("description") or "")
+    return bool(m) and a.get("prix_verifie") is not True and str(a.get("prix")).rstrip("0").rstrip(".") and \
+        m.group(1).endswith(str(a["prix"]).rstrip("0").rstrip(".")) and len(m.group(1)) > len(str(a["prix"]))
 
 
 def collecter(sources, lecteur=lire_source):

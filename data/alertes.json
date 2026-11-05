@@ -42239,7 +42239,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T14:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -42390,6 +42390,18 @@
   "controle_prix": {
    "statut": "inconnu",
    "prix_page": null
+  },
+  "verifie_le": "2026-11-05T15:48+00:00",
+  "verdict": {
+   "commentaire": "Faux prix : 90,90 € est une erreur de lecture du collecteur (« prix initial 3090,9 € »). La fiche ManoMano affiche en réalité 309,90 € pour la SP6000J1, et le lien de l'alerte mène à une autre scie (HS7601J, 190 mm). À 309,90 €, c'est au mieux 10 % sous les 345,45 € d'Amazon.fr (Keepa), sous les 15 % demandés. Rejet.",
+   "prix_neuf_min_idealo": 345.45,
+   "source_prix_ref": "Keepa / amazon.fr (fiche de l'alerte)",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -42431,7 +42443,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -42599,6 +42611,18 @@
    "proba_detail": [
     "Google 590/mois"
    ]
+  },
+  "verifie_le": "2026-11-05T15:48+00:00",
+  "verdict": {
+   "commentaire": "Coolblue ne livre pas en France (page de l'offre : livraison France non). De plus, la fiche coolblue.nl affiche 419 €, pas 379 €. Rejet.",
+   "prix_neuf_min_idealo": 509.0,
+   "source_prix_ref": "achatmoinscher (comparateur français, non recoupé)",
+   "economie_pct": 25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -42640,7 +42664,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -42761,7 +42785,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 15:16 UTC : offre active, 129.99 affiché, marchand 6_4 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T15:48+00:00",
+  "verdict": {
+   "commentaire": "Currys (Royaume-Uni) ne livre pas en France. Coût rendu 230,14 € calculé sur 160,97 £, soit plus cher que le neuf en France (228,25 €). La page affichait 129,99 £ mais l'offre reste inachetable depuis la France. Rejet.",
+   "prix_neuf_min_idealo": 228.25,
+   "source_prix_ref": "achatmoinscher (comparateur français)",
+   "economie_pct": -1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "f91741a126",
@@ -42821,7 +42857,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -43000,6 +43036,18 @@
     "ES": 70.77
    },
    "meilleur_pays": "FR"
+  },
+  "verifie_le": "2026-11-05T15:48+00:00",
+  "verdict": {
+   "commentaire": "Vendu sur Miravia, qui ne livre que l'Espagne (mêmes rejets déjà faits sur ce marchand) ; livraison France non prouvée. La fiche affiche 42,64 € et non 38,64 €. Pour info, Galaxus.fr est à 69,99 € et Amazon.fr est descendu à 57,38 € sur 90 jours. Rejet.",
+   "prix_neuf_min_idealo": 62.0,
+   "source_prix_ref": "achatmoinscher (comparateur)",
+   "economie_pct": 30,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "vente flash, 3 jours affichés",
+   "demande_confirmee": false
   }
  },
  {
@@ -43048,7 +43096,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T15:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -43154,6 +43202,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan illisible (HTTP 404) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-05T15:48+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan disparue (erreur 404), Huawei UK ne livre pas en France, et le coût rendu de 159,79 € n'est que 6 % sous les 169,99 € français, sous les 15 % demandés. Rejet.",
+   "prix_neuf_min_idealo": 169.99,
+   "source_prix_ref": "achatmoinscher (comparateur français)",
+   "economie_pct": 6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée ou inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -46,7 +46,8 @@ for a in cands:
     if f:
         for v in vend.get(f["product_id"], []):
             nom = f"{v.get('marchand') or ''} {v.get('lien') or ''}"
-            if v.get("etat") in (None, "", "new", "neuf") and FR.search(nom) and not EXCLUS.search(nom):
+            meme = (a.get("marchand") or "x").split()[0].lower()  # le marchand de l'annonce lui-même est exclu de la comparaison
+            if v.get("etat") in (None, "", "new", "neuf") and FR.search(nom) and not EXCLUS.search(nom) and meme not in nom.lower():
                 v["total"] = v.get("total") or round(v["prix"] + (v.get("port") or 0), 2)
                 vs.append(v)
     vs.sort(key=lambda v: v["total"])

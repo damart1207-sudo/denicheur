@@ -25,5 +25,24 @@
     "exemple_gros_ecart": "max 200 €, coût 100 €, marge visée 30 € -> surplus 100 € >= 60 € -> reste 70 €, remise 30 % = 21 € -> prix client 179 €, marge 79 €",
     "declenchement_min_marge_nette_eur": 10
   },
-  "colis_hors_europe": "acceptés (Chine compris) ; produit authentique obligatoire, vérifié avant achat"
+  "colis_hors_europe": "acceptés (Chine compris) ; produit authentique obligatoire, vérifié avant achat",
+  "chasse": {
+    "prix_max": "le client donne DEUX prix max : neuf, et occasion (reconditionné compris) ; il peut n'en remplir qu'un",
+    "analyse_immediate": "au dépôt, les dénicheurs cherchent tout de suite ; si une offre sous le prix max existe déjà -> proposition immédiate, pas de surveillance",
+    "surveillance_keepa": "seulement si rien n'est trouvé à l'analyse immédiate ; arrêtée dès que : client a payé, client annule, 30 jours écoulés, ou offre envoyée restée sans réponse 12 h",
+    "occasion_sources": [
+      "Vinted",
+      "Leboncoin",
+      "eBay",
+      "Amazon Seconde main",
+      "Back Market",
+      "Rakuten occasion",
+      "Easy Cash",
+      "Cash Converters",
+      "Cdiscount occasion",
+      "Rebuy",
+      "Label Emmaüs"
+    ],
+    "occasion_livraison": "achat chez le particulier avec livraison en point relais choisi près du client (pas de double port) ; état vérifié sur photos + protection acheteur de la plateforme"
+  }
 }

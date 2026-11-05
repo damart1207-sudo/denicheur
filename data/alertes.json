@@ -47960,17 +47960,17 @@
    "prix_page": null
   },
   "verdict": {
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "demande_confirmee": false,
-   "commentaire": "Prix à confirmer. 65 € relevé par le collecteur StockX pour la pointure US 12 (EU 46), sans les frais de traitement et de livraison StockX, donc le coût de 70 € n'est pas prouvé. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, sans promotion (relu le 05/11). La fiche Keepa de l'alerte est la version noire et ne sert pas de référence.",
+   "commentaire": "Prix à confirmer. 65 € relevé par le collecteur StockX pour la pointure US 12 (EU 46), sans les frais de traitement et de livraison StockX, qui varient selon l'adresse : le coût de 70 € n'est pas prouvé. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, exclue des promotions (relu le 05/11 au soir). La fiche Keepa de l'alerte est la version noire et ne sert pas de référence.",
    "prix_neuf_min_idealo": 119.99,
    "source_prix_ref": "Nike.com France, 05/11",
    "economie_pct": null,
-   "duree_offre": "prix StockX variable selon la pointure"
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix StockX variable selon la pointure",
+   "demande_confirmee": false
   },
-  "verifie_le": "2026-11-05T22:49+00:00"
+  "verifie_le": "2026-11-05T23:48+00:00"
  },
  {
   "id": "8c71581d77",
@@ -48256,7 +48256,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:52+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -48414,17 +48414,17 @@
    "statut": "inconnu",
    "prix_page": null
   },
-  "verifie_le": "2026-11-05T22:49+00:00",
+  "verifie_le": "2026-11-05T23:48+00:00",
   "verdict": {
+   "commentaire": "Rejeté : moins cher ailleurs. Dyson vend ce soir le V12 Detect Slim Absolute, mieux équipé, à 399 € sur sa boutique officielle (Clubic, 05/11 à 16h33), sous les 419 € de ManoMano avant port. Le même V12 Detect Slim + kit de nettoyage minutieux y est à 499 € avec station offerte : l'écart de 16 % ne tient donc pas face à l'Absolute.",
+   "prix_neuf_min_idealo": 399.0,
+   "source_prix_ref": "Boutique Dyson d'après Clubic, 05/11 à 16h33 (modèle Absolute)",
+   "economie_pct": 0,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "demande_confirmee": false,
-   "commentaire": "419 € relevé sur ManoMano par le collecteur à 22h11 (prix initial 509 €, -18 %, vendeur Dyson), frais de port à confirmer. Neuf en France : 499 € pour le V12 Detect Slim Absolute chez ManoMano (achatmoinscher lu le 05/11), 649 € chez Boulanger, 699 € chez Darty et Fnac. Soit au mieux 16 % sous le plus bas, à condition que le port soit gratuit, et l'Absolute a plus d'accessoires : il faut encore comparer à l'exacte même version. Le même produit a déjà été vu à 299 € sur Dealabs (offre terminée).",
-   "prix_neuf_min_idealo": 499.0,
-   "source_prix_ref": "achatmoinscher (ManoMano, version Absolute), 05/11",
-   "economie_pct": null,
-   "duree_offre": "vente Black Friday ManoMano"
+   "duree_offre": "vente Black Friday ManoMano",
+   "demande_confirmee": false
   }
  },
  {
@@ -48980,7 +48980,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T23:08+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -49113,7 +49113,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-05T23:09+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit : MSI MAG Forge 320R Airflow blanc (même fiche Amazon B0CXF9DWCG sur Amazon.es et Amazon.fr). 44,99 € sur Amazon.es : confirmé par la fiche Amazon lue par le robot à 23h09 (37,18 € hors TVA, soit 44,99 € TTC, en stock) ; offre active sur Chollometro à la même heure. Port vers la France estimé à 5 € : 49,99 €, à contrôler au panier (l'offre reste sous le seuil jusqu'à 63,74 € livré). Neuf en France, version blanche : 74,99 € chez Fnac (port gratuit), Amazon.fr et Darty, 76 € PcComponentes, 79,98 € Cdiscount port compris ; LDLC en rupture. Plus bas 90 jours Amazon.fr : 57,70 €, donc bon prix, et même sous ce plus bas. Pas de revente : 24 vendeurs, à 85 % du neuf (63,74 €) bénéfice 13,75 €, soit 27,5 % du coût, sous les seuils.",
+   "prix_neuf_min_idealo": 74.99,
+   "source_prix_ref": "comparateur-gamer (Fnac, Amazon.fr, Darty), relu le 05/11 à 23h ; Keepa Amazon.fr 74,99 € le 05/11",
+   "economie_pct": 33.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix Amazon.es variable, sans date de fin annoncée",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T23:48+00:00"
  },
  {
   "id": "31d9e1e93a",
@@ -49154,7 +49166,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T23:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -49277,7 +49289,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 23:18 UTC : offre active, 127.99 affiché, marchand 5_4 ; fiche amazon.co.uk lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : pas assez d'écart et livraison France non confirmée. Vendu 71,81 £ sur Amazon UK d'après le titre HotUKDeals, mais la page relue à 23h18 affiche aussi 127,99 £ ; coût estimé par le robot 107,10 € avec port et frais depuis le Royaume-Uni, soit 13 % sous le neuf français (seuil 15 %). Neuf en France ce soir : 122,99 € PcComponentes (hors port), 130,98 € Cdiscount port compris, 139,99 € Boulanger. Attention : le chiffre de 85,90 € de l'alerte est dépassé.",
+   "prix_neuf_min_idealo": 122.99,
+   "source_prix_ref": "comparateur-gamer (PcComponentes), relu le 05/11 à 23h",
+   "economie_pct": 12.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T23:48+00:00"
  },
  {
   "id": "5f871693ec",
@@ -49325,7 +49349,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T23:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -49442,7 +49466,19 @@
    "livraison_france": "oui",
    "resume": "fiche micromania.fr lue : 79.99, en stock (panier), livraison : livrer en ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : faux prix. Fiche Micromania lue par le robot à 23h29 : GTA VI code de téléchargement PS5 à 79,99 €. Les 39,99 € ne valent qu'après une reprise boostée d'environ 40 € d'un jeu ou d'un matériel (offre Micromania signalée sur Dealabs), ce n'est pas un prix d'achat. Sans reprise, c'est plus cher que le neuf à 60 € relevé en France.",
+   "prix_neuf_min_idealo": 60.0,
+   "source_prix_ref": "achatmoinscher, 05/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "précommande, sortie à venir",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-05T23:48+00:00"
  },
  {
   "id": "2b824e38c9",

@@ -42,6 +42,15 @@ def lire(source, timeout=25):
                 valeurs.append(float(q))
             except ValueError:
                 pass
+        lieu = re.search(r"(\d[\d \u00a0.,]*\d)\s*(?:€|euros?)?\s*au lieu de\s*(\d[\d \u00a0.,]*\d)", t, re.I)
+        if lieu:  # « 25.99 au lieu de 34.99€ » : le premier est le prix, le second l'ancien prix
+            def _n(x):
+                x = x.replace("\u00a0", "").replace(" ", "")
+                return float(re.sub(r"[.,](?=\d{1,2}$)", ".", re.sub(r"[.,](?=\d{3}\b)", "", x)))
+            try:
+                valeurs = [_n(lieu.group(1)), _n(lieu.group(2))]
+            except ValueError:
+                pass
         if not valeurs:
             continue
         liens = re.findall(r'href="(https?://(?!t\.me)[^"]+)"', corps)

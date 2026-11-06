@@ -14,9 +14,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Maison & Habitat",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
@@ -44,9 +44,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 7,
+"recherches": 8,
 "cout_usd": 0.0,
-"resultats": 7,
+"resultats": 8,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Services & Contracts": {
@@ -64,9 +64,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Groceries",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 8,
+"resultats": 9,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Gaming": {
@@ -444,10 +444,10 @@
 "source": "flux:prospectus",
 "cible": "",
 "categorie": "?",
-"recherches": 32,
+"recherches": 33,
 "cout_usd": 0.0,
-"resultats": 432,
-"alertes": 0
+"resultats": 469,
+"alertes": 1
 },
 "A | flux:dealabs-nouveaux |  | Jardin & Bricolage": {
 "denicheur": "A",
@@ -494,9 +494,9 @@
 "source": "flux:lesnumeriques-bonsplans",
 "cible": "",
 "categorie": "?",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Travel": {
@@ -1344,9 +1344,9 @@
 "source": "flux:telegram:promorat",
 "cible": "",
 "categorie": "?",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 5,
+"resultats": 6,
 "alertes": 0
 },
 "A | apify:idealo | Husqvarna Automower Aspire R4 | ": {
@@ -1524,9 +1524,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Family & Kids",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | flux:pepper-pl-hot |  | Kultura i rozrywka": {
@@ -1554,6 +1554,56 @@
 "source": "flux:pepper-pl-hot",
 "cible": "",
 "categorie": "Rodzina i dzieci",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | Chilli Trottinette Rocky | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Chilli Trottinette Rocky",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0095,
+"resultats": 3,
+"alertes": 0
+},
+"A | apify:vinted | Chilli Trottinette Rocky | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Chilli Trottinette Rocky",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.003,
+"resultats": 3,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Chilli%20Trottinette%20Rocky | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Chilli%20Trottinette%20Rocky",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:mydealz-hot |  | Sport & Outdoor": {
+"denicheur": "A",
+"source": "flux:mydealz-hot",
+"cible": "",
+"categorie": "Sport & Outdoor",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:mydealz-hot |  | Elektronik": {
+"denicheur": "A",
+"source": "flux:mydealz-hot",
+"cible": "",
+"categorie": "Elektronik",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

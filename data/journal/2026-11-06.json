@@ -114,9 +114,9 @@
 "source": "flux:pc:stockx-populaires",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 1504,
+"resultats": 1560,
 "alertes": 0
 },
 "A | flux:pc:labelemmaus |  | ?": {
@@ -124,9 +124,9 @@
 "source": "flux:pc:labelemmaus",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 938,
+"resultats": 968,
 "alertes": 0
 },
 "A | flux:pc:manomano-bonsplans |  | ?": {
@@ -414,19 +414,19 @@
 "source": "flux:pc:ledenicheur-bonsplans",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 311,
-"alertes": 2
+"resultats": 315,
+"alertes": 3
 },
 "A | flux:pc:kingjouet-promos |  | ?": {
 "denicheur": "A",
 "source": "flux:pc:kingjouet-promos",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 125,
+"resultats": 130,
 "alertes": 0
 },
 "A | flux:pc:rebuy |  | ?": {
@@ -434,9 +434,9 @@
 "source": "flux:pc:rebuy",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 100,
+"resultats": 104,
 "alertes": 0
 },
 "A | flux:prospectus |  | ?": {
@@ -444,9 +444,9 @@
 "source": "flux:prospectus",
 "cible": "",
 "categorie": "?",
-"recherches": 25,
+"recherches": 26,
 "cout_usd": 0.0,
-"resultats": 225,
+"resultats": 234,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Jardin & Bricolage": {
@@ -564,9 +564,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Fashion & Accessories",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Home & Living": {
@@ -674,9 +674,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Garden & Do It Yourself",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Jardín y bricolaje": {
@@ -934,9 +934,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "High-Tech",
-"recherches": 2,
+"recherches": 3,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | apify:idealo | Kobo Libra Colour | ": {
@@ -1057,6 +1057,36 @@
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | Fossil CH2564 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Fossil CH2564",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | Fossil CH2564 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Fossil CH2564",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Fossil%20CH2564 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Fossil%20CH2564",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
 "alertes": 0
 }
 }

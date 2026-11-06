@@ -127,14 +127,14 @@ class GitHub:
             except urllib.error.HTTPError as e:
                 if e.code != 404:
                     raise Indisponible('registre partagé inaccessible') from None
-                # Distinguer fichier absent et branche absente/droit insuffisant.
-                try:
-                    self._api('/git/ref/heads/' + BRANCHE)
-                except Exception:
-                    raise Indisponible('branche budget-api absente ou inaccessible') from None
-                etat, sha = {}, None
+                # Ne jamais réinitialiser les compteurs après une suppression,
+                # même si la branche existe toujours. Initialisation hors runtime.
+                raise Indisponible('registre partagé absent ou inaccessible, restauration requise') from None
             except Exception:
                 raise Indisponible('registre partagé illisible') from None
+            if (not isinstance(etat, dict) or type(etat.get('version')) is not int
+                    or etat['version'] != 1 or not etat.get('services')):
+                raise Indisponible('registre partagé non initialisé, restauration requise')
             verifier_etat(etat)
             resultat = fonction(etat)
             data = {'message': 'Réservation ou rapprochement de budget', 'branch': BRANCHE,

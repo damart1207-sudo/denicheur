@@ -61,6 +61,13 @@ class BudgetTests(unittest.TestCase):
             with self.assertRaises(budget.Indisponible):
                 budget.reserver('x', .1, 1, 1, backend=budget.Local(p))
 
+    def test_migration_bloque_toute_nouvelle_depense(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / 'budget.json'
+            p.write_text(json.dumps({'migration_en_cours': True, 'services': {}}))
+            with self.assertRaises(budget.Indisponible):
+                budget.reserver('x', .1, 1, 1, backend=budget.Local(p))
+
     def test_actions_sans_jeton_ne_replie_pas_sur_disque(self):
         with patch.dict(os.environ, {'GITHUB_ACTIONS': 'true', 'BUDGET_GITHUB_TOKEN': ''}):
             with self.assertRaises(budget.Indisponible):

@@ -36,6 +36,9 @@ def candidat():
             'controle_prix': {'statut': 'ok', 'prix_page': 30, 'lien': URL, 'verifie_le': NOW},
             'meme_produit': {'meme': True}, 'livraison_fr_confirmee': True,
             'cout_total_confirme': True,
+            'preuve_livraison': {'lien': URL, 'verifie_le': NOW, 'source': 'jsonld-offre',
+                'pays_destination': 'FR', 'devise': 'EUR', 'prix_article': 30, 'port': 0,
+                'pays_expedition': 'FR', 'tva_incluse': True, 'total': 30},
             'canaux': [{'canal': 'rebifftout', 'prix_vente': 90, 'marge_nette': 999}],
             'statut': 'valide', 'verifie_le': NOW}
 
@@ -167,7 +170,7 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(fiche.evaluer(candidat(), {})['feu'], 'vert')
 
     def test_preuves_manquantes_restent_orange(self):
-        for key in ['controle_prix', 'meme_produit', 'livraison_fr_confirmee', 'cout_total_confirme']:
+        for key in ['controle_prix', 'meme_produit', 'preuve_livraison']:
             x = candidat()
             del x[key]
             with self.subTest(key=key):

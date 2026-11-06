@@ -11,6 +11,7 @@ Documentation : https://docs.dataforseo.com/v3/
 import base64
 import json
 import os
+import re
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -21,6 +22,7 @@ PLAFOND_JOUR_USD = 1.00  # accord de David le 04/11 (≈ 30 $/mois au plus)
 PAYS = {"FR": 2250, "DE": 2276, "ES": 2724, "IT": 2380, "US": 2840, "UK": 2826, "NL": 2528, "PL": 2616, "JP": 2392}
 LANGUE = {"FR": "fr", "DE": "de", "ES": "es", "IT": "it", "US": "en", "UK": "en", "NL": "nl", "PL": "pl", "JP": "ja"}
 COUT = {"volumes": 0.09, "tendances": 0.011}
+_INTERDITS = re.compile(r"[,!@%^()={};~`<>?\\|™®©\"]")
 
 
 def _auth():
@@ -86,12 +88,21 @@ def _poster(chemin, taches, cout):
 
 def volumes(mots, pays="FR"):
     """Volume de recherche mensuel Google (Google Ads) pour une liste de mots-clés (≤ 1 000). {mot: {...}}."""
-    mots = [m.strip()[:80] for m in mots if m and m.strip()][:1000]
+    # Google Ads refuse certains signes : un seul mot-clé fautif (« russell hobbs cook@home », 06/11) peut faire échouer tout le lot.
+    origine = {}
+    for m in mots:
+        if m and m.strip():
+            propre = " ".join(_INTERDITS.sub(" ", m.lower()).split()[:10])[:80].strip()
+            if propre:
+                origine.setdefault(propre, []).append(m.strip())
+    mots = list(origine)[:1000]
     if not mots or not disponible(COUT["volumes"]):
         return {}
     taches = _poster("keywords_data/google_ads/search_volume/live",
                      [{"keywords": mots, "location_code": PAYS.get(pays, 2250), "language_code": LANGUE.get(pays, "fr")}],
                      COUT["volumes"])
+    if taches and all(t.get("status_code") != 20000 for t in taches):  # l'appel passe mais la tâche échoue : le dire au lieu de rendre « aucun volume »
+        raise RuntimeError(f"DataForSEO tâche {taches[0].get('status_code')}: {taches[0].get('status_message')}")
     res = {}
     for t in taches:
         for it in (t.get("result") or []):
@@ -100,6 +111,10 @@ def volumes(mots, pays="FR"):
             hist = [h.get("search_volume") or 0 for h in (it.get("monthly_searches") or [])[:3]]
             res[it["keyword"]] = {"volume_mensuel": it.get("search_volume"), "concurrence": it.get("competition"),
                                   "cpc": it.get("cpc"), "trois_derniers_mois": hist}
+    for propre, noms in origine.items():
+        if propre in res:
+            for n in noms:
+                res.setdefault(n, res[propre])
     return res
 
 

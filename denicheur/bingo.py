@@ -141,6 +141,9 @@ def jour():
         return
     mots = list(cands)[:1000]
     vols = sante.protege("bingo volumes", dataforseo.volumes, mots, "FR", defaut={})
+    if not vols:  # aucun volume reçu : on garde les bingos précédents plutôt que d'effacer la liste
+        print(f"bingo : aucun volume Google reçu pour {len(mots)} mots-clés, liste précédente conservée")
+        return
     lignes = []
     for m, c in cands.items():
         v = vols.get(m) or vols.get(m.lower()) or {}

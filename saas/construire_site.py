@@ -10,6 +10,9 @@ import os
 import re
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from denicheur.validation import blocages, url_produit
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = os.path.join(RACINE, "docs")
@@ -21,7 +24,8 @@ PAYS = {"FR": "France", "DE": "Allemagne", "ES": "Espagne", "IT": "Italie", "UK"
 
 def lire(c, d=None):
     try:
-        return json.load(open(os.path.join(RACINE, c), encoding="utf-8"))
+        with open(os.path.join(RACINE, c), encoding="utf-8") as source:
+            return json.load(source)
     except (OSError, json.JSONDecodeError):
         return d
 
@@ -52,12 +56,16 @@ def affaires():
             if v.get("verdict") not in ("valide", "bon") or v["id"] not in candidats:
                 continue
             c = candidats[v["id"]]
+            if blocages(c):
+                continue
             ref = ((c.get("prix_plancher") or {}).get("prix_min") or (c.get("verification") or {}).get("prix_neuf_min")
                    or ref_depuis_texte(v.get("commentaire")))
             out.append({"nom": c.get("nom_produit") or c["titre"], "titre": c["titre"], "prix": c["prix"] * TAUX.get(c.get("devise"), 1),
                         "marchand": c.get("marchand"), "pays": c.get("pays"), "lien": c.get("lien"), "ref": ref,
                         "verifie": a.get("horodatage", "")[:10], "commentaire": v.get("commentaire")})
     for x in lire("data/alertes.json", []) or []:
+        if blocages(x):
+            continue
         if x.get("statut") not in ("valide", "bon", "bon_plan"):
             continue
         # un bon plan vérifié reste affiché 3 jours (les promos expirent vite)
@@ -65,7 +73,7 @@ def affaires():
             if (datetime.now(timezone.utc) - datetime.fromisoformat(x.get("verifie_le") or x.get("trouve_le"))).days >= 3:
                 continue
         except (TypeError, ValueError):
-            pass
+            continue
         vd = x.get("verdict") or {}
         ref = vd.get("prix_neuf_min_idealo") or (x.get("idealo") or {}).get("prix_min") or (x.get("prix_plancher") or {}).get("prix_min")
         out.append({"nom": x.get("nom_produit") or x["titre"], "titre": x["titre"], "prix": x["prix"] * TAUX.get(x.get("devise"), 1),
@@ -77,7 +85,12 @@ def affaires():
         o["economie"] = o["ref"] - o["prix"]
         o["pct"] = round(100 * o["economie"] / o["ref"])
     out.sort(key=lambda o: (o["verifie"], o["pct"]), reverse=True)
-    return out
+    uniques = {}
+    for o in out:
+        lien = url_produit(o.get("lien"))
+        if lien:
+            uniques.setdefault(lien, o)
+    return list(uniques.values())
 
 
 def date_fr(iso):
@@ -96,7 +109,7 @@ def carte(o, aujourd_hui):
   <div class="produit"><h3>{e(o['nom'])}</h3><p class="origine">{origine}</p><p class="etat">{etat}</p></div>
   <div class="prix">
     <p class="ici"><span class="montant">{euro(o['prix'])}</span></p>
-    <p class="ailleurs">Le moins cher ailleurs en France : <s>{euro(o['ref'])}</s></p>
+    <p class="ailleurs">Prix de référence relevé en France : <s>{euro(o['ref'])}</s></p>
     <p class="gain">{euro(o['economie'])} de moins, soit −{o['pct']} %</p>
     {lien}
   </div>
@@ -114,7 +127,7 @@ def construire():
         "{{NOM}}": e(NOM_SITE),
         "{{MAJ}}": datetime.now(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y à %Hh%M"),
         "{{NB}}": str(len(liste)),
-        "{{UNE}}": carte(une, aujourd_hui).replace('<li class="etiquette', '<div class="etiquette grande').replace("</li>", "</div>") if une else "<p>Aucune affaire vérifiée pour le moment. Revenez dans une heure.</p>",
+        "{{UNE}}": carte(une, aujourd_hui).replace('<li class="etiquette', '<div class="etiquette grande').replace("</li>", "</div>") if une else "<p>Aucune offre ne satisfait actuellement tous les contrôles de publication.</p>",
         "{{LISTE}}": "\n".join(carte(o, aujourd_hui) for o in liste[1:]) or '<li class="vide">Les prochaines affaires vérifiées apparaîtront ici.</li>',
         "{{TENDANCES}}": "\n".join(f'<li><span class="q">{e(t["recherche"])}</span><span class="h">{"nouveau" if t.get("nouveau") or (t.get("hausse_pct") or 0) > 1000 else "+" + str(t.get("hausse_pct")) + " %"}</span></li>' for t in tendances) or "<li>Données en cours de collecte.</li>",
     }

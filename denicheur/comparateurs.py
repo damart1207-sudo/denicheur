@@ -50,10 +50,23 @@ def mots_cles(nom):
     return [m for m in re.findall(r"[\w+]+", _norm(nom)) if len(m) > 1 or m.isdigit()]
 
 
+def references(nom):
+    """Conserve les suffixes isolés des références composées (A620M-E)."""
+    return set(re.findall(r'\b[\w]*\d[\w]*(?:[-/][\w+]+)+\b', _norm(nom)))
+
+
 def correspond(titre, nom):
     """Tous les mots du nom doivent être présents EN MOTS ENTIERS (« 17 » ne correspond pas à « 17e »)."""
     t = _norm(titre)
-    return all(re.search(r"(?<![\w+])" + re.escape(m) + r"(?![\w+])", t) for m in mots_cles(nom))
+    mots = mots_cles(nom)
+    if not mots:
+        return False
+    for ref in references(nom):
+        morceaux = re.split(r'[-/]', ref)
+        motif = r'(?<![\w+])' + r'[-/\s]*'.join(re.escape(m) for m in morceaux) + r'(?![\w+]|[-/][\w])'
+        if not re.search(motif, t):
+            return False
+    return all(re.search(r"(?<![\w+])" + re.escape(m) + r"(?![\w+])", t) for m in mots)
 
 
 def achatmoinscher(nom, neuf=True):

@@ -454,9 +454,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Jardin & Bricolage",
-"recherches": 9,
+"recherches": 10,
 "cout_usd": 0.0,
-"resultats": 13,
+"resultats": 14,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Juguetes, familia e hijos": {
@@ -464,9 +464,9 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Juguetes, familia e hijos",
-"recherches": 11,
+"recherches": 12,
 "cout_usd": 0.0,
-"resultats": 42,
+"resultats": 45,
 "alertes": 2
 },
 "A | flux:mydealz-hot |  | Urlaub & Reisen": {
@@ -494,9 +494,9 @@
 "source": "flux:lesnumeriques-bonsplans",
 "cible": "",
 "categorie": "?",
-"recherches": 4,
+"recherches": 5,
 "cout_usd": 0.0,
-"resultats": 5,
+"resultats": 6,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Travel": {
@@ -504,9 +504,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Travel",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Electronics": {
@@ -514,9 +514,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Electronics",
-"recherches": 7,
+"recherches": 8,
 "cout_usd": 0.0,
-"resultats": 9,
+"resultats": 10,
 "alertes": 1
 },
 "A | flux:chollometro-nuevos |  | Electrónica": {
@@ -754,9 +754,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Garten & Baumarkt",
-"recherches": 3,
+"recherches": 4,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 4,
 "alertes": 0
 },
 "A | apify:idealo | Cecotec Bolero Dresscode 8500 8kg | ": {
@@ -844,10 +844,10 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Family & Kids",
-"recherches": 9,
+"recherches": 10,
 "cout_usd": 0.0,
-"resultats": 10,
-"alertes": 1
+"resultats": 12,
+"alertes": 2
 },
 "A | flux:pepper-nl-hot |  | Boodschappen": {
 "denicheur": "A",
@@ -914,9 +914,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Elektronik",
-"recherches": 12,
+"recherches": 13,
 "cout_usd": 0.0,
-"resultats": 16,
+"resultats": 18,
 "alertes": 0
 },
 "A | flux:pepper-nl-hot |  | Home & Living": {
@@ -984,9 +984,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Culture & Leisure",
-"recherches": 5,
+"recherches": 6,
 "cout_usd": 0.0,
-"resultats": 6,
+"resultats": 7,
 "alertes": 0
 },
 "A | apify:idealo | Ecovacs T50 OMNI Gen3 | ": {
@@ -1344,9 +1344,9 @@
 "source": "flux:telegram:promorat",
 "cible": "",
 "categorie": "?",
-"recherches": 9,
+"recherches": 10,
 "cout_usd": 0.0,
-"resultats": 11,
+"resultats": 12,
 "alertes": 0
 },
 "A | apify:idealo | Husqvarna Automower Aspire R4 | ": {
@@ -1364,9 +1364,9 @@
 "source": "flux:pepper-nl-hot",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "B | apify:idealo | shark flexstyle | ": {
@@ -1684,9 +1684,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Culture & Divertissement",
-"recherches": 3,
+"recherches": 4,
 "cout_usd": 0.0,
-"resultats": 3,
+"resultats": 4,
 "alertes": 0
 },
 "A | flux:pepper-pl-hot |  | Ogród i majsterkowanie": {
@@ -2027,6 +2027,36 @@
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | LEGO Star Wars 75423 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "LEGO Star Wars 75423",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | LEGO Star Wars 75423 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "LEGO Star Wars 75423",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20Star%20Wars%2075423 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20Star%20Wars%2075423",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
 "alertes": 0
 }
 }

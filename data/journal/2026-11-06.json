@@ -14,9 +14,9 @@
 "source": "flux:dealabs-nouveaux",
 "cible": "",
 "categorie": "Maison & Habitat",
-"recherches": 5,
+"recherches": 6,
 "cout_usd": 0.0,
-"resultats": 5,
+"resultats": 7,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
@@ -44,9 +44,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Gaming",
-"recherches": 10,
+"recherches": 11,
 "cout_usd": 0.0,
-"resultats": 11,
+"resultats": 12,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Services & Contracts": {
@@ -54,9 +54,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Services & Contracts",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 2,
+"resultats": 3,
 "alertes": 0
 },
 "A | flux:hotukdeals-new |  | Groceries": {
@@ -84,9 +84,9 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Moda y accesorios",
-"recherches": 7,
+"recherches": 8,
 "cout_usd": 0.0,
-"resultats": 12,
+"resultats": 14,
 "alertes": 0
 },
 "A | flux:pepper-pl-hot |  | Artykuły spożywcze": {
@@ -104,9 +104,9 @@
 "source": "flux:pc:leboncoin-tendances",
 "cible": "",
 "categorie": "?",
-"recherches": 34,
+"recherches": 35,
 "cout_usd": 0.0,
-"resultats": 799,
+"resultats": 802,
 "alertes": 2
 },
 "A | flux:pc:stockx-populaires |  | ?": {
@@ -114,9 +114,9 @@
 "source": "flux:pc:stockx-populaires",
 "cible": "",
 "categorie": "?",
-"recherches": 36,
+"recherches": 37,
 "cout_usd": 0.0,
-"resultats": 1660,
+"resultats": 1669,
 "alertes": 0
 },
 "A | flux:pc:labelemmaus |  | ?": {
@@ -464,10 +464,10 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Juguetes, familia e hijos",
-"recherches": 8,
+"recherches": 9,
 "cout_usd": 0.0,
-"resultats": 25,
-"alertes": 1
+"resultats": 28,
+"alertes": 2
 },
 "A | flux:mydealz-hot |  | Urlaub & Reisen": {
 "denicheur": "A",
@@ -524,9 +524,9 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Electrónica",
-"recherches": 6,
+"recherches": 7,
 "cout_usd": 0.0,
-"resultats": 10,
+"resultats": 12,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Hogar, vivienda y oficina": {
@@ -684,9 +684,9 @@
 "source": "flux:chollometro-nuevos",
 "cible": "",
 "categorie": "Jardín y bricolaje",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | apify:idealo | Dyson V12 Detect Slim Absolute | ": {
@@ -914,9 +914,9 @@
 "source": "flux:mydealz-new",
 "cible": "",
 "categorie": "Elektronik",
-"recherches": 9,
+"recherches": 10,
 "cout_usd": 0.0,
-"resultats": 10,
+"resultats": 11,
 "alertes": 0
 },
 "A | flux:pepper-nl-hot |  | Home & Living": {
@@ -1944,6 +1944,46 @@
 "source": "flux:preisjaeger-hot",
 "cible": "",
 "categorie": "Fashion & Accessories",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | LEGO Harry Potter 76471 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "LEGO Harry Potter 76471",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | LEGO Harry Potter 76471 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "LEGO Harry Potter 76471",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.015,
+"resultats": 15,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20Harry%20Potter%2076471 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20Harry%20Potter%2076471",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:mydealz-new |  | Beauty & Gesundheit": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Beauty & Gesundheit",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

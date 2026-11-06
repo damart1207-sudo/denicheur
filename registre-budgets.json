@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "migration_en_cours": true,
+  "note": "Planchers conservateurs issus des compteurs historiques publics du 06/11/2026, majorés d'une réserve quotidienne. Ce ne sont pas des dépenses facturées. Rapprocher avant activation et ne jamais réinitialiser.",
+  "services": {
+    "dataforseo": {
+      "jours": {"2026-11-06": 1000000},
+      "mois": {"2026-11": 4359000},
+      "categories": {},
+      "reserves": {}
+    },
+    "apify": {
+      "jours": {"2026-11-06": 1100000},
+      "mois": {"2026-11": 14190000},
+      "categories": {"2026-11-06:A": 550000, "2026-11-06:P": 150000, "2026-11-06:B": 150000, "2026-11-06:C": 150000, "2026-11-06:D": 100000},
+      "reserves": {}
+    }
+  }
+}

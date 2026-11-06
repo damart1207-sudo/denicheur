@@ -37,6 +37,8 @@ def micros(v):
 
 
 def verifier_etat(e):
+    if isinstance(e, dict) and e.get('migration_en_cours') is True:
+        raise Indisponible('migration des budgets en cours, appels payants bloqués')
     if not isinstance(e, dict) or not isinstance(e.get('services', {}), dict):
         raise Indisponible('format du registre invalide')
     for s in e.get('services', {}).values():

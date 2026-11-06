@@ -112,6 +112,10 @@ def _borne(v, mini, maxi, defaut):
 
 
 def cout_achat(annonce, regles):
+    from .logistique import etat
+    confirme = etat(annonce)['total']
+    if confirme is not None:
+        return confirme
     prix = annonce["prix"]
     if annonce["devise"] == "GBP":
         prix *= regles.get("taux_gbp_eur", 1.15)
@@ -128,6 +132,8 @@ def marge_nette(prix_revente, plateforme, cout, regles):
 
 def canaux_de_vente(c, regles):
     """Prix et marge nette par profil d'acheteur et par canal, à partir du neuf le moins cher (prix plancher)."""
+    from .logistique import appliquer
+    appliquer(c)
     pmin = (c.get("prix_plancher") or {}).get("prix_min")
     if not pmin:
         return None
@@ -165,6 +171,7 @@ def consolider(annonces, tous_choix, regles):
         score = max(0.0, rentab) * 100 * (0.6 + 0.2 * consensus) * confiance * (demande / 3) * (1.3 - 0.1 * concurrence)
         candidats.append({
             **{k: a[k] for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
+            **{k: a.get(k) for k in ('preuve_prix', 'preuve_livraison', 'controle_prix', 'meme_produit', 'lien_marchand')},
             "domaine": statistics.mode(c["domaine"] for c in choix),
             "nom_produit": (statistics.mode([c["nom_produit"] for c in choix if c.get("nom_produit")] or [""])),
             "plateforme_revente": plateforme,

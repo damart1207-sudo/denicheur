@@ -195,6 +195,7 @@ def passage(nom, test=False):
                 continue
             cout = x.get("cout_achat") or equipe.cout_achat(x, regles)
             retenus.append({**{k: x.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature")},
+                            **{k: x.get(k) for k in ('preuve_prix', 'preuve_livraison', 'controle_prix', 'meme_produit', 'lien_marchand')},
                             "domaine": "autre", "nom_produit": x.get("nom_produit") or x["titre"], "plateforme_revente": meilleur["canal"],
                             "prix_revente_estime": meilleur["prix_vente"], "cout_achat": cout, "marge_nette": meilleur["marge_nette"],
                             "rentabilite": meilleur.get("rentabilite", 0), "demande": 3, "concurrence": 3, "consensus": 1, "agents": ["veille"],
@@ -331,6 +332,19 @@ def passage(nom, test=False):
             neuf = (c.get("ebay") or {}).get("neuf")
             if isinstance(neuf, dict) and neuf.get("nb") is not None:
                 c["annonces_ebay"] = neuf["nb"]
+    # Contrôle marchand gratuit des dix premiers candidats ; jamais d'achat.
+    if not test:
+        from . import verif_prix
+        from .logistique import appliquer
+        for c in retenus[:10]:
+            controle = verif_prix.controler(c)
+            c['controle_prix'] = controle
+            if controle.get('statut') == 'different' and controle.get('prix_page'):
+                ancien = c['prix']
+                c['prix'] = controle['prix_page']
+                c['cout_achat'] = round(c['cout_achat'] + c['prix'] - ancien, 2)
+                c['controle_prix'] = {**controle, 'statut': 'ok'}
+            appliquer(c, controle.get('preuve_livraison'))
     s_ = regles["seuils"]
     for c in retenus:
         c["canaux"] = equipe.canaux_de_vente(c, regles)

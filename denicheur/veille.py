@@ -101,7 +101,7 @@ def examiner(a, nom, maintenant, regles, deja):
         return None
     if not ((ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85))):
         return None
-    x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie", "prix_verifie", "prix_page", "prix_carte", "preuve_prix", "livraison_fr_confirmee", "cout_total_confirme", "lien_marchand")},
+    x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie", "prix_verifie", "prix_page", "prix_carte", "preuve_prix", "preuve_livraison", "livraison_fr_confirmee", "cout_total_confirme", "lien_marchand")},
          "nom_produit": nom, "cout_achat": cout, "prix_plancher": pp, "ecart_vs_neuf_min": ecart,
          "economie_pct": round((1 - ecart) * 100) if ecart else None,
          "type": "bon_plan", "signal_erreur_prix": signal, "trouve_le": maintenant.isoformat(timespec="minutes"),
@@ -230,6 +230,9 @@ def tour():
                         c["marge_nette"] = round(c["marge_nette"] - delta, 2)
             elif v.get("statut") != "ok" and str(x.get("source", "")).startswith("pc:"):
                 continue  # prix lu sur une page par le PC et non confirmé par la fiche produit : pas d'alerte
+            from .logistique import appliquer
+            appliquer(x, v.get('preuve_livraison'))
+            x['canaux'] = equipe.canaux_de_vente(x, regles) or []
             # MÊME PRODUIT ? (piège du 05/11 : lot de 2 roues comparé à un lot de 8) -> sinon pas d'alerte
             if x.get("prix_plancher"):
                 from . import meme_produit

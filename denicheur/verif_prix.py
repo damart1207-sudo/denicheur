@@ -49,7 +49,7 @@ def _types(o):
     return set(t if isinstance(t, list) else [t])
 
 
-def prix_officiel(h, lien=None, identifiants=None):
+def offre_officielle(h, lien=None, identifiants=None):
     """Sélection par URL/GTIN/SKU ou produit unique sur canonique concordante.
 
     Pas de recherche récursive dans recommandations, listes ou variantes.
@@ -76,6 +76,8 @@ def prix_officiel(h, lien=None, identifiants=None):
     for p in produits:
         urls = [p.get("url"), p.get("@id")]
         vals = {str(p[k]) for k in ("gtin", "gtin8", "gtin12", "gtin13", "gtin14", "sku") if p.get(k)}
+        if ids and vals and not (ids & vals):
+            continue  # Une URL commune ne permet pas d'ignorer une variante explicitement différente.
         explicites = [u for u in urls if isinstance(u, str) and not u.startswith("#")]
         correspond = lien and any(url_produit(urljoin(lien, u)) == url_produit(lien) for u in explicites)
         canonique = lien and not explicites and len(produits) == 1 and any(
@@ -98,13 +100,21 @@ def prix_officiel(h, lien=None, identifiants=None):
             continue
         n = _num(o.get("price"))
         if n is not None:
-            prix.append(n)
+            prix.append({'prix': n, 'offre': o, 'produit': selection[0]})
     return prix[0] if len(prix) == 1 else None
+
+
+def prix_officiel(h, lien=None, identifiants=None):
+    detail = offre_officielle(h, lien, identifiants)
+    return detail['prix'] if detail else None
 
 
 def controler(x, timeout=25):
     lien = x.get("lien_marchand") or (x.get("page_offre") or {}).get("lien_marchand") or x.get("lien") or ""
     inconnu = {"statut": "inconnu", "prix_page": None, "lien": lien}
+    if x.get("devise", "EUR") != "EUR":
+        return inconnu
+    preuve = None
     if not url_produit(lien):
         return inconnu
     host = urlsplit(lien).hostname or ""
@@ -116,17 +126,21 @@ def controler(x, timeout=25):
             and recu.get("devise") == "EUR" and recu.get("disponibilite") == "InStock"
             and recu.get("identite_confirmee") is True and _num(recu.get("prix_page")) is not None):
         p, date = _num(recu["prix_page"]), recu["verifie_le"]
+        preuve = recu.get("preuve_livraison")
     else:
         try:
             with urllib.request.urlopen(urllib.request.Request(lien, headers=UA), timeout=timeout) as r:
                 if url_produit(r.geturl()) != url_produit(lien):
                     return inconnu
                 h = r.read(3_000_000).decode("utf-8", "replace")
-            p = prix_officiel(h, lien, [x.get("ean"), x.get("sku")])
+            detail = offre_officielle(h, lien, [x.get("ean"), x.get("sku")])
+            p = detail['prix'] if detail else None
             date = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            from .logistique import depuis_offre
+            preuve = depuis_offre(detail, lien, date)
         except Exception:
             return inconnu
     if p is None:
         return inconnu
     return {"statut": "ok" if meme_prix(p, x.get("prix")) else "different",
-            "prix_page": p, "verifie_le": date, "lien": lien}
+            "prix_page": p, "verifie_le": date, "lien": lien, "preuve_livraison": preuve}

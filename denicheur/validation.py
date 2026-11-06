@@ -50,8 +50,10 @@ def blocages(x):
         erreurs.append("prix marchand non confirmé récemment pour cette offre")
     if (x.get("meme_produit") or {}).get("meme") is not True:
         erreurs.append("même produit exact non confirmé")
-    if x.get("livraison_fr_confirmee") is not True:
+    from .logistique import etat
+    logistique = etat(x)
+    if not logistique["livraison"]:
         erreurs.append("livraison en France non confirmée")
-    if x.get("cout_total_confirme") is not True:
+    if logistique["total"] is None or not meme_prix(logistique["total"], x.get("cout_achat")):
         erreurs.append("coût total livré non confirmé")
     return erreurs

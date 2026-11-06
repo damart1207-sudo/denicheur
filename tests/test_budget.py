@@ -86,7 +86,7 @@ class BudgetTests(unittest.TestCase):
             used = 900_000 if len([x for x in calls if x[2] == 'PUT']) else 0
             from datetime import datetime, timezone
             jour = datetime.now(timezone.utc).strftime('%Y-%m-%d')
-            etat = {'services': {'x': {'jours': {jour: used}, 'mois': {jour[:7]: used},
+            etat = {'version': 1, 'services': {'x': {'jours': {jour: used}, 'mois': {jour[:7]: used},
                     'categories': {}, 'reserves': {}}}}
             return {'sha': 'revision', 'content': base64.b64encode(json.dumps(etat).encode()).decode()}
         with patch.object(g, '_api', side_effect=api), patch.object(budget.time, 'sleep'):
@@ -100,10 +100,28 @@ class BudgetTests(unittest.TestCase):
         def api(route, data=None, method=None):
             if method == 'PUT':
                 raise TimeoutError()
-            return {'sha': 'revision', 'content': base64.b64encode(b'{}').decode()}
+            etat = {'version': 1, 'services': {'x': {'jours': {}, 'mois': {}, 'categories': {}, 'reserves': {}}}}
+            return {'sha': 'revision', 'content': base64.b64encode(json.dumps(etat).encode()).decode()}
         with patch.object(g, '_api', side_effect=api):
             with self.assertRaises(budget.Indisponible):
                 budget.reserver('x', .1, 1, 1, backend=g)
+
+    def test_registre_github_absent_ne_recree_pas_les_compteurs(self):
+        g = budget.GitHub('owner/repo', 'FAUX_JETON_TEST')
+        with patch.object(g, '_api', side_effect=HTTPError('url', 404, 'absent', {}, None)) as api:
+            with self.assertRaisesRegex(budget.Indisponible, 'restauration requise'):
+                budget.reserver('x', .1, 1, 1, backend=g)
+        self.assertEqual(api.call_count, 1)
+        self.assertEqual(api.call_args.args, ('/contents/registre-budgets.json?ref=budget-api',))
+
+    def test_registre_github_vide_ou_version_inconnue_bloque(self):
+        g = budget.GitHub('owner/repo', 'FAUX_JETON_TEST')
+        for etat in [{}, {'version': 1, 'services': {}}, {'version': 2, 'services': {'x': {}}}]:
+            contenu = base64.b64encode(json.dumps(etat).encode()).decode()
+            with self.subTest(etat=etat), patch.object(g, '_api', return_value={'sha': 'revision', 'content': contenu}) as api:
+                with self.assertRaises(budget.Indisponible):
+                    budget.reserver('x', .1, 1, 1, backend=g)
+                self.assertEqual(api.call_count, 1)
 
     def test_dataforseo_arrete_avant_appel_si_budget_epuise(self):
         with patch.object(dataforseo, '_auth', return_value='AUTH_TEST'), \

@@ -65315,7 +65315,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T17:56+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -65522,17 +65522,17 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "À revérifier : la page du marchand « tsoto » n'a pas pu être ouverte (offre et livraison non confirmées, marchand peu connu). Neuf le moins cher en France : 459,99 € Amazon.fr (plus bas 90 j : 390,99 €), 497,99 € PcComponentes.",
+   "commentaire": "Bon produit (LEGO 10333 Barad-dûr). Fiche tsoto.net lue par le robot : 354,99 €, en stock. Mais tsoto est une petite boutique allemande et la livraison en France et ses frais ne sont pas prouvés. Neuf le moins cher en France : 459,99 € (Galaxus.fr, Amazon.fr). Dans le doute : rejet. Revente non rentable (marge négative).",
    "prix_neuf_min_idealo": 459.99,
-   "source_prix_ref": "achatmoinscher (Amazon 459,99 €), recoupé par keepa",
-   "economie_pct": 23,
+   "source_prix_ref": "Galaxus.fr lu le 06/11, recoupé par Keepa/Amazon.fr",
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-06T19:55+00:00"
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "34a968bc37",
@@ -67673,7 +67673,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T19:34+00:00",
-  "statut": "a_reverifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -67886,16 +67886,16 @@
    "premiere_lecture": "2026-11-06T19:34+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-06T19:55+00:00",
+  "verifie_le": "2026-11-06T20:53+00:00",
   "verdict": {
-   "commentaire": "À revérifier : la page Amazon.nl n'a pas pu être ouverte (offre active et livraison en France non confirmées). Prix neuf en France : 36,99 € (achatmoinscher), 41 € Amazon.fr (plus bas 90 j : 37,99 €). Si l'offre à 20 € est livrable en France pour ~5 €, l'économie serait d'environ 32 %.",
+   "commentaire": "Bon produit (Hinokami Chronicles 2, PS5, version boîte). Page du bon plan Pepper NL lue par le robot à 21h08 : offre active sur Amazon.nl à 21,99 €, livraison en France possible. Avec ~5 € de port vers la France : ~26,99 €. Neuf le moins cher en France : 36,99 € (achatmoinscher), 41 € sur Amazon.fr (plus bas 90 j : 37,99 € selon Keepa). Économie ≈ 27 %. Revente non rentable (marge ~0 €).",
    "prix_neuf_min_idealo": 36.99,
-   "source_prix_ref": "achatmoinscher, recoupé par keepa/amazon.fr",
-   "economie_pct": 32,
+   "source_prix_ref": "achatmoinscher, recoupé par Keepa/Amazon.fr",
+   "economie_pct": 27,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": null,
+   "duree_offre": "courte (prix Amazon variable)",
    "demande_confirmee": false
   }
  },
@@ -67943,7 +67943,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T19:34+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -68149,12 +68149,12 @@
    "premiere_lecture": "2026-11-06T19:35+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-06T19:55+00:00",
+  "verifie_le": "2026-11-06T20:53+00:00",
   "verdict": {
-   "commentaire": "À revérifier : la page Amazon.de n'a pas pu être ouverte (prix 112,04 € et frais de port vers la France non confirmés). Neuf le moins cher en France : 135,49 € Techinn (+13,99 € de port), 142,17 € Rue du Commerce. Sans les frais de port réels, l'économie peut passer sous 15 %.",
-   "prix_neuf_min_idealo": 135.49,
-   "source_prix_ref": "achatmoinscher (Techinn)",
-   "economie_pct": 17,
+   "commentaire": "Prix incohérent : l'alerte dit 112,04 € sur Amazon.de, mais la page du bon plan relue par le robot à 21h08 affiche 374,16 €. Neuf le moins cher en France : 142,17 € port offert (Rue du Commerce). Prix d'alerte non confirmé : rejet.",
+   "prix_neuf_min_idealo": 142.17,
+   "source_prix_ref": "achatmoinscher (Rue du Commerce, port offert), lu le 06/11",
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
@@ -68479,7 +68479,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -68682,7 +68682,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T20:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "x-kom.pl (Pologne) ne livre pas la France (page du bon plan lue à 21h07). De plus la fiche Amazon trouvée est la Kraken Kitty V3 X, un autre modèle. Neuf en France : 44,84 €.",
+   "prix_neuf_min_idealo": 44.84,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "0c16c3c957",
@@ -68728,7 +68740,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -68933,7 +68945,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T20:17+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Amazon UK : coût livré en France 75,62 €, plus cher que le neuf en France (59,90 €, achatmoinscher ; 64,99 € Amazon.fr). Aucune économie.",
+   "prix_neuf_min_idealo": 59.9,
+   "source_prix_ref": "achatmoinscher, recoupé par Keepa/Amazon.fr",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "5fa67d6d0f",
@@ -68979,7 +69003,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:27+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -69155,7 +69179,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 20:27 UTC : offre active, 35.95 affiché, code notino, marchand 55_3 ; notino.fr refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (L.12.12 Silver Grey, eau de parfum 100 ml). Page du bon plan Dealabs lue par le robot à 21h27 : offre active chez Notino.fr, 35,95 € avec le code « notino », livraison en France. Avec 5 € de port au maximum : ~40,95 €. Neuf le moins cher en France : 49,99 € + 2,99 € de port chez Dressinn (52,98 €), 53,60 € port offert sur Amazon. Économie ≈ 23 %. Revente non rentable (marge négative).",
+   "prix_neuf_min_idealo": 52.98,
+   "source_prix_ref": "achatmoinscher (Dressinn 49,99 € + 2,99 € de port), lu le 06/11",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "quelques jours (code promo Notino)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "b91ad332c1",
@@ -69208,7 +69244,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:27+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -69409,7 +69445,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 20:28 UTC : offre active, 159.0 affiché, marchand 5_4 ; boots.com refuse les robots (page anti-robot (captcha)) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Boots (Royaume-Uni) ne livre pas la France (page du bon plan lue à 21h28). La fiche Amazon.fr trouvée est le M50 Ultra, un autre modèle. Rejet.",
+   "prix_neuf_min_idealo": 257.53,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "3a2832b69b",
@@ -69455,7 +69503,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -69661,7 +69709,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 20:30 UTC : offre active, 46.39 affiché, marchand 483_3 ; fiche expert.de lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon produit (Denon AVR-X1800H DAB). Offre expert.de (Allemagne) à 499 € : la boutique en ligne expert.de livre l'Allemagne, livraison en France non prouvée, et la fiche lue par le robot n'affiche pas 499 €. Neuf en France : 594 € (achatmoinscher), plus bas 90 j sur Amazon.fr 483 €. Dans le doute : rejet.",
+   "prix_neuf_min_idealo": 594.0,
+   "source_prix_ref": "achatmoinscher, recoupé par Keepa/Amazon.fr",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T20:53+00:00"
  },
  {
   "id": "554c64f93f",
@@ -69694,7 +69754,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T20:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -69901,6 +69961,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 20:40 UTC : offre active, 449.0 affiché, marchand 1650_3 ; fiche markselectrical.co.uk lue : 429.0, en stock (panier), livraison : click & collect ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T20:58+00:00",
+  "verdict": {
+   "commentaire": "Mark's Electrical (Royaume-Uni) livre seulement le Royaume-Uni, modèle UK. Coût estimé livré en France 600 € : bien au-dessus du plus bas 90 j sur Amazon.fr (374,87 € selon Keepa). Rejet.",
+   "prix_neuf_min_idealo": 374.87,
+   "source_prix_ref": "Keepa/Amazon.fr (plus bas 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

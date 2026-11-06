@@ -22,7 +22,8 @@ RESERVE_BINGO_USD = 0.35  # bingo + hype de la nuit
 
 def _lire(f, d):
     try:
-        return json.load(open(f, encoding="utf-8"))
+        with open(f, encoding="utf-8") as source:
+            return json.load(source)
     except (OSError, json.JSONDecodeError):
         return d
 
@@ -108,16 +109,30 @@ def evaluer(x, vol=None):
     if isinstance(k.get("occasion"), (int, float)):
         occ.append(k["occasion"])
     occ_bas, occ_haut = (min(occ), max(occ)) if occ else (None, None)
-    canaux = [c for c in (x.get("canaux") or []) if isinstance(c, dict) and isinstance(c.get("marge_nette"), (int, float))]
+    # Recalculer les marges historiques, jamais faire confiance au cache d'avant audit.
+    from .rentabilite import calculer
+    from .validation import blocages
+    regles = _lire(os.path.join(RACINE, "config/regles.json"), {})
+    seuil_vert = regles.get("seuils", {}).get("marge_verte_min", MARGE_MIN)
+    seuil_envoi = regles.get("seuils", {}).get("marge_nette_min", MARGE_ENVOI)
+    canaux = []
+    for c in x.get("canaux") or []:
+        if not isinstance(c, dict) or achat is None:
+            continue
+        try:
+            detail = calculer(c["prix_vente"], c["canal"], achat, regles)
+        except (KeyError, ValueError, TypeError, ArithmeticError):
+            continue
+        canaux.append({**c, "marge_nette": detail["marge_nette"], "calcul_marge": detail})
     best = max(canaux, key=lambda c: c["marge_nette"], default=None)
     marge = best["marge_nette"] if best else None
-    achat_max = round(marge + achat - MARGE_MIN, 2) if best and achat else None
+    achat_max = round(marge + achat - seuil_vert, 2) if best and achat else None
     f = {"achat": achat, "neuf_min": neuf_min, "neuf_ou": neuf_ou, "neuf_lien": neuf_lien, "ecart_pct": ecart, "vendeurs": vendeurs, "volume": v,
          "occ_bas": occ_bas, "occ_haut": occ_haut, "ventes_30j": x.get("ventes_estimees_30j", k.get("ventes_estimees_30j")),
          "vendre_sur": best.get("canal") if best else None, "prix_vente": best.get("prix_vente") if best else None,
          "benefice": marge, "achat_max": achat_max, "manque": []}
     # ROUGE : on passe
-    if marge is None or marge < MARGE_ENVOI or (neuf_min and achat >= neuf_min):
+    if marge is None or marge < seuil_envoi or (neuf_min and achat >= neuf_min):
         f["feu"], f["raison"] = "rouge", "bénéfice sous 10 €"
         return f
     if isinstance(vendeurs, int) and (vendeurs >= 10 or (vendeurs >= 5 and (ecart or 0) < 15)):
@@ -127,8 +142,10 @@ def evaluer(x, vol=None):
     # au moins 15 % au-dessus de notre achat, pas de signal contraire connu. Les données manquantes (concurrence,
     # volume, occasion) sont affichées « à compléter » mais ne bloquent plus le vert.
     f["a_completer"] = []
-    if marge < MARGE_MIN:
-        f["manque"].append(f"bénéfice sous {MARGE_MIN} €")
+    f["manque"].extend(blocages(x))
+    f["calcul_marge"] = best.get("calcul_marge") if best else None
+    if marge < seuil_vert:
+        f["manque"].append(f"bénéfice sous {seuil_vert} €")
     if neuf_min is None:
         f["manque"].append("prix neuf ailleurs inconnu")
     elif ecart is not None and ecart < 15:
@@ -184,5 +201,5 @@ def probabilite_vente(x, f):
         pts += 0.6 if c <= 4 else 0 if c <= 9 else -0.8
     if not detail:
         return {"proba_vente_7j": None, "proba_detail": []}
-    proba = round(100 / (1 + math.exp(-(pts - 2.2))))   # ≈ 50 % quand les signaux sont moyens
-    return {"proba_vente_7j": max(5, min(95, proba)), "proba_detail": detail}
+    niveau = "forts" if pts >= 3.5 else "moyens" if pts >= 2 else "faibles"
+    return {"proba_vente_7j": None, "indicateurs_demande": niveau, "proba_detail": detail}

@@ -76,6 +76,7 @@ def rapport_passage(resultat, lien_rapport=None):
                       f"achat {_eur(c.get('prix'))} chez {_e(c.get('marchand'))} ({_e(c.get('pays'))}) · neuf {_eur(pmin)} · "
                       f"revente {_eur(c.get('prix_revente_prudent'))} · marge <b>{_eur(c.get('marge_verifiee'))}</b>"
                       + (f" · concurrents Amazon : {c['vendeurs_amazon']} vendeurs" if c.get('vendeurs_amazon') is not None else "")
+                      + (f"\n⚠️ {_e(', '.join(c.get('verification_blocages') or []))}" if c.get("verification_blocages") else "")
                       + f"\n🔗 Annonce la moins chère : {_e(c.get('lien'))}"
                       + (f"\n🔗 Moins cher en France : {_e((c.get('prix_plancher') or {}).get('lien'))}" if (c.get("prix_plancher") or {}).get("lien") else ""))
     if lien_rapport:
@@ -100,7 +101,7 @@ def alerte(x, vol=None):
         if f["feu"] == "vert":
             f["feu"] = "orange"
         f.setdefault("manque", []).append(f"écart anormal de {f['ecart_pct']} % : prix probablement mal lu, à vérifier")
-    if f["feu"] == "vert" and (x.get("controle_prix") or {}).get("statut") not in ("ok", "different"):
+    if f["feu"] == "vert" and (x.get("controle_prix") or {}).get("statut") != "ok":
         f["feu"] = "orange"
         f["manque"] = f["manque"] + ["prix non revérifié sur la fiche"]
     rond = {"vert": "🟢 <b>VERT</b> — l'affaire tient", "orange": "🟠 <b>ORANGE</b> — à confirmer"}[f["feu"]]
@@ -117,9 +118,9 @@ def alerte(x, vol=None):
              f"🔎 Recherches Google : {n(f['volume'])} /mois · ventes Amazon 30 jours : {n(f['ventes_30j'])}\n"
              f"♻️ Occasion : " + (f"de {_eur(f['occ_bas'])} à {_eur(f['occ_haut'])}" if f['occ_bas'] is not None else "inconnue") + "\n"
              f"🎯 Prix d'achat maximum : {_eur(f['achat_max'])} · revendre sur <b>{_e(f['vendre_sur'])}</b> à {_eur(f['prix_vente'])}\n"
-             f"💰 Bénéfice net : <b>{_eur(f['benefice'])}</b>\n"
-             + (f"🎯 Probabilité de vendre en 7 jours : <b>{f['proba_vente_7j']} %</b> ({_e(' · '.join(f['proba_detail']))}) — estimation\n"
-                if f.get("proba_vente_7j") is not None else "")
+             f"💰 Marge après prélèvements et provision, avant frais mensuels : <b>{_eur(f['benefice'])}</b>\n"
+             + (f"📊 Indicateurs de demande : {_e(f['indicateurs_demande'])} — non calibrés sur nos ventes\n"
+                if f.get("indicateurs_demande") else "")
              + (f"⚠️ Bloque le vert : {_e(', '.join(f['manque']))}\n" if f['manque'] else "")
              + (f"ℹ️ À compléter (ne bloque pas) : {_e(', '.join(f.get('a_completer') or []))}\n" if f.get('a_completer') else "")
              + ("✅ Même produit que la référence France\n" if (x.get("meme_produit") or {}).get("meme") is True

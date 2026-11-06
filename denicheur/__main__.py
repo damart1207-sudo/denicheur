@@ -384,6 +384,12 @@ def passage(nom, test=False):
         if occ:
             c["occasion"] = {"bas": min(occ), "haut": max(occ),
                              "position_neuf": round(c["prix"] / min(occ), 2)}  # < 1 : notre neuf sous l'occasion la moins chère = or
+    # Même barrière que les fiches et le site : des données manquantes restent internes.
+    from .validation import blocages
+    for c in retenus:
+        c["verification_blocages"] = blocages(c)
+        if c.get("feu") == "vert" and c["verification_blocages"]:
+            c["feu"] = "orange"
     # SCORE DE VENTE (skills/vente.md) : demande x marge x vitesse / concurrence, bonus hype, malus marque fermée / import
     for c in retenus:
         vol = (c.get("demande_google") or {}).get("volume_mensuel") or 0

@@ -122,9 +122,8 @@ def cout_achat(annonce, regles):
 
 
 def marge_nette(prix_revente, plateforme, cout, regles):
-    p = regles["plateformes_revente"].get(plateforme) or regles["plateformes_revente"]["amazon"]
-    net_vente = prix_revente * (1 - p["commission"]) - p["frais_fixes"] - p["port"]
-    return round(net_vente - cout, 2)
+    from .rentabilite import calculer
+    return calculer(prix_revente, plateforme, cout, regles)["marge_nette"]
 
 
 def canaux_de_vente(c, regles):
@@ -136,9 +135,12 @@ def canaux_de_vente(c, regles):
     for cle, prof in regles.get("profils_acheteurs", {}).items():
         prix = round(pmin * prof["prix_vs_neuf_min"], 2)
         for canal in prof["canaux"]:
-            m = marge_nette(prix, canal, c["cout_achat"], regles)
+            from .rentabilite import calculer
+            detail = calculer(prix, canal, c["cout_achat"], regles)
+            m = detail["marge_nette"]
             res.append({"profil": cle, "profil_nom": prof["nom"], "canal": canal, "prix_vente": prix,
-                        "marge_nette": m, "rentabilite": round(m / c["cout_achat"], 3) if c["cout_achat"] else 0})
+                        "marge_nette": m, "calcul_marge": detail,
+                        "rentabilite": round(m / c["cout_achat"], 3) if c["cout_achat"] else 0})
     res.sort(key=lambda x: -x["marge_nette"])
     return res
 

@@ -67,6 +67,7 @@ jobs:
       - name: Lancer le passage
         env:
           PYTHONUNBUFFERED: "1"
+          BUDGET_GITHUB_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || secrets.GEMINI }}
           NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY || secrets.DEEPSEEK }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY || secrets.OPENROUTER }}

@@ -1,0 +1,19 @@
+name: Vérification sans appels payants
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Régressions hors réseau
+        run: python -m unittest discover -s tests -v
+      - name: Compilation
+        run: python -m compileall -q denicheur saas pc tests

@@ -11,7 +11,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-from . import comparateurs, journal
+from . import comparateurs, journal, budget
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafond Apify côté compte : 40 $/mois
@@ -90,6 +90,17 @@ def lancer(robot, entree, maxi=10):
         return None
     acteur, plafond = ROBOTS[robot]
     b = _budget()
+    categorie = CONTEXTE['denicheur']
+    try:
+        reservation = budget.reserver('apify', plafond, sum(PLAFOND_JOUR_USD.values()), BUDGET_MOIS_USD,
+            categorie=categorie, plafond_categorie=PLAFOND_JOUR_USD.get(categorie, 0.03),
+            deja_jour=sum(depense_du_jour(c) for c in PLAFOND_JOUR_USD),
+            deja_mois=max(depense_reelle() or 0, b.get('depense_estimee_usd', 0)),
+            deja_categorie=depense_du_jour(categorie))
+    except budget.Indisponible:
+        return None
+    if reservation is None:
+        return None
     url = (f"https://api.apify.com/v2/acts/{acteur}/run-sync-get-dataset-items?"
            + urllib.parse.urlencode({"timeout": 150, "maxItems": maxi, "maxTotalChargeUsd": plafond}))
     req = urllib.request.Request(url, data=json.dumps(entree).encode(), method="POST", headers={
@@ -99,7 +110,11 @@ def lancer(robot, entree, maxi=10):
             items = json.loads(r.read() or b"[]")
     except Exception:
         items = None
-    _noter(b, plafond)  # on compte le plafond (estimation prudente)
+    if isinstance(items, list):
+        budget.rapprocher('apify', reservation, plafond)
+    # Le dataset ne contient pas la facture exacte : conserver le plafond débité.
+    # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique.
+    _noter(b, plafond)
     n = len(items) if isinstance(items, list) else 0
     dep, unit = TARIFS.get(robot, (0.0, plafond / max(maxi, 1)))
     journal.noter(CONTEXTE["denicheur"], "apify:" + robot, entree.get("searchQuery") or entree.get("query")

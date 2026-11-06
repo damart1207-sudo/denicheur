@@ -380,10 +380,11 @@ VERIF_REMISE_MIN = 30  # % : on relit la fiche des produits remisés d'au moins 
 
 
 def verifier_fiches(page, annonces):
-    """Relit la fiche de chaque produit fortement remisé : prix des données structurées, sinon le prix principal affiché.
+    """Relit la fiche avec le contrôle strict du produit et de son offre en stock.
     Corrige le prix si la carte a été mal lue ; marque prix_verifie (True/False). Incident Makita LS1019L du 05/11."""
     sys.path.insert(0, RACINE)
-    from denicheur.verif_prix import prix_officiel
+    from denicheur.verif_prix import offre_officielle
+    from denicheur.logistique import depuis_offre, appliquer
     def remise(a):
         m = re.search(r"-(\d+) %", a.get("description") or "")
         return int(m.group(1)) if m else 0
@@ -392,21 +393,28 @@ def verifier_fiches(page, annonces):
         try:
             page.goto(a["lien"], wait_until="domcontentloaded", timeout=40000)
             page.wait_for_timeout(2500 + random.randint(0, 1500))
-            p = prix_officiel(page.content())
-            if p is None:
-                p = page.evaluate(JS_PRIX_FICHE)
+            detail = offre_officielle(page.content(), a["lien"], [a.get("ean"), a.get("sku")])
+            p = detail["prix"] if detail else None
+            if page.url != a["lien"]:
+                p = None
         except Exception:
             p = None
         if not p:
             a["prix_verifie"] = False
             continue
+        a["preuve_prix"] = {"prix_page": p, "lien": a["lien"], "devise": "EUR",
+                            "disponibilite": "InStock", "identite_confirmee": True,
+                            "verifie_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         a["prix_page"] = p
-        if abs(p - a["prix"]) / max(p, 1) <= 0.05:
+        if abs(p - a["prix"]) <= 0.011:
             a["prix_verifie"] = True
         else:
             a["prix_carte"], a["prix"] = a["prix"], p
             a["prix_verifie"] = True
             a["description"] = (a.get("description") or "") + f" (prix corrigé sur la fiche : {p} €, carte lue {a['prix_carte']} €)"
+        preuve = depuis_offre(detail, a['lien'], a['preuve_prix']['verifie_le'])
+        a['preuve_prix']['preuve_livraison'] = preuve
+        appliquer(a, preuve)
         time.sleep(1 + random.random() * 2)
     return len(cibles)
 

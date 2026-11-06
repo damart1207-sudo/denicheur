@@ -15,6 +15,7 @@ import re
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
+from . import budget
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_BUDGET = os.path.join(RACINE, "data/etat/dataforseo_budget.json")
@@ -58,7 +59,8 @@ F_EXTRA = os.path.join(os.path.dirname(F_BUDGET), "dataforseo_extra.json")
 def plafond_du_jour():
     """Plafond quotidien + dépassement exceptionnel accordé par David pour la journée (data/etat/dataforseo_extra.json)."""
     try:
-        e = json.load(open(F_EXTRA))
+        with open(F_EXTRA) as source:
+            e = json.load(source)
     except (OSError, json.JSONDecodeError):
         e = {}
     jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -71,7 +73,16 @@ def disponible(cout=0.1):
 
 def _poster(chemin, taches, cout):
     auth = _auth()
+    if auth is None:
+        return []
     b = _budget()
+    try:
+        reservation = budget.reserver('dataforseo', cout, plafond_du_jour(), 31 * PLAFOND_JOUR_USD,
+            deja_jour=b['depense_usd'], deja_mois=b.get('depense_mois_usd', 0))
+    except budget.Indisponible:
+        return []
+    if reservation is None:
+        return []
     req = urllib.request.Request("https://api.dataforseo.com/v3/" + chemin, data=json.dumps(taches).encode(),
                                  headers={"Authorization": auth, "Content-Type": "application/json", "User-Agent": "denicheur/1.0"})
     try:
@@ -80,7 +91,12 @@ def _poster(chemin, taches, cout):
     except urllib.error.HTTPError as e:
         corps = e.read()[:300].decode("utf-8", "replace")
         raise RuntimeError(f"HTTP {e.code} : {corps}") from None
-    _noter(b, float(d.get("cost") or cout))
+    # Zéro facturé est une valeur réelle ; une réponse perdue conserve la réserve.
+    reel = d.get("cost")
+    if not isinstance(reel, (int, float)) or isinstance(reel, bool):
+        reel = cout
+    budget.rapprocher('dataforseo', reservation, reel)
+    _noter(b, reel)
     if d.get("status_code") != 20000:
         raise RuntimeError(f"DataForSEO {d.get('status_code')}: {d.get('status_message')}")
     return d.get("tasks") or []

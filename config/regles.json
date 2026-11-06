@@ -71,13 +71,20 @@
       "port": 0.0,
       "profil": "petit_budget",
       "note": "Marketplace, remise en main propre"
+    },
+    "rebifftout": {
+      "commission": 0.015,
+      "frais_fixes": 0.25,
+      "port": 0.0,
+      "note": "Hypothèse cartes standard EEE ; port fournisseur inclus dans cout_achat. Adapter au tarif réel."
     }
   },
   "port_achat_defaut": 5.0,
   "seuils": {
-    "marge_nette_min": 8,
+    "marge_nette_min": 10,
     "rentabilite_min": 0.3,
-    "consensus_min": 1
+    "consensus_min": 1,
+    "marge_verte_min": 20
   },
   "taux_gbp_eur": 1.15,
   "profils_acheteurs": {
@@ -111,5 +118,12 @@
       "note": "vendu par la vidéo, pas par le prix"
     }
   },
-  "idealo_passage_max": 15
+  "idealo_passage_max": 15,
+  "fiscalite": {
+    "cotisations": 0.123,
+    "versement_liberatoire": 0.01,
+    "formation_professionnelle": 0.001,
+    "provision_incident_eur": 3.0,
+    "note": "Hypothèses achat-revente en micro avec versement libératoire ; à adapter au régime effectif. Provision de 3 EUR, avant frais mensuels et temps de travail."
+  }
 }

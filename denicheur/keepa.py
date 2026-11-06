@@ -93,7 +93,23 @@ def fiche(ean=None, asin=None, pays="FR"):
     prods = d.get("products") or []
     if not prods:
         return None
-    return _parser(prods[0], params["domain"], pays, d.get("tokensLeft"))
+    # Un résultat de recherche/code n'est pas une preuve d'identité : certains
+    # retours contiennent plusieurs produits. Ne jamais prendre le premier.
+    def identique(p):
+        if not isinstance(p, dict):
+            return False
+        if asin:
+            return str(p.get('asin', '')).upper() == str(asin).strip().upper()
+        demande = str(ean).strip()
+        if not demande.isdigit() or len(demande) not in (8, 12, 13, 14):
+            return False
+        codes = [code for champ in ('eanList', 'upcList')
+                 for code in (p.get(champ) if isinstance(p.get(champ), list) else [])]
+        return any(str(c).isdigit() and str(c).zfill(14) == demande.zfill(14) for c in codes)
+    exacts = [p for p in prods if identique(p)]
+    if len(exacts) != 1:
+        return None
+    return _parser(exacts[0], params["domain"], pays, d.get("tokensLeft"))
 
 
 def _parser(p, domaine, pays="FR", jetons=None):

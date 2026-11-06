@@ -1,0 +1,54 @@
+name: Vérification sans appels payants
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Régressions hors réseau
+        run: python -m unittest discover -s tests -v
+      - name: Compilation
+        run: python -m compileall -q denicheur saas pc tests
+      - name: Lire les dernières alertes sans exécuter leur code
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          path: etat-courant
+          sparse-checkout: data/alertes.json
+          sparse-checkout-cone-mode: false
+          persist-credentials: false
+      - name: Générer le pilote avec les dernières alertes
+        run: python saas/pilote.py --alertes etat-courant/data/alertes.json
+      - name: Conserver le pilote à télécharger
+        uses: actions/upload-artifact@v4
+        with:
+          name: rebifftout-pilote
+          path: data/test/pilote.html
+          retention-days: 7
+          if-no-files-found: error
+  comptes:
+    name: Accès aux compteurs fournisseurs (lecture seule)
+    if: github.actor == github.repository_owner && github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'fix/audit-rentabilite-verifications'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Lire uniquement la disponibilité des compteurs
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
+          DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
+        run: python outils/controle_comptes.py

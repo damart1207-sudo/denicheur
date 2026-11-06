@@ -60,8 +60,8 @@ def affaires():
                 continue
             ref = ((c.get("prix_plancher") or {}).get("prix_min") or (c.get("verification") or {}).get("prix_neuf_min")
                    or ref_depuis_texte(v.get("commentaire")))
-            out.append({"nom": c.get("nom_produit") or c["titre"], "titre": c["titre"], "prix": c["prix"] * TAUX.get(c.get("devise"), 1),
-                        "marchand": c.get("marchand"), "pays": c.get("pays"), "lien": c.get("lien"), "ref": ref,
+            out.append({"nom": c.get("nom_produit") or c["titre"], "titre": c["titre"], "prix": c["cout_achat"],
+                        "marchand": c.get("marchand"), "pays": c.get("pays"), "lien": (c.get("controle_prix") or {}).get("lien"), "ref": ref,
                         "verifie": a.get("horodatage", "")[:10], "commentaire": v.get("commentaire")})
     for x in lire("data/alertes.json", []) or []:
         if blocages(x):
@@ -76,8 +76,8 @@ def affaires():
             continue
         vd = x.get("verdict") or {}
         ref = vd.get("prix_neuf_min_idealo") or (x.get("idealo") or {}).get("prix_min") or (x.get("prix_plancher") or {}).get("prix_min")
-        out.append({"nom": x.get("nom_produit") or x["titre"], "titre": x["titre"], "prix": x["prix"] * TAUX.get(x.get("devise"), 1),
-                    "marchand": x.get("marchand"), "pays": x.get("pays"), "lien": x.get("lien"), "ref": ref,
+        out.append({"nom": x.get("nom_produit") or x["titre"], "titre": x["titre"], "prix": x["cout_achat"],
+                    "marchand": x.get("marchand"), "pays": x.get("pays"), "lien": (x.get("controle_prix") or {}).get("lien"), "ref": ref,
                     "verifie": (x.get("verifie_le") or x.get("trouve_le") or "")[:10], "commentaire": vd.get("commentaire")})
     # pas de publication si la livraison en France n'est pas confirmée
     out = [o for o in out if o["ref"] and o["ref"] > o["prix"] and "CONDITION" not in (o.get("commentaire") or "")]
@@ -108,7 +108,7 @@ def carte(o, aujourd_hui):
     return f"""<li class="etiquette{' ancienne' if age > 2 else ''}">
   <div class="produit"><h3>{e(o['nom'])}</h3><p class="origine">{origine}</p><p class="etat">{etat}</p></div>
   <div class="prix">
-    <p class="ici"><span class="montant">{euro(o['prix'])}</span></p>
+    <p class="ici"><span class="montant">{euro(o['prix'])}</span> livré</p>
     <p class="ailleurs">Prix de référence relevé en France : <s>{euro(o['ref'])}</s></p>
     <p class="gain">{euro(o['economie'])} de moins, soit −{o['pct']} %</p>
     {lien}

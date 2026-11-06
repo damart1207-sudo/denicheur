@@ -75,3 +75,15 @@ Quand le total est prouvé, il remplace l'ancien port d'achat forfaitaire dans l
 L'outil `python outils/diagnostic_preuves.py` produit un diagnostic sans réseau. L'option `--relire` effectue au maximum trois GET marchands publics, sans IA, API payante, Telegram, achat ni écriture dans les données. Le diagnostic effectué sur 334 alertes historiques et trois relectures n'a pas validé d'offre complète. Les tests synthétiques ne constituent pas une preuve qu'un fournisseur réel renseigne tous les champs ; un test de panier réel reste nécessaire avant activation commerciale.
 
 Sources du contrat de données : https://schema.org/OfferShippingDetails et https://schema.org/valueAddedTaxIncluded.
+
+## Contrôle de panier et protection contre la perte du registre (06/11/2026)
+
+Un panier de test a été ouvert chez Outlet PC pour la carte mère MSI PRO A620M-E, référence marchand 00808386 (alerte 5eec1d7c71). La fiche et le panier indiquent 69,99 EUR pour un article neuf ; la fiche affiche TVA incluse et un port « depuis 3,99 EUR ». La France est sélectionnable au paiement, mais aucun tarif de transport n'est retourné sans destination complète. Le total affiché de 69,99 EUR, avec ligne de transport non renseignée, ne constitue donc pas un coût livré. Aucune coordonnée personnelle, aucun moyen de paiement ni commande n'ont été transmis. L'article ajouté a été retiré après le test. Cette offre reste non validée ; ne pas enregistrer 73,98 EUR comme coût livré France.
+
+Sources publiques :
+- https://outlet-pc.es/products/msi-pro-a620m-e-placa-base-am5-ddr5-pcie-4-0-m-2-usb-3-2-gen1-matx
+- https://outlet-pc.es/policies/shipping-policy
+
+La lecture des compteurs historiques distants donne DataForSEO 0,988 USD/jour et 4,347 USD/mois ; Apify 13,63 USD estimés/mois et 2,911187 USD déclarés réels/mois. Ces valeurs évolutives proviennent des fichiers du dépôt et ne valent pas relevé de facturation. Le registre conservateur reste verrouillé. La présence d'anciennes automatisations (veille horaire, relance en chaîne, rattrapage des passages et tâches Windows) doit être prise en compte lors du basculement ; le verrou du nouveau registre ne stoppe pas l'ancien code. Aucun de ces automatismes n'a été arrêté dans cette étape.
+
+Une suppression du fichier partagé ne peut désormais plus le recréer avec des compteurs vides. Un registre absent, vide ou de version inconnue bloque toute réservation et nécessite une restauration contrôlée de l'historique. La panne ne doit jamais autoriser une dépense. Deux tests de régression supplémentaires couvrent ces cas : 59 tests hors réseau réussis localement, compilation et contrôle du diff réussis.

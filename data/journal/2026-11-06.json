@@ -104,9 +104,9 @@
 "source": "flux:pc:leboncoin-tendances",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 648,
+"resultats": 665,
 "alertes": 1
 },
 "A | flux:pc:stockx-populaires |  | ?": {
@@ -114,9 +114,9 @@
 "source": "flux:pc:stockx-populaires",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 1448,
+"resultats": 1504,
 "alertes": 0
 },
 "A | flux:pc:labelemmaus |  | ?": {
@@ -124,9 +124,9 @@
 "source": "flux:pc:labelemmaus",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 908,
+"resultats": 938,
 "alertes": 0
 },
 "A | flux:pc:manomano-bonsplans |  | ?": {
@@ -414,19 +414,19 @@
 "source": "flux:pc:ledenicheur-bonsplans",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 300,
-"alertes": 0
+"resultats": 311,
+"alertes": 2
 },
 "A | flux:pc:kingjouet-promos |  | ?": {
 "denicheur": "A",
 "source": "flux:pc:kingjouet-promos",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 120,
+"resultats": 125,
 "alertes": 0
 },
 "A | flux:pc:rebuy |  | ?": {
@@ -434,9 +434,9 @@
 "source": "flux:pc:rebuy",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 96,
+"resultats": 100,
 "alertes": 0
 },
 "A | flux:prospectus |  | ?": {
@@ -444,9 +444,9 @@
 "source": "flux:prospectus",
 "cible": "",
 "categorie": "?",
-"recherches": 24,
+"recherches": 25,
 "cout_usd": 0.0,
-"resultats": 216,
+"resultats": 225,
 "alertes": 0
 },
 "A | flux:dealabs-nouveaux |  | Jardin & Bricolage": {
@@ -514,9 +514,9 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Electronics",
-"recherches": 1,
+"recherches": 2,
 "cout_usd": 0.0,
-"resultats": 1,
+"resultats": 2,
 "alertes": 0
 },
 "A | flux:chollometro-nuevos |  | Electrónica": {
@@ -984,6 +984,76 @@
 "source": "flux:hotukdeals-new",
 "cible": "",
 "categorie": "Culture & Leisure",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:idealo | Ecovacs T50 OMNI Gen3 | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "Ecovacs T50 OMNI Gen3",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0095,
+"resultats": 3,
+"alertes": 0
+},
+"A | apify:vinted | Ecovacs T50 OMNI Gen3 | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "Ecovacs T50 OMNI Gen3",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.001,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=Ecovacs%20T50%20OMNI%20Gen3 | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=Ecovacs%20T50%20OMNI%20Gen3",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | apify:idealo | LEGO Icons 10333 Barad-dûr | ": {
+"denicheur": "A",
+"source": "apify:idealo",
+"cible": "LEGO Icons 10333 Barad-dûr",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0035,
+"resultats": 1,
+"alertes": 0
+},
+"A | apify:vinted | LEGO Icons 10333 Barad-dûr | ": {
+"denicheur": "A",
+"source": "apify:vinted",
+"cible": "LEGO Icons 10333 Barad-dûr",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.008,
+"resultats": 8,
+"alertes": 0
+},
+"A | apify:leboncoin | https://www.leboncoin.fr/recherche?text=LEGO%20Icons%2010333%20Barad-d%C3%BBr | ": {
+"denicheur": "A",
+"source": "apify:leboncoin",
+"cible": "https://www.leboncoin.fr/recherche?text=LEGO%20Icons%2010333%20Barad-d%C3%BBr",
+"categorie": "",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 0,
+"alertes": 0
+},
+"A | flux:pepper-pl-hot |  | Dom i mieszkanie": {
+"denicheur": "A",
+"source": "flux:pepper-pl-hot",
+"cible": "",
+"categorie": "Dom i mieszkanie",
 "recherches": 1,
 "cout_usd": 0.0,
 "resultats": 1,

@@ -60156,7 +60156,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -60441,7 +60441,19 @@
    "proba_detail": [
     "Amazon 33/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Prix de 199 € non confirmé : la page Mydealz affiche 249 €, et ce bon plan est ancien. Joybuy.de bloque les robots et la livraison en France est inconnue. La référence de 299 € est haute : moyenne Amazon sur 90 jours 241 €, plus bas 30 jours 270,69 € selon KultureGeek.",
+   "prix_neuf_min_idealo": 299.0,
+   "source_prix_ref": "KultureGeek : Amazon vendu par Ecovacs France, 299 € lu le 06/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "61c26039d3",
@@ -60474,7 +60486,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:21+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -60686,7 +60698,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T15:21+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prix de référence non fiable : le prix Amazon.fr de 131,24 € concerne le GWS 20-230 P, pas le J. Aucun prix français du modèle J trouvé. Offre réelle : 115 € lu sur Amazon.es, en stock. Face au P, l'économie serait de 8,6 % avec frais, sous les 15 %.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune pour le modèle J (Amazon.fr GWS 20-230 P à 131,24 €, autre modèle)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "15e3fdadd8",
@@ -60732,7 +60756,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -60992,7 +61016,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Offre terminée ou erronée : la fiche Coolblue.de lue par le robot affiche 149 €, pas 111 €. De plus Coolblue.de ne livre pas en France.",
+   "prix_neuf_min_idealo": 219.0,
+   "source_prix_ref": "AchatMoinsCher (4 boutiques), relevé du 06/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "c3a9d83f2d",
@@ -61038,7 +61074,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -61239,7 +61275,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 15:22 UTC : offre active, 299.99 affiché, marchand 7_3 ; argos.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Argos ne livre pas en France (Royaume-Uni uniquement, retrait en magasin). Achat impossible depuis la France.",
+   "prix_neuf_min_idealo": 105.5,
+   "source_prix_ref": "AchatMoinsCher (2 boutiques), relevé du 06/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "8282ac034c",
@@ -61292,7 +61340,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:31+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -61586,7 +61634,19 @@
    "proba_detail": [
     "Amazon 34/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon plan vérifié, avec une réserve : T50 Omni Gen3 (pas le Pro) à 249 € sur Amazon.de, annoncé par Mydealz le 06/11, Hottip et Preis-King le 05/11. La fiche lue par le robot montrait seulement 399 € (lecture depuis les États-Unis, coupon ou remise panier non visible) : contrôler 249 € au panier et la couleur avant de commander. Amazon.de livre en France d'après le robot. Neuf en France : 359,40 € (AchatMoinsCher, 6 boutiques, relevé du 06/11), 399 € Galaxus.fr lu le 06/11. Amazon.fr a affiché 254 à 299 € en septembre avec remise panier, prix du jour non lu ; même à 299 €, l'économie reste de 15 %. Revente non retenue : 21,08 € de marge au mieux, soit 8,3 %.",
+   "prix_neuf_min_idealo": 359.4,
+   "source_prix_ref": "AchatMoinsCher (6 boutiques), recoupé par Galaxus.fr à 399 € lu le 06/11",
+   "economie_pct": 29.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Preis-King annonce jusqu'au 30/11, non confirmé par Amazon",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "badbbf159f",
@@ -61632,7 +61692,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -61895,7 +61955,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Prix très attractif mais livraison en France et code non confirmés : le code MYDEALZ60 vient d'un bon plan allemand, le lien pointe vers le site américain d'AliExpress et la page bloque les robots. La référence française est faible : un seul vendeur Amazon à 839,91 €, 0 vente estimée et un plus bas 90 jours à 504 €. Revente non retenue : 452,95 € en occasion, presque rien après frais.",
+   "prix_neuf_min_idealo": 827.1,
+   "source_prix_ref": "AchatMoinsCher (2 boutiques) et Amazon.fr 839,91 €, référence peu fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "fb5aafaae2",
@@ -61948,7 +62020,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:34+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -62232,7 +62304,19 @@
    "proba_detail": [
     "Amazon 13/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon plan vérifié : OnePlus Watch 2R verte (46 mm), le même coloris que la référence. Offre Dealabs France à 95,02 € sur AliExpress avec le code 11FR13, active d'après le robot à 15h35 UTC. La page AliExpress bloque les robots : prix affiché par Dealabs, pas relu chez le vendeur. Neuf en France : 154,91 € chez Amazon (vendu par Amazon), puis 162,19 € Topbiz, 167,11 € Fnac, Darty et Cdiscount, lus le 06/11. Même avec 5 € de frais éventuels, l'économie reste de 35 %. Revente non retenue : à 136,32 € (plafond 88 %), il reste 15,03 € soit 15 % du coût, sous les seuils. Une occasion Fnac à 129 € existe.",
+   "prix_neuf_min_idealo": 154.91,
+   "source_prix_ref": "AchatMoinsCher (6 boutiques) : Amazon 154,91 €, lu le 06/11 ; Amazon.fr noir 164,99 € (Keepa)",
+   "economie_pct": 35.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "probablement jusqu'au 11/11 (code AliExpress 11.11)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  },
  {
   "id": "5d55a7b41e",
@@ -62278,7 +62362,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -62479,6 +62563,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 15:35 UTC : offre active, 61.39 affiché, code DED1108, marchand 483_3 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Économie trop faible : 57,67 € contre 68,99 € soit 16 % sans frais, mais 9 % avec 5 € de frais éventuels. La page Mydealz affiche même 61,39 €. Amazon.fr est descendu à 18,99 € sur 90 jours. Revente perdante : marge de -13 €.",
+   "prix_neuf_min_idealo": 68.99,
+   "source_prix_ref": "AchatMoinsCher (3 boutiques) et Amazon.fr, relevés du 06/11",
+   "economie_pct": 9.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-06T15:54+00:00"
  }
 ]

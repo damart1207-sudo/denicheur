@@ -68203,7 +68203,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T19:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -68404,6 +68404,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 19:45 UTC : offre active, 289.99 affiché, marchand 1711_2 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T20:00+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France d'environ 629 € depuis le Royaume-Uni (port et taxes), alors que le Ryzen 9 9900X3D est à 542 € neuf en France.",
+   "prix_neuf_min_idealo": 542.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

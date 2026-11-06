@@ -1,32 +1,452 @@
 {
-"P | apify:idealo | Salomon Alphaglide | ": {
-"denicheur": "P",
-"source": "apify:idealo",
-"cible": "Salomon Alphaglide",
+"B | apify:idealo_tendances | idealo.fr,idealo.de,idealo.es,idealo.it | ": {
+"denicheur": "B",
+"source": "apify:idealo_tendances",
+"cible": "idealo.fr,idealo.de,idealo.es,idealo.it",
 "categorie": "",
 "recherches": 1,
-"cout_usd": 0.0095,
+"cout_usd": 0.1001,
+"resultats": 200,
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | Maison & Habitat": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "Maison & Habitat",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:dealabs-nouveaux |  | Consoles & Jeux vidéo": {
+"denicheur": "A",
+"source": "flux:dealabs-nouveaux",
+"cible": "",
+"categorie": "Consoles & Jeux vidéo",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-hot |  | Electronics": {
+"denicheur": "A",
+"source": "flux:hotukdeals-hot",
+"cible": "",
+"categorie": "Electronics",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:mydealz-new |  | Gaming": {
+"denicheur": "A",
+"source": "flux:mydealz-new",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Services & Contracts": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Services & Contracts",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Groceries": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Groceries",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:hotukdeals-new |  | Gaming": {
+"denicheur": "A",
+"source": "flux:hotukdeals-new",
+"cible": "",
+"categorie": "Gaming",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:chollometro-nuevos |  | Moda y accesorios": {
+"denicheur": "A",
+"source": "flux:chollometro-nuevos",
+"cible": "",
+"categorie": "Moda y accesorios",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pepper-pl-hot |  | Artykuły spożywcze": {
+"denicheur": "A",
+"source": "flux:pepper-pl-hot",
+"cible": "",
+"categorie": "Artykuły spożywcze",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pc:leboncoin-tendances |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:leboncoin-tendances",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 71,
+"alertes": 0
+},
+"A | flux:pc:stockx-populaires |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:stockx-populaires",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 74,
+"alertes": 0
+},
+"A | flux:pc:labelemmaus |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:labelemmaus",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 42,
+"alertes": 0
+},
+"A | flux:pc:manomano-bonsplans |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:manomano-bonsplans",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:pc:cdiscount-meilleures-offres |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:cdiscount-meilleures-offres",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 24,
+"alertes": 0
+},
+"A | flux:pc:zalando-prive |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:zalando-prive",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 28,
+"alertes": 0
+},
+"A | flux:pc:cultura-bonsplans |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:cultura-bonsplans",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 9,
+"alertes": 0
+},
+"A | flux:pc:asics-outlet |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:asics-outlet",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 9,
+"alertes": 0
+},
+"A | flux:pc:nocibe-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:nocibe-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 50,
+"alertes": 0
+},
+"A | flux:pc:amazon-warehouse |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:amazon-warehouse",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 10,
+"alertes": 0
+},
+"A | flux:pc:bazarchic |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:bazarchic",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 12,
+"alertes": 0
+},
+"A | flux:pc:micromania-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:micromania-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pc:carrefour-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:carrefour-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 27,
+"alertes": 0
+},
+"A | flux:pc:leroymerlin-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:leroymerlin-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 29,
+"alertes": 0
+},
+"A | flux:pc:manomano-blackfriday |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:manomano-blackfriday",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
 "resultats": 3,
 "alertes": 0
 },
-"P | apify:idealo | Nike Air Force 1 '07 | ": {
-"denicheur": "P",
-"source": "apify:idealo",
-"cible": "Nike Air Force 1 '07",
-"categorie": "",
+"A | flux:pc:but-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:but-promos",
+"cible": "",
+"categorie": "?",
 "recherches": 1,
-"cout_usd": 0.0095,
-"resultats": 3,
+"cout_usd": 0.0,
+"resultats": 9,
 "alertes": 0
 },
-"P | apify:idealo | Schneider Ray - Stylo-plume pour droitiers - Cartouche d'encre standar | ": {
-"denicheur": "P",
-"source": "apify:idealo",
-"cible": "Schneider Ray - Stylo-plume pour droitiers - Cartouche d'encre standar",
-"categorie": "",
+"A | flux:pc:adidas-outlet |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:adidas-outlet",
+"cible": "",
+"categorie": "?",
 "recherches": 1,
-"cout_usd": 0.0095,
-"resultats": 3,
+"cout_usd": 0.0,
+"resultats": 12,
+"alertes": 0
+},
+"A | flux:pc:intersport-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:intersport-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 9,
+"alertes": 0
+},
+"A | flux:pc:zalando-outlet |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:zalando-outlet",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pc:electrodepot-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:electrodepot-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 25,
+"alertes": 0
+},
+"A | flux:pc:grosbill-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:grosbill-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:pc:sonvideo-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:sonvideo-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 8,
+"alertes": 0
+},
+"A | flux:pc:micromania-occasion |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:micromania-occasion",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:pc:norauto-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:norauto-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:pc:feuvert-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:feuvert-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 17,
+"alertes": 0
+},
+"A | flux:pc:truffaut-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:truffaut-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 38,
+"alertes": 0
+},
+"A | flux:pc:newbalance-outlet |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:newbalance-outlet",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 9,
+"alertes": 0
+},
+"A | flux:pc:underarmour-outlet |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:underarmour-outlet",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 24,
+"alertes": 0
+},
+"A | flux:pc:marionnaud-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:marionnaud-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 10,
+"alertes": 0
+},
+"A | flux:pc:easycash-occasion |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:easycash-occasion",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 2,
+"alertes": 0
+},
+"A | flux:pc:idealo-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:idealo-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 1,
+"alertes": 0
+},
+"A | flux:pc:ledenicheur-bonsplans |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:ledenicheur-bonsplans",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 15,
+"alertes": 0
+},
+"A | flux:pc:kingjouet-promos |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:kingjouet-promos",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 5,
+"alertes": 0
+},
+"A | flux:pc:rebuy |  | ?": {
+"denicheur": "A",
+"source": "flux:pc:rebuy",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 4,
+"alertes": 0
+},
+"A | flux:prospectus |  | ?": {
+"denicheur": "A",
+"source": "flux:prospectus",
+"cible": "",
+"categorie": "?",
+"recherches": 1,
+"cout_usd": 0.0,
+"resultats": 9,
 "alertes": 0
 }
 }

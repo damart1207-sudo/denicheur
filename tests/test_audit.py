@@ -153,6 +153,8 @@ class PrixTests(unittest.TestCase):
 class ProduitTests(unittest.TestCase):
     def test_couleur_differente(self):
         self.assertIs(meme_produit.mecanique('Modèle noir', 'Modèle blanc')[0], False)
+        self.assertIs(meme_produit.mecanique('Jordan 1 Mid SE Chaussure pour enfant', 'NIKE Femme Air Jordan 1 Mid SE')[0], False)
+        self.assertFalse(meme_produit.public_different('Chaussure pour enfant', 'Chaussure enfant et femme'))
         self.assertIsNone(meme_produit.mecanique('Modèle noir', 'Modèle black')[0])
 
     def test_lots_differents(self):

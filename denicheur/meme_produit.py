@@ -16,6 +16,8 @@ F_CACHE = os.path.join(RACINE, "data/base/meme_produit.json")
 QTE = re.compile(r"(?:lot|pack|set|boite|boîte|coffret|carton)\s*(?:de|of)?\s*(\d{1,3})\b|\b(\d{1,3})\s*(?:x|×)\s*(?!\d)|\b(\d{1,3})\s*(?:pcs?|pi[èe]ces?|unit[ée]s?|pack|rouleaux|sachets?|capsules|dosettes|ampoules|piles|paires?)\b|\bx\s?(\d{1,3})\b", re.I)
 OPPOSES = [("gonflable", r"plein|increvable|pu\b|mousse"), ("sans fil|wifi|bluetooth|batterie", r"filaire"),
            ("neuf", r"occasion|reconditionn"), ("digital|num[ée]rique", r"disque|lecteur"), ("pro\b", r"\blite\b|\bmini\b")]
+ENFANT = r"\benfants?\b|\bkids?\b|\bjunior\b|\bb[ée]b[ée]s?\b"
+ADULTE = r"\bfemmes?\b|\bhommes?\b|\bwomen\b|\bmen\b|\badultes?\b"
 MESURES = re.compile(r"(\d{2,4})\s?[x×]\s?(\d{2,4})|(?<![\d.,])(\d{1,4}(?:[.,]\d{1,2})?)\s?(go|gb|to|tb|w|kw|mah|ah|l|ml|cl|kg|g|cm|mm|m|pouces?|\")(?![a-z])", re.I)
 UNITE = {"go": "gb", "to": "tb", "pouces": "pouce", '"': "pouce"}
 
@@ -56,6 +58,12 @@ def mesures(titre):
     return dims, vals
 
 
+def public_different(titre_a, titre_b):
+    """Modèle enfant comparé à un modèle adulte (Jordan 1 Mid enfant 62,99 € contre fiche femme 179 €, 06/11) : autre produit, autre prix."""
+    a, b = _n(titre_a), _n(titre_b)
+    return any(re.search(x, a) and re.search(y, b) and not re.search(x, b) for x, y in ((ENFANT, ADULTE), (ADULTE, ENFANT)))
+
+
 def mecanique(titre_a, titre_b):
     """Tests sans IA. Renvoie (verdict, raison) ; verdict None = pas de contradiction trouvée, à confirmer par l'IA."""
     a, b = _n(titre_a), _n(titre_b)
@@ -74,6 +82,8 @@ def mecanique(titre_a, titre_b):
     for x, y in OPPOSES:
         if (re.search(x, a) and re.search(y, b) and not re.search(x, b)) or (re.search(x, b) and re.search(y, a) and not re.search(x, a)):
             return False, f"caractéristiques opposées ({x.split('|')[0]} / {y.split('|')[0]})"
+    if public_different(a, b):
+        return False, "modèle enfant comparé à un modèle adulte"
     da, va = mesures(a)
     db, vb = mesures(b)
     if da and db and not (da & db):

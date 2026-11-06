@@ -14,6 +14,7 @@ from zoneinfo import ZoneInfo
 
 from . import apify, base, collecte, comparateurs, demande, equipe, journal, lecteur, sante
 from .ia import Agent, extraire_json
+from .meme_produit import public_different
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEUIL_ECART = 0.85          # bon plan : prix <= 85 % du neuf le moins cher en France (au moins 15 % d'économie)
@@ -126,7 +127,7 @@ def examiner(a, nom, maintenant, regles, deja):
         # fiche Amazon par Keepa (10 jetons, abonnement) : ASIN, EAN, prix neuf/occasion Amazon, vendeurs, ventes 30 j
         from . import keepa
         k = sante.protege("keepa_recherche", keepa.rechercher, nom, "FR", a["prix"])
-        if k and not k.get("erreur"):
+        if k and not k.get("erreur") and not public_different(a["titre"], k.get("titre")):
             x["keepa"] = k
             x["asin"], x["ean"] = k.get("asin"), k.get("ean")
             x["vendeurs_amazon"], x["ventes_estimees_30j"] = k.get("nb_vendeurs_neuf"), k.get("ventes_estimees_30j")

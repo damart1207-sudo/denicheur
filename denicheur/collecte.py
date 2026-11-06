@@ -134,7 +134,7 @@ def lire_source(source, timeout=25):
         except (OSError, _json.JSONDecodeError):
             return [], "pas encore de collecte PC"
         limite = (datetime.now(timezone.utc) - timedelta(hours=26)).strftime("%Y-%m-%dT%H:%M")
-        return [corriger_prix_titre(a) for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix") and not carte_collee(a)], None
+        return [corriger_prix_titre(a) for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix") and not carte_collee(a) and not vitrine_idealo(a)], None
     if source.get("type") == "prospectus":  # promos des prospectus de magasins (Bonial), lues chaque nuit
         from . import prospectus
         return prospectus.annonces(), None
@@ -145,6 +145,12 @@ def lire_source(source, timeout=25):
         from . import pages
         return pages.lire(source, timeout)
     return lire_flux(source, timeout)
+
+
+def vitrine_idealo(a):
+    """Vignette de la page d'accueil idealo : « à partir de 414,04 € » est le prix neuf le plus bas d'idealo, pas une offre à saisir.
+    Le comparer aux autres comparateurs créait de fausses affaires (Xiaomi Mix Flip « -35 % », 06/11)."""
+    return a.get("marchand") == "idealo" and bool(re.search(r"à partir de\s+\d", a.get("titre") or ""))
 
 
 def corriger_prix_titre(a):

@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 
 from . import championnat, collecte, ebay, equipe, rapport, verif
 from .ia import Agent
+from .meme_produit import public_different
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -236,6 +237,8 @@ def passage(nom, test=False):
                     k = keepa.rechercher(c.get("nom_produit") or c["titre"], "FR", prix_attendu=c.get("prix"))
             except Exception as e:
                 k = {"erreur": type(e).__name__}
+            if k and not k.get("erreur") and public_different(c["titre"], k.get("titre")):
+                k = None  # fiche Amazon d'un modèle adulte pour un modèle enfant (ou l'inverse) : aucun prix de référence
             if k and not k.get("erreur"):
                 if k.get("prix_neuf") and k.get("moyenne_90j") and k["prix_neuf"] > k["moyenne_90j"] * 1.25:
                     k["prix_neuf_vendeur_tiers"], k["prix_neuf"] = k["prix_neuf"], k.get("plus_bas_90j") or k["moyenne_90j"]

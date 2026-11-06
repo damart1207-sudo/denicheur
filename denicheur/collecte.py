@@ -134,7 +134,7 @@ def lire_source(source, timeout=25):
         except (OSError, _json.JSONDecodeError):
             return [], "pas encore de collecte PC"
         limite = (datetime.now(timezone.utc) - timedelta(hours=26)).strftime("%Y-%m-%dT%H:%M")
-        return [a for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix") and not carte_collee(a)], None
+        return [corriger_prix_titre(a) for a in d.get("annonces", []) if a.get("date", "") >= limite and a.get("prix") and not carte_collee(a)], None
     if source.get("type") == "prospectus":  # promos des prospectus de magasins (Bonial), lues chaque nuit
         from . import prospectus
         return prospectus.annonces(), None
@@ -145,6 +145,17 @@ def lire_source(source, timeout=25):
         from . import pages
         return pages.lire(source, timeout)
     return lire_flux(source, timeout)
+
+
+def corriger_prix_titre(a):
+    """Carte idealo mal lue : le titre dit « à partir de 339,99 € » mais le prix vient d'un autre bloc de la page
+    (199,99 € sur 8 produits différents, 06/11). Le titre fait foi, et le faux « prix initial » est retiré."""
+    m = re.search(r"\s*à partir de\s+(\d[\d\s\u00a0\u202f]*(?:[,.]\d{1,2})?)\s*€", a.get("titre") or "")
+    if not m:
+        return a
+    prix = float(re.sub(r"[\s\u00a0\u202f]", "", m.group(1)).replace(",", "."))
+    desc = re.sub(r"prix initial [\d.]+ €, -\d+ %\.\s*", "", a.get("description") or "")
+    return {**a, "prix": prix, "titre": a["titre"][:m.start()].strip(), "description": desc}
 
 
 def carte_collee(a):

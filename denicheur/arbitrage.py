@@ -7,6 +7,7 @@ Carte quand : écart ≥ ECART_MIN après port (PORT_EUR) ; le produit se vend e
 -> data/arbitrage.json (meilleurs écarts) ; annonces_arbitrage() les donne au passage comme n'importe quelle annonce.
 python -m denicheur.arbitrage   (un tour à la main)"""
 import json
+import re
 import os
 from datetime import datetime, timedelta, timezone
 
@@ -118,7 +119,9 @@ def tour(etat=None, par_tour=PAR_TOUR):
 def annonces_arbitrage(maxi=80):
     """Les écarts au format annonce, pour le passage : achat sur Amazon DE/IT/ES, prix France connu."""
     out = []
-    for l in _lire(F_ARB, {}).get("ecarts", [])[:maxi]:
+    # une seule taille de vêtement = rejet automatique de l'audit : ces lignes restent dans l'onglet, pas dans le passage (06/11)
+    lignes = [l for l in _lire(F_ARB, {}).get("ecarts", []) if not re.search(r"\b\d{2}W\s*/\s*\d{2}L\b", l.get("titre") or "")]
+    for l in lignes[:maxi]:
         out.append({"id": f'keepa-{l["asin"]}-arb{l["pays_achat"]}', "titre": (l.get("titre") or "") + f' [Amazon {l["pays_achat"]}]',
                     "temperature": min(int(l["ecart_pct"] * 10), 900), "categorie": "Arbitrage Europe", "marchand": f'Amazon.{ {"DE": "de", "IT": "it", "ES": "es"}[l["pays_achat"]] }',
                     "prix": l["prix_achat"], "devise": "EUR", "lien": l["lien_achat"], "date": l.get("vu", ""), "source": "keepa-arbitrage",

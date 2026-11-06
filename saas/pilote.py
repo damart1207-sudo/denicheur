@@ -86,10 +86,13 @@ if __name__ == '__main__':
     p.add_argument('--canal', choices=['leboncoin', 'ebay', 'rebifftout'], default='leboncoin')
     p.add_argument('--objectif', type=float, default=20)
     p.add_argument('--sortie', type=Path, default=RACINE / 'data/test/pilote.html')
+    p.add_argument('--alertes', type=Path, default=RACINE / 'data/alertes.json', help='Instantané JSON des alertes à examiner')
     args = p.parse_args()
     if not math.isfinite(args.objectif) or args.objectif < 0:
         p.error('objectif positif ou nul requis')
-    annonces = json.loads((RACINE / 'data/alertes.json').read_text(encoding='utf-8'))
+    annonces = json.loads(args.alertes.read_text(encoding='utf-8'))
+    if not isinstance(annonces, list):
+        p.error('le fichier des alertes doit contenir une liste JSON')
     regles = json.loads((RACINE / 'config/regles.json').read_text(encoding='utf-8'))
     args.sortie.parent.mkdir(parents=True, exist_ok=True)
     args.sortie.write_text(construire(annonces, regles, args.canal, args.objectif), encoding='utf-8')

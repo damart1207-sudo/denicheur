@@ -59909,7 +59909,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T15:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -60110,6 +60110,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 15:01 UTC : offre active, 97.87 affiché, marchand 1650_3 ; argos.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T15:04+00:00",
+  "verdict": {
+   "commentaire": "Rejet : Argos (Royaume-Uni) ne livre pas en France (page du bon plan lue par le robot à 15h01 UTC). Le prix n'est pas meilleur non plus : 89,99 £ reviennent à 132,19 € livrés, alors que la même souris est proposée dès 109,99 € sur leDénicheur (titre de la fiche lu le 06/11). La référence Keepa de 42,99 € est écartée : c'est la Viper V3 HyperSpeed, pas la V3 Pro. Revente : aucune annonce réelle, 34 vendeurs sur Amazon, aucune marge possible.",
+   "prix_neuf_min_idealo": 109.99,
+   "source_prix_ref": "leDénicheur, fiche du 06/11 (offres dès 109,99 €)",
+   "economie_pct": -20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  }
 ]

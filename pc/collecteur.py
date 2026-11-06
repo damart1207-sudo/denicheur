@@ -380,7 +380,7 @@ VERIF_REMISE_MIN = 30  # % : on relit la fiche des produits remisés d'au moins 
 
 
 def verifier_fiches(page, annonces):
-    """Relit la fiche de chaque produit fortement remisé : prix des données structurées, sinon le prix principal affiché.
+    """Relit la fiche avec le contrôle strict du produit et de son offre en stock.
     Corrige le prix si la carte a été mal lue ; marque prix_verifie (True/False). Incident Makita LS1019L du 05/11."""
     sys.path.insert(0, RACINE)
     from denicheur.verif_prix import prix_officiel
@@ -392,16 +392,19 @@ def verifier_fiches(page, annonces):
         try:
             page.goto(a["lien"], wait_until="domcontentloaded", timeout=40000)
             page.wait_for_timeout(2500 + random.randint(0, 1500))
-            p = prix_officiel(page.content())
-            if p is None:
-                p = page.evaluate(JS_PRIX_FICHE)
+            p = prix_officiel(page.content(), a["lien"], [a.get("ean"), a.get("sku")])
+            if page.url != a["lien"]:
+                p = None
         except Exception:
             p = None
         if not p:
             a["prix_verifie"] = False
             continue
+        a["preuve_prix"] = {"prix_page": p, "lien": a["lien"], "devise": "EUR",
+                            "disponibilite": "InStock", "identite_confirmee": True,
+                            "verifie_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         a["prix_page"] = p
-        if abs(p - a["prix"]) / max(p, 1) <= 0.05:
+        if abs(p - a["prix"]) <= 0.011:
             a["prix_verifie"] = True
         else:
             a["prix_carte"], a["prix"] = a["prix"], p

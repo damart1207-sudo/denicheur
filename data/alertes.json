@@ -59070,7 +59070,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T13:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -59262,7 +59262,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-06T13:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T15:04+00:00",
+  "verdict": {
+   "commentaire": "Rejet : pas une baisse réelle. 34,66 € est le prix « à partir de » de la fiche idealo (relevé du collecteur PC du 06/11), sans marchand ni frais de port connus. Hors port, l'écart n'est que de 13,3 % face à leDénicheur (39,99 € chez Cdiscount et Fnac Marketplace, AliExpress 41,31 €, fiche lue le 06/11), sous les 15 % demandés ; avec le port estimé (39,66 €), il tombe à 0,8 %. Le prix Keepa de 14,98 € est écarté : c'est un lot de bracelets, pas la montre. Revente : aucune annonce réelle et aucune marge possible à ce prix.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "leDénicheur, fiche lue le 06/11 (Cdiscount et Fnac Marketplace) ; idealo 34,66 € « à partir de » relevé le 06/11",
+   "economie_pct": 13.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "prix courant, pas de promotion datée",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "a1a5e27922",
@@ -59315,7 +59327,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T14:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -59606,6 +59618,18 @@
    "proba_detail": [
     "Amazon 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-06T15:04+00:00",
+  "verdict": {
+   "commentaire": "Rejet : l'offre iBOOD à 599 € (titre du bon plan Dealabs lu le 06/11, port non précisé) est un article « as-is », « stock SAV » : d'après iBOOD sur Trustpilot, ce sont des appareils issus du stock d'échange Apple, en boîte marron, présentés comme neufs et non utilisés, mais une cliente a cru à du reconditionné. Ce n'est donc pas comparable à un iPhone neuf en boîte d'origine. Écart théorique de 27,9 % face au neuf le plus bas récent (Pixmania 838 € livré, achatmoinscher lu le 06/11 ; les 817,98 € de laboutiquedunet datent du 09/04 et sont écartés), mais le reconditionné excellent état est moins cher : Cdiscount 549,99 € livré, Darty Marketplace 609 €, Fnac 619 €. Revente : le reconditionné à 550 € plafonne le prix, aucune marge sûre (calcul du robot au mieux 36 € soit 6 %, sous les seuils).",
+   "prix_neuf_min_idealo": 838.0,
+   "source_prix_ref": "achatmoinscher lu le 06/11 (Pixmania 838 € neuf, livré) ; Fnac 989,99 €, Auchan 1 051,99 € lus le 06/11",
+   "economie_pct": 27.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (stock limité iBOOD)",
+   "demande_confirmee": "non"
   }
  },
  {
@@ -59639,7 +59663,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T14:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -59840,7 +59864,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:49 UTC : offre active, 314.99 affiché, marchand 4_2 ; notebooksbilliger.de refuse les robots (HTTP 404) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T15:04+00:00",
+  "verdict": {
+   "commentaire": "Rejet : Notebooksbilliger livre seulement en Allemagne (ColisExpat lu le 06/11), et le prix n'est pas intéressant : 357,99 € hors port face à la Fnac à 369,99 € livrée gratuitement, en stock (comparateur-gamer, relevé du 05/11 à 15h ; Cybertek 379,99 € relu le 06/11), soit 3,2 % d'écart seulement. La référence Keepa de 431,22 € est écartée : version UK d'un vendeur tiers, prix au-dessus de la moyenne 90 j. Revente : aucune annonce réelle, marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 369.99,
+   "source_prix_ref": "comparateur-gamer, relevé du 05/11 15h (Fnac 369,99 € livré, en stock) ; Cybertek 379,99 € lu le 06/11",
+   "economie_pct": 3.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "d4dcbebe55",

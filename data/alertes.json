@@ -70021,7 +70021,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T21:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -70224,7 +70224,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T21:12+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre sur Allegro (Pologne), livraison en France non confirmée (Allegro ne livre en général pas la France) et page de l'offre non consultable. Prix neuf France le plus bas : 374,99 € (achatmoinscher, 6 boutiques).",
+   "prix_neuf_min_idealo": 374.99,
+   "source_prix_ref": "achatmoinscher (EAN 5035048468876), Amazon.fr 380,99 €",
+   "economie_pct": 51,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c8c5ec89ff",
@@ -70270,7 +70282,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T21:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -70548,6 +70560,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-06T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : prix neuf France vérifié 199 € (HP France et E.Leclerc, livraison offerte, comparez-malin 06/11), mais la page Amazon.nl n'a pas pu être ouverte : offre active et livraison en France non confirmées. À reprendre si l'offre est encore là.",
+   "prix_neuf_min_idealo": 199.0,
+   "source_prix_ref": "comparez-malin.fr (HP France / E.Leclerc 199 €), Amazon.fr 199 €",
+   "economie_pct": 38,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -70594,7 +70618,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T21:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -70798,6 +70822,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T21:13+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré estimé 344,99 € contre 399,99 € neuf en France = seulement 14 % d'économie (sous le seuil de 15 %), revente à perte, et livraison France par Lefeld (Allemagne) non confirmée.",
+   "prix_neuf_min_idealo": 399.99,
+   "source_prix_ref": "achatmoinscher (2 boutiques)",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

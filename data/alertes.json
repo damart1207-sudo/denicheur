@@ -47801,7 +47801,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-05T21:19+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -47960,7 +47960,7 @@
    "prix_page": null
   },
   "verdict": {
-   "commentaire": "Prix à confirmer. 65 € relevé par le collecteur StockX le 05/11 pour la pointure US 12 (EU 46), hors frais de traitement et de livraison StockX : le coût de 70 € n'est pas prouvé. Cette annonce ne figure plus dans la collecte StockX de 03h45 le 06/11. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche (relu le 05/11 au soir). La fiche Keepa de l'alerte est la version noire et ne sert pas de référence.",
+   "commentaire": "Rejet dans le doute. Le 65 € relevé par le collecteur StockX le 05/11 pour la pointure US 12 n'apparaît plus dans les collectes suivantes, dont celle du 06/11 au matin, et il ne comprenait ni les frais de traitement ni la livraison : le prix final n'est pas prouvé. Neuf de référence : 119,99 € sur Nike.com France pour la CW2288-111 blanche, relevé le 05/11.",
    "prix_neuf_min_idealo": 119.99,
    "source_prix_ref": "Nike.com France, 05/11",
    "economie_pct": null,
@@ -47970,7 +47970,7 @@
    "duree_offre": "prix StockX variable selon la pointure",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-06T02:46+00:00"
+  "verifie_le": "2026-11-06T03:58+00:00"
  },
  {
   "id": "8c71581d77",
@@ -50200,7 +50200,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T02:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 251.0,
@@ -50327,7 +50327,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T02:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T03:58+00:00",
+  "verdict": {
+   "commentaire": "Pas une affaire neuve : annonce Leboncoin à 150 € relevée par le collecteur à 01h38, avec seulement le titre, sans description. Rien ne montre que la liseuse est neuve, ni son état, ni sa livraison, donc le prix ne se compare pas au neuf. Neuf en France : 251 € chez Amazon (idealo, 28 offres ; achatmoinscher confirme le 06/11). Occasion sur Vinted : 180 à environ 230 €, 6 annonces relevées par le robot. Revente non retenue tant que l'état n'est pas connu.",
+   "prix_neuf_min_idealo": 251.0,
+   "source_prix_ref": "idealo (28 offres) et achatmoinscher, 06/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "annonce unique, peut partir à tout moment",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9bc2da63f7",
@@ -50355,7 +50367,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T03:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 349.4,
@@ -50496,7 +50508,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T03:19+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T03:58+00:00",
+  "verdict": {
+   "commentaire": "Le 254,14 € est un « prix membre » Amazon affiché par leDénicheur (fiche lue le 06/11), pas un prix ouvert à tous : la condition n'est pas précisée. Fiche Amazon.fr lue par Keepa à 03h17 : 372,38 €, et plus bas sur 90 jours 299 €. Sans condition, leDénicheur donne 399 € chez Boulanger et Cdiscount. Neuf le plus bas en France : 349,40 € (idealo, 21 offres). Le prix de 254 € avait déjà circulé le 27/09 avec une remise panier Amazon. Sans prix public, aucune économie prouvée, donc rejet.",
+   "prix_neuf_min_idealo": 349.4,
+   "source_prix_ref": "idealo (21 offres), 06/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3a00e07852",
@@ -50524,7 +50548,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T03:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 459.99,
@@ -50744,6 +50768,18 @@
     "Amazon 36/mois",
     "Google 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-06T03:58+00:00",
+  "verdict": {
+   "commentaire": "Le 385,99 € est un prix réservé aux membres : leDénicheur l'affiche en « prix membre » face à 459,99 € barré, et Dealabs l'avait marqué [Prime] sur une ancienne offre terminée. Il faut donc un abonnement payant. Fiche Amazon.fr lue par Keepa à 03h17 : 459,99 €, qui est aussi le neuf le plus bas en France (idealo, 11 offres ; achatmoinscher : Amazon 459,99 €, PcComponentes 497,99 €). Au prix ouvert à tous, économie nulle. Revente sous les seuils : au mieux 28,80 € sur Fnac, soit 7 %.",
+   "prix_neuf_min_idealo": 459.99,
+   "source_prix_ref": "idealo (11 offres) et achatmoinscher, 06/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -50772,7 +50808,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T03:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 137.87,
@@ -50982,6 +51018,18 @@
    "proba_detail": [
     "Amazon 29/mois"
    ]
+  },
+  "verifie_le": "2026-11-06T03:58+00:00",
+  "verdict": {
+   "commentaire": "Prix très probablement faux ou conditionnel : leDénicheur affiche 44 € chez Amazon à côté d'un « prix membre » à 169 €. Le robot signale une erreur de prix probable. Fiche Amazon.fr lue par Keepa : 169 €, moyenne 90 jours 156,77 €. Autres offres : 137,87 € Cdiscount Marketplace, le neuf le plus bas en France (idealo, 7 offres), 153,67 € eBay, 159,28 € Fnac Marketplace. Aucune source ne confirme 44 €, ni le vendeur, ni l'état neuf. Rejet.",
+   "prix_neuf_min_idealo": 137.87,
+   "source_prix_ref": "idealo (7 offres), 06/11",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

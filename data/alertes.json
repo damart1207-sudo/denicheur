@@ -70881,7 +70881,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T22:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -71086,6 +71086,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-06T22:58+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T23:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO Icons Barad-dûr 10333, même référence que la fiche Amazon.fr). Prix neuf le plus bas en France relevé le 06/11 : 459,99 € (Amazon.fr, Lego.fr, LToys, port gratuit ; comparateur Brickfact mis à jour le 06/11 à 17h01, confirmé par Keepa). L'offre tsoto.net est à 354,99 € (fiche marchand lue par le robot à 23h31 UTC : en stock au panier), soit 23 % de moins hors frais de port. Rejeté car la livraison en France n'est confirmée nulle part (boutique allemande, ni le bon plan Mydealz ni le marchand n'indiquent les pays livrés ni les frais vers la France) et c'est une précommande sans date de livraison. Revente : perdante (marge -4,84 € sur Fnac au prix du neuf).",
+   "prix_neuf_min_idealo": 459.99,
+   "source_prix_ref": "Brickfact (comparateur français, 06/11 17h01) + Keepa Amazon.fr",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (précommande)",
+   "demande_confirmee": false
+  }
  }
 ]

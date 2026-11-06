@@ -48,3 +48,11 @@ Sources :
 5. Pour la vente directe client : terminer le parcours commande, stock, paiement, suivi, retours et les informations réelles de l'exploitant. Ce lot ne permet pas d'encaisser automatiquement.
 
 Les tests hors réseau couvrent les coûts, le blocage sur preuves absentes, les budgets concurrents et le poste de contrôle. Le lanceur Windows n'a pas été exécuté sur le PC de l'utilisateur.
+
+## Rapport généré sur GitHub
+
+Le workflow `Vérification sans appels payants` produit maintenant un fichier à télécharger nommé `rebifftout-pilote` après les tests. Il utilise le code de la branche testée et lit uniquement `data/alertes.json` depuis la dernière révision de `main`, sans exécuter le code de cette seconde copie. Le rapport affiche sa date de génération. Le fichier est conservé sept jours dans les artefacts de l'exécution GitHub Actions.
+
+Sur une mise à jour de la proposition, les tests et cette génération se lancent automatiquement. La génération du pilote ne déclenche pas de nouvelle collecte fournisseur : elle examine les alertes présentes sur `main`. Ce n'est pas encore un service qui tourne en permanence, ni un déploiement de la nouvelle collecte en production. Aucun secret fournisseur n'est fourni à ce workflow et ses permissions restent en lecture seule. Un compte GitHub autorisé peut être requis pour télécharger l'artefact.
+
+Les références composées des comparateurs et de la recherche Keepa conservent leurs suffixes : `A620M-E` ne correspond plus à `A620M-B`. Les fiches Keepa demandées par EAN/UPC ou ASIN sélectionnent l'identifiant exact dans la réponse ; un autre produit, une ambiguïté ou une liste d'identifiants malformée sont refusés. Cela élimine cette classe de faux rapprochements, sans prouver à lui seul l'état, la couleur ou les accessoires. Les anciennes alertes ne sont pas réécrites silencieusement.

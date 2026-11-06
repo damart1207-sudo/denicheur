@@ -66345,7 +66345,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-06T18:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -66564,6 +66564,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:40 UTC : offre active, 136.83 affiché, marchand 16595_2 ; fiche lg.com lue : 679.0 GBP, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-06T19:00+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : remise réservée au personnel de santé britannique (Health Service Discounts) sur le site LG Royaume-Uni, non achetable depuis la France ; coût livré estimé 788,54 €, plus cher que le neuf en France (699 €).",
+   "prix_neuf_min_idealo": 699.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

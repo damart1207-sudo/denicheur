@@ -71150,7 +71150,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T00:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -71366,7 +71366,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T00:12+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T00:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Zelda Echoes of Wisdom, Switch). Fiche Micromania lue par le robot à 00h12 : 34,99 €, en stock, retrait en magasin. Mais le neuf est déjà à 39,00 € (Cdiscount Marketplace) sur leDénicheur, 43,07 € chez Cultura et 43,17 € chez Amazon/Cdiscount ; plus bas Amazon sur 90 jours : 39,06 € (Keepa). Économie de 10 % seulement, sous les 15 %. Revente : perte (~-10 €).",
+   "prix_neuf_min_idealo": 39.0,
+   "source_prix_ref": "leDénicheur (Cdiscount Marketplace 39,00 €), Keepa plus bas 90 j 39,06 €",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  },
  {
   "id": "1b51ec1f17",
@@ -71412,7 +71424,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T00:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -71605,6 +71617,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 00:24 UTC : offre active, 74.99 affiché, marchand 4_2 ; fiche kamera-express.de lue : 113.65 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T00:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Pentax Papilio III 6.5x21 WR noir). Fiche Kamera Express (Allemagne) lue par le robot à 00h24 : 113,65 €, en stock, mais livraison en France et frais de port non confirmés (coût estimé 118,65 €). En France, le neuf est à 134,90 € livraison offerte chez MN Photo Vidéo (LDLC 169,90 €). Économie ~12 %, sous les 15 %. Revente : marge ~8 € soit 7 %, trop faible.",
+   "prix_neuf_min_idealo": 134.9,
+   "source_prix_ref": "mnphotovideo.com (134,90 €, livraison offerte), recherche web",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "non"
+  }
  }
 ]

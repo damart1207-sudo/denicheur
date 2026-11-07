@@ -83727,7 +83727,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T21:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -84020,6 +84020,18 @@
    "proba_detail": [
     "Amazon 44/mois"
    ]
+  },
+  "verifie_le": "2026-11-07T21:50+00:00",
+  "verdict": {
+   "commentaire": "Même produit (ECOVACS GOAT O600 RTK), offre active à 349 € chez chipstore.de (fiche lue par le robot à 22h11, en stock). Mais CHIP Store livre uniquement en Allemagne (page « Fragen & Antworten » : « Versand nur innerhalb Deutschlands »). Non livrable en France : rejeté.",
+   "prix_neuf_min_idealo": 499.0,
+   "source_prix_ref": "Keepa / Amazon.fr (moyenne 90 j 509 €), Galaxus.fr 579 €",
+   "economie_pct": 30,
+   "canal": null,
+   "prix_revente_verifie": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  },
  {
@@ -84066,7 +84078,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T21:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -84273,6 +84285,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:21 UTC : offre active, 88.0 affiché, marchand 41438_4 ; fiche powertoolmate.co.uk lue : 39.99, en stock (panier), livraison : click & collect ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T21:50+00:00",
+  "verdict": {
+   "commentaire": "Même produit (Makita DTD152Z machine seule), 39,99 £ chez Powertoolmate (fiche lue par le robot à 22h21). Mais Powertoolmate n'accepte aucune commande internationale (page Livraison : « unable to take international orders ») : non livrable en France, rejeté.",
+   "prix_neuf_min_idealo": 86.84,
+   "source_prix_ref": "achatmoinscher.com (Keepa Amazon.fr moyenne 90 j 83,68 €)",
+   "economie_pct": 27,
+   "canal": null,
+   "prix_revente_verifie": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

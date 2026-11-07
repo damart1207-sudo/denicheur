@@ -57,10 +57,29 @@ def lire_flux(source, timeout=25):
     try:
         racine = ET.fromstring(brut)
     except ET.ParseError as e:
-        return [], f"XML illisible: {e}"[:200]
+        # flux abîmé (une seule annonce mal formée suffit à tout bloquer, ex. pepper.it 07/11) :
+        # on relit chaque <item> séparément et on écarte seulement ceux qui sont cassés.
+        items = _items_un_par_un(brut, source)
+        return (items, None) if items else ([], f"XML illisible: {e}"[:200])
     items = [a for a in (_item(i, source) for i in racine.iter("item")) if a]
     items += [a for a in (_entree_atom(e, source) for e in racine.iter(ATOM + "entry")) if a]
     return items, None
+
+
+def _items_un_par_un(brut, source):
+    texte = brut.decode("utf-8", "replace")
+    entete = re.search(r"<rss[^>]*>", texte)
+    ns = entete.group(0) if entete else "<rss>"
+    sortie = []
+    for bloc in re.findall(r"<item[\s>].*?</item>", texte, re.S):
+        try:
+            el = ET.fromstring(ns + bloc + "</rss>").find("item")
+        except ET.ParseError:
+            continue
+        a = _item(el, source) if el is not None else None
+        if a:
+            sortie.append(a)
+    return sortie
 
 
 def _item(item, source):

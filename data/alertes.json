@@ -73752,7 +73752,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T08:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -73930,7 +73930,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T08:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Savers est un magasin anglais qui ne livre pas la France (page marchand bloquée, livraison France non prouvée) ; revente : marge négative.",
+   "prix_neuf_min_idealo": 75.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 26,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "49bcdcac7f",
@@ -73963,7 +73975,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-07T09:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -74185,7 +74197,19 @@
    "premiere_lecture": "2026-11-07T09:06+00:00",
    "expiree_vue_le": "2026-11-07T09:40+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Erreur de prix chez Welkoop (Pays-Bas) : l'offre est expirée et le magasin ne livre pas la France.",
+   "prix_neuf_min_idealo": 210.5,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 29,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "28d8f1a392",
@@ -74231,7 +74255,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -74434,7 +74458,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T09:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Les 20 € sont crédités sur la carte de fidélité Carrefour (obligatoire) : le vrai prix payé est 79,99 €, pas 59,99 €. Pas assez sous le neuf (99,99 €).",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "0b8ab39d43",
@@ -74480,7 +74516,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -74681,7 +74717,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 09:20 UTC : offre active, 49.0 affiché, code precio en cesta, marchand 211_4 ; carrefour.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Carrefour Espagne ne livre pas la France (prix « en panier » réservé au site espagnol).",
+   "prix_neuf_min_idealo": 59.9,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "768c69d9a9",
@@ -74714,7 +74762,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -74904,7 +74952,19 @@
    "livraison_france": "oui",
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "C'est le prix d'Amazon lui-même : aucune économie par rapport au neuf le plus bas en France.",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9cf25ce7da",
@@ -74950,7 +75010,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -75180,7 +75240,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 09:30 UTC : offre active, 700.0 affiché, marchand 11761_1 ; fiche consumer.huawei.com lue : 299.0 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Boutique Huawei Allemagne : livraison en France non prouvée, et le prix de référence (399 €) concerne l'ancienne Watch Buds, pas la Watch Buds 2. Marge de revente nulle.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3d6f9aaddb",
@@ -75239,7 +75311,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -75440,7 +75512,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 09:39 UTC : offre active, 26.92 affiché, code CHOLLOES03\\/ ESD1103 \\/ AEES03, marchand 165_2 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Codes promo AliExpress réservés à l'Espagne, page de l'offre impossible à ouvrir : prix livré en France non prouvé ; revente : marge trop faible (moins de 2 €).",
+   "prix_neuf_min_idealo": 52.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "626f1126dc",
@@ -75486,7 +75570,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T09:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -75662,6 +75746,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 09:40 UTC : offre active, 24.99 affiché, code 29NC8QC4, marchand 9645_2 ; pharmacy2u.co.uk refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T09:50+00:00",
+  "verdict": {
+   "commentaire": "Pharmacie anglaise, livraison France non prouvée ; et le coût livré (41 €) dépasse le prix neuf en France (35,99 €).",
+   "prix_neuf_min_idealo": 35.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

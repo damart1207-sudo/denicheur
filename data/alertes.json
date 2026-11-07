@@ -82603,7 +82603,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T19:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -82806,7 +82806,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T19:52+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Magasins U impossible à vérifier (page Dealabs inaccessible, souvent en magasin seulement ou avec carte U). Livraison en France non prouvée. Revente : marge ~3 €, trop faible.",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "keepa/amazon.fr (plus bas 90 j ; prix actuel 54,23 €)",
+   "economie_pct": 22,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "b55b05aebe",
@@ -82852,7 +82864,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T20:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -83138,6 +83150,18 @@
    "proba_detail": [
     "Amazon 16/mois"
    ]
+  },
+  "verifie_le": "2026-11-07T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : marchand non identifié sur Pepper NL, offre et livraison en France invérifiables (une offre à 99 € chez Outlet PC est vue sur Dealabs, peut-être produit déstocké/outlet). Prix neuf France vérifié : 199 € (Amazon.fr, RueDuCommerce 199,99 €).",
+   "prix_neuf_min_idealo": 199.0,
+   "source_prix_ref": "comparateur-gamer.fr (07/11) + keepa/amazon.fr",
+   "economie_pct": 48,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -83191,7 +83215,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T20:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -83399,7 +83423,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T20:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre d'un magasin expert à Bayreuth (Allemagne), achat/livraison depuis la France non prouvés. Revente : marge négative.",
+   "prix_neuf_min_idealo": 259.0,
+   "source_prix_ref": "achatmoinscher (8 boutiques)",
+   "economie_pct": 21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "24e429e009",
@@ -83445,7 +83481,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T20:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -83646,6 +83682,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 20:26 UTC : offre active, 39.35 affiché, marchand 16098_1 ; m.alza.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Alza Allemagne, livraison en France non confirmée ; économie ~18 % seulement face à 56,99 € en France ; revente à perte.",
+   "prix_neuf_min_idealo": 56.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

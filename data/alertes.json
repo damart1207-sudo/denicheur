@@ -81480,7 +81480,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T16:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -81773,6 +81773,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-07T16:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Zgonc est une chaîne de magasins autrichienne, livraison en France non confirmée (vente en Autriche seulement selon toute vraisemblance) ; page du deal non consultable. Revente : marge 9-11 % du coût, sous les seuils. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 329.93,
+   "source_prix_ref": "achatmoinscher (relevé du robot, non revérifié)",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

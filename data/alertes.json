@@ -72961,7 +72961,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T07:05+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -73164,7 +73164,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T07:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T07:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : l'offre à 292 € ne semble plus active. La fiche SonoVente du WiiM Amp Space Grey affiche maintenant 307,50 € HT, soit 369 € TTC. Prix neuf le plus bas trouvé en France : 369 € (achatmoinscher), Fnac et Boulanger à 419 €, marketplace Fnac dès 389 €. Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 369.0,
+   "source_prix_ref": "achatmoinscher (9 boutiques) + fiches Fnac/Boulanger lues le 07/11",
+   "economie_pct": 21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée ou très courte",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "002049128f",
@@ -73197,7 +73209,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T07:05+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -73402,6 +73414,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T07:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T07:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : même prix en France. Les 120 switches Glorious Kailh Pro Purple sont à 19,99 € sur Amazon.fr, comme sur Amazon.es. Aucune économie et revente à perte.",
+   "prix_neuf_min_idealo": 19.99,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

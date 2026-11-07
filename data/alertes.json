@@ -82075,7 +82075,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T18:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -82283,6 +82283,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 18:14 UTC : offre active, 39.99 affiché, marchand 4107_1 ; joybuy.fr refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T18:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute. Bon produit (The Adventures of Elliot: The Millennium Tales, PS5, EAN 5021290102668) à 38,81 € sur Joybuy France. Prix neuf le plus bas en France : 49,99 € chez Amazon, port offert (AchatMoinsCher, 07/11 ; Keepa le confirme, plus bas 90 jours 43,84 €). Mais la page Dealabs n'a pas pu être lue : offre active, frais de port et conditions (code, nouveaux clients, abonnement JoyPlus) non confirmés. Avec 5 € de port, l'économie tombe à 12 %, sous les 15 %. Revente : perte (neuf déjà à 49,99 €, occasion ~44 €).",
+   "prix_neuf_min_idealo": 49.99,
+   "source_prix_ref": "AchatMoinsCher (Amazon, port offert) le 07/11, confirmé par Keepa",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

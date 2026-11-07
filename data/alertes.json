@@ -84620,7 +84620,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T22:46+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -84823,7 +84823,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T22:47+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T23:45+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Mydealz relue par le robot à 00h20 : offre active (89 € sur la fiche, 84,99 € avec les 15 % OTTO UP). Mais OTTO (otto.de) ne livre qu'en Allemagne : non achetable depuis la France. En plus, Amazon.fr l'a déjà vendu 78 € dans les 90 derniers jours. Rejeté.",
+   "prix_neuf_min_idealo": 102.47,
+   "source_prix_ref": "achatmoinscher.com (Vulcan II linéaire noir) ; Amazon.fr via Keepa 129,99 € (moyenne 90 j 114,87 €)",
+   "economie_pct": 17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -14.9,
+   "duree_offre": "quelques jours (promo OTTO UP)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "d357c43173",
@@ -84888,7 +84900,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T22:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -85091,6 +85103,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T22:59+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T23:45+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Chollometro relue par le robot à 00h32 : offre active à 46,98 € chez Miravia. Miravia ne livre qu'en Espagne : non achetable depuis la France. La fiche Amazon trouvée est la version « Pro », pas le même produit. Revente : marge d'environ 1 €, sans intérêt. Rejeté.",
+   "prix_neuf_min_idealo": 67.97,
+   "source_prix_ref": "achatmoinscher.com (Xiaomi OpenWear Stereo, 8 boutiques)",
+   "economie_pct": 29,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 0.81,
+   "duree_offre": "courte (vente flash Miravia)",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -71677,7 +71677,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T05:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -71880,6 +71880,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 05:10 UTC : offre active, 149.0 affiché, marchand 7_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T05:45+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon UK à 136,99 £ : coût livré en France ≈ 197 € (conversion + port + taxes), plus cher que le neuf en France (164,16 € sur achatmoinscher, 16 boutiques ; 184 € sur Amazon.fr). Pas une économie, revente à perte.",
+   "prix_neuf_min_idealo": 164.16,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot) + Keepa Amazon.fr",
+   "economie_pct": -20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

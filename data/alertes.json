@@ -81818,7 +81818,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T17:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -82015,6 +82015,18 @@
    "livraison_france": "oui",
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 73,70 € sur Amazon.fr est déjà le prix neuf le plus bas en France (leDénicheur lu le 07/11 à 18h50 : Amazon.fr 73,70 €, ManoMano 73,93 € avec kit, Fnac 93,03 €). La référence Keepa (97,44 €) est un pack avec 4 forets, pas le même produit. Économie réelle ≈ 0 %, et revente à perte sur tous les canaux.",
+   "prix_neuf_min_idealo": 73.7,
+   "source_prix_ref": "ledenicheur.fr (Amazon.fr 73,70 €, ManoMano 73,93 €)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

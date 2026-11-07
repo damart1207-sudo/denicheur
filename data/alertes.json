@@ -75806,7 +75806,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T10:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -76099,6 +76099,18 @@
    "proba_detail": [
     "Amazon 34/mois"
    ]
+  },
+  "verifie_le": "2026-11-07T10:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Pepper.pl relue à 11h35 : 359,30 zł annoncé, mais la fiche de la boutique officielle Dreame Pologne (pl.dreametech.com) affiche maintenant 399 zł : prix remonté. Boutique polonaise, livraison en France non confirmée. Rejeté.",
+   "prix_neuf_min_idealo": 164.55,
+   "source_prix_ref": "Amazon.fr (Keepa, moyenne 90 j ; prix du jour 175,35 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  },
  {
@@ -76152,7 +76164,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T10:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -76330,7 +76342,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T10:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T10:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Chollometro relue à 11h35 : 26,92 € sur AliExpress avec le code ESD1103, un code de l'AliExpress Espagne : ce prix n'est pas garanti pour une livraison en France. Prix neuf en France vers 38 € (achatmoinscher). Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 38.0,
+   "source_prix_ref": "achatmoinscher.com (2 boutiques)",
+   "economie_pct": 29,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "ad7b16cbb4",
@@ -76395,7 +76419,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T10:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -76625,6 +76649,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 10:25 UTC : offre active, 139.99 affiché, code CUPONATION10, marchand 1038_2 ; fiche sharkninja.es lue : 229.99 EUR, OutOfStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T10:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Chollometro relue à 11h25 : 139,99 € avec code sur sharkninja.es (fiche lue : 168 € en stock). Boutique SharkNinja Espagne, qui ne livre qu'en Espagne : pas achetable pour la France. Rejeté.",
+   "prix_neuf_min_idealo": 199.99,
+   "source_prix_ref": "achatmoinscher.com (Ninja CREAMi NC300EU, 11 boutiques)",
+   "economie_pct": 30,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

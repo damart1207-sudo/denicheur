@@ -80645,7 +80645,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T14:34+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -80938,6 +80938,18 @@
    "proba_detail": [
     "Amazon 27/mois"
    ]
+  },
+  "verifie_le": "2026-11-07T15:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute. Produit plausible (Hesh ANC, EAN 0810015588512) mais couleur non confirmée, et le lien marchand du bon plan espagnol renvoie vers amazon.com (États-Unis) : livraison en France et coût final livré non confirmés, page Chollometro non relue ici. Prix neuf en France : 64,99 € (achatmoinscher, blanc), 90,06 € sur Amazon.fr (plus bas 90 j : 47,86 €). Revente : ~11,6 € de marge sur Leboncoin, sous les 20 € exigés sans prix idealo.",
+   "prix_neuf_min_idealo": 64.99,
+   "source_prix_ref": "achatmoinscher (robot) + Amazon.fr (keepa)",
+   "economie_pct": 46,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": "faible (≈27 ventes/mois sur Amazon.fr)"
   }
  },
  {
@@ -80991,7 +81003,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T14:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -81185,7 +81197,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-07T14:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T15:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : l'offre Acer UK revient à ~257 € livrée (180,49 £ + frais), plus cher que le neuf en France à 218,17 € (achatmoinscher). Pas 15 % moins cher, livraison en France depuis la boutique Acer UK non confirmée, revente à perte (~-94 €).",
+   "prix_neuf_min_idealo": 218.17,
+   "source_prix_ref": "achatmoinscher (robot)",
+   "economie_pct": -18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -93.82,
+   "duree_offre": "inconnue (code SAVE5)",
+   "demande_confirmee": "non (≈1 vente/mois sur Amazon.fr)"
+  }
  },
  {
   "id": "eb8f3398e7",
@@ -81231,7 +81255,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T15:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -81398,6 +81422,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 15:21 UTC : offre active, 239.0 affiché, marchand 10_2 ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-07T15:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : prix de 135 € valable seulement dans un magasin physique Medimax à Teltow (Allemagne), donc pas achetable ni livrable en France ; la page affiche maintenant 239 €. Neuf en France : 199,99 € (achatmoinscher).",
+   "prix_neuf_min_idealo": 199.99,
+   "source_prix_ref": "achatmoinscher (robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "magasin local, inconnue",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

@@ -77902,7 +77902,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T12:56+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -78191,17 +78191,17 @@
     "Amazon 35/mois"
    ]
   },
-  "verifie_le": "2026-11-07T13:53+00:00",
+  "verifie_le": "2026-11-07T14:55+00:00",
   "verdict": {
-   "commentaire": "Page mydealz lue par le robot à 14h30 : offre active à 249 € sur Amazon. Référence France : 359,40 € (achatmoinscher), 399 € chez Boulanger, Darty, Fnac, Amazon.fr. Reste à confirmer sur la fiche Amazon le prix de 249 €, le modèle exact (T50 Omni Gen3, pas Pro : deux références Amazon différentes) et les frais vers la France.",
-   "prix_neuf_min_idealo": 359.4,
-   "source_prix_ref": "achatmoinscher.com + KultureGeek (07/11)",
-   "economie_pct": 29,
+   "commentaire": "Rejeté : sur Amazon.de ce robot est à 249-269 € (coupon) depuis mi-octobre ; le plus bas sur 30 jours en France est 246,52 € selon KultureGeek, et Amazon Allemagne (livrable en France) est déjà à 299 €. Pas une vraie baisse, et la revente laisse moins de 15 % de marge.",
+   "prix_neuf_min_idealo": 299.0,
+   "source_prix_ref": "kulturegeek.fr (Amazon Allemagne livrable FR ; Boulanger/Amazon FR 399 €)",
+   "economie_pct": 17,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "courte (promo Amazon.de, quelques jours)",
-   "demande_confirmee": null
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -79360,7 +79360,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T13:18+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -79564,7 +79564,18 @@
    "premiere_lecture": "2026-11-07T13:19+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-07T13:53+00:00"
+  "verifie_le": "2026-11-07T14:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon Italie vend le Sonos Ace neuf 253,49 € livrable en France ; 220,90 € n'est que 13 % moins cher (seuil 15 %), et la livraison en France depuis Amazon.pl n'est pas confirmée.",
+   "prix_neuf_min_idealo": 253.49,
+   "source_prix_ref": "kulturegeek.fr (Amazon Italie, livrable FR)",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "6e16005059",
@@ -80126,7 +80137,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T13:38+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -80321,17 +80332,17 @@
    "premiere_lecture": "2026-11-07T13:40+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-07T13:53+00:00",
+  "verifie_le": "2026-11-07T14:55+00:00",
   "verdict": {
-   "commentaire": "Page Dealabs lue par le robot à 14h40 : offre active à 29,99 € chez Carrefour. Le moins cher ailleurs en neuf : 42,99 € chez Auchan (46,99 € livré), 44,74 € sur Amazon.fr, 49,99 € à la Fnac. Reste à confirmer sur la fiche Carrefour le prix, les frais de livraison et l'absence de condition carte fidélité.",
+   "commentaire": "Rejeté dans le doute : le comparateur Bonne-Promo voit Carrefour à 46,01 € (pas 29,99 €) et Amazon est déjà descendu à 29,99 € ce mois-ci ; page de l'offre impossible à ouvrir pour confirmer.",
    "prix_neuf_min_idealo": 42.99,
-   "source_prix_ref": "achatmoinscher.com (Auchan) + Keepa Amazon.fr",
-   "economie_pct": 19,
+   "source_prix_ref": "bonne-promo.com (Auchan.fr 42,99 €)",
+   "economie_pct": 30,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "courte (Black November Carrefour)",
-   "demande_confirmee": true
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -80365,7 +80376,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T14:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -80555,7 +80566,19 @@
    "livraison_france": "oui",
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : 67,99 € est le prix Amazon.fr actuel lui-même ; aucune économie par rapport au neuf le plus bas.",
+   "prix_neuf_min_idealo": 67.99,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-07T14:55+00:00"
  },
  {
   "id": "8dffef4037",
@@ -80620,7 +80643,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-07T14:34+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -80913,6 +80936,18 @@
    "proba_detail": [
     "Amazon 27/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "À revérifier : prix de référence en France autour de 64,99 € (comparateur) mais la page de l'offre Amazon.es n'a pas pu être ouverte pour confirmer qu'elle est active et livrable en France.",
+   "prix_neuf_min_idealo": 64.99,
+   "source_prix_ref": "achatmoinscher (à confirmer)",
+   "economie_pct": 46,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-07T14:55+00:00"
  }
 ]

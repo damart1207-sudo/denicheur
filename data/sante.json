@@ -1,7 +1,7 @@
 {
- "tours_ok": 792,
+ "tours_ok": 793,
  "tours_echec": 4,
- "dernier_ok": "08/11 06:59",
+ "dernier_ok": "08/11 07:11",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -146,13 +146,37 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "08/11 07:10",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "HTTPError: HTTP Error 402: Payment Required | e marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 402: Payment Required\n"
+  },
+  {
+   "heure": "08/11 07:10",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "HTTPError: HTTP Error 402: Payment Required | e marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 402: Payment Required\n"
+  },
+  {
+   "heure": "08/11 07:10",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "HTTPError: HTTP Error 402: Payment Required | e marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 402: Payment Required\n"
+  },
+  {
+   "heure": "08/11 07:11",
+   "niveau": "erreur",
+   "etape": "ia_meme_produit",
+   "message": "HTTPError: HTTP Error 402: Payment Required | e marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 402: Payment Required\n"
   }
  ],
  "dernier_resume": {
-  "heure": "08/11 06:59",
+  "heure": "08/11 07:09",
   "annonces": 535,
-  "nouvelles": 78,
+  "nouvelles": 85,
   "examinees": 25,
-  "alertes": 0
+  "alertes": 4
  }
 }

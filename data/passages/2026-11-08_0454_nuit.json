@@ -1,0 +1,1062 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-08_0454",
+ "date_affichee": "08/11/2026 à 04 h 54",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 679,
+ "nb_nouvelles": 10,
+ "nb_prefiltres": 6,
+ "nb_tries": 6,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 0
+  },
+  "gptoss": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 3
+  },
+  "qwen": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 0
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "prix": 53.89,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 440,
+   "domaine": "autre",
+   "nom_produit": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 104.31,
+   "cout_achat": 58.89,
+   "marge_nette": 28.44,
+   "rentabilite": 0.483,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 118.53 €, baisse 55 %, rang 917"
+   },
+   "score": 48.3,
+   "asin": "B0BK749DJG",
+   "ean": "4004117625893",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 14,
+   "ebay": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "LEUCHTTURM1917",
+    "asin": "B0BK749DJG",
+    "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red, pointillé",
+    "ean": "4004117625893",
+    "pays": "FR",
+    "prix_neuf": 53.89,
+    "prix_amazon": null,
+    "prix_tiers": 53.89,
+    "moyenne_90j": 118.53,
+    "plus_bas_90j": 21.5,
+    "occasion": null,
+    "rang_ventes": 919,
+    "chutes_rang_30j": 14,
+    "chutes_rang_90j": 44,
+    "ventes_estimees_30j": 14,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+    "jetons_restants": 291
+   },
+   "prix_plancher": {
+    "nom": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 53.89,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "remise_sincere": true,
+   "mot_cle": "leuchtturm1917 367251 carnet notes",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 47.42,
+     "marge_nette": -20.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.42,
+      "cout_achat": 58.89,
+      "frais_canal": 0.0,
+      "prelevements": 6.35,
+      "provision": 3.0,
+      "marge_nette": -20.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 47.42,
+     "marge_nette": -20.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.42,
+      "cout_achat": 58.89,
+      "frais_canal": 0.0,
+      "prelevements": 6.35,
+      "provision": 3.0,
+      "marge_nette": -20.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 47.42,
+     "marge_nette": -20.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.42,
+      "cout_achat": 58.89,
+      "frais_canal": 0.0,
+      "prelevements": 6.35,
+      "provision": 3.0,
+      "marge_nette": -20.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 53.89,
+     "marge_nette": -26.07,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.89,
+      "cout_achat": 58.89,
+      "frais_canal": 10.85,
+      "prelevements": 7.22,
+      "provision": 3.0,
+      "marge_nette": -26.07,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.443
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 53.89,
+     "marge_nette": -26.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.89,
+      "cout_achat": 58.89,
+      "frais_canal": 11.77,
+      "prelevements": 7.22,
+      "provision": 3.0,
+      "marge_nette": -26.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 53.89,
+     "marge_nette": -27.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.89,
+      "cout_achat": 58.89,
+      "frais_canal": 12.31,
+      "prelevements": 7.22,
+      "provision": 3.0,
+      "marge_nette": -27.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.467
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 53.89,
+     "marge_nette": -28.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.89,
+      "cout_achat": 58.89,
+      "frais_canal": 13.36,
+      "prelevements": 7.22,
+      "provision": 3.0,
+      "marge_nette": -28.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.485
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 53.89,
+     "marge_nette": -30.29,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.89,
+      "cout_achat": 58.89,
+      "frais_canal": 15.07,
+      "prelevements": 7.22,
+      "provision": 3.0,
+      "marge_nette": -30.29,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.514
+    }
+   ],
+   "prix_revente_prudent": 48.5,
+   "marge_verifiee": -19.89,
+   "rentabilite_verifiee": -0.338,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "temperature_dealabs": 440,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "0063b3fb6e",
+   "titre": "Enceinte Bluetooth Edifier ES20 - 6W, Étanchéité IP67, Autonomie 15h, BT 5.4",
+   "prix": 29.0,
+   "devise": "EUR",
+   "marchand": "JoyBuy",
+   "lien": "https://www.dealabs.com/bons-plans/enceinte-bluetooth-edifier-es20-6w-etancheite-ip67-autonomie-15h-bt-54-3448471",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/enceinte-bluetooth-edifier-es20-6w-etancheite-ip67-autonomie-15h-bt-54-3448471"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Edifier ES20",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 35.19,
+   "cout_achat": 34.0,
+   "marge_nette": -6.53,
+   "rentabilite": -0.192,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 28 % vs neuf le moins cher"
+   },
+   "score": 42.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Edifier ES20",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "EDIFIER Haut-parleur portable Bluetooth  ES20 ivoire",
+       "prix": 39.99,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Enceinte-portable/haut-parleur-portable-bluetooth-edifier-es20-ivoire.html"
+      },
+      "autres": [
+       {
+        "titre": "Enceinte Bluetooth portable Edifier ES20",
+        "prix": 49.95,
+        "nb_boutiques": 2,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Enceinte-portable/enceinte-bluetooth-portable-edifier-es20.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 39.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Enceinte-portable/haut-parleur-portable-bluetooth-edifier-es20-ivoire.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Edifier ES20",
+    "neuf": {
+     "nb": 4,
+     "min": 77.65,
+     "p25": 77.92,
+     "mediane": 80.28,
+     "max": 82.04
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Edifier ES20 Bluetooth RGB Portable Speaker IP66 Ivory",
+      "prix": "77.65",
+      "url": "https://www.ebay.fr/itm/358557976702?_skw=Edifier+ES20&hash=item537bb8887e:g:71YAAeSwLGBqA8Rq"
+     },
+     {
+      "titre": "Haut-parleur portable Edifier ES20 Bluetooth RGB IP66 noir",
+      "prix": "78.72",
+      "url": "https://www.ebay.fr/itm/358557976746?_skw=Edifier+ES20&hash=item537bb888aa:g:paEAAeSwrURqA8Rr"
+     },
+     {
+      "titre": "Haut-parleur Bluetooth sans fil portable RGB Edifier ES20 standard",
+      "prix": "82.04",
+      "url": "https://www.ebay.fr/itm/358828798822?_skw=Edifier+ES20&hash=item538bdcf366:g:IVwAAeSwcUpqYBe4"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 77.92,
+     "DE": 73.99,
+     "IT": 67.77,
+     "ES": 65.52
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "edifier es20",
+   "annonces_ebay": 4,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 35.19,
+     "marge_nette": -6.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.19,
+      "cout_achat": 34.0,
+      "frais_canal": 0.0,
+      "prelevements": 4.72,
+      "provision": 3.0,
+      "marge_nette": -6.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.192
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 35.19,
+     "marge_nette": -6.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.19,
+      "cout_achat": 34.0,
+      "frais_canal": 0.0,
+      "prelevements": 4.72,
+      "provision": 3.0,
+      "marge_nette": -6.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.192
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 35.19,
+     "marge_nette": -6.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.19,
+      "cout_achat": 34.0,
+      "frais_canal": 0.0,
+      "prelevements": 4.72,
+      "provision": 3.0,
+      "marge_nette": -6.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.192
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 39.99,
+     "marge_nette": -11.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.99,
+      "cout_achat": 34.0,
+      "frais_canal": 9.6,
+      "prelevements": 5.36,
+      "provision": 3.0,
+      "marge_nette": -11.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.352
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 39.99,
+     "marge_nette": -13.17,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.99,
+      "cout_achat": 34.0,
+      "frais_canal": 10.8,
+      "prelevements": 5.36,
+      "provision": 3.0,
+      "marge_nette": -13.17,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.387
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 39.99,
+     "marge_nette": -13.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.99,
+      "cout_achat": 34.0,
+      "frais_canal": 11.2,
+      "prelevements": 5.36,
+      "provision": 3.0,
+      "marge_nette": -13.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.399
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 39.99,
+     "marge_nette": -13.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.99,
+      "cout_achat": 34.0,
+      "frais_canal": 11.55,
+      "prelevements": 5.36,
+      "provision": 3.0,
+      "marge_nette": -13.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.409
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 39.99,
+     "marge_nette": -15.36,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.99,
+      "cout_achat": 34.0,
+      "frais_canal": 12.99,
+      "prelevements": 5.36,
+      "provision": 3.0,
+      "marge_nette": -15.36,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.452
+    }
+   ],
+   "prix_revente_prudent": 35.19,
+   "marge_verifiee": -6.53,
+   "rentabilite_verifiee": -0.192,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Edifier ES20",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 77.65,
+       "titre": "Edifier ES20 Bluetooth RGB Portable Speaker IP66 Ivory",
+       "lien": "https://www.ebay.fr/itm/358557976702?_skw=Edifier+ES20&hash=item537bb8887e:g:71YAAeSwLGBqA8Rq",
+       "vendeur": "nodotake_japan",
+       "avis_vendeur": 2375
+      },
+      "plus_cher": {
+       "prix": 82.04,
+       "titre": "Haut-parleur Bluetooth sans fil portable RGB Edifier ES20 standard",
+       "lien": "https://www.ebay.fr/itm/358828798822?_skw=Edifier+ES20&hash=item538bdcf366:g:IVwAAeSwcUpqYBe4",
+       "vendeur": "nodotake_japan",
+       "avis_vendeur": 2375
+      }
+     },
+     "DE": {
+      "nb_annonces": 11,
+      "total_ebay": 11,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 44.1,
+       "titre": "Edifier ES20 Portable Bluetooth Speaker Ivory Lautsprecher Akku Drahtlos IP67 6W",
+       "lien": "https://www.ebay.de/itm/407319511501?_skw=Edifier+ES20&hash=item5ed62281cd:g:XoQAAeSwWLdqvBWu",
+       "vendeur": "musikhaus-kirstein",
+       "avis_vendeur": 266502
+      },
+      "plus_cher": {
+       "prix": 101.0,
+       "titre": "Edifier ES20_IVORY Es20 Stereo Portable Speaker  White 6 W ~E~",
+       "lien": "https://www.ebay.de/itm/298610147923?_skw=Edifier+ES20&hash=item45868d4253:g:mKoAAeSwXyxqi09X",
+       "vendeur": "ersazza",
+       "avis_vendeur": 5198
+      }
+     },
+     "IT": {
+      "nb_annonces": 15,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 44.1,
+       "titre": "Edifier ES20 Altoparlante Bluetooth Portatile Avorio Altoparlante Batteria Wireless IP67 6W",
+       "lien": "https://www.ebay.it/itm/407319511501?_skw=Edifier+ES20&hash=item5ed62281cd:g:XoQAAeSwWLdqvBWu",
+       "vendeur": "musikhaus-kirstein",
+       "avis_vendeur": 266502
+      },
+      "plus_cher": {
+       "prix": 114.76,
+       "titre": "Edifier ES20 Altoparlante Bluetooth portatile - IP67",
+       "lien": "https://www.ebay.it/itm/317015593967?_skw=Edifier+ES20&hash=item49cf9a13ef:g:WfcAAOSw4qRoVH14",
+       "vendeur": "footbal-54",
+       "avis_vendeur": 64
+      }
+     },
+     "ES": {
+      "nb_annonces": 14,
+      "total_ebay": 14,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 44.1,
+       "titre": "Edifier ES20 Altavoz Bluetooth Portátil Marfil Altavoz Batería Inalámbrico IP67 6W",
+       "lien": "https://www.ebay.es/itm/407319511501?_skw=Edifier+ES20&hash=item5ed62281cd:g:XoQAAeSwWLdqvBWu",
+       "vendeur": "musikhaus-kirstein",
+       "avis_vendeur": 266502
+      },
+      "plus_cher": {
+       "prix": 113.82,
+       "titre": "Altavoz portátil Bluetooth Edifier ES20 - IP67",
+       "lien": "https://www.ebay.es/itm/317015593967?_skw=Edifier+ES20&hash=item49cf9a13ef:g:WfcAAOSw4qRoVH14",
+       "vendeur": "footbal-54",
+       "avis_vendeur": 64
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Edifier ES20",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "edifier es20",
+     "edifier es20 review",
+     "edifier es20 bluetooth",
+     "edifier es20 vs",
+     "edifier es20 frequency response",
+     "edifier es20 portable bluetooth speaker",
+     "edifier es20 vs jbl go 4",
+     "edifier es20 portable speaker",
+     "edifier es200",
+     "edifier es20 test"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "c91e6188c7",
+   "titre": "Men's Winter Parka Coat Windproof Hooded Mid-Length - Size S - Sold by C'est la vie /FBA",
+   "prix": 28.47,
+   "devise": "GBP",
+   "marchand": "Amazon",
+   "lien": "https://www.hotukdeals.com/deals/mens-winter-parka-coat-windproof-hooded-mid-length-size-s-sold-by-cest-la-vie-fba-5025866",
+   "pays": "UK",
+   "source": "hotukdeals-hot",
+   "temperature": 106,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.hotukdeals.com/deals/mens-winter-parka-coat-windproof-hooded-mid-length-size-s-sold-by-cest-la-vie-fba-5025866"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "C'est la vie Winter Parka",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 47.29,
+   "marge_nette": 18.99,
+   "rentabilite": 0.402,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Coût d'achat très inférieur au prix de revente habituel d'un parka neuf sur Vinted."
+   },
+   "score": 22.5,
+   "ebay": {
+    "requete": "C'est la vie Winter Parka",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "C'est la vie Winter Parka",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "c'est vie winter parka",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "C'est la vie Winter Parka",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "C'est la vie Winter Parka",
+    "temperature_dealabs": 106,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 : vérification arrêtée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 3,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 0,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "temperature": 440,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 53.89,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "date": "2026-11-08T03:32",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BK749DJG",
+   "ref_fr": 118.53,
+   "description": "moyenne 90 j 118.53 €, baisse 55 %, rang 917"
+  },
+  {
+   "id": "c91e6188c7",
+   "titre": "Men's Winter Parka Coat Windproof Hooded Mid-Length - Size S - Sold by C'est la vie /FBA",
+   "temperature": 106,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Amazon",
+   "prix": 28.47,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/mens-winter-parka-coat-windproof-hooded-mid-length-size-s-sold-by-cest-la-vie-fba-5025866",
+   "date": "Sun, 08 Nov 2026 03:49:02 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£28.47 - Amazon Men's Winter Parka Coat Windproof Hooded Mid-Length Puffer Jacket, Warm Insulated, Waterproof, Faux Fur Trim, Multiple Pockets, Zip Snap Placket, Ribbed..."
+  },
+  {
+   "id": "124ddafbc2",
+   "titre": "Starship Troopers: Ultimate Bug War! Xbox Series X/S",
+   "temperature": 103,
+   "categorie": "Gaming",
+   "marchand": "Xbox",
+   "prix": 10.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/starship-troopers-ultimate-bug-war-xbox-series-xs-5025179",
+   "date": "Sun, 08 Nov 2026 03:47:19 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.49 - Xbox • First-person shooter • Retro shooter • Original story set in the Starship Troopers universe The United Citizen Federation is calling on Y..."
+  },
+  {
+   "id": "496b89babb",
+   "titre": "Ryobi Percussion Drill, Angle Grinder, Battery, and Bag",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 132.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ryobi-percussion-drill-angle-grinder-battery-and-bag-5026025",
+   "date": "Sun, 08 Nov 2026 03:42:09 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£132 - Amazon Brushless Percussion drill ideal for drilling in wood or metal, driving screws or even drilling in masonry thanks to the hammer action Ryobi brushless technology uses patented electronics to deliver more runtime and power Powerful brushless motor for an excellent performance and AC fee"
+  },
+  {
+   "id": "64cb520523",
+   "titre": "24/18 Pack Cans mix and match - Any 2 For £15 - Coca Cola, Diet Coke, Tango, 7Up Zero, Dr Pepper Zero, Fanta, Lucozade, IRN-BRU",
+   "temperature": null,
+   "categorie": "Groceries",
+   "marchand": "ASDA Groceries",
+   "prix": 15.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/2418-pack-cans-mix-and-match-any-2-for-ps15-coca-cola-diet-coke-tango-7up-zero-dr-pepper-zero-fanta-lucozade-irn-bru-5026024",
+   "date": "Sun, 08 Nov 2026 03:41:05 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£15 - ASDA Groceries Mix and match - Any 2 for £15 Offer incudes: Coca-Cola Zero Sugar Cherry 24 x 330ml Cans Diet Coke No Caffeine Cola 24 x 330ml Cans Coca-Cola Zero Sugar Zero Caffeine 24 x 330ml Cans Coca-Cola Zero Sugar 18 x 330ml Cans Diet Coke Cola 18 x 330ml Cans DIET IRN-BRU Soft Drink Can "
+  },
+  {
+   "id": "7cb5a08ddb",
+   "titre": "Buy 3 Vinyl save €10 promo",
+   "temperature": null,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon France",
+   "prix": 42.18,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/buy-3-vinyl-save-eur10-promo-5026022",
+   "date": "Sun, 08 Nov 2026 03:31:00 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£42.18 - Amazon France €10 discount applied at checkout. Eg. Bjork - Post, Bruce Springsteen - Born in the USA and Coldplay - A Rush of Blood to the Head for £45.68 delivered. Quite a few double vinyl albums in the selection."
+  }
+ ]
+}

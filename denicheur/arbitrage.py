@@ -121,6 +121,8 @@ def annonces_arbitrage(maxi=80):
     out = []
     # une seule taille de vêtement = rejet automatique de l'audit : ces lignes restent dans l'onglet, pas dans le passage (06/11)
     lignes = [l for l in _lire(F_ARB, {}).get("ecarts", []) if not re.search(r"\b\d{2}W\s*/\s*\d{2}L\b", l.get("titre") or "")]
+    # 08/11 : un écart qui ne tient que face à un pic Amazon.fr (vendeur tiers) est faux : il faut aussi battre de 20 % la moyenne 90 j
+    lignes = [l for l in lignes if not l.get("moyenne_90j_fr") or (l.get("cout_rendu") or l["prix_achat"]) <= 0.8 * l["moyenne_90j_fr"]]
     for l in lignes[:maxi]:
         out.append({"id": f'keepa-{l["asin"]}-arb{l["pays_achat"]}', "titre": (l.get("titre") or "") + f' [Amazon {l["pays_achat"]}]',
                     "temperature": min(int(l["ecart_pct"] * 10), 900), "categorie": "Arbitrage Europe", "marchand": f'Amazon.{ {"DE": "de", "IT": "it", "ES": "es"}[l["pays_achat"]] }',

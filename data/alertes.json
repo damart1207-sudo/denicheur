@@ -85144,7 +85144,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-08T05:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -85205,7 +85205,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-08T05:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-08T06:50+00:00",
+  "verdict": {
+   "commentaire": "Offre allemande (de.myprotein.com, code promo propre à l'Allemagne) et produit alimentaire : prix livré en France non comparable, rejeté par prudence.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "06310ff952",
@@ -85270,7 +85282,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-08T06:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -85570,6 +85582,18 @@
    "proba_detail": [
     "Amazon 30/mois"
    ]
+  },
+  "verifie_le": "2026-11-08T06:50+00:00",
+  "verdict": {
+   "commentaire": "Sèche-cheveux reconditionné (pas neuf) vendu par dyson.co.uk à 195 £ (fiche lue à 06h10 UTC) : boutique Royaume-Uni réservée au Royaume-Uni, pas livrable en France.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -85623,7 +85647,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-08T06:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": [
@@ -85801,7 +85825,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-08T06:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-08T06:50+00:00",
+  "verdict": {
+   "commentaire": "Boots (Royaume-Uni) ne livre pas la France (page du bon plan lue à 06h10 UTC). Le prix de comparaison trouvé concernait un autre parfum (Absolu Parfum Intense).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "0422ef0e12",
@@ -85847,7 +85883,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-08T06:09+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": [
@@ -86025,7 +86061,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-08T06:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-08T06:50+00:00",
+  "verdict": {
+   "commentaire": "Offre de la Fnac Suisse (fr.fnac.ch) réservée aux frontaliers : livraison ou retrait en Suisse uniquement, pas livrable à une adresse en France.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "0c47f13a4d",
@@ -86058,7 +86106,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-08T06:09+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -86259,6 +86307,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 06:11 UTC : offre active, 329.0 affiché, marchand 1_5 ; fiche veepee.fr lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-08T06:50+00:00",
+  "verdict": {
+   "commentaire": "Vente Veepee (France, inscription gratuite) : Ecovacs Deebot X11 Pro Omni noir à 449,99 € + port, environ 455 € livré. Prix neuf le plus bas en France vérifié : 549 € (Amazon.fr lu par Keepa, plus bas sur 90 jours ; même prix chez Joybuy, présenté comme son prix le plus bas). Économie d'environ 17 %. Revente non rentable (marge négative après frais).",
+   "prix_neuf_min_idealo": 549.0,
+   "source_prix_ref": "Keepa/Amazon.fr + Joybuy (labomaison.com)",
+   "economie_pct": 17,
+   "prix_revente_verifie": 549.0,
+   "canal": "fnac",
+   "marge_nette_verifiee": -28.99,
+   "duree_offre": "vente flash Veepee, quelques jours",
+   "demande_confirmee": false
+  }
  }
 ]

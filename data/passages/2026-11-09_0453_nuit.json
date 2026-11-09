@@ -1,0 +1,1843 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-09_0453",
+ "date_affichee": "09/11/2026 à 04 h 53",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 31,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 669,
+ "nb_nouvelles": 19,
+ "nb_prefiltres": 13,
+ "nb_tries": 13,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 3
+  },
+  "gptoss": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 10
+  },
+  "qwen": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 3
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0GXGNTDN8-arbDE",
+   "titre": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde) [Amazon DE]",
+   "prix": 279.0,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0GXGNTDN8",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 350,
+   "domaine": "autre",
+   "nom_produit": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 385.85,
+   "cout_achat": 284.0,
+   "marge_nette": 47.15,
+   "rentabilite": 0.166,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 438.47 € (moyenne 90 j 359.66 €), écart 35 % port compris, ventes 30 j 15, 1 vendeurs FR"
+   },
+   "score": 16.6,
+   "asin": "B0GXGNTDN8",
+   "ean": "8718591686955",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 15,
+   "ebay": {
+    "requete": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "VirtuFit",
+    "asin": "B0GXGNTDN8",
+    "titre": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+    "ean": "8718591686955",
+    "pays": "FR",
+    "prix_neuf": 438.47,
+    "prix_amazon": null,
+    "prix_tiers": 438.47,
+    "moyenne_90j": 359.66,
+    "plus_bas_90j": 259.0,
+    "occasion": null,
+    "rang_ventes": 52543,
+    "chutes_rang_30j": 15,
+    "chutes_rang_90j": 52,
+    "ventes_estimees_30j": 15,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0GXGNTDN8",
+    "jetons_restants": 152
+   },
+   "prix_plancher": {
+    "nom": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 438.47,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0GXGNTDN8"
+   },
+   "remise_sincere": true,
+   "mot_cle": "virtufit piscine",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0GXGNTDN8"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 438.47,
+     "marge_nette": 54.02,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 438.47,
+      "cout_achat": 284.0,
+      "frais_canal": 38.69,
+      "prelevements": 58.75,
+      "provision": 3.0,
+      "marge_nette": 54.02,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.19
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 438.47,
+     "marge_nette": 49.64,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 438.47,
+      "cout_achat": 284.0,
+      "frais_canal": 43.08,
+      "prelevements": 58.75,
+      "provision": 3.0,
+      "marge_nette": 49.64,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.175
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 438.47,
+     "marge_nette": 47.25,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 438.47,
+      "cout_achat": 284.0,
+      "frais_canal": 45.46,
+      "prelevements": 58.75,
+      "provision": 3.0,
+      "marge_nette": 47.25,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.166
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 385.85,
+     "marge_nette": 47.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 385.85,
+      "cout_achat": 284.0,
+      "frais_canal": 0.0,
+      "prelevements": 51.7,
+      "provision": 3.0,
+      "marge_nette": 47.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.166
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 385.85,
+     "marge_nette": 47.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 385.85,
+      "cout_achat": 284.0,
+      "frais_canal": 0.0,
+      "prelevements": 51.7,
+      "provision": 3.0,
+      "marge_nette": 47.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.166
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 385.85,
+     "marge_nette": 47.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 385.85,
+      "cout_achat": 284.0,
+      "frais_canal": 0.0,
+      "prelevements": 51.7,
+      "provision": 3.0,
+      "marge_nette": 47.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.166
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 438.47,
+     "marge_nette": 29.36,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 438.47,
+      "cout_achat": 284.0,
+      "frais_canal": 63.35,
+      "prelevements": 58.75,
+      "provision": 3.0,
+      "marge_nette": 29.36,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.103
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 438.47,
+     "marge_nette": 19.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 438.47,
+      "cout_achat": 284.0,
+      "frais_canal": 72.76,
+      "prelevements": 58.75,
+      "provision": 3.0,
+      "marge_nette": 19.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.07
+    }
+   ],
+   "prix_revente_prudent": 385.85,
+   "marge_verifiee": 47.15,
+   "rentabilite_verifiee": 0.166,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 371.3,
+   "rapport_concurrence": {
+    "requete": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde)",
+    "temperature_dealabs": 350,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "titre": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LED, Respirants, Haute Qualité p",
+   "prix": 28.31,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 760,
+   "domaine": "autre",
+   "nom_produit": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LE",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 505.53,
+   "cout_achat": 33.31,
+   "marge_nette": 401.48,
+   "rentabilite": 12.053,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 574.47 €, baisse 95 %, rang 34253"
+   },
+   "score": 1205.3,
+   "asin": "B0DK3PRPXQ",
+   "ean": "0757806963359",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 5,
+   "ebay": {
+    "requete": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LE",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "OHMG",
+    "asin": "B0DK3PRPXQ",
+    "titre": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LED, Respirants, Haute Qualité pour Débutants",
+    "ean": "0757806963359",
+    "pays": "FR",
+    "prix_neuf": 28.31,
+    "prix_amazon": null,
+    "prix_tiers": 28.31,
+    "moyenne_90j": 574.39,
+    "plus_bas_90j": 28.31,
+    "occasion": null,
+    "rang_ventes": 34797,
+    "chutes_rang_30j": 5,
+    "chutes_rang_90j": 6,
+    "ventes_estimees_30j": 5,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ",
+    "jetons_restants": 164
+   },
+   "prix_plancher": {
+    "nom": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LE",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 28.31,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ"
+   },
+   "remise_sincere": true,
+   "mot_cle": "ohmg rollers adultes enfants",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 24.91,
+     "marge_nette": -14.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.91,
+      "cout_achat": 33.31,
+      "frais_canal": 0.0,
+      "prelevements": 3.34,
+      "provision": 3.0,
+      "marge_nette": -14.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.443
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 24.91,
+     "marge_nette": -14.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.91,
+      "cout_achat": 33.31,
+      "frais_canal": 0.0,
+      "prelevements": 3.34,
+      "provision": 3.0,
+      "marge_nette": -14.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.443
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 24.91,
+     "marge_nette": -14.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.91,
+      "cout_achat": 33.31,
+      "frais_canal": 0.0,
+      "prelevements": 3.34,
+      "provision": 3.0,
+      "marge_nette": -14.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.443
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 28.31,
+     "marge_nette": -20.34,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 28.31,
+      "cout_achat": 33.31,
+      "frais_canal": 8.55,
+      "prelevements": 3.79,
+      "provision": 3.0,
+      "marge_nette": -20.34,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.611
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 28.31,
+     "marge_nette": -21.78,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 28.31,
+      "cout_achat": 33.31,
+      "frais_canal": 9.98,
+      "prelevements": 3.79,
+      "provision": 3.0,
+      "marge_nette": -21.78,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.654
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 28.31,
+     "marge_nette": -21.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 28.31,
+      "cout_achat": 33.31,
+      "frais_canal": 10.03,
+      "prelevements": 3.79,
+      "provision": 3.0,
+      "marge_nette": -21.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.655
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 28.31,
+     "marge_nette": -22.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 28.31,
+      "cout_achat": 33.31,
+      "frais_canal": 10.26,
+      "prelevements": 3.79,
+      "provision": 3.0,
+      "marge_nette": -22.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.662
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 28.31,
+     "marge_nette": -23.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 28.31,
+      "cout_achat": 33.31,
+      "frais_canal": 11.24,
+      "prelevements": 3.79,
+      "provision": 3.0,
+      "marge_nette": -23.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.691
+    }
+   ],
+   "prix_revente_prudent": 25.48,
+   "marge_verifiee": -14.24,
+   "rentabilite_verifiee": -0.427,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LE",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LE",
+    "temperature_dealabs": 760,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "titre": "Thermaltake CT200 PC | White | Single Pack",
+   "prix": 29.26,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 432,
+   "domaine": "autre",
+   "nom_produit": "Thermaltake CT200 PC | White | Single Pack",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 56.17,
+   "cout_achat": 34.26,
+   "marge_nette": 11.38,
+   "rentabilite": 0.332,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 63.83 €, baisse 54 %, rang 11209"
+   },
+   "score": 33.2,
+   "asin": "B0DTKH2GZ2",
+   "ean": "4711475641310",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 11,
+   "ebay": {
+    "requete": "Thermaltake CT200 PC | White | Single Pack",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 32.49,
+     "IT": 28.64,
+     "ES": 27.14
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "Thermaltake",
+    "asin": "B0DTKH2GZ2",
+    "titre": "Thermaltake CT200 PC | White | Single Pack",
+    "ean": "4711475641310",
+    "pays": "FR",
+    "prix_neuf": 29.26,
+    "prix_amazon": 29.26,
+    "prix_tiers": 29.26,
+    "moyenne_90j": 25.78,
+    "plus_bas_90j": 19.0,
+    "occasion": null,
+    "rang_ventes": 11243,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 33,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2",
+    "jetons_restants": 163
+   },
+   "prix_plancher": {
+    "nom": "Thermaltake CT200 PC | White | Single Pack",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 29.26,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2"
+   },
+   "remise_sincere": false,
+   "mot_cle": "thermaltake ct200",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 25.75,
+     "marge_nette": -14.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.75,
+      "cout_achat": 34.26,
+      "frais_canal": 0.0,
+      "prelevements": 3.45,
+      "provision": 3.0,
+      "marge_nette": -14.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.437
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 25.75,
+     "marge_nette": -14.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.75,
+      "cout_achat": 34.26,
+      "frais_canal": 0.0,
+      "prelevements": 3.45,
+      "provision": 3.0,
+      "marge_nette": -14.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.437
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 25.75,
+     "marge_nette": -14.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.75,
+      "cout_achat": 34.26,
+      "frais_canal": 0.0,
+      "prelevements": 3.45,
+      "provision": 3.0,
+      "marge_nette": -14.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.437
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 29.26,
+     "marge_nette": -20.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.26,
+      "cout_achat": 34.26,
+      "frais_canal": 8.63,
+      "prelevements": 3.92,
+      "provision": 3.0,
+      "marge_nette": -20.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.6
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 29.26,
+     "marge_nette": -21.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.26,
+      "cout_achat": 34.26,
+      "frais_canal": 10.05,
+      "prelevements": 3.92,
+      "provision": 3.0,
+      "marge_nette": -21.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.641
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 29.26,
+     "marge_nette": -22.07,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.26,
+      "cout_achat": 34.26,
+      "frais_canal": 10.15,
+      "prelevements": 3.92,
+      "provision": 3.0,
+      "marge_nette": -22.07,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.644
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 29.26,
+     "marge_nette": -22.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.26,
+      "cout_achat": 34.26,
+      "frais_canal": 10.34,
+      "prelevements": 3.92,
+      "provision": 3.0,
+      "marge_nette": -22.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.65
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 29.26,
+     "marge_nette": -23.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.26,
+      "cout_achat": 34.26,
+      "frais_canal": 11.38,
+      "prelevements": 3.92,
+      "provision": 3.0,
+      "marge_nette": -23.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.68
+    }
+   ],
+   "prix_revente_prudent": 26.33,
+   "marge_verifiee": -14.46,
+   "rentabilite_verifiee": -0.422,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Thermaltake CT200 PC | White | Single Pack",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 32.49,
+       "titre": "Thermaltake CT200 ARGB Sync PC Cooling Fan White Single Pack weiss 200 mm",
+       "lien": "https://www.ebay.de/itm/267348656365?_skw=Thermaltake+CT200+PC+%7C+White+%7C+Single+Pack&hash=item3e3f38c0ed:g:p~0AAeSwz0Foixa2",
+       "vendeur": "cw-mobile-shop",
+       "avis_vendeur": 365646
+      },
+      "plus_cher": {
+       "prix": 37.74,
+       "titre": "Thermaltake CT200 ARGB Sync PC Cooling Fan White (Single Pack), Gehäuselüfter we",
+       "lien": "https://www.ebay.de/itm/157705099751?_skw=Thermaltake+CT200+PC+%7C+White+%7C+Single+Pack&hash=item24b7f4d9e7:g:i6YAAeSw8vxqeeCW",
+       "vendeur": "computerxtreme_de",
+       "avis_vendeur": 40445
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Thermaltake CT200 PC | White | Single Pack",
+    "temperature_dealabs": 432,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "c416cec6d6",
+   "titre": "Duży zestaw narzędzi, 1452el, walizka narzędziowa, klucze, nasadki, bity",
+   "prix": 67.48,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/duzy-zestaw-narzedzi-1452el-walizka-narzedziowa-klucze-nasadki-bity-1385507",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 217,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/duzy-zestaw-narzedzi-1452el-walizka-narzedziowa-klucze-nasadki-bity-1385507"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Zestaw Narzędzi 1452el",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 72.48,
+   "marge_nette": 28.44,
+   "rentabilite": 0.392,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Ensemble complet à prix très compétitif, forte demande auprès des bricoleurs"
+   },
+   "score": 29.3,
+   "ebay": {
+    "requete": "Zestaw Narzędzi 1452el",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Zestaw Narzędzi 1452el",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "zestaw narzędzi 1452el",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Zestaw Narzędzi 1452el",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Zestaw Narzędzi 1452el",
+    "temperature_dealabs": 217,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "0c47f13a4d",
+   "titre": "Robot aspirateur Deebot x11 pro omni - 2.5L et 19500 Pa",
+   "prix": 449.99,
+   "devise": "EUR",
+   "marchand": "Veepee",
+   "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-deebot-x11-pro-omni-de-25l-et-19500-pa-de-couleur-noir-3448797",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-deebot-x11-pro-omni-de-25l-et-19500-pa-de-couleur-noir-3448797"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Ecovacs Deebot X11 Pro Omni",
+   "plateforme_revente": "fnac",
+   "prix_revente_estime": 549.0,
+   "cout_achat": 454.99,
+   "marge_nette": -28.99,
+   "rentabilite": -0.064,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 18 % vs neuf le moins cher"
+   },
+   "score": 27.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Ecovacs Deebot X11 Pro Omni",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "ECOVACS Robot aspirateur laveur  Deebot X11 Pro Omni Noir",
+       "prix": 648.63,
+       "nb_boutiques": 9,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Robot-nettoyeur/robot-aspirateur-laveur-ecovacs-deebot-x11-pro-omni-noir.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 549.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0G4C3J9XB"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "ECOVACS",
+    "asin": "B0G4C3J9XB",
+    "titre": "ECOVACS DEEBOT X11 Pro Omni Robot Aspirateur avec Accessoires Kit Blast Puissance 19500Pa, OZMO Roller 2.0, PowerBoost Ultra-Rapide,Ascension Max de 4 cm, ZeroTangle 3.0, TruEdge 3.0, Station Omni",
+    "ean": "6970135038138",
+    "pays": "FR",
+    "prix_neuf": 549.0,
+    "prix_amazon": null,
+    "prix_tiers": 549.0,
+    "moyenne_90j": 634.29,
+    "plus_bas_90j": 549.0,
+    "occasion": null,
+    "rang_ventes": 47922,
+    "chutes_rang_30j": 23,
+    "chutes_rang_90j": 79,
+    "ventes_estimees_30j": 23,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0G4C3J9XB",
+    "jetons_restants": 306
+   },
+   "ean": "6970135038138",
+   "asin": "B0G4C3J9XB",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 23,
+   "ebay": {
+    "requete": "Ecovacs Deebot X11 Pro Omni",
+    "neuf": {
+     "nb": 3,
+     "min": 1265.71,
+     "p25": 1265.71,
+     "mediane": 1398.58,
+     "max": 1398.58
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Accessoires pour Ecovacs Deebot X11 OmniCyclone/X11/X9 Pro Omni/T80S Omni",
+      "prix": "36.50",
+      "url": "https://www.ebay.fr/itm/137838001344?_skw=Ecovacs+Deebot+X11+Pro+Omni&hash=item2017c8fcc0:g:rjwAAeSwF3dqzRrX"
+     },
+     {
+      "titre": "X11 Omnicyclone Accessoires Pour ECOVACS DEEBOT X11 Pro Omni/X9 Pro Omni",
+      "prix": "78.99",
+      "url": "https://www.ebay.fr/itm/336845999983?_skw=Ecovacs+Deebot+X11+Pro+Omni&hash=item4e6d960f6f:g:yNEAAeSwdxhq0SpL&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7lt%2BdhrEgQ66lohvrNxZtgkYLJUVvYA5Rk8%2BccfQWHjKDS8RTZ4hy%2B5VlzSWqk45ru8u05zFpohNYjZMmh5D4D3mAp3zdUgkBWliQ5Wsm1evJUv12gZPWHW3t2UAwzs3FCoaIxgOxq%2BQMvo2GSPVPdQYnYTW39%2FjWHqRm9eF4XyxPPLXy9YwS8c9gPBjGlPifwz0Fgax5o96k6ICfbOJhV9F0q4pxVKjxo%2BA%2FnIdwj9AciYlPgKUJXkksi%2FI5dSQVjTNhKMb%2FmBSMOma0aCSqesVWKIXHapXLV0qBAgfB2l2c2MgJhZf7GABDxuCFGCR5k%3D"
+     },
+     {
+      "titre": "Accessoires Pour Ecovacs Deebot X11 Omnicyclone/X11 Pro Omni/X11 Pro/X11/X9 Pro",
+      "prix": "43.99",
+      "url": "https://www.ebay.fr/itm/336846000608?_skw=Ecovacs+Deebot+X11+Pro+Omni&hash=item4e6d9611e0:g:oLMAAeSwTMRq0SpM&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7npZfJQ%2FC%2BbbqMNHILEpsCrs%2B%2FT0gRE%2FwASFBn4Ybtr4JLkaFhouaau1KuPUWn1XOIEazFWcNMzVx75ISN8vXPdg69eMajK%2FQ2IvVA%2B8asvJf%2BooDaQsz8r85TO437RhMph67N1yHbbtbzXUAB%2BCIxQPGnXUQ9CPQrYJOHHtgWbtA57kmjywPcZ4Txr1KA3PEJUkSUYO%2FKsWK9MzX2azwYT%2FouU8Snzr0OEEj0sYd2VqNhwb0M%2F1OPUtnIb4Ou3Dv9Xn0NB2FU1%2Flbedufrs6L7q2ye718pc9qbr92n6LS2vTRI8GqcNf6aQSHandezGvg%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 1265.71,
+     "DE": 470.0,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "ecovacs deebot x11 pro",
+   "annonces_ebay": 3,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 549.0,
+     "marge_nette": -28.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 549.0,
+      "cout_achat": 454.99,
+      "frais_canal": 46.43,
+      "prelevements": 73.57,
+      "provision": 3.0,
+      "marge_nette": -28.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.064
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 549.0,
+     "marge_nette": -34.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 549.0,
+      "cout_achat": 454.99,
+      "frais_canal": 51.92,
+      "prelevements": 73.57,
+      "provision": 3.0,
+      "marge_nette": -34.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.076
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 549.0,
+     "marge_nette": -37.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 549.0,
+      "cout_achat": 454.99,
+      "frais_canal": 55.41,
+      "prelevements": 73.57,
+      "provision": 3.0,
+      "marge_nette": -37.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.083
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 483.12,
+     "marge_nette": -39.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 483.12,
+      "cout_achat": 454.99,
+      "frais_canal": 0.0,
+      "prelevements": 64.74,
+      "provision": 3.0,
+      "marge_nette": -39.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.087
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 483.12,
+     "marge_nette": -39.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 483.12,
+      "cout_achat": 454.99,
+      "frais_canal": 0.0,
+      "prelevements": 64.74,
+      "provision": 3.0,
+      "marge_nette": -39.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.087
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 483.12,
+     "marge_nette": -39.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 483.12,
+      "cout_achat": 454.99,
+      "frais_canal": 0.0,
+      "prelevements": 64.74,
+      "provision": 3.0,
+      "marge_nette": -39.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.087
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 549.0,
+     "marge_nette": -60.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 549.0,
+      "cout_achat": 454.99,
+      "frais_canal": 77.72,
+      "prelevements": 73.57,
+      "provision": 3.0,
+      "marge_nette": -60.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.132
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 549.0,
+     "marge_nette": -71.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 549.0,
+      "cout_achat": 454.99,
+      "frais_canal": 89.34,
+      "prelevements": 73.57,
+      "provision": 3.0,
+      "marge_nette": -71.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.158
+    }
+   ],
+   "prix_revente_prudent": 494.1,
+   "marge_verifiee": -72.69,
+   "rentabilite_verifiee": -0.16,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Ecovacs Deebot X11 Pro Omni",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 6,
+      "total_ebay": 14,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 549.0,
+       "titre": "ECOVACS DEEBOT X11 PRO Omni Saugroboter mit Wischfunktion 19.500Pa Schwarz DE",
+       "lien": "https://www.ebay.de/itm/377445739166?_skw=Ecovacs+Deebot+X11+Pro+Omni&hash=item57e184ea9e:g:GVEAAeSwhVlqjTuj",
+       "vendeur": "crtech-eu",
+       "avis_vendeur": 2064
+      },
+      "plus_cher": {
+       "prix": 707.66,
+       "titre": "Ecovacs Deebot X11 Pro Omni Saugroboter 19500 Pa Schwarz",
+       "lien": "https://www.ebay.de/itm/366751483544?_skw=Ecovacs+Deebot+X11+Pro+Omni&hash=item5564178698:g:YEwAAeSwdJBqBQK3",
+       "vendeur": "global-retail-network",
+       "avis_vendeur": 1709
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Ecovacs Deebot X11 Pro Omni",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0,
+      0,
+      0,
+      0,
+      0,
+      13,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "ecovacs deebot x11 pro omni",
+     "ecovacs deebot x11 pro omni avis",
+     "ecovacs deebot x11 pro omni robot aspirateur et laveur 19 5 kpa",
+     "ecovacs deebot x11 pro omni test",
+     "ecovacs deebot x11 pro omni robot aspirateur & laveur",
+     "ecovacs deebot x11 omnicyclone pro",
+     "ecovacs deebot x11 pro omni amazon",
+     "ecovacs deebot x11 pro omni vs dreame x50 ultra",
+     "ecovacs deebot x11 pro omni video",
+     "ecovacs deebot x11 pro omni darty"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 : vérification arrêtée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 5,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 7,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0DK3PRPXQ-neuf",
+   "titre": "OHMG Rollers Adultes et Enfants à Taille Réglable, Rollers Lumineux LED, Respirants, Haute Qualité p",
+   "temperature": 760,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 28.31,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DK3PRPXQ",
+   "date": "2026-11-09T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0DK3PRPXQ",
+   "ref_fr": 574.47,
+   "description": "moyenne 90 j 574.47 €, baisse 95 %, rang 34253"
+  },
+  {
+   "id": "keepa-B01BSTVF5K-neuf",
+   "titre": "LEUCHTTURM1917 349303 Carnet Pocket (A6), couverture souple, 123 pages numérotées, ligné, bleu marin",
+   "temperature": 440,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01BSTVF5K",
+   "date": "2026-11-09T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B01BSTVF5K",
+   "ref_fr": 37.91,
+   "description": "moyenne 90 j 37.91 €, baisse 55 %, rang 1516"
+  },
+  {
+   "id": "keepa-B0DTKH2GZ2-neuf",
+   "titre": "Thermaltake CT200 PC | White | Single Pack",
+   "temperature": 432,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.26,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DTKH2GZ2",
+   "date": "2026-11-09T01:55",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0DTKH2GZ2",
+   "ref_fr": 63.83,
+   "description": "moyenne 90 j 63.83 €, baisse 54 %, rang 11209"
+  },
+  {
+   "id": "keepa-B0BCJ5SRYL-neuf",
+   "titre": "LEAP Horloge d'échecs avec fonctions de compte à rebours, d'alarme bonus et de délai pour les échecs",
+   "temperature": 408,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BCJ5SRYL",
+   "date": "2026-11-09T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BCJ5SRYL",
+   "ref_fr": 61.67,
+   "description": "moyenne 90 j 61.67 €, baisse 51 %, rang 17350"
+  },
+  {
+   "id": "keepa-B0GXGNTDN8-arbDE",
+   "titre": "VirtuFit Piscine (Noir, Ø366 x 100 cm (INKL. Filterpumpe), Ronde) [Amazon DE]",
+   "temperature": 350,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 279.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0GXGNTDN8",
+   "date": "2026-11-09T03:30",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "8718591686955",
+   "asin": "B0GXGNTDN8",
+   "ref_fr": 438.47,
+   "ventes_30j": 15,
+   "vendeurs": 1,
+   "description": "Amazon.fr 438.47 € (moyenne 90 j 359.66 €), écart 35 % port compris, ventes 30 j 15, 1 vendeurs FR"
+  },
+  {
+   "id": "c416cec6d6",
+   "titre": "Duży zestaw narzędzi, 1452el, walizka narzędziowa, klucze, nasadki, bity",
+   "temperature": 217,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Allegro",
+   "prix": 67.48,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/duzy-zestaw-narzedzi-1452el-walizka-narzedziowa-klucze-nasadki-bity-1385507",
+   "date": "Mon, 09 Nov 2026 04:38:04 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "287,13zł - Allegro Sporo narzędzi, ale żeby nie było za dobrze, to w zestaw wlicza się \" 416 opasek zaciskowych do uniwersalnych zastosowań\" i \"500 wytr..."
+  },
+  {
+   "id": "5617367afb",
+   "titre": "LA ROCHE-POSAY - Mela B3 Sérum Antimanchas con Melasyl + Niacanamida 30 ML",
+   "temperature": 187,
+   "categorie": "Salud y belleza",
+   "marchand": "Miravia",
+   "prix": 19.89,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/la-roche-posay-mela-b3-serum-antimanchas-con-melasyl-niacanamida-30-ml-2060097",
+   "date": "Mon, 09 Nov 2026 04:43:32 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,89€ - Miravia ✨ MELA B3 Sérum Antimanchas de La Roche-Posay ✨ Innovación respaldada por 18 años de investigación: Nacido de 18 años de inv..."
+  },
+  {
+   "id": "86dce858ae",
+   "titre": "Vax Blade 4 Classic Pet & Car Cordless Vacuum Cleaner - Black Friday deal",
+   "temperature": 110,
+   "categorie": "Home & Living",
+   "marchand": "Argos",
+   "prix": 129.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/vax-blade-4-classic-pet-car-cordless-vacuum-cleaner-5026213",
+   "date": "Mon, 09 Nov 2026 03:39:44 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£129.99 - Argos About this product The Vax Blade 4 Classic Pet & Car Cordless Vacuum Cleaner is built for tackling pet hair and everyday mess across your home and car...."
+  },
+  {
+   "id": "36e98e1b21",
+   "titre": "Le vélo de route LEGO Icons 11380 (via 24.00€ en Tickets E.Leclerc )",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "E.Leclerc",
+   "prix": 71.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/le-velo-de-route-lego-icons-11380-via-2400eur-en-tickets-eleclerc-3449428",
+   "date": "Mon, 09 Nov 2026 04:46:37 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "71,99€ - E.Leclerc Un très bon prix pour ce set à 119.99 € chez LEGO Livraison gratuite en magasin Description : Offrez-vous ou offrez Le vélo de route LEGO Icons (11380) aux adultes passionnés de cyclisme. Plongez dans un projet créatif immersif en créant la réplique d’un vélo de route doté d’une r"
+  },
+  {
+   "id": "2388bab18d",
+   "titre": "Enregistreur vocal numérique portable 128 Go – Rexsun avec écran LCD",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "JoyBuy",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/enregistreur-vocal-numerique-portable-128-go-rexsun-avec-ecran-lcd-3449427",
+   "date": "Mon, 09 Nov 2026 04:43:17 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,99€ - JoyBuy Enregistreur vocal numérique Rexsun L357 – Réduction intelligente du bruit · Enregistrement clair · Facile à utiliser Enregistrement professionnel Équipé d'un microphone à réduction dynamique du bruit, il prend en charge l'enregistrement haute définition 1536 kbps, capturant précisém"
+  },
+  {
+   "id": "8fcf9ead5b",
+   "titre": "Transcend ESD420 SSD Portable 2To (Compatible iPhone MagSafe) 20 Gbit/s, jusqu'à 2 000 Mo/s, 4K, doré – TS2TESD420G",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 278.51,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/transcend-esd420-ssd-portable-2to-compatible-iphone-magsafe-20-gbits-jusqua-2-000-mos-4k-dore-ts2tesd420g-3449426",
+   "date": "Mon, 09 Nov 2026 04:32:48 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "278,51€ - Amazon Le SSD externe ESD420 de Transcend est doté d'un design magnétique compatible avec les modèles d'iPhone prenant en charge la technologie MagSafe. Avec des vitesses de transfert ultra-rapides allant jusqu'à 20 Gbps, la capture de vidéos 4K ProRes sur votre iPhone se fait en douceur e"
+  },
+  {
+   "id": "6acc06ddb0",
+   "titre": "Lego Ideas 21357 Disney Pixar Luxo Jr.",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Joybuy",
+   "prix": 37.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/lego-ideas-21357-disney-pixar-luxo-jr-2867099",
+   "date": "Mon, 09 Nov 2026 04:32:26 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "37,99€ - Joybuy GuMo, bei Joybuy gibt es aktuell das Lego Ideas Set 21357 (Disney Pixar Luxo Jr. ) für 37,99€ (das entspricht 46% zur UVP und ist damit nahe am Bestpreis) bei Verwendung des Codes EM08LB . Der Versand ist kostenlos. Brickmerge: https://brickmerge.de/21357-1 LEGO Ideas 21357 Disney Pi"
+  },
+  {
+   "id": "bfb835a8b2",
+   "titre": "[Amazon Prime] Kong: Survivor Instinct - Titans Edition (PS5)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-prime-kong-survivor-instinct-titans-edition-ps5-2867098",
+   "date": "Mon, 09 Nov 2026 04:31:48 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "19,99€ - Amazon Moinsen bei Amazon bekommen derzeit Prime Mitglieder das Spiel Kong: Survivor Instinct - Titans Edition (PS5) für 19,99€ inkl. Versandkosten. Preisvergleich 33,80€ Ein plötzlicher Titanenangriff führt zu enormen Evakuierungsmaßnahmen, doch nicht alle können sich rechtzeitig in Sicher"
+  }
+ ]
+}

@@ -86497,7 +86497,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-09T10:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -86546,7 +86546,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-09T10:50+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-09T11:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : « box mystère » UGREEN, contenu inconnu, donc pas de produit exact à comparer à un prix neuf français. Livraison en France non confirmée depuis de.ugreen.com. Impossible de calculer une économie ou une marge fiable.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (erreur de prix probable)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "1b42a78516",
@@ -86575,7 +86587,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-09T11:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -86607,6 +86619,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:10 UTC : offre active, 121.41 affiché, code news10, marchand 903_2 ; fiche lindt.com.nl lue : 24.99, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-09T11:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : calendrier de l'Avent Lindt LINDOR 299 g vendu par la boutique néerlandaise lindt.com.nl (boutiques séparées par pays, livraison en France non prouvée). Alimentaire (rejet automatique pour la revente). Prix neuf de référence français non vérifié.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (erreur de prix probable)",
+   "demande_confirmee": false
+  }
  }
 ]

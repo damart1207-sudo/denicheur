@@ -86424,7 +86424,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-09T09:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -86454,6 +86454,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 09:15 UTC : offre expirée, 27.99 affiché, marchand 3_2 ; hygi.de refuse les robots (HTTP 247) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-09T09:45+00:00",
+  "verdict": {
+   "commentaire": "Offre marquée expirée sur la page mydealz (lue à 09:15 UTC), livraison en France non confirmée (hygi.de bloque la lecture), produit encombrant (poubelle 166 L) et aucun prix de référence France vérifié : rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "expirée",
+   "demande_confirmee": false
+  }
  }
 ]

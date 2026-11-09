@@ -47,7 +47,7 @@ def priorite(a):
     dm = demande.est_demande(a["titre"], DEMANDE)
     if dm:
         p += 300  # produit que les gens cherchent en ce moment : examiné en premier
-        if str(dm.get("origine", "")) in ("bingo",) or str(dm.get("origine", "")).startswith("hype"):
+        if str(dm.get("origine", "")) in ("bingo", "david") or str(dm.get("origine", "")).startswith("hype"):
             p += 400  # liste de chasse d'Amigo (bingo / hype étrangère) : tout en haut de la pile
     if SIGNAUX.search(a["titre"] + " " + (a.get("description") or "")):
         p += 500

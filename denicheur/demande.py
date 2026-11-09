@@ -103,6 +103,15 @@ def liste_de_chasse(d=None, n_bingo=40, n_hype=40):
         except (OSError, json.JSONDecodeError):
             return defaut
 
+    # cibles données par David (config/cibles_david.json) : en tête de liste, avec leurs variantes d'écriture
+    david = []
+    for c in _lire_f("config/cibles_david.json", []):
+        for q in [c.get("nom") or ""] + list(c.get("variantes") or []):
+            if q and q.lower() not in deja:
+                deja.add(q.lower())
+                david.append({"recherche": q, "popularite": None, "hausse_pct": 0, "pays": "FR",
+                              "origine": "david", "cible": c.get("nom")})
+    liste = david + liste
     for x in _lire_f("data/bingo.json", {}).get("bingos", [])[:n_bingo]:
         q = x.get("mot_cle") or ""
         if q and q.lower() not in deja:
@@ -142,9 +151,12 @@ def chasse_ciblee(regles, n=5):
     apify.CONTEXTE["denicheur"] = "C"
     trouves = []
     vus_A = _annonces_A()
-    # priorité : bingos (très recherchés, peu vendus), puis hype étrangère, puis recherches idealo en hausse
+    # priorité : cibles de David, bingos (très recherchés, peu vendus), puis hype étrangère, puis recherches idealo en hausse
     chasse = [x for x in liste_de_chasse(d) if x["pays"] == "FR"]
-    chasse.sort(key=lambda x: (0 if x.get("origine") == "bingo" else 1 if str(x.get("origine", "")).startswith("hype") else 2))
+    # une seule recherche par cible de David (son nom principal), pour ne pas dépenser de crédits sur les variantes
+    chasse = [x for x in chasse if x.get("origine") != "david" or x["recherche"] == x.get("cible")]
+    chasse.sort(key=lambda x: (-1 if x.get("origine") == "david" else 0 if x.get("origine") == "bingo"
+                               else 1 if str(x.get("origine", "")).startswith("hype") else 2))
     for x in chasse[:n]:
         q = x["recherche"]
         deja_A = [a for a in vus_A if a.get("prix") and comparateurs.correspond(a["titre"], q)]

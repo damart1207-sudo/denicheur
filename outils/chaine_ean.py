@@ -136,7 +136,14 @@ print(f"Amigo : {len(amigo)} produits qui se vendent (≥ 30 ventes estimées / 
 # ================================================================== marché français PAR CODE (les deux dénicheurs)
 tous = {c["ean"]: c for c in amigo}
 tous.update({c["ean"]: c for c in identifies})
-eans = list(tous)
+# ordre de priorité si le plafond DataForSEO du jour ne couvre pas tout : fiches du PC, autres bons plans, puis Amigo
+ordre = [c["ean"] for c in identifies if c.get("lu_par") == "PC"] + [c["ean"] for c in identifies if c.get("lu_par") != "PC"] + [c["ean"] for c in amigo]
+eans = list(dict.fromkeys(ordre))
+reste_usd = dataforseo.plafond_du_jour() - dataforseo._budget()["depense_usd"]
+possible = max(0, int((reste_usd - 0.01) / 0.0042))
+if len(eans) > possible:
+    print(f"Plafond du jour : il reste {reste_usd:.2f} $ -> {possible} produits comparés sur {len(eans)} (les autres attendront demain)")
+    eans = eans[:possible]
 print(f"Google Shopping : {len(eans)} codes, coût prévu ≤ {len(eans) * 0.004:.2f} $ ; disponible : {dataforseo.disponible(len(eans) * 0.004)}")
 marche = chaine.marche_google(eans, {e: c.get("titre_fiche") or c.get("titre") for e, c in tous.items()},
                               {e: (c.get("keepa") or {}).get("marque") or (c.get("fiche_page") or {}).get("marque") for e, c in tous.items()}) if eans else {}

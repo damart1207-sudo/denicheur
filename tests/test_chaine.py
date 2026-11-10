@@ -95,6 +95,10 @@ class ConcordanceTests(unittest.TestCase):
     def test_autre_modele_de_la_meme_marque(self):
         self.assertFalse(chaine.concorde("Tineco A30S Aspirateur Balai", "Tineco Floor One S5 aspirateur laveur", "Tineco"))
 
+    def test_requete_google_par_nom_court(self):
+        self.assertEqual(chaine.requete_google("Tineco A30S Aspirateur Balai sans Fil, 160W d'Aspiration, 60Min"), "Tineco A30S Aspirateur Balai sans Fil")
+        self.assertEqual(chaine.requete_google("Multisoup Blender Chauffant 850W (noir)", "Moulinex"), "Moulinex Multisoup Blender Chauffant 850W")
+
     def test_amazon_com_depuis_une_source_francaise(self):
         self.assertEqual(chaine.asin_de("https://www.amazon.com/dp/B08X21QX27"), ("B08X21QX27", "FR"))
 

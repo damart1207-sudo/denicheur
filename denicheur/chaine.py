@@ -221,10 +221,26 @@ def concorde(ref, titre, marque=None):
     return len((a & b) - m) >= 2
 
 
+def requete_google(titre, marque=None):
+    """Recherche Google Shopping par NOM court (marque + début du titre). Constat du 10/11 sur 99 codes : interrogé par
+    code EAN, Google Shopping renvoie des produits sans aucun rapport (figurines, vinyles, câbles) ; le code ne sert donc
+    qu'à relier la fiche du marchand à Amazon (Keepa), et c'est `concorde` (marque + référence du modèle) qui garantit
+    que la fiche Google est bien le même produit."""
+    t = re.sub(r"[\[\(].*?[\]\)]", " ", titre or "")
+    t = re.split(r",| - | – | \| ", t)[0]
+    mots = [m for m in re.sub(r"[^\w\s.+/-]", " ", t).split() if m][:7]
+    if marque and marque.lower() not in " ".join(mots).lower():
+        mots.insert(0, marque)
+    return " ".join(mots)[:80]
+
+
 def marche_google(eans, titres, marques=None):
-    """{ean: {'fiche': titre Google, 'vendeurs': [{marchand, total, gros, lien}]}} — recherche PAR CODE, puis vendeurs
-    de la fiche Google retenue. Une fiche dont le titre contredit le produit (lot, couleur, capacité) est refusée."""
-    res = shopping.chercher(list(eans), "FR", attente_max=240)
+    """{ean: {'fiche': titre Google, 'vendeurs': [{marchand, total, gros, lien}]}} — recherche par nom court, fiche
+    retenue seulement si elle concorde (marque + modèle), puis vendeurs de cette fiche."""
+    marques = marques or {}
+    req = {e: requete_google(titres.get(e), marques.get(e)) for e in eans}
+    par_req = shopping.chercher([q for q in req.values() if q], "FR", attente_max=240)
+    res = {e: par_req.get(req[e], []) for e in eans}
     choix = {}
     for e in eans:
         ref = titres.get(e) or ""
@@ -240,7 +256,7 @@ def marche_google(eans, titres, marques=None):
     for e in eans:
         o = choix.get(e)
         if not o:
-            out[e] = {"fiche": None, "vendeurs": [], "raison": "code introuvable sur Google Shopping" if not res.get(e) else "fiche Google non concordante",
+            out[e] = {"fiche": None, "vendeurs": [], "raison": "produit introuvable sur Google Shopping" if not res.get(e) else "fiche Google non concordante",
                       "refusees": [x.get("titre") for x in res.get(e, [])[:4]]}
             continue
         vs, vus = [], set()

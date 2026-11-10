@@ -375,8 +375,8 @@ JS_PRIX_FICHE = r"""
   return parseFloat(m[1].replace(/[.,]/g, '') + '.' + (m[2] || '0'));
 }
 """
-VERIF_MAX = 25        # fiches produit relues par tour (les plus fortes remises d'abord)
-VERIF_REMISE_MIN = 30  # % : on relit la fiche des produits remisés d'au moins 30 %
+VERIF_MAX = 60        # fiches produit relues par tour (les plus fortes remises d'abord) ; 25 avant le 10/11
+VERIF_REMISE_MIN = 20  # % : on relit la fiche des produits remisés d'au moins 20 % (30 avant le 10/11)
 
 
 def verifier_fiches(page, annonces):
@@ -406,6 +406,11 @@ def verifier_fiches(page, annonces):
                             "disponibilite": "InStock", "identite_confirmee": True,
                             "verifie_le": datetime.now(timezone.utc).isoformat(timespec="seconds")}
         a["prix_page"] = p
+        # code EAN lu dans les données de la fiche : c'est lui qui rattache le produit au marché (chaîne EAN, 10/11)
+        prod = (detail or {}).get("produit") or {}
+        code = next((re.sub(r"\D", "", str(prod[k])) for k in ("gtin13", "gtin", "gtin14", "gtin12", "gtin8") if prod.get(k)), None)
+        if code:
+            a["ean"] = code
         if abs(p - a["prix"]) <= 0.011:
             a["prix_verifie"] = True
         else:

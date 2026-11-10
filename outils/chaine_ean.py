@@ -86,6 +86,27 @@ for c in amz:
     else:
         c["ean"], c["prix_page"] = k["eans"][0], k["prix_neuf"]
 
+# PC de David : pages de magasins illisibles depuis le cloud. On ne prend que les fiches RELUES par le PC aujourd'hui,
+# avec le code EAN et le prix lus dans les données de la fiche (pc/collecteur.py, verifier_fiches).
+pc = lire("data/pc/annonces.json", {})
+jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+pc_frais = [a for a in pc.get("annonces", []) if (a.get("date") or "")[:10] == jour]
+nb_pc = 0
+for a in pc_frais:
+    e = chaine.ean13(a.get("ean"))
+    pv = a.get("preuve_prix") or {}
+    if any(m in (a.get("source") or "") for m in ("occasion", "warehouse", "easycash", "leboncoin", "stockx", "emmaus", "rebuy", "vinted", "agorastore")):
+        continue   # sources d'occasion : jamais comparées à du neuf
+    if not e or a.get("prix_verifie") is not True or not pv.get("prix_page") or a.get("etat") not in (None, "neuf"):
+        continue
+    if not (chaine.PRIX_MIN <= pv["prix_page"] <= chaine.PRIX_MAX):
+        continue
+    nb_pc += 1
+    cands.append({"denicheur": "Idéfix", "titre": a["titre"], "titre_fiche": a["titre"], "prix_annonce": a.get("prix_carte") or a["prix"],
+                  "lien": a["lien"], "lien_marchand": a["lien"], "domaine": chaine.domaine(a["lien"]), "source": a.get("source"),
+                  "ean": e, "prix_page": pv["prix_page"], "vu": pv.get("verifie_le"), "lu_par": "PC"})
+print(f"PC : dernière collecte {pc.get('maj')}, {len(pc_frais)} annonces du jour, {nb_pc} fiches avec code EAN et prix relus")
+
 identifies = [c for c in cands if c.get("ean") and c.get("prix_page") and not c.get("rejet")]
 for c in identifies:
     c["achat"] = c["prix_page"]
@@ -145,7 +166,7 @@ affaires = []
 for c in identifies:
     refs, m = references(c, c["domaine"])
     k = c.get("keepa") or {}
-    c["fiche_google"], c["marche_raison"] = m.get("fiche"), m.get("raison")
+    c["fiche_google"], c["marche_raison"], c["google_refuse"] = m.get("fiche"), m.get("raison"), m.get("refusees")
     gros = bool(chaine.GROS.search(c["domaine"]))
     if "amazon" in c["domaine"] and k.get("moyenne_90j"):
         # la promo Amazon finie, le prix revient à son niveau habituel : c'est lui, le vrai prix de revente possible
@@ -165,7 +186,7 @@ for c in amigo:
     if c.get("amazon_index") and not any("amazon" in v["marchand"].lower() for v in vs):
         vs.append({"marchand": "Amazon.fr", "total": c["amazon_index"], "gros": True, "lien": f"https://www.amazon.fr/dp/{c['asin']}"})
     vs.sort(key=lambda v: v["total"])
-    c["fiche_google"], c["marche_raison"] = m.get("fiche"), m.get("raison")
+    c["fiche_google"], c["marche_raison"], c["google_refuse"] = m.get("fiche"), m.get("raison"), m.get("refusees")
     if len(vs) < 2:
         c["verdict"] = {"feu": "rouge", "raison": m.get("raison") or "moins de deux marchands français pour ce code", "nb_vendeurs": len(vs)}
         affaires.append(c)
@@ -207,6 +228,7 @@ ent = collections.OrderedDict()
 ent["Idéfix — bons plans français du jour examinés"] = len(cands)
 ent["Idéfix — lien du marchand trouvé"] = sum(1 for c in cands if c.get("lien_marchand"))
 ent["Idéfix — produit identifié par code EAN, prix confirmé"] = len(identifies)
+ent["   dont fiches lues par le PC (magasins fermés au cloud)"] = nb_pc
 ent["Idéfix — marché français trouvé pour ce code"] = sum(1 for c in identifies if (c["verdict"].get("ref_min")))
 ent["Amigo — produits qui se vendent examinés"] = len(amigo)
 ent["Amigo — au moins deux marchands français pour ce code"] = sum(1 for c in amigo if c.get("achat"))

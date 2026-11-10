@@ -87027,7 +87027,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-10T13:04+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -87050,6 +87050,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-10T13:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-10T13:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : achat impossible depuis la France. Page du bon plan Mydealz lue par le robot à 14h37 (Paris) : offre active à 20-22 € chez Rossmann (Allemagne). La page service de Rossmann.de (lue le 10/11) indique une livraison en Allemagne seulement, plus la Suisse via un service tiers : pas de livraison en France. Prix aussi anormalement bas (signal d'erreur de prix). Pour info, neuf en France sur achatmoinscher : 78,98 € livré chez Dressinn.",
+   "prix_neuf_min_idealo": 78.98,
+   "source_prix_ref": "achatmoinscher.com (Dressinn, livraison incluse), 10/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (offre magasin Rossmann Allemagne)",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -214,7 +214,7 @@ def _refs(t):
     mots = re.findall(r"[a-z0-9]{2,}", meme_produit._n(t or ""))
     # « 850w », « 13000pa », « 60min », « 16go » sont des caractéristiques, pas des références de modèle
     carac = re.compile(r"\d+(w|l|cl|ml|go|gb|tb|to|mah|pa|kpa|mm|cm|m|min|h|kg|g|db|mhz|hz|v|pcs|k|x|eur|en|in)?")
-    return {x for x in mots if re.search(r"\d", x) and not (carac.fullmatch(x) and not re.fullmatch(r"\d{4,6}", x))}
+    return {x for x in mots if re.search(r"\d", x) and not (carac.fullmatch(x) and not re.fullmatch(r"\d{4,}", x))}
 
 
 def concorde(ref, titre, marque=None):

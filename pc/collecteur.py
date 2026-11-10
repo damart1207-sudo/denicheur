@@ -561,7 +561,16 @@ def pousser():
         return "rien de nouveau"
     git("commit", "-q", "-m", "Collecteur PC " + datetime.now().strftime("%d/%m %H:%M"))
     r = git("push", "-q", "origin", "HEAD:main")
-    return "poussé" if r.returncode == 0 else "push impossible : " + r.stderr[-200:]
+    if r.returncode != 0:   # un robot du cloud a pu envoyer entre-temps : on se replace derrière lui et on réessaie une fois
+        git("pull", "-q", "--rebase", "-X", "theirs", "origin", "main")
+        r = git("push", "-q", "origin", "HEAD:main")
+    res = "poussé" if r.returncode == 0 else "push impossible : " + (r.stderr or r.stdout)[-400:]
+    try:   # la tâche planifiée n'a pas de fenêtre : sans ce journal, un envoi refusé reste invisible (10/11 : rien reçu depuis le 06/11)
+        with open(os.path.join(RACINE, "pc_journal.txt"), "a", encoding="utf-8") as f:
+            f.write(datetime.now().strftime("%d/%m %H:%M") + " " + res.replace("\n", " | ") + "\n")
+    except OSError:
+        pass
+    return res
 
 
 if __name__ == "__main__":

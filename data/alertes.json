@@ -86699,7 +86699,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-10T01:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -86912,6 +86912,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-10T01:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-10T02:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : boutique mi.com Pays-Bas, livraison DHL vers les codes postaux néerlandais seulement (page d'expédition mi.com/nl lue le 10/11) ; prix de 359,90 € obtenu avec un coupon de 140 € à réclamer sur mi.com NL. Non livrable en France. Revente de toute façon trop faible (marge ≤ 6 €).",
+   "prix_neuf_min_idealo": 479.96,
+   "source_prix_ref": "achatmoinscher (12 Go/256 Go noir, 14 boutiques)",
+   "economie_pct": 25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  }
 ]

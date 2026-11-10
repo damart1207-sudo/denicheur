@@ -240,7 +240,8 @@ def marche_google(eans, titres, marques=None):
     for e in eans:
         o = choix.get(e)
         if not o:
-            out[e] = {"fiche": None, "vendeurs": [], "raison": "code introuvable sur Google Shopping" if not res.get(e) else "fiche Google non concordante"}
+            out[e] = {"fiche": None, "vendeurs": [], "raison": "code introuvable sur Google Shopping" if not res.get(e) else "fiche Google non concordante",
+                      "refusees": [x.get("titre") for x in res.get(e, [])[:4]]}
             continue
         vs, vus = [], set()
         for v in vend.get(o["product_id"], []):

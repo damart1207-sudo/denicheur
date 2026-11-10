@@ -296,24 +296,51 @@ def marche_google(eans, titres, marques=None):
 
 
 # ------------------------------------------------------------------ idealo par code (la preuve)
+def _idealo(q):
+    from . import apify
+    for contexte in ("A", "P"):   # plafond des vérifications, puis celui des passages
+        apify.CONTEXTE["denicheur"] = contexte
+        items = apify.lancer("idealo", {"searchQuery": q, "country": "FR", "maxItems": 3, "fetchOffers": False}, maxi=3)
+        if items is not None:
+            return [i for i in items if isinstance(i, dict)]
+    return None
+
+
+def _fiche_idealo(i, ean):
+    """La fiche idealo (ou une de ses variantes) qui porte exactement ce code, sinon None."""
+    for x in [i] + [v for v in (i.get("variants") or []) if isinstance(v, dict)]:
+        if ean13(x.get("gtin")) == ean and isinstance(x.get("price"), (int, float)) and x["price"] > 0:
+            return {"prix_min": float(x["price"]), "nb_offres": x.get("offerCount"), "lien": x.get("url"), "titre": x.get("title"),
+                    "marchand_min": i.get("shopName"), "preuve": "code EAN affiché par idealo"}
+    return None
+
+
 def idealo_par_code(ean, nom=None):
     """Prix neuf le plus bas de France pour CE code EAN, lu chez idealo (robot Apify, ≈ 0,01 $ par recherche).
-    On cherche par le code, puis par le nom ; dans les deux cas une fiche n'est acceptée que si son code EAN est
-    exactement celui du produit. Renvoie {prix_min, nb_offres, lien, titre} ou {'raison': …}."""
-    from . import apify
-    apify.CONTEXTE["denicheur"] = "A"
-    vu = False
-    for q in (ean, nom):
-        if not q:
-            continue
-        items = apify.lancer("idealo", {"searchQuery": q, "country": "FR", "maxItems": 3, "fetchOffers": False}, maxi=3)
-        if items is None:
-            return {"raison": "idealo indisponible (plafond du jour ou robot en panne)"}
-        vu = vu or bool(items)
-        for i in items:
-            if isinstance(i, dict) and ean13(i.get("gtin")) == ean and isinstance(i.get("price"), (int, float)) and i["price"] > 0:
-                return {"prix_min": float(i["price"]), "nb_offres": i.get("offerCount"), "lien": i.get("url"), "titre": i.get("title")}
-    return {"raison": "idealo a des fiches proches mais aucune avec ce code" if vu else "produit absent d'idealo"}
+    Constat du 10/11 (outils/diag_idealo.py) : idealo sait chercher par code ; il répond alors UNE fiche, sans rappeler
+    le code. Recherche par code -> une seule fiche = la bonne. Sinon recherche par nom, fiche acceptée seulement si
+    son code EAN (ou celui d'une variante) est exactement celui du produit.
+    Renvoie {prix_min, nb_offres, lien, titre, marchand_min, preuve} ou {'raison': …}."""
+    items = _idealo(ean)
+    if items is None:
+        return {"raison": "idealo indisponible (plafond du jour ou robot en panne)"}
+    for i in items:
+        f = _fiche_idealo(i, ean)
+        if f:
+            return f
+    sans_code = [i for i in items if "gtin" not in i and isinstance(i.get("price"), (int, float)) and i["price"] > 0 and not i.get("usedOnly")]
+    if len(items) == 1 and len(sans_code) == 1:
+        i = sans_code[0]
+        return {"prix_min": float(i["price"]), "nb_offres": i.get("offerCount"), "lien": i.get("url"), "titre": i.get("title"),
+                "marchand_min": i.get("shopName"), "preuve": "recherche idealo par code EAN : une seule fiche"}
+    if len(items) > 1:
+        return {"raison": "idealo répond plusieurs fiches à ce code"}
+    par_nom = _idealo(nom) if nom else []
+    for i in par_nom or []:
+        f = _fiche_idealo(i, ean)
+        if f:
+            return f
+    return {"raison": "idealo a des fiches proches mais aucune avec ce code" if par_nom else "code inconnu d'idealo"}
 
 
 # ------------------------------------------------------------------ verdict

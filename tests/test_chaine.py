@@ -120,5 +120,26 @@ class ConcordanceTests(unittest.TestCase):
         self.assertEqual(chaine.asin_de("https://www.amazon.com/dp/B08X21QX27"), ("B08X21QX27", "FR"))
 
 
+class IdealoTests(unittest.TestCase):
+    def test_recherche_par_code_une_seule_fiche(self):
+        from unittest.mock import patch
+        une = [{"title": "Pentax Papilio III 8.5x21 Black", "price": 144.9, "offerCount": 5, "shopName": "Digit-photo.com", "url": "u"}]
+        with patch.object(chaine, "_idealo", return_value=une):
+            self.assertEqual(chaine.idealo_par_code("0027075311732")["prix_min"], 144.9)
+        with patch.object(chaine, "_idealo", return_value=une * 2):
+            self.assertIn("plusieurs", chaine.idealo_par_code("0027075311732")["raison"])
+
+    def test_recherche_par_nom_exige_le_code(self):
+        from unittest.mock import patch
+        par_nom = [{"title": "Pentax Papilio III", "gtin": None, "price": 143.9,
+                    "variants": [{"title": "Olive", "gtin": "0027075311749", "price": 143.9}, {"title": "Black", "gtin": "0027075311732", "price": 144.9, "offerCount": 5}]}]
+        with patch.object(chaine, "_idealo", side_effect=[[], par_nom]):
+            self.assertEqual(chaine.idealo_par_code("0027075311732", "Pentax Papilio III")["prix_min"], 144.9)
+        with patch.object(chaine, "_idealo", side_effect=[[], par_nom]):
+            self.assertIn("aucune avec ce code", chaine.idealo_par_code("3016667297926", "Pentax Papilio III")["raison"])
+        with patch.object(chaine, "_idealo", return_value=None):
+            self.assertIn("indisponible", chaine.idealo_par_code("0027075311732")["raison"])
+
+
 if __name__ == "__main__":
     unittest.main()

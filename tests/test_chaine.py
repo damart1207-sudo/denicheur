@@ -141,5 +141,13 @@ class IdealoTests(unittest.TestCase):
             self.assertIn("indisponible", chaine.idealo_par_code("0027075311732")["raison"])
 
 
+class PortTests(unittest.TestCase):
+    def test_port_selon_le_poids(self):
+        self.assertEqual(chaine.port_europe(None), 7.0)
+        self.assertEqual(chaine.port_europe(800), 7.0)
+        self.assertEqual(chaine.port_europe(10000), 25.0)   # papier OFITURIA, 10 kg
+        self.assertIsNone(chaine.port_europe(22000))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -62,7 +62,14 @@ for x in pre:
     if not c["prix_etranger"] or not c["prix_fr"]:
         c["verdict"] = {"feu": "rouge", "raison": "prix introuvable à la relecture (plus d'offre neuve ?)"}
     else:
-        c["achat"] = round(c["prix_etranger"] + PORT, 2)
+        c["poids_g"] = ke.get("poids_g") or kf.get("poids_g")
+        port = chaine.port_europe(c["poids_g"])
+        if port is None:
+            c["verdict"] = {"feu": "rouge", "raison": f"colis trop lourd ({c['poids_g'] / 1000:.0f} kg) : port imprévisible"}
+            affaires.append(c)
+            continue
+        c["port"] = port
+        c["achat"] = round(c["prix_etranger"] + port, 2)
         c["verdict"] = chaine.verdict(c["achat"], refs_amazon(c["prix_fr"], c["moyenne_90j_fr"]), True, regles, c["ventes_30j_fr"])
         if c["verdict"]["feu"] != "rouge":
             a_prouver.append(c)
@@ -93,9 +100,22 @@ for c in a_prouver:
     refs += refs_amazon(c["prix_fr"], c["moyenne_90j_fr"])
     c["verdict"] = chaine.verdict(c["achat"], refs, True, regles, c["ventes_30j_fr"], preuve_code=True)
     c["refs"] = refs
+# Un prix français tenu par UN seul vendeur n'est pas un prix de marché (papier OFITURIA : 159 € chez un vendeur isolé,
+# 20 à 30 € les 500 feuilles ailleurs). Sans autre marchand français au même niveau, jamais vert.
+for c in affaires:
+    v = c["verdict"]
+    if v["feu"] == "rouge":
+        continue
+    i = c.get("idealo") or {}
+    seul = (c.get("vendeurs_fr") or 0) <= 1 and (not i.get("prix_min") or (i.get("nb_offres") or 1) <= 1)
+    if seul:
+        v.setdefault("manque", []).append("prix français tenu par un seul vendeur : pas un prix de marché")
+        v["feu"] = "orange"
+    if not c.get("poids_g"):
+        v.setdefault("a_completer", []).append("poids du colis inconnu : port compté 7 €")
 for c in affaires:
     if c["verdict"]["feu"] != "rouge":
-        c["verdict"].setdefault("a_completer", []).append(f"livraison Amazon {c['pays_achat']} vers la France et port réel : à vérifier au panier (7 € comptés)")
+        c["verdict"].setdefault("a_completer", []).append(f"livraison Amazon {c['pays_achat']} vers la France et port réel : à vérifier au panier ({c.get('port', 7):.0f} € comptés)")
 
 ordre = {"vert": 0, "orange": 1, "rouge": 2}
 affaires.sort(key=lambda c: (ordre[c["verdict"]["feu"]], -(c["verdict"].get("marge_nette") or -999)))

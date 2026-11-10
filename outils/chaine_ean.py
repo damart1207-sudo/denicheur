@@ -117,7 +117,8 @@ tous = {c["ean"]: c for c in amigo}
 tous.update({c["ean"]: c for c in identifies})
 eans = list(tous)
 print(f"Google Shopping : {len(eans)} codes, coût prévu ≤ {len(eans) * 0.004:.2f} $ ; disponible : {dataforseo.disponible(len(eans) * 0.004)}")
-marche = chaine.marche_google(eans, {e: c.get("titre_fiche") or c.get("titre") for e, c in tous.items()}) if eans else {}
+marche = chaine.marche_google(eans, {e: c.get("titre_fiche") or c.get("titre") for e, c in tous.items()},
+                              {e: (c.get("keepa") or {}).get("marque") or (c.get("fiche_page") or {}).get("marque") for e, c in tous.items()}) if eans else {}
 print("Google Shopping : fiches trouvées", sum(1 for m in marche.values() if m.get("fiche")), "sur", len(eans))
 
 # Amazon par code pour les produits identifiés hors Amazon (référence Amazon + ventes + vendeurs)
@@ -145,7 +146,15 @@ for c in identifies:
     refs, m = references(c, c["domaine"])
     k = c.get("keepa") or {}
     c["fiche_google"], c["marche_raison"] = m.get("fiche"), m.get("raison")
+    gros = bool(chaine.GROS.search(c["domaine"]))
+    if "amazon" in c["domaine"] and k.get("moyenne_90j"):
+        # la promo Amazon finie, le prix revient à son niveau habituel : c'est lui, le vrai prix de revente possible
+        refs.append({"marchand": "Amazon.fr (prix habituel sur 90 jours)", "total": k["moyenne_90j"], "gros": False, "lien": k.get("lien")})
     c["verdict"] = chaine.verdict(c["achat"], refs, True, regles, k.get("ventes_mois") or k.get("ventes_estimees_30j"))
+    if gros and c["verdict"]["feu"] != "rouge":
+        # tant que la promo dure, le client la voit aussi chez ce gros site : pas de livraison directe possible
+        c["verdict"]["manque"].append("promo chez un gros site visible de tous : seulement en achat de stock, à revendre une fois la promo finie")
+        c["verdict"]["feu"] = "orange"
     c["refs"] = refs[:6]
     affaires.append(c)
 

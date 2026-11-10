@@ -84,5 +84,20 @@ class VerdictTests(unittest.TestCase):
         self.assertEqual(chaine.verdict(20, self.refs(25, 26), True, REGLES)["feu"], "rouge")
 
 
+class ConcordanceTests(unittest.TestCase):
+    def test_google_repond_un_autre_produit(self):
+        self.assertFalse(chaine.concorde("Tineco A30S Aspirateur Balai sans Fil, 160W", "Casque gamer HyperX Cloud Alpha 2 sans fil", "Tineco"))
+
+    def test_meme_modele(self):
+        self.assertTrue(chaine.concorde("dreame L10s Pro Gen 3 Robot Aspirateur Laveur, 13 000 Pa", "Dreame L10s Pro Gen 3 Noir Robot Aspirateur Laveur", "dreame"))
+        self.assertTrue(chaine.concorde("Moulinex - Multisoup Blender Chauffant 850W Capacité 1.2 L", "Moulinex Multisoup Blender", "Moulinex"))
+
+    def test_autre_modele_de_la_meme_marque(self):
+        self.assertFalse(chaine.concorde("Tineco A30S Aspirateur Balai", "Tineco Floor One S5 aspirateur laveur", "Tineco"))
+
+    def test_amazon_com_depuis_une_source_francaise(self):
+        self.assertEqual(chaine.asin_de("https://www.amazon.com/dp/B08X21QX27"), ("B08X21QX27", "FR"))
+
+
 if __name__ == "__main__":
     unittest.main()

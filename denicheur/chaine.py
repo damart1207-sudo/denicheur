@@ -73,7 +73,9 @@ def asin_de(url):
     if "amazon." not in d:
         return None, None
     m = ASIN.search(urllib.parse.urlsplit(url).path + "/")
-    pays = next((p for k, p in PAYS_AMAZON.items() if d.endswith(k)), None)
+    # amazon.com : le robot tourne aux États-Unis et Amazon y renvoie parfois les liens courts français ; le code produit
+    # est le même, et Keepa confirme ensuite que la fiche existe bien sur Amazon France.
+    pays = next((p for k, p in PAYS_AMAZON.items() if d.endswith(k)), "FR" if d.endswith("amazon.com") else None)
     return (m.group(1) if m else None), pays
 
 
@@ -194,11 +196,32 @@ def keepa_lot(valeurs, par="asin", pays="FR", attente_max=600):
 
 
 # ------------------------------------------------------------------ marché français par EAN
+VIDES = {"avec", "sans", "pour", "the", "and", "noir", "noire", "blanc", "blanche", "black", "white", "lot", "pack", "fil",
+         "homme", "femme", "new", "neuf", "pro", "max", "plus", "mini", "les", "des", "eur"}
+
+
 def _mots(t):
-    return set(re.findall(r"[a-z0-9]{3,}", meme_produit._n(t or "")))
+    return set(re.findall(r"[a-z0-9]{3,}", meme_produit._n(t or ""))) - VIDES
 
 
-def marche_google(eans, titres):
+def concorde(ref, titre, marque=None):
+    """La fiche Google est-elle le même produit que la fiche du marchand ? Google répond parfois n'importe quoi à un code
+    (10/11 : un casque HyperX pour le code d'un aspirateur Tineco). Il faut : pas de contradiction mécanique, la MARQUE
+    dans les deux titres, et soit une référence de modèle commune (mot avec un chiffre : a30s, l10s, 75379), soit,
+    quand la fiche Google ne cite aucune référence, au moins deux autres mots en commun."""
+    if not ref or not titre or meme_produit.mecanique(ref, titre)[0] is False:
+        return False
+    a, b = _mots(ref), _mots(titre)
+    m = _mots(marque) or set(list(re.findall(r"[a-z0-9]{3,}", meme_produit._n(ref)))[:1])
+    if not m or not (m & b):
+        return False
+    refs_a, refs_b = {x for x in a if re.search(r"\d", x)}, {x for x in b if re.search(r"\d", x)}
+    if refs_b:
+        return bool(refs_a & refs_b)
+    return len((a & b) - m) >= 2
+
+
+def marche_google(eans, titres, marques=None):
     """{ean: {'fiche': titre Google, 'vendeurs': [{marchand, total, gros, lien}]}} — recherche PAR CODE, puis vendeurs
     de la fiche Google retenue. Une fiche dont le titre contredit le produit (lot, couleur, capacité) est refusée."""
     res = shopping.chercher(list(eans), "FR", attente_max=240)
@@ -208,9 +231,7 @@ def marche_google(eans, titres):
         for o in res.get(e, []):
             if not o.get("product_id") or not o.get("titre"):
                 continue
-            if meme_produit.mecanique(ref, o["titre"])[0] is False:
-                continue
-            if ref and len(_mots(ref) & _mots(o["titre"])) < 2:
+            if not concorde(ref, o["titre"], (marques or {}).get(e)):
                 continue
             choix[e] = o
             break

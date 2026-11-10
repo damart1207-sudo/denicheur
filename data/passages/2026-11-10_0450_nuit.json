@@ -1,0 +1,497 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-10_0450",
+ "date_affichee": "10/11/2026 à 04 h 50",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 686,
+ "nb_nouvelles": 25,
+ "nb_prefiltres": 22,
+ "nb_tries": 22,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 1
+  },
+  "gptoss": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 6
+  },
+  "qwen": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 1
+  }
+ },
+ "remplacements": {},
+ "candidats": [],
+ "verification": {
+  "faits": 0,
+  "erreurs": []
+ },
+ "verification_ebay": {
+  "faits": 0,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 6,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0HPFPN2XD-neuf",
+   "titre": "Écouteurs Bluetooth Sans Fil Sport, 60H, 28 Modes Sonores via l'App, New",
+   "temperature": 344,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HPFPN2XD",
+   "date": "2026-11-10T03:30",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0HPFPN2XD",
+   "ref_fr": 52.49,
+   "description": "moyenne 90 j 52.49 €, baisse 43 %, rang 753"
+  },
+  {
+   "id": "9ab0e798da",
+   "titre": "Air Jordan 1 Mid Chaussure pour pré-ado",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 76.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-air-jordan-1-mid-pour-ado-sDqMX68e/IV6050-451",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 109.99 €, -30 %. Nike IV6050-451 ; couleur Obsidian/Blanc/Grey Fog/Obsidian"
+  },
+  {
+   "id": "7a55b3c32a",
+   "titre": "Nike Winflo 12 Chaussure de running sur route pour femme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 76.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-de-running-sur-route-nike-winflo-12-pour-femme-uNZHuPIQ/IR0209-001",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 109.99 €, -30 %. Nike IR0209-001 ; couleur Noir/British Khaki/Fusion Red/Sail"
+  },
+  {
+   "id": "c4e448496b",
+   "titre": "Boitier PC Mars Gaming MC-Prisma - ATX, Triple Verre Trempé Continu sans Cadre, Éclairage ARGB Latéral et Frontal",
+   "temperature": 105,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 65.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boitier-pc-mars-gaming-mc-prisma-atx-triple-verre-trempe-continu-sans-cadre-eclairage-argb-lateral-et-frontal-3450102",
+   "date": "Tue, 10 Nov 2026 04:29:31 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "65,99€ - Amazon VISION PANORAMIQUE ET DOUBLE CHAMBRE: Le boîtier MC-PRISMA intègre trois panneaux en verre trempé continu sans cadre, mettant en valeur chaque composant et tran..."
+  },
+  {
+   "id": "d7d5734e0f",
+   "titre": "Black Friday Sale - Up to 30% off 1000's of Electricals - E.g. Lenovo IdeaPad Slim 3 15.6\" Laptop, 512GB SSD, 8 GB RAM - Arctic Grey",
+   "temperature": 103,
+   "categorie": "Electronics",
+   "marchand": "ao",
+   "prix": 399.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/black-friday-sale-up-to-30-off-1000s-of-electricals-members-always-pay-less-5027125",
+   "date": "Tue, 10 Nov 2026 01:04:39 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£399 - ao https://ao.com/product/82xm01e0uk-lenovo-ideap..."
+  },
+  {
+   "id": "2dc5898cdd",
+   "titre": "MiniArt Modellbau Flugzeug Junkers F13 mit Schneekufen im Maßstab 1:48",
+   "temperature": 102,
+   "categorie": "Family & Kids",
+   "marchand": null,
+   "prix": 27.95,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/miniart-modellbau-flugzeug-junkers-f13-mit-schneekufen-im-massstab-148-2867615",
+   "date": "Tue, 10 Nov 2026 04:46:16 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "27,95€ Kunststoffbausatz der Junkers F13 in der frühen Ausführung, ausgerüstet mit Schneekufen statt Radfahrwerk. Nachgebildet ist das komplette Innenleben mit Moto..."
+  },
+  {
+   "id": "7002891148",
+   "titre": "Booster Bundle Pokémon - Écarlate & Violet 151 - EV03.5 - Français",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": null,
+   "prix": 69.98,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/booster-bundle-pokemon-ecarlate-violet-151-ev035-francais-3450459",
+   "date": "Tue, 10 Nov 2026 04:49:12 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "69,98€ Bundle – Écarlate & Violet 151 – EV03.5 – Français Pack officiel en version française comprenant 6 boosters scellés de l’extension Écarlate & Violet 151 (EV03.5). Parfait pour les ouvertures rapides, la collection ou le deckbuilding autour des Pokémon emblématiques de la première génération. "
+  },
+  {
+   "id": "07ec2537f4",
+   "titre": "Robot aspirateur laveur Dreame L50s Pro Ultra-A - 30 000 Pa, lavage serpillère 100 °C, franchissement 40 mm, brosse anti-emmêlement",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 499.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-laveur-dreame-l50s-pro-ultra-a-30-000-pa-lavage-serpillere-100-c-franchissement-40-mm-brosse-anti-emmelement-3450456",
+   "date": "Tue, 10 Nov 2026 04:35:31 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "499€ - Amazon Offre à durée limitée Une base de nettoyage qui reste propre tout en éliminant les taches tenaces: Le système de serpillière à nettoyage automatique à 100 °C ThermoHub utilise une plaque de lavage avec chauffage PTC pour laver les serpillières à haute température et renforcer ainsi l'h"
+  },
+  {
+   "id": "457e57402e",
+   "titre": "Ajax, Nettoyant Multi-Surfaces Power Mousse, Spray, Lot de 12 x 500 ml",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Amazon",
+   "prix": 19.17,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ajax-nettoyant-multi-surfaces-power-mousse-spray-lot-de-12-x-500-ml-3450455",
+   "date": "Tue, 10 Nov 2026 04:34:25 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,17€ - Amazon 18.21 euros avec l 'option prévoyez et économisez Soit 1.58 euros l'unité 2.99 chez Carrefour À propos de cet article GARDE LES SURFACES PROPRES : Gardez vos surfaces propres et brillantes grâce au nettoyant multi-surfaces Ajax Power Mousse et à sa mousse riche et épaisse. POUR DE MU"
+  },
+  {
+   "id": "4c759a0ffe",
+   "titre": "T-shirt Uniqlo U beige, marron, rose - XS à 3XL",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Uniqlo",
+   "prix": 9.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/t-shirt-uniqlo-u-xs-2xl-3450454",
+   "date": "Tue, 10 Nov 2026 04:32:40 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "9,90€ - Uniqlo • T-shirt unisexe Uniqlo U Beige, rose, marron dispo et toutes les tailles."
+  },
+  {
+   "id": "96431a5c6e",
+   "titre": "Needit Aktion: Drive One 2 Verkehrsassistent mit Blitzer.de 21,99€/ Needit Drive One Pro Verkehrsassistent 49,99€/ Park Lite 18,99€ (Prime)",
+   "temperature": null,
+   "categorie": "Auto & Motorrad",
+   "marchand": "Amazon",
+   "prix": 21.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/needit-aktion-drive-one-2-verkehrsassistent-mit-blitzerde-2199eur-needit-drive-one-pro-verkehrsassistent-4999eur-park-lite-1899eur-prime-2867725",
+   "date": "Tue, 10 Nov 2026 04:29:51 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "21,99€ - Amazon kleine Needit Aktion bei Amazon mit Prime, zB: Needit Drive One 2 Verkehrsassistent I Offizieller Partner von Blitzer.de für 21,99€ Idealo Warnt vor Kontrollen & Gefahren I Automatisch aktiv I Unauffällig im Fahrzeug Needit Drive One 2 Blitzerwarner [NEUES Modell 2026] liefert präzis"
+  },
+  {
+   "id": "28290cac2b",
+   "titre": "Anker Power Bank 4-in-1 20000mAh 45W Portable Charger, Dual Built-in USB-C Cables (All Colours) | Sold By AnkerDirect UK / FBA",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 32.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/anker-power-bank-4-in-1-20000mah-45w-portable-charger-dual-built-in-usb-c-cables-all-colours-sold-by-ankerdirect-uk-fba-5027680",
+   "date": "Tue, 10 Nov 2026 03:45:26 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£32.99 - Amazon About this item: Dual Built-In USB-C Cables: Charge effortlessly with dual built-in USB-C cables. 45W High-Speed Charging: Enjoy more time on the go without waiting around for your devices to charge with 45W power. The USB-C port supports 45W fast charging for compatible Samsung Gala"
+  },
+  {
+   "id": "09ea66946d",
+   "titre": "Easyjet Flight Birthday Sale Up to 25% off e.g LGW to Furteventura Rtn £28.48 - LTN to Lanzarote Rtn £29.98 - LTN to Gran Canaria Rtn £30.98",
+   "temperature": null,
+   "categorie": "Travel",
+   "marchand": "easyJet",
+   "prix": 28.48,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/easyjet-flight-birthday-sale-up-to-25-off-eg-lgw-to-furteventura-rtn-ps2848-ltn-to-lanzarote-rtn-ps2998-ltn-to-gran-canaria-ps3098-5027678",
+   "date": "Tue, 10 Nov 2026 03:42:48 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "easyJet Easyjet are live with the 31st Birthday sale, discounted flights up to 25%. Use the inspire me tool on their site to check flight prices. 3 examples I found looking for flights in December 2026, based on hand luggage. States sale is for 31 hours. LGW to Furteventura Return £28.48 LTN to Lanz"
+  },
+  {
+   "id": "38bc5e98ac",
+   "titre": "Angostura 7-Year-Old House Signature, Premium Caribbean Rum, 40% - 70cl (£16.97/£16.03 S&S)",
+   "temperature": null,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 18.86,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/angostura-7-year-old-house-signature-premium-caribbean-rum-40-70cl-ps1697ps1603-ss-5027676",
+   "date": "Tue, 10 Nov 2026 03:32:00 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£18.86 - Amazon ABOUT - Angostura 7 Year Old House Signature Rum is an aged Caribbean rum from Trinidad and Tobago, offering a fuller and more robust expression within the Angostura rum range. HOW IT'S MADE - A blend of rums aged for a minimum of seven years in oak casks, allowing extended maturatio"
+  },
+  {
+   "id": "a1f1b1c919",
+   "titre": "CMF By NOTHING Speaker M Portable Bluetooth Speaker, 35W Woofer & Tweeter 18hr Playtime, IP68, Bluetooth 6.0, USB-C Audio - £ Colours",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 79.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/cmf-by-nothing-speaker-m-portable-bluetooth-speaker-35w-woofer-tweeter-18hr-playtime-ip68-bluetooth-60-usb-c-audio-ps-colours-5027675",
+   "date": "Tue, 10 Nov 2026 03:31:45 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£79 - Amazon About this item: 35W Dual-Driver Sound - CMF BY NOTHING Speaker M combines a dedicated 25W woofer and 10W tweeter in a sealed enclosure to deliver 35W RMS output across a 60Hz–20kHz frequency range. The woofer brings deep, controlled bass, while the tweeter delivers crisp highs and clea"
+  },
+  {
+   "id": "42e76bce03",
+   "titre": "CMF By NOTHING Speaker S Portable Bluetooth Speaker, 10W RMS, 18hr Playtime, IP68, Bluetooth 6.0, NFC Fast Pair - All Colours",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 39.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/cmf-by-nothing-speaker-s-portable-bluetooth-speaker-10w-rms-18hr-playtime-ip68-bluetooth-60-nfc-fast-pair-all-colours-5027674",
+   "date": "Tue, 10 Nov 2026 03:29:05 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£39 - Amazon About this item: Hit Tiny: CMF Speaker S packs a custom-tuned 45mm full-range driver, dual passive radiators and up to 10W RMS output into a compact body. Ultra Bass adds extra low-end punch, while Wide Soundstage creates a more spacious and immersive listening experience indoors or out"
+  },
+  {
+   "id": "dc6d933900",
+   "titre": "2 Pack Heavy Duty Oversized Camping Chair for Adults 200KG Max/Lumbar Support - Folding Chairs with Side Pocket, Cup Holder & Cooler Bag",
+   "temperature": null,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Amazon",
+   "prix": 39.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/2-pack-heavy-duty-oversized-camping-chair-for-adults-200kg-maxlumbar-support-folding-chairs-with-side-pocket-cup-holder-cooler-bag-5027673",
+   "date": "Tue, 10 Nov 2026 03:28:59 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£39.99 - Amazon £40 Discount Voucher below LISTING WHILE OFFER LASTS UNTIL 18th November 2026 - About this item 【Extreme Durability – 600D Heat-Resistant Oxford Fabric】 Withstands temperatures up to 200°C and intense sunlight. This tear-resistant, abrasion-proof material is built for harsh outdoor c"
+  },
+  {
+   "id": "prosp-0fb6f95d5b",
+   "titre": "PARKSIDE Set de douilles",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Lidl",
+   "prix": 49.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Lidl",
+   "date": "2026-11-10",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-12 → 2026-11-18"
+  },
+  {
+   "id": "prosp-561a1ac3fa",
+   "titre": "ACTUEL SAPIN ENNEIGÉ ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-10",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-3b99e8b1bb",
+   "titre": "ACTUEL SAPIN VERT ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-10",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-62952ec91c",
+   "titre": "ACTUEL SAPIN CANADIEN ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-10",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-55ddca37d1",
+   "titre": "ACTUEL SAPIN POMMES DE PIN ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-10",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  }
+ ]
+}

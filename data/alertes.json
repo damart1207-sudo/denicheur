@@ -87091,7 +87091,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-10T16:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -87126,7 +87126,19 @@
    "premiere_lecture": "2026-11-10T16:56+00:00",
    "expiree_vue_le": "2026-11-10T17:26+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-10T17:50+00:00",
+  "verdict": {
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "commentaire": "Offre terminée (page du bon plan relue par le robot à 18h26) : affichée expirée, prix remonté à 19,96 €. De plus le lien marchand mène à d'autres gants (Chilly Grip sur Amazon.com), pas aux Stronghand Aqua Guard. Rejeté.",
+   "duree_offre": "terminée",
+   "demande_confirmee": "sans objet"
+  }
  },
  {
   "id": "dcce52b9db",
@@ -87155,7 +87167,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-10T17:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -87189,6 +87201,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-10T17:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-10T17:50+00:00",
+  "verdict": {
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "commentaire": "Rejet : produit alimentaire (vin) et « erreur de prix » annoncée par le bon plan (7,27 € le carton de 6 sur Amazon.de, page relue à 18h38). Amazon.de n'expédie en général pas l'alcool vers la France, et une erreur de prix est souvent annulée. Pas de prix de référence français pour ce vin précis. Rejeté.",
+   "duree_offre": "quelques heures (erreur de prix)",
+   "demande_confirmee": "sans objet"
+  }
  }
 ]

@@ -16,7 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from denicheur import chaine, dataforseo, lecteur, validation  # noqa: E402
 
 DEBUT = time.monotonic()
-BUDGET_S = 38 * 60                 # le lancement est coupé à 58 min : on s'arrête de soi-même bien avant
+BUDGET_S = 46 * 60                 # le lancement est coupé à 58 min : on s'arrête de soi-même bien avant
 MAX_IDEFIX = int(os.environ.get("CHAINE_MAX_IDEFIX", "170"))
 MAX_AMIGO = int(os.environ.get("CHAINE_MAX_AMIGO", "45"))
 SOURCES_FR = ("dealabs-nouveaux", "dealabs-tendance", "dealabs-hot", "telegram:promorat", "telegram:bonsplans", "ldlc-promos")
@@ -54,6 +54,32 @@ while any(par_source.values()) and len(melange) < MAX_IDEFIX:
         if par_source[s] and len(melange) < MAX_IDEFIX:
             melange.append(par_source[s].pop(0))
 cands = melange
+
+# Magasins vus par le PC de David (listes de promos) : tant que le PC ne relit pas lui-même les fiches (code EAN),
+# le cloud tente de lire la fiche de chaque produit. Les sites qui bloquent le cloud sont comptés dans les rejets.
+MAX_PC_CLOUD = int(os.environ.get("CHAINE_MAX_PC", "150"))
+HORS_NEUF = ("occasion", "warehouse", "easycash", "leboncoin", "stockx", "emmaus", "rebuy", "vinted", "agorastore", "tendances",
+             "classement", "rank", "tiktok", "encheres", "prive", "bazarchic", "showroom", "veepee", "privalia", "idealo", "ledenicheur")
+_pc = lire("data/pc/annonces.json", {})
+_jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+_par = collections.defaultdict(list)
+for a in _pc.get("annonces", []):
+    if (a.get("date") or "")[:10] != _jour or a.get("ean") or any(m in (a.get("source") or "") for m in HORS_NEUF):
+        continue
+    if not isinstance(a.get("prix"), (int, float)) or not (chaine.PRIX_MIN <= a["prix"] <= chaine.PRIX_MAX) or not str(a.get("lien") or "").startswith("http"):
+        continue
+    if a.get("etat") not in (None, "neuf") or a["lien"] in vus:
+        continue
+    vus.add(a["lien"])
+    _par[a["source"]].append({"denicheur": "Idéfix", "titre": a["titre"], "prix_annonce": a["prix"], "lien": a["lien"], "source": a["source"],
+                              "vu": a.get("date"), "lu_par": "PC (liste) + cloud (fiche)"})
+_pc_cloud = []
+while any(_par.values()) and len(_pc_cloud) < MAX_PC_CLOUD:
+    for src in list(_par):
+        if _par[src] and len(_pc_cloud) < MAX_PC_CLOUD:
+            _pc_cloud.append(_par[src].pop(0))
+cands += _pc_cloud
+print(f"Magasins du PC : {len(_pc_cloud)} produits neufs du jour ajoutés aux candidats (collecte du {_pc.get('maj')})")
 print(f"Idéfix : {len(cands)} candidats (sur {len(vus)} bons plans français du jour entre {chaine.PRIX_MIN} et {chaine.PRIX_MAX} €)")
 
 for i, c in enumerate(cands):
@@ -266,7 +292,9 @@ for c in affaires:
 
 # ================================================================== résultat
 ent = collections.OrderedDict()
-ent["Idéfix — bons plans français du jour examinés"] = len(cands)
+ent["Idéfix — candidats examinés (bons plans + magasins du PC)"] = len(cands)
+ent["   dont produits des magasins du PC"] = len(_pc_cloud)
+ent["   dont produits du PC identifiés par code, prix confirmé"] = sum(1 for c in _pc_cloud if c.get("ean") and c.get("prix_page") and not c.get("rejet"))
 ent["Idéfix — lien du marchand trouvé"] = sum(1 for c in cands if c.get("lien_marchand"))
 ent["Idéfix — produit identifié par code EAN, prix confirmé"] = len(identifies)
 ent["   dont fiches lues par le PC (magasins fermés au cloud)"] = nb_pc

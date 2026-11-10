@@ -95,6 +95,23 @@ class ConcordanceTests(unittest.TestCase):
     def test_autre_modele_de_la_meme_marque(self):
         self.assertFalse(chaine.concorde("Tineco A30S Aspirateur Balai", "Tineco Floor One S5 aspirateur laveur", "Tineco"))
 
+    def test_faux_jumeaux_vus_le_10_11(self):
+        for ref, google, marque in [
+            ("Tineco A30S Aspirateur Balai sans Fil, 160W d'Aspiration", "Aspirateur balai Tineco Floor One S3 Breeze laveur", "Tineco"),
+            ("REDMI Note 17 5G, Smartphone 6+128 Go, Noir", "Housse Xiaomi Redmi Note 17 Pro 5G Cuir Folio Shield", "REDMI"),
+            ("LEGO Icons Le télescope Spatial Hubble 11382", "Kit d'éclairage LED pour LEGO Icons Télescope Spatial Hubble", "LEGO"),
+            ("PETLIBRO Distributeur Croquettes Chat Automatique, Wi-Fi 2,4 GHz, 2L, Noir", "Petlibro Granary Distributeur Automatique", "PETLIBRO"),
+            ("CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 Lot", "GP Batteries PILE LITHIUM CR123A", "Keenstone"),
+        ]:
+            self.assertFalse(chaine.concorde(ref, google, marque), google)
+        self.assertTrue(chaine.concorde("LEGO Technic Supercar Lamborghini Revuelto 42214", "42214 LEGO Technic Lamborghini Revuelto Supercar", "LEGO"))
+
+    def test_preuve_par_code(self):
+        r = [{"marchand": "idealo", "total": 150, "gros": True}]
+        self.assertEqual(chaine.verdict(100, r, True, REGLES, preuve_code=True)["feu"], "vert")
+        self.assertEqual(chaine.verdict(100, r, True, REGLES)["feu"], "orange")
+        self.assertEqual(chaine.verdict(100, [{"marchand": "idealo", "total": 101, "gros": True}], True, REGLES, preuve_code=True)["feu"], "rouge")
+
     def test_requete_google_par_nom_court(self):
         self.assertEqual(chaine.requete_google("Tineco A30S Aspirateur Balai sans Fil, 160W d'Aspiration, 60Min"), "Tineco A30S Aspirateur Balai sans Fil")
         self.assertEqual(chaine.requete_google("Multisoup Blender Chauffant 850W (noir)", "Moulinex"), "Moulinex Multisoup Blender Chauffant 850W")

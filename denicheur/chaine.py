@@ -204,21 +204,40 @@ def _mots(t):
     return set(re.findall(r"[a-z0-9]{3,}", meme_produit._n(t or ""))) - VIDES
 
 
+ACCESSOIRE = re.compile(r"\b(housse|coque|etui|kit|cable|piece|pieces|remplacement|compatible|coussinets?|support|protection|"
+                        r"minifigs?|eclairage|accessoire|chargeur|batterie de rechange|filtre|sac|brossettes?|cartouches?|"
+                        r"telecommande|verre trempe|film|adaptateur|camera supplementaire)\b")
+
+
+def _refs(t):
+    """Références de modèle : mots contenant un chiffre (a30s, t50, 42214, 16gb)."""
+    mots = re.findall(r"[a-z0-9]{2,}", meme_produit._n(t or ""))
+    # « 850w », « 13000pa », « 60min », « 16go » sont des caractéristiques, pas des références de modèle
+    carac = re.compile(r"\d+(w|l|cl|ml|go|gb|tb|to|mah|pa|kpa|mm|cm|m|min|h|kg|g|db|mhz|hz|v|pcs|k|x|eur|en|in)?")
+    return {x for x in mots if re.search(r"\d", x) and not (carac.fullmatch(x) and not re.fullmatch(r"\d{4,6}", x))}
+
+
 def concorde(ref, titre, marque=None):
-    """La fiche Google est-elle le même produit que la fiche du marchand ? Google répond parfois n'importe quoi à un code
-    (10/11 : un casque HyperX pour le code d'un aspirateur Tineco). Il faut : pas de contradiction mécanique, la MARQUE
-    dans les deux titres, et soit une référence de modèle commune (mot avec un chiffre : a30s, l10s, 75379), soit,
-    quand la fiche Google ne cite aucune référence, au moins deux autres mots en commun."""
+    """La fiche Google est-elle le même produit que la fiche du marchand ? Simple TRI, jamais une preuve (la preuve est
+    le code EAN chez idealo). Il faut : pas de contradiction mécanique, la MARQUE dans les deux titres, aucun mot
+    d'accessoire en plus (housse, kit, câble…), et les références de modèle de la fiche Google toutes présentes dans
+    le titre du marchand. Deux titres sans aucune référence : tous les mots de la fiche Google doivent être dans le titre du marchand."""
     if not ref or not titre or meme_produit.mecanique(ref, titre)[0] is False:
         return False
+    na, nb = meme_produit._n(ref), meme_produit._n(titre)
+    if ACCESSOIRE.search(nb) and not ACCESSOIRE.search(na):
+        return False
     a, b = _mots(ref), _mots(titre)
-    m = _mots(marque) or set(list(re.findall(r"[a-z0-9]{3,}", meme_produit._n(ref)))[:1])
+    m = _mots(marque) or set(list(re.findall(r"[a-z0-9]{3,}", na))[:1])
     if not m or not (m & b):
         return False
-    refs_a, refs_b = {x for x in a if re.search(r"\d", x)}, {x for x in b if re.search(r"\d", x)}
-    if refs_b:
-        return bool(refs_a & refs_b)
-    return len((a & b) - m) >= 2
+    ra, rb = _refs(ref), _refs(titre)
+    if rb:
+        return bool(ra) and rb <= ra
+    if ra:
+        return False   # le marchand cite un modèle précis, Google non : impossible de dire que c'est le même
+    reste_b = b - m
+    return len(reste_b) >= 2 and reste_b <= a   # tous les mots de la fiche Google sont dans le titre du marchand
 
 
 def requete_google(titre, marque=None):
@@ -276,8 +295,29 @@ def marche_google(eans, titres, marques=None):
     return out
 
 
+# ------------------------------------------------------------------ idealo par code (la preuve)
+def idealo_par_code(ean, nom=None):
+    """Prix neuf le plus bas de France pour CE code EAN, lu chez idealo (robot Apify, ≈ 0,01 $ par recherche).
+    On cherche par le code, puis par le nom ; dans les deux cas une fiche n'est acceptée que si son code EAN est
+    exactement celui du produit. Renvoie {prix_min, nb_offres, lien, titre} ou {'raison': …}."""
+    from . import apify
+    apify.CONTEXTE["denicheur"] = "A"
+    vu = False
+    for q in (ean, nom):
+        if not q:
+            continue
+        items = apify.lancer("idealo", {"searchQuery": q, "country": "FR", "maxItems": 3, "fetchOffers": False}, maxi=3)
+        if items is None:
+            return {"raison": "idealo indisponible (plafond du jour ou robot en panne)"}
+        vu = vu or bool(items)
+        for i in items:
+            if isinstance(i, dict) and ean13(i.get("gtin")) == ean and isinstance(i.get("price"), (int, float)) and i["price"] > 0:
+                return {"prix_min": float(i["price"]), "nb_offres": i.get("offerCount"), "lien": i.get("url"), "titre": i.get("title")}
+    return {"raison": "idealo a des fiches proches mais aucune avec ce code" if vu else "produit absent d'idealo"}
+
+
 # ------------------------------------------------------------------ verdict
-def verdict(achat, refs, prix_confirme=True, regles=None, ventes_30j=None):
+def verdict(achat, refs, prix_confirme=True, regles=None, ventes_30j=None, preuve_code=False):
     """achat : prix d'achat confirmé. refs : [{marchand, total, gros}] = les AUTRES marchands français, neuf, port compris.
     Seuils de David : ≥ 10 vendeurs dont un gros site à notre prix = on passe ; 5-9 = seulement si ≥ 15 % moins cher ;
     ≤ 4 et moins cher = bon. Vert = marge nette ≥ 20 €, prix confirmé, deux marchands d'accord sur le prix de référence."""
@@ -313,7 +353,9 @@ def verdict(achat, refs, prix_confirme=True, regles=None, ventes_30j=None):
             v["manque"].append(f"seulement {v['ecart_pct']} % sous le marché")
         if not prix_confirme:
             v["manque"].append("prix d'achat à confirmer sur la fiche")
-        if len(refs) < 2:
+        if preuve_code:
+            pass   # la référence est le prix le plus bas de France pour CE code (idealo) : pas besoin d'un second avis
+        elif len(refs) < 2:
             v["manque"].append("un seul marchand de référence")
         elif refs[1]["total"] > ref["total"] * 1.25:
             v["manque"].append("les deux marchands de référence ne sont pas d'accord (écart > 25 %)")

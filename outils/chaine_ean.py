@@ -222,6 +222,40 @@ for c in finalistes:
     else:
         c["verdict"].setdefault("manque", []).append(f"fiche du marchand : {f.get('raison') or 'produit pas neuf'}")
 
+# PREUVE PAR CODE : tout ce qui n'est pas rouge après le tri est recherché chez idealo PAR SON CODE EAN.
+# Vert seulement si idealo (même code) confirme l'écart ; sinon orange « non prouvé par code ».
+MAX_IDEALO = int(os.environ.get("CHAINE_MAX_IDEALO", "24"))
+a_prouver = sorted([c for c in affaires if c["verdict"]["feu"] != "rouge"], key=lambda c: -(c["verdict"].get("marge_nette") or 0))
+nb_idealo = 0
+for c in a_prouver:
+    if nb_idealo >= MAX_IDEALO or reste() < 60:
+        c["verdict"]["manque"].append("non recherché chez idealo (limite du passage)")
+        c["verdict"]["feu"] = "orange"
+        continue
+    nb_idealo += 1
+    try:
+        i = chaine.idealo_par_code(c["ean"], chaine.requete_google(c.get("titre_fiche") or c.get("titre"), (c.get("keepa") or {}).get("marque")))
+    except Exception as e:
+        i = {"raison": f"idealo en erreur ({type(e).__name__})"}
+    c["idealo"] = i
+    avant = c["verdict"]
+    if not i.get("prix_min"):
+        avant["manque"].append(f"écart non prouvé par code : {i.get('raison')}")
+        avant["feu"] = "orange"
+        continue
+    k = c.get("keepa") or {}
+    refs = [{"marchand": f"idealo, moins cher de France pour ce code ({i.get('nb_offres') or '?'} offres)", "total": i["prix_min"], "gros": True, "lien": i.get("lien")}]
+    if "amazon" in (c.get("domaine") or "") and k.get("moyenne_90j"):
+        refs.append({"marchand": "Amazon.fr (prix habituel sur 90 jours)", "total": k["moyenne_90j"], "gros": False, "lien": k.get("lien")})
+    confirme = not any("confirmer sur la fiche" in m or "fiche du marchand" in m for m in avant.get("manque", []))
+    v = chaine.verdict(c["achat"], refs, confirme, regles, avant.get("ventes_30j"), preuve_code=True)
+    v["tri_google"] = {x: avant.get(x) for x in ("ref_min", "ref_ou", "ecart_pct", "marge_nette")}
+    if v["feu"] != "rouge" and chaine.GROS.search(c.get("domaine") or "") and "amazon" in (c.get("domaine") or ""):
+        v["manque"].append("promo Amazon visible de tous : seulement en achat de stock, à revendre une fois la promo finie")
+        v["feu"] = "orange"
+    c["verdict"], c["refs"] = v, refs
+print(f"idealo par code : {nb_idealo} recherches, {sum(1 for c in a_prouver if (c.get('idealo') or {}).get('prix_min'))} fiches au bon code")
+
 # étoile : le même code sort vert/orange des deux côtés
 bons = collections.defaultdict(set)
 for c in affaires:
@@ -239,6 +273,8 @@ ent["   dont fiches lues par le PC (magasins fermés au cloud)"] = nb_pc
 ent["Idéfix — marché français trouvé pour ce code"] = sum(1 for c in identifies if (c["verdict"].get("ref_min")))
 ent["Amigo — produits qui se vendent examinés"] = len(amigo)
 ent["Amigo — au moins deux marchands français pour ce code"] = sum(1 for c in amigo if c.get("achat"))
+ent["Preuve par code — recherches idealo"] = nb_idealo
+ent["Preuve par code — fiche idealo au bon code"] = sum(1 for c in a_prouver if (c.get("idealo") or {}).get("prix_min"))
 for d in ("Idéfix", "Amigo"):
     for feu in ("vert", "orange", "rouge"):
         ent[f"{d} — {feu}"] = sum(1 for c in affaires if c["denicheur"] == d and c["verdict"]["feu"] == feu)

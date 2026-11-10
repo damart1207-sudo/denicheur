@@ -47,8 +47,17 @@ def mots(t):
 
 def construire():
     p = lire("data/dernier_passage.json", {})
+    if not p.get("candidats"):
+        # Passage sans nouvelle affaire (toutes déjà vues) : montrer le dernier passage qui en a, avec son audit.
+        dossier = os.path.join(RACINE, "data/passages")
+        for nom in sorted(os.listdir(dossier), reverse=True) if os.path.isdir(dossier) else []:
+            q = lire(f"data/passages/{nom}", {})
+            if q.get("candidats"):
+                p = q
+                break
     audits = sorted(os.listdir(os.path.join(RACINE, "data/audits"))) if os.path.isdir(os.path.join(RACINE, "data/audits")) else []
-    audit = lire(f"data/audits/{audits[-1]}", {}) if audits and audits[-1].startswith(p.get("horodatage", "x")) else {}
+    du_passage = [a for a in audits if a.startswith(p.get("horodatage", "x"))]
+    audit = lire(f"data/audits/{du_passage[-1]}", {}) if du_passage else {}
     verdicts = {v["id"]: v for v in audit.get("verdicts", [])}
     il_y_a_24h = (datetime.now(timezone.utc) - timedelta(hours=24)).isoformat(timespec="minutes")
 

@@ -1,21 +1,21 @@
 {
- "maj": "10/11/2026 20:26",
+ "maj": "10/11/2026 20:48",
  "entonnoir": {
   "Idéfix — bons plans français du jour examinés": 84,
-  "Idéfix — lien du marchand trouvé": 83,
-  "Idéfix — produit identifié par code EAN, prix confirmé": 42,
+  "Idéfix — lien du marchand trouvé": 84,
+  "Idéfix — produit identifié par code EAN, prix confirmé": 43,
   "   dont fiches lues par le PC (magasins fermés au cloud)": 0,
-  "Idéfix — marché français trouvé pour ce code": 41,
+  "Idéfix — marché français trouvé pour ce code": 42,
   "Amigo — produits qui se vendent examinés": 45,
-  "Amigo — au moins deux marchands français pour ce code": 11,
-  "Preuve par code — recherches idealo": 8,
-  "Preuve par code — fiche idealo au bon code": 0,
+  "Amigo — au moins deux marchands français pour ce code": 12,
+  "Preuve par code — recherches idealo": 9,
+  "Preuve par code — fiche idealo au bon code": 2,
   "Idéfix — vert": 0,
   "Idéfix — orange": 5,
-  "Idéfix — rouge": 37,
+  "Idéfix — rouge": 38,
   "Amigo — vert": 0,
-  "Amigo — orange": 3,
-  "Amigo — rouge": 42
+  "Amigo — orange": 2,
+  "Amigo — rouge": 43
  },
  "rejets_identification": {
   "aucune donnée produit dans la page": 19,
@@ -24,28 +24,28 @@
   "pas de code EAN dans la page": 4,
   "lien Amazon sans fiche produit": 2,
   "pas d'offre neuve sur Amazon en ce moment": 1,
-  "Amazon hors France": 1,
-  "lien du marchand introuvable": 1
+  "Amazon hors France": 1
  },
  "raisons_rouges": {
-  "fiche Google non concordante": 28,
-  "pas moins cher que le marché": 26,
-  "marge nette trop faible": 18,
-  "moins de deux marchands français pour ce code": 6,
+  "pas moins cher que le marché": 27,
+  "fiche Google non concordante": 24,
+  "marge nette trop faible": 20,
+  "produit introuvable sur Google Shopping": 5,
+  "moins de deux marchands français pour ce code": 4,
   "aucun autre marchand français trouvé pour ce code": 1
  },
  "marchands": {
   "amazon.fr": {
-   "vus": 33,
-   "identifies": 29
+   "vus": 32,
+   "identifies": 28
   },
   "ldlc.com": {
    "vus": 14,
    "identifies": 10
   },
   "amazon.com": {
-   "vus": 7,
-   "identifies": 3
+   "vus": 8,
+   "identifies": 4
   },
   "cdiscount.com": {
    "vus": 5,
@@ -55,7 +55,7 @@
    "vus": 3,
    "identifies": 0
   },
-  "aliexpress.com": {
+  "login.aliexpress.us": {
    "vus": 2,
    "identifies": 0
   },
@@ -115,6 +115,10 @@
    "vus": 1,
    "identifies": 0
   },
+  "boutique.orange.fr": {
+   "vus": 1,
+   "identifies": 1
+  },
   "joybuy.fr": {
    "vus": 1,
    "identifies": 0
@@ -129,99 +133,6 @@
   }
  },
  "affaires": [
-  {
-   "denicheur": "Amigo",
-   "titre": "Vengeance RGB Pro 2 x 8 Go DDR4 Jusqu'à 3200MHz Cas 16 – Noir",
-   "titre_fiche": "Vengeance RGB Pro 2 x 8 Go DDR4 Jusqu'à 3200MHz Cas 16 – Noir",
-   "ean": "0843591075381",
-   "asin": "B07D1XCKWW",
-   "ventes_30j": 67,
-   "vendeurs_amazon": 4,
-   "amazon_index": 203.99,
-   "source": "ventes Amazon (Keepa)",
-   "fiche_google": "Corsair Vengeance RGB PRO SL DDR4",
-   "marche_raison": null,
-   "google_refuse": null,
-   "achat": 46.86,
-   "marchand": "Shoppydeals UK - ShoppyDeals France",
-   "lien_marchand": "https://www.shoppydeals.fr/ddr4-16gb-pc-3600-cl18-corsair-kit-2x8gb-vengeance-rgb-cmh16gx4m2d3600c18-corsair-shoppydeals-fr-2/",
-   "domaine": "shoppydeals.fr",
-   "refs": [
-    {
-     "marchand": "PC&Co",
-     "total": 189.9,
-     "gros": false,
-     "lien": "https://pcandco.fr/ram/1082-corsair-vengeance-rgb-pro-d4-3600-16g-2x8g-cmh16gx4m2d3600c18-0840006631989.html"
-    },
-    {
-     "marchand": "Amazon.fr",
-     "total": 203.99,
-     "gros": true,
-     "lien": "https://www.amazon.fr/dp/B07D1XCKWW"
-    },
-    {
-     "marchand": "Rue du Commerce Marketplace",
-     "total": 541.02,
-     "gros": true,
-     "lien": "https://www.rueducommerce.fr/p/r24060014424.html"
-    },
-    {
-     "marchand": "Darty",
-     "total": 541.12,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC346869024.html?ofmp=1561356617&dartycid=sem_free-listing_MP-informatique_composants-pc"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 541.12,
-     "gros": true,
-     "lien": "https://www.fnac.com/mp46869024/CORSAIR-Vengeance-RGB-PRO-SL-DDR4-kit-16-Go-2-x-8-Go-DIMM-288-broches-3600-MHz-PC4-28800-CL18-1-35-V-memoire-sans-tampon-non-ECC-noir/w-4?oref=6d2ca83b-7e0d-b01f-3d4d-d37b4c723fa8&Origin=CMP_GOOGLE_FL_MICRO"
-    },
-    {
-     "marchand": "Carrefour",
-     "total": 569.84,
-     "gros": true,
-     "lien": "https://www.carrefour.fr/p/memoire-pc-ddr4-vengeance-rgb-pro-16go-2x8go-3600mhz-cas-18-black-cmh16gx4m2d3600c18--0840006631989?s=2849"
-    }
-   ],
-   "verdict": {
-    "achat": 46.86,
-    "nb_vendeurs": 6,
-    "ventes_30j": 67,
-    "manque": [
-     "prix d'achat à confirmer sur la fiche",
-     "écart anormal (75.3 %) : à vérifier à la main",
-     "fiche du marchand : le code attendu n'est pas dans la page",
-     "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
-    ],
-    "feu": "orange",
-    "ref_min": 189.9,
-    "ref_ou": "PC&Co",
-    "ref_lien": "https://pcandco.fr/ram/1082-corsair-vengeance-rgb-pro-d4-3600-16g-2x8g-cmh16gx4m2d3600c18-0840006631989.html",
-    "ref_mediane": 541.07,
-    "ecart_pct": 75.3,
-    "prix_vente": 184.2,
-    "marge_nette": 106.64,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 184.2,
-     "cout_achat": 46.86,
-     "frais_canal": 3.01,
-     "prelevements": 24.68,
-     "provision": 3.0,
-     "marge_nette": 106.64,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": []
-   },
-   "fiche_page": {
-    "raison": "le code attendu n'est pas dans la page"
-   },
-   "idealo": {
-    "raison": "idealo a des fiches proches mais aucune avec ce code"
-   },
-   "etoile": false
-  },
   {
    "denicheur": "Idéfix",
    "titre": "Redmi Note 17 5G, Smartphone 6+128 Go Noir 279.99 au lieu de 353€ https://www.amazon.fr/dp/B0H4H1SZ8",
@@ -242,7 +153,7 @@
     "prix_neuf": 299.99,
     "prix_amazon": 299.99,
     "prix_tiers": 299.99,
-    "moyenne_90j": 422.85,
+    "moyenne_90j": 422.82,
     "plus_bas_90j": 279.99,
     "occasion": 229.59,
     "rang_ventes": 59,
@@ -251,7 +162,7 @@
     "ventes_estimees_30j": 29,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0H4H1SZ8K",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "6939093039526"
     ],
@@ -262,14 +173,9 @@
    "prix_page": 299.99,
    "achat": 299.99,
    "note_prix": "le bon plan annonçait 279.99 € (code promo, carte de fidélité ou remboursement différé ?) ; prix réellement affiché sur la fiche : 299.99 €",
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Xiaomi Redmi 17 5G 256GB",
-    "Xiaomi Redmi Note 17 4G 256GB",
-    "Xiaomi Redmi Note 17 4G 256GB",
-    "Xiaomi Redmi Note 17 5G - 6GB+128GB - Noir"
-   ],
+   "fiche_google": "Xiaomi Redmi Note 17 5G; 6 + 128 GB Smartphone AMOLED Screen 6.99 inches 120 Hz, 7700 mAh Battery, 45 W Fast Charging, Black; with Charger",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "achat": 299.99,
     "nb_vendeurs": 1,
@@ -280,21 +186,21 @@
      "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
     ],
     "feu": "orange",
-    "ref_min": 422.85,
+    "ref_min": 422.82,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0H4H1SZ8K",
-    "ref_mediane": 422.85,
+    "ref_mediane": 422.82,
     "ecart_pct": 29.1,
-    "prix_vente": 410.16,
-    "marge_nette": 45.81,
+    "prix_vente": 410.14,
+    "marge_nette": 45.79,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 410.16,
+     "prix_vente": 410.14,
      "cout_achat": 299.99,
      "frais_canal": 6.4,
      "prelevements": 54.96,
      "provision": 3.0,
-     "marge_nette": 45.81,
+     "marge_nette": 45.79,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": []
@@ -302,7 +208,7 @@
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 422.85,
+     "total": 422.82,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0H4H1SZ8K"
     }
@@ -332,7 +238,7 @@
     "prix_neuf": 166.46,
     "prix_amazon": null,
     "prix_tiers": 166.46,
-    "moyenne_90j": 248.97,
+    "moyenne_90j": 248.95,
     "plus_bas_90j": 166.46,
     "occasion": null,
     "rang_ventes": 12394,
@@ -341,7 +247,7 @@
     "ventes_estimees_30j": 9,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B08P9QZ2LG",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "4260663280973"
     ],
@@ -356,8 +262,8 @@
    "google_refuse": [
     "Ensemble poussette combinée 4 en 1 KESSER avec nacelle, siège poussette, pneus en caoutchouc plein, sac à langer, protection contre la pluie,",
     "KESSER Loops : Poussette combinée 4 en 1 pour enfants jusqu'à 4 ans, comprenant une nacelle, un siège auto et un sac de couchage",
-    "Poussette combinée trio KESSER 3en1 Landau + siège auto + siège sport",
-    "Poussette combinée 3en1 KESSER Trio landau complet Poignée 12 positions"
+    "poussette multifonctionnelle 4 en 1 pliable avec siège auto landau Portable bébé",
+    "Poussette combinée trio KESSER 3en1 Landau + siège auto + siège sport"
    ],
    "verdict": {
     "achat": 166.46,
@@ -369,21 +275,21 @@
      "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
     ],
     "feu": "orange",
-    "ref_min": 248.97,
+    "ref_min": 248.95,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B08P9QZ2LG",
-    "ref_mediane": 248.97,
+    "ref_mediane": 248.95,
     "ecart_pct": 33.1,
-    "prix_vente": 241.5,
-    "marge_nette": 35.81,
+    "prix_vente": 241.48,
+    "marge_nette": 35.79,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 241.5,
+     "prix_vente": 241.48,
      "cout_achat": 166.46,
      "frais_canal": 3.87,
      "prelevements": 32.36,
      "provision": 3.0,
-     "marge_nette": 35.81,
+     "marge_nette": 35.79,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": []
@@ -391,7 +297,7 @@
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 248.97,
+     "total": 248.95,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B08P9QZ2LG"
     }
@@ -458,7 +364,7 @@
      "prix d'achat à confirmer sur la fiche",
      "les deux marchands de référence ne sont pas d'accord (écart > 25 %)",
      "fiche du marchand : le code attendu n'est pas dans la page",
-     "écart non prouvé par code : idealo indisponible (plafond du jour ou robot en panne)"
+     "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
     ],
     "feu": "orange",
     "ref_min": 89.6,
@@ -484,7 +390,7 @@
     "raison": "le code attendu n'est pas dans la page"
    },
    "idealo": {
-    "raison": "idealo indisponible (plafond du jour ou robot en panne)"
+    "raison": "idealo a des fiches proches mais aucune avec ce code"
    },
    "etoile": false
   },
@@ -508,7 +414,7 @@
     "prix_neuf": 359.9,
     "prix_amazon": 359.9,
     "prix_tiers": 359.9,
-    "moyenne_90j": 456.98,
+    "moyenne_90j": 456.95,
     "plus_bas_90j": 359.9,
     "occasion": null,
     "rang_ventes": 171,
@@ -517,7 +423,7 @@
     "ventes_estimees_30j": 29,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0FL7MGQXH",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "8435782180343"
     ],
@@ -527,7 +433,7 @@
    "ean": "8435782180343",
    "prix_page": 359.9,
    "achat": 359.9,
-   "fiche_google": "Cecotec Lave-vaisselle Bolero Aguazero 6620 60 cm 15 couverts",
+   "fiche_google": "Cecotec Lave-vaisselle Bolero Aguazero 6620 Full-BI",
    "marche_raison": null,
    "google_refuse": null,
    "verdict": {
@@ -540,21 +446,21 @@
      "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
     ],
     "feu": "orange",
-    "ref_min": 456.98,
+    "ref_min": 456.95,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0FL7MGQXH",
-    "ref_mediane": 489.0,
+    "ref_mediane": 539.0,
     "ecart_pct": 21.2,
-    "prix_vente": 443.27,
-    "marge_nette": 14.07,
+    "prix_vente": 443.24,
+    "marge_nette": 14.05,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 443.27,
+     "prix_vente": 443.24,
      "cout_achat": 359.9,
      "frais_canal": 6.9,
-     "prelevements": 59.4,
+     "prelevements": 59.39,
      "provision": 3.0,
-     "marge_nette": 14.07,
+     "marge_nette": 14.05,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": []
@@ -562,19 +468,19 @@
    "refs": [
     {
      "marchand": "Cecotec FR",
-     "total": 489.0,
+     "total": 539.0,
      "gros": false,
-     "lien": "https://storececotec.fr/fr/lave-vaisselle/bolero-aguazero-6620?srsltid=AYCX9vLQWWKfv5qcv4DKSb2Dm4XQYb7M0Ob6kCr_4UcpmfOUHBmrsBUZ4s4"
+     "lien": "https://storececotec.fr/fr/lave-vaisselle/bolero-aguazero-6620-full-bi-matt-black-glass?srsltid=AYCX9vJSRZKqxxRbJrbjfHjoDqAz_Y4wqRtldT3zSEKIr9W7qslPIvaqMc8"
     },
     {
      "marchand": "Carrefour",
-     "total": 747.07,
+     "total": 886.81,
      "gros": true,
-     "lien": "https://www.carrefour.fr/p/cecotec-lave-vaisselle-compact-de-60-cm-bolero-aguazero-6620-c-1850w-15-couverts-8-programmes-moteur-inverter-ecran-8435782180329?s=6540"
+     "lien": "https://www.carrefour.fr/p/cecotec-lave-vaisselle-integrable-60cm-bolero-aguazero-6620-full-bi-black-glass-c-1850w-15-couverts-8-programmes-8435782180404?s=3154"
     },
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 456.98,
+     "total": 456.95,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0FL7MGQXH"
     }
@@ -606,7 +512,7 @@
      "marchand": "PcComponentes FR",
      "total": 129.0,
      "gros": false,
-     "lien": "https://www.pccomponentes.fr/distributeur-de-nourriture-pour-animaux-petlibro-granary-avec-camera-et-double-bol-5l?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vK5yTbC8P0CICjL3CvRpReCG8vpkRW-6ZW22Bx77OAaTPgUyJmFqpQ"
+     "lien": "https://www.pccomponentes.fr/distributeur-de-nourriture-pour-animaux-petlibro-granary-avec-camera-et-double-bol-5l?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vLg7VcDBM4iw_dJvwGUHeI4SL0IaJBv5q0uuHtEKyepk8yC0Thb0TY"
     }
    ],
    "verdict": {
@@ -622,7 +528,7 @@
     "feu": "orange",
     "ref_min": 129.0,
     "ref_ou": "PcComponentes FR",
-    "ref_lien": "https://www.pccomponentes.fr/distributeur-de-nourriture-pour-animaux-petlibro-granary-avec-camera-et-double-bol-5l?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vK5yTbC8P0CICjL3CvRpReCG8vpkRW-6ZW22Bx77OAaTPgUyJmFqpQ",
+    "ref_lien": "https://www.pccomponentes.fr/distributeur-de-nourriture-pour-animaux-petlibro-granary-avec-camera-et-double-bol-5l?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vLg7VcDBM4iw_dJvwGUHeI4SL0IaJBv5q0uuHtEKyepk8yC0Thb0TY",
     "ref_mediane": 129.0,
     "ecart_pct": 30.2,
     "prix_vente": 125.13,
@@ -664,7 +570,7 @@
     "prix_neuf": 39.08,
     "prix_amazon": 39.08,
     "prix_tiers": 39.08,
-    "moyenne_90j": 65.38,
+    "moyenne_90j": 65.37,
     "plus_bas_90j": 39.08,
     "occasion": 38.69,
     "rang_ventes": 18737,
@@ -673,7 +579,7 @@
     "ventes_estimees_30j": 17,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0D7CSK75M",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5056583017121"
     ],
@@ -697,21 +603,21 @@
      "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
     ],
     "feu": "orange",
-    "ref_min": 65.38,
+    "ref_min": 65.37,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0D7CSK75M",
     "ref_mediane": 94.89,
     "ecart_pct": 40.2,
-    "prix_vente": 63.42,
-    "marge_nette": 11.64,
+    "prix_vente": 63.41,
+    "marge_nette": 11.63,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 63.42,
+     "prix_vente": 63.41,
      "cout_achat": 39.08,
      "frais_canal": 1.2,
      "prelevements": 8.5,
      "provision": 3.0,
-     "marge_nette": 11.64,
+     "marge_nette": 11.63,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": []
@@ -727,17 +633,17 @@
      "marchand": "ManoMano.fr",
      "total": 94.98,
      "gros": true,
-     "lien": "https://www.manomano.fr/rail-de-guidage-2606?model_id=90619277&srsltid=AYCX9vLegJECS9-t1i58CaEUz14TdIKNFpgnLRwKh0xQTt1KS3N39k2zgKc"
+     "lien": "https://www.manomano.fr/rail-de-guidage-2606?model_id=90619277&srsltid=AYCX9vJPq7UF_dG3-B6q0deFms5RwYznSotUtAdj2McgKfGwBdLqXsgw3LE"
     },
     {
      "marchand": "Verkter France",
      "total": 124.93,
      "gros": false,
-     "lien": "https://www.verkter.fr/rail-de-guidage-evolution-st1400-g2-2x700-mm.html?srsltid=AYCX9vIqsAoVA9lhYmYS2jCZwIWp6gmp-Gn7HrvQtj8TwhUC31wlcKbBDK8"
+     "lien": "https://www.verkter.fr/rail-de-guidage-evolution-st1400-g2-2x700-mm.html?srsltid=AYCX9vLPrIkbwmioYImiSDvuKP4krU4eei6jqugl_97Z56lfppKnl85HKWM"
     },
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 65.38,
+     "total": 65.37,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0D7CSK75M"
     }
@@ -767,7 +673,7 @@
     "prix_neuf": 34.99,
     "prix_amazon": 34.99,
     "prix_tiers": 34.99,
-    "moyenne_90j": 59.29,
+    "moyenne_90j": 59.27,
     "plus_bas_90j": 34.99,
     "occasion": null,
     "rang_ventes": 1703,
@@ -776,7 +682,7 @@
     "ventes_estimees_30j": 30,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0H7XJPNJD",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "8720689060912"
     ],
@@ -787,8 +693,13 @@
    "prix_page": 34.99,
    "achat": 34.99,
    "fiche_google": null,
-   "marche_raison": "produit introuvable sur Google Shopping",
-   "google_refuse": [],
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Peigne de tondeuse - Rasoir, tondeuse - 422203630691 - Philips",
+    "Philips Norelco Rasoir tête Pro série 7000, utilisation sèche ou humide | Rasoir électrique pour homme et femme, tête flexible à 360°, lames",
+    "Philips Capot de protection AquaTouch/PowerTouchCRP154/01",
+    "Pièce détachée rasoir Changm Hq9 (Hq8140/9070/8160/Pt920) Couverture de maille Blade mesh cover Compatible Philips"
+   ],
    "verdict": {
     "achat": 34.99,
     "nb_vendeurs": 1,
@@ -797,24 +708,24 @@
      "marge nette sous 20 €",
      "un seul marchand de référence",
      "promo chez un gros site visible de tous : seulement en achat de stock, à revendre une fois la promo finie",
-     "écart non prouvé par code : idealo a des fiches proches mais aucune avec ce code"
+     "écart non prouvé par code : idealo répond plusieurs fiches à ce code"
     ],
     "feu": "orange",
-    "ref_min": 59.29,
+    "ref_min": 59.27,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0H7XJPNJD",
-    "ref_mediane": 59.29,
+    "ref_mediane": 59.27,
     "ecart_pct": 41.0,
-    "prix_vente": 57.51,
-    "marge_nette": 10.7,
+    "prix_vente": 57.49,
+    "marge_nette": 10.68,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 57.51,
+     "prix_vente": 57.49,
      "cout_achat": 34.99,
      "frais_canal": 1.11,
-     "prelevements": 7.71,
+     "prelevements": 7.7,
      "provision": 3.0,
-     "marge_nette": 10.7,
+     "marge_nette": 10.68,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": []
@@ -822,13 +733,13 @@
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 59.29,
+     "total": 59.27,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0H7XJPNJD"
     }
    ],
    "idealo": {
-    "raison": "idealo a des fiches proches mais aucune avec ce code"
+    "raison": "idealo répond plusieurs fiches à ce code"
    },
    "etoile": false
   },
@@ -852,7 +763,7 @@
     "prix_neuf": 49.99,
     "prix_amazon": 49.99,
     "prix_tiers": 49.99,
-    "moyenne_90j": 74.23,
+    "moyenne_90j": 74.22,
     "plus_bas_90j": 49.99,
     "occasion": 48.99,
     "rang_ventes": 90,
@@ -861,7 +772,7 @@
     "ventes_estimees_30j": 24,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0FPGGMMVL",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "3016667297926"
     ],
@@ -874,10 +785,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Afficheur pour friteuse air fryer Moulinex Easy Fry Silence EZ57",
-    "Accessoires cookeo",
-    "Moulinex easy fry silence",
-    "Friteuse Moulinex Easy Fry Silence"
+    "MOULINEX Lot de 2 Couvercles Conservation cuve Cookeo XA608000",
+    "Compagnon",
+    "Cookeo connect ce952810",
+    "Compagnon MOULINEX"
    ],
    "verdict": {
     "achat": 49.99,
@@ -885,30 +796,30 @@
     "ventes_30j": 300,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 74.23,
+    "ref_min": 74.22,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0FPGGMMVL",
-    "ref_mediane": 74.23,
-    "ecart_pct": 32.7,
-    "prix_vente": 72.0,
-    "marge_nette": 8.03,
+    "ref_mediane": 74.22,
+    "ecart_pct": 32.6,
+    "prix_vente": 71.99,
+    "marge_nette": 8.02,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 72.0,
+     "prix_vente": 71.99,
      "cout_achat": 49.99,
      "frais_canal": 1.33,
      "prelevements": 9.65,
      "provision": 3.0,
-     "marge_nette": 8.03,
+     "marge_nette": 8.02,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (8.03 €)"
+    "raison": "marge nette trop faible (8.02 €)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 74.23,
+     "total": 74.22,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0FPGGMMVL"
     }
@@ -944,7 +855,7 @@
     "ventes_estimees_30j": 27,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0B3MQ93BQ",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "3700123870593"
     ],
@@ -959,14 +870,14 @@
    "google_refuse": null,
    "verdict": {
     "achat": 44.46,
-    "nb_vendeurs": 8,
+    "nb_vendeurs": 6,
     "ventes_30j": 27,
     "manque": [],
     "feu": "rouge",
     "ref_min": 60.69,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0B3MQ93BQ",
-    "ref_mediane": 74.75,
+    "ref_mediane": 69.58,
     "ecart_pct": 26.7,
     "prix_vente": 58.87,
     "marge_nette": 2.39,
@@ -985,22 +896,16 @@
    },
    "refs": [
     {
-     "marchand": "Darty",
-     "total": 63.9,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC346872478.html?ofmp=959228180&dartycid=sem_free-listing_MP-jardin_station-meteo-thermometre-pluviometre"
-    },
-    {
      "marchand": "BUT Marketplace",
      "total": 63.9,
      "gros": true,
-     "lien": "https://www.but.fr/produits/3700123870593/Station-Meteo-Blanc-Ws6820-wi.html?srsltid=AYCX9vKtBEZYrCDQGvHkZl5_L26jg7uhzBcBT1GR8HwhgqKi4CbZ8asmSb4"
+     "lien": "https://www.but.fr/produits/3700123870593/Station-Meteo-Blanc-Ws6820-wi.html?srsltid=AYCX9vKKL37YrqeI0w5j95L1R-kpGXGPhsjVIcXLlAfxh3OLZg5-51Q2ExI"
     },
     {
-     "marchand": "Bricorama",
-     "total": 74.23,
-     "gros": false,
-     "lien": "https://www.bricorama.fr/p/station-meteo-blanc-ws6820-wi/3700123870593?srsltid=AYCX9vK9J6Q32Tnm7cZJLn32IBkCPvON87izfbRLSLHpzT6EDbrjuEY-8wc"
+     "marchand": "Fnac",
+     "total": 63.9,
+     "gros": true,
+     "lien": "https://www.fnac.com/mp46872478/La-Crosse-Technology-WS6820-Station-meteo-avec-ecran-colore-Blanc/w-4?oref=209eb8f2-cfc2-1f5e-cc78-ff92928bdee6&Origin=CMP_GOOGLE_FL_JARDI"
     },
     {
      "marchand": "Leroy Merlin France",
@@ -1015,93 +920,16 @@
      "lien": "https://www.castorama.fr/mkp/station-m-t-o-blanc-la-crosse-technology-ws6820-wi/3700123870593_CAFR.prd"
     },
     {
-     "marchand": "Gamm Vert",
-     "total": 75.27,
-     "gros": false,
-     "lien": "https://www.gammvert.fr/p/station-meteo-blanc-ws6820-wi-la-crosse-technology-690b51b24d6f53add45530a4?srsltid=AYCX9vKS7DdRRyYsmZYHrzl6voo2eDOtW6FOT5oMwWOsySZdLVY9UYECS0k"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
-   "titre": "Lot de 10 Brossettes Oral-B Pro Sensitive Clean",
-   "prix_annonce": 22.99,
-   "lien": "https://www.dealabs.com/bons-plans/lot-de-10-brossettes-oral-b-pro-sensitive-clean-3450401",
-   "source": "dealabs-tendance",
-   "vu": "2026-11-10T19:00+00:00",
-   "lien_marchand": "https://www.amazon.com/dp/B0BWNTF2YF",
-   "domaine": "amazon.com",
-   "asin": "B0BWNTF2YF",
-   "keepa": {
-    "nb_vendeurs_neuf": 11,
-    "marque": "Oral-B",
-    "asin": "B0BWNTF2YF",
-    "titre": "Oral-B Brossettes de Rechange Sensitive Clean, lot de 10, Blanches",
-    "ean": "8006540862094",
-    "pays": "FR",
-    "prix_neuf": 22.99,
-    "prix_amazon": 22.99,
-    "prix_tiers": 22.99,
-    "moyenne_90j": 33.66,
-    "plus_bas_90j": 19.9,
-    "occasion": 40.32,
-    "rang_ventes": 620,
-    "chutes_rang_30j": 31,
-    "chutes_rang_90j": 85,
-    "ventes_estimees_30j": 31,
-    "remise_sincere": true,
-    "lien": "https://www.amazon.fr/dp/B0BWNTF2YF",
-    "jetons_restants": 333,
-    "eans": [
-     "8006540862094"
-    ],
-    "ventes_mois": 100
-   },
-   "titre_fiche": "Oral-B Brossettes de Rechange Sensitive Clean, lot de 10, Blanches",
-   "ean": "8006540862094",
-   "prix_page": 22.99,
-   "achat": 22.99,
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Oral-B iO Ultimate Clean Black Opzetborstels (4/6/8 st.) 6 st.",
-    "Brossette De Rechange Pour Brosse À Dents Électrique Io Ultimate Clean",
-    "Lot de 3 Têtes Oral-B iO Ultimate Clean Blanches",
-    "Uoww 8 Brossettes de Rechange Ultimate Clean pour Oral B Braun Electrique | Poils Ultra-fins, Nettoyage Doux des Dents et Des Gencives, Lot de 8"
-   ],
-   "verdict": {
-    "achat": 22.99,
-    "nb_vendeurs": 1,
-    "ventes_30j": 100,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 33.66,
-    "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
-    "ref_lien": "https://www.amazon.fr/dp/B0BWNTF2YF",
-    "ref_mediane": 33.66,
-    "ecart_pct": 31.7,
-    "prix_vente": 32.65,
-    "marge_nette": 1.55,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 32.65,
-     "cout_achat": 22.99,
-     "frais_canal": 0.74,
-     "prelevements": 4.38,
-     "provision": 3.0,
-     "marge_nette": 1.55,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     "marchand": "Carrefour",
+     "total": 79.99,
+     "gros": true,
+     "lien": "https://www.carrefour.fr/p/centrale-meteo-la-crosse-technology-ws6820-wi-3700123870593?s=2540"
     },
-    "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (1.55 €)"
-   },
-   "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 33.66,
+     "total": 60.69,
      "gros": false,
-     "lien": "https://www.amazon.fr/dp/B0BWNTF2YF"
+     "lien": "https://www.amazon.fr/dp/B0B3MQ93BQ"
     }
    ],
    "etoile": false
@@ -1121,7 +949,7 @@
    "google_refuse": null,
    "achat": 25.01,
    "marchand": "Notino.fr",
-   "lien_marchand": "https://www.notino.fr/diesel/fuel-for-life-eau-de-toilette-pour-homme/p-16030522/?srsltid=AYCX9vJSaSl8SWc73NI5u8-JC2C2POtxjH91Bc3vrAnflT_AYhTzG050Ryc",
+   "lien_marchand": "https://www.notino.fr/diesel/fuel-for-life-eau-de-toilette-pour-homme/p-16030522/?srsltid=AYCX9vKe0jlIbEdAvtg9Qv411s3mX9fGNeFO72QWOYg90PUw2gSboy81ZJc",
    "domaine": "notino.fr",
    "refs": [
     {
@@ -1146,7 +974,7 @@
      "marchand": "Marionnaud",
      "total": 40.95,
      "gros": false,
-     "lien": "https://www.marionnaud.fr/homme/parfum-homme/eau-de-toilette/fuel-for-life-eau-de-toilette-diesel/p/BP_100048873?channable=09fb44756e697175655f6964003130303034383837334d&varSel=100048873&srsltid=AYCX9vIm3zopg06t8O0M4S7-JcAUWLriABGujwMDINUQ3m0YxF4prdn_qYE"
+     "lien": "https://www.marionnaud.fr/homme/parfum-homme/eau-de-toilette/fuel-for-life-eau-de-toilette-diesel/p/BP_100048873?channable=09fb44756e697175655f6964003130303034383837334d&varSel=100048873&srsltid=AYCX9vI76LVLguqkBJtIacQrTI94BxplOG0yw7Vx5FyKkgP5UY0NaTfA3pk"
     },
     {
      "marchand": "Passion Beauté",
@@ -1204,7 +1032,7 @@
    "google_refuse": null,
    "achat": 25.01,
    "marchand": "Notino.fr",
-   "lien_marchand": "https://www.notino.fr/diesel/fuel-for-life-eau-de-toilette-pour-homme/p-16030522/?srsltid=AYCX9vJSaSl8SWc73NI5u8-JC2C2POtxjH91Bc3vrAnflT_AYhTzG050Ryc",
+   "lien_marchand": "https://www.notino.fr/diesel/fuel-for-life-eau-de-toilette-pour-homme/p-16030522/?srsltid=AYCX9vKe0jlIbEdAvtg9Qv411s3mX9fGNeFO72QWOYg90PUw2gSboy81ZJc",
    "domaine": "notino.fr",
    "refs": [
     {
@@ -1229,7 +1057,7 @@
      "marchand": "Marionnaud",
      "total": 40.95,
      "gros": false,
-     "lien": "https://www.marionnaud.fr/homme/parfum-homme/eau-de-toilette/fuel-for-life-eau-de-toilette-diesel/p/BP_100048873?channable=09fb44756e697175655f6964003130303034383837334d&varSel=100048873&srsltid=AYCX9vIm3zopg06t8O0M4S7-JcAUWLriABGujwMDINUQ3m0YxF4prdn_qYE"
+     "lien": "https://www.marionnaud.fr/homme/parfum-homme/eau-de-toilette/fuel-for-life-eau-de-toilette-diesel/p/BP_100048873?channable=09fb44756e697175655f6964003130303034383837334d&varSel=100048873&srsltid=AYCX9vI76LVLguqkBJtIacQrTI94BxplOG0yw7Vx5FyKkgP5UY0NaTfA3pk"
     },
     {
      "marchand": "Passion Beauté",
@@ -1295,13 +1123,13 @@
     "moyenne_90j": 27.09,
     "plus_bas_90j": 16.16,
     "occasion": null,
-    "rang_ventes": 551,
+    "rang_ventes": 552,
     "chutes_rang_30j": 33,
     "chutes_rang_90j": 95,
     "ventes_estimees_30j": 33,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B00UL4M22Y",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5060221201407"
     ],
@@ -1351,89 +1179,6 @@
    "etoile": false
   },
   {
-   "denicheur": "Amigo",
-   "titre": "CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 3V Lithium Jetables Lot de 24 pour Lamp",
-   "titre_fiche": "CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 3V Lithium Jetables Lot de 24 pour Lamp",
-   "ean": "0810142340090",
-   "asin": "B0CBQ5RJLK",
-   "ventes_30j": 76,
-   "vendeurs_amazon": 1,
-   "amazon_index": 33.57,
-   "source": "ventes Amazon (Keepa)",
-   "fiche_google": "Philips CR123A 3V Lithium",
-   "marche_raison": null,
-   "google_refuse": null,
-   "achat": 3.69,
-   "marchand": "Cdiscount",
-   "lien_marchand": "https://www.cdiscount.com/juniors/piles-pour-vos-jouets/pile-philips-extremelife-cr123a-li-philips/f-12080-phi4895229106116.html?srsltid=AYCX9vKHMvOz0RwoiIazqOrE_xzl5O7_B7tJY5eVNuGqqcEGRrDE2XDrE4E",
-   "domaine": "cdiscount.com",
-   "refs": [
-    {
-     "marchand": "ManoMano.fr",
-     "total": 5.08,
-     "gros": true,
-     "lien": "https://www.manomano.fr/pile-lr03-pile-lr06-et-autres-piles-standard-309?model_id=244498560&srsltid=AYCX9vK949tEQ-rzKuVemS19WJiKhQlhmxJJh0QBiawOm7l6GgRbezeS87w"
-    },
-    {
-     "marchand": "Carrefour",
-     "total": 8.58,
-     "gros": true,
-     "lien": "https://www.carrefour.fr/p/pile-philips-cr123a-lithium-3-v-1300-mah-4895229106116?s=2145"
-    },
-    {
-     "marchand": "Leroy Merlin France",
-     "total": 9.3,
-     "gros": true,
-     "lien": "https://www.leroymerlin.fr/produits/batterie-au-lithium-philips-1-uds-84975540.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite"
-    },
-    {
-     "marchand": "tecnomat.fr",
-     "total": 9.3,
-     "gros": false,
-     "lien": "https://www.tecnomat.fr/produits/batterie-au-lithium-philips-1-uds-92310310.html?at_medium=google_shopping_free&at_campaign=3P"
-    },
-    {
-     "marchand": "Lumimania.fr",
-     "total": 12.98,
-     "gros": false,
-     "lien": "https://www.lumimania.fr/philips-cr123a-01b-pile-lithium-cr123a-minicells-3v/?utm_source=google&utm_medium=organic&utm_campaign=free_listing"
-    },
-    {
-     "marchand": "Darty.com",
-     "total": 13.98,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/accessoires/accessoire_pour_console/pile/philips_cr_123a_x1.html?dartycid=sem_free-listing_STOCKE-audio--hifi--casque_piles-et-chargeur"
-    }
-   ],
-   "verdict": {
-    "achat": 3.69,
-    "nb_vendeurs": 7,
-    "ventes_30j": 76,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 5.08,
-    "ref_ou": "ManoMano.fr",
-    "ref_lien": "https://www.manomano.fr/pile-lr03-pile-lr06-et-autres-piles-standard-309?model_id=244498560&srsltid=AYCX9vK949tEQ-rzKuVemS19WJiKhQlhmxJJh0QBiawOm7l6GgRbezeS87w",
-    "ref_mediane": 9.3,
-    "ecart_pct": 27.4,
-    "prix_vente": 4.93,
-    "marge_nette": -2.74,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 4.93,
-     "cout_achat": 3.69,
-     "frais_canal": 0.32,
-     "prelevements": 0.66,
-     "provision": 3.0,
-     "marge_nette": -2.74,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (-2.74 €)"
-   },
-   "etoile": false
-  },
-  {
    "denicheur": "Idéfix",
    "titre": "🛍️ LEGO Icons Le télescope Spatial Hubble 11382, 1252 pièces ✅ 90,99€ au lieu de 129,99€ ➡️ https://",
    "prix_annonce": 90.99,
@@ -1453,7 +1198,7 @@
     "prix_neuf": 90.99,
     "prix_amazon": 90.99,
     "prix_tiers": 90.99,
-    "moyenne_90j": 111.33,
+    "moyenne_90j": 111.32,
     "plus_bas_90j": 90.99,
     "occasion": 90.08,
     "rang_ventes": 4191,
@@ -1462,7 +1207,7 @@
     "ventes_estimees_30j": 48,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0GGSLFWNB",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5702018063637"
     ],
@@ -1483,7 +1228,7 @@
     "feu": "rouge",
     "ref_min": 109.88,
     "ref_ou": "E.Leclerc",
-    "ref_lien": "https://e.leclerc/fp/5702018063637?srsltid=AYCX9vJfxAdOMjv1lUKiVOCb_cZyEljCo5IHR7behNth0_TVQ_zn4QyCkmE",
+    "ref_lien": "https://e.leclerc/fp/5702018063637?srsltid=AYCX9vLrZXVtV8rJvFcnR2y3J5id8XhZUH0a9UEjDiGZ-sWI_zlwlGRsHt8",
     "ref_mediane": 118.48,
     "ecart_pct": 17.2,
     "prix_vente": 106.58,
@@ -1506,7 +1251,7 @@
      "marchand": "E.Leclerc",
      "total": 109.88,
      "gros": true,
-     "lien": "https://e.leclerc/fp/5702018063637?srsltid=AYCX9vJfxAdOMjv1lUKiVOCb_cZyEljCo5IHR7behNth0_TVQ_zn4QyCkmE"
+     "lien": "https://e.leclerc/fp/5702018063637?srsltid=AYCX9vLrZXVtV8rJvFcnR2y3J5id8XhZUH0a9UEjDiGZ-sWI_zlwlGRsHt8"
     },
     {
      "marchand": "Carrefour - Carrefour.fr",
@@ -1543,6 +1288,114 @@
   },
   {
    "denicheur": "Idéfix",
+   "titre": "Pack de x8 Oral-B Brossettes de Rechange Ultimate Clean",
+   "prix_annonce": 34.99,
+   "lien": "https://www.dealabs.com/bons-plans/pack-de-x8-oral-b-brossettes-de-rechange-ultimate-clean-3451445",
+   "source": "dealabs-nouveaux",
+   "vu": "2026-11-10T19:00+00:00",
+   "lien_marchand": "https://www.amazon.com/dp/B0DQLVR8SD",
+   "domaine": "amazon.com",
+   "asin": "B0DQLVR8SD",
+   "keepa": {
+    "nb_vendeurs_neuf": 20,
+    "marque": "Oral-B",
+    "asin": "B0DQLVR8SD",
+    "titre": "Oral-B Brossettes de Rechange Ultimate Clean, Lot de 8, Noires",
+    "ean": "8700216778497",
+    "pays": "FR",
+    "prix_neuf": 34.99,
+    "prix_amazon": 34.99,
+    "prix_tiers": 34.99,
+    "moyenne_90j": 49.04,
+    "plus_bas_90j": 29.99,
+    "occasion": null,
+    "rang_ventes": 1328,
+    "chutes_rang_30j": 41,
+    "chutes_rang_90j": 111,
+    "ventes_estimees_30j": 41,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0DQLVR8SD",
+    "jetons_restants": 765,
+    "eans": [
+     "8700216778497"
+    ],
+    "ventes_mois": 50
+   },
+   "titre_fiche": "Oral-B Brossettes de Rechange Ultimate Clean, Lot de 8, Noires",
+   "ean": "8700216778497",
+   "prix_page": 34.99,
+   "achat": 34.99,
+   "fiche_google": "ORAL-B IO ULTIMATE CLEAN",
+   "marche_raison": null,
+   "google_refuse": null,
+   "verdict": {
+    "achat": 34.99,
+    "nb_vendeurs": 8,
+    "ventes_30j": 50,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 41.95,
+    "ref_ou": "Cdiscount",
+    "ref_lien": "https://www.cdiscount.com/electromenager/sante-minceur/brossette-oral-b-io-refills-ultimate-clean-pac/f-110590501-ora8700216778497.html?o=4294598551&p=36.96",
+    "ref_mediane": 51.5,
+    "ecart_pct": 16.6,
+    "prix_vente": 40.69,
+    "marge_nette": -3.61,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 40.69,
+     "cout_achat": 34.99,
+     "frais_canal": 0.86,
+     "prelevements": 5.45,
+     "provision": 3.0,
+     "marge_nette": -3.61,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [],
+    "raison": "marge nette trop faible (-3.61 €)"
+   },
+   "refs": [
+    {
+     "marchand": "Cdiscount",
+     "total": 41.95,
+     "gros": true,
+     "lien": "https://www.cdiscount.com/electromenager/sante-minceur/brossette-oral-b-io-refills-ultimate-clean-pac/f-110590501-ora8700216778497.html?o=4294598551&p=36.96"
+    },
+    {
+     "marchand": "Galaxus",
+     "total": 49.39,
+     "gros": false,
+     "lien": "https://www.galaxus.fr/fr/s6/product/oral-b-io-ultimate-clean-8x-tete-de-brosse-a-dents-55716958?offertype=retail&offerid=2705624&utm_campaign=organicshopping&utm_source=google&utm_medium=organic"
+    },
+    {
+     "marchand": "Carrefour",
+     "total": 50.37,
+     "gros": true,
+     "lien": "https://www.carrefour.fr/p/brossettes-rondes-serie-io-ultimate-clean-noir-oral-b-8700216778497?s=2419"
+    },
+    {
+     "marchand": "Darty",
+     "total": 52.63,
+     "gros": true,
+     "lien": "https://www.darty.com/nav/achat/ref/MC352193298.html?ofmp=1201588502&dartycid=sem_free-listing_MP-beaute--forme-et-sante_soin-corps-et-visage"
+    },
+    {
+     "marchand": "Fnac",
+     "total": 58.49,
+     "gros": true,
+     "lien": "https://www.fnac.com/mp52193298/Brossette-ORALB-iO-refills-Ultimate-Clean-Pack-de-8/w-4?oref=6cd87ec6-e655-d7f9-add7-68997abeed9d&Origin=CMP_GOOGLE_FL_PEM"
+    },
+    {
+     "marchand": "Castorama",
+     "total": 60.08,
+     "gros": true,
+     "lien": "https://www.castorama.fr/mkp/oral-b-accessoire-dentaire-10670/8700216778497_CAFR.prd"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
    "titre": "🛍️ LEGO ONE PIECE L’affrontement avec le capitaine Smoker 75642, 547 pièces ✅ 41,99€ au lieu de 59,9",
    "prix_annonce": 41.99,
    "lien": "https://www.amazon.fr/dp/B0GGSNB27S/?tag=pmrat-21",
@@ -1570,7 +1423,7 @@
     "ventes_estimees_30j": 45,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0GGSNB27S",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5702018067345"
     ],
@@ -1580,7 +1433,7 @@
    "ean": "5702018067345",
    "prix_page": 41.99,
    "achat": 41.99,
-   "fiche_google": "75642 LEGO One Piece L’affrontement avec le Capitaine Smoker",
+   "fiche_google": "LEGO 75642 ONE PIECE Showdown mit Kapitän Smoker",
    "marche_raison": null,
    "google_refuse": null,
    "verdict": {
@@ -1620,7 +1473,7 @@
      "marchand": "E.Leclerc",
      "total": 51.89,
      "gros": true,
-     "lien": "https://e.leclerc/fp/5702018067345?srsltid=AYCX9vKZU0ffaiN3C9Wddf88bfOZRB2tUGT9HxXlTS5ut5edm-TZgIVium8"
+     "lien": "https://e.leclerc/fp/5702018067345?srsltid=AYCX9vLaS3l3j-w8hygUDOHp_Gv6ubCckredTVnf73I_mnotpcxKNc5M2mA"
     },
     {
      "marchand": "King Jouet",
@@ -1650,6 +1503,59 @@
    "etoile": false
   },
   {
+   "denicheur": "Amigo",
+   "titre": "545 et 546 XL Cartouche Encre Compatible pour Canon 545XL 546XL TS3550 TS3450 Cartouches d",
+   "titre_fiche": "545 et 546 XL Cartouche Encre Compatible pour Canon 545XL 546XL TS3550 TS3450 Cartouches d",
+   "ean": "6978150818513",
+   "asin": "B0GQ9PPDGV",
+   "ventes_30j": 71,
+   "vendeurs_amazon": 5,
+   "amazon_index": 26.59,
+   "source": "ventes Amazon (Keepa)",
+   "fiche_google": "PG-545XL CL-546XL Remplacement pour Cartouche Canon 545-546 pour Cartouche",
+   "marche_raison": null,
+   "google_refuse": null,
+   "achat": 25.99,
+   "marchand": "Amazon.fr - Seller",
+   "lien_marchand": "https://www.amazon.fr/7Magic-PG-545XL-CL-546XL-Remplacement-Cartouche/dp/B0C9TBX1HP?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1IDY4I1HXKM2D",
+   "domaine": "amazon.fr",
+   "refs": [
+    {
+     "marchand": "Price Radar",
+     "total": 29.99,
+     "gros": false,
+     "lien": "https://radar-prix.fr/price-comparison/product-E6Ll8Tip8j"
+    }
+   ],
+   "verdict": {
+    "achat": 25.99,
+    "nb_vendeurs": 1,
+    "ventes_30j": 71,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 29.99,
+    "ref_ou": "Price Radar",
+    "ref_lien": "https://radar-prix.fr/price-comparison/product-E6Ll8Tip8j",
+    "ref_mediane": 29.99,
+    "ecart_pct": 13.3,
+    "prix_vente": 29.09,
+    "marge_nette": -4.48,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 29.09,
+     "cout_achat": 25.99,
+     "frais_canal": 0.69,
+     "prelevements": 3.9,
+     "provision": 3.0,
+     "marge_nette": -4.48,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [],
+    "raison": "marge nette trop faible (-4.48 €)"
+   },
+   "etoile": false
+  },
+  {
    "denicheur": "Idéfix",
    "titre": "🛍️ SONGMICS Chaise Gaming avec Repose-Pied, en Tissu, 150 kg, 70 x 70 x 123,5-133 cm, Gris Tourterel",
    "prix_annonce": 97.59,
@@ -1669,7 +1575,7 @@
     "prix_neuf": 97.59,
     "prix_amazon": 97.59,
     "prix_tiers": 97.59,
-    "moyenne_90j": 116.29,
+    "moyenne_90j": 116.28,
     "plus_bas_90j": 95.99,
     "occasion": null,
     "rang_ventes": 1555,
@@ -1678,7 +1584,7 @@
     "ventes_estimees_30j": 31,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0F6MYX8D4",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "0194343432731"
     ],
@@ -1692,9 +1598,9 @@
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
     "SONGMICS Chaise gaming avec repose-pieds",
-    "SONGMICS Chaise Gaming Ergonomique coussin d’Assise à ressorts",
-    "SONGMICS Chaise gaming ergonomique avec repose-pieds et coussin à ressorts",
-    "SONGMICS Chaise gaming avec repose-pieds, Noir et Blanc"
+    "SONGMICS Chaise gaming avec repose-pieds, Noir et Blanc",
+    "Songmics Chaise gaming avec repose-pieds",
+    "SONGMICS Chaise gaming ergonomique avec repose-pieds et coussin à ressorts"
    ],
    "verdict": {
     "achat": 97.59,
@@ -1702,30 +1608,30 @@
     "ventes_30j": 100,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 116.29,
+    "ref_min": 116.28,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0F6MYX8D4",
-    "ref_mediane": 116.29,
+    "ref_mediane": 116.28,
     "ecart_pct": 16.1,
-    "prix_vente": 112.8,
-    "marge_nette": -4.85,
+    "prix_vente": 112.79,
+    "marge_nette": -4.86,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 112.8,
+     "prix_vente": 112.79,
      "cout_achat": 97.59,
      "frais_canal": 1.94,
-     "prelevements": 15.12,
+     "prelevements": 15.11,
      "provision": 3.0,
-     "marge_nette": -4.85,
+     "marge_nette": -4.86,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (-4.85 €)"
+    "raison": "marge nette trop faible (-4.86 €)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 116.29,
+     "total": 116.28,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0F6MYX8D4"
     }
@@ -1761,7 +1667,7 @@
     "ventes_estimees_30j": 45,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0GH5FW4GZ",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "6970135039135"
     ],
@@ -1897,7 +1803,7 @@
     "ventes_estimees_30j": 47,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0FPXCX4H7",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5702018031858",
      "5702018079522"
@@ -1942,13 +1848,13 @@
      "marchand": "Lidl.fr",
      "total": 46.98,
      "gros": false,
-     "lien": "https://www.lidl.fr/p/lego-botanicals-fleur-de-paix/p100413514?srsltid=AYCX9vI04V2KSsnMH_gMQKUVkMx3V2fyFHqFk-oqxMld1Ez84cY5wf9d56M"
+     "lien": "https://www.lidl.fr/p/lego-botanicals-fleur-de-paix/p100413514?srsltid=AYCX9vIjQEyWi0HSWuMQ3m1EJLXlKwb0Jd3h9PemHJmZr9Zhzixzym-llEw"
     },
     {
      "marchand": "E.Leclerc",
      "total": 49.89,
      "gros": true,
-     "lien": "https://e.leclerc/fp/5702018031858?srsltid=AYCX9vLjBvhp8_ORJ0tUyWJUXPBottFoezc4PTxJlFWCSqwrOe1dCtRdfsk"
+     "lien": "https://e.leclerc/fp/5702018031858?srsltid=AYCX9vIek805YjGHzVibKWcauhBskRq1QT7hvck7_16NIlDjL1ldPpMH1Qk"
     },
     {
      "marchand": "King Jouet",
@@ -1992,7 +1898,7 @@
    "google_refuse": null,
    "achat": 22.94,
    "marchand": "Deporvillage.fr",
-   "lien_marchand": "https://www.deporvillage.fr/trousse-eastpak-oval-s-bleu-fonce-mat-noir?srsltid=AYCX9vKwS8e-IJRwQvuN4S9UeTdRYiFREdaFlBoza_WN31ZauqHizZnJXMM",
+   "lien_marchand": "https://www.deporvillage.fr/trousse-eastpak-oval-s-bleu-fonce-mat-noir?srsltid=AYCX9vIxOb6vb2Ogx-YycFiHWiU1tkjsDOU7gxNfhWvHmoe14EBjF83TiF4",
    "domaine": "deporvillage.fr",
    "refs": [
     {
@@ -2005,13 +1911,13 @@
      "marchand": "Bureau Vallée",
      "total": 26.89,
      "gros": false,
-     "lien": "https://www.bureau-vallee.fr/eastpak-oval-single-trousse-1-compartiment-powder-pilot-405177286.html?srsltid=AYCX9vJ0o4wRQT07CYbmOcHVhe1QGnXPPqCTU8BGWR6W3Z1zIXGNflk9OWY"
+     "lien": "https://www.bureau-vallee.fr/eastpak-oval-single-trousse-1-compartiment-powder-pilot-405177286.html?srsltid=AYCX9vKWPhwObtyQ8j9R68BrIjGs6oIlBXyh1TepaVwaB4BzQGqqMI-prVw"
     },
     {
      "marchand": "Beausoleil Maroquinerie",
      "total": 26.9,
      "gros": false,
-     "lien": "https://www.beausoleilmaroquinerie.fr/eastpak/trousse-zippee-ovale-simple-compartiment-authentic.html?srsltid=AYCX9vJ9pJdE3WInxh7wH1zYw6Q5i2c3noM5llzOcW1YPFsWi5mfCHjqWzY#/88-ligne-authentic/5933-couleur-powder_pilot"
+     "lien": "https://www.beausoleilmaroquinerie.fr/eastpak/trousse-zippee-ovale-simple-compartiment-authentic.html?srsltid=AYCX9vJNK-NA4awzdhOTy9dHfdeK_Xvvj_oGaxNAhB6XR_C6lEE5jFNyJHQ#/88-ligne-authentic/5933-couleur-powder_pilot"
     },
     {
      "marchand": "Zalando.fr",
@@ -2085,7 +1991,7 @@
     "ventes_estimees_30j": 44,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B078WDWSLW",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "8424167591539"
     ],
@@ -2099,10 +2005,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Boîte de dérivation PLEXO Legrand carrée Gris 092005",
-    "Legrand Boîte de dérivation rectangulaire plexo",
-    "Legrand Coffret Plexo³ 4x18 modules avec embouts perforation directe",
-    "Legrand Coffret étanche à équiper 1 rangée 6 modules"
+    "Legrand Legrand FR distribution plexo S AP ip65-IK07",
+    "Legrand Legrand FR distribution plexo S AP ip65-IK07",
+    "Legrand Legrand FR distribution plexo S AP ip65-IK07",
+    "Legrand - Plexo L - LOT de 10 Supports encastré - 1 poste - Composable - Blanc - Ref. : 069692Lx10"
    ],
    "verdict": {
     "achat": 22.9,
@@ -2160,7 +2066,7 @@
     "prix_neuf": 139.99,
     "prix_amazon": null,
     "prix_tiers": 139.99,
-    "moyenne_90j": 164.29,
+    "moyenne_90j": 164.28,
     "plus_bas_90j": 138.9,
     "occasion": 137.19,
     "rang_ventes": 11335,
@@ -2169,7 +2075,7 @@
     "ventes_estimees_30j": 24,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0CZR6J6P4",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "6974950106850"
     ],
@@ -2179,30 +2085,30 @@
    "ean": "6974950106850",
    "prix_page": 139.99,
    "achat": 139.99,
-   "fiche_google": "Tineco Aspirateur balai A30S Plus",
+   "fiche_google": "Tineco Aspirateur balai A30S Plus - Showroomprivé",
    "marche_raison": null,
    "google_refuse": null,
    "verdict": {
     "achat": 139.99,
-    "nb_vendeurs": 6,
+    "nb_vendeurs": 7,
     "ventes_30j": 24,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 164.29,
+    "ref_min": 164.28,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0CZR6J6P4",
-    "ref_mediane": 186.27,
+    "ref_mediane": 181.48,
     "ecart_pct": 14.8,
-    "prix_vente": 159.36,
-    "marge_nette": -7.62,
+    "prix_vente": 159.35,
+    "marge_nette": -7.63,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 159.36,
+     "prix_vente": 159.35,
      "cout_achat": 139.99,
      "frais_canal": 2.64,
      "prelevements": 21.35,
      "provision": 3.0,
-     "marge_nette": -7.62,
+     "marge_nette": -7.63,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
@@ -2214,6 +2120,12 @@
      "total": 169.0,
      "gros": false,
      "lien": "https://www.galaxus.fr/fr/s2/product/tineco-pure-one-a30s-plus-aspirateur-49240081?offertype=retail&offerid=2705624&utm_campaign=organicshopping&utm_source=google&utm_medium=organic"
+    },
+    {
+     "marchand": "Fnac",
+     "total": 176.0,
+     "gros": true,
+     "lien": "https://www.fnac.com/mp52970889/Tineco-Aspirateur-balai-A30S-Plus/w-4?oref=ddb28e90-c0ff-3893-6cd7-2b48bd2f5f4a&Origin=CMP_GOOGLE_FL_PEM"
     },
     {
      "marchand": "Darty",
@@ -2231,19 +2143,13 @@
      "marchand": "ManoMano.fr",
      "total": 191.94,
      "gros": true,
-     "lien": "https://www.manomano.fr/aspirateur-balai-4551?model_id=93532608&srsltid=AYCX9vJyH9Jdy9sdC9RYijOzb_z0Pgej1duCrt6v4nIfkPRd0BT1iElUEco"
+     "lien": "https://www.manomano.fr/aspirateur-balai-4551?model_id=93532608&srsltid=AYCX9vLJ1N36kUnV3BE0fRrUld0GmANnyZua8cdQUWsqljBeJQQtFOj0iuY"
     },
     {
      "marchand": "Kaufland.fr - NetworkTechnologies",
      "total": 193.09,
      "gros": false,
      "lien": "https://www.kaufland.fr/product/514158017/?utm_source=shopping&utm_medium=non-paid&utm_campaign=pricecomparison&id_unit=393110271404"
-    },
-    {
-     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 164.29,
-     "gros": false,
-     "lien": "https://www.amazon.fr/dp/B0CZR6J6P4"
     }
    ],
    "etoile": false
@@ -2277,7 +2183,7 @@
     "ventes_estimees_30j": 49,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B0FPXF3G9L",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "5702018063897"
     ],
@@ -2361,7 +2267,7 @@
     "ventes_estimees_30j": 7,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0C4F9QJ9M",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "4099685667109"
     ],
@@ -2371,19 +2277,19 @@
    "ean": "4099685667109",
    "prix_page": 35.7,
    "achat": 35.7,
-   "fiche_google": null,
-   "marche_raison": "produit introuvable sur Google Shopping",
-   "google_refuse": [],
+   "fiche_google": "Puma teamGOAL 23 Casuals Homme Pantalon",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "achat": 35.7,
-    "nb_vendeurs": 1,
+    "nb_vendeurs": 2,
     "ventes_30j": 7,
     "manque": [],
     "feu": "rouge",
     "ref_min": 37.79,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0C4F9QJ9M",
-    "ref_mediane": 37.79,
+    "ref_mediane": 52.03,
     "ecart_pct": 5.5,
     "prix_vente": 36.66,
     "marge_nette": -7.75,
@@ -2401,6 +2307,12 @@
     "raison": "marge nette trop faible (-7.75 €)"
    },
    "refs": [
+    {
+     "marchand": "Decathlon.fr",
+     "total": 66.26,
+     "gros": true,
+     "lien": "https://www.decathlon.fr/p/mp/pantalon-puma-team-goal-23-casuals/03309401-c409-48e1-9dc1-37005b5d61f9/c1"
+    },
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
      "total": 37.79,
@@ -2439,7 +2351,7 @@
     "ventes_estimees_30j": 43,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0CQ53RVTW",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "0194644188276",
      "1946441882760"
@@ -2450,19 +2362,19 @@
    "ean": "0194644188276",
    "prix_page": 79.99,
    "achat": 79.99,
-   "fiche_google": "Anker Soundcore Boom 2",
+   "fiche_google": "Enceinte Bluetooth Anker Soundcore Boom 2",
    "marche_raison": null,
    "google_refuse": null,
    "verdict": {
     "achat": 79.99,
-    "nb_vendeurs": 7,
+    "nb_vendeurs": 3,
     "ventes_30j": 50,
     "manque": [],
     "feu": "rouge",
     "ref_min": 90.96,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0CQ53RVTW",
-    "ref_mediane": 127.22,
+    "ref_mediane": 99.99,
     "ecart_pct": 12.1,
     "prix_vente": 88.23,
     "marge_nette": -8.16,
@@ -2477,46 +2389,180 @@
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "pas moins cher que le marché (12.1 % sous Amazon.fr (prix habituel sur 90 jours))"
+    "raison": "marge nette trop faible (-8.16 €)"
    },
    "refs": [
     {
-     "marchand": "Decathlon.fr",
-     "total": 116.09,
-     "gros": true,
-     "lien": "https://www.decathlon.fr/p/mp/haut-parleurs-bluetooth-portables-soundcore-a3138011-noir/010ecd93-187b-461b-9b22-0b12fa4bbd59/c255"
-    },
-    {
-     "marchand": "Galaxus",
-     "total": 120.9,
-     "gros": false,
-     "lien": "https://www.galaxus.fr/fr/s1/product/anker-soundcore-boom-2-24-h-enceinte-bluetooth-46586918?offertype=retail&offerid=2705624&utm_campaign=organicshopping&utm_source=google&utm_medium=organic"
-    },
-    {
-     "marchand": "Kaufland.fr - Schnaeppchen-Schuppen",
-     "total": 127.22,
-     "gros": false,
-     "lien": "https://www.kaufland.fr/product/501345935/?utm_source=shopping&utm_medium=non-paid&utm_campaign=pricecomparison&id_unit=391590564832"
-    },
-    {
-     "marchand": "PcComponentes FR",
-     "total": 130.0,
-     "gros": false,
-     "lien": "https://www.pccomponentes.fr/soundcore-boom-2-enceinte-sans-fil-2-1-rvb-noir?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vJukOObrzY0uH5EocMyYp9u3Us_Sc1nOvvUv-gJAfVWq1IPAme2Pew"
-    },
-    {
-     "marchand": "Darty",
-     "total": 131.62,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC350936015.html?ofmp=1553134425&dartycid=sem_free-listing_MP-audio--hifi--casque_enceinte-sans-fil-dock"
-    },
-    {
      "marchand": "Cdiscount",
-     "total": 145.99,
+     "total": 99.99,
      "gros": true,
-     "lien": "https://www.cdiscount.com/high-tech/enceintes-sans-fil-bluetooth/soundcore-enceinte-bluetooth-exterieure-boom-2-so/f-10684-10b1710914003410.html?srsltid=AYCX9vJe8C4BxZZpnl1EER91Ob7ONih6QISJMdX8B1JAi0WSZMRqzR6h3Nc"
+     "lien": "https://www.cdiscount.com/high-tech/enceintes-sans-fil-bluetooth/enceinte-bluetooth-anker-boom/f-10684-aaduz31710.html?srsltid=AYCX9vJyl7s4EfnZQPh9BQse9qnx5m4vNwxO21S3Sw1FxBpAR5x6zf1BOtw"
+    },
+    {
+     "marchand": "Muziker.fr",
+     "total": 154.9,
+     "gros": false,
+     "lien": "https://www.muziker.fr/anker-soundcore-boom-2-black?srsltid=AYCX9vL9yEO0bjLpYTkVz6T3t2Zt84Rkc0jjZlftXOeqXfhib5azzFfaFZ8"
+    },
+    {
+     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
+     "total": 90.96,
+     "gros": false,
+     "lien": "https://www.amazon.fr/dp/B0CQ53RVTW"
     }
    ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Amigo",
+   "titre": "CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 3V Lithium Jetables Lot de 24 pour Lamp",
+   "titre_fiche": "CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 3V Lithium Jetables Lot de 24 pour Lamp",
+   "ean": "0810142340090",
+   "asin": "B0CBQ5RJLK",
+   "ventes_30j": 76,
+   "vendeurs_amazon": 1,
+   "amazon_index": 33.57,
+   "source": "ventes Amazon (Keepa)",
+   "fiche_google": "GP Batteries PILE LITHIUM CR123A",
+   "marche_raison": null,
+   "google_refuse": null,
+   "achat": 33.57,
+   "marchand": "Amazon.fr",
+   "lien_marchand": "https://www.amazon.fr/dp/B0CBQ5RJLK",
+   "domaine": "amazon.fr",
+   "refs": [
+    {
+     "marchand": "idealo, moins cher de France pour ce code (1 offres)",
+     "total": 33.57,
+     "gros": true,
+     "lien": null
+    }
+   ],
+   "verdict": {
+    "achat": 33.57,
+    "nb_vendeurs": 1,
+    "ventes_30j": 76,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 33.57,
+    "ref_ou": "idealo, moins cher de France pour ce code (1 offres)",
+    "ref_lien": null,
+    "ref_mediane": 33.57,
+    "ecart_pct": 0.0,
+    "prix_vente": 32.56,
+    "marge_nette": -9.11,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 32.56,
+     "cout_achat": 33.57,
+     "frais_canal": 0.74,
+     "prelevements": 4.36,
+     "provision": 3.0,
+     "marge_nette": -9.11,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [
+     "idealo, moins cher de France pour ce code (1 offres)"
+    ],
+    "raison": "pas moins cher que le marché (0.0 % sous idealo, moins cher de France pour ce code (1 offres))",
+    "tri_google": {
+     "ref_min": 139.99,
+     "ref_ou": "ManoMano.fr",
+     "ecart_pct": 76.0,
+     "marge_nette": 78.74
+    }
+   },
+   "idealo": {
+    "prix_min": 33.57,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "CR123A 3V Lithium, Keenstone 1600mAh Piles CR17345 3V Lithium Jetables Lot de 24 pour Lampe de Poche, Camera, Instrument Intelligent, Microphone etc.【Pas pour Arlo】",
+    "marchand_min": "Amazon.fr",
+    "preuve": "recherche idealo par code EAN : une seule fiche"
+   },
+   "etoile": false
+  },
+  {
+   "denicheur": "Amigo",
+   "titre": "Bosch Professional 18V System chargeur GAL 1880 CV (sans batterie)",
+   "titre_fiche": "Bosch Professional 18V System chargeur GAL 1880 CV (sans batterie)",
+   "ean": "3165140839327",
+   "asin": "B013WAWSGI",
+   "ventes_30j": 62,
+   "vendeurs_amazon": 2,
+   "amazon_index": 89.66,
+   "source": "ventes Amazon (Keepa)",
+   "fiche_google": "Bosch GAL 1880 CV Chargeur",
+   "marche_raison": null,
+   "google_refuse": null,
+   "achat": 62.85,
+   "marchand": "Fixami.fr",
+   "lien_marchand": "https://www.fixami.fr/bosch-gal-1880-cv-chargeur-rapide-li-ion-14-4-18v-1600a00b8g.html?srsltid=AYCX9vJiF0mosivt8gU43LLjXXn3PrxBN15PmwXxmRfU3ohAmITiHC8DJGo",
+   "domaine": "fixami.fr",
+   "refs": [
+    {
+     "marchand": "ManoMano.fr",
+     "total": 68.98,
+     "gros": true,
+     "lien": "https://www.manomano.fr/chargeur-pour-electroportatif-2318?model_id=49458046&srsltid=AYCX9vLxF4cDOmKTmZsCSfA8F_9CHvHWp1Ywm8ImHklTqmfwEoYhzWpMnCY"
+    },
+    {
+     "marchand": "Tecnomat",
+     "total": 79.0,
+     "gros": false,
+     "lien": "https://www.tecnomat.fr/produits/chargeur-rapide-18v-gal-1880-cv-bosch-professional-1600a00b8g-1206331.html?srsltid=AYCX9vLMCW-3aPP1FN9QhQjZbM2Smw7iQNBIClnNVEmuTQbgqjcLn8d_q10"
+    },
+    {
+     "marchand": "Veepee",
+     "total": 84.54,
+     "gros": false,
+     "lien": "https://www.veepee.fr/gr/p/maison/bazar-11056/chargeur-gal-1880-cv-bosch-1600a00b8g/bppf82123084"
+    },
+    {
+     "marchand": "GUEDO outillage",
+     "total": 87.58,
+     "gros": false,
+     "lien": "https://www.guedo-outillage.fr/products/bosch-chargeur-rapide-144-18v-gal1880cv-1600a00b8g?variant=59703188848965&srsltid=AYCX9vL0h33_hNz-a4iw2PFJkgIzvYYNG0KFUUIMHzFRtbM8A6TZt2H2p64"
+    },
+    {
+     "marchand": "Amazon.fr",
+     "total": 89.66,
+     "gros": true,
+     "lien": "https://www.amazon.fr/dp/B013WAWSGI"
+    },
+    {
+     "marchand": "PMB Multi Batterie",
+     "total": 91.86,
+     "gros": false,
+     "lien": "https://boutique.pmb.fr/alimentations/5456-gal1880cv-chargeur-bosch-pro-bosch-148-18v-8a-liion-glissiere-3165140839327.html"
+    }
+   ],
+   "verdict": {
+    "achat": 62.85,
+    "nb_vendeurs": 8,
+    "ventes_30j": 62,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 68.98,
+    "ref_ou": "ManoMano.fr",
+    "ref_lien": "https://www.manomano.fr/chargeur-pour-electroportatif-2318?model_id=49458046&srsltid=AYCX9vLxF4cDOmKTmZsCSfA8F_9CHvHWp1Ywm8ImHklTqmfwEoYhzWpMnCY",
+    "ref_mediane": 88.62,
+    "ecart_pct": 8.9,
+    "prix_vente": 66.91,
+    "marge_nette": -9.16,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 66.91,
+     "cout_achat": 62.85,
+     "frais_canal": 1.25,
+     "prelevements": 8.97,
+     "provision": 3.0,
+     "marge_nette": -9.16,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [],
+    "raison": "pas moins cher que le marché (8.9 % sous ManoMano.fr)"
+   },
    "etoile": false
   },
   {
@@ -2548,7 +2594,7 @@
     "ventes_estimees_30j": 39,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0GVY2CLT7",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "6978813333568"
     ],
@@ -2564,7 +2610,7 @@
     "Ginaray Aspirateur Balai sans Fil - 580W Taille standard, Bleu",
     "Aspirateur balai sans fil doré - Ginaray - 580 W - 3 niveaux d’aspiration - 38 kPa - Autonomie jusqu’à 65 min",
     "Aspirateur balai sans fil bleu - Ginaray - 580 W - 3 niveaux d’aspiration - Brosse LED verte - Autonomie jusqu’à 65 min",
-    "650W/55KPA Aspirateur Balai sans Fil 70min ,pour Sols Durs/Animaux/Voiture | Aspirateur sans fil puissant 1,8L avec support mural de recharge, brosse"
+    "Aspirateur balais léger et sans fil - Autonomie 1h"
    ],
    "verdict": {
     "achat": 69.99,
@@ -2617,14 +2663,14 @@
    "google_refuse": null,
    "achat": 41.15,
    "marchand": "ManoMano.fr",
-   "lien_marchand": "https://www.manomano.fr/compresseur-de-climatisation-6104?model_id=95639459&srsltid=AYCX9vLHDfcQA1QDDctzTXVGRaMdHjJL7adkqTvDzA1tUF2hRQP-jNUkZKc",
+   "lien_marchand": "https://www.manomano.fr/compresseur-de-climatisation-6104?model_id=95639459&srsltid=AYCX9vIikSLKdlDM-QFVbR2Y_oG1JXO_OSL_aAeP5fp0cIgSDiPmSFuUupk",
    "domaine": "manomano.fr",
    "refs": [
     {
      "marchand": "Cdiscount",
      "total": 41.99,
      "gros": true,
-     "lien": "https://www.cdiscount.com/auto/pieces-auto/canette-rfrigrant-r134a--/f-13390-aabjz50839.html?srsltid=AYCX9vJaEoJwpJDD9d4btgiMuZdELJpQlEdl0Z8SDjj_-9L73xrOr6PUc9M"
+     "lien": "https://www.cdiscount.com/auto/pieces-auto/canette-rfrigrant-r134a--/f-13390-aabjz50839.html?srsltid=AYCX9vKh38DZVz_a7y8i8xH2ZOTPQzVdahEhSVplD67mvJHTnM7BzY1NEQM"
     },
     {
      "marchand": "Amazon.fr - Seller",
@@ -2641,7 +2687,7 @@
     "feu": "rouge",
     "ref_min": 41.99,
     "ref_ou": "Cdiscount",
-    "ref_lien": "https://www.cdiscount.com/auto/pieces-auto/canette-rfrigrant-r134a--/f-13390-aabjz50839.html?srsltid=AYCX9vJaEoJwpJDD9d4btgiMuZdELJpQlEdl0Z8SDjj_-9L73xrOr6PUc9M",
+    "ref_lien": "https://www.cdiscount.com/auto/pieces-auto/canette-rfrigrant-r134a--/f-13390-aabjz50839.html?srsltid=AYCX9vKh38DZVz_a7y8i8xH2ZOTPQzVdahEhSVplD67mvJHTnM7BzY1NEQM",
     "ref_mediane": 42.99,
     "ecart_pct": 2.0,
     "prix_vente": 40.73,
@@ -2665,116 +2711,6 @@
   },
   {
    "denicheur": "Idéfix",
-   "titre": "Pack de x8 Oral-B Brossettes de Rechange Ultimate Clean",
-   "prix_annonce": 34.99,
-   "lien": "https://www.dealabs.com/bons-plans/pack-de-x8-oral-b-brossettes-de-rechange-ultimate-clean-3451445",
-   "source": "dealabs-nouveaux",
-   "vu": "2026-11-10T19:00+00:00",
-   "lien_marchand": "https://www.amazon.fr/dp/B0DQLVR8SD",
-   "domaine": "amazon.fr",
-   "asin": "B0DQLVR8SD",
-   "keepa": {
-    "nb_vendeurs_neuf": 20,
-    "marque": "Oral-B",
-    "asin": "B0DQLVR8SD",
-    "titre": "Oral-B Brossettes de Rechange Ultimate Clean, Lot de 8, Noires",
-    "ean": "8700216778497",
-    "pays": "FR",
-    "prix_neuf": 34.99,
-    "prix_amazon": 34.99,
-    "prix_tiers": 34.99,
-    "moyenne_90j": 49.05,
-    "plus_bas_90j": 29.99,
-    "occasion": null,
-    "rang_ventes": 1328,
-    "chutes_rang_30j": 41,
-    "chutes_rang_90j": 111,
-    "ventes_estimees_30j": 41,
-    "remise_sincere": true,
-    "lien": "https://www.amazon.fr/dp/B0DQLVR8SD",
-    "jetons_restants": 333,
-    "eans": [
-     "8700216778497"
-    ],
-    "ventes_mois": 50
-   },
-   "titre_fiche": "Oral-B Brossettes de Rechange Ultimate Clean, Lot de 8, Noires",
-   "ean": "8700216778497",
-   "prix_page": 34.99,
-   "achat": 34.99,
-   "fiche_google": "Oral-B iO Ultimate Clean",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "achat": 34.99,
-    "nb_vendeurs": 7,
-    "ventes_30j": 50,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 31.75,
-    "ref_ou": "Cdiscount",
-    "ref_lien": "https://www.cdiscount.com/electromenager/sante-minceur/brossettes-oral-b-io-refills-ultimate-clean/f-110590501-ora8700216195829.html?o=4318461379&p=30.15",
-    "ref_mediane": 43.94,
-    "ecart_pct": -10.2,
-    "prix_vente": 30.8,
-    "marge_nette": -12.03,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 30.8,
-     "cout_achat": 34.99,
-     "frais_canal": 0.71,
-     "prelevements": 4.13,
-     "provision": 3.0,
-     "marge_nette": -12.03,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [
-     "Cdiscount"
-    ],
-    "raison": "pas moins cher que le marché (-10.2 % sous Cdiscount)"
-   },
-   "refs": [
-    {
-     "marchand": "Cdiscount",
-     "total": 31.75,
-     "gros": true,
-     "lien": "https://www.cdiscount.com/electromenager/sante-minceur/brossettes-oral-b-io-refills-ultimate-clean/f-110590501-ora8700216195829.html?o=4318461379&p=30.15"
-    },
-    {
-     "marchand": "Galaxus",
-     "total": 35.0,
-     "gros": false,
-     "lien": "https://www.galaxus.fr/fr/s6/product/oral-b-io-nettoyage-ultime-4x-tete-de-brosse-a-dents-56466103?offertype=retail&offerid=2705624&utm_campaign=organicshopping&utm_source=google&utm_medium=organic"
-    },
-    {
-     "marchand": "Farmaciasdirect Fr",
-     "total": 38.99,
-     "gros": false,
-     "lien": "https://www.farmaciasdirect.fr/products/oral-b-io-ultimate-clean-replacement-heads-4-unit-pack-replacement-heads?variant=43704755290289"
-    },
-    {
-     "marchand": "mifarma.fr",
-     "total": 43.94,
-     "gros": false,
-     "lien": "https://www.mifarma.fr/oral-b-io-ultimate-clean-lot-de-4-tetes-de-rechange"
-    },
-    {
-     "marchand": "Rue du Commerce Marketplace",
-     "total": 45.09,
-     "gros": true,
-     "lien": "https://www.rueducommerce.fr/p/m26019427801.html"
-    },
-    {
-     "marchand": "PcComponentes FR",
-     "total": 53.05,
-     "gros": false,
-     "lien": "https://www.pccomponentes.fr/brossette-dentaire-oral-b-io-ultimate-clean-4-unites-indicateur-dusure?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vIyLuatHNmM8nze8sWdHDr3NnbH14ds1dS9Qfo-zh9EZ1l7pAAzK5Q"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
    "titre": "Philips 2300 LatteGo, machine à café à grains 351.72 au lieu de 549.99€ https://www.amazon.fr/dp/B0D",
    "prix_annonce": 351.72,
    "lien": "https://www.amazon.fr/dp/B0D1VRV1YW/?tag=chollosyofe0b-20",
@@ -2793,7 +2729,7 @@
     "prix_neuf": 351.72,
     "prix_amazon": 351.72,
     "prix_tiers": 351.72,
-    "moyenne_90j": 414.89,
+    "moyenne_90j": 414.87,
     "plus_bas_90j": 299.0,
     "occasion": 316.04,
     "rang_ventes": 3570,
@@ -2802,7 +2738,7 @@
     "ventes_estimees_30j": 48,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0D1VRV1YW",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "8720389027611"
     ],
@@ -2812,39 +2748,44 @@
    "ean": "8720389027611",
    "prix_page": 351.72,
    "achat": 351.72,
-   "fiche_google": "Philips Série 2300 Machine espresso entière automatique",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Expresso broyeur Philips EP1220/00",
+    "Philips 5571",
+    "Philips 5571",
+    "Philips 2200 series EP2236/40 coffee maker"
+   ],
    "verdict": {
     "achat": 351.72,
     "nb_vendeurs": 1,
     "ventes_30j": 50,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 414.89,
+    "ref_min": 414.87,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0D1VRV1YW",
-    "ref_mediane": 414.89,
+    "ref_mediane": 414.87,
     "ecart_pct": 15.2,
-    "prix_vente": 402.44,
-    "marge_nette": -12.49,
+    "prix_vente": 402.42,
+    "marge_nette": -12.51,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 402.44,
+     "prix_vente": 402.42,
      "cout_achat": 351.72,
      "frais_canal": 6.29,
-     "prelevements": 53.93,
+     "prelevements": 53.92,
      "provision": 3.0,
-     "marge_nette": -12.49,
+     "marge_nette": -12.51,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (-12.49 €)"
+    "raison": "marge nette trop faible (-12.51 €)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 414.89,
+     "total": 414.87,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0D1VRV1YW"
     }
@@ -2871,7 +2812,7 @@
     "prix_neuf": 84.46,
     "prix_amazon": null,
     "prix_tiers": 84.46,
-    "moyenne_90j": 90.49,
+    "moyenne_90j": 90.47,
     "plus_bas_90j": 79.0,
     "occasion": null,
     "rang_ventes": 2729,
@@ -2880,7 +2821,7 @@
     "ventes_estimees_30j": 48,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0DK5FH9L8",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "0194644299217"
     ],
@@ -2899,30 +2840,30 @@
     "ventes_30j": 48,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 90.49,
+    "ref_min": 90.47,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0DK5FH9L8",
-    "ref_mediane": 90.49,
-    "ecart_pct": 6.7,
-    "prix_vente": 87.78,
-    "marge_nette": -13.01,
+    "ref_mediane": 90.47,
+    "ecart_pct": 6.6,
+    "prix_vente": 87.76,
+    "marge_nette": -13.03,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 87.78,
+     "prix_vente": 87.76,
      "cout_achat": 84.46,
      "frais_canal": 1.57,
      "prelevements": 11.76,
      "provision": 3.0,
-     "marge_nette": -13.01,
+     "marge_nette": -13.03,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (-13.01 €)"
+    "raison": "marge nette trop faible (-13.03 €)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 90.49,
+     "total": 90.47,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0DK5FH9L8"
     }
@@ -2949,7 +2890,7 @@
     "prix_neuf": 43.99,
     "prix_amazon": 43.99,
     "prix_tiers": 43.99,
-    "moyenne_90j": 39.19,
+    "moyenne_90j": 39.2,
     "plus_bas_90j": 28.75,
     "occasion": 37.91,
     "rang_ventes": 1181,
@@ -2958,7 +2899,7 @@
     "ventes_estimees_30j": 33,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B098XSQC9H",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "3030050175691"
     ],
@@ -2968,46 +2909,73 @@
    "ean": "3030050175691",
    "prix_page": 43.99,
    "achat": 43.99,
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Babyliss Sèche-cheveux domestique pliable 2000w Sèche-cheveux",
-    "Babyliss Pro Diffuseur",
-    "Babyliss Pro Diffuseur",
-    "Babyliss Diffuseur Pro universel"
-   ],
+   "fiche_google": "Babyliss Sèche-cheveux 6719DE",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "achat": 43.99,
-    "nb_vendeurs": 1,
+    "nb_vendeurs": 9,
     "ventes_30j": 500,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 39.19,
+    "ref_min": 39.2,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B098XSQC9H",
-    "ref_mediane": 39.19,
+    "ref_mediane": 54.38,
     "ecart_pct": -12.2,
-    "prix_vente": 38.01,
-    "marge_nette": -14.89,
+    "prix_vente": 38.02,
+    "marge_nette": -14.88,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 38.01,
+     "prix_vente": 38.02,
      "cout_achat": 43.99,
      "frais_canal": 0.82,
      "prelevements": 5.09,
      "provision": 3.0,
-     "marge_nette": -14.89,
+     "marge_nette": -14.88,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
-    "gros_au_meme_prix": [],
+    "gros_au_meme_prix": [
+     "Cdiscount"
+    ],
     "raison": "pas moins cher que le marché (-12.2 % sous Amazon.fr (prix habituel sur 90 jours))"
    },
    "refs": [
     {
-     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 39.19,
+     "marchand": "Cdiscount",
+     "total": 43.99,
+     "gros": true,
+     "lien": "https://www.cdiscount.com/electromenager/soin-de-la-personne-beaute/seche-cheveux-babyliss-6719de-air-pro-2200-p/f-110570504-bab3030050175691.html"
+    },
+    {
+     "marchand": "Carrefour",
+     "total": 53.24,
+     "gros": true,
+     "lien": "https://www.carrefour.fr/p/seche-cheveux-babyliss-air-pro-2200w-ionisant-noir-2-vitesses-2-temperatures-diffuseur-3030050175691?s=2718"
+    },
+    {
+     "marchand": "BUT Marketplace",
+     "total": 53.71,
+     "gros": true,
+     "lien": "https://www.but.fr/produits/3030050175691/Seche-cheveux-2200w-Ioniseur-Air-Frais-Diffuseur-2-Vitesses-2-Temperatures.html?srsltid=AYCX9vLYGqj6lvMSd4vOjD3NyhXiH2v8ITVt3nGp-wKkapDVWjfwwZD113A"
+    },
+    {
+     "marchand": "Sanitino.fr",
+     "total": 54.38,
      "gros": false,
-     "lien": "https://www.amazon.fr/dp/B098XSQC9H"
+     "lien": "https://www.sanitino.fr/babyliss-seche-cheveux-air-pro-6719de?srsltid=AYCX9vJOPoWGs7GfPEJSGweVGIgwA7vWQxXUMSboBTjK3i36AmVkQ2jDWfk"
+    },
+    {
+     "marchand": "Darty",
+     "total": 54.69,
+     "gros": true,
+     "lien": "https://www.darty.com/nav/achat/petit_electromenager/beaute_feminine-seche-cheveux/seche_cheveux/babyliss_6719de.html?ofmp=1551678513&dartycid=sem_free-listing_MP-beaute--forme-et-sante_coiffure"
+    },
+    {
+     "marchand": "ManoMano.fr",
+     "total": 56.19,
+     "gros": true,
+     "lien": "https://www.manomano.fr/seche-cheveux-6001?model_id=72859757&srsltid=AYCX9vIpZW74IlUwqyVgb1FvkwQdirKhV_J8bMPF0bdfv98pLO9gTW41yfo"
     }
    ],
    "etoile": false
@@ -3032,7 +3000,7 @@
     "prix_neuf": 112.88,
     "prix_amazon": 112.88,
     "prix_tiers": 112.88,
-    "moyenne_90j": 121.34,
+    "moyenne_90j": 121.36,
     "plus_bas_90j": 78.3,
     "occasion": null,
     "rang_ventes": 4279,
@@ -3041,7 +3009,7 @@
     "ventes_estimees_30j": 21,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B0CS3NX4QG",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "3121040090893"
     ],
@@ -3066,32 +3034,144 @@
     "ventes_30j": 21,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 121.34,
+    "ref_min": 121.36,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0CS3NX4QG",
-    "ref_mediane": 121.34,
+    "ref_mediane": 121.36,
     "ecart_pct": 7.0,
-    "prix_vente": 117.7,
-    "marge_nette": -15.97,
+    "prix_vente": 117.72,
+    "marge_nette": -15.95,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 117.7,
+     "prix_vente": 117.72,
      "cout_achat": 112.88,
      "frais_canal": 2.02,
      "prelevements": 15.77,
      "provision": 3.0,
-     "marge_nette": -15.97,
+     "marge_nette": -15.95,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "marge nette trop faible (-15.97 €)"
+    "raison": "marge nette trop faible (-15.95 €)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 121.34,
+     "total": 121.36,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0CS3NX4QG"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "Lot de 10 Brossettes Oral-B Pro Sensitive Clean",
+   "prix_annonce": 22.99,
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-10-brossettes-oral-b-pro-sensitive-clean-3450401",
+   "source": "dealabs-tendance",
+   "vu": "2026-11-10T19:00+00:00",
+   "lien_marchand": "https://www.amazon.com/dp/B0BWNTF2YF",
+   "domaine": "amazon.com",
+   "asin": "B0BWNTF2YF",
+   "keepa": {
+    "nb_vendeurs_neuf": 11,
+    "marque": "Oral-B",
+    "asin": "B0BWNTF2YF",
+    "titre": "Oral-B Brossettes de Rechange Sensitive Clean, lot de 10, Blanches",
+    "ean": "8006540862094",
+    "pays": "FR",
+    "prix_neuf": 22.99,
+    "prix_amazon": 22.99,
+    "prix_tiers": 22.99,
+    "moyenne_90j": 33.66,
+    "plus_bas_90j": 19.9,
+    "occasion": 40.32,
+    "rang_ventes": 620,
+    "chutes_rang_30j": 31,
+    "chutes_rang_90j": 85,
+    "ventes_estimees_30j": 31,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0BWNTF2YF",
+    "jetons_restants": 765,
+    "eans": [
+     "8006540862094"
+    ],
+    "ventes_mois": 100
+   },
+   "titre_fiche": "Oral-B Brossettes de Rechange Sensitive Clean, lot de 10, Blanches",
+   "ean": "8006540862094",
+   "prix_page": 22.99,
+   "achat": 22.99,
+   "fiche_google": "Oral-B Brossettes Pro Sensitive Clean",
+   "marche_raison": null,
+   "google_refuse": null,
+   "verdict": {
+    "achat": 22.99,
+    "nb_vendeurs": 6,
+    "ventes_30j": 100,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 11.99,
+    "ref_ou": "Cdiscount",
+    "ref_lien": "https://www.cdiscount.com/au-quotidien/hygiene-soin-beaute/brossette-sensitive-clean/f-127021701-aaacj16414.html?srsltid=AYCX9vKsmc5eAnyHqm-HyhlkC18CW3T_pv_GqL5-NhSmb-axYGLnxXBEfNo",
+    "ref_mediane": 15.43,
+    "ecart_pct": -91.7,
+    "prix_vente": 11.63,
+    "marge_nette": -16.34,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 11.63,
+     "cout_achat": 22.99,
+     "frais_canal": 0.42,
+     "prelevements": 1.56,
+     "provision": 3.0,
+     "marge_nette": -16.34,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [
+     "Cdiscount",
+     "Carrefour",
+     "Electro Dépôt"
+    ],
+    "raison": "pas moins cher que le marché (-91.7 % sous Cdiscount)"
+   },
+   "refs": [
+    {
+     "marchand": "Cdiscount",
+     "total": 11.99,
+     "gros": true,
+     "lien": "https://www.cdiscount.com/au-quotidien/hygiene-soin-beaute/brossette-sensitive-clean/f-127021701-aaacj16414.html?srsltid=AYCX9vKsmc5eAnyHqm-HyhlkC18CW3T_pv_GqL5-NhSmb-axYGLnxXBEfNo"
+    },
+    {
+     "marchand": "Monoprix",
+     "total": 13.75,
+     "gros": false,
+     "lien": "https://courses.monoprix.fr/products/MPX_6620473/details"
+    },
+    {
+     "marchand": "Carrefour",
+     "total": 13.99,
+     "gros": true,
+     "lien": "https://www.carrefour.fr/p/brossettes-pour-brosse-a-dents-electrique-oral-b-8006540896013"
+    },
+    {
+     "marchand": "Electro Dépôt",
+     "total": 16.88,
+     "gros": true,
+     "lien": "https://www.electrodepot.fr/brossettes-oral-b-ultra-thin-x2.html?srsltid=AYCX9vLJMC46FknaeQrI6TrZm8k9TeqTEAaMNcuanqe72A1ZwB9GCFJMTr0"
+    },
+    {
+     "marchand": "Rue du Commerce Marketplace",
+     "total": 28.02,
+     "gros": true,
+     "lien": "https://www.rueducommerce.fr/p/m24070654888.html"
+    },
+    {
+     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
+     "total": 33.66,
+     "gros": false,
+     "lien": "https://www.amazon.fr/dp/B0BWNTF2YF"
     }
    ],
    "etoile": false
@@ -3136,31 +3216,26 @@
     "ventes_estimees_30j": 28,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B0D96C7W3N",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "5026555437899"
     ],
     "ventes_mois": null,
     "nb_fiches_amazon": 1
    },
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "PGA Tour 2K25",
-    "NBA 2K25 (PC) Steam Key - NORTH AMERICA",
-    "Code NBA 2K25 Standard Edition dans une boîte Nintendo Switch",
-    "NBA 2K25 All-Star Edition (Europe) (PC) - Steam - Digital Key"
-   ],
+   "fiche_google": "2K Games NBA 2K25",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "achat": 30.66,
-    "nb_vendeurs": 1,
+    "nb_vendeurs": 2,
     "ventes_30j": 28,
     "manque": [],
     "feu": "rouge",
     "ref_min": 18.21,
     "ref_ou": "Amazon.fr",
     "ref_lien": "https://www.amazon.fr/dp/B0D96C7W3N",
-    "ref_mediane": 18.21,
+    "ref_mediane": 24.98,
     "ecart_pct": -68.4,
     "prix_vente": 17.66,
     "marge_nette": -18.88,
@@ -3175,11 +3250,18 @@
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [
-     "Amazon.fr"
+     "Amazon.fr",
+     "Cdiscount"
     ],
     "raison": "pas moins cher que le marché (-68.4 % sous Amazon.fr)"
    },
    "refs": [
+    {
+     "marchand": "Cdiscount",
+     "total": 31.76,
+     "gros": true,
+     "lien": "https://www.cdiscount.com/jeux-pc-video-console/ps4/nba-2k25-ps4-standard-edition/f-1030401-2kg1741675858467.html?srsltid=AYCX9vKwkjrJMVeQ4E0UL3_yAgpQMuI352sQlesNF9_E28_7loRDoC7drN0"
+    },
     {
      "marchand": "Amazon.fr",
      "total": 18.21,
@@ -3218,7 +3300,7 @@
     "ventes_estimees_30j": 20,
     "remise_sincere": true,
     "lien": "https://www.amazon.fr/dp/B005CTTS52",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "3417750385108"
     ],
@@ -3232,10 +3314,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Blouson vintage bomber Schott nyc cwu r flight jacket taille XL/42",
-    "Edward Marine 48/s Marine - Accueil",
-    "Schott LCWELISA MOKA Veste marron",
-    "Edward Marine 56/2xl Marine - Accueil"
+    "Schott Homme Bombardier en CUIR",
+    "Schott NYC Blouson Aviateur B-3 Homme",
+    "Schott Nyc blouson aviateur B-3 Homme",
+    "Schott NYC Blouson Aviateur B-3 Homme Mouton"
    ],
    "verdict": {
     "achat": 383.49,
@@ -3269,225 +3351,6 @@
      "total": 445.34,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B005CTTS52"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
-   "titre": "LEGO Technic 42214 - Supercar Lamborghini Revuelto (via coupon)",
-   "prix_annonce": 94.17,
-   "lien": "https://www.dealabs.com/bons-plans/supercar-lamborghini-revuelto-lego-technic-42214-via-coupon-3449486",
-   "source": "dealabs-tendance",
-   "vu": "2026-11-10T18:40+00:00",
-   "lien_marchand": "https://www.amazon.fr/dp/B0DWDTRG1P",
-   "domaine": "amazon.fr",
-   "asin": "B0DWDTRG1P",
-   "keepa": {
-    "nb_vendeurs_neuf": 76,
-    "marque": "LEGO",
-    "asin": "B0DWDTRG1P",
-    "titre": "LEGO Technic Supercar Lamborghini Revuelto 42214",
-    "ean": "5702017816371",
-    "pays": "FR",
-    "prix_neuf": 119.99,
-    "prix_amazon": 119.99,
-    "prix_tiers": 119.99,
-    "moyenne_90j": 122.85,
-    "plus_bas_90j": 107.99,
-    "occasion": null,
-    "rang_ventes": 1442,
-    "chutes_rang_30j": 53,
-    "chutes_rang_90j": 140,
-    "ventes_estimees_30j": 53,
-    "remise_sincere": false,
-    "lien": "https://www.amazon.fr/dp/B0DWDTRG1P",
-    "jetons_restants": 333,
-    "eans": [
-     "5702017816371"
-    ],
-    "ventes_mois": 100
-   },
-   "titre_fiche": "LEGO Technic Supercar Lamborghini Revuelto 42214",
-   "ean": "5702017816371",
-   "prix_page": 119.99,
-   "achat": 119.99,
-   "note_prix": "le bon plan annonçait 94.17 € (code promo, carte de fidélité ou remboursement différé ?) ; prix réellement affiché sur la fiche : 119.99 €",
-   "fiche_google": "42214 LEGO Technic Lamborghini Revuelto Supercar",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "achat": 119.99,
-    "nb_vendeurs": 8,
-    "ventes_30j": 100,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 119.99,
-    "ref_ou": "Auchan.fr",
-    "ref_lien": "https://www.auchan.fr/lego-technic-42214-supercar-lamborghini-revuelto-jeu-de-construction-10-ans-voiture/pr-C1844685",
-    "ref_mediane": 175.38,
-    "ecart_pct": 0.0,
-    "prix_vente": 116.39,
-    "marge_nette": -24.19,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 116.39,
-     "cout_achat": 119.99,
-     "frais_canal": 2.0,
-     "prelevements": 15.6,
-     "provision": 3.0,
-     "marge_nette": -24.19,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [
-     "Auchan.fr"
-    ],
-    "raison": "pas moins cher que le marché (0.0 % sous Auchan.fr)"
-   },
-   "refs": [
-    {
-     "marchand": "Auchan.fr",
-     "total": 119.99,
-     "gros": true,
-     "lien": "https://www.auchan.fr/lego-technic-42214-supercar-lamborghini-revuelto-jeu-de-construction-10-ans-voiture/pr-C1844685"
-    },
-    {
-     "marchand": "E.Leclerc",
-     "total": 133.37,
-     "gros": true,
-     "lien": "https://e.leclerc/fp/5702017816371?srsltid=AYCX9vL6FDw7tjeaJtcAMh8EibOBI13uyZD9c0tSB-xJ7VkOwjmVhxirqqo"
-    },
-    {
-     "marchand": "Vertbaudet Marketplace",
-     "total": 170.78,
-     "gros": false,
-     "lien": "https://www.vertbaudet.fr/lego-technic-supercar-lamborghini-revuelto-42214-multicolore.htm?ProductId=A0000H0AK&FiltreCouleur=HGAZ&FiltreTaille=TU"
-    },
-    {
-     "marchand": "Cultura.com",
-     "total": 179.99,
-     "gros": false,
-     "lien": "https://www.cultura.com/p-legor-42214-supercar-lamborghini-revuelto-technic-11884018.html?utm_source=seo&utm_medium=organic_grid&utm_campaign=jeux-et-jouets"
-    },
-    {
-     "marchand": "King Jouet",
-     "total": 179.99,
-     "gros": false,
-     "lien": "https://www.king-jouet.com/jeu-jouet/jeux-constructions/lego-planchettes/ref-990046-42214-lego-technic-supercar-lamborghini-revuelto.htm"
-    },
-    {
-     "marchand": "La Grande Récré",
-     "total": 186.98,
-     "gros": false,
-     "lien": "https://www.lagranderecre.fr/jeux-de-construction/jeux-de-construction-en-briques/sport-et-aventures/supercar-lamborghini-revuelto-lego-technic-42214.html"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
-   "titre": "🛍️ Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone ✅ 99,95€ au lieu de 125,00€ ➡️",
-   "prix_annonce": 99.95,
-   "lien": "https://www.amazon.fr/dp/B0BGT3G48W/?tag=pmrat-21",
-   "source": "telegram:promorat",
-   "vu": "2026-11-10T18:40+00:00",
-   "lien_marchand": "https://www.amazon.fr/dp/B0BGT3G48W/?tag=pmrat-21",
-   "domaine": "amazon.fr",
-   "asin": "B0BGT3G48W",
-   "keepa": {
-    "nb_vendeurs_neuf": 29,
-    "marque": "Canon",
-    "asin": "B0BGT3G48W",
-    "titre": "Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone",
-    "ean": "4549292194180",
-    "pays": "FR",
-    "prix_neuf": 99.95,
-    "prix_amazon": 99.95,
-    "prix_tiers": 99.95,
-    "moyenne_90j": 94.92,
-    "plus_bas_90j": 84.82,
-    "occasion": 84.42,
-    "rang_ventes": null,
-    "chutes_rang_30j": 0,
-    "chutes_rang_90j": 0,
-    "ventes_estimees_30j": 0,
-    "remise_sincere": false,
-    "lien": "https://www.amazon.fr/dp/B0BGT3G48W",
-    "jetons_restants": 333,
-    "eans": [
-     "4549292194180"
-    ],
-    "ventes_mois": 200
-   },
-   "titre_fiche": "Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone",
-   "ean": "4549292194180",
-   "prix_page": 99.95,
-   "achat": 99.95,
-   "fiche_google": "Imprimante photo Canon Zoemini",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "achat": 99.95,
-    "nb_vendeurs": 8,
-    "ventes_30j": 200,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 94.92,
-    "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
-    "ref_lien": "https://www.amazon.fr/dp/B0BGT3G48W",
-    "ref_mediane": 187.19,
-    "ecart_pct": -5.3,
-    "prix_vente": 92.07,
-    "marge_nette": -24.85,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 92.07,
-     "cout_achat": 99.95,
-     "frais_canal": 1.63,
-     "prelevements": 12.34,
-     "provision": 3.0,
-     "marge_nette": -24.85,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [],
-    "raison": "pas moins cher que le marché (-5.3 % sous Amazon.fr (prix habituel sur 90 jours))"
-   },
-   "refs": [
-    {
-     "marchand": "Shop-Printer",
-     "total": 137.23,
-     "gros": false,
-     "lien": "https://shop-printer.fr/autres-imprimantes/61038907-canon-zoemini-pv-123-couleur-imprimante-portable-12438-eur-4549292128284.html"
-    },
-    {
-     "marchand": "Cdiscount",
-     "total": 167.88,
-     "gros": true,
-     "lien": "https://www.cdiscount.com/photo-numerique/accessoires-photo/canon-zoemini-imprimante-photo-de-poche-photo/f-1121120-can4549292128284.html?srsltid=AYCX9vL085XXv2PQ7xwtVFRG9FRHR6yiN8_3NXUNqYggElBhLsWdb0Vi_Ok"
-    },
-    {
-     "marchand": "PcComponentes FR",
-     "total": 186.58,
-     "gros": false,
-     "lien": "https://www.pccomponentes.fr/canon-zoemini-impresora-fotografica-portatil-oro-rosa?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vKRbWk254zF1AqCwUJUwj9GfcA7Jnepn4n6YvzPcsvloPikA65pWn4"
-    },
-    {
-     "marchand": "Rue du Commerce Marketplace",
-     "total": 187.8,
-     "gros": true,
-     "lien": "https://www.rueducommerce.fr/p/m24072527211.html"
-    },
-    {
-     "marchand": "Darty",
-     "total": 195.63,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/informatique/imprimante-imprimante/imprimante_photo/canon_zoe_mini.html?ofmp=1555345842&dartycid=sem_free-listing_MP-informatique_imprimante-et-scanner"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 195.63,
-     "gros": true,
-     "lien": "https://www.fnac.com/Imprimante-portable-Canon-Zoemini-Rose/a12977986/w-4?oref=86ceaf7e-3c7a-ef0c-4127-6f46dde6cc83&Origin=CMP_GOOGLE_FL_MICRO"
     }
    ],
    "etoile": false
@@ -3532,7 +3395,7 @@
     "ventes_estimees_30j": 1,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B0D3QTW7DX",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "5026555368971"
     ],
@@ -3548,34 +3411,221 @@
     "ventes_30j": 1,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 14.99,
+    "ref_min": 20.11,
     "ref_ou": "Amazon.fr",
-    "ref_lien": "https://www.amazon.fr/TopSpin-2K25-PS5-%C3%89dition-Standard/dp/B0CSK9NC8R?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1X6FK5RDHNB96&language=fr_FR",
-    "ref_mediane": 14.99,
-    "ecart_pct": -126.8,
-    "prix_vente": 14.54,
-    "marge_nette": -24.88,
+    "ref_lien": "https://www.amazon.fr/dp/B0D3QTW7DX",
+    "ref_mediane": 20.11,
+    "ecart_pct": -69.1,
+    "prix_vente": 19.51,
+    "marge_nette": -20.65,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 14.54,
+     "prix_vente": 19.51,
      "cout_achat": 34.0,
-     "frais_canal": 0.47,
-     "prelevements": 1.95,
+     "frais_canal": 0.54,
+     "prelevements": 2.61,
      "provision": 3.0,
-     "marge_nette": -24.88,
+     "marge_nette": -20.65,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [
      "Amazon.fr"
     ],
-    "raison": "pas moins cher que le marché (-126.8 % sous Amazon.fr)"
+    "raison": "pas moins cher que le marché (-69.1 % sous Amazon.fr)"
    },
    "refs": [
     {
      "marchand": "Amazon.fr",
-     "total": 14.99,
+     "total": 20.11,
      "gros": true,
-     "lien": "https://www.amazon.fr/TopSpin-2K25-PS5-%C3%89dition-Standard/dp/B0CSK9NC8R?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1X6FK5RDHNB96&language=fr_FR"
+     "lien": "https://www.amazon.fr/dp/B0D3QTW7DX"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "LEGO Technic 42214 - Supercar Lamborghini Revuelto (via coupon)",
+   "prix_annonce": 94.17,
+   "lien": "https://www.dealabs.com/bons-plans/supercar-lamborghini-revuelto-lego-technic-42214-via-coupon-3449486",
+   "source": "dealabs-tendance",
+   "vu": "2026-11-10T18:40+00:00",
+   "lien_marchand": "https://www.amazon.fr/dp/B0DWDTRG1P",
+   "domaine": "amazon.fr",
+   "asin": "B0DWDTRG1P",
+   "keepa": {
+    "nb_vendeurs_neuf": 76,
+    "marque": "LEGO",
+    "asin": "B0DWDTRG1P",
+    "titre": "LEGO Technic Supercar Lamborghini Revuelto 42214",
+    "ean": "5702017816371",
+    "pays": "FR",
+    "prix_neuf": 119.99,
+    "prix_amazon": 119.99,
+    "prix_tiers": 119.99,
+    "moyenne_90j": 122.84,
+    "plus_bas_90j": 107.99,
+    "occasion": null,
+    "rang_ventes": 1442,
+    "chutes_rang_30j": 53,
+    "chutes_rang_90j": 140,
+    "ventes_estimees_30j": 53,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0DWDTRG1P",
+    "jetons_restants": 765,
+    "eans": [
+     "5702017816371"
+    ],
+    "ventes_mois": 100
+   },
+   "titre_fiche": "LEGO Technic Supercar Lamborghini Revuelto 42214",
+   "ean": "5702017816371",
+   "prix_page": 119.99,
+   "achat": 119.99,
+   "note_prix": "le bon plan annonçait 94.17 € (code promo, carte de fidélité ou remboursement différé ?) ; prix réellement affiché sur la fiche : 119.99 €",
+   "fiche_google": "Cadre Mural d’Exposition pour LEGO Technic 42214 Lamborghini Revuelto Super Sports Taille Moyenne LEGO 42214 Lamborghini Revuelto Supercar de sport",
+   "marche_raison": null,
+   "google_refuse": null,
+   "verdict": {
+    "achat": 119.99,
+    "nb_vendeurs": 1,
+    "ventes_30j": 100,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 122.84,
+    "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
+    "ref_lien": "https://www.amazon.fr/dp/B0DWDTRG1P",
+    "ref_mediane": 122.84,
+    "ecart_pct": 2.3,
+    "prix_vente": 119.15,
+    "marge_nette": -21.84,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 119.15,
+     "cout_achat": 119.99,
+     "frais_canal": 2.04,
+     "prelevements": 15.97,
+     "provision": 3.0,
+     "marge_nette": -21.84,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [],
+    "raison": "pas moins cher que le marché (2.3 % sous Amazon.fr (prix habituel sur 90 jours))"
+   },
+   "refs": [
+    {
+     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
+     "total": 122.84,
+     "gros": false,
+     "lien": "https://www.amazon.fr/dp/B0DWDTRG1P"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "🛍️ Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone ✅ 99,95€ au lieu de 125,00€ ➡️",
+   "prix_annonce": 99.95,
+   "lien": "https://www.amazon.fr/dp/B0BGT3G48W/?tag=pmrat-21",
+   "source": "telegram:promorat",
+   "vu": "2026-11-10T18:40+00:00",
+   "lien_marchand": "https://www.amazon.fr/dp/B0BGT3G48W/?tag=pmrat-21",
+   "domaine": "amazon.fr",
+   "asin": "B0BGT3G48W",
+   "keepa": {
+    "nb_vendeurs_neuf": 29,
+    "marque": "Canon",
+    "asin": "B0BGT3G48W",
+    "titre": "Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone",
+    "ean": "4549292194180",
+    "pays": "FR",
+    "prix_neuf": 99.95,
+    "prix_amazon": 99.95,
+    "prix_tiers": 99.95,
+    "moyenne_90j": 94.92,
+    "plus_bas_90j": 84.82,
+    "occasion": 84.42,
+    "rang_ventes": null,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0BGT3G48W",
+    "jetons_restants": 765,
+    "eans": [
+     "4549292194180"
+    ],
+    "ventes_mois": 200
+   },
+   "titre_fiche": "Canon ZOEMINI 2 Imprimante Photo Portable Bluetooth pour Téléphone",
+   "ean": "4549292194180",
+   "prix_page": 99.95,
+   "achat": 99.95,
+   "fiche_google": "Imprimante photo Canon Zoemini",
+   "marche_raison": null,
+   "google_refuse": null,
+   "verdict": {
+    "achat": 99.95,
+    "nb_vendeurs": 8,
+    "ventes_30j": 200,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 94.92,
+    "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
+    "ref_lien": "https://www.amazon.fr/dp/B0BGT3G48W",
+    "ref_mediane": 187.53,
+    "ecart_pct": -5.3,
+    "prix_vente": 92.07,
+    "marge_nette": -24.85,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 92.07,
+     "cout_achat": 99.95,
+     "frais_canal": 1.63,
+     "prelevements": 12.34,
+     "provision": 3.0,
+     "marge_nette": -24.85,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [],
+    "raison": "pas moins cher que le marché (-5.3 % sous Amazon.fr (prix habituel sur 90 jours))"
+   },
+   "refs": [
+    {
+     "marchand": "Shop-Printer",
+     "total": 137.23,
+     "gros": false,
+     "lien": "https://shop-printer.fr/autres-imprimantes/61038907-canon-zoemini-pv-123-couleur-imprimante-portable-12438-eur-4549292128284.html"
+    },
+    {
+     "marchand": "Cdiscount",
+     "total": 167.88,
+     "gros": true,
+     "lien": "https://www.cdiscount.com/photo-numerique/accessoires-photo/canon-zoemini-imprimante-photo-de-poche-photo/f-1121120-can4549292128284.html?srsltid=AYCX9vIJoMDtYzZRrnZNr02iDvjdFvNd6dYpRfvLvA6GJTI21pIVQpc96B8"
+    },
+    {
+     "marchand": "PcComponentes FR",
+     "total": 187.25,
+     "gros": false,
+     "lien": "https://www.pccomponentes.fr/canon-zoemini-impresora-fotografica-portatil-oro-rosa?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vJ6Nrq61_HiGJNoSQlohk_1_hNPoXNCUlw1Kitz-kFcQ0TG2_aOez4"
+    },
+    {
+     "marchand": "Rue du Commerce Marketplace",
+     "total": 187.8,
+     "gros": true,
+     "lien": "https://www.rueducommerce.fr/p/m24072527211.html"
+    },
+    {
+     "marchand": "Darty",
+     "total": 195.63,
+     "gros": true,
+     "lien": "https://www.darty.com/nav/achat/informatique/imprimante-imprimante/imprimante_photo/canon_zoe_mini.html?ofmp=1555345842&dartycid=sem_free-listing_MP-informatique_imprimante-et-scanner"
+    },
+    {
+     "marchand": "Fnac",
+     "total": 195.63,
+     "gros": true,
+     "lien": "https://www.fnac.com/Imprimante-portable-Canon-Zoemini-Rose/a12977986/w-4?oref=86ceaf7e-3c7a-ef0c-4127-6f46dde6cc83&Origin=CMP_GOOGLE_FL_MICRO"
     }
    ],
    "etoile": false
@@ -3595,14 +3645,14 @@
    "google_refuse": null,
    "achat": 154.68,
    "marchand": "PcComponentes FR",
-   "lien_marchand": "https://www.pccomponentes.fr/lexar-ld4bu008g-r3200gdxg-ddr4-3200-mhz-16-go-2-x-8-go-cl19?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vLCX-1ybk4ZnjRoJSpxEBxqLfciQMnRSnbU4ALB4CJ0eGOtIkQRBLQ",
+   "lien_marchand": "https://www.pccomponentes.fr/lexar-ld4bu008g-r3200gdxg-ddr4-3200-mhz-16-go-2-x-8-go-cl19?utm_source=google&utm_medium=free-listings&srsltid=AYCX9vJjCSPQ420D91dHDsX7bMLVC9wcV5Xrw5dHEiGxkSnbrgZzlwhwAQ4",
    "domaine": "pccomponentes.fr",
    "refs": [
     {
      "marchand": "Cdiscount",
      "total": 156.24,
      "gros": true,
-     "lien": "https://www.cdiscount.com/informatique/memoire-ram/barrette-memoire-lexar-thor-ddr4-3200-udimm/f-10716-lex0843367127894.html?srsltid=AYCX9vIlpfSYRt94jWNuBFRbOe-sB6EQlk440QIKDhWyUSyj9WjPyTaM0WU"
+     "lien": "https://www.cdiscount.com/informatique/memoire-ram/barrette-memoire-lexar-thor-ddr4-3200-udimm/f-10716-lex0843367127894.html?srsltid=AYCX9vK1M7V0gl7kfNXWllhHsybTmgHs3cJeia0Ayak3yTCG4T6drkA6L0c"
     },
     {
      "marchand": "Amazon.fr",
@@ -3632,7 +3682,7 @@
      "marchand": "hello RSE",
      "total": 185.78,
      "gros": false,
-     "lien": "https://hellorse.fr/produits/0843367127894?srsltid=AYCX9vKhgpYwFk3Qa38ytp2lI1jWPPWCQVOGFGmmXhlJoDf49yxJTvUDmOg"
+     "lien": "https://hellorse.fr/produits/0843367127894?srsltid=AYCX9vLxBqYh6unVXUNKTjRzv_1bZARG9E4_QjN_Sv-vz9RCs85u4Aa36Fs"
     }
    ],
    "verdict": {
@@ -3643,7 +3693,7 @@
     "feu": "rouge",
     "ref_min": 156.24,
     "ref_ou": "Cdiscount",
-    "ref_lien": "https://www.cdiscount.com/informatique/memoire-ram/barrette-memoire-lexar-thor-ddr4-3200-udimm/f-10716-lex0843367127894.html?srsltid=AYCX9vIlpfSYRt94jWNuBFRbOe-sB6EQlk440QIKDhWyUSyj9WjPyTaM0WU",
+    "ref_lien": "https://www.cdiscount.com/informatique/memoire-ram/barrette-memoire-lexar-thor-ddr4-3200-udimm/f-10716-lex0843367127894.html?srsltid=AYCX9vK1M7V0gl7kfNXWllhHsybTmgHs3cJeia0Ayak3yTCG4T6drkA6L0c",
     "ref_mediane": 179.39,
     "ecart_pct": 1.0,
     "prix_vente": 151.55,
@@ -3695,7 +3745,7 @@
     "ventes_estimees_30j": 51,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B0GCMNN2ZQ",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "8700216985598"
     ],
@@ -3709,10 +3759,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Brosse à dents électrique Oral-B iO 3 Duo",
-    "Oral B Brosse à dents électrique iO 3 Bleue Edition cadeau",
-    "Oral-B iO3 Bleue",
-    "Brosse à dents électrique Oral-B iO 3"
+    "Oral B Brosse à dents électrique iO 3",
+    "Brosse à dents électrique Oral-B iO 3",
+    "Brosse à dents électrique Oral-B iO 3 Matt",
+    "Oral-B iO3 Bleue"
    ],
    "verdict": {
     "achat": 152.62,
@@ -3790,7 +3840,7 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B074WB5G42",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159511481"
     ],
@@ -3883,7 +3933,7 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B01820CYN0",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159504667"
     ],
@@ -3982,7 +4032,7 @@
      "marchand": "Son-Vidéo.com",
      "total": 199.0,
      "gros": false,
-     "lien": "https://www.son-video.com/article/ecouteurs-true-wireless/sony/wf1000xm5-argent?srsltid=AYCX9vLBWgbEpml9_Y7Un3gfhS7ZjRqmy-LsSTdNLjMC415WLbOAHxcXAQ0"
+     "lien": "https://www.son-video.com/article/ecouteurs-true-wireless/sony/wf1000xm5-argent?srsltid=AYCX9vLCzlcg2xsvAeDmV3DiEdjdteiEiOdBMaJZxfDKp5rOjUq1eHEXNN0"
     },
     {
      "marchand": "Auchan.fr",
@@ -4045,7 +4095,7 @@
     "prix_neuf": 95.0,
     "prix_amazon": null,
     "prix_tiers": 95.0,
-    "moyenne_90j": 61.74,
+    "moyenne_90j": 61.75,
     "plus_bas_90j": 56.11,
     "occasion": null,
     "rang_ventes": 134025,
@@ -4054,7 +4104,7 @@
     "ventes_estimees_30j": 1,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B0F8W6WNKK",
-    "jetons_restants": 333,
+    "jetons_restants": 765,
     "eans": [
      "0075020114099"
     ],
@@ -4079,16 +4129,16 @@
     "ventes_30j": 1,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 61.74,
+    "ref_min": 61.75,
     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
     "ref_lien": "https://www.amazon.fr/dp/B0F8W6WNKK",
-    "ref_mediane": 61.74,
-    "ecart_pct": -53.9,
-    "prix_vente": 59.89,
+    "ref_mediane": 61.75,
+    "ecart_pct": -53.8,
+    "prix_vente": 59.9,
     "marge_nette": -47.28,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 59.89,
+     "prix_vente": 59.9,
      "cout_achat": 95.0,
      "frais_canal": 1.15,
      "prelevements": 8.03,
@@ -4097,14 +4147,207 @@
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "pas moins cher que le marché (-53.9 % sous Amazon.fr (prix habituel sur 90 jours))"
+    "raison": "pas moins cher que le marché (-53.8 % sous Amazon.fr (prix habituel sur 90 jours))"
    },
    "refs": [
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 61.74,
+     "total": 61.75,
      "gros": false,
      "lien": "https://www.amazon.fr/dp/B0F8W6WNKK"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "Robot Aspirateur Laveur Lefant M210 Pro 20000Pa 279.98 au lieu de 699.99€ https://www.amazon.fr/dp/B",
+   "prix_annonce": 279.98,
+   "lien": "https://www.amazon.fr/dp/B0G7V355ZS/?tag=chollosyofe0b-20",
+   "source": "telegram:bonsplans",
+   "vu": "2026-11-10T19:00+00:00",
+   "lien_marchand": "https://www.amazon.fr/dp/B0G7V355ZS/?tag=chollosyofe0b-20",
+   "domaine": "amazon.fr",
+   "asin": "B0G7V355ZS",
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Lefant",
+    "asin": "B0G7V355ZS",
+    "titre": "Lefant M210 Pro Omni 28cm Mini Rouleau Robot Aspirateur Laveur, 20000Pa",
+    "ean": "0674026773943",
+    "pays": "FR",
+    "prix_neuf": 279.98,
+    "prix_amazon": null,
+    "prix_tiers": 279.98,
+    "moyenne_90j": 725.07,
+    "plus_bas_90j": 279.98,
+    "occasion": null,
+    "rang_ventes": 879,
+    "chutes_rang_30j": 24,
+    "chutes_rang_90j": 71,
+    "ventes_estimees_30j": 24,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0G7V355ZS",
+    "jetons_restants": 765,
+    "eans": [
+     "0674026773943"
+    ],
+    "ventes_mois": null
+   },
+   "titre_fiche": "Lefant M210 Pro Omni 28cm Mini Rouleau Robot Aspirateur Laveur, 20000Pa",
+   "ean": "0674026773943",
+   "prix_page": 279.98,
+   "achat": 279.98,
+   "fiche_google": null,
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
+   "verdict": {
+    "achat": 279.98,
+    "nb_vendeurs": 2,
+    "ventes_30j": 24,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 279.98,
+    "ref_ou": "idealo, moins cher de France pour ce code (1 offres)",
+    "ref_lien": null,
+    "ref_mediane": 502.53,
+    "ecart_pct": 0.0,
+    "prix_vente": 271.58,
+    "marge_nette": -52.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 271.58,
+     "cout_achat": 279.98,
+     "frais_canal": 4.32,
+     "prelevements": 36.39,
+     "provision": 3.0,
+     "marge_nette": -52.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [
+     "idealo, moins cher de France pour ce code (1 offres)"
+    ],
+    "raison": "pas moins cher que le marché (0.0 % sous idealo, moins cher de France pour ce code (1 offres))",
+    "tri_google": {
+     "ref_min": 725.07,
+     "ref_ou": "Amazon.fr (prix habituel sur 90 jours)",
+     "ecart_pct": 61.4,
+     "marge_nette": 315.3
+    }
+   },
+   "refs": [
+    {
+     "marchand": "idealo, moins cher de France pour ce code (1 offres)",
+     "total": 279.98,
+     "gros": true,
+     "lien": null
+    },
+    {
+     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
+     "total": 725.07,
+     "gros": false,
+     "lien": "https://www.amazon.fr/dp/B0G7V355ZS"
+    }
+   ],
+   "idealo": {
+    "prix_min": 279.98,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Lefant M210 Pro Omni 28cm Mini Rouleau Robot Aspirateur Laveur, 20000Pa | Zéro Enchevêtrement Poils 800ML Corps 85mm Adapté Sols Carrelés & Poils Animaux Nettoyage Automatique Instantané WIFI APP",
+    "marchand_min": "amazon-marketplace.fr",
+    "preuve": "recherche idealo par code EAN : une seule fiche"
+   },
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
+   "prix_annonce": 166.0,
+   "lien": "https://www.ldlc.com/fiche/PB00575461.html",
+   "source": "ldlc-promos",
+   "vu": "2026-11-10T19:00+00:00",
+   "lien_marchand": "https://www.ldlc.com/fiche/PB00575461.html",
+   "domaine": "ldlc.com",
+   "fiche_page": {
+    "ean": "8595159503844",
+    "titre": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
+    "marque": "2N",
+    "dispo": true,
+    "etat": "neuf",
+    "prix": 166.0
+   },
+   "ean": "8595159503844",
+   "prix_page": 166.0,
+   "titre_fiche": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
+   "achat": 166.0,
+   "keepa": {
+    "nb_vendeurs_neuf": 12,
+    "marque": "AXIS",
+    "asin": "B01FO1UHES",
+    "titre": "Entry Panel IP Verso 2 Module/Flush Frame 9155012 2N",
+    "ean": "8595159503844",
+    "pays": "FR",
+    "prix_neuf": 139.86,
+    "prix_amazon": null,
+    "prix_tiers": 139.86,
+    "moyenne_90j": 139.45,
+    "plus_bas_90j": 59.19,
+    "occasion": null,
+    "rang_ventes": null,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B01FO1UHES",
+    "jetons_restants": 874,
+    "eans": [
+     "8595159503844"
+    ],
+    "ventes_mois": null,
+    "nb_fiches_amazon": 1
+   },
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Oregon Huile deux temps",
+    "Mélange 2 temps MARLINE",
+    "Carburateur Renforcé Tsx33 Pour Tracteurs Ford 2n",
+    "Balance de poche Kern"
+   ],
+   "verdict": {
+    "achat": 166.0,
+    "nb_vendeurs": 1,
+    "ventes_30j": 0,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 139.86,
+    "ref_ou": "Amazon.fr",
+    "ref_lien": "https://www.amazon.fr/dp/B01FO1UHES",
+    "ref_mediane": 139.86,
+    "ecart_pct": -18.7,
+    "prix_vente": 135.66,
+    "marge_nette": -53.8,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 135.66,
+     "cout_achat": 166.0,
+     "frais_canal": 2.28,
+     "prelevements": 18.18,
+     "provision": 3.0,
+     "marge_nette": -53.8,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "gros_au_meme_prix": [
+     "Amazon.fr"
+    ],
+    "raison": "pas moins cher que le marché (-18.7 % sous Amazon.fr)"
+   },
+   "refs": [
+    {
+     "marchand": "Amazon.fr",
+     "total": 139.86,
+     "gros": true,
+     "lien": "https://www.amazon.fr/dp/B01FO1UHES"
     }
    ],
    "etoile": false
@@ -4149,289 +4392,55 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B01G3HUL7U",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159503868"
     ],
     "ventes_mois": null,
     "nb_fiches_amazon": 1
    },
-   "fiche_google": "2N Cadre saillie 3 module IP Verso 9155023",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Oregon Huile deux temps",
+    "Mélange 2 temps MARLINE",
+    "Carburateur Renforcé Tsx33 Pour Tracteurs Ford 2n",
+    "Balance de poche Kern"
+   ],
    "verdict": {
     "achat": 122.0,
-    "nb_vendeurs": 7,
+    "nb_vendeurs": 1,
     "ventes_30j": 0,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 76.15,
-    "ref_ou": "Leroy Merlin France",
-    "ref_lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite",
+    "ref_min": 85.83,
+    "ref_ou": "Amazon.fr",
+    "ref_lien": "https://www.amazon.fr/dp/B01G3HUL7U",
     "ref_mediane": 85.83,
-    "ecart_pct": -60.2,
-    "prix_vente": 73.87,
-    "marge_nette": -62.39,
+    "ecart_pct": -42.1,
+    "prix_vente": 83.26,
+    "marge_nette": -54.4,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 73.87,
+     "prix_vente": 83.26,
      "cout_achat": 122.0,
-     "frais_canal": 1.36,
-     "prelevements": 9.9,
+     "frais_canal": 1.5,
+     "prelevements": 11.16,
      "provision": 3.0,
-     "marge_nette": -62.39,
+     "marge_nette": -54.4,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [
-     "Leroy Merlin France",
-     "Castorama",
-     "Fnac",
      "Amazon.fr"
     ],
-    "raison": "pas moins cher que le marché (-60.2 % sous Leroy Merlin France)"
+    "raison": "pas moins cher que le marché (-42.1 % sous Amazon.fr)"
    },
    "refs": [
     {
-     "marchand": "Leroy Merlin France",
-     "total": 76.15,
+     "marchand": "Amazon.fr",
+     "total": 85.83,
      "gros": true,
-     "lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite"
-    },
-    {
-     "marchand": "Castorama",
-     "total": 76.15,
-     "gros": true,
-     "lien": "https://www.castorama.fr/mkp/cadre-saillie-3-module-ip-verso-9155023/8595159503882_CAFR.prd"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 79.49,
-     "gros": true,
-     "lien": "https://www.fnac.com/mp49567771/Cadre-saillie-3-module-IP-Verso-9155023/w-4?oref=32fcc2e8-062f-3c69-19bb-6a5abbba9461&Origin=CMP_GOOGLE_FL_GPS"
-    },
-    {
-     "marchand": "W3CAM",
-     "total": 117.24,
-     "gros": false,
-     "lien": "https://www.w3cam.fr/accessoires-2n/11262-2n-cadre-montage-saillie-3-modules-nickel-9155023-8595159503882.html?srsltid=AYCX9vIYoe9h_EbP0mWMjUaXwKbk5_wrntfWPcTbk_zf90q_0YTSurTsYCs"
-    },
-    {
-     "marchand": "Elecdistri",
-     "total": 125.18,
-     "gros": false,
-     "lien": "https://elecdistri.fr/accessoires-controle-d-acces/466-2n-ip-verso-cadre-saillie-3-modules-gris-2n-nn9155023.html?srsltid=AYCX9vIHZzmQgup2nFE5R-4X5qm7FZf4BYgNJWn4HQEXRWE6kYISpqPNPrI"
-    },
-    {
-     "marchand": "Darty",
-     "total": 148.26,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC349567771.html?ofmp=1567671739&dartycid=sem_free-listing_MP-objets-connectes_maison-connectee"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
-   "titre": "Rasoir électrique Philips i9000 Prestige Ultra étanche 269.99 au lieu de 429.99€ https://www.amazon.",
-   "prix_annonce": 269.99,
-   "lien": "https://www.amazon.fr/dp/B0DT6MC45H/?tag=chollosyofe0b-20",
-   "source": "telegram:bonsplans",
-   "vu": "2026-11-10T19:00+00:00",
-   "lien_marchand": "https://www.amazon.fr/dp/B0DT6MC45H/?tag=chollosyofe0b-20",
-   "domaine": "amazon.fr",
-   "asin": "B0DT6MC45H",
-   "keepa": {
-    "nb_vendeurs_neuf": 16,
-    "marque": "PHILIPS",
-    "asin": "B0DT6MC45H",
-    "titre": "Philips Rasoir i9000 Prestige Ultra, rasoir électrique 100% étanche, technologie Skin IQ Pro, système Triple Lift & Cut, lames de précision NanoTech rotatives 360, 5 modes de rasage, XP9404/38",
-    "ean": "8720689030373",
-    "pays": "FR",
-    "prix_neuf": 269.99,
-    "prix_amazon": 269.99,
-    "prix_tiers": 269.99,
-    "moyenne_90j": 388.74,
-    "plus_bas_90j": 269.99,
-    "occasion": 261.89,
-    "rang_ventes": 1399,
-    "chutes_rang_30j": 14,
-    "chutes_rang_90j": 70,
-    "ventes_estimees_30j": 14,
-    "remise_sincere": true,
-    "lien": "https://www.amazon.fr/dp/B0DT6MC45H",
-    "jetons_restants": 333,
-    "eans": [
-     "8720689030373"
-    ],
-    "ventes_mois": 50
-   },
-   "titre_fiche": "Philips Rasoir i9000 Prestige Ultra, rasoir électrique 100% étanche, technologie Skin IQ Pro, système Triple Lift & Cut, lames de précision NanoTech rotatives 360, 5 modes de rasage, XP9404/38",
-   "ean": "8720689030373",
-   "prix_page": 269.99,
-   "achat": 269.99,
-   "fiche_google": "Philips i9000",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "achat": 269.99,
-    "nb_vendeurs": 2,
-    "ventes_30j": 50,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 229.99,
-    "ref_ou": "Philips - FR",
-    "ref_lien": "https://www.philips.fr/c-p/X9000_10/i9000-wet-dry-electric-shaver-with-skiniq",
-    "ref_mediane": 309.37,
-    "ecart_pct": -17.4,
-    "prix_vente": 223.09,
-    "marge_nette": -83.39,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 223.09,
-     "cout_achat": 269.99,
-     "frais_canal": 3.6,
-     "prelevements": 29.89,
-     "provision": 3.0,
-     "marge_nette": -83.39,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [],
-    "raison": "pas moins cher que le marché (-17.4 % sous Philips - FR)"
-   },
-   "refs": [
-    {
-     "marchand": "Philips - FR",
-     "total": 229.99,
-     "gros": false,
-     "lien": "https://www.philips.fr/c-p/X9000_10/i9000-wet-dry-electric-shaver-with-skiniq"
-    },
-    {
-     "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 388.74,
-     "gros": false,
-     "lien": "https://www.amazon.fr/dp/B0DT6MC45H"
-    }
-   ],
-   "etoile": false
-  },
-  {
-   "denicheur": "Idéfix",
-   "titre": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
-   "prix_annonce": 166.0,
-   "lien": "https://www.ldlc.com/fiche/PB00575461.html",
-   "source": "ldlc-promos",
-   "vu": "2026-11-10T19:00+00:00",
-   "lien_marchand": "https://www.ldlc.com/fiche/PB00575461.html",
-   "domaine": "ldlc.com",
-   "fiche_page": {
-    "ean": "8595159503844",
-    "titre": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
-    "marque": "2N",
-    "dispo": true,
-    "etat": "neuf",
-    "prix": 166.0
-   },
-   "ean": "8595159503844",
-   "prix_page": 166.0,
-   "titre_fiche": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
-   "achat": 166.0,
-   "keepa": {
-    "nb_vendeurs_neuf": 12,
-    "marque": "AXIS",
-    "asin": "B01FO1UHES",
-    "titre": "Entry Panel IP Verso 2 Module/Flush Frame 9155012 2N",
-    "ean": "8595159503844",
-    "pays": "FR",
-    "prix_neuf": 139.86,
-    "prix_amazon": null,
-    "prix_tiers": 139.86,
-    "moyenne_90j": 139.45,
-    "plus_bas_90j": 59.19,
-    "occasion": null,
-    "rang_ventes": null,
-    "chutes_rang_30j": 0,
-    "chutes_rang_90j": 0,
-    "ventes_estimees_30j": 0,
-    "remise_sincere": false,
-    "lien": "https://www.amazon.fr/dp/B01FO1UHES",
-    "jetons_restants": 443,
-    "eans": [
-     "8595159503844"
-    ],
-    "ventes_mois": null,
-    "nb_fiches_amazon": 1
-   },
-   "fiche_google": "2N Cadre saillie 3 module IP Verso 9155023",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "achat": 166.0,
-    "nb_vendeurs": 7,
-    "ventes_30j": 0,
-    "manque": [],
-    "feu": "rouge",
-    "ref_min": 76.15,
-    "ref_ou": "Leroy Merlin France",
-    "ref_lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite",
-    "ref_mediane": 117.24,
-    "ecart_pct": -118.0,
-    "prix_vente": 73.87,
-    "marge_nette": -106.39,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 73.87,
-     "cout_achat": 166.0,
-     "frais_canal": 1.36,
-     "prelevements": 9.9,
-     "provision": 3.0,
-     "marge_nette": -106.39,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "gros_au_meme_prix": [
-     "Leroy Merlin France",
-     "Castorama",
-     "Fnac",
-     "Amazon.fr",
-     "Darty"
-    ],
-    "raison": "pas moins cher que le marché (-118.0 % sous Leroy Merlin France)"
-   },
-   "refs": [
-    {
-     "marchand": "Leroy Merlin France",
-     "total": 76.15,
-     "gros": true,
-     "lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite"
-    },
-    {
-     "marchand": "Castorama",
-     "total": 76.15,
-     "gros": true,
-     "lien": "https://www.castorama.fr/mkp/cadre-saillie-3-module-ip-verso-9155023/8595159503882_CAFR.prd"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 79.49,
-     "gros": true,
-     "lien": "https://www.fnac.com/mp49567771/Cadre-saillie-3-module-IP-Verso-9155023/w-4?oref=32fcc2e8-062f-3c69-19bb-6a5abbba9461&Origin=CMP_GOOGLE_FL_GPS"
-    },
-    {
-     "marchand": "W3CAM",
-     "total": 117.24,
-     "gros": false,
-     "lien": "https://www.w3cam.fr/accessoires-2n/11262-2n-cadre-montage-saillie-3-modules-nickel-9155023-8595159503882.html?srsltid=AYCX9vIYoe9h_EbP0mWMjUaXwKbk5_wrntfWPcTbk_zf90q_0YTSurTsYCs"
-    },
-    {
-     "marchand": "Elecdistri",
-     "total": 125.18,
-     "gros": false,
-     "lien": "https://elecdistri.fr/accessoires-controle-d-acces/466-2n-ip-verso-cadre-saillie-3-modules-gris-2n-nn9155023.html?srsltid=AYCX9vIHZzmQgup2nFE5R-4X5qm7FZf4BYgNJWn4HQEXRWE6kYISpqPNPrI"
-    },
-    {
-     "marchand": "Darty",
-     "total": 148.26,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC349567771.html?ofmp=1567671739&dartycid=sem_free-listing_MP-objets-connectes_maison-connectee"
+     "lien": "https://www.amazon.fr/dp/B01G3HUL7U"
     }
    ],
    "etoile": false
@@ -4476,168 +4485,139 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B013TEFBD4",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159504346"
     ],
     "ventes_mois": null,
     "nb_fiches_amazon": 1
    },
-   "fiche_google": "2N Cadre saillie 3 module IP Verso 9155023",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Oregon Huile deux temps",
+    "Mélange 2 temps MARLINE",
+    "Carburateur Renforcé Tsx33 Pour Tracteurs Ford 2n",
+    "Balance de poche Kern"
+   ],
    "verdict": {
     "achat": 202.0,
-    "nb_vendeurs": 7,
+    "nb_vendeurs": 1,
     "ventes_30j": 0,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 76.15,
-    "ref_ou": "Leroy Merlin France",
-    "ref_lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite",
-    "ref_mediane": 117.24,
-    "ecart_pct": -165.3,
-    "prix_vente": 73.87,
-    "marge_nette": -142.39,
+    "ref_min": 169.84,
+    "ref_ou": "Amazon.fr",
+    "ref_lien": "https://www.amazon.fr/dp/B013TEFBD4",
+    "ref_mediane": 169.84,
+    "ecart_pct": -18.9,
+    "prix_vente": 164.74,
+    "marge_nette": -65.06,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 73.87,
+     "prix_vente": 164.74,
      "cout_achat": 202.0,
-     "frais_canal": 1.36,
-     "prelevements": 9.9,
+     "frais_canal": 2.72,
+     "prelevements": 22.08,
      "provision": 3.0,
-     "marge_nette": -142.39,
+     "marge_nette": -65.06,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [
-     "Leroy Merlin France",
-     "Castorama",
-     "Fnac",
-     "Darty",
      "Amazon.fr"
     ],
-    "raison": "pas moins cher que le marché (-165.3 % sous Leroy Merlin France)"
+    "raison": "pas moins cher que le marché (-18.9 % sous Amazon.fr)"
    },
    "refs": [
     {
-     "marchand": "Leroy Merlin France",
-     "total": 76.15,
+     "marchand": "Amazon.fr",
+     "total": 169.84,
      "gros": true,
-     "lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite"
-    },
-    {
-     "marchand": "Castorama",
-     "total": 76.15,
-     "gros": true,
-     "lien": "https://www.castorama.fr/mkp/cadre-saillie-3-module-ip-verso-9155023/8595159503882_CAFR.prd"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 79.49,
-     "gros": true,
-     "lien": "https://www.fnac.com/mp49567771/Cadre-saillie-3-module-IP-Verso-9155023/w-4?oref=32fcc2e8-062f-3c69-19bb-6a5abbba9461&Origin=CMP_GOOGLE_FL_GPS"
-    },
-    {
-     "marchand": "W3CAM",
-     "total": 117.24,
-     "gros": false,
-     "lien": "https://www.w3cam.fr/accessoires-2n/11262-2n-cadre-montage-saillie-3-modules-nickel-9155023-8595159503882.html?srsltid=AYCX9vIYoe9h_EbP0mWMjUaXwKbk5_wrntfWPcTbk_zf90q_0YTSurTsYCs"
-    },
-    {
-     "marchand": "Elecdistri",
-     "total": 125.18,
-     "gros": false,
-     "lien": "https://elecdistri.fr/accessoires-controle-d-acces/466-2n-ip-verso-cadre-saillie-3-modules-gris-2n-nn9155023.html?srsltid=AYCX9vIHZzmQgup2nFE5R-4X5qm7FZf4BYgNJWn4HQEXRWE6kYISpqPNPrI"
-    },
-    {
-     "marchand": "Darty",
-     "total": 148.26,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC349567771.html?ofmp=1567671739&dartycid=sem_free-listing_MP-objets-connectes_maison-connectee"
+     "lien": "https://www.amazon.fr/dp/B013TEFBD4"
     }
    ],
    "etoile": false
   },
   {
    "denicheur": "Idéfix",
-   "titre": "Robot Aspirateur Laveur Lefant M210 Pro 20000Pa 279.98 au lieu de 699.99€ https://www.amazon.fr/dp/B",
-   "prix_annonce": 279.98,
-   "lien": "https://www.amazon.fr/dp/B0G7V355ZS/?tag=chollosyofe0b-20",
+   "titre": "Rasoir électrique Philips i9000 Prestige Ultra étanche 269.99 au lieu de 429.99€ https://www.amazon.",
+   "prix_annonce": 269.99,
+   "lien": "https://www.amazon.fr/dp/B0DT6MC45H/?tag=chollosyofe0b-20",
    "source": "telegram:bonsplans",
    "vu": "2026-11-10T19:00+00:00",
-   "lien_marchand": "https://www.amazon.fr/dp/B0G7V355ZS/?tag=chollosyofe0b-20",
+   "lien_marchand": "https://www.amazon.fr/dp/B0DT6MC45H/?tag=chollosyofe0b-20",
    "domaine": "amazon.fr",
-   "asin": "B0G7V355ZS",
+   "asin": "B0DT6MC45H",
    "keepa": {
-    "nb_vendeurs_neuf": 1,
-    "marque": "Lefant",
-    "asin": "B0G7V355ZS",
-    "titre": "Lefant M210 Pro Omni 28cm Mini Rouleau Robot Aspirateur Laveur, 20000Pa",
-    "ean": "0674026773943",
+    "nb_vendeurs_neuf": 16,
+    "marque": "PHILIPS",
+    "asin": "B0DT6MC45H",
+    "titre": "Philips Rasoir i9000 Prestige Ultra, rasoir électrique 100% étanche, technologie Skin IQ Pro, système Triple Lift & Cut, lames de précision NanoTech rotatives 360, 5 modes de rasage, XP9404/38",
+    "ean": "8720689030373",
     "pays": "FR",
-    "prix_neuf": 279.98,
-    "prix_amazon": null,
-    "prix_tiers": 279.98,
-    "moyenne_90j": 725.16,
-    "plus_bas_90j": 279.98,
-    "occasion": null,
-    "rang_ventes": 879,
-    "chutes_rang_30j": 24,
-    "chutes_rang_90j": 71,
-    "ventes_estimees_30j": 24,
+    "prix_neuf": 269.99,
+    "prix_amazon": 269.99,
+    "prix_tiers": 269.99,
+    "moyenne_90j": 388.72,
+    "plus_bas_90j": 269.99,
+    "occasion": 261.89,
+    "rang_ventes": 1399,
+    "chutes_rang_30j": 14,
+    "chutes_rang_90j": 70,
+    "ventes_estimees_30j": 14,
     "remise_sincere": true,
-    "lien": "https://www.amazon.fr/dp/B0G7V355ZS",
-    "jetons_restants": 333,
+    "lien": "https://www.amazon.fr/dp/B0DT6MC45H",
+    "jetons_restants": 765,
     "eans": [
-     "0674026773943"
+     "8720689030373"
     ],
-    "ventes_mois": null
+    "ventes_mois": 50
    },
-   "titre_fiche": "Lefant M210 Pro Omni 28cm Mini Rouleau Robot Aspirateur Laveur, 20000Pa",
-   "ean": "0674026773943",
-   "prix_page": 279.98,
-   "achat": 279.98,
-   "fiche_google": "Lefant Aspirateur Robot M210 Connecté WiFi/Alexa/Google/App",
+   "titre_fiche": "Philips Rasoir i9000 Prestige Ultra, rasoir électrique 100% étanche, technologie Skin IQ Pro, système Triple Lift & Cut, lames de précision NanoTech rotatives 360, 5 modes de rasage, XP9404/38",
+   "ean": "8720689030373",
+   "prix_page": 269.99,
+   "achat": 269.99,
+   "fiche_google": "Philips i9000",
    "marche_raison": null,
    "google_refuse": null,
    "verdict": {
-    "achat": 279.98,
+    "achat": 269.99,
     "nb_vendeurs": 2,
-    "ventes_30j": 24,
+    "ventes_30j": 50,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 140.0,
-    "ref_ou": "ubuy.fr",
-    "ref_lien": "https://www.ubuy.fr/fr/product/JHQ5I2NEK-lefant-robot-vacuum-cleaner-strong-suction-120-mins-runtime-slim-low-noise-automatic-self-charging-wi-fi-app-alexa-control-ideal-for-pet-hair?srsltid=AYCX9vKulYfdglHfQvxsDyq6Z7P33ZjsCvQY5t0fA7nqnsyWls3gPsBtDC8",
-    "ref_mediane": 432.58,
-    "ecart_pct": -100.0,
-    "prix_vente": 135.8,
-    "marge_nette": -167.66,
+    "ref_min": 229.99,
+    "ref_ou": "Philips - FR",
+    "ref_lien": "https://www.philips.fr/c-p/X9000_10/i9000-wet-dry-electric-shaver-with-skiniq",
+    "ref_mediane": 309.36,
+    "ecart_pct": -17.4,
+    "prix_vente": 223.09,
+    "marge_nette": -83.39,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 135.8,
-     "cout_achat": 279.98,
-     "frais_canal": 2.29,
-     "prelevements": 18.2,
+     "prix_vente": 223.09,
+     "cout_achat": 269.99,
+     "frais_canal": 3.6,
+     "prelevements": 29.89,
      "provision": 3.0,
-     "marge_nette": -167.66,
+     "marge_nette": -83.39,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [],
-    "raison": "pas moins cher que le marché (-100.0 % sous ubuy.fr)"
+    "raison": "pas moins cher que le marché (-17.4 % sous Philips - FR)"
    },
    "refs": [
     {
-     "marchand": "ubuy.fr",
-     "total": 140.0,
+     "marchand": "Philips - FR",
+     "total": 229.99,
      "gros": false,
-     "lien": "https://www.ubuy.fr/fr/product/JHQ5I2NEK-lefant-robot-vacuum-cleaner-strong-suction-120-mins-runtime-slim-low-noise-automatic-self-charging-wi-fi-app-alexa-control-ideal-for-pet-hair?srsltid=AYCX9vKulYfdglHfQvxsDyq6Z7P33ZjsCvQY5t0fA7nqnsyWls3gPsBtDC8"
+     "lien": "https://www.philips.fr/c-p/X9000_10/i9000-wet-dry-electric-shaver-with-skiniq"
     },
     {
      "marchand": "Amazon.fr (prix habituel sur 90 jours)",
-     "total": 725.16,
+     "total": 388.72,
      "gros": false,
-     "lien": "https://www.amazon.fr/dp/B0G7V355ZS"
+     "lien": "https://www.amazon.fr/dp/B0DT6MC45H"
     }
    ],
    "etoile": false
@@ -4682,84 +4662,147 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B01FO1UK4A",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159504292"
     ],
     "ventes_mois": null,
     "nb_fiches_amazon": 1
    },
-   "fiche_google": "2N Cadre saillie 3 module IP Verso 9155023",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Oregon Huile deux temps",
+    "Mélange 2 temps MARLINE",
+    "Carburateur Renforcé Tsx33 Pour Tracteurs Ford 2n",
+    "Balance de poche Kern"
+   ],
    "verdict": {
     "achat": 351.0,
-    "nb_vendeurs": 7,
+    "nb_vendeurs": 1,
     "ventes_30j": 0,
     "manque": [],
     "feu": "rouge",
-    "ref_min": 76.15,
-    "ref_ou": "Leroy Merlin France",
-    "ref_lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite",
-    "ref_mediane": 117.24,
-    "ecart_pct": -360.9,
-    "prix_vente": 73.87,
-    "marge_nette": -291.39,
+    "ref_min": 295.7,
+    "ref_ou": "Amazon.fr",
+    "ref_lien": "https://www.amazon.fr/dp/B01FO1UK4A",
+    "ref_mediane": 295.7,
+    "ecart_pct": -18.7,
+    "prix_vente": 286.83,
+    "marge_nette": -110.16,
     "calcul_marge": {
      "version": 2,
-     "prix_vente": 73.87,
+     "prix_vente": 286.83,
      "cout_achat": 351.0,
-     "frais_canal": 1.36,
-     "prelevements": 9.9,
+     "frais_canal": 4.55,
+     "prelevements": 38.44,
      "provision": 3.0,
-     "marge_nette": -291.39,
+     "marge_nette": -110.16,
      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
     "gros_au_meme_prix": [
-     "Leroy Merlin France",
-     "Castorama",
-     "Fnac",
-     "Darty",
      "Amazon.fr"
     ],
-    "raison": "pas moins cher que le marché (-360.9 % sous Leroy Merlin France)"
+    "raison": "pas moins cher que le marché (-18.7 % sous Amazon.fr)"
    },
    "refs": [
     {
-     "marchand": "Leroy Merlin France",
-     "total": 76.15,
+     "marchand": "Amazon.fr",
+     "total": 295.7,
      "gros": true,
-     "lien": "https://www.leroymerlin.fr/produits/cadre-mural-2n-pour-panneaux-de-boutons-ip-lte-verso-avec-3-modules-nickel-9155023-89816758.html?megaBoost=&at_medium=Search%2Bengines&at_source=google&at_campaign=fiche-gratuite"
+     "lien": "https://www.amazon.fr/dp/B01FO1UK4A"
+    }
+   ],
+   "etoile": false
+  },
+  {
+   "denicheur": "Idéfix",
+   "titre": "Smartphone Apple iPhone 18 Pro Bordeaux 256 Go (via 158€ d'ODR)",
+   "prix_annonce": 158.0,
+   "lien": "https://www.dealabs.com/bons-plans/iphone-18-pro-et-18-pro-max-3451367",
+   "source": "dealabs-nouveaux",
+   "vu": "2026-11-10T18:30+00:00",
+   "lien_marchand": "https://boutique.orange.fr/mobile/details/apple-iphone-18-pro-bordeaux-256-go?intention=terminal-seul&id_aff=1395037010&effi_id=ppr-fr-1947270788&id_c=23044214&eaf-publisher=effinity&eaf-name=fil-rouge_fr_orange_tra_tra_aff_ddgp_gb_effinity_prosp_fr_-2025_gp_effinity_glob&eaf-creative=clearpix&eaf-creativetype=1x1&eseg-name=id_affilie&eseg-item=1395037010&eff_cpt=23044214&eff_sub1=ppr-fr-1947270788&gad_source=7",
+   "domaine": "boutique.orange.fr",
+   "fiche_page": {
+    "ean": "0195951416809",
+    "titre": "iPhone 18 Pro Bordeaux 256 Go",
+    "marque": "Apple",
+    "dispo": true,
+    "etat": "neuf",
+    "prix": 1379.0
+   },
+   "ean": "0195951416809",
+   "prix_page": 1379.0,
+   "titre_fiche": "iPhone 18 Pro Bordeaux 256 Go",
+   "achat": 1379.0,
+   "note_prix": "le bon plan annonçait 158.0 € (code promo, carte de fidélité ou remboursement différé ?) ; prix réellement affiché sur la fiche : 1379.0 €",
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Apple",
+    "asin": "B0HJBG9HKM",
+    "titre": "Apple iPhone 18 Pro 256 Go - Bourgogne",
+    "ean": "0195951416809",
+    "pays": "FR",
+    "prix_neuf": 1479.0,
+    "prix_amazon": 1479.0,
+    "prix_tiers": 1479.0,
+    "moyenne_90j": 1478.99,
+    "plus_bas_90j": 1479.0,
+    "occasion": null,
+    "rang_ventes": 244,
+    "chutes_rang_30j": 24,
+    "chutes_rang_90j": 47,
+    "ventes_estimees_30j": 24,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0HJBG9HKM",
+    "jetons_restants": 874,
+    "eans": [
+     "0195951416809"
+    ],
+    "ventes_mois": 400,
+    "nb_fiches_amazon": 1
+   },
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Apple iPhone 18 Pro",
+    "Apple iPhone 18 Pro Max",
+    "Iphone 18 pro Bordeaux / SIM-Physique",
+    "iPhone 18 Pro 256 Go Bordeaux + Adaptateur secteur USB‐C Apple 20 W"
+   ],
+   "verdict": {
+    "achat": 1379.0,
+    "nb_vendeurs": 1,
+    "ventes_30j": 400,
+    "manque": [],
+    "feu": "rouge",
+    "ref_min": 1479.0,
+    "ref_ou": "Amazon.fr",
+    "ref_lien": "https://www.amazon.fr/dp/B0HJBG9HKM",
+    "ref_mediane": 1479.0,
+    "ecart_pct": 6.8,
+    "prix_vente": 1434.63,
+    "marge_nette": -161.38,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 1434.63,
+     "cout_achat": 1379.0,
+     "frais_canal": 21.77,
+     "prelevements": 192.24,
+     "provision": 3.0,
+     "marge_nette": -161.38,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
     },
+    "gros_au_meme_prix": [],
+    "raison": "marge nette trop faible (-161.38 €)"
+   },
+   "refs": [
     {
-     "marchand": "Castorama",
-     "total": 76.15,
+     "marchand": "Amazon.fr",
+     "total": 1479.0,
      "gros": true,
-     "lien": "https://www.castorama.fr/mkp/cadre-saillie-3-module-ip-verso-9155023/8595159503882_CAFR.prd"
-    },
-    {
-     "marchand": "Fnac",
-     "total": 79.49,
-     "gros": true,
-     "lien": "https://www.fnac.com/mp49567771/Cadre-saillie-3-module-IP-Verso-9155023/w-4?oref=32fcc2e8-062f-3c69-19bb-6a5abbba9461&Origin=CMP_GOOGLE_FL_GPS"
-    },
-    {
-     "marchand": "W3CAM",
-     "total": 117.24,
-     "gros": false,
-     "lien": "https://www.w3cam.fr/accessoires-2n/11262-2n-cadre-montage-saillie-3-modules-nickel-9155023-8595159503882.html?srsltid=AYCX9vIYoe9h_EbP0mWMjUaXwKbk5_wrntfWPcTbk_zf90q_0YTSurTsYCs"
-    },
-    {
-     "marchand": "Elecdistri",
-     "total": 125.18,
-     "gros": false,
-     "lien": "https://elecdistri.fr/accessoires-controle-d-acces/466-2n-ip-verso-cadre-saillie-3-modules-gris-2n-nn9155023.html?srsltid=AYCX9vIHZzmQgup2nFE5R-4X5qm7FZf4BYgNJWn4HQEXRWE6kYISpqPNPrI"
-    },
-    {
-     "marchand": "Darty",
-     "total": 148.26,
-     "gros": true,
-     "lien": "https://www.darty.com/nav/achat/ref/MC349567771.html?ofmp=1567671739&dartycid=sem_free-listing_MP-objets-connectes_maison-connectee"
+     "lien": "https://www.amazon.fr/dp/B0HJBG9HKM"
     }
    ],
    "etoile": false
@@ -4805,7 +4848,7 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": false,
     "lien": "https://www.amazon.fr/dp/B07C8G5P3X",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159505602"
     ],
@@ -4889,7 +4932,7 @@
     "prix_neuf": null,
     "prix_amazon": null,
     "prix_tiers": null,
-    "moyenne_90j": 80.81,
+    "moyenne_90j": 80.82,
     "plus_bas_90j": 13.3,
     "occasion": null,
     "rang_ventes": null,
@@ -4898,7 +4941,7 @@
     "ventes_estimees_30j": 0,
     "remise_sincere": null,
     "lien": "https://www.amazon.fr/dp/B07C2VVJHW",
-    "jetons_restants": 443,
+    "jetons_restants": 874,
     "eans": [
      "8595159513300"
     ],
@@ -4937,10 +4980,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "moniteur PRO 5,5\" HD à Écran Partagé",
     "Babysense PRO Babyphone avec 3 Caméras Écran Partagé Monitor",
-    "Moniteur Vidéo pour Bébé Babyphone avec Écran Divisé 4,3“ et 2 Caméras",
-    "Babysense HD S2 Babyphone avec 3 Caméras"
+    "Babytone Sleep Satview mit HD Kamera Zwei wege Audio",
+    "Caméra supplémentaire pour moniteur vidéo pour bébé HD S2",
+    "Babyphone Camera Bébé - Camera Babysitter VB801"
    ],
    "verdict": {
     "feu": "rouge",
@@ -4962,10 +5005,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
+    "Western Digital SSD Black SN8100",
+    "Western Digital SSD Black SN7100 NVMe",
     "Western Digital SN770 NVMe SSD",
-    "Western Digital Black NVMe M.2 SSD",
-    "Western Digital WD Black SN770 1 TB M.2 Pcie Gen 4 Nvme Internal SSD wdbbdl0010bnc Sealed New",
-    "Western Digital SSD Black SN7100 NVMe"
+    "Western Digital SSD Black SN8100"
    ],
    "verdict": {
     "feu": "rouge",
@@ -4987,10 +5030,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Babysense 7 Moniteur pour bébé à mouvements respiratoires",
-    "Babysense HOME Ensemble de Surveillance 2-en-1",
-    "Babysense 7",
-    "Babysense 7&V24R Moniteur Vidéo pour Bébé Babysense avec Écran de 2,4\" et Moniteur de Respiration Certifié Médical – Alertes en Temps Réel en Cas"
+    "Moniteur babysense 5 très bon état",
+    "Babysense 2 Hisense",
+    "Moniteur Respiratoire Babysense 7",
+    "BabySense HD S2 Video Baby Monitor Digital 5\"\" Split Screen Camera Night"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5015,7 +5058,7 @@
     "Fontaine a Eau Chat sans Fil,Distributeur Eau Chaton Detecteur Mouvemen Batterie 4000mAh Chargée",
     "Fontaine à Eau pour Chat Chien 2Lfontaine à Fleur pour Chat 3 Modes Distributeur Eau pour Chat Lumière Led Intelligente Gris",
     "PETLIBRO Dockstream 2 Fontaine à eau pour chat améliorée avec application intelligente de surveillance 3 l et coque en acier inoxydable pour boire",
-    "Fontaine pour animal Dockstream 2"
+    "Petlibro Dockstream Fontaine à Eau avec APP Surveillance"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5087,10 +5130,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "moniteur PRO 5,5\" HD à Écran Partagé",
-    "Moniteur Vidéo pour Bébé Babyphone avec Écran Divisé 4,3“ et 2 Caméras",
-    "Babysense PRO Babyphone avec 3 Caméras Écran Partagé Monitor",
-    "Moniteur Vidéo pour Bébé Babysense HDS2 5\" HD 720p"
+    "Babyphone Camera Bébé - Camera Babysitter VB801",
+    "Caméra supplémentaire pour moniteur vidéo pour bébé HD S2",
+    "Berceuse vidéo pour bébé",
+    "Berceuse vidéo pour bébé"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5109,17 +5152,12 @@
    "vendeurs_amazon": 2,
    "amazon_index": 57.99,
    "source": "ventes Amazon (Keepa)",
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "AutoFullCar FullCarX Kit de nettoyage pour voiture intérieure et extérieure 3 x 750 ml, shampooing actif, cire liquide, nettoyant tableau de bord,",
-    "Kit Lavaggio Self Service Full 500 ml / 500 ml",
-    "Kit Lavaggio Self Service Full 500 ml / 1 L",
-    "Kit Lavaggio Self Service Full 1 L / 500 ml"
-   ],
+   "fiche_google": "Kit de gaz de climatisation CARFIX 3 en 1 R1234yf réfrigérant de rechange",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
+    "raison": "moins de deux marchands français pour ce code",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5137,10 +5175,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Chargeur INIU A11-E1 100 W GaN",
-    "A11-E1 GaN Charger 100W 3-Port | INIU Official Store EU / Black / 1 Pack",
-    "INIU D5CC USB C vers C Câble 100W",
-    "INIU I641 100W GaN Charger"
+    "INIU D7CC USB-C Cable 240W 2-Pack",
+    "INIU D7CC USB-C Cable 240W 2-Pack",
+    "INIU D7CC USB-C Cable 240W 2-Pack",
+    "Iniu Cable usb C qc3.0 3.1a usb Cable type C charge rapid"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5163,9 +5201,9 @@
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
     "Petlibro Dockstream Gamelle",
+    "PETLIBRO Distributeur automatique automatique pour chat RFID, Wi-Fi | Distributeur de nourriture pour chat avec capteur de collier, Distributeur",
     "PETLIBRO 5G Wi-Fi Distributeur automatique de nourriture pour chats chiens 5 L",
-    "Petlibro Granary 2 Vision Distributeur Croquette Chat Caméra",
-    "PetLibro Distributeur intelligent Granary"
+    "Petlibro Granary 2 Vision Distributeur Croquette Chat Caméra"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5188,9 +5226,9 @@
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
     "Petlibro Dockstream Gamelle",
+    "PETLIBRO Distributeur automatique automatique pour chat RFID, Wi-Fi | Distributeur de nourriture pour chat avec capteur de collier, Distributeur",
     "PETLIBRO 5G Wi-Fi Distributeur automatique de nourriture pour chats chiens 5 L",
-    "Petlibro Granary 2 Vision Distributeur Croquette Chat Caméra",
-    "PetLibro Distributeur intelligent Granary"
+    "Petlibro Granary 2 Vision Distributeur Croquette Chat Caméra"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5210,36 +5248,11 @@
    "amazon_index": 29.22,
    "source": "ventes Amazon (Keepa)",
    "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Nuactiv Bouteille Isotherme 500ml en Acier Inox – Garde 24h Froid & 12h Chaud – Gourde Double Paroi Sans BPA Étanche Réutilisable pour Voyage,",
-    "Bouteille Isotherme 500ml en Acier Inox Garde 24h Froid & 12h Chaud Gourd",
-    "Bouteille isotherme double paroi inox 500 ml",
-    "Bouteille isotherme en acier inoxydable 500ml sans Bpa Bouteille d'eau"
-   ],
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
-    "nb_vendeurs": 1
-   },
-   "etoile": false
-  },
-  {
-   "denicheur": "Amigo",
-   "titre": "545 et 546 XL Cartouche Encre Compatible pour Canon 545XL 546XL TS3550 TS3450 Cartouches d",
-   "titre_fiche": "545 et 546 XL Cartouche Encre Compatible pour Canon 545XL 546XL TS3550 TS3450 Cartouches d",
-   "ean": "6978150818513",
-   "asin": "B0GQ9PPDGV",
-   "ventes_30j": 71,
-   "vendeurs_amazon": 5,
-   "amazon_index": 26.59,
-   "source": "ventes Amazon (Keepa)",
-   "fiche_google": "PG-545XL CL-546XL Remplacement pour Cartouche Canon 545-546 pour Cartouche",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "feu": "rouge",
-    "raison": "moins de deux marchands français pour ce code",
+    "raison": "produit introuvable sur Google Shopping",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5257,10 +5270,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Moniteur Vidéo pour Bébé Babyphone avec Écran Divisé 4,3“ et 2 Caméras",
-    "Babysense HD S2 Babyphone avec 3 Caméras",
+    "Babysense Prisma Moniteur Vidéo Bébé avec 1 Caméra",
+    "Babysense Prisma Video Baby Monitor with 2 Cameras",
     "Babysense HOME Ensemble de Surveillance 2-en-1",
-    "moniteur PRO 5,5\" HD à Écran Partagé"
+    "Moniteur Vidéo pour Bébé Babysense HDS2 5\" HD 720p"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5282,10 +5295,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Moniteur vidéo pour bébé BABYSENSE V24R",
-    "Unité parents pour moniteur vidéo bébé V24R",
-    "Moniteur vidéo compact pour bébé V24R avec 2 caméras",
-    "Caméra supplémentaire pour Babyphone vidéo MaxviewPRO\\PRO"
+    "Babysense Prisma Moniteur Vidéo Bébé avec 1 Caméra",
+    "Babysense Prisma Video Baby Monitor with 2 Cameras",
+    "Unité Parentale pour Moniteur Vidéo Bébé Prisma à Écran Divisé 5",
+    "Babysense Moniteur vidéo HD pour bébé de 5\" avec 2 caméras et Audio, sans WiFi, écran divisé, veilleuse 6 Couleurs, Bruit Blanc et Machine à Son"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5304,12 +5317,17 @@
    "vendeurs_amazon": 3,
    "amazon_index": 39.9,
    "source": "ventes Amazon (Keepa)",
-   "fiche_google": "AC RENEW Kit Recharge Climatisation Voiture Remplacement R134a Cartouche Gaz Réfrigérant pour Clim, Bonbonne 220g Plus Rendiment, Naturel et",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Kit Ac Complet Pack de Recharge de Gaz 3 En 1 Avec Huile Marqueur Et Scellant Climatisation Voiture Avec Manomètre",
+    "FrostMEISTER 3en1 Réfrigérant Climatisation",
+    "Kit de recharge de climatisation FIXFY 3 en 1 500 ml - 2 grands bidons + tuyau + adaptateur R1234yf",
+    "CLIMASET Kit Recharge Clim Voiture 3en1 R134a + tuyau"
+   ],
    "verdict": {
     "feu": "rouge",
-    "raison": "moins de deux marchands français pour ce code",
+    "raison": "fiche Google non concordante",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5324,12 +5342,12 @@
    "vendeurs_amazon": 1,
    "amazon_index": 109.99,
    "source": "ventes Amazon (Keepa)",
-   "fiche_google": "Distributeur automatique de nourriture PETLIBRO 5G",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
    "verdict": {
     "feu": "rouge",
-    "raison": "moins de deux marchands français pour ce code",
+    "raison": "produit introuvable sur Google Shopping",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5347,10 +5365,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Distributeur de croquettes automatique double Petlibro Granary",
-    "Petlibro Granary",
-    "PETLIBRO Granary 2 Mangeoire automatique pour chat avec application et pour nourriture sèche",
-    "PETLIBRO Distributeur automatique automatique pour chat RFID Wi-Fi Distributeur de nourriture pour chat avec capteur de collier"
+    "Petlibro Espace Gamelle",
+    "Petlibro Intelligenter Futterautomat PLAF108 mit APP-Steuerung",
+    "PETLIBRO Distributeur Croquettes Chat Automatique, Wi‐FI 2,4 GHz, 2L, Noir | Distributeur Sans Fil, Batterie Rechargeable, Design Compact, Contrôle",
+    "Petlibro Granary 2 Vision Distributeur Croquette Chat Caméra"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5372,10 +5390,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Sac Sous Vide Vetement Aspirateur avec Pompe Électrique Gris Lot de 12. Sans marque. Gris. Sacs, housses de rangement. 0754202084299.",
-    "Sac Sous Vide Vetement Aspirateur 20 Pièces avec Pompe Électrique",
-    "Vacbird Sac Sous Vide Vetement Aspirateur et Pompe à Vide Sans Fil, Lot de 8(2 Géants, 2 Grands, 2 Moyens, 2 Petits), Sac de Rangement Sous Vide",
-    "MONVANE Sac sous Vide Vêtement Aspirateur et Pompe Électrique sans Fil 12 Pac"
+    "Lot de 2 housses de rangement Compactor",
+    "Compactor Boîte de rangement sous vide Granit M gris",
+    "Pompe à Vide Portative sans Fil pour Sacs 4500Pa 25W 1800Mah Usb C Compacte Puissante Gris/Orange pour Voyage & Rangement Maison JBNIUAY",
+    "VOUNOT Lot de 9 Sac de rangement sous vide Non Tisse Xxl gris"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5397,14 +5415,34 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Erborian Crème CC Latte - 40 ml",
-    "Erborian Ginseng Power - crème lissante 15ml",
-    "erborian CC EYE Crème Contour des Yeux clair 2x10 ml Maquillage",
-    "ERBORIAN | CC CREAM centella asiática | Face"
+    "Erborian CC Crème",
+    "CC RED CORRECT ERBORIAN",
+    "ERBORIAN BB CRÈME AU GINSENG",
+    "CC Dull Correct Erborian"
    ],
    "verdict": {
     "feu": "rouge",
     "raison": "fiche Google non concordante",
+    "nb_vendeurs": 1
+   },
+   "etoile": false
+  },
+  {
+   "denicheur": "Amigo",
+   "titre": "Vengeance RGB Pro 2 x 8 Go DDR4 Jusqu'à 3200MHz Cas 16 – Noir",
+   "titre_fiche": "Vengeance RGB Pro 2 x 8 Go DDR4 Jusqu'à 3200MHz Cas 16 – Noir",
+   "ean": "0843591075381",
+   "asin": "B07D1XCKWW",
+   "ventes_30j": 67,
+   "vendeurs_amazon": 4,
+   "amazon_index": 203.99,
+   "source": "ventes Amazon (Keepa)",
+   "fiche_google": "Corsair Vengeance RGB PRO SL DDR4",
+   "marche_raison": null,
+   "google_refuse": null,
+   "verdict": {
+    "feu": "rouge",
+    "raison": "moins de deux marchands français pour ce code",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5445,16 +5483,11 @@
    "amazon_index": 57.0,
    "source": "ventes Amazon (Keepa)",
    "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Cacharel Coffret Yes I Am Bloom Up!",
-    "Cacharel Yes I Am Fabulous Eau de Parfum",
-    "CACHAREL - LOU LOU - PERFUMED BODY CREAM - 150ML",
-    "F19 CHRYSTAL Série Limitée"
-   ],
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
+    "raison": "produit introuvable sur Google Shopping",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5472,10 +5505,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Amiibo neko peach & neko mario set",
-    "Nintendo Amiibo Mario Chat & Peach Chat",
-    "Nintendo Amiibo Cat Peach Nouveau",
-    "Figurine amiibo PEACH – Super Smash Bros."
+    "Super Smash Bros Collection N0.2 Peach Nintendo Amiibo Loose",
+    "Nintendo Super Smash Bros. Peach amiibo",
+    "amiibo Nintendo Super Smash Bros. Peach",
+    "Super Mario Collection Peach Odyssey Nintendo Amiibo Loose"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5494,17 +5527,12 @@
    "vendeurs_amazon": 3,
    "amazon_index": 269.99,
    "source": "ventes Amazon (Keepa)",
-   "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Machine à pâtes Philips 7000 series HR2660/00",
-    "Philips Machine à pâtes HR2665/93",
-    "Machine à pâtes Philips HR2665/96",
-    "Philips Collection Avance Machine à pâtes"
-   ],
+   "fiche_google": "Philips Série 7000 Machine à pâtes",
+   "marche_raison": null,
+   "google_refuse": null,
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
+    "raison": "moins de deux marchands français pour ce code",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5522,10 +5550,10 @@
    "fiche_google": null,
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
-    "Llofer Chlore Choc Granule",
     "Llofer - Chlore Multifonction en Pastilles de 20g -3kg- Désinfection Longue Durée 7 Actions,Haute Teneur en Chlore (92%), Fabriqué en Europe",
-    "PH minus Granule",
-    "Llofer Chlore Multifonctions Galets de 250Gr"
+    "Llofer Chlore Choc Granule",
+    "Llofer 25kg Sel Fin Dissolution Rapide",
+    "Llofer - Chlore Choc Piscine Granulés 5kg – Désinfection Rapide et Efficace – Traitement Choc Eau Verte – Compatible Tous Types de Piscines – 55% en"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5545,16 +5573,11 @@
    "amazon_index": 49.99,
    "source": "ventes Amazon (Keepa)",
    "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Visiophone EZVIZ HP7 Pro 4K",
-    "Caméra de Sécurité Ezviz Caméra Wifi Extérieure 2k Avec Alerte de Mouvement Couleur Night View Ezc3tn1h3l28",
-    "EZVIZ Camera Interieur 360°, Caméra Surveillance WiFi 2.4Ghz | Vision Nocturne, Détection de Mouvement Suivi Intelligent, Audio Bidirectionnel,",
-    "2K Caméra de Surveillance Extérieur Wi-FI à 360° Blanc"
-   ],
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
+    "raison": "produit introuvable sur Google Shopping",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5573,9 +5596,9 @@
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
     "Disque Dur Externe Portable 2.5'' USB 3.0 Ultra Fin",
-    "Maxone Portable HDD - 1TB - 2,5\"\" - USB 3.0 A auf Micro-B - Externe Festplatte",
-    "Disque Dur Externe Portable 2.5'' USB 3.0 Ultra Fin",
-    "Disque Dur Externe UnionSine UnionSine-HD2513"
+    "Maxone Disque Dur Externe Portable 1To 2.5\" USB 3.0 Ultra Fin Aluminium | Stockage et Sauvegarde pour PC, Mac, Laptop, Xbox One, PS4, Wii U, TV,",
+    "Disque Dur Externe UnionSine UnionSine-HD2513",
+    "UnionSine Disque dur externe 2 5\" 320 Go USB 3.0 portable compatible PC/Mac/PS4/Xbox"
    ],
    "verdict": {
     "feu": "rouge",
@@ -5594,12 +5617,17 @@
    "vendeurs_amazon": 1,
    "amazon_index": 28.99,
    "source": "ventes Amazon (Keepa)",
-   "fiche_google": "302 XL 302XL Remplacement pour Cartouche HP 302 XL Noir et Couleur Cartouche",
-   "marche_raison": null,
-   "google_refuse": null,
+   "fiche_google": null,
+   "marche_raison": "fiche Google non concordante",
+   "google_refuse": [
+    "Cartouche HP Officejet 3831 Compatible Noir",
+    "Cartouche HP Officejet 5220 Compatible Noir",
+    "Cartouche HP Officejet 3832 Compatible Noir",
+    "Cartouche HP Deskjet 3634 Compatible Noir"
+   ],
    "verdict": {
     "feu": "rouge",
-    "raison": "moins de deux marchands français pour ce code",
+    "raison": "fiche Google non concordante",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5618,33 +5646,13 @@
    "marche_raison": "fiche Google non concordante",
    "google_refuse": [
     "Cacharel Eden, Eau de Parfum for Women, Floral, Chypre With Notes of Mimosa & Sandalwood",
-    "50ml-Eden - Eau de Parfum-CACHAREL PARFUM",
     "Cacharel Anais Anais Eau de Toilette",
-    "Cacharel Anais Anais Eau de Toilette"
+    "Cacharel Anais Anais Eau de Toilette",
+    "F35 - VENUSIA (même famille olfactive : Eden de Cacharel)"
    ],
    "verdict": {
     "feu": "rouge",
     "raison": "fiche Google non concordante",
-    "nb_vendeurs": 1
-   },
-   "etoile": false
-  },
-  {
-   "denicheur": "Amigo",
-   "titre": "Bosch Professional 18V System chargeur GAL 1880 CV (sans batterie)",
-   "titre_fiche": "Bosch Professional 18V System chargeur GAL 1880 CV (sans batterie)",
-   "ean": "3165140839327",
-   "asin": "B013WAWSGI",
-   "ventes_30j": 62,
-   "vendeurs_amazon": 2,
-   "amazon_index": 89.66,
-   "source": "ventes Amazon (Keepa)",
-   "fiche_google": "Bosch Professional Gli 18v-300 Lampe sans fil + Gba 18 V 4,0 Ah + Chargeur GAL 1880",
-   "marche_raison": null,
-   "google_refuse": null,
-   "verdict": {
-    "feu": "rouge",
-    "raison": "moins de deux marchands français pour ce code",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5730,16 +5738,11 @@
    "amazon_index": 42.55,
    "source": "ventes Amazon (Keepa)",
    "fiche_google": null,
-   "marche_raison": "fiche Google non concordante",
-   "google_refuse": [
-    "Cacharel Coffret Yes I Am Bloom Up!",
-    "Cacharel Yes I Am Fabulous Eau de Parfum",
-    "CACHAREL - LOU LOU - PERFUMED BODY CREAM - 150ML",
-    "F19 CHRYSTAL Série Limitée"
-   ],
+   "marche_raison": "produit introuvable sur Google Shopping",
+   "google_refuse": [],
    "verdict": {
     "feu": "rouge",
-    "raison": "fiche Google non concordante",
+    "raison": "produit introuvable sur Google Shopping",
     "nb_vendeurs": 1
    },
    "etoile": false
@@ -5751,8 +5754,8 @@
    "prix_annonce": 79.01,
    "lien": "https://www.dealabs.com/bons-plans/ecouteurs-samsung-galaxy-buds-3-pro-anc-bluetooth-54-audio-360-ip57-6-micros-boitier-515mahv-3451131",
    "source": "dealabs-hot",
-   "domaine": "aliexpress.com",
-   "rejet": "fiche du marchand illisible depuis le cloud (200)"
+   "domaine": "login.aliexpress.us",
+   "rejet": "fiche du marchand illisible depuis le cloud (302)"
   },
   {
    "titre": "Lot de 160 Pastilles Lave Vaisselle Finish Ultimate Infinity Shine",
@@ -5807,8 +5810,8 @@
    "prix_annonce": 44.58,
    "lien": "https://www.dealabs.com/bons-plans/mini-enceinte-bluetooth-divoom-minitoo-ecran-pixel-art-reveil-sons-pour-le-sommeil-usb-audio-carte-microsd-3451430",
    "source": "dealabs-nouveaux",
-   "domaine": "aliexpress.com",
-   "rejet": "fiche du marchand illisible depuis le cloud (200)"
+   "domaine": "login.aliexpress.us",
+   "rejet": "fiche du marchand illisible depuis le cloud (302)"
   },
   {
    "titre": "LEGO Architecture 21066 - New York, la grosse pomme, 1465 pièces",
@@ -6011,14 +6014,6 @@
    "rejet": "aucune donnée produit dans la page"
   },
   {
-   "titre": "Smartphone Apple iPhone 18 Pro Bordeaux 256 Go (via 158€ d'ODR)",
-   "prix_annonce": 158.0,
-   "lien": "https://www.dealabs.com/bons-plans/iphone-18-pro-et-18-pro-max-3451367",
-   "source": "dealabs-nouveaux",
-   "domaine": null,
-   "rejet": "lien du marchand introuvable"
-  },
-  {
    "titre": "Écran Incurvé 49\" Crua - DQHD 5120x1440, 165Hz",
    "prix_annonce": 459.99,
    "lien": "https://www.dealabs.com/bons-plans/crua-ecran-incurve-gaming-49-pouces-dqhd-5120x1440-165hz-3451401",
@@ -6083,5 +6078,5 @@
    "rejet": "produit Amazon sans code EAN"
   }
  ],
- "duree_s": 1175
+ "duree_s": 1013
 }

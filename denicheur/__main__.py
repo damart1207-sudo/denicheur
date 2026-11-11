@@ -281,7 +281,7 @@ def passage(nom, test=False):
             elif i < nb_idealo:
                 apify.CONTEXTE["denicheur"] = "P"  # budget idealo réservé au passage, indépendant de la veille
                 try:
-                    pi = apify.prix_idealo(nom_p)
+                    pi = apify.prix_idealo(nom_p, c.get("ean") or (c.get("keepa") or {}).get("ean"))
                 except Exception as e:
                     pi = None
                     c["idealo_erreur"] = type(e).__name__

@@ -130,12 +130,20 @@ def _num(v):
     return comparateurs._prix(m.group(0)) if m else None
 
 
-def prix_idealo(nom):
-    """Prix neuf le plus bas en France sur idealo pour CE produit exact."""
-    items = lancer("idealo", {"searchQuery": nom, "country": "FR", "maxItems": 3, "fetchOffers": False}, maxi=3)
+def prix_idealo(nom, ean=None):
+    """Prix neuf le plus bas en France sur idealo pour CE produit exact.
+    11/11 : avec un code EAN, la recherche se fait par EAN (les longs titres Amazon ne trouvaient rien sur idealo)."""
+    ean = str(ean).strip() if ean else ""
+    items = lancer("idealo", {"searchQuery": ean or nom, "country": "FR", "maxItems": 3, "fetchOffers": False}, maxi=3)
     if not items:
         return None
-    bons = [i for i in items if isinstance(i, dict) and i.get("price") and comparateurs.correspond(i.get("title", ""), nom)]
+    def _ok(i):
+        if ean and str(i.get("gtin") or "").lstrip("0") == ean.lstrip("0"):
+            return True
+        if ean and len(items) == 1:
+            return True  # idealo renvoie la fiche exacte pour un EAN
+        return comparateurs.correspond(i.get("title", ""), nom)
+    bons = [i for i in items if isinstance(i, dict) and i.get("price") and _ok(i)]
     if not bons:
         return None
     b = min(bons, key=lambda i: i["price"])

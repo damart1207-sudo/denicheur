@@ -382,10 +382,6 @@ VERIF_REMISE_MIN = 20  # % : on relit la fiche des produits remisés d'au moins 
 def verifier_fiches(page, annonces):
     """Relit la fiche avec le contrôle strict du produit et de son offre en stock.
     Corrige le prix si la carte a été mal lue ; marque prix_verifie (True/False). Incident Makita LS1019L du 05/11."""
-    # Le PC ne mettait à jour que pc/ et config/ : son dossier denicheur/ était resté au 05/11 et cette relecture
-    # plantait à l'import depuis le 06/11 (« fiches_verifiees: erreur ImportError », vu le 10/11). On le met à jour ici.
-    for cmd in (("fetch", "-q", "origin", "main"), ("checkout", "origin/main", "--", "denicheur")):
-        subprocess.run(["git", "-C", RACINE, *cmd], capture_output=True, text=True, timeout=120)
     sys.path.insert(0, RACINE)
     from denicheur.verif_prix import offre_officielle
     from denicheur.logistique import depuis_offre, appliquer
@@ -531,6 +527,11 @@ def collecter(connexion=False, seulement=None):
             print(source, etat[source])
             time.sleep(3 + random.random() * 5)
         try:
+            # Le PC ne mettait à jour que pc/ et config/ : son dossier denicheur/ était resté au 05/11 et la relecture
+            # plantait à l'import depuis le 06/11 (« erreur ImportError », vu le 10/11). Mise à jour ICI, pas dans
+            # verifier_fiches : les tests l'appellent, et ce checkout effaçait les modifications en cours du développeur.
+            for cmd in (("fetch", "-q", "origin", "main"), ("checkout", "origin/main", "--", "denicheur")):
+                subprocess.run(["git", "-C", RACINE, *cmd], capture_output=True, text=True, timeout=120)
             etat["fiches_verifiees"] = verifier_fiches(page, resultats)
         except Exception as e:
             etat["fiches_verifiees"] = f"erreur {type(e).__name__}: {str(e)[:150]}"

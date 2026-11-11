@@ -182,6 +182,7 @@ def keepa_lot(valeurs, par="asin", pays="FR", attente_max=600):
         f = keepa._parser(p, params["domain"], pays, d.get("tokensLeft"))
         f["eans"] = sorted({ean13(c) for c in (p.get("eanList") or []) + (p.get("upcList") or []) if ean13(c)})
         f["ventes_mois"] = p.get("monthlySold") if isinstance(p.get("monthlySold"), int) else None
+        f["poids_g"] = p.get("packageWeight") if isinstance(p.get("packageWeight"), int) and p["packageWeight"] > 0 else None
         if par == "asin":
             out[p["asin"]] = f
         else:
@@ -296,6 +297,16 @@ def marche_google(eans, titres, marques=None):
 
 
 # ------------------------------------------------------------------ idealo par code (la preuve)
+def port_europe(poids_g):
+    """Port estimé d'un colis Amazon Allemagne/Italie/Espagne vers la France selon le poids (ordre de grandeur, à
+    confirmer au panier). Poids inconnu : 7 €, signalé. Au-delà de 15 kg : None (on ne s'y risque pas).
+    Leçon du papier OFITURIA (10 kg compté 7 € de port, rejeté par l'audit les 06 et 10/11)."""
+    if not poids_g:
+        return 7.0
+    kg = poids_g / 1000
+    return 7.0 if kg <= 2 else 12.0 if kg <= 5 else 25.0 if kg <= 15 else None
+
+
 def _idealo(q):
     from . import apify
     for contexte in ("A", "P"):   # plafond des vérifications, puis celui des passages

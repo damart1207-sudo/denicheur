@@ -1,0 +1,1134 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-11_0511",
+ "date_affichee": "11/11/2026 à 05 h 11",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 31,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 1043,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 1718,
+ "nb_nouvelles": 31,
+ "nb_prefiltres": 25,
+ "nb_tries": 25,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 1
+  },
+  "gptoss": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 9
+  },
+  "qwen": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 3
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "prix": 50.26,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 464,
+   "domaine": "autre",
+   "nom_produit": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 104.28,
+   "cout_achat": 55.26,
+   "marge_nette": 32.05,
+   "rentabilite": 0.58,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 118.5 €, baisse 58 %, rang 937"
+   },
+   "score": 58.0,
+   "asin": "B0BK749DJG",
+   "ean": "4004117625893",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 16,
+   "ebay": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "LEUCHTTURM1917",
+    "asin": "B0BK749DJG",
+    "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red, pointillé",
+    "ean": "4004117625893",
+    "pays": "FR",
+    "prix_neuf": 50.26,
+    "prix_amazon": null,
+    "prix_tiers": 50.26,
+    "moyenne_90j": 118.49,
+    "plus_bas_90j": 21.5,
+    "occasion": null,
+    "rang_ventes": 939,
+    "chutes_rang_30j": 16,
+    "chutes_rang_90j": 47,
+    "ventes_estimees_30j": 16,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+    "jetons_restants": 600
+   },
+   "prix_plancher": {
+    "nom": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 50.26,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "remise_sincere": true,
+   "mot_cle": "leuchtturm1917 367251 carnet notes",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 44.23,
+     "marge_nette": -19.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.23,
+      "cout_achat": 55.26,
+      "frais_canal": 0.0,
+      "prelevements": 5.93,
+      "provision": 3.0,
+      "marge_nette": -19.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 44.23,
+     "marge_nette": -19.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.23,
+      "cout_achat": 55.26,
+      "frais_canal": 0.0,
+      "prelevements": 5.93,
+      "provision": 3.0,
+      "marge_nette": -19.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 44.23,
+     "marge_nette": -19.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.23,
+      "cout_achat": 55.26,
+      "frais_canal": 0.0,
+      "prelevements": 5.93,
+      "provision": 3.0,
+      "marge_nette": -19.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 50.26,
+     "marge_nette": -25.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.26,
+      "cout_achat": 55.26,
+      "frais_canal": 10.52,
+      "prelevements": 6.73,
+      "provision": 3.0,
+      "marge_nette": -25.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.457
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 50.26,
+     "marge_nette": -26.25,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.26,
+      "cout_achat": 55.26,
+      "frais_canal": 11.52,
+      "prelevements": 6.73,
+      "provision": 3.0,
+      "marge_nette": -26.25,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.475
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 50.26,
+     "marge_nette": -26.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.26,
+      "cout_achat": 55.26,
+      "frais_canal": 12.02,
+      "prelevements": 6.73,
+      "provision": 3.0,
+      "marge_nette": -26.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.484
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 50.26,
+     "marge_nette": -27.62,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.26,
+      "cout_achat": 55.26,
+      "frais_canal": 12.88,
+      "prelevements": 6.73,
+      "provision": 3.0,
+      "marge_nette": -27.62,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.5
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 50.26,
+     "marge_nette": -29.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.26,
+      "cout_achat": 55.26,
+      "frais_canal": 14.53,
+      "prelevements": 6.73,
+      "provision": 3.0,
+      "marge_nette": -29.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.529
+    }
+   ],
+   "prix_revente_prudent": 45.23,
+   "marge_verifiee": -19.09,
+   "rentabilite_verifiee": -0.345,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "temperature_dealabs": 464,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0D9B8FW7S-neuf",
+   "titre": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensible 1 to), 13MP+5MP, 8000 mAh +",
+   "prix": 99.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0D9B8FW7S",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 360,
+   "domaine": "autre",
+   "nom_produit": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensib",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 159.51,
+   "cout_achat": 104.99,
+   "marge_nette": 30.15,
+   "rentabilite": 0.287,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 181.26 €, baisse 45 %, rang 1551"
+   },
+   "score": 28.7,
+   "asin": "B0D9B8FW7S",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 12,
+   "ebay": {
+    "requete": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensib",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "DMOAO",
+    "asin": "B0D9B8FW7S",
+    "titre": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensible 1 to), 13MP+5MP, 8000 mAh + Charge Rapide 18 W, Widevine L1, 5G Wi-FI, GPS, Octa-Core 2.0 GHz, Face ID, Bleu",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 99.99,
+    "prix_amazon": null,
+    "prix_tiers": 99.99,
+    "moyenne_90j": 181.04,
+    "plus_bas_90j": 99.99,
+    "occasion": null,
+    "rang_ventes": 1546,
+    "chutes_rang_30j": 12,
+    "chutes_rang_90j": 14,
+    "ventes_estimees_30j": 12,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0D9B8FW7S",
+    "jetons_restants": 599
+   },
+   "prix_plancher": {
+    "nom": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensib",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 99.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0D9B8FW7S"
+   },
+   "remise_sincere": true,
+   "mot_cle": "dmoao tablette android 11",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0D9B8FW7S"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 87.99,
+     "marge_nette": -31.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": -31.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.303
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 87.99,
+     "marge_nette": -31.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": -31.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.303
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 87.99,
+     "marge_nette": -31.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": -31.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.303
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 99.99,
+     "marge_nette": -36.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 104.99,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": -36.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.347
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 99.99,
+     "marge_nette": -36.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 104.99,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": -36.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.347
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 99.99,
+     "marge_nette": -37.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 104.99,
+      "frais_canal": 16.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": -37.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.356
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 99.99,
+     "marge_nette": -40.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 104.99,
+      "frais_canal": 19.35,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": -40.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.388
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 99.99,
+     "marge_nette": -43.39,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 104.99,
+      "frais_canal": 21.99,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": -43.39,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.413
+    }
+   ],
+   "prix_revente_prudent": 89.99,
+   "marge_verifiee": -30.06,
+   "rentabilite_verifiee": -0.286,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensib",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensib",
+    "temperature_dealabs": 360,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 : vérification arrêtée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 2,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 9,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "temperature": 464,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 50.26,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "date": "2026-11-11T03:32",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BK749DJG",
+   "ref_fr": 118.5,
+   "description": "moyenne 90 j 118.5 €, baisse 58 %, rang 937"
+  },
+  {
+   "id": "keepa-B0D9B8FW7S-neuf",
+   "titre": "DMOAO Tablette Android 11 Pouces avec 20 Go RAM + 128 Go ROM (Extensible 1 to), 13MP+5MP, 8000 mAh +",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D9B8FW7S",
+   "date": "2026-11-11T02:08",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0D9B8FW7S",
+   "ref_fr": 181.26,
+   "description": "moyenne 90 j 181.26 €, baisse 45 %, rang 1551"
+  },
+  {
+   "id": "9494d94821",
+   "titre": "Sony DualSense PS5 Wireless Controller - 007 First Light Limited Edition £47.99 w/ signup code (free c+c)",
+   "temperature": 114,
+   "categorie": "Gaming",
+   "marchand": "Argos",
+   "prix": 52.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ony-dualsense-ps5-wireless-controller-007-first-light-limited-edition-ps4799-w-signup-code-free-cc-5029050",
+   "date": "Wed, 11 Nov 2026 00:48:23 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£52.99 - Argos Take to checkout to see price update, further £5 off with signup code. Credit @DealDisc..."
+  },
+  {
+   "id": "dd798c0144",
+   "titre": "[Prime] Ninja Foodi MAX Dual Zone Heißluftfritteuse AF400EUCP 9,5 L (2 Zonen, 6 Funktionen, Kupfer/Schwarz)",
+   "temperature": 107,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 139.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-ninja-foodi-max-dual-zone-heissluftfritteuse-af400eucp-95-l-2-zonen-6-funktionen-kupferschwarz-2867887",
+   "date": "Wed, 11 Nov 2026 04:34:37 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "139,99€ - Amazon Bei Amazon gibt es die Ninja Foodi MAX Dual Zone Heißluftfritteuse mit 9,5 L in Kupfer/Schwarz (inkl. Silikonzange) bei Amazon für 139,99€ inkl. Vers..."
+  },
+  {
+   "id": "ad21b74775",
+   "titre": "GameSir X5 Lite Game Controller for Android, iPhone 16/15, iPad mini - w/code sold by GameSir Global Store",
+   "temperature": 102,
+   "categorie": "Electronics",
+   "marchand": "AliExpress",
+   "prix": 10.08,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gamesir-x5-lite-game-controller-for-android-iphone-1615-ipad-mini-hall-effect-joysticks-app-support-for-mobile-gaming-5028518",
+   "date": "Wed, 11 Nov 2026 04:00:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.08 - AliExpress Tech Specs Brand: GameSir Model: X5 Lite Colors: Black / Wasabi Connection: Type-C Wired Working Platforms: iPhone 16/15 series, iPad m..."
+  },
+  {
+   "id": "7c336bf30e",
+   "titre": "London (LGW) to Hong Kong, Return Flights via Shangai - China Eastern - Nov Dec Dates - Inc Checked Bags",
+   "temperature": 102,
+   "categorie": "Travel",
+   "marchand": "Skyscanner",
+   "prix": 294.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/london-lgw-to-hong-kong-return-flights-via-shangai-china-eastern-nov-dec-dates-inc-checked-bags-5028600",
+   "date": "Wed, 11 Nov 2026 04:00:05 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£294 - Skyscanner Found a cracking deal with China Eastern Airlines for flights from London to Hong Kong for just £295 return. Good availability through November and December 202..."
+  },
+  {
+   "id": "7ba2ef5e8b",
+   "titre": "🛍️ Yumove Anti Démangeaison Chien ✅ 25,63€ au lieu de 43,05€ ➡️ https://www.amazon.fr/dp/B07X12683N/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 25.63,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07X12683N/?tag=pmrat-21",
+   "date": "2026-11-11T03:31",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Yumove Anti Démangeaison Chien ✅ 25,63€ au lieu de 43,05€ ➡️ https://www.amazon.fr/dp/B07X12683N/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 43.05
+  },
+  {
+   "id": "7c13848aaa",
+   "titre": "🛍️ Braun Rasoir Electrique Homme, Tout-en-Un Series 3 XT3 XT3205, Jaune ✅ 24,99€ au lieu de 33,36€ ➡️ https://www.amazon.fr/dp/B0DQWYBF55/?tag=pmrat-21 Publicit",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DQWYBF55/?tag=pmrat-21",
+   "date": "2026-11-11T03:38",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Braun Rasoir Electrique Homme, Tout-en-Un Series 3 XT3 XT3205, Jaune ✅ 24,99€ au lieu de 33,36€ ➡️ https://www.amazon.fr/dp/B0DQWYBF55/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 33.36
+  },
+  {
+   "id": "37e7716ae2",
+   "titre": "Xenoblade Chronicles 2 - Edition sur Nintendo Switch 2",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 51.74,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/xenoblade-chronicles-2-edition-sur-nintendo-switch-2-3451738",
+   "date": "Wed, 11 Nov 2026 05:00:37 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "51,74€ - Amazon Explorez un océan de nuages infini où vivent les derniers rescapés d’une civilisation sur le dos de monstres colossaux appelés Titans. Vivez l’histoire de Rex et de Pyra, une mystérieuse entité dotée de pouvoirs immenses. Partez ensemble en quête du monde perdu de Pyra, Elysium, le b"
+  },
+  {
+   "id": "fe5d9156a7",
+   "titre": "Two Point Hospital: Full Health Collection sur Nintendo Switch 2",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 28.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/two-point-hospital-full-health-collection-sur-nintendo-switch-2-3451736",
+   "date": "Wed, 11 Nov 2026 04:56:32 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "28€ - E.Leclerc • Comprend le jeu de base et tous les contenus téléchargeables sortis • Permet de soigner des patients • Permet de concevoir des installations hospitalières • Permet de gérer le personnel • Le meilleur pack Two Point Hospital que vous ayez jamais vu est enfin là ! Découvrez... Two Po"
+  },
+  {
+   "id": "dfbf7f0b77",
+   "titre": "ESN Designer Whey Protein Powder, Chocolat/Vanille/Nature, 1 kg",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Amazon",
+   "prix": 35.63,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/esn-designer-whey-protein-powder-chocolatvanillenature-1-kg-3451735",
+   "date": "Wed, 11 Nov 2026 04:48:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "35,63€ - Amazon Célibataire ou entre bronze et gold sur LoL ou Valorant depuis des années ? Il est temps de se bouger et aller pousser de la fonte pour devenir fit, 8 mois avant l'été et s'entraîner en écoutant des vidéos de dégénérés où Coleman cri \"light Weight baby ! \" Avec le prix de la whey, on"
+  },
+  {
+   "id": "e3ff6bba43",
+   "titre": "Chaussure de running Nike air zoom pegasus 42 Black / Black / Medium Ash / Metallic Silver du 40 au 47.5",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Asphaltgold",
+   "prix": 72.75,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussure-de-running-nike-air-zoom-pegasus-42-black-black-medium-ash-metallic-silver-du-40-au-475-3451732",
+   "date": "Wed, 11 Nov 2026 04:34:01 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "72,75€ - Asphaltgold • Amorti réactif • Conçue pour la course quotidienne sur route Nike Air Zoom Pegasus 42 L'amortissement réactif du Pegasus garantit une expérience de course énergique lors de la course quotidienne. Deux éléments Air Zoom et une semelle intermédiaire en mousse ReactX garantissent"
+  },
+  {
+   "id": "8d8144f125",
+   "titre": "Nike air force 1 '07 wb Wolf Grey / Wolf Grey / Black du 36 au 47.5",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Asphaltgold",
+   "prix": 67.5,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nike-air-force-1-07-wb-wolf-grey-wolf-grey-black-du-36-au-475-3451731",
+   "date": "Wed, 11 Nov 2026 04:31:30 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "67,50€ - Asphaltgold • Couleur : Wolf Grey Nike Air Force 1 '07 WB La Nike Air Force 1 '07 WB en \"Wolf Grey\" reste fidèle à son héritage emblématique, apportant un classique intemporel à l'actualité urbaine. Le matériau supérieur en cuir nubuck souple donne des accents discrets, tandis que la couche"
+  },
+  {
+   "id": "49cf7a2363",
+   "titre": "49\" Samsung Odyssey G9 G91F, 5120x1440, VA-Panel",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "notebooksbilliger",
+   "prix": 589.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/49-samsung-odyssey-g9-g91f-5120x1440-va-panel-2868636",
+   "date": "Wed, 11 Nov 2026 05:01:12 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "589,90€ - notebooksbilliger 49\" ist das neue 27\" oder besser 2x 27\" :D , aber ohne lästigen Strich in der Mitte. Ultra-wide 32:9 Monitor im 16:9-Format mit 5120x1440 Auflösung und 144Hz. Der Monitor ist mit 1000R/1m recht stark gebogen. Das VA-Panel stammt von Samsung und bietet eine Reaktionszeit v"
+  },
+  {
+   "id": "fb7612ad1f",
+   "titre": "Ein gutes Angebot für alle Vielkaffeetrinker",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": null,
+   "prix": 8.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ein-gutes-angebot-fur-alle-vielkaffeetrinker-2868635",
+   "date": "Wed, 11 Nov 2026 04:58:35 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "8,99€ • Karton mit 8 Stück • 1 kg pro Stück"
+  },
+  {
+   "id": "522edce8d1",
+   "titre": "Oban 14 Jahre Single Malt Scotch Whisky 0,7l 43% (Prime Spar-Abo) (39,09€ bei 5 Spar-Abos)",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 43.69,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/oban-14-jahre-single-malt-scotch-whisky-07l-43-prime-spar-abo-3909eur-bei-5-spar-abos-2868632",
+   "date": "Wed, 11 Nov 2026 04:42:29 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "43,69€ - Amazon Whiskybase: 81.98 Oban 14 Jahre - Whisky Verkostung Tasting Notes Nase: würziger Eichenduft, mit schwebendem Torfrauch, einer fruchtigen Süße nach dunklen Beeren und gewürzt mit einer Prise salzigem Seetang und Malz Gaumen: seidig weich, mit maritimen Aromen von Meersalz, fein kombin"
+  },
+  {
+   "id": "2295c26191",
+   "titre": "Aberlour 12 Jahre Double Cask Matured Single Malt Scotch Whisky 0,7l 40% (Prime Spar-Abo) (24,13€ bei 5 Spar-Abos)",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 26.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aberlour-12-jahre-double-cask-matured-single-malt-scotch-whisky-07l-40-prime-spar-abo-2413eur-bei-5-spar-abos-2868631",
+   "date": "Wed, 11 Nov 2026 04:38:44 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "26,97€ - Amazon Whiskybase: 82.49 Aberlour 12 Jahre - Whisky Verkostung Der Aberlour 12 Years Old Double Cask Matured ist ein klassischer Single Malt Scotch Whisky aus der schottischen Speyside, der durch seine doppelte Fassreifung in ex-Bourbonfässern und Sherryfässern einen besonders harmonischen "
+  },
+  {
+   "id": "07b47719cf",
+   "titre": "Highland Park 12 Jahre Single Malt Scotch Whisky 0,7l 40% (Prime Spar-Abo) (24,90€ bei 5 Spar-Abos)",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 27.83,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/highland-park-12-jahre-single-malt-scotch-whisky-07l-40-prime-spar-abo-2490eur-bei-5-spar-abos-2868630",
+   "date": "Wed, 11 Nov 2026 04:33:45 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "27,83€ - Amazon Whiskybase: 81.46 Highland Park 12 Jahre - Whisky Verkostung Der Highland Park 12 Years Old SPICY & WELL-ROUNDED 40% Vol. 0,7 l + GB ist der wichtigste Eckpfeiler des Sortiments der traditionsreichen Highland Park Distillery auf den schottischen Orkney-Inseln. Als Nachfolger des beka"
+  },
+  {
+   "id": "476f54c0dc",
+   "titre": "Lego Hogsmeade collectors edition",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": null,
+   "prix": 260.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-hogsmeade-collectors-edition-5029144",
+   "date": "Wed, 11 Nov 2026 04:10:09 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£260 Best price I’ve seen on this set so far. They also have the venator for £420"
+  },
+  {
+   "id": "6174c16315",
+   "titre": "5 x NIVEA MEN TIME TO GET SET Skincare Gift Set, 5-Piece Collection - With Code (works out at £3.50 Each) - Amazon Haul",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 17.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/5-x-nivea-men-time-to-get-set-skincare-gift-set-5-piece-collection-with-code-works-out-at-ps350-each-amazon-haul-5029143",
+   "date": "Wed, 11 Nov 2026 03:53:53 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£17.50 - Amazon TIME TO GET SET: Complete sensitive skin care travel set for men with shower gel, face wash, anti-perspirant and creme in a stylish travel bag for organised, on-the-go grooming UNWRAP EPIC GROOMING PERFORMANCE: Deliver soothed, protected sensitive skin and professional results—every "
+  },
+  {
+   "id": "1c4633bdf3",
+   "titre": "SMK-37 Elite MIDI Keyboard with Weighted Keys, Built-in Synthesizer Sounds (Possible 35% TCB) - with code 0 HaiDun Music Store",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "AliExpress",
+   "prix": 73.32,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/smk-37-elite-midi-keyboard-with-weighted-keys-built-in-synthesizer-sounds-possible-35-tcb-with-code-0-haidun-music-store-5029142",
+   "date": "Wed, 11 Nov 2026 03:44:34 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£73.32 - AliExpress Possible 35% TCB today only (11th November) Use code for discount. Apply it at the checkout (Ignore the perks discount) Or £68.90 if you have an Elite account Choice shipping, from China Professional-grade MIDI keyboard with weighted keys The SMK-37 Elite features weighted keys f"
+  },
+  {
+   "id": "61bfadb6ec",
+   "titre": "POCO C95 Pro, Smartphone 8+256 GB, Blue, 7500mAh battery 45W Charging, 6.9\" Display, 120Hz Display, 50MP, HyperOS 3, 1 Year Extra Warranty",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 175.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/poco-c95-pro-smartphone-8256-gb-blue-7500mah-battery-45w-charging-69-display-120hz-display-50mp-hyperos-3-1-year-extra-warranty-5029141",
+   "date": "Wed, 11 Nov 2026 03:41:34 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£175.99 - Amazon 【7500mAh High-Capacity Battery】Delivers up to two days of reliable power on a single charge. Stay powered all day with stable, reliable battery performance whenever you need it. 【45W Turbo Charging】35 mins charging, all day power. The battery maintains over 80% of its original capac"
+  },
+  {
+   "id": "b28a6c0158",
+   "titre": "Ninja CrushBOSS 3-in-1 Kitchen System with Food Processor & Tumbler - Onyx",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "SharkNinja",
+   "prix": 189.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ninja-crushboss-3-in-1-kitchen-system-with-food-processor-tumbler-onyx-5029140",
+   "date": "Wed, 11 Nov 2026 03:36:49 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£189.99 - SharkNinja Three appliances, one base, three smart presets. The Ninja CrushBOSS brings blending, food processing, and personal blending together - with an XL 13cm feed chute that fits whole ingredients and 1200 watts of power. Perks at Work 9% additional discount"
+  },
+  {
+   "id": "c3d232d01c",
+   "titre": "IX&DAO 2026 New Warrior 37mm Men's Automatic Mechanical Watch PT5000 (Possible 35% TCB) - with code - IX&DAO Brand Store",
+   "temperature": null,
+   "categorie": "Fashion & Accessories",
+   "marchand": "AliExpress",
+   "prix": 254.51,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ixdao-2026-new-warrior-37mm-mens-automatic-mechanical-watch-pt5000-possible-35-tcb-with-code-ixdao-brand-store-5029139",
+   "date": "Wed, 11 Nov 2026 03:35:27 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£254.51 - AliExpress Possible 35% TCB today only (11th November) Use code for discount. Apply it at the checkout (Ignore the perks discount) (Pre-order) Brand+, shipped from China (factor in VAT, as over £135) - see VAT adjustment in checkout screen above Few other options available Stylish 37mm Rou"
+  },
+  {
+   "id": "d00b66c8a0",
+   "titre": "MAC Spotlight Kit Makeup Gift Set (£35.10 with student discount)",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Boots",
+   "prix": 39.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/mac-spotlight-kit-makeup-gift-set-ps3510-with-student-discount-5029138",
+   "date": "Wed, 11 Nov 2026 03:28:58 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£39 - Boots Own the spotlight with our effortless edit of 4 full-sized beauty essentials, for wherever the night takes you… Includes our best-selling Extended Play Mascara, Lustreglass Lip Tint in XOXO, Lip Pencil in Cork and our iconic Fix+ Setting Spray. Comes in a sleek vanity case. Create define"
+  }
+ ]
+}

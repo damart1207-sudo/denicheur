@@ -1,0 +1,5472 @@
+{
+ "passage": "midi",
+ "horodatage": "2026-11-12_1251",
+ "date_affichee": "12/11/2026 à 12 h 51",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 29,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 38,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 1576,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 2249,
+ "nb_nouvelles": 142,
+ "nb_prefiltres": 109,
+ "nb_tries": 109,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 23
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 34,
+   "remplace": "nemotron_nv"
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 7,
+   "erreurs": [
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested "
+   ],
+   "choix": 4,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "TimeoutError: The read operation timed out",
+    "coupé pour ce passage (aucune réponse)"
+   ],
+   "choix": 0
+  }
+ },
+ "remplacements": {
+  "gptoss": "nemotron_nv",
+  "qwen": "gemma"
+ },
+ "candidats": [
+  {
+   "id": "keepa-B0C6N2DJ9R-arbDE",
+   "titre": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi/blanc, XXL taille t [Amazon DE]",
+   "prix": 81.0,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0C6N2DJ9R",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 550,
+   "domaine": "autre",
+   "nom_produit": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 172.48,
+   "cout_achat": 86.0,
+   "marge_nette": 60.37,
+   "rentabilite": 0.702,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 196.0 € (moyenne 90 j 184.83 €), écart 55 % port compris, ventes 30 j 11, 1 vendeurs FR"
+   },
+   "score": 70.2,
+   "asin": "B0C6N2DJ9R",
+   "ean": "0195251321162",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 11,
+   "ebay": {
+    "requete": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Under Armour",
+    "asin": "B0C6N2DJ9R",
+    "titre": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi/blanc, XXL taille tall",
+    "ean": "0195251321162",
+    "pays": "FR",
+    "prix_neuf": 193.4,
+    "prix_amazon": null,
+    "prix_tiers": 193.4,
+    "moyenne_90j": 184.59,
+    "plus_bas_90j": 90.71,
+    "occasion": null,
+    "rang_ventes": 2747,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 25,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0C6N2DJ9R",
+    "jetons_restants": 100
+   },
+   "prix_plancher": {
+    "nom": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 193.4,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0C6N2DJ9R"
+   },
+   "remise_sincere": true,
+   "mot_cle": "under armour coldgear mock",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": 1.24,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0C6N2DJ9R"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 170.19,
+     "marge_nette": 58.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 170.19,
+      "cout_achat": 86.0,
+      "frais_canal": 0.0,
+      "prelevements": 22.81,
+      "provision": 3.0,
+      "marge_nette": 58.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.679
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 170.19,
+     "marge_nette": 58.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 170.19,
+      "cout_achat": 86.0,
+      "frais_canal": 0.0,
+      "prelevements": 22.81,
+      "provision": 3.0,
+      "marge_nette": 58.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.679
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 170.19,
+     "marge_nette": 58.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 170.19,
+      "cout_achat": 86.0,
+      "frais_canal": 0.0,
+      "prelevements": 22.81,
+      "provision": 3.0,
+      "marge_nette": 58.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.679
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 193.4,
+     "marge_nette": 56.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 193.4,
+      "cout_achat": 86.0,
+      "frais_canal": 21.54,
+      "prelevements": 25.92,
+      "provision": 3.0,
+      "marge_nette": 56.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.662
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 193.4,
+     "marge_nette": 55.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 193.4,
+      "cout_achat": 86.0,
+      "frais_canal": 23.41,
+      "prelevements": 25.92,
+      "provision": 3.0,
+      "marge_nette": 55.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.64
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 193.4,
+     "marge_nette": 55.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 193.4,
+      "cout_achat": 86.0,
+      "frais_canal": 23.47,
+      "prelevements": 25.92,
+      "provision": 3.0,
+      "marge_nette": 55.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.64
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 193.4,
+     "marge_nette": 46.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 193.4,
+      "cout_achat": 86.0,
+      "frais_canal": 31.49,
+      "prelevements": 25.92,
+      "provision": 3.0,
+      "marge_nette": 46.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.546
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 193.4,
+     "marge_nette": 42.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 193.4,
+      "cout_achat": 86.0,
+      "frais_canal": 36.0,
+      "prelevements": 25.92,
+      "provision": 3.0,
+      "marge_nette": 42.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.494
+    }
+   ],
+   "prix_revente_prudent": 172.48,
+   "marge_verifiee": 60.37,
+   "rentabilite_verifiee": 0.702,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 338.0,
+   "rapport_concurrence": {
+    "requete": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi",
+    "temperature_dealabs": 550,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FRFPMX3W-arbES",
+   "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, [Amazon ES]",
+   "prix": 39.44,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B0FRFPMX3W",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 540,
+   "domaine": "autre",
+   "nom_produit": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 87.99,
+   "cout_achat": 44.44,
+   "marge_nette": 28.76,
+   "rentabilite": 0.647,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 99.99 € (moyenne 90 j 84.01 €), écart 54 % port compris, ventes 30 j 8, 2 vendeurs FR"
+   },
+   "score": 64.7,
+   "asin": "B0FRFPMX3W",
+   "ean": "6926681761563",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 8,
+   "ebay": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Velaze",
+    "asin": "B0FRFPMX3W",
+    "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, Cuisson et Induction - Noir Mat",
+    "ean": "6926681761563",
+    "pays": "FR",
+    "prix_neuf": 99.99,
+    "prix_amazon": null,
+    "prix_tiers": 99.99,
+    "moyenne_90j": 84.02,
+    "plus_bas_90j": 48.35,
+    "occasion": null,
+    "rang_ventes": 98709,
+    "chutes_rang_30j": 8,
+    "chutes_rang_90j": 34,
+    "ventes_estimees_30j": 8,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0FRFPMX3W",
+    "jetons_restants": 99
+   },
+   "prix_plancher": {
+    "nom": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 99.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FRFPMX3W"
+   },
+   "remise_sincere": true,
+   "mot_cle": "velaze cocotte fonte ronde",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.es/dp/B0FRFPMX3W"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 99.99,
+     "marge_nette": 24.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 24.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.543
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 99.99,
+     "marge_nette": 24.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 24.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.543
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 99.99,
+     "marge_nette": 23.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 16.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 23.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.521
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 99.99,
+     "marge_nette": 19.8,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 19.35,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 19.8,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.446
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 99.99,
+     "marge_nette": 17.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 21.99,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 17.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.386
+    }
+   ],
+   "prix_revente_prudent": 87.99,
+   "marge_verifiee": 28.76,
+   "rentabilite_verifiee": 0.647,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 48.3,
+   "rapport_concurrence": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "temperature_dealabs": 540,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B07TBTGWPT-arbES",
+   "titre": "KEEN Targhee III Open Toe Sandal De Marche - 40 [Amazon ES]",
+   "prix": 45.7,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B07TBTGWPT",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 430,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.es/dp/B07TBTGWPT"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Keen Targhee III Open Toe",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 82.5,
+   "cout_achat": 50.7,
+   "marge_nette": 17.75,
+   "rentabilite": 0.35,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Sandale de rando réputée, prix d'achat 45 € vs 100-120 € neuf, pointure 40 facile à revendre sur Vinted sans frais vendeur.",
+    "gptoss": "Chaussure de marque recherchée en été, prix d'achat nettement inférieur au prix de revente."
+   },
+   "score": 40.9,
+   "ebay": {
+    "requete": "Keen Targhee III Open Toe",
+    "neuf": {
+     "nb": 5,
+     "min": 118.18,
+     "p25": 139.93,
+     "mediane": 161.67,
+     "max": 161.67
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+      "prix": "161.67",
+      "url": "https://www.ebay.fr/itm/398220458573?_skw=Keen+Targhee+III+Open+Toe&hash=item5cb7c9fa4d:g:IkYAAeSwsehqWYY2"
+     },
+     {
+      "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+      "prix": "161.67",
+      "url": "https://www.ebay.fr/itm/178348574664?_skw=Keen+Targhee+III+Open+Toe&hash=item29866747c8:g:IkYAAeSwsehqWYY2"
+     },
+     {
+      "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+      "prix": "161.67",
+      "url": "https://www.ebay.fr/itm/158124774849?_skw=Keen+Targhee+III+Open+Toe&hash=item24d0f895c1:g:IkYAAeSwsehqWYY2"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 139.93,
+     "DE": 67.45,
+     "IT": 69.95,
+     "ES": 69.95
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "KEEN",
+    "asin": "B07TBTGWPT",
+    "titre": "KEEN Targhee III Open Toe Sandal De Marche - 40",
+    "ean": "0191190487778",
+    "pays": "FR",
+    "prix_neuf": 92.85,
+    "prix_amazon": null,
+    "prix_tiers": 92.85,
+    "moyenne_90j": 89.98,
+    "plus_bas_90j": 47.99,
+    "occasion": 90.24,
+    "rang_ventes": 227848,
+    "chutes_rang_30j": 3,
+    "chutes_rang_90j": 7,
+    "ventes_estimees_30j": 3,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B07TBTGWPT",
+    "jetons_restants": 97
+   },
+   "asin": "B07TBTGWPT",
+   "ean": "0191190487778",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 3,
+   "prix_plancher": {
+    "nom": "Keen Targhee III Open Toe",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 92.85,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B07TBTGWPT"
+   },
+   "remise_sincere": true,
+   "mot_cle": "keen targhee iii open",
+   "annonces_ebay": 5,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 81.71,
+     "marge_nette": 17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 81.71,
+      "cout_achat": 50.7,
+      "frais_canal": 0.0,
+      "prelevements": 10.95,
+      "provision": 3.0,
+      "marge_nette": 17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.336
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 81.71,
+     "marge_nette": 17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 81.71,
+      "cout_achat": 50.7,
+      "frais_canal": 0.0,
+      "prelevements": 10.95,
+      "provision": 3.0,
+      "marge_nette": 17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.336
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 81.71,
+     "marge_nette": 17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 81.71,
+      "cout_achat": 50.7,
+      "frais_canal": 0.0,
+      "prelevements": 10.95,
+      "provision": 3.0,
+      "marge_nette": 17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.336
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 92.85,
+     "marge_nette": 12.35,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.85,
+      "cout_achat": 50.7,
+      "frais_canal": 14.36,
+      "prelevements": 12.44,
+      "provision": 3.0,
+      "marge_nette": 12.35,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.244
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 92.85,
+     "marge_nette": 12.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.85,
+      "cout_achat": 50.7,
+      "frais_canal": 14.5,
+      "prelevements": 12.44,
+      "provision": 3.0,
+      "marge_nette": 12.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.241
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 92.85,
+     "marge_nette": 11.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.85,
+      "cout_achat": 50.7,
+      "frais_canal": 15.43,
+      "prelevements": 12.44,
+      "provision": 3.0,
+      "marge_nette": 11.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.222
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 92.85,
+     "marge_nette": 8.29,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.85,
+      "cout_achat": 50.7,
+      "frais_canal": 18.42,
+      "prelevements": 12.44,
+      "provision": 3.0,
+      "marge_nette": 8.29,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.164
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 92.85,
+     "marge_nette": 5.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.85,
+      "cout_achat": 50.7,
+      "frais_canal": 20.92,
+      "prelevements": 12.44,
+      "provision": 3.0,
+      "marge_nette": 5.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.114
+    }
+   ],
+   "prix_revente_prudent": 82.5,
+   "marge_verifiee": 17.75,
+   "rentabilite_verifiee": 0.35,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 90.24,
+    "haut": 90.24,
+    "position_neuf": 0.51
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 17.5,
+   "rapport_concurrence": {
+    "requete": "Keen Targhee III Open Toe",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 161.67,
+       "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+       "lien": "https://www.ebay.fr/itm/158124774849?_skw=Keen+Targhee+III+Open+Toe&hash=item24d0f895c1:g:IkYAAeSwsehqWYY2",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32541
+      },
+      "plus_cher": {
+       "prix": 161.67,
+       "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+       "lien": "https://www.ebay.fr/itm/398220458573?_skw=Keen+Targhee+III+Open+Toe&hash=item5cb7c9fa4d:g:IkYAAeSwsehqWYY2",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32541
+      }
+     },
+     "DE": {
+      "nb_annonces": 11,
+      "total_ebay": 13,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 48.0,
+       "titre": "Keen Targhee III Open Toe Sandal Herren-Sandalen Sandaletten Wandersandale Grau",
+       "lien": "https://www.ebay.de/itm/384817650980?_skw=Keen+Targhee+III+Open+Toe&hash=item5998eb5d24:g:oUgAAOSwvP1iTD6B",
+       "vendeur": "fun-sport-vision-shop",
+       "avis_vendeur": 222511
+      },
+      "plus_cher": {
+       "prix": 118.18,
+       "titre": "Sandały Keen Targhee III Open Toe Sandal M 1022423 Sandały Keen Targhee III Open",
+       "lien": "https://www.ebay.de/itm/178345930626?_skw=Keen+Targhee+III+Open+Toe&hash=item29863eef82:g:IkYAAeSwsehqWYY2",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32541
+      }
+     },
+     "IT": {
+      "nb_annonces": 4,
+      "total_ebay": 23,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 48.0,
+       "titre": "Keen Targhee III Open Toe Sandal Sandali Uomo Sandali da Escursionismo Grigio",
+       "lien": "https://www.ebay.it/itm/384817650980?_skw=Keen+Targhee+III+Open+Toe&hash=item5998eb5d24:g:oUgAAOSwvP1iTD6B",
+       "vendeur": "fun-sport-vision-shop",
+       "avis_vendeur": 222511
+      },
+      "plus_cher": {
+       "prix": 69.95,
+       "titre": "Keen sandalo uomo 1024865 TARGHEE III OPEN TOE nero taglia 44",
+       "lien": "https://www.ebay.it/itm/237165026801?_skw=Keen+Targhee+III+Open+Toe&hash=item3738231df1:g:oeAAAeSwPZBpwT0C",
+       "vendeur": "kedaschuhe",
+       "avis_vendeur": 22177
+      }
+     },
+     "ES": {
+      "nb_annonces": 9,
+      "total_ebay": 33,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 48.0,
+       "titre": "Keen Targhee III Open Toe Sandalia Hombre Sandalias Sandalia Senderismo Gris",
+       "lien": "https://www.ebay.es/itm/384817650980?_skw=Keen+Targhee+III+Open+Toe&hash=item5998eb5d24:g:oUgAAOSwvP1iTD6B",
+       "vendeur": "fun-sport-vision-shop",
+       "avis_vendeur": 222511
+      },
+      "plus_cher": {
+       "prix": 112.02,
+       "titre": "Mens Keen Targhee Iii Open Toe Adjustable Leather Comfortable Sandals - ModeShoe",
+       "lien": "https://www.ebay.es/itm/256738884424?_skw=Keen+Targhee+III+Open+Toe&hash=item3bc6d47b48:g:csAAAOSwdStnQUei",
+       "vendeur": "modefootwear",
+       "avis_vendeur": 4482
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Keen Targhee III Open Toe",
+    "temperature_dealabs": 430,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "keen targhee iii open toe sandal",
+     "keen targhee iii open toe",
+     "keen targhee iii open toe h2",
+     "keen targhee iii open toe sandal review",
+     "keen targhee iii open toe walking sandals",
+     "keen targhee iii open toe sandals men's",
+     "keen targhee iii open toe sandal m",
+     "keen targhee iii open toe sandal sandalen",
+     "keen targhee 3 open toe",
+     "keen targhee 3 open toe h2"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "8386361c65",
+   "titre": "PUMA Anzarun Lite unisex 371128_02 negra/blanca con EXTRA25, malla y SOFTFOAM+, tallas 35.5 a 48.5",
+   "prix": 24.75,
+   "devise": "EUR",
+   "marchand": "Puma",
+   "lien": "https://www.chollometro.com/ofertas/puma-anzarun-lite-unisex-371128-02-negrablanca-con-extra25-malla-y-softfoam-tallas-355-a-485-2066268",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/puma-anzarun-lite-unisex-371128-02-negrablanca-con-extra25-malla-y-softfoam-tallas-355-a-485-2066268"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Puma Anzarun Lite Unisex",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 50.0,
+   "cout_achat": 29.75,
+   "marge_nette": 10.55,
+   "rentabilite": 0.355,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle courant mais prix outlet direct marque (ES), marge ~25€ par pointure, tailles 35.5-48.5 dispo, envoi soigné boîte d'origine."
+   },
+   "score": 28.4,
+   "ebay": {
+    "requete": "Puma Anzarun Lite Unisex",
+    "neuf": {
+     "nb": 18,
+     "min": 32.24,
+     "p25": 47.53,
+     "mediane": 49.1,
+     "max": 64.64
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Puma Anzarun Lite Chaussure De Sport Unisexe 371128 03 Blanc",
+      "prix": "64.64",
+      "url": "https://www.ebay.fr/itm/117513478908?_skw=Puma+Anzarun+Lite+Unisex&hash=item1b5c5962fc:g:kdEAAOSwaDVmulpf"
+     },
+     {
+      "titre": "Puma Anzarun Lite Chaussure De Sport Unisexe 371128 02 Noir",
+      "prix": "59.29",
+      "url": "https://www.ebay.fr/itm/307262611715?_skw=Puma+Anzarun+Lite+Unisex&hash=item478a476103:g:TtwAAOSwArBmul2f"
+     },
+     {
+      "titre": "Sneakers Puma Enfant Anzarun Lite Jr Unisexe 372004 38 Noir Bleu Blanc Redmazing",
+      "prix": "48.60",
+      "url": "https://www.ebay.fr/itm/307278530739?_skw=Puma+Anzarun+Lite+Unisex&hash=item478b3a48b3:g:ChEAAeSwkkJpbgPt"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 47.53,
+     "DE": 32.0,
+     "IT": 40.84,
+     "ES": 49.46
+    },
+    "meilleur_pays": "ES"
+   },
+   "prix_plancher": {
+    "nom": "Puma Anzarun Lite Unisex",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "puma anzarun lite unisex",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": 0.52,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "annonces_ebay": 18,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "prix_revente_prudent": 47.53,
+   "marge_verifiee": 8.41,
+   "rentabilite_verifiee": 0.283,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 5.0,
+   "rapport_concurrence": {
+    "requete": "Puma Anzarun Lite Unisex",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 12,
+      "total_ebay": 27,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 21.37,
+       "titre": "Puma Anzarun Lite AC Unisex Kleinkind Sneaker UK 4 Kleinkind Brandneu Originalverpackt",
+       "lien": "https://www.ebay.de/itm/396824880960?_skw=Puma+Anzarun+Lite+Unisex&hash=item5c649b2740:g:n3UAAeSw7DloaRL4",
+       "vendeur": "pmc14339",
+       "avis_vendeur": 362
+      },
+      "plus_cher": {
+       "prix": 54.95,
+       "titre": "Puma Anzarun Lite Unisex Sneaker Sportschuh 371128 03 Weiß",
+       "lien": "https://www.ebay.de/itm/305554265213?_skw=Puma+Anzarun+Lite+Unisex&hash=item472474147d:g:kdEAAOSwaDVmulpf",
+       "vendeur": "sneakerprofi",
+       "avis_vendeur": 436286
+      }
+     },
+     "IT": {
+      "nb_annonces": 21,
+      "total_ebay": 64,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 41.13,
+       "titre": "PUMA Anzarun Lite Unisex UK6 Scarpe da Ginnastica, Morbida Schiuma Grigio con Verde Lime",
+       "lien": "https://www.ebay.it/itm/307120068212?_skw=Puma+Anzarun+Lite+Unisex&hash=item4781c85674:g:PO4AAeSwkVdqewye",
+       "vendeur": "florentinefinest",
+       "avis_vendeur": 109
+      },
+      "plus_cher": {
+       "prix": 95.71,
+       "titre": "Puma Anzarun Lite SlipOn Grigio Chiaro Bianco Blu Uomo Unisex Corsa su Strada 387599-17",
+       "lien": "https://www.ebay.it/itm/298696744819?_skw=Puma+Anzarun+Lite+Unisex&hash=item458bb69f73:g:ZYYAAeSw2WZqsfUy",
+       "vendeur": "id4shoes",
+       "avis_vendeur": 136208
+      }
+     },
+     "ES": {
+      "nb_annonces": 22,
+      "total_ebay": 37,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 21.73,
+       "titre": "Zapatillas Infantiles PUMA Anzarun Lite AC Unisex Reino Unido 4 Infantiles Nuevas en Caja",
+       "lien": "https://www.ebay.es/itm/396824880960?_skw=Puma+Anzarun+Lite+Unisex&hash=item5c649b2740:g:n3UAAeSw7DloaRL4",
+       "vendeur": "pmc14339",
+       "avis_vendeur": 362
+      },
+      "plus_cher": {
+       "prix": 94.92,
+       "titre": "Puma Anzarun Lite SlipOn Gris Claro Blanco Azul Hombres Unisex Carretera Correr 387599-17",
+       "lien": "https://www.ebay.es/itm/298696744819?_skw=Puma+Anzarun+Lite+Unisex&hash=item458bb69f73:g:ZYYAAeSw2WZqsfUy",
+       "vendeur": "id4shoes",
+       "avis_vendeur": 136208
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Puma Anzarun Lite Unisex",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 2,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      94,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "puma anzarun lite unisex",
+     "puma anzarun lite unisex adult sneaker",
+     "puma anzarun lite unisex sneaker",
+     "puma anzarun lite unisex spor ayakkabı",
+     "puma anzarun lite unisex siyah günlük spor ayakkabı",
+     "puma anzarun lite unisex gri koşu ayakkabısı",
+     "puma anzarun lite unisex günlük ayakkabı renkli",
+     "puma anzarun lite unisex sneaker ayakkabı siyah",
+     "puma anzarun lite unisex white casual sneakers",
+     "puma anzarun lite ac unisex"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "9c4e91ced0",
+   "titre": "Skórzane buty męskie ECCO Rugged Track (41 za 292.44 zł, 43 za 337 zł, czarne 43 za 376 zł) @Amazon",
+   "prix": 68.72,
+   "devise": "EUR",
+   "marchand": "Amazon.pl",
+   "lien": "https://www.pepper.pl/promocje/skorzane-buty-meskie-ecco-rugged-track-41-za-29244-zl-43-za-337-zl-czarne-43-za-376-zl-at-amazon-1388288",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 206,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/skorzane-buty-meskie-ecco-rugged-track-41-za-29244-zl-43-za-337-zl-czarne-43-za-376-zl-at-amazon-1388288"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "ECCO Rugged Track",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 115.0,
+   "cout_achat": 73.72,
+   "marge_nette": 22.87,
+   "rentabilite": 0.31,
+   "demande": 3.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Botte cuir premium ECCO, 69 € achat PL vs 150-180 € neuf, marge très large, revente Vinted/LBC homme pointures 41-43.",
+    "gptoss": "Chaussures de marque à prix réduit, revente aisée sur Vinted."
+   },
+   "score": 25.2,
+   "ebay": {
+    "requete": "ECCO Rugged Track",
+    "neuf": {
+     "nb": 13,
+     "min": 199.49,
+     "p25": 209.65,
+     "mediane": 217.75,
+     "max": 258.0
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Ecco Rugged Track 25 Chaussures de Randonnée Homme Imperméables Cuir",
+      "prix": "216.30",
+      "url": "https://www.ebay.fr/itm/257844382756?_skw=ECCO+Rugged+Track&hash=item3c08b90c24:g:cJkAAeSwEmpq2gcd"
+     },
+     {
+      "titre": "Ecco Ecco Rugged Track 25 Chaussures Imperméables Homme Cuir Noir Outdoor",
+      "prix": "217.75",
+      "url": "https://www.ebay.fr/itm/257793649220?_skw=ECCO+Rugged+Track&hash=item3c05b2ea44:g:CFoAAeSwmX1qjtfW"
+     },
+     {
+      "titre": "Ecco Rugged Track 25 Bottes Mi-Montantes Homme Imperméables à Lacets",
+      "prix": "241.64",
+      "url": "https://www.ebay.fr/itm/267840081844?_skw=ECCO+Rugged+Track&hash=item3e5c834fb4:g:ZZoAAeSw0sdqz381"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 209.65,
+     "DE": 129.99,
+     "IT": 129.99,
+     "ES": 129.99
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 11,
+    "marque": "ECCO",
+    "asin": "B0DS4V6YCY",
+    "titre": "ECCO Homme Rugged Track, Noir, 43 EU",
+    "ean": "0194892041798",
+    "pays": "FR",
+    "prix_neuf": 107.8,
+    "prix_amazon": 107.8,
+    "prix_tiers": 107.8,
+    "moyenne_90j": 130.05,
+    "plus_bas_90j": 77.96,
+    "occasion": null,
+    "rang_ventes": 77548,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 2,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0DS4V6YCY",
+    "jetons_restants": 65
+   },
+   "asin": "B0DS4V6YCY",
+   "ean": "0194892041798",
+   "vendeurs_amazon": 11,
+   "ventes_estimees_30j": 1,
+   "prix_plancher": {
+    "nom": "ECCO Rugged Track",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 107.8,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DS4V6YCY"
+   },
+   "remise_sincere": true,
+   "mot_cle": "ecco rugged track",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": null,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "annonces_ebay": 13,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 94.86,
+     "marge_nette": 5.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 94.86,
+      "cout_achat": 73.72,
+      "frais_canal": 0.0,
+      "prelevements": 12.71,
+      "provision": 3.0,
+      "marge_nette": 5.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.074
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 94.86,
+     "marge_nette": 5.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 94.86,
+      "cout_achat": 73.72,
+      "frais_canal": 0.0,
+      "prelevements": 12.71,
+      "provision": 3.0,
+      "marge_nette": 5.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.074
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 94.86,
+     "marge_nette": 5.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 94.86,
+      "cout_achat": 73.72,
+      "frais_canal": 0.0,
+      "prelevements": 12.71,
+      "provision": 3.0,
+      "marge_nette": 5.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.074
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 107.8,
+     "marge_nette": 1.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.8,
+      "cout_achat": 73.72,
+      "frais_canal": 15.55,
+      "prelevements": 14.45,
+      "provision": 3.0,
+      "marge_nette": 1.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.015
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 107.8,
+     "marge_nette": 0.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.8,
+      "cout_achat": 73.72,
+      "frais_canal": 15.7,
+      "prelevements": 14.45,
+      "provision": 3.0,
+      "marge_nette": 0.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.013
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 107.8,
+     "marge_nette": 0.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.8,
+      "cout_achat": 73.72,
+      "frais_canal": 16.62,
+      "prelevements": 14.45,
+      "provision": 3.0,
+      "marge_nette": 0.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.0
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 107.8,
+     "marge_nette": -3.73,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.8,
+      "cout_achat": 73.72,
+      "frais_canal": 20.36,
+      "prelevements": 14.45,
+      "provision": 3.0,
+      "marge_nette": -3.73,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.051
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 107.8,
+     "marge_nette": -6.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.8,
+      "cout_achat": 73.72,
+      "frais_canal": 23.16,
+      "prelevements": 14.45,
+      "provision": 3.0,
+      "marge_nette": -6.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.089
+    }
+   ],
+   "prix_revente_prudent": 97.02,
+   "marge_verifiee": 7.3,
+   "rentabilite_verifiee": 0.099,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.9,
+   "rapport_concurrence": {
+    "requete": "ECCO Rugged Track",
+    "pays": {
+     "FR": {
+      "nb_annonces": 12,
+      "total_ebay": 13,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 199.49,
+       "titre": "Botte Ecco Rugged Track Bt Imperméable À Laçage Pour Homme En Café UK 7 - 11",
+       "lien": "https://www.ebay.fr/itm/377623736618?_skw=ECCO+Rugged+Track&hash=item57ec20f12a:g:jOsAAeSw5PBq7Hzl",
+       "vendeur": "4feetshoes",
+       "avis_vendeur": 87204
+      },
+      "plus_cher": {
+       "prix": 258.0,
+       "titre": "Chaussures Ecco Rugged Track 83820461869",
+       "lien": "https://www.ebay.fr/itm/860092496536?_skw=ECCO+Rugged+Track&hash=itemc84181fa98:g:DUoAAeSw6N9q4h6u",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3946
+      }
+     },
+     "DE": {
+      "nb_annonces": 49,
+      "total_ebay": 52,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 85.0,
+       "titre": "ECCO RUGGED TRACK Stiel Größe 42, Schwarz ",
+       "lien": "https://www.ebay.de/itm/257282678954?_skw=ECCO+Rugged+Track&hash=item3be73e20aa:g:M8IAAeSwIiNn7Pve",
+       "vendeur": "barchen0303",
+       "avis_vendeur": 381
+      },
+      "plus_cher": {
+       "prix": 258.0,
+       "titre": "Schuhe Ecco Rugged Track 83820451094",
+       "lien": "https://www.ebay.de/itm/257818859679?_skw=ECCO+Rugged+Track&hash=item3c0733989f:g:87oAAeSwYAJq33yN",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3946
+      }
+     },
+     "IT": {
+      "nb_annonces": 49,
+      "total_ebay": 64,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 88.0,
+       "titre": "Stivali Ecco Rugged Track WP in pizzo cammello taglia 9-9,5",
+       "lien": "https://www.ebay.it/itm/389126454430?_skw=ECCO+Rugged+Track&hash=item5a99be7c9e:g:WnEAAeSwndFo99Ky",
+       "vendeur": "chacharasc_2",
+       "avis_vendeur": 2959
+      },
+      "plus_cher": {
+       "prix": 211.74,
+       "titre": "Scarpe da trekking Ecco Rugged Track 25 uomo taglio medio pelle impermeabili stringate",
+       "lien": "https://www.ebay.it/itm/257703702126?_skw=ECCO+Rugged+Track&hash=item3c00566e6e:g:qsQAAeSwR8JqjtO2",
+       "vendeur": "ilc8587",
+       "avis_vendeur": 3244
+      }
+     },
+     "ES": {
+      "nb_annonces": 51,
+      "total_ebay": 73,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 87.28,
+       "titre": "Bota de encaje Ecco Rugged Track WP camel talla 9-9,5",
+       "lien": "https://www.ebay.es/itm/389126454430?_skw=ECCO+Rugged+Track&hash=item5a99be7c9e:g:WnEAAeSwndFo99Ky",
+       "vendeur": "chacharasc_2",
+       "avis_vendeur": 2959
+      },
+      "plus_cher": {
+       "prix": 258.0,
+       "titre": "Zapatos Ecco Rugged Track 83820451094",
+       "lien": "https://www.ebay.es/itm/257818859679?_skw=ECCO+Rugged+Track&hash=item3c0733989f:g:87oAAeSwYAJq33yN",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3946
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "ECCO Rugged Track",
+    "temperature_dealabs": 206,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "ecco rugged track",
+     "ecco rugged track shoes",
+     "ecco rugged track boots",
+     "ecco rugged track review",
+     "ecco rugged track wp",
+     "ecco rugged track gtx",
+     "ecco rugged track waterproof",
+     "ecco rugged track gore tex",
+     "ecco rugged track wp wl boot",
+     "ecco rugged track men's boot"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "2b18b930f9",
+   "titre": "Aspirateur Balai Sans Fil Ginaray 580W avec LED 69.99 au lieu de 266.99€ https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20 ⠀",
+   "prix": 69.99,
+   "devise": "EUR",
+   "marchand": "",
+   "lien": "https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20",
+   "pays": "FR",
+   "source": "telegram:bonsplans",
+   "temperature": 100,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Ginaray Aspirateur Balai Sans Fil 580W",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 250.0,
+   "cout_achat": 74.99,
+   "marge_nette": 94.02,
+   "rentabilite": 1.254,
+   "demande": 4.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Discount important, marge nette après commission."
+   },
+   "score": 102.3,
+   "ebay": {
+    "requete": "Ginaray Aspirateur Balai Sans Fil 580W",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Aspirateur Balai Sans Fil Ginaray Doré 580W Poils Animaux Tous Sols",
+      "prix": "96.99",
+      "url": "https://www.ebay.fr/itm/168820537253?_skw=Ginaray+Aspirateur+Balai+Sans+Fil+580W&hash=item274e7cf7a5:g:geQAAeSwEDNq4QRH"
+     },
+     {
+      "titre": "Ginaray Doré Aspirateur Balai sans Fil 580W, Poils standard size,",
+      "prix": "110.08",
+      "url": "https://www.ebay.fr/itm/407240363469?_skw=Ginaray+Aspirateur+Balai+Sans+Fil+580W&hash=item5ed16acdcd:g:CuMAAeSwIF5qtHwu"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "Ginaray",
+    "asin": "B0GVY2CLT7",
+    "titre": "Ginaray Aspirateur Balai sans Fil - 580W Aspirateur Électrique Silencieux Puissant, Aspiration Brosse LED Batterie Rechargeable Cordless Vacuum Cleaner pour Poils d’Animaux Tapis Sols Durs",
+    "ean": "6978813333568",
+    "pays": "FR",
+    "prix_neuf": 69.99,
+    "prix_amazon": null,
+    "prix_tiers": 69.99,
+    "moyenne_90j": 77.12,
+    "plus_bas_90j": 69.99,
+    "occasion": null,
+    "rang_ventes": 703,
+    "chutes_rang_30j": 37,
+    "chutes_rang_90j": 90,
+    "ventes_estimees_30j": 37,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0GVY2CLT7",
+    "jetons_restants": 101
+   },
+   "asin": "B0GVY2CLT7",
+   "ean": "6978813333568",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 37,
+   "prix_plancher": {
+    "nom": "Ginaray Aspirateur Balai Sans Fil 580W",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 69.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0GVY2CLT7"
+   },
+   "remise_sincere": true,
+   "mot_cle": "ginaray aspirateur balai fil",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 61.59,
+     "marge_nette": -24.65,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.59,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 8.25,
+      "provision": 3.0,
+      "marge_nette": -24.65,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 61.59,
+     "marge_nette": -24.65,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.59,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 8.25,
+      "provision": 3.0,
+      "marge_nette": -24.65,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 61.59,
+     "marge_nette": -24.65,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.59,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 8.25,
+      "provision": 3.0,
+      "marge_nette": -24.65,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 69.99,
+     "marge_nette": -29.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.99,
+      "cout_achat": 74.99,
+      "frais_canal": 12.3,
+      "prelevements": 9.38,
+      "provision": 3.0,
+      "marge_nette": -29.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.396
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 69.99,
+     "marge_nette": -30.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.99,
+      "cout_achat": 74.99,
+      "frais_canal": 12.9,
+      "prelevements": 9.38,
+      "provision": 3.0,
+      "marge_nette": -30.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.404
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 69.99,
+     "marge_nette": -30.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.99,
+      "cout_achat": 74.99,
+      "frais_canal": 13.6,
+      "prelevements": 9.38,
+      "provision": 3.0,
+      "marge_nette": -30.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.413
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 69.99,
+     "marge_nette": -32.83,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.99,
+      "cout_achat": 74.99,
+      "frais_canal": 15.45,
+      "prelevements": 9.38,
+      "provision": 3.0,
+      "marge_nette": -32.83,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.438
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 69.99,
+     "marge_nette": -34.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.99,
+      "cout_achat": 74.99,
+      "frais_canal": 17.49,
+      "prelevements": 9.38,
+      "provision": 3.0,
+      "marge_nette": -34.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    }
+   ],
+   "prix_revente_prudent": 62.99,
+   "marge_verifiee": -39.88,
+   "rentabilite_verifiee": -0.532,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Ginaray Aspirateur Balai Sans Fil 580W",
+    "pays": {
+     "FR": {
+      "nb_annonces": 2,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 96.99,
+       "titre": "Aspirateur Balai Sans Fil Ginaray Doré 580W Poils Animaux Tous Sols",
+       "lien": "https://www.ebay.fr/itm/168820537253?_skw=Ginaray+Aspirateur+Balai+Sans+Fil+580W&hash=item274e7cf7a5:g:geQAAeSwEDNq4QRH",
+       "vendeur": "novarioshop",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 110.08,
+       "titre": "Ginaray Doré Aspirateur Balai sans Fil 580W, Poils standard size,",
+       "lien": "https://www.ebay.fr/itm/407240363469?_skw=Ginaray+Aspirateur+Balai+Sans+Fil+580W&hash=item5ed16acdcd:g:CuMAAeSwIF5qtHwu",
+       "vendeur": "digitalleyshop8052",
+       "avis_vendeur": 574
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Ginaray Aspirateur Balai Sans Fil 580W",
+    "temperature_dealabs": 100,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CRB1J7DV-arbDE",
+   "titre": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréales de 15,2 cm pour so [Amazon DE]",
+   "prix": 85.53,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0CRB1J7DV",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 490,
+   "domaine": "autre",
+   "nom_produit": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréale",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 160.61,
+   "cout_achat": 90.53,
+   "marge_nette": 45.56,
+   "rentabilite": 0.503,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 182.51 € (moyenne 90 j 128.35 €), écart 49 % port compris, ventes 30 j 10, 1 vendeurs FR"
+   },
+   "score": 50.3,
+   "asin": "B0CRB1J7DV",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 11,
+   "ebay": {
+    "requete": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréale",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "MALACASA",
+    "asin": "B0CRB1J7DV",
+    "titre": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréales de 15,2 cm pour soupe, céréales, flocons d'avoine, fruits, riz, passent au lave-vaisselle et au micro-ondes, série standard",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 44.53,
+    "prix_amazon": null,
+    "prix_tiers": 184.3,
+    "moyenne_90j": 130.26,
+    "plus_bas_90j": 44.53,
+    "occasion": null,
+    "rang_ventes": 21856,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 47,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0CRB1J7DV",
+    "jetons_restants": 98,
+    "prix_neuf_vendeur_tiers": 184.3
+   },
+   "prix_plancher": {
+    "nom": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréale",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 44.53,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CRB1J7DV"
+   },
+   "remise_sincere": true,
+   "mot_cle": "malacasa 4 bols soupe",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0CRB1J7DV"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 39.19,
+     "marge_nette": -59.59,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.19,
+      "cout_achat": 90.53,
+      "frais_canal": 0.0,
+      "prelevements": 5.25,
+      "provision": 3.0,
+      "marge_nette": -59.59,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.658
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 39.19,
+     "marge_nette": -59.59,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.19,
+      "cout_achat": 90.53,
+      "frais_canal": 0.0,
+      "prelevements": 5.25,
+      "provision": 3.0,
+      "marge_nette": -59.59,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.658
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 39.19,
+     "marge_nette": -59.59,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.19,
+      "cout_achat": 90.53,
+      "frais_canal": 0.0,
+      "prelevements": 5.25,
+      "provision": 3.0,
+      "marge_nette": -59.59,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.658
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 44.53,
+     "marge_nette": -64.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.53,
+      "cout_achat": 90.53,
+      "frais_canal": 10.01,
+      "prelevements": 5.97,
+      "provision": 3.0,
+      "marge_nette": -64.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.718
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 44.53,
+     "marge_nette": -66.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.53,
+      "cout_achat": 90.53,
+      "frais_canal": 11.12,
+      "prelevements": 5.97,
+      "provision": 3.0,
+      "marge_nette": -66.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.73
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 44.53,
+     "marge_nette": -66.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.53,
+      "cout_achat": 90.53,
+      "frais_canal": 11.56,
+      "prelevements": 5.97,
+      "provision": 3.0,
+      "marge_nette": -66.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.735
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 44.53,
+     "marge_nette": -67.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.53,
+      "cout_achat": 90.53,
+      "frais_canal": 12.14,
+      "prelevements": 5.97,
+      "provision": 3.0,
+      "marge_nette": -67.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.741
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 44.53,
+     "marge_nette": -68.64,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.53,
+      "cout_achat": 90.53,
+      "frais_canal": 13.67,
+      "prelevements": 5.97,
+      "provision": 3.0,
+      "marge_nette": -68.64,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.758
+    }
+   ],
+   "prix_revente_prudent": 40.08,
+   "marge_verifiee": -58.82,
+   "rentabilite_verifiee": -0.65,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréale",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréale",
+    "temperature_dealabs": 490,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0H7Z68Y76-arbIT",
+   "titre": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et Android Compatible, 5 [Amazon IT]",
+   "prix": 124.99,
+   "devise": "EUR",
+   "marchand": "Amazon.it",
+   "lien": "https://www.amazon.it/dp/B0H7Z68Y76",
+   "pays": "IT",
+   "source": "keepa-arbitrage",
+   "temperature": 420,
+   "domaine": "autre",
+   "nom_produit": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et A",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 201.52,
+   "cout_achat": 129.99,
+   "marge_nette": 41.53,
+   "rentabilite": 0.319,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 229.0 € (moyenne 90 j 173.84 €), écart 42 % port compris, ventes 30 j 50, 1 vendeurs FR"
+   },
+   "score": 31.9,
+   "asin": "B0H7Z68Y76",
+   "ean": "0195951390383",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 53,
+   "ebay": {
+    "requete": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et A",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Beats",
+    "asin": "B0H7Z68Y76",
+    "titre": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et Android Compatible, 50 Heures d’autonomie - Exclusivitè Amazon Sable",
+    "ean": "0195951390383",
+    "pays": "FR",
+    "prix_neuf": 169.95,
+    "prix_amazon": 229.0,
+    "prix_tiers": 229.0,
+    "moyenne_90j": 175.37,
+    "plus_bas_90j": 169.95,
+    "occasion": null,
+    "rang_ventes": 7064,
+    "chutes_rang_30j": 53,
+    "chutes_rang_90j": 100,
+    "ventes_estimees_30j": 53,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0H7Z68Y76",
+    "jetons_restants": 96,
+    "prix_neuf_vendeur_tiers": 229.0
+   },
+   "prix_plancher": {
+    "nom": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et A",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 169.95,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0H7Z68Y76"
+   },
+   "remise_sincere": true,
+   "mot_cle": "beats solo 4",
+   "demande_google": {
+    "volume_mensuel": 1000,
+    "concurrence": "HIGH",
+    "cpc": 0.21,
+    "trois_derniers_mois": [
+     880,
+     720,
+     880
+    ]
+   },
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.it/dp/B0H7Z68Y76"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 149.56,
+     "marge_nette": -3.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.56,
+      "cout_achat": 129.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.04,
+      "provision": 3.0,
+      "marge_nette": -3.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.027
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 149.56,
+     "marge_nette": -3.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.56,
+      "cout_achat": 129.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.04,
+      "provision": 3.0,
+      "marge_nette": -3.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.027
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 149.56,
+     "marge_nette": -3.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.56,
+      "cout_achat": 129.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.04,
+      "provision": 3.0,
+      "marge_nette": -3.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.027
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 169.95,
+     "marge_nette": -5.71,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.95,
+      "cout_achat": 129.99,
+      "frais_canal": 19.9,
+      "prelevements": 22.77,
+      "provision": 3.0,
+      "marge_nette": -5.71,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.044
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 169.95,
+     "marge_nette": -7.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.95,
+      "cout_achat": 129.99,
+      "frais_canal": 21.3,
+      "prelevements": 22.77,
+      "provision": 3.0,
+      "marge_nette": -7.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.055
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 169.95,
+     "marge_nette": -7.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.95,
+      "cout_achat": 129.99,
+      "frais_canal": 21.6,
+      "prelevements": 22.77,
+      "provision": 3.0,
+      "marge_nette": -7.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.057
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 169.95,
+     "marge_nette": -14.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.95,
+      "cout_achat": 129.99,
+      "frais_canal": 28.44,
+      "prelevements": 22.77,
+      "provision": 3.0,
+      "marge_nette": -14.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.11
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 169.95,
+     "marge_nette": -18.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.95,
+      "cout_achat": 129.99,
+      "frais_canal": 32.48,
+      "prelevements": 22.77,
+      "provision": 3.0,
+      "marge_nette": -18.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.141
+    }
+   ],
+   "prix_revente_prudent": 152.95,
+   "marge_verifiee": -0.54,
+   "rentabilite_verifiee": -0.004,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et A",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et A",
+    "temperature_dealabs": 420,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": {
+    "mot_cle": "beats solo 4",
+    "recherches_mois": 1000,
+    "vendeurs": 2,
+    "annonces_ebay": null
+   }
+  },
+  {
+   "id": "a52aaa15f8",
+   "titre": "Robot tondeuse Ecovacs Goat O600 RTK - 600 m² (vendeur tiers)",
+   "prix": 349.0,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.dealabs.com/bons-plans/robot-tondeuse-ecovacs-goat-o600-rtk-care-kit-600-m2-3452099",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 103,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/robot-tondeuse-ecovacs-goat-o600-rtk-care-kit-600-m2-3452099"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Ecovacs Goat O600 RTK",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 540.0,
+   "cout_achat": 354.0,
+   "marge_nette": 110.64,
+   "rentabilite": 0.313,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Robot tondeuse RTK récent à -50% du prix marché, forte demande saisonnière, marge nette ~200€ après port sur Leboncoin.",
+    "gptoss": "Marge nette estimée d'environ 13 € après frais et taxes."
+   },
+   "score": 28.5,
+   "ebay": {
+    "requete": "Ecovacs Goat O600 RTK",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Robot tondeuse ECOVACS Goat O600 RTK  sans Fil, 600 M², Navigation  RTK+Vision",
+      "prix": "506.50",
+      "url": "https://www.ebay.fr/itm/377211795605?_skw=Ecovacs+Goat+O600+RTK&hash=item57d3933895:g:ZYMAAeSwsj1qFVLk"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 451.72,
+     "IT": 337.0,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "ECOVACS",
+    "asin": "B0G5WMLPNQ",
+    "titre": "ECOVACS GOAT O600 RTK Robot Tondeuse sans Fil，600 m²，Care Kit",
+    "ean": "6970135039609",
+    "pays": "FR",
+    "prix_neuf": 399.0,
+    "prix_amazon": null,
+    "prix_tiers": 399.0,
+    "moyenne_90j": 558.59,
+    "plus_bas_90j": 399.0,
+    "occasion": 601.74,
+    "rang_ventes": 1199,
+    "chutes_rang_30j": 43,
+    "chutes_rang_90j": 96,
+    "ventes_estimees_30j": 43,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0G5WMLPNQ",
+    "jetons_restants": 86
+   },
+   "asin": "B0G5WMLPNQ",
+   "ean": "6970135039609",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 43,
+   "prix_plancher": {
+    "nom": "Ecovacs Goat O600 RTK",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "ECOVACS  GOAT Robot tondeuse O600 RTK jusqu''à 600 m²",
+       "prix": 468.6,
+       "nb_boutiques": 4,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Robot-tondeuse/ecovacs-goat-robot-tondeuse-o600-rtk-jusqu-a-600-m.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 399.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0G5WMLPNQ"
+   },
+   "remise_sincere": true,
+   "mot_cle": "ecovacs goat o600 rtk",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 399.0,
+     "marge_nette": -47.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 399.0,
+      "cout_achat": 354.0,
+      "frais_canal": 35.93,
+      "prelevements": 53.47,
+      "provision": 3.0,
+      "marge_nette": -47.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.134
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 399.0,
+     "marge_nette": -51.39,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 399.0,
+      "cout_achat": 354.0,
+      "frais_canal": 39.92,
+      "prelevements": 53.47,
+      "provision": 3.0,
+      "marge_nette": -51.39,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.145
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 351.12,
+     "marge_nette": -52.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 351.12,
+      "cout_achat": 354.0,
+      "frais_canal": 0.0,
+      "prelevements": 47.05,
+      "provision": 3.0,
+      "marge_nette": -52.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.15
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 351.12,
+     "marge_nette": -52.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 351.12,
+      "cout_achat": 354.0,
+      "frais_canal": 0.0,
+      "prelevements": 47.05,
+      "provision": 3.0,
+      "marge_nette": -52.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.15
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 351.12,
+     "marge_nette": -52.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 351.12,
+      "cout_achat": 354.0,
+      "frais_canal": 0.0,
+      "prelevements": 47.05,
+      "provision": 3.0,
+      "marge_nette": -52.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.15
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 399.0,
+     "marge_nette": -53.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 399.0,
+      "cout_achat": 354.0,
+      "frais_canal": 41.91,
+      "prelevements": 53.47,
+      "provision": 3.0,
+      "marge_nette": -53.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.151
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 399.0,
+     "marge_nette": -69.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 399.0,
+      "cout_achat": 354.0,
+      "frais_canal": 58.22,
+      "prelevements": 53.47,
+      "provision": 3.0,
+      "marge_nette": -69.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.197
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 399.0,
+     "marge_nette": -78.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 399.0,
+      "cout_achat": 354.0,
+      "frais_canal": 66.84,
+      "prelevements": 53.47,
+      "provision": 3.0,
+      "marge_nette": -78.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.221
+    }
+   ],
+   "prix_revente_prudent": 359.1,
+   "marge_verifiee": -46.02,
+   "rentabilite_verifiee": -0.13,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 601.74,
+    "haut": 601.74,
+    "position_neuf": 0.58
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Ecovacs Goat O600 RTK",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 3,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 460.0,
+       "titre": "Mähroboter Ecovacs GOAT O600 RTK EU Rasenroboter Grau - NEU und ORIGINALVERPACKT",
+       "lien": "https://www.ebay.de/itm/257708324424?_skw=Ecovacs+Goat+O600+RTK&hash=item3c009cf648:g:TnEAAeSwJ9tqkZqP",
+       "vendeur": "kajaja13",
+       "avis_vendeur": 1446
+      },
+      "plus_cher": {
+       "prix": 498.0,
+       "titre": "ECOVACS GOAT Mähroboter O600 RTK bis 600 m² grey/black",
+       "lien": "https://www.ebay.de/itm/227558728622?_skw=Ecovacs+Goat+O600+RTK&hash=item34fb8ea3ae:g:epEAAeSw--Vq03qR",
+       "vendeur": "ao-projekt-gmbh",
+       "avis_vendeur": 162981
+      }
+     },
+     "IT": {
+      "nb_annonces": 5,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 175.99,
+       "titre": "ECOVACS GOAT Robot Tosaerba compatibile con Garage per O600 RTK, O800 RTK, O1200",
+       "lien": "https://www.ebay.it/itm/188584878833?_skw=Ecovacs+Goat+O600+RTK&hash=item2be888e2f1:g:~9oAAeSwA9FqdwA0",
+       "vendeur": "planck-it",
+       "avis_vendeur": 21247
+      },
+      "plus_cher": {
+       "prix": 588.27,
+       "titre": "ECOVACS GOAT O600 RTK Robot Tagliaerba Senza Filo 600 m² Care Kit RTK Vision",
+       "lien": "https://www.ebay.it/itm/377533562518?_skw=Ecovacs+Goat+O600+RTK&hash=item57e6c0fe96:g:ZzAAAeSwGNRqvN0m",
+       "vendeur": "bussybu2025",
+       "avis_vendeur": 1271
+      }
+     },
+     "ES": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 498.0,
+       "titre": "Robot cortacésped ECOVACS GOAT O600 RTK hasta 600 m² gris/negro",
+       "lien": "https://www.ebay.es/itm/227558728622?_skw=Ecovacs+Goat+O600+RTK&hash=item34fb8ea3ae:g:epEAAeSw--Vq03qR",
+       "vendeur": "ao-projekt-gmbh",
+       "avis_vendeur": 162981
+      },
+      "plus_cher": {
+       "prix": 498.0,
+       "titre": "Robot cortacésped ECOVACS GOAT O600 RTK hasta 600 m² gris/negro",
+       "lien": "https://www.ebay.es/itm/227558728622?_skw=Ecovacs+Goat+O600+RTK&hash=item34fb8ea3ae:g:epEAAeSw--Vq03qR",
+       "vendeur": "ao-projekt-gmbh",
+       "avis_vendeur": 162981
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Ecovacs Goat O600 RTK",
+    "temperature_dealabs": 103,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "ecovacs goat o600 rtk",
+     "ecovacs goat o600 rtk robot lawn mower",
+     "ecovacs goat o600 rtk review",
+     "ecovacs goat o600 rtk robot lawn mower review",
+     "ecovacs goat o600 rtk robot lawn mower - grey",
+     "ecovacs goat o600 rtk smart robot lawn mower",
+     "ecovacs goat o600 rtk manual",
+     "ecovacs goat o600 rtk reddit",
+     "ecovacs goat o600 rtk installation",
+     "ecovacs goat o600 rtk setup"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "prix": 49.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 520,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Table à Langer Pliable",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 90.0,
+   "cout_achat": 54.99,
+   "marge_nette": 19.95,
+   "rentabilite": 0.363,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Demande stable pour les accessoires bébé, prix d'achat très compétitif, marge nette solide."
+   },
+   "score": 27.5,
+   "ebay": {
+    "requete": "Table à Langer Pliable",
+    "neuf": {
+     "nb": 21,
+     "min": 45.59,
+     "p25": 73.79,
+     "mediane": 97.35,
+     "max": 240.15
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 26.7,
+     "p25": 26.7,
+     "mediane": 97.22,
+     "max": 104.44
+    },
+    "exemples": [
+     {
+      "titre": "VEVOR Table à langer murale pliable 85 x 57 x 47 cm HDPE gris Station à langer",
+      "prix": "104.44",
+      "url": "https://www.ebay.fr/itm/407281558815?_skw=Table+%C3%A0+Langer+Pliable&hash=item5ed3df651f:g:l~QAAeSwn2NqxPMb"
+     },
+     {
+      "titre": "Table à langer pliable VEVOR 85 x 57 x 47 cm PEHD gris pour montage mural",
+      "prix": "97.22",
+      "url": "https://www.ebay.fr/itm/278353268440?_skw=Table+%C3%A0+Langer+Pliable&hash=item40cf25ced8:g:C3gAAeSwxn9qw2ts"
+     },
+     {
+      "titre": "Table à langer pliable pour poupon en métal avec jupe en tissu",
+      "prix": "26.70",
+      "url": "https://www.ebay.fr/itm/800666706252?_skw=Table+%C3%A0+Langer+Pliable&hash=itemba6b74614c:g:hgUAAeSwXFlqqYId"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 73.79,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0CHMBYWJM",
+    "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x65x99cm, Gris",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 49.99,
+    "prix_amazon": null,
+    "prix_tiers": 49.99,
+    "moyenne_90j": 143.09,
+    "plus_bas_90j": 49.99,
+    "occasion": null,
+    "rang_ventes": 2633,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 15,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+    "jetons_restants": 75
+   },
+   "asin": "B0CHMBYWJM",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 7,
+   "prix_plancher": {
+    "nom": "Table à Langer Pliable",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 4,
+      "meilleur": {
+       "titre": "VEVOR Table à Langer Murale en HDPE Station à Langer Horizontale Pliable Capacité 20KG",
+       "prix": 104.9,
+       "nb_boutiques": 5,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-murale-en-hdpe-station-a-langer-horizontale-pliable-capacite-20kg.html"
+      },
+      "autres": [
+       {
+        "titre": "RUBBERMAID Table À Langer Pliable -",
+        "prix": 451.2,
+        "nb_boutiques": 2,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-pliable-rubbermaid.html"
+       },
+       {
+        "titre": "RUBBERMAID Table À Langer Pliable H Ht:55.7 Cm L Ht:86.2 Cm",
+        "prix": 452.4,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-pliable-h-ht-55-7-cm-l-ht-86-2-cm.html"
+       },
+       {
+        "titre": "MATERIEL CHR PRO Table à Langer Horizontale Pliable Magrini - -",
+        "prix": 523.18,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-horizontale-pliable-magrini.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 49.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM"
+   },
+   "remise_sincere": true,
+   "mot_cle": "table langer pliable",
+   "demande_google": {
+    "volume_mensuel": 90,
+    "concurrence": "HIGH",
+    "cpc": 0.26,
+    "trois_derniers_mois": [
+     110,
+     70,
+     70
+    ]
+   },
+   "annonces_ebay": 21,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.99,
+     "marge_nette": -25.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 10.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -25.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.99,
+     "marge_nette": -26.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 11.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.476
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.99,
+     "marge_nette": -26.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.0,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.486
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.99,
+     "marge_nette": -27.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.85,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -27.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.501
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.99,
+     "marge_nette": -29.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 14.49,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -29.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.531
+    }
+   ],
+   "prix_revente_prudent": 26.7,
+   "marge_verifiee": -34.87,
+   "rentabilite_verifiee": -0.634,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 26.7,
+    "haut": 97.22,
+    "position_neuf": 1.87
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Table à Langer Pliable",
+    "pays": {
+     "FR": {
+      "nb_annonces": 20,
+      "total_ebay": 20,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 45.59,
+       "titre": "Table à Langer Pliable Bébé avec Panier Latéral et Roulettes Gris Clair",
+       "lien": "https://www.ebay.fr/itm/136116421672?_skw=Table+%C3%A0+Langer+Pliable&hash=item1fb12bc428:g:SnkAAeSwrRhoazYg",
+       "vendeur": "uimoso-store-fr",
+       "avis_vendeur": 1276
+      },
+      "plus_cher": {
+       "prix": 174.99,
+       "titre": "OKBABY Flat Matelas à Langer Pliable pour Table Lit Baignoire Bébé 11 kg",
+       "lien": "https://www.ebay.fr/itm/318922755455?_skw=Table+%C3%A0+Langer+Pliable&hash=item4a41470d7f:g:5TkAAeSwRzdquHeU",
+       "vendeur": "salevendor",
+       "avis_vendeur": 39
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 290,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 267,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Table à Langer Pliable",
+    "temperature_dealabs": 520,
+    "google_trends": {
+     "interet_moyen": 8,
+     "interet_recent": 44,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      94,
+      0,
+      70,
+      52,
+      51,
+      72,
+      100,
+      97,
+      54,
+      65,
+      58,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "table à langer pliable",
+     "table à langer pliable murale",
+     "table à langer pliable ikea",
+     "table à langer pliable avec baignoire",
+     "table à langer pliable leclerc",
+     "table à langer pliable amazon",
+     "table à langer pliable bois",
+     "table à langer pliable pas cher",
+     "table à langer pliable baignoire",
+     "table à langer pliable carrefour"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 : vérification arrêtée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 10,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 36,
+ "annonces_analysees": [
+  {
+   "id": "c4074405af",
+   "titre": "(Oberwiesenthal / Erzgebirge) Familienurlaub: 3 Nächte inkl. Frühstück ab 198€ für 2 Erwachsene + 2 Kinder",
+   "temperature": 593,
+   "categorie": "Urlaub & Reisen",
+   "marchand": "Urlaubspiraten",
+   "prix": 198.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/oberwiesenthal-erzgebirge-familienurlaub-3-nachte-inkl-fruhstuck-ab-212eur-fur-2-erwachsene-2-kinder-2842041",
+   "date": "Thu, 12 Nov 2026 12:35:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "198€ - Urlaubspiraten Toller Familienurlaubs-Deal bei den Urlaubspiraten <3 Hier findet ihr auch Feedback aus der Community: <a href=\"/profile/jrw\" data-mention-us..."
+  },
+  {
+   "id": "keepa-B0C6N2DJ9R-arbDE",
+   "titre": "Under Armour Maillot de compression ColdGear Mock pour homme, Bleu roi/blanc, XXL taille t [Amazon DE]",
+   "temperature": 550,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 81.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0C6N2DJ9R",
+   "date": "2026-11-10T15:44",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "0195251321162",
+   "asin": "B0C6N2DJ9R",
+   "ref_fr": 196.0,
+   "ventes_30j": 11,
+   "vendeurs": 1,
+   "description": "Amazon.fr 196.0 € (moyenne 90 j 184.83 €), écart 55 % port compris, ventes 30 j 11, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FRFPMX3W-arbES",
+   "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, [Amazon ES]",
+   "temperature": 540,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 39.44,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FRFPMX3W",
+   "date": "2026-11-12T11:34",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "6926681761563",
+   "asin": "B0FRFPMX3W",
+   "ref_fr": 99.99,
+   "ventes_30j": 8,
+   "vendeurs": 2,
+   "description": "Amazon.fr 99.99 € (moyenne 90 j 84.01 €), écart 54 % port compris, ventes 30 j 8, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "temperature": 520,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "date": "2026-11-12T02:57",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CHMBYWJM",
+   "ref_fr": 143.53,
+   "description": "moyenne 90 j 143.53 €, baisse 65 %, rang 2584"
+  },
+  {
+   "id": "keepa-B0CRB1J7DV-arbDE",
+   "titre": "MALACASA Lot de 4 bols à soupe en porcelaine de 760 ml, bols à céréales de 15,2 cm pour so [Amazon DE]",
+   "temperature": 490,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 85.53,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0CRB1J7DV",
+   "date": "2026-11-10T13:26",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0CRB1J7DV",
+   "ref_fr": 182.51,
+   "ventes_30j": 10,
+   "vendeurs": 1,
+   "description": "Amazon.fr 182.51 € (moyenne 90 j 128.35 €), écart 49 % port compris, ventes 30 j 10, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07TBTGWPT-arbES",
+   "titre": "KEEN Targhee III Open Toe Sandal De Marche - 40 [Amazon ES]",
+   "temperature": 430,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 45.7,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B07TBTGWPT",
+   "date": "2026-11-10T12:22",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0191190487778",
+   "asin": "B07TBTGWPT",
+   "ref_fr": 92.85,
+   "ventes_30j": 3,
+   "vendeurs": 3,
+   "description": "Amazon.fr 92.85 € (moyenne 90 j 89.98 €), écart 43 % port compris, ventes 30 j 3, 3 vendeurs FR"
+  },
+  {
+   "id": "keepa-B09KXTZ9WZ-neuf",
+   "titre": "BARNETT FKG-03 Gants de Football Haut Niveau Linebacker, LB, RB, Te, Bleu (M)",
+   "temperature": 424,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09KXTZ9WZ",
+   "date": "2026-11-12T11:45",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B09KXTZ9WZ",
+   "ref_fr": 30.0,
+   "description": "moyenne 90 j 30.0 €, baisse 53 %, rang 54856"
+  },
+  {
+   "id": "keepa-B0H7Z68Y76-arbIT",
+   "titre": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et Android Compatible, 5 [Amazon IT]",
+   "temperature": 420,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 124.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0H7Z68Y76",
+   "date": "2026-11-10T12:43",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "0195951390383",
+   "asin": "B0H7Z68Y76",
+   "ref_fr": 229.0,
+   "ventes_30j": 50,
+   "vendeurs": 1,
+   "description": "Amazon.fr 229.0 € (moyenne 90 j 173.84 €), écart 42 % port compris, ventes 30 j 50, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B08JHLMN1H-arbES",
+   "titre": "Amazon Essentials Pantalon Chino Anti-Plis, Coupe Classique et Pinces (Disponible en Grand [Amazon ES]",
+   "temperature": 370,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 13.6,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B08JHLMN1H",
+   "date": "2026-11-10T12:22",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0195111324456",
+   "asin": "B08JHLMN1H",
+   "ref_fr": 32.9,
+   "ventes_30j": 8,
+   "vendeurs": 1,
+   "description": "Amazon.fr 32.9 € (moyenne 90 j 25.84 €), écart 37 % port compris, ventes 30 j 8, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B000V6E4UU-arbDE",
+   "titre": "Anita Soutien-Gorge de Soutien Gorge Soutien-Gorge de Soutien, Chair, 105F [Amazon DE]",
+   "temperature": 370,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 35.96,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B000V6E4UU",
+   "date": "2026-11-10T12:22",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4009706769262",
+   "asin": "B000V6E4UU",
+   "ref_fr": 67.95,
+   "ventes_30j": 5,
+   "vendeurs": 6,
+   "description": "Amazon.fr 67.95 € (moyenne 90 j 62.55 €), écart 37 % port compris, ventes 30 j 5, 6 vendeurs FR"
+  },
+  {
+   "id": "keepa-B000V6HZA6-arbDE",
+   "titre": "Anita Soutien-Gorge de soulagement 5427, Chair, 80 [Amazon DE]",
+   "temperature": 360,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 36.55,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B000V6HZA6",
+   "date": "2026-11-10T12:02",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4009706768975",
+   "asin": "B000V6HZA6",
+   "ref_fr": 67.95,
+   "ventes_30j": 4,
+   "vendeurs": 6,
+   "description": "Amazon.fr 67.95 € (moyenne 90 j 54.53 €), écart 36 % port compris, ventes 30 j 4, 6 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07XVSRFXV-arbES",
+   "titre": "Skechers D'Lux Walker-Infinite Motion 149023-BBK, Womens Sneakers,Sports Shoes, Black, 36  [Amazon ES]",
+   "temperature": 350,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 46.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B07XVSRFXV",
+   "date": "2026-11-12T11:46",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0194428380414",
+   "asin": "B07XVSRFXV",
+   "ref_fr": 82.47,
+   "ventes_30j": 11,
+   "vendeurs": 7,
+   "description": "Amazon.fr 82.47 € (moyenne 90 j 77.81 €), écart 35 % port compris, ventes 30 j 11, 7 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0BGCZFZKT-arbDE",
+   "titre": "Reebok Mixte Club C 85 Vintage Flat-Sheets, Black Ftwwht Pugry2, 44.5 EU [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 70.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0BGCZFZKT",
+   "date": "2026-11-10T12:02",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4065418222617",
+   "asin": "B0BGCZFZKT",
+   "ref_fr": 110.0,
+   "ventes_30j": 10,
+   "vendeurs": 3,
+   "description": "Amazon.fr 110.0 € (moyenne 90 j 104.33 €), écart 30 % port compris, ventes 30 j 10, 3 vendeurs FR"
+  },
+  {
+   "id": "65de27da92",
+   "titre": "Marvel - Lampe 3D LED Spider-Man Miles Morales Face 3D",
+   "temperature": 280,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 98.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00532040.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 149.99 €, -35 %. Lampe 3D LED Spider-Man Miles Morales Face 3D."
+  },
+  {
+   "id": "keepa-B0FKG6TDRR-arbES",
+   "titre": "CMF Headphone Pro - Casque Bluetooth Over-Ear, ANC Hybride, Jusqu’à 100 h [Amazon ES]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FKG6TDRR",
+   "date": "2026-11-10T13:05",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "6974434226722",
+   "asin": "B0FKG6TDRR",
+   "ref_fr": 78.84,
+   "ventes_30j": 50,
+   "vendeurs": 1,
+   "description": "Amazon.fr 78.84 € (moyenne 90 j 76.73 €), écart 28 % port compris, ventes 30 j 50, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FLKC5JN4-arbES",
+   "titre": "CMF Headphone Pro - Casque Bluetooth Over-Ear, ANC Hybride, Jusqu’à 100 h [Amazon ES]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FLKC5JN4",
+   "date": "2026-11-10T15:44",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "6974434226739",
+   "asin": "B0FLKC5JN4",
+   "ref_fr": 78.84,
+   "ventes_30j": 50,
+   "vendeurs": 2,
+   "description": "Amazon.fr 78.84 € (moyenne 90 j 81.78 €), écart 28 % port compris, ventes 30 j 50, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0F6YV2C32-arbES",
+   "titre": "Ninja Air Fryer Dual Zone MAX numérique, Friteuse à air chaud, Pierre/Or [Amazon ES]",
+   "temperature": 270,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 159.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0F6YV2C32",
+   "date": "2026-11-10T13:26",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0622356328784",
+   "asin": "B0F6YV2C32",
+   "ref_fr": 229.99,
+   "ventes_30j": 49,
+   "vendeurs": 1,
+   "description": "Amazon.fr 229.99 € (moyenne 90 j 226.53 €), écart 27 % port compris, ventes 30 j 49, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0G43M427Z-arbES",
+   "titre": "vancasso SELENE Lot de 6 Bols Petit Déjeuner en Porcelaine Pastel - 720ml - Bols à Céréale [Amazon ES]",
+   "temperature": 260,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 26.81,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0G43M427Z",
+   "date": "2026-11-10T15:22",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": null,
+   "asin": "B0G43M427Z",
+   "ref_fr": 45.99,
+   "ventes_30j": 14,
+   "vendeurs": 2,
+   "description": "Amazon.fr 45.99 € (moyenne 90 j 42.55 €), écart 26 % port compris, ventes 30 j 14, 2 vendeurs FR"
+  },
+  {
+   "id": "88d943aaec",
+   "titre": "Nike Sportswear Tech Fleece Windrunner Sweat à capuche à zip pour femme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/sweat-a-capuche-a-zip-nike-sportswear-tech-fleece-windrunner-pour-femme-m12oUTEX/HV6747-010",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 119.99 €, -30 %. Nike HV6747-010 ; couleur Noir/Noir"
+  },
+  {
+   "id": "c7eae51bdb",
+   "titre": "Nike Sportswear Tech Fleece Windrunner Sweat à capuche à zip pour femme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/sweat-a-capuche-a-zip-nike-sportswear-tech-fleece-windrunner-pour-femme-m12oUTEX/HV6747-063",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 119.99 €, -30 %. Nike HV6747-063 ; couleur Dark Grey Heather/Noir"
+  },
+  {
+   "id": "34739a693e",
+   "titre": "Nike Shox NZ Chaussure pour homme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 90.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-nike-shox-pour-homme-Y01XNpCg/IQ8264-001",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 129.99 €, -30 %. Nike IQ8264-001 ; couleur Smoke Grey/Grey Fog/Off White/Smoke Grey"
+  },
+  {
+   "id": "0177f2b727",
+   "titre": "Nike Air Max Moto 2K Chaussure pour homme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 97.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussures-nike-air-max-moto-2k-pour-homme-WremRdJv/IR0072-002",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 139.99 €, -30 %. Nike IR0072-002 ; couleur Noir/Noir/Anthracite/Noir"
+  },
+  {
+   "id": "3981d31991",
+   "titre": "Nike Romaleos 4 Chaussure de renforcement musculaire",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 139.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-de-renforcement-musculaire-nike-romaleos-4-yEPhnlW4/CD3463-101",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -30 %. Nike CD3463-101 ; couleur Blanc/Blanc/Noir"
+  },
+  {
+   "id": "9dee1f10b9",
+   "titre": "Nike Romaleos 4 Chaussure de renforcement musculaire",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 139.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-de-renforcement-musculaire-nike-romaleos-4-yEPhnlW4/CD3463-010",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -30 %. Nike CD3463-010 ; couleur Noir/Noir/Blanc"
+  },
+  {
+   "id": "d6f56dfe7f",
+   "titre": "2N - Cadre d'encastrement 3 modules du Verso IP - 9155013",
+   "temperature": 240,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 174.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575452.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -30 %. 2N - Cadre d'encastrement 3 modules du Verso IP - 9155013"
+  },
+  {
+   "id": "6606aef1c7",
+   "titre": "Xbox Mando inalámbrico Forza Horizon 6 Edición limitada Series X|S, One, PC y dispositivos habilitados para la nube",
+   "temperature": 231,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 60.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/xbox-mando-inalambrico-forza-horizon-6-edicion-limitada-series-xs-one-pc-y-dispositivos-habilitados-para-la-nube-2066168",
+   "date": "Thu, 12 Nov 2026 12:43:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "60,50€ - Amazon Inspirado en las sinuosas carreteras de montaña de Japón, este mando combina un estilo de alto rendimiento con el estilo del Festival. Observa cómo la carcas..."
+  },
+  {
+   "id": "keepa-B07WTVYWGF-arbDE",
+   "titre": "Reolink 2K Caméra Solaire 360° Pan&Tilt, Détection IA, Argus PT Lite [Amazon DE]",
+   "temperature": 230,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B07WTVYWGF",
+   "date": "2026-11-10T12:02",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "6972489771297",
+   "asin": "B07WTVYWGF",
+   "ref_fr": 99.99,
+   "ventes_30j": 50,
+   "vendeurs": 2,
+   "description": "Amazon.fr 99.99 € (moyenne 90 j 97.92 €), écart 23 % port compris, ventes 30 j 50, 2 vendeurs FR"
+  },
+  {
+   "id": "6b3a6b8443",
+   "titre": "LEGO 40813 Okolicznościowe Japoński Kot Szczęścia @InPost",
+   "temperature": 220,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "InPost",
+   "prix": 15.05,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lego-40813-okolicznosciowe-japonski-kot-szczescia-at-inpost-1388144",
+   "date": "Thu, 12 Nov 2026 12:39:52 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "64,04zł - InPost LEGO 40813 Okolicznościowe Japoński Kot Szczęścia W aplikacji InPost -15 zł z kodem rabatowym „ Vonhalsky „ oraz darmową dostawą do paczkomatu ..."
+  },
+  {
+   "id": "cc0b8972db",
+   "titre": "Airpods Pro 3 por sólo 199€ (Club Carrefour)",
+   "temperature": 212,
+   "categorie": "Electrónica",
+   "marchand": "Carrefour",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/airpods-pro-3-por-solo-199eur-club-carrefour-2066070",
+   "date": "Thu, 12 Nov 2026 12:30:32 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "199€ - Carrefour • Tipo de auriculares: botón • Conexión: USB-C"
+  },
+  {
+   "id": "621c921979",
+   "titre": "Bose QuietComfort SC – Auriculares con cancelación de ruido, multipunto, 24 h de batería – 111 € con cupón de 5 € (cuentas seleccionadas)",
+   "temperature": 209,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 116.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bose-quietcomfort-sc-auriculares-con-cancelacion-de-ruido-multipunto-24-h-de-bateria-116-eur-con-cupon-de-5-eur-cuentas-seleccionadas-2053163",
+   "date": "Thu, 12 Nov 2026 12:31:35 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "116€ - AliExpress Los Bose QuietComfort SC son exactamente los mismos auriculares que los Bose QuietComfort Headphones, los sucesores de los míticos QC45. Lo único que cambia ..."
+  },
+  {
+   "id": "9c4e91ced0",
+   "titre": "Skórzane buty męskie ECCO Rugged Track (41 za 292.44 zł, 43 za 337 zł, czarne 43 za 376 zł) @Amazon",
+   "temperature": 206,
+   "categorie": "Moda",
+   "marchand": "Amazon.pl",
+   "prix": 68.72,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/skorzane-buty-meskie-ecco-rugged-track-41-za-29244-zl-43-za-337-zl-czarne-43-za-376-zl-at-amazon-1388288",
+   "date": "Thu, 12 Nov 2026 12:48:22 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "292,44zł - Amazon.pl Skórzane buty męskie ECCO Rugged Track: 41 za 292.44 zł 43 za 337 zł czarne 43 za 376 zł </li..."
+  },
+  {
+   "id": "d5a1bb5bf0",
+   "titre": "Cecotec Vinoteca Bolero GrandSommelier 1250 CoolCrystal. Bodega para 12 botellas, enfriamiento termoeléctrico, 35dB panel táctil y luz LED",
+   "temperature": 202,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 100.63,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cecotec-vinoteca-bolero-grandsommelier-1250-coolcrystal-bodega-para-12-botellas-enfriamiento-termoelectrico-35db-panel-tactil-y-luz-led-2066182",
+   "date": "Thu, 12 Nov 2026 12:40:53 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "100,63€ - Amazon Gran capacidad. Guarda tus vinos en su espacio interior ideal para 12 botellas. Enfriamiento termoeléctrico. Vinoteca de bajo nivel sonoro y alto ren..."
+  },
+  {
+   "id": "8f0b7ed96f",
+   "titre": "NBA 2K25 (PS4)",
+   "temperature": 184,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 30.66,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00640220.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 39.99 €, -23 %. Jeu PS4 Sport 3 ans et plus"
+  },
+  {
+   "id": "beba18dacf",
+   "titre": "2N - Module d'interphone à 5 boutons IP Verso – 9155035",
+   "temperature": 152,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 202.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582774.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -19 %. 2N - Module d'interphone à 5 boutons IP Verso – 9155035"
+  },
+  {
+   "id": "465f64a580",
+   "titre": "Ecran PC 32\" Gigabyte MO32U2 - QD-OLED, 4K UHD, 240Hz, 0,03ms, HDR True Black 400, HDMI 2.1, FreeSync Premium Pro (via Remise Panier)",
+   "temperature": 119,
+   "categorie": "High-Tech",
+   "marchand": "Amazon.es",
+   "prix": 506.22,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-32-gigabyte-mo32u2-qd-oled-4k-uhd-240hz-003ms-hdr-true-black-400-hdmi-21-freesync-premium-pro-via-remise-panier-3452807",
+   "date": "Thu, 12 Nov 2026 12:26:22 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "506,22€ - Amazon.es ● Baisse de prix pour ce 32\" QD OLED 4K UHD , la remise s'applique au panier Vendu et expédié par AMAZON <br /..."
+  },
+  {
+   "id": "abef6b1b1d",
+   "titre": "WOLFBOX DF200 Druckluftbläser mit 3 Stufen, 6000 mAh Akku (wechselbar), USB-C | Versand aus Deutschland",
+   "temperature": 118,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "AliExpress",
+   "prix": 42.69,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/wolfbox-df200-druckluftblaser-mit-3-stufen-6000-mah-akku-wechselbar-usb-c-versand-aus-deutschland-2868587",
+   "date": "Thu, 12 Nov 2026 12:16:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "42,69€ - AliExpress Bei Ali-Express gibt es den WOLFBOX DF200 Druckluftbläser mit 3 Stufen, 6000 mAh Akku (wechselbar), USB-C, Zubehör usw. inkl. Versand aus Deutschland für 42,..."
+  },
+  {
+   "id": "27433f41be",
+   "titre": "Manette pro 2 Nintendo pour Nintendo Switch 2 (Remise au paiement)",
+   "temperature": 115,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon.es",
+   "prix": 62.39,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/manette-pro-2-nintendo-pour-nintendo-switch-2-remise-au-paiement-3452614",
+   "date": "Thu, 12 Nov 2026 12:31:30 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "62,39€ - Amazon.es Remise au paiement À utiliser uniquement avec la Nintendo Switch 2. Élevez vos sessions de jeu d'un cran avec l..."
+  },
+  {
+   "id": "70c8d5b88c",
+   "titre": "Chaussures unisex Gel-Cumulus 16 - Tailles du 41,5 au 46,5",
+   "temperature": 114,
+   "categorie": "Sports & Plein air",
+   "marchand": "Asics",
+   "prix": 50.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-unisex-gel-cumulus-16-tailles-du-415-au-465-3452886",
+   "date": "Thu, 12 Nov 2026 12:34:16 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "50€ - Asics Lancée pour la première fois en 2014, la chaussure GEL-CUMULUS 16 était autrefois réputée pour ses capacités d'amorti doux sur des longues distances.<br /..."
+  },
+  {
+   "id": "96a7fb67d2",
+   "titre": "[bol.com] Dagdeal op Fisher-Price & V-Tech",
+   "temperature": 114,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Bol",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/bolcom-dagdeal-op-fisher-price-v-tech-426582",
+   "date": "Thu, 12 Nov 2026 08:36:00 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€44,99 - Bol Bij bol.com Dagdeal op Fisher-Price & V-Tech Gratis verzending vanaf €25 of met se..."
+  },
+  {
+   "id": "aed68f63ef",
+   "titre": "Lidl Crivit verstellbare Kurzhantel 25Kg",
+   "temperature": 112,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Lidl",
+   "prix": 79.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/lidl-crivit-verstellbare-kurzhantel-25kg-2869670",
+   "date": "Thu, 12 Nov 2026 12:45:51 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "79,99€ - Lidl Jetzt für 79,99 € über die Lidl Plus App verfügbar. Ich habe mir die damals gekauft und bin weiterhin zufrieden mit den Hanteln. Die Scheiben sind übrigens a..."
+  },
+  {
+   "id": "fd3abae37e",
+   "titre": "Einhell TC-SM 2131/1 Dual Bevel Sliding Mitre Saw 1800W",
+   "temperature": 111,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 85.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/einhell-dual-bevel-sliding-mitre-saw-1800w-45-mitre-47-bevel-saw-5030391",
+   "date": "Thu, 12 Nov 2026 11:35:54 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£85 - Amazon The Einhell TC-SM 2131/1 Dual drag, crosscut and miter saw is suitable for cutting wood, laminated panels and plastic. The drag, crosscut and miter saw ..."
+  },
+  {
+   "id": "a52aaa15f8",
+   "titre": "Robot tondeuse Ecovacs Goat O600 RTK - 600 m² (vendeur tiers)",
+   "temperature": 103,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 349.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robot-tondeuse-ecovacs-goat-o600-rtk-care-kit-600-m2-3452099",
+   "date": "Thu, 12 Nov 2026 12:45:20 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "349€ - Amazon 【Navigation RTK fiable TrueMapping 2.0】4x plus rapide et 30 % plus stable que les autres technologies RTK, même à l'ombre des arbres ou des bâtiments..."
+  },
+  {
+   "id": "129f7d5e17",
+   "titre": "[Prime] Chupa Chups Adventskalender 2026, Weihnachts-Kalender mit 24 Türchen, Lutscher & Kaugummi, Süßigkeiten (1x 225g)",
+   "temperature": 103,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 8.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-chupa-chups-adventskalender-2026-weihnachts-kalender-mit-24-turchen-lutscher-kaugummi-sussigkeiten-1x-225g-2869603",
+   "date": "Thu, 12 Nov 2026 12:34:31 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "8,99€ - Amazon Moin zusammen, für alle Naschkatzen und Chupa-Chups-Fans: Mit dem Chupa Chups Adventskalender 2026 wird die Vorweihnachtszeit besonders..."
+  },
+  {
+   "id": "b60d494639",
+   "titre": "LEGO Architecture Trevi Fountain 21062",
+   "temperature": 102,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 93.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-architecture-trevi-fountain-21062-5029208",
+   "date": "Thu, 12 Nov 2026 11:40:10 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£93 - Amazon LEGO Architecture Trevi Fountain 21062"
+  },
+  {
+   "id": "46a657815b",
+   "titre": "🛍️ Lefant M210 Omni Mini Rouleau Robot Aspirateur Laveur, Aspiration 20000 Pa ✅ 199,99€ au lieu de 599,99€ ➡️ https://www.amazon.fr/dp/B0G7V5G5NR/?tag=pmrat-21 ",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 199.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0G7V5G5NR/?tag=pmrat-21",
+   "date": "2026-11-12T11:30",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Lefant M210 Omni Mini Rouleau Robot Aspirateur Laveur, Aspiration 20000 Pa ✅ 199,99€ au lieu de 599,99€ ➡️ https://www.amazon.fr/dp/B0G7V5G5NR/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 599.99
+  },
+  {
+   "id": "5358847a59",
+   "titre": "🛍️ LEGO City Le tractopelle jaune 60480, 301 pièces ✅ 18,99€ au lieu de 29,99€ ➡️ https://www.amazon.fr/dp/B0FPXHZZFF/?tag=pmrat-21 Publicité/Lien affilié Le pr",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FPXHZZFF/?tag=pmrat-21",
+   "date": "2026-11-12T11:36",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO City Le tractopelle jaune 60480, 301 pièces ✅ 18,99€ au lieu de 29,99€ ➡️ https://www.amazon.fr/dp/B0FPXHZZFF/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 29.99
+  },
+  {
+   "id": "846308ca31",
+   "titre": "🛍️ Dusserre, Tarot de marseille de paul Marteau ✅ 14,99€ au lieu de 19,99€ ➡️ https://www.amazon.fr/dp/B00005QQZN/?tag=pmspt-21 Publicité/Lien affilié Le prix p",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B00005QQZN/?tag=pmspt-21",
+   "date": "2026-11-12T11:43",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Dusserre, Tarot de marseille de paul Marteau ✅ 14,99€ au lieu de 19,99€ ➡️ https://www.amazon.fr/dp/B00005QQZN/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 19.99
+  },
+  {
+   "id": "1ab73c0631",
+   "titre": "🛍️ LEGO Bluey Les Grand-mères avec Bingo et Bluey 11216, 80 pièces ✅ 9,73€ au lieu de 14,99€ ➡️ https://www.amazon.fr/dp/B0FPXHTWM1/?tag=pmrat-21 Publicité/Lien",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 9.73,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FPXHTWM1/?tag=pmrat-21",
+   "date": "2026-11-12T11:50",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO Bluey Les Grand-mères avec Bingo et Bluey 11216, 80 pièces ✅ 9,73€ au lieu de 14,99€ ➡️ https://www.amazon.fr/dp/B0FPXHTWM1/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 14.99
+  },
+  {
+   "id": "cd207a69ad",
+   "titre": "Ninja Air Fryer Max Pro 6,2 L Blanc 99.99 au lieu de 149.99€ https://www.amazon.fr/dp/B0DSK843XY/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DSK843XY/?tag=chollosyofe0b-20",
+   "date": "2026-11-10T06:08",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Ninja Air Fryer Max Pro 6,2 L Blanc 99.99 au lieu de 149.99€ https://www.amazon.fr/dp/B0DSK843XY/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 149.99
+  },
+  {
+   "id": "b18f8fd77f",
+   "titre": "Lot de 12 sacs sous vide jumbo réutilisables 18.99 au lieu de 24.95€ https://www.amazon.fr/dp/B0CM33WPTY/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CM33WPTY/?tag=chollosyofe0b-20",
+   "date": "2026-11-10T09:08",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Lot de 12 sacs sous vide jumbo réutilisables 18.99 au lieu de 24.95€ https://www.amazon.fr/dp/B0CM33WPTY/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 24.95
+  },
+  {
+   "id": "2b18b930f9",
+   "titre": "Aspirateur Balai Sans Fil Ginaray 580W avec LED 69.99 au lieu de 266.99€ https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20",
+   "date": "2026-11-10T12:07",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Aspirateur Balai Sans Fil Ginaray 580W avec LED 69.99 au lieu de 266.99€ https://www.amazon.fr/dp/B0GVY2CLT7/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 266.99
+  },
+  {
+   "id": "a6f727dd55",
+   "titre": "Philips 2300 LatteGo, machine à café à grains 351.72 au lieu de 549.99€ https://www.amazon.fr/dp/B0D1VRV1YW/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 351.72,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D1VRV1YW/?tag=chollosyofe0b-20",
+   "date": "2026-11-10T15:06",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Philips 2300 LatteGo, machine à café à grains 351.72 au lieu de 549.99€ https://www.amazon.fr/dp/B0D1VRV1YW/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 549.99
+  },
+  {
+   "id": "81969ec6c1",
+   "titre": "Formule 1 an Oxxa Fitness - oxxa-fitness.com",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": null,
+   "prix": 380.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/formule-1-an-oxxa-fitness-3453128",
+   "date": "Thu, 12 Nov 2026 12:48:59 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "380€ 12 mois d’accès à la salle, payement comptant, valable pour les 50 premiers inscrits."
+  },
+  {
+   "id": "696065a468",
+   "titre": "Doudoune Sans Couture - Gris et Noir, de XS à M",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Uniqlo",
+   "prix": 129.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/uniqlo-doudoune-sans-couture-3453132",
+   "date": "Thu, 12 Nov 2026 12:43:15 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "129,90€ - Uniqlo DEAL UNIQLO – Doudoune Seamless Down à 119 € ! Une doudoune légère et chaude avec une belle composition : ✅ 90 % duvet / 10 % plumes ✅ Pouvoir gonflant 750+ CUIN ✅ Coupe-vent et déperlante ✅ Sans coutures 2 coloris disponibles : noir et gris foncé. Plusieurs tailles selon les stocks"
+  },
+  {
+   "id": "a926c00db3",
+   "titre": "Casque audio sans fil Bluetooth Marshall Monitor II ANC - Advanced ANC réduction de bruit active, Noir",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Cultura",
+   "prix": 149.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-audio-sans-fil-bluetooth-marshall-monitor-ii-anc-advanced-anc-reduction-de-bruit-active-noir-3453131",
+   "date": "Thu, 12 Nov 2026 12:42:54 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "149,99€ - Cultura Le casque Marshall Monitor II ANC allie un design emblématique à une excellente expérience audio. Grâce à sa réduction de bruit active (ANC), il permet de profiter pleinement de sa musique en limitant les bruits environnants. Il dispose également d'un mode transparence pour rester "
+  },
+  {
+   "id": "f52a8fe650",
+   "titre": "[Ventes privées] Jeu de société Monster Lands",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Philibert Net",
+   "prix": 15.89,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/monster-lands-3453127",
+   "date": "Thu, 12 Nov 2026 12:39:20 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "15,89€ - Philibert Net Monster Lands est un jeu compétitif de placement de dés qui combine la gestion des ressources et le placement des travailleurs. Incarnez le rôle d'un chef d'un clan de guerriers convoitant la couronne Les Terres de La Discorde. Version Française à partir de 12 ans 1 à 2h 1 à 4"
+  },
+  {
+   "id": "a2a552c522",
+   "titre": "Jeu de société Fortuna (Vente Privée)",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Philibert Net",
+   "prix": 11.25,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/fortuna-3453125",
+   "date": "Thu, 12 Nov 2026 12:38:00 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "11,25€ - Philibert Net Fortuna se situe dans l'Empire romain, sous le règne de César.Les joueurs sont des Romains ambitieux qui cherchent à gagner de l'influence dans l'Empire romain. En quête de pouvoir, de bonheur et de richesse, ils quittent leur village et se dirigent vers la ville de Rome. Vers"
+  },
+  {
+   "id": "3957aef8e9",
+   "titre": "Jeu de société : Progrès - Evolution de la Technologie",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Philibert Net",
+   "prix": 9.75,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/jeu-de-societe-progres-evolution-de-la-technologie-vente-privee-3453124",
+   "date": "Thu, 12 Nov 2026 12:36:33 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "9,75€ - Philibert Net Progrès - Evolution de la Technologie VF est un jeu de cartes sur la recherche de technologie et l'évolution d'une civilisation. version Française à partir de 12 ans 1 à 2h 1 à 5 joueurs Progrès : Evolution de la Technologie est un jeu de cartes et de civilisation vous proposan"
+  },
+  {
+   "id": "1252d516ea",
+   "titre": "Coque OtterBox Clear Case Series MagSafe pour iPhone 16",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 13.59,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/coque-iphone-16-clear-case-series-magsafe-dotterbox-3453123",
+   "date": "Thu, 12 Nov 2026 12:36:23 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "13,59€ - Amazon Protégez votre smartphone avec la gamme Clear Case ultra-mince, la coque iPhone 16 qui est facile à installer et résiste à un nombre de chutes trois fois supérieur à celui spécifié dans la norme militaire (MIL-STD-810G 516.6). La coque Clear Case Series MagSafe d’OtterBox a des bords"
+  },
+  {
+   "id": "253565f171",
+   "titre": "Mini réfrigérateur 8L 64cm Minecraft Creeper UKONIC",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Micromania Zing",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/mini-frigo-minecraft-8l-3453065",
+   "date": "Thu, 12 Nov 2026 12:34:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "89,99€ - Micromania Zing Si vous trouvez Minecraft génial, prouvez-le avec ce mini-réfrigérateur Creeper Minecraft Legends de 60 cm (2 pieds) de haut, prêt à vous servir, à vous et à vos amis gamers, une boisson fraîche. Même sans fonction de réfrigération, ce Creeper constituerait un élément de déc"
+  },
+  {
+   "id": "de5a20a993",
+   "titre": "Pack surprise Freegun de 5 boxers ultra-doux coton - Du S au XXL",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 15.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pack-surprise-freegun-de-5-boxers-ultra-doux-coton-taille-s-a-xxl-3453121",
+   "date": "Thu, 12 Nov 2026 12:34:30 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "15,90€ - Amazon Ce pack surprise Freegun réunit cinq boxers pour homme en coton stretch. La sélection des modèles, imprimés et coloris est aléatoire parmi les stocks disponibles; l’assortiment reçu peut donc différer des visuels. Le tissu est composé de 95 % de coton et de 5 % d’élasthanne. La marqu"
+  },
+  {
+   "id": "9ac16df80f",
+   "titre": "Pochette de transport Edition 40e anniversaire de The Legend of Zelda et protection d'écran",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "E.Leclerc",
+   "prix": 34.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pochette-zelda-40eme-anniversaire-3453122",
+   "date": "Thu, 12 Nov 2026 12:34:13 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "34,90€ - E.Leclerc • Pochette de transport pour Nintendo Switch 2 • Protection d’écran pour Nintendo Switch 2 • Édition 40e anniversaire de The Legend of Zelda"
+  },
+  {
+   "id": "7927d89177",
+   "titre": "Aspirateur balai laveur vapeur Tineco Floor One S7 Stretch Steam",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Tineco",
+   "prix": 310.2,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/aspirateur-balai-laveur-vapeur-tineco-floor-one-s7-stretch-steam-3451522",
+   "date": "Thu, 12 Nov 2026 12:33:34 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "310,20€ - Tineco EDIT : nouvelle baisse de prix à 329,99 soit 310,20€ avec le code promo. Aspirateur-balai vapeur sans fil tout-en-un qui aspire, lave et nettoie à la vapeur. Technologie HyperSteam qui chauffe jusqu'à 160 °C pour dissoudre les taches tenaces (graisse, résidus collants), et design Du"
+  },
+  {
+   "id": "76ff63c287",
+   "titre": "Jusqu'à 150€ remboursés pour l'achat de 2 ou 4 pneus Bridgestone & 50% de réduction sur le montage. Ex: Lot de 2 Turanza All Season 6 225/40",
+   "temperature": null,
+   "categorie": "Auto-Moto",
+   "marchand": "Speedy",
+   "prix": 203.85,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-4-pneus-4-saisons-brigdestone-turanza-all-season-6-22540r18-92y-via-120eur-dodr-et-50-sur-le-montage-3452921",
+   "date": "Thu, 12 Nov 2026 12:32:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "203,85€ - Speedy Bon plan pneumatiques chez Speedy : jusqu'au 3 janvier 2027 , profitez d'une double offre cumulable sur une large sélection de pneus Bridgestone (gammes été, hiver, toutes saisons, tourisme, utilitaire et 4x4) pour l'achat et le montage simultanés de 2 ou 4 pneus commandés en ligne "
+  },
+  {
+   "id": "984d21b736",
+   "titre": "Multitool Signal édition limitée Leatherman - Coyote",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Military.eu",
+   "prix": 128.79,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/multitool-signal-edition-limitee-leatherman-coyote-3453120",
+   "date": "Thu, 12 Nov 2026 12:31:01 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "128,79€ - Military.eu Le premier multitool créé par la société américaine Leatherman , spécialement conçu pour les passionnés de survivalisme et d'activités en plein air. Le modèle Signal comprend 19 outils , dont une lame qui peut être ouverte d'un seul mouvement de la main, sans avoir à déployer l"
+  },
+  {
+   "id": "cdb95072e5",
+   "titre": "Actualité : Black Friday 2026 - Le smartphone Nothing Phone (3) 256 Go est à 479 € (-44 %)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 479.0,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/telephone-portable/black-friday-2026-le-smartphone-nothing-phone-3-256-go-est-a-479-44-n267244.html",
+   "date": "2026-11-12T12:46:00+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Écran AMOLED de 6,67 pouces, Snapdragon 8s Gen 4 et quatre capteurs de 50 Mpx : le Nothing Phone (3) 12 Go + 256 Go passe à 479 € chez Amazon, soit 370 € de moins."
+  },
+  {
+   "id": "90ddc0494c",
+   "titre": "SONNI Höhenverstellbarer Schreibtisch 140 x 60 cm mit Smart Memory Funktion schwarz",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "ManoMano",
+   "prix": 45.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/sonni-hohenverstellbarer-schreibtisch-140-x-60-cm-mit-smart-memory-funktion-schwarz-2869838",
+   "date": "Thu, 12 Nov 2026 12:49:06 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "45,99€ - ManoMano Bei ManoMano höhenvestellbarer Schreibtisch von Sonni 140 x 60 cm für 45,99 € mit Versand. Vergleichspreis Amazon . Tischplatte ist wohl zweigeteilt! Produktinfos: SONNI Höhenverstellbare Schreibtische Der SONNI Schreibtisch eignet sich sowohl für die Sitz- als auch für die Arbeits"
+  },
+  {
+   "id": "0fbeedf495",
+   "titre": "[Stückpreis] EVE Audio SC204 Aktiver 2-Wege Studiomonitor | 100 W Ausgangsleistung (Class-D), XLR-3 & RCA Eingänge, DSP 3-Band Filter",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Thomann",
+   "prix": 239.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/stuckpreis-eve-audio-sc204-aktiver-2-wege-studiomonitor-100-w-ausgangsleistung-class-d-xlr-3-rca-eingange-dsp-3-band-filter-2869837",
+   "date": "Thu, 12 Nov 2026 12:46:44 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "239€ - Thomann Mahlzeit meine lieben Audio-Kolleginnen und Kollegen. :) Uff... starke Ansage bei Thomann im Zuge der Black Deals für den aktiven EVE Audio SC204 2-Wege Studiomonitor. Ihr bekommt ihn aktuell für 239€ inkl. kostenlosem Versand. Der nächste Händler hätte laut Idealo ansonsten gern 337,"
+  },
+  {
+   "id": "b8d78d1f27",
+   "titre": "[ EDEKA Südwest ] Bis zu 20 € Rabatt mit der EDEKA App sichern!",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "EDEKA",
+   "prix": 20.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/edeka-sudwest-bis-zu-20-eur-rabatt-mit-der-edeka-app-sichern-2869835",
+   "date": "Thu, 12 Nov 2026 12:44:30 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "EDEKA EDEKA-App: Bis zu 20 € Rabatt vom 16.11. bis 21.11.2026 Bis zu 20 € Rabatt mit der EDEKA App sichern! Jetzt registrieren und 3-fach sparen! QR-Code scannen und App downloaden. Link vom QR-Code: https://edeka.go.link/6lYea So funktioniert’s App downloaden, registrieren und 5 € Gutschein sichern"
+  },
+  {
+   "id": "35b9c93cb2",
+   "titre": "Tineco Floor ONE i6 Stretch Nass Trockensauger, 85 °C Heißluft-Trocknung",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 149.46,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tineco-floor-one-i6-stretch-nass-trockensauger-85-c-heissluft-trocknung-2869833",
+   "date": "Thu, 12 Nov 2026 12:43:35 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "149,46€ - Amazon Tineco Floor ONE i6 Stretch Nass Trockensauger, 85 °C Heißluft-Trocknung 180° Lay-Flat Nasssauger,40 Min Laufzeit, Anti-Verhedderung Design, 20kPa Saugkraft, Beidseitige Kantenreinigung < 0,5 cm"
+  },
+  {
+   "id": "3b489930c5",
+   "titre": "[Decathlon] KIMJALY Rolltop-Rucksack 20–35 l mit Laptop- & Yogamattenfach, 7 Fächer (14,99 € bei Abholung)",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "DECATHLON",
+   "prix": 19.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/decathlon-kimjaly-rolltop-rucksack-20-35-l-mit-laptop-yogamattenfach-7-facher-1499-eur-bei-abholung-2869832",
+   "date": "Thu, 12 Nov 2026 12:42:12 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "19,98€ - DECATHLON Bei Decathlon bekommt ihr den KIMJALY-Rolltop-Rucksack in Schwarz/Rauchschwarz für 14,99 €. Mit 4,99 € Standardversand sind es 19,98 € insgesamt. Die reguläre Lieferung an eine deutsche Decathlon-Wunschfiliale zur Abholung ist kostenlos; die kostenpflichtige Express-Abholung ist d"
+  },
+  {
+   "id": "59d288942c",
+   "titre": "Biohort BikeLift Fahrradwandhalterung",
+   "temperature": null,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Mein-Gartenshop24",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/biohort-bikelift-fahrradwandhalterung-2869831",
+   "date": "Thu, 12 Nov 2026 12:42:10 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "199€ - Mein-Gartenshop24 Ich beobachte sie schon länger. Der Preis sollte der Bestpreis sein. Aber ich werde sie wahrscheinlich trotzdem nicht kaufen, da wir mit 200 € für die Technik immer noch zu teuer sind. :p XD (lol) Beschreibung: • Fahrrad-Wandhalterung • Vertikale Wandmontage • Geeignet für E"
+  },
+  {
+   "id": "bf666a0969",
+   "titre": "Prime: mehrere Depeche Mode günstiger- hier: - Music for the Masses Vinyl LP Standard Version",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 22.39,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-mehrere-depeche-mode-gunstiger-hier-music-for-the-masses-vinyl-lp-standard-version-2869828",
+   "date": "Thu, 12 Nov 2026 12:38:10 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "22,39€ - Amazon Amazon hat momentan auch folgende Depeche Mode mit Gutschein ca. 5€ günstiger: 101 live: https://amzn.eu/d/06GXGWTR Some great reward https://amzn.eu/d/03N0VpDE Music For The Masses ist das sechste Album von Depeche Mode. Der Albumtitel war ironisch gemeint, denn Depeche Mode verstan"
+  },
+  {
+   "id": "e84b1db8dc",
+   "titre": "ELITEWHEELS ENT-DISC 2.0 Carbon-Laufradsatz 700C - Scheibenbremse Center Lock, 50 mm Höhe, Tubeless, POE 120 Nabe, Shimano/XDR",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "AliExpress",
+   "prix": 281.42,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/elitewheels-ent-disc-20-carbon-laufradsatz-700c-scheibenbremse-center-lock-50-mm-hohe-tubeless-poe-120-nabe-shimanoxdr-2869827",
+   "date": "Thu, 12 Nov 2026 12:37:36 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "281,42€ - AliExpress Den alten Deal kann ich leider nicht neu hochholen, da ich dort den PayPal-Rabatt von 20 € mit eingerechnet hatte. Der ist jetzt leider aus. Doch der ELITEWHEELS ENT Disc 2.0 Laufradsatz erfreut sich hier ja großer Beliebtheit und der ist beim Hersteller via AliExpress nun auch "
+  },
+  {
+   "id": "cd992c60ab",
+   "titre": "Gigabyte MO32U2 32\" Gaming Monitor 4K, OLED, 240 Hz für 521,10€ (Amazon.es)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon.es",
+   "prix": 521.1,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/gigabyte-mo32u2-32-gaming-monitor-4k-oled-240-hz-fur-52110eur-amazones-2869826",
+   "date": "Thu, 12 Nov 2026 12:37:32 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "521,10€ - Amazon.es Moinsen, bei Amazon.es erhaltet ihr den Gigabyte MO32U2 32\" Gaming Monitor 4K, OLED, 240 Hz zum Bestpreis von 521,10€ inkl. Versand. Der richtige Preis wird am Ende der Bestellung angezeigt. Bezahlen könnt ihr mit Sepa oder Kreditkarte. Viel Spaß :) Preisvergleich 665,94€ Bildeig"
+  },
+  {
+   "id": "8047f0be97",
+   "titre": "Segafredo Zanetti Intermezzo Caffé crema Kaffee ganze Bohnen 1kg verschiedene Sorten",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Lidl",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/segafredo-zanetti-intermezzo-caffe-crema-kaffee-ganze-bohnen-2869825",
+   "date": "Thu, 12 Nov 2026 12:37:11 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "11,99€ - Lidl ☕ Segafredo Intermezzo / Caffè Crema (1 kg) für 11,99 € mit Lidl Plus statt 19,99 € Bei Lidl gibt's aktuell 1 kg Segafredo Kaffeebohnen zum Angebotspreis. Normalpreis: 19,99 € Angebotspreis: 12,99 € Mit Lidl Plus: 11,99 € Ersparnis: 40 % gegenüber UVP Inhalt: 1 kg ganze Bohnen Sorten: "
+  },
+  {
+   "id": "a8f630ffe9",
+   "titre": "Linkin Park - Hybrid Theory [Vinyl LP] (Prime)",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 15.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/linkin-park-hybrid-theory-vinyl-lp-prime-2869824",
+   "date": "Thu, 12 Nov 2026 12:37:08 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "15,99€ - Amazon Spare 4€ an der Kasse. Erleben Sie das bahnbrechende Debütalbum von Linkin Park in einer besonderen Vinyl-Ausgabe. \"Hybrid Theory\" vereint kraftvolle Rock-Elemente mit elektronischen Einflüssen und markiert einen Meilenstein in der Musikgeschichte. Die unverwechselbare Mischung aus d"
+  },
+  {
+   "id": "6d9a4cf007",
+   "titre": "Nightjet / Euronight: Im Nachtzug nach Kroatien ab 25€ | Liegewagen ab 35€ | Schlafabteil ab 60€ | von Stuttgart, Augsburg, München uvm",
+   "temperature": null,
+   "categorie": "Urlaub & Reisen",
+   "marchand": null,
+   "prix": 24.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/nightjet-euronight-im-nachtzug-nach-kroatien-ab-25eur-liegewagen-ab-35eur-schlafabteil-ab-60eur-von-stuttgart-augsburg-munchen-uvm-2869823",
+   "date": "Thu, 12 Nov 2026 12:35:42 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "24,90€ Mit dem Nachtzug nach Kroatien, und das schon ab 24,90€ im Sitzwagen, 34,90€ im Liegewagen oder ab 59,90€ im Schlafwagen. Gebucht kann das auf der Seite der ÖBB werden. Ihr könnt von Stuttgart, Augsburg oder München nach z.B. Zagreb fahren. Komfort Im Sitzwagen gibt es insgesamt 6 Plätze. Die"
+  },
+  {
+   "id": "b02277788c",
+   "titre": "Yaheetech 183 cm künstlicher Weihnachtsbaum mit Schnee und 64 Kiefernzapfen",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 56.85,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/yaheetech-183-cm-kunstlicher-weihnachtsbaum-mit-schnee-und-64-kiefernzapfen-2869821",
+   "date": "Thu, 12 Nov 2026 12:32:36 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "56,85€ - Amazon Hat echt bessere Qualität, ich kann das jedem empfehlen , auch wenn diese Angebot nicht für eine oder andere ok ist, trotzdem sollte man darüber nachdenken, wieviele Bäume jedes Jahr gefällt werden . Produkt: Yaheetech 183 cm künstlicher Weihnachtsbaum mit Schnee und 64 Kiefernzapfen"
+  },
+  {
+   "id": "59cf8d8336",
+   "titre": "Fairphone Fairbuds XL (2025) Over-Ear Bluetooth Kopfhörer mit Active Noise-Cancelling schwarz",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Cyberport",
+   "prix": 159.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/fairphone-fairbuds-xl-2025-over-ear-kopfhorer-schwarz-2869819",
+   "date": "Thu, 12 Nov 2026 12:30:04 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "159€ - Cyberport Wer diese reparierbaren Fairphone Kopfhörer kauft, der kennt sie! Produktdetails: Ohrumschließender, geschlossener Kopfhörer Bluetooth-Übertragung Modulares Design mit austauschbaren Ersatzteilen Noise-Cancelling Headsetfunktion Bedienelemente am Headset Maximale Akkulaufzeit: 30 St"
+  },
+  {
+   "id": "5db41c4c9c",
+   "titre": "Depeche Mode -The Best of Depeche Mode Volume One 3 Vinyl LP",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 35.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/depeche-mode-the-best-of-depeche-mode-volume-one-3-vinyl-lp-2869818",
+   "date": "Thu, 12 Nov 2026 12:29:39 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "35,99€ - Amazon Mit 5€-Gutschein kommt man auf diesen Preis! »The Best Of Depeche Mode Vol. 1« ist ursprünglich am 8. November 2006 erschienen. Es handelt sich dabei um eine Songsammlung aus 25 Jahren. Sie umfasst insgesamt 18 Hits der Band um Dave Gahan. Mit dabei sind Klassiker wie »Personal Jesus"
+  },
+  {
+   "id": "5758f85bb4",
+   "titre": "Hisense 8Kg Heat Pump Tumble Dryer 3S Series Wifi Connected - Black -DH3S802BB3 £354",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": null,
+   "prix": 354.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/hisense-8kg-heat-pump-tumble-dryer-3s-series-wifi-connected-black-dh3s802bb3-ps354-5030784",
+   "date": "Thu, 12 Nov 2026 11:48:55 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£354 Cheapest I can find for a \"slim\" dryer"
+  },
+  {
+   "id": "7f7844bdc6",
+   "titre": "SONGMICS BELLAH Collection - Bedside Table with Charging Station White / Brown/ Black with code",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "SONGMICS Home",
+   "prix": 23.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/songmics-bellah-collection-bedside-table-with-charging-station-white-brown-black-with-code-5030783",
+   "date": "Thu, 12 Nov 2026 11:46:56 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£23.99 - SONGMICS Home We worked with Songmisc to get this exclusive code for the community. Key Features Fusion That Delights: From the Bellah Collection, this piece fuses steel, engineered wood, and textile for a great blend of strength, softness, and storage. Pair it with matching furniture for a"
+  },
+  {
+   "id": "1ded995961",
+   "titre": "Cuisinart Ceramica XT 11 piece Non-Stick Cookware Set - Lifetime Guarantee",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 99.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/cuisinart-ceramica-xt-11-piece-non-stick-cookware-set-lifetime-guarantee-5030781",
+   "date": "Thu, 12 Nov 2026 11:42:16 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£99.99 - Amazon Cook with confidence: From quick weekday meals to weekend feasts, this versatile 11-piece set gives you the freedom to simmer, sauté, fry, boil, and braise with ease. Less oil, less effort: The titanium-reinforced Ceramica XT non-stick surface means healthier cooking and effortless f"
+  },
+  {
+   "id": "eae9498694",
+   "titre": "LEGO Mario Kart Mario & Standard Kart 72037 - W/Code",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Very",
+   "prix": 94.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-mario-kart-mario-standard-kart-72037-wcode-5030780",
+   "date": "Thu, 12 Nov 2026 11:41:07 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£94.49 - Very LEGO Super Mario set for adults – Show off your love for Mario Kart with this brick-built model kit featuring Mario in his Standard Kart, great for display and gaming-room decor • Pose the head and arms of the Nintendo® brick-built figure of Mario • Includes a stand to display the Stan"
+  },
+  {
+   "id": "dcc8849d9c",
+   "titre": "LEGO Icons Transformers: Soundwave Model Kit 10358 with code",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Very",
+   "prix": 101.24,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-icons-transformers-soundwave-model-kit-10358-with-code-5030779",
+   "date": "Thu, 12 Nov 2026 11:39:34 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£101.24 - Very Apply code for discount t"
+  },
+  {
+   "id": "325bfc15b0",
+   "titre": "LEGO Speed Champions McLaren W1 Toy Car Model 77257 / Dodge Challenger SRT Hellcat Sports Car 77237 - With Code - £3 C&C",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Very",
+   "prix": 12.59,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-speed-champions-mclaren-w1-toy-car-model-77257-dodge-challenger-srt-hellcat-sports-car-77237-ps3-cc-5030778",
+   "date": "Thu, 12 Nov 2026 11:37:11 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£12.59 - Very Use code for discount"
+  },
+  {
+   "id": "35c6ebe69a",
+   "titre": "UGREEN 15W for iPhone MagSafe Charger Pad, Zapix Fast Wireless Charging Station for MagSafe with 1.5M Cable - UGREEN Group / FBA",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 9.48,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ugreen-15w-for-iphone-magsafe-charger-pad-zapix-fast-wireless-charging-station-for-magsafe-with-15m-cable-ugreen-group-fba-5030777",
+   "date": "Thu, 12 Nov 2026 11:36:12 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£9.48 - Amazon About this item 15W Snap & Boost Wireless Charger：Simply snap your iPhone onto the magnetic pad to activate 15W wireless charging. it charges an iPhone 17 Pro from 0% to 37% in just 30 minutes. Get the power you need quickly—perfect for a fast top-up before you head out the door Pocke"
+  },
+  {
+   "id": "ce8e7d776b",
+   "titre": "Four Roses Single Barrel Premium Kentucky Straight Bourbon Whiskey - 70cl - 50% ABV (£35.62 / £31.87 max S&S) - Early Black Friday",
+   "temperature": null,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 37.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/four-roses-single-barrel-5030774",
+   "date": "Thu, 12 Nov 2026 11:35:33 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£37.50 - Amazon Fantastic deal at a great price, normally £49/£50."
+  },
+  {
+   "id": "9a43739080",
+   "titre": "LEGO Harry Potter Luna Lovegood's House 76467 w/code - Free C&C",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Very",
+   "prix": 58.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-harry-potter-luna-lovegoods-house-76467-wcode-free-cc-5030773",
+   "date": "Thu, 12 Nov 2026 11:33:09 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£58.49 - Very BUILDING TOY FOR PLAY AND DISPLAY – Discover the enchanting Lovegood family with LEGO Harry Potter Luna Lovegood's House toy for 10+ year old girls and boys, as seen in Harry Potter and the Deathly Hallows AUTHENTIC DETAILS – Capture the eccentric charm of the Lovegoods’ family home wi"
+  },
+  {
+   "id": "5775001e2e",
+   "titre": "LEGO Creator 3in1 Haunted Mansion 31167",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 58.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-creator-3in1-haunted-mansion-31167-5030772",
+   "date": "Thu, 12 Nov 2026 11:32:20 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£58 - Amazon 27% off RRP £79.99"
+  },
+  {
+   "id": "42098b9354",
+   "titre": "HOMCOM 5 Piece Dining Table and Chairs Set, Space Saving, Oak. Sold and shipped by MH STAR UK LTD",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Tesco",
+   "prix": 85.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/homcom-5-piece-dining-table-and-chairs-set-space-saving-oak-5030771",
+   "date": "Thu, 12 Nov 2026 11:31:55 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£85.49 - Tesco Everyday dining made minimal with this HOMCOM five-piece dining set. With four chairs and a spacious dining, there's plenty of room for you and company to dine together morning through to evening. Strong metal frames comes in black - paired with the oak-effect seats and tabletop for a"
+  },
+  {
+   "id": "822778a5e4",
+   "titre": "Birra Moretti Premium Lager Beer Cans 10x330ml",
+   "temperature": null,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 9.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/birra-moretti-premium-lager-beer-cans-10x330ml-5030770",
+   "date": "Thu, 12 Nov 2026 11:30:47 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£9.49 - Amazon Birra Moretti Premium Lager Beer Cans 10x330ml"
+  },
+  {
+   "id": "debd402a72",
+   "titre": "Diesel Pulsera de acero con cierre en D para hombre",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 41.76,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/diesel-pulsera-de-acero-con-cierre-en-d-para-hombre-2066290",
+   "date": "Thu, 12 Nov 2026 12:49:30 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "41,76€ - Amazon"
+  },
+  {
+   "id": "fea8026f6e",
+   "titre": "Depiladora Laser Mujer de 5 ℃ con Función de Enfriamiento",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 32.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/depiladora-laser-mujer-de-5-con-funcion-de-enfriamiento-2066288",
+   "date": "Thu, 12 Nov 2026 12:49:16 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "32,99€ - Amazon Depiladora de luz pulsada (IPL) para casa , diseñada para ir debilitando el vello desde la raíz poco a poco, rápido y sin que duela o queme en la piel. Lo más apañado que tiene: No quema (efecto frío a $5^\\circ\\text{C}$): Lleva un sistema de enfriamiento que deja la piel fresquita mi"
+  },
+  {
+   "id": "9286db078b",
+   "titre": "London Pack de 4/8 Calzoncillos Bóxer Hombre, Cintura Elástica, Suaves",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 22.67,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/london-pack-de-48-calzoncillos-boxer-hombre-cintura-elastica-suaves-2066286",
+   "date": "Thu, 12 Nov 2026 12:49:06 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "22,67€ - Amazon"
+  },
+  {
+   "id": "c1a861f298",
+   "titre": "Cetaphil Loción Hidratante 473ml + Loción Limpiadora Mini 29ml con CR",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 10.92,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cetaphil-locion-hidratante-473ml-locion-limpiadora-mini-29ml-con-cr-2066284",
+   "date": "Thu, 12 Nov 2026 12:47:03 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "10,92€ - Amazon LOCIÓN HIDRATANTE: Clínicamente probado para restaurar la barrera de humedad en 1 semana. Fórmula no comedogénica, sin fragancias añadidas ni irritaciones. LOCIÓN HIDRATANTE: Alivia y protege la piel de la sequedad hasta 48 horas; reduce aspereza y tirantez; apto para cuerpo y rostro"
+  },
+  {
+   "id": "52199b358d",
+   "titre": "Set de 8 figuras Disney: Doorables Stitch",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Fnac",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/set-de-8-figuras-disney-doorables-stitch-2066280",
+   "date": "Thu, 12 Nov 2026 12:47:00 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "10€ - Fnac Set de 8 figuras Disney: Doorables Stitch Colección del 20.º aniversario con temática tropical y 8 figuras exclusivas de las historias de Lilo y Stitch de Disney. Cada figura mide aproximadamente 4 cm de alto y tiene una pose inspirada en la vida de Stitch en Hawaii, además de sus amigos "
+  },
+  {
+   "id": "a14e25018b",
+   "titre": "Camiseta Reebok manga larga tallas m-l-xl con un gran descuento",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 13.32,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/camiseta-reebok-manga-larga-tallas-m-l-xl-con-un-gran-descuento-2066282",
+   "date": "Thu, 12 Nov 2026 12:46:59 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "13,32€ - Amazon Muy buena rebaja para esta camiseta manga larga de Reebok en tallas M-L-Xl"
+  },
+  {
+   "id": "4970a64d19",
+   "titre": "Juego de herramientas de reparación de 46 piezas",
+   "temperature": null,
+   "categorie": "Coches y motos",
+   "marchand": "AliExpress",
+   "prix": 11.44,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/juego-de-herramientas-de-reparacion-de-46-piezas-2066278",
+   "date": "Thu, 12 Nov 2026 12:43:46 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "11,44€ - AliExpress Incluye 46 piezas para tareas de reparación y bricolaje. Juego con vasos, puntas y llave de carraca de 1/4″. También incorpora un destornillador con puntas intercambiables. Se presenta en un estuche compacto con espacios para guardar las piezas."
+  },
+  {
+   "id": "bd8d332d25",
+   "titre": "Plancha de pelo ghd Gold Max (placas anchas) por 169,99€ en Amazon",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 169.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/plancha-de-pelo-ghd-gold-max-placas-anchas-por-16999eur-en-amazon-2066274",
+   "date": "Thu, 12 Nov 2026 12:43:36 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "169,99€ - Amazon Plancha de pelo ghd Gold Max con placas anchas a 169,99€ en Amazon, vendida y enviada por Amazon, con envío gratis. Según el historial de CamelCamelCamel, su mínimo anterior en Amazon era 171,99€ y la media ronda los 213€, así que ahora está en su precio más bajo registrado. Caracte"
+  },
+  {
+   "id": "b3af1b9ff6",
+   "titre": "Cepillo de limpieza eléctrico 9 en 1 con mango extensible",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AliExpress",
+   "prix": 12.91,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cepillo-de-limpieza-electrico-9-en-1-con-mango-extensible-2066271",
+   "date": "Thu, 12 Nov 2026 12:42:29 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "12,91€ - AliExpress ️ Incluye varios cabezales intercambiables para distintas tareas de limpieza. Mango extensible para limpiar con mayor alcance; también puede usarse sin él. Batería de 2000 mAh y carga mediante USB-C. ⚙️ Cuenta con 2 velocidades. Adecuado para tareas de limpieza en el hogar, como "
+  },
+  {
+   "id": "656a859b2c",
+   "titre": "Cecotec Centro de Planchado Horizontal IronHero H-2800 Station. 2800W, Vapor 135g/m, Golpe 360g/m, Suela Cerámica, Antical, Auto Off",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 38.93,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cecotec-centro-de-planchado-horizontal-ironhero-h-2800-station-2800w-vapor-135gm-golpe-360gm-suela-ceramica-antical-auto-off-2066272",
+   "date": "Thu, 12 Nov 2026 12:40:13 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "38,93€ - Amazon Cecotec Centro de Planchado Horizontal IronHero H-2800 Station. 2800W, Vapor 135g/m, Golpe 360g/m, Suela Cerámica, Antical, Auto Off. Precio: 38,93 €. Referencia de Amazon: 49,90 €. Ahorro frente a esa referencia: 10,97 € (21,98 %). Características: • Marca: Cecotec • Color: Negro • "
+  },
+  {
+   "id": "8386361c65",
+   "titre": "PUMA Anzarun Lite unisex 371128_02 negra/blanca con EXTRA25, malla y SOFTFOAM+, tallas 35.5 a 48.5",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Puma",
+   "prix": 24.75,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/puma-anzarun-lite-unisex-371128-02-negrablanca-con-extra25-malla-y-softfoam-tallas-355-a-485-2066268",
+   "date": "Thu, 12 Nov 2026 12:33:12 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "24,75€ - Puma Las PUMA Anzarun Lite 371128_02 combinan empeine de malla y plantilla SOFTFOAM+ en una zapatilla unisex negra con franja y suela blancas. Un diseño sencillo para el uso diario, con cierre de cordones. Composición: exterior de 74,92 % textil y 25,08 % sintético ; forro y plantilla de 10"
+  },
+  {
+   "id": "1b6f224365",
+   "titre": "M•A•C Stack Máscara de Pestañas - Negro Intenso",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "El Corte Inglés",
+   "prix": 14.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/mac-stack-mascara-de-pestanas-negro-intenso-2066263",
+   "date": "Thu, 12 Nov 2026 12:32:07 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "14€ - El Corte Inglés • Máscara de pestañas • Color negro intenso"
+  },
+  {
+   "id": "e895e03d19",
+   "titre": "HAIER Lavadora I-Pro Series 5 HW90-B14959EU1 Libre Instalación, 9 Kg, 1400 RPM, Motor Direct Motion, Clase A, Blanco, A x P x A. 595x583x850",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Haier",
+   "prix": 369.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/haier-lavadora-i-pro-series-5-hw90-b14959eu1-libre-instalacion-9-kg-1400-rpm-motor-direct-motion-clase-a-blanco-a-x-p-x-a-595x583x850-2066261",
+   "date": "Thu, 12 Nov 2026 12:31:46 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "369€ - Haier Envío gratis con ENVIOVIP. 10% de descuento Newsleater. • Programa Vapor Refresh • Motor Direct Motion • Sistema Smart Dual Spray • Tratamiento antibacterias • Tambor de gran capacidad y almohadillado • Conexión Wi-Fi con la app hOn • Luz en el tambor • Fin diferido de hasta 24 horas • "
+  },
+  {
+   "id": "c21d2c5ebb",
+   "titre": "M.A.C Barra de labios Macximal Silky Matte Lipstick",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "El Corte Inglés",
+   "prix": 14.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/mac-barra-de-labios-macximal-silky-matte-lipstick-2066259",
+   "date": "Thu, 12 Nov 2026 12:30:28 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "14€ - El Corte Inglés La barra de labios ofrece una fórmula reformulada que combina alta intensidad de color con una sensación confortable. Proporciona cobertura total gracias a sus pigmentos y mantiene los labios hidratados durante 8 horas mediante ingredientes como aceite de coco, manteca de karit"
+  },
+  {
+   "id": "d7014b49e5",
+   "titre": "Bresdk Cardigan Mujer Navidad Sueter de Punto Cuello en V Manga Larga con Botones Estilo Largo",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bresdk-cardigan-mujer-navidad-sueter-de-punto-cuello-en-v-manga-larga-con-botones-estilo-largo-2066264",
+   "date": "Thu, 12 Nov 2026 12:29:31 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "14,99€ - Amazon Bresdk Cardigan Mujer Navidad Sueter de Punto Cuello en V Manga Larga con Botones Estilo Largo. Precio: 14,99 €. Referencia de Amazon: 25,99 €. Ahorro frente a esa referencia: 11,00 € (42,32 %). Características: • Tipo de cierre: Botón Detalles del producto: • Suéter de Navidad para "
+  },
+  {
+   "id": "fce9923141",
+   "titre": "Pack 10 camisetas básicas de algodón Unisex - mas colore disponibles",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "AliExpress",
+   "prix": 17.7,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pack-10-camisetas-basicas-de-algodon-unisex-mas-colore-disponibles-2066262",
+   "date": "Thu, 12 Nov 2026 12:28:28 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "17,70€ - AliExpress Camiseta de manga corta tubular. Cuelo redondo en canalé 1x1 con cubrecosturas interior. La marca puede variar pero siempre calidad 150grs Composición: 100% algodón, punto liso, 150 g/m². Color gris vigoré 58: 85% algodón / 15% viscosa."
+  }
+ ]
+}

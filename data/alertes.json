@@ -87246,7 +87246,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-12T18:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -87472,7 +87472,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-12T18:43+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-12T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : l'offre est la version téléchargeable sur le PlayStation Store autrichien (34,99 €), achetable seulement avec un compte autrichien, et non revendable. Le prix de référence (68,50 € sur Amazon.fr) concerne la boîte physique « Édition Spécialiste » : ce n'est pas le même produit.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune référence valable (Keepa = version boîte, différente)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "1e26815e58",
@@ -87518,7 +87530,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-12T18:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -87728,6 +87740,18 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-12T18:43+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-12T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute : prix neuf le plus bas en France 149 € (Auchan, port gratuit, achatmoinscher). L'offre Amazon.nl à 119 € n'a pas pu être ouverte (page anti-robot) : ni l'offre active, ni le modèle exact (H60 Hub et non H60 Hub Ultra), ni les frais de livraison vers la France ne sont vérifiés. Avec 5 € de port l'économie n'est que de 16,8 %, et passe sous 15 % si le port dépasse 7,65 €. Revente : perte (≈ -13 € au mieux).",
+   "prix_neuf_min_idealo": 149.0,
+   "source_prix_ref": "achatmoinscher.com (Auchan 149 €, Darty/Fnac 149,99 €), relu le 12/11",
+   "economie_pct": 16.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

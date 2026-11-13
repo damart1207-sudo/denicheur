@@ -87863,7 +87863,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-13T11:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -87895,6 +87895,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 11:17 UTC : offre expirée, 7.7 affiché, marchand 120_3 ; fiche amazon.de lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-13T11:48+00:00",
+  "verdict": {
+   "commentaire": "Offre expirée (page mydealz marquée expirée), prix Amazon.de non affiché et livraison en France non confirmée ; aucun prix de référence français vérifié. Probable erreur de prix déjà corrigée. Rejeté par prudence.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": false
+  }
  }
 ]

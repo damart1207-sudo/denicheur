@@ -87936,7 +87936,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-13T12:23+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -87975,6 +87975,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 12:23 UTC : offre active, 133.0 affiché, marchand 2139_1 ; fiche amazon.pl lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-13T12:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Pepper.pl lue par le robot à 13h23 : offre active, à partir de 133 zł (~31 €), signalée « erreur de prix », valable seulement pour certains modèles (Wonder, Monta, Tanaro), couleurs et pointures. La fiche Amazon.pl lue (Wonder beige, pointure 39) n'affiche pas ce prix, et les frais d'envoi vers la France ne sont pas connus. Référence trouvée : Legero Wonder à 140 € chez Boozt (boutique européenne, livre la France), pas encore de prix neuf français le plus bas confirmé pour le modèle exact. À revoir au prochain tour.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "Boozt (indicatif, 140 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (erreur de prix probable)",
+   "demande_confirmee": false
+  }
  }
 ]

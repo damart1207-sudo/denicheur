@@ -87781,8 +87781,8 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-13T08:49+00:00",
-  "statut": "a_verifier",
-  "meme_produit_ia": null,
+  "statut": "rejete",
+  "meme_produit_ia": true,
   "demande_forte": {
    "recherche": "pokémon",
    "popularite": null,
@@ -87822,6 +87822,18 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-13T08:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-13T09:53+00:00",
+  "verdict": {
+   "commentaire": "Rejet. Bon plan expert.de annoncé en erreur de prix (Preisfehler, 19 €) : ce type d'offre est quasi toujours annulé par le marchand. En plus, expert.de est une enseigne allemande qui livre en Allemagne (fiche en retrait magasin, branch_id) — livraison en France non assurée. Prix neuf France vérifié ~38,89 € (comparateur achatmoinscher, version Switch, 10 boutiques). Même si l'écart paraît fort, l'offre n'est ni fiable ni livrable en France : dans le doute, on rejette.",
+   "prix_neuf_min_idealo": 38.89,
+   "source_prix_ref": "achatmoinscher.com (recherche web)",
+   "economie_pct": 35.7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "erreur de prix (Preisfehler), ephemere",
+   "demande_confirmee": true
+  }
  }
 ]

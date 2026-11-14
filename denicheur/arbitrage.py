@@ -16,6 +16,7 @@ from . import moisson, sante
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 F_ARB = os.path.join(RACINE, "data/arbitrage.json")
 F_VUS = os.path.join(RACINE, "data/etat/arbitrage_vus.json")
+F_ARB_AUDIT = os.path.join(RACINE, "data/arbitrage_audit.json")
 PAYS = ("DE", "IT", "ES")
 PORT_EUR = 7.0          # livraison Amazon DE/IT/ES -> France (ordre de grandeur, souvent gratuite dès 39-59 €)
 ECART_MIN = 0.15        # au moins 15 % moins cher à l'étranger, port compris
@@ -123,6 +124,9 @@ def annonces_arbitrage(maxi=80):
     lignes = [l for l in _lire(F_ARB, {}).get("ecarts", []) if not re.search(r"\b\d{2}W\s*/\s*\d{2}L\b", l.get("titre") or "")]
     # 08/11 : un écart qui ne tient que face à un pic Amazon.fr (vendeur tiers) est faux : il faut aussi battre de 20 % la moyenne 90 j
     lignes = [l for l in lignes if not l.get("moyenne_90j_fr") or (l.get("cout_rendu") or l["prix_achat"]) <= 0.8 * l["moyenne_90j_fr"]]
+    # 14/11 : place aux écarts neufs — pas de ligne déjà rejetée par l'audit, et au moins 5 ventes par mois en France
+    rejetes = {a for a, v in _lire(F_ARB_AUDIT, {}).items() if isinstance(v, dict) and str(v.get("verdict", "")).startswith("rejet")}
+    lignes = [l for l in lignes if l["asin"] not in rejetes and (l.get("ventes_30j_fr") or 0) >= 5]
     for l in lignes[:maxi]:
         out.append({"id": f'keepa-{l["asin"]}-arb{l["pays_achat"]}', "titre": (l.get("titre") or "") + f' [Amazon {l["pays_achat"]}]',
                     "temperature": min(int(l["ecart_pct"] * 10), 900), "categorie": "Arbitrage Europe", "marchand": f'Amazon.{ {"DE": "de", "IT": "it", "ES": "es"}[l["pays_achat"]] }',

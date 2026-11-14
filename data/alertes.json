@@ -88018,7 +88018,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-14T15:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -88050,6 +88050,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-14T15:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-14T15:45+00:00",
+  "verdict": {
+   "commentaire": "Offre déjà expirée sur mydealz (erreur de prix Kaufland marketplace, 99 € affiché) ; page marchand kaufland.de inaccessible (403), livraison en France non confirmée, aucun prix de référence France vérifié. Rejeté par prudence.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": false
+  }
  }
 ]

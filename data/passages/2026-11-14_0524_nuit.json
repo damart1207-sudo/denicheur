@@ -1,0 +1,5380 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-14_0524",
+ "date_affichee": "14/11/2026 à 05 h 24",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 35,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 1175,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 1854,
+ "nb_nouvelles": 142,
+ "nb_prefiltres": 112,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 10
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 36
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 3
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0FRFPMX3W-arbES",
+   "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, [Amazon ES]",
+   "prix": 39.44,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B0FRFPMX3W",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 540,
+   "domaine": "autre",
+   "nom_produit": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 87.99,
+   "cout_achat": 44.44,
+   "marge_nette": 28.76,
+   "rentabilite": 0.647,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 99.99 € (moyenne 90 j 84.01 €), écart 54 % port compris, ventes 30 j 8, 2 vendeurs FR"
+   },
+   "score": 64.7,
+   "asin": "B0FRFPMX3W",
+   "ean": "6926681761563",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 8,
+   "ebay": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Velaze",
+    "asin": "B0FRFPMX3W",
+    "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, Cuisson et Induction - Noir Mat",
+    "ean": "6926681761563",
+    "pays": "FR",
+    "prix_neuf": 99.99,
+    "prix_amazon": null,
+    "prix_tiers": 99.99,
+    "moyenne_90j": 84.89,
+    "plus_bas_90j": 48.35,
+    "occasion": null,
+    "rang_ventes": 189700,
+    "chutes_rang_30j": 8,
+    "chutes_rang_90j": 32,
+    "ventes_estimees_30j": 8,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0FRFPMX3W",
+    "jetons_restants": 293
+   },
+   "prix_plancher": {
+    "nom": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 99.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FRFPMX3W"
+   },
+   "remise_sincere": true,
+   "mot_cle": "velaze cocotte fonte ronde",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.es/dp/B0FRFPMX3W"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 87.99,
+     "marge_nette": 28.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.99,
+      "cout_achat": 44.44,
+      "frais_canal": 0.0,
+      "prelevements": 11.79,
+      "provision": 3.0,
+      "marge_nette": 28.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.647
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 99.99,
+     "marge_nette": 24.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 24.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.543
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 99.99,
+     "marge_nette": 24.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 15.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 24.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.543
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 99.99,
+     "marge_nette": 23.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 16.0,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 23.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.521
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 99.99,
+     "marge_nette": 19.8,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 19.35,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 19.8,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.446
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 99.99,
+     "marge_nette": 17.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.99,
+      "cout_achat": 44.44,
+      "frais_canal": 21.99,
+      "prelevements": 13.4,
+      "provision": 3.0,
+      "marge_nette": 17.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.386
+    }
+   ],
+   "prix_revente_prudent": 87.99,
+   "marge_verifiee": 28.76,
+   "rentabilite_verifiee": 0.647,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 48.3,
+   "rapport_concurrence": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec ",
+    "temperature_dealabs": 540,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0F8VSM83V-arbDE",
+   "titre": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et PVC [Amazon DE]",
+   "prix": 109.99,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0F8VSM83V",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 310,
+   "domaine": "autre",
+   "nom_produit": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et P",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 149.59,
+   "cout_achat": 114.99,
+   "marge_nette": 11.55,
+   "rentabilite": 0.1,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 169.99 € (moyenne 90 j 165.88 €), écart 31 % port compris, ventes 30 j 18, 1 vendeurs FR"
+   },
+   "score": 10.0,
+   "asin": "B0F8VSM83V",
+   "ean": "6978421747542",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 17,
+   "ebay": {
+    "requete": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et P",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "SHareconn",
+    "asin": "B0F8VSM83V",
+    "titre": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et PVC",
+    "ean": "6978421747542",
+    "pays": "FR",
+    "prix_neuf": 169.99,
+    "prix_amazon": null,
+    "prix_tiers": 169.99,
+    "moyenne_90j": 166.01,
+    "plus_bas_90j": 99.99,
+    "occasion": null,
+    "rang_ventes": 2532,
+    "chutes_rang_30j": 17,
+    "chutes_rang_90j": 31,
+    "ventes_estimees_30j": 17,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0F8VSM83V",
+    "jetons_restants": 258
+   },
+   "prix_plancher": {
+    "nom": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et P",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 169.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0F8VSM83V"
+   },
+   "remise_sincere": true,
+   "mot_cle": "shareconn sapin noël 1569",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 149.59,
+     "marge_nette": 11.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.59,
+      "cout_achat": 114.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.05,
+      "provision": 3.0,
+      "marge_nette": 11.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.1
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 149.59,
+     "marge_nette": 11.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.59,
+      "cout_achat": 114.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.05,
+      "provision": 3.0,
+      "marge_nette": 11.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.1
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 149.59,
+     "marge_nette": 11.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.59,
+      "cout_achat": 114.99,
+      "frais_canal": 0.0,
+      "prelevements": 20.05,
+      "provision": 3.0,
+      "marge_nette": 11.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.1
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 169.99,
+     "marge_nette": 9.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.99,
+      "cout_achat": 114.99,
+      "frais_canal": 19.9,
+      "prelevements": 22.78,
+      "provision": 3.0,
+      "marge_nette": 9.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.081
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 169.99,
+     "marge_nette": 7.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.99,
+      "cout_achat": 114.99,
+      "frais_canal": 21.3,
+      "prelevements": 22.78,
+      "provision": 3.0,
+      "marge_nette": 7.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.069
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 169.99,
+     "marge_nette": 7.62,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.99,
+      "cout_achat": 114.99,
+      "frais_canal": 21.6,
+      "prelevements": 22.78,
+      "provision": 3.0,
+      "marge_nette": 7.62,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.066
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 169.99,
+     "marge_nette": 0.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.99,
+      "cout_achat": 114.99,
+      "frais_canal": 28.45,
+      "prelevements": 22.78,
+      "provision": 3.0,
+      "marge_nette": 0.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.007
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 169.99,
+     "marge_nette": -3.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 169.99,
+      "cout_achat": 114.99,
+      "frais_canal": 32.49,
+      "prelevements": 22.78,
+      "provision": 3.0,
+      "marge_nette": -3.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.028
+    }
+   ],
+   "prix_revente_prudent": 149.59,
+   "marge_verifiee": 11.55,
+   "rentabilite_verifiee": 0.1,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 96.2,
+   "rapport_concurrence": {
+    "requete": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et P",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et P",
+    "temperature_dealabs": 310,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0C8J9CPXQ-arbDE",
+   "titre": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logoté [Amazon DE]",
+   "prix": 59.95,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0C8J9CPXQ",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 440,
+   "domaine": "autre",
+   "nom_produit": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logo",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 105.56,
+   "cout_achat": 64.95,
+   "marge_nette": 23.46,
+   "rentabilite": 0.361,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 119.95 € (moyenne 90 j 106.25 €), écart 44 % port compris, ventes 30 j 7, 2 vendeurs FR"
+   },
+   "score": 36.1,
+   "asin": "B0C8J9CPXQ",
+   "ean": "4063541966835",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 9,
+   "ebay": {
+    "requete": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logo",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "BOSS",
+    "asin": "B0C8J9CPXQ",
+    "titre": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logoté",
+    "ean": "4063541966835",
+    "pays": "FR",
+    "prix_neuf": 101.96,
+    "prix_amazon": 101.96,
+    "prix_tiers": 101.96,
+    "moyenne_90j": 106.54,
+    "plus_bas_90j": 54.19,
+    "occasion": null,
+    "rang_ventes": 50498,
+    "chutes_rang_30j": 9,
+    "chutes_rang_90j": 31,
+    "ventes_estimees_30j": 9,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0C8J9CPXQ",
+    "jetons_restants": 260
+   },
+   "prix_plancher": {
+    "nom": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logo",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 101.96,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0C8J9CPXQ"
+   },
+   "remise_sincere": true,
+   "mot_cle": "boss hommes westart sweat",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0C8J9CPXQ"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 89.72,
+     "marge_nette": 9.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 89.72,
+      "cout_achat": 64.95,
+      "frais_canal": 0.0,
+      "prelevements": 12.02,
+      "provision": 3.0,
+      "marge_nette": 9.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.15
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 89.72,
+     "marge_nette": 9.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 89.72,
+      "cout_achat": 64.95,
+      "frais_canal": 0.0,
+      "prelevements": 12.02,
+      "provision": 3.0,
+      "marge_nette": 9.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.15
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 89.72,
+     "marge_nette": 9.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 89.72,
+      "cout_achat": 64.95,
+      "frais_canal": 0.0,
+      "prelevements": 12.02,
+      "provision": 3.0,
+      "marge_nette": 9.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.15
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 101.96,
+     "marge_nette": 5.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 101.96,
+      "cout_achat": 64.95,
+      "frais_canal": 15.14,
+      "prelevements": 13.66,
+      "provision": 3.0,
+      "marge_nette": 5.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.08
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 101.96,
+     "marge_nette": 5.17,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 101.96,
+      "cout_achat": 64.95,
+      "frais_canal": 15.18,
+      "prelevements": 13.66,
+      "provision": 3.0,
+      "marge_nette": 5.17,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.08
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 101.96,
+     "marge_nette": 4.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 101.96,
+      "cout_achat": 64.95,
+      "frais_canal": 16.16,
+      "prelevements": 13.66,
+      "provision": 3.0,
+      "marge_nette": 4.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.065
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 101.96,
+     "marge_nette": 0.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 101.96,
+      "cout_achat": 64.95,
+      "frais_canal": 19.6,
+      "prelevements": 13.66,
+      "provision": 3.0,
+      "marge_nette": 0.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.011
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 101.96,
+     "marge_nette": -1.94,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 101.96,
+      "cout_achat": 64.95,
+      "frais_canal": 22.28,
+      "prelevements": 13.66,
+      "provision": 3.0,
+      "marge_nette": -1.94,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.03
+    }
+   ],
+   "prix_revente_prudent": 91.76,
+   "marge_verifiee": 11.51,
+   "rentabilite_verifiee": 0.177,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 20.0,
+   "rapport_concurrence": {
+    "requete": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logo",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logo",
+    "temperature_dealabs": 440,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FTMS1PNB-arbDE",
+   "titre": "PUMA Baskets Shuffle Downtown Mixte, White-Moss Veil, 41 EU [Amazon DE]",
+   "prix": 30.95,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0FTMS1PNB",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 420,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0FTMS1PNB"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Puma Shuffle Downtown Mixte",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 65.0,
+   "cout_achat": 35.95,
+   "marge_nette": 17.34,
+   "rentabilite": 0.482,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Silhouette tendance, prix DE 31€ + port ~8€, revente 60-70€ neuf pointure 41, marge ~20€.",
+    "gptoss": "Coût total après TVA et droits ≈40 €, revente à 65 € sur Vinted, marge nette ≈20 €, chaussures populaires et faciles à expédier."
+   },
+   "score": 45.0,
+   "ebay": {
+    "requete": "Puma Shuffle Downtown Mixte",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "PUMA",
+    "asin": "B0FTMS1PNB",
+    "titre": "PUMA Baskets Shuffle Downtown Mixte, White-Moss Veil, 41 EU",
+    "ean": "4070032716909",
+    "pays": "FR",
+    "prix_neuf": 57.99,
+    "prix_amazon": 57.99,
+    "prix_tiers": 57.99,
+    "moyenne_90j": 51.04,
+    "plus_bas_90j": 39.71,
+    "occasion": null,
+    "rang_ventes": 13228,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 15,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0FTMS1PNB",
+    "jetons_restants": 282
+   },
+   "asin": "B0FTMS1PNB",
+   "ean": "4070032716909",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 4,
+   "prix_plancher": {
+    "nom": "Puma Shuffle Downtown Mixte",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 57.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FTMS1PNB"
+   },
+   "remise_sincere": true,
+   "mot_cle": "puma shuffle downtown mixte",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 51.03,
+     "marge_nette": 5.24,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.03,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 6.84,
+      "provision": 3.0,
+      "marge_nette": 5.24,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.146
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 51.03,
+     "marge_nette": 5.24,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.03,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 6.84,
+      "provision": 3.0,
+      "marge_nette": 5.24,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.146
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 51.03,
+     "marge_nette": 5.24,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.03,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 6.84,
+      "provision": 3.0,
+      "marge_nette": 5.24,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.146
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 57.99,
+     "marge_nette": 0.05,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.99,
+      "cout_achat": 35.95,
+      "frais_canal": 11.22,
+      "prelevements": 7.77,
+      "provision": 3.0,
+      "marge_nette": 0.05,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.001
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 57.99,
+     "marge_nette": -0.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.99,
+      "cout_achat": 35.95,
+      "frais_canal": 12.06,
+      "prelevements": 7.77,
+      "provision": 3.0,
+      "marge_nette": -0.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.022
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 57.99,
+     "marge_nette": -1.37,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.99,
+      "cout_achat": 35.95,
+      "frais_canal": 12.64,
+      "prelevements": 7.77,
+      "provision": 3.0,
+      "marge_nette": -1.37,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.038
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 57.99,
+     "marge_nette": -2.62,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.99,
+      "cout_achat": 35.95,
+      "frais_canal": 13.89,
+      "prelevements": 7.77,
+      "provision": 3.0,
+      "marge_nette": -2.62,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.073
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 57.99,
+     "marge_nette": -4.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.99,
+      "cout_achat": 35.95,
+      "frais_canal": 15.69,
+      "prelevements": 7.77,
+      "provision": 3.0,
+      "marge_nette": -4.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.123
+    }
+   ],
+   "prix_revente_prudent": 52.19,
+   "marge_verifiee": 6.25,
+   "rentabilite_verifiee": 0.174,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 11.2,
+   "rapport_concurrence": {
+    "requete": "Puma Shuffle Downtown Mixte",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Puma Shuffle Downtown Mixte",
+    "temperature_dealabs": 420,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "puma mixte shuffle downtown basket"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DL6WPGPD-arbDE",
+   "titre": "adidas Homme Streettalk Shoes, Core Black/Core Black/Off White, 38 EU [Amazon DE]",
+   "prix": 23.1,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0DL6WPGPD",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 330,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0DL6WPGPD"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Adidas Streettalk Homme",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 75.0,
+   "cout_achat": 28.1,
+   "marge_nette": 33.85,
+   "rentabilite": 1.205,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Prix DE 23€ anormalement bas pour du Adidas (probable erreur ou déstockage taille 38 unique), revente 70-80€ si commande honorée, risque annulation élevé."
+   },
+   "score": 70.7,
+   "ebay": {
+    "requete": "Adidas Streettalk Homme",
+    "neuf": {
+     "nb": 50,
+     "min": 49.56,
+     "p25": 63.07,
+     "mediane": 78.26,
+     "max": 123.22
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Chaussures pour homme  adidas Streettalk IH6626 - 42 adidas",
+      "prix": "78.26",
+      "url": "https://www.ebay.fr/itm/398081282106?_skw=Adidas+Streettalk+Homme&hash=item5caf7e503a:g:iiAAAeSwF4FqNHq5"
+     },
+     {
+      "titre": "adidas Streettalk Core Black Off White Men Unisex Casual Lifestyle Shoes JP8278",
+      "prix": "92.40",
+      "url": "https://www.ebay.fr/itm/267777089802?_skw=Adidas+Streettalk+Homme&hash=item3e58c2210a:g:zQ0AAeSw4U1qf1KO&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7mCzUz7u5%2FeTc%2BqK%2F4LNZWMBPfQQ6L1Q67v5qvDwG5xKMLFC2MPnr2%2F12keLwJANUcEi6OBrdjBtKuO9JJqqRJQhGejrvDVm5W%2BNyOH--8q6IpbEDC8l5oEOVijCQHCzV10WjL4ciRCtRtKG9ODwH32JrNRx86I0pd17xG3CDSPPmK85NXx69FoKS2%2Bfz0EQVIaDtLqNupvEsKvUJToI0wOiH2zp93Tdb6uNeyFFiX4dfbr8go7hwe8tPBisp4E8MUeg9hJ4qnlLV30tOKMGshKMP5cf9DB2BJn7OdEVZ%2BbJA%3D%3D"
+     },
+     {
+      "titre": "Adidas Chaussures Homme Streettalk, Temps Libre - Couleur : Blanc",
+      "prix": "80.18",
+      "url": "https://www.ebay.fr/itm/237177804720?_skw=Adidas+Streettalk+Homme&hash=item3738e617b0:g:3JIAAeSwxLFq2bm5"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 63.07,
+     "DE": null,
+     "IT": 63.07,
+     "ES": 63.07
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "adidas",
+    "asin": "B0DL6WPGPD",
+    "titre": "adidas Homme Streettalk Shoes, Core Black/Core Black/Off White, 38 EU",
+    "ean": "4068801381151",
+    "pays": "FR",
+    "prix_neuf": 44.95,
+    "prix_amazon": 44.95,
+    "prix_tiers": 44.95,
+    "moyenne_90j": 41.73,
+    "plus_bas_90j": 32.83,
+    "occasion": null,
+    "rang_ventes": 3964,
+    "chutes_rang_30j": 6,
+    "chutes_rang_90j": 13,
+    "ventes_estimees_30j": 6,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0DL6WPGPD",
+    "jetons_restants": 294
+   },
+   "asin": "B0DL6WPGPD",
+   "ean": "4068801381151",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 6,
+   "prix_plancher": {
+    "nom": "Adidas Streettalk Homme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 44.95,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DL6WPGPD"
+   },
+   "remise_sincere": true,
+   "mot_cle": "adidas streettalk homme",
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 39.56,
+     "marge_nette": 3.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.56,
+      "cout_achat": 28.1,
+      "frais_canal": 0.0,
+      "prelevements": 5.3,
+      "provision": 3.0,
+      "marge_nette": 3.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.112
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 39.56,
+     "marge_nette": 3.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.56,
+      "cout_achat": 28.1,
+      "frais_canal": 0.0,
+      "prelevements": 5.3,
+      "provision": 3.0,
+      "marge_nette": 3.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.112
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 39.56,
+     "marge_nette": 3.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 39.56,
+      "cout_achat": 28.1,
+      "frais_canal": 0.0,
+      "prelevements": 5.3,
+      "provision": 3.0,
+      "marge_nette": 3.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.112
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 44.95,
+     "marge_nette": -2.22,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.95,
+      "cout_achat": 28.1,
+      "frais_canal": 10.05,
+      "prelevements": 6.02,
+      "provision": 3.0,
+      "marge_nette": -2.22,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.079
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 44.95,
+     "marge_nette": -3.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.95,
+      "cout_achat": 28.1,
+      "frais_canal": 11.15,
+      "prelevements": 6.02,
+      "provision": 3.0,
+      "marge_nette": -3.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.118
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 44.95,
+     "marge_nette": -3.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.95,
+      "cout_achat": 28.1,
+      "frais_canal": 11.6,
+      "prelevements": 6.02,
+      "provision": 3.0,
+      "marge_nette": -3.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.134
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 44.95,
+     "marge_nette": -4.37,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.95,
+      "cout_achat": 28.1,
+      "frais_canal": 12.19,
+      "prelevements": 6.02,
+      "provision": 3.0,
+      "marge_nette": -4.37,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.156
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 44.95,
+     "marge_nette": -5.91,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.95,
+      "cout_achat": 28.1,
+      "frais_canal": 13.73,
+      "prelevements": 6.02,
+      "provision": 3.0,
+      "marge_nette": -5.91,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.21
+    }
+   ],
+   "prix_revente_prudent": 40.46,
+   "marge_verifiee": 3.94,
+   "rentabilite_verifiee": 0.14,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 2.2,
+   "rapport_concurrence": {
+    "requete": "Adidas Streettalk Homme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 316,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 69.87,
+       "titre": "Chaussures pour homme  adidas Streettalk IH6626 - 40 adidas",
+       "lien": "https://www.ebay.fr/itm/880004562625?_skw=Adidas+Streettalk+Homme&hash=itemcce45bfec1:g:asUAAeSwtgZqymze",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32601
+      },
+      "plus_cher": {
+       "prix": 80.18,
+       "titre": "Adidas Chaussures Homme Streettalk, Temps Libre - Couleur : Blanc/Noir/Or",
+       "lien": "https://www.ebay.fr/itm/237177804674?_skw=Adidas+Streettalk+Homme&hash=item3738e61782:g:4K0AAeSw~y1q2bnZ",
+       "vendeur": "sconti365_official_store",
+       "avis_vendeur": 11667
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 376,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 377,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Streettalk Homme",
+    "temperature_dealabs": 330,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "adidas streettalk homme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B00TU6JR5Y-arbES",
+   "titre": "Steinbach Double Marche en Plastique pour Jacuzzi 015050 [Amazon ES]",
+   "prix": 28.93,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B00TU6JR5Y",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 570,
+   "domaine": "autre",
+   "nom_produit": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 73.03,
+   "cout_achat": 33.93,
+   "marge_nette": 26.31,
+   "rentabilite": 0.775,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "Amazon.fr 82.99 € (moyenne 90 j 58.63 €), écart 57 % port compris, ventes 30 j 8, 4 vendeurs FR"
+   },
+   "score": 77.5,
+   "asin": "B00TU6JR5Y",
+   "ean": "9008748150507",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 7,
+   "ebay": {
+    "requete": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "Steinbach",
+    "asin": "B00TU6JR5Y",
+    "titre": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+    "ean": "9008748150507",
+    "pays": "FR",
+    "prix_neuf": 49.19,
+    "prix_amazon": 95.66,
+    "prix_tiers": 82.99,
+    "moyenne_90j": 59.08,
+    "plus_bas_90j": 49.19,
+    "occasion": 54.28,
+    "rang_ventes": 54436,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 26,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B00TU6JR5Y",
+    "jetons_restants": 295,
+    "prix_neuf_vendeur_tiers": 82.99
+   },
+   "prix_plancher": {
+    "nom": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 49.19,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B00TU6JR5Y"
+   },
+   "remise_sincere": true,
+   "mot_cle": "steinbach double marche plastique",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.es/dp/B00TU6JR5Y"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.29,
+     "marge_nette": 0.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.29,
+      "cout_achat": 33.93,
+      "frais_canal": 0.0,
+      "prelevements": 5.8,
+      "provision": 3.0,
+      "marge_nette": 0.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.29,
+     "marge_nette": 0.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.29,
+      "cout_achat": 33.93,
+      "frais_canal": 0.0,
+      "prelevements": 5.8,
+      "provision": 3.0,
+      "marge_nette": 0.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.29,
+     "marge_nette": 0.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.29,
+      "cout_achat": 33.93,
+      "frais_canal": 0.0,
+      "prelevements": 5.8,
+      "provision": 3.0,
+      "marge_nette": 0.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.19,
+     "marge_nette": -4.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.19,
+      "cout_achat": 33.93,
+      "frais_canal": 10.43,
+      "prelevements": 6.59,
+      "provision": 3.0,
+      "marge_nette": -4.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.14
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.19,
+     "marge_nette": -5.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.19,
+      "cout_achat": 33.93,
+      "frais_canal": 11.44,
+      "prelevements": 6.59,
+      "provision": 3.0,
+      "marge_nette": -5.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.17
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.19,
+     "marge_nette": -6.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.19,
+      "cout_achat": 33.93,
+      "frais_canal": 11.94,
+      "prelevements": 6.59,
+      "provision": 3.0,
+      "marge_nette": -6.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.185
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.19,
+     "marge_nette": -7.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.19,
+      "cout_achat": 33.93,
+      "frais_canal": 12.74,
+      "prelevements": 6.59,
+      "provision": 3.0,
+      "marge_nette": -7.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.209
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.19,
+     "marge_nette": -8.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.19,
+      "cout_achat": 33.93,
+      "frais_canal": 14.37,
+      "prelevements": 6.59,
+      "provision": 3.0,
+      "marge_nette": -8.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.256
+    }
+   ],
+   "prix_revente_prudent": 44.27,
+   "marge_verifiee": 1.41,
+   "rentabilite_verifiee": 0.042,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 54.28,
+    "haut": 54.28,
+    "position_neuf": 0.53
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 1.6,
+   "rapport_concurrence": {
+    "requete": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Steinbach Double Marche en Plastique pour Jacuzzi 015050",
+    "temperature_dealabs": 570,
+    "google_trends": {
+     "interet_moyen": 3,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      79,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      94,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "prix": 49.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 520,
+   "domaine": "autre",
+   "nom_produit": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobil",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 124.28,
+   "cout_achat": 54.99,
+   "marge_nette": 49.64,
+   "rentabilite": 0.903,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 141.23 €, baisse 65 %, rang 2586"
+   },
+   "score": 90.3,
+   "asin": "B0CHMBYWJM",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 7,
+   "ebay": {
+    "requete": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobil",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0CHMBYWJM",
+    "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x65x99cm, Gris",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 49.99,
+    "prix_amazon": null,
+    "prix_tiers": 49.99,
+    "moyenne_90j": 141.18,
+    "plus_bas_90j": 49.99,
+    "occasion": null,
+    "rang_ventes": 2626,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 16,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+    "jetons_restants": 296
+   },
+   "prix_plancher": {
+    "nom": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobil",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 49.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM"
+   },
+   "remise_sincere": true,
+   "mot_cle": "table langer pliable",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.99,
+     "marge_nette": -25.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 10.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -25.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.99,
+     "marge_nette": -26.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 11.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.476
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.99,
+     "marge_nette": -26.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.0,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.486
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.99,
+     "marge_nette": -27.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.85,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -27.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.501
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.99,
+     "marge_nette": -29.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 14.49,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -29.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.531
+    }
+   ],
+   "prix_revente_prudent": 44.99,
+   "marge_verifiee": -19.03,
+   "rentabilite_verifiee": -0.346,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobil",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobil",
+    "temperature_dealabs": 520,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "02a85d7393",
+   "titre": "Chaussure Samba Jp",
+   "prix": 65.0,
+   "devise": "EUR",
+   "marchand": "Adidas",
+   "lien": "https://www.adidas.fr/chaussure-samba-jp/JQ9056.html",
+   "pays": "FR",
+   "source": "pc:adidas-outlet",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.adidas.fr/chaussure-samba-jp/JQ9056.html"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Adidas Samba JP",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 115.0,
+   "cout_achat": 70.0,
+   "marge_nette": 26.59,
+   "rentabilite": 0.38,
+   "demande": 5,
+   "concurrence": 4.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle Samba JP en direct Adidas à 65 € (prix public ~110 €), forte hype sneakers, revente rapide 90-110 € neuf sur Vinted.",
+    "gptoss": "Sneaker recherchée, prix d'achat très attractif, marge nette correcte malgré forte concurrence."
+   },
+   "score": 45.6,
+   "ebay": {
+    "requete": "Adidas Samba JP",
+    "neuf": {
+     "nb": 39,
+     "min": 42.09,
+     "p25": 96.0,
+     "mediane": 121.37,
+     "max": 528.83
+    },
+    "occasion": {
+     "nb": 11,
+     "min": 42.3,
+     "p25": 101.65,
+     "mediane": 239.9,
+     "max": 363.7
+    },
+    "exemples": [
+     {
+      "titre": "adidas Samba JP blanc/noir semelle gomme homme US 11 EU 45 1/3 JQ9055",
+      "prix": "70.38",
+      "url": "https://www.ebay.fr/itm/137885076986?_skw=Adidas+Samba+JP&hash=item201a974dfa:g:ckAAAeSwsjVq47Qp"
+     },
+     {
+      "titre": "adidas Samba Jp Mixte argentées bleu, semelle caoutchouc, EU 38 2/3 Comme Neuves",
+      "prix": "42.30",
+      "url": "https://www.ebay.fr/itm/206520630665?_skw=Adidas+Samba+JP&hash=item301596bd89:g:36UAAeSwR-1qkTRo"
+     },
+     {
+      "titre": "ADIDAS CHILE 62'S SAMBA TAILLE UK 9 1/2 EUR 44 JP 28 CM",
+      "prix": "312.70",
+      "url": "https://www.ebay.fr/itm/365275897751?_skw=Adidas+Samba+JP&hash=item550c23df97:g:3soAAOSwcnhnVdWJ"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 96.0,
+     "DE": 66.5,
+     "IT": 63.26,
+     "ES": 64.51
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "adidas",
+    "asin": "B0FYF79B52",
+    "titre": "adidas Samba JP JQ7824 Crème Beige Noir, crème, 38 EU",
+    "ean": "4067905564606",
+    "pays": "FR",
+    "prix_neuf": 84.0,
+    "prix_amazon": null,
+    "prix_tiers": 84.0,
+    "moyenne_90j": 89.54,
+    "plus_bas_90j": 84.0,
+    "occasion": null,
+    "rang_ventes": null,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FYF79B52",
+    "jetons_restants": 283
+   },
+   "asin": "B0FYF79B52",
+   "ean": "4067905564606",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 0,
+   "prix_plancher": {
+    "nom": "Adidas Samba JP",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 84.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FYF79B52"
+   },
+   "remise_sincere": true,
+   "mot_cle": "adidas samba jp",
+   "annonces_ebay": 39,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 73.92,
+     "marge_nette": -8.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 73.92,
+      "cout_achat": 70.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.91,
+      "provision": 3.0,
+      "marge_nette": -8.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.128
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 73.92,
+     "marge_nette": -8.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 73.92,
+      "cout_achat": 70.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.91,
+      "provision": 3.0,
+      "marge_nette": -8.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.128
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 73.92,
+     "marge_nette": -8.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 73.92,
+      "cout_achat": 70.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.91,
+      "provision": 3.0,
+      "marge_nette": -8.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.128
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 84.0,
+     "marge_nette": -13.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 84.0,
+      "cout_achat": 70.0,
+      "frais_canal": 13.56,
+      "prelevements": 11.26,
+      "provision": 3.0,
+      "marge_nette": -13.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.197
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 84.0,
+     "marge_nette": -14.14,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 84.0,
+      "cout_achat": 70.0,
+      "frais_canal": 13.88,
+      "prelevements": 11.26,
+      "provision": 3.0,
+      "marge_nette": -14.14,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.202
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 84.0,
+     "marge_nette": -14.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 84.0,
+      "cout_achat": 70.0,
+      "frais_canal": 14.72,
+      "prelevements": 11.26,
+      "provision": 3.0,
+      "marge_nette": -14.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.214
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 84.0,
+     "marge_nette": -17.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 84.0,
+      "cout_achat": 70.0,
+      "frais_canal": 17.27,
+      "prelevements": 11.26,
+      "provision": 3.0,
+      "marge_nette": -17.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.25
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 84.0,
+     "marge_nette": -19.85,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 84.0,
+      "cout_achat": 70.0,
+      "frais_canal": 19.59,
+      "prelevements": 11.26,
+      "provision": 3.0,
+      "marge_nette": -19.85,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.284
+    }
+   ],
+   "prix_revente_prudent": 75.6,
+   "marge_verifiee": -7.53,
+   "rentabilite_verifiee": -0.108,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 101.65,
+    "haut": 239.9,
+    "position_neuf": 0.64
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Adidas Samba JP",
+    "pays": {
+     "FR": {
+      "nb_annonces": 10,
+      "total_ebay": 33,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 42.09,
+       "titre": "adidas Originals Samba JP Baskets homme argenté/bleu JR2181 EU 43 1/3",
+       "lien": "https://www.ebay.fr/itm/128181495778?_skw=Adidas+Samba+JP&hash=item1dd83667e2:g:zpsAAeSw3slq721x",
+       "vendeur": "cle_158074",
+       "avis_vendeur": 1
+      },
+      "plus_cher": {
+       "prix": 229.5,
+       "titre": "ADIDAS BECKENBAUER SAMBA SPEZIAL UK 11 1/2 EUR 46 2/3 JP 30 CM",
+       "lien": "https://www.ebay.fr/itm/407274241372?_skw=Adidas+Samba+JP&hash=item5ed36fbd5c:g:Vf8AAeSw4tZqxqLT",
+       "vendeur": "an_165564",
+       "avis_vendeur": 24
+      }
+     },
+     "DE": {
+      "nb_annonces": 55,
+      "total_ebay": 195,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 45.3,
+       "titre": "Adidas Samba JP White gum Men's sz 11.5 Brand New ",
+       "lien": "https://www.ebay.de/itm/117509728632?_skw=Adidas+Samba+JP&hash=item1b5c202978:g:cAcAAeSwaopqyDrx",
+       "vendeur": "vinzenso_lo",
+       "avis_vendeur": 374
+      },
+      "plus_cher": {
+       "prix": 250.0,
+       "titre": "ADIDAS ACHILL SAMBA GR. UK 11 EUR 46 JP 29,5 CM",
+       "lien": "https://www.ebay.de/itm/146637706639?_skw=Adidas+Samba+JP&hash=item222449d58f:g:VPYAAOSwesFoRyl2",
+       "vendeur": "grg091",
+       "avis_vendeur": 115
+      }
+     },
+     "IT": {
+      "nb_annonces": 359,
+      "total_ebay": 1283,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.57,
+       "titre": "Adidas Samba Jp Ragazzi Bianco Sneakers Scarpe Casual JQ1323",
+       "lien": "https://www.ebay.it/itm/407300602099?_skw=Adidas+Samba+JP&hash=item5ed501f8f3:g:hCMAAeSwDHxq95J5",
+       "vendeur": "official_shoebacca",
+       "avis_vendeur": 578703
+      },
+      "plus_cher": {
+       "prix": 242.57,
+       "titre": "Adidas Samba JP Glow Blue Core White Aurora Ink KJ7302 taglia donna",
+       "lien": "https://www.ebay.it/itm/358064318004?_skw=Adidas+Samba+JP&hash=item535e4be634:g:Q7IAAeSw4TxpTpdi",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18744
+      }
+     },
+     "ES": {
+      "nb_annonces": 412,
+      "total_ebay": 1330,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 42.69,
+       "titre": "JQ1327 Adidas Samba JP J “Blanco/Negro” Talla Y5/W6 NUEVA CAJA DAÑADA",
+       "lien": "https://www.ebay.es/itm/128017639289?_skw=Adidas+Samba+JP&hash=item1dce722779:g:0NQAAeSwjJxqeGYe",
+       "vendeur": "stussy535",
+       "avis_vendeur": 840
+      },
+      "plus_cher": {
+       "prix": 250.0,
+       "titre": "ADIDAS ACHILL SAMBA TALLA UK 11 EUR 46 JP 29,5 CM",
+       "lien": "https://www.ebay.es/itm/146637706639?_skw=Adidas+Samba+JP&hash=item222449d58f:g:VPYAAOSwesFoRyl2",
+       "vendeur": "grg091",
+       "avis_vendeur": 115
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Samba JP",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 25,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "adidas samba jp shoes",
+     "adidas samba jp black",
+     "adidas samba jp",
+     "adidas samba jp vs og",
+     "adidas samba jp white",
+     "adidas samba jp brown",
+     "adidas samba jp mens",
+     "adidas samba jp review",
+     "adidas samba jp athletic shoe - off white / magic beige / core black",
+     "adidas samba jp blue"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FWK3T3WC-neuf",
+   "titre": "Belfoyer Poussette Bébé 3 en 1 Pliable avec Dossier Inclinable, Moustiquaire, Coussin & Porte-Gobele",
+   "prix": 69.39,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0FWK3T3WC",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 464,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FWK3T3WC"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Belfoyer Poussette 3en1",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 74.39,
+   "marge_nette": 35.19,
+   "rentabilite": 0.473,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Achat à 69,39 €, revente possible à 130 € ; marge nette ~60 €, produit recherché et peu présent sur les annonces locales."
+   },
+   "score": 40.4,
+   "ebay": {
+    "requete": "Belfoyer Poussette 3en1",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0FWK3T3WC",
+    "titre": "Belfoyer Poussette Bébé 3 en 1 Pliable avec Dossier Inclinable, Moustiquaire, Coussin & Porte-Gobelet, Compacte avec Roues EVA Antichoc, 0–4 Ans(98 * 71 * 45cm,Kaki)",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 69.39,
+    "prix_amazon": null,
+    "prix_tiers": 69.39,
+    "moyenne_90j": 163.57,
+    "plus_bas_90j": 69.39,
+    "occasion": null,
+    "rang_ventes": 11180,
+    "chutes_rang_30j": 2,
+    "chutes_rang_90j": 3,
+    "ventes_estimees_30j": 2,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FWK3T3WC",
+    "jetons_restants": 281
+   },
+   "asin": "B0FWK3T3WC",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 2,
+   "prix_plancher": {
+    "nom": "Belfoyer Poussette 3en1",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 69.39,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FWK3T3WC"
+   },
+   "remise_sincere": true,
+   "mot_cle": "belfoyer poussette 3en1",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 61.06,
+     "marge_nette": -24.51,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.06,
+      "cout_achat": 74.39,
+      "frais_canal": 0.0,
+      "prelevements": 8.18,
+      "provision": 3.0,
+      "marge_nette": -24.51,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 61.06,
+     "marge_nette": -24.51,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.06,
+      "cout_achat": 74.39,
+      "frais_canal": 0.0,
+      "prelevements": 8.18,
+      "provision": 3.0,
+      "marge_nette": -24.51,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 61.06,
+     "marge_nette": -24.51,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 61.06,
+      "cout_achat": 74.39,
+      "frais_canal": 0.0,
+      "prelevements": 8.18,
+      "provision": 3.0,
+      "marge_nette": -24.51,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.329
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 69.39,
+     "marge_nette": -29.54,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.39,
+      "cout_achat": 74.39,
+      "frais_canal": 12.25,
+      "prelevements": 9.3,
+      "provision": 3.0,
+      "marge_nette": -29.54,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.397
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 69.39,
+     "marge_nette": -30.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.39,
+      "cout_achat": 74.39,
+      "frais_canal": 12.86,
+      "prelevements": 9.3,
+      "provision": 3.0,
+      "marge_nette": -30.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.405
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 69.39,
+     "marge_nette": -30.85,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.39,
+      "cout_achat": 74.39,
+      "frais_canal": 13.55,
+      "prelevements": 9.3,
+      "provision": 3.0,
+      "marge_nette": -30.85,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.415
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 69.39,
+     "marge_nette": -32.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.39,
+      "cout_achat": 74.39,
+      "frais_canal": 15.37,
+      "prelevements": 9.3,
+      "provision": 3.0,
+      "marge_nette": -32.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.439
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 69.39,
+     "marge_nette": -34.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 69.39,
+      "cout_achat": 74.39,
+      "frais_canal": 17.4,
+      "prelevements": 9.3,
+      "provision": 3.0,
+      "marge_nette": -34.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.466
+    }
+   ],
+   "prix_revente_prudent": 62.45,
+   "marge_verifiee": -23.31,
+   "rentabilite_verifiee": -0.313,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Belfoyer Poussette 3en1",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Belfoyer Poussette 3en1",
+    "temperature_dealabs": 464,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "e7d080fa69",
+   "titre": "Xbox 1er gén + 12 jeu + 3 DVDs demos. Console",
+   "prix": 100,
+   "devise": "EUR",
+   "marchand": "Leboncoin (recherches populaires)",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308900503",
+   "pays": "FR",
+   "source": "pc:leboncoin-tendances",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.leboncoin.fr/ad/consoles/3308900503"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Xbox One génération 1 + jeux",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 180.0,
+   "cout_achat": 105.0,
+   "marge_nette": 47.88,
+   "rentabilite": 0.456,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Achat à prix cassé, revente possible avec marge sur le marché de l'occasion"
+   },
+   "score": 38.9,
+   "ebay": {
+    "requete": "Xbox One génération 1 + jeux",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Jeu XBOX - DEAD OR ALIVE 3 - GER - Jeu en Français - Complet - 1ère Génération",
+      "prix": "9.99",
+      "url": "https://www.ebay.fr/itm/205469005278?_skw=Xbox+One+g%C3%A9n%C3%A9ration+1+%2B+jeux&hash=item2fd6e835de:g:NWwAAOSwsyZoGe8o"
+     },
+     {
+      "titre": "Generation Zero VF 1er édition [Complet] Xbox One",
+      "prix": "16.90",
+      "url": "https://www.ebay.fr/itm/143722882018?_skw=Xbox+One+g%C3%A9n%C3%A9ration+1+%2B+jeux&hash=item21768d23e2:g:bzYAAOSw9hZfVK45"
+     },
+     {
+      "titre": "JEU XBOX 1ERE GÉNÉRATION CRASH TAG TEAM RACING / COMPLET",
+      "prix": "16.15",
+      "url": "https://www.ebay.fr/itm/197022441881?_skw=Xbox+One+g%C3%A9n%C3%A9ration+1+%2B+jeux&hash=item2ddf73e199:g:2NQAAeSw0GZnsCmq"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Xbox One génération 1 + jeux",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "xbox one génération 1",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Xbox One génération 1 + jeux",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Xbox One génération 1 + jeux",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 62,
+     "interet_recent": 75,
+     "tendance": "stable",
+     "courbe": [
+      54,
+      62,
+      63,
+      56,
+      60,
+      61,
+      60,
+      61,
+      66,
+      67,
+      55,
+      57,
+      59,
+      57,
+      61,
+      67,
+      66,
+      53,
+      50,
+      56,
+      50,
+      51,
+      56,
+      59,
+      44,
+      51,
+      53,
+      52,
+      49,
+      64,
+      62,
+      45,
+      51,
+      59,
+      53,
+      55,
+      86,
+      100,
+      78,
+      68,
+      63,
+      53,
+      55,
+      64,
+      64,
+      54,
+      52,
+      60,
+      55,
+      56,
+      72,
+      67,
+      49,
+      50,
+      62,
+      55,
+      56,
+      71,
+      68,
+      52,
+      56,
+      56,
+      53,
+      58,
+      66,
+      69,
+      69,
+      65,
+      65,
+      63,
+      76,
+      77,
+      74,
+      63,
+      58,
+      72,
+      64,
+      63,
+      76,
+      77,
+      61,
+      61,
+      71,
+      67,
+      72,
+      83,
+      84,
+      65,
+      70,
+      87,
+      68,
+      76,
+      70
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "a9c04ea89c",
+   "titre": "Sac à main ALDO noir avec des anses arrondies, une poche avant à rabat imprimé, un détail chaîne et une longue bandoulière.",
+   "prix": 65,
+   "devise": "EUR",
+   "marchand": "Zalando Privé",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4SHX/articles/ZZO47LG0G-Q00?navigationSource=tp4u&catalog-type=top-picks",
+   "pays": "FR",
+   "source": "pc:zalando-prive",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.zalando-prive.fr/campaigns/ZZO4SHX/articles/ZZO47LG0G-Q00?navigationSource=tp4u&catalog-type=top-picks"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Aldo Black Handbag",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 70.0,
+   "marge_nette": 30.92,
+   "rentabilite": 0.442,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Sac à main de marque reconnue, prix d'achat très attractif par rapport au marché de l'occasion."
+   },
+   "score": 38.7,
+   "ebay": {
+    "requete": "Aldo Black Handbag",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Porte carte ALDO noir mini.",
+      "prix": "20.62",
+      "url": "https://www.ebay.fr/itm/202655363577?_skw=Aldo+Black+Handbag&hash=item2f2f3371f9:g:wQ4AAOSw0bpctjn8"
+     },
+     {
+      "titre": "Sac pochette Aldo - Noir",
+      "prix": "35.92",
+      "url": "https://www.ebay.fr/itm/254773889531?_skw=Aldo+Black+Handbag&hash=item3b51b509fb:g:cjYAAOSw5Bde7i-D"
+     },
+     {
+      "titre": "Sac à bandoulière noir Aldo",
+      "prix": "28.73",
+      "url": "https://www.ebay.fr/itm/283968219126?_skw=Aldo+Black+Handbag&hash=item421dd327f6:g:mHQAAOSwqDpfKJaa"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": 38.63,
+     "ES": 38.31
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Aldo Black Handbag",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "aldo handbag",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0F6393YXK-arbES",
+   "titre": "PUMA Baskets Smash 30 Mixte, Totally Taupe-Warm White, 45 EU [Amazon ES]",
+   "prix": 30.95,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B0F6393YXK",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 310,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": null,
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Puma Smash 30 Mixte",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 60.0,
+   "cout_achat": 35.95,
+   "marge_nette": 13.01,
+   "rentabilite": 0.362,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Modèle best-seller Puma, prix ES 31€ + port ~8€, revente 55-65€ neuf pointure 45 (homme), rotation rapide."
+   },
+   "score": 27.0,
+   "ebay": {
+    "requete": "Puma Smash 30 Mixte",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "PUMA",
+    "asin": "B0F6393YXK",
+    "titre": "PUMA Baskets Smash 30 Mixte, Totally Taupe-Warm White, 45 EU",
+    "ean": "4069161503818",
+    "pays": "FR",
+    "prix_neuf": 49.95,
+    "prix_amazon": 54.93,
+    "prix_tiers": 49.95,
+    "moyenne_90j": 53.25,
+    "plus_bas_90j": 27.5,
+    "occasion": null,
+    "rang_ventes": 1500,
+    "chutes_rang_30j": 31,
+    "chutes_rang_90j": 96,
+    "ventes_estimees_30j": 31,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0F6393YXK",
+    "jetons_restants": 259
+   },
+   "asin": "B0F6393YXK",
+   "ean": "4069161503818",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 31,
+   "prix_plancher": {
+    "nom": "Puma Smash 30 Mixte",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 49.95,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0F6393YXK"
+   },
+   "remise_sincere": true,
+   "mot_cle": "puma smash 30 mixte",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.96,
+     "marge_nette": -0.88,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.96,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -0.88,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.024
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.96,
+     "marge_nette": -0.88,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.96,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -0.88,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.024
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.96,
+     "marge_nette": -0.88,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.96,
+      "cout_achat": 35.95,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -0.88,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.024
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.95,
+     "marge_nette": -6.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.95,
+      "cout_achat": 35.95,
+      "frais_canal": 10.5,
+      "prelevements": 6.69,
+      "provision": 3.0,
+      "marge_nette": -6.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.172
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.95,
+     "marge_nette": -7.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.95,
+      "cout_achat": 35.95,
+      "frais_canal": 11.5,
+      "prelevements": 6.69,
+      "provision": 3.0,
+      "marge_nette": -7.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.2
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.95,
+     "marge_nette": -7.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.95,
+      "cout_achat": 35.95,
+      "frais_canal": 12.0,
+      "prelevements": 6.69,
+      "provision": 3.0,
+      "marge_nette": -7.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.214
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.95,
+     "marge_nette": -8.54,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.95,
+      "cout_achat": 35.95,
+      "frais_canal": 12.84,
+      "prelevements": 6.69,
+      "provision": 3.0,
+      "marge_nette": -8.54,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.238
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.95,
+     "marge_nette": -10.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.95,
+      "cout_achat": 35.95,
+      "frais_canal": 14.48,
+      "prelevements": 6.69,
+      "provision": 3.0,
+      "marge_nette": -10.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.283
+    }
+   ],
+   "prix_revente_prudent": 44.96,
+   "marge_verifiee": -0.01,
+   "rentabilite_verifiee": -0.0,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 : vérification arrêtée"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 12,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 29,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B00TU6JR5Y-arbES",
+   "titre": "Steinbach Double Marche en Plastique pour Jacuzzi 015050 [Amazon ES]",
+   "temperature": 570,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 28.93,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B00TU6JR5Y",
+   "date": "2026-11-12T07:36",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "9008748150507",
+   "asin": "B00TU6JR5Y",
+   "ref_fr": 82.99,
+   "ventes_30j": 8,
+   "vendeurs": 4,
+   "description": "Amazon.fr 82.99 € (moyenne 90 j 58.63 €), écart 57 % port compris, ventes 30 j 8, 4 vendeurs FR"
+  },
+  {
+   "id": "041fb5a2f9",
+   "titre": "Leroy Merlin",
+   "temperature": 568,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 80,
+   "devise": "EUR",
+   "lien": "https://www.leroymerlin.fr/produits/perceuse-a-percussion-18-v-dhp490wvx7-2-batteries-makita-71270905.html",
+   "date": "2026-11-14T03:10",
+   "source": "pc:leroymerlin-promos",
+   "pays": "FR",
+   "description": "prix initial 279 €, -71 %.",
+   "prix_verifie": false
+  },
+  {
+   "id": "keepa-B0FRFPMX3W-arbES",
+   "titre": "Velaze Cocotte en Fonte Ronde Émaillée Anti-adhésive 4.8L Ø24 cm avec Couvercle pour Pain, [Amazon ES]",
+   "temperature": 540,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 39.44,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FRFPMX3W",
+   "date": "2026-11-12T11:34",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "6926681761563",
+   "asin": "B0FRFPMX3W",
+   "ref_fr": 99.99,
+   "ventes_30j": 8,
+   "vendeurs": 2,
+   "description": "Amazon.fr 99.99 € (moyenne 90 j 84.01 €), écart 54 % port compris, ventes 30 j 8, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "temperature": 520,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "date": "2026-11-14T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CHMBYWJM",
+   "ref_fr": 141.23,
+   "description": "moyenne 90 j 141.23 €, baisse 65 %, rang 2586"
+  },
+  {
+   "id": "keepa-B0D9Y34BB6-neuf",
+   "titre": "DURATECH Ciseaux Multi-Usages 250 mm, Ciseaux Industriels Robustes",
+   "temperature": 480,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D9Y34BB6",
+   "date": "2026-11-14T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0D9Y34BB6",
+   "ref_fr": 37.91,
+   "description": "moyenne 90 j 37.91 €, baisse 60 %, rang 17381"
+  },
+  {
+   "id": "keepa-B0FWK3T3WC-neuf",
+   "titre": "Belfoyer Poussette Bébé 3 en 1 Pliable avec Dossier Inclinable, Moustiquaire, Coussin & Porte-Gobele",
+   "temperature": 464,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 69.39,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FWK3T3WC",
+   "date": "2026-11-14T02:58",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FWK3T3WC",
+   "ref_fr": 163.67,
+   "description": "moyenne 90 j 163.67 €, baisse 58 %, rang 10645"
+  },
+  {
+   "id": "keepa-B0GQZ1WSV4-neuf",
+   "titre": "languo Stylos à Bille Multicolores 0,8 mm,120 Couleurs,18 Stylos 10-en-1",
+   "temperature": 440,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GQZ1WSV4",
+   "date": "2026-11-14T03:39",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0GQZ1WSV4",
+   "ref_fr": 42.53,
+   "description": "moyenne 90 j 42.53 €, baisse 55 %, rang 24188"
+  },
+  {
+   "id": "keepa-B0C8J9CPXQ-arbDE",
+   "titre": "BOSS Hommes Westart Sweat Regular en Molleton de Coton avec Patch logoté [Amazon DE]",
+   "temperature": 440,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 59.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0C8J9CPXQ",
+   "date": "2026-11-12T06:33",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4063541966835",
+   "asin": "B0C8J9CPXQ",
+   "ref_fr": 119.95,
+   "ventes_30j": 7,
+   "vendeurs": 2,
+   "description": "Amazon.fr 119.95 € (moyenne 90 j 106.25 €), écart 44 % port compris, ventes 30 j 7, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FTMS1PNB-arbDE",
+   "titre": "PUMA Baskets Shuffle Downtown Mixte, White-Moss Veil, 41 EU [Amazon DE]",
+   "temperature": 420,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 30.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0FTMS1PNB",
+   "date": "2026-11-12T09:29",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4070032716909",
+   "asin": "B0FTMS1PNB",
+   "ref_fr": 65.0,
+   "ventes_30j": 5,
+   "vendeurs": 1,
+   "description": "Amazon.fr 65.0 € (moyenne 90 j 50.78 €), écart 42 % port compris, ventes 30 j 5, 1 vendeurs FR"
+  },
+  {
+   "id": "cb9021aec2",
+   "titre": "La nutrition sans intox - 40 idées reçues décortiquées pour faire de meilleurs choix pour votre santé !, image principale du produit",
+   "temperature": 352,
+   "categorie": "",
+   "marchand": "Cultura",
+   "prix": 8.99,
+   "devise": "EUR",
+   "lien": "https://www.cultura.com/p-la-nutrition-sans-intox-40-idees-recues-decortiquees-pour-faire-de-meilleurs-choix-pour-votre-sante-13479250.html",
+   "date": "2026-11-14T03:20",
+   "source": "pc:cultura-bonsplans",
+   "pays": "FR",
+   "description": "prix initial 15.99 €, -44 %."
+  },
+  {
+   "id": "keepa-B07XVSRFXV-arbES",
+   "titre": "Skechers D'Lux Walker-Infinite Motion 149023-BBK, Womens Sneakers,Sports Shoes, Black, 36  [Amazon ES]",
+   "temperature": 350,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 46.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B07XVSRFXV",
+   "date": "2026-11-12T11:46",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0194428380414",
+   "asin": "B07XVSRFXV",
+   "ref_fr": 82.47,
+   "ventes_30j": 11,
+   "vendeurs": 7,
+   "description": "Amazon.fr 82.47 € (moyenne 90 j 77.81 €), écart 35 % port compris, ventes 30 j 11, 7 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0DL6WPGPD-arbDE",
+   "titre": "adidas Homme Streettalk Shoes, Core Black/Core Black/Off White, 38 EU [Amazon DE]",
+   "temperature": 330,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 23.1,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0DL6WPGPD",
+   "date": "2026-11-12T20:59",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4068801381151",
+   "asin": "B0DL6WPGPD",
+   "ref_fr": 44.95,
+   "ventes_30j": 5,
+   "vendeurs": 1,
+   "description": "Amazon.fr 44.95 € (moyenne 90 j 41.65 €), écart 33 % port compris, ventes 30 j 5, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0GQ6FG2PB-arbDE",
+   "titre": "Scream 7 [Blu-ray] [Amazon DE]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 16.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0GQ6FG2PB",
+   "date": "2026-11-12T06:02",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4061229694919",
+   "asin": "B0GQ6FG2PB",
+   "ref_fr": 35.1,
+   "ventes_30j": 27,
+   "vendeurs": 5,
+   "description": "Amazon.fr 35.1 € (moyenne 90 j 34.55 €), écart 32 % port compris, ventes 30 j 27, 5 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0B3MK4LKX-arbIT",
+   "titre": "Skechers Femme Summits Bright Charmer Espadrilles, Navy & Light Blue Mesh/Trim, 40 EU [Amazon IT]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 36.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0B3MK4LKX",
+   "date": "2026-11-12T08:38",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "0196642057226",
+   "asin": "B0B3MK4LKX",
+   "ref_fr": 65.0,
+   "ventes_30j": 6,
+   "vendeurs": 8,
+   "description": "Amazon.fr 65.0 € (moyenne 90 j 61.36 €), écart 32 % port compris, ventes 30 j 6, 8 vendeurs FR"
+  },
+  {
+   "id": "keepa-B001TCKHR4-arbDE",
+   "titre": "Anita Comfort - Soutien-Gorge de Tous Les Jours - Femme - Noir (Schwarz 001) - 125F (Taill [Amazon DE]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 35.96,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B001TCKHR4",
+   "date": "2026-11-12T15:41",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4009706021209",
+   "asin": "B001TCKHR4",
+   "ref_fr": 62.87,
+   "ventes_30j": 6,
+   "vendeurs": 5,
+   "description": "Amazon.fr 62.87 € (moyenne 90 j 64.03 €), écart 32 % port compris, ventes 30 j 6, 5 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FP2KCSBC-arbDE",
+   "titre": "Skechers UNO Baskets compensées Safari Daze pour Femme, Blanc cassé, 40 EU [Amazon DE]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0FP2KCSBC",
+   "date": "2026-11-13T10:03",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "0199252498311",
+   "asin": "B0FP2KCSBC",
+   "ref_fr": 83.98,
+   "ventes_30j": 6,
+   "vendeurs": 7,
+   "description": "Amazon.fr 83.98 € (moyenne 90 j 78.34 €), écart 32 % port compris, ventes 30 j 6, 7 vendeurs FR"
+  },
+  {
+   "id": "keepa-B00KMUQVHY-arbDE",
+   "titre": "walther design Album Photo Rouge 30 x 30 cm avec découpe de Couverture, Pack Double, Fun F [Amazon DE]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 15.49,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B00KMUQVHY",
+   "date": "2026-11-12T10:53",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4004122075713",
+   "asin": "B00KMUQVHY",
+   "ref_fr": 33.09,
+   "ventes_30j": 5,
+   "vendeurs": 2,
+   "description": "Amazon.fr 33.09 € (moyenne 90 j 37.33 €), écart 32 % port compris, ventes 30 j 5, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0B1MZ3RP5-arbIT",
+   "titre": "Reebok Femme Glisse Basket, FTWR Gomme en Caoutchouc Blanc Froid 2 01, 39 EU [Amazon IT]",
+   "temperature": 320,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 29.02,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0B1MZ3RP5",
+   "date": "2026-11-12T12:31",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "4066748668021",
+   "asin": "B0B1MZ3RP5",
+   "ref_fr": 53.15,
+   "ventes_30j": 5,
+   "vendeurs": 7,
+   "description": "Amazon.fr 53.15 € (moyenne 90 j 58.8 €), écart 32 % port compris, ventes 30 j 5, 7 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0F6393YXK-arbES",
+   "titre": "PUMA Baskets Smash 30 Mixte, Totally Taupe-Warm White, 45 EU [Amazon ES]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 30.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0F6393YXK",
+   "date": "2026-11-12T08:58",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "4069161503818",
+   "asin": "B0F6393YXK",
+   "ref_fr": 54.93,
+   "ventes_30j": 30,
+   "vendeurs": 4,
+   "description": "Amazon.fr 54.93 € (moyenne 90 j 53.09 €), écart 31 % port compris, ventes 30 j 30, 4 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0F8VSM83V-arbDE",
+   "titre": "SHareconn 229cm Sapin de Noël avec 1569 Pointes de Branches en PE et PVC [Amazon DE]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 109.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0F8VSM83V",
+   "date": "2026-11-12T04:59",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "6978421747542",
+   "asin": "B0F8VSM83V",
+   "ref_fr": 169.99,
+   "ventes_30j": 18,
+   "vendeurs": 1,
+   "description": "Amazon.fr 169.99 € (moyenne 90 j 165.88 €), écart 31 % port compris, ventes 30 j 18, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FBS2PQ3F-arbIT",
+   "titre": "Reebok Baskets Glide pour Femme, FTWRWHITE/FTWRWHITE/MUTEDMAUVE, 37,5 EU [Amazon IT]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 34.19,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0FBS2PQ3F",
+   "date": "2026-11-13T09:09",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "1200179297945",
+   "asin": "B0FBS2PQ3F",
+   "ref_fr": 60.0,
+   "ventes_30j": 7,
+   "vendeurs": 1,
+   "description": "Amazon.fr 60.0 € (moyenne 90 j 55.63 €), écart 31 % port compris, ventes 30 j 7, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B000WBQYW0-arbDE",
+   "titre": "Triumph Femme Triaction Trophy N Bra, Noir, 100C EU [Amazon DE]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 24.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B000WBQYW0",
+   "date": "2026-11-13T19:15",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4000660366788",
+   "asin": "B000WBQYW0",
+   "ref_fr": 45.64,
+   "ventes_30j": 5,
+   "vendeurs": 5,
+   "description": "Amazon.fr 45.64 € (moyenne 90 j 42.42 €), écart 31 % port compris, ventes 30 j 5, 5 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07BJHMSTL-arbDE",
+   "titre": "G-Star Femme Jean Midge Straight, Multicolore (medium indigo aged D07145-8968-6028), 28W / [Amazon DE]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 55.69,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B07BJHMSTL",
+   "date": "2026-11-14T02:47",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "8719369935480",
+   "asin": "B07BJHMSTL",
+   "ref_fr": 90.75,
+   "ventes_30j": 5,
+   "vendeurs": 4,
+   "description": "Amazon.fr 90.75 € (moyenne 90 j 80.0 €), écart 31 % port compris, ventes 30 j 5, 4 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FKBG7GXS-arbDE",
+   "titre": "DANISH ENDURANCE Ensemble Thermique Mérinos Femme, 250 g/m² Bleu Marine XXL [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 84.45,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0FKBG7GXS",
+   "date": "2026-11-13T18:33",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "5713205041697",
+   "asin": "B0FKBG7GXS",
+   "ref_fr": 129.95,
+   "ventes_30j": 9,
+   "vendeurs": 1,
+   "description": "Amazon.fr 129.95 € (moyenne 90 j 116.58 €), écart 30 % port compris, ventes 30 j 9, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0BGCZFZKT-arbDE",
+   "titre": "Reebok Mixte Club C 85 Vintage Flat-Sheets, Black Ftwwht Pugry2, 44.5 EU [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 66.45,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0BGCZFZKT",
+   "date": "2026-11-14T00:09",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4065418222617",
+   "asin": "B0BGCZFZKT",
+   "ref_fr": 104.49,
+   "ventes_30j": 9,
+   "vendeurs": 3,
+   "description": "Amazon.fr 104.49 € (moyenne 90 j 103.94 €), écart 30 % port compris, ventes 30 j 9, 3 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FDDBP6CR-arbES",
+   "titre": "Crocs Classic Clog, Unisex, 33-34 EU, Frappé [Amazon ES]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 32.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FDDBP6CR",
+   "date": "2026-11-13T14:51",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0198445308840",
+   "asin": "B0FDDBP6CR",
+   "ref_fr": 57.32,
+   "ventes_30j": 8,
+   "vendeurs": 3,
+   "description": "Amazon.fr 57.32 € (moyenne 90 j 63.61 €), écart 30 % port compris, ventes 30 j 8, 3 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0017OYA7M-arbDE",
+   "titre": "Anita Comfort - Soutien-Gorge de Tous Les Jours - Femme - Blanc (Weiß 006) - 100F (Taille  [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 36.88,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0017OYA7M",
+   "date": "2026-11-12T15:20",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4009706342069",
+   "asin": "B0017OYA7M",
+   "ref_fr": 62.87,
+   "ventes_30j": 7,
+   "vendeurs": 5,
+   "description": "Amazon.fr 62.87 € (moyenne 90 j 62.76 €), écart 30 % port compris, ventes 30 j 7, 5 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07M7KN1W8-arbIT",
+   "titre": "Naturino Chaussures Premiers Pas en Cuir, Jaune 17 [Amazon IT]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B07M7KN1W8",
+   "date": "2026-11-12T17:17",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "8052324292885",
+   "asin": "B07M7KN1W8",
+   "ref_fr": 59.8,
+   "ventes_30j": 7,
+   "vendeurs": 1,
+   "description": "Amazon.fr 59.8 € (moyenne 90 j 54.14 €), écart 30 % port compris, ventes 30 j 7, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FZBPJ6ML-arbIT",
+   "titre": "PUMA Doudoune à Capuche Essentials Enfant et Adolescent 128, Misty Pink [Amazon IT]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 29.49,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0FZBPJ6ML",
+   "date": "2026-11-13T02:58",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "4070033518564",
+   "asin": "B0FZBPJ6ML",
+   "ref_fr": 52.45,
+   "ventes_30j": 6,
+   "vendeurs": 5,
+   "description": "Amazon.fr 52.45 € (moyenne 90 j 53.09 €), écart 30 % port compris, ventes 30 j 6, 5 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0C6YHB2WT-arbIT",
+   "titre": "Tamaris Femmes Baskets Basses blanc 40 EU [Amazon IT]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 35.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0C6YHB2WT",
+   "date": "2026-11-12T07:55",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "4064195226221",
+   "asin": "B0C6YHB2WT",
+   "ref_fr": 61.6,
+   "ventes_30j": 5,
+   "vendeurs": 9,
+   "description": "Amazon.fr 61.6 € (moyenne 90 j 60.77 €), écart 30 % port compris, ventes 30 j 5, 9 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0GT95N5ZF-arbDE",
+   "titre": "Sidi Global Market Papier Cartonné 50x65 Noir 185g 125 Feuilles [Amazon DE]",
+   "temperature": 290,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 63.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0GT95N5ZF",
+   "date": "2026-11-12T07:14",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "8447145007143",
+   "asin": "B0GT95N5ZF",
+   "ref_fr": 99.04,
+   "ventes_30j": 24,
+   "vendeurs": 1,
+   "description": "Amazon.fr 99.04 € (moyenne 90 j 124.06 €), écart 29 % port compris, ventes 30 j 24, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FP2NSP41-arbDE",
+   "titre": "Bartuke Tapis de litière pour chat, 34\" x 22\" tapis de piège à litière en silicone pour co [Amazon DE]",
+   "temperature": 290,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0FP2NSP41",
+   "date": "2026-11-13T12:54",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0FP2NSP41",
+   "ref_fr": 27.99,
+   "ventes_30j": 8,
+   "vendeurs": 1,
+   "description": "Amazon.fr 27.99 € (moyenne 90 j 27.99 €), écart 29 % port compris, ventes 30 j 8, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B00410A4FG-arbDE",
+   "titre": "Roces RSK 2 450572-001 Patins à Glace pour Homme Noir Pointure 47 [Amazon DE]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B00410A4FG",
+   "date": "2026-11-12T06:22",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "8020187727059",
+   "asin": "B00410A4FG",
+   "ref_fr": 99.9,
+   "ventes_30j": 14,
+   "vendeurs": 3,
+   "description": "Amazon.fr 99.9 € (moyenne 90 j 97.0 €), écart 28 % port compris, ventes 30 j 14, 3 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FBGCDGFM-arbIT",
+   "titre": "Reebok Court Advance Vulc Baskets pour Femme Craie/Rose poussiéreux Taille 37 EU [Amazon IT]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 25.64,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0FBGCDGFM",
+   "date": "2026-11-13T17:51",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "1200179864819",
+   "asin": "B0FBGCDGFM",
+   "ref_fr": 45.0,
+   "ventes_30j": 9,
+   "vendeurs": 3,
+   "description": "Amazon.fr 45.0 € (moyenne 90 j 41.2 €), écart 28 % port compris, ventes 30 j 9, 3 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0FX5GJSDV-arbIT",
+   "titre": "New Balance 574 Chaussure de Gymnastique [Amazon IT]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 72.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0FX5GJSDV",
+   "date": "2026-11-12T21:31",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "0199063012362",
+   "asin": "B0FX5GJSDV",
+   "ref_fr": 110.2,
+   "ventes_30j": 7,
+   "vendeurs": 8,
+   "description": "Amazon.fr 110.2 € (moyenne 90 j 115.44 €), écart 28 % port compris, ventes 30 j 7, 8 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07N118XX3-arbES",
+   "titre": "CASARIA Bac à Fleurs en Polyrotin Noir [Amazon ES]",
+   "temperature": 270,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 58.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B07N118XX3",
+   "date": "2026-11-12T19:15",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "4250525360875",
+   "asin": "B07N118XX3",
+   "ref_fr": 89.99,
+   "ventes_30j": 9,
+   "vendeurs": 1,
+   "description": "Amazon.fr 89.99 € (moyenne 90 j 87.17 €), écart 27 % port compris, ventes 30 j 9, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B085VDGLHR-arbDE",
+   "titre": "INMOZATA Lot de 2 Pieds de Table Metal 40 cm Hauteur x 30 cm Largeur Pied de Table Basse e [Amazon DE]",
+   "temperature": 270,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 50.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B085VDGLHR",
+   "date": "2026-11-13T09:42",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B085VDGLHR",
+   "ref_fr": 78.99,
+   "ventes_30j": 9,
+   "vendeurs": 1,
+   "description": "Amazon.fr 78.99 € (moyenne 90 j 78.99 €), écart 27 % port compris, ventes 30 j 9, 1 vendeurs FR"
+  },
+  {
+   "id": "88d943aaec",
+   "titre": "Nike Sportswear Tech Fleece Windrunner Sweat à capuche à zip pour femme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/sweat-a-capuche-a-zip-nike-sportswear-tech-fleece-windrunner-pour-femme-m12oUTEX/HV6747-010",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 119.99 €, -30 %. Nike HV6747-010 ; couleur Noir/Noir"
+  },
+  {
+   "id": "c7eae51bdb",
+   "titre": "Nike Sportswear Tech Fleece Windrunner Sweat à capuche à zip pour femme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/sweat-a-capuche-a-zip-nike-sportswear-tech-fleece-windrunner-pour-femme-m12oUTEX/HV6747-063",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 119.99 €, -30 %. Nike HV6747-063 ; couleur Dark Grey Heather/Noir"
+  },
+  {
+   "id": "34739a693e",
+   "titre": "Nike Shox NZ Chaussure pour homme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 90.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-nike-shox-pour-homme-Y01XNpCg/IQ8264-001",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 129.99 €, -30 %. Nike IQ8264-001 ; couleur Smoke Grey/Grey Fog/Off White/Smoke Grey"
+  },
+  {
+   "id": "0177f2b727",
+   "titre": "Nike Air Max Moto 2K Chaussure pour homme",
+   "temperature": 240,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 97.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussures-nike-air-max-moto-2k-pour-homme-WremRdJv/IR0072-002",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 139.99 €, -30 %. Nike IR0072-002 ; couleur Noir/Noir/Anthracite/Noir"
+  },
+  {
+   "id": "65de27da92",
+   "titre": "Marvel - Lampe 3D LED Spider-Man Miles Morales Face 3D",
+   "temperature": 240,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 174.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00532040.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -30 %. Lampe 3D LED Spider-Man Miles Morales Face 3D."
+  },
+  {
+   "id": "keepa-B0GT7Y8Q6N-arbIT",
+   "titre": "NYXI Warrior Lite Contrôleur sans fil GameCube Style pour Switch 2/PC/iOS/Android, Joystic [Amazon IT]",
+   "temperature": 240,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 25.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0GT7Y8Q6N",
+   "date": "2026-11-13T00:00",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": null,
+   "asin": "B0GT7Y8Q6N",
+   "ref_fr": 43.69,
+   "ventes_30j": 14,
+   "vendeurs": 1,
+   "description": "Amazon.fr 43.69 € (moyenne 90 j 44.76 €), écart 24 % port compris, ventes 30 j 14, 1 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0BVPW98TC-arbIT",
+   "titre": "Tree Hut Gommage pour le corps (510 g, Blue Lagoon) [Amazon IT]",
+   "temperature": 230,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 15.55,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B0BVPW98TC",
+   "date": "2026-11-12T04:59",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "0075371002915",
+   "asin": "B0BVPW98TC",
+   "ref_fr": 29.22,
+   "ventes_30j": 33,
+   "vendeurs": 7,
+   "description": "Amazon.fr 29.22 € (moyenne 90 j 29.13 €), écart 23 % port compris, ventes 30 j 33, 7 vendeurs FR"
+  },
+  {
+   "id": "keepa-B0GS5RLFK6-arbDE",
+   "titre": "GAESHOW 40 cm + 60 cm Acier Inoxydable Couteau a Enduire Spatule Enduit Set [Amazon DE]",
+   "temperature": 210,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 24.69,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0GS5RLFK6",
+   "date": "2026-11-14T01:55",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0GS5RLFK6",
+   "ref_fr": 39.99,
+   "ventes_30j": 18,
+   "vendeurs": 2,
+   "description": "Amazon.fr 39.99 € (moyenne 90 j 41.69 €), écart 21 % port compris, ventes 30 j 18, 2 vendeurs FR"
+  },
+  {
+   "id": "82c13a02c7",
+   "titre": "Robot Aspirador y Friegasuelos Dreame L50s Pro Ultra Blanco (30.000 Pa, Base Autovaciado 3,2L, Depósito Agua 4,5L)",
+   "temperature": 204,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "LDLC",
+   "prix": 499.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/robot-aspirador-y-friegasuelos-dreame-l50s-pro-ultra-blanco-30000-pa-base-autovaciado-32l-deposito-agua-45l-2067074",
+   "date": "Sat, 14 Nov 2026 04:34:44 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "499€ - LDLC Chollazo en hogar y limpieza con este robot aspirador de gama alta Dreame L50s Pro Ultra rebajado a 499 € (32% de descuento) en los Black Days de LDLC[span_1..."
+  },
+  {
+   "id": "keepa-B083DM83N5-arbDE",
+   "titre": "Bosch 1x Scie trépan PRO Multi Material Power Change Plus [Amazon DE]",
+   "temperature": 190,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 10.91,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B083DM83N5",
+   "date": "2026-11-12T06:33",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "6949509240279",
+   "asin": "B083DM83N5",
+   "ref_fr": 22.21,
+   "ventes_30j": 27,
+   "vendeurs": 8,
+   "description": "Amazon.fr 22.21 € (moyenne 90 j 22.55 €), écart 19 % port compris, ventes 30 j 27, 8 vendeurs FR"
+  },
+  {
+   "id": "beba18dacf",
+   "titre": "2N - Module d'interphone à 5 boutons IP Verso – 9155035",
+   "temperature": 152,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 202.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582774.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -19 %. 2N - Module d'interphone à 5 boutons IP Verso – 9155035"
+  },
+  {
+   "id": "0f128580a6",
+   "titre": "Prime: Ramones - Ramones Vinyl LP 180 Gramm",
+   "temperature": 108,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 19.19,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-ramones-ramones-vinyl-lp-180-gramm-2870974",
+   "date": "Sat, 14 Nov 2026 05:05:07 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "19,19€ - Amazon Mit ihrem gleichnamigen Debütalbum aus dem Jahr 1976 lösten die Ramones die Punkrock-Bewegung aus und belebten den Rock'n'Roll auf einem seiner Tiefpunkte mit H..."
+  },
+  {
+   "id": "780007d1cc",
+   "titre": "The Witcher 3 : Wild Hunt - Complete Edition sur PS5",
+   "temperature": 100,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 22.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/the-witcher-3-wild-hunt-complete-edition-ps5-3454939",
+   "date": "Sat, 14 Nov 2026 04:45:48 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "22,99€ - E.Leclerc Contenu bonus : - Des améliorations graphiques. - Toutes les extensions. - Des objets bonus inspirés de la série Netflix. Vous incar..."
+  },
+  {
+   "id": "4621d0aeb6",
+   "titre": "Papier Toilette Kleenex ® Coussiné P6, Lot de 7 16.12 au lieu de 24.43€ https://www.amazon.fr/dp/B0DWFT498H/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 24.43,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DWFT498H/?tag=chollosyofe0b-20",
+   "date": "2026-11-12T05:53",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Papier Toilette Kleenex ® Coussiné P6, Lot de 7 16.12 au lieu de 24.43€ https://www.amazon.fr/dp/B0DWFT498H/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 716.12
+  },
+  {
+   "id": "5567c20f89",
+   "titre": "Kit d’entretien ECOVACS T90S PRO OMNI 549 au lieu de 799€ https://www.amazon.fr/dp/B0H9RMS9WV/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 549.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H9RMS9WV/?tag=chollosyofe0b-20",
+   "date": "2026-11-12T08:53",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Kit d’entretien ECOVACS T90S PRO OMNI 549 au lieu de 799€ https://www.amazon.fr/dp/B0H9RMS9WV/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 799.0
+  },
+  {
+   "id": "c0f5819025",
+   "titre": "Chaise \"Taho\" Atmosphèra",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Atmosphera",
+   "prix": 12.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaise-taho-atmosphera-3454989",
+   "date": "Sat, 14 Nov 2026 05:02:41 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "12,49€ - Atmosphera Belle réduction chez Atmosphera sur la chaise Taho grise, proposée à seulement 12,49 € au lieu de 24,99 €, soit une remise de 50 % ! Avec son design d'inspiration scandinave, cette chaise dispose d'une assise en polypropylène et de pieds en acier avec une finition imitation bois."
+  },
+  {
+   "id": "11cd924f0f",
+   "titre": "L'Or Espresso Café - 100 Capsules Splendente Intensité 7",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Amazon",
+   "prix": 23.79,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lor-espresso-cafe-100-capsules-splendente-intensite-7-3454988",
+   "date": "Sat, 14 Nov 2026 04:49:05 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "23,79€ - Amazon Prévoyez économisez"
+  },
+  {
+   "id": "3a24e31441",
+   "titre": "L'Or Espresso Café - 200 Capsules Delizioso Intensité 5 Compatibles Nespresso*, lot de 10 x 20 capsules",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Amazon",
+   "prix": 42.61,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lor-espresso-cafe-200-capsules-delizioso-intensite-5-compatibles-nespresso-lot-de-10-x-20-capsules-3454987",
+   "date": "Sat, 14 Nov 2026 04:47:40 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "42,61€ - Amazon Prévoyez économisez"
+  },
+  {
+   "id": "6373cb3058",
+   "titre": "Sun - Capsules Lave vaisselle, Ultra Expert, Brillance, 37 Pastilles",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 9.02,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sun-capsules-lave-vaisselle-ultra-expert-brillance-37-pastilles-3454986",
+   "date": "Sat, 14 Nov 2026 04:44:51 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "9,02€ - Amazon EFFICACITÉ SUR LES TACHES : Les pastilles lave-vaisselle Brillance tout en 1 éliminent les taches incrustées depuis plus de 72h, même en cycle court, grâce à une formule ultra- concentrée PLUS DE BRILLANCE: Ces tablettes lave- vaisselle offrent 4x plus de brillance sur le verre par ra"
+  },
+  {
+   "id": "48045c0872",
+   "titre": "Finish Ultimate Infinity Shine Pastilles Lave-Vaisselle Citron, Imbattable contre les taches tenaces, 80 capsules",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 10.79,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/finish-ultimate-infinity-shine-pastilles-lave-vaisselle-citron-imbattable-contre-les-taches-tenaces-80-capsules-3454985",
+   "date": "Sat, 14 Nov 2026 04:39:09 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "10,79€ - Amazon 80 capsules Prévoyez économisez Élimine les taches incrustées sans prérinçage préalable 80 capsules pour deux ans de lave-vaisselle selon les utilisateurs Vaisselle brillante et sans traces dès le premier lavage"
+  },
+  {
+   "id": "0ae75fe14e",
+   "titre": "Pull only taille L",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 17.63,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pull-only-taille-l-3454984",
+   "date": "Sat, 14 Nov 2026 04:36:10 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "17,63€ - Amazon forts Les fleurs en relief restent intactes après le lavage Les manches bouffantes créent un look original et polyvalent Le mélange coton-polyester offre légèreté et À propos de ce produit Poignets : poignets côtelés Manches : épaules tombantes Coupe : regular fit Commentaires client"
+  },
+  {
+   "id": "8701e27523",
+   "titre": "Pampers Harmonie Couches Édition Limitée Taille 6 x120 Pack 1 Mois 13kg+. Conçues Pour Les Peaux Les Plus Sensibles. Pack 1 Mois.",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 38.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pampers-harmonie-couches-edition-limitee-taille-6-x120-pack-1-mois-13kg-concues-pour-les-peaux-les-plus-sensibles-pack-1-mois-3454983",
+   "date": "Sat, 14 Nov 2026 04:33:43 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "38,95€ - Amazon Conçue pour les peaux les plus sensibles Testée contre les substances nocives* (*Selon la norme STANDARD 100 d'OEKO-TEX) Une nuit jusqu'à 100% sans fuites Hypoallergénique* & testée dermatologiquement (*Conçue pour minimiser le risque d'allergies) Jusqu'à 12 heures bien au sec & une "
+  },
+  {
+   "id": "f6ea7510e4",
+   "titre": "Eastpak Tranverz S Valise Cabine 42L (51 x 32,5 x 24 cm), bagage à main à roulettes",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 64.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/eastpak-tranverz-s-valise-cabine-42l-51-x-325-x-24-cm-bagage-a-main-a-roulettes-3454982",
+   "date": "Sat, 14 Nov 2026 04:31:00 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "64€ - Amazon Roues silencieuses en caoutchouc, parfaites pour les aéroports Sangles de compression réduisent la taille pour respecter les normes cabine Double compartiment zippé permet de séparer vêtements et accessoires À propos de ce produit FORMAT CABINE PRÊT À VOYAGER : Valise idéale en bagage c"
+  },
+  {
+   "id": "00669566f2",
+   "titre": "Samsonite Lite-Shock Valise 4 Roues, 55 cm Sable, valise rigide, 55H x 40W x 20D cm, 36 L, avec Curv et coque qui absorbe les chocs",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 196.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/samsonite-lite-shock-valise-4-roues-55-cm-sable-valise-rigide-55h-x-40w-x-20d-cm-36-l-avec-curv-et-coque-qui-absorbe-les-chocs-3454981",
+   "date": "Sat, 14 Nov 2026 04:29:18 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "196,95€ - Amazon Principaux points forts Pèse seulement 1,7 kg, gagnez des kilos pour vos affaires Matériau Curv absorbe les chocs aux angles sans coque épaisse Roues multidirectionnelles à 360° pour une maniabilité fluide À propos de ce produit Fabriquée en matériau Curv : extrêmement résistant et "
+  },
+  {
+   "id": "0bd0ed71fb",
+   "titre": "Ninja AutoBarista Machine à café automatique, 10 programmes Café filtre et infusion à froid et 4 pré-réglages de moussage du lait",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 599.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ninja-autobarista-machine-a-cafe-automatique-10-programmes-cafe-filtre-et-infusion-a-froid-et-4-pre-reglages-de-moussage-du-lait-3454980",
+   "date": "Sat, 14 Nov 2026 04:28:38 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "599,99€ - Amazon MACHINE ENTIÈREMENT AUTOMATIQUE : machine à café expresso, avec broyage, infusion et moussage du lait automatiques 10 BOISSONS DISPONIBLES D’UNE SIMPLE PRESSION : Expresso, Americano, Grand crème, Latte Macchiato, Cappuccino, Cortado, Café filtre, Infusion à froid, Extraction à froi"
+  },
+  {
+   "id": "b8228c9d96",
+   "titre": "Madonna - Confessions II (Extended Version) (140g) (Limited Edition) (Translucent Pink Vinyl) 2 LPs",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 38.39,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/madonna-confessions-ii-extended-version-140g-limited-edition-translucent-pink-vinyl-2-lps-2871030",
+   "date": "Sat, 14 Nov 2026 04:39:33 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "38,39€ - Amazon Madonna - Confessions II (Extended Version) (140g) (Limited Edition) (Translucent Pink Vinyl) 2 LPs für 47,99€, 9,60€ werden an der Kasse abgezogen. Gesamtpreis 38,39€. Madonnas mit Spannung für den Sommer 2026 erwartetes neues Album »Confessions II« ist die Fortsetzung des kultigen "
+  },
+  {
+   "id": "02a85d7393",
+   "titre": "Chaussure Samba Jp",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 65.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-samba-jp/JQ9056.html",
+   "date": "2026-11-14T02:13",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "60b108064b",
+   "titre": "Leroy Merlin",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 26.9,
+   "devise": "EUR",
+   "lien": "https://www.leroymerlin.fr/produits/lot-de-5-plinthes-medium-mdf-arrondies-revetu-blanc-h-9-5-cm-l-2-m-ep-9-mm-98630601.html",
+   "date": "2026-11-14T03:10",
+   "source": "pc:leroymerlin-promos",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "6d6300fa03",
+   "titre": "Sponsorisé en savoir plus sur cette publicité  ?        Friteuse sans huile - PHILIPS - NA210/00 - Airfryer Série 2000 - Capacité 3,2 L - 13 modes de cuisson - ",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Cdiscount",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.cdiscount.com/electromenager/petits-appareils-de-cuisson/friteuse-sans-huile-philips-na210-00-airfrye/f-1102002-phi1730936845919.html?sw=9c416a18fedd96ad16ab91678b9a5d6277ff2fac1cd7ba4276d8b5ae2b55b3afb09004ff6f2bd02a37cf72c62ead3adc9c8d385e6314c58045bf6110f8ccc08edf0f66f83bcf54577ca40138893163242598939004b6b7414824bdcbf7814751a18fa04ac03050762afe529c4941e9b178973e922cfedacf0f90b5f160b9a763b829288edb58aaa75993ffba9de62651&amp;idOffre=4317064008#cm_rr=FP:10114852:SW:CAR",
+   "date": "2026-11-14T03:12",
+   "source": "pc:cdiscount-meilleures-offres",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "a664dcca02",
+   "titre": "Sponsorisé en savoir plus sur cette publicité  ?        Friteuse sans huile - PHILIPS - NA230/00 - Airfryer Série 2000 6.2L - 13 modes de cuisson - fenêtre de c",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Cdiscount",
+   "prix": 129.99,
+   "devise": "EUR",
+   "lien": "https://www.cdiscount.com/electromenager/petits-appareils-de-cuisson/friteuse-sans-huile-philips-na230-00-airfrye/f-1102002-phi1726804854749.html?sw=9c416a18fedd96ad16ab91678b9a5d6277ff2fac1cd7ba4276d8b5ae2b55b3afb09004ff6f2bd02a37cf72c62ead3adc45abb5c33a985c0b412f5c20e2266f078a7eb7720d25ab5d4481348c6184e1c7bb5705d5ffb772457c5314f1936ba0822cdbe04c29de7accf2fd572f0631b7036c280551030271705515b92b7fca90ce73ca571d6cdfd264d5bc68ce89a97b11&amp;idOffre=4218946388#cm_rr=FP:10114852:SW:CAR",
+   "date": "2026-11-14T03:12",
+   "source": "pc:cdiscount-meilleures-offres",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "5a1cd543dc",
+   "titre": "Bon plan              Air fryer Friteuse à Air Sans huile CONTINENTAL EDISON - CERFRSH24002CB - 9 L - Double bacs - 2400W - Noir                 4,4 / 5   869 a",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Cdiscount",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.cdiscount.com/electromenager/petits-appareils-de-cuisson/air-fryer-friteuse-a-air-sans-huile-continental-ed/f-1102002-cerfrsh24002cb.html#cm_rr=FP:7583423:SP:CAR",
+   "date": "2026-11-14T03:12",
+   "source": "pc:cdiscount-meilleures-offres",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "346ce8706e",
+   "titre": "Chaussure Adizero EVO SL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 150.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-adizero-evo-sl/JP7149.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "9ff0fb7ef2",
+   "titre": "Chaussure de randonnée Terrex AX4",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 66.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-de-randonnee-terrex-ax4/IH1131.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "4c78ccc0a4",
+   "titre": "CHAUSSURES SAMBA",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 84.5,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussures-samba/IH9015.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "d7c36840f9",
+   "titre": "Chaussure Adizero EVO SL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 150.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-adizero-evo-sl/JH6208.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "54e4287371",
+   "titre": "Chaussure Campus 00s",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 120.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-campus-00s/ID1435.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "b0e74c6099",
+   "titre": "Chaussure imprimé léopard Handball Spezial",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 120.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-imprime-leopard-handball-spezial/KI6678.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "2ed88fd4a4",
+   "titre": "VESTE À CAPUCHE ZIP INTÉGRAL SPACER CUTLINE TEAMGEIST 26",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 85.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/veste-a-capuche-zip-integral-spacer-cutline-teamgeist-26/KR7070.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "289985154b",
+   "titre": "Chaussure de football F50 CLUB Turf",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 33.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-de-football-f50-club-turf/JR9052.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "4c99ab0e6d",
+   "titre": "Chaussettes Leopard mi-mollet (2 paires)",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 18.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussettes-leopard-mi-mollet--2-paires-/JV7855.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "c6f689280a",
+   "titre": "Chaussure Adizero EVO SL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Adidas",
+   "prix": 150.0,
+   "devise": "EUR",
+   "lien": "https://www.adidas.fr/chaussure-adizero-evo-sl/JH6206.html",
+   "date": "2026-11-14T03:14",
+   "source": "pc:adidas-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "d6bff6d870",
+   "titre": "Paire de chaussettes basses, une blanche avec des rayures imprimé léopard, une jaune avec des taches de léopard noires et des rayures blanches, toutes deux avec un logo sur le reve",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 17.95,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4RVP/articles/AD181F00O-O11?navigationSource=tp4u&catalog-type=top-picks",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "a9c04ea89c",
+   "titre": "Sac à main ALDO noir avec des anses arrondies, une poche avant à rabat imprimé, un détail chaîne et une longue bandoulière.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 65,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4SHX/articles/ZZO47LG0G-Q00?navigationSource=tp4u&catalog-type=top-picks",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "55ff4d9c9a",
+   "titre": "Sandale slide Adidas bleue avec trois bandes bleu clair et le logo Adidas sur la bride latérale, vue de l'extérieur.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 25,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4PWN/articles/AD543B0OY-K14?navigationSource=tp4u&catalog-type=top-picks",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "51e5b9b9cf",
+   "titre": "Sur un fond blanc se trouve un chapeau rond en fausse fourrure gris clair, avec un large bord replié.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4SHX/articles/PE351B0AM-O11?navigationSource=tp4u&catalog-type=top-picks",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "d0b3db18e2",
+   "titre": "Valise roulante Eastpak gris clair avec poignées noires, sangles de compression latérales et deux roues à la base sur fond blanc.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 185,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4RQ8/articles/ZZO3NM527-C00?navigationSource=tp4u&catalog-type=top-picks",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "52d5407d1c",
+   "titre": "Femme en costume jaune et ballerines cloutées, assise en s'appuyant en arrière, homme en chemise rayée bleue et pantalon marron assis à côté d'elle, regardant sur le côté.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Zalando Privé",
+   "prix": 50,
+   "devise": "EUR",
+   "lien": "https://www.zalando-prive.fr/campaigns/ZZO4SMY",
+   "date": "2026-11-14T03:16",
+   "source": "pc:zalando-prive",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "961ada00ff",
+   "titre": "Coupe-vent Le Vrai 4.0 Claude noir",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "BazarChic",
+   "prix": 99,
+   "devise": "EUR",
+   "lien": "https://fr.bazarchic.com/ventes/produit/id/5817031/idcat/3345592/",
+   "date": "2026-11-14T03:17",
+   "source": "pc:bazarchic",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "6ac1482fcd",
+   "titre": "Resident Evil 7 Biohazard - Occasion",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Micromania",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.micromania.fr/p/resident-evil-7-biohazard-occasion-69807.html",
+   "date": "2026-11-14T03:21",
+   "source": "pc:micromania-occasion",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "6a8129d0f2",
+   "titre": "65 capsules lessive tout en 1 Mountain Spring \n           \n          \n   Prix ​​régulier \n       \n        16,95€\n        \n   \n     Prix ​​de vente \n     \n      ",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Stokomani",
+   "prix": 16.95,
+   "devise": "EUR",
+   "lien": "https://www.stokomani.fr/products/65-capsules-lessive-tout-en-1-mountain-spring_147582",
+   "date": "2026-11-14T03:24",
+   "source": "pc:stokomani",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "1780efce9e",
+   "titre": "GEL-NYC product image, Image 1 de 2",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Asics",
+   "prix": 150,
+   "devise": "EUR",
+   "lien": "https://www.asics.com/fr/fr-fr/gel-nyc/p/1203A663-102.html",
+   "date": "2026-11-14T03:29",
+   "source": "pc:asics-outlet",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "d457cdc74c",
+   "titre": "13,09 €   13 ,   09  €     (  13 090,00 €  13 090,00€  /l)   Conseillé : 13,50 €   Conseillé :    13,50 €  13,50€          Économisez 5 % sur 4 articles éligibl",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Amazon Seconde main",
+   "prix": 90.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/HP-Cartouche-Authentique-3YM61AE-DeskJet/dp/B087DJ43K3/ref=lp_13921051_1_7?pf_rd_p=9122ec7c-6b57-4fee-b68e-8b58dece58a4&amp;pf_rd_r=PJEN44D3KWSDFNP65AKM&amp;sbo=RZvfv%2F%2FHxDF%2BO5021pAnSA%3D%3D",
+   "date": "2026-11-14T03:33",
+   "source": "pc:amazon-warehouse",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "6762d396aa",
+   "titre": "Switch oled édition Zelda TOKT",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 300,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308901129",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "4a66754981",
+   "titre": "Asus Rog ally Z2 A",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 360,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308900833",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "49dfb520ae",
+   "titre": "PS3 500 go + 23 jeux + 2 manettes à réviser. Console",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 100,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308900614",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "1d42ca3b87",
+   "titre": "Ps2 avec sa boîte d'origine",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 100,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308900547",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "e7d080fa69",
+   "titre": "Xbox 1er gén + 12 jeu + 3 DVDs demos. Console",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 100,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308900503",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "8c6e3b27ed",
+   "titre": "Switch 2 neuve avec batterie",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 380,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308899945",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  },
+  {
+   "id": "2be2ce7542",
+   "titre": "Switch 1",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leboncoin (recherches populaires)",
+   "prix": 190,
+   "devise": "EUR",
+   "lien": "https://www.leboncoin.fr/ad/consoles/3308899543",
+   "date": "2026-11-14T03:38",
+   "source": "pc:leboncoin-tendances",
+   "pays": "FR",
+   "description": ""
+  }
+ ]
+}

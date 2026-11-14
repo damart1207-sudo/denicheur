@@ -1,7 +1,7 @@
 {
- "tours_ok": 1815,
+ "tours_ok": 1816,
  "tours_echec": 4,
- "dernier_ok": "14/11 05:20",
+ "dernier_ok": "14/11 05:42",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -194,12 +194,54 @@
    "niveau": "erreur",
    "etape": "ia_meme_produit",
    "message": "HTTPError: HTTP Error 402: Payment Required | e marque, même modèle, \"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 402: Payment Required\n"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "classements",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests | , line 189, in tour\n    top = chine(date=date) if pays == \"CN\" else amazon(pays)\n                                                ^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests\n"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "14/11 05:42",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  ],
  "dernier_resume": {
-  "heure": "14/11 05:20",
+  "heure": "14/11 05:41",
   "annonces": 1714,
-  "nouvelles": 1088,
+  "nouvelles": 1091,
   "examinees": 25,
   "alertes": 0
  }

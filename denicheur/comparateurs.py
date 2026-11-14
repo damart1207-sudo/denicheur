@@ -66,7 +66,15 @@ def correspond(titre, nom):
         motif = r'(?<![\w+])' + r'[-/\s]*'.join(re.escape(m) for m in morceaux) + r'(?![\w+]|[-/][\w])'
         if not re.search(motif, t):
             return False
-    return all(re.search(r"(?<![\w+])" + re.escape(m) + r"(?![\w+])", t) for m in mots)
+    if not all(re.search(r"(?<![\w+])" + re.escape(m) + r"(?![\w+])", t) for m in mots):
+        return False
+    # Variante de gamme absente du nom (ex. « Qrevo 2 Pro » ≠ « Qrevo Curv 2 Pro », audit 14/11) : pas le même produit.
+    debut = re.findall(r"[\w+]+", t)[:8]
+    noms = set(re.findall(r"[\w+]+", _norm(nom)))
+    return not any(m in VARIANTES and m not in noms for m in debut)
+
+
+VARIANTES = {"curv", "edge", "ultra", "mini", "lite", "slim", "prox", "plus", "max", "fe"}
 
 
 def achatmoinscher(nom, neuf=True):

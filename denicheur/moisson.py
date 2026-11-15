@@ -47,6 +47,10 @@ DOMAINES = {**keepa.DOMAINES, "JP": 5, "SG": 19, "IN": 10}
 _jetons = {"restants": None, "depenses": 0}
 
 
+class BudgetKeepaInsuffisant(RuntimeError):
+    """Le lot reste à faire ; une réserve insuffisante n'est pas un produit absent."""
+
+
 # ---------- état / fichiers ----------
 def _lire(f, defaut):
     try:
@@ -72,8 +76,13 @@ def _etat():
 
 
 # ---------- appels Keepa (avec compteur de jetons) ----------
-def _appel(chemin, params, corps=None):
+def _appel(chemin, params, corps=None, *, etat=None, cout_max=None):
     """GET ou POST sur api.keepa.com. Met à jour le compteur de jetons restants (tokensLeft)."""
+    if etat is not None:
+        if type(cout_max) is not int or cout_max <= 0:
+            raise ValueError("coût maximal Keepa requis")
+        if not _peut(cout_max, etat):
+            raise BudgetKeepaInsuffisant("réserve ou plafond Keepa atteint")
     attente = 1.1 - (time.time() - keepa._dernier[0])
     if attente > 0:
         time.sleep(attente)
@@ -83,22 +92,40 @@ def _appel(chemin, params, corps=None):
     data = json.dumps(corps).encode() if corps is not None else None
     req = urllib.request.Request(url, data=data, headers={"User-Agent": "denicheur/1.0", "Accept-Encoding": "gzip",
                                                            **({"Content-Type": "application/json"} if data else {})})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        brut = r.read()
-    if brut[:2] == b"\x1f\x8b":
-        brut = gzip.decompress(brut)
-    d = json.loads(brut)
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            brut = r.read()
+        if brut[:2] == b"\x1f\x8b":
+            brut = gzip.decompress(brut)
+        d = json.loads(brut)
+        if not isinstance(d, dict):
+            raise ValueError("réponse Keepa invalide")
+    except Exception:
+        if etat is not None:
+            _jetons["depenses"] += cout_max
+            _jetons["restants"] = max(0, (_jetons["restants"] or 0) - cout_max)
+        raise
+    consommes = d.get("tokensConsumed")
+    if type(consommes) is int and consommes >= 0:
+        _jetons["depenses"] += consommes
+    else:
+        solde = d.get("tokensLeft")
+        difference = max(0, (_jetons["restants"] or 0) - solde) if type(solde) is int else 0
+        # Sans mesure fournisseur, réserver le pire cas, sans déduire le refill.
+        _jetons["depenses"] += max(cout_max or 0, difference)
     if isinstance(d.get("tokensLeft"), int):
-        if _jetons["restants"] is not None:
-            _jetons["depenses"] += max(0, _jetons["restants"] - d["tokensLeft"])
         _jetons["restants"] = d["tokensLeft"]
+    elif etat is not None:
+        _jetons["restants"] = 0  # impossible de confirmer la réserve : arrêt prudent
+    if etat is not None and type(consommes) is int and consommes > cout_max:
+        _jetons["restants"] = 0  # coût inattendu : ne pas engager d'autre lot
     return d
 
 
 def jetons_restants():
     if _jetons["restants"] is None:
         try:  # 1 jeton : la liste des catégories racine, on en profite pour la garder
-            d = _appel("category", {"domain": 4, "category": 0, "parents": 0})
+            d = _appel("category", {"domain": 4, "category": 0, "parents": 0}, cout_max=1)
             cats = d.get("categories") or {}
             if cats and not os.path.exists(F_CATS):
                 _ecrire(F_CATS, {k: {"nom": v.get("name"), "pays": "FR"} for k, v in cats.items() if isinstance(v, dict)})
@@ -154,6 +181,7 @@ def resumer(p, pays="FR"):
         "ch30": st.get("salesRankDrops30"), "ch90": st.get("salesRankDrops90"),
         "offres": nb_neuf, "vendus_mois": p.get("monthlySold") if isinstance(p.get("monthlySold"), int) and p.get("monthlySold") > 0 else None, "note": p.get("reviews", {}).get("rating") if isinstance(p.get("reviews"), dict) else None,
         "vu": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "collecte_le": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
 
 
@@ -169,7 +197,7 @@ def _garder(resumes):
     idx = _lire(F_INDEX, {})
     for r in resumes:
         if r.get("asin"):
-            idx[f'{r["asin"]}:{r["pays"]}'] = {k: r.get(k) for k in ("ean", "t", "neuf", "m90", "rang", "ch30", "offres", "vu")}
+            idx[f'{r["asin"]}:{r["pays"]}'] = {k: r.get(k) for k in ("ean", "t", "neuf", "m90", "rang", "ch30", "offres", "vu", "collecte_le")}
     _ecrire(F_INDEX, idx, compact=True)
     return len(resumes)
 
@@ -177,9 +205,10 @@ def _garder(resumes):
 def fiches(asins, pays="FR", etat=None):
     """Fiches complètes de ≤ 100 ASIN en un appel (1 jeton chacune). Renvoie la liste des résumés."""
     asins = [a for a in dict.fromkeys(asins) if a][:100]
-    if not asins or (etat is not None and not _peut(len(asins), etat)):
+    if not asins:
         return []
-    d = _appel("product", {"domain": DOMAINES.get(pays, 4), "asin": ",".join(asins), "stats": 180, "history": 0})
+    d = _appel("product", {"domain": DOMAINES.get(pays, 4), "asin": ",".join(asins), "stats": 180, "history": 0},
+               etat=etat, cout_max=2 * len(asins))
     return [resumer(p, pays) for p in (d.get("products") or []) if isinstance(p, dict)]
 
 
@@ -201,7 +230,7 @@ def radar(etat):
                "singleVariation": True, "filterErotic": True, "hasReviews": True,
                **({"includeCategories": cats[:500]} if cats and cats != [c for c, _ in CATEGORIES_FR] else {})}
         try:
-            d = _appel("deal", {"domain": domaine}, corps=sel)
+            d = _appel("deal", {"domain": domaine}, corps=sel, etat=etat, cout_max=5)
         except Exception as e:
             sante.noter("erreur", "moisson radar", f"{nom} {domaine} p{page}: {type(e).__name__}: {str(e)[:120]}")
             continue
@@ -287,9 +316,9 @@ def etagere(etat, nb_cats=4):
                "salesRankDrops30_gte": 25, "productType": 0, "perPage": 100, "page": etat["tours"] % 3,
                "sort": [["salesRankDrops30", "desc"]]}
         try:
-            d = _appel("query", {"domain": 4, "selection": json.dumps(sel)})
+            d = _appel("query", {"domain": 4, "selection": json.dumps(sel)}, etat=etat, cout_max=41)
             asins = d.get("asinList") or []
-            res = fiches(asins, "FR")
+            res = fiches(asins, "FR", etat=etat)
             for r in res:
                 r["etagere"] = cat_nom
             total += _garder(res)
@@ -326,14 +355,14 @@ def hype(etat):
     etat["hype_suivante"] = i + 1
     cat, cat_fr = cats[i]
     try:
-        d = _appel("bestsellers", {"domain": DOMAINES[pays], "category": cat})
+        d = _appel("bestsellers", {"domain": DOMAINES[pays], "category": cat}, etat=etat, cout_max=50)
         asins = ((d.get("bestSellersList") or {}).get("asinList") or [])[:100]
         if not asins:
             sante.noter("erreur", "moisson hype", f"{pays} {cat_fr} : liste des meilleures ventes vide")
         if not asins:
             return 0
-        labas = {r["asin"]: r for r in fiches(asins, pays)}
-        ici = {r["asin"]: r for r in fiches(list(labas), "FR")}
+        labas = {r["asin"]: r for r in fiches(asins, pays, etat=etat)}
+        ici = {r["asin"]: r for r in fiches(list(labas), "FR", etat=etat)}
     except Exception as e:
         sante.noter("erreur", "moisson hype", f"{pays} {cat}: {type(e).__name__}: {str(e)[:120]}")
         return 0

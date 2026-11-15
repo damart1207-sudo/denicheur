@@ -18,15 +18,23 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # plafonds par jour (estimés d'après les tarifs) pour que le crédit gratuit tienne tout le mois :
 # A (vérifications idealo/Leboncoin/Vinted des alertes) 0,55 $ ; P (idealo des trois passages, à part : le 05/11 la veille avait vidé A avant midi) 0,15 $ ;
 # B (tendances) 0,15 $ ; C (chasse ciblée) 0,15 $ ; D (Vinted inter-pays) 0,10 $
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10}  # ≈ 1,10 $/jour, soit ~33 $/mois
+# T (affiliation TikTok Shop, outils/affiliation_tiktok.py : 2 relevés par semaine prévus, ≈ 0,40 $ le relevé) 0,55 $ les jours de relevé
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 0.55}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
-TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005)}
+TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),
+          # relevés réels du 15/11/2026 (console Apify de David) : TikTok 0,073 $ pour 25 produits ; eBay 0,018 $ pour 5 ventes ;
+          # pubs 0,086 $ pour 42 pubs. TikTok : démarrage 0,025 $ à partir du 23/11/2026 (annoncé par le robot).
+          "tiktok_top": (0.025, 0.0027), "ebay_vendus": (0.0, 0.0035), "pubs": (0.0, 0.0021)}
 CONTEXTE = {"denicheur": "A"}  # qui appelle (A, B ou C), pour le journal
 ROBOTS = {
     "idealo": ("memo23~idealo-scraper", 0.015),  # 08/11 : coût réel ~0,01 $ (3 résultats) ; 0,03 bloquait les passages après 5 appels/jour
     "leboncoin": ("fatihtahta~leboncoin-fr-scraper", 0.03),
     "vinted": ("scrape.badger~vinted-scraper", 0.03),
+    # affiliation TikTok Shop (testés le 15/11/2026, voir outils/affiliation_tiktok.py)
+    "tiktok_top": ("lergassy~tiktok-shop-top-products-scraper", 0.25),   # classement des ventes TikTok Shop France + commission
+    "ebay_vendus": ("caffein.dev~ebay-sold-listings", 0.04),            # prix réellement vendus sur ebay.fr
+    "pubs": ("apivault_labs~ad-library-scraper-facebook-tiktok-google-ads", 0.04),  # pubs Facebook / Instagram / Google
 }
 
 
@@ -117,10 +125,19 @@ def lancer(robot, entree, maxi=10):
     _noter(b, plafond)
     n = len(items) if isinstance(items, list) else 0
     dep, unit = TARIFS.get(robot, (0.0, plafond / max(maxi, 1)))
-    journal.noter(CONTEXTE["denicheur"], "apify:" + robot, entree.get("searchQuery") or entree.get("query")
-                  or ",".join(entree.get("domains", [])) or ",".join(entree.get("startUrls", []))[:80],
-                  cout_usd=dep + unit * n, resultats=n)
+    journal.noter(CONTEXTE["denicheur"], "apify:" + robot, _cible(entree), cout_usd=dep + unit * n, resultats=n)
     return items if isinstance(items, list) else None
+
+
+def _cible(entree):
+    """Ce qui a été cherché, en texte court pour le journal (les robots attendent tantôt un texte, tantôt une liste)."""
+    for cle in ("searchQuery", "query", "keywords", "categories", "domains", "startUrls"):
+        v = entree.get(cle)
+        if v:
+            if isinstance(v, (list, tuple)):
+                v = ",".join(x.get("url", "") if isinstance(x, dict) else str(x) for x in v)
+            return str(v)[:80]
+    return ""
 
 
 def _num(v):

@@ -1,0 +1,18 @@
+{
+  "_aide": "Réglages du relevé d'affiliation TikTok Shop (outils/affiliation_tiktok.py). Modifiable sans toucher au code.",
+  "pays": "FR",
+  "periode": "last7Day",
+  "tri": "unitsSold",
+  "categories": ["Beauty & Personal Care", "Home Supplies", "Toys & Hobbies"],
+  "produits_par_categorie": 25,
+  "finalistes": 3,
+  "filtres": {
+    "prix_moyen_min_usd": 3,
+    "ventes_min": 200,
+    "evolution_min_pct": -20,
+    "gain_par_vente_min_usd": 1.0
+  },
+  "ebay": {"ventes_par_finaliste": 10, "jours": 30},
+  "pubs": {"pubs_par_finaliste": 15, "region": "FR"},
+  "keepa": true
+}

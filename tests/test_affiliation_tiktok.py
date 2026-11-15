@@ -123,6 +123,20 @@ class Calculs(unittest.TestCase):
         self.assertEqual(A.deja_lus(v1, "15/11/2026", "plus_vendus"), [{"lien": "b"}])
         self.assertIsNone(A.deja_lus(v1, "15/11/2026", "hausses"))
         self.assertIsNone(A.deja_lus(None, "15/11/2026", "plus_vendus"))
+        # un réglage qui change (plancher de chiffre d'affaires) invalide le classement du jour
+        r = {"tri": "revenueGrowth", "revenu_min_usd": 1500}
+        v3 = {"jour": "16/11/2026", "classements": {"hausses": [{"lien": "h"}], "plus_vendus": [{"lien": "a"}]}, "reglages": {"hausses": r}}
+        self.assertEqual(A.deja_lus(v3, "16/11/2026", "hausses", r), [{"lien": "h"}])
+        self.assertIsNone(A.deja_lus(v3, "16/11/2026", "hausses", dict(r, revenu_min_usd=3000)))
+        self.assertIsNone(A.deja_lus({"jour": "16/11/2026", "classements": {"hausses": [{"lien": "h"}]}}, "16/11/2026", "hausses", r))
+        self.assertEqual(A.deja_lus(v3, "16/11/2026", "plus_vendus", {"tri": "unitsSold"}), [{"lien": "a"}])  # ancien relevé sans réglages
+
+    def test_moins_de_ventes_exigees_pour_les_hausses(self):
+        f = dict(FILTRES, ventes_min_hausses=50)
+        shark = A.lire_produit(ligne("Brosse Shark Smooth", 173, 66.87, 5, 389))
+        self.assertEqual(A.retenu(shark, f)[1], "trop peu de ventes")
+        self.assertTrue(A.retenu(dict(shark, listes=["hausses"]), f)[0])
+        self.assertFalse(A.retenu(dict(shark, listes=["hausses"], ventes_7j=20), f)[0])
 
     def test_resumes(self):
         e = A.resume_ebay([{"soldPrice": "213.90", "soldCurrency": "EUR"}, {"soldPrice": "230.00"}, {"soldPrice": None}])

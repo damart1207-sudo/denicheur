@@ -2,7 +2,8 @@
 
 Chaîne (4 sources prouvées le 15/11/2026 par de vrais relevés) :
  1. DEUX classements TikTok Shop France sur 7 jours, avec la commission d'affiliation (robot Apify « tiktok_top ») :
-    les plus vendus (valeurs sûres, déjà très promues) et les plus fortes hausses (moins de créateurs dessus).
+    les plus vendus (valeurs sûres, déjà très promues) et les plus fortes hausses parmi les produits qui font déjà un vrai
+    chiffre (plancher « revenu_min_usd » : sans lui, la liste du 15/11 était faite de produits à 11 ventes sans commission).
     Un produit présent dans les deux listes est un BINGO : il se vend déjà et il accélère encore ;
  2. tri : gain par vente (prix moyen × commission), volume, évolution -> quelques finalistes, en variant marques et catégories ;
  3. pour chaque finaliste : prix réellement vendus sur ebay.fr (robot « ebay_vendus »), pubs Facebook / Instagram / Google
@@ -222,7 +223,8 @@ def retenu(p, filtres):
     """Renvoie (True, "") ou (False, raison écrite pour David)."""
     if p["prix_moyen_usd"] < filtres["prix_moyen_min_usd"]:
         return False, "prix moyen trop bas (donnée douteuse ou gain infime)"
-    if p["ventes_7j"] < filtres["ventes_min"]:
+    hausse = "hausses" in (p.get("listes") or [])  # liste déjà filtrée sur le chiffre d'affaires : moins de ventes exigées
+    if p["ventes_7j"] < (filtres.get("ventes_min_hausses", filtres["ventes_min"]) if hausse else filtres["ventes_min"]):
         return False, "trop peu de ventes"
     if p["evolution_pct"] is not None and p["evolution_pct"] < filtres["evolution_min_pct"]:
         return False, "ventes en recul"
@@ -462,7 +464,7 @@ table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:n
 <p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
 « bingo » = présent dans les deux listes.</p>
 <p><b>Finalistes</b> : {cfg['finalistes']} produits au plus : d'abord les bingos, puis en alternance un produit en hausse et un produit très vendu, jamais deux fois la même marque, après avoir écarté
-les prix moyens sous {cfg['filtres']['prix_moyen_min_usd']} $, les produits à moins de {cfg['filtres']['ventes_min']} ventes, les ventes en recul de plus de {abs(cfg['filtres']['evolution_min_pct'])} % et les gains par vente sous {cfg['filtres']['gain_par_vente_min_usd']} $.</p>
+les prix moyens sous {cfg['filtres']['prix_moyen_min_usd']} $, les produits à moins de {cfg['filtres']['ventes_min']} ventes ({cfg['filtres'].get('ventes_min_hausses', cfg['filtres']['ventes_min'])} pour la liste des hausses, déjà filtrée sur le chiffre d'affaires), les ventes en recul de plus de {abs(cfg['filtres']['evolution_min_pct'])} % et les gains par vente sous {cfg['filtres']['gain_par_vente_min_usd']} $.</p>
 <p class="note">Les ventes et revenus TikTok sont des estimations du fournisseur de données, en dollars : ils servent à comparer les produits entre eux.
 Le taux de commission est celui annoncé par le robot ; vérifie-le dans ton catalogue créateur avant de tourner la vidéo.
 {'Conversion en euros au taux BCE du jour : 1 $ = ' + format(taux, '.4f').replace('.', ',') + ' €.' if taux else 'Conversion en euros indisponible aujourd’hui : montants en dollars seuls.'}</p></div></section>
@@ -511,12 +513,21 @@ CLES = ("titre", "marque", "categorie", "rang", "ventes_7j", "prix_moyen_usd", "
         "revenu_usd", "commissions_totales_usd", "part_video_pct", "evolution_pct", "lien")
 
 
-def deja_lus(ancien, jour, nom):
-    """Produits d'un classement déjà payé aujourd'hui (ou None)."""
+def reglage(cfg, c):
+    """Ce qui définit un classement : s'il change, le classement déjà lu aujourd'hui n'est plus valable."""
+    return {"tri": c["tri"], "revenu_min_usd": c.get("revenu_min_usd", 0), "categories": cfg["categories"],
+            "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
+
+
+def deja_lus(ancien, jour, nom, attendu=None):
+    """Produits d'un classement déjà payé aujourd'hui avec les mêmes réglages (ou None)."""
     if not isinstance(ancien, dict):
         return None
     if ancien.get("jour") == jour and (ancien.get("classements") or {}).get(nom):
-        return ancien["classements"][nom]
+        connu = (ancien.get("reglages") or {}).get(nom)
+        if attendu is None or connu == attendu or (connu is None and nom == "plus_vendus"):
+            return ancien["classements"][nom]
+        return None
     if nom == "plus_vendus" and "classements" not in ancien and str(ancien.get("quand", "")).startswith(jour) and ancien.get("tous"):
         return ancien["tous"]  # ancien format (premier relevé du 15/11/2026)
     return None
@@ -532,14 +543,15 @@ def main():
         ancien = None
     noms = [c["nom"] for c in cfg["classements"]]
     if (isinstance(ancien, dict) and ancien.get("jour") == jour and ancien.get("finalistes")
-            and all((ancien.get("classements") or {}).get(n) for n in noms) and os.environ.get("AFFIL_FORCER") != "1"):
+            and all(deja_lus(ancien, jour, c["nom"], reglage(cfg, c)) for c in cfg["classements"])
+            and os.environ.get("AFFIL_FORCER") != "1"):
         print(f"Relevé du {jour} déjà complet : rien n'est relancé ni repayé (AFFIL_FORCER=1 pour forcer).")
         return 0
     avant = depense_apify()
     n = len(cfg["categories"]) * cfg["produits_par_categorie"]
     classements, repris = {}, []
     for c in cfg["classements"]:
-        deja = deja_lus(ancien, jour, c["nom"]) if cfg.get("reutiliser_classement_du_jour", True) else None
+        deja = deja_lus(ancien, jour, c["nom"], reglage(cfg, c)) if cfg.get("reutiliser_classement_du_jour", True) else None
         if deja:
             repris.append(c["nom"])
             produits = []
@@ -548,9 +560,11 @@ def main():
                 p["categorie"] = categorie_principale(p["categorie"])
                 produits.append(p)
         else:
-            brut = apify.lancer("tiktok_top", {"country": cfg["pays"], "period": cfg["periode"], "sortBy": c["tri"],
-                                               "categories": cfg["categories"], "maxResultsPerSource": cfg["produits_par_categorie"],
-                                               "addAnalytics": False}, maxi=n + len(cfg["categories"]))
+            entree = {"country": cfg["pays"], "period": cfg["periode"], "sortBy": c["tri"], "categories": cfg["categories"],
+                      "maxResultsPerSource": cfg["produits_par_categorie"], "addAnalytics": False}
+            if c.get("revenu_min_usd"):
+                entree["minRevenue"] = int(c["revenu_min_usd"])  # sans ce plancher, les « hausses » sont des produits à 10 ventes
+            brut = apify.lancer("tiktok_top", entree, maxi=n + len(cfg["categories"]))
             if brut is None:
                 sante.noter("erreur", "affiliation tiktok", f"classement « {c['nom']} » non lu (budget du jour ou du mois atteint, jeton absent, ou robot en erreur)")
                 print(f"Classement {c['nom']} non lu.")
@@ -581,7 +595,10 @@ def main():
         par_cat[p["categorie"]] = par_cat.get(p["categorie"], 0) + 1
     with open(F_JSON, "w", encoding="utf-8") as f:
         json.dump({"version": 2, "jour": jour, "quand": quand, "classements_repris": repris, "taux_usd_eur": taux,
-                   "cout_apify_mesure_usd": cout, "produits_par_categorie": par_cat, "bingos": sum(1 for p in tous if p["bingo"]),
+                   "cout_apify_mesure_usd": cout,
+                   "reglages": {c["nom"]: (ancien or {}).get("reglages", {}).get(c["nom"]) if c["nom"] in repris else reglage(cfg, c)
+                                for c in cfg["classements"] if c["nom"] in classements},
+                   "produits_par_categorie": par_cat, "bingos": sum(1 for p in tous if p["bingo"]),
                    "finalistes": finalistes, "classements": {k: [{c: p.get(c) for c in CLES} for p in v] for k, v in classements.items()},
                    "tous": tous}, f, ensure_ascii=False, indent=1)
     print(f"{len(tous)} produits uniques {par_cat} ; {sum(1 for p in tous if p['bingo'])} bingo(s) ; {len(finalistes)} finaliste(s) ; coût Apify mesuré : {cout}")

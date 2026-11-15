@@ -28,6 +28,28 @@ class Calculs(unittest.TestCase):
         self.assertEqual(A.mot_cle("Fructis Méthode Boucles - Hydratation et Définition - Garnier"), "Fructis Méthode Boucles")
         self.assertEqual(A.marque(""), "")
 
+    def test_marque_fiable_et_recherche(self):
+        cas = {"[medicube Officiel] Sérum raffermissant NAD+ EGF | Sérum": "medicube", "[NYX PM] Epic Inky Stix": "NYX",
+               "LANDOT Brosse électrique lissante 2 en 1 pour cheveux": "LANDOT", "CP PAPILLON 50ML - 23 VARIANTES": "CP PAPILLON",
+               "Fructis Méthode Boucles - Hydratation et Définition - Garnier": "Garnier",
+               # relevé réel du 15/11/2026 : ces titres ramenaient d'autres produits -> aucun recoupement
+               "Manteau bloom": "", "Coffret de Noël – 6 squishies à presser": "", "Christmas Party Card Game, 250+ Game Cards": "",
+               "Rose Mystik - Lingettes Intimes": "", "Lip liner - Crayon à lèvres": "", "KIT de magicien": "", "": ""}
+        for titre, attendu in cas.items():
+            self.assertEqual(A.marque_fiable(titre), attendu, titre)
+        self.assertEqual(A.recherche("LANDOT Brosse électrique lissante 2 en 1 pour cheveux, peigne", "LANDOT"), "LANDOT Brosse électrique lissante")
+        self.assertEqual(A.recherche("[medicube Officiel] Sérum raffermissant NAD+ EGF | Sérum avec", "medicube"), "medicube Sérum raffermissant NAD+")
+        self.assertEqual(A.recherche("Fructis Méthode Boucles - Hydratation - Garnier", "Garnier"), "Garnier Fructis Méthode Boucles")
+        self.assertEqual(A.categorie_principale("Home Supplies | Home Supplies-Home Decor | Home Supplies-Towels"), "Home Supplies")
+
+    def test_filtrage_des_recoupements(self):
+        ventes = [{"title": "Brosse lissante LANDOT neuve", "soldPrice": "30"}, {"title": "Coffret de Noël thés", "soldPrice": "99"}]
+        self.assertEqual([v["soldPrice"] for v in A.garder_ventes(ventes, "LANDOT")], ["30"])
+        pubs = [{"platform": "meta", "advertiserName": "Landot Beauty"}, {"platform": "meta", "advertiserName": "Sébastien Roland Jean LANDOT"},
+                {"platform": "meta", "advertiserName": "Seymouri", "landingUrl": "https://seymouri.com/products/landot-brush"}]
+        self.assertEqual([x["advertiserName"] for x in A.garder_pubs(pubs, "LANDOT")], ["Landot Beauty", "Seymouri"])
+        self.assertEqual(A.garder_pubs(pubs, ""), [])
+
     def test_lecture_et_gain(self):
         p = A.lire_produit(ligne("LANDOT Brosse lissante", 1823, 46.2, 10, 15.03))
         self.assertEqual(p["gain_par_vente_usd"], 4.62)
@@ -71,7 +93,8 @@ class Calculs(unittest.TestCase):
         tous = [A.lire_produit(ligne('LANDOT <script>alert(1)</script> Brosse', 1823, 46.2, 10)),
                 A.lire_produit(ligne("AYAT 50ML", 9302, 0.33, 10))]
         fin = A.choisir_finalistes(tous, cfg["filtres"], 3)
-        fin[0].update({"ebay": None, "ebay_lu": True, "pubs": None, "pubs_lu": True, "pubs_terme": "LANDOT", "amazon": None})
+        fin[0].update({"marque_sure": "LANDOT", "recherche": "LANDOT Brosse", "ebay": None, "ebay_lu": True, "pubs": None,
+                       "pubs_lu": True, "pubs_terme": "LANDOT", "amazon": None})
         ancien = A.F_HTML
         with tempfile.TemporaryDirectory() as d:
             A.F_HTML = os.path.join(d, "r.html")
@@ -85,6 +108,9 @@ class Calculs(unittest.TestCase):
         self.assertIn("0,412 $", page)
         self.assertIn("Trouvé par : robot TikTok Shop (Apify)", page)
         self.assertTrue(A.message_telegram(fin, 0.93, 2).startswith("<b>Affiliation TikTok Shop</b>"))
+        sans = dict(fin[0], marque_sure="", titre="Manteau bloom")
+        self.assertIn("non recoupé : produit sans marque identifiable", A.carte(sans, 0.93))
+        self.assertIn("pas de marque identifiable", A.message_telegram([sans], 0.93, 2))
 
 
 if __name__ == "__main__":

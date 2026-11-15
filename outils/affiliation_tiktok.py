@@ -60,6 +60,74 @@ def mot_cle(titre, mots=4):
     return " ".join(([m] if m else []) + corps.split()[:mots]).strip()
 
 
+PAS_UNE_MARQUE = {"LOT", "PACK", "NEW", "PROMO", "KIT", "SET", "XXL", "LED", "USB", "STEM", "PVC", "BLACK", "FRIDAY", "NOEL", "NOËL",
+                  "CADEAU", "COFFRET", "OFFRE", "SOLDES", "VARIANTES", "FRANCE", "BIO", "PRO", "MAX", "MINI", "PLUS"}
+
+
+def marque_fiable(titre):
+    """Marque dont on est sûr, sinon "" (relevé du 15/11/2026 : sans marque, eBay, Amazon et les pubs renvoyaient
+    d'AUTRES produits — « Coffret de Noël » ramenait un coffret de thés, « Manteau » des annonceurs nommés Manteau).
+    Trois cas acceptés : marque entre crochets en tête ; premiers mots tout en majuscules (« LANDOT », « CP PAPILLON ») ;
+    un seul mot à majuscule après le dernier « - » (« … - Garnier »)."""
+    titre = (titre or "").strip()
+    if titre.startswith("["):
+        return marque(titre)
+    debut = []
+    for mot in titre.split():
+        m = mot.strip(",;:|")
+        if len(m) >= 2 and m.isalpha() and m.isupper() and m not in PAS_UNE_MARQUE:
+            debut.append(m)
+        else:
+            break
+    if debut and max(len(m) for m in debut) >= 3:
+        return " ".join(debut)
+    fin = re.split(r"\s[–—-]\s", titre)
+    if len(fin) > 1:
+        dernier = fin[-1].strip()
+        if re.fullmatch(r"[A-ZÀ-Ý][a-zà-ÿ]{2,}", dernier):
+            return dernier
+    return ""
+
+
+def recherche(titre, marque_sure, mots=3):
+    """Recherche courte et précise : la marque sûre + les premiers mots du produit."""
+    corps = re.sub(r"\[[^\]]*\]", " ", titre or "")
+    corps = re.split(r"\s[|–—-]\s|[,(]", corps)[0]
+    reste = [m for m in corps.split() if m.strip(",;:").lower() not in {x.lower() for x in marque_sure.split()}]
+    return " ".join([marque_sure] + reste[:mots]).strip()
+
+
+def _sans_accent(t):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", str(t or "").lower()) if unicodedata.category(c) != "Mn")
+
+
+def garder_ventes(lignes, marque_sure):
+    """Ne garde que les ventes eBay dont le titre contient la marque (sinon ce n'est pas le même produit)."""
+    m = _sans_accent(marque_sure)
+    return [l for l in lignes or [] if isinstance(l, dict) and m and m in _sans_accent(l.get("title"))]
+
+
+def garder_pubs(lignes, marque_sure):
+    """Ne garde que les pubs de la marque : annonceur dont le nom COMMENCE par la marque, ou lien qui la contient
+    (« Sébastien Roland Jean LANDOT » est une personne, pas la marque LANDOT)."""
+    m = _sans_accent(marque_sure).replace(" ", "")
+    bons = []
+    for l in lignes or []:
+        if not isinstance(l, dict) or not m:
+            continue
+        nom = _sans_accent(l.get("advertiserName") or l.get("resolvedBrand")).replace(" ", "")
+        lien = _sans_accent(str(l.get("landingUrl") or "") + " " + str(l.get("destinationDomain") or "")).replace("-", "")
+        if nom.startswith(m) or m in lien:
+            bons.append(l)
+    return bons
+
+
+def categorie_principale(texte):
+    """Le robot renvoie toute la liste des sous-catégories (« Home Supplies | Home Supplies-Home Decor | … ») : on garde la première."""
+    return str(texte or "").split(" | ")[0].strip()
+
+
 def lire_produit(ligne):
     """Une ligne du robot TikTok -> produit normalisé, ou None si ce n'est pas une ligne produit (notice, erreur)."""
     if not isinstance(ligne, dict) or not ligne.get("title"):
@@ -72,7 +140,7 @@ def lire_produit(ligne):
     return {
         "titre": str(ligne["title"]).strip(),
         "marque": marque(ligne["title"]),
-        "categorie": str(ligne.get("category") or ligne.get("sourceInput") or "").strip(),
+        "categorie": categorie_principale(ligne.get("category") or ligne.get("sourceInput")),
         "rang": ligne.get("rank"),
         "ventes_7j": int(ventes),
         "prix_moyen_usd": round(prix, 2),
@@ -157,25 +225,28 @@ def depense_apify():
 
 
 def enrichir(p, cfg):
-    q = mot_cle(p["titre"])
+    m = marque_fiable(p["titre"])
+    p["marque_sure"] = m
+    p.update({"ebay": None, "ebay_lu": False, "pubs": None, "pubs_lu": False, "pubs_terme": m, "amazon": None, "recherche": ""})
+    if not m:
+        return p  # sans marque sûre, aucun recoupement : mieux vaut « non fait » qu'un autre produit
+    q = recherche(p["titre"], m)
     p["recherche"] = q
     ventes = apify.lancer("ebay_vendus", {"keywords": [q], "ebaySite": "ebay.fr", "count": cfg["ebay"]["ventes_par_finaliste"],
                                           "daysToScrape": cfg["ebay"]["jours"]}, maxi=cfg["ebay"]["ventes_par_finaliste"])
-    p["ebay"] = resume_ebay(ventes)
+    p["ebay"] = resume_ebay(garder_ventes(ventes, m))
     p["ebay_lu"] = ventes is not None
-    terme = p["marque"] or q
-    pubs = apify.lancer("pubs", {"mode": "discovery", "searchQuery": [terme], "domains": [], "region": cfg["pubs"]["region"],
+    pubs = apify.lancer("pubs", {"mode": "discovery", "searchQuery": [m], "domains": [], "region": cfg["pubs"]["region"],
                                  "includeMeta": True, "includeTikTok": False, "maxItems": cfg["pubs"]["pubs_par_finaliste"],
                                  "rehostMetaMedia": False, "rehostGoogleVideos": False, "rehostTikTokMedia": False,
                                  "includeAdvertiserInfo": False}, maxi=cfg["pubs"]["pubs_par_finaliste"])
-    p["pubs"] = resume_pubs(pubs)
-    p["pubs_terme"] = terme
+    p["pubs"] = resume_pubs(garder_pubs(pubs, m))
     p["pubs_lu"] = pubs is not None
-    p["amazon"] = None
     if cfg.get("keepa"):
         f = sante.protege("affiliation keepa", keepa.rechercher, q, "FR")
-        if isinstance(f, dict) and not f.get("erreur") and f.get("prix_neuf"):
-            p["amazon"] = {"prix_neuf_eur": f.get("prix_neuf"), "asin": f.get("asin"), "titre": f.get("titre") or f.get("title"),
+        if (isinstance(f, dict) and not f.get("erreur") and f.get("prix_neuf")
+                and _sans_accent(m) in _sans_accent(f.get("titre"))):
+            p["amazon"] = {"prix_neuf_eur": f.get("prix_neuf"), "asin": f.get("asin"), "titre": f.get("titre"),
                            "rang_ventes": f.get("rang_ventes")}
     return p
 
@@ -199,21 +270,25 @@ def _evo(v):
 
 def carte(p, taux):
     e, pb, am = p.get("ebay"), p.get("pubs"), p.get("amazon")
-    if e:
-        ebay = f"{e['nb']} vente(s) sur 30 jours : de {_eur(e['min'])} à {_eur(e['max'])} {e['devise']} (médiane {_eur(e['mediane'])})"
+    non_lu = "non lu (budget du jour atteint ou robot indisponible)"
+    if not p.get("marque_sure"):
+        ebay = pubs = amazon = "non recoupé : produit sans marque identifiable (risque de confondre avec un autre article)"
     else:
-        ebay = "aucune vente trouvée sur ebay.fr" if p.get("ebay_lu") else "non lu (budget du jour atteint ou robot indisponible)"
-    if pb:
-        pubs = (f"{pb['nb']} pub(s) trouvée(s) pour « {H.escape(p['pubs_terme'])} »"
-                + (f", la plus ancienne tourne depuis {pb['plus_longue_jours']} jours" if pb["plus_longue_jours"] is not None else "")
-                + (f", {pb['depuis_30j_ou_plus']} depuis 30 jours ou plus" if pb["depuis_30j_ou_plus"] else "")
-                + (f", {pb['vers_amazon']} renvoient vers Amazon" if pb["vers_amazon"] else "")
-                + (f" — annonceurs : {H.escape(', '.join(pb['annonceurs']))}" if pb["annonceurs"] else ""))
-    else:
-        pubs = (f"aucune pub trouvée pour « {H.escape(p.get('pubs_terme', ''))} »" if p.get("pubs_lu")
-                else "non lu (budget du jour atteint ou robot indisponible)")
-    amazon = (f"{_eur(am['prix_neuf_eur'])} € neuf sur Amazon.fr" + (f" (ASIN {H.escape(str(am['asin']))})" if am.get("asin") else "")
-              if am else "non trouvé sur Amazon.fr par Keepa")
+        if e:
+            ebay = (f"{e['nb']} vente(s) de la marque sur 30 jours : de {_eur(e['min'])} à {_eur(e['max'])} {e['devise']}"
+                    f" (médiane {_eur(e['mediane'])})")
+        else:
+            ebay = f"aucune vente trouvée sur ebay.fr pour « {H.escape(p.get('recherche', ''))} »" if p.get("ebay_lu") else non_lu
+        if pb:
+            pubs = (f"{pb['nb']} pub(s) de la marque « {H.escape(p['pubs_terme'])} »"
+                    + (f", la plus ancienne tourne depuis {pb['plus_longue_jours']} jours" if pb["plus_longue_jours"] is not None else "")
+                    + (f", {pb['depuis_30j_ou_plus']} depuis 30 jours ou plus" if pb["depuis_30j_ou_plus"] else "")
+                    + (f", {pb['vers_amazon']} renvoient vers Amazon" if pb["vers_amazon"] else "")
+                    + (f" — annonceurs : {H.escape(', '.join(pb['annonceurs']))}" if pb["annonceurs"] else ""))
+        else:
+            pubs = f"aucune pub de la marque « {H.escape(p.get('pubs_terme', ''))} » trouvée" if p.get("pubs_lu") else non_lu
+        amazon = (f"{_eur(am['prix_neuf_eur'])} € neuf sur Amazon.fr" + (f" (ASIN {H.escape(str(am['asin']))})" if am.get("asin") else "")
+                  if am else f"non trouvé sur Amazon.fr par Keepa pour « {H.escape(p.get('recherche', ''))} »")
     return f"""<div class="carte"><h3><a href="{H.escape(p['lien'])}" target="_blank" rel="noopener">{H.escape(p['titre'][:110])}</a></h3>
 <p class="sig">Trouvé par : robot TikTok Shop (Apify) · catégorie {H.escape(p['categorie'] or 'inconnue')} · rang {H.escape(str(p['rang']))}</p>
 <table class="kv">
@@ -305,8 +380,9 @@ def message_telegram(finalistes, taux, n_lus):
         e, pb = p.get("ebay"), p.get("pubs")
         blocs.append(f"\n{i}. <a href=\"{H.escape(p['lien'])}\">{H.escape(p['titre'][:70])}</a>\n"
                      f"Gain par vente : {_usd(p['gain_par_vente_usd'], taux)} ({p['commission_pct']:g} %) · {p['ventes_7j']} ventes sur 7 j ({_evo(p['evolution_pct'])})\n"
+                     + ("" if p.get("marque_sure") else "Recoupement eBay, Amazon et pubs non fait : pas de marque identifiable\n")
                      + (f"eBay.fr : {e['nb']} vente(s), médiane {_eur(e['mediane'])} {e['devise']}\n" if e else "")
-                     + (f"Pubs : {pb['nb']}" + (f", la plus ancienne depuis {pb['plus_longue_jours']} j" if pb['plus_longue_jours'] is not None else "") + "\n" if pb else ""))
+                     + (f"Pubs de la marque : {pb['nb']}" + (f", la plus ancienne depuis {pb['plus_longue_jours']} j" if pb['plus_longue_jours'] is not None else "") + "\n" if pb else ""))
     return "".join(blocs)
 
 
@@ -315,7 +391,16 @@ def main():
     apify.CONTEXTE["denicheur"] = "T"
     avant = depense_apify()
     n = len(cfg["categories"]) * cfg["produits_par_categorie"]
-    brut = apify.lancer("tiktok_top", {"country": cfg["pays"], "period": cfg["periode"], "sortBy": cfg["tri"],
+    jour = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y")
+    deja = None
+    if cfg.get("reutiliser_classement_du_jour", True):
+        try:
+            ancien = json.load(open(F_JSON, encoding="utf-8"))
+            if str(ancien.get("quand", "")).startswith(jour) and ancien.get("tous"):
+                deja = ancien["tous"]  # le classement TikTok ne se paie qu'une fois par jour
+        except (OSError, json.JSONDecodeError):
+            pass
+    brut = [] if deja else apify.lancer("tiktok_top", {"country": cfg["pays"], "period": cfg["periode"], "sortBy": cfg["tri"],
                                        "categories": cfg["categories"], "maxResultsPerSource": cfg["produits_par_categorie"],
                                        "addAnalytics": False}, maxi=n + len(cfg["categories"]))
     if brut is None:
@@ -323,6 +408,13 @@ def main():
         print("Classement TikTok non lu : aucun rapport écrit.")
         return 1
     vus, tous = set(), []
+    cles = ("titre", "marque", "categorie", "rang", "ventes_7j", "prix_moyen_usd", "commission_pct", "gain_par_vente_usd",
+            "revenu_usd", "commissions_totales_usd", "part_video_pct", "evolution_pct", "lien")
+    for p in deja or []:
+        p = {k: p.get(k) for k in cles}
+        p["categorie"] = categorie_principale(p["categorie"])
+        vus.add(p["lien"])
+        tous.append(p)
     for ligne in brut:
         p = lire_produit(ligne)
         if p and p["lien"] not in vus:
@@ -342,11 +434,11 @@ def main():
     par_cat = {}
     for p in tous:
         par_cat[p["categorie"]] = par_cat.get(p["categorie"], 0) + 1
-    json.dump({"quand": quand, "taux_usd_eur": taux, "cout_apify_mesure_usd": cout, "produits_par_categorie": par_cat,
+    json.dump({"quand": quand, "classement_reutilise": bool(deja), "taux_usd_eur": taux, "cout_apify_mesure_usd": cout, "produits_par_categorie": par_cat,
                "finalistes": finalistes, "tous": tous}, open(F_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"{len(tous)} produits lus {par_cat} ; {len(finalistes)} finaliste(s) ; coût Apify mesuré : {cout}")
+    print(f"{len(tous)} produits {'repris du relevé du jour' if deja else 'lus'} {par_cat} ; {len(finalistes)} finaliste(s) ; coût Apify mesuré : {cout}")
     for p in finalistes:
-        print(" -", p["titre"][:70], "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"],
+        print(" -", p["titre"][:70], "| marque sûre", repr(p.get("marque_sure")), "| recherche", repr(p.get("recherche")), "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"],
               "| eBay", p.get("ebay"), "| pubs", p.get("pubs"), "| Amazon", p.get("amazon"))
     if not finalistes:
         sante.noter("erreur", "affiliation tiktok", f"{len(tous)} produits lus mais aucun ne passe les filtres")

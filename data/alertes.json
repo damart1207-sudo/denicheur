@@ -88676,7 +88676,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T12:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -88891,7 +88891,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-15T13:02+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T13:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Produit exact : Ghost of Yotei PS5 édition standard. Page du bon plan Pepper.pl lue par le robot à 13h30 : offre active chez NETGAMES.de (Allemagne), 29,95 € + 6,95 € de port allemand. Conditions de livraison de NETGAMES lues : port hors d'Allemagne « sur demande », livraison en France non confirmée, version allemande (langue française non garantie). Neuf le plus bas en France : 43,90 € livré chez Auchan (achatmoinscher.com, 15/11) ; PcComponentes.fr 53,99 € port gratuit. Économie possible environ 15-18 % seulement si le port vers la France reste bas, ce qui n'est pas prouvé : dans le doute, rejet. Revente négative (environ -5 €).",
+   "prix_neuf_min_idealo": 43.9,
+   "source_prix_ref": "achatmoinscher.com (Auchan 43,90 € livré, 15/11) ; contrôle PcComponentes.fr 53,99 €",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Prix de magasin allemand, peut durer quelques jours",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "2ba74d6594",
@@ -88950,7 +88962,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T13:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -89158,6 +89170,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 13:20 UTC : offre active, 177.0 affiché, marchand 14_2 ; alternate.nl refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T13:48+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Produit exact : manette Sony DualSense PS5 (coloris divers). Page du bon plan Pepper.nl lue par le robot à 13h20 : offre active chez Alternate.nl à 59 €, plus le port vers la France. En France, offre Black Friday Sony sur PlayStation Direct : DualSense à 54,99 € (Dealabs, novembre 2026) ; Amazon.fr est descendu à 58 € ces 90 jours (Keepa). L'offre néerlandaise n'est donc pas moins chère que le neuf en France. Revente négative (environ -7 €).",
+   "prix_neuf_min_idealo": 54.99,
+   "source_prix_ref": "PlayStation Direct France 54,99 € (Black Friday, relevé Dealabs) ; Keepa Amazon.fr plus bas 90 j 58 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Promo Black Friday, quelques jours",
+   "demande_confirmee": false
+  }
  }
 ]

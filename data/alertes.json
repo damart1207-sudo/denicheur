@@ -89528,7 +89528,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-15T15:52+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -89562,17 +89562,17 @@
    "premiere_lecture": "2026-11-15T15:58+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-15T16:50+00:00",
+  "verifie_le": "2026-11-15T17:55+00:00",
   "verdict": {
-   "commentaire": "Produit mal identifié (château de poupée en bois FSC blanc Vertbaudet, réf. 620033768) et aucun prix de référence fiable en France trouvé. vertbaudet.de bloque la lecture (403) et la livraison en France n'est pas confirmée (prix du deal incohérent : 114,11 € annoncé, 4,76 € lu sur la page). À revérifier ; ne pas publier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "inconnue",
-   "demande_confirmee": false
+   "demande_confirmee": false,
+   "commentaire": "Rejeté : château de poupée Vertbaudet Allemagne (vertbaudet.de, bloque la lecture), prix incohérent (114,11 € annoncé, 4,76 € lu : erreur de prix probable), livraison en France non confirmée et aucun prix de référence fiable en France.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "duree_offre": "inconnue"
   }
  },
  {
@@ -89606,7 +89606,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-15T17:26+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "idealo": {
    "prix_min": 79.51,
@@ -89797,7 +89797,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 17:32 UTC : offre active, 29.99 affiché, marchand 1538_1 ; jbl.nl refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T17:55+00:00",
+  "verdict": {
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Rejeté : annoncé comme erreur de prix (« PRIJSFOUT ») sur la boutique JBL Pays-Bas (jbl.nl), qui bloque la lecture (403). Livraison en France non confirmée (les boutiques JBL nationales livrent leur propre pays) et commande probablement annulée. Prix neuf le plus bas en France : 79,51 € (idealo, même produit JBL Smart TX).",
+   "prix_neuf_min_idealo": 79.51,
+   "source_prix_ref": "idealo (relevé du robot)",
+   "duree_offre": "très courte (erreur de prix)"
+  }
  },
  {
   "id": "d251ca84bd",
@@ -89830,7 +89842,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T17:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 33.99,
@@ -90053,6 +90065,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 17:42 UTC : offre active, 13.95 affiché, marchand 511_1 ; mediamarkt.at refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T17:55+00:00",
+  "verdict": {
+   "economie_pct": 1.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false,
+   "commentaire": "Rejeté : MediaMarkt Autriche (mediamarkt.at) ne livre pas en France. De plus, 32,99 € avec port contre 33,49 € neuf en France (idealo) : économie de 1,5 %, loin des 15 %. Revente impossible (occasion autour de 23-29 €, 51 vendeurs neufs sur Amazon).",
+   "prix_neuf_min_idealo": 33.49,
+   "source_prix_ref": "idealo (relevé du robot)",
+   "duree_offre": "quelques jours"
+  }
  }
 ]

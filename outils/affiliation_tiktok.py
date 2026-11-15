@@ -1,14 +1,17 @@
 """AFFILIATION TIKTOK SHOP : quels produits promouvoir en vidéo ? (demande de David, 15/11/2026)
 
 Chaîne (4 sources prouvées le 15/11/2026 par de vrais relevés) :
- 1. classement des ventes TikTok Shop France sur 7 jours, avec la commission d'affiliation (robot Apify « tiktok_top ») ;
- 2. tri : gain par vente (prix moyen × commission), volume, évolution -> quelques finalistes, un par catégorie et par marque ;
+ 1. DEUX classements TikTok Shop France sur 7 jours, avec la commission d'affiliation (robot Apify « tiktok_top ») :
+    les plus vendus (valeurs sûres, déjà très promues) et les plus fortes hausses (moins de créateurs dessus).
+    Un produit présent dans les deux listes est un BINGO : il se vend déjà et il accélère encore ;
+ 2. tri : gain par vente (prix moyen × commission), volume, évolution -> quelques finalistes, en variant marques et catégories ;
  3. pour chaque finaliste : prix réellement vendus sur ebay.fr (robot « ebay_vendus »), pubs Facebook / Instagram / Google
     en cours (robot « pubs » : une pub payée depuis des semaines = un produit qui se vend), prix Amazon.fr (Keepa).
 Aucun chiffre inventé : une donnée absente est écrite « non trouvé ». Les montants TikTok sont des ESTIMATIONS du
 fournisseur de données, en dollars (à utiliser pour comparer les produits entre eux).
 
-Coût : ≈ 0,40 $ par relevé (plafond du jour « T » dans denicheur/apify.py), Keepa ≈ 10 jetons par finaliste.
+Coût : ≈ 0,55 $ par relevé (plafond du jour « T » dans denicheur/apify.py), Keepa ≈ 10 jetons par finaliste.
+Un classement n'est payé qu'une fois par jour, et un relevé complet n'est pas refait le même jour (sauf AFFIL_FORCER=1).
 Lancement : outil = affiliation_tiktok  ->  data/affiliation_tiktok.html + data/affiliation_tiktok.json + Telegram
 Réglages : config/affiliation_tiktok.json"""
 import html as H
@@ -228,20 +231,54 @@ def retenu(p, filtres):
     return True, ""
 
 
+LIBELLES = {"plus_vendus": "classement des plus vendus", "hausses": "classement des plus fortes hausses"}
+
+
+def fusionner(classements):
+    """{nom de liste: [produits]} -> produits uniques (par lien), chacun avec ses listes ; bingo = présent dans les deux."""
+    par_lien = {}
+    for nom, produits in classements.items():
+        for p in produits or []:
+            x = par_lien.setdefault(p["lien"], dict(p, listes=[]))
+            if nom not in x["listes"]:
+                x["listes"].append(nom)
+    for x in par_lien.values():
+        x["bingo"] = len(x["listes"]) >= 2
+    return list(par_lien.values())
+
+
+def trouve_par(p):
+    listes = p.get("listes") or ["plus_vendus"]
+    if p.get("bingo"):
+        return "BINGO : présent dans les deux classements (plus vendus et plus fortes hausses)"
+    return LIBELLES.get(listes[0], listes[0])
+
+
 def choisir_finalistes(produits, filtres, n=3):
-    """Les n meilleurs par commissions totales estimées, en variant les catégories puis les marques."""
-    bons = sorted((p for p in produits if retenu(p, filtres)[0]), key=lambda p: -p["commissions_totales_usd"])
-    choisis, marques, categories = [], set(), set()
-    for passe in (1, 2):  # passe 1 : une catégorie et une marque différentes ; passe 2 : seulement une marque différente
-        for p in bons:
+    """Ordre : d'abord les bingos, puis en alternance un produit en hausse et un produit très vendu.
+    Jamais deux fois la même marque ; les catégories sont réparties (puis complétées s'il reste de la place)."""
+    bons = [p for p in produits if retenu(p, filtres)[0]]
+    total = lambda p: -p["commissions_totales_usd"]  # noqa: E731
+    bingos = sorted((p for p in bons if p.get("bingo")), key=total)
+    hausses = sorted((p for p in bons if not p.get("bingo") and "hausses" in (p.get("listes") or [])),
+                     key=lambda p: -(p["evolution_pct"] if p["evolution_pct"] is not None else -1e9))
+    vendus = sorted((p for p in bons if not p.get("bingo") and "hausses" not in (p.get("listes") or [])), key=total)
+    ordre = list(bingos)
+    for k in range(max(len(hausses), len(vendus))):
+        ordre += hausses[k:k + 1] + vendus[k:k + 1]
+    nb_cat = len({p["categorie"] for p in bons}) or 1
+    par_categorie_max = max(1, -(-n // nb_cat))
+    choisis, marques, compte = [], set(), {}
+    for passe in (1, 2):  # passe 1 : catégories réparties ; passe 2 : on complète sans cette limite
+        for p in ordre:
             if len(choisis) >= n:
                 return choisis
             m = p["marque"].lower()
-            if p in choisis or m in marques or (passe == 1 and p["categorie"] in categories):
+            if p in choisis or m in marques or (passe == 1 and compte.get(p["categorie"], 0) >= par_categorie_max):
                 continue
             choisis.append(p)
             marques.add(m)
-            categories.add(p["categorie"])
+            compte[p["categorie"]] = compte.get(p["categorie"], 0) + 1
     return choisis
 
 
@@ -344,7 +381,8 @@ def carte(p, taux):
     e, pb, am = p.get("ebay"), p.get("pubs"), p.get("amazon")
     non_lu = "non lu (budget du jour atteint ou robot indisponible)"
     if not p.get("marque_sure"):
-        ebay = pubs = amazon = "non recoupé : produit sans marque identifiable (risque de confondre avec un autre article)"
+        ebay = pubs = amazon = ("non recoupé : produit sans marque identifiable (risque de confondre avec un autre article)."
+                                " À contrôler dans ton appli TikTok : note des acheteurs et échantillon gratuit")
     else:
         if e:
             ebay = (f"{e['nb']} vente(s) de la marque sur 30 jours : de {_eur(e['min'])} à {_eur(e['max'])} {e['devise']}"
@@ -366,7 +404,7 @@ def carte(p, taux):
         else:
             amazon = f"aucune fiche Amazon.fr assez ressemblante pour « {H.escape(p.get('recherche', ''))} »"
     return f"""<div class="carte"><h3><a href="{H.escape(p['lien'])}" target="_blank" rel="noopener">{H.escape(p['titre'][:110])}</a></h3>
-<p class="sig">Trouvé par : robot TikTok Shop (Apify) · catégorie {H.escape(p['categorie'] or 'inconnue')} · rang {H.escape(str(p['rang']))}</p>
+<p class="sig">{'<span class="bingo">BINGO</span> ' if p.get('bingo') else ''}Trouvé par : robot TikTok Shop (Apify), {H.escape(trouve_par(p))} · catégorie {H.escape(p['categorie'] or 'inconnue')} · rang {H.escape(str(p['rang']))}</p>
 <table class="kv">
 <tr><th>Gain par vente</th><td><b>{_usd(p['gain_par_vente_usd'], taux)}</b> ({p['commission_pct']:g} % de {_usd(p['prix_moyen_usd'], None)})</td></tr>
 <tr><th>Ventes sur 7 jours</th><td>{f"{p['ventes_7j']:,}".replace(",", " ")} (évolution {_evo(p['evolution_pct'])})</td></tr>
@@ -384,6 +422,7 @@ def rapport(tous, finalistes, cfg, taux, cout, quand):
         ok, raison = retenu(p, cfg["filtres"])
         lignes.append({**{k: p[k] for k in ("titre", "marque", "categorie", "ventes_7j", "prix_moyen_usd", "commission_pct",
                                               "gain_par_vente_usd", "commissions_totales_usd", "evolution_pct", "lien")},
+                       "liste": "bingo" if p.get("bingo") else ("en hausse" if "hausses" in (p.get("listes") or []) else "plus vendu"),
                        "etat": "finaliste" if p in finalistes else ("retenu" if ok else raison)})
     cout_txt = "non mesuré" if cout is None else f"{cout:.3f} $".replace(".", ",")
     page = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -402,23 +441,27 @@ table.liste{{border-collapse:collapse;width:100%;background:#fff;font-size:14px}
 table.liste th,table.liste td{{border-bottom:1px solid #e3e6eb;padding:7px 9px;text-align:left}}
 table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:nowrap}} td.n{{text-align:right;font-variant-numeric:tabular-nums}}
 .filtres{{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 12px}} .filtres input,.filtres select{{padding:7px 9px;border:1px solid #c9ced6;border-radius:6px;font-size:14px}}
+.bingo{{background:#0a7a3d;color:#fff;border-radius:4px;padding:1px 7px;font-weight:600;font-size:12px}}
 .note{{color:#5b6370;font-size:13px}} a{{color:#0b57d0}} .f{{font-weight:600;color:#0a7a3d}}
 </style>
 <header><h1 style="margin:0;font-size:21px">Affiliation TikTok Shop France</h1>
-<p>Relevé du {quand} · {len(tous)} produits lus · {len(finalistes)} finaliste(s) · coût Apify mesuré : {cout_txt}</p></header>
+<p>Relevé du {quand} · {len(tous)} produits lus · {sum(1 for p in tous if p.get('bingo'))} bingo(s) · {len(finalistes)} finaliste(s) · coût Apify de ce lancement : {cout_txt}</p></header>
 <nav><button class="on" data-t="fin">Finalistes</button><button data-t="tous">Tous les produits</button><button data-t="lire">Comment lire</button></nav>
 <main>
 <section id="fin" class="on">{''.join(carte(p, taux) for p in finalistes)}</section>
 <section id="tous"><div class="filtres"><input id="q" placeholder="Chercher un produit ou une marque" size="32">
 <select id="cat"><option value="">Toutes les catégories</option></select>
+<select id="liste"><option value="">Toutes les listes</option><option>bingo</option><option>en hausse</option><option>plus vendu</option></select>
 <select id="etat"><option value="">Tous</option><option value="ok">Retenus et finalistes</option><option value="non">Écartés</option></select></div>
-<table class="liste"><thead><tr><th data-k="titre">Produit</th><th data-k="categorie">Catégorie</th><th data-k="ventes_7j">Ventes 7 j</th>
+<table class="liste"><thead><tr><th data-k="titre">Produit</th><th data-k="liste">Liste</th><th data-k="categorie">Catégorie</th><th data-k="ventes_7j">Ventes 7 j</th>
 <th data-k="prix_moyen_usd">Prix moyen ($)</th><th data-k="commission_pct">Commission</th><th data-k="gain_par_vente_usd">Gain par vente ($)</th>
 <th data-k="commissions_totales_usd">Commissions totales ($)</th><th data-k="evolution_pct">Évolution</th><th data-k="etat">Verdict</th></tr></thead><tbody id="tb"></tbody></table></section>
 <section id="lire"><div class="carte"><h3>Comment lire ce rapport</h3>
 <p><b>Gain par vente</b> : prix moyen × commission. C'est ce que touche le créateur pour une vente, avant annulation en cas de retour.</p>
 <p><b>Commissions totales estimées</b> : revenu estimé × commission, tous créateurs confondus. Cela mesure où se trouve l'argent, pas ce que tu toucheras.</p>
-<p><b>Finalistes</b> : les {cfg['finalistes']} produits au plus fort total de commissions, une catégorie et une marque différentes à chaque fois, après avoir écarté
+<p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
+« bingo » = présent dans les deux listes.</p>
+<p><b>Finalistes</b> : {cfg['finalistes']} produits au plus : d'abord les bingos, puis en alternance un produit en hausse et un produit très vendu, jamais deux fois la même marque, après avoir écarté
 les prix moyens sous {cfg['filtres']['prix_moyen_min_usd']} $, les produits à moins de {cfg['filtres']['ventes_min']} ventes, les ventes en recul de plus de {abs(cfg['filtres']['evolution_min_pct'])} % et les gains par vente sous {cfg['filtres']['gain_par_vente_min_usd']} $.</p>
 <p class="note">Les ventes et revenus TikTok sont des estimations du fournisseur de données, en dollars : ils servent à comparer les produits entre eux.
 Le taux de commission est celui annoncé par le robot ; vérifie-le dans ton catalogue créateur avant de tourner la vidéo.
@@ -432,18 +475,18 @@ const fr=(v,d)=>v==null?"inconnue":Number(v).toLocaleString("fr-FR",{{minimumFra
 const cats=[...new Set(D.map(x=>x.categorie).filter(Boolean))].sort();
 document.getElementById("cat").innerHTML+=cats.map(c=>`<option>${{esc(c)}}</option>`).join("");
 function dessiner(){{
-  const q=document.getElementById("q").value.toLowerCase(),c=document.getElementById("cat").value,e=document.getElementById("etat").value;
+  const q=document.getElementById("q").value.toLowerCase(),c=document.getElementById("cat").value,e=document.getElementById("etat").value,li=document.getElementById("liste").value;
   const ok=x=>x.etat==="finaliste"||x.etat==="retenu";
-  const L=D.filter(x=>(!q||(x.titre+" "+x.marque).toLowerCase().includes(q))&&(!c||x.categorie===c)&&(!e||(e==="ok")===ok(x)));
+  const L=D.filter(x=>(!q||(x.titre+" "+x.marque).toLowerCase().includes(q))&&(!c||x.categorie===c)&&(!li||x.liste===li)&&(!e||(e==="ok")===ok(x)));
   L.sort((a,b)=>{{const x=a[tri],y=b[tri];if(x==null)return 1;if(y==null)return -1;return (typeof x==="number"?x-y:String(x).localeCompare(String(y),"fr"))*sens}});
-  document.getElementById("tb").innerHTML=L.map(x=>`<tr><td><a href="${{esc(x.lien)}}" target="_blank" rel="noopener">${{esc(x.titre.slice(0,80))}}</a></td><td>${{esc(x.categorie)}}</td>
+  document.getElementById("tb").innerHTML=L.map(x=>`<tr><td><a href="${{esc(x.lien)}}" target="_blank" rel="noopener">${{esc(x.titre.slice(0,80))}}</a></td><td class="${{x.liste==="bingo"?"f":""}}">${{esc(x.liste)}}</td><td>${{esc(x.categorie)}}</td>
 <td class="n">${{fr(x.ventes_7j,0)}}</td><td class="n">${{fr(x.prix_moyen_usd,2)}}</td><td class="n">${{fr(x.commission_pct,0)}} %</td><td class="n">${{fr(x.gain_par_vente_usd,2)}}</td>
 <td class="n">${{fr(x.commissions_totales_usd,0)}}</td><td class="n">${{x.evolution_pct==null?"inconnue":(x.evolution_pct>=0?"+":"")+fr(x.evolution_pct,0)+" %"}}</td>
 <td class="${{ok(x)?"f":""}}">${{esc(x.etat)}}</td></tr>`).join("");
 }}
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{{document.querySelectorAll("nav button,section").forEach(x=>x.classList.remove("on"));b.classList.add("on");document.getElementById(b.dataset.t).classList.add("on")}});
 document.querySelectorAll("th[data-k]").forEach(t=>t.onclick=()=>{{sens=tri===t.dataset.k?-sens:-1;tri=t.dataset.k;dessiner()}});
-["q","cat","etat"].forEach(i=>document.getElementById(i).oninput=dessiner);
+["q","cat","etat","liste"].forEach(i=>document.getElementById(i).oninput=dessiner);
 dessiner();
 </script></html>"""
     with open(F_HTML, "w", encoding="utf-8") as f:
@@ -454,7 +497,8 @@ def message_telegram(finalistes, taux, n_lus):
     blocs = [f"<b>Affiliation TikTok Shop</b> — {n_lus} produits lus, {len(finalistes)} à tester en vidéo :"]
     for i, p in enumerate(finalistes, 1):
         e, pb = p.get("ebay"), p.get("pubs")
-        blocs.append(f"\n{i}. <a href=\"{H.escape(p['lien'])}\">{H.escape(p['titre'][:70])}</a>\n"
+        etiquette = "BINGO" if p.get("bingo") else ("en hausse" if "hausses" in (p.get("listes") or []) else "plus vendu")
+        blocs.append(f"\n{i}. [{etiquette}] <a href=\"{H.escape(p['lien'])}\">{H.escape(p['titre'][:70])}</a>\n"
                      f"Gain par vente : {_usd(p['gain_par_vente_usd'], taux)} ({p['commission_pct']:g} %) · {p['ventes_7j']} ventes sur 7 j ({_evo(p['evolution_pct'])})\n"
                      + ("" if p.get("marque_sure") else "Recoupement eBay, Amazon et pubs non fait : pas de marque identifiable\n")
                      + (f"Amazon.fr : {_eur(p['amazon']['prix_neuf_eur'])} € neuf\n" if p.get("amazon") else "")
@@ -463,42 +507,65 @@ def message_telegram(finalistes, taux, n_lus):
     return "".join(blocs)
 
 
+CLES = ("titre", "marque", "categorie", "rang", "ventes_7j", "prix_moyen_usd", "commission_pct", "gain_par_vente_usd",
+        "revenu_usd", "commissions_totales_usd", "part_video_pct", "evolution_pct", "lien")
+
+
+def deja_lus(ancien, jour, nom):
+    """Produits d'un classement déjà payé aujourd'hui (ou None)."""
+    if not isinstance(ancien, dict):
+        return None
+    if ancien.get("jour") == jour and (ancien.get("classements") or {}).get(nom):
+        return ancien["classements"][nom]
+    if nom == "plus_vendus" and "classements" not in ancien and str(ancien.get("quand", "")).startswith(jour) and ancien.get("tous"):
+        return ancien["tous"]  # ancien format (premier relevé du 15/11/2026)
+    return None
+
+
 def main():
     cfg = json.load(open(F_CONFIG, encoding="utf-8"))
     apify.CONTEXTE["denicheur"] = "T"
+    jour = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y")
+    try:
+        ancien = json.load(open(F_JSON, encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        ancien = None
+    noms = [c["nom"] for c in cfg["classements"]]
+    if (isinstance(ancien, dict) and ancien.get("jour") == jour and ancien.get("finalistes")
+            and all((ancien.get("classements") or {}).get(n) for n in noms) and os.environ.get("AFFIL_FORCER") != "1"):
+        print(f"Relevé du {jour} déjà complet : rien n'est relancé ni repayé (AFFIL_FORCER=1 pour forcer).")
+        return 0
     avant = depense_apify()
     n = len(cfg["categories"]) * cfg["produits_par_categorie"]
-    jour = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y")
-    deja = None
-    if cfg.get("reutiliser_classement_du_jour", True):
-        try:
-            ancien = json.load(open(F_JSON, encoding="utf-8"))
-            if str(ancien.get("quand", "")).startswith(jour) and ancien.get("tous"):
-                deja = ancien["tous"]  # le classement TikTok ne se paie qu'une fois par jour
-        except (OSError, json.JSONDecodeError):
-            pass
-    brut = [] if deja else apify.lancer("tiktok_top", {"country": cfg["pays"], "period": cfg["periode"], "sortBy": cfg["tri"],
-                                       "categories": cfg["categories"], "maxResultsPerSource": cfg["produits_par_categorie"],
-                                       "addAnalytics": False}, maxi=n + len(cfg["categories"]))
-    if brut is None:
-        sante.noter("erreur", "affiliation tiktok", "classement TikTok non lu (budget du jour ou du mois atteint, jeton absent, ou robot en erreur)")
-        print("Classement TikTok non lu : aucun rapport écrit.")
-        return 1
-    vus, tous = set(), []
-    cles = ("titre", "marque", "categorie", "rang", "ventes_7j", "prix_moyen_usd", "commission_pct", "gain_par_vente_usd",
-            "revenu_usd", "commissions_totales_usd", "part_video_pct", "evolution_pct", "lien")
-    for p in deja or []:
-        p = {k: p.get(k) for k in cles}
-        p["categorie"] = categorie_principale(p["categorie"])
-        vus.add(p["lien"])
-        tous.append(p)
-    for ligne in brut:
-        p = lire_produit(ligne)
-        if p and p["lien"] not in vus:
-            vus.add(p["lien"])
-            tous.append(p)
+    classements, repris = {}, []
+    for c in cfg["classements"]:
+        deja = deja_lus(ancien, jour, c["nom"]) if cfg.get("reutiliser_classement_du_jour", True) else None
+        if deja:
+            repris.append(c["nom"])
+            produits = []
+            for p in deja:
+                p = {k: p.get(k) for k in CLES}
+                p["categorie"] = categorie_principale(p["categorie"])
+                produits.append(p)
+        else:
+            brut = apify.lancer("tiktok_top", {"country": cfg["pays"], "period": cfg["periode"], "sortBy": c["tri"],
+                                               "categories": cfg["categories"], "maxResultsPerSource": cfg["produits_par_categorie"],
+                                               "addAnalytics": False}, maxi=n + len(cfg["categories"]))
+            if brut is None:
+                sante.noter("erreur", "affiliation tiktok", f"classement « {c['nom']} » non lu (budget du jour ou du mois atteint, jeton absent, ou robot en erreur)")
+                print(f"Classement {c['nom']} non lu.")
+                continue
+            vus, produits = set(), []
+            for ligne in brut:
+                p = lire_produit(ligne)
+                if p and p["lien"] not in vus:
+                    vus.add(p["lien"])
+                    produits.append(p)
+        classements[c["nom"]] = produits
+        print(f"classement {c['nom']} : {len(produits)} produits" + (" (repris du relevé du jour)" if deja else ""))
+    tous = fusionner(classements)
     if not tous:
-        sante.noter("erreur", "affiliation tiktok", f"{len(brut)} ligne(s) reçue(s) mais aucun produit lisible")
+        sante.noter("erreur", "affiliation tiktok", "aucun produit lisible dans les classements")
         print("Aucun produit lisible : aucun rapport écrit.")
         return 1
     finalistes = choisir_finalistes(tous, cfg["filtres"], cfg["finalistes"])
@@ -511,12 +578,19 @@ def main():
     par_cat = {}
     for p in tous:
         par_cat[p["categorie"]] = par_cat.get(p["categorie"], 0) + 1
-    json.dump({"quand": quand, "classement_reutilise": bool(deja), "taux_usd_eur": taux, "cout_apify_mesure_usd": cout, "produits_par_categorie": par_cat,
-               "finalistes": finalistes, "tous": tous}, open(F_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"{len(tous)} produits {'repris du relevé du jour' if deja else 'lus'} {par_cat} ; {len(finalistes)} finaliste(s) ; coût Apify mesuré : {cout}")
+    with open(F_JSON, "w", encoding="utf-8") as f:
+        json.dump({"version": 2, "jour": jour, "quand": quand, "classements_repris": repris, "taux_usd_eur": taux,
+                   "cout_apify_mesure_usd": cout, "produits_par_categorie": par_cat, "bingos": sum(1 for p in tous if p["bingo"]),
+                   "finalistes": finalistes, "classements": {k: [{c: p.get(c) for c in CLES} for p in v] for k, v in classements.items()},
+                   "tous": tous}, f, ensure_ascii=False, indent=1)
+    print(f"{len(tous)} produits uniques {par_cat} ; {sum(1 for p in tous if p['bingo'])} bingo(s) ; {len(finalistes)} finaliste(s) ; coût Apify mesuré : {cout}")
     for p in finalistes:
-        print(" -", p["titre"][:70], "| marque sûre", repr(p.get("marque_sure")), "| recherche", repr(p.get("recherche")), "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"],
+        print(" -", "BINGO" if p["bingo"] else p["listes"], p["titre"][:60], "| marque sûre", repr(p.get("marque_sure")), "| recherche", repr(p.get("recherche")),
+              "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"], "| évolution", p["evolution_pct"],
               "| eBay", p.get("ebay"), "| pubs", p.get("pubs"), "| Amazon", p.get("amazon"))
+    if len(classements) < len(noms):
+        print("Un classement manque : données enregistrées, aucun rapport envoyé (il sera complété au prochain lancement).")
+        return 1
     if not finalistes:
         sante.noter("erreur", "affiliation tiktok", f"{len(tous)} produits lus mais aucun ne passe les filtres")
         print("Aucun finaliste : données enregistrées, aucun rapport envoyé.")

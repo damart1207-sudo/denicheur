@@ -21,7 +21,8 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # T (affiliation TikTok Shop, outils/affiliation_tiktok.py : 2 relevés par semaine prévus ; premier relevé réel 0,307 $ le 15/11) :
 # 1 $ les jours de relevé = un relevé complet (0,65 $ de plafonds réservés au pire, 5 finalistes) + une contre-vérification des finalistes.
 # Ce sont des plafonds réservés, pas la dépense : le relevé complet du 15/11 a coûté 0,31 $, une contre-vérification 0,07 $.
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.00}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
+# 15/11 au soir : 1,50 $ le temps de prouver le second classement (mise au point), à remettre à 1 $ ensuite.
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.50}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),

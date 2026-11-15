@@ -98,6 +98,32 @@ class Calculs(unittest.TestCase):
         f2 = A.choisir_finalistes(produits[:3], FILTRES, 3)
         self.assertEqual([p["marque"] for p in f2], ["LANDOT", "medicube"])
 
+    def test_deux_classements_bingo_et_ordre(self):
+        P = lambda *a, **k: A.lire_produit(ligne(*a, **k))  # noqa: E731
+        landot, serum = P("LANDOT Brosse lissante", 1823, 46.2, 10, 15, lien="L"), P("[medicube Officiel] Sérum NAD+", 4748, 17.33, 10, 48, lien="S")
+        monte = P("ZETA Lampe", 400, 30, 10, 300, cat="Home Supplies", lien="Z")
+        monte2 = P("Tapis de bain", 300, 20, 10, 150, cat="Home Supplies", lien="T")
+        tous = A.fusionner({"plus_vendus": [landot, serum], "hausses": [dict(serum), monte, monte2]})
+        self.assertEqual(len(tous), 4)
+        par = {p["lien"]: p for p in tous}
+        self.assertTrue(par["S"]["bingo"])
+        self.assertEqual(par["S"]["listes"], ["plus_vendus", "hausses"])
+        self.assertEqual((par["L"]["bingo"], par["Z"]["listes"]), (False, ["hausses"]))
+        self.assertIn("BINGO", A.trouve_par(par["S"]))
+        self.assertEqual(A.trouve_par(par["Z"]), "classement des plus fortes hausses")
+        # bingo d'abord, puis la plus forte hausse, puis le plus vendu, puis la hausse suivante
+        self.assertEqual([p["lien"] for p in A.choisir_finalistes(tous, FILTRES, 4)], ["S", "Z", "L", "T"])
+
+    def test_classement_paye_une_fois_par_jour(self):
+        v2 = {"jour": "16/11/2026", "classements": {"plus_vendus": [{"lien": "a"}], "hausses": []}}
+        self.assertEqual(A.deja_lus(v2, "16/11/2026", "plus_vendus"), [{"lien": "a"}])
+        self.assertIsNone(A.deja_lus(v2, "16/11/2026", "hausses"))
+        self.assertIsNone(A.deja_lus(v2, "17/11/2026", "plus_vendus"))
+        v1 = {"quand": "15/11/2026 à 20 h 54", "tous": [{"lien": "b"}]}
+        self.assertEqual(A.deja_lus(v1, "15/11/2026", "plus_vendus"), [{"lien": "b"}])
+        self.assertIsNone(A.deja_lus(v1, "15/11/2026", "hausses"))
+        self.assertIsNone(A.deja_lus(None, "15/11/2026", "plus_vendus"))
+
     def test_resumes(self):
         e = A.resume_ebay([{"soldPrice": "213.90", "soldCurrency": "EUR"}, {"soldPrice": "230.00"}, {"soldPrice": None}])
         self.assertEqual((e["nb"], e["min"], e["max"], e["mediane"]), (2, 213.9, 230.0, 221.95))

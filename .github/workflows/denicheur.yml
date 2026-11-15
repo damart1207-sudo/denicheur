@@ -177,6 +177,13 @@ jobs:
       - name: Enregistrer les résultats
         if: always()
         run: |
+          # GARDE-FOU (16/11/2026) : ce rebase « -X theirs » sur un clone de profondeur 1 n'est sûr que depuis main.
+          # Lancé depuis une autre branche, il rejoue tout l'instantané de la branche par-dessus main et écrase ce qui
+          # y a été fusionné entre-temps (le 15/11 à 23 h 53, le lot 1 #2 a été écrasé ainsi, puis rétabli).
+          if [ "${{ github.ref_name }}" != "main" ]; then
+            echo "Lancement depuis la branche ${{ github.ref_name }} : résultats NON enregistrés sur main (pousser le code sur main puis relancer)."
+            exit 0
+          fi
           git config user.name "denicheur-bot"
           git config user.email "denicheur-bot@users.noreply.github.com"
           mkdir -p data

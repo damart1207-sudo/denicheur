@@ -89107,7 +89107,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T14:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -89315,7 +89315,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:16 UTC : offre active, 39.99 affiché, marchand 235_3 ; miravia.es refuse les robots (page anti-robot (captcha)) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Page du bon plan Chollometro lue par le robot à 15h16 (Paris) : offre active à 39,99 € chez Miravia, place de marché espagnole qui livre l'Espagne ; livraison en France non prouvée. Prix neuf de référence en France : 57,99 € (fiche Amazon.fr lue par Keepa, plus bas 90 j 52,79 €). Revente : marge négative (-7 € au mieux), aucune revente possible.",
+   "prix_neuf_min_idealo": 57.99,
+   "source_prix_ref": "Keepa / Amazon.fr (moyenne 90 j 59,97 €)",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "387b951bef",
@@ -89374,7 +89386,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T14:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -89557,6 +89569,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:27 UTC : offre active, 134.1 affiché, marchand 13322_2 ; tiktok.com refuse les robots (page anti-robot (captcha)) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Page du bon plan Mydealz lue par le robot à 15h27 (Paris) : offre active à 134,10 € sur TikTok Shop Allemagne, boutique qui livre l'Allemagne ; livraison en France non prouvée. Prix neuf le plus bas relevé en France : 159,99 € (achatmoinscher, 21 boutiques). Revente : marge négative (-9 € au mieux).",
+   "prix_neuf_min_idealo": 159.99,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

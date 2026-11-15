@@ -60,9 +60,9 @@ def a_faire():
     return [(q, p) for _, q, p in out]
 
 
-def analyser(q, pays, etat=None):
+def analyser(q, pays):
     """Recherche Keepa sur l'Amazon du pays : garde les vrais résultats (pas les accessoires bon marché)."""
-    d = moisson._appel("search", {"domain": moisson.DOMAINES.get(pays, 4), "type": "product", "term": q[:100], "stats": 180, "history": 0}, etat=etat, cout_max=10)
+    d = moisson._appel("search", {"domain": moisson.DOMAINES.get(pays, 4), "type": "product", "term": q[:100], "stats": 180, "history": 0})
     res = []
     for p in (d.get("products") or [])[:10]:
         if isinstance(p, dict):
@@ -80,19 +80,19 @@ def analyser(q, pays, etat=None):
     par_pays = {pays: {"prix": top["neuf"], "lien": lien(top["asin"], pays)}}
     for p in PAYS:
         if p != pays:
-            for r in moisson.fiches([top["asin"]], p, etat=etat):
+            for r in moisson.fiches([top["asin"]], p):
                 if r.get("neuf"):
                     par_pays[p] = {"prix": r["neuf"], "lien": lien(top["asin"], p)}
     return {"pays": pays, "jour": _aujourdhui(), "nb": len(bons), "moins_cher": fiche(bas), "plus_cher": fiche(haut),
             "meilleure_vente": fiche(top), "par_pays": par_pays}
 
 
-def prix_europe(asins, etat=None):
+def prix_europe(asins):
     """Prix du même produit sur Amazon Allemagne, Italie, Espagne (1 jeton par produit et par pays)."""
     out = {a: {"jour": _aujourdhui()} for a in asins}
     for p in ("DE", "IT", "ES"):
         for i in range(0, len(asins), 100):
-            for r in moisson.fiches(asins[i:i + 100], p, etat=etat):
+            for r in moisson.fiches(asins[i:i + 100], p):
                 if r.get("neuf"):
                     out[r["asin"]][p] = r["neuf"]
     return out
@@ -115,11 +115,11 @@ def tour(etat, maxi=3, maxi_hype=30):
             break
         if (d["recherches"].get(q.lower()) or {}).get("jour", "") >= limite:
             continue
-        d["recherches"][q.lower()] = analyser(q, pays, etat=etat)
+        d["recherches"][q.lower()] = analyser(q, pays)
         n += 1
     asins = hype_a_faire(d["hype"])[:maxi_hype]
     if asins and moisson._peut(len(asins) * 3, etat):
-        d["hype"].update(prix_europe(asins, etat=etat))
+        d["hype"].update(prix_europe(asins))
     else:
         asins = []
     if n or asins:

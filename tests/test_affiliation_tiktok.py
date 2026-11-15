@@ -158,6 +158,59 @@ class Calculs(unittest.TestCase):
         p = A.lire_produit(ligne("LANDOT Brosse", 1823, 46.2, 10, lien="https://shop.tiktok.com/fr/pdp/1729506070096550618"))
         self.assertEqual(p["lien"], "https://www.tiktok.com/view/product/1729506070096550618")
 
+    def test_comparaison_avec_les_marchands_francais(self):
+        # offres réelles relevées sur Google Shopping le 15/11/2026
+        O = lambda t, p, m="Amazon.fr - Seller": {"titre": t, "prix": p, "marchand": m, "devise": "EUR", "lien": "https://x"}  # noqa: E731
+        t_landot = "LANDOT Brosse électrique lissante 2 en 1 pour cheveux, peigne lissant et boucleur anti-emmêlement"
+        self.assertEqual(A.requete_comparaison(t_landot, "LANDOT"), ("LANDOT Brosse électrique lissante", "meme_produit"))
+        self.assertEqual(A.requete_comparaison("Manteau bloom", ""), (None, "titre_vague"))
+        self.assertEqual(A.requete_comparaison("Gamme jaune poussin métisse", ""), (None, "titre_vague"))
+        self.assertEqual(A.requete_comparaison("100 blocs de construction magnétiques – Jeu créatif STEM pour enfants", "")[1], "equivalents")
+        landot = [O("Landot Brosse Lissante Chauffante Ionique 2 en 1 Lisseur", 47.99), O("LANDOT Brosse Lissante, 12 Temp 120-230°C", 45.99),
+                  O("Brosse Lissante Remington Keratin Protect", 45.99, "Amazon.fr"),            # autre marque
+                  O("LANDOT Boucleur Lisseur 2 en 1, Plaques Céramiques", 42.99),                # même marque, autre produit
+                  O("LANDOT Brosse électrique lissante 2 en 1 pour cheveux,", 42.00, "Leboncoin")]  # occasion
+        c = A.comparer_offres(landot, t_landot, "LANDOT", "meme_produit", 41.80)
+        self.assertEqual((c["type"], c["nb"], c["min"], c["max"], c["ecart_eur"]), ("meme_produit", 2, 45.99, 47.99, 4.19))
+        self.assertIn("même produit à partir de 45,99 € chez Amazon.fr - Seller (2 offres, jusqu'à 47,99 €)", A.texte_comparaison(c))
+        self.assertIn("soit 4,19 € de moins", A.texte_comparaison(c))
+        plus_cher = A.comparer_offres(landot, t_landot, "LANDOT", "meme_produit", 55.0)
+        self.assertIn("PLUS CHER", A.texte_comparaison(plus_cher))
+        t_blocs = "100 blocs de construction magnétiques – Jeu créatif STEM pour enfants"
+        blocs = [O("VEVOR Construction Magnétique Enfant 100 Blocs Magnétiques", 20.14, "Darty"), O("Blocs Construction Magnétiques 100 Pièces", 39.99),
+                 O("100 blocs de construction magnétiques jouets série pompier", 26.84, "Leroy Merlin"),
+                 O("Jeu de construction magnetique SPRINGOS 2025", 18.99, "Cdiscount")]             # pas 100 blocs : écarté
+        c = A.comparer_offres(blocs, t_blocs, "", "equivalents", 14.11)
+        self.assertEqual((c["type"], c["nb"], c["min"], c["max"], c["mediane"]), ("equivalents", 3, 20.14, 39.99, 26.84))
+        self.assertIn("produits équivalents (pas forcément le même)", A.texte_comparaison(c))
+        # trop peu d'offres proches : on n'affiche pas de fourchette
+        sq = [O("6 PCS Crunchy Squishy Fun Box Asmr", 29.99), O("Dumpling Squishies Mystery Box", 40.0, "ubuy.fr")]
+        c = A.comparer_offres(sq, "Coffret de Noël – 6 squishies à presser en forme de petits pains vapeur", "", "equivalents", 21.77)
+        self.assertEqual(c["type"], "aucune")
+        self.assertIn("aucune offre comparable", A.texte_comparaison(c))
+        self.assertIn("titre trop vague", A.texte_comparaison({"type": "titre_vague"}))
+        self.assertEqual(A.texte_comparaison(None), "")
+
+    def test_comparer_ne_cherche_que_ce_qui_manque(self):
+        demandes = []
+        ancien = A.shopping.chercher
+        A.shopping.chercher = lambda q, pays="FR", **k: (demandes.append(list(q)) or {q[0]: [{"titre": "LANDOT Brosse Lissante", "prix": 45.99, "marchand": "Amazon.fr", "devise": "EUR"}]})
+        try:
+            cfg = {"comparaison": {"actif": True, "mots_min_titre": 6}}
+            f = [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10)), A.lire_produit(ligne("Manteau bloom", 473, 27, 13)),
+                 dict(A.lire_produit(ligne("NYX Rouge", 900, 9, 10)), comparaison={"type": "aucune"})]
+            self.assertEqual(A.comparer(f, 0.9, cfg), 1)
+            self.assertEqual(demandes, [["LANDOT Brosse électrique lissante"]])
+            self.assertEqual((f[0]["comparaison"]["type"], f[1]["comparaison"]["type"], f[2]["comparaison"]["type"]), ("meme_produit", "titre_vague", "aucune"))
+            self.assertEqual(A.comparer(f, 0.9, cfg), 0)          # plus rien à chercher : aucun appel
+            self.assertEqual(len(demandes), 1)
+            A.shopping.chercher = lambda q, pays="FR", **k: {}     # budget atteint : marqué « non lu », réessayé au lancement suivant
+            g = [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10))]
+            self.assertEqual(A.comparer(g, 0.9, cfg), 0)
+            self.assertEqual(g[0]["comparaison"]["type"], "non_lu")
+        finally:
+            A.shopping.chercher = ancien
+
     def test_resumes(self):
         e = A.resume_ebay([{"soldPrice": "213.90", "soldCurrency": "EUR"}, {"soldPrice": "230.00"}, {"soldPrice": None}])
         self.assertEqual((e["nb"], e["min"], e["max"], e["mediane"]), (2, 213.9, 230.0, 221.95))

@@ -6,7 +6,9 @@ Chaîne (4 sources prouvées le 15/11/2026 par de vrais relevés) :
     chiffre (plancher « revenu_min_usd » : sans lui, la liste du 15/11 était faite de produits à 11 ventes sans commission).
     Un produit présent dans les deux listes est un BINGO : il se vend déjà et il accélère encore ;
  2. tri : gain par vente (prix moyen × commission), volume, évolution -> quelques finalistes, en variant marques et catégories ;
- 3. pour chaque finaliste : prix réellement vendus sur ebay.fr (robot « ebay_vendus »), pubs Facebook / Instagram / Google
+ 3. pour chaque finaliste : prix chez les marchands français (Google Shopping par DataForSEO, 0,002 $ la recherche) :
+    « même produit » si la marque et le type correspondent, « produits équivalents » (fourchette) pour un sans-marque au
+    titre précis, rien si le titre est trop vague ; puis prix réellement vendus sur ebay.fr (robot « ebay_vendus »), pubs Facebook / Instagram / Google
     en cours (robot « pubs » : une pub payée depuis des semaines = un produit qui se vend), prix Amazon.fr (Keepa).
 Aucun chiffre inventé : une donnée absente est écrite « non trouvé ». Les montants TikTok sont des ESTIMATIONS du
 fournisseur de données, en dollars (à utiliser pour comparer les produits entre eux).
@@ -27,7 +29,7 @@ from zoneinfo import ZoneInfo
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, RACINE)
-from denicheur import apify, keepa, sante, telegram  # noqa: E402
+from denicheur import apify, keepa, sante, shopping, telegram  # noqa: E402
 
 F_CONFIG = os.path.join(RACINE, "config/affiliation_tiktok.json")
 F_JSON = os.path.join(RACINE, "data/affiliation_tiktok.json")
@@ -337,6 +339,101 @@ def resume_pubs(lignes):
             "annonceurs": sorted(annonceurs, key=lambda a: -annonceurs[a])[:3], "vers_amazon": vers_amazon}
 
 
+# ---------- comparaison avec les marchands français (calculs purs) ----------
+
+OCCASION = re.compile(r"leboncoin|ebay|vinted|back ?market|rakuten|rebuy|occasion|reconditionn", re.I)
+
+
+def _racine(m):
+    return m[:-1] if len(m) > 3 and m[-1] in "sx" else m
+
+
+def noyau(titre, marque_sure="", n=4):
+    """Les premiers mots qui disent ce qu'est le produit (sans la marque), au singulier, sans accent."""
+    m = {_racine(x) for x in mots(marque_sure)}
+    out = []
+    for x in mots(re.sub(r"\[[^\]]*\]", " ", sans_etiquettes(titre))):
+        x = _racine(x)
+        if x not in m and x not in out:
+            out.append(x)
+    return out[:n]
+
+
+def requete_comparaison(titre, marque_sure, mots_min=6):
+    """(requête, type) : « meme_produit » avec une marque sûre ; « equivalents » pour un sans-marque au titre précis ;
+    (None, "titre_vague") sinon — « Mini box » ou « Manteau bloom » ramèneraient n'importe quoi."""
+    if marque_sure:
+        return recherche(titre, marque_sure, mots=3), "meme_produit"
+    propre = re.sub(r"[–—|,;:()\[\]【】]", " ", sans_etiquettes(titre))
+    if len(mots(propre)) < mots_min:
+        return None, "titre_vague"
+    return " ".join(propre.split()[:7]), "equivalents"
+
+
+def comparer_offres(offres, titre, marque_sure, genre, prix_tiktok_eur):
+    """Offres Google Shopping -> résumé. On ne garde que le neuf en euros qui partage les mots du produit
+    (et la marque pour « même produit ») : un boucleur LANDOT n'est pas la brosse LANDOT (test du 15/11/2026)."""
+    coeur = noyau(titre, marque_sure, 3 if genre == "meme_produit" else 4)
+    besoin = 2 if genre == "meme_produit" else max(2, -(-3 * len(coeur) // 4))
+    marque_n = _sans_accent(marque_sure).replace(" ", "")
+    bonnes = []
+    for o in offres or []:
+        t = o.get("titre") or ""
+        if not isinstance(o.get("prix"), (int, float)) or o["prix"] <= 0 or (o.get("devise") not in (None, "", "EUR")):
+            continue
+        if OCCASION.search(str(o.get("marchand") or "")) or OCCASION.search(t):
+            continue
+        if marque_n and marque_n not in _sans_accent(t).replace(" ", ""):
+            continue
+        if len({_racine(x) for x in mots(t)} & set(coeur)) < min(besoin, len(coeur)):
+            continue
+        bonnes.append(o)
+    minimum = 1 if genre == "meme_produit" else 3  # une fourchette d'équivalents demande au moins 3 offres
+    if len(bonnes) < minimum:
+        return {"type": "aucune", "genre": genre, "nb_lues": len(offres or [])}
+    prix = sorted(o["prix"] for o in bonnes)
+    bas = min(bonnes, key=lambda o: o["prix"])
+    r = {"type": genre, "nb": len(bonnes), "nb_lues": len(offres or []), "min": prix[0], "max": prix[-1],
+         "mediane": round(statistics.median(prix), 2),
+         "moins_cher": {"marchand": bas.get("marchand"), "prix": bas["prix"], "titre": (bas.get("titre") or "")[:90], "lien": bas.get("lien")}}
+    if prix_tiktok_eur:
+        r["prix_tiktok_eur"] = round(prix_tiktok_eur, 2)
+        r["ecart_eur"] = round(prix[0] - prix_tiktok_eur, 2)  # positif : TikTok est moins cher que la moins chère des offres
+    return r
+
+
+def texte_comparaison(c):
+    """Phrase lisible par David, ou "" s'il n'y a rien à dire."""
+    if not isinstance(c, dict):
+        return ""
+    t = c.get("type")
+    if t == "titre_vague":
+        return "non comparé : titre trop vague pour chercher ailleurs sans risque de confusion"
+    if t == "non_lu":
+        return "non lu (budget du jour atteint ou service indisponible)"
+    if t == "aucune":
+        return f"aucune offre comparable chez les marchands français ({c.get('nb_lues', 0)} offre(s) lue(s), aucune assez proche)"
+    if t not in ("meme_produit", "equivalents"):
+        return ""
+    bas = c["moins_cher"]
+    if t == "meme_produit":
+        debut = (f"même produit à partir de {_eur(c['min'])} € chez {bas.get('marchand') or 'un marchand'}"
+                 + (f" ({c['nb']} offres, jusqu'à {_eur(c['max'])} €)" if c["nb"] > 1 else ""))
+    else:
+        debut = (f"produits équivalents (pas forcément le même) : de {_eur(c['min'])} à {_eur(c['max'])} €, "
+                 f"médiane {_eur(c['mediane'])} € sur {c['nb']} offres")
+    e = c.get("ecart_eur")
+    if e is None:
+        return debut
+    if e > 0.5:
+        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, soit {_eur(e)} € de moins" + (" que la moins chère" if t == "equivalents" else "")
+    elif e < -0.5:
+        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, soit {_eur(-e)} € PLUS CHER" + (" que la moins chère" if t == "equivalents" else "")
+    else:
+        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, même prix"
+    return debut + fin
+
+
 # ---------- réseau ----------
 
 def taux_usd_eur():
@@ -351,6 +448,36 @@ def taux_usd_eur():
 def depense_apify():
     apify._reel.clear()
     return apify.depense_reelle()
+
+
+def comparer(finalistes, taux, cfg):
+    """Une seule demande groupée à Google Shopping (0,002 $ par produit cherché) pour les finalistes pas encore comparés."""
+    reglages = cfg.get("comparaison") or {}
+    if not reglages.get("actif", True):
+        return 0
+    demandes = {}
+    for p in finalistes:
+        if (p.get("comparaison") or {}).get("type") not in (None, "non_lu"):
+            continue
+        m = marque_fiable(p["titre"])
+        q, genre = requete_comparaison(p["titre"], m, reglages.get("mots_min_titre", 6))
+        if q is None:
+            p["comparaison"] = {"type": genre}
+        else:
+            demandes[id(p)] = (p, q, genre, m)
+    if not demandes:
+        return 0
+    res = sante.protege("affiliation comparaison", shopping.chercher, [d[1] for d in demandes.values()], "FR", defaut={}) or {}
+    lus = 0
+    for p, q, genre, m in demandes.values():
+        if q not in res:
+            p["comparaison"] = {"type": "non_lu", "requete": q}
+            continue
+        c = comparer_offres(res[q], p["titre"], m, genre, p["prix_moyen_usd"] * taux if taux else None)
+        c["requete"] = q
+        p["comparaison"] = c
+        lus += 1
+    return lus
 
 
 def enrichir(p, cfg):
@@ -408,6 +535,11 @@ def _evo(v):
     return "inconnue" if v is None else f"{'+' if v >= 0 else ''}{v:.0f} %"
 
 
+def _lien_offre(c):
+    lien = ((c or {}).get("moins_cher") or {}).get("lien") if isinstance(c, dict) else None
+    return f' — <a href="{H.escape(str(lien))}" target="_blank" rel="noopener">voir l\'offre</a>' if lien else ""
+
+
 def carte(p, taux):
     e, pb, am = p.get("ebay"), p.get("pubs"), p.get("amazon")
     non_lu = "non lu (budget du jour atteint ou robot indisponible)"
@@ -442,6 +574,7 @@ def carte(p, taux):
 <tr><th>Ventes sur 7 jours</th><td>{f"{p['ventes_7j']:,}".replace(",", " ")} (évolution {_evo(p['evolution_pct'])})</td></tr>
 <tr><th>Commissions totales estimées</th><td>{_usd(p['commissions_totales_usd'], None)} sur 7 jours, tous créateurs confondus</td></tr>
 <tr><th>Part des ventes en vidéo</th><td>{'inconnue' if p['part_video_pct'] is None else str(p['part_video_pct']) + ' %'}</td></tr>
+<tr><th>Ailleurs en France</th><td>{H.escape(texte_comparaison(p.get('comparaison')) or 'non comparé')}{_lien_offre(p.get('comparaison'))}</td></tr>
 <tr><th>Prix vendus sur eBay.fr</th><td>{ebay}</td></tr>
 <tr><th>Publicités en cours</th><td>{pubs}</td></tr>
 <tr><th>Prix Amazon.fr</th><td>{amazon}</td></tr>
@@ -493,6 +626,9 @@ table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:n
 <p><b>Liens</b> : ils ouvrent la fiche du produit dans l'appli TikTok. Ouvre le rapport sur ton téléphone ; sur un ordinateur, TikTok n'affiche pas les fiches françaises.</p>
 <p><b>Prix de vente moyen</b> : moyenne des ventes des 7 derniers jours, estimée en dollars puis convertie en euros. Ce n'est pas forcément
 le prix affiché aujourd'hui dans l'appli (promotions, variantes) : le lien du produit donne le prix exact.</p>
+<p><b>Ailleurs en France</b> : prix du neuf chez les marchands français lus sur Google Shopping. « Même produit » = la marque et le type
+correspondent. « Produits équivalents » = des articles du même genre, pas forcément le même : c'est une fourchette de marché.
+Rien n'est cherché quand le titre est trop vague, pour ne pas comparer avec un autre article.</p>
 <p><b>Gain par vente</b> : prix moyen × commission. C'est ce que touche le créateur pour une vente, avant annulation en cas de retour.</p>
 <p><b>Commissions totales estimées</b> : revenu estimé × commission, tous créateurs confondus. Cela mesure où se trouve l'argent, pas ce que tu toucheras.</p>
 <p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
@@ -538,6 +674,8 @@ def message_telegram(finalistes, taux, n_lus):
                      f"Prix de vente moyen : {_usd(p['prix_moyen_usd'], taux)}\n"
                      f"Gain par vente : {_usd(p['gain_par_vente_usd'], taux)} ({p['commission_pct']:g} %) · {p['ventes_7j']} ventes sur 7 j ({_evo(p['evolution_pct'])})\n"
                      + ("" if p.get("marque_sure") else "Recoupement eBay, Amazon et pubs non fait : pas de marque identifiable\n")
+                     + (f"Ailleurs en France : {H.escape(texte_comparaison(p.get('comparaison')))}\n"
+                        if (p.get("comparaison") or {}).get("type") in ("meme_produit", "equivalents") else "")
                      + (f"Amazon.fr : {_eur(p['amazon']['prix_neuf_eur'])} € neuf\n" if p.get("amazon") else "")
                      + (f"eBay.fr : {e['nb']} vente(s), médiane {_eur(e['mediane'])} {e['devise']}\n" if e else "")
                      + (f"Pubs de la marque : {pb['nb']}" + (f", la plus ancienne depuis {pb['plus_longue_jours']} j" if pb['plus_longue_jours'] is not None else "") + "\n" if pb else ""))
@@ -554,7 +692,7 @@ def reglage(cfg, c):
             "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
 
 
-VERSION_RAPPORT = 3     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
+VERSION_RAPPORT = 4     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
 METHODE_SELECTION = 2  # à augmenter quand la façon de choisir les finalistes change
 
 
@@ -590,7 +728,9 @@ def main():
             and ancien.get("selection") == reglage_selection(cfg)
             and os.environ.get("AFFIL_FORCER") != "1"):
         print(f"Relevé du {jour} déjà complet : rien n'est relancé ni repayé (AFFIL_FORCER=1 pour forcer).")
-        if ancien.get("rapport_version") != VERSION_RAPPORT:  # présentation corrigée : on refait la page et le message, gratuitement
+        a_comparer = any((f.get("comparaison") or {}).get("type") in (None, "non_lu") for f in ancien["finalistes"])
+        compares = comparer(ancien["finalistes"], ancien.get("taux_usd_eur"), cfg) if a_comparer else 0
+        if ancien.get("rapport_version") != VERSION_RAPPORT or compares:  # page refaite sans repayer les classements
             for liste in [ancien["tous"], ancien["finalistes"]] + list(ancien["classements"].values()):
                 for p in liste:
                     p["lien"] = lien_appli(p.get("lien"))
@@ -598,10 +738,12 @@ def main():
             rapport(ancien["tous"], ancien["finalistes"], cfg, ancien.get("taux_usd_eur"), ancien.get("cout_apify_mesure_usd"), ancien["quand"])
             with open(F_JSON, "w", encoding="utf-8") as f:
                 json.dump(ancien, f, ensure_ascii=False, indent=1)
-            telegram.envoyer("Rapport mis à jour : prix de vente moyen ajouté pour chaque produit.\n\n"
+            telegram.envoyer("Rapport mis à jour : comparaison avec les prix des marchands français.\n\n"
                              + message_telegram(ancien["finalistes"], ancien.get("taux_usd_eur"), len(ancien["tous"])))
             telegram.envoyer_fichier(F_HTML, "Affiliation TikTok Shop : rapport mis à jour")
-            print("Rapport du jour refait avec la nouvelle présentation (aucun appel payant).")
+            print(f"Rapport du jour refait ; {compares} produit(s) comparé(s) sur Google Shopping.")
+            for f in ancien["finalistes"]:
+                print(" -", f["titre"][:50], "|", f.get("comparaison"))
         return 0
     avant = depense_apify()
     n = len(cfg["categories"]) * cfg["produits_par_categorie"]
@@ -641,11 +783,13 @@ def main():
         return 1
     complet = len(classements) == len(noms)
     finalistes = choisir_finalistes(tous, cfg["filtres"], cfg["finalistes"]) if complet else []
+    taux = taux_usd_eur()
     for p in finalistes:  # aucun recoupement payant tant qu'un classement manque
         sante.protege("affiliation enrichir", enrichir, p, cfg)
+    if finalistes:
+        sante.protege("affiliation comparaison", comparer, finalistes, taux, cfg)
     apres = depense_apify()
     cout = round(apres - avant, 4) if avant is not None and apres is not None else None
-    taux = taux_usd_eur()
     quand = datetime.now(timezone.utc).astimezone(ZoneInfo("Europe/Paris")).strftime("%d/%m/%Y à %H h %M")
     par_cat = {}
     for p in tous:
@@ -662,7 +806,7 @@ def main():
     for p in finalistes:
         print(" -", "BINGO" if p["bingo"] else p["listes"], p["titre"][:60], "| marque sûre", repr(p.get("marque_sure")), "| recherche", repr(p.get("recherche")),
               "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"], "| évolution", p["evolution_pct"],
-              "| eBay", p.get("ebay"), "| pubs", p.get("pubs"), "| Amazon", p.get("amazon"))
+              "| eBay", p.get("ebay"), "| pubs", p.get("pubs"), "| Amazon", p.get("amazon"), "| ailleurs", p.get("comparaison"))
     if not complet:
         print("Un classement manque : données enregistrées, aucun rapport envoyé (il sera complété au prochain lancement).")
         return 1

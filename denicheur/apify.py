@@ -20,7 +20,7 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # B (tendances) 0,15 $ ; C (chasse ciblée) 0,15 $ ; D (Vinted inter-pays) 0,10 $
 # T (affiliation TikTok Shop, outils/affiliation_tiktok.py, 2 relevés par semaine) : 1 $ les jours de relevé.
 # Un relevé = 2 classements de 100 produits (0,295 $ chacun, mesuré le 15/11) + recoupements des finalistes (≈ 0,03 $ par marque).
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.00}  # 1,25 $/jour hors T ; le plafond mensuel prime
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.00}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
 # Soirée de mise au point du 15/11/2026 uniquement (plusieurs relevés d'essai, débités au plafond avant le débit réel) :
 if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-15":
     PLAFOND_JOUR_USD["T"] = 2.00
@@ -47,8 +47,7 @@ ROBOTS = {
 def _budget():
     mois = datetime.now(timezone.utc).strftime("%Y-%m")
     try:
-        with open(F_BUDGET) as source:
-            b = json.load(source)
+        b = json.load(open(F_BUDGET))
     except (OSError, json.JSONDecodeError):
         b = {}
     if b.get("mois") != mois:
@@ -58,13 +57,11 @@ def _budget():
 
 def _noter(b, cout):
     b["depense_estimee_usd"] = round(b["depense_estimee_usd"] + cout, 4)
-    b.pop("depense_ce_tour", None)  # ancien cumul persistant, pas un compteur de tour
-    _reel["reserves_processus"] = round(_reel.get("reserves_processus", 0) + cout, 4)
+    b["depense_ce_tour"] = round(b.get("depense_ce_tour", 0) + cout, 4)
     b["depense_reelle_usd"] = _reel.get("usd")
     b["appels"] += 1
     os.makedirs(os.path.dirname(F_BUDGET), exist_ok=True)
-    with open(F_BUDGET, "w") as sortie:
-        json.dump(b, sortie, indent=1)
+    json.dump(b, open(F_BUDGET, "w"), indent=1)
 
 
 _reel = {}
@@ -98,29 +95,14 @@ def disponible():
     reel = depense_reelle()
     if reel is None:  # impossible de lire la dépense : prudence, on s'arrête
         return False
-    # Le registre partagé reste l'autorité. Ne pas réadditionner les anciens
-    # appels déjà présents dans la mesure fournisseur à chaque redémarrage.
-    return max(reel + _reel.get("reserves_processus", 0),
-               _budget().get("depense_estimee_usd", 0)) < BUDGET_MOIS_USD
+    return reel + _budget().get("depense_ce_tour", 0) < BUDGET_MOIS_USD
 
 
 def lancer(robot, entree, maxi=10):
     """Lance un robot (synchrone). Renvoie la liste des résultats, ou None si budget/jeton absent ou erreur."""
-    acteur, plafond = ROBOTS[robot]
-    return _lancer(robot, acteur, plafond, entree, maxi)
-
-
-def lancer_test(nom, acteur, entree, maxi=10):
-    """Sonde réelle : même registre et catégorie A, plafond fixe de 0,05 $.
-
-    Cette fonction n'est pas un mode gratuit. Les tests hors réseau la simulent.
-    """
-    return _lancer("test:" + nom, acteur, 0.05, entree, maxi)
-
-
-def _lancer(robot, acteur, plafond, entree, maxi):
     if not disponible():
         return None
+    acteur, plafond = ROBOTS[robot]
     b = _budget()
     categorie = CONTEXTE['denicheur']
     try:
@@ -144,9 +126,9 @@ def _lancer(robot, acteur, plafond, entree, maxi):
         items = None
     n = len(items) if isinstance(items, list) else 0
     dep, unit = TARIFS.get(robot, (0.0, plafond / max(maxi, 1)))
-    # Le nombre de résultats n'est pas une facture. Aucun remboursement de
-    # réservation à partir d'un tarif estimé ; conserver le plafond engagé.
-    debit = plafond
+    # Le dataset ne contient pas la facture exacte : conserver le plafond débité, SAUF pour les robots payés au résultat
+    # dont le tarif a été relevé sur de vraies factures (15/11/2026) : démarrage + prix × résultats, borné par le plafond.
+    debit = min(plafond, dep + unit * n) if robot in COUT_AU_RESULTAT and isinstance(items, list) else plafond
     if isinstance(items, list):
         budget.rapprocher('apify', reservation, debit)
     # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique (le plafond reste débité).

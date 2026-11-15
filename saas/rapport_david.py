@@ -6,14 +6,10 @@ import json
 import os
 import re
 import unicodedata
-import sys
 from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if RACINE not in sys.path:
-    sys.path.insert(0, RACINE)
-from denicheur.rentabilite import depuis_audit
 PARIS = ZoneInfo("Europe/Paris")
 TAUX_HYPE, PORT_HYPE, IMPORT_HYPE = {"US": 0.90, "JP": 0.0058}, {"US": 15, "JP": 12}, 1.25   # mêmes valeurs que denicheur/hype_jour.py
 PORT_UE, FRAIS_VENTE = 7.0, 0.12
@@ -50,7 +46,6 @@ def mots(t):
 
 
 def construire():
-    regles = lire("config/regles.json", {})
     p = lire("data/dernier_passage.json", {})
     if not p.get("candidats"):
         # Passage sans nouvelle affaire (toutes déjà vues) : montrer le dernier passage qui en a, avec son audit.
@@ -73,12 +68,6 @@ def construire():
         verd = v.get("verdict") or c.get("feu") or ("passe" if c.get("passe_verif") else "attente")
         feu = {"valide": "vert", "bon": "orange", "passe": "orange", "rejete": "rouge", "attente": "gris", "vert": "vert", "orange": "orange", "rouge": "rouge"}[verd]
         k = c.get("keepa") or {}
-        marge = depuis_audit(c, v, regles)
-        seuil = regles.get("seuils", {}).get("marge_nette_min", 10)
-        if marge["marge"] is not None and marge["marge"] < seuil:
-            feu = "rouge"
-        elif marge["marge"] is None and feu in ("vert", "orange"):
-            feu = "gris"
         affaires.append({
             "titre": c.get("nom_produit") or c.get("titre"), "titre_complet": c.get("titre"), "prix": c.get("prix"), "cout": c.get("cout_achat"),
             "marchand": c.get("marchand"), "pays": c.get("pays"), "lien": c.get("lien"), "denicheur": signe(c.get("source")),
@@ -88,7 +77,7 @@ def construire():
             "occ_bas": (c.get("occasion") or {}).get("bas") or (c.get("verification") or {}).get("occasion_bas"),
             "occ_haut": (c.get("occasion") or {}).get("haut") or (c.get("verification") or {}).get("occasion_haut"),
             "vendeurs": c.get("vendeurs_amazon"), "concurrence": c.get("concurrence_amazon"),
-            **marge,
+            "revente": v.get("prix_revente_verifie") or c.get("prix_revente_prudent"), "marge": v.get("marge_nette_verifiee") if v.get("marge_nette_verifiee") is not None else c.get("marge_verifiee"),
             "canal": v.get("ou_vendre") or c.get("plateforme_revente"), "ean": c.get("ean"), "ventes30": k.get("ventes_estimees_30j"),
             "volume_google": (c.get("demande_google") or {}).get("volume_mensuel"), "bingo": bool(c.get("bingo")), "annonces_ebay": c.get("annonces_ebay"), "mot_cle": c.get("mot_cle"), "score_vente": c.get("score_vente"),
             "date": p.get("horodatage", "").replace("_", " ")[:16], "motif": v.get("commentaire") or (c.get("verification") or {}).get("remarque") or "",
@@ -103,12 +92,6 @@ def construire():
         st = a.get("statut")
         feu = {"valide": "vert", "bon": "orange", "bon_plan": "orange", "a_verifier": "gris"}.get(st, "rouge")
         meilleur = max((x for x in (a.get("canaux") or []) if isinstance(x, dict)), key=lambda x: x.get("marge_nette") or 0, default={})
-        marge = depuis_audit(a, v, regles, meilleur)
-        seuil = regles.get("seuils", {}).get("marge_nette_min", 10)
-        if marge["marge"] is not None and marge["marge"] < seuil:
-            feu = "rouge"
-        elif marge["marge"] is None and feu in ("vert", "orange"):
-            feu = "gris"
         alertes.append({
             "titre": a.get("nom_produit") or a.get("titre"), "titre_complet": a.get("titre"), "prix": a.get("prix"), "cout": a.get("cout_achat"),
             "marchand": a.get("marchand"), "pays": a.get("pays"), "lien": a.get("lien"), "denicheur": signe(a.get("source"), a.get("denicheur")),
@@ -116,7 +99,7 @@ def construire():
             "neuf_min": (a.get("idealo") or {}).get("prix_min") or (a.get("prix_plancher") or {}).get("prix_min"),
             "neuf_ou": "idealo" if a.get("idealo") else (a.get("prix_plancher") or {}).get("ou"),
             "occ_bas": min((x.get("min") for x in (a.get("revente_reelle") or {}).values() if isinstance(x, dict) and x.get("min")), default=None),
-            **marge,
+            "revente": v.get("prix_revente_verifie") or meilleur.get("prix_vente"), "marge": v.get("marge_nette_verifiee") if v.get("marge_nette_verifiee") is not None else meilleur.get("marge_nette"),
             "canal": v.get("canal") or meilleur.get("canal"), "date": iso_paris(a.get("trouve_le")), "date_iso": a.get("trouve_le"),
             "motif": v.get("commentaire") or "", "duree": v.get("duree_offre"),
         })

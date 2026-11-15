@@ -2,12 +2,10 @@
 import json
 import os
 import time
-import sys
 import urllib.parse
 import urllib.request
 
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from denicheur import apify
+TOKEN = os.environ["APIFY_TOKEN"].strip()
 Q = "garmin forerunner 165"
 TESTS = {
     "idealo_pricepirate": ("pricepirate~idealo-price-data-api", {"operation": "search-by-term", "values": [Q], "country": "fr"}),
@@ -22,13 +20,20 @@ TESTS = {
 }
 
 
+def appel(methode, chemin, corps=None, params=None):
+    url = "https://api.apify.com/v2" + chemin + ("?" + urllib.parse.urlencode(params) if params else "")
+    data = json.dumps(corps).encode() if corps is not None else None
+    req = urllib.request.Request(url, data=data, method=methode, headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=200) as r:
+        return json.loads(r.read() or b"null")
+
+
 res = {}
 for nom, (acteur, entree) in TESTS.items():
     t0 = time.time()
     try:
-        items = apify.lancer_test(nom, acteur, entree, maxi=10)
-        if items is None:
-            raise RuntimeError("budget refusé, clé absente ou robot indisponible")
+        items = appel("POST", f"/acts/{acteur}/run-sync-get-dataset-items", entree,
+                      {"timeout": 150, "maxItems": 10, "maxTotalChargeUsd": 0.05})
         items = items if isinstance(items, list) else [items]
         res[nom] = {"ok": True, "nb": len(items), "secondes": round(time.time() - t0),
                     "champs": sorted(items[0].keys())[:40] if items and isinstance(items[0], dict) else None,
@@ -39,7 +44,8 @@ for nom, (acteur, entree) in TESTS.items():
         res[nom] = {"ok": False, "erreur": f"{type(e).__name__}: {str(e)[:200]}"}
     print(nom, res[nom].get("ok"), res[nom].get("nb"), res[nom].get("erreur", "")[:150])
 try:
-    res["_credit"] = {"utilise_usd": apify.depense_reelle(), "plafond_logiciel_usd": apify.BUDGET_MOIS_USD}
+    lim = appel("GET", "/users/me/limits")["data"]
+    res["_credit"] = {"limite_usd": lim["limits"]["maxMonthlyUsageUsd"], "utilise_usd": lim["current"]["monthlyUsageUsd"]}
 except Exception as e:
     res["_credit"] = {"erreur": str(e)[:150]}
 print("credit", res["_credit"])

@@ -88360,7 +88360,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T10:00+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -88605,6 +88605,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-15T10:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T10:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Stardew Valley Switch, même EAN) et offre active chez Just for Games à 24,99 €, mais livraison gratuite seulement dès 26,99 € : avec le port (~5 €), le prix livré est d'environ 29,99 €, soit 14 % sous le neuf le plus bas (34,98 € Cdiscount) — sous le seuil de 15 %. Frais de port exacts non confirmés : dans le doute, rejet. Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 34.98,
+   "source_prix_ref": "achatmoinscher.com (Cdiscount 34,98 € neuf, livraison gratuite) ; Amazon.fr 34,99 € (Keepa)",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday Just for Games, jusqu'au 30/11",
+   "demande_confirmee": false
+  }
  }
 ]

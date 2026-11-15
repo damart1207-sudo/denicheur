@@ -89948,7 +89948,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-15T21:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "demande_forte": {
@@ -89986,7 +89986,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 21:45 UTC : offre expirée, 49.14 affiché, marchand 11190_1 ; ebay.de refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T22:45+00:00",
+  "verdict": {
+   "commentaire": "Offre expirée (page du bon plan marquée expirée), annonce d'une erreur de prix sur eBay.de non vérifiable (eBay refuse les robots). Pas de prix de référence France fiable. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "expirée",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "1854048a66",
@@ -90024,7 +90036,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-15T22:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -90055,6 +90067,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 22:19 UTC : offre active, 14.47 affiché, marchand 1650_3 ; mrcentralheating.co.uk refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T22:45+00:00",
+  "verdict": {
+   "commentaire": "Robinets de radiateur vendus par un site britannique (Mr Central Heating) : livraison en France non confirmée (après le Brexit, droits et TVA en plus), page marchand illisible (HTTP 403) et aucun prix de référence en France trouvé. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

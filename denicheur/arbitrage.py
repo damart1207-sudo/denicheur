@@ -59,10 +59,10 @@ def file_attente(vus):
     return list(dict.fromkeys(prio + [a for _, a in cands]))
 
 
-def comparer(asins):
+def comparer(asins, etat=None):
     """Fiches FR + DE/IT/ES (résumés), et lignes d'arbitrage pour les écarts qui valent le coup."""
-    fr = {r["asin"]: r for r in moisson.fiches(asins, "FR")}
-    etranger = {p: {r["asin"]: r for r in moisson.fiches(asins, p)} for p in PAYS}
+    fr = {r["asin"]: r for r in moisson.fiches(asins, "FR", etat=etat)}
+    etranger = {p: {r["asin"]: r for r in moisson.fiches(asins, p, etat=etat)} for p in PAYS}
     lignes = []
     for asin in asins:
         f = fr.get(asin)
@@ -98,7 +98,7 @@ def tour(etat=None, par_tour=PAR_TOUR):
     if not asins:
         return 0
     try:
-        resumes, lignes = comparer(asins)
+        resumes, lignes = comparer(asins, etat=etat)
     except Exception as ex:
         sante.noter("erreur", "arbitrage", f"{type(ex).__name__}: {str(ex)[:120]}")
         return 0

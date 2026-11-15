@@ -89505,7 +89505,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-15T15:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -89715,7 +89715,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-15T15:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T16:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (MSI MAG401QR, EAN 4711377080514), mais l'offre est chez OTTO.de, qui livre uniquement en Allemagne (« Wir liefern ausschließlich innerhalb Deutschlands », FAQ OTTO). Non livrable en France : rejeté. Pour info, 299,90 € serait 18 % sous le plus bas français (365,95 € chez PcComponentes, comparateur-gamer 15/11 12h). Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 365.95,
+   "source_prix_ref": "comparateur-gamer.fr (PcComponentes, 15/11/2026 12h) ; Keepa Amazon.fr 389 €",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "220a2e4e87",
@@ -89753,7 +89765,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-15T15:52+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -89786,6 +89798,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-15T15:58+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-15T16:50+00:00",
+  "verdict": {
+   "commentaire": "Produit mal identifié (château de poupée en bois FSC blanc Vertbaudet, réf. 620033768) et aucun prix de référence fiable en France trouvé. vertbaudet.de bloque la lecture (403) et la livraison en France n'est pas confirmée (prix du deal incohérent : 114,11 € annoncé, 4,76 € lu sur la page). À revérifier ; ne pas publier.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

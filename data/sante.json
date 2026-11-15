@@ -1,6 +1,6 @@
 {
  "tours_ok": 2098,
- "tours_echec": 5,
+ "tours_echec": 6,
  "dernier_ok": "15/11 22:46",
  "evenements": [
   {
@@ -722,6 +722,18 @@
    "niveau": "echec",
    "etape": "tour",
    "message": "tour 4 : code 124 (coupé à 10 min)"
+  },
+  {
+   "heure": "15/11 23:08",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 21 produits sur 25 (431 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "15/11 23:11",
+   "niveau": "echec",
+   "etape": "tour",
+   "message": "tour 1 : code 124 (coupé à 10 min)"
   }
  ],
  "dernier_resume": {

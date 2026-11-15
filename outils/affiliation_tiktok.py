@@ -437,6 +437,7 @@ def carte(p, taux):
     return f"""<div class="carte"><h3><a href="{H.escape(p['lien'])}" target="_blank" rel="noopener">{H.escape(p['titre'][:110])}</a></h3>
 <p class="sig">{'<span class="bingo">BINGO</span> ' if p.get('bingo') else ''}Trouvé par : robot TikTok Shop (Apify), {H.escape(trouve_par(p))} · catégorie {H.escape(p['categorie'] or 'inconnue')} · rang {H.escape(str(p['rang']))}</p>
 <table class="kv">
+<tr><th>Prix de vente moyen</th><td><b>{_usd(p['prix_moyen_usd'], taux)}</b> sur 7 jours (le prix affiché dans l'appli peut différer : promotions, variantes)</td></tr>
 <tr><th>Gain par vente</th><td><b>{_usd(p['gain_par_vente_usd'], taux)}</b> ({p['commission_pct']:g} % de {_usd(p['prix_moyen_usd'], None)})</td></tr>
 <tr><th>Ventes sur 7 jours</th><td>{f"{p['ventes_7j']:,}".replace(",", " ")} (évolution {_evo(p['evolution_pct'])})</td></tr>
 <tr><th>Commissions totales estimées</th><td>{_usd(p['commissions_totales_usd'], None)} sur 7 jours, tous créateurs confondus</td></tr>
@@ -490,6 +491,8 @@ table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:n
 <th data-k="commissions_totales_usd">Commissions totales ($)</th><th data-k="evolution_pct">Évolution</th><th data-k="etat">Verdict</th></tr></thead><tbody id="tb"></tbody></table></section>
 <section id="lire"><div class="carte"><h3>Comment lire ce rapport</h3>
 <p><b>Liens</b> : ils ouvrent la fiche du produit dans l'appli TikTok. Ouvre le rapport sur ton téléphone ; sur un ordinateur, TikTok n'affiche pas les fiches françaises.</p>
+<p><b>Prix de vente moyen</b> : moyenne des ventes des 7 derniers jours, estimée en dollars puis convertie en euros. Ce n'est pas forcément
+le prix affiché aujourd'hui dans l'appli (promotions, variantes) : le lien du produit donne le prix exact.</p>
 <p><b>Gain par vente</b> : prix moyen × commission. C'est ce que touche le créateur pour une vente, avant annulation en cas de retour.</p>
 <p><b>Commissions totales estimées</b> : revenu estimé × commission, tous créateurs confondus. Cela mesure où se trouve l'argent, pas ce que tu toucheras.</p>
 <p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
@@ -532,6 +535,7 @@ def message_telegram(finalistes, taux, n_lus):
         e, pb = p.get("ebay"), p.get("pubs")
         etiquette = "BINGO" if p.get("bingo") else ("en hausse" if "hausses" in (p.get("listes") or []) else "plus vendu")
         blocs.append(f"\n{i}. [{etiquette}] <a href=\"{H.escape(p['lien'])}\">{H.escape(p['titre'][:70])}</a>\n"
+                     f"Prix de vente moyen : {_usd(p['prix_moyen_usd'], taux)}\n"
                      f"Gain par vente : {_usd(p['gain_par_vente_usd'], taux)} ({p['commission_pct']:g} %) · {p['ventes_7j']} ventes sur 7 j ({_evo(p['evolution_pct'])})\n"
                      + ("" if p.get("marque_sure") else "Recoupement eBay, Amazon et pubs non fait : pas de marque identifiable\n")
                      + (f"Amazon.fr : {_eur(p['amazon']['prix_neuf_eur'])} € neuf\n" if p.get("amazon") else "")
@@ -550,7 +554,7 @@ def reglage(cfg, c):
             "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
 
 
-VERSION_RAPPORT = 2     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
+VERSION_RAPPORT = 3     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
 METHODE_SELECTION = 2  # à augmenter quand la façon de choisir les finalistes change
 
 
@@ -594,9 +598,9 @@ def main():
             rapport(ancien["tous"], ancien["finalistes"], cfg, ancien.get("taux_usd_eur"), ancien.get("cout_apify_mesure_usd"), ancien["quand"])
             with open(F_JSON, "w", encoding="utf-8") as f:
                 json.dump(ancien, f, ensure_ascii=False, indent=1)
-            telegram.envoyer("Liens corrigés : ils ouvrent maintenant la fiche du produit dans l'appli TikTok.\n\n"
+            telegram.envoyer("Rapport mis à jour : prix de vente moyen ajouté pour chaque produit.\n\n"
                              + message_telegram(ancien["finalistes"], ancien.get("taux_usd_eur"), len(ancien["tous"])))
-            telegram.envoyer_fichier(F_HTML, "Affiliation TikTok Shop : rapport avec les liens corrigés")
+            telegram.envoyer_fichier(F_HTML, "Affiliation TikTok Shop : rapport mis à jour")
             print("Rapport du jour refait avec la nouvelle présentation (aucun appel payant).")
         return 0
     avant = depense_apify()

@@ -186,6 +186,8 @@ class Calculs(unittest.TestCase):
         self.assertIn("0,412 $", page)
         self.assertIn("Trouvé par : robot TikTok Shop (Apify)", page)
         self.assertTrue(A.message_telegram(fin, 0.93, 2).startswith("<b>Affiliation TikTok Shop</b>"))
+        self.assertIn("Prix de vente moyen : 46,20 $ (≈ 42,97 €)", A.message_telegram(fin, 0.93, 2))
+        self.assertIn("Prix de vente moyen</th><td><b>46,20 $ (≈ 42,97 €)</b>", page)
         sans = dict(fin[0], marque_sure="", titre="Manteau bloom")
         self.assertIn("non recoupé : produit sans marque identifiable", A.carte(sans, 0.93))
         self.assertIn("pas de marque identifiable", A.message_telegram([sans], 0.93, 2))

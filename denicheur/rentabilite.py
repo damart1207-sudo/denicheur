@@ -37,3 +37,25 @@ def calculer(prix, plateforme, cout, regles):
             "frais_canal": _euros(frais), "prelevements": _euros(prelevements),
             "provision": _euros(provision), "marge_nette": _euros(vente - achat - frais - prelevements - provision),
             "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"}
+
+
+def depuis_audit(candidat, verdict, regles, secours=None):
+    """Recalcule une marge : un montant fourni par une IA n'est jamais une preuve.
+
+    Le prix de revente audité exige un canal explicite. Le coût livré et les
+    tarifs proviennent du candidat et de la configuration, jamais du texte libre.
+    """
+    secours = secours or {}
+    audite = verdict.get("prix_revente_verifie") is not None
+    prix = verdict.get("prix_revente_verifie") if audite else candidat.get("prix_revente_prudent", secours.get("prix_vente"))
+    canal = (verdict.get("plateforme_verifiee") or verdict.get("canal")) if audite else (candidat.get("plateforme_revente") or secours.get("canal"))
+    cout = candidat.get("cout_achat")
+    try:
+        if prix is None or cout is None or not canal:
+            raise ValueError("prix, coût livré ou canal manquant")
+        calcul = calculer(prix, canal.lower().strip(), cout, regles)
+    except (ValueError, TypeError, KeyError, AttributeError, ArithmeticError):
+        return {"revente": prix, "marge": None, "calcul_marge": None,
+                "blocage_marge": "Marge non calculable : prix, coût livré ou canal valide manquant."}
+    return {"revente": prix, "marge": calcul["marge_nette"], "calcul_marge": calcul,
+            "blocage_marge": None}

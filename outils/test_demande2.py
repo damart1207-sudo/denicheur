@@ -1,4 +1,7 @@
 import json, os, re, urllib.parse, urllib.request
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from denicheur import apify
 T = os.environ.get("APIFY_TOKEN", "").strip()
 UA = {"User-Agent": "Mozilla/5.0 Chrome/130.0", "Accept-Language": "fr-FR"}
 res = {}
@@ -12,6 +15,8 @@ for c in range(1, 21):
     except Exception as e:
         res[f"trends_cat_{c}"] = str(e)[:80]
 def api(chemin, corps=None, params=None):
+    if corps is not None:
+        raise ValueError("cette fonction est réservée aux lectures GET")
     url = "https://api.apify.com/v2" + chemin + ("?" + urllib.parse.urlencode(params) if params else "")
     req = urllib.request.Request(url, data=json.dumps(corps).encode() if corps is not None else None, method="POST" if corps is not None else "GET",
                                  headers={"Authorization": f"Bearer {T}", "Content-Type": "application/json"})
@@ -25,7 +30,9 @@ for acteur, entree in (("saswave~idealo-trending-search-scraper", {"domains": ["
         sch = api(f"/acts/{acteur}/builds/{b}")["data"].get("inputSchema")
         sch = json.loads(sch) if isinstance(sch, str) else sch
         res[acteur + "_schema"] = {k: str(v.get("prefill", v.get("default")))[:100] for k, v in (sch or {}).get("properties", {}).items()}
-        it = api(f"/acts/{acteur}/run-sync-get-dataset-items", entree, {"timeout": 150, "maxItems": 25, "maxTotalChargeUsd": 0.05})
+        it = apify.lancer_test("demande2", acteur, entree, maxi=25)
+        if it is None:
+            raise RuntimeError("budget refusé, clé absente ou robot indisponible")
         res[acteur] = {"nb": len(it), "exemples": [json.dumps(i, ensure_ascii=False)[:220] for i in it[:12]]}
     except urllib.error.HTTPError as e:
         res[acteur] = f"HTTP {e.code}: {e.read()[:250].decode(errors='replace')}"

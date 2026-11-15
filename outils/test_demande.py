@@ -2,8 +2,11 @@
 import json
 import os
 import re
+import sys
 import urllib.parse
 import urllib.request
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from denicheur import apify as robots_apify
 
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/130.0 Safari/537.36", "Accept-Language": "fr-FR"}
 res = {}
@@ -40,10 +43,12 @@ T = os.environ.get("APIFY_TOKEN", "").strip()
 
 
 def apify(acteur, entree, plafond=0.05, maxi=20):
-    url = f"https://api.apify.com/v2/acts/{acteur}/run-sync-get-dataset-items?" + urllib.parse.urlencode({"timeout": 150, "maxItems": maxi, "maxTotalChargeUsd": plafond})
-    req = urllib.request.Request(url, data=json.dumps(entree).encode(), method="POST", headers={"Authorization": f"Bearer {T}", "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=200) as r:
-        return json.loads(r.read() or b"[]")
+    if plafond != 0.05:
+        raise ValueError("sonde limitée à 0,05 $")
+    items = robots_apify.lancer_test("demande", acteur, entree, maxi=maxi)
+    if items is None:
+        raise RuntimeError("budget refusé, clé absente ou robot indisponible")
+    return items
 
 
 for nom, acteur, entree in (

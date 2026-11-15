@@ -50,6 +50,24 @@ class Calculs(unittest.TestCase):
         self.assertEqual([x["advertiserName"] for x in A.garder_pubs(pubs, "LANDOT")], ["Landot Beauty", "Seymouri"])
         self.assertEqual(A.garder_pubs(pubs, ""), [])
 
+    def test_recherche_precise_et_amazon(self):
+        t = "[medicube Officiel] Sérum raffermissant NAD+ EGF | Sérum avec NAD+, EGF & extrait de collagène | K Beauty (30 ml)"
+        self.assertEqual(A.mots_distinctifs(t, "medicube"), ["NAD", "EGF"])
+        self.assertEqual(A.recherche_precise(t, "medicube"), "medicube NAD EGF")
+        self.assertEqual(A.recherche_precise("LANDOT Brosse électrique lissante 2 en 1 pour cheveux", "LANDOT"), "LANDOT Brosse électrique")
+        pubs = [{"landingUrl": "https://www.amazon.fr/dp/B0DGTMR754?maas=1"}, {"landingUrl": "https://www.amazon.fr/dp/B0DGTMR754"},
+                {"landingUrl": "https://www.amazon.fr/medicube-PDRN/dp/B0GS8YKMN3"}, {"landingUrl": "https://www.amazon.com/dp/B000000000"},
+                {"landingUrl": None}]
+        self.assertEqual(A.asins_des_pubs(pubs), ["B0DGTMR754", "B0GS8YKMN3"])
+        bon = {"titre": "medicube NAD+ EGF Firming Serum 30ml, sérum raffermissant coréen", "prix_neuf": 24.9, "asin": "B1"}
+        autre = {"titre": "medicube PDRN Pink Collagen Jelly Cream 100ml", "prix_neuf": 19.9, "asin": "B2"}
+        faux = {"titre": "Les 2 Marmottes Coffret Cadeau de Noël Contes de Thés", "prix_neuf": 19.95, "asin": "B3"}
+        self.assertEqual(A.choisir_amazon(t, [autre, bon, faux, None, {"erreur": "x"}], "medicube")["asin"], "B1")
+        self.assertIsNone(A.choisir_amazon(t, [autre], "medicube"))          # même marque, autre produit
+        self.assertIsNone(A.choisir_amazon(t, [faux], "medicube"))           # la marque manque
+        self.assertIsNone(A.choisir_amazon(t, [bon, dict(bon, asin="B9")], "medicube"))  # égalité : on ne tranche pas
+        self.assertEqual(A.ressemblance(t, faux["titre"], ""), 0)
+
     def test_lecture_et_gain(self):
         p = A.lire_produit(ligne("LANDOT Brosse lissante", 1823, 46.2, 10, 15.03))
         self.assertEqual(p["gain_par_vente_usd"], 4.62)

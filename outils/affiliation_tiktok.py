@@ -102,6 +102,67 @@ def _sans_accent(t):
     return "".join(c for c in unicodedata.normalize("NFD", str(t or "").lower()) if unicodedata.category(c) != "Mn")
 
 
+UNITES = {"ml", "cl", "kg", "mg", "cm", "mm", "spf", "pcs", "edp", "edt"}
+MOTS_VIDES = {"les", "des", "pour", "avec", "sans", "une", "aux", "the", "and", "for", "with", "sur", "par", "est", "son", "ses",
+              "peau", "soin", "soins", "visage", "officiel", "official", "beauty"}
+
+
+def mots(texte):
+    return [m for m in re.findall(r"[a-z0-9]+", _sans_accent(texte)) if len(m) >= 3 and m not in MOTS_VIDES and m not in UNITES]
+
+
+def mots_distinctifs(titre, marque_sure):
+    """Les mots qui identifient le modèle : sigles et références (« NAD+ », « EGF », « PDRN », « HS08 »), dans l'ordre du titre."""
+    m = set(mots(marque_sure))
+    vus, out = set(), []
+    for brut in re.findall(r"[A-Za-zÀ-ÿ0-9+]+", re.sub(r"\[[^\]]*\]", " ", titre or "")):
+        coeur = brut.strip("+")
+        sigle = len(coeur) >= 3 and coeur.isalpha() and coeur.isupper() and coeur not in PAS_UNE_MARQUE
+        reference = len(coeur) >= 3 and any(c.isdigit() for c in coeur) and any(c.isalpha() for c in coeur)
+        n = _sans_accent(coeur)
+        if (sigle or reference) and n not in m and n not in UNITES and not re.fullmatch(r"\d+(ml|g|kg|cm|mm|h|pcs)", n) and n not in vus:
+            vus.add(n)
+            out.append(coeur)
+    return out
+
+
+def recherche_precise(titre, marque_sure):
+    """Pour eBay et Amazon, où les titres changent de langue : la marque + 2 sigles/références du modèle, sinon 2 mots."""
+    d = mots_distinctifs(titre, marque_sure)[:2]
+    return " ".join([marque_sure] + d) if d else recherche(titre, marque_sure, mots=2)
+
+
+def asins_des_pubs(pubs):
+    """Les fiches amazon.fr vers lesquelles la marque envoie elle-même ses pubs : c'est le lien le plus sûr vers le bon produit."""
+    out = []
+    for l in pubs or []:
+        m = re.search(r"amazon\.fr/(?:[^/?#]+/)?(?:dp|gp/product)/([A-Z0-9]{10})", str(l.get("landingUrl") or ""))
+        if m and m.group(1) not in out:
+            out.append(m.group(1))
+    return out
+
+
+def ressemblance(titre_tiktok, titre_amazon, marque_sure):
+    """Nombre de mots du modèle partagés (un sigle ou une référence compte double). 0 si la marque manque."""
+    if not marque_sure or _sans_accent(marque_sure).replace(" ", "") not in _sans_accent(titre_amazon).replace(" ", ""):
+        return 0
+    a = set(mots(titre_amazon))
+    m = set(mots(marque_sure))
+    d = {_sans_accent(x) for x in mots_distinctifs(titre_tiktok, marque_sure)}
+    communs = (set(mots(re.sub(r"\[[^\]]*\]", " ", titre_tiktok))) - m) & a
+    return len(communs) + len(communs & d)
+
+
+def choisir_amazon(titre_tiktok, fiches, marque_sure, seuil=3):
+    """La fiche Amazon qui ressemble le plus au produit TikTok, si elle partage assez de mots du modèle ; sinon None."""
+    notes = [(ressemblance(titre_tiktok, f.get("titre"), marque_sure), f) for f in fiches
+             if isinstance(f, dict) and not f.get("erreur") and f.get("prix_neuf")]
+    notes.sort(key=lambda x: -x[0])
+    if not notes or notes[0][0] < seuil or (len(notes) > 1 and notes[1][0] == notes[0][0]):
+        return None  # pas assez ressemblant, ou deux fiches à égalité : on ne tranche pas au hasard
+    return notes[0][1]
+
+
 def garder_ventes(lignes, marque_sure):
     """Ne garde que les ventes eBay dont le titre contient la marque (sinon ce n'est pas le même produit)."""
     m = _sans_accent(marque_sure)
@@ -227,10 +288,11 @@ def depense_apify():
 def enrichir(p, cfg):
     m = marque_fiable(p["titre"])
     p["marque_sure"] = m
-    p.update({"ebay": None, "ebay_lu": False, "pubs": None, "pubs_lu": False, "pubs_terme": m, "amazon": None, "recherche": ""})
+    p.update({"ebay": None, "ebay_lu": False, "pubs": None, "pubs_lu": False, "pubs_terme": m, "amazon": None, "recherche": "",
+              "amazon_piste": ""})
     if not m:
         return p  # sans marque sûre, aucun recoupement : mieux vaut « non fait » qu'un autre produit
-    q = recherche(p["titre"], m)
+    q = recherche_precise(p["titre"], m)
     p["recherche"] = q
     ventes = apify.lancer("ebay_vendus", {"keywords": [q], "ebaySite": "ebay.fr", "count": cfg["ebay"]["ventes_par_finaliste"],
                                           "daysToScrape": cfg["ebay"]["jours"]}, maxi=cfg["ebay"]["ventes_par_finaliste"])
@@ -240,14 +302,24 @@ def enrichir(p, cfg):
                                  "includeMeta": True, "includeTikTok": False, "maxItems": cfg["pubs"]["pubs_par_finaliste"],
                                  "rehostMetaMedia": False, "rehostGoogleVideos": False, "rehostTikTokMedia": False,
                                  "includeAdvertiserInfo": False}, maxi=cfg["pubs"]["pubs_par_finaliste"])
-    p["pubs"] = resume_pubs(garder_pubs(pubs, m))
+    bonnes = garder_pubs(pubs, m)
+    p["pubs"] = resume_pubs(bonnes)
     p["pubs_lu"] = pubs is not None
     if cfg.get("keepa"):
-        f = sante.protege("affiliation keepa", keepa.rechercher, q, "FR")
-        if (isinstance(f, dict) and not f.get("erreur") and f.get("prix_neuf")
-                and _sans_accent(m) in _sans_accent(f.get("titre"))):
+        # 1) les fiches amazon.fr vers lesquelles la marque envoie ses propres pubs (1 jeton Keepa par fiche, 4 au plus)
+        asins = asins_des_pubs(bonnes)[:4]
+        fiches = [sante.protege("affiliation keepa", keepa.fiche, None, a, "FR") for a in asins]
+        f = choisir_amazon(p["titre"], fiches, m)
+        piste = "fiche Amazon visée par une pub de la marque" if f else ""
+        if not f:  # 2) recherche Keepa par nom (10 jetons), gardée seulement si elle ressemble assez
+            r = sante.protege("affiliation keepa", keepa.rechercher, q, "FR")
+            f = choisir_amazon(p["titre"], [r], m)
+            piste = "recherche Keepa par nom" if f else ""
+        p["amazon_essais"] = {"fiches_des_pubs": len(asins), "lues": sum(1 for x in fiches if isinstance(x, dict) and not x.get("erreur"))}
+        if f:
             p["amazon"] = {"prix_neuf_eur": f.get("prix_neuf"), "asin": f.get("asin"), "titre": f.get("titre"),
-                           "rang_ventes": f.get("rang_ventes")}
+                           "rang_ventes": f.get("rang_ventes"), "moyenne_90j": f.get("moyenne_90j"), "lien": f.get("lien")}
+            p["amazon_piste"] = piste
     return p
 
 
@@ -287,8 +359,12 @@ def carte(p, taux):
                     + (f" — annonceurs : {H.escape(', '.join(pb['annonceurs']))}" if pb["annonceurs"] else ""))
         else:
             pubs = f"aucune pub de la marque « {H.escape(p.get('pubs_terme', ''))} » trouvée" if p.get("pubs_lu") else non_lu
-        amazon = (f"{_eur(am['prix_neuf_eur'])} € neuf sur Amazon.fr" + (f" (ASIN {H.escape(str(am['asin']))})" if am.get("asin") else "")
-                  if am else f"non trouvé sur Amazon.fr par Keepa pour « {H.escape(p.get('recherche', ''))} »")
+        if am:
+            amazon = (f"<a href=\"{H.escape(str(am.get('lien') or ''))}\" target=\"_blank\" rel=\"noopener\">{_eur(am['prix_neuf_eur'])} € neuf sur Amazon.fr</a>"
+                      + (f" (moyenne sur 90 jours : {_eur(am['moyenne_90j'])} €)" if am.get("moyenne_90j") else "")
+                      + f" — {H.escape(str(am.get('titre') or '')[:70])} ; trouvé par : {H.escape(p.get('amazon_piste', ''))}")
+        else:
+            amazon = f"aucune fiche Amazon.fr assez ressemblante pour « {H.escape(p.get('recherche', ''))} »"
     return f"""<div class="carte"><h3><a href="{H.escape(p['lien'])}" target="_blank" rel="noopener">{H.escape(p['titre'][:110])}</a></h3>
 <p class="sig">Trouvé par : robot TikTok Shop (Apify) · catégorie {H.escape(p['categorie'] or 'inconnue')} · rang {H.escape(str(p['rang']))}</p>
 <table class="kv">
@@ -381,6 +457,7 @@ def message_telegram(finalistes, taux, n_lus):
         blocs.append(f"\n{i}. <a href=\"{H.escape(p['lien'])}\">{H.escape(p['titre'][:70])}</a>\n"
                      f"Gain par vente : {_usd(p['gain_par_vente_usd'], taux)} ({p['commission_pct']:g} %) · {p['ventes_7j']} ventes sur 7 j ({_evo(p['evolution_pct'])})\n"
                      + ("" if p.get("marque_sure") else "Recoupement eBay, Amazon et pubs non fait : pas de marque identifiable\n")
+                     + (f"Amazon.fr : {_eur(p['amazon']['prix_neuf_eur'])} € neuf\n" if p.get("amazon") else "")
                      + (f"eBay.fr : {e['nb']} vente(s), médiane {_eur(e['mediane'])} {e['devise']}\n" if e else "")
                      + (f"Pubs de la marque : {pb['nb']}" + (f", la plus ancienne depuis {pb['plus_longue_jours']} j" if pb['plus_longue_jours'] is not None else "") + "\n" if pb else ""))
     return "".join(blocs)

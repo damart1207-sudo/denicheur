@@ -59,16 +59,29 @@ def nommer(annonces):
     noms = {}
     # Gemini (niveau payant, quelques centimes/jour) : les 120 appels quotidiens de la veille vidaient le quota Groq
     # (200 000 jetons/jour) dont le tribunal de nuit a besoin.
-    conf = _lire("config/equipe.json", {})["agents"]["gemini"]
-    agent = Agent("gemini", {**conf, "max_appels": 2})
+    # Gemini d'abord ; s'il refuse (402 paiement, quota), relais par les IA gratuites (NVIDIA, Z.ai, OpenRouter),
+    # jamais Groq (réservé au tribunal de nuit). Sans nom, Idéfix ne peut rien comparer : le relais est vital.
+    agents_conf = _lire("config/equipe.json", {})["agents"]
     lignes = "\n".join(f'{a["id"]} | {a["titre"]}' for a in annonces)
-    rep = agent.demander(
-        "Tu identifies des produits. Réponds en json uniquement.",
-        "Pour chaque ligne « id | titre d'annonce », donne le nom exact du produit : marque + modèle + "
-        "capacité si utile, 2 à 6 mots, sans couleur, taille, texte promo ni nom de magasin. "
-        "Si ce n'est pas un produit physique précis (lot, code promo, abonnement, sélection), mets null.\n"
-        'Format json : {"produits": [{"id": "...", "nom": "..." }]}\n\n' + lignes)
-    d = extraire_json(rep) if rep else None
+    d, agent = None, None
+    for ident in ("gemini", "deepseek", "glm", "nemotron_nv", "gemma"):
+        conf = agents_conf.get(ident)
+        if not conf:
+            continue
+        ag = Agent(ident, {**conf, "max_appels": 2, "json_mode": conf.get("json_mode", False)})
+        if not ag.cle:
+            continue
+        rep = ag.demander(
+            "Tu identifies des produits. Réponds en json uniquement.",
+            "Pour chaque ligne « id | titre d'annonce », donne le nom exact du produit : marque + modèle + "
+            "capacité si utile, 2 à 6 mots, sans couleur, taille, texte promo ni nom de magasin. "
+            "Si ce n'est pas un produit physique précis (lot, code promo, abonnement, sélection), mets null.\n"
+            'Format json : {"produits": [{"id": "...", "nom": "..." }]}\n\n' + lignes)
+        d = extraire_json(rep) if rep else None
+        if agent is None or (d and d.get("produits")):
+            agent = ag
+        if d and d.get("produits"):
+            break
     for x in (d or {}).get("produits", []):
         if isinstance(x, dict) and x.get("id") and x.get("nom"):
             noms[str(x["id"])] = str(x["nom"])[:60]

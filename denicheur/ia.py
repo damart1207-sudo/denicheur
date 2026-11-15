@@ -103,7 +103,41 @@ def extraire_json(texte):
 
 
 def gemini_oui_non(question, timeout=40):
-    """Pose une question fermée à Gemini (rapide). True / False / None si l'IA ne répond pas."""
+    """Pose une question fermée à Gemini (rapide). True / False / None si l'IA ne répond pas.
+    Si Gemini refuse (402 paiement, quota, panne), relais gratuit par NVIDIA / Z.ai (jamais Groq)."""
+    try:
+        r = _gemini_oui_non(question, timeout)
+        if r is not None:
+            return r
+    except Exception:
+        pass
+    return _relais_oui_non(question)
+
+
+def _relais_oui_non(question):
+    try:
+        with open("config/equipe.json", encoding="utf-8") as f:
+            agents = json.load(f)["agents"]
+    except Exception:
+        return None
+    for ident in ("deepseek", "glm", "nemotron_nv"):
+        conf = agents.get(ident)
+        if not conf:
+            continue
+        ag = Agent(ident, {**conf, "max_appels": 1, "timeout": 40, "json_mode": False})
+        if not ag.cle:
+            continue
+        t = ag.demander("Réponds uniquement OUI ou NON.", question)
+        if t:
+            t = re.sub(r"<think>.*?</think>", "", t, flags=re.S).strip().upper()
+            if t.startswith("OUI"):
+                return True
+            if t.startswith("NON"):
+                return False
+    return None
+
+
+def _gemini_oui_non(question, timeout=40):
     cle = os.environ.get("GEMINI_API_KEY", "").strip()
     if not cle:
         return None

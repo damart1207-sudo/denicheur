@@ -148,6 +148,16 @@ class Calculs(unittest.TestCase):
         self.assertTrue(A.retenu(dict(shark, listes=["hausses"]), f)[0])
         self.assertFalse(A.retenu(dict(shark, listes=["hausses"], ventes_7j=20), f)[0])
 
+    def test_lien_qui_ouvre_l_appli(self):
+        bon = "https://www.tiktok.com/view/product/1729922914496059620"
+        self.assertEqual(A.lien_appli("https://shop.tiktok.com/fr/pdp/1729922914496059620"), bon)
+        self.assertEqual(A.lien_appli("https://shop.tiktok.com/fr/pdp/manteau-bloom/1729922914496059620?x=1"), bon)
+        self.assertEqual(A.lien_appli(bon), bon)
+        self.assertEqual(A.lien_appli("https://exemple.fr/page"), "https://exemple.fr/page")
+        self.assertEqual(A.lien_appli(None), "")
+        p = A.lire_produit(ligne("LANDOT Brosse", 1823, 46.2, 10, lien="https://shop.tiktok.com/fr/pdp/1729506070096550618"))
+        self.assertEqual(p["lien"], "https://www.tiktok.com/view/product/1729506070096550618")
+
     def test_resumes(self):
         e = A.resume_ebay([{"soldPrice": "213.90", "soldCurrency": "EUR"}, {"soldPrice": "230.00"}, {"soldPrice": None}])
         self.assertEqual((e["nb"], e["min"], e["max"], e["mediane"]), (2, 213.9, 230.0, 221.95))

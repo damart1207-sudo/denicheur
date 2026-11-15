@@ -201,6 +201,14 @@ def garder_pubs(lignes, marque_sure):
     return bons
 
 
+def lien_appli(url):
+    """Lien qui ouvre la fiche dans l'appli TikTok. Les liens du robot (shop.tiktok.com/fr/pdp/…) renvoient à l'accueil avec
+    « région non prise en charge » : les fiches françaises ne s'affichent pas dans un navigateur (constaté le 15/11/2026).
+    Le format /view/product/ a été vérifié par David sur son téléphone le 15/11/2026."""
+    m = re.search(r"(?:/pdp/(?:[^/?#]*/)?|/view/product/|/product/)(\d{10,})", str(url or ""))
+    return f"https://www.tiktok.com/view/product/{m.group(1)}" if m else str(url or "")
+
+
 def categorie_principale(texte):
     """Le robot renvoie toute la liste des sous-catégories (« Home Supplies | Home Supplies-Home Decor | … ») : on garde la première."""
     return str(texte or "").split(" | ")[0].strip()
@@ -228,7 +236,7 @@ def lire_produit(ligne):
         "commissions_totales_usd": round(revenu * com / 100),
         "part_video_pct": round(100 * video / revenu) if video is not None and revenu > 0 else None,
         "evolution_pct": nombre(ligne.get("revenueGrowthPercent")),
-        "lien": ligne.get("url") or "",
+        "lien": lien_appli(ligne.get("url")),
     }
 
 
@@ -441,12 +449,13 @@ def carte(p, taux):
 
 def rapport(tous, finalistes, cfg, taux, cout, quand):
     lignes = []
+    liens_finalistes = {f["lien"] for f in finalistes}
     for p in tous:
         ok, raison = retenu(p, cfg["filtres"])
         lignes.append({**{k: p[k] for k in ("titre", "marque", "categorie", "ventes_7j", "prix_moyen_usd", "commission_pct",
                                               "gain_par_vente_usd", "commissions_totales_usd", "evolution_pct", "lien")},
                        "liste": "bingo" if p.get("bingo") else ("en hausse" if "hausses" in (p.get("listes") or []) else "plus vendu"),
-                       "etat": "finaliste" if p in finalistes else ("retenu" if ok else raison)})
+                       "etat": "finaliste" if p["lien"] in liens_finalistes else ("retenu" if ok else raison)})
     cout_txt = "non mesuré" if cout is None else f"{cout:.3f} $".replace(".", ",")
     page = f"""<!doctype html><html lang="fr"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Affiliation TikTok Shop</title>
@@ -480,6 +489,7 @@ table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:n
 <th data-k="prix_moyen_usd">Prix moyen ($)</th><th data-k="commission_pct">Commission</th><th data-k="gain_par_vente_usd">Gain par vente ($)</th>
 <th data-k="commissions_totales_usd">Commissions totales ($)</th><th data-k="evolution_pct">Évolution</th><th data-k="etat">Verdict</th></tr></thead><tbody id="tb"></tbody></table></section>
 <section id="lire"><div class="carte"><h3>Comment lire ce rapport</h3>
+<p><b>Liens</b> : ils ouvrent la fiche du produit dans l'appli TikTok. Ouvre le rapport sur ton téléphone ; sur un ordinateur, TikTok n'affiche pas les fiches françaises.</p>
 <p><b>Gain par vente</b> : prix moyen × commission. C'est ce que touche le créateur pour une vente, avant annulation en cas de retour.</p>
 <p><b>Commissions totales estimées</b> : revenu estimé × commission, tous créateurs confondus. Cela mesure où se trouve l'argent, pas ce que tu toucheras.</p>
 <p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
@@ -540,6 +550,7 @@ def reglage(cfg, c):
             "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
 
 
+VERSION_RAPPORT = 2     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
 METHODE_SELECTION = 2  # à augmenter quand la façon de choisir les finalistes change
 
 
@@ -575,6 +586,18 @@ def main():
             and ancien.get("selection") == reglage_selection(cfg)
             and os.environ.get("AFFIL_FORCER") != "1"):
         print(f"Relevé du {jour} déjà complet : rien n'est relancé ni repayé (AFFIL_FORCER=1 pour forcer).")
+        if ancien.get("rapport_version") != VERSION_RAPPORT:  # présentation corrigée : on refait la page et le message, gratuitement
+            for liste in [ancien["tous"], ancien["finalistes"]] + list(ancien["classements"].values()):
+                for p in liste:
+                    p["lien"] = lien_appli(p.get("lien"))
+            ancien["rapport_version"] = VERSION_RAPPORT
+            rapport(ancien["tous"], ancien["finalistes"], cfg, ancien.get("taux_usd_eur"), ancien.get("cout_apify_mesure_usd"), ancien["quand"])
+            with open(F_JSON, "w", encoding="utf-8") as f:
+                json.dump(ancien, f, ensure_ascii=False, indent=1)
+            telegram.envoyer("Liens corrigés : ils ouvrent maintenant la fiche du produit dans l'appli TikTok.\n\n"
+                             + message_telegram(ancien["finalistes"], ancien.get("taux_usd_eur"), len(ancien["tous"])))
+            telegram.envoyer_fichier(F_HTML, "Affiliation TikTok Shop : rapport avec les liens corrigés")
+            print("Rapport du jour refait avec la nouvelle présentation (aucun appel payant).")
         return 0
     avant = depense_apify()
     n = len(cfg["categories"]) * cfg["produits_par_categorie"]
@@ -587,6 +610,7 @@ def main():
             for p in deja:
                 p = {k: p.get(k) for k in CLES}
                 p["categorie"] = categorie_principale(p["categorie"])
+                p["lien"] = lien_appli(p["lien"])
                 produits.append(p)
         else:
             entree = {"country": cfg["pays"], "period": cfg["periode"], "sortBy": c["tri"], "categories": cfg["categories"],
@@ -623,7 +647,7 @@ def main():
     for p in tous:
         par_cat[p["categorie"]] = par_cat.get(p["categorie"], 0) + 1
     with open(F_JSON, "w", encoding="utf-8") as f:
-        json.dump({"version": 2, "jour": jour, "quand": quand, "classements_repris": repris, "taux_usd_eur": taux,
+        json.dump({"version": 2, "rapport_version": VERSION_RAPPORT, "jour": jour, "quand": quand, "classements_repris": repris, "taux_usd_eur": taux,
                    "cout_apify_mesure_usd": cout, "selection": reglage_selection(cfg),
                    "reglages": {c["nom"]: (ancien or {}).get("reglages", {}).get(c["nom"]) if c["nom"] in repris else reglage(cfg, c)
                                 for c in cfg["classements"] if c["nom"] in classements},

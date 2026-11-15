@@ -1,5 +1,5 @@
 {
-  "_aide": "Réglages du relevé d'affiliation TikTok Shop (outils/affiliation_tiktok.py). Modifiable sans toucher au code.",
+  "_aide": "Réglages du relevé d'affiliation TikTok Shop (outils/affiliation_tiktok.py). Modifiable sans toucher au code. Le robot TikTok exige au moins 25 produits par catégorie.",
   "pays": "FR",
   "periode": "last7Day",
   "classements": [
@@ -18,7 +18,7 @@
     "Kitchenware",
     "Toys & Hobbies"
   ],
-  "produits_par_categorie": 20,
+  "produits_par_categorie": 25,
   "finalistes": 5,
   "filtres": {
     "prix_moyen_min_usd": 3,

@@ -21,21 +21,23 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # T (affiliation TikTok Shop, outils/affiliation_tiktok.py : 2 relevés par semaine prévus ; premier relevé réel 0,307 $ le 15/11) :
 # 1 $ les jours de relevé = un relevé complet (0,65 $ de plafonds réservés au pire, 5 finalistes) + une contre-vérification des finalistes.
 # Ce sont des plafonds réservés, pas la dépense : le relevé complet du 15/11 a coûté 0,31 $, une contre-vérification 0,07 $.
-# 15/11 au soir : 1,50 $ le temps de prouver le second classement (mise au point), à remettre à 1 $ ensuite.
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.50}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
+# 15/11 au soir : 2 $ le temps de prouver le second classement (mise au point), à remettre à 1 $ ensuite.
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 2.00}
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),
           # relevés réels du 15/11/2026 (console Apify de David) : TikTok 0,073 $ pour 25 produits ; eBay 0,018 $ pour 5 ventes ;
           # pubs 0,086 $ pour 42 pubs. TikTok : démarrage 0,025 $ à partir du 23/11/2026 (annoncé par le robot).
           "tiktok_top": (0.025, 0.0027), "ebay_vendus": (0.0, 0.0035), "pubs": (0.0, 0.0021)}
+COUT_AU_RESULTAT = {"tiktok_top", "ebay_vendus", "pubs"}
 CONTEXTE = {"denicheur": "A"}  # qui appelle (A, B ou C), pour le journal
 ROBOTS = {
     "idealo": ("memo23~idealo-scraper", 0.015),  # 08/11 : coût réel ~0,01 $ (3 résultats) ; 0,03 bloquait les passages après 5 appels/jour
     "leboncoin": ("fatihtahta~leboncoin-fr-scraper", 0.03),
     "vinted": ("scrape.badger~vinted-scraper", 0.03),
     # affiliation TikTok Shop (testés le 15/11/2026, voir outils/affiliation_tiktok.py)
-    "tiktok_top": ("lergassy~tiktok-shop-top-products-scraper", 0.25),   # classement des ventes TikTok Shop France + commission
+    # 4 catégories × 25 produits (25 = minimum accepté par le robot) = 100 lignes × 0,0027 $ + démarrage 0,025 $ = 0,295 $
+    "tiktok_top": ("lergassy~tiktok-shop-top-products-scraper", 0.30),   # classement des ventes TikTok Shop France + commission
     "ebay_vendus": ("caffein.dev~ebay-sold-listings", 0.04),            # prix réellement vendus sur ebay.fr
     "pubs": ("apivault_labs~ad-library-scraper-facebook-tiktok-google-ads", 0.04),  # pubs Facebook / Instagram / Google
 }
@@ -121,13 +123,15 @@ def lancer(robot, entree, maxi=10):
             items = json.loads(r.read() or b"[]")
     except Exception:
         items = None
-    if isinstance(items, list):
-        budget.rapprocher('apify', reservation, plafond)
-    # Le dataset ne contient pas la facture exacte : conserver le plafond débité.
-    # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique.
-    _noter(b, plafond)
     n = len(items) if isinstance(items, list) else 0
     dep, unit = TARIFS.get(robot, (0.0, plafond / max(maxi, 1)))
+    # Le dataset ne contient pas la facture exacte : conserver le plafond débité, SAUF pour les robots payés au résultat
+    # dont le tarif a été relevé sur de vraies factures (15/11/2026) : démarrage + prix × résultats, borné par le plafond.
+    debit = min(plafond, dep + unit * n) if robot in COUT_AU_RESULTAT and isinstance(items, list) else plafond
+    if isinstance(items, list):
+        budget.rapprocher('apify', reservation, debit)
+    # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique (le plafond reste débité).
+    _noter(b, debit)
     journal.noter(CONTEXTE["denicheur"], "apify:" + robot, _cible(entree), cout_usd=dep + unit * n, resultats=n)
     return items if isinstance(items, list) else None
 

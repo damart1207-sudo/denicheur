@@ -10,7 +10,7 @@ Chaîne (4 sources prouvées le 15/11/2026 par de vrais relevés) :
 Aucun chiffre inventé : une donnée absente est écrite « non trouvé ». Les montants TikTok sont des ESTIMATIONS du
 fournisseur de données, en dollars (à utiliser pour comparer les produits entre eux).
 
-Coût : ≈ 0,55 $ par relevé (plafond du jour « T » dans denicheur/apify.py), Keepa ≈ 10 jetons par finaliste.
+Coût : ≈ 0,70 $ par relevé (2 classements de 100 produits ≈ 0,59 $ + recoupements ≈ 0,10 $) (plafond du jour « T » dans denicheur/apify.py), Keepa ≈ 10 jetons par finaliste.
 Un classement n'est payé qu'une fois par jour, et un relevé complet n'est pas refait le même jour (sauf AFFIL_FORCER=1).
 Lancement : outil = affiliation_tiktok  ->  data/affiliation_tiktok.html + data/affiliation_tiktok.json + Telegram
 Réglages : config/affiliation_tiktok.json"""
@@ -568,8 +568,9 @@ def main():
         sante.noter("erreur", "affiliation tiktok", "aucun produit lisible dans les classements")
         print("Aucun produit lisible : aucun rapport écrit.")
         return 1
-    finalistes = choisir_finalistes(tous, cfg["filtres"], cfg["finalistes"])
-    for p in finalistes:
+    complet = len(classements) == len(noms)
+    finalistes = choisir_finalistes(tous, cfg["filtres"], cfg["finalistes"]) if complet else []
+    for p in finalistes:  # aucun recoupement payant tant qu'un classement manque
         sante.protege("affiliation enrichir", enrichir, p, cfg)
     apres = depense_apify()
     cout = round(apres - avant, 4) if avant is not None and apres is not None else None
@@ -588,7 +589,7 @@ def main():
         print(" -", "BINGO" if p["bingo"] else p["listes"], p["titre"][:60], "| marque sûre", repr(p.get("marque_sure")), "| recherche", repr(p.get("recherche")),
               "| gain/vente", p["gain_par_vente_usd"], "$ | ventes", p["ventes_7j"], "| évolution", p["evolution_pct"],
               "| eBay", p.get("ebay"), "| pubs", p.get("pubs"), "| Amazon", p.get("amazon"))
-    if len(classements) < len(noms):
+    if not complet:
         print("Un classement manque : données enregistrées, aucun rapport envoyé (il sera complété au prochain lancement).")
         return 1
     if not finalistes:

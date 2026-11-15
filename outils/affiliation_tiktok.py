@@ -45,9 +45,22 @@ def nombre(v):
         return None
 
 
+ETIQUETTE_PROMO = re.compile(r"exclusivit|live|black\s*friday|promo|offre|nouveau|new|soldes|no[ëe]l|cadeau|pack|lot\b", re.I)
+
+
+def sans_etiquettes(titre):
+    """Retire les étiquettes promotionnelles en tête : « [EXCLUSIVITÉ LIVE] medicube … », « 【Black Friday】GaaliShop … »."""
+    titre = (titre or "").strip()
+    while True:
+        m = re.match(r"\s*[\[【]([^\]】]+)[\]】]\s*", titre)
+        if not m or not ETIQUETTE_PROMO.search(m.group(1)):
+            return titre
+        titre = titre[m.end():]
+
+
 def marque(titre):
     """Marque probable : le texte entre crochets en tête (« [medicube Officiel] »), sinon le premier mot."""
-    titre = (titre or "").strip()
+    titre = sans_etiquettes(titre)
     m = re.match(r"\s*\[([^\]]+)\]", titre)
     if m:
         return re.sub(r"\s+", " ", MOTS_MARQUE_INUTILES.sub(" ", m.group(1))).strip()
@@ -73,7 +86,7 @@ def marque_fiable(titre):
     d'AUTRES produits — « Coffret de Noël » ramenait un coffret de thés, « Manteau » des annonceurs nommés Manteau).
     Trois cas acceptés : marque entre crochets en tête ; premiers mots tout en majuscules (« LANDOT », « CP PAPILLON ») ;
     un seul mot à majuscule après le dernier « - » (« … - Garnier »)."""
-    titre = (titre or "").strip()
+    titre = sans_etiquettes(titre)
     if titre.startswith("["):
         return marque(titre)
     debut = []
@@ -221,6 +234,8 @@ def lire_produit(ligne):
 
 def retenu(p, filtres):
     """Renvoie (True, "") ou (False, raison écrite pour David)."""
+    if re.search(r"exclusivit[ée]s?\s+live", p["titre"], re.I):
+        return False, "réservé aux lives"
     if p["prix_moyen_usd"] < filtres["prix_moyen_min_usd"]:
         return False, "prix moyen trop bas (donnée douteuse ou gain infime)"
     hausse = "hausses" in (p.get("listes") or [])  # liste déjà filtrée sur le chiffre d'affaires : moins de ventes exigées
@@ -257,30 +272,36 @@ def trouve_par(p):
 
 
 def choisir_finalistes(produits, filtres, n=3):
-    """Ordre : d'abord les bingos, puis en alternance un produit en hausse et un produit très vendu.
-    Jamais deux fois la même marque ; les catégories sont réparties (puis complétées s'il reste de la place)."""
+    """Tourniquet entre trois familles pour ne fermer aucune piste : un bingo, un produit en hausse, un produit très vendu,
+    et on recommence. Dans chaque famille, le plus gros total de commissions d'abord. Jamais deux fois la même marque ;
+    les catégories sont réparties (puis complétées s'il reste de la place)."""
     bons = [p for p in produits if retenu(p, filtres)[0]]
     total = lambda p: -p["commissions_totales_usd"]  # noqa: E731
     bingos = sorted((p for p in bons if p.get("bingo")), key=total)
-    hausses = sorted((p for p in bons if not p.get("bingo") and "hausses" in (p.get("listes") or [])),
-                     key=lambda p: -(p["evolution_pct"] if p["evolution_pct"] is not None else -1e9))
+    hausses = sorted((p for p in bons if not p.get("bingo") and "hausses" in (p.get("listes") or [])), key=total)
     vendus = sorted((p for p in bons if not p.get("bingo") and "hausses" not in (p.get("listes") or [])), key=total)
-    ordre = list(bingos)
-    for k in range(max(len(hausses), len(vendus))):
-        ordre += hausses[k:k + 1] + vendus[k:k + 1]
     nb_cat = len({p["categorie"] for p in bons}) or 1
     par_categorie_max = max(1, -(-n // nb_cat))
     choisis, marques, compte = [], set(), {}
-    for passe in (1, 2):  # passe 1 : catégories réparties ; passe 2 : on complète sans cette limite
-        for p in ordre:
-            if len(choisis) >= n:
-                return choisis
+
+    def prendre(famille, limite_categorie):
+        for p in famille:
             m = p["marque"].lower()
-            if p in choisis or m in marques or (passe == 1 and compte.get(p["categorie"], 0) >= par_categorie_max):
+            if p in choisis or m in marques or (limite_categorie and compte.get(p["categorie"], 0) >= par_categorie_max):
                 continue
             choisis.append(p)
             marques.add(m)
             compte[p["categorie"]] = compte.get(p["categorie"], 0) + 1
+            return True
+        return False
+
+    for limite in (True, False):  # passe 1 : catégories réparties ; passe 2 : on complète sans cette limite
+        avance = True
+        while avance and len(choisis) < n:
+            avance = False
+            for famille in (bingos, hausses, vendus):
+                if len(choisis) < n and prendre(famille, limite):
+                    avance = True
     return choisis
 
 
@@ -463,7 +484,7 @@ table.liste th{{cursor:pointer;background:#eef0f3;user-select:none;white-space:n
 <p><b>Commissions totales estimées</b> : revenu estimé × commission, tous créateurs confondus. Cela mesure où se trouve l'argent, pas ce que tu toucheras.</p>
 <p><b>Deux classements</b> : « plus vendu » = valeur sûre, déjà très promue ; « en hausse » = ventes qui décollent, moins de créateurs dessus ;
 « bingo » = présent dans les deux listes.</p>
-<p><b>Finalistes</b> : {cfg['finalistes']} produits au plus : d'abord les bingos, puis en alternance un produit en hausse et un produit très vendu, jamais deux fois la même marque, après avoir écarté
+<p><b>Finalistes</b> : {cfg['finalistes']} produits au plus, pris à tour de rôle dans trois familles (un bingo, un produit en hausse, un produit très vendu), le plus gros total de commissions d'abord, jamais deux fois la même marque, après avoir écarté les produits réservés aux lives,
 les prix moyens sous {cfg['filtres']['prix_moyen_min_usd']} $, les produits à moins de {cfg['filtres']['ventes_min']} ventes ({cfg['filtres'].get('ventes_min_hausses', cfg['filtres']['ventes_min'])} pour la liste des hausses, déjà filtrée sur le chiffre d'affaires), les ventes en recul de plus de {abs(cfg['filtres']['evolution_min_pct'])} % et les gains par vente sous {cfg['filtres']['gain_par_vente_min_usd']} $.</p>
 <p class="note">Les ventes et revenus TikTok sont des estimations du fournisseur de données, en dollars : ils servent à comparer les produits entre eux.
 Le taux de commission est celui annoncé par le robot ; vérifie-le dans ton catalogue créateur avant de tourner la vidéo.
@@ -519,6 +540,13 @@ def reglage(cfg, c):
             "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
 
 
+METHODE_SELECTION = 2  # à augmenter quand la façon de choisir les finalistes change
+
+
+def reglage_selection(cfg):
+    return {"methode": METHODE_SELECTION, "finalistes": cfg["finalistes"], "filtres": cfg["filtres"]}
+
+
 def deja_lus(ancien, jour, nom, attendu=None):
     """Produits d'un classement déjà payé aujourd'hui avec les mêmes réglages (ou None)."""
     if not isinstance(ancien, dict):
@@ -544,6 +572,7 @@ def main():
     noms = [c["nom"] for c in cfg["classements"]]
     if (isinstance(ancien, dict) and ancien.get("jour") == jour and ancien.get("finalistes")
             and all(deja_lus(ancien, jour, c["nom"], reglage(cfg, c)) for c in cfg["classements"])
+            and ancien.get("selection") == reglage_selection(cfg)
             and os.environ.get("AFFIL_FORCER") != "1"):
         print(f"Relevé du {jour} déjà complet : rien n'est relancé ni repayé (AFFIL_FORCER=1 pour forcer).")
         return 0
@@ -595,7 +624,7 @@ def main():
         par_cat[p["categorie"]] = par_cat.get(p["categorie"], 0) + 1
     with open(F_JSON, "w", encoding="utf-8") as f:
         json.dump({"version": 2, "jour": jour, "quand": quand, "classements_repris": repris, "taux_usd_eur": taux,
-                   "cout_apify_mesure_usd": cout,
+                   "cout_apify_mesure_usd": cout, "selection": reglage_selection(cfg),
                    "reglages": {c["nom"]: (ancien or {}).get("reglages", {}).get(c["nom"]) if c["nom"] in repris else reglage(cfg, c)
                                 for c in cfg["classements"] if c["nom"] in classements},
                    "produits_par_categorie": par_cat, "bingos": sum(1 for p in tous if p["bingo"]),

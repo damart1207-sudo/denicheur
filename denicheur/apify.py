@@ -18,11 +18,12 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # plafonds par jour (estimés d'après les tarifs) pour que le crédit gratuit tienne tout le mois :
 # A (vérifications idealo/Leboncoin/Vinted des alertes) 0,55 $ ; P (idealo des trois passages, à part : le 05/11 la veille avait vidé A avant midi) 0,15 $ ;
 # B (tendances) 0,15 $ ; C (chasse ciblée) 0,15 $ ; D (Vinted inter-pays) 0,10 $
-# T (affiliation TikTok Shop, outils/affiliation_tiktok.py : 2 relevés par semaine prévus ; premier relevé réel 0,307 $ le 15/11) :
-# 1 $ les jours de relevé = un relevé complet (0,65 $ de plafonds réservés au pire, 5 finalistes) + une contre-vérification des finalistes.
-# Ce sont des plafonds réservés, pas la dépense : le relevé complet du 15/11 a coûté 0,31 $, une contre-vérification 0,07 $.
-# 15/11 au soir : 2 $ le temps de prouver le second classement (mise au point), à remettre à 1 $ ensuite.
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 2.00}
+# T (affiliation TikTok Shop, outils/affiliation_tiktok.py, 2 relevés par semaine) : 1 $ les jours de relevé.
+# Un relevé = 2 classements de 100 produits (0,295 $ chacun, mesuré le 15/11) + recoupements des finalistes (≈ 0,03 $ par marque).
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.00}  # ≈ 1,10 $/jour hors T, soit ~33 $/mois
+# Soirée de mise au point du 15/11/2026 uniquement (plusieurs relevés d'essai, débités au plafond avant le débit réel) :
+if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-15":
+    PLAFOND_JOUR_USD["T"] = 2.00
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),

@@ -111,8 +111,18 @@ class Calculs(unittest.TestCase):
         self.assertEqual((par["L"]["bingo"], par["Z"]["listes"]), (False, ["hausses"]))
         self.assertIn("BINGO", A.trouve_par(par["S"]))
         self.assertEqual(A.trouve_par(par["Z"]), "classement des plus fortes hausses")
-        # bingo d'abord, puis la plus forte hausse, puis le plus vendu, puis la hausse suivante
+        # tourniquet : un bingo, une hausse, un plus vendu, puis on recommence (ici il ne reste qu'une hausse)
         self.assertEqual([p["lien"] for p in A.choisir_finalistes(tous, FILTRES, 4)], ["S", "Z", "L", "T"])
+        self.assertEqual([p["lien"] for p in A.choisir_finalistes(tous, FILTRES, 2)], ["S", "Z"])
+
+    def test_etiquettes_promo_et_lives(self):
+        self.assertEqual(A.marque_fiable("[EXCLUSIVITÉ LIVE] medicube Routine PDRN Éclat"), "")
+        self.assertEqual(A.marque_fiable("[EXCLUSIVITÉ LIVE] [medicube Officiel] Routine PDRN"), "medicube")
+        self.assertEqual(A.marque_fiable("【Black Friday】GaaliShop | Dalles PVC"), "")
+        self.assertEqual(A.marque_fiable("[medicube Officiel] Sérum"), "medicube")
+        self.assertEqual(A.marque("[EXCLUSIVITÉ LIVE] medicube Routine"), "medicube")
+        live = A.lire_produit(ligne("[EXCLUSIVITÉ LIVE] medicube Routine PDRN", 77, 151.82, 10, 529))
+        self.assertEqual(A.retenu(live, FILTRES), (False, "réservé aux lives"))
 
     def test_classement_paye_une_fois_par_jour(self):
         v2 = {"jour": "16/11/2026", "classements": {"plus_vendus": [{"lien": "a"}], "hausses": []}}

@@ -341,6 +341,7 @@ def resume_pubs(lignes):
 
 # ---------- comparaison avec les marchands français (calculs purs) ----------
 
+VERSION_COMPARAISON = 2  # à augmenter quand le tri des offres change : recalcul gratuit à partir des offres enregistrées
 OCCASION = re.compile(r"leboncoin|ebay|vinted|back ?market|rakuten|rebuy|occasion|reconditionn", re.I)
 
 
@@ -376,6 +377,7 @@ def comparer_offres(offres, titre, marque_sure, genre, prix_tiktok_eur):
     coeur = noyau(titre, marque_sure, 3 if genre == "meme_produit" else 4)
     besoin = 2 if genre == "meme_produit" else max(2, -(-3 * len(coeur) // 4))
     marque_n = _sans_accent(marque_sure).replace(" ", "")
+    nombres = [x for x in coeur if x.isdigit()]  # « 100 blocs » : un jeu de 80 pièces n'est pas un équivalent
     bonnes = []
     for o in offres or []:
         t = o.get("titre") or ""
@@ -385,15 +387,19 @@ def comparer_offres(offres, titre, marque_sure, genre, prix_tiktok_eur):
             continue
         if marque_n and marque_n not in _sans_accent(t).replace(" ", ""):
             continue
-        if len({_racine(x) for x in mots(t)} & set(coeur)) < min(besoin, len(coeur)):
+        dans_titre = {_racine(x) for x in mots(t)}
+        if len(dans_titre & set(coeur)) < min(besoin, len(coeur)) or any(n not in dans_titre for n in nombres):
             continue
         bonnes.append(o)
+    if len(bonnes) >= 3:  # prix aberrants (lot de 50 boîtes à 1 438 €, accessoire à 2 €) : hors de la fourchette médiane ÷ 3 à médiane × 3
+        med = statistics.median(o["prix"] for o in bonnes)
+        bonnes = [o for o in bonnes if med / 3 <= o["prix"] <= med * 3]
     minimum = 1 if genre == "meme_produit" else 3  # une fourchette d'équivalents demande au moins 3 offres
     if len(bonnes) < minimum:
-        return {"type": "aucune", "genre": genre, "nb_lues": len(offres or [])}
+        return {"type": "aucune", "genre": genre, "nb_lues": len(offres or []), "v": VERSION_COMPARAISON}
     prix = sorted(o["prix"] for o in bonnes)
     bas = min(bonnes, key=lambda o: o["prix"])
-    r = {"type": genre, "nb": len(bonnes), "nb_lues": len(offres or []), "min": prix[0], "max": prix[-1],
+    r = {"type": genre, "v": VERSION_COMPARAISON, "nb": len(bonnes), "nb_lues": len(offres or []), "min": prix[0], "max": prix[-1],
          "mediane": round(statistics.median(prix), 2),
          "moins_cher": {"marchand": bas.get("marchand"), "prix": bas["prix"], "titre": (bas.get("titre") or "")[:90], "lien": bas.get("lien")}}
     if prix_tiktok_eur:
@@ -450,34 +456,44 @@ def depense_apify():
     return apify.depense_reelle()
 
 
+def _douteuse(c):
+    """Ancienne comparaison sans offres enregistrées dont la fourchette est manifestement faussée par un prix aberrant."""
+    return (c.get("type") == "equivalents" and "offres" not in c and c.get("mediane") and c.get("max", 0) > 3 * c["mediane"])
+
+
 def comparer(finalistes, taux, cfg):
-    """Une seule demande groupée à Google Shopping (0,002 $ par produit cherché) pour les finalistes pas encore comparés."""
+    """Une seule demande groupée à Google Shopping (0,002 $ par produit cherché) pour les finalistes pas encore comparés.
+    Les offres lues sont enregistrées : si la façon de les trier change, le recalcul est gratuit. Renvoie le nombre de
+    comparaisons nouvelles ou recalculées."""
     reglages = cfg.get("comparaison") or {}
     if not reglages.get("actif", True):
         return 0
-    demandes = {}
+    demandes, changes = {}, 0
     for p in finalistes:
-        if (p.get("comparaison") or {}).get("type") not in (None, "non_lu"):
-            continue
+        c = p.get("comparaison") or {}
         m = marque_fiable(p["titre"])
         q, genre = requete_comparaison(p["titre"], m, reglages.get("mots_min_titre", 6))
-        if q is None:
-            p["comparaison"] = {"type": genre}
-        else:
-            demandes[id(p)] = (p, q, genre, m)
+        tiktok_eur = p["prix_moyen_usd"] * taux if taux else None
+        if "offres" in c and c.get("v") != VERSION_COMPARAISON and q:  # recalcul gratuit
+            p["comparaison"] = dict(comparer_offres(c["offres"], p["titre"], m, genre, tiktok_eur), requete=c.get("requete", q), offres=c["offres"])
+            changes += 1
+        elif c.get("type") in (None, "non_lu") or _douteuse(c):
+            if q is None:
+                p["comparaison"] = {"type": genre}
+            else:
+                demandes[id(p)] = (p, q, genre, m, tiktok_eur)
     if not demandes:
-        return 0
+        return changes
     res = sante.protege("affiliation comparaison", shopping.chercher, [d[1] for d in demandes.values()], "FR", defaut={}) or {}
-    lus = 0
-    for p, q, genre, m in demandes.values():
+    for p, q, genre, m, tiktok_eur in demandes.values():
         if q not in res:
-            p["comparaison"] = {"type": "non_lu", "requete": q}
+            if not (p.get("comparaison") or {}).get("type") in ("meme_produit", "equivalents", "aucune"):
+                p["comparaison"] = {"type": "non_lu", "requete": q}
             continue
-        c = comparer_offres(res[q], p["titre"], m, genre, p["prix_moyen_usd"] * taux if taux else None)
-        c["requete"] = q
-        p["comparaison"] = c
-        lus += 1
-    return lus
+        offres = [{k: o.get(k) for k in ("titre", "prix", "marchand", "lien", "devise")} for o in res[q]]
+        p["comparaison"] = dict(comparer_offres(offres, p["titre"], m, genre, tiktok_eur), requete=q, offres=offres)
+        changes += 1
+    return changes
 
 
 def enrichir(p, cfg):

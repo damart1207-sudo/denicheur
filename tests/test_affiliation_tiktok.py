@@ -183,6 +183,10 @@ class Calculs(unittest.TestCase):
         c = A.comparer_offres(blocs, t_blocs, "", "equivalents", 14.11)
         self.assertEqual((c["type"], c["nb"], c["min"], c["max"], c["mediane"]), ("equivalents", 3, 20.14, 39.99, 26.84))
         self.assertIn("produits équivalents (pas forcément le même)", A.texte_comparaison(c))
+        # relevé réel du 15/11 (23 h 55) : un jeu de 80 pièces et un lot à 1 438,80 € faussaient la fourchette
+        blocs2 = blocs + [O("HISHOPTOY Blocs de Construction magnétiques 80 pièces Enfants", 17.99), O("Lot 60 boîtes 100 blocs de construction magnétiques", 1438.80)]
+        c2 = A.comparer_offres(blocs2, t_blocs, "", "equivalents", 14.11)
+        self.assertEqual((c2["nb"], c2["min"], c2["max"]), (3, 20.14, 39.99))
         # trop peu d'offres proches : on n'affiche pas de fourchette
         sq = [O("6 PCS Crunchy Squishy Fun Box Asmr", 29.99), O("Dumpling Squishies Mystery Box", 40.0, "ubuy.fr")]
         c = A.comparer_offres(sq, "Coffret de Noël – 6 squishies à presser en forme de petits pains vapeur", "", "equivalents", 21.77)
@@ -204,6 +208,14 @@ class Calculs(unittest.TestCase):
             self.assertEqual((f[0]["comparaison"]["type"], f[1]["comparaison"]["type"], f[2]["comparaison"]["type"]), ("meme_produit", "titre_vague", "aucune"))
             self.assertEqual(A.comparer(f, 0.9, cfg), 0)          # plus rien à chercher : aucun appel
             self.assertEqual(len(demandes), 1)
+            self.assertEqual(len(f[0]["comparaison"]["offres"]), 1)   # offres enregistrées
+            f[0]["comparaison"]["v"] = 1                               # tri des offres modifié : recalcul gratuit, sans appel
+            self.assertEqual(A.comparer(f, 0.9, cfg), 1)
+            self.assertEqual((len(demandes), f[0]["comparaison"]["v"]), (1, A.VERSION_COMPARAISON))
+            vieux = {"type": "equivalents", "min": 17.99, "max": 1438.8, "mediane": 25.99, "nb": 14}
+            h = [dict(A.lire_produit(ligne("100 blocs de construction magnétiques – Jeu créatif STEM pour enfants", 557, 15.59, 8)), comparaison=vieux)]
+            A.comparer(h, 0.9, cfg)                                    # fourchette aberrante sans offres enregistrées : redemandée
+            self.assertEqual(len(demandes), 2)
             A.shopping.chercher = lambda q, pays="FR", **k: {}     # budget atteint : marqué « non lu », réessayé au lancement suivant
             g = [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10))]
             self.assertEqual(A.comparer(g, 0.9, cfg), 0)

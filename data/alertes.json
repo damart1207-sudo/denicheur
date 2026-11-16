@@ -91174,7 +91174,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T02:38+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -91364,6 +91364,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 02:46 UTC : offre active, 52.99 affiché, marchand 5_4 ; fiche smythstoys.com lue ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T02:58+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Smyths Royaume-Uni, retrait en magasin uniquement (Click & Collect), donc non livrable en France. Coût estimé 83,89 €, pas moins cher que la référence France 84,90 €.",
+   "prix_neuf_min_idealo": 84.9,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 1.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

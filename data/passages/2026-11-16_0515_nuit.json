@@ -1,0 +1,3271 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-16_0515",
+ "date_affichee": "16/11/2026 à 05 h 15",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 34,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 686,
+ "nb_nouvelles": 66,
+ "nb_prefiltres": 56,
+ "nb_tries": 56,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 5
+  },
+  "gptoss": {
+   "appels": 5,
+   "reussites": 5,
+   "erreurs": [],
+   "choix": 21
+  },
+  "qwen": {
+   "appels": 5,
+   "reussites": 5,
+   "erreurs": [],
+   "choix": 0
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "prosp-bab19e4aa4",
+   "titre": "PARAGOOSE Blouson Femme",
+   "prix": 69.99,
+   "devise": "EUR",
+   "marchand": "Intersport",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/Intersport"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Paragoose Blouson Femme",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 180.0,
+   "cout_achat": 74.99,
+   "marge_nette": 77.89,
+   "rentabilite": 1.039,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Marque premium canadienne peu distribuée en grande surface, marge potentielle forte si modèle doudoune/parka technique."
+   },
+   "score": 73.1,
+   "ebay": {
+    "requete": "Paragoose Blouson Femme",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Paragoose Blouson Femme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 37.29,
+    "ou": "idealo",
+    "lien": null
+   },
+   "idealo": {
+    "prix_min": 37.29,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Doudoune Paragoose Femme Parka Chaude Femme Veste D Hiver Matelassée En Coton Épais à Blocs De Couleurs Pour Veste Longue Rembourrée En Coton Manteau Grande Taille Blouson Hiver",
+    "gtin": null
+   },
+   "mot_cle": "paragoose blouson femme",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": 0.22,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 32.82,
+     "marge_nette": -49.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 32.82,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 4.4,
+      "provision": 3.0,
+      "marge_nette": -49.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.661
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 32.82,
+     "marge_nette": -49.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 32.82,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 4.4,
+      "provision": 3.0,
+      "marge_nette": -49.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.661
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 32.82,
+     "marge_nette": -49.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 32.82,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 4.4,
+      "provision": 3.0,
+      "marge_nette": -49.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.661
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 37.29,
+     "marge_nette": -55.05,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.29,
+      "cout_achat": 74.99,
+      "frais_canal": 9.36,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": -55.05,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.734
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 37.29,
+     "marge_nette": -56.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.29,
+      "cout_achat": 74.99,
+      "frais_canal": 10.61,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": -56.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.751
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 37.29,
+     "marge_nette": -56.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.29,
+      "cout_achat": 74.99,
+      "frais_canal": 10.98,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": -56.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.756
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 37.29,
+     "marge_nette": -56.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.29,
+      "cout_achat": 74.99,
+      "frais_canal": 11.2,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": -56.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.759
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 37.29,
+     "marge_nette": -58.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.29,
+      "cout_achat": 74.99,
+      "frais_canal": 12.58,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": -58.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.777
+    }
+   ],
+   "prix_revente_prudent": 33.56,
+   "marge_verifiee": -48.93,
+   "rentabilite_verifiee": -0.652,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Paragoose Blouson Femme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Paragoose Blouson Femme",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "paragoose blouson femme",
+     "paragoose manteau femme",
+     "paragoose jacket femme",
+     "blouson paragoose femme intersport",
+     "paragoose veste femme",
+     "manteau paragoose femme intersport",
+     "manteau paragoose femme bleu marine",
+     "manteau paragoose femme court",
+     "manteau paragoose femme noir",
+     "manteau paragoose femme ginette"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "prosp-fde4884983",
+   "titre": "REDSKINS Sherpa Homme",
+   "prix": 49.99,
+   "devise": "EUR",
+   "marchand": "Intersport",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/Intersport"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Timberland Seneca Bay Mid",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 105.0,
+   "cout_achat": 54.99,
+   "marge_nette": 32.94,
+   "rentabilite": 0.599,
+   "demande": 4.5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit d'extérieur tendance, marge d'environ 30 € après achat."
+   },
+   "score": 65.8,
+   "ebay": {
+    "requete": "Timberland Seneca Bay Mid",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Paire de chaussures Timberland Seneca Bay Mid (Sneakers Wheat Nubuck)",
+      "prix": "156.70",
+      "url": "https://www.ebay.fr/itm/960143394246?_skw=Timberland+Seneca+Bay+Mid&hash=itemdf8d0185c6:g:U90AAeSwpVdq6BUe"
+     },
+     {
+      "titre": "Chaussures Timberland  Seneca Bay Mid  TB0A69M1EM5 - 9M",
+      "prix": "86.90",
+      "url": "https://www.ebay.fr/itm/137824462406?_skw=Timberland+Seneca+Bay+Mid&hash=item2016fa6646:g:bM8AAeSwVyFqx0m4"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 78.7,
+     "IT": 77.9,
+     "ES": 77.9
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "Timberland",
+    "asin": "B0FH73D1BY",
+    "titre": "Timberland Seneca Bay Mid Lace Up Brown 44,5 EU",
+    "ean": "0197804738731",
+    "pays": "FR",
+    "prix_neuf": 60.69,
+    "prix_amazon": 60.69,
+    "prix_tiers": 60.69,
+    "moyenne_90j": 90.78,
+    "plus_bas_90j": 60.69,
+    "occasion": null,
+    "rang_ventes": 42398,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 7,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FH73D1BY",
+    "jetons_restants": 750
+   },
+   "asin": "B0FH73D1BY",
+   "ean": "0197804738731",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 4,
+   "prix_plancher": {
+    "nom": "Timberland Seneca Bay Mid",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 60.69,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FH73D1BY"
+   },
+   "remise_sincere": true,
+   "mot_cle": "timberland seneca bay mid",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 53.41,
+     "marge_nette": -11.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.41,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 7.16,
+      "provision": 3.0,
+      "marge_nette": -11.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.213
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 53.41,
+     "marge_nette": -11.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.41,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 7.16,
+      "provision": 3.0,
+      "marge_nette": -11.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.213
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 53.41,
+     "marge_nette": -11.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.41,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 7.16,
+      "provision": 3.0,
+      "marge_nette": -11.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.213
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 60.69,
+     "marge_nette": -16.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 60.69,
+      "cout_achat": 54.99,
+      "frais_canal": 11.46,
+      "prelevements": 8.13,
+      "provision": 3.0,
+      "marge_nette": -16.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.307
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 60.69,
+     "marge_nette": -17.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 60.69,
+      "cout_achat": 54.99,
+      "frais_canal": 12.25,
+      "prelevements": 8.13,
+      "provision": 3.0,
+      "marge_nette": -17.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.322
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 60.69,
+     "marge_nette": -18.29,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 60.69,
+      "cout_achat": 54.99,
+      "frais_canal": 12.86,
+      "prelevements": 8.13,
+      "provision": 3.0,
+      "marge_nette": -18.29,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.333
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 60.69,
+     "marge_nette": -19.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 60.69,
+      "cout_achat": 54.99,
+      "frais_canal": 14.24,
+      "prelevements": 8.13,
+      "provision": 3.0,
+      "marge_nette": -19.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.358
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 60.69,
+     "marge_nette": -21.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 60.69,
+      "cout_achat": 54.99,
+      "frais_canal": 16.09,
+      "prelevements": 8.13,
+      "provision": 3.0,
+      "marge_nette": -21.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.392
+    }
+   ],
+   "prix_revente_prudent": 54.62,
+   "marge_verifiee": -10.69,
+   "rentabilite_verifiee": -0.194,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Timberland Seneca Bay Mid",
+    "pays": {
+     "FR": {
+      "nb_annonces": 2,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 86.9,
+       "titre": "Chaussures Timberland  Seneca Bay Mid  TB0A69M1EM5 - 9M",
+       "lien": "https://www.ebay.fr/itm/137824462406?_skw=Timberland+Seneca+Bay+Mid&hash=item2016fa6646:g:bM8AAeSwVyFqx0m4",
+       "vendeur": "jekoshop",
+       "avis_vendeur": 60600
+      },
+      "plus_cher": {
+       "prix": 156.7,
+       "titre": "Paire de chaussures Timberland Seneca Bay Mid (Sneakers Wheat Nubuck)",
+       "lien": "https://www.ebay.fr/itm/960143394246?_skw=Timberland+Seneca+Bay+Mid&hash=itemdf8d0185c6:g:U90AAeSwpVdq6BUe",
+       "vendeur": "dpndt8",
+       "avis_vendeur": 17
+      }
+     },
+     "DE": {
+      "nb_annonces": 7,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 78.7,
+       "titre": "Timberland Schuhe Seneca Bay Mid TB0A69M1EM5 Braun",
+       "lien": "https://www.ebay.de/itm/188943092879?_skw=Timberland+Seneca+Bay+Mid&hash=item2bfde2cc8f:g:YuIAAeSw21dqo~OP",
+       "vendeur": "sapato-it",
+       "avis_vendeur": 10784
+      },
+      "plus_cher": {
+       "prix": 83.9,
+       "titre": "Schuhe Timberland  Seneca Bay Mid  TB0A69M1EM5 - 9M",
+       "lien": "https://www.ebay.de/itm/377503416603?_skw=Timberland+Seneca+Bay+Mid&hash=item57e4f5011b:g:3ogAAeSwGb1qo~OB",
+       "vendeur": "jekoshop",
+       "avis_vendeur": 60600
+      }
+     },
+     "IT": {
+      "nb_annonces": 18,
+      "total_ebay": 23,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 57.55,
+       "titre": "Timberland Seneca Bay Mid Lace Sneakers Uomo 8,5 Taupe Marrone Pelle Nuove con scatola",
+       "lien": "https://www.ebay.it/itm/960200061188?_skw=Timberland+Seneca+Bay+Mid&hash=itemdf90623104:g:IS8AAeSwYyFq896i",
+       "vendeur": "dstout_05",
+       "avis_vendeur": 232
+      },
+      "plus_cher": {
+       "prix": 121.75,
+       "titre": "Sneakers Timberland Seneca Bay Mid in pelle taglie 9, 10, 10,5, 11, 12, 13",
+       "lien": "https://www.ebay.it/itm/146278547149?_skw=Timberland+Seneca+Bay+Mid&hash=item220ee17ecd:g:eF4AAOSw7sBnYjSX",
+       "vendeur": "verda_5531",
+       "avis_vendeur": 205
+      }
+     },
+     "ES": {
+      "nb_annonces": 8,
+      "total_ebay": 23,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 77.9,
+       "titre": "ZAPATOS TIMBERLAND SENECA BAY MID TG 41 COD TB0A69M1EM5 - 9M [US 7.5 UK 7 CM 2...",
+       "lien": "https://www.ebay.es/itm/137724600489?_skw=Timberland+Seneca+Bay+Mid&hash=item201106a0a9:g:bM8AAeSwVyFqx0m4",
+       "vendeur": "jekoshop",
+       "avis_vendeur": 60600
+      },
+      "plus_cher": {
+       "prix": 120.75,
+       "titre": "Zapatillas Timberland Seneca Bay Mid Cuero Tallas 9, 10, 10.5, 11, 12, 13",
+       "lien": "https://www.ebay.es/itm/146278547149?_skw=Timberland+Seneca+Bay+Mid&hash=item220ee17ecd:g:eF4AAOSw7sBnYjSX",
+       "vendeur": "verda_5531",
+       "avis_vendeur": 205
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Timberland Seneca Bay Mid",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "timberland seneca bay mid",
+     "timberland seneca bay mid lace sneaker wheat",
+     "timberland seneca bay mid hiker",
+     "timberland seneca bay mid grey",
+     "timberland seneca bay mid wheat nubuck",
+     "timberland seneca bay mid lace up sneaker",
+     "timberland seneca bay mid lace",
+     "timberland seneca bay mid lace up trainer",
+     "timberland seneca bay mid trainers",
+     "timberland seneca bay mid black"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CX9CDHH3-neuf",
+   "titre": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour Chiens, Chats et Enfants, Anim",
+   "prix": 62.89,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CX9CDHH3",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 448,
+   "domaine": "autre",
+   "nom_produit": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 126.98,
+   "cout_achat": 67.89,
+   "marge_nette": 39.07,
+   "rentabilite": 0.575,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 144.3 €, baisse 56 %, rang 24205"
+   },
+   "score": 57.5,
+   "asin": "B0CX9CDHH3",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 7,
+   "ebay": {
+    "requete": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "CACSPS",
+    "asin": "B0CX9CDHH3",
+    "titre": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour Chiens, Chats et Enfants, Animaux domestiques, Chiot - 140 x 30 cm - Red",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 62.89,
+    "prix_amazon": null,
+    "prix_tiers": 62.89,
+    "moyenne_90j": 58.63,
+    "plus_bas_90j": 37.99,
+    "occasion": null,
+    "rang_ventes": 24219,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 15,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0CX9CDHH3",
+    "jetons_restants": 749
+   },
+   "prix_plancher": {
+    "nom": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 62.89,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CX9CDHH3"
+   },
+   "remise_sincere": false,
+   "mot_cle": "cacsps piscine pliable surdimensionnée",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0CX9CDHH3"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 55.34,
+     "marge_nette": -22.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.34,
+      "cout_achat": 67.89,
+      "frais_canal": 0.0,
+      "prelevements": 7.42,
+      "provision": 3.0,
+      "marge_nette": -22.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.338
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 55.34,
+     "marge_nette": -22.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.34,
+      "cout_achat": 67.89,
+      "frais_canal": 0.0,
+      "prelevements": 7.42,
+      "provision": 3.0,
+      "marge_nette": -22.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.338
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 55.34,
+     "marge_nette": -22.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.34,
+      "cout_achat": 67.89,
+      "frais_canal": 0.0,
+      "prelevements": 7.42,
+      "provision": 3.0,
+      "marge_nette": -22.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.338
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 62.89,
+     "marge_nette": -28.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.89,
+      "cout_achat": 67.89,
+      "frais_canal": 11.66,
+      "prelevements": 8.43,
+      "provision": 3.0,
+      "marge_nette": -28.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.414
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 62.89,
+     "marge_nette": -28.83,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.89,
+      "cout_achat": 67.89,
+      "frais_canal": 12.4,
+      "prelevements": 8.43,
+      "provision": 3.0,
+      "marge_nette": -28.83,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.425
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 62.89,
+     "marge_nette": -29.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.89,
+      "cout_achat": 67.89,
+      "frais_canal": 13.03,
+      "prelevements": 8.43,
+      "provision": 3.0,
+      "marge_nette": -29.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.434
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 62.89,
+     "marge_nette": -30.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.89,
+      "cout_achat": 67.89,
+      "frais_canal": 14.53,
+      "prelevements": 8.43,
+      "provision": 3.0,
+      "marge_nette": -30.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.456
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 62.89,
+     "marge_nette": -32.85,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.89,
+      "cout_achat": 67.89,
+      "frais_canal": 16.42,
+      "prelevements": 8.43,
+      "provision": 3.0,
+      "marge_nette": -32.85,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.484
+    }
+   ],
+   "prix_revente_prudent": 56.6,
+   "marge_verifiee": -21.87,
+   "rentabilite_verifiee": -0.322,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour ",
+    "temperature_dealabs": 448,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "8d32270e44",
+   "titre": "LEGO Star Wars Droide Astromecánico BB-8 - 75452",
+   "prix": 48.2,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/lego-star-wars-droide-astromecanico-bb-8-75452-2070768",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 189,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/lego-star-wars-droide-astromecanico-bb-8-75452-2070768"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "LEGO Star Wars BB-8 75452",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 55.43,
+   "cout_achat": 53.2,
+   "marge_nette": -8.2,
+   "rentabilite": -0.154,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 24 % vs neuf le moins cher"
+   },
+   "score": 36.0,
+   "veille": true,
+   "idealo": {
+    "prix_min": 62.99,
+    "nb_offres": 16,
+    "lien": "https://www.idealo.fr/prix/208651945/lego-star-wars-droide-astromecano-bb-8-75452.html",
+    "titre": "LEGO Star Wars - Droïde astromécano BB-8 (75452)",
+    "gtin": "5702018063095"
+   },
+   "prix_plancher": {
+    "nom": "LEGO Star Wars BB-8 75452",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "LEGO® Star Wars™ 75452 Droïde astromécano BB-8™",
+       "prix": 62.99,
+       "nb_boutiques": 17,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-75452-droide-astromecano-bb-8.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 62.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-75452-droide-astromecano-bb-8.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 80,
+    "marque": "LEGO",
+    "asin": "B0FPXFW6PM",
+    "titre": "LEGO Star Wars Droïde astromécano BB-8 - 75452",
+    "ean": "5702018063095",
+    "pays": "FR",
+    "prix_neuf": 62.99,
+    "prix_amazon": 62.99,
+    "prix_tiers": 62.99,
+    "moyenne_90j": 66.76,
+    "plus_bas_90j": 55.99,
+    "occasion": 54.7,
+    "rang_ventes": 2361,
+    "chutes_rang_30j": 52,
+    "chutes_rang_90j": 127,
+    "ventes_estimees_30j": 52,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FPXFW6PM",
+    "jetons_restants": 340
+   },
+   "ean": "5702018063095",
+   "asin": "B0FPXFW6PM",
+   "vendeurs_amazon": 80,
+   "ventes_estimees_30j": 52,
+   "ebay": {
+    "requete": "LEGO Star Wars BB-8 75452",
+    "neuf": {
+     "nb": 15,
+     "min": 83.99,
+     "p25": 111.0,
+     "mediane": 124.88,
+     "max": 216.1
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "LEGO Star Wars Droïde astromécano BB-8 - 75452",
+      "prix": "83.99",
+      "url": "https://www.ebay.fr/itm/237171318187?_skw=LEGO+Star+Wars+BB-8+75452&hash=item3738831dab:g:sC8AAeSwneBq8Irm"
+     },
+     {
+      "titre": "LEGO Star Wars 75452 Droïde astromecano BB-8",
+      "prix": "118.99",
+      "url": "https://www.ebay.fr/itm/327430471686?_skw=LEGO+Star+Wars+BB-8+75452&hash=item4c3c608006:g:6XUAAeSwlNZq-lh9"
+     },
+     {
+      "titre": "LEGO 75452 Droïde astromécano BB-8",
+      "prix": "103.49",
+      "url": "https://www.ebay.fr/itm/267840461850?_skw=LEGO+Star+Wars+BB-8+75452&hash=item3e5c891c1a:i:267840461850"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 111.0,
+     "DE": 64.99,
+     "IT": 71.13,
+     "ES": 67.84
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "lego star wars bb",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": 0.16,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "annonces_ebay": 15,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 55.43,
+     "marge_nette": -8.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.43,
+      "cout_achat": 53.2,
+      "frais_canal": 0.0,
+      "prelevements": 7.43,
+      "provision": 3.0,
+      "marge_nette": -8.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.154
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 55.43,
+     "marge_nette": -8.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.43,
+      "cout_achat": 53.2,
+      "frais_canal": 0.0,
+      "prelevements": 7.43,
+      "provision": 3.0,
+      "marge_nette": -8.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.154
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 55.43,
+     "marge_nette": -8.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 55.43,
+      "cout_achat": 53.2,
+      "frais_canal": 0.0,
+      "prelevements": 7.43,
+      "provision": 3.0,
+      "marge_nette": -8.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.154
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 62.99,
+     "marge_nette": -13.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.99,
+      "cout_achat": 53.2,
+      "frais_canal": 11.67,
+      "prelevements": 8.44,
+      "provision": 3.0,
+      "marge_nette": -13.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.25
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 62.99,
+     "marge_nette": -14.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.99,
+      "cout_achat": 53.2,
+      "frais_canal": 12.41,
+      "prelevements": 8.44,
+      "provision": 3.0,
+      "marge_nette": -14.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.264
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 62.99,
+     "marge_nette": -14.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.99,
+      "cout_achat": 53.2,
+      "frais_canal": 13.04,
+      "prelevements": 8.44,
+      "provision": 3.0,
+      "marge_nette": -14.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.276
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 62.99,
+     "marge_nette": -16.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.99,
+      "cout_achat": 53.2,
+      "frais_canal": 14.54,
+      "prelevements": 8.44,
+      "provision": 3.0,
+      "marge_nette": -16.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.304
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 62.99,
+     "marge_nette": -18.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 62.99,
+      "cout_achat": 53.2,
+      "frais_canal": 16.44,
+      "prelevements": 8.44,
+      "provision": 3.0,
+      "marge_nette": -18.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.34
+    }
+   ],
+   "prix_revente_prudent": 55.43,
+   "marge_verifiee": -8.2,
+   "rentabilite_verifiee": -0.154,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "occasion": {
+    "bas": 54.7,
+    "haut": 54.7,
+    "position_neuf": 0.88
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEGO Star Wars BB-8 75452",
+    "pays": {
+     "FR": {
+      "nb_annonces": 12,
+      "total_ebay": 13,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 83.99,
+       "titre": "LEGO Star Wars Droïde astromécano BB-8 - 75452",
+       "lien": "https://www.ebay.fr/itm/237171318187?_skw=LEGO+Star+Wars+BB-8+75452&hash=item3738831dab:g:sC8AAeSwneBq8Irm",
+       "vendeur": "eliastore04",
+       "avis_vendeur": 49
+      },
+      "plus_cher": {
+       "prix": 184.98,
+       "titre": "LEGO Star Wars BB-8 Astromech Droid Building Set 75452",
+       "lien": "https://www.ebay.fr/itm/358905030805?_skw=LEGO+Star+Wars+BB-8+75452&hash=item5390682895:g:WSIAAeSwU21qeI-D",
+       "vendeur": "nodotake_japan",
+       "avis_vendeur": 2404
+      }
+     },
+     "DE": {
+      "nb_annonces": 93,
+      "total_ebay": 102,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 31.98,
+       "titre": "LocoLee LED Licht für LEGO Star Wars 75452 Der Astromech-Droide BB-8™ Licht Set",
+       "lien": "https://www.ebay.de/itm/376901493980?_skw=LEGO+Star+Wars+BB-8+75452&hash=item57c11464dc:g:S9wAAeSwjddpdzN5",
+       "vendeur": "locolee-official-de",
+       "avis_vendeur": 1917
+      },
+      "plus_cher": {
+       "prix": 180.08,
+       "titre": "LEGO 75452 Star Wars BB-8 Droid Figur Anleitung ABS JDM 80211_1 Japan Bauset",
+       "lien": "https://www.ebay.de/itm/397597105722?_skw=LEGO+Star+Wars+BB-8+75452&hash=item5c92a25e3a:g:KhkAAeSwnzxpi9Qn",
+       "vendeur": "sakurahills_japan",
+       "avis_vendeur": 496
+      }
+     },
+     "IT": {
+      "nb_annonces": 105,
+      "total_ebay": 116,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 31.82,
+       "titre": "Originale LEGO Star Wars Minifigure BB-8 (Grande Fotorecettore) SW1485 75452",
+       "lien": "https://www.ebay.it/itm/257849552414?_skw=LEGO+Star+Wars+BB-8+75452&hash=item3c0907ee1e:g:phsAAeSwJRRq9i3m",
+       "vendeur": "justanotherbrick-84",
+       "avis_vendeur": 759
+      },
+      "plus_cher": {
+       "prix": 188.14,
+       "titre": "PSL Lego Star Wars BB-8 Astromech Droid #75452 nuovo sigillato",
+       "lien": "https://www.ebay.it/itm/177736584173?_skw=LEGO+Star+Wars+BB-8+75452&hash=item2961ed0bed:g:oMoAAeSwyPRpWDWY",
+       "vendeur": "legobrickmasters",
+       "avis_vendeur": 2164
+      }
+     },
+     "ES": {
+      "nb_annonces": 88,
+      "total_ebay": 105,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 31.55,
+       "titre": "Original LEGO Star Wars Minifigura BB-8 (Fotorreceptor Grande) SW1485 75452",
+       "lien": "https://www.ebay.es/itm/257849552414?_skw=LEGO+Star+Wars+BB-8+75452&hash=item3c0907ee1e:g:phsAAeSwJRRq9i3m",
+       "vendeur": "justanotherbrick-84",
+       "avis_vendeur": 759
+      },
+      "plus_cher": {
+       "prix": 180.08,
+       "titre": "LEGO 75452 Star Wars BB-8 Droid Figura Manual ABS JDM 80211_1 Japón Juego de ...",
+       "lien": "https://www.ebay.es/itm/397595964576?_skw=LEGO+Star+Wars+BB-8+75452&hash=item5c9290f4a0:g:KhkAAeSwnzxpi9Qn",
+       "vendeur": "sakurahills_japan",
+       "avis_vendeur": 496
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "LEGO Star Wars BB-8 75452",
+    "temperature_dealabs": 189,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "lego star wars 75452 bb 8",
+     "lego star wars 75452 droïde astromécano bb 8",
+     "lego star wars bb 8 astromech droid 75452",
+     "lego star wars 75452 bb 8 astromech droid set",
+     "lego star wars 75452 bb 8 tm astromech droid",
+     "lego star wars bb-8- set 75452",
+     "lego star wars bb 8 astromech droid construction set 75452",
+     "lego star wars bb 8 astromech droid kids toy 75452",
+     "lego star wars tm 75452 bb 8 tm asztromechanikus droid",
+     "lego star wars 75452 droide astromeccanico bb 8"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "119d43f4e6",
+   "titre": "[CB Deal] Adidas Galaxy 8 • Laufschuh • Schwarz • 39 1/3 - 48 2/3",
+   "prix": 26.79,
+   "devise": "EUR",
+   "marchand": "adidas",
+   "lien": "https://www.mydealz.de/deals/cb-deal-adidas-galaxy-8-laufschuh-schwarz-39-13-48-23-2872224",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/cb-deal-adidas-galaxy-8-laufschuh-schwarz-39-13-48-23-2872224"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Adidas Galaxy 8 Running",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 60.0,
+   "cout_achat": 31.79,
+   "marge_nette": 17.17,
+   "rentabilite": 0.54,
+   "demande": 3.0,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussure populaire à prix très bas, marge nette correcte même sans frais de plateforme."
+   },
+   "score": 31.1,
+   "ebay": {
+    "requete": "Adidas Galaxy 8 Running",
+    "neuf": {
+     "nb": 20,
+     "min": 27.08,
+     "p25": 41.22,
+     "mediane": 45.2,
+     "max": 132.43
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Chaussures sportif Sneakers HOMME Adidas Galaxy 8 M Blanc Bleu Running Jogging",
+      "prix": "43.93",
+      "url": "https://www.ebay.fr/itm/267842358841?_skw=Adidas+Galaxy+8+Running&hash=item3e5ca60e39:g:2zQAAeSwOdBq94Sw"
+     },
+     {
+      "titre": "Chaussures sportif Sneakers HOMME Adidas Running GALAXY 8 M Noir Blanc Jaune",
+      "prix": "41.17",
+      "url": "https://www.ebay.fr/itm/267803652452?_skw=Adidas+Galaxy+8+Running&hash=item3e5a577164:g:Mz0AAeSwE-Nq0rMS&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mgZaM2XX5g8k5cNkr4%2B%2B7WrAtrhTBlYo6O9UKPExVf0hcxLiD2x%2BMhsB%2FY5%2F6xNJ4du9B80zlu362VMD4rTBo7JMdZwzGxe55LXMyiLmKTNvfaHVrqeNXidsRtmBHfuTaxzUhgGrbr757pXiPDJmwkHDOItiXKANjVvMfQAV97cac2Elqe3cDB%2B8q7QX3VsA3LWK2ssC%2Bdt9%2BCrJbFSzqnRlVXQJHX1dygyRs6UrTjlWuLdhOGKlwYuIqBtijf%2BZBAJh3EdttTu1VqfxzqhoPpi3rgvnjxQCJWowodxQexzlAVppA20J4j9XO0%2Bct8kkc%3D"
+     },
+     {
+      "titre": "Chaussures sportif Sneakers HOMME Adidas Galaxy 8 M Blanc Running",
+      "prix": "47.64",
+      "url": "https://www.ebay.fr/itm/257765201117?_skw=Adidas+Galaxy+8+Running&hash=item3c0400d4dd:g:CRUAAeSw8a1q-RXr&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lnz6tfEb%2BGpMtLtyzALtTMRen13KndBXShmQvkSvjB7YPfV%2FD0zKCGYp1RI58Z4ssXJlMWh8ILDlS51doQCLP6hsBHD521jT%2FCgoLmvVEVC6peGlBWGvqCllOUO8QkfhpgI%2Bo1EuE97QvtH2TyvmCIxWDoTvc%2FU0twZR5HMCI9PDqyhmyZ4Wxjs7wCgeAAkuoE4qmpMsgOG%2F2UnPIeEtxqbd%2B%2Bx6MRZvBlKZLFYuufr73GDbPGP1tpxHztB1usSYHIuApTuPQ8rcuThiPehyNXMPt%2FFwKEsKzUReM7BMP3vQ%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 41.22,
+     "DE": 40.98,
+     "IT": 40.25,
+     "ES": 40.44
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 10,
+    "marque": "adidas",
+    "asin": "B0FWD4GJQT",
+    "titre": "adidas Homme Galaxy 8 Running Shoes, CBLACK/GRESIX/Carbon, 43 1/3 EU",
+    "ean": "4069987562907",
+    "pays": "FR",
+    "prix_neuf": 40.95,
+    "prix_amazon": 40.95,
+    "prix_tiers": 40.95,
+    "moyenne_90j": 48.39,
+    "plus_bas_90j": 40.95,
+    "occasion": null,
+    "rang_ventes": 1929,
+    "chutes_rang_30j": 25,
+    "chutes_rang_90j": 67,
+    "ventes_estimees_30j": 25,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FWD4GJQT",
+    "jetons_restants": 739
+   },
+   "asin": "B0FWD4GJQT",
+   "ean": "4069987562907",
+   "vendeurs_amazon": 10,
+   "ventes_estimees_30j": 25,
+   "prix_plancher": {
+    "nom": "Adidas Galaxy 8 Running",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 40.95,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FWD4GJQT"
+   },
+   "remise_sincere": true,
+   "mot_cle": "adidas galaxy 8 running",
+   "annonces_ebay": 20,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 36.04,
+     "marge_nette": -3.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.04,
+      "cout_achat": 31.79,
+      "frais_canal": 0.0,
+      "prelevements": 4.83,
+      "provision": 3.0,
+      "marge_nette": -3.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 36.04,
+     "marge_nette": -3.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.04,
+      "cout_achat": 31.79,
+      "frais_canal": 0.0,
+      "prelevements": 4.83,
+      "provision": 3.0,
+      "marge_nette": -3.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 36.04,
+     "marge_nette": -3.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.04,
+      "cout_achat": 31.79,
+      "frais_canal": 0.0,
+      "prelevements": 4.83,
+      "provision": 3.0,
+      "marge_nette": -3.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 40.95,
+     "marge_nette": -9.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.95,
+      "cout_achat": 31.79,
+      "frais_canal": 9.69,
+      "prelevements": 5.49,
+      "provision": 3.0,
+      "marge_nette": -9.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.283
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 40.95,
+     "marge_nette": -10.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.95,
+      "cout_achat": 31.79,
+      "frais_canal": 10.87,
+      "prelevements": 5.49,
+      "provision": 3.0,
+      "marge_nette": -10.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.321
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 40.95,
+     "marge_nette": -10.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.95,
+      "cout_achat": 31.79,
+      "frais_canal": 11.28,
+      "prelevements": 5.49,
+      "provision": 3.0,
+      "marge_nette": -10.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.333
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 40.95,
+     "marge_nette": -11.0,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.95,
+      "cout_achat": 31.79,
+      "frais_canal": 11.67,
+      "prelevements": 5.49,
+      "provision": 3.0,
+      "marge_nette": -11.0,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.346
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 40.95,
+     "marge_nette": -12.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.95,
+      "cout_achat": 31.79,
+      "frais_canal": 13.13,
+      "prelevements": 5.49,
+      "provision": 3.0,
+      "marge_nette": -12.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.392
+    }
+   ],
+   "prix_revente_prudent": 36.86,
+   "marge_verifiee": -2.87,
+   "rentabilite_verifiee": -0.09,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Adidas Galaxy 8 Running",
+    "pays": {
+     "FR": {
+      "nb_annonces": 18,
+      "total_ebay": 19,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 27.08,
+       "titre": "Chaussures Sneakers Garçons Femme Adidas Running Galaxy 8 J Carbon SIlver",
+       "lien": "https://www.ebay.fr/itm/267797027569?_skw=Adidas+Galaxy+8+Running&hash=item3e59f25af1:g:FqsAAeSwp0Rq2XS~",
+       "vendeur": "sportsfrance2013",
+       "avis_vendeur": 3786
+      },
+      "plus_cher": {
+       "prix": 52.87,
+       "titre": "Chaussures sportif Sneakers HOMME Adidas Running Galaxy 8 M Jaune gris",
+       "lien": "https://www.ebay.fr/itm/267799716391?_skw=Adidas+Galaxy+8+Running&hash=item3e5a1b6227:g:AsIAAeSwshNq6ZxR",
+       "vendeur": "sportsfrance2013",
+       "avis_vendeur": 3786
+      }
+     },
+     "DE": {
+      "nb_annonces": 53,
+      "total_ebay": 75,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 27.08,
+       "titre": "Sport Schuhe Jungen Damen Adidas Running Galaxy 8 J Carbon SIlver",
+       "lien": "https://www.ebay.de/itm/128101406931?_skw=Adidas+Galaxy+8+Running&hash=item1dd37058d3:g:voQAAeSw5Nlq9QVO",
+       "vendeur": "megp84",
+       "avis_vendeur": 7706
+      },
+      "plus_cher": {
+       "prix": 97.5,
+       "titre": "Adidas Galaxy 7 Wide Running Dolphin Silver JQ7141 Herren Gr.",
+       "lien": "https://www.ebay.de/itm/358550851302?_skw=Adidas+Galaxy+8+Running&hash=item537b4bcee6:g:B~IAAeSwWxpqAbfH",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18771
+      }
+     },
+     "IT": {
+      "nb_annonces": 84,
+      "total_ebay": 178,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 27.08,
+       "titre": "Sneakers Scarpe Bamini Ragazzi Donne Adidas Running Galaxy 8 J Carbon SIlver",
+       "lien": "https://www.ebay.it/itm/377526529730?_skw=Adidas+Galaxy+8+Running&hash=item57e655aec2:g:OowAAeSws8Rq9QVN",
+       "vendeur": "megp84",
+       "avis_vendeur": 7706
+      },
+      "plus_cher": {
+       "prix": 99.6,
+       "titre": "Adidas Donna Galaxy 7 Running, Bianco/Halo Come Nuove/Lime Burst, 8",
+       "lien": "https://www.ebay.it/itm/157684055745?_skw=Adidas+Galaxy+8+Running&hash=item24b6b3bec1:g:BboAAeSwVrFpkfXY",
+       "vendeur": "medfun",
+       "avis_vendeur": 2152
+      }
+     },
+     "ES": {
+      "nb_annonces": 72,
+      "total_ebay": 227,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 27.08,
+       "titre": "Adidas Running Galaxy 8 J Carbon Silver Zapatillas de Hombre Zapatillas de mujer",
+       "lien": "https://www.ebay.es/itm/267797027569?_skw=Adidas+Galaxy+8+Running&hash=item3e59f25af1:g:FqsAAeSwp0Rq2XS~",
+       "vendeur": "sportsfrance2013",
+       "avis_vendeur": 3786
+      },
+      "plus_cher": {
+       "prix": 96.6,
+       "titre": "Nuevo Adidas Running Mujer GALAXY 6 NEGRO/BLANCO NUBE GW3847 EE. UU. W 5 - 8 TOMAS",
+       "lien": "https://www.ebay.es/itm/285229620573?_skw=Adidas+Galaxy+8+Running&hash=item4269029d5d:g:xPAAAOSwnBJkNQIk",
+       "vendeur": "takse",
+       "avis_vendeur": 3780
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Galaxy 8 Running",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "adidas galaxy 8 running",
+     "adidas galaxy 8 running shoes",
+     "adidas galaxy 8 running shoes review",
+     "adidas galaxy 8 running review",
+     "adidas galaxy 8 running shoes men",
+     "adidas galaxy 8 running shoes kids",
+     "adidas galaxy 8 running shoes women",
+     "adidas galaxy 8 running shoes release date",
+     "adidas galaxy 8 running shoes black",
+     "adidas galaxy 8 running shoes reddit"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "3751fb412e",
+   "titre": "Piec na drewno VEVOR, 80-calowy piec kempingowy ze stali nierdzewnej do namiotu, przenośny piec opalany drewnem",
+   "prix": 67.42,
+   "devise": "EUR",
+   "marchand": "vevor",
+   "lien": "https://www.pepper.pl/promocje/piec-na-drewno-vevor-80-calowy-piec-kempingowy-ze-stali-nierdzewnej-do-namiotu-przenosny-piec-opalany-drewnem-1390817",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 212,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/piec-na-drewno-vevor-80-calowy-piec-kempingowy-ze-stali-nierdzewnej-do-namiotu-przenosny-piec-opalany-drewnem-1390817"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "VEVOR Poêle Bois Portable",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 120.0,
+   "cout_achat": 72.42,
+   "marge_nette": 28.5,
+   "rentabilite": 0.394,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit niche pour le camping, marge nette d'environ 31 € après frais."
+   },
+   "score": 24.3,
+   "ebay": {
+    "requete": "VEVOR Poêle Bois Portable",
+    "neuf": {
+     "nb": 10,
+     "min": 49.9,
+     "p25": 80.17,
+     "mediane": 109.9,
+     "max": 157.9
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "VEVOR Poêle à bois portable tente camping barbecue extérieur 80 po avec tuyaux",
+      "prix": "83.90",
+      "url": "https://www.ebay.fr/itm/357292435013?_skw=VEVOR+Po%C3%AAle+Bois+Portable&hash=item533049e645:g:NXIAAeSwoCRod1cQ"
+     },
+     {
+      "titre": "VEVOR Réchaud Camping Rocket Poêle à Bois Portable Acier Carbone Sac",
+      "prix": "68.99",
+      "url": "https://www.ebay.fr/itm/147623257762?_skw=VEVOR+Po%C3%AAle+Bois+Portable&hash=item225f0826a2:g:WB8AAeSwkNpqxfBu&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mV8%2F5ujopIjDE%2Fc1Wowv0vSKShzo%2FmwTCnQUSjG%2FoVXn%2BAhC26y5tHB6SBS5lIVgyw%2BPQ0MSxkf71aKJS3HYsDuJh6uyw1gXGOJNJPAdKIngUlpfzp9XKOapjUR%2FE4YHOgXa3yYg%2FaVLbdxalPUjh7aZ7KDM6xqi%2BAjmSiRnsaC2Q%2FEBFHi8Di0SCn64a3kHQHRgqMKLXpQUhWYd1MlirXDknVjEBrvxPqidnOyM12WCQC91JxTbEHQq6mEi%2F3wixe1x92CE%2Bvw90DdIfmlGSurZ10ZdwE68CO2TfKY60Ojn%2B%2BPgpCJ3e1R2obQ3eFLZA%3D"
+     },
+     {
+      "titre": "VEVOR Poêle à bois portable tente camping barbecue extérieur 118 po avec tuyaux",
+      "prix": "152.90",
+      "url": "https://www.ebay.fr/itm/357292434875?_skw=VEVOR+Po%C3%AAle+Bois+Portable&hash=item533049e5bb:g:MocAAeSw8n1od1bk"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 80.17,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "VEVOR",
+    "asin": "B0C9TP2LWY",
+    "titre": "VEVOR Poêle à Bois 86 pouces, Poêle de Tente de Camping Portable en Acier",
+    "ean": "0840349977034",
+    "pays": "FR",
+    "prix_neuf": 104.9,
+    "prix_amazon": 104.9,
+    "prix_tiers": 104.9,
+    "moyenne_90j": 109.8,
+    "plus_bas_90j": 97.99,
+    "occasion": 89.34,
+    "rang_ventes": 941,
+    "chutes_rang_30j": 19,
+    "chutes_rang_90j": 30,
+    "ventes_estimees_30j": 19,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0C9TP2LWY",
+    "jetons_restants": 729
+   },
+   "asin": "B0C9TP2LWY",
+   "ean": "0840349977034",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 19,
+   "prix_plancher": {
+    "nom": "VEVOR Poêle Bois Portable",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 104.9,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0C9TP2LWY"
+   },
+   "remise_sincere": true,
+   "idealo": {
+    "prix_min": 104.9,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "VEVOR Poêle à Bois 86 pouces, Poêle de Tente de Camping Portable en Acier | pour Cuisine et Chauffage en Plein Air, Volume 1400 pouces³, avec 8 Tuyaux de Cheminée et Gants, Structure en Acier Allié",
+    "gtin": null
+   },
+   "mot_cle": "vevor poêle bois portable",
+   "annonces_ebay": 10,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 92.31,
+     "marge_nette": 4.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.31,
+      "cout_achat": 72.42,
+      "frais_canal": 0.0,
+      "prelevements": 12.37,
+      "provision": 3.0,
+      "marge_nette": 4.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.062
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 92.31,
+     "marge_nette": 4.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.31,
+      "cout_achat": 72.42,
+      "frais_canal": 0.0,
+      "prelevements": 12.37,
+      "provision": 3.0,
+      "marge_nette": 4.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.062
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 92.31,
+     "marge_nette": 4.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 92.31,
+      "cout_achat": 72.42,
+      "frais_canal": 0.0,
+      "prelevements": 12.37,
+      "provision": 3.0,
+      "marge_nette": 4.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.062
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 104.9,
+     "marge_nette": 0.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.9,
+      "cout_achat": 72.42,
+      "frais_canal": 15.34,
+      "prelevements": 14.06,
+      "provision": 3.0,
+      "marge_nette": 0.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.001
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 104.9,
+     "marge_nette": -0.02,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.9,
+      "cout_achat": 72.42,
+      "frais_canal": 15.44,
+      "prelevements": 14.06,
+      "provision": 3.0,
+      "marge_nette": -0.02,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.0
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 104.9,
+     "marge_nette": -0.97,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.9,
+      "cout_achat": 72.42,
+      "frais_canal": 16.39,
+      "prelevements": 14.06,
+      "provision": 3.0,
+      "marge_nette": -0.97,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.013
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 104.9,
+     "marge_nette": -4.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.9,
+      "cout_achat": 72.42,
+      "frais_canal": 19.99,
+      "prelevements": 14.06,
+      "provision": 3.0,
+      "marge_nette": -4.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.063
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 104.9,
+     "marge_nette": -7.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.9,
+      "cout_achat": 72.42,
+      "frais_canal": 22.73,
+      "prelevements": 14.06,
+      "provision": 3.0,
+      "marge_nette": -7.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.101
+    }
+   ],
+   "prix_revente_prudent": 80.17,
+   "marge_verifiee": -5.99,
+   "rentabilite_verifiee": -0.083,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 89.34,
+    "haut": 89.34,
+    "position_neuf": 0.75
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "VEVOR Poêle Bois Portable",
+    "pays": {
+     "FR": {
+      "nb_annonces": 10,
+      "total_ebay": 10,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 49.9,
+       "titre": "VEVOR Réchaud Camping Rocket Poêle Bois Portable en Acier Carbone Sac Transport",
+       "lien": "https://www.ebay.fr/itm/357635857054?_skw=VEVOR+Po%C3%AAle+Bois+Portable&hash=item5344c21a9e:g:gkwAAeSwXJVoy~ci",
+       "vendeur": "beachzoeabc",
+       "avis_vendeur": 14134
+      },
+      "plus_cher": {
+       "prix": 157.9,
+       "titre": "VEVOR Poêle à bois portable pour tente camping extérieur tuyau acier inoxydable",
+       "lien": "https://www.ebay.fr/itm/357292434805?_skw=VEVOR+Po%C3%AAle+Bois+Portable&hash=item533049e575:g:L1cAAeSw10tqOKgy",
+       "vendeur": "beachzoeabc",
+       "avis_vendeur": 14134
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 12,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 14,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "VEVOR Poêle Bois Portable",
+    "temperature_dealabs": 212,
+    "google_trends": {
+     "interet_moyen": 2,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      91,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 6,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 18,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0CX9CDHH3-neuf",
+   "titre": "CACSPS Piscine Pliable surdimensionnée en Plastique Dur Portable pour Chiens, Chats et Enfants, Anim",
+   "temperature": 448,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 62.89,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CX9CDHH3",
+   "date": "2026-11-16T03:32",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CX9CDHH3",
+   "ref_fr": 144.3,
+   "description": "moyenne 90 j 144.3 €, baisse 56 %, rang 24205"
+  },
+  {
+   "id": "keepa-B0GYWJ23MP-neuf",
+   "titre": "TiMu Enceinte Bluetooth Puissante 30W, Haut-Parleur Portable Bluetooth 5.4, Basses Puissantes, Auton",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 26.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GYWJ23MP",
+   "date": "2026-11-16T03:32",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0GYWJ23MP",
+   "ref_fr": 49.18,
+   "description": "moyenne 90 j 49.18 €, baisse 45 %, rang 4625"
+  },
+  {
+   "id": "d86827c5b6",
+   "titre": "VARTA Pilas AAA, paquete de 40, Industrial Pro, Baterías Alcalinas, 1,5V, paquete de almacenamiento de embalaje ecológico, Made in Germany",
+   "temperature": 219,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 8.72,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/varta-pilas-aaa-paquete-de-40-industrial-pro-baterias-alcalinas-15v-paquete-de-almacenamiento-de-embalaje-ecologico-made-in-germany-2070724",
+   "date": "Mon, 16 Nov 2026 04:45:18 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,72€ - Amazon Calidad de alto rendimiento producto de marca producido en Alemania Paquete de reserva de pilas Micro AAA, pilas alcalinas a un precio..."
+  },
+  {
+   "id": "3751fb412e",
+   "titre": "Piec na drewno VEVOR, 80-calowy piec kempingowy ze stali nierdzewnej do namiotu, przenośny piec opalany drewnem",
+   "temperature": 212,
+   "categorie": "Sport i turystyka",
+   "marchand": "vevor",
+   "prix": 67.42,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/piec-na-drewno-vevor-80-calowy-piec-kempingowy-ze-stali-nierdzewnej-do-namiotu-przenosny-piec-opalany-drewnem-1390817",
+   "date": "Mon, 16 Nov 2026 04:50:26 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "286,90zł - vevor Piec na drewno VEVOR to przenośny piec kempingowy ze stali nierdzewnej, idealny do gotowania i ogrzewania na świeżym powietrzu oraz do namiotu myślę że sprawdzi..."
+  },
+  {
+   "id": "ed3f6146cb",
+   "titre": "Buty zimowe dziecięce Superfit - rozmiar 23 (w opisie również półbuty i sandały)",
+   "temperature": 204,
+   "categorie": "Moda",
+   "marchand": "Amazon.pl",
+   "prix": 13.38,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-zimowe-dzieciece-superfit-rozmiar-24-w-opisie-rowniez-polbuty-i-sandaly-1390818",
+   "date": "Mon, 16 Nov 2026 04:53:42 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "56,95zł - Amazon.pl Buty zimowe Superfit Husky w bardzo dobrej cenie 56,95 - tylko rozmiar 23. <a href=\"https://www.amazon.pl/gp/product/B0DT4SZ4TQ/ref=ox_sc_act_title_2?sm..."
+  },
+  {
+   "id": "6b8bdb96fc",
+   "titre": "Elden ring ps5 en carrefour,pc componentes,corte ingles",
+   "temperature": 194,
+   "categorie": "Gaming",
+   "marchand": "Carrefour",
+   "prix": 19.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/elden-ring-ps5-en-carrefourpc-componentescorte-ingles-2070744",
+   "date": "Mon, 16 Nov 2026 04:41:23 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,90€ - Carrefour • Plataforma: PS5 • Clasificación PEGI: 16 • Edición: Standard Edition • Fecha de lanzamiento: 25/02/2022 . Elden ring carrefour: ..."
+  },
+  {
+   "id": "f7f670b036",
+   "titre": "Ratón Gaming Ultraligero CHERRY XTRFY M4 RGB con Cable - Sensor Pixart 3389, Ergonómico para Diestros",
+   "temperature": 192,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 14.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/raton-gaming-ultraligero-cherry-xtrfy-m4-rgb-con-cable-sensor-pixart-3389-ergonomico-para-diestros-2070791",
+   "date": "Mon, 16 Nov 2026 04:54:46 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "14,90€ - Amazon El ratón gaming con cable CHERRY XTRFY M4 RGB en edición rosa (Pink Edition) destaca por su carcasa ultraligera perforada con diseño ergonómico pensado para jug..."
+  },
+  {
+   "id": "d58ba8cd3f",
+   "titre": "Split Fiction ~ 29,99€ für PlayStation 5 (PS5) für Xbox Series X ~ 29,92€ | Co-Op | Amazon Prime / MediaMarkt & Saturn Abholung",
+   "temperature": 109,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/split-fiction-2999eur-fur-playstation-5-ps5-fur-xbox-series-x-2992eur-co-op-amazon-prime-mediamarkt-saturn-abholung-2872156",
+   "date": "Mon, 16 Nov 2026 04:52:15 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "29,99€ - Amazon Aktuell erhaltet ihr bei Amazon und MediaMarkt & Saturn das Spiel Split Fiction im Angebot für die PlayStation 5 oder die Xbox Series X...."
+  },
+  {
+   "id": "d51a680496",
+   "titre": "Montre connectée Garmin Forerunner 265 - AMOLED, Turquoise, 46mm",
+   "temperature": 100,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 269.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-connectee-garmin-forerunner-265-montre-gps-connectee-running-amoled-turquoise-46mm-3455943",
+   "date": "Mon, 16 Nov 2026 04:57:37 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "269,99€ - Amazon Écran tactile AMOLED lumineux avec 5 boutons avec un boitier de 42mm Autonomie de 15 jours en mode montre connectée et de 24 heures en mode GPS<..."
+  },
+  {
+   "id": "5f03d59925",
+   "titre": "🛍️ Philips WelcomeEye Connect 2 Visiophone filaire 2 Fils,Platine alu IP44 ✅ 179,58€ au lieu de 329,90€ ➡️ https://www.amazon.fr/dp/B08JCJ9JR5/?tag=pmrat-21 Pub",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 179.58,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08JCJ9JR5/?tag=pmrat-21",
+   "date": "2026-11-16T04:01",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Philips WelcomeEye Connect 2 Visiophone filaire 2 Fils,Platine alu IP44 ✅ 179,58€ au lieu de 329,90€ ➡️ https://www.amazon.fr/dp/B08JCJ9JR5/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 329.9
+  },
+  {
+   "id": "a694050853",
+   "titre": "🛍️ SANDISK Optimus GX Pro 850X NVMe SSD 1 ✅ 213,77€ au lieu de 278,99€ ➡️ https://www.amazon.fr/dp/B0GJDCLR6R/?tag=pmrat-21 Publicité/Lien affilié Le prix peut ",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 213.77,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GJDCLR6R/?tag=pmrat-21",
+   "date": "2026-11-16T04:11",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ SANDISK Optimus GX Pro 850X NVMe SSD 1 ✅ 213,77€ au lieu de 278,99€ ➡️ https://www.amazon.fr/dp/B0GJDCLR6R/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 278.99
+  },
+  {
+   "id": "b77954a636",
+   "titre": "Redmi Note 17 5G, Smartphone 256 Go Bleu 248 au lieu de 403€ https://www.amazon.fr/dp/B0H4H6PYWC/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 248.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H4H6PYWC/?tag=chollosyofe0b-20",
+   "date": "2026-11-13T17:43",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Redmi Note 17 5G, Smartphone 256 Go Bleu 248 au lieu de 403€ https://www.amazon.fr/dp/B0H4H6PYWC/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 403.0
+  },
+  {
+   "id": "bcf2b21ea1",
+   "titre": "Caméra intérieure Ring 2e génération avec audio bidirectionnel 17.99 au lieu de 49.99€ https://www.amazon.fr/dp/B0CRM5LQZN/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CRM5LQZN/?tag=chollosyofe0b-20",
+   "date": "2026-11-14T02:40",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Caméra intérieure Ring 2e génération avec audio bidirectionnel 17.99 au lieu de 49.99€ https://www.amazon.fr/dp/B0CRM5LQZN/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 49.99
+  },
+  {
+   "id": "7cc3f41902",
+   "titre": "Lucky Duck Games - Cascadia (Jeu de société)",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 25.18,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lucky-duck-games-cascadia-jeu-de-societe-3456839",
+   "date": "Mon, 16 Nov 2026 05:13:12 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "25,18€ - Amazon BGG 7.9 Cascadia est un jeu à base d’assemblage de tuiles et de draft de jetons mettant en scène les habitats et la vie sauvage du Nord Ouest du Pacifique. À vous de créer un écosystème diversifié et harmonieux. Cascadia, un jeu de tuiles qui sent bon la nature Cascadia est un jeu à "
+  },
+  {
+   "id": "b69d919f1a",
+   "titre": "Sony Interactive Entertainment Sackboy A Big Adventure",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 25.14,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sony-interactive-entertainment-sackboy-a-big-adventure-3456836",
+   "date": "Mon, 16 Nov 2026 04:45:05 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "25,14€ - E.Leclerc • Mode solo • Équipes de 2 à 4 joueurs"
+  },
+  {
+   "id": "b01d9dac92",
+   "titre": "Helldivers II (PS5)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 24.94,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/helldivers-ii-ps5-3456835",
+   "date": "Mon, 16 Nov 2026 04:43:07 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "24,94€ - E.Leclerc Engagez-vous chez les Helldivers et rejoignez le combat pour la liberté à travers une galaxie hostile dans ce féroce et frénétique jeu de tir à la troisième personne. DIFFUSION URGENTE - FORCES ARMÉES DE LA SUPER-TERRE Liberté. Paix. Démocratie. Vos droits inaliénables en tant qu'"
+  },
+  {
+   "id": "a5bce7f277",
+   "titre": "Death Stranding Director's Cut PS5",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Micromania Zing",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/death-stranding-directors-cut-ps5-3456834",
+   "date": "Mon, 16 Nov 2026 04:38:35 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Micromania Zing Bonne promotion !"
+  },
+  {
+   "id": "9bcbc522e1",
+   "titre": "Aspirateur balai sans fil Dreame R10s Lite-A - 25 000 Pa",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/aspirateur-balai-sans-fil-dreame-r10s-lite-a-25-000-pa-3456833",
+   "date": "Mon, 16 Nov 2026 04:35:35 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "99€ - Amazon À propos de cet article Tige de rallonge flexible à pour nettoyer les zones inaccessibles: Il se plie à près de 180° pour se glisser sous les lits et les canapés, atteignant les espaces les plus bas pour s’attaquer à la poussière cachée que les autres aspirateurs ne parviennent pas à dé"
+  },
+  {
+   "id": "b9f477f2b4",
+   "titre": "Demon's Souls Remake PS5",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Micromania Zing",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/demons-souls-remake-ps5-3456832",
+   "date": "Mon, 16 Nov 2026 04:35:03 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "34,99€ - Micromania Zing Promotion sympa !"
+  },
+  {
+   "id": "c5a0214452",
+   "titre": "Sony God of War Ragnarök Standard PlayStation 5",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 31.14,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sony-god-of-war-ragnarok-standard-playstation-5-3456831",
+   "date": "Mon, 16 Nov 2026 04:29:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "31,14€ - E.Leclerc • Suite de God of War (2018) • Développé par Santa Monica Studio • L’histoire se déroule dans les neuf royaumes nordiques • La Hache Léviathan, les Lames du Chaos et le bouclier Gardien sont présents"
+  },
+  {
+   "id": "a94d614f90",
+   "titre": "Actualité : Bon plan – Le répéteur Wifi Asus ZenWiFi BT8 pack de 1 à 237,90 € (-23%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 237.9,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/repeteurs-wi-fi/bon-plan-le-repeteur-wifi-asus-zenwifi-bt8-pack-de-1-a-237-90-23-n267576.html",
+   "date": "2026-11-16T04:30:05+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Le répéteur Wifi Asus ZenWiFi BT8 pack de 1 passe sous les 250 € chez Materiel.net soit une baisse d'environ 23% sur le prix habituellement constaté. C'est actuellement le meilleur produit de notre comparatif."
+  },
+  {
+   "id": "2e0ec89379",
+   "titre": "[MaxGaming] Sony PlayStation DualSense Edge Wireless Controller (white & midnight black)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "MaxGaming",
+   "prix": 159.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/maxgaminggg-sony-playstation-dualsense-edge-wireless-controller-white-midnight-black-2872226",
+   "date": "Mon, 16 Nov 2026 04:51:45 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "159,90€ - MaxGaming Moin zusammen, den DualSense Edge Controller ist aktuell zum Preis von 159,90€ inkl. Versand bei maxgaming.gg (Online) zu haben. Anders als bei den letzten Deals von expert, ist diesmal nicht nur der Controller in der Farbe white , sondern auch in midnight black im Angebot. Persö"
+  },
+  {
+   "id": "83a6a4c53d",
+   "titre": "Google Play Guthaben 50€ + 5€ MediaMarkt-Coupon gratis dazu (bis 22.11.)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "MediaMarkt",
+   "prix": 50.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/google-play-guthaben-50eur-5eur-mediamarkt-coupon-gratis-dazu-bis-2211-2872225",
+   "date": "Mon, 16 Nov 2026 04:46:11 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "50€ - MediaMarkt Besser als nichts! Ich weiss 10% Cashback sind nichts aussergewöhnliches bei Google Play und dazu kommen die auch noch als Mediamarkt Gutschein und nicht auszahlbar aber vielleicht nutzt der eine oder andere es ja für die Mediamarkt Black Friday Deals. Angebot: Beim Kauf einer Googl"
+  },
+  {
+   "id": "119d43f4e6",
+   "titre": "[CB Deal] Adidas Galaxy 8 • Laufschuh • Schwarz • 39 1/3 - 48 2/3",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "adidas",
+   "prix": 26.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/cb-deal-adidas-galaxy-8-laufschuh-schwarz-39-13-48-23-2872224",
+   "date": "Mon, 16 Nov 2026 04:39:56 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "26,79€ - adidas Guten Morgen, bei Adidas bekommt ihr den Adidas Galaxy 8 gerade günstiger als den Vorgänger Galaxy 7. Mit den 10% Corporate Benefits und 30€ Adidas Guthaben (ebenfalls über CB) kommt man am Ende auf einen Dealpreis von nur 26,79€ ( VGP / identischer Grundpreis bei OTTO ). Weite Passf"
+  },
+  {
+   "id": "a26ac764c3",
+   "titre": "2x Osram SMART+ Matter Planon Frameless Deckenleuchte 30x30 cm – WLAN, je 1600 lm, Tunable White",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "iBOOD",
+   "prix": 45.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/2x-osram-smart-matter-planon-frameless-deckenleuchte-30x30-cm-wlan-je-1600-lm-tunable-white-2872223",
+   "date": "Mon, 16 Nov 2026 04:39:46 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "45,90€ - iBOOD Bei iBOOD bekommt ihr zwei Osram SMART+ Matter Planon Frameless Deckenleuchten für insgesamt 45,90 € inklusive Versand. Der Preis setzt sich aus 39,95 € für den Zweierpack und 5,95 € Versand zusammen – also 22,95 € je Leuchte. Vergleichspreis: 155,10 € für zwei identische Einzelgeräte"
+  },
+  {
+   "id": "047a8ed880",
+   "titre": "[Amazon] Rasierer trocken/nass Panasonic Series 900 Premium Wet and Dry Razor ES-LV9U,",
+   "temperature": null,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 189.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-panasonic-series-900-premium-wet-and-dry-razor-es-lv9u-2872221",
+   "date": "Mon, 16 Nov 2026 04:36:46 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "189,99€ - Amazon Panasonic Series 900 Premium Nass- & Trockenrasierer ES-LV9U (inkl. Reinigungs- & Ladestation) für 189,99€ Aktuell ein sehr guter Preis für das Set. Im Preisverlauf bei idealo auch nie günstiger gewesen. Obligatorische Kurzbeschreibung: Premium-Folienrasierer von Panasonic mit 5 jap"
+  },
+  {
+   "id": "4c5fc2f94a",
+   "titre": "PHILIPS OneBlade Pro 360 Face & Body, 3 x 360 Klingen QP6652/35 59,99€/ Braun Barttrimmer Series 7 BT7535 49,99€/ Rasierer 71-S1000s 99,99€",
+   "temperature": null,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/philips-oneblade-pro-360-face-body-3-x-360-klingen-qp665235-5999eur-braun-barttrimmer-series-7-bt7535-4999eur-rasierer-71-s1000s-9999eur-2872220",
+   "date": "Mon, 16 Nov 2026 04:29:38 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "59,99€ - Amazon beim OneBlade Pro dürfte das falsche Bild bei Amazon sein, direkt bei Philips PHILIPS OneBlade Pro 360 Face & Body - elektrischer Rasierer, Trimmer & Bodygroomer, 3 x 360 Klingen, Präzisionskamm, 2x Körperaufsätze, Reiseetui, Ladestation, für Gesicht & Körper (QP6652/35) 59,99€ OneBl"
+  },
+  {
+   "id": "46a07064e1",
+   "titre": "roborock QV 35A Set Saugroboter mit Wischfunktion mit 8.000 Pa Saugkraft",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 299.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/roborock-qv-35a-set-saugroboter-mit-wischfunktion-mit-8000-pa-saugkraft-2872219",
+   "date": "Mon, 16 Nov 2026 04:28:47 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "299,99€ - Amazon Haarverwicklungen gehören der Vergangenheit an Mopps heben sich automatisch auf Teppichen an Station wäscht und trocknet Mopps vollautomatisch Zusammengefasst aus Produktinformationen Leistungsstarke 8000Pa Saugkraft, verbessert von Qrevo S: Entwickelt für unübertroffene Reinigungsl"
+  },
+  {
+   "id": "f97665c6d7",
+   "titre": "Amazon - Technics EAH-AZ-100 - True Wireless Earbuds TWS Kopfhörer in allen Farben für 199 Euro, Rolling Stone für 229 Euro",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-kopfhorer-technics-eahz-100-in-allen-farben-fur-199-euro-rolling-stone-fur-229-euro-2872218",
+   "date": "Mon, 16 Nov 2026 04:28:08 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "199€ - Amazon Amazon verkauft im Rahmen der frühen Black Week Angebote die kabellosen in ear Kopfhörer Technics EAH-AZ 100 in allen Farben für 199 Euro. Für die Sonderedition \"Rolling Stone\" (scheint einfach ne Hülle um die schwarzen Kopfhörer zu sein. Ich habe sie Vorgänger EAH-AZ-60 jetzt seit meh"
+  },
+  {
+   "id": "d6b1c89f73",
+   "titre": "Gymshark Leggings (3 Styles / 6 Colours - Sizes XXS-XXL) - With Code",
+   "temperature": null,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Gymshark",
+   "prix": 12.15,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gymshark-leggings-3-styles-6-colours-sizes-xxs-xxl-with-code-5034182",
+   "date": "Mon, 16 Nov 2026 04:13:02 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£12.15 - Gymshark 70% off plus an extra 10% off with code. Examples POISE SEAMLESS LEGGINGS (XS-XXL) POISE SEAMLESS LEGGINGS (XS-XXL) WHITNEY REGULAR LEGGINGS (XXS-XXL) WHITNEY REGULAR LEGGINGS (XXS-XXL) INTENSE BUM SCRUNCH LEGGINGS (XXS-XXL) WHITNEY HIGH-RISE SHORT LEGGING (S-XL)"
+  },
+  {
+   "id": "50223c8410",
+   "titre": "TCL 55\"V6C Direct LED 4K HDR Smart Google TV-55V6C(Dolby Atmos, AiPQ Processor, 120Hz Game Accelerator (FHD) JoyPlus Member Price",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": null,
+   "prix": 222.13,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tcl-55v6c-direct-led-4k-hdr-smart-google-tv-55v6cdolby-atmos-aipq-processor-120hz-game-accelerator-fhd-joyplus-member-price-5034180",
+   "date": "Mon, 16 Nov 2026 04:01:16 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£222.13 The TCL V6C Series offers a well-rounded 4K entertainment experience, combining vibrant visuals with smooth performance and immersive audio. Featuring 4K UHD HDR, AiPQ™ Processor, and Motion Clarity, the V6C delivers vivid colours, sharp contrast, and fluid motion for an elevated viewing exp"
+  },
+  {
+   "id": "2b6bafbc28",
+   "titre": "TCL 65\"V6C Direct LED 4K HDR Smart Google TV-65V6C(Dolby Atmos, AiPQ Processor, 120Hz Game Accelerator (FHD) JoyPlus Member Price",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": null,
+   "prix": 305.55,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tcl-65v6c-direct-led-4k-hdr-smart-google-tv-65v6cdolby-atmos-aipq-processor-120hz-game-accelerator-fhd-joyplus-member-price-5034179",
+   "date": "Mon, 16 Nov 2026 03:52:03 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£305.55 The TCL V6C Series offers a well-rounded 4K entertainment experience, combining vibrant visuals with smooth performance and immersive audio. Featuring 4K UHD HDR, AiPQ™ Processor, and Motion Clarity, the V6C delivers vivid colours, sharp contrast, and fluid motion for an elevated viewing exp"
+  },
+  {
+   "id": "f7ce0a8456",
+   "titre": "Blink Outdoor 4 Cameras with free Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 84.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/blink-outdoor-4-cameras-with-free-blink-wired-doorbell-2k-newest-gen-sync-module-core-included-5034178",
+   "date": "Mon, 16 Nov 2026 03:47:02 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£84.99 - Amazon This bundle includes Blink Outdoor Camera 4 and 1 Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included MEET THE LATEST – Blink Outdoor 4 camera is our fourth generation, wireless, smart security camera that helps protect your home inside and out, directly from the Blink a"
+  },
+  {
+   "id": "a1af5b7854",
+   "titre": "Blink Outdoor 2 Cameras with Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 47.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/blink-outdoor-2-cameras-with-blink-wired-doorbell-2k-newest-gen-sync-module-core-included-5034177",
+   "date": "Mon, 16 Nov 2026 03:44:35 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£47.99 - Amazon This bundle includes Blink Outdoor Camera 4 and 1 Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included MEET THE LATEST – Blink Outdoor 4 camera is our fourth generation, wireless, smart security camera that helps protect your home inside and out, directly from the Blink a"
+  },
+  {
+   "id": "1ba8bca741",
+   "titre": "Blink Outdoor 4 Camera with Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 24.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/blink-outdoor-4-camera-with-blink-wired-doorbell-2k-newest-gen-sync-module-core-included-5034176",
+   "date": "Mon, 16 Nov 2026 03:41:48 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£24.99 - Amazon This bundle includes Blink Outdoor Camera 4 and 1 Blink Wired Doorbell 2K+ (newest gen), Sync Module Core included MEET THE LATEST – Blink Outdoor 4 camera is our fourth generation, wireless, smart security camera that helps protect your home inside and out, directly from the Blink a"
+  },
+  {
+   "id": "ab8c65ad88",
+   "titre": "SanDisk 128 GB Ultra microSDXC UHS-I Memory Card with Adapter",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 18.11,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/sandisk-128-gb-ultra-microsdxc-uhs-i-memory-card-with-adapter-5034175",
+   "date": "Mon, 16 Nov 2026 03:37:51 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£18.11 - Amazon Ideal for Android smartphones and tablets; the SanDisk Ultra microSDXC UHS-I card is compatible with Android smartphones and tablets, and works with Nintendo Switch (not compatible with Nintendo Switch 2) Capture and store more hours of Full HD video; with capacities of up to 1.5 TB,"
+  },
+  {
+   "id": "ab9907334a",
+   "titre": "aowoka Bluetooth Speaker, Portable Wireless Bluetooth 5.4 Speaker, 20W Stereo Sound, Deep Bass, LED Display, 20H Playtime, IPX7 Waterproof,",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 21.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/aowoka-bluetooth-speaker-portable-wireless-bluetooth-54-speaker-20w-stereo-sound-deep-bass-led-display-20h-playtime-ipx7-waterproof-5034174",
+   "date": "Mon, 16 Nov 2026 03:32:00 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£21.99 - Amazon Details Explore Reviews Report an issue with this product You might also like Sponsored Frequently bought together + Power Bank Fast Charging 10000mAh, 22.5W Portable Charger Built-in 4 Cables | LED Display, Built-in 4 Cables & 6-Device, PD 3 Buy Both: £38.98 Product details Top high"
+  },
+  {
+   "id": "e23957601b",
+   "titre": "Sennheiser HD 599 SE Open-Back Headphones",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 62.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/sennheiser-hd-599-se-open-back-headphones-5034173",
+   "date": "Mon, 16 Nov 2026 03:30:09 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£62.99 - Amazon Audiophile-Grade Open-Back Sound: Enjoy natural, balanced audio with a spacious soundstage for an immersive listening experience with Sennheiser headphones Clarity & Detail: These Sennheiser wired over ear headphones capture every note with precise highs, rich mids, and controlled ba"
+  },
+  {
+   "id": "prosp-0debf16451",
+   "titre": "Lotto Pantalon enfant",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-fee72f9f7e",
+   "titre": "adidas Pantalon Homme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-fde4884983",
+   "titre": "REDSKINS Sherpa Homme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-eaabdc5d6b",
+   "titre": "Timberland Seneca Bay Mid",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-3e5228850a",
+   "titre": "Lotto Sweatshirt à capuche Enfant",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-bcb8c59577",
+   "titre": "REDSKINS ALMIRA",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-85cf366c41",
+   "titre": "PUMA Pantalon Homme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-e66a16b797",
+   "titre": "PUMA Sweatshirt zippé à capuche Homme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-2e7303cdb9",
+   "titre": "Nike Initiator",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-bab19e4aa4",
+   "titre": "PARAGOOSE Blouson Femme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-083a72f8f1",
+   "titre": "New Balance W80",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-3af241eca3",
+   "titre": "PUMA Trinity 2",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-9d751842da",
+   "titre": "Columbia Doudoune Homme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 79.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-076a728c38",
+   "titre": "LUHTA Veste Softshell Femme",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intersport",
+   "prix": 79.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intersport",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-16 → 2026-11-30"
+  },
+  {
+   "id": "prosp-561a1ac3fa",
+   "titre": "ACTUEL SAPIN ENNEIGÉ ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-3b99e8b1bb",
+   "titre": "ACTUEL SAPIN VERT ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-62952ec91c",
+   "titre": "ACTUEL SAPIN CANADIEN ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  },
+  {
+   "id": "prosp-55ddca37d1",
+   "titre": "ACTUEL SAPIN POMMES DE PIN ACTUEL",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-16",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-10 → 2026-11-24"
+  }
+ ]
+}

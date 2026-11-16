@@ -95796,7 +95796,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T13:37+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -96009,17 +96009,17 @@
    "premiere_lecture": "2026-11-16T13:44+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-16T13:50+00:00",
+  "verifie_le": "2026-11-16T14:55+00:00",
   "verdict": {
-   "commentaire": "Rejeté : version numérique sur le PlayStation Store britannique, non achetable avec un compte français et non revendable ; la référence Keepa était Silent Hill 2, pas Silent Hill f.",
-   "prix_neuf_min_idealo": 49.99,
-   "source_prix_ref": "achatmoinscher",
-   "economie_pct": null,
+   "commentaire": "Même produit (GS24F14, EAN 4719331877200). Prix de référence France ~105,50 € (achatmoinscher) / 110,39 € Amazon.fr (moyenne 90 j : 102,27 €), soit ~27 % d'économie à 74,99 € livré. Mais la page de l'offre Amazon.es n'a pas pu être ouverte : impossible de confirmer qu'elle est encore active et livrable en France. À revérifier. Revente : marge ~2 €, sans intérêt.",
+   "prix_neuf_min_idealo": 102.27,
+   "source_prix_ref": "Keepa Amazon.fr moyenne 90 j + achatmoinscher 105,50 € (idealo non joignable)",
+   "economie_pct": 27,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": null,
-   "demande_confirmee": null
+   "marge_nette_verifiee": 2.41,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -96053,7 +96053,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T14:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -96265,7 +96265,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:29 UTC : offre active, 99.0 affiché, marchand 5_4 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T14:55+00:00",
+  "verdict": {
+   "commentaire": "Coût livré en France 139,10 € (95 £) contre 109 € neuf sur Amazon.fr : plus cher qu'en France.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": -28,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": true
+  }
  },
  {
   "id": "fc54f38366",
@@ -96311,7 +96323,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T14:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -96494,7 +96506,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 14:39 UTC : offre active, 359.95 affiché, marchand 36_3 ; cdiscount.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T14:55+00:00",
+  "verdict": {
+   "commentaire": "Même modèle à 449,99 € chez Darty et Boulanger (comparez-malin, 15/11). 382,99 € livré = 14,9 % d'économie, sous le seuil de 15 %. Revente non rentable.",
+   "prix_neuf_min_idealo": 449.99,
+   "source_prix_ref": "comparez-malin.fr (Darty, Boulanger)",
+   "economie_pct": 14.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "34be43bdf7",
@@ -96527,7 +96551,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T14:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -96735,6 +96759,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:50 UTC : offre active, 585.92 affiché, marchand 3_2 ; alza.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T14:58+00:00",
+  "verdict": {
+   "commentaire": "Coût livré 174,98 € (Alza.de) contre 189 € neuf sur Amazon.fr : seulement 7 % d'économie, sous le seuil de 15 %. Revente à perte.",
+   "prix_neuf_min_idealo": 189.0,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": 7.4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": true
+  }
  }
 ]

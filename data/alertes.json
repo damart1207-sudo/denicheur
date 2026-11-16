@@ -91231,7 +91231,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T07:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91439,7 +91439,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T07:46+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Lidl Pologne, non livrable en France ; le prix de référence trouvé concerne un tapis silicone, pas la machine Philips EP1200.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "keepa-B0FH5XM616-neuf",
@@ -91472,7 +91484,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T07:58+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -91669,7 +91681,19 @@
    "livraison_france": "oui",
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Prometteur (13,59 € contre 31,43 € chez un vendeur tiers) mais la page Amazon n'a pas pu être ouverte ce matin et le prix neuf le plus bas en France n'est pas confirmé. À revoir.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "a723b7dfbf",
@@ -91702,7 +91726,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T07:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91914,7 +91938,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 08:05 UTC : offre active, 89.0 affiché, marchand 1650_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Beats Solo 4 au Royaume-Uni : 130,82 € livré en France, plus cher que le neuf en France (109 € sur Amazon.fr).",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": -20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "keepa-B0009YCP1Y-arbDE",
@@ -91947,7 +91983,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T08:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -92205,7 +92241,19 @@
    "proba_detail": [
     "Amazon 9/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Prix français de référence (81,90 €, vendeur tiers) pas fiable : le plus bas sur 90 jours en France est 9,80 €. Pas une vraie économie.",
+   "prix_neuf_min_idealo": 9.8,
+   "source_prix_ref": "keepa/amazon.fr (plus bas 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "keepa-B07W6JX9JR-arbES",
@@ -92238,7 +92286,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T08:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -92497,7 +92545,19 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Seule référence française : un vendeur tiers à 43,74 € (plus bas 90 j 24,51 €), une seule taille, ventes très faibles. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 24.51,
+   "source_prix_ref": "keepa/amazon.fr (plus bas 90 j)",
+   "economie_pct": 28,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "7511f3be1f",
@@ -92530,7 +92590,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T08:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -92736,7 +92796,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 08:24 UTC : offre active, 399.0 affiché, marchand 37_2 ; fiche lidl.pl lue ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Doublon : offre Lidl Pologne non livrable en France, prix de référence faux (accessoire).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "d6a1c457ee",
@@ -92782,7 +92854,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T08:18+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -93032,7 +93104,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Prometteur (73 € sur Amazon Espagne contre 153 € relevé en France) mais l'offre et la livraison en France n'ont pas pu être vérifiées ce matin. À revoir.",
+   "prix_neuf_min_idealo": 153.0,
+   "source_prix_ref": "achatmoinscher (non confirmé)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  },
  {
   "id": "88908c0fb8",
@@ -93091,7 +93175,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T08:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -93299,6 +93383,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 08:34 UTC : offre active, 29.99 affiché, marchand 6888_2 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Currys (Royaume-Uni) en retrait magasin : pas d'achat ni de livraison en France ; 46,64 € livré contre 39,99 € neuf en France.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T08:50+00:00"
  }
 ]

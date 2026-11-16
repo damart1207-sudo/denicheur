@@ -91,8 +91,10 @@ def comparer(asins, etat=None):
 
 def tour(etat=None, par_tour=PAR_TOUR):
     """Un tour : PAR_TOUR produits comparés sur 4 pays. Renvoie le nombre d'écarts trouvés."""
-    if etat is not None and not moisson._peut(par_tour * 4 + 5, etat):
-        return 0
+    if etat is not None:
+        par_tour = moisson.taille_lot(par_tour, 2 * (1 + len(PAYS)), etat)
+        if not par_tour:
+            return 0
     vus = _lire(F_VUS, {})
     asins = file_attente(vus)[:par_tour]
     if not asins:

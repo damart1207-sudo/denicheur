@@ -1,7 +1,7 @@
 {
- "tours_ok": 2142,
+ "tours_ok": 2143,
  "tours_echec": 10,
- "dernier_ok": "16/11 07:12",
+ "dernier_ok": "16/11 07:23",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1220,13 +1220,31 @@
    "niveau": "erreur",
    "etape": "moisson étagère",
    "message": "Bébé et Puériculture: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 07:23",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 18 produits sur 25 (412 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "16/11 07:23",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Jeux et Jouets: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 07:23",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Sports et Loisirs: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "16/11 07:06",
-  "annonces": 545,
-  "nouvelles": 385,
-  "examinees": 25,
-  "alertes": 0
+  "heure": "16/11 07:16",
+  "annonces": 547,
+  "nouvelles": 378,
+  "examinees": 18,
+  "alertes": 1
  }
 }

@@ -95771,9 +95771,9 @@
    "premiere_lecture": "2026-11-16T13:44+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-16T14:55+00:00",
+  "verifie_le": "2026-11-16T15:50+00:00",
   "verdict": {
-   "commentaire": "Même produit (GS24F14, EAN 4719331877200). Prix de référence France ~105,50 € (achatmoinscher) / 110,39 € Amazon.fr (moyenne 90 j : 102,27 €), soit ~27 % d'économie à 74,99 € livré. Mais la page de l'offre Amazon.es n'a pas pu être ouverte : impossible de confirmer qu'elle est encore active et livrable en France. À revérifier. Revente : marge ~2 €, sans intérêt.",
+   "commentaire": "Même produit (GS24F14, EAN 4719331877200), ~27 % sous le prix France (~102-105 €). Nouvelle tentative 16/11 16h50 : page de l'offre toujours impossible à ouvrir, donc offre active et livraison en France non confirmées. Reste à revérifier (abandon après 24 h). Revente : marge ~2 €, sans intérêt.",
    "prix_neuf_min_idealo": 102.27,
    "source_prix_ref": "Keepa Amazon.fr moyenne 90 j + achatmoinscher 105,50 € (idealo non joignable)",
    "economie_pct": 27,
@@ -96581,7 +96581,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T15:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -96802,7 +96802,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T15:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T15:50+00:00",
+  "verdict": {
+   "commentaire": "Même set (LEGO 75440, EAN 5702018062999). Le prix de 33,74 € n'est atteint qu'avec 11,25 € de cagnotte fidélité Auchan (à dépenser plus tard) : on paie réellement ~44,99 €, plus la livraison. Même en comptant la cagnotte, coût livré ~38,74 € contre 44,42 € neuf sur Amazon.fr : environ 13 % d'économie, sous le seuil de 15 %. Revente à perte.",
+   "prix_neuf_min_idealo": 44.42,
+   "source_prix_ref": "Keepa Amazon.fr + achatmoinscher (44,42 €)",
+   "economie_pct": 12.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -7.89,
+   "duree_offre": null,
+   "demande_confirmee": true
+  }
  },
  {
   "id": "612f15d231",
@@ -96835,7 +96847,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T15:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -97038,6 +97050,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 15:38 UTC : offre active, 76.75 affiché, marchand 170_1 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T15:50+00:00",
+  "verdict": {
+   "commentaire": "Même produit (Denon DP-29F). 99,99 € sur Amazon.es (104,99 € livré en France) alors que le même prix 99,99 € existe déjà sur Amazon.fr : aucune économie. Revente à perte.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -31.79,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

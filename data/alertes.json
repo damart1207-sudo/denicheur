@@ -90609,7 +90609,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T01:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -90826,7 +90826,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T01:59+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T02:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : prix Leclerc 36,94 € + 5 € de port = 41,94 €, seulement 4,5 % sous Auchan (43,90 € livraison gratuite). Pas assez pour un bon plan (15 %), et revente à perte (Vinted médiane 45 €). Page de l'offre non ouverte.",
+   "prix_neuf_min_idealo": 43.9,
+   "source_prix_ref": "achatmoinscher (Auchan, livraison gratuite)",
+   "economie_pct": 4.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "068f7cdff5",
@@ -90872,7 +90884,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T02:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -91104,7 +91116,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 02:36 UTC : offre active, 58.85 affiché, marchand 13069_1 ; fiche playstation.com lue : 64.99 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T02:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute : offre PlayStation Direct Allemagne (64,99 €), boutique réservée aux clients allemands, livraison en France non confirmée ; page de l'offre impossible à ouvrir. Référence France 84,90 € (achatmoinscher).",
+   "prix_neuf_min_idealo": 84.9,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 17.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "1dcc25cde5",

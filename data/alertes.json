@@ -93373,7 +93373,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-16T09:44+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -93409,7 +93409,7 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Pack Blink Outdoor 4 + sonnette 2K+ à 22,80 € annoncé sur Amazon.es (page Chollometro lue à 11h16 : offre active). Prix de référence France du même pack et prix sur Amazon.es à confirmer au prochain tour.",
+   "commentaire": "Pack Blink Outdoor 4 + Videotimbre 2K+ sur amazon.es : livraison en France non confirmée (appareils Amazon souvent bloqués hors Espagne) et aucun prix neuf FR fiable pour ce pack précis. Dans le doute, rejeté.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": null,
    "economie_pct": null,
@@ -93417,9 +93417,9 @@
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
-   "demande_confirmee": false
+   "demande_confirmee": null
   },
-  "verifie_le": "2026-11-16T10:55+00:00"
+  "verifie_le": "2026-11-16T11:50+00:00"
  },
  {
   "id": "9a26c792c5",
@@ -93991,7 +93991,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T10:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -94194,7 +94194,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T10:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T11:50+00:00",
+  "verdict": {
+   "commentaire": "Prix de 46 € réservé aux nouveaux abonnés OTTO UP Plus + remise ; OTTO.de ne livre pas en France. Coût réel ~51 € contre 54,99 € en France : économie < 15 %.",
+   "prix_neuf_min_idealo": 54.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "c4c31f6552",
@@ -94227,7 +94239,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T10:59+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -94441,7 +94453,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T11:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T11:50+00:00",
+  "verdict": {
+   "commentaire": "Beats Solo 4 à 99 € (+ port ≈ 104 €) sur amazon.es contre 109 € sur amazon.fr : économie < 15 %, pas de marge de revente.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "Keepa amazon.fr",
+   "economie_pct": 5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "54982928ca",
@@ -94494,7 +94518,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T11:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -94702,7 +94726,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 11:27 UTC : offre active, 37.99 affiché, marchand 1650_3 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T11:50+00:00",
+  "verdict": {
+   "commentaire": "Currys (UK) ne livre pas en France ; coût livré estimé 56,30 € supérieur au prix neuf FR de 49,99 €. Keepa avait en plus associé le mauvais jeu (Silent Hill 2).",
+   "prix_neuf_min_idealo": 49.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "0c0baec677",
@@ -94748,7 +94784,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T11:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -94973,6 +95009,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:34 UTC : offre active, 20.99 affiché, marchand 1650_3 ; fiche thegamecollection.net lue : 19.95 GBP, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T11:50+00:00",
+  "verdict": {
+   "commentaire": "19,95 £ chez The Game Collection (UK) mais coût livré en France estimé 35,53 € (port + frais import) contre 38,81 € neuf en France : économie ≈ 8 %, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 38.81,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

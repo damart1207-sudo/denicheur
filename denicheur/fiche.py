@@ -135,8 +135,11 @@ def evaluer(x, vol=None):
     if marge is None or marge < seuil_envoi or (neuf_min and achat >= neuf_min):
         f["feu"], f["raison"] = "rouge", "bénéfice sous 10 €"
         return f
-    if isinstance(vendeurs, int) and (vendeurs >= 10 or (vendeurs >= 5 and (ecart or 0) < 15)):
-        f["feu"], f["raison"] = "rouge", f"concurrence trop forte ({vendeurs} vendeurs)"
+    # Règle de David du 16/11/2026 (cas de l'écran iiyama à 92 € sur Amazon, 139 € partout ailleurs) : le NOMBRE de vendeurs
+    # ne bloque plus. Même à 30 vendeurs, si on achète au moins 15 % sous le moins cher d'entre eux, on est le moins cher
+    # et l'affaire tient. La concurrence ne fait passer au rouge que lorsqu'on n'est PAS nettement moins cher.
+    if isinstance(vendeurs, int) and vendeurs >= 5 and (ecart or 0) < 15:
+        f["feu"], f["raison"] = "rouge", f"{vendeurs} vendeurs et pas assez moins cher qu'eux ({ecart or 0} % d'écart, il en faut 15)"
         return f
     # VERT = l'affaire tient (règle de David, 05/11, cas Dyson V12s) : bénéfice ≥ 20 €, prix neuf France connu et
     # au moins 15 % au-dessus de notre achat, pas de signal contraire connu. Les données manquantes (concurrence,

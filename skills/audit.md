@@ -20,6 +20,16 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
 2. **Prix de revente réaliste** sur la plateforme visée :
    - Vinted / Leboncoin / eBay : fourchette des annonces comparables (neuf ou très bon état).
    - Le prix retenu ne dépasse JAMAIS 85 % du neuf le moins cher, ni le haut de la fourchette d'occasion.
+   - **Exception « le moins cher du marché » (règle de David, 16/11/2026, cas de l'écran iiyama GB2771HSU-W1 acheté 92,19 € sur
+     Amazon alors que tous les autres marchands étaient à 139 € et plus, rejeté à tort avec une revente à 115 €)** :
+     quand le produit est NEUF, scellé, et que notre coût d'achat est au moins 15 % sous le neuf le moins cher des AUTRES
+     marchands français (prix lus le jour même, pas un comparateur en retard), on revend comme le vendeur le moins cher :
+     prix de revente = 3 % sous le neuf le moins cher des autres marchands (pas 85 %), et le plafond de l'occasion ne
+     s'applique pas. La marge se calcule alors sur un canal où l'on vend du neuf à ce prix (Rebifftout, Leboncoin en
+     vendeur pro) ; l'écrire dans `ou_vendre`, et donner aussi la marge sur eBay / Cdiscount (souvent négative à cause
+     des commissions : le dire tel quel).
+   - Offre « à durée limitée » / vente flash : le dire en tête du commentaire, `mode` = `stock` (le prix aura disparu
+     avant qu'un client commande), et la signaler tout de suite sur Telegram sans attendre le rapport.
    - Si `verification` (Gemini + Google) existe déjà dans l'affaire, s'en servir et la contrôler.
 3. **Marge nette** = prix de revente retenu − `cout_achat` (déjà frais de port et taxes compris),
    moins la commission de la plateforme (voir `config/regles.json`).
@@ -39,12 +49,14 @@ But : David ne doit rien avoir à vérifier. Chaque affaire du dernier passage �
    - `ou_vendre` : canal + pays, ex. « Leboncoin (France) », « Vinted (France, Italie, Espagne) »,
      « eBay Allemagne ». Se servir de `ebay.neuf_par_pays` / `meilleur_pays` pour choisir le pays.
 5 bis. **Carte trois feux** (champ `feu` calculé par le robot : vert / orange / rouge) : l'audit confirme ou rétrograde.
-   - Concurrence (`vendeurs_amazon`, `concurrence_amazon`) : ≥ 10 vendeurs → rouge sauf si on est ≥ 15 % sous le moins cher ;
-     5 à 9 → orange ; ≤ 4 → peut être vert. Compter aussi les gros sites (Fnac, Cdiscount, Boulanger) au même prix.
+   - Concurrence (règle du 16/11/2026) : le NOMBRE de vendeurs ne fait plus jamais rejeter une affaire. Seule question :
+     sommes-nous le moins cher ? Si un autre marchand (surtout un gros site : Fnac, Cdiscount, Boulanger, Darty) vend déjà
+     à notre prix d'achat (à 5 % près) → rouge. Si nous sommes ≥ 15 % sous le moins cher de tous → peut être vert, même
+     avec 30 vendeurs. Entre les deux (5 à 15 % d'écart) → orange. Donner quand même le nombre de vendeurs dans le commentaire.
    - Occasion (`occasion.bas` / `occasion.haut` / `position_neuf`) : si notre coût d'achat dépasse le HAUT de l'occasion → rouge.
      Si notre prix est sous le BAS de l'occasion → signaler « or » dans le commentaire.
    - `bingo` (très recherché, peu vendu) : le dire dans le commentaire, c'est prioritaire pour David.
-   - Vert = marge ≥ 20 € ET prix neuf prouvé ET concurrence faible ; orange = marge 8-20 € ou preuve partielle ; sinon rouge.
+   - Vert = marge ≥ 20 € ET prix neuf prouvé ET nous sommes ≥ 15 % sous le moins cher ; orange = marge 8-20 € ou preuve partielle ; sinon rouge.
    Le verdict écrit : `valide` (vert), `bon` (orange), `rejete` (rouge).
 6. En cas de doute sans preuve → **rejet** (motif : « prix de revente non confirmé »). Mieux vaut
    rater une affaire que d'en valider une fausse.

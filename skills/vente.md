@@ -17,7 +17,7 @@
 2. ACHAT AU PLUS BAS : ≥ 15 % sous le neuf le moins cher en France (idealo / Keepa / comparateurs / pages PC / arbitrage / Sourceur).
 3. REVENTE AU PLUS HAUT : canal par profil (Vinted/Leboncoin occasion, eBay export/collection, Rebifftout marge ouverte),
    prix = fourchette réellement payée. Marge nette ≥ 20 € (orange dès 8 €).
-4. CONCURRENCE : vendeurs Amazon + marchands idealo + annonces eBay : ≥ 10 → passe ; 5-9 → seulement si ≥ 15 % moins cher ; ≤ 4 → bingo.
+4. CONCURRENCE : vendeurs Amazon + marchands idealo + annonces eBay : depuis le 16/11/2026 le nombre de vendeurs ne fait plus rejeter : ≥ 15 % sous le moins cher de tous → on y va, même à 30 vendeurs ; un marchand déjà à notre prix d'achat → on passe ; ≤ 4 vendeurs et moins cher → bingo.
 5. VITESSE : jours de revente estimés < 15 (ventes 30 j, annonces eBay vendues).
 6. SCORE = demande × marge × (1 / vitesse) ÷ concurrence × bonus hype × malus marque fermée / import.
 

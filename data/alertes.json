@@ -91547,7 +91547,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T06:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91755,7 +91755,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 06:23 UTC : offre active, 31.14 affiché, marchand 195_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T06:55+00:00",
+  "verdict": {
+   "commentaire": "Prix de 31,14 € introuvable : la fiche E.Leclerc affiche 61,13 € (neuf) ; la remise annoncée passe sans doute par des tickets fidélité ou a expiré. Offre non vérifiable, donc rejetée.",
+   "prix_neuf_min_idealo": 52.79,
+   "source_prix_ref": "Keepa amazon.fr (plus bas 90 j) ; consollection.com : Cdiscount 59,99 €",
+   "economie_pct": null,
+   "prix_revente_verifie": 49.27,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 3.53,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c149d485c3",
@@ -91788,7 +91800,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T06:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -92000,6 +92012,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 06:42 UTC : offre active, 99.0 affiché, marchand 14_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T06:55+00:00",
+  "verdict": {
+   "commentaire": "Même prix (109 €) sur Amazon.fr : aucune économie pour un acheteur en France ; revente à perte.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "Keepa amazon.fr (B0CZPMXGSH)",
+   "economie_pct": 0,
+   "prix_revente_verifie": 95.92,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -33.93,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

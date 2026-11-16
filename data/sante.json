@@ -1,7 +1,7 @@
 {
- "tours_ok": 2121,
+ "tours_ok": 2122,
  "tours_echec": 10,
- "dernier_ok": "16/11 03:27",
+ "dernier_ok": "16/11 03:36",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1016,13 +1016,25 @@
    "niveau": "erreur",
    "etape": "moisson étagère",
    "message": "Instruments de musique et Sono: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 03:36",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 23 produits sur 25 (480 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "16/11 03:37",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Bricolage: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "16/11 03:22",
-  "annonces": 1051,
-  "nouvelles": 671,
-  "examinees": 25,
-  "alertes": 0
+  "heure": "16/11 03:28",
+  "annonces": 883,
+  "nouvelles": 586,
+  "examinees": 23,
+  "alertes": 1
  }
 }

@@ -95262,7 +95262,7 @@
    "premiere_lecture": "2026-11-16T13:44+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-16T16:49+00:00",
+  "verifie_le": "2026-11-16T16:50+00:00",
   "verdict": {
    "commentaire": "Rejeté : page de l'offre Amazon Espagne impossible à ouvrir, offre encore active et livraison en France non confirmées. Prix FR de référence ~102 € (moyenne Amazon.fr 90 j), déjà descendu à 69,99 € sur Amazon.fr. Revente : marge 2 € seulement.",
    "prix_neuf_min_idealo": 102.27,
@@ -96812,7 +96812,7 @@
    "premiere_lecture": "2026-11-16T16:06+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-16T16:49+00:00",
+  "verifie_le": "2026-11-16T16:50+00:00",
   "verdict": {
    "commentaire": "Rejeté : offre Amazon UK non vérifiable (page inaccessible), frais d'import après Brexit incertains, prix FR le plus bas non confirmé. Revente : marge négative (−3 €).",
    "prix_neuf_min_idealo": 55.99,
@@ -97066,8 +97066,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 16:34 UTC : offre active, 151.99 affiché, marchand 3_2 ; fiche amazon.de lue, en stock (panier) ; livraison France : oui"
   },
-<<<<<<< Updated upstream
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T16:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : seulement 5 % sous le prix Amazon.fr (182,59 €), seuil de 15 % non atteint ; revente impossible avec profit (occasion ~173 €).",
+   "prix_neuf_min_idealo": 182.59,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "38c8150166",
@@ -97603,20 +97614,5 @@
    "resume": "page du bon plan lue à 16:45 UTC : offre active, 26.99 affiché, marchand 171_4 ; fiche amazon.es lue, en stock (panier) ; livraison France : oui"
   },
   "denicheur": "A"
-=======
-  "denicheur": "A",
-  "verifie_le": "2026-11-16T16:49+00:00",
-  "verdict": {
-   "commentaire": "Rejeté : seulement 8 % sous le prix Amazon.fr (182,59 €), seuil de 15 % non atteint ; revente impossible avec profit (occasion ~173 €).",
-   "prix_neuf_min_idealo": 182.59,
-   "source_prix_ref": "keepa/amazon.fr",
-   "economie_pct": 5,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": "inconnue",
-   "demande_confirmee": false
-  }
->>>>>>> Stashed changes
  }
 ]

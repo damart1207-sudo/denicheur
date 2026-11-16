@@ -97493,7 +97493,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T20:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -97712,7 +97712,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-16T20:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon.pl (autre fiche produit que la fiche française). Coût livré ≈ 52 € alors que la manette Carbon Black se trouve couramment autour de 42-50 € en France (promos Clubic/Dealabs, plus bas Amazon.fr 90 j : 36 €). Pas 15 % sous le neuf français.",
+   "prix_neuf_min_idealo": 64.99,
+   "source_prix_ref": "achatmoinscher + Amazon.fr (Keepa) + recherche web",
+   "economie_pct": 20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "0cf29ad502",
@@ -97745,7 +97757,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T20:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -97950,7 +97962,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-16T20:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Amazon.nl : livraison en France et prise compatible France non confirmées ; le prix Amazon.fr a déjà été à 21,99 € ces 90 jours, donc la référence 51,34 € n'est pas fiable. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 51.34,
+   "source_prix_ref": "Keepa/Amazon.fr",
+   "economie_pct": 43,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "26e04527dd",
@@ -97996,7 +98020,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T20:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -98306,6 +98330,18 @@
    "proba_detail": [
     "Amazon 25/mois"
    ]
+  },
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Marchand autrichien Enzinger : prix lu 605 € (plus 555,99 €), livraison en France non confirmée. Neuf France 799 € (achatmoinscher), Amazon.fr a été à 666 € en 90 j : écart insuffisant ou incertain. Rejet.",
+   "prix_neuf_min_idealo": 799.0,
+   "source_prix_ref": "achatmoinscher + Keepa/Amazon.fr",
+   "economie_pct": 30,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -98359,7 +98395,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T20:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -98571,7 +98607,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T21:00+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon UK/US en livres : coût livré estimé 36,97 €, plus cher que le neuf en France (32,06 €). Rejet.",
+   "prix_neuf_min_idealo": 32.06,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -15,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c56f2168f9",
@@ -98617,7 +98665,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-16T21:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -98911,6 +98959,18 @@
    "proba_detail": [
     "Amazon 27/mois"
    ]
+  },
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Offre expirée sur Mydealz (expert TechnoMarkt, Allemagne), signalée comme erreur de prix probable. Rejet.",
+   "prix_neuf_min_idealo": 699.0,
+   "source_prix_ref": "achatmoinscher + Keepa/Amazon.fr",
+   "economie_pct": 45,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -98949,7 +99009,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-16T21:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -99001,279 +99061,18 @@
    "premiere_lecture": "2026-11-16T21:09+00:00",
    "expiree_vue_le": "2026-11-16T21:37+00:00"
   },
-  "denicheur": "A"
- },
- {
-  "id": "bd904ffdb5",
-  "titre": "Dyson Corrale Haarglätter Glätteisen + Generalüberholt - Refurbished + 12M Herstellergarantie + 12M eBay Zusatzschutz - NP: 319 €",
-  "prix": 175.5,
-  "devise": "EUR",
-  "marchand": "eBay",
-  "lien": "https://www.mydealz.de/deals/dyson-corrale-haarglatter-glatteisen-nachtblaukupfer-generaluberholt-refurbished-12m-herstellergarantie-12m-ebay-zusatzschutz-2862728",
-  "pays": "DE",
-  "source": "mydealz-new",
-  "temperature": null,
-  "categorie": "Beauty & Gesundheit",
-  "prix_verifie": null,
-  "prix_page": null,
-  "prix_carte": null,
-  "preuve_prix": null,
-  "preuve_livraison": null,
-  "livraison_fr_confirmee": false,
-  "cout_total_confirme": false,
-  "lien_marchand": null,
-  "nom_produit": "Dyson Corrale",
-  "cout_achat": 180.5,
-  "prix_plancher": {
-   "nom": "Dyson Corrale",
-   "sources": {
-    "achatmoinscher": {
-     "nb_produits": 5,
-     "meilleur": {
-      "titre": "Occasion DYSON Corrale Bleu Rose Poudre Reconditionné",
-      "prix": 249.99,
-      "nb_boutiques": 2,
-      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Fer-a-lisser-lisseur/corrale-bleu-rose-poudre-reconditionne.html"
-     },
-     "autres": [
-      {
-       "titre": "DYSON Lisseur  Corrale CoolShine Rose",
-       "prix": 299.0,
-       "nb_boutiques": 7,
-       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Fer-a-lisser-lisseur/lisseur-dyson-corrale-coolshine-rose.html"
-      },
-      {
-       "titre": "DYSON Lisseur sans fil  Corrale Nickel / Copper Multicolore",
-       "prix": 349.0,
-       "nb_boutiques": 7,
-       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Fer-a-lisser-lisseur/lisseur-sans-fil-dyson-corrale-nickel-copper-multicolore-dyson.html"
-      },
-      {
-       "titre": "DYSON  Lisseur Corrale Gris/Fuschia",
-       "prix": 522.5,
-       "nb_boutiques": 4,
-       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Fer-a-lisser-lisseur/dyson-lisseur-corrale-gris-fuschia.html"
-      }
-     ]
-    }
-   },
-   "prix_min": 249.99,
-   "ou": "achatmoinscher",
-   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Fer-a-lisser-lisseur/corrale-bleu-rose-poudre-reconditionne.html"
-  },
-  "ecart_vs_neuf_min": 0.702,
-  "economie_pct": 30,
-  "type": "bon_plan",
-  "signal_erreur_prix": false,
-  "trouve_le": "2026-11-16T21:42+00:00",
-  "statut": "a_verifier",
-  "meme_produit_ia": true,
-  "revente_reelle": {},
-  "keepa": {
-   "nb_vendeurs_neuf": null,
-   "marque": "Dyson",
-   "asin": "B0CMTYWDT2",
-   "titre": "Dyson Corrale™ : lisseur (Cuivré/Nickel)",
-   "ean": "5025155073575",
-   "pays": "FR",
-   "prix_neuf": null,
-   "prix_amazon": null,
-   "prix_tiers": null,
-   "moyenne_90j": 351.3,
-   "plus_bas_90j": 299.0,
-   "occasion": 327.86,
-   "rang_ventes": 53004,
-   "chutes_rang_30j": 19,
-   "chutes_rang_90j": 49,
-   "ventes_estimees_30j": 19,
-   "remise_sincere": null,
-   "lien": "https://www.amazon.fr/dp/B0CMTYWDT2",
-   "jetons_restants": 347
-  },
-  "asin": "B0CMTYWDT2",
-  "ean": "5025155073575",
-  "vendeurs_amazon": null,
-  "ventes_estimees_30j": 19,
-  "demande_forte": {
-   "recherche": "dyson",
-   "popularite": 139,
-   "hausse_pct": 75,
-   "nouveau": false,
-   "pays": "ES"
-  },
-  "canaux": [
-   {
-    "profil": "confiance",
-    "profil_nom": "Acheteurs prudents (gros sites)",
-    "canal": "fnac",
-    "prix_vente": 249.99,
-    "marge_nette": 7.49,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 249.99,
-     "cout_achat": 180.5,
-     "frais_canal": 25.5,
-     "prelevements": 33.5,
-     "provision": 3.0,
-     "marge_nette": 7.49,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.041
-   },
-   {
-    "profil": "petit_budget",
-    "profil_nom": "Petit budget (occasion)",
-    "canal": "leboncoin",
-    "prix_vente": 219.99,
-    "marge_nette": 7.01,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 219.99,
-     "cout_achat": 180.5,
-     "frais_canal": 0.0,
-     "prelevements": 29.48,
-     "provision": 3.0,
-     "marge_nette": 7.01,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.039
-   },
-   {
-    "profil": "petit_budget",
-    "profil_nom": "Petit budget (occasion)",
-    "canal": "vinted",
-    "prix_vente": 219.99,
-    "marge_nette": 7.01,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 219.99,
-     "cout_achat": 180.5,
-     "frais_canal": 0.0,
-     "prelevements": 29.48,
-     "provision": 3.0,
-     "marge_nette": 7.01,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.039
-   },
-   {
-    "profil": "petit_budget",
-    "profil_nom": "Petit budget (occasion)",
-    "canal": "facebook",
-    "prix_vente": 219.99,
-    "marge_nette": 7.01,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 219.99,
-     "cout_achat": 180.5,
-     "frais_canal": 0.0,
-     "prelevements": 29.48,
-     "provision": 3.0,
-     "marge_nette": 7.01,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.039
-   },
-   {
-    "profil": "confiance",
-    "profil_nom": "Acheteurs prudents (gros sites)",
-    "canal": "cdiscount",
-    "prix_vente": 249.99,
-    "marge_nette": 4.99,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 249.99,
-     "cout_achat": 180.5,
-     "frais_canal": 28.0,
-     "prelevements": 33.5,
-     "provision": 3.0,
-     "marge_nette": 4.99,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.028
-   },
-   {
-    "profil": "impulsion",
-    "profil_nom": "Achat coup de cœur (vidéo)",
-    "canal": "tiktok",
-    "prix_vente": 249.99,
-    "marge_nette": 4.49,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 249.99,
-     "cout_achat": 180.5,
-     "frais_canal": 28.5,
-     "prelevements": 33.5,
-     "provision": 3.0,
-     "marge_nette": 4.49,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": 0.025
-   },
-   {
-    "profil": "confiance",
-    "profil_nom": "Acheteurs prudents (gros sites)",
-    "canal": "ebay",
-    "prix_vente": 249.99,
-    "marge_nette": -5.86,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 249.99,
-     "cout_achat": 180.5,
-     "frais_canal": 38.85,
-     "prelevements": 33.5,
-     "provision": 3.0,
-     "marge_nette": -5.86,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": -0.032
-   },
-   {
-    "profil": "confiance",
-    "profil_nom": "Acheteurs prudents (gros sites)",
-    "canal": "amazon",
-    "prix_vente": 249.99,
-    "marge_nette": -11.5,
-    "calcul_marge": {
-     "version": 2,
-     "prix_vente": 249.99,
-     "cout_achat": 180.5,
-     "frais_canal": 44.49,
-     "prelevements": 33.5,
-     "provision": 3.0,
-     "marge_nette": -11.5,
-     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-    },
-    "rentabilite": -0.064
-   }
-  ],
-  "page_offre": {
-   "lu_le": "2026-11-16T21:48+00:00",
-   "lien_deal": "https://www.mydealz.de/deals/dyson-corrale-haarglatter-glatteisen-nachtblaukupfer-generaluberholt-refurbished-12m-herstellergarantie-12m-ebay-zusatzschutz-2862728",
-   "page_deal": {
-    "code": 200,
-    "lu": true
-   },
-   "expiree": false,
-   "prix_page": 16.99,
-   "prix_ailleurs_annonce": 27.19,
-   "port_page": null,
-   "code_promo": "RSTRCW26",
-   "marchand_page": "3_2",
-   "description": "The world\\u2019s largest shopping community with Europe\\u2019s leading shopping rewards company.",
-   "lien_marchand": "https://www.ebay.de/itm/205847240730?mkcid=1&mkrid=705-53470-19255-0&campid=5339158230&customid=ppr-de-2455695644&toolid=10001&mkevt=1",
-   "type_page": "deal Pepper",
-   "marchand": {
-    "lien": "https://www.ebay.de/itm/205847240730?mkcid=1&mkrid=705-53470-19255-0&campid=5339158230&customid=ppr-de-2455695644&toolid=10001&mkevt=1",
-    "code": 403,
-    "lu": false,
-    "domaine": "ebay.de",
-    "erreur": "HTTP 403",
-    "bloque": true
-   },
-   "livraison_france": "oui",
-   "resume": "page du bon plan lue à 21:48 UTC : offre active, 16.99 affiché, code RSTRCW26, marchand 3_2 ; ebay.de refuse les robots (HTTP 403) ; livraison France : oui"
-  },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T22:05+00:00",
+  "verdict": {
+   "commentaire": "Offre expirée (MediaMarkt Allemagne) et aucun prix de référence français trouvé. Rejet.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

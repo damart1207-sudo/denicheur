@@ -1,7 +1,7 @@
 {
- "tours_ok": 2150,
+ "tours_ok": 2151,
  "tours_echec": 10,
- "dernier_ok": "16/11 08:27",
+ "dernier_ok": "16/11 08:37",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1310,13 +1310,25 @@
    "niveau": "erreur",
    "etape": "moisson étagère",
    "message": "Cuisine et Maison: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 08:37",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 20 produits sur 25 (402 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "16/11 08:38",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Fournitures de bureau: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "16/11 08:21",
-  "annonces": 554,
-  "nouvelles": 385,
-  "examinees": 25,
+  "heure": "16/11 08:31",
+  "annonces": 553,
+  "nouvelles": 387,
+  "examinees": 20,
   "alertes": 1
  }
 }

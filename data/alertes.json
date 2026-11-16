@@ -97197,7 +97197,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-16T18:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "demande_forte": {
@@ -97242,7 +97242,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T18:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre locale en magasin à Hanovre (Allemagne), pas livrable en France ; modèle WH-1000XM4C (variante) non comparable directement.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T18:49+00:00"
  },
  {
   "id": "e486bf5d29",
@@ -97275,7 +97287,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T18:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -97498,16 +97510,16 @@
    "premiere_lecture": "2026-11-16T18:10+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-16T17:50+00:00",
+  "verifie_le": "2026-11-16T18:49+00:00",
   "verdict": {
-   "commentaire": "Rejeté : Amazon.es 24,95 €, soit 29,95 € livré en France avec le port estimé, contre 34,03 € au plus bas en France (achatmoinscher, 12 boutiques) = 12 % d'économie, sous le seuil de 15 %. Frais de port vers la France non confirmés : dans le doute, rejet. Revente à perte (−7,01 €).",
-   "prix_neuf_min_idealo": 34.03,
-   "source_prix_ref": "achatmoinscher.com (12 boutiques)",
-   "economie_pct": 12.0,
+   "commentaire": "Même prix sur Amazon.fr (109 €) : aucune économie ; le deal espagnol coûte plus cher livré en France.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "Keepa / amazon.fr",
+   "economie_pct": 0,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": -7.01,
-   "duree_offre": "inconnue",
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
    "demande_confirmee": false
   }
  },
@@ -97555,7 +97567,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T18:23+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -97763,7 +97775,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 18:29 UTC : offre active, 22.99 affiché, marchand 36_3 ; fnac.com refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Fnac.com 24,99 € neuf, en stock, retrait magasin gratuit (offre Black November). Prix neuf le plus bas ailleurs en France : 32,99 € (Amazon). Revente non rentable (marge négative).",
+   "prix_neuf_min_idealo": 32.99,
+   "source_prix_ref": "achatmoinscher.com (Amazon 32,99 € livré)",
+   "economie_pct": 24,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "quelques jours (Black November)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T18:49+00:00"
  },
  {
   "id": "ce7e3de05f",
@@ -97828,7 +97852,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T18:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -98038,6 +98062,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:39 UTC : offre active, 22.99 affiché, marchand 1650_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Amazon UK ~42 € livrée en France, plus cher que le prix français (31 €).",
+   "prix_neuf_min_idealo": 31.0,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-16T18:49+00:00"
  }
 ]

@@ -9,6 +9,7 @@ Identifiants : secrets GitHub DATAFORSEO_LOGIN et DATAFORSEO_PASSWORD (login + m
 Documentation : https://docs.dataforseo.com/v3/
 """
 import base64
+import contextlib
 import json
 import os
 import re
@@ -64,7 +65,24 @@ def plafond_du_jour():
     except (OSError, json.JSONDecodeError):
         e = {}
     jour = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    return PLAFOND_JOUR_USD + (float(e.get("extra_usd", 0)) if e.get("jour") == jour else 0)
+    return PLAFOND_JOUR_USD + (float(e.get("extra_usd", 0)) if e.get("jour") == jour else 0) + _RESERVE
+
+
+_RESERVE = 0.0
+
+
+@contextlib.contextmanager
+def reserve(usd):
+    """Petite réserve au-dessus du plafond du jour, valable seulement pendant le bloc « with » (accord de David le
+    16/11/2026 : 0,02 $ par relevé d'affiliation pour la comparaison de prix, quand les passages de nuit ont déjà
+    consommé le plafond). C'est à l'outil appelant de compter ce qu'il a déjà pris dans la journée."""
+    global _RESERVE
+    avant = _RESERVE
+    _RESERVE = max(0.0, float(usd))
+    try:
+        yield
+    finally:
+        _RESERVE = avant
 
 
 def disponible(cout=0.1):

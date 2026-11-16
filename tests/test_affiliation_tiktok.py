@@ -10,6 +10,8 @@ spec = importlib.util.spec_from_file_location("affiliation_tiktok", os.path.join
 A = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(A)
 
+A.F_RESERVE = os.path.join(tempfile.mkdtemp(), "affiliation_comparaison.json")  # jamais le vrai compteur pendant les tests
+
 FILTRES = {"prix_moyen_min_usd": 3, "ventes_min": 200, "evolution_min_pct": -20, "gain_par_vente_min_usd": 1.0}
 
 
@@ -194,6 +196,29 @@ class Calculs(unittest.TestCase):
         self.assertIn("aucune offre comparable", A.texte_comparaison(c))
         self.assertIn("titre trop vague", A.texte_comparaison({"type": "titre_vague"}))
         self.assertEqual(A.texte_comparaison(None), "")
+
+    def test_reserve_de_la_comparaison(self):
+        """0,02 $ par jour au-dessus du plafond, seulement pendant la comparaison, et jamais deux fois le même jour."""
+        vus = []
+        ancien, fichier = A.shopping.chercher, A.F_RESERVE
+        A.F_RESERVE = os.path.join(tempfile.mkdtemp(), "r.json")
+        base = A.dataforseo.plafond_du_jour()
+        A.shopping.chercher = lambda q, pays="FR", **k: (vus.append(round(A.dataforseo.plafond_du_jour() - base, 4)) or {x: [] for x in q})
+        try:
+            cfg = {"comparaison": {"actif": True, "mots_min_titre": 6, "reserve_usd": 0.004}}
+            neufs = lambda: [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10)),
+                             A.lire_produit(ligne("NYX Rouge à lèvres mat longue tenue", 900, 9, 10)),
+                             A.lire_produit(ligne("medicube Sérum raffermissant collagène", 900, 19, 10))]
+            A.comparer(neufs(), 0.9, cfg)
+            self.assertEqual(vus, [0.004])                                # 3 recherches = 0,006 $, réserve limitée à 0,004 $
+            self.assertEqual(A.dataforseo.plafond_du_jour(), base)        # la réserve disparaît après la comparaison
+            self.assertEqual(A.reserve_restante(cfg["comparaison"]), 0.0)
+            A.comparer(neufs(), 0.9, cfg)
+            self.assertEqual(vus[-1], 0.0)                                # déjà prise aujourd'hui : plus rien au-dessus du plafond
+            self.assertEqual(A.reserve_restante(cfg["comparaison"], jour="2099-01-01"), 0.004)   # un autre jour : réserve entière
+            self.assertEqual(A.reserve_restante({}), 0.0)                 # sans réglage : aucune réserve
+        finally:
+            A.shopping.chercher, A.F_RESERVE = ancien, fichier
 
     def test_comparer_ne_cherche_que_ce_qui_manque(self):
         demandes = []

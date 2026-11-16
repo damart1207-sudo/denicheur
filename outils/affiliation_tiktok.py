@@ -29,11 +29,12 @@ from zoneinfo import ZoneInfo
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, RACINE)
-from denicheur import apify, keepa, sante, shopping, telegram  # noqa: E402
+from denicheur import apify, dataforseo, keepa, sante, shopping, telegram  # noqa: E402
 
 F_CONFIG = os.path.join(RACINE, "config/affiliation_tiktok.json")
 F_JSON = os.path.join(RACINE, "data/affiliation_tiktok.json")
 F_HTML = os.path.join(RACINE, "data/affiliation_tiktok.html")
+F_RESERVE = os.path.join(RACINE, "data/etat/affiliation_comparaison.json")
 MOTS_MARQUE_INUTILES = re.compile(r"\b(officiel(le)?|official|pm|store|shop|france|fr)\b", re.I)
 
 
@@ -461,6 +462,32 @@ def _douteuse(c):
     return (c.get("type") == "equivalents" and "offres" not in c and c.get("mediane") and c.get("max", 0) > 3 * c["mediane"])
 
 
+def reserve_restante(reglages, jour=None):
+    """Ce qui reste aujourd'hui de la réserve accordée à la comparaison au-dessus du plafond DataForSEO (0,02 $ par jour)."""
+    jour = jour or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    try:
+        with open(F_RESERVE) as source:
+            e = json.load(source)
+    except (OSError, json.JSONDecodeError):
+        e = {}
+    pris = float(e.get("pris_usd", 0)) if e.get("jour") == jour else 0.0
+    return max(0.0, round(float(reglages.get("reserve_usd", 0)) - pris, 4))
+
+
+def noter_reserve(cout, jour=None):
+    jour = jour or datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    try:
+        with open(F_RESERVE) as source:
+            e = json.load(source)
+    except (OSError, json.JSONDecodeError):
+        e = {}
+    pris = float(e.get("pris_usd", 0)) if e.get("jour") == jour else 0.0
+    os.makedirs(os.path.dirname(F_RESERVE), exist_ok=True)
+    with open(F_RESERVE, "w") as cible:
+        json.dump({"jour": jour, "pris_usd": round(pris + cout, 4),
+                   "note": "Réserve de la comparaison de prix du relevé d'affiliation (accord de David le 16/11/2026)."}, cible, indent=1)
+
+
 def comparer(finalistes, taux, cfg):
     """Une seule demande groupée à Google Shopping (0,002 $ par produit cherché) pour les finalistes pas encore comparés.
     Les offres lues sont enregistrées : si la façon de les trier change, le recalcul est gratuit. Renvoie le nombre de
@@ -484,7 +511,11 @@ def comparer(finalistes, taux, cfg):
                 demandes[id(p)] = (p, q, genre, m, tiktok_eur)
     if not demandes:
         return changes
-    res = sante.protege("affiliation comparaison", shopping.chercher, [d[1] for d in demandes.values()], "FR", defaut={}) or {}
+    cout = shopping.COUT * len({d[1] for d in demandes.values()})
+    with dataforseo.reserve(min(reserve_restante(reglages), cout)):  # les passages de nuit ont souvent déjà pris le plafond du jour
+        res = sante.protege("affiliation comparaison", shopping.chercher, [d[1] for d in demandes.values()], "FR", defaut={}) or {}
+    if res:
+        noter_reserve(cout)  # compté même si le plafond normal suffisait : jamais plus de « reserve_usd » par jour
     for p, q, genre, m, tiktok_eur in demandes.values():
         if q not in res:
             if not (p.get("comparaison") or {}).get("type") in ("meme_produit", "equivalents", "aucune"):

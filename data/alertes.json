@@ -91025,7 +91025,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T02:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91235,7 +91235,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T02:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T03:55+00:00",
+  "verdict": {
+   "commentaire": "Offre Argos (Royaume-Uni) en retrait en magasin (« Free C&C ») : Argos ne livre pas en France, donc pas achetable depuis la France. De plus le coût estimé livré (70,09 €) n'est que 11 % sous le moins cher en France (78,99 € achatmoinscher).",
+   "prix_neuf_min_idealo": 78.99,
+   "source_prix_ref": "achatmoinscher.com (11/2026)",
+   "economie_pct": 11,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "008c3bf93f",
@@ -91294,7 +91306,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T03:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91506,7 +91518,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T03:12+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T03:55+00:00",
+  "verdict": {
+   "commentaire": "Le 279 € dépend d'une ODR de 70 € (remboursement plus tard, conditions non contrôlées : la page Dealabs n'a pas pu être lue et le lien marchand trouvé par le robot pointe vers un autre modèle, Redmi Note 15 Pro sur amazon.com). Sans ODR on paie environ 349 €, soit le même prix que le moins cher en France (Darty Marketplace 349 €, Fnac Marketplace 349,97 € selon bonne-promo.com au 15/11). Économie réelle à la commande : 0 %. Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 349.0,
+   "source_prix_ref": "bonne-promo.com + achatmoinscher.com (15-16/11)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9a374ab45d",
@@ -91539,7 +91563,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T03:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -91742,6 +91766,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 03:23 UTC : offre active, 44.9 affiché, marchand 582_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T03:55+00:00",
+  "verdict": {
+   "commentaire": "Même prix en France : Amazon.fr vend la même alimentation (même ASIN B08BKPQQDD) à 45,90 €, et l'offre espagnole coûte 50,90 € livrée. Aucune économie (0 %), et pas d'écart pour la revente.",
+   "prix_neuf_min_idealo": 45.9,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

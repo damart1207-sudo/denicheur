@@ -97880,7 +97880,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T18:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -98090,7 +98090,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:53 UTC : offre active, 174.0 affiché, marchand 47444_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 174 £ sur Amazon UK revient à environ 248 € livré en France (port et taxes compris), plus cher que le neuf le moins cher en France (209 €). Pas une bonne affaire.",
+   "prix_neuf_min_idealo": 209.0,
+   "source_prix_ref": "achatmoinscher + Keepa/Amazon.fr (209 €, plus bas 90 j 187 €)",
+   "economie_pct": -19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "keepa-B079XZ4TCW-arbES",
@@ -98123,7 +98135,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T19:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -98313,6 +98325,18 @@
    "livraison_france": "oui",
    "resume": "amazon.es refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : page de l'offre Amazon.es impossible à ouvrir (disponibilité, contenance et livraison en France non confirmées). Référence Amazon.fr 44,90 € mais plus bas 90 j 38,49 € et parfumeries en ligne souvent moins chères ; revente : marge faible après commissions.",
+   "prix_neuf_min_idealo": 44.9,
+   "source_prix_ref": "Keepa/Amazon.fr",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  }
 ]

@@ -45,8 +45,13 @@ def verifier_prix(candidats, cle=None, modeles=("gemini-3.8-flash", "gemini-flas
                 break
             except urllib.error.HTTPError as e:
                 if e.code == 402 or e.code == 403:
-                    bilan["erreurs"].append(f"HTTP {e.code} : vérification arrêtée")
-                    return bilan
+                    # 402/403 peut ne concerner qu'un modèle (modèle réservé aux comptes payants) :
+                    # on essaie le modèle suivant, et on n'arrête que si TOUS refusent.
+                    bilan["erreurs"].append(f"HTTP {e.code} ({modele})")
+                    if modele == modeles[-1] and bilan["faits"] == 0:
+                        bilan["erreurs"].append(f"HTTP {e.code} : vérification arrêtée (tous les modèles)")
+                        return bilan
+                    continue
                 bilan["erreurs"].append(f"HTTP {e.code} ({modele})")
                 if e.code == 429 and modele == modeles[-1] and bilan["faits"] == 0:
                     bilan["erreurs"].append("quota Google épuisé : vérification reportée")

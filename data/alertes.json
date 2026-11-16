@@ -90703,7 +90703,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T00:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 110.99,
@@ -90928,6 +90928,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T00:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T01:50+00:00",
+  "verdict": {
+   "commentaire": "Même produit (ASUS VY279HGR, EAN 4711387628928). Prix livré estimé 84 € (Amazon.es) contre 99 € neuf sur Amazon.fr (plus bas 90 j : 94 €) : économie 15,2 %, à la limite du seuil, et livraison en France non confirmée (page Amazon illisible, page du bon plan inaccessible à la vérification). Revente perdante (marge nette −11,55 € au mieux). Dans le doute : rejeté.",
+   "prix_neuf_min_idealo": 99.0,
+   "source_prix_ref": "Amazon.fr (Keepa, 16/11) ; idealo 110,99 € ; PcComponentes.fr 110,99 €",
+   "economie_pct": 15.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -11.55,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

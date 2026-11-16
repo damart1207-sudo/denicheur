@@ -21,10 +21,16 @@ Aucun euro en plus : tout est compris dans l'abonnement. Une erreur n'arrête ja
 import gzip
 import json
 import os
+import sys
 import time
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
+
+# Le lancement avec -m et les imports des autres récolteurs doivent partager
+# le même compteur, au lieu de créer __main__ et denicheur.moisson séparément.
+if __name__ == "__main__" and __spec__ is not None:
+    sys.modules[__spec__.name] = sys.modules[__name__]
 
 from . import keepa, sante
 
@@ -71,7 +77,8 @@ def _etat():
     e = _lire(F_ETAT, {})
     if e.get("jour") != jour:
         e = {"jour": jour, "jetons_jour": 0, "tours": 0, "cat_suivante": e.get("cat_suivante", 0),
-             "hype_suivante": e.get("hype_suivante", 0), "pays_suivant": e.get("pays_suivant", 0), "produits_jour": 0}
+             "hype_suivante": e.get("hype_suivante", 0), "pays_suivant": e.get("pays_suivant", 0), "produits_jour": 0,
+             "etagere_attente": e.get("etagere_attente", {})}
     return e
 
 
@@ -144,6 +151,12 @@ def _peut(cout, etat):
         reserve = RESERVE_MIN
     return (jetons_restants() - cout >= reserve and _jetons["depenses"] + cout <= JETONS_TOUR_MAX
             and etat["jetons_jour"] + _jetons["depenses"] + cout <= JETONS_JOUR_MAX)
+
+
+def taille_lot(maxi, cout_unitaire, etat):
+    """Plus grand lot entièrement finançable, réserve et plafonds compris."""
+    return next((n for n in range(maxi, 0, -1)
+                 if _peut(n * cout_unitaire, etat)), 0)
 
 
 # ---------- résumé compact d'une fiche produit ----------
@@ -307,21 +320,30 @@ def etagere(etat, nb_cats=4):
     total = 0
     cats = categories_fr()
     for _ in range(nb_cats):
-        if not _peut(115, etat):
-            break
-        i = etat.get("cat_suivante", 0) % len(cats)
-        etat["cat_suivante"] = i + 1
-        cat_id, cat_nom = cats[i]
-        sel = {"rootCategory": [cat_id], "current_NEW_gte": PRIX_MIN_CENT, "current_NEW_lte": PRIX_MAX_CENT,
-               "salesRankDrops30_gte": 25, "productType": 0, "perPage": 100, "page": etat["tours"] % 3,
-               "sort": [["salesRankDrops30", "desc"]]}
+        attente = etat.get("etagere_attente") or {}
+        cat_nom = attente.get("categorie", "")
         try:
-            d = _appel("query", {"domain": 4, "selection": json.dumps(sel)}, etat=etat, cout_max=41)
-            asins = d.get("asinList") or []
-            res = fiches(asins, "FR", etat=etat)
+            if not attente.get("asins"):
+                # Conserver assez de place pour au moins une fiche après la requête.
+                if not _peut(43, etat):
+                    break
+                i = etat.get("cat_suivante", 0) % len(cats)
+                cat_id, cat_nom = cats[i]
+                sel = {"rootCategory": [cat_id], "current_NEW_gte": PRIX_MIN_CENT, "current_NEW_lte": PRIX_MAX_CENT,
+                       "salesRankDrops30_gte": 25, "productType": 0, "perPage": 100, "page": etat["tours"] % 3,
+                       "sort": [["salesRankDrops30", "desc"]]}
+                d = _appel("query", {"domain": 4, "selection": json.dumps(sel)}, etat=etat, cout_max=41)
+                attente = {"categorie": cat_nom, "asins": list(dict.fromkeys(d.get("asinList") or []))}
+                etat["etagere_attente"] = attente
+                etat["cat_suivante"] = i + 1
+            n = taille_lot(min(100, len(attente["asins"])), 2, etat)
+            if not n:
+                break
+            res = fiches(attente["asins"][:n], "FR", etat=etat)
             for r in res:
                 r["etagere"] = cat_nom
             total += _garder(res)
+            attente["asins"] = attente["asins"][n:]
         except Exception as e:
             sante.noter("erreur", "moisson étagère", f"{cat_nom}: {type(e).__name__}: {str(e)[:120]}")
     return total
@@ -421,15 +443,12 @@ def tour():
     from . import recherches_prix
     bilan["prix_recherches"] = sante.protege("moisson prix recherches", recherches_prix.tour, etat, defaut=0)
     from . import arbitrage
-    bilan["arbitrage"] = sante.protege("moisson arbitrage", arbitrage.tour, etat, defaut=0)
-    # la réserve ne se remplit que de ≈ 200 jetons entre deux tours (10 min) : un tour sur trois pour la hype
-    # (≈ 250 jetons), les deux autres pour l'étagère ; ce qui reste va à l'autre récolte.
-    if etat["tours"] % 3 == 0:
-        bilan["hype"] = sante.protege("moisson hype", hype, etat, defaut=0)
-        bilan["etagere"] = sante.protege("moisson étagère", etagere, etat, defaut=0)
-    else:
-        bilan["etagere"] = sante.protege("moisson étagère", etagere, etat, defaut=0)
-        bilan["hype"] = sante.protege("moisson hype", hype, etat, defaut=0)
+    # Chaque récolte passe en tête un tour sur trois : l'arbitrage ne doit pas
+    # absorber systématiquement les jetons avant la découverte de nouveaux ASIN.
+    recoltes = [("arbitrage", arbitrage.tour), ("etagere", etagere), ("hype", hype)]
+    premier = etat["tours"] % len(recoltes)
+    for nom, fonction in recoltes[premier:] + recoltes[:premier]:
+        bilan[nom] = sante.protege("moisson " + nom, fonction, etat, defaut=0)
     etat["jetons_jour"] += _jetons["depenses"]
     etat["produits_jour"] = etat.get("produits_jour", 0) + bilan["etagere"]
     etat["tours"] += 1

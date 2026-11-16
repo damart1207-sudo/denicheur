@@ -6,6 +6,7 @@ Rapide et économe : pas d'équipe complète, une seule IA rapide (Gemini) pour 
 python -m denicheur.veille
 """
 import json
+import hashlib
 import os
 import re
 import time
@@ -42,6 +43,33 @@ def _ecrire(rel, d):
 DEMANDE = {}
 
 
+def empreinte(a):
+    """Un changement de prix doit être examiné même si l'identifiant est stable."""
+    valeurs = [a.get(k) for k in ("id", "prix", "devise", "pays", "titre")]
+    return hashlib.sha256(json.dumps(valeurs, ensure_ascii=False).encode()).hexdigest()
+
+
+def identifier_asin(a):
+    """Extraire uniquement un identifiant explicite d'un lien Amazon."""
+    lien = a.get("lien_marchand") or a.get("lien") or ""
+    m = re.search(r"https?://(?:www\.)?amazon\.[a-z.]+/(?:dp|gp/product)/([A-Z0-9]{10})(?:[/?#]|$)", lien, re.I)
+    if m and not a.get("asin"):
+        a["asin"] = m.group(1).upper()
+
+
+def a_revoir(a, vus, maintenant):
+    precedent = vus.get(a["id"], {})
+    return (precedent.get("empreinte") != empreinte(a)
+            or precedent.get("prochain", "") <= maintenant.isoformat())
+
+
+def annonces_keepa():
+    """Lire les récoltes locales : aucun appel fournisseur supplémentaire."""
+    from . import moisson, arbitrage
+    return (sante.protege("radar vers veille", moisson.annonces_radar, maxi=12, defaut=[]) or []) + (
+        sante.protege("arbitrage vers veille", arbitrage.annonces_arbitrage, maxi=8, defaut=[]) or [])
+
+
 def priorite(a):
     p = (a.get("temperature") or 0)
     dm = demande.est_demande(a["titre"], DEMANDE)
@@ -74,7 +102,8 @@ def nommer(annonces):
         rep = ag.demander(
             "Tu identifies des produits. Réponds en json uniquement.",
             "Pour chaque ligne « id | titre d'annonce », donne le nom exact du produit : marque + modèle + "
-            "capacité si utile, 2 à 6 mots, sans couleur, taille, texte promo ni nom de magasin. "
+            "capacité, taille, couleur et version si elles identifient la variante exacte. "
+            "Conserve la référence fabricant, sans texte promo ni nom de magasin. "
             "Si ce n'est pas un produit physique précis (lot, code promo, abonnement, sélection), mets null.\n"
             'Format json : {"produits": [{"id": "...", "nom": "..." }]}\n\n' + lignes)
         d = extraire_json(rep) if rep else None
@@ -103,6 +132,19 @@ def examiner(a, nom, maintenant, regles, deja):
     """Examine UNE offre. Renvoie l'alerte (dict) ou None. Une erreur ici n'arrête jamais le tour."""
     signal = bool(SIGNAUX.search(a["titre"] + " " + (a.get("description") or "")))
     pp = sante.protege("comparateur", comparateurs.prix_plancher, nom) if nom else None
+    # Une référence exacte existe déjà : ne pas perdre l'offre si le comparateur
+    # ne répond pas, ni comparer une occasion au seul prix barré historique.
+    from . import keepa
+    k = None
+    if a.get("asin") and (not pp or str(a.get("source", "")).startswith("keepa-")):
+        k = sante.protege("keepa_asin", keepa.fiche, asin=a["asin"], pays="FR")
+        if k and not k.get("erreur") and k.get("prix_neuf"):
+            p = k["prix_neuf"]
+            if not pp or not pp.get("prix_min") or p < pp["prix_min"]:
+                pp = {"prix_min": p, "ou": "keepa/amazon.fr", "lien": k.get("lien")}
+    if not (pp or {}).get("prix_min") and not signal:
+        a["_a_reessayer"] = True
+        return None
     pmin = (pp or {}).get("prix_min")
     if pmin:
         base.noter_prix(nom, pmin, pays="FR", site=(pp or {}).get("ou", ""), lien=(pp or {}).get("lien", ""), source="comparateur", denicheur="A")
@@ -139,7 +181,8 @@ def examiner(a, nom, maintenant, regles, deja):
         x["revente_reelle"] = sante.protege("apify_revente", apify.revente_reelle, nom, a["prix"])
         # fiche Amazon par Keepa (10 jetons, abonnement) : ASIN, EAN, prix neuf/occasion Amazon, vendeurs, ventes 30 j
         from . import keepa
-        k = sante.protege("keepa_recherche", keepa.rechercher, nom, "FR", a["prix"])
+        k = k or (sante.protege("keepa_asin", keepa.fiche, asin=a["asin"], pays="FR") if a.get("asin")
+                  else sante.protege("keepa_recherche", keepa.rechercher, nom, "FR", a["prix"]))
         if k and not k.get("erreur") and not public_different(a["titre"], k.get("titre")):
             x["keepa"] = k
             x["asin"], x["ean"] = k.get("asin"), k.get("ean")
@@ -170,12 +213,19 @@ def tour():
     regles = _lire("config/regles.json", {})
     DEMANDE.update(sante.protege("demande_B", demande.tendances, defaut={}) or {})
     annonces, etat = sante.protege("collecte", collecte.collecter, sources, defaut=([], {}))
-    vus = set(_lire("data/etat/vus_veille.json", []))
-    nouvelles = [a for a in annonces if a["id"] not in vus]
+    annonces = list({a["id"]: a for a in annonces + annonces_keepa()}.values())
+    for a in annonces:
+        identifier_asin(a)
+    # Nouveau format : les anciens identifiants seuls n'attestent ni le prix ni
+    # une vérification réussie. Migration progressive, toujours limitée à 25/tour.
+    vus = _lire("data/etat/vus_veille_v2.json", {})
+    nouvelles = [a for a in annonces if a_revoir(a, vus, maintenant)]
     candidates = equipe.prefiltre(nouvelles, regles)
     candidates.sort(key=priorite, reverse=True)
     lot = candidates[:MAXI_PRODUITS]
-    noms, agent = (sante.protege("ia_noms", nommer, lot, defaut=({}, None)) if lot else ({}, None))
+    sans_identite = [a for a in lot if not a.get("asin")]
+    noms, agent = (sante.protege("ia_noms", nommer, sans_identite, defaut=({}, None)) if sans_identite else ({}, None))
+    noms.update({a["id"]: a["titre"] for a in lot if a.get("asin")})
     alertes = _lire("data/alertes.json", [])
     deja = {x["id"] for x in alertes}
     nouvelles_alertes = []
@@ -192,6 +242,7 @@ def tour():
                 deja.add(x["id"])
                 _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])  # écrit tout de suite : une coupure ne perd rien
         except Exception as e:
+            a["_a_reessayer"] = True
             sante.noter("erreur", "examen offre", f"{a.get('titre', '')[:60]} : {type(e).__name__}: {e}")
     lot = lot[:examinees]
     # relecture des pages des alertes encore à vérifier (expirée ? prix remonté ?), 4 au plus par tour, si le temps le permet
@@ -215,8 +266,12 @@ def tour():
     # ne marquer « vu » que ce qui a été examiné (le reste sera revu au prochain tour)
     ids_lot = {a["id"] for a in lot}
     ids_candidates = {a["id"] for a in candidates}
-    vus.update(a["id"] for a in nouvelles if a["id"] not in ids_candidates or a["id"] in ids_lot)
-    _ecrire("data/etat/vus_veille.json", sorted(vus)[-20000:])
+    for a in nouvelles:
+        if a["id"] not in ids_candidates or a["id"] in ids_lot:
+            delai = timedelta(hours=1 if a.get("_a_reessayer") else 24)
+            vus[a["id"]] = {"empreinte": empreinte(a), "prochain": (maintenant + delai).isoformat()}
+    vus = dict(sorted(vus.items(), key=lambda x: x[1].get("prochain", ""))[-20000:])
+    _ecrire("data/etat/vus_veille_v2.json", vus)
     if nouvelles_alertes:
         _ecrire("data/alertes.json", (alertes + nouvelles_alertes)[-500:])
         from . import telegram, fiche

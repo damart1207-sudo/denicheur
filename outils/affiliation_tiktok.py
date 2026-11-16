@@ -432,12 +432,20 @@ def texte_comparaison(c):
     e = c.get("ecart_eur")
     if e is None:
         return debut
+    tk = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, "
+    if t == "equivalents":
+        # Des équivalents ne sont pas le même produit (tailles, qualités) : on situe TikTok par rapport au prix médian,
+        # pas par rapport au moins cher (relevé du 16/11 : « 24 € plus cher » qu'un lot d'assiettes sans rapport).
+        m = c["mediane"] - c["prix_tiktok_eur"]
+        if abs(m) <= 0.10 * c["mediane"]:
+            return debut + tk + "dans les prix du marché"
+        return debut + tk + (f"soit {_eur(m)} € de moins que le prix médian" if m > 0 else f"soit {_eur(-m)} € de plus que le prix médian")
     if e > 0.5:
-        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, soit {_eur(e)} € de moins" + (" que la moins chère" if t == "equivalents" else "")
+        fin = tk + f"soit {_eur(e)} € de moins"
     elif e < -0.5:
-        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, soit {_eur(-e)} € PLUS CHER" + (" que la moins chère" if t == "equivalents" else "")
+        fin = tk + f"soit {_eur(-e)} € PLUS CHER"
     else:
-        fin = f" ; TikTok ≈ {_eur(c['prix_tiktok_eur'])} €, même prix"
+        fin = tk + "même prix"
     return debut + fin
 
 
@@ -739,7 +747,7 @@ def reglage(cfg, c):
             "produits_par_categorie": cfg["produits_par_categorie"], "pays": cfg["pays"], "periode": cfg["periode"]}
 
 
-VERSION_RAPPORT = 4     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
+VERSION_RAPPORT = 5     # à augmenter quand la présentation change : le rapport du jour est alors refait, sans rien repayer
 METHODE_SELECTION = 2  # à augmenter quand la façon de choisir les finalistes change
 
 

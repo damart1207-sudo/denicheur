@@ -197,6 +197,13 @@ class Calculs(unittest.TestCase):
         self.assertIn("titre trop vague", A.texte_comparaison({"type": "titre_vague"}))
         self.assertEqual(A.texte_comparaison(None), "")
 
+    def test_equivalents_situes_par_rapport_au_prix_median(self):
+        base = {"type": "equivalents", "min": 19.88, "max": 94.98, "mediane": 44.99, "nb": 15, "moins_cher": {"marchand": "Amazon.fr", "prix": 19.88}}
+        self.assertIn("dans les prix du marché", A.texte_comparaison(dict(base, prix_tiktok_eur=44.47, ecart_eur=-24.59)))
+        self.assertNotIn("PLUS CHER", A.texte_comparaison(dict(base, prix_tiktok_eur=44.47, ecart_eur=-24.59)))
+        self.assertIn("de moins que le prix médian", A.texte_comparaison(dict(base, prix_tiktok_eur=30.0, ecart_eur=-10.12)))
+        self.assertIn("de plus que le prix médian", A.texte_comparaison(dict(base, prix_tiktok_eur=60.0, ecart_eur=-40.12)))
+
     def test_reserve_de_la_comparaison(self):
         """0,02 $ par jour au-dessus du plafond, seulement pendant la comparaison, et jamais deux fois le même jour."""
         vus = []

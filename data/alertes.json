@@ -91794,7 +91794,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T07:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -92002,7 +92002,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 07:26 UTC : offre active, 19.9 affiché, marchand 249_3 ; elcorteingles.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T07:50+00:00",
+  "verdict": {
+   "commentaire": "Offre El Corte Inglés Espagne (version espagnole) : le site ne livre pas en France (livraison France : non) ; non achetable depuis la France, et revente à perte.",
+   "prix_neuf_min_idealo": 29.99,
+   "source_prix_ref": "Keepa amazon.fr (B0CJJYWH32)",
+   "economie_pct": 0,
+   "prix_revente_verifie": 26.39,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -5.05,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "e11c07e987",
@@ -92048,7 +92060,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T07:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -92273,6 +92285,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 07:37 UTC : offre active, 39.9 affiché, marchand 81_2 ; fiche store.playstation.com lue : 42.25 PLN ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T07:50+00:00",
+  "verdict": {
+   "commentaire": "Version numérique du PlayStation Store polonais : pas le même produit que le disque à 33,99 €, et non achetable avec un compte français ; non revendable.",
+   "prix_neuf_min_idealo": 33.99,
+   "source_prix_ref": "achatmoinscher (version disque)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

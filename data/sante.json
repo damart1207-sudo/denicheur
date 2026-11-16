@@ -1,7 +1,7 @@
 {
- "tours_ok": 2122,
+ "tours_ok": 2123,
  "tours_echec": 10,
- "dernier_ok": "16/11 03:36",
+ "dernier_ok": "16/11 03:46",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1028,13 +1028,25 @@
    "niveau": "erreur",
    "etape": "moisson étagère",
    "message": "Bricolage: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 03:46",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 24 produits sur 25 (484 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "16/11 03:47",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Auto et Moto: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "16/11 03:28",
-  "annonces": 883,
-  "nouvelles": 586,
-  "examinees": 23,
+  "heure": "16/11 03:38",
+  "annonces": 699,
+  "nouvelles": 484,
+  "examinees": 24,
   "alertes": 1
  }
 }

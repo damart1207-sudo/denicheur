@@ -439,6 +439,9 @@ def tour():
     debut = jetons_restants()
     bilan = {"jetons_debut": debut}
     bilan["radar"] = sante.protege("moisson radar", radar, etat, defaut=0)
+    # juste après le radar : écart entre le 1er et le 2e vendeur sur ses baisses (8 produits, ≈ 110 jetons au plus)
+    from . import ecart
+    bilan["ecarts"] = sante.protege("moisson ecarts", ecart.tour, etat, defaut=0)
     # avant l'arbitrage, qui prend presque toute la réserve : ≈ 130 jetons par tour jusqu'à ce que les prix soient à jour
     from . import recherches_prix
     bilan["prix_recherches"] = sante.protege("moisson prix recherches", recherches_prix.tour, etat, defaut=0)

@@ -99235,7 +99235,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T22:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -99440,6 +99440,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T23:03+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T23:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : la page du bon plan affiche maintenant 169 € (plus 159 €), et le lien marchand mène à Amazon.com (États-Unis, coloris exclusif Khaki) : livraison en France non confirmée, douane/TVA possibles. À 169 € l'économie n'est que de 10,6 % face au neuf le plus bas en France (189 € sur Amazon.fr, déjà vu à 169 € ces 90 derniers jours) : sous le seuil de 15 %. Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 189.0,
+   "source_prix_ref": "keepa/amazon.fr (Amazon.fr, 189 €)",
+   "economie_pct": 10.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

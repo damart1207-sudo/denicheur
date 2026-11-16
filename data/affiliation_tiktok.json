@@ -1,13 +1,11 @@
 {
  "version": 2,
- "jour": "15/11/2026",
- "quand": "15/11/2026 à 22 h 09",
- "classements_repris": [
-  "plus_vendus",
-  "hausses"
- ],
+ "rapport_version": 4,
+ "jour": "16/11/2026",
+ "quand": "16/11/2026 à 06 h 47",
+ "classements_repris": [],
  "taux_usd_eur": 0.90481,
- "cout_apify_mesure_usd": 0.0,
+ "cout_apify_mesure_usd": 0.5502,
  "selection": {
   "methode": 2,
   "finalistes": 6,
@@ -20,7 +18,19 @@
   }
  },
  "reglages": {
-  "plus_vendus": null,
+  "plus_vendus": {
+   "tri": "unitsSold",
+   "revenu_min_usd": 0,
+   "categories": [
+    "Beauty & Personal Care",
+    "Home Supplies",
+    "Kitchenware",
+    "Toys & Hobbies"
+   ],
+   "produits_par_categorie": 25,
+   "pays": "FR",
+   "periode": "last7Day"
+  },
   "hausses": {
    "tri": "revenueGrowth",
    "revenu_min_usd": 1500,
@@ -38,10 +48,10 @@
  "produits_par_categorie": {
   "Beauty & Personal Care": 47,
   "Home Supplies": 44,
-  "Toys & Hobbies": 39,
-  "Kitchenware": 25
+  "Kitchenware": 40,
+  "Toys & Hobbies": 39
  },
- "bingos": 20,
+ "bingos": 30,
  "finalistes": [
   {
    "titre": "Manteau bloom",
@@ -146,37 +156,24 @@
     "lues": 0
    },
    "comparaison": {
-    "type": "meme_produit",
-    "nb": 3,
-    "nb_lues": 40,
-    "min": 45.99,
-    "max": 52.48,
-    "mediane": 47.99,
-    "moins_cher": {
-     "marchand": "Amazon.fr - Seller",
-     "prix": 45.99,
-     "titre": "LANDOT Brosse Lissante, 12 Temp 120-230°C, 30s Chauffe, Anti-brûlure | Dompte Frisottis, C",
-     "lien": "https://google.fr/search?ibp=oshop&q=LANDOT+Brosse+%C3%A9lectrique+lissante&prds=headlineOfferDocid:12632910270558525053,pvo:3,pvt:hg&hl=fr&gl=FR"
-    },
-    "prix_tiktok_eur": 41.8,
-    "ecart_eur": 4.19,
+    "type": "non_lu",
     "requete": "LANDOT Brosse électrique lissante"
    }
   },
   {
-   "titre": "Coffret de Noël – 6 squishies à presser en forme de petits pains vapeur, chacun dans son mini panier – Cadeau kawaii pour enfants",
-   "marque": "Coffret",
-   "categorie": "Toys & Hobbies",
+   "titre": "Lot de 4 plats alimentaires en acier inoxydable avec couvercles – chacun 7,5 L, acier 201, hermétiques, empilables – parfaits pour buffet, traiteur et rangement dans la cuisine à domicile",
+   "marque": "Lot",
+   "categorie": "Kitchenware",
    "rang": 11,
-   "ventes_7j": 259,
-   "prix_moyen_usd": 24.06,
-   "commission_pct": 12.0,
-   "gain_par_vente_usd": 2.89,
-   "revenu_usd": 6231,
-   "commissions_totales_usd": 748,
-   "part_video_pct": 99,
-   "evolution_pct": 43.63,
-   "lien": "https://www.tiktok.com/view/product/1729978867061135688",
+   "ventes_7j": 156,
+   "prix_moyen_usd": 49.15,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 4.92,
+   "revenu_usd": 7668,
+   "commissions_totales_usd": 767,
+   "part_video_pct": 36,
+   "evolution_pct": 375.99,
+   "lien": "https://www.tiktok.com/view/product/1729795562914290654",
    "listes": [
     "plus_vendus",
     "hausses"
@@ -192,10 +189,8 @@
    "recherche": "",
    "amazon_piste": "",
    "comparaison": {
-    "type": "aucune",
-    "genre": "equivalents",
-    "nb_lues": 40,
-    "requete": "Coffret de Noël 6 squishies à presser"
+    "type": "non_lu",
+    "requete": "Lot de 4 plats alimentaires en acier"
    }
   },
   {
@@ -230,19 +225,19 @@
    }
   },
   {
-   "titre": "100 blocs de construction magnétiques – Jeu créatif STEM pour enfants, cubes à empiler Montessori, jouet éducatif et sensoriel dès 3 ans",
-   "marque": "100",
+   "titre": "Coffret de Noël – 6 squishies à presser en forme de petits pains vapeur, chacun dans son mini panier – Cadeau kawaii pour enfants",
+   "marque": "Coffret",
    "categorie": "Toys & Hobbies",
-   "rang": 6,
-   "ventes_7j": 557,
-   "prix_moyen_usd": 15.59,
-   "commission_pct": 8.0,
-   "gain_par_vente_usd": 1.25,
-   "revenu_usd": 8684,
-   "commissions_totales_usd": 695,
-   "part_video_pct": 94,
-   "evolution_pct": 58.36,
-   "lien": "https://www.tiktok.com/view/product/1729918151451646648",
+   "rang": 11,
+   "ventes_7j": 259,
+   "prix_moyen_usd": 24.06,
+   "commission_pct": 12.0,
+   "gain_par_vente_usd": 2.89,
+   "revenu_usd": 6231,
+   "commissions_totales_usd": 748,
+   "part_video_pct": 99,
+   "evolution_pct": 43.63,
+   "lien": "https://www.tiktok.com/view/product/1729978867061135688",
    "listes": [
     "plus_vendus",
     "hausses"
@@ -258,21 +253,8 @@
    "recherche": "",
    "amazon_piste": "",
    "comparaison": {
-    "type": "equivalents",
-    "nb": 14,
-    "nb_lues": 40,
-    "min": 17.99,
-    "max": 1438.8,
-    "mediane": 25.99,
-    "moins_cher": {
-     "marchand": "Amazon.fr - Seller",
-     "prix": 17.99,
-     "titre": "HISHOPTOY Blocs de Construction magnétiques 80 pièces Enfants à partir 3 4 5 6 7 8 Ans Cad",
-     "lien": "https://google.fr/search?ibp=oshop&q=100+blocs+de+construction+magn%C3%A9tiques+Jeu+cr%C3%A9atif&prds=gpcid:15152490163614967842,rds:PC_15152490163614967842%7CPROD_PC_15152490163614967842,headlineOfferDocid:13548438352556455324,catalogid:3824403523105049953,pvo:3,pvt:hg&hl=fr&gl=FR"
-    },
-    "prix_tiktok_eur": 14.11,
-    "ecart_eur": 3.88,
-    "requete": "100 blocs de construction magnétiques Jeu créatif"
+    "type": "non_lu",
+    "requete": "Coffret de Noël 6 squishies à presser"
    }
   }
  ],
@@ -880,7 +862,7 @@
    },
    {
     "titre": "【Black Friday】Tirelire créative à faire soi‑même, boîte de rangement pour espèces, tirelire en bois réutilisable, décoration intérieure, cadeau éducatif, design Buxus Sinica, modèle 24-1212 #top picks",
-    "marque": "【Black",
+    "marque": "Tirelire",
     "categorie": "Home Supplies",
     "rang": 16,
     "ventes_7j": 421,
@@ -985,7 +967,7 @@
    },
    {
     "titre": "【Black Friday】GaaliShop | Dalles PVC Auto-Adhésives Effet Bois - Stickers de Sol Épais  & Résistants - Rénovation Salon Chambre Cuisine",
-    "marque": "【Black",
+    "marque": "GaaliShop",
     "categorie": "Home Supplies",
     "rang": 23,
     "ventes_7j": 342,
@@ -1027,6 +1009,381 @@
     "part_video_pct": 46,
     "evolution_pct": 351.67,
     "lien": "https://www.tiktok.com/view/product/1729965480735709561"
+   },
+   {
+    "titre": "Grand Plat de Présentation en Inox avec Couvercle Élégant et Raffiné pour Table - 2 dimensions au choix: 34cm et 38cm",
+    "marque": "Grand",
+    "categorie": "Kitchenware",
+    "rang": 1,
+    "ventes_7j": 876,
+    "prix_moyen_usd": 6.59,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 0.66,
+    "revenu_usd": 5772,
+    "commissions_totales_usd": 577,
+    "part_video_pct": 26,
+    "evolution_pct": -68.94,
+    "lien": "https://www.tiktok.com/view/product/1729948920854321420"
+   },
+   {
+    "titre": "Plat air fryer en verre avec poignée amovible",
+    "marque": "Plat",
+    "categorie": "Kitchenware",
+    "rang": 2,
+    "ventes_7j": 704,
+    "prix_moyen_usd": 9.56,
+    "commission_pct": 8.0,
+    "gain_par_vente_usd": 0.76,
+    "revenu_usd": 6732,
+    "commissions_totales_usd": 539,
+    "part_video_pct": 77,
+    "evolution_pct": 90.53,
+    "lien": "https://www.tiktok.com/view/product/1729833038802622785"
+   },
+   {
+    "titre": "1pc, Funny Insulated Double-Walled Borosilicate Reusable Water Cup with Handle, Fun Cups, OH FFS WHERE IS MY VAP Clear Coffee Mug for Hot & Cold Beverages Drinks for Men Women, Holidays Gift, Travel-Friendly, Kitchen Bar Settings, Home Office",
+    "marque": "1pc",
+    "categorie": "Kitchenware",
+    "rang": 3,
+    "ventes_7j": 438,
+    "prix_moyen_usd": 26.63,
+    "commission_pct": 0.0,
+    "gain_par_vente_usd": 0.0,
+    "revenu_usd": 11663,
+    "commissions_totales_usd": 0,
+    "part_video_pct": 44,
+    "evolution_pct": -42.21,
+    "lien": "https://www.tiktok.com/view/product/1729925501287701038"
+   },
+   {
+    "titre": "100 pièces de capuchons de conservation élastiques en PE, couvercles transparents pour bols avec élastique, capuchons de couverture extensibles pour bols, assiettes, fruits, restes et stockage des aliments",
+    "marque": "100",
+    "categorie": "Kitchenware",
+    "rang": 4,
+    "ventes_7j": 362,
+    "prix_moyen_usd": 4.38,
+    "commission_pct": 15.0,
+    "gain_par_vente_usd": 0.66,
+    "revenu_usd": 1584,
+    "commissions_totales_usd": 238,
+    "part_video_pct": 100,
+    "evolution_pct": -13.37,
+    "lien": "https://www.tiktok.com/view/product/1729912772150204798"
+   },
+   {
+    "titre": "SOPAMI brosse pour bouteilles et tasses 5-en-1, brosse de nettoyage multifonctionnelle pour bouteilles, verres, gobelets, piques à boire et couvercles, 1 pièce, couleur aléatoire",
+    "marque": "SOPAMI",
+    "categorie": "Kitchenware",
+    "rang": 5,
+    "ventes_7j": 318,
+    "prix_moyen_usd": 0.59,
+    "commission_pct": 0.0,
+    "gain_par_vente_usd": 0.0,
+    "revenu_usd": 188,
+    "commissions_totales_usd": 0,
+    "part_video_pct": 99,
+    "evolution_pct": -19.2,
+    "lien": "https://www.tiktok.com/view/product/1729963874199050786"
+   },
+   {
+    "titre": "Ensemble de Tupperware en verre pour aliments, 24 pièces (12 couvercles + 12 couvercles hermétiques), récipients en verre pour aliments compatibles avec le lave-vaisselle et le micro-ondes, sans BPA",
+    "marque": "Ensemble",
+    "categorie": "Kitchenware",
+    "rang": 6,
+    "ventes_7j": 306,
+    "prix_moyen_usd": 51.1,
+    "commission_pct": 5.0,
+    "gain_par_vente_usd": 2.56,
+    "revenu_usd": 15637,
+    "commissions_totales_usd": 782,
+    "part_video_pct": 75,
+    "evolution_pct": -37.09,
+    "lien": "https://www.tiktok.com/view/product/1729711588950645153"
+   },
+   {
+    "titre": "Balance électronique 0,01 g à 200 g, balance numérique pour la cuisine, mini balance de poche, balance de précision avec écran LCD, balance pour bijoux, balance pour peser des pièces d’or, des aliments, du café et de la vanille (sans piles)",
+    "marque": "Balance",
+    "categorie": "Kitchenware",
+    "rang": 7,
+    "ventes_7j": 288,
+    "prix_moyen_usd": 5.2,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 0.52,
+    "revenu_usd": 1497,
+    "commissions_totales_usd": 150,
+    "part_video_pct": 95,
+    "evolution_pct": -26.09,
+    "lien": "https://www.tiktok.com/view/product/1729650840942123813"
+   },
+   {
+    "titre": "CXINYI dispositif brumisateur d'huile en verre 16 oz/470 ml sans BPA, ustensile de cuisine résistant à la chaleur, embout pulvérisation précis pour friteuse à air, avec base antidérapante en silicone",
+    "marque": "CXINYI",
+    "categorie": "Kitchenware",
+    "rang": 8,
+    "ventes_7j": 248,
+    "prix_moyen_usd": 5.38,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 0.54,
+    "revenu_usd": 1334,
+    "commissions_totales_usd": 133,
+    "part_video_pct": 100,
+    "evolution_pct": -38.58,
+    "lien": "https://www.tiktok.com/view/product/1729897824835246365"
+   },
+   {
+    "titre": "Mister Ludo Pack Hercule - Robot hercule XL  + 2 boites de conservations + Peel Cut + Décorateur de légumes",
+    "marque": "Mister",
+    "categorie": "Kitchenware",
+    "rang": 9,
+    "ventes_7j": 222,
+    "prix_moyen_usd": 42.49,
+    "commission_pct": 13.0,
+    "gain_par_vente_usd": 5.52,
+    "revenu_usd": 9433,
+    "commissions_totales_usd": 1226,
+    "part_video_pct": 6,
+    "evolution_pct": -71.98,
+    "lien": "https://www.tiktok.com/view/product/1729673871215991082"
+   },
+   {
+    "titre": "[Hachoir multifonctionnel] Hachoir manuel pour légumes 16 en 1, trancheuse alimentaire en plastique avec panier d’égouttage, protection des mains",
+    "marque": "Hachoir multifonctionnel",
+    "categorie": "Kitchenware",
+    "rang": 10,
+    "ventes_7j": 207,
+    "prix_moyen_usd": 2.04,
+    "commission_pct": 11.0,
+    "gain_par_vente_usd": 0.22,
+    "revenu_usd": 422,
+    "commissions_totales_usd": 46,
+    "part_video_pct": 100,
+    "evolution_pct": 70.94,
+    "lien": "https://www.tiktok.com/view/product/1729665424383908431"
+   },
+   {
+    "titre": "Lot de 4 plats alimentaires en acier inoxydable avec couvercles – chacun 7,5 L, acier 201, hermétiques, empilables – parfaits pour buffet, traiteur et rangement dans la cuisine à domicile",
+    "marque": "Lot",
+    "categorie": "Kitchenware",
+    "rang": 11,
+    "ventes_7j": 156,
+    "prix_moyen_usd": 49.15,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 4.92,
+    "revenu_usd": 7668,
+    "commissions_totales_usd": 767,
+    "part_video_pct": 36,
+    "evolution_pct": 375.99,
+    "lien": "https://www.tiktok.com/view/product/1729795562914290654"
+   },
+   {
+    "titre": "Lot de 100 couvercles jetables extensibles pour bols et assiettes, couvercles élastiques pour bols, alternative en film plastique aux restes de fruits et légumes et au rangement en cuisine",
+    "marque": "Lot",
+    "categorie": "Kitchenware",
+    "rang": 12,
+    "ventes_7j": 147,
+    "prix_moyen_usd": 2.22,
+    "commission_pct": 0.0,
+    "gain_par_vente_usd": 0.0,
+    "revenu_usd": 326,
+    "commissions_totales_usd": 0,
+    "part_video_pct": 95,
+    "evolution_pct": -16.6,
+    "lien": "https://www.tiktok.com/view/product/1729907891242834916"
+   },
+   {
+    "titre": "Lot de 4 Ensembles de Conteneurs pour Aliments – Boîtes de Conservation Alimentaire Hermétiques avec Couvercles – Compatibles Congélateur – Adaptés aux Aliments Chauds – Différentes Capacités – Durables et Réutilisables",
+    "marque": "Lot",
+    "categorie": "Kitchenware",
+    "rang": 13,
+    "ventes_7j": 142,
+    "prix_moyen_usd": 39.16,
+    "commission_pct": 4.0,
+    "gain_par_vente_usd": 1.57,
+    "revenu_usd": 5560,
+    "commissions_totales_usd": 222,
+    "part_video_pct": 14,
+    "evolution_pct": 281.53,
+    "lien": "https://www.tiktok.com/view/product/1729861463957019227"
+   },
+   {
+    "titre": "LES THE ASSIL - 9 VARIANTES",
+    "marque": "LES",
+    "categorie": "Kitchenware",
+    "rang": 14,
+    "ventes_7j": 140,
+    "prix_moyen_usd": 4.04,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 0.4,
+    "revenu_usd": 566,
+    "commissions_totales_usd": 57,
+    "part_video_pct": 90,
+    "evolution_pct": 96.59,
+    "lien": "https://www.tiktok.com/view/product/1729870235753159010"
+   },
+   {
+    "titre": "【Pre-Black Friday】VEVOR appareil de maintien au chaud pour buffet, 5 qt (env. 4,7 L), lot de 4, support de maintien en acier inoxydable avec 4 poêles pleine taille, support de maintien rond pour service d’événement",
+    "marque": "VEVOR",
+    "categorie": "Kitchenware",
+    "rang": 15,
+    "ventes_7j": 137,
+    "prix_moyen_usd": 103.75,
+    "commission_pct": 3.0,
+    "gain_par_vente_usd": 3.11,
+    "revenu_usd": 14214,
+    "commissions_totales_usd": 426,
+    "part_video_pct": 57,
+    "evolution_pct": 40.81,
+    "lien": "https://www.tiktok.com/view/product/1729822394419091558"
+   },
+   {
+    "titre": "1pc Christmas Gingerbread Man Coffee Mug, Gingers Are For Life Not Just For Christmas - Ceramic Mug, 11oz, Red, Christmas Gift for Family And Friends",
+    "marque": "1pc",
+    "categorie": "Kitchenware",
+    "rang": 16,
+    "ventes_7j": 134,
+    "prix_moyen_usd": 31.01,
+    "commission_pct": 0.0,
+    "gain_par_vente_usd": 0.0,
+    "revenu_usd": 4155,
+    "commissions_totales_usd": 0,
+    "part_video_pct": 15,
+    "evolution_pct": 55.12,
+    "lien": "https://www.tiktok.com/view/product/1729923134404663854"
+   },
+   {
+    "titre": "Mug à café sur le thème de la musique rap amusante, mug fantaisie en céramique de 11 oz, « J’ai besoin de mon thé — Hé » cadeau pour les amateurs de musique, mug unique avec un design drôle",
+    "marque": "Mug",
+    "categorie": "Kitchenware",
+    "rang": 17,
+    "ventes_7j": 133,
+    "prix_moyen_usd": 28.57,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 2.86,
+    "revenu_usd": 3800,
+    "commissions_totales_usd": 380,
+    "part_video_pct": 47,
+    "evolution_pct": -52.95,
+    "lien": "https://www.tiktok.com/view/product/1729929940192434734"
+   },
+   {
+    "titre": "Batterie de cuisine Tefal Ingenio Cook Eat set Inox 15p Casseroles, poeles et ustensiles L881SF04",
+    "marque": "Batterie",
+    "categorie": "Kitchenware",
+    "rang": 18,
+    "ventes_7j": 130,
+    "prix_moyen_usd": 111.1,
+    "commission_pct": 5.0,
+    "gain_par_vente_usd": 5.55,
+    "revenu_usd": 14443,
+    "commissions_totales_usd": 722,
+    "part_video_pct": 65,
+    "evolution_pct": 33.0,
+    "lien": "https://www.tiktok.com/view/product/1729886986759477303"
+   },
+   {
+    "titre": "Étagère de four à micro ondes à 3 niveaux, support de micro ondes réglable pour le plan de travail — pour ranger les ustensiles de cuisine et la vaisselle, acier au carbone, étagère de surface à installer au dessus du micro ondes",
+    "marque": "Étagère",
+    "categorie": "Kitchenware",
+    "rang": 19,
+    "ventes_7j": 128,
+    "prix_moyen_usd": 24.36,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 2.44,
+    "revenu_usd": 3118,
+    "commissions_totales_usd": 312,
+    "part_video_pct": 100,
+    "evolution_pct": -38.7,
+    "lien": "https://www.tiktok.com/view/product/1729924877206789067"
+   },
+   {
+    "titre": "Pépeuse tranchante en acier inoxydable avec manche ergonomique antidérapant en bois, ouvre-bouteille intégré, construction durable pour fruits et légumes, outil de cuisine essentiel",
+    "marque": "Pépeuse",
+    "categorie": "Kitchenware",
+    "rang": 20,
+    "ventes_7j": 120,
+    "prix_moyen_usd": 1.92,
+    "commission_pct": 5.0,
+    "gain_par_vente_usd": 0.1,
+    "revenu_usd": 231,
+    "commissions_totales_usd": 12,
+    "part_video_pct": 100,
+    "evolution_pct": 56.87,
+    "lien": "https://www.tiktok.com/view/product/1729969079121648586"
+   },
+   {
+    "titre": "SUNCOK Batterie de Cuisine 19 Pièces, Casseroles et Poêles à Revêtement Céramique Antiadhésif, 2 Poignées Amovibles, Empilables, Compatibles Induction, Utilisables au Four sans Poignées ni Couvercles, Blanc Crème",
+    "marque": "SUNCOK",
+    "categorie": "Kitchenware",
+    "rang": 21,
+    "ventes_7j": 109,
+    "prix_moyen_usd": 79.39,
+    "commission_pct": 5.0,
+    "gain_par_vente_usd": 3.97,
+    "revenu_usd": 8654,
+    "commissions_totales_usd": 433,
+    "part_video_pct": 71,
+    "evolution_pct": 4.39,
+    "lien": "https://www.tiktok.com/view/product/1729908551260936292"
+   },
+   {
+    "titre": "【Black Friday】Étagère égouttoir à deux niveaux, support pour bols et plats, étagère de rangement pour couverts, porte-ustensiles, gain de place, grande capacité, avec plateau d’égouttage #top pick",
+    "marque": "Étagère",
+    "categorie": "Kitchenware",
+    "rang": 22,
+    "ventes_7j": 108,
+    "prix_moyen_usd": 26.16,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 2.62,
+    "revenu_usd": 2826,
+    "commissions_totales_usd": 283,
+    "part_video_pct": 100,
+    "evolution_pct": 7.55,
+    "lien": "https://www.tiktok.com/view/product/1729754173424179211"
+   },
+   {
+    "titre": "Spray et vaporisateur OLIVIA 2 en 1 pour verre, 470 ml, coloris assortis",
+    "marque": "Spray",
+    "categorie": "Kitchenware",
+    "rang": 23,
+    "ventes_7j": 107,
+    "prix_moyen_usd": 4.7,
+    "commission_pct": 13.0,
+    "gain_par_vente_usd": 0.61,
+    "revenu_usd": 502,
+    "commissions_totales_usd": 65,
+    "part_video_pct": 100,
+    "evolution_pct": 2.52,
+    "lien": "https://www.tiktok.com/view/product/1729799543460698877"
+   },
+   {
+    "titre": "CXINYI Distributeur d’Huile d’Olive 16 oz/470 ml avec Protection UV et Socle en Silicone Antidérapant, Flacon Pulvérisateur d’Huile 2 en 1 pour Cuisine et Air Fryer, Accessoire de Cuisine Moderne",
+    "marque": "CXINYI",
+    "categorie": "Kitchenware",
+    "rang": 24,
+    "ventes_7j": 107,
+    "prix_moyen_usd": 3.61,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 0.36,
+    "revenu_usd": 386,
+    "commissions_totales_usd": 39,
+    "part_video_pct": 99,
+    "evolution_pct": -81.89,
+    "lien": "https://www.tiktok.com/view/product/1729897822508849437"
+   },
+   {
+    "titre": "Coupe-légumes multifonction, hachoir manuel pour légumes 15 en 1, trancheuse alimentaire en plastique avec panier d’égouttage, ustensile de cuisine idéal pour les légumes et les fruits, cadeau créatif et cadeau pour les fêtes, offres Black Friday",
+    "marque": "Coupe-légumes",
+    "categorie": "Kitchenware",
+    "rang": 25,
+    "ventes_7j": 99,
+    "prix_moyen_usd": 15.31,
+    "commission_pct": 10.0,
+    "gain_par_vente_usd": 1.53,
+    "revenu_usd": 1516,
+    "commissions_totales_usd": 152,
+    "part_video_pct": 99,
+    "evolution_pct": 51.88,
+    "lien": "https://www.tiktok.com/view/product/1729703477956352584"
    },
    {
     "titre": "Calendrier de l’Avent Dumpling – 24 Surprises de Noël – Squishy Anti-Stress à Collectionner – 3 Modèles Disponibles – Vendu à l’Unité – Prix Unique",
@@ -1572,7 +1929,7 @@
    },
    {
     "titre": "[EXCLUSIVITÉ LIVE] medicube Routine PDRN Éclat & Hydratation en 4 Étapes | Sérum PDRN One Day OFFERT à l'achat",
-    "marque": "EXCLUSIVITÉ LIVE",
+    "marque": "medicube",
     "categorie": "Beauty & Personal Care",
     "rang": 12,
     "ventes_7j": 77,
@@ -2367,7 +2724,7 @@
    },
    {
     "titre": "【Pre-Black Friday】VEVOR lot de 4 plateaux vapeur pour table à nourriture, profond, format complet, récipient alimentaire profond en acier inoxydable, plateau four, plateaux pour hôtel, anti‑blocage, plat vapeur pour table à nourriture",
-    "marque": "【Pre-Black",
+    "marque": "VEVOR",
     "categorie": "Kitchenware",
     "rang": 15,
     "ventes_7j": 38,
@@ -2412,7 +2769,7 @@
    },
    {
     "titre": "【Pre-Black Friday】VEVOR Set de buffet chauffant, 8 Qt, lot de 4, chafing dish en acier inoxydable avec 4 plats pleine grandeur, chauffe-plat de restauration rectangulaire avec couvercle, support pour plats à eau, support pour carburant",
-    "marque": "【Pre-Black",
+    "marque": "VEVOR",
     "categorie": "Kitchenware",
     "rang": 18,
     "ventes_7j": 45,
@@ -2427,7 +2784,7 @@
    },
    {
     "titre": "【Pre-Black Friday】VEVOR appareil de maintien au chaud pour buffet, 5 qt (env. 4,7 L), lot de 4, support de maintien en acier inoxydable avec 4 poêles pleine taille, support de maintien rond pour service d’événement",
-    "marque": "【Pre-Black",
+    "marque": "VEVOR",
     "categorie": "Kitchenware",
     "rang": 19,
     "ventes_7j": 137,
@@ -2457,7 +2814,7 @@
    },
    {
     "titre": "【Black Friday】Étagère égouttoir à deux niveaux, support pour bols et plats, étagère de rangement pour couverts, porte-ustensiles, gain de place, grande capacité, avec plateau d’égouttage #top pick",
-    "marque": "【Black",
+    "marque": "Étagère",
     "categorie": "Kitchenware",
     "rang": 21,
     "ventes_7j": 108,
@@ -2517,7 +2874,7 @@
    },
    {
     "titre": "【Black Friday】Sacs de Rangement sous Vide Lot avec Pompe Électrique Rechargeable – Gain de Place pour Vêtements, Couettes et Oreillers, Rangement Malin pour Armoire et Voyage",
-    "marque": "【Black",
+    "marque": "Sacs",
     "categorie": "Kitchenware",
     "rang": 25,
     "ventes_7j": 94,
@@ -2892,7 +3249,7 @@
    },
    {
     "titre": "【Pre-Black Friday】VEVOR Piano numérique à 61 touches, touches éclairées, Piano électrique Portable avec support réglable, 600 tons, 500 rythmes, haut parleurs intégrés, pédale de maintien, casque, Microphone",
-    "marque": "【Pre-Black",
+    "marque": "VEVOR",
     "categorie": "Toys & Hobbies",
     "rang": 25,
     "ventes_7j": 30,
@@ -3176,6 +3533,10 @@
    "amazon_essais": {
     "fiches_des_pubs": 0,
     "lues": 0
+   },
+   "comparaison": {
+    "type": "non_lu",
+    "requete": "LANDOT Brosse électrique lissante"
    }
   },
   {
@@ -3645,7 +4006,10 @@
    "pubs_terme": "",
    "amazon": null,
    "recherche": "",
-   "amazon_piste": ""
+   "amazon_piste": "",
+   "comparaison": {
+    "type": "titre_vague"
+   }
   },
   {
    "titre": "Piège à mouches de fruits Super Ninja pour l’intérieur – lot de 2, piège efficace contre les mouches des fruits pour la maison et la cuisine, jusqu’à 3 semaines d’efficacité par bouteille, sûr pour enfants et animaux de compagnie",
@@ -3707,7 +4071,7 @@
   },
   {
    "titre": "【Black Friday】Tirelire créative à faire soi‑même, boîte de rangement pour espèces, tirelire en bois réutilisable, décoration intérieure, cadeau éducatif, design Buxus Sinica, modèle 24-1212 #top picks",
-   "marque": "【Black",
+   "marque": "Tirelire",
    "categorie": "Home Supplies",
    "rang": 16,
    "ventes_7j": 421,
@@ -3841,7 +4205,7 @@
   },
   {
    "titre": "【Black Friday】GaaliShop | Dalles PVC Auto-Adhésives Effet Bois - Stickers de Sol Épais  & Résistants - Rénovation Salon Chambre Cuisine",
-   "marque": "【Black",
+   "marque": "GaaliShop",
    "categorie": "Home Supplies",
    "rang": 23,
    "ventes_7j": 342,
@@ -3891,6 +4255,504 @@
    "part_video_pct": 46,
    "evolution_pct": 351.67,
    "lien": "https://www.tiktok.com/view/product/1729965480735709561",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "Grand Plat de Présentation en Inox avec Couvercle Élégant et Raffiné pour Table - 2 dimensions au choix: 34cm et 38cm",
+   "marque": "Grand",
+   "categorie": "Kitchenware",
+   "rang": 1,
+   "ventes_7j": 876,
+   "prix_moyen_usd": 6.59,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 0.66,
+   "revenu_usd": 5772,
+   "commissions_totales_usd": 577,
+   "part_video_pct": 26,
+   "evolution_pct": -68.94,
+   "lien": "https://www.tiktok.com/view/product/1729948920854321420",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Plat air fryer en verre avec poignée amovible",
+   "marque": "Plat",
+   "categorie": "Kitchenware",
+   "rang": 2,
+   "ventes_7j": 704,
+   "prix_moyen_usd": 9.56,
+   "commission_pct": 8.0,
+   "gain_par_vente_usd": 0.76,
+   "revenu_usd": 6732,
+   "commissions_totales_usd": 539,
+   "part_video_pct": 77,
+   "evolution_pct": 90.53,
+   "lien": "https://www.tiktok.com/view/product/1729833038802622785",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "1pc, Funny Insulated Double-Walled Borosilicate Reusable Water Cup with Handle, Fun Cups, OH FFS WHERE IS MY VAP Clear Coffee Mug for Hot & Cold Beverages Drinks for Men Women, Holidays Gift, Travel-Friendly, Kitchen Bar Settings, Home Office",
+   "marque": "1pc",
+   "categorie": "Kitchenware",
+   "rang": 3,
+   "ventes_7j": 438,
+   "prix_moyen_usd": 26.63,
+   "commission_pct": 0.0,
+   "gain_par_vente_usd": 0.0,
+   "revenu_usd": 11663,
+   "commissions_totales_usd": 0,
+   "part_video_pct": 44,
+   "evolution_pct": -42.21,
+   "lien": "https://www.tiktok.com/view/product/1729925501287701038",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "100 pièces de capuchons de conservation élastiques en PE, couvercles transparents pour bols avec élastique, capuchons de couverture extensibles pour bols, assiettes, fruits, restes et stockage des aliments",
+   "marque": "100",
+   "categorie": "Kitchenware",
+   "rang": 4,
+   "ventes_7j": 362,
+   "prix_moyen_usd": 4.38,
+   "commission_pct": 15.0,
+   "gain_par_vente_usd": 0.66,
+   "revenu_usd": 1584,
+   "commissions_totales_usd": 238,
+   "part_video_pct": 100,
+   "evolution_pct": -13.37,
+   "lien": "https://www.tiktok.com/view/product/1729912772150204798",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "SOPAMI brosse pour bouteilles et tasses 5-en-1, brosse de nettoyage multifonctionnelle pour bouteilles, verres, gobelets, piques à boire et couvercles, 1 pièce, couleur aléatoire",
+   "marque": "SOPAMI",
+   "categorie": "Kitchenware",
+   "rang": 5,
+   "ventes_7j": 318,
+   "prix_moyen_usd": 0.59,
+   "commission_pct": 0.0,
+   "gain_par_vente_usd": 0.0,
+   "revenu_usd": 188,
+   "commissions_totales_usd": 0,
+   "part_video_pct": 99,
+   "evolution_pct": -19.2,
+   "lien": "https://www.tiktok.com/view/product/1729963874199050786",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Ensemble de Tupperware en verre pour aliments, 24 pièces (12 couvercles + 12 couvercles hermétiques), récipients en verre pour aliments compatibles avec le lave-vaisselle et le micro-ondes, sans BPA",
+   "marque": "Ensemble",
+   "categorie": "Kitchenware",
+   "rang": 6,
+   "ventes_7j": 306,
+   "prix_moyen_usd": 51.1,
+   "commission_pct": 5.0,
+   "gain_par_vente_usd": 2.56,
+   "revenu_usd": 15637,
+   "commissions_totales_usd": 782,
+   "part_video_pct": 75,
+   "evolution_pct": -37.09,
+   "lien": "https://www.tiktok.com/view/product/1729711588950645153",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Balance électronique 0,01 g à 200 g, balance numérique pour la cuisine, mini balance de poche, balance de précision avec écran LCD, balance pour bijoux, balance pour peser des pièces d’or, des aliments, du café et de la vanille (sans piles)",
+   "marque": "Balance",
+   "categorie": "Kitchenware",
+   "rang": 7,
+   "ventes_7j": 288,
+   "prix_moyen_usd": 5.2,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 0.52,
+   "revenu_usd": 1497,
+   "commissions_totales_usd": 150,
+   "part_video_pct": 95,
+   "evolution_pct": -26.09,
+   "lien": "https://www.tiktok.com/view/product/1729650840942123813",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "CXINYI dispositif brumisateur d'huile en verre 16 oz/470 ml sans BPA, ustensile de cuisine résistant à la chaleur, embout pulvérisation précis pour friteuse à air, avec base antidérapante en silicone",
+   "marque": "CXINYI",
+   "categorie": "Kitchenware",
+   "rang": 8,
+   "ventes_7j": 248,
+   "prix_moyen_usd": 5.38,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 0.54,
+   "revenu_usd": 1334,
+   "commissions_totales_usd": 133,
+   "part_video_pct": 100,
+   "evolution_pct": -38.58,
+   "lien": "https://www.tiktok.com/view/product/1729897824835246365",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Mister Ludo Pack Hercule - Robot hercule XL  + 2 boites de conservations + Peel Cut + Décorateur de légumes",
+   "marque": "Mister",
+   "categorie": "Kitchenware",
+   "rang": 9,
+   "ventes_7j": 222,
+   "prix_moyen_usd": 42.49,
+   "commission_pct": 13.0,
+   "gain_par_vente_usd": 5.52,
+   "revenu_usd": 9433,
+   "commissions_totales_usd": 1226,
+   "part_video_pct": 6,
+   "evolution_pct": -71.98,
+   "lien": "https://www.tiktok.com/view/product/1729673871215991082",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "[Hachoir multifonctionnel] Hachoir manuel pour légumes 16 en 1, trancheuse alimentaire en plastique avec panier d’égouttage, protection des mains",
+   "marque": "Hachoir multifonctionnel",
+   "categorie": "Kitchenware",
+   "rang": 10,
+   "ventes_7j": 207,
+   "prix_moyen_usd": 2.04,
+   "commission_pct": 11.0,
+   "gain_par_vente_usd": 0.22,
+   "revenu_usd": 422,
+   "commissions_totales_usd": 46,
+   "part_video_pct": 100,
+   "evolution_pct": 70.94,
+   "lien": "https://www.tiktok.com/view/product/1729665424383908431",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Lot de 4 plats alimentaires en acier inoxydable avec couvercles – chacun 7,5 L, acier 201, hermétiques, empilables – parfaits pour buffet, traiteur et rangement dans la cuisine à domicile",
+   "marque": "Lot",
+   "categorie": "Kitchenware",
+   "rang": 11,
+   "ventes_7j": 156,
+   "prix_moyen_usd": 49.15,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 4.92,
+   "revenu_usd": 7668,
+   "commissions_totales_usd": 767,
+   "part_video_pct": 36,
+   "evolution_pct": 375.99,
+   "lien": "https://www.tiktok.com/view/product/1729795562914290654",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true,
+   "marque_sure": "",
+   "ebay": null,
+   "ebay_lu": false,
+   "pubs": null,
+   "pubs_lu": false,
+   "pubs_terme": "",
+   "amazon": null,
+   "recherche": "",
+   "amazon_piste": "",
+   "comparaison": {
+    "type": "non_lu",
+    "requete": "Lot de 4 plats alimentaires en acier"
+   }
+  },
+  {
+   "titre": "Lot de 100 couvercles jetables extensibles pour bols et assiettes, couvercles élastiques pour bols, alternative en film plastique aux restes de fruits et légumes et au rangement en cuisine",
+   "marque": "Lot",
+   "categorie": "Kitchenware",
+   "rang": 12,
+   "ventes_7j": 147,
+   "prix_moyen_usd": 2.22,
+   "commission_pct": 0.0,
+   "gain_par_vente_usd": 0.0,
+   "revenu_usd": 326,
+   "commissions_totales_usd": 0,
+   "part_video_pct": 95,
+   "evolution_pct": -16.6,
+   "lien": "https://www.tiktok.com/view/product/1729907891242834916",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Lot de 4 Ensembles de Conteneurs pour Aliments – Boîtes de Conservation Alimentaire Hermétiques avec Couvercles – Compatibles Congélateur – Adaptés aux Aliments Chauds – Différentes Capacités – Durables et Réutilisables",
+   "marque": "Lot",
+   "categorie": "Kitchenware",
+   "rang": 13,
+   "ventes_7j": 142,
+   "prix_moyen_usd": 39.16,
+   "commission_pct": 4.0,
+   "gain_par_vente_usd": 1.57,
+   "revenu_usd": 5560,
+   "commissions_totales_usd": 222,
+   "part_video_pct": 14,
+   "evolution_pct": 281.53,
+   "lien": "https://www.tiktok.com/view/product/1729861463957019227",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "LES THE ASSIL - 9 VARIANTES",
+   "marque": "LES",
+   "categorie": "Kitchenware",
+   "rang": 14,
+   "ventes_7j": 140,
+   "prix_moyen_usd": 4.04,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 0.4,
+   "revenu_usd": 566,
+   "commissions_totales_usd": 57,
+   "part_video_pct": 90,
+   "evolution_pct": 96.59,
+   "lien": "https://www.tiktok.com/view/product/1729870235753159010",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "【Pre-Black Friday】VEVOR appareil de maintien au chaud pour buffet, 5 qt (env. 4,7 L), lot de 4, support de maintien en acier inoxydable avec 4 poêles pleine taille, support de maintien rond pour service d’événement",
+   "marque": "VEVOR",
+   "categorie": "Kitchenware",
+   "rang": 15,
+   "ventes_7j": 137,
+   "prix_moyen_usd": 103.75,
+   "commission_pct": 3.0,
+   "gain_par_vente_usd": 3.11,
+   "revenu_usd": 14214,
+   "commissions_totales_usd": 426,
+   "part_video_pct": 57,
+   "evolution_pct": 40.81,
+   "lien": "https://www.tiktok.com/view/product/1729822394419091558",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "1pc Christmas Gingerbread Man Coffee Mug, Gingers Are For Life Not Just For Christmas - Ceramic Mug, 11oz, Red, Christmas Gift for Family And Friends",
+   "marque": "1pc",
+   "categorie": "Kitchenware",
+   "rang": 16,
+   "ventes_7j": 134,
+   "prix_moyen_usd": 31.01,
+   "commission_pct": 0.0,
+   "gain_par_vente_usd": 0.0,
+   "revenu_usd": 4155,
+   "commissions_totales_usd": 0,
+   "part_video_pct": 15,
+   "evolution_pct": 55.12,
+   "lien": "https://www.tiktok.com/view/product/1729923134404663854",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "Mug à café sur le thème de la musique rap amusante, mug fantaisie en céramique de 11 oz, « J’ai besoin de mon thé — Hé » cadeau pour les amateurs de musique, mug unique avec un design drôle",
+   "marque": "Mug",
+   "categorie": "Kitchenware",
+   "rang": 17,
+   "ventes_7j": 133,
+   "prix_moyen_usd": 28.57,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 2.86,
+   "revenu_usd": 3800,
+   "commissions_totales_usd": 380,
+   "part_video_pct": 47,
+   "evolution_pct": -52.95,
+   "lien": "https://www.tiktok.com/view/product/1729929940192434734",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Batterie de cuisine Tefal Ingenio Cook Eat set Inox 15p Casseroles, poeles et ustensiles L881SF04",
+   "marque": "Batterie",
+   "categorie": "Kitchenware",
+   "rang": 18,
+   "ventes_7j": 130,
+   "prix_moyen_usd": 111.1,
+   "commission_pct": 5.0,
+   "gain_par_vente_usd": 5.55,
+   "revenu_usd": 14443,
+   "commissions_totales_usd": 722,
+   "part_video_pct": 65,
+   "evolution_pct": 33.0,
+   "lien": "https://www.tiktok.com/view/product/1729886986759477303",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "Étagère de four à micro ondes à 3 niveaux, support de micro ondes réglable pour le plan de travail — pour ranger les ustensiles de cuisine et la vaisselle, acier au carbone, étagère de surface à installer au dessus du micro ondes",
+   "marque": "Étagère",
+   "categorie": "Kitchenware",
+   "rang": 19,
+   "ventes_7j": 128,
+   "prix_moyen_usd": 24.36,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 2.44,
+   "revenu_usd": 3118,
+   "commissions_totales_usd": 312,
+   "part_video_pct": 100,
+   "evolution_pct": -38.7,
+   "lien": "https://www.tiktok.com/view/product/1729924877206789067",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Pépeuse tranchante en acier inoxydable avec manche ergonomique antidérapant en bois, ouvre-bouteille intégré, construction durable pour fruits et légumes, outil de cuisine essentiel",
+   "marque": "Pépeuse",
+   "categorie": "Kitchenware",
+   "rang": 20,
+   "ventes_7j": 120,
+   "prix_moyen_usd": 1.92,
+   "commission_pct": 5.0,
+   "gain_par_vente_usd": 0.1,
+   "revenu_usd": 231,
+   "commissions_totales_usd": 12,
+   "part_video_pct": 100,
+   "evolution_pct": 56.87,
+   "lien": "https://www.tiktok.com/view/product/1729969079121648586",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "SUNCOK Batterie de Cuisine 19 Pièces, Casseroles et Poêles à Revêtement Céramique Antiadhésif, 2 Poignées Amovibles, Empilables, Compatibles Induction, Utilisables au Four sans Poignées ni Couvercles, Blanc Crème",
+   "marque": "SUNCOK",
+   "categorie": "Kitchenware",
+   "rang": 21,
+   "ventes_7j": 109,
+   "prix_moyen_usd": 79.39,
+   "commission_pct": 5.0,
+   "gain_par_vente_usd": 3.97,
+   "revenu_usd": 8654,
+   "commissions_totales_usd": 433,
+   "part_video_pct": 71,
+   "evolution_pct": 4.39,
+   "lien": "https://www.tiktok.com/view/product/1729908551260936292",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "【Black Friday】Étagère égouttoir à deux niveaux, support pour bols et plats, étagère de rangement pour couverts, porte-ustensiles, gain de place, grande capacité, avec plateau d’égouttage #top pick",
+   "marque": "Étagère",
+   "categorie": "Kitchenware",
+   "rang": 22,
+   "ventes_7j": 108,
+   "prix_moyen_usd": 26.16,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 2.62,
+   "revenu_usd": 2826,
+   "commissions_totales_usd": 283,
+   "part_video_pct": 100,
+   "evolution_pct": 7.55,
+   "lien": "https://www.tiktok.com/view/product/1729754173424179211",
+   "listes": [
+    "plus_vendus",
+    "hausses"
+   ],
+   "bingo": true
+  },
+  {
+   "titre": "Spray et vaporisateur OLIVIA 2 en 1 pour verre, 470 ml, coloris assortis",
+   "marque": "Spray",
+   "categorie": "Kitchenware",
+   "rang": 23,
+   "ventes_7j": 107,
+   "prix_moyen_usd": 4.7,
+   "commission_pct": 13.0,
+   "gain_par_vente_usd": 0.61,
+   "revenu_usd": 502,
+   "commissions_totales_usd": 65,
+   "part_video_pct": 100,
+   "evolution_pct": 2.52,
+   "lien": "https://www.tiktok.com/view/product/1729799543460698877",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "CXINYI Distributeur d’Huile d’Olive 16 oz/470 ml avec Protection UV et Socle en Silicone Antidérapant, Flacon Pulvérisateur d’Huile 2 en 1 pour Cuisine et Air Fryer, Accessoire de Cuisine Moderne",
+   "marque": "CXINYI",
+   "categorie": "Kitchenware",
+   "rang": 24,
+   "ventes_7j": 107,
+   "prix_moyen_usd": 3.61,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 0.36,
+   "revenu_usd": 386,
+   "commissions_totales_usd": 39,
+   "part_video_pct": 99,
+   "evolution_pct": -81.89,
+   "lien": "https://www.tiktok.com/view/product/1729897822508849437",
+   "listes": [
+    "plus_vendus"
+   ],
+   "bingo": false
+  },
+  {
+   "titre": "Coupe-légumes multifonction, hachoir manuel pour légumes 15 en 1, trancheuse alimentaire en plastique avec panier d’égouttage, ustensile de cuisine idéal pour les légumes et les fruits, cadeau créatif et cadeau pour les fêtes, offres Black Friday",
+   "marque": "Coupe-légumes",
+   "categorie": "Kitchenware",
+   "rang": 25,
+   "ventes_7j": 99,
+   "prix_moyen_usd": 15.31,
+   "commission_pct": 10.0,
+   "gain_par_vente_usd": 1.53,
+   "revenu_usd": 1516,
+   "commissions_totales_usd": 152,
+   "part_video_pct": 99,
+   "evolution_pct": 51.88,
+   "lien": "https://www.tiktok.com/view/product/1729703477956352584",
    "listes": [
     "plus_vendus",
     "hausses"
@@ -4011,16 +4873,7 @@
     "plus_vendus",
     "hausses"
    ],
-   "bingo": true,
-   "marque_sure": "",
-   "ebay": null,
-   "ebay_lu": false,
-   "pubs": null,
-   "pubs_lu": false,
-   "pubs_terme": "",
-   "amazon": null,
-   "recherche": "",
-   "amazon_piste": ""
+   "bingo": true
   },
   {
    "titre": "Blocs magnétiques – 100 pièces aléatoires, jeu de cubes de construction magnétiques pour garçons et filles de 3 à 10 ans, STEM Montessori, jouet d’empilement et sensoriel",
@@ -4126,7 +4979,11 @@
    "pubs_terme": "",
    "amazon": null,
    "recherche": "",
-   "amazon_piste": ""
+   "amazon_piste": "",
+   "comparaison": {
+    "type": "non_lu",
+    "requete": "Coffret de Noël 6 squishies à presser"
+   }
   },
   {
    "titre": "Jouet en forme d’ours, blocs de construction Winktoys, bloc de construction en forme d’ours, cadeau d’anniversaire, jouet éducatif, garçon, fille, décoration tendance, cadeaux sympas, blocs de construction, moments en famille, Black Friday, Noël",
@@ -4574,7 +5431,7 @@
   },
   {
    "titre": "[EXCLUSIVITÉ LIVE] medicube Routine PDRN Éclat & Hydratation en 4 Étapes | Sérum PDRN One Day OFFERT à l'achat",
-   "marque": "EXCLUSIVITÉ LIVE",
+   "marque": "medicube",
    "categorie": "Beauty & Personal Care",
    "rang": 12,
    "ventes_7j": 77,
@@ -4750,7 +5607,10 @@
    "pubs_terme": "",
    "amazon": null,
    "recherche": "",
-   "amazon_piste": ""
+   "amazon_piste": "",
+   "comparaison": {
+    "type": "titre_vague"
+   }
   },
   {
    "titre": "Brosse chauffante et peigne lissant Shark SmoothStyle avec sac de rangement",
@@ -4949,7 +5809,10 @@
    "pubs_terme": "",
    "amazon": null,
    "recherche": "",
-   "amazon_piste": ""
+   "amazon_piste": "",
+   "comparaison": {
+    "type": "titre_vague"
+   }
   },
   {
    "titre": "Horloge Adhan design moderne - Blanche dorée - Chiffres indiens",
@@ -5237,25 +6100,6 @@
    "bingo": false
   },
   {
-   "titre": "Lot de 4 plats alimentaires en acier inoxydable avec couvercles – chacun 7,5 L, acier 201, hermétiques, empilables – parfaits pour buffet, traiteur et rangement dans la cuisine à domicile",
-   "marque": "Lot",
-   "categorie": "Kitchenware",
-   "rang": 3,
-   "ventes_7j": 156,
-   "prix_moyen_usd": 49.15,
-   "commission_pct": 10.0,
-   "gain_par_vente_usd": 4.92,
-   "revenu_usd": 7668,
-   "commissions_totales_usd": 767,
-   "part_video_pct": 36,
-   "evolution_pct": 375.99,
-   "lien": "https://www.tiktok.com/view/product/1729795562914290654",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
    "titre": "BOREINE Collection Chef  Casseroles et Poêles - Batterie Pro Antiadhésive, Manche Amovible, Sans PFOA, Induction",
    "marque": "BOREINE",
    "categorie": "Kitchenware",
@@ -5288,25 +6132,6 @@
    "part_video_pct": 33,
    "evolution_pct": 312.14,
    "lien": "https://www.tiktok.com/view/product/1729823595226700267",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "Lot de 4 Ensembles de Conteneurs pour Aliments – Boîtes de Conservation Alimentaire Hermétiques avec Couvercles – Compatibles Congélateur – Adaptés aux Aliments Chauds – Différentes Capacités – Durables et Réutilisables",
-   "marque": "Lot",
-   "categorie": "Kitchenware",
-   "rang": 6,
-   "ventes_7j": 142,
-   "prix_moyen_usd": 39.16,
-   "commission_pct": 4.0,
-   "gain_par_vente_usd": 1.57,
-   "revenu_usd": 5560,
-   "commissions_totales_usd": 222,
-   "part_video_pct": 14,
-   "evolution_pct": 281.53,
-   "lien": "https://www.tiktok.com/view/product/1729861463957019227",
    "listes": [
     "hausses"
    ],
@@ -5408,25 +6233,6 @@
    "bingo": false
   },
   {
-   "titre": "Plat air fryer en verre avec poignée amovible",
-   "marque": "Plat",
-   "categorie": "Kitchenware",
-   "rang": 12,
-   "ventes_7j": 704,
-   "prix_moyen_usd": 9.56,
-   "commission_pct": 8.0,
-   "gain_par_vente_usd": 0.76,
-   "revenu_usd": 6732,
-   "commissions_totales_usd": 539,
-   "part_video_pct": 77,
-   "evolution_pct": 90.53,
-   "lien": "https://www.tiktok.com/view/product/1729833038802622785",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
    "titre": "MALACASA ensembles d'assiettes et de bols, 12/16/18/ 24 pièces, service de vaisselle en porcelaine, service de vaisselle en céramique résistant aux puces, Service de vaisselle pour 4 / 6, série LUNA",
    "marque": "MALACASA",
    "categorie": "Kitchenware",
@@ -5466,7 +6272,7 @@
   },
   {
    "titre": "【Pre-Black Friday】VEVOR lot de 4 plateaux vapeur pour table à nourriture, profond, format complet, récipient alimentaire profond en acier inoxydable, plateau four, plateaux pour hôtel, anti‑blocage, plat vapeur pour table à nourriture",
-   "marque": "【Pre-Black",
+   "marque": "VEVOR",
    "categorie": "Kitchenware",
    "rang": 15,
    "ventes_7j": 38,
@@ -5484,46 +6290,8 @@
    "bingo": false
   },
   {
-   "titre": "1pc Christmas Gingerbread Man Coffee Mug, Gingers Are For Life Not Just For Christmas - Ceramic Mug, 11oz, Red, Christmas Gift for Family And Friends",
-   "marque": "1pc",
-   "categorie": "Kitchenware",
-   "rang": 16,
-   "ventes_7j": 134,
-   "prix_moyen_usd": 31.01,
-   "commission_pct": 0.0,
-   "gain_par_vente_usd": 0.0,
-   "revenu_usd": 4155,
-   "commissions_totales_usd": 0,
-   "part_video_pct": 15,
-   "evolution_pct": 55.12,
-   "lien": "https://www.tiktok.com/view/product/1729923134404663854",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "Coupe-légumes multifonction, hachoir manuel pour légumes 15 en 1, trancheuse alimentaire en plastique avec panier d’égouttage, ustensile de cuisine idéal pour les légumes et les fruits, cadeau créatif et cadeau pour les fêtes, offres Black Friday",
-   "marque": "Coupe-légumes",
-   "categorie": "Kitchenware",
-   "rang": 17,
-   "ventes_7j": 99,
-   "prix_moyen_usd": 15.31,
-   "commission_pct": 10.0,
-   "gain_par_vente_usd": 1.53,
-   "revenu_usd": 1516,
-   "commissions_totales_usd": 152,
-   "part_video_pct": 99,
-   "evolution_pct": 51.88,
-   "lien": "https://www.tiktok.com/view/product/1729703477956352584",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
    "titre": "【Pre-Black Friday】VEVOR Set de buffet chauffant, 8 Qt, lot de 4, chafing dish en acier inoxydable avec 4 plats pleine grandeur, chauffe-plat de restauration rectangulaire avec couvercle, support pour plats à eau, support pour carburant",
-   "marque": "【Pre-Black",
+   "marque": "VEVOR",
    "categorie": "Kitchenware",
    "rang": 18,
    "ventes_7j": 45,
@@ -5535,82 +6303,6 @@
    "part_video_pct": 75,
    "evolution_pct": 51.77,
    "lien": "https://www.tiktok.com/view/product/1729730046931802214",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "【Pre-Black Friday】VEVOR appareil de maintien au chaud pour buffet, 5 qt (env. 4,7 L), lot de 4, support de maintien en acier inoxydable avec 4 poêles pleine taille, support de maintien rond pour service d’événement",
-   "marque": "【Pre-Black",
-   "categorie": "Kitchenware",
-   "rang": 19,
-   "ventes_7j": 137,
-   "prix_moyen_usd": 103.75,
-   "commission_pct": 3.0,
-   "gain_par_vente_usd": 3.11,
-   "revenu_usd": 14214,
-   "commissions_totales_usd": 426,
-   "part_video_pct": 57,
-   "evolution_pct": 40.81,
-   "lien": "https://www.tiktok.com/view/product/1729822394419091558",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "Batterie de cuisine Tefal Ingenio Cook Eat set Inox 15p Casseroles, poeles et ustensiles L881SF04",
-   "marque": "Batterie",
-   "categorie": "Kitchenware",
-   "rang": 20,
-   "ventes_7j": 130,
-   "prix_moyen_usd": 111.1,
-   "commission_pct": 5.0,
-   "gain_par_vente_usd": 5.55,
-   "revenu_usd": 14443,
-   "commissions_totales_usd": 722,
-   "part_video_pct": 65,
-   "evolution_pct": 33.0,
-   "lien": "https://www.tiktok.com/view/product/1729886986759477303",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "【Black Friday】Étagère égouttoir à deux niveaux, support pour bols et plats, étagère de rangement pour couverts, porte-ustensiles, gain de place, grande capacité, avec plateau d’égouttage #top pick",
-   "marque": "【Black",
-   "categorie": "Kitchenware",
-   "rang": 21,
-   "ventes_7j": 108,
-   "prix_moyen_usd": 26.16,
-   "commission_pct": 10.0,
-   "gain_par_vente_usd": 2.62,
-   "revenu_usd": 2826,
-   "commissions_totales_usd": 283,
-   "part_video_pct": 100,
-   "evolution_pct": 7.55,
-   "lien": "https://www.tiktok.com/view/product/1729754173424179211",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
-   "titre": "SUNCOK Batterie de Cuisine 19 Pièces, Casseroles et Poêles à Revêtement Céramique Antiadhésif, 2 Poignées Amovibles, Empilables, Compatibles Induction, Utilisables au Four sans Poignées ni Couvercles, Blanc Crème",
-   "marque": "SUNCOK",
-   "categorie": "Kitchenware",
-   "rang": 22,
-   "ventes_7j": 109,
-   "prix_moyen_usd": 79.39,
-   "commission_pct": 5.0,
-   "gain_par_vente_usd": 3.97,
-   "revenu_usd": 8654,
-   "commissions_totales_usd": 433,
-   "part_video_pct": 71,
-   "evolution_pct": 4.39,
-   "lien": "https://www.tiktok.com/view/product/1729908551260936292",
    "listes": [
     "hausses"
    ],
@@ -5636,27 +6328,8 @@
    "bingo": false
   },
   {
-   "titre": "100 pièces de capuchons de conservation élastiques en PE, couvercles transparents pour bols avec élastique, capuchons de couverture extensibles pour bols, assiettes, fruits, restes et stockage des aliments",
-   "marque": "100",
-   "categorie": "Kitchenware",
-   "rang": 24,
-   "ventes_7j": 362,
-   "prix_moyen_usd": 4.38,
-   "commission_pct": 15.0,
-   "gain_par_vente_usd": 0.66,
-   "revenu_usd": 1584,
-   "commissions_totales_usd": 238,
-   "part_video_pct": 100,
-   "evolution_pct": -13.37,
-   "lien": "https://www.tiktok.com/view/product/1729912772150204798",
-   "listes": [
-    "hausses"
-   ],
-   "bingo": false
-  },
-  {
    "titre": "【Black Friday】Sacs de Rangement sous Vide Lot avec Pompe Électrique Rechargeable – Gain de Place pour Vêtements, Couettes et Oreillers, Rangement Malin pour Armoire et Voyage",
-   "marque": "【Black",
+   "marque": "Sacs",
    "categorie": "Kitchenware",
    "rang": 25,
    "ventes_7j": 94,
@@ -5922,7 +6595,7 @@
   },
   {
    "titre": "【Pre-Black Friday】VEVOR Piano numérique à 61 touches, touches éclairées, Piano électrique Portable avec support réglable, 600 tons, 500 rythmes, haut parleurs intégrés, pédale de maintien, casque, Microphone",
-   "marque": "【Pre-Black",
+   "marque": "VEVOR",
    "categorie": "Toys & Hobbies",
    "rang": 25,
    "ventes_7j": 30,
@@ -5939,6 +6612,5 @@
    ],
    "bingo": false
   }
- ],
- "rapport_version": 4
+ ]
 }

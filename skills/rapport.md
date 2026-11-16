@@ -15,7 +15,7 @@
    Horaires voulus : 5 h, 13 h, 18 h (Paris). Pas d'exemples inventés : les tests se font sur les produits
    réels sortis par Amigo.
 6. **Chaîne de décision** : gros volume de recherche → produit trouvé au prix le plus bas → concurrence
-   (≥ 10 vendeurs dont un gros site au même prix : on passe ; 5-9 : seulement si ≥ 15 % moins cher ;
-   ≤ 4 et moins cher : BINGO) → fourchette d'occasion (plus bas / plus haut réellement vendus) et position
+   (depuis le 16/11/2026 le nombre de vendeurs ne fait plus rejeter : un marchand déjà à notre prix d'achat : on passe ;
+   ≥ 15 % sous le moins cher de tous : on y va, même à 30 vendeurs ; ≤ 4 et moins cher : BINGO) → fourchette d'occasion (plus bas / plus haut réellement vendus) et position
    de notre neuf dedans. En parallèle, Idéfix alerte sur tout écart de prix (ex. 100 € idealo, trouvé 50 €),
    sans attendre le volume.

@@ -1,7 +1,7 @@
 {
- "tours_ok": 2136,
+ "tours_ok": 2137,
  "tours_echec": 10,
- "dernier_ok": "16/11 06:16",
+ "dernier_ok": "16/11 06:29",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1166,13 +1166,25 @@
    "niveau": "erreur",
    "etape": "moisson étagère",
    "message": "Jardin: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "16/11 06:29",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 22 produits sur 25 (475 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "16/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson étagère",
+   "message": "Jeux vidéo: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "16/11 06:11",
-  "annonces": 547,
-  "nouvelles": 374,
-  "examinees": 25,
+  "heure": "16/11 06:21",
+  "annonces": 548,
+  "nouvelles": 372,
+  "examinees": 22,
   "alertes": 0
  }
 }

@@ -99106,7 +99106,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T22:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -99309,6 +99309,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-16T22:16+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-16T22:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : même casque Sennheiser Accentum Plus noir déjà à 109,99 € neuf sur Amazon.fr (vu par Keepa), alors que l'offre MediaMarkt Espagne coûte 114 € livrée ; en plus MediaMarkt.es ne livre pas en France. Aucune économie, revente à perte.",
+   "prix_neuf_min_idealo": 109.99,
+   "source_prix_ref": "Keepa / Amazon.fr (B0CQKDKPS6)",
+   "economie_pct": -4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

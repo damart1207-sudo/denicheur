@@ -839,7 +839,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T21:00+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1049,7 +1049,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T21:02+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T21:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (LEGO Ideas 21372 La Catrina, EAN 5702018066331), mais l'offre Cdiscount à 71,39 € n'a pas pu être confirmée : Cdiscount est affiché à 91,38 € sur le comparateur Brickfact. Coût estimé 76,39 € livré, soit seulement 11,6 % sous le prix le plus bas en France (86,39 € Amazon.fr, livraison gratuite). Seuil de 15 % non atteint. Déjà vu à 71,63 € ce mois-ci : pas de revente intéressante.",
+   "prix_neuf_min_idealo": 86.39,
+   "source_prix_ref": "brickfact.com/fr-fr + bonne-promo.com (Amazon.fr 86,39 € livré, 17/11/2026)",
+   "economie_pct": 11.6,
+   "prix_revente_verifie": 85.54,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "keepa-B0DVMXRC85-arbIT",
@@ -1082,7 +1094,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T21:05+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -1343,6 +1355,18 @@
    "proba_detail": [
     "Amazon 16/mois"
    ]
+  },
+  "verifie_le": "2026-11-17T21:50+00:00",
+  "verdict": {
+   "commentaire": "Prix de référence Amazon.fr (266 € chez un vendeur tiers) gonflé. La même veste PUMA Porsche Motorsport Team Hybrid (noire) est à 150 € sur fuelforfans.com (boutique officielle, livraison UE gratuite dès 90 €). L'offre Amazon.it à 175 € + port (180 €) est plus chère. Rejet.",
+   "prix_neuf_min_idealo": 150.0,
+   "source_prix_ref": "fuelforfans.com (boutique officielle, livraison UE)",
+   "economie_pct": -20.0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -1389,7 +1413,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T21:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1599,6 +1623,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:28 UTC : offre active, 44.99 affiché, marchand 4409_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T21:50+00:00",
+  "verdict": {
+   "commentaire": "Manette DualSense Techno Red : coût total depuis Amazon UK estimé à 74,14 € (47,93 £ + port + conversion), plus cher que le prix en France (64,99 € sur Amazon.fr, 64,45 € au plus bas sur achatmoinscher). Aucune économie. Rejet.",
+   "prix_neuf_min_idealo": 64.45,
+   "source_prix_ref": "achatmoinscher.com + Amazon.fr (Keepa)",
+   "economie_pct": -15.0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  }
 ]

@@ -9,7 +9,8 @@ from denicheur import apify, bilan, dataforseo, ecart, marche, telegram
 
 NB = int(os.environ.get("NB", "2"))
 base = ecart._lire(ecart.F_ECARTS, {})
-lot = [dict(f) for f in base.get("affaires", []) if f.get("retenu")][:NB]
+lot = [dict(f) for f in base.get("affaires", []) if f.get("retenu")]
+lot = ([f for f in lot if f["asin"] == "B0DB2FF9BX"] + [f for f in lot if f["asin"] != "B0DB2FF9BX"])[:NB]   # le Motorola d'abord (annonce neuve Vinted vue le 17/11)
 print(f"{len(lot)} affaires du {base.get('jour')} ; Apify disponible : {apify.disponible()} ; DataForSEO dépensé : {dataforseo._budget()['depense_usd']} $")
 t0 = time.time()
 marche.etudier(lot)
@@ -21,7 +22,7 @@ for f in lot:
     f["bilan"] = bilan.rediger(f)
     print("--- fiche donnée à l'IA ---\n" + bilan.fiche_texte(f) + "\n--- bilan ---\n" + json.dumps(f["bilan"], ensure_ascii=False))
     print(json.dumps({k: f.get(k) for k in ("titre", "nom_court", "ean", "premier", "second", "volume", "volume_mot", "marche")}, ensure_ascii=False, indent=1))
-    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), avec le bilan de l'expert et de l'acheteur\n" + ecart.message(f)
+    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), avec le sens inverse (acheter l'annonce neuve, revendre sous Amazon)\n" + ecart.message(f)
     print(texte)
     print("Telegram :", telegram.envoyer(texte))
 # Vinted : le robot donne-t-il une date de publication ? (schéma gratuit + champs d'une annonce de l'étude ci-dessus)

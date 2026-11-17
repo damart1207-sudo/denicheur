@@ -287,6 +287,30 @@ def _ligne(nom, r, etat=""):
     return t
 
 
+INVERSE_MIN = 50   # euros d'écart au moins entre une annonce NEUVE (Vinted, eBay) et le moins cher d'Amazon
+
+
+def inverse(f):
+    """SENS INVERSE (idée de David, 17/11/2026) : au lieu d'acheter sur Amazon, acheter l'annonce NEUVE la moins chère
+    (Vinted ou eBay) quand elle est nettement sous le moins cher d'Amazon, et revendre en neuf sous le prix Amazon.
+    À état égal seulement : les annonces d'occasion ne comptent pas. Coût Vinted = prix + protection acheteur (5 % + 0,70 €),
+    hors port. Renvoie {site, prix, cout, ecart, lien} ou None."""
+    m = f.get("marche") or {}
+    v, e = m.get("vinted") or {}, m.get("ebay") or {}
+    c = []
+    if (v.get("neuf") or {}).get("nb"):
+        p = v["neuf"]["min"]
+        c.append({"site": "vinted", "prix": p, "cout": round(p * 1.05 + 0.70, 2), "lien": v["neuf"].get("lien_min"), "age": v["neuf"].get("age_min")})
+    if (e.get("neuf") or {}).get("nb"):
+        p = e["neuf"]["min"]
+        c.append({"site": "ebay", "prix": p, "cout": p, "lien": e["neuf"].get("lien_min"), "age": e["neuf"].get("age_min")})
+    if not c:
+        return None
+    b = min(c, key=lambda x: x["cout"])
+    b["ecart"] = round(f["premier"] - b["cout"], 2)
+    return b if b["ecart"] >= INVERSE_MIN else None
+
+
 def lignes(f):
     """Lignes à insérer dans l'alerte : comparateurs, puis présence sur Leboncoin / Vinted / eBay."""
     m = f.get("marche")
@@ -330,6 +354,12 @@ def lignes(f):
     if revente and bas and min(bas)[0] < revente:
         p, s = min(bas)
         t.append(f"⚠️ Déjà à {_eur(p)} sur {s} : sous le prix de revente conseillé ({_eur(revente)})")
+    inv = inverse(f)
+    if inv:
+        nom = {"vinted": "Vinted", "ebay": "eBay"}[inv["site"]]
+        frais = f" ({_eur(inv['cout'])} avec la protection acheteur, hors port)" if inv["site"] == "vinted" else ""
+        t.append(f"🔄 <b>Sens inverse</b> : {_lien('une annonce NEUVE', inv.get('lien'))} à <b>{_eur(inv['prix'])}</b> sur {nom}{frais}, "
+                 f"soit {_eur(inv['ecart'])} sous le moins cher d'Amazon → à acheter là et revendre en neuf sous le prix Amazon")
     # la moins chère traîne depuis plus de 3 semaines : personne n'en veut à ce prix, ou l'annonce est mal faite
     vieux = [(r["min"], s, r["age_min"]) for s, r in (("Leboncoin", m.get("leboncoin")), ("Vinted", v), ("eBay neuf", (e or {}).get("neuf") if e else None),
                                                        ("eBay occasion", (e or {}).get("occasion") if e else None))

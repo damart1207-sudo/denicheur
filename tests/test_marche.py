@@ -140,6 +140,26 @@ class Bilan(unittest.TestCase):
         self.f["bilan"] = b
         self.assertIn("Je ne le vends pas", ecart.message(self.f))
 
+    def test_sens_inverse(self):
+        f = fiche(premier=349.99, second=549.0, marche={"leboncoin": {"nb": 0}, "comparateurs_consultes": [],
+                  "vinted": {"nb": 3, "min": 170.0, "max": 250.0, "lien_min": "u", "neuf": {"nb": 1, "min": 250.0, "max": 250.0, "lien_min": "v"}},
+                  "ebay": {"nb": 1, "neuf": {"nb": 0}, "occasion": {"nb": 1, "min": 229.5, "max": 229.5, "lien_min": "e"}}})
+        inv = marche.inverse(f)
+        self.assertEqual((inv["site"], inv["prix"], inv["cout"], inv["ecart"]), ("vinted", 250.0, 263.2, 86.79))   # l'occasion à 170 € ne compte pas
+        self.assertIn("Sens inverse</b>", ecart.message(f))
+        self.assertIn("Sens inverse : une annonce NEUVE à 250 € sur vinted", self.b.fiche_texte(f))
+        ac = {"acheter": "OUI", "raisons": "40 € de moins qu'Amazon."}
+        b = self.b.valider(f, {"expert": {"vendre": "OUI", "achat": "vinted", "ou": "leboncoin", "prix": 310, "raisons": "x"}, "acheteur": ac}, self.regles)
+        self.assertEqual((b["achat"], b["cout_achat"], b["prix"], b["marge_sans_charges"]), ("vinted", 263.2, 310.0, 46.8))
+        f["bilan"] = b
+        self.assertIn("En l'achetant sur <b>Vinted</b> à 250 €", ecart.message(f))
+        for expert in ({"vendre": "OUI", "achat": "vinted", "ou": "amazon", "prix": 320, "raisons": "x"},      # jamais revendu sur Amazon
+                       {"vendre": "OUI", "achat": "vinted", "ou": "leboncoin", "prix": 360, "raisons": "x"},   # au-dessus du moins cher d'Amazon
+                       {"vendre": "OUI", "achat": "ebay", "ou": "leboncoin", "prix": 300, "raisons": "x"}):    # pas d'annonce neuve relevée sur eBay
+            self.assertIsNone(self.b.valider(f, {"expert": expert, "acheteur": ac}, self.regles))
+        f["marche"]["vinted"]["neuf"]["min"] = 320.0   # moins de 50 € d'écart : pas de sens inverse
+        self.assertIsNone(marche.inverse(f))
+
     def test_sans_ia_pas_de_bilan(self):
         with patch.dict(os.environ, {k: "" for k in ("GEMINI_API_KEY", "NVIDIA_API_KEY", "ZAI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY")}):
             self.assertIsNone(self.b.rediger(self.f))

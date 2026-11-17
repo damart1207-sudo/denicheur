@@ -4,7 +4,8 @@
 
 Une IA rédige les deux avis à partir des SEULS chiffres relevés (prix, ventes, volume de recherche, comparateurs,
 annonces Leboncoin / Vinted / eBay et leur ancienneté). Garde-fous : aucun chiffre accepté de l'IA en dehors du prix de
-vente conseillé, lui-même borné entre notre achat et le 2e vendeur ; les deux marges à ce prix sont recalculées ici
+vente conseillé, lui-même borné entre notre achat et le 2e vendeur (sens inverse : entre le coût de l'annonce neuve et le
+moins cher d'Amazon, jamais revendu sur Amazon) ; les deux marges à ce prix sont recalculées ici
 (denicheur/rentabilite.py). Un appel par alerte : Gemini (dans son plafond existant), sinon les IA gratuites de l'équipe.
 Sans réponse valable, l'alerte part sans bilan : jamais un avis inventé.
 """
@@ -17,13 +18,17 @@ CANAUX = {"leboncoin": "Leboncoin", "vinted": "Vinted", "ebay": "eBay", "amazon"
 ORDRE_IA = ("gemini", "deepseek", "glm", "gptoss", "nemotron_nv")
 SYSTEME = """Tu rends un bilan sur un produit acheté neuf pour être revendu neuf par un particulier ou une micro-entreprise en France.
 Tu tiens deux rôles, l'un après l'autre, et tu réponds UNIQUEMENT par un objet JSON :
-{"expert": {"vendre": "OUI" ou "NON", "ou": "leboncoin" | "vinted" | "ebay" | "amazon" | null, "prix": nombre ou null, "raisons": "..."},
+{"expert": {"vendre": "OUI" ou "NON", "achat": "amazon" | "vinted" | "ebay", "ou": "leboncoin" | "vinted" | "ebay" | "amazon" | null, "prix": nombre ou null, "raisons": "..."},
  "acheteur": {"acheter": "OUI" ou "NON", "raisons": "..."}}
 
 Rôle 1, EXPERT e-commerce : décide si tu revends ce produit. Si OUI : le site où il partira le mieux et UN prix de vente en euros,
 strictement entre le prix d'achat et le prix du 2e vendeur. Dis NON si la demande est faible (peu de ventes, peu de recherches),
 si le produit est déjà affiché à ton prix d'achat dans les comparateurs, si des annonces moins chères existent déjà,
 ou si des annonces traînent depuis des semaines sans se vendre.
+Deux sens sont possibles, choisis le meilleur et indique-le dans « achat » : (a) acheter sur Amazon au prix d'achat de la fiche et revendre
+ailleurs, prix de vente strictement entre ce prix d'achat et le 2e vendeur ; (b) seulement si la fiche contient une ligne « Sens inverse » :
+acheter l'annonce neuve indiquée (vinted ou ebay) et revendre en neuf sur leboncoin, vinted ou ebay, JAMAIS sur amazon (Amazon exige une
+facture de fournisseur pour vendre du neuf), prix de vente strictement entre le coût de cette annonce et le prix le moins cher d'Amazon.
 Rôle 2, ACHETEUR : tu es devant l'annonce de ce produit au prix conseillé par l'expert (ou au prix de revente indiqué si l'expert
 dit NON), sur le site choisi. Tu compares avec ce que tu trouves en deux minutes : comparateurs, Amazon, autres annonces.
 Dis si tu achètes, OUI ou NON, et pourquoi.
@@ -80,6 +85,12 @@ def fiche_texte(f):
     t.append(_site("eBay neuf", e.get("neuf")) if e else _site("eBay", None))
     if e:
         t.append(_site("eBay occasion", e.get("occasion")))
+    from .marche import inverse
+    inv = inverse(f)
+    if inv:
+        t.append(f"Sens inverse : une annonce NEUVE à {_eur(inv['prix'])} sur {inv['site']} (coût {_eur(inv['cout'])} frais d'achat compris, hors port)"
+                 + (f", en ligne depuis {inv['age']} jours" if inv.get("age") is not None else "")
+                 + f", soit {_eur(inv['ecart'])} sous le moins cher d'Amazon ({_eur(f.get('premier'))})")
     if m:
         t.append(f"Prix de revente indiqué par défaut (milieu entre l'achat et le 2e vendeur) : {_eur(m.get('prix_revente'))} ; "
                  f"marge à ce prix sur Leboncoin : {_eur(m.get('marge_sans_charges'))} sans charges, {_eur(m.get('marge_avec_charges'))} avec charges de micro-entreprise")
@@ -107,15 +118,24 @@ def valider(f, d, regles):
             prix = round(float(str(ex.get("prix")).replace(",", ".").replace("€", "").strip()), 2)
         except (TypeError, ValueError):
             return None
-        if canal not in CANAUX or not (f["premier"] < prix < f["second"]):
-            return None   # site inconnu ou prix hors des bornes : avis rejeté
+        from .marche import inverse
         from .rentabilite import calculer
+        achat, inv = str(ex.get("achat") or "amazon").strip().lower(), inverse(f)
+        if achat == "amazon":
+            cout, haut = f["premier"], f["second"]
+        elif inv and achat == inv["site"] and canal != "amazon":
+            cout, haut = inv["cout"], f["premier"]   # sens inverse : revendre sous le moins cher d'Amazon, jamais sur Amazon
+            b.update({"achat": achat, "prix_achat": inv["prix"], "cout_achat": cout})
+        else:
+            return None   # sens inverse sans annonce neuve relevée, ou revente sur Amazon : avis rejeté
+        if canal not in CANAUX or not (cout < prix < haut):
+            return None   # site inconnu ou prix hors des bornes : avis rejeté
         try:
-            avec = calculer(prix, canal, f["premier"], regles)
+            avec = calculer(prix, canal, cout, regles)
         except (KeyError, ValueError, ArithmeticError):
             return None
         b.update({"ou": canal, "prix": prix, "marge_avec_charges": avec["marge_nette"],
-                  "marge_sans_charges": round(prix - f["premier"] - avec["frais_canal"], 2)})
+                  "marge_sans_charges": round(prix - cout - avec["frais_canal"], 2)})
     return b
 
 
@@ -153,6 +173,8 @@ def lignes(f):
         return []
     t = ["", "🧑‍💼 <b>BILAN DE L'EXPERT</b>"]
     if b["vendre"]:
+        if b.get("achat"):
+            t.append(f"🔄 En l'achetant sur <b>{CANAUX[b['achat']]}</b> à {_eur(b['prix_achat'])} (annonce neuve), pas sur Amazon")
         t.append(f"✅ <b>Je le vends</b> : sur <b>{CANAUX[b['ou']]}</b> à <b>{_eur(b['prix'])}</b>"
                  f" → marge {_eur(b['marge_sans_charges'])} sans charges, {_eur(b['marge_avec_charges'])} avec charges micro")
     else:

@@ -50,7 +50,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T18:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -370,7 +370,19 @@
    "proba_detail": [
     "Amazon 45/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Jeu dématérialisé (PlayStation Store Pays-Bas), pas une boîte : la référence 49,99 € (jeu en boîte, et la fiche Keepa vise Silent Hill 2) ne compte pas. La promo Black Friday du PS Store est mondiale (-72 %) : le même jeu est au même prix (19,59 €) sur le PS Store français, donc aucune économie. Un jeu dématérialisé ne se revend pas.",
+   "prix_neuf_min_idealo": 19.59,
+   "source_prix_ref": "PlayStation Store (promo Black Friday -72 %, même prix en zone euro, recherche web)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "promo PS Store Black Friday (quelques semaines)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T19:00+00:00"
  },
  {
   "id": "32e09f425c",
@@ -416,7 +428,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T18:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -599,6 +611,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 18:44 UTC : offre active, 31.99 affiché, code EM08MY, marchand 13322_2 ; joybuy.de refuse les robots (page anti-robot (captcha)) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Page du bon plan lue par le robot à 19h44 : offre active, 31,99 € avec le code EM08MY, port offert, chez Joybuy Allemagne (joybuy.de). Joybuy a un site par pays et joybuy.de ne livre que l'Allemagne (page des frais de port : seule la livraison en Allemagne est indiquée) : livraison en France non confirmée. Prix de référence français incertain (55,50 € sur achatmoinscher, 79,36 € chez Lookfantastic, pas de relevé idealo). Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 55.5,
+   "source_prix_ref": "achatmoinscher (non confirmé par idealo)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "code promo, durée inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T19:00+00:00"
  }
 ]

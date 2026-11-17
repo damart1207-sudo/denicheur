@@ -178,6 +178,15 @@ def achatmoinscher(nom):
     return {"prix_min": m["prix"], "nb_offres": m.get("nb_boutiques"), "lien": m.get("lien")} if m else {"prix_min": None}
 
 
+VENTES_MIN = 10   # ventes Amazon estimées sur 30 jours pour payer les recherches Leboncoin / Vinted / idealo
+
+
+def se_vend(f):
+    """Le produit se vend-il déjà ? (17/11/2026 : 16 affaires avant 9 h 30, dont 8 à moins de 10 ventes par mois ; les étudier
+    toutes coûterait ≈ 1,30 $ par jour chez Apify. Les sources gratuites, eBay et achatmoinscher, restent consultées pour toutes.)"""
+    return bool(f.get("achetes_mois_amazon")) or (f.get("ventes_estimees_30j") or 0) >= VENTES_MIN
+
+
 def etudier(affaires):
     """Complète chaque affaire (fiche de denicheur/ecart.py) avec f['marche']. Recherches en parallèle, plafond Apify « E »."""
     from . import apify, sante
@@ -191,9 +200,12 @@ def etudier(affaires):
                 f["nom_court"] = nom
                 bas, haut = PLANCHER * f["premier"], PLAFOND * f["second"]
                 ean = f.get("ean")
-                for cle, fonction, args in (("leboncoin", leboncoin, (nom, bas, haut)), ("vinted", vinted, (nom, bas, haut)),
-                                            ("ebay", ebay_fr, (nom, ean, bas, haut)), ("idealo", idealo, (nom, ean)),
-                                            ("achatmoinscher", achatmoinscher, (nom,))):
+                sources = [("ebay", ebay_fr, (nom, ean, bas, haut)), ("achatmoinscher", achatmoinscher, (nom,))]   # gratuites
+                if se_vend(f):   # les recherches payantes (≈ 0,03 $) seulement pour un produit qui se vend
+                    sources += [("leboncoin", leboncoin, (nom, bas, haut)), ("vinted", vinted, (nom, bas, haut)), ("idealo", idealo, (nom, ean))]
+                else:
+                    f.setdefault("marche", {})["gratuit_seul"] = True
+                for cle, fonction, args in sources:
                     taches.append((f, cle, pool.submit(sante.protege, "marché " + cle, fonction, *args, defaut=None)))
             for f, cle, t in taches:
                 f.setdefault("marche", {})[cle] = t.result()
@@ -336,9 +348,12 @@ def lignes(f):
     else:
         t.append("🧭 Comparateurs de prix : non consultés")
     t.append("♻️ Déjà en vente ailleurs ?")
-    t.append(_ligne("Leboncoin", m.get("leboncoin")))
     v = m.get("vinted")
-    t.append(_ligne("Vinted", v) + (f" — dont {v['neuf']['nb']} en neuf dès {_eur(v['neuf']['min'])}" if v and v.get("nb") and v["neuf"].get("nb") else ""))
+    if m.get("gratuit_seul"):
+        t.append(f" • Leboncoin, Vinted, idealo : pas vérifiés, le produit se vend trop peu (moins de {VENTES_MIN} ventes par mois sur Amazon)")
+    else:
+        t.append(_ligne("Leboncoin", m.get("leboncoin")))
+        t.append(_ligne("Vinted", v) + (f" — dont {v['neuf']['nb']} en neuf dès {_eur(v['neuf']['min'])}" if v and v.get("nb") and v["neuf"].get("nb") else ""))
     e = m.get("ebay")
     if e is None:
         t.append(_ligne("eBay", None))

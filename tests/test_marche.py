@@ -53,6 +53,23 @@ class Sources(unittest.TestCase):
             self.assertEqual(marche.leboncoin("motorola edge 50 neo", 100, 999), {"nb": 2, "min": 199.0, "max": 270.0, "lien_min": "l1"})
 
 
+class Payant(unittest.TestCase):
+    def test_recherches_payantes_seulement_si_le_produit_se_vend(self):
+        appels = []
+        def source(nom):
+            return lambda *a: appels.append(nom) or {"nb": 0, "prix_min": None, "neuf": {"nb": 0}, "occasion": {"nb": 0}}
+        peu, bien = fiche(asin="PEU", ventes_estimees_30j=2), fiche(asin="BIEN", ventes_estimees_30j=35)
+        with patch.object(marche, "leboncoin", source("leboncoin")), patch.object(marche, "vinted", source("vinted")), \
+                patch.object(marche, "idealo", source("idealo")), patch.object(marche, "ebay_fr", source("ebay")), \
+                patch.object(marche, "achatmoinscher", source("achatmoinscher")):
+            marche.etudier([peu, bien])
+        self.assertEqual(sorted(appels), ["achatmoinscher", "achatmoinscher", "ebay", "ebay", "idealo", "leboncoin", "vinted"])
+        self.assertTrue(peu["marche"]["gratuit_seul"])
+        self.assertIn("pas vérifiés, le produit se vend trop peu", ecart.message(peu))
+        self.assertIn("Leboncoin : aucune annonce", ecart.message(bien))
+        self.assertTrue(marche.se_vend(fiche(achetes_mois_amazon=50)))
+
+
 class Dates(unittest.TestCase):
     def test_anciennete_des_annonces(self):
         from datetime import timedelta

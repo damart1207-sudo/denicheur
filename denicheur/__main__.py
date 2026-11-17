@@ -358,13 +358,28 @@ def passage(nom, test=False):
             c["feu"], c["concurrence_amazon"] = "rouge", "inconnue"
             c["marge_verifiee"], c["passe_verif"] = c.get("marge_verifiee", 0), False
             continue
-        plafonds = [c["prix_revente_estime"]]
-        if pmin:
-            plafonds.append(round(pmin * 0.9, 2))  # un acheteur ne paie pas plus que 90 % du neuf le moins cher
-        if v:
-            plafonds.append(v["prix_revente_prudent"])
-        if plaf_ebay is not None:
-            plafonds.append(plaf_ebay)
+        # Exception « le moins cher du marché » (règle de David, 16/11/2026, skills/audit.md) : neuf, coût ≥ 15 % sous le
+        # neuf le moins cher des AUTRES marchands -> revente 3 % sous ce prix, le plafond de l'occasion ne s'applique pas.
+        ref = pmin
+        kp = c.get("keepa") or {}
+        if ref and str((c.get("prix_plancher") or {}).get("ou", "")).startswith("keepa") and kp.get("moyenne_90j"):
+            ref = min(ref, kp["moyenne_90j"])  # prix Amazon anormalement haut (vendeur tiers) -> moyenne 90 j
+        neuf_autres = ((c.get("ebay") or {}).get("neuf") or {}).get("p25") if isinstance((c.get("ebay") or {}).get("neuf"), dict) else None
+        if ref and neuf_autres:
+            ref = min(ref, neuf_autres)
+        moins_cher_marche = bool(ref and c["cout_achat"] <= ref * 0.85 and not c.get("erreur_prix")
+                                 and not (v and v.get("deja_moins_cher_ailleurs")))
+        c["moins_cher_du_marche"] = moins_cher_marche
+        if moins_cher_marche:
+            plafonds = [round(ref * 0.97, 2)]
+        else:
+            plafonds = [c["prix_revente_estime"]]
+            if pmin:
+                plafonds.append(round(pmin * 0.9, 2))  # un acheteur ne paie pas plus que 90 % du neuf le moins cher
+            if v:
+                plafonds.append(v["prix_revente_prudent"])
+            if plaf_ebay is not None:
+                plafonds.append(plaf_ebay)
         c["prix_revente_prudent"] = min(plafonds)
         cout = c["cout_achat"]
         c["marge_verifiee"] = equipe.marge_nette(c["prix_revente_prudent"], c["plateforme_revente"], cout, regles)
@@ -385,9 +400,11 @@ def passage(nom, test=False):
         demande_ok = bool((c.get("demande_google") or {}).get("volume_mensuel")) or bool(c.get("bingo")) or (c.get("ventes_estimees_30j") or 0) >= 20
         sans_nom = str(c.get("source", "")).startswith("keepa") and ((c.get("vendeurs_amazon") or 0) <= 1 and not demande_ok)
         import_risque = bool(re.search(r"aliexpress|temu|shein|banggood|wish", (c.get("marchand") or "") + " " + (c.get("lien") or ""), re.I))
-        if c["passe_verif"] and pmin_ok and c["marge_verifiee"] >= 20 and concurrence in ("faible", "inconnue") and not sans_nom and not import_risque:
+        # règle du 16/11 : le nombre de vendeurs ne fait plus rejeter quand on est ≥ 15 % sous le moins cher de tous
+        assez_moins_cher = assez_moins_cher or moins_cher_marche
+        if c["passe_verif"] and pmin_ok and c["marge_verifiee"] >= 20 and (concurrence in ("faible", "inconnue") or assez_moins_cher) and not sans_nom and not import_risque:
             feu = "vert"
-        elif c["passe_verif"] and (concurrence != "forte") and (concurrence != "moyenne" or assez_moins_cher):
+        elif c["passe_verif"] and (assez_moins_cher or concurrence in ("faible", "inconnue")):
             feu = "orange"
         elif c["marge_verifiee"] >= s_["marge_nette_min"] and not pmin_ok:
             feu = "orange"  # marge probable mais prix neuf de référence non prouvé : à vérifier par l'audit

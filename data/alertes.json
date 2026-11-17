@@ -100443,7 +100443,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T06:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -100737,6 +100737,18 @@
    "manque": [],
    "feu": "rouge",
    "raison": "bénéfice sous 10 €"
+  },
+  "verifie_le": "2026-11-17T07:10+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : prix payé 699 € chez RED by SFR, réservé aux clients RED, et 479,20 € seulement après 2 remboursements différés (ODR 100 € + 100 €). Comparé au prix neuf le plus bas relevé en France (519 €), l'économie n'est que ~8 % (< 15 %), avec risque ODR. Revente : perte (coût réel 699 € avant remboursements).",
+   "prix_neuf_min_idealo": 519.0,
+   "source_prix_ref": "achatmoinscher.com (comparateur FR)",
+   "economie_pct": 8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
   }
  }
 ]

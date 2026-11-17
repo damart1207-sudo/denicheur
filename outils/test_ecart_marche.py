@@ -1,6 +1,6 @@
 """Test réel du marché des écarts vendeurs (denicheur/marche.py) sur les VRAIES affaires du jour (data/ecarts.json).
 Pour les NB meilleures : Leboncoin, Vinted, eBay, comparateurs, volume de recherche, puis l'alerte complète sur Telegram.
-Coût : eBay et achatmoinscher gratuits ; Apify 0,045 $ réservés par affaire (≈ 0,02 $ réels), plafond « E » ;
+Coût : eBay et achatmoinscher gratuits ; Apify 0,05 $ réservés par affaire (≈ 0,03 $ réels), plafond « E » ;
 volume : cache, sinon un appel DataForSEO Labs (≈ 0,013 $) seulement s'il reste du plafond du jour. Aucun jeton Keepa.
 outil = test_ecart_marche"""
 import json, os, sys, time
@@ -19,7 +19,7 @@ for f in lot:
     v = vol.get(f["nom_court"])
     f["volume"], f["volume_mot"] = (v["v"], v["mot"]) if v else (None, None)
     print(json.dumps({k: f.get(k) for k in ("titre", "nom_court", "ean", "premier", "second", "volume", "volume_mot", "marche")}, ensure_ascii=False, indent=1))
-    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), complétée : marché et comparateurs\n" + ecart.message(f)
+    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), version vérifiée : Leboncoin, Vinted, eBay, comparateurs\n" + ecart.message(f)
     print(texte)
     print("Telegram :", telegram.envoyer(texte))
 print(f"DataForSEO dépensé après : {dataforseo._budget()['depense_usd']} $")

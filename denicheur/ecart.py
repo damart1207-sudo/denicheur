@@ -28,7 +28,7 @@ ECART_MIN = 50            # euros entre le 1er et le 2e vendeur
 PRIX_MIN = 40
 BAISSE_MIN = 45           # euros sous la moyenne 90 jours pour mériter les 14 jetons
 COHERENCE = (0.70, 1.35)  # le 2e vendeur doit être entre 70 % et 135 % de la moyenne 90 jours
-PRODUITS_TOUR, COUT_PRODUIT, ALERTES_TOUR = 8, 14, 5
+PRODUITS_TOUR, COUT_PRODUIT, ALERTES_TOUR = 8, 14, 3   # 3 alertes par passage (toutes les 10 min) : l'étude tient dans le délai
 ATTENTE_MAX_MIN = 90      # une affaire retenue mais pas encore alertée au bout de 90 minutes est abandonnée (prix périmé)
 NET_VISE = 30             # marge nette que David vise
 

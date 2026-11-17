@@ -47,9 +47,10 @@ class Sources(unittest.TestCase):
             self.assertEqual(marche.leboncoin("motorola edge 50 neo", 1, 999), {"nb": 0})
 
     def test_leboncoin_prix(self):
-        items = [{"title": "Motorola Edge 50 Neo 256", "pricing": {"price": 280}, "url": "l1"}]
+        items = [{"title": "Motorola Edge 50 néo", "price": 199, "url": "l1"}, {"title": "Motorola edge 50 neo 512", "price": 270, "url": "l2"},
+                 {"title": "Motorola Edge 30 Ultra 256Go", "price": 500, "url": "l3"}, {"title": "Coque motorola edge 50 neo", "price": 5, "url": "l4"}]
         with patch.object(apify, "_lancer", return_value=items):
-            self.assertEqual(marche.leboncoin("motorola edge 50 neo", 100, 999), {"nb": 1, "min": 280.0, "max": 280.0, "lien_min": "l1"})
+            self.assertEqual(marche.leboncoin("motorola edge 50 neo", 100, 999), {"nb": 2, "min": 199.0, "max": 270.0, "lien_min": "l1"})
 
 
 class Texte(unittest.TestCase):

@@ -99432,7 +99432,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T01:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -99624,7 +99624,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T01:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T01:58+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : offre sur joybuy.de (site allemand), livraison en France non confirmée (page marchand bloquée par captcha, Joybuy a un site français séparé) et page de l'offre non consultable. Revente : marge 8,88 € soit 12 %, sous les seuils.",
+   "prix_neuf_min_idealo": 113.99,
+   "source_prix_ref": "achatmoinscher.com (relevé du dénicheur)",
+   "economie_pct": 39,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 8.88,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3a8b72de3f",
@@ -99670,7 +99682,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T01:41+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -99871,6 +99883,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 01:45 UTC : offre active, 89.95 affiché, marchand 15232_1 ; amazon.com refuse les robots (HTTP 503) ; fiche Amazon connue par Keepa ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T01:58+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : offre Amazon Allemagne dont la page n'a pas pu être ouverte (lien amazon.com en erreur 503), prix possiblement limité à une couleur, frais de livraison vers la France non vérifiés. Prix France vérifié : 121,95 € (Sunday Grey) / 129,94 € livré (noir) sur achatmoinscher. Revente : marge négative.",
+   "prix_neuf_min_idealo": 121.95,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -6.06,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

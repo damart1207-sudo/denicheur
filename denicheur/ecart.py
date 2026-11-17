@@ -13,7 +13,7 @@ Depuis le 17/11/2026 (demande de David), l'alerte dit aussi si le produit se ven
 la moisson) étudie le marché puis envoie l'alerte Telegram, une seule fois par jour et par prix.
 
 Garde-fous : PRODUITS_TOUR produits par tour (14 jetons Keepa chacun au plus, compris dans l'abonnement), réserve et
-plafonds du moissonneur respectés ; marché : eBay et achatmoinscher gratuits, robots Apify sous le plafond « E » (0,40 $/jour) ;
+plafonds du moissonneur respectés ; marché : eBay et achatmoinscher gratuits, robots Apify sous le plafond « E » (1 $/jour) ;
 volume : cache d'abord, sinon un appel groupé DataForSEO Labs (≈ 0,013 $) dans le plafond du jour ; aucun achat.
 -> data/ecarts.json
 """
@@ -110,6 +110,10 @@ def analyser(p, a, regles):
     ref = a.get("moyenne_90j")
     if not ref or not (COHERENCE[0] * ref <= second["total"] <= COHERENCE[1] * ref):
         f["raison"] = f"prix du 2e vendeur incohérent avec la moyenne 90 jours ({ref} €)"
+        return f
+    from .marche import VENTES_MIN, se_vend
+    if not se_vend(f):   # décision de David, 17/11/2026 à 9 h 41 : seulement les affaires sur des produits qui se vendent
+        f["raison"] = f"se vend trop peu (moins de {VENTES_MIN} ventes sur 30 jours sur Amazon)"
         return f
     f["mot_cle"] = f["nom_court"] = mot_cle(f["titre"], f["marque"])
     f["ean"] = next((str(c) for c in (p.get("eanList") or []) if c), None)

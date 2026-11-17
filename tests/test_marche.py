@@ -70,6 +70,22 @@ class Payant(unittest.TestCase):
         self.assertTrue(marche.se_vend(fiche(achetes_mois_amazon=50)))
 
 
+class Retenue(unittest.TestCase):
+    def test_seules_les_affaires_qui_se_vendent_sont_retenues(self):
+        regles = ecart._lire(os.path.join(ecart.RACINE, "config/regles.json"), {})
+        offre = lambda prix: {"condition": 1, "offerCSV": [0, prix, 0]}
+        a = {"asin": "B0X", "titre": "Sennheiser RS 195-U Casque sans Fil", "lien": "l", "moyenne_90j": 300.0, "rang": 3186}
+        def produit(ventes):
+            return {"title": a["titre"], "brand": "Sennheiser", "offers": [offre(21999), offre(31000)], "eanList": ["4044155092011"],
+                    "stats": {"current": [0, 0, 0, 3186], "salesRankDrops30": ventes}}
+        peu, bien = ecart.analyser(produit(2), a, regles), ecart.analyser(produit(35), a, regles)
+        self.assertFalse(peu["retenu"])
+        self.assertIn("se vend trop peu", peu["raison"])
+        self.assertTrue(bien["retenu"])
+        self.assertEqual((bien["ean"], bien["nom_court"]), ("4044155092011", "sennheiser rs 195-u casque"))
+        self.assertGreaterEqual(apify.PLAFOND_JOUR_USD["E"], 1.0)
+
+
 class Dates(unittest.TestCase):
     def test_anciennete_des_annonces(self):
         from datetime import timedelta

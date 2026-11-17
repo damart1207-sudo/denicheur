@@ -6,7 +6,7 @@ Pour chaque produit trouvé avec un gros écart, avant l'alerte Telegram :
  3. le VOLUME de recherche Google (voir `volumes`).
 
 Coûts : eBay et achatmoinscher gratuits. Vinted, Leboncoin et idealo passent par les robots Apify déjà payés
-(0,05 $ réservés par affaire, ≈ 0,03 $ au réel), sous un plafond à part « E » de 0,40 $ par jour (denicheur/apify.py) :
+(0,05 $ réservés par affaire, ≈ 0,03 $ au réel), sous un plafond à part « E » de 1 $ par jour (denicheur/apify.py) :
 la veille garde tout son plafond « A ». Les recherches partent en parallèle (une affaire est étudiée en ≈ 1 minute).
 Une source qui ne répond pas est notée « non consultée » : jamais un chiffre inventé, jamais « aucune annonce » à tort.
 """

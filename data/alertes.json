@@ -99379,7 +99379,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-16T23:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -99625,6 +99625,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-17T00:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute : offre Amazon relayée par Preisjaeger (Autriche) impossible à confirmer — le lien marchand mène à une autre fiche (amazon.com, autre titre), prix lu 83,01 € et non 80,05 €, livraison en France non prouvée. Prix neuf FR peu fiable : 124,99 € chez PcComponentes (rupture), 138,99 € sur achatmoinscher. Revente : marge 17,87 € (21 %), sous les seuils.",
+   "prix_neuf_min_idealo": 124.99,
+   "source_prix_ref": "pccomponentes.fr (rupture de stock) / achatmoinscher 138,99 €",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

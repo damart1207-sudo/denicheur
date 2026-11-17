@@ -103945,7 +103945,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T14:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -104218,6 +104218,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-17T15:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Bon produit (JBL Live 770NC blanc) et prix intéressant (67,44 € livré estimé contre 102,92 € au plus bas en France), mais la page Amazon.pl de l'offre n'a pas pu être ouverte : prix actuel et frais de livraison vers la France non confirmés. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 102.92,
+   "source_prix_ref": "kulturegeek.fr (Darty Marketplace 102,92 €, Amazon.fr 129,99 €) le 17/11",
+   "economie_pct": 34,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  },
  {
@@ -104264,7 +104276,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T15:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -104469,7 +104481,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T15:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T15:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Lumie Vitamin L chez Amazon.nl : 84,74 € livré estimé contre 99,99 € en France (Boulanger, Amazon.fr) = seulement -15 %, juste au seuil, avec des frais de port vers la France non confirmés (page de l'offre non lue). Amazon.fr est déjà descendu à 63,44 € ces 90 derniers jours. Revente : marge négative.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "auchan.fr (Boulanger 99,99 €) + Keepa Amazon.fr le 17/11",
+   "economie_pct": 15,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "0fcb8873f1",
@@ -104522,7 +104546,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T15:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -104732,7 +104756,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T15:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T15:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Version numérique sur l'eShop Nintendo britannique : un compte Nintendo français ne peut pas l'acheter, et le prix de référence français est celui de la cartouche (pas le même produit). Revente impossible (achat numérique).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source comparable (version numérique UK)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "b720590535",
@@ -104765,7 +104801,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T15:35+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -104995,6 +105031,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 15:40 UTC : offre active, 28.99 affiché, code COLORS, marchand 3_2 ; fiche logitechg.com lue : 32.99 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T15:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Offre de la boutique Logitech G allemande, qui ne livre que l'Allemagne : pas achetable livrée en France. De plus le coût (32,99 € livré estimé) n'est que 16 % sous Amazon.fr (39,39 €), qui est déjà descendu à 29,99 € ces 90 jours. Revente : marge négative.",
+   "prix_neuf_min_idealo": 39.39,
+   "source_prix_ref": "Keepa / Amazon.fr le 17/11",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

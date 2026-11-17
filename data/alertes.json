@@ -939,18 +939,525 @@
       "premiere_lecture": "2026-11-17T19:08+00:00",
       "expiree_vue_le": "2026-11-17T19:34+00:00"
     },
-    "denicheur": "A",
-    "verifie_le": "2026-11-17T19:50+00:00",
-    "verdict": {
-      "commentaire": "Contenance (30/50/100 ml) non précisée : produit exact non confirmé. Référence Amazon.fr 44,70 € (1 seul vendeur) non fiable : les parfumeries en ligne (Notino, Sephora, Nocibé) n'ont pas pu être lues. Revente : marge négative (-1,58 €) sur tous les canaux.",
-      "prix_neuf_min_idealo": 44.7,
-      "source_prix_ref": "keepa/amazon.fr (non confirmé)",
-      "economie_pct": null,
-      "prix_revente_verifie": null,
-      "canal": null,
-      "marge_nette_verifiee": null,
-      "duree_offre": null,
-      "demande_confirmee": false
+    "rentabilite": 0.49
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 39.59,
+    "marge_nette": 10.29,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.59,
+     "cout_achat": 20.99,
+     "frais_canal": 0.0,
+     "prelevements": 5.31,
+     "provision": 3.0,
+     "marge_nette": 10.29,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.49
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 39.59,
+    "marge_nette": 10.29,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.59,
+     "cout_achat": 20.99,
+     "frais_canal": 0.0,
+     "prelevements": 5.31,
+     "provision": 3.0,
+     "marge_nette": 10.29,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.49
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 44.99,
+    "marge_nette": 4.92,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 44.99,
+     "cout_achat": 20.99,
+     "frais_canal": 10.05,
+     "prelevements": 6.03,
+     "provision": 3.0,
+     "marge_nette": 4.92,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.234
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 44.99,
+    "marge_nette": 3.82,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 44.99,
+     "cout_achat": 20.99,
+     "frais_canal": 11.15,
+     "prelevements": 6.03,
+     "provision": 3.0,
+     "marge_nette": 3.82,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.182
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 44.99,
+    "marge_nette": 3.37,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 44.99,
+     "cout_achat": 20.99,
+     "frais_canal": 11.6,
+     "prelevements": 6.03,
+     "provision": 3.0,
+     "marge_nette": 3.37,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.161
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 44.99,
+    "marge_nette": 2.77,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 44.99,
+     "cout_achat": 20.99,
+     "frais_canal": 12.2,
+     "prelevements": 6.03,
+     "provision": 3.0,
+     "marge_nette": 2.77,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.132
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 44.99,
+    "marge_nette": 1.23,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 44.99,
+     "cout_achat": 20.99,
+     "frais_canal": 13.74,
+     "prelevements": 6.03,
+     "provision": 3.0,
+     "marge_nette": 1.23,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.059
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-17T19:34+00:00",
+   "lien_deal": "https://www.amazon.es/dp/B0DPJSKRX4",
+   "type_page": "marchand direct",
+   "lien_marchand": "https://www.amazon.es/dp/B0DPJSKRX4",
+   "marchand": {
+    "lien": "https://www.amazon.es/dp/B0DPJSKRX4",
+    "code": 200,
+    "lu": true,
+    "domaine": "amazon.es",
+    "titre": "CYEER 40 Pieces Vinyl Flooring Self Adhesive Black and White Marble 30 x 30 cm PVC Tiles (3.6 m²), Waterproof Checkerboard Look Floor Covering for Kitchen and B",
+    "prix": null,
+    "prix_vus": [
+     9.61,
+     9.0,
+     61.0,
+     9.61,
+     9.0,
+     61.0
+    ],
+    "disponibilite": "en stock (panier)",
+    "extrait": "CYEER 40 Pieces Vinyl Flooring Self Adhesive Black and White Marble 30 x 30 cm PVC Tiles (3.6 m²), Waterproof Checkerboard Look Floor Covering for Kitchen and Bathroom : Amazon.es: DIY & Tools Skip to Main content About this item About this item About this item Buying options Compare with similar items Videos Reviews Keyboard shortcuts Search ALT + / Basket shift + ALT + C Home shift + ALT + H Orders shift + ALT + O Add to basket shift + ALT + K Product summary shift + ALT + D Show/Hide shortcuts shift + ALT + Z To move between items, use your keyboard's up or down arrows. .es Deliver to United States Industrial & Scientific Select the department you want to search in All Departments Alexa S"
+   },
+   "livraison_france": "oui",
+   "resume": "fiche amazon.es lue, en stock (panier) ; livraison France : oui",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-17T19:08+00:00"
+  },
+  "denicheur": "A",
+  "ebay": {
+   "requete": "CYEER 40 Dalles PVC Autocollantes de Sol 30x30 cm - Revêtement Vinyle Effet Marbre Noir et [Amazon ES]",
+   "neuf": null,
+   "occasion": null,
+   "exemples": [],
+   "neuf_par_pays": {
+    "FR": null,
+    "DE": null,
+    "IT": null,
+    "ES": null
+   },
+   "meilleur_pays": null
+  },
+  "controle_prix": {
+   "statut": "inconnu",
+   "prix_page": null,
+   "lien": "https://www.amazon.es/dp/B0DPJSKRX4"
+  },
+  "meme_produit": {
+   "meme": false,
+   "raison": "couleurs différentes",
+   "qte_a": null,
+   "qte_b": null,
+   "reference": "CYEER 40 Dalles PVC Autocollantes de Sol 30x30 cm - Revêtement Vinyle Effet Marbre Noir et Blanc (3,6 m²) - Sol Adhésif Étanche et Antidérapant pour Cuisine, Salle de Bain et Salon - Pose DIY Facile"
+  }
+ },
+ {
+  "id": "keepa-B0G3511Y2L-arbES",
+  "titre": "511 Slim Chillwave [Amazon ES]",
+  "prix": 46.04,
+  "devise": "EUR",
+  "marchand": "Amazon.es",
+  "lien": "https://www.amazon.es/dp/B0G3511Y2L",
+  "pays": "ES",
+  "source": "keepa-arbitrage",
+  "temperature": 470,
+  "categorie": "Arbitrage Europe",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "511 Slim Chillwave [Amazon ES]",
+  "cout_achat": 51.04,
+  "prix_plancher": {
+   "prix_min": 99.93,
+   "ou": "keepa/amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0G3511Y2L"
+  },
+  "ecart_vs_neuf_min": 0.461,
+  "economie_pct": 54,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-17T19:16+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": null,
+  "revente_reelle": {},
+  "keepa": {
+   "nb_vendeurs_neuf": 3,
+   "marque": "Levi's",
+   "asin": "B0G3511Y2L",
+   "titre": "511 Slim Chillwave",
+   "ean": "5401235232993",
+   "pays": "FR",
+   "prix_neuf": 99.93,
+   "prix_amazon": 101.93,
+   "prix_tiers": 99.93,
+   "moyenne_90j": 68.05,
+   "plus_bas_90j": 45.8,
+   "occasion": null,
+   "rang_ventes": 11,
+   "chutes_rang_30j": 16,
+   "chutes_rang_90j": 38,
+   "ventes_estimees_30j": 16,
+   "remise_sincere": false,
+   "lien": "https://www.amazon.fr/dp/B0G3511Y2L",
+   "jetons_restants": 367
+  },
+  "asin": "B0G3511Y2L",
+  "ean": "5401235232993",
+  "vendeurs_amazon": 3,
+  "ventes_estimees_30j": 16,
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 87.94,
+    "marge_nette": 22.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.94,
+     "cout_achat": 51.04,
+     "frais_canal": 0.0,
+     "prelevements": 11.78,
+     "provision": 3.0,
+     "marge_nette": 22.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.433
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 87.94,
+    "marge_nette": 22.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.94,
+     "cout_achat": 51.04,
+     "frais_canal": 0.0,
+     "prelevements": 11.78,
+     "provision": 3.0,
+     "marge_nette": 22.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.433
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 87.94,
+    "marge_nette": 22.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.94,
+     "cout_achat": 51.04,
+     "frais_canal": 0.0,
+     "prelevements": 11.78,
+     "provision": 3.0,
+     "marge_nette": 22.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.433
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 99.93,
+    "marge_nette": 17.51,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.93,
+     "cout_achat": 51.04,
+     "frais_canal": 14.99,
+     "prelevements": 13.39,
+     "provision": 3.0,
+     "marge_nette": 17.51,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.343
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 99.93,
+    "marge_nette": 17.5,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.93,
+     "cout_achat": 51.04,
+     "frais_canal": 15.0,
+     "prelevements": 13.39,
+     "provision": 3.0,
+     "marge_nette": 17.5,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.343
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 99.93,
+    "marge_nette": 16.5,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.93,
+     "cout_achat": 51.04,
+     "frais_canal": 15.99,
+     "prelevements": 13.39,
+     "provision": 3.0,
+     "marge_nette": 16.5,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.323
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 99.93,
+    "marge_nette": 13.16,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.93,
+     "cout_achat": 51.04,
+     "frais_canal": 19.34,
+     "prelevements": 13.39,
+     "provision": 3.0,
+     "marge_nette": 13.16,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.258
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 99.93,
+    "marge_nette": 10.52,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.93,
+     "cout_achat": 51.04,
+     "frais_canal": 21.98,
+     "prelevements": 13.39,
+     "provision": 3.0,
+     "marge_nette": 10.52,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.206
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-17T19:43+00:00",
+   "lien_deal": "https://www.amazon.es/dp/B0G3511Y2L",
+   "type_page": "marchand direct",
+   "lien_marchand": "https://www.amazon.es/dp/B0G3511Y2L",
+   "marchand": {
+    "lien": "https://www.amazon.es/dp/B0G3511Y2L",
+    "code": 200,
+    "lu": true,
+    "domaine": "amazon.es",
+    "titre": "Levi'S 511 Slim - Men's Jeans, Chillwave : Amazon.es: Fashion",
+    "prix": null,
+    "prix_vus": [
+     86.61,
+     86.0,
+     80.56,
+     6.05,
+     86.61,
+     86.61
+    ],
+    "disponibilite": "en stock (panier)",
+    "extrait": "Levi'S 511 Slim - Men's Jeans, Chillwave : Amazon.es: Fashion Skip to Main content About this item About this item About this item Buying options Compare with similar items Videos Reviews Keyboard shortcuts Search ALT + / Basket shift + ALT + C Home shift + ALT + H Orders shift + ALT + O Add to basket shift + ALT + K Product summary shift + ALT + D Show/Hide shortcuts shift + ALT + Z To move between items, use your keyboard's up or down arrows. .es Deliver to United States All Select the department you want to search in All Departments Alexa Skills Amazon Devices Amazon Global Store Amazon Haul Amazon Resale Apps & Games Audible Audiobooks Automotive Baby Beauty Books CDs & Vinyl Computers D"
+   },
+   "livraison_france": "oui",
+   "resume": "fiche amazon.es lue, en stock (panier) ; livraison France : oui",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-17T19:18+00:00"
+  },
+  "denicheur": "A",
+  "ebay": {
+   "requete": "511 Slim Chillwave [Amazon ES]",
+   "neuf": null,
+   "occasion": null,
+   "exemples": [],
+   "neuf_par_pays": {
+    "FR": null,
+    "DE": null,
+    "IT": null,
+    "ES": null
+   },
+   "meilleur_pays": null
+  },
+  "controle_prix": {
+   "statut": "inconnu",
+   "prix_page": null,
+   "lien": "https://www.amazon.es/dp/B0G3511Y2L"
+  },
+  "meme_produit": {
+   "meme": null,
+   "raison": "non confirmé",
+   "qte_a": null,
+   "qte_b": null,
+   "reference": "511 Slim Chillwave"
+  },
+  "fiche": {
+   "achat": 51.04,
+   "neuf_min": 99.93,
+   "neuf_ou": "keepa/amazon.fr",
+   "neuf_lien": "https://www.amazon.fr/dp/B0G3511Y2L",
+   "ecart_pct": 49,
+   "vendeurs": 3,
+   "volume": null,
+   "occ_bas": null,
+   "occ_haut": null,
+   "ventes_30j": 16,
+   "vendre_sur": "leboncoin",
+   "prix_vente": 87.94,
+   "benefice": 22.12,
+   "achat_max": 53.16,
+   "manque": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "a_completer": [
+    "volume de recherche",
+    "prix d'occasion"
+   ],
+   "calcul_marge": {
+    "version": 2,
+    "prix_vente": 87.94,
+    "cout_achat": 51.04,
+    "frais_canal": 0.0,
+    "prelevements": 11.78,
+    "provision": 3.0,
+    "marge_nette": 22.12,
+    "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+   },
+   "feu": "orange",
+   "proba_vente_7j": null,
+   "indicateurs_demande": "faibles",
+   "proba_detail": [
+    "Amazon 16/mois"
+   ]
+  }
+ },
+ {
+  "id": "c581f297ac",
+  "titre": "EA Sports FC27 para Switch",
+  "prix": 29.9,
+  "devise": "EUR",
+  "marchand": "Carrefour",
+  "lien": "https://www.chollometro.com/ofertas/ea-sports-fc27-para-switch-2073543",
+  "pays": "ES",
+  "source": "chollometro-hot",
+  "temperature": 188,
+  "categorie": "Gaming",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "EA Sports FC 27 Nintendo Switch",
+  "cout_achat": 34.9,
+  "prix_plancher": {
+   "nom": "EA Sports FC 27 Nintendo Switch",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 1,
+     "meilleur": {
+      "titre": "ELECTRONICS ARTS EA SPORTS FC 27 - Jeu Nintendo Switch 1",
+      "prix": 39.98,
+      "nb_boutiques": 3,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/ea-sports-fc-27-jeu-nintendo-switch-1.html"
+     },
+     "autres": []
     }
   },
   {
@@ -1779,18 +2286,363 @@
       "livraison_france": "non",
       "resume": "page du bon plan lue à 19:33 UTC : offre active, 29.9 affiché, marchand 173_2 ; carrefour.es refuse les robots (HTTP 403) ; livraison France : non"
     },
-    "denicheur": "A",
-    "verifie_le": "2026-11-17T19:50+00:00",
-    "verdict": {
-      "commentaire": "Carrefour.es ne livre pas en France. De plus 34,90 € livré contre 39,98 € en France = 13 % seulement (< 15 %). Revente négative.",
-      "prix_neuf_min_idealo": 39.98,
-      "source_prix_ref": "achatmoinscher",
-      "economie_pct": 13,
-      "prix_revente_verifie": null,
-      "canal": null,
-      "marge_nette_verifiee": null,
-      "duree_offre": null,
-      "demande_confirmee": false
+    "rentabilite": -0.369
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 39.98,
+    "marge_nette": -14.08,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.98,
+     "cout_achat": 34.9,
+     "frais_canal": 10.8,
+     "prelevements": 5.36,
+     "provision": 3.0,
+     "marge_nette": -14.08,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.403
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 39.98,
+    "marge_nette": -14.48,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.98,
+     "cout_achat": 34.9,
+     "frais_canal": 11.2,
+     "prelevements": 5.36,
+     "provision": 3.0,
+     "marge_nette": -14.48,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.415
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 39.98,
+    "marge_nette": -14.82,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.98,
+     "cout_achat": 34.9,
+     "frais_canal": 11.55,
+     "prelevements": 5.36,
+     "provision": 3.0,
+     "marge_nette": -14.82,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.425
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 39.98,
+    "marge_nette": -16.26,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.98,
+     "cout_achat": 34.9,
+     "frais_canal": 12.99,
+     "prelevements": 5.36,
+     "provision": 3.0,
+     "marge_nette": -16.26,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.466
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-17T19:33+00:00",
+   "lien_deal": "https://www.chollometro.com/ofertas/ea-sports-fc27-para-switch-2073543",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 29.9,
+   "prix_ailleurs_annonce": 51.36,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "173_2",
+   "description": "La comunidad de compras m\\u00e1s grande del mundo",
+   "lien_marchand": "https://www.carrefour.es/ea-sports-fc27-para-switch/VC4A-34337657/p?gad_source=7&gad_campaignid=23402849979",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.carrefour.es/ea-sports-fc27-para-switch/VC4A-34337657/p?gad_source=7&gad_campaignid=23402849979",
+    "code": 403,
+    "lu": false,
+    "domaine": "carrefour.es",
+    "erreur": "HTTP 403",
+    "bloque": true
+   },
+   "livraison_france": "non",
+   "resume": "page du bon plan lue à 19:33 UTC : offre active, 29.9 affiché, marchand 173_2 ; carrefour.es refuse les robots (HTTP 403) ; livraison France : non"
+  },
+  "denicheur": "A"
+ },
+ {
+  "id": "8b0b1725df",
+  "titre": "Baten Kaitos I & II HD Remaster - Nintendo Switch Game",
+  "prix": 13.49,
+  "devise": "GBP",
+  "marchand": "Nintendo eShop",
+  "lien": "https://www.hotukdeals.com/deals/baten-kaitos-i-ii-hd-remaster-nintendo-switch-5036577",
+  "pays": "UK",
+  "source": "hotukdeals-new",
+  "temperature": null,
+  "categorie": "Gaming",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "Baten Kaitos I & II HD Remaster Nintendo Switch",
+  "cout_achat": 26.62,
+  "prix_plancher": {
+   "nom": "Baten Kaitos I & II HD Remaster Nintendo Switch",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 1,
+     "meilleur": {
+      "titre": "BANDAI NAMCO Baten Kaitos I & II HD Remaster Nintendo Switch",
+      "prix": 45.24,
+      "nb_boutiques": 6,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/baten-kaitos-i-ii-hd-remaster-nintendo-switch.html"
+     },
+     "autres": []
     }
-  }
+   },
+   "prix_min": 45.24,
+   "ou": "achatmoinscher",
+   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/baten-kaitos-i-ii-hd-remaster-nintendo-switch.html"
+  },
+  "ecart_vs_neuf_min": 0.298,
+  "economie_pct": 70,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-17T19:40+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": true,
+  "revente_reelle": {},
+  "keepa": {
+   "nb_vendeurs_neuf": null,
+   "marque": "Bandai Namco",
+   "asin": "B0BVG3M8ST",
+   "titre": "Baten Kaitos I & II HD Remaster Nintendo Switch",
+   "ean": "3391892024951",
+   "pays": "FR",
+   "prix_neuf": null,
+   "prix_amazon": null,
+   "prix_tiers": null,
+   "moyenne_90j": 46.76,
+   "plus_bas_90j": 34.99,
+   "occasion": null,
+   "rang_ventes": 45432,
+   "chutes_rang_30j": 0,
+   "chutes_rang_90j": 0,
+   "ventes_estimees_30j": 0,
+   "remise_sincere": null,
+   "lien": "https://www.amazon.fr/dp/B0BVG3M8ST",
+   "jetons_restants": 312
+  },
+  "asin": "B0BVG3M8ST",
+  "ean": "3391892024951",
+  "vendeurs_amazon": null,
+  "ventes_estimees_30j": 0,
+  "demande_forte": {
+   "recherche": "switch",
+   "popularite": 348,
+   "hausse_pct": 68,
+   "nouveau": false,
+   "pays": "FR"
+  },
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 39.81,
+    "marge_nette": 4.86,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.81,
+     "cout_achat": 26.62,
+     "frais_canal": 0.0,
+     "prelevements": 5.33,
+     "provision": 3.0,
+     "marge_nette": 4.86,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.183
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 39.81,
+    "marge_nette": 4.86,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.81,
+     "cout_achat": 26.62,
+     "frais_canal": 0.0,
+     "prelevements": 5.33,
+     "provision": 3.0,
+     "marge_nette": 4.86,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.183
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 39.81,
+    "marge_nette": 4.86,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 39.81,
+     "cout_achat": 26.62,
+     "frais_canal": 0.0,
+     "prelevements": 5.33,
+     "provision": 3.0,
+     "marge_nette": 4.86,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.183
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 45.24,
+    "marge_nette": -0.51,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.24,
+     "cout_achat": 26.62,
+     "frais_canal": 10.07,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": -0.51,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.019
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 45.24,
+    "marge_nette": -1.61,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.24,
+     "cout_achat": 26.62,
+     "frais_canal": 11.17,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": -1.61,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.06
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 45.24,
+    "marge_nette": -2.06,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.24,
+     "cout_achat": 26.62,
+     "frais_canal": 11.62,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": -2.06,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.077
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 45.24,
+    "marge_nette": -2.67,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.24,
+     "cout_achat": 26.62,
+     "frais_canal": 12.23,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": -2.67,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.1
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 45.24,
+    "marge_nette": -4.22,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.24,
+     "cout_achat": 26.62,
+     "frais_canal": 13.78,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": -4.22,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.159
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-17T19:43+00:00",
+   "lien_deal": "https://www.hotukdeals.com/deals/baten-kaitos-i-ii-hd-remaster-nintendo-switch-5036577",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 12.49,
+   "prix_ailleurs_annonce": null,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "5_4",
+   "description": "The world\\u2019s largest shopping community with Europe\\u2019s leading shopping rewards company.",
+   "lien_marchand": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Baten-Kaitos-I-II-HD-Remaster-2337916.html",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Baten-Kaitos-I-II-HD-Remaster-2337916.html",
+    "code": 200,
+    "lu": true,
+    "domaine": "nintendo.com",
+    "titre": "Baten Kaitos I & II HD Remaster | Nintendo Switch games | Games | Nintendo UK",
+    "disponibilite": "en stock (panier)",
+    "extrait": "Baten Kaitos I & II HD Remaster | Nintendo Switch games | Games | Nintendo UK Overview Orders Address book Nintendo Account details {{pageTitle}} , {{gameSystem}} Starting from: {{regularPrice}} {{lowestPrice}} Search Wish List Sign In See purchase options × Close How about... All Nintendo Switch 2 games All Nintendo Switch 2 games on sale All Nintendo Switch games All Nintendo Switch games on sale All Nintendo 3DS games All Super Mario games All The Legend of Zelda games All Pokémon games × Visit us on Facebook Nintendo Nintendo Switch Nintendo 3DS Nintendo Store Super Mario The Legend of Zelda Super Smash Bros. Animal Crossing Mario Kart Splatoon Fire Emblem X @NintendoUK @NintendoStoreUK "
+   },
+   "livraison_france": "inconnue",
+   "resume": "page du bon plan lue à 19:43 UTC : offre active, 12.49 affiché, marchand 5_4 ; fiche nintendo.com lue, en stock (panier) ; livraison France : inconnue"
+  },
+  "denicheur": "A"
+ }
 ]

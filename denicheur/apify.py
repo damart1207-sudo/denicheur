@@ -7,6 +7,7 @@ import json
 import os
 import re
 import statistics
+import threading
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -20,7 +21,9 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # B (tendances) 0,15 $ ; C (chasse ciblée) 0,15 $ ; D (Vinted inter-pays) 0,10 $
 # T (affiliation TikTok Shop, outils/affiliation_tiktok.py, 2 relevés par semaine) : 1 $ les jours de relevé.
 # Un relevé = 2 classements de 100 produits (0,295 $ chacun, mesuré le 15/11) + recoupements des finalistes (≈ 0,03 $ par marque).
-PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "T": 1.00}  # 1,25 $/jour hors T ; le plafond mensuel prime
+# E (marché des écarts vendeurs, denicheur/marche.py, 17/11/2026) : Vinted + Leboncoin + idealo pour chaque affaire alertée,
+# 0,045 $ réservés par affaire (≈ 0,02 $ au réel), soit 8 affaires par jour ; à part pour ne pas prendre sur les vérifications de la veille (A).
+PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "E": 0.40, "T": 1.00}  # 1,65 $/jour hors T ; le plafond mensuel prime
 # Soirée de mise au point du 15/11/2026 uniquement (plusieurs relevés d'essai, débités au plafond avant le débit réel) :
 if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-15":
     PLAFOND_JOUR_USD["T"] = 2.00
@@ -118,21 +121,25 @@ def lancer_test(nom, acteur, entree, maxi=10):
     return _lancer("test:" + nom, acteur, 0.05, entree, maxi)
 
 
+_VERROU = threading.RLock()  # les recherches du marché partent en parallèle : budget et journal un seul à la fois
+
+
 def _lancer(robot, acteur, plafond, entree, maxi):
-    if not disponible():
-        return None
-    b = _budget()
-    categorie = CONTEXTE['denicheur']
-    try:
-        reservation = budget.reserver('apify', plafond, sum(PLAFOND_JOUR_USD.values()), BUDGET_MOIS_USD,
-            categorie=categorie, plafond_categorie=PLAFOND_JOUR_USD.get(categorie, 0.03),
-            deja_jour=sum(depense_du_jour(c) for c in PLAFOND_JOUR_USD),
-            deja_mois=max(depense_reelle() or 0, b.get('depense_estimee_usd', 0)),
-            deja_categorie=depense_du_jour(categorie))
-    except budget.Indisponible:
-        return None
-    if reservation is None:
-        return None
+    with _VERROU:
+        if not disponible():
+            return None
+        b = _budget()
+        categorie = CONTEXTE['denicheur']
+        try:
+            reservation = budget.reserver('apify', plafond, sum(PLAFOND_JOUR_USD.values()), BUDGET_MOIS_USD,
+                categorie=categorie, plafond_categorie=PLAFOND_JOUR_USD.get(categorie, 0.03),
+                deja_jour=sum(depense_du_jour(c) for c in PLAFOND_JOUR_USD),
+                deja_mois=max(depense_reelle() or 0, b.get('depense_estimee_usd', 0)),
+                deja_categorie=depense_du_jour(categorie))
+        except budget.Indisponible:
+            return None
+        if reservation is None:
+            return None
     url = (f"https://api.apify.com/v2/acts/{acteur}/run-sync-get-dataset-items?"
            + urllib.parse.urlencode({"timeout": 150, "maxItems": maxi, "maxTotalChargeUsd": plafond}))
     req = urllib.request.Request(url, data=json.dumps(entree).encode(), method="POST", headers={
@@ -147,11 +154,12 @@ def _lancer(robot, acteur, plafond, entree, maxi):
     # Le nombre de résultats n'est pas une facture. Aucun remboursement de
     # réservation à partir d'un tarif estimé ; conserver le plafond engagé.
     debit = plafond
-    if isinstance(items, list):
-        budget.rapprocher('apify', reservation, debit)
-    # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique (le plafond reste débité).
-    _noter(b, debit)
-    journal.noter(CONTEXTE["denicheur"], "apify:" + robot, _cible(entree), cout_usd=dep + unit * n, resultats=n)
+    with _VERROU:
+        if isinstance(items, list):
+            budget.rapprocher('apify', reservation, debit)
+        # Un timeout ne signifie pas que l'acteur s'est arrêté ; aucune relance automatique (le plafond reste débité).
+        _noter(_budget(), debit)   # relu : un autre appel a pu écrire pendant celui-ci
+        journal.noter(categorie, "apify:" + robot, _cible(entree), cout_usd=dep + unit * n, resultats=n)
     return items if isinstance(items, list) else None
 
 

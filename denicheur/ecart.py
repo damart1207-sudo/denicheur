@@ -7,10 +7,14 @@ constatés au test du 16/11).
 Chaque affaire est analysée : ventes (achats du mois affichés par Amazon, ventes estimées sur 30 jours, classement),
 volume de recherche Google (appel groupé DataForSEO, plafonds existants), et DEUX marges à un prix de revente
 intermédiaire sur Leboncoin : sans charges, et avec les charges de la micro-entreprise (config/regles.json).
-Alerte Telegram par affaire, une seule fois par jour et par prix.
+Depuis le 17/11/2026 (demande de David), l'alerte dit aussi si le produit se vend DÉJÀ sur Leboncoin, Vinted et eBay
+(prix de la moins chère à la plus chère), son prix le plus bas dans les comparateurs de prix, et le volume de recherche
+(denicheur/marche.py). Le tour ne fait que retenir les affaires ; `suite()` (python -m denicheur.ecart, lancé juste après
+la moisson) étudie le marché puis envoie l'alerte Telegram, une seule fois par jour et par prix.
 
 Garde-fous : PRODUITS_TOUR produits par tour (14 jetons Keepa chacun au plus, compris dans l'abonnement), réserve et
-plafonds du moissonneur respectés, au plus un appel DataForSEO groupé (0,09 $) toutes les 2 heures, aucun achat.
+plafonds du moissonneur respectés ; marché : eBay et achatmoinscher gratuits, robots Apify sous le plafond « E » (0,40 $/jour) ;
+volume : cache d'abord, sinon un appel groupé DataForSEO Labs (≈ 0,013 $) dans le plafond du jour ; aucun achat.
 -> data/ecarts.json
 """
 import json
@@ -25,6 +29,7 @@ PRIX_MIN = 40
 BAISSE_MIN = 45           # euros sous la moyenne 90 jours pour mériter les 14 jetons
 COHERENCE = (0.70, 1.35)  # le 2e vendeur doit être entre 70 % et 135 % de la moyenne 90 jours
 PRODUITS_TOUR, COUT_PRODUIT, ALERTES_TOUR = 8, 14, 5
+ATTENTE_MAX_MIN = 90      # une affaire retenue mais pas encore alertée au bout de 90 minutes est abandonnée (prix périmé)
 NET_VISE = 30             # marge nette que David vise
 
 
@@ -61,9 +66,9 @@ def offres_neuves(p):
 
 
 def mot_cle(titre, marque=None):
-    """Nom court pour le volume de recherche : marque + les premiers mots du titre (4 mots au plus)."""
-    from .chaine import requete_google
-    return " ".join(requete_google(titre, marque).lower().split()[:4])
+    """Nom court (volume de recherche, Leboncoin, Vinted, eBay) : marque + 4 premiers mots utiles du titre."""
+    from .marche import nom_court
+    return nom_court(titre, marque)
 
 
 def marges(achat, second, regles):
@@ -106,7 +111,8 @@ def analyser(p, a, regles):
     if not ref or not (COHERENCE[0] * ref <= second["total"] <= COHERENCE[1] * ref):
         f["raison"] = f"prix du 2e vendeur incohérent avec la moyenne 90 jours ({ref} €)"
         return f
-    f["mot_cle"] = mot_cle(f["titre"], f["marque"])
+    f["mot_cle"] = f["nom_court"] = mot_cle(f["titre"], f["marque"])
+    f["ean"] = next((str(c) for c in (p.get("eanList") or []) if c), None)
     f["marges"] = marges(premier["total"], second["total"], regles)
     f["retenu"] = True
     return f
@@ -132,7 +138,11 @@ def message(f):
     if ventes:
         t.append("Ventes : " + " · ".join(ventes))
     if f.get("volume") is not None:
-        t.append(f"Recherches Google : {f['volume']}/mois (« {escape(f['mot_cle'])} »)")
+        mot = escape(f.get("volume_mot") or f["mot_cle"])
+        t.append(f"📈 Recherches Google : <b>{f['volume']:,}</b>/mois (« {mot} »)".replace(",", " ") if f["volume"] > 0
+                 else f"📈 Recherches Google : trop peu recherché pour être mesuré (« {mot} »)")
+    from . import marche
+    t += marche.lignes(f)
     n = NET_VISE
     possible = m[f"{n}_net_possible_avec_charges"]
     t += [f"Revente à {_eur(m['prix_revente'])} sur Leboncoin ({m['sous_le_second_pct']} % sous le 2e vendeur) :",
@@ -185,22 +195,55 @@ def tour(etat, maxi=PRODUITS_TOUR):
         if f["retenu"]:
             retenus.append(f)
     if retenus:
-        from . import fiche
-        vol = fiche.completer_volumes([{"nom_produit": f["mot_cle"]} for f in retenus])
         deja = {x["asin"]: x for x in base["affaires"]}
-        envoyes = 0
         for f in sorted(retenus, key=lambda f: -f["marges"]["marge_avec_charges"]):
-            v = vol.get(f["mot_cle"])
-            f["volume"] = v.get("v") if isinstance(v, dict) else None
             ancien = deja.get(f["asin"])
-            if envoyes < ALERTES_TOUR and not (ancien and ancien.get("alerte") and abs(ancien.get("premier", 0) - f["premier"]) < 1):
-                f["alerte"] = telegram.envoyer(message(f))
-                envoyes += 1
-            elif ancien:
-                f["alerte"] = ancien.get("alerte")
+            if ancien and ancien.get("alerte") and abs(ancien.get("premier", 0) - f["premier"]) < 1:
+                f.update({k: ancien[k] for k in ("alerte", "volume", "volume_mot", "marche") if k in ancien})  # déjà alertée à ce prix
+            else:
+                f["a_envoyer"] = True   # `suite()` étudie le marché puis envoie (ALERTES_TOUR par passage, le reste au suivant)
             deja[f["asin"]] = f
         base["affaires"] = sorted(deja.values(), key=lambda f: -f["marges"]["marge_avec_charges"])
     base["maj"] = datetime.now(timezone.utc).isoformat(timespec="minutes")
     _ecrire(F_ECARTS, base)
     _ecrire(F_VUS, vus)
     return len(retenus)
+
+
+def suite(maxi=ALERTES_TOUR):
+    """Affaires retenues en attente : marché (Leboncoin, Vinted, eBay, comparateurs) + volume de recherche, puis alerte.
+    Renvoie le nombre d'alertes parties. L'étude est enregistrée avant l'envoi : une coupure ne la fait jamais repayer."""
+    from . import marche, telegram
+    maintenant = datetime.now(timezone.utc)
+    base = _lire(F_ECARTS, {})
+    if base.get("jour") != maintenant.strftime("%Y-%m-%d"):
+        return 0
+    lot = []
+    for f in base.get("affaires", []):
+        if not f.get("a_envoyer"):
+            continue
+        try:
+            age = (maintenant - datetime.strptime(f["vu"], "%Y-%m-%dT%H:%M").replace(tzinfo=timezone.utc)).total_seconds() / 60
+        except (KeyError, ValueError):
+            age = 0
+        if age > ATTENTE_MAX_MIN:
+            f.pop("a_envoyer")
+        elif len(lot) < maxi:
+            lot.append(f)
+    if lot:
+        marche.etudier([f for f in lot if "marche" not in f])
+        _ecrire(F_ECARTS, base)
+        vol = marche.volumes([f["nom_court"] for f in lot])
+    envoyes = 0
+    for f in lot:
+        v = vol.get(f["nom_court"])
+        f["volume"], f["volume_mot"] = (v["v"], v["mot"]) if v else (None, None)
+        f["alerte"] = telegram.envoyer(message(f))
+        f.pop("a_envoyer")
+        envoyes += bool(f["alerte"])
+    _ecrire(F_ECARTS, base)
+    return envoyes
+
+
+if __name__ == "__main__":
+    print(f"écarts : {suite()} alerte(s) envoyée(s)")

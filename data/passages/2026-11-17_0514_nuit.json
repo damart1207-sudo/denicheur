@@ -1,0 +1,2642 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-17_0514",
+ "date_affichee": "17/11/2026 à 05 h 14",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 34,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 690,
+ "nb_nouvelles": 48,
+ "nb_prefiltres": 36,
+ "nb_tries": 36,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 3
+  },
+  "gptoss": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 18
+  },
+  "qwen": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 2
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "prosp-d02cab5f5b",
+   "titre": "PHILIPS AIRFRYER CONNECTÉE HD9280/60",
+   "prix": 59.99,
+   "devise": "EUR",
+   "marchand": "Auchan",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/Auchan"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "cuisine",
+   "nom_produit": "Philips Airfryer Connectée HD9280/60",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 132.5,
+   "cout_achat": 64.99,
+   "marge_nette": 46.76,
+   "rentabilite": 0.719,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Airfryer connectée 4,1 L à 60 € chez Auchan (prix habituel 110-120 €) ; revente rapide 90-100 € sur Leboncoin, marge ~30 €.",
+    "gptoss": "Appareil très demandé, prix d'achat très inférieur au prix du marché, marge nette solide même après frais."
+   },
+   "score": 71.9,
+   "ebay": {
+    "requete": "Philips Airfryer Connectée HD9280/60",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Philips Airfryer Connectée HD9280/60",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "philips airfryer connectée hd9280",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Philips Airfryer Connectée HD9280/60",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Airfryer Connectée HD9280/60",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "philips airfryer essential connected xl hd9280 60 avis",
+     "philips airfryer xl connected hd9280 60",
+     "philips airfryer essential connected xl hd9280 60",
+     "philips airfryer essential connected xl hd9280 60 review"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "c4efa5958f",
+   "titre": "Invincible VS sur Xbox Series X",
+   "prix": 22.99,
+   "devise": "EUR",
+   "marchand": "Cdiscount",
+   "lien": "https://www.dealabs.com/bons-plans/invincible-vs-jeu-xbox-series-x-3457414",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/invincible-vs-jeu-xbox-series-x-3457414"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Invincible VS Xbox Series X",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 30.44,
+   "cout_achat": 27.99,
+   "marge_nette": -4.63,
+   "rentabilite": -0.165,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 34 % vs neuf le moins cher"
+   },
+   "score": 51.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Invincible VS Xbox Series X",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "Invincible VS - Jeu Xbox Series X",
+       "prix": 22.99,
+       "nb_boutiques": 7,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/invincible-vs-jeu-xbox-series-x.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 22.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/invincible-vs-jeu-xbox-series-x.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 6,
+    "marque": "Skybound",
+    "asin": "B0G612WSL9",
+    "titre": "Invincible VS (Xbox Series X)",
+    "ean": "0810161632039",
+    "pays": "FR",
+    "prix_neuf": 34.59,
+    "prix_amazon": 34.59,
+    "prix_tiers": 34.59,
+    "moyenne_90j": 32.15,
+    "plus_bas_90j": 29.99,
+    "occasion": null,
+    "rang_ventes": 1621,
+    "chutes_rang_30j": 34,
+    "chutes_rang_90j": 99,
+    "ventes_estimees_30j": 34,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0G612WSL9",
+    "jetons_restants": 339
+   },
+   "ean": "0810161632039",
+   "asin": "B0G612WSL9",
+   "vendeurs_amazon": 6,
+   "ventes_estimees_30j": 34,
+   "ebay": {
+    "requete": "Invincible VS Xbox Series X",
+    "neuf": {
+     "nb": 3,
+     "min": 49.99,
+     "p25": 49.99,
+     "mediane": 53.49,
+     "max": 71.88
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Invincible VS Xbox Series X",
+      "prix": "49.99",
+      "url": "https://www.ebay.fr/itm/257299432253?_skw=Invincible+VS+Xbox+Series+X&hash=item3be83dc33d:g:YqYAAeSwndRq8dRj"
+     },
+     {
+      "titre": "INVINCIBLE VS XBOX SERIES X EURO NEW (GAME IN ENGLISH/FRANCAIS/DE/ES/IT)",
+      "prix": "53.49",
+      "url": "https://www.ebay.fr/itm/287338676350?_skw=Invincible+VS+Xbox+Series+X&hash=item42e6b8407e:g:mywAAeSw3w1qCvGw"
+     },
+     {
+      "titre": "Invincible VS - Jeu Xbox Series X",
+      "prix": "71.88",
+      "url": "https://www.ebay.fr/itm/128126158722?_skw=Invincible+VS+Xbox+Series+X&hash=item1dd4ea0782:g:XPkAAeSwG2Vqye0o"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 49.99,
+     "DE": 49.05,
+     "IT": 49.8,
+     "ES": 49.39
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "invincible vs xbox series",
+   "annonces_ebay": 3,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 22.99,
+     "marge_nette": -19.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 8.07,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -19.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.684
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 22.99,
+     "marge_nette": -20.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.34,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.73
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 22.99,
+     "marge_nette": -20.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.61,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.739
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 22.99,
+     "marge_nette": -20.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.84,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.747
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 22.99,
+     "marge_nette": -21.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 10.44,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -21.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.769
+    }
+   ],
+   "prix_revente_prudent": 20.69,
+   "marge_verifiee": -13.07,
+   "rentabilite_verifiee": -0.467,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "moyenne",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Invincible VS Xbox Series X",
+    "pays": {
+     "FR": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 49.99,
+       "titre": "Invincible VS Xbox Series X",
+       "lien": "https://www.ebay.fr/itm/257299432253?_skw=Invincible+VS+Xbox+Series+X&hash=item3be83dc33d:g:YqYAAeSwndRq8dRj",
+       "vendeur": "justforgames2013",
+       "avis_vendeur": 18866
+      },
+      "plus_cher": {
+       "prix": 71.88,
+       "titre": "Invincible VS - Jeu Xbox Series X",
+       "lien": "https://www.ebay.fr/itm/128126158722?_skw=Invincible+VS+Xbox+Series+X&hash=item1dd4ea0782:g:XPkAAeSwG2Vqye0o",
+       "vendeur": "mgt-shop-eu",
+       "avis_vendeur": 248
+      }
+     },
+     "DE": {
+      "nb_annonces": 7,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.72,
+       "titre": "Invincible VS - Xbox Series X - Neu & OVP",
+       "lien": "https://www.ebay.de/itm/307162074871?_skw=Invincible+VS+Xbox+Series+X&hash=item4784494ef7:g:WtgAAeSwNoNqmniq",
+       "vendeur": "re2gamesde",
+       "avis_vendeur": 797
+      },
+      "plus_cher": {
+       "prix": 67.54,
+       "titre": "NEU Xbox Spiel Invincible VS für Series X S Download Code Game Key Email 24h NEW",
+       "lien": "https://www.ebay.de/itm/168616414841?_skw=Invincible+VS+Xbox+Series+X&hash=item2742524e79:g:hKwAAeSw-V9qgNGg",
+       "vendeur": "thommys-things",
+       "avis_vendeur": 4362
+      }
+     },
+     "IT": {
+      "nb_annonces": 15,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 45.19,
+       "titre": "Gioco Invincible VS XBox Series X - Nuovo e Sigillato - SPEDIZIONE VELOCE",
+       "lien": "https://www.ebay.it/itm/257851372412?_skw=Invincible+VS+Xbox+Series+X&hash=item3c0923b37c:g:-lkAAeSwDQhq95jF",
+       "vendeur": "wil78yeah",
+       "avis_vendeur": 607
+      },
+      "plus_cher": {
+       "prix": 77.42,
+       "titre": "Invincible VS Xbox Series X Gioco Disco Action Fighters Versione USA Nuovo NON APERTO",
+       "lien": "https://www.ebay.it/itm/236998238015?_skw=Invincible+VS+Xbox+Series+X&hash=item372e321f3f:g:QucAAeSwuKZqekGN",
+       "vendeur": "fungamingshop",
+       "avis_vendeur": 5548
+      }
+     },
+     "ES": {
+      "nb_annonces": 10,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 49.39,
+       "titre": "INVINCIBLE VS - Microsoft Xbox Series X|S",
+       "lien": "https://www.ebay.es/itm/407109220608?_skw=Invincible+VS+Xbox+Series+X&hash=item5ec999b900:g:dOAAAeSwf79qa9C~",
+       "vendeur": "anigamesstore",
+       "avis_vendeur": 582
+      },
+      "plus_cher": {
+       "prix": 76.78,
+       "titre": "Invincible VS Xbox Series X Juego Disco Luchadores Versión EE. UU. Nuevo SIN ABRIR",
+       "lien": "https://www.ebay.es/itm/236998238015?_skw=Invincible+VS+Xbox+Series+X&hash=item372e321f3f:g:QucAAeSwuKZqekGN",
+       "vendeur": "fungamingshop",
+       "avis_vendeur": 5548
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Invincible VS Xbox Series X",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "invincible vs xbox series x",
+     "invincible vs xbox series x and series s store",
+     "invincible vs xbox series x collector's edition",
+     "invincible vs xbox series x physical copy",
+     "invincible vs xbox series x release date",
+     "invincible vs xbox series x price",
+     "invincible vs xbox series x disc",
+     "invincible vs beta xbox series x",
+     "invincible vs open beta xbox series x",
+     "invincible vs deluxe edition xbox series x"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0DKNP17NQ-arbDE",
+   "titre": "RevolutionRace Femme RVRC GP Pants, Pantalon Durable pour la randonnée et Autres activités [Amazon DE]",
+   "prix": 57.0,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.amazon.de/dp/B0DKNP17NQ",
+   "pays": "DE",
+   "source": "keepa-arbitrage",
+   "temperature": 280,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.de/dp/B0DKNP17NQ"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "RevolutionRace RVRC GP Pants",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 110.0,
+   "cout_achat": 62.0,
+   "marge_nette": 30.26,
+   "rentabilite": 0.488,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat 57€ bien inférieur au prix de revente moyen de 110€ sur le marché français, marge nette après frais."
+   },
+   "score": 39.0,
+   "ebay": {
+    "requete": "RevolutionRace RVRC GP Pants",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "RevolutionRace Homme RVRC GP Pants, Pantalon Durable pour la randonnée S, Mud",
+      "prix": "90.19",
+      "url": "https://www.ebay.fr/itm/147582242475?_skw=RevolutionRace+RVRC+GP+Pants&hash=item225c964eab:g:SEkAAeSwABRqrVFX"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 56.5,
+     "IT": 78.81,
+     "ES": null
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "RevolutionRace",
+    "asin": "B0DKNP17NQ",
+    "titre": "RevolutionRace Femme RVRC GP Pants, Pantalon Durable pour la randonnée et Autres activités de Plein air, Grey, XL",
+    "ean": "7340171178614",
+    "pays": "FR",
+    "prix_neuf": 57.0,
+    "prix_amazon": null,
+    "prix_tiers": 57.0,
+    "moyenne_90j": 83.15,
+    "plus_bas_90j": 57.0,
+    "occasion": null,
+    "rang_ventes": 30177,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 12,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0DKNP17NQ",
+    "jetons_restants": 428
+   },
+   "asin": "B0DKNP17NQ",
+   "ean": "7340171178614",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 7,
+   "prix_plancher": {
+    "nom": "RevolutionRace RVRC GP Pants",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 57.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DKNP17NQ"
+   },
+   "remise_sincere": true,
+   "mot_cle": "revolutionrace rvrc gp pants",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": 0.73,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 50.16,
+     "marge_nette": -21.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.16,
+      "cout_achat": 62.0,
+      "frais_canal": 0.0,
+      "prelevements": 6.72,
+      "provision": 3.0,
+      "marge_nette": -21.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.348
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 50.16,
+     "marge_nette": -21.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.16,
+      "cout_achat": 62.0,
+      "frais_canal": 0.0,
+      "prelevements": 6.72,
+      "provision": 3.0,
+      "marge_nette": -21.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.348
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 50.16,
+     "marge_nette": -21.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.16,
+      "cout_achat": 62.0,
+      "frais_canal": 0.0,
+      "prelevements": 6.72,
+      "provision": 3.0,
+      "marge_nette": -21.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.348
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 57.0,
+     "marge_nette": -26.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.0,
+      "cout_achat": 62.0,
+      "frais_canal": 11.13,
+      "prelevements": 7.64,
+      "provision": 3.0,
+      "marge_nette": -26.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.432
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 57.0,
+     "marge_nette": -27.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.0,
+      "cout_achat": 62.0,
+      "frais_canal": 11.99,
+      "prelevements": 7.64,
+      "provision": 3.0,
+      "marge_nette": -27.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.446
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 57.0,
+     "marge_nette": -28.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.0,
+      "cout_achat": 62.0,
+      "frais_canal": 12.56,
+      "prelevements": 7.64,
+      "provision": 3.0,
+      "marge_nette": -28.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.455
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 57.0,
+     "marge_nette": -29.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.0,
+      "cout_achat": 62.0,
+      "frais_canal": 13.76,
+      "prelevements": 7.64,
+      "provision": 3.0,
+      "marge_nette": -29.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.474
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 57.0,
+     "marge_nette": -31.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 57.0,
+      "cout_achat": 62.0,
+      "frais_canal": 15.54,
+      "prelevements": 7.64,
+      "provision": 3.0,
+      "marge_nette": -31.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.503
+    }
+   ],
+   "prix_revente_prudent": 51.3,
+   "marge_verifiee": -20.57,
+   "rentabilite_verifiee": -0.332,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "RevolutionRace RVRC GP Pants",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 90.19,
+       "titre": "RevolutionRace Homme RVRC GP Pants, Pantalon Durable pour la randonnée S, Mud",
+       "lien": "https://www.ebay.fr/itm/147582242475?_skw=RevolutionRace+RVRC+GP+Pants&hash=item225c964eab:g:SEkAAeSwABRqrVFX",
+       "vendeur": "digitalleyshop1100",
+       "avis_vendeur": 1423
+      },
+      "plus_cher": {
+       "prix": 90.19,
+       "titre": "RevolutionRace Homme RVRC GP Pants, Pantalon Durable pour la randonnée S, Mud",
+       "lien": "https://www.ebay.fr/itm/147582242475?_skw=RevolutionRace+RVRC+GP+Pants&hash=item225c964eab:g:SEkAAeSwABRqrVFX",
+       "vendeur": "digitalleyshop1100",
+       "avis_vendeur": 1423
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 1,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 86.11,
+       "titre": "RevolutionRace RVRC GP Pants Pantaloni da Uomo durevoli per Trekking e Altre",
+       "lien": "https://www.ebay.it/itm/377522392614?_skw=RevolutionRace+RVRC+GP+Pants&hash=item57e6168e26:g:PMoAAeSw5NNqtpLX",
+       "vendeur": "bussybu2025",
+       "avis_vendeur": 1285
+      },
+      "plus_cher": {
+       "prix": 86.11,
+       "titre": "RevolutionRace RVRC GP Pants Pantaloni da Uomo durevoli per Trekking e Altre",
+       "lien": "https://www.ebay.it/itm/377522392614?_skw=RevolutionRace+RVRC+GP+Pants&hash=item57e6168e26:g:PMoAAeSw5NNqtpLX",
+       "vendeur": "bussybu2025",
+       "avis_vendeur": 1285
+      }
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "RevolutionRace RVRC GP Pants",
+    "temperature_dealabs": 280,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "revolutionrace rvrc gp pants",
+     "revolutionrace rvrc gp pants women",
+     "revolutionrace rvrc gp pants herren",
+     "revolutionrace rvrc gp pants men",
+     "revolutionrace homme rvrc gp pants",
+     "revolutionrace homme rvrc gp pro pants",
+     "revolutionrace rvrc gp pro pants",
+     "revolutionrace rvrc gp pro rescue pants",
+     "revolutionrace rvrc gp pro zip off pants",
+     "revolutionrace rvrc gp trousers"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "f4e784abcf",
+   "titre": "Star Wars Outlaws Edition Gold sur Nintendo Switch 2",
+   "prix": 24.99,
+   "devise": "EUR",
+   "marchand": "Fnac",
+   "lien": "https://www.dealabs.com/bons-plans/star-wars-outlaws-edition-gold-sur-nintendo-switch-2-3457968",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 117,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/star-wars-outlaws-edition-gold-sur-nintendo-switch-2-3457968"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 29.03,
+   "cout_achat": 29.99,
+   "marge_nette": -7.85,
+   "rentabilite": -0.262,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 24 % vs neuf le moins cher"
+   },
+   "score": 36.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "UBISOFT Star Wars : Outlaws - Gold Edition (NINTENDO SWITCH 2)",
+       "prix": 24.99,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 24.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Ubisoft",
+    "asin": "B0F7LQKRL9",
+    "titre": "Star Wars Outlaws Gold Edition - Nintendo Switch 2",
+    "ean": "3307216304852",
+    "pays": "FR",
+    "prix_neuf": 49.83,
+    "prix_amazon": null,
+    "prix_tiers": 49.83,
+    "moyenne_90j": 49.86,
+    "plus_bas_90j": 49.82,
+    "occasion": 53.5,
+    "rang_ventes": 16527,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 16,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0F7LQKRL9",
+    "jetons_restants": 297
+   },
+   "ean": "3307216304852",
+   "asin": "B0F7LQKRL9",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "ebay": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "neuf": {
+     "nb": 6,
+     "min": 40.79,
+     "p25": 41.92,
+     "mediane": 43.58,
+     "max": 74.72
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "42.30",
+      "url": "https://www.ebay.fr/itm/336475946679?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item4e57877eb7:g:GsAAAeSwAlppyTX2"
+     },
+     {
+      "titre": "Star Wars Outlaws - Gold Edition, Nintendo Switch 2 Nintendo (Nintendo Switch 2)",
+      "prix": "66.14",
+      "url": "https://www.ebay.fr/itm/407284802776?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5ed410e4d8:g:DJcAAeSwLWBqzMTv&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kwJBhj70Od7c5m1CxNxlJQdrRi08nI7yRNjBtQbVHQeWdCVaFep836PQrwx8wLKlipxxslyCZqiULb5i6vLyPOEgltZPmc403Zbe0WwmY9sfz5gMOKePFJB0VkoruE2uJIUjgWV%2BTpCKtOEZcbwv9qjKz%2BNkry9%2F197IqzQNF5Y0i%2BR2Zv0lwirRJGYUIyAp6ZtCKY43oD%2BOQNZaAvW5te50b%2FeiyHUQoaMIL2DOHqqVKkbo%2Ftk58ea0meOU%2B1gfDNXEwww%2BFw%2FcppQvKYw7V0uZil3N2Z6bIXEeSIkeLoTW4rDSi%2BuYrKKnFS8KPqJ3Bp0Fpz6Nm6BONYAC4%2BCDpf"
+     },
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "44.38",
+      "url": "https://www.ebay.fr/itm/227487194522?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item34f74b1d9a:g:B8gAAeSw0zlqigpi"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 41.92,
+     "DE": 33.23,
+     "IT": 34.44,
+     "ES": 33.61
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "star wars outlaws edition",
+   "annonces_ebay": 6,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 24.99,
+     "marge_nette": -19.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 8.25,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -19.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.654
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 24.99,
+     "marge_nette": -20.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.6,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -20.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.699
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 24.99,
+     "marge_nette": -21.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.75,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.704
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 24.99,
+     "marge_nette": -21.35,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.0,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.35,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.712
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 24.99,
+     "marge_nette": -22.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.74,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -22.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.737
+    }
+   ],
+   "prix_revente_prudent": 22.49,
+   "marge_verifiee": -13.51,
+   "rentabilite_verifiee": -0.45,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 53.5,
+    "haut": 53.5,
+    "position_neuf": 0.47
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "pays": {
+     "FR": {
+      "nb_annonces": 3,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.79,
+       "titre": "Star Wars Outlaws Gold Edition Juego Digital para consola Nintendo Switch 2",
+       "lien": "https://www.ebay.fr/itm/236850780357?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item37256818c5:g:is8AAeSwFyJqHey~",
+       "vendeur": "arreglatelo",
+       "avis_vendeur": 28246
+      },
+      "plus_cher": {
+       "prix": 66.14,
+       "titre": "Star Wars Outlaws - Gold Edition, Nintendo Switch 2 Nintendo (Nintendo Switch 2)",
+       "lien": "https://www.ebay.fr/itm/407284802776?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5ed410e4d8:g:DJcAAeSwLWBqzMTv",
+       "vendeur": "rarewaves-united",
+       "avis_vendeur": 480923
+      }
+     },
+     "DE": {
+      "nb_annonces": 15,
+      "total_ebay": 21,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 29.99,
+       "titre": "Star Wars Outlaws Gold Edition (Nintendo Switch 2) Adventure",
+       "lien": "https://www.ebay.de/itm/227588321962?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item34fd5232aa:g:0pcAAeSwEd5q4w8d",
+       "vendeur": "mediamarkt-jena",
+       "avis_vendeur": 14677
+      },
+      "plus_cher": {
+       "prix": 64.99,
+       "titre": "Star Wars Outlaws - Gold Edition - Nintendo Switch 2 - Neu & OVP",
+       "lien": "https://www.ebay.de/itm/406583151549?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5eaa3e8bbd:g:nOMAAeSwgVxpY0gX",
+       "vendeur": "m-h-e-i-n-e_havefunworld",
+       "avis_vendeur": 1057
+      }
+     },
+     "IT": {
+      "nb_annonces": 49,
+      "total_ebay": 70,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 27.12,
+       "titre": "Star Wars Outlaws Gold Edition Nintendo Switch 2 sigillato in fabbrica",
+       "lien": "https://www.ebay.it/itm/158232975057?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item24d76b96d1:g:82IAAeSwRUZqkZE-",
+       "vendeur": "brett1883",
+       "avis_vendeur": 21572
+      },
+      "plus_cher": {
+       "prix": 99.7,
+       "titre": "Nintendo Switch 2 Star Wars Outlaws Gold Edition versione coreana 1 confezione",
+       "lien": "https://www.ebay.it/itm/257581794258?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item3bf91243d2:g:zkoAAeSwMWtqOfBF",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 883
+      }
+     },
+     "ES": {
+      "nb_annonces": 47,
+      "total_ebay": 67,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 26.9,
+       "titre": "Star Wars Outlaws Gold Edition Nintendo Switch 2 sellado de fábrica",
+       "lien": "https://www.ebay.es/itm/158232975057?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item24d76b96d1:g:82IAAeSwRUZqkZE-",
+       "vendeur": "brett1883",
+       "avis_vendeur": 21572
+      },
+      "plus_cher": {
+       "prix": 98.88,
+       "titre": "Nintendo Switch 2 Star Wars Outlaws Gold Edition Versión Coreana 1 Pack",
+       "lien": "https://www.ebay.es/itm/257581794258?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item3bf91243d2:g:zkoAAeSwMWtqOfBF",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 883
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "temperature_dealabs": 117,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "star wars outlaws edition gold nintendo switch 2",
+     "star wars outlaws édition gold jeu nintendo switch 2",
+     "star wars outlaws gold edition nintendo switch 2 test",
+     "star wars outlaws gold edition nintendo switch 2 review",
+     "star wars outlaws gold edition nintendo switch 2 game",
+     "star wars outlaws gold edition nintendo switch 2 gameplay",
+     "star wars outlaws gold edition nintendo switch 2 amazon",
+     "star wars outlaws gold edition - nintendo switch 2 digital",
+     "star wars outlaws gold edition gra nintendo switch 2",
+     "ubisoft star wars outlaws gold edition nintendo switch 2"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "prosp-3197efbe0c",
+   "titre": "ROWENTA Aspirateur x-pert 6.60 smart avec kit d’accessoires anti-poils d’animaux",
+   "prix": 99.99,
+   "devise": "EUR",
+   "marchand": "Gifi",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/Gifi"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Rowenta X-pert 6.60",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 165.0,
+   "cout_achat": 104.99,
+   "marge_nette": 34.9,
+   "rentabilite": 0.332,
+   "demande": 3.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Aspirateur robot à prix très compétitif (99,99 €) vs prix moyen du marché (~200 €).",
+    "qwen": "Aspirateur balai Rowenta très populaire, le prix Gifi est inférieur au prix moyen constaté sur Leboncoin pour un modèle neuf."
+   },
+   "score": 31.0,
+   "ebay": {
+    "requete": "Rowenta X-pert 6.60",
+    "neuf": {
+     "nb": 6,
+     "min": 41.99,
+     "p25": 46.49,
+     "mediane": 151.99,
+     "max": 217.99
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Odkurzacz Rowenta RH6879WO, X-PERT 6.60 ",
+      "prix": "51.30",
+      "url": "https://www.ebay.fr/itm/357637414811?_skw=Rowenta+X-pert+6.60&hash=item5344d9df9b:g:kZoAAeSwvDZozG6v"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 46.49,
+     "DE": 86.14,
+     "IT": 120.5,
+     "ES": 44.99
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "Rowenta",
+    "asin": "B0D9PQD5V4",
+    "titre": "Rowenta X-Pert 6.60 - Aspirateur balai sans fil - Gris",
+    "ean": "3221616130180",
+    "pays": "FR",
+    "prix_neuf": 159.0,
+    "prix_amazon": 159.99,
+    "prix_tiers": 159.0,
+    "moyenne_90j": 136.65,
+    "plus_bas_90j": 99.99,
+    "occasion": 105.34,
+    "rang_ventes": 90,
+    "chutes_rang_30j": 25,
+    "chutes_rang_90j": 82,
+    "ventes_estimees_30j": 25,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0D9PQD5V4",
+    "jetons_restants": 418
+   },
+   "asin": "B0D9PQD5V4",
+   "ean": "3221616130180",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 25,
+   "prix_plancher": {
+    "nom": "Rowenta X-pert 6.60",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "ROWENTA Aspirateur balai X-PERT 6.60 RH6821WO",
+       "prix": 119.98,
+       "nb_boutiques": 7,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Aspirateur-balai/aspirateur-balai-x-pert-6-60-rh6821wo.html"
+      },
+      "autres": [
+       {
+        "titre": "ROWENTA  X-Pert 6.60 RH6878WO - Aspirateur balai",
+        "prix": 175.99,
+        "nb_boutiques": 6,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Aspirateur-balai/rowenta-x-pert-6-60-rh6878wo-aspirateur-balai.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 119.98,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Aspirateur-balai/aspirateur-balai-x-pert-6-60-rh6821wo.html"
+   },
+   "remise_sincere": true,
+   "mot_cle": "rowenta",
+   "demande_google": {
+    "volume_mensuel": 60500,
+    "concurrence": "HIGH",
+    "cpc": 0.27,
+    "trois_derniers_mois": [
+     49500,
+     40500,
+     49500
+    ]
+   },
+   "annonces_ebay": 6,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 105.58,
+     "marge_nette": -16.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 105.58,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.15,
+      "provision": 3.0,
+      "marge_nette": -16.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.158
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 105.58,
+     "marge_nette": -16.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 105.58,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.15,
+      "provision": 3.0,
+      "marge_nette": -16.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.158
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 105.58,
+     "marge_nette": -16.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 105.58,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.15,
+      "provision": 3.0,
+      "marge_nette": -16.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.158
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 119.98,
+     "marge_nette": -20.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.98,
+      "cout_achat": 104.99,
+      "frais_canal": 16.4,
+      "prelevements": 16.08,
+      "provision": 3.0,
+      "marge_nette": -20.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.195
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 119.98,
+     "marge_nette": -20.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.98,
+      "cout_achat": 104.99,
+      "frais_canal": 16.8,
+      "prelevements": 16.08,
+      "provision": 3.0,
+      "marge_nette": -20.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.199
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 119.98,
+     "marge_nette": -21.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.98,
+      "cout_achat": 104.99,
+      "frais_canal": 17.6,
+      "prelevements": 16.08,
+      "provision": 3.0,
+      "marge_nette": -21.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.207
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 119.98,
+     "marge_nette": -26.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.98,
+      "cout_achat": 104.99,
+      "frais_canal": 21.95,
+      "prelevements": 16.08,
+      "provision": 3.0,
+      "marge_nette": -26.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.248
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 119.98,
+     "marge_nette": -29.07,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.98,
+      "cout_achat": 104.99,
+      "frais_canal": 24.99,
+      "prelevements": 16.08,
+      "provision": 3.0,
+      "marge_nette": -29.07,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.277
+    }
+   ],
+   "prix_revente_prudent": 46.49,
+   "marge_verifiee": -67.73,
+   "rentabilite_verifiee": -0.645,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 105.34,
+    "haut": 105.34,
+    "position_neuf": 0.95
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Rowenta X-pert 6.60",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 133.99,
+       "titre": "Rowenta X-Pert 6.60 Aspirateur Balai Sans Fil 18V 100W 45Min Batterie 0,55L 45",
+       "lien": "https://www.ebay.fr/itm/128172869305?_skw=Rowenta+X-pert+6.60&hash=item1dd7b2c6b9:g:VHoAAeSwxIhq6ewu",
+       "vendeur": "aurashop_8",
+       "avis_vendeur": 3
+      },
+      "plus_cher": {
+       "prix": 217.99,
+       "titre": "Rowenta X-Pert 6.60 Aspirateur Balai Sans Fil 100W Batterie 18V Noir",
+       "lien": "https://www.ebay.fr/itm/168820486350?_skw=Rowenta+X-pert+6.60&hash=item274e7c30ce:g:4kgAAeSwBgVq4Pqf",
+       "vendeur": "novarioshop",
+       "avis_vendeur": 0
+      }
+     },
+     "DE": {
+      "nb_annonces": 1,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 78.01,
+       "titre": "Filter für TEFAL X-FORCE FLEX 8.60 X-Pert 6.60 X-Combo, ROWENTA Staubsauger",
+       "lien": "https://www.ebay.de/itm/178053488037?_skw=Rowenta+X-pert+6.60&hash=item2974d09da5:g:hF0AAeSw~F5p4NBS",
+       "vendeur": "topoffers_eu",
+       "avis_vendeur": 60198
+      },
+      "plus_cher": {
+       "prix": 78.01,
+       "titre": "Filter für TEFAL X-FORCE FLEX 8.60 X-Pert 6.60 X-Combo, ROWENTA Staubsauger",
+       "lien": "https://www.ebay.de/itm/178053488037?_skw=Rowenta+X-pert+6.60&hash=item2974d09da5:g:hF0AAeSw~F5p4NBS",
+       "vendeur": "topoffers_eu",
+       "avis_vendeur": 60198
+      }
+     },
+     "IT": {
+      "nb_annonces": 52,
+      "total_ebay": 80,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 68.9,
+       "titre": "Rowenta ZR009703 Batteria originale per scopa elettrica X-Pert 6.60 RH68...",
+       "lien": "https://www.ebay.it/itm/820266111921?_skw=Rowenta+X-pert+6.60&hash=itembefbab93b1:g:FXYAAeSwnPRq2hxq",
+       "vendeur": "sb_commerciale_ricambi",
+       "avis_vendeur": 3134
+      },
+      "plus_cher": {
+       "prix": 281.74,
+       "titre": "Rowenta X-PERT 6.60 Smart Display, Aspirapolvere Senza Fili, Potenza 100W, Legge",
+       "lien": "https://www.ebay.it/itm/278388695133?_skw=Rowenta+X-pert+6.60&hash=item40d142605d:g:L3UAAeSwk7BqveCF",
+       "vendeur": "sempre.utile",
+       "avis_vendeur": 14027
+      }
+     },
+     "ES": {
+      "nb_annonces": 3,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 79.9,
+       "titre": "Batería ROWENTA 18V Aspiradora eléctrica original X-PERT 6.60",
+       "lien": "https://www.ebay.es/itm/276201643960?_skw=Rowenta+X-pert+6.60&hash=item404ee69fb8:g:aO0AAOSwpE5laJS5",
+       "vendeur": "cre_ricambi",
+       "avis_vendeur": 42902
+      },
+      "plus_cher": {
+       "prix": 159.0,
+       "titre": "Rowenta RH6821WO X-PERT 6.60 Aspirador Inalámbrico, Batería, 25,2 V, Sin Bolsa",
+       "lien": "https://www.ebay.es/itm/257415019641?_skw=Rowenta+X-pert+6.60&hash=item3bef217c79:g:hOYAAeSwnc1pvAzW",
+       "vendeur": "koromonto_de",
+       "avis_vendeur": 17984
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Rowenta X-pert 6.60",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 3,
+     "interet_recent": 14,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      13,
+      11,
+      9,
+      12,
+      14,
+      21,
+      13,
+      12,
+      20,
+      11,
+      22,
+      18,
+      19,
+      17,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "rowenta x-pert 6.60",
+     "rowenta x-pert 6.60 avis",
+     "rowenta x-pert 6.60 aspirateur balai sans fil",
+     "rowenta x-pert 6.60 fiche technique",
+     "rowenta x-pert 6.60 essential",
+     "rowenta x-pert 6.60 animal",
+     "rowenta x-pert 6.60 smart",
+     "rowenta x-pert 6.60 prix",
+     "rowenta x-pert 6.60 - aspirateur balai sans fil - noir",
+     "rowenta x-pert 6.60 smart avis"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 5,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 15,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0DKNP17NQ-arbDE",
+   "titre": "RevolutionRace Femme RVRC GP Pants, Pantalon Durable pour la randonnée et Autres activités [Amazon DE]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 57.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0DKNP17NQ",
+   "date": "2026-11-15T21:19",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "7340171178614",
+   "asin": "B0DKNP17NQ",
+   "ref_fr": 89.0,
+   "ventes_30j": 5,
+   "vendeurs": 1,
+   "description": "Amazon.fr 89.0 € (moyenne 90 j 83.15 €), écart 28 % port compris, ventes 30 j 5, 1 vendeurs FR"
+  },
+  {
+   "id": "29c6def9e4",
+   "titre": "Brennenstuhl Supersolidna ochrona przeciwprzepięciowa 4,500 A | z kablem o długości 2,5 m i przełącznikiem, kolor srebrny",
+   "temperature": 220,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 15.25,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/brennenstuhl-supersolidna-ochrona-przeciwprzepieciowa-4500-a-z-kablem-o-dlugosci-25-m-i-przelacznikiem-kolor-srebrny-1391834",
+   "date": "Tue, 17 Nov 2026 04:42:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "64,90zł - Amazon.pl Wysyła i sprzedaje Amazon. Darmowa dostawa z Amazon Prime. Listwa zasilająca z 5 zestykami ochronnymi o długości 2,5 m H05VV-F 3G1,5 i ..."
+  },
+  {
+   "id": "aba79ac9c3",
+   "titre": "Telewizor Samsung UE43U8072HUXXH 43\" LED 4K UHD Tizen Smart TV Vision AI",
+   "temperature": 205,
+   "categorie": "Elektronika",
+   "marchand": "Allegro",
+   "prix": 258.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/telewizor-samsung-ue43u8072huxxh-43-led-4k-uhd-tizen-smart-tv-vision-ai-1391811",
+   "date": "Tue, 17 Nov 2026 05:10:01 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 099zł - Allegro Telewizor Samsung UE43U8072HUXXH 43\" LED 4K UHD Tizen Smart TV Vision AI Bardzo dobry Smart TV od Samsunga 43' w me..."
+  },
+  {
+   "id": "36d3218282",
+   "titre": "Oppo Pad 5 Pro - Cupón Descuento 30%",
+   "temperature": 183,
+   "categorie": "Electrónica",
+   "marchand": "OPPO",
+   "prix": 489.3,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oppo-pad-5-pro-cupon-descuento-30-2066059",
+   "date": "Tue, 17 Nov 2026 05:05:19 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "489,30€ - OPPO Especificaciones: Diseño y dimensiones Dimensiones: 289,71 × 209,76 × 5,94 mm <stro..."
+  },
+  {
+   "id": "9c0fdcbac0",
+   "titre": "Philips Hue Devote Slanke Plafondlamp (maat S)",
+   "temperature": 117,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.nl",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-hue-devote-slanke-plafondlamp-maat-s-427400",
+   "date": "Tue, 17 Nov 2026 04:55:40 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€59,99 - Amazon.nl De Philips Hue Devote Slim plafondlamp (maat S, 29,1 cm, wit) is nu op Amazon.nl te krijgen voor €59..."
+  },
+  {
+   "id": "c1edaacde8",
+   "titre": "Dremel 8250 F0138250JF - 12V Bürstenloser Multifunktionswerkzeug - Set mit Dremel Box, 65 Zubehören, 5 Auf-und Vorsätze 2 Akku+ Ladegerät",
+   "temperature": 113,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 158.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/dremel-8250-f0138250jf-12v-burstenloser-multifunktionswerkzeug-set-mit-dremel-box-65-zubehoren-5-auf-und-vorsatze-2-akku-ladegerat-2873243",
+   "date": "Tue, 17 Nov 2026 04:36:23 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "158,99€ - Amazon 12V Bürstenlose Motorleistung: Bietet außergewöhnliche Leistung mit mehr Power, längerer Laufzeit und höherer Haltbarkeit – verlängert die Lebensdaue..."
+  },
+  {
+   "id": "40b6a8cffb",
+   "titre": "[Amazon] Ninja Foodi PossibleCooker MC1001EU 8-in-1-Multikocher mit 8 Litern für 109,99 € statt 169,99 €",
+   "temperature": 107,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 109.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-ninja-foodi-possiblecooker-mc1001eu-8-in-1-multikocher-mit-8-litern-fur-10999-eur-statt-16999-eur-2873129",
+   "date": "Tue, 17 Nov 2026 04:38:26 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "109,99€ - Amazon Amazon bietet aktuell den Ninja Foodi PossibleCooker MC1001EU für 109,99 € inklusive Versand an. Der Preis gilt direkt und ist weder an einen Gutsche..."
+  },
+  {
+   "id": "5869990969",
+   "titre": "Wanderstop - Echtee Cartridge - Nintendo Switch 2 - IAm8Bit - Physisch - Prime",
+   "temperature": 107,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 33.16,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/wanderstop-echtee-cartridge-nintendo-switch-2-iam8bit-prime-2873218",
+   "date": "Tue, 17 Nov 2026 04:36:51 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "33,16€ - Amazon Wanderstop ist ein Spiel des Teams von Ivy Road, zu dem unter anderen Davey Wreden (Schöpfer von The Stanley Parable und The Beginner’s Guide), Karla Zimonja (M..."
+  },
+  {
+   "id": "d04b988ebd",
+   "titre": "GXTrust Forta PS5 Gaming Headset Lizenziert für PlayStation 5, Weiß - prime",
+   "temperature": 106,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/gxtrust-forta-ps5-gaming-headset-lizenziert-fur-playstation-5-weiss-2873092",
+   "date": "Tue, 17 Nov 2026 04:53:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "29,99€ - Amazon Info zu diesem Artikel ES IST OFFIZIELL – Forta ist offiziell für PlayStation5-Konsolen lizenziert MUSIK IN DEI..."
+  },
+  {
+   "id": "ff4d33bb46",
+   "titre": "Rab Microlight Alpine Down Men's Jacket in multiple colours W/Code",
+   "temperature": 104,
+   "categorie": "Fashion & Accessories",
+   "marchand": "SportsShoes",
+   "prix": 97.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/rab-microlight-alpine-down-mens-jacket-in-dark-pollen-or-oak-5035412",
+   "date": "Tue, 17 Nov 2026 04:07:33 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£97.49 - SportsShoes Fantastic price for the best light down jacket around. All sizes available at the time of posting. Colours might not be for everyone, but each to their own.<..."
+  },
+  {
+   "id": "bce2328c50",
+   "titre": "Endorfy Fishtank 6000 Flex in Schwarz für 79 € inkl. Versand (MindStar)",
+   "temperature": 103,
+   "categorie": "Elektronik",
+   "marchand": "Mindfactory",
+   "prix": 79.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/endorfy-fishtank-6000-flex-in-schwarz-fur-79-eur-inkl-versand-mindstar-2873076",
+   "date": "Tue, 17 Nov 2026 04:53:32 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "79€ - Mindfactory Bei Mindfactory steht das schwarze Endorfy Fishtank 6000 Flex (EY2A026) im MindStar für 79 € inkl. Versand. Der nächste Gesamtpreis liegt bei 89 €. Den Aktio..."
+  },
+  {
+   "id": "8bab06cbc6",
+   "titre": "FabFilter Pro-Q 4 - EQ Plugin - VST, VST3, AU, CLAP, AAX, AudioSuite",
+   "temperature": 103,
+   "categorie": "Elektronik",
+   "marchand": "Thomann",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/fabfilter-pro-q-4-eq-plugin-vst-vst3-au-clap-aax-audiosuite-2873169",
+   "date": "Tue, 17 Nov 2026 04:37:37 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "99€ - Thomann P ro-Q 4 ist ein EQ-Plugin für Windows und macOS (VST3, AU, AAX, CLAP). Es richtet sich an alle, die regelmäßig mischen oder mastern. <..."
+  },
+  {
+   "id": "5908660f7d",
+   "titre": "(Prime) Rowenta Premiss 2.0 Personenwaage",
+   "temperature": 103,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 9.49,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-rowenta-premiss-20-personenwaage-2873191",
+   "date": "Tue, 17 Nov 2026 04:37:15 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "9,49€ - Amazon Bequeme Benutzung: Einfach ablesbares LCD-Display mit breiter Glasplatte (30 x 30 cm) für bis zu 160 kg und mit 100-g-Schritten Einfaches Versta..."
+  },
+  {
+   "id": "93e676bed0",
+   "titre": "Montre Citizen Promaster Fujitsubo NB6021-68L - Full Titane, Saphir, 20 ATM, 41mm",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 449.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-citizen-promaster-fujitsubo-nb6021-68l-full-titane-saphir-20-atm-41mm-3458409",
+   "date": "Tue, 17 Nov 2026 05:11:27 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "449,95€ - Amazon Prix bradé pour cette plongeuse d'exception, vendue directement par Amazon. Encore 5 exemplaires en stock lors de la publication mais un réapprovisionnement est en cours Caractéristiques Marque Citizen Description de la tranche d’âge Adulte Nom du modèle Promaster Diver Pays d'origi"
+  },
+  {
+   "id": "9f4d10b479",
+   "titre": "Jeu PS5 Clair Obscur: Expedition 33 (Version Française) à 36,99€ (au lieu de 49,99€)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 36.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/jeu-ps5-clair-obscur-expedition-33-version-francaise-a-3699eur-au-lieu-de-4999eur-3458408",
+   "date": "Tue, 17 Nov 2026 05:01:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "36,99€ - JoyBuy • JRPG au tour par tour • Version sur disque pour PS5 • Textes et voix en français • Jouable hors ligne sur PS5 avec lecteur de disque"
+  },
+  {
+   "id": "1f686e33e8",
+   "titre": "Kosmos Cities [Müller Filialabholung]",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Müller",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kosmos-cities-muller-filialabholung-2873355",
+   "date": "Tue, 17 Nov 2026 05:07:32 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "19,99€ - Müller Tolles Stadtbau-Spiel was auch zu zweit Spaß macht. Laut Brettspiel-Angebote.de lag der bisherige Bestpreis bei 20,87€. Um auf den Preis zu kommen könnt ihr das Brettspiel, dass auf der Bestenliste vom Spiel des Jahres 2025 stand, versandkostenfrei in eine Müller-Filiale bestellen. A"
+  },
+  {
+   "id": "5a72e7c6ca",
+   "titre": "Coffee Talk Tokyo Switch für 22,99€ mit Otto Up Plus",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "OTTO",
+   "prix": 22.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/coffee-talk-tokyo-switch-fur-2299eur-mit-otto-up-plus-2873353",
+   "date": "Tue, 17 Nov 2026 04:41:29 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "22,99€ - OTTO Bei Otto gibt es die Switch Version von Coffee Talk Tokyo für 22,99€. Als Otto Up Plus Abonnent oder ab 59,95€ Bestellwert ist der Versand kostenlos. Die PS5 Fassung kostet ebenfalls 22,99€. Link zur PS5 Fassung Der nächstbeste Preis liegt bei 30,99€ über Amazon. Es kann natürlich sein"
+  },
+  {
+   "id": "96676d8cca",
+   "titre": "GilletteLabs Body + Intimate Razor for Men, 1 Handle & 2 Cartridges",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 15.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gillettelabs-body-intimate-razor-for-men-1-handle-2-cartridges-5035627",
+   "date": "Tue, 17 Nov 2026 03:39:42 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£15.50 - Amazon GilletteLabs Body + Intimate Razor for Men, 1 Handle & 2 Cartridges Triple Defence System, Anti-Ingrown & Anti-Irritation Bars, Magnetic Shower Hanger, Ergonomic Shower Grip Handle"
+  },
+  {
+   "id": "f3d8e0824a",
+   "titre": "GilletteLabs i7 Body + Intimate Hair Trimmer for Men, with 3 Combs",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 59.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gillettelabs-i7-body-intimate-hair-trimmer-for-men-with-3-combs-5035626",
+   "date": "Tue, 17 Nov 2026 03:38:28 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£59.99 - Amazon GilletteLabs i7 Body + Intimate Hair Trimmer for Men, with 3 Combs Precision Body & Pubic Hair Trimming, SkinFirst Tech, Waterproof, Charging Stand, Shower Hanger, Pouch, 100-Min Runtime"
+  },
+  {
+   "id": "765e3ad493",
+   "titre": "GilletteLabs i3 Body + Intimate Hair Trimmer for Men, with 2 Combs",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/gillettelabs-i3-body-intimate-hair-trimmer-for-men-with-2-combs-5035625",
+   "date": "Tue, 17 Nov 2026 03:37:14 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£29.99 - Amazon GilletteLabs i3 Body + Intimate Hair Trimmer for Men, with 2 Combs Precision Body & Pubic Hair Trimming, Cleaning Brush, SkinFirst Technology, Waterproof, 80-Min Runtime"
+  },
+  {
+   "id": "9e9391b95f",
+   "titre": "King C. Gillette Cordless Beard Trimmer for Men",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 20.82,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/king-c-gillette-cordless-beard-trimmer-for-men-5035624",
+   "date": "Tue, 17 Nov 2026 03:35:50 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£20.82 - Amazon King C. Gillette Cordless Beard Trimmer for Men with 5 Combs 1 Trimmer, 5 Interchangeable Combs, Cleaning Brush, Charger, Zip Pouch, Rechargeable Beard Trimmer with Lifetime Sharp Blades The King C. Gillette Cordless Beard Trimmer for Men , available on Amazon for £20.82, offers a ve"
+  },
+  {
+   "id": "d08929c3b4",
+   "titre": "Beats - Powerbeats Fit",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/beats-powerbeats-fit-5035623",
+   "date": "Tue, 17 Nov 2026 03:33:26 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£99 - Amazon Beats - Powerbeats Fit"
+  },
+  {
+   "id": "45cd0badf0",
+   "titre": "Judgment , Like a Dragon, Serie completa de Yakuza (STEAM)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": null,
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/judgment-like-a-dragon-serie-completa-de-yakuza-steam-2073258",
+   "date": "Tue, 17 Nov 2026 05:08:56 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,99€ RGG Studio se enorgullece de presentar Judgment, un juego de acción y aventura de detectives que sigue el retorcido crimen que se esconde bajo las calles de Tokio. Ponte en la piel de Takayuki Yagami, un abogado defensor caído en desgracia que se ha convertido en detective, y ábrete paso a tra"
+  },
+  {
+   "id": "prosp-3197efbe0c",
+   "titre": "ROWENTA Aspirateur x-pert 6.60 smart avec kit d’accessoires anti-poils d’animaux",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-5d4c9b124a",
+   "titre": "TEFAL Batteur électrique",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 16.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-e6c421ac13",
+   "titre": "BLACK+DECKER Nettoyeur haute pression",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 84.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-19afd6dcf4",
+   "titre": "Aspirateur souffleur",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 19.95,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-edf5183c6c",
+   "titre": "STANLEY Perceuse filaire",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-6b2126bb6a",
+   "titre": "Aspirateur laveur",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 69.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-d5ca1a94d2",
+   "titre": "Rowenta Aspirateur sans fil",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-b35d7d8558",
+   "titre": "RUSSELL HOBBS Blender mixeur",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-dacf603ba0",
+   "titre": "Appareil à gaufres fourrées",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Gifi",
+   "prix": 18.74,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Gifi",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-11 → 2026-11-17"
+  },
+  {
+   "id": "prosp-d02cab5f5b",
+   "titre": "PHILIPS AIRFRYER CONNECTÉE HD9280/60",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-22"
+  },
+  {
+   "id": "prosp-06e26fa163",
+   "titre": "5 FIVE SIMPLY SMART LOT DE 9 BOÎTES DE CONSERVATION",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 19.79,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-22"
+  },
+  {
+   "id": "prosp-cafb99d531",
+   "titre": "ASUS ORDINATEUR PORTABLE VIVOBOOK R1600QA-SE8178W + SOURIS ET SAC A DOS",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 479.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-22"
+  },
+  {
+   "id": "prosp-c13055e2ca",
+   "titre": "SANSMARQUE MATELAS À RESSORTS COSMOS",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Auchan",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Auchan",
+   "date": "2026-11-17",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-22"
+  }
+ ]
+}

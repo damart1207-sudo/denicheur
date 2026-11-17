@@ -193,8 +193,36 @@ class Bilan(unittest.TestCase):
         f["marche"]["vinted"]["neuf"]["min"] = 320.0   # moins de 50 € d'écart : pas de sens inverse
         self.assertIsNone(marche.inverse(f))
 
+    def test_grille_du_programme(self):
+        self.f["ventes_estimees_30j"] = 40
+        g = self.b.grille(self.f, self.regles)
+        self.assertEqual((g["demande"], g["ref_nom"], g["plafond"], g["marge_sans"], g["vetos"], g["vendable"]),
+                         ("forte", "le comparateur idealo", 132.05, 39.86, [], True))
+        # prix au-dessus du maximum de la grille : avis rejeté, même sous le 2e vendeur
+        ac = {"acheter": "NON", "raisons": "x"}
+        self.assertIsNone(self.b.valider(self.f, {"expert": {"vendre": "OUI", "ou": "leboncoin", "prix": 138, "raisons": "x"}, "acheteur": ac}, self.regles))
+        # eBay : 13 % de frais, la marge passe sous 20 € -> rejeté
+        self.assertIsNone(self.b.valider(self.f, {"expert": {"vendre": "OUI", "ou": "ebay", "prix": 130, "raisons": "x"}, "acheteur": ac}, self.regles))
+        # déjà au prix d'achat dans le comparateur : refus automatique, un OUI de l'IA est rejeté
+        self.f["marche"]["comparateur_min"] = {"prix": 93.0, "ou": "idealo", "nb_offres": 30, "lien": None, "ecart": 0.81}
+        g = self.b.grille(self.f, self.regles)
+        self.assertFalse(g["vendable"])
+        self.assertEqual(len(g["vetos"]), 2)
+        self.assertIn("REFUSE la vente", self.b.grille_texte(g))
+        self.assertIsNone(self.b.valider(self.f, {"expert": {"vendre": "OUI", "ou": "leboncoin", "prix": 110, "raisons": "x"}, "acheteur": ac}, self.regles))
+        b = self.b.sans_ia(self.f, g)
+        self.assertIn("déjà affiché à 93 € sur idealo", b["raisons_expert"])
+        self.assertIn("Ce qui ferait tout rater", "\n".join(self.b.lignes({"bilan": {**self.b.valider(fiche(ventes_estimees_30j=40, marche={}), {"expert": {
+            "vendre": "OUI", "ou": "leboncoin", "prix": 129.9, "raisons": "x", "condition": "Si l'offre à 92 € reste en ligne."}, "acheteur": ac}, self.regles)}})))
+        self.assertIn("LE PRODUIT SE VEND", self.b.formation())
+
     def test_sans_ia_pas_de_bilan(self):
-        with patch.dict(os.environ, {k: "" for k in ("GEMINI_API_KEY", "NVIDIA_API_KEY", "ZAI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY")}):
+        vide = {k: "" for k in ("GEMINI_API_KEY", "NVIDIA_API_KEY", "ZAI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY")}
+        with patch.dict(os.environ, vide):
+            b = self.b.rediger(self.f)                       # demande faible : le programme refuse lui-même, chiffres à l'appui
+            self.assertEqual((b["vendre"], b["ia"]), (False, "programme"))
+            self.assertIn("se vend trop peu", b["raisons_expert"])
+            self.f["ventes_estimees_30j"] = 40               # tout est bon : le programme ne dit jamais OUI tout seul
             self.assertIsNone(self.b.rediger(self.f))
         self.f["bilan"] = None
         self.assertNotIn("BILAN", ecart.message(self.f))

@@ -30,7 +30,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T19:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -233,7 +233,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T19:58+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré 104 € contre 119 € neuf le plus bas en France (Amazon.fr), soit 12,6 % d'économie seulement, sous le seuil de 15 %. Revente sans marge (occasion ~104 €).",
+   "prix_neuf_min_idealo": 119.0,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 12.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "876a4a7024",
@@ -279,7 +291,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T20:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -506,7 +518,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T20:18+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre du PlayStation Store britannique (PlayStation Direct UK), qui ne livre pas en France ; coût estimé 70,09 € avec frais, alors que la manette blanche se trouve couramment sous ce prix en France. Livraison France non confirmée.",
+   "prix_neuf_min_idealo": 78.99,
+   "source_prix_ref": "achatmoinscher (non fiable, prix FR courant plus bas)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": null
+  }
  },
  {
   "id": "9dcaab5e44",
@@ -539,7 +563,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T20:30+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -757,6 +781,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 20:33 UTC : offre active, 109.0 affiché, marchand 173_2 ; fiche amazon.es lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 109 € sur Amazon Espagne (114 € livré) alors qu'Amazon.fr vend le même Beats Solo 4 Noir Mat à 109 €. Aucune économie.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": null
+  }
  }
 ]

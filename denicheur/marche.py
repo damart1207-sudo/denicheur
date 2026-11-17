@@ -6,13 +6,14 @@ Pour chaque produit trouvé avec un gros écart, avant l'alerte Telegram :
  3. le VOLUME de recherche Google (voir `volumes`).
 
 Coûts : eBay et achatmoinscher gratuits. Vinted, Leboncoin et idealo passent par les robots Apify déjà payés
-(0,045 $ réservés par affaire, ≈ 0,02 $ au réel), sous un plafond à part « E » de 0,40 $ par jour (denicheur/apify.py) :
+(0,05 $ réservés par affaire, ≈ 0,03 $ au réel), sous un plafond à part « E » de 0,40 $ par jour (denicheur/apify.py) :
 la veille garde tout son plafond « A ». Les recherches partent en parallèle (une affaire est étudiée en ≈ 1 minute).
 Une source qui ne répond pas est notée « non consultée » : jamais un chiffre inventé, jamais « aucune annonce » à tort.
 """
 import json
 import os
 import re
+import unicodedata
 import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
@@ -23,7 +24,7 @@ RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOTS_VIDES = {"de", "du", "des", "la", "le", "les", "un", "une", "et", "ou", "à", "a", "au", "aux", "avec", "pour", "sans",
               "en", "sur", "par", "the", "and", "with", "for", "of", "pack", "lot", "neuf", "nouveau", "new"}
 PLANCHER, PLAFOND = 0.30, 2.0   # une annonce sous 30 % de notre achat = accessoire ; au-dessus de 2 fois le 2e vendeur = lot
-PLAFOND_ROBOT = 0.015           # $ au plus par recherche Vinted ou Leboncoin (15 annonces) ; idealo : 0,015 $ aussi
+PLAFOND_ROBOT = 0.015           # $ au plus par recherche Vinted (15 annonces) ; Leboncoin 0,02 $ ; idealo 0,015 $
 
 
 def nom_court(titre, marque=None, n=4):
@@ -40,6 +41,15 @@ def variantes(nom):
     """Du nom précis au nom plus large (3 mots au moins) : sert au volume de recherche, sans coût en plus (même appel)."""
     m = nom.split()
     return [nom] + ([" ".join(m[:3])] if len(m) >= 4 else [])
+
+
+def _sans_accents(t):
+    return "".join(c for c in unicodedata.normalize("NFD", t or "") if unicodedata.category(c) != "Mn")
+
+
+def meme(titre, nom):
+    """Même produit, d'après le titre d'une annonce de particulier : mots entiers, sans tenir compte des accents (« néo »)."""
+    return comparateurs.correspond(_sans_accents(titre), _sans_accents(nom))
 
 
 def _fourchette(annonces):
@@ -62,7 +72,7 @@ def vinted(nom, bas, haut):
         return None
     tout, neufs = [], []
     for i in items:
-        if not isinstance(i, dict) or not comparateurs.correspond(i.get("title") or "", nom):
+        if not isinstance(i, dict) or not meme(i.get("title") or "", nom):
             continue
         p = apify._num(i.get("price_amount"))
         if not _dans_bornes(p, bas, haut):
@@ -75,19 +85,10 @@ def vinted(nom, bas, haut):
 
 def leboncoin(nom, bas, haut):
     from . import apify
-    items = apify._lancer("leboncoin", apify.ROBOTS["leboncoin"][0], PLAFOND_ROBOT,
-                          {"startUrls": ["https://www.leboncoin.fr/recherche?text=" + urllib.parse.quote(nom)], "limit": 15}, 15)
-    if items is None:
+    annonces = apify.annonces_leboncoin(nom, plafond=0.02)
+    if annonces is None:
         return None
-    tout = []
-    for i in items:
-        if not isinstance(i, dict) or not comparateurs.correspond(i.get("title") or "", nom):
-            continue
-        m = re.search(r'"(?:price|amount|value)[a-z_]*"\s*:\s*\[?\s*"?(\d+(?:[.,]\d+)?)', json.dumps(i.get("pricing") or {}))
-        p = apify._num(m.group(1)) if m else None
-        if _dans_bornes(p, bas, haut):
-            tout.append((p, i.get("url")))
-    return _fourchette(tout)
+    return _fourchette([(p, lien) for t, p, lien in annonces if meme(t, nom) and _dans_bornes(p, bas, haut)])
 
 
 def _ebay_appel(tok, params, neuf):
@@ -117,7 +118,7 @@ def ebay_fr(nom, ean, bas, haut):
         for items, sur in lots:
             for it in items:
                 ident = it.get("itemId")
-                if ident in vus or not (sur or comparateurs.correspond(it.get("title") or "", nom)):
+                if ident in vus or not (sur or meme(it.get("title") or "", nom)):
                     continue
                 try:
                     p = float(it["price"]["value"])
@@ -155,7 +156,7 @@ def etudier(affaires):
     apify.CONTEXTE["denicheur"] = "E"
     taches = []
     try:
-        with ThreadPoolExecutor(max_workers=8) as pool:
+        with ThreadPoolExecutor(max_workers=12) as pool:
             for f in affaires:
                 nom = f.get("nom_court") or nom_court(f["titre"], f.get("marque"))
                 f["nom_court"] = nom

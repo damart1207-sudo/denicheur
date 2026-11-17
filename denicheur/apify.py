@@ -22,14 +22,14 @@ BUDGET_MOIS_USD = 35.0  # plan Starter (19 $ inclus) pris le 03/11/2026 ; plafon
 # T (affiliation TikTok Shop, outils/affiliation_tiktok.py, 2 relevés par semaine) : 1 $ les jours de relevé.
 # Un relevé = 2 classements de 100 produits (0,295 $ chacun, mesuré le 15/11) + recoupements des finalistes (≈ 0,03 $ par marque).
 # E (marché des écarts vendeurs, denicheur/marche.py, 17/11/2026) : Vinted + Leboncoin + idealo pour chaque affaire alertée,
-# 0,045 $ réservés par affaire (≈ 0,02 $ au réel), soit 8 affaires par jour ; à part pour ne pas prendre sur les vérifications de la veille (A).
+# 0,05 $ réservés par affaire (≈ 0,03 $ au réel), soit 8 affaires par jour ; à part pour ne pas prendre sur les vérifications de la veille (A).
 PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "E": 0.40, "T": 1.00}  # 1,65 $/jour hors T ; le plafond mensuel prime
 # Soirée de mise au point du 15/11/2026 uniquement (plusieurs relevés d'essai, débités au plafond avant le débit réel) :
 if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-15":
     PLAFOND_JOUR_USD["T"] = 2.00
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
-TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.0, 0.001), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),
+TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.005, 0.0008), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),
           # relevés réels du 15/11/2026 (console Apify de David) : TikTok 0,073 $ pour 25 produits ; eBay 0,018 $ pour 5 ventes ;
           # pubs 0,086 $ pour 42 pubs. TikTok : démarrage 0,025 $ à partir du 23/11/2026 (annoncé par le robot).
           "tiktok_top": (0.025, 0.0027), "ebay_vendus": (0.0, 0.0035), "pubs": (0.0, 0.0021)}
@@ -37,7 +37,9 @@ COUT_AU_RESULTAT = {"tiktok_top", "ebay_vendus", "pubs"}
 CONTEXTE = {"denicheur": "A"}  # qui appelle (A, B ou C), pour le journal
 ROBOTS = {
     "idealo": ("memo23~idealo-scraper", 0.015),  # 08/11 : coût réel ~0,01 $ (3 résultats) ; 0,03 bloquait les passages après 5 appels/jour
-    "leboncoin": ("fatihtahta~leboncoin-fr-scraper", 0.03),
+    # 17/11/2026 : fatihtahta~leboncoin-fr-scraper ne renvoyait plus AUCUNE annonce depuis le 06/11 (« source connection
+    # unavailable », diagnostic outils/diag_leboncoin.py). Remplacé par memo23 : 15 annonces justes en 37 s pour ≈ 0,017 $.
+    "leboncoin": ("memo23~leboncoin-scraper", 0.02),
     "vinted": ("scrape.badger~vinted-scraper", 0.03),
     # affiliation TikTok Shop (testés le 15/11/2026, voir outils/affiliation_tiktok.py)
     # 4 catégories × 25 produits (25 = minimum accepté par le robot) = 100 lignes × 0,0027 $ + démarrage 0,025 $ = 0,295 $
@@ -202,6 +204,21 @@ def prix_idealo(nom, ean=None):
             "gtin": b.get("gtin")}
 
 
+def annonces_leboncoin(nom, maxi=15, plafond=None):
+    """Annonces Leboncoin en cours pour une recherche : [(titre, prix, lien)]. None si le robot n'a pas pu être lancé."""
+    acteur, defaut = ROBOTS["leboncoin"]
+    items = _lancer("leboncoin", acteur, plafond or defaut,
+                    {"startUrls": [{"url": "https://www.leboncoin.fr/recherche?text=" + urllib.parse.quote(nom)}], "maxItems": maxi}, maxi)
+    if items is None:
+        return None
+    out = []
+    for i in items:
+        p = _num(i.get("price")) if isinstance(i, dict) else None
+        if p and i.get("title"):
+            out.append((i["title"], p, i.get("url")))
+    return out
+
+
 def revente_reelle(nom, prix_achat, avec_liens=False):
     """Prix des annonces réelles en cours (neuf ou comme neuf) sur Vinted et Leboncoin."""
     res = {}
@@ -212,14 +229,7 @@ def revente_reelle(nom, prix_achat, avec_liens=False):
     if pv:
         res["vinted"] = {"nb": len(pv), "min": min(pv), "mediane": statistics.median(pv),
                          "lien_min": next((i.get("url") for i in v if isinstance(i, dict) and i.get("price_amount") and float(i["price_amount"]) == min(pv)), None)}
-    lb = lancer("leboncoin", {"startUrls": ["https://www.leboncoin.fr/recherche?text=" + urllib.parse.quote(nom)], "limit": 15}, maxi=15) or []
-    pl = []
-    for i in lb:
-        if isinstance(i, dict) and comparateurs.correspond(i.get("title", ""), nom):
-            m = re.search(r'"(?:price|amount|value)[a-z_]*"\s*:\s*\[?\s*"?(\d+(?:[.,]\d+)?)', json.dumps(i.get("pricing") or {}))
-            p = _num(m.group(1)) if m else None
-            if p and p >= prix_achat * 0.5:
-                pl.append(p)
+    pl = [p for t, p, _ in annonces_leboncoin(nom) or [] if comparateurs.correspond(t, nom) and p >= prix_achat * 0.5]
     if pl:
         res["leboncoin"] = {"nb": len(pl), "min": min(pl), "mediane": statistics.median(pl)}
     return res

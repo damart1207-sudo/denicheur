@@ -1,6 +1,6 @@
 {
  "jour": "2026-11-17",
- "examines": 75,
+ "examines": 83,
  "affaires": [
   {
    "asin": "B0DWKBMSWG",
@@ -445,6 +445,152 @@
    "alerte": true
   },
   {
+   "asin": "B0CZPKPFTW",
+   "titre": "Beats Solo 4 – Casque Supra-auriculaire sans Fil Bluetooth, Apple et Android Compatible, 50 Heures d’autonomie - Rose pâle",
+   "marque": "Beats",
+   "lien": "https://www.amazon.fr/dp/B0CZPKPFTW",
+   "moyenne_90j": 177.13,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 109.0,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 185.44,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 12833,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 48,
+   "vu": "2026-11-17T13:37",
+   "retenu": true,
+   "premier": 109.0,
+   "premier_amazon": true,
+   "second": 185.44,
+   "ecart": 76.44,
+   "mot_cle": "beats solo 4",
+   "nom_court": "beats solo 4",
+   "ean": "0195949121845",
+   "marges": {
+    "prix_revente": 147.0,
+    "sous_le_second_pct": 21,
+    "marge_sans_charges": 38.0,
+    "marge_avec_charges": 15.3,
+    "charges_micro": 19.7,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 139.0,
+    "prix_pour_30_net_avec_charges": 163.97,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 1,
+      "min": 229.0,
+      "max": 229.0,
+      "lien_min": "https://www.ebay.fr/itm/820297168544?hash=itembefd8576a0:g:2y4AAeSwDtRq-SCL",
+      "dates": 1,
+      "age_min": 18,
+      "age_recent": 18,
+      "age_ancien": 18,
+      "recentes": 0,
+      "anciennes": 0
+     },
+     "occasion": {
+      "nb": 14,
+      "min": 36.88,
+      "max": 287.09,
+      "lien_min": "https://www.ebay.fr/itm/327413087225?_skw=beats+solo+4&hash=item4c3b573bf9:g:MDcAAeSwMilpRcvL",
+      "dates": 14,
+      "age_min": 29,
+      "age_recent": 22,
+      "age_ancien": 135,
+      "recentes": 0,
+      "anciennes": 14
+     },
+     "nb": 15
+    },
+    "achatmoinscher": {
+     "prix_min": 137.61,
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/modele-du-produit-casque-solo-4-wireless-cloud-pink-0195949121845.html"
+    },
+    "leboncoin": {
+     "nb": 15,
+     "min": 95.0,
+     "max": 170.0,
+     "lien_min": "https://www.leboncoin.fr/ad/photo_audio_video/3303273249",
+     "dates": 15,
+     "age_min": 11,
+     "age_recent": 2,
+     "age_ancien": 57,
+     "recentes": 3,
+     "anciennes": 9
+    },
+    "vinted": {
+     "nb": 13,
+     "min": 70.0,
+     "max": 140.0,
+     "lien_min": "https://www.vinted.fr/items/10835323425-beats-solo-4",
+     "neuf": {
+      "nb": 5,
+      "min": 100.0,
+      "max": 140.0,
+      "lien_min": "https://www.vinted.fr/items/10782482087-cuffie-beats-solo-4"
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 137.61,
+     "ou": "achatmoinscher",
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/modele-du-produit-casque-solo-4-wireless-cloud-pink-0195949121845.html",
+     "ecart": 28.61
+    }
+   },
+   "volume": 1000,
+   "volume_mot": "beats solo 4",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "Le programme refuse la vente car le prix maximum de 95 € (sous l'annonce Vinted à 100 €) donne une perte de 14 € au lieu d'une marge. De plus, 23 annonces sur 30 traînent depuis plus de 3 semaines, ce qui montre que le marché est saturé et que ça ne part pas vite.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même casque neuf dès 100 € sur Vinted et à 137 € sur les comparateurs, donc ton prix de 147 € est trop élevé. Il y a aussi des occasions à moins de 40 € sur eBay, ce qui rend l'achat neuf peu attractif.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "forte",
+     "ref_nom": "une annonce neuve Vinted",
+     "ref_prix": 100.0,
+     "plafond": 95.0,
+     "marge_sans": -14.0,
+     "marge_avec": -29.73,
+     "vetos": [
+      "en vendant 5 % sous une annonce neuve Vinted (100 €), soit 95 €, il reste -14 € de marge, moins de 20 €"
+     ],
+     "annonce_min": [
+      36.88,
+      "eBay occasion"
+     ],
+     "anciennes": 23,
+     "datees": 30,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": false
+    }
+   },
+   "alerte": true
+  },
+  {
    "asin": "B082N2Y688",
    "titre": "LEGO 75279 Star Wars Calendrier de l’Avent LEGO Star Wars 2020 mini jeu de Construction de Noël avec des Vaisseaux et des personnages emblém",
    "marque": "LEGO",
@@ -576,6 +722,174 @@
     "30_net_possible_avec_charges": true
    },
    "volume": null,
+   "alerte": true
+  },
+  {
+   "asin": "B0D6RQGFGG",
+   "titre": "Bose Ultra Open Earbuds, Écouteurs Oreilles Libres avec Technologie OpenAudio, Écouteurs immersifs à Clipser, Jusqu’à 48 Heures d’autonomie,",
+   "marque": "Bose",
+   "lien": "https://www.amazon.fr/dp/B0D6RQGFGG",
+   "moyenne_90j": 228.37,
+   "nb_offres_neuves": 12,
+   "offres": [
+    {
+     "total": 149.99,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 229.64,
+     "amazon": false,
+     "fba": true
+    },
+    {
+     "total": 252.89,
+     "amazon": false,
+     "fba": true
+    },
+    {
+     "total": 259.42,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 3089,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 42,
+   "vu": "2026-11-17T13:37",
+   "retenu": true,
+   "premier": 149.99,
+   "premier_amazon": true,
+   "second": 229.64,
+   "ecart": 79.65,
+   "mot_cle": "bose ultra open earbuds",
+   "nom_court": "bose ultra open earbuds",
+   "ean": "0017817854740",
+   "marges": {
+    "prix_revente": 190.0,
+    "sous_le_second_pct": 17,
+    "marge_sans_charges": 40.01,
+    "marge_avec_charges": 11.55,
+    "charges_micro": 25.46,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 179.99,
+    "prix_pour_30_net_avec_charges": 211.3,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 22,
+      "min": 51.05,
+      "max": 422.42,
+      "lien_min": "https://www.ebay.fr/itm/860013279720?_skw=bose+ultra+open+earbuds&hash=itemc83cc939e8:g:bGIAAeSwe1Bqw6K~",
+      "dates": 22,
+      "age_min": 42,
+      "age_recent": 12,
+      "age_ancien": 547,
+      "recentes": 0,
+      "anciennes": 20
+     },
+     "occasion": {
+      "nb": 11,
+      "min": 156.6,
+      "max": 386.23,
+      "lien_min": "https://www.ebay.fr/itm/206612740532?_skw=bose+ultra+open+earbuds&hash=item301b1439b4:g:Z-8AAeSwOedqx~~i",
+      "dates": 11,
+      "age_min": 40,
+      "age_recent": 3,
+      "age_ancien": 296,
+      "recentes": 1,
+      "anciennes": 10
+     },
+     "nb": 33
+    },
+    "achatmoinscher": {
+     "prix_min": 149.99,
+     "nb_offres": 3,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/sans-fil-ultra-open-earbuds-edition-limitee-violet-minuit.html"
+    },
+    "leboncoin": {
+     "nb": 15,
+     "min": 80.0,
+     "max": 220.0,
+     "lien_min": "https://www.leboncoin.fr/ad/photo_audio_video/3293950208",
+     "dates": 15,
+     "age_min": 25,
+     "age_recent": 1,
+     "age_ancien": 87,
+     "recentes": 3,
+     "anciennes": 5
+    },
+    "vinted": {
+     "nb": 10,
+     "min": 50.0,
+     "max": 219.0,
+     "lien_min": "https://www.vinted.fr/items/10849169276-bose-ultra-open-earbuds-transportetui-mit-ladefunktion",
+     "neuf": {
+      "nb": 6,
+      "min": 50.0,
+      "max": 219.0,
+      "lien_min": "https://www.vinted.fr/items/10849169276-bose-ultra-open-earbuds-transportetui-mit-ladefunktion"
+     }
+    },
+    "idealo": {
+     "prix_min": 149.99,
+     "nb_offres": 6,
+     "lien": "https://www.idealo.fr/prix/204990028/bose-ultra-open-earbuds-bleu-pierre-de-lune.html"
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 149.99,
+     "ou": "idealo",
+     "nb_offres": 6,
+     "lien": "https://www.idealo.fr/prix/204990028/bose-ultra-open-earbuds-bleu-pierre-de-lune.html",
+     "ecart": 0.0
+    }
+   },
+   "volume": 2400,
+   "volume_mot": "bose ultra open earbuds",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "Le programme refuse la vente car le prix d'achat de 149,99 € est déjà affiché sur idealo, ce qui annule tout avantage concurrentiel. La marge calculée est négative (-7,50 €), ce qui rend l'opération perdante.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même produit neuf à 149,99 € sur Amazon avec livraison gratuite et retour facile, donc je n'achèterai pas plus cher. De plus, il existe des annonces d'occasion ou de revente dès 50 € sur Vinted qui attirent les acheteurs sensibles au prix.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "forte",
+     "ref_nom": "le comparateur idealo",
+     "ref_prix": 149.99,
+     "plafond": 142.49,
+     "marge_sans": -7.5,
+     "marge_avec": -29.59,
+     "vetos": [
+      "il est déjà affiché à 149,99 € sur idealo, ton prix d'achat : n'importe qui le trouve à ce prix",
+      "en vendant 5 % sous le comparateur idealo (149,99 €), soit 142,49 €, il reste -7,50 € de marge, moins de 20 €"
+     ],
+     "annonce_min": [
+      50.0,
+      "Vinted"
+     ],
+     "anciennes": 35,
+     "datees": 48,
+     "inverse": null,
+     "douteuses": [
+      [
+       "une annonce neuve Vinted",
+       50.0
+      ],
+      [
+       "une annonce neuve eBay",
+       51.05
+      ]
+     ],
+     "vendable": false
+    }
+   },
    "alerte": true
   },
   {
@@ -1081,5 +1395,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-17T13:32+00:00"
+ "maj": "2026-11-17T13:38+00:00"
 }

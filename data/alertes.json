@@ -98747,7 +98747,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T06:38+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -99036,16 +99036,16 @@
     "Amazon 24/mois"
    ]
   },
-  "verifie_le": "2026-11-17T07:50+00:00",
+  "verifie_le": "2026-11-17T08:45+00:00",
   "verdict": {
-   "commentaire": "À revérifier : moniteur LG 32U721SA-W (blanc) à 199–209 € sur amazon.es (deal Chollometro), mais prix exact sur Amazon non lu et frais de port vers la France inconnus. Aucun prix neuf français fiable trouvé (LDLC et Alternate : plus en vente ; idealo/ledenicheur non lisibles). Indice seulement : Amazon.fr vendeurs tiers 325 €, plus bas 90 j 279 € (Keepa) — l'écart serait ~23 % si confirmé. Revente : marge ~23–26 € soit ~12 % du coût (< 15 %), donc pas de revente. Revérifié 17/11 07:50 UTC : page de l'offre toujours illisible, port vers la France toujours inconnu — reste à revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "non vérifié (indice Keepa Amazon.fr : 325 €, plus bas 90 j 279 €)",
+   "commentaire": "Offre terminée (page du bon plan relue à 08h29 UTC : expirée ; fiche amazon.es lue : rupture de stock).",
+   "prix_neuf_min_idealo": 315.78,
+   "source_prix_ref": "achatmoinscher (Amazon.fr Keepa 325 €)",
    "economie_pct": null,
    "prix_revente_verifie": null,
-   "canal": "fnac",
+   "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": "inconnue (Black Friday Amazon.es)",
+   "duree_offre": "sans objet",
    "demande_confirmee": false
   }
  },
@@ -100476,7 +100476,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T07:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -100665,7 +100665,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T07:51+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Pas moins cher qu'en France : coût livré estimé 139,10 € (95 £ + port/taxes depuis Amazon UK) contre 137,61 € en neuf en France (achatmoinscher). Livraison en France non confirmée.",
+   "prix_neuf_min_idealo": 137.61,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -1.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "00ec29fcd3",
@@ -100711,7 +100723,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -100929,7 +100941,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 08:19 UTC : offre active, 119.92 affiché, marchand 5_5 ; fiche auchan.fr lue : 157.99, en stock (panier), livraison : click & collect, livraison en, livrée en ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Les 39,50 € de réduction sont versés sur la carte de fidélité Auchan (cagnotte), pas déduits du prix : fiche auchan.fr lue à 08h19 UTC à 157,99 €. Carte de fidélité obligatoire et plus bas Amazon.fr sur 90 j à 116,31 € (Keepa) : pas une vraie affaire.",
+   "prix_neuf_min_idealo": 157.02,
+   "source_prix_ref": "achatmoinscher (Keepa Amazon.fr : 172,78 €, plus bas 90 j 116,31 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "993b9a9c06",
@@ -100962,7 +100986,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:14+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -101172,7 +101196,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 08:19 UTC : offre active, 54.99 affiché, marchand 200_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Économie trop faible : 54,99 € + port depuis Amazon Espagne (≈59,99 € livré) contre 59,99 € sur Amazon.fr (fiche lue par Keepa) : 0 à 8 % d'écart, sous les 15 % demandés.",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": 0.0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "006e282fd4",
@@ -101218,7 +101254,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -101437,7 +101473,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 08:28 UTC : offre active, 52.49 affiché, marchand 5_5 ; fiche auchan.fr lue : 84.99, en stock (panier), livraison : click & collect, livraison en, livret en ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Les 21,25 € de réduction sont versés sur la carte de fidélité Auchan (cagnotte), pas déduits du prix : fiche auchan.fr lue à 08h28 UTC à 84,99 €. Carte de fidélité obligatoire ; neuf le moins cher en France 83,99 € (achatmoinscher), Amazon.fr moyenne 90 j 78,86 €.",
+   "prix_neuf_min_idealo": 83.99,
+   "source_prix_ref": "achatmoinscher (Keepa Amazon.fr moyenne 90 j 78,86 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "48bf9ef6bd",
@@ -101483,7 +101531,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -101691,7 +101739,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 08:29 UTC : offre active, 24.95 affiché, marchand 1650_3 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Currys (Royaume-Uni) ne livre pas en France (retrait en magasin offert) ; coût livré estimé 45,22 € contre 39,99 € sur Amazon.fr (Keepa) et 31,82 € (achatmoinscher). Plus cher qu'en France.",
+   "prix_neuf_min_idealo": 31.82,
+   "source_prix_ref": "achatmoinscher (Keepa Amazon.fr 39,99 €)",
+   "economie_pct": -42.1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ed10ca0d0a",
@@ -101720,7 +101780,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-17T08:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -101741,7 +101801,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 08:36 UTC : offre active, 129.76 affiché, marchand 12683_2 ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Forfait mobile allemand (freenet / Telekom, offre « Young » réservée aux jeunes) : abonnement, pas un produit livrable ni revendable en France.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "sans objet",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "d80f364370",
@@ -101806,7 +101878,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -102106,6 +102178,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-17T08:45+00:00",
+  "verdict": {
+   "commentaire": "Offre réservée aux clients RED by SFR existants (renouvellement), avec 50 € d'offre de remboursement à demander : pas achetable par tout le monde. Fiche red-by-sfr.fr lue à 08h38 UTC à 549 € (449 € sur la page du bon plan). Neuf le moins cher en France 409 € (achatmoinscher). Prix final non confirmé.",
+   "prix_neuf_min_idealo": 409.0,
+   "source_prix_ref": "achatmoinscher (Keepa Amazon.fr 512 €, plus bas 90 j 402,72 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": false
   }
  }
 ]

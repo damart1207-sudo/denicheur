@@ -205,7 +205,8 @@ def prix_idealo(nom, ean=None):
 
 
 def annonces_leboncoin(nom, maxi=15, plafond=None):
-    """Annonces Leboncoin en cours pour une recherche : [(titre, prix, lien)]. None si le robot n'a pas pu être lancé."""
+    """Annonces Leboncoin en cours pour une recherche : [(titre, prix, lien, date de 1re publication)].
+    None si le robot n'a pas pu être lancé."""
     acteur, defaut = ROBOTS["leboncoin"]
     items = _lancer("leboncoin", acteur, plafond or defaut,
                     {"startUrls": [{"url": "https://www.leboncoin.fr/recherche?text=" + urllib.parse.quote(nom)}], "maxItems": maxi}, maxi)
@@ -215,7 +216,7 @@ def annonces_leboncoin(nom, maxi=15, plafond=None):
     for i in items:
         p = _num(i.get("price")) if isinstance(i, dict) else None
         if p and i.get("title"):
-            out.append((i["title"], p, i.get("url")))
+            out.append((i["title"], p, i.get("url"), i.get("firstPublishedAt") or i.get("indexedAt")))
     return out
 
 
@@ -229,7 +230,7 @@ def revente_reelle(nom, prix_achat, avec_liens=False):
     if pv:
         res["vinted"] = {"nb": len(pv), "min": min(pv), "mediane": statistics.median(pv),
                          "lien_min": next((i.get("url") for i in v if isinstance(i, dict) and i.get("price_amount") and float(i["price_amount"]) == min(pv)), None)}
-    pl = [p for t, p, _ in annonces_leboncoin(nom) or [] if comparateurs.correspond(t, nom) and p >= prix_achat * 0.5]
+    pl = [p for t, p, _, _ in annonces_leboncoin(nom) or [] if comparateurs.correspond(t, nom) and p >= prix_achat * 0.5]
     if pl:
         res["leboncoin"] = {"nb": len(pl), "min": min(pl), "mediane": statistics.median(pl)}
     return res

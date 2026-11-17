@@ -52,16 +52,44 @@ def meme(titre, nom):
     return comparateurs.correspond(_sans_accents(titre), _sans_accents(nom))
 
 
+ANCIENNE_J = 21   # une annonce en ligne depuis plus de 3 semaines sans se vendre (remarque de David, 17/11/2026)
+
+
+def age_jours(date):
+    """Nombre de jours depuis la publication (date ISO, ou secondes/millisecondes depuis 1970). None si illisible."""
+    from datetime import datetime, timezone
+    try:
+        if isinstance(date, (int, float)) and date > 0:
+            d = datetime.fromtimestamp(date / 1000 if date > 1e11 else date, timezone.utc)
+        else:
+            m = re.match(r"(\d{4})-(\d{2})-(\d{2})", str(date or ""))
+            d = datetime(int(m.group(1)), int(m.group(2)), int(m.group(3)), tzinfo=timezone.utc)
+    except (AttributeError, ValueError, OverflowError, OSError):
+        return None
+    j = (datetime.now(timezone.utc) - d).days
+    return j if 0 <= j < 3650 else None
+
+
 def _fourchette(annonces):
-    """annonces : [(prix, lien)] -> {nb, min, max, lien_min} ; {nb: 0} si aucune."""
-    annonces = sorted((a for a in annonces if a[0]), key=lambda a: a[0])
+    """annonces : [(prix, lien, date de publication)] -> {nb, min, max, lien_min} + l'ancienneté des annonces quand la date
+    est connue : age_min (jours en ligne de la moins chère), age_recent / age_ancien (la plus récente, la plus ancienne),
+    recentes (publiées depuis 7 jours), anciennes (en ligne depuis plus de ANCIENNE_J jours). {nb: 0} si aucune."""
+    annonces = sorted(((a[0], a[1], age_jours(a[2]) if len(a) > 2 else None) for a in annonces if a[0]), key=lambda a: a[0])
     if not annonces:
         return {"nb": 0}
-    return {"nb": len(annonces), "min": round(annonces[0][0], 2), "max": round(annonces[-1][0], 2), "lien_min": annonces[0][1]}
+    r = {"nb": len(annonces), "min": round(annonces[0][0], 2), "max": round(annonces[-1][0], 2), "lien_min": annonces[0][1]}
+    ages = [a[2] for a in annonces if a[2] is not None]
+    if ages:
+        r.update({"dates": len(ages), "age_min": annonces[0][2], "age_recent": min(ages), "age_ancien": max(ages),
+                  "recentes": sum(1 for x in ages if x <= 7), "anciennes": sum(1 for x in ages if x > ANCIENNE_J)})
+    return r
 
 
 def _dans_bornes(p, bas, haut):
     return isinstance(p, (int, float)) and bas <= p <= haut
+
+
+DATES_VINTED = ("created_at", "created_at_ts", "createdAt", "published_at", "upload_date", "last_push_up_at", "updated_at")
 
 
 def vinted(nom, bas, haut):
@@ -77,9 +105,10 @@ def vinted(nom, bas, haut):
         p = apify._num(i.get("price_amount"))
         if not _dans_bornes(p, bas, haut):
             continue
-        tout.append((p, i.get("url")))
+        date = next((i[k] for k in DATES_VINTED if i.get(k)), None)
+        tout.append((p, i.get("url"), date))
         if "neuf" in (i.get("status") or "").lower():
-            neufs.append((p, i.get("url")))
+            neufs.append((p, i.get("url"), date))
     return {**_fourchette(tout), "neuf": _fourchette(neufs)}
 
 
@@ -88,7 +117,7 @@ def leboncoin(nom, bas, haut):
     annonces = apify.annonces_leboncoin(nom, plafond=0.02)
     if annonces is None:
         return None
-    return _fourchette([(p, lien) for t, p, lien in annonces if meme(t, nom) and _dans_bornes(p, bas, haut)])
+    return _fourchette([(p, lien, date) for t, p, lien, date in annonces if meme(t, nom) and _dans_bornes(p, bas, haut)])
 
 
 def _ebay_appel(tok, params, neuf):
@@ -126,7 +155,7 @@ def ebay_fr(nom, ean, bas, haut):
                     continue
                 if _dans_bornes(p, bas, haut):
                     vus.add(ident)
-                    annonces.append((p, it.get("itemWebUrl")))
+                    annonces.append((p, it.get("itemWebUrl"), it.get("itemCreationDate")))
         res[cle] = _fourchette(annonces)
     res["nb"] = res["neuf"]["nb"] + res["occasion"]["nb"]
     return res
@@ -239,6 +268,10 @@ def _lien(texte, url):
     return f'<a href="{escape(url, quote=True)}">{texte}</a>' if url else texte
 
 
+def _depuis(j):
+    return "aujourd'hui" if j == 0 else f"depuis {j} j"
+
+
 def _ligne(nom, r, etat=""):
     if r is None:
         return f" • {nom} : non consulté"
@@ -246,7 +279,12 @@ def _ligne(nom, r, etat=""):
         return f" • {nom} : aucune annonce{etat}"
     n = r["nb"]
     prix = f"de {_eur(r['min'])} à {_eur(r['max'])}" if n > 1 and r["max"] > r["min"] else f"à {_eur(r['min'])}"
-    return f" • {nom} : {n} annonce{'s' if n > 1 else ''}{etat}, {prix} ({_lien('la moins chère', r.get('lien_min'))})"
+    t = f" • {nom} : {n} annonce{'s' if n > 1 else ''}{etat}, {prix} ({_lien('la moins chère', r.get('lien_min'))}"
+    t += (f", en ligne {_depuis(r['age_min'])}" if r.get("age_min") is not None else "") + ")"
+    if r.get("dates") and n > 1:   # ancienneté des annonces : ce qui traîne ne se vend pas
+        t += f"\n     📅 {r['recentes']} publiée{'s' if r['recentes'] > 1 else ''} cette semaine · {r['anciennes']} en ligne depuis plus de {ANCIENNE_J} j"
+        t += f" · la plus ancienne : {r['age_ancien']} j"
+    return t
 
 
 def lignes(f):
@@ -290,4 +328,10 @@ def lignes(f):
     if revente and bas and min(bas)[0] < revente:
         p, s = min(bas)
         t.append(f"⚠️ Déjà à {_eur(p)} sur {s} : sous le prix de revente conseillé ({_eur(revente)})")
+    # la moins chère traîne depuis plus de 3 semaines : personne n'en veut à ce prix, ou l'annonce est mal faite
+    vieux = [(r["min"], s, r["age_min"]) for s, r in (("Leboncoin", m.get("leboncoin")), ("Vinted", v), ("eBay neuf", (e or {}).get("neuf") if e else None),
+                                                       ("eBay occasion", (e or {}).get("occasion") if e else None))
+             if r and r.get("nb") and (r.get("age_min") or 0) > ANCIENNE_J]
+    for p, s, j in vieux:
+        t.append(f"⏳ {s} : l'annonce à {_eur(p)} est en ligne depuis {j} j sans se vendre (peu de demande, ou annonce mal faite)")
     return t

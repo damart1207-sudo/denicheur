@@ -53,6 +53,21 @@ class Sources(unittest.TestCase):
             self.assertEqual(marche.leboncoin("motorola edge 50 neo", 100, 999), {"nb": 2, "min": 199.0, "max": 270.0, "lien_min": "l1"})
 
 
+class Dates(unittest.TestCase):
+    def test_anciennete_des_annonces(self):
+        from datetime import timedelta
+        j = lambda n: (datetime.now(timezone.utc) - timedelta(days=n)).strftime("%Y-%m-%dT10:00:00Z")
+        r = marche._fourchette([(80.0, "a", j(26)), (120.0, "b", j(2)), (150.0, "c", j(40)), (130.0, "d", None)])
+        self.assertEqual((r["nb"], r["dates"], r["age_min"], r["age_recent"], r["age_ancien"], r["recentes"], r["anciennes"]), (4, 3, 26, 2, 40, 1, 2))
+        self.assertIsNone(marche.age_jours("hier"))
+        self.assertEqual(marche.age_jours((datetime.now(timezone.utc) - timedelta(days=3)).timestamp()), 3)
+        f = fiche(marche={"leboncoin": r, "vinted": {"nb": 0, "neuf": {"nb": 0}}, "ebay": None, "comparateurs_consultes": []})
+        t = ecart.message(f)
+        self.assertIn("en ligne depuis 26 j)", t)
+        self.assertIn("1 publiée cette semaine · 2 en ligne depuis plus de 21 j · la plus ancienne : 40 j", t)
+        self.assertIn("⏳ Leboncoin : l'annonce à 80 € est en ligne depuis 26 j sans se vendre", t)
+
+
 class Texte(unittest.TestCase):
     def test_alerte_complete(self):
         f = fiche(volume=1900, volume_mot="iiyama g-master gb2771hsu-w1", marche={

@@ -152,6 +152,33 @@ def volumes(mots, pays="FR"):
     return res
 
 
+def volumes_labs(mots, pays="FR"):
+    """Volume mensuel Google par la base DataForSEO Labs : {mot: volume}. ≈ 0,012 $ par appel + 0,00012 $ par mot
+    (tarif public relevé le 17/11/2026), contre 0,09 $ pour l'appel Google Ads de `volumes` : fait pour quelques mots
+    à la fois (alertes d'écart vendeurs). Renvoie None si l'appel n'a pas pu se faire, {} s'il n'a rien trouvé."""
+    propres = {}
+    for m in mots:
+        p = " ".join(_INTERDITS.sub(" ", (m or "").lower()).split()[:10])[:80].strip()
+        if p:
+            propres.setdefault(p, m)
+    cout = round(0.012 + 0.00012 * len(propres) + 0.005, 4)
+    if not propres or not disponible(cout):
+        return None
+    taches = _poster("dataforseo_labs/google/keyword_overview/live",
+                     [{"keywords": list(propres)[:700], "location_code": PAYS.get(pays, 2250), "language_code": LANGUE.get(pays, "fr")}],
+                     cout)
+    if not taches or all(t.get("status_code") != 20000 for t in taches):
+        return None
+    res = {}
+    for t in taches:
+        for bloc in (t.get("result") or []):
+            for it in ((bloc or {}).get("items") or []):
+                v = ((it or {}).get("keyword_info") or {}).get("search_volume")
+                if it.get("keyword") in propres and isinstance(v, int):
+                    res[propres[it["keyword"]]] = v
+    return res
+
+
 def tendances(mots, pays="FR", periode="past_90_days"):
     """Google Trends : intérêt 0-100 dans le temps pour ≤ 5 mots-clés dans un pays. {mot: {"serie": [...], "actuel", "moyenne", "tendance"}}."""
     mots = [m.strip()[:80] for m in mots if m and m.strip()][:5]

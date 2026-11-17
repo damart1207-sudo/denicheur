@@ -54,9 +54,9 @@ concurrency:
 jobs:
   passage:
     runs-on: ubuntu-latest
-    # garde-fou : la veille (4 tours de 10 min au plus, chacun coupé à 10 min + moisson 4 min) tient dans 70 min ;
+    # garde-fou : la veille (4 tours de 10 min au plus, chacun coupé à 10 min + moisson 4 min + écarts 3 min 30) tient dans 80 min ;
     # un passage complet dure 40 à 45 min (délai interne 45 min) : 58 min pour qu'il ne soit jamais coupé avant d'avoir écrit.
-    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 70 || 58 }}
+    timeout-minutes: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 80 || 58 }}
     steps:
       - uses: actions/checkout@v5
 
@@ -130,6 +130,8 @@ jobs:
               timeout -k 15 600 python -m denicheur.veille || python -m denicheur.sante echec "tour $i : code $? (coupé à 10 min)"
               # moissonneur Keepa : vide la réserve de jetons (ils expirent au bout d'une heure) -> radar Amazon, étagère, hype
               timeout -k 15 240 python -m denicheur.moisson || python -m denicheur.sante erreur "moisson tour $i : code $?"
+              # écarts vendeurs retenus par la moisson : marché (Leboncoin, Vinted, eBay, comparateurs) + volume, puis alerte Telegram
+              timeout -k 15 210 python -m denicheur.ecart || python -m denicheur.sante erreur "ecarts tour $i : code $?"
               python saas/construire_site.py || python -m denicheur.sante echec "site : construction"
               python saas/rapport_hype.py || true
               python saas/rapport_david.py || true

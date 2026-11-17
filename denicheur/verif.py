@@ -25,7 +25,7 @@ Réponds uniquement avec ce JSON :
 "remarque": "<une phrase en français>"}}"""
 
 
-def verifier_prix(candidats, cle=None, modeles=("gemini-3.8-flash", "gemini-flash-latest", "gemini-3.5-flash"), maxi=15):
+def verifier_prix(candidats, cle=None, modeles=("gemini-3.8-flash", "gemini-flash-latest", "gemini-3.5-flash", "gemini-2.5-flash", "gemini-flash-lite-latest"), maxi=15):
     cle = cle or os.environ.get("GEMINI_API_KEY", "").strip()
     bilan = {"faits": 0, "erreurs": []}
     if not cle:

@@ -22,7 +22,7 @@ from . import comparateurs
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MOTS_VIDES = {"de", "du", "des", "la", "le", "les", "un", "une", "et", "ou", "à", "a", "au", "aux", "avec", "pour", "sans",
-              "en", "sur", "par", "the", "and", "with", "for", "of", "pack", "lot", "neuf", "nouveau", "new"}
+              "en", "sur", "par", "the", "and", "with", "for", "of", "pack", "lot", "set", "kit", "neuf", "nouveau", "new"}
 PLANCHER, PLAFOND = 0.30, 2.0   # une annonce sous 30 % de notre achat = accessoire ; au-dessus de 2 fois le 2e vendeur = lot
 PLAFOND_ROBOT = 0.015           # $ au plus par recherche Vinted (15 annonces) ; Leboncoin 0,02 $ ; idealo 0,015 $
 
@@ -302,6 +302,8 @@ def lignes(f):
             ligne += f" → ton achat est <b>{_eur(c['ecart'])} en dessous</b> ✅"
         elif c["ecart"] > -5:
             ligne += " → ⚠️ déjà affiché à ce prix dans les comparateurs"
+        elif c["prix"] < 0.7 * f["premier"]:   # trouvé par le nom, très en dessous : le plus souvent un autre modèle (Bodum 1,5 L, 17/11)
+            ligne += " → ❓ bien moins cher que ton achat : sans doute un autre modèle, à vérifier sur le lien"
         else:
             ligne += f" → ⚠️ {_eur(-c['ecart'])} MOINS CHER que ton achat"
         t.append(ligne)

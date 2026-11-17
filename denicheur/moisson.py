@@ -131,12 +131,15 @@ def _appel(chemin, params, corps=None, *, etat=None, cout_max=None):
 
 def jetons_restants():
     if _jetons["restants"] is None:
+        if time.time() - _jetons.get("echec", 0) < 300:
+            return 0  # Keepa vient de refuser (429…) : ne pas le relancer à chaque taille de lot
         try:  # 1 jeton : la liste des catégories racine, on en profite pour la garder
             d = _appel("category", {"domain": 4, "category": 0, "parents": 0}, cout_max=1)
             cats = d.get("categories") or {}
             if cats and not os.path.exists(F_CATS):
                 _ecrire(F_CATS, {k: {"nom": v.get("name"), "pays": "FR"} for k, v in cats.items() if isinstance(v, dict)})
         except Exception as e:
+            _jetons["echec"] = time.time()
             sante.noter("erreur", "moisson jetons", f"{type(e).__name__}: {str(e)[:120]}")
             return 0
     return _jetons["restants"] or 0

@@ -5,7 +5,7 @@
 Fiabilité (17/11/2026, David : « es-tu sûr que ton expert s'y connaît ? ») : le PROGRAMME calcule d'abord une grille
 (`grille`) : demande, prix de vente maximum (5 % sous le neuf le moins cher visible), marges, refus automatiques. L'IA reçoit
 sa formation (skills/expert_revente.md) et cette grille ; un avis qui la contredit est rejeté. Sans IA valable, le programme
-écrit lui-même un refus chiffré, jamais un « oui ».
+écrit lui-même un refus chiffré, jamais un « oui ». Un « oui » est toujours soumis à un 2e expert (une autre IA).
 Une IA rédige les deux avis à partir des SEULS chiffres relevés (prix, ventes, volume de recherche, comparateurs,
 annonces Leboncoin / Vinted / eBay et leur ancienneté). Garde-fous : aucun chiffre accepté de l'IA en dehors du prix de
 vente conseillé, lui-même borné entre notre achat et le 2e vendeur (sens inverse : entre le coût de l'annonce neuve et le
@@ -19,7 +19,9 @@ import re
 
 RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CANAUX = {"leboncoin": "Leboncoin", "vinted": "Vinted", "ebay": "eBay", "amazon": "Amazon"}
-ORDRE_IA = ("gemini", "deepseek", "glm", "gptoss", "nemotron_nv")
+# Classement mesuré le 17/11/2026 sur 3 affaires réelles (outils/test_expert.py) : qwen et gpt-oss répondent juste en 1 à 3 s,
+# les Nemotron en 40 à 80 s, GLM 2 fois sur 3. Gemini (402 paiement exigé) et DeepSeek (modèle retiré le 16/11) ne répondent plus.
+ORDRE_IA = ("qwen", "gptoss", "nemotron_nv", "nemotron", "glm")
 SYSTEME = """Tu rends un bilan sur un produit acheté neuf pour être revendu neuf par un particulier ou une micro-entreprise en France.
 Tu tiens deux rôles, l'un après l'autre, et tu réponds UNIQUEMENT par un objet JSON :
 {"expert": {"vendre": "OUI" ou "NON", "achat": "amazon" | "vinted" | "ebay", "ou": "leboncoin" | "vinted" | "ebay" | "amazon" | null, "prix": nombre ou null, "raisons": "..."},
@@ -121,7 +123,10 @@ def grille(f, regles):
     c = mk.get("comparateur_min")
     c = c if c and c["prix"] >= 0.7 * f["premier"] else None
     v, e = mk.get("vinted") or {}, mk.get("ebay") or {}
+    from .marche import MEME_MODELE
     neufs = [(f"une annonce neuve {n}", r["min"]) for n, r in (("Vinted", v.get("neuf")), ("eBay", e.get("neuf"))) if r and r.get("nb")]
+    douteuses = [r for r in neufs if r[1] < MEME_MODELE * f["premier"]]   # trop bas pour être le même produit : ignorées
+    neufs = [r for r in neufs if r not in douteuses]
     refs = [("le 2e vendeur Amazon", f["second"])] + ([(f"le comparateur {c['ou']}", c["prix"])] if c else []) + neufs
     ref_nom, ref_prix = min(refs, key=lambda r: r[1])
     plafond = round(ref_prix * SOUS_LE_NEUF, 2)
@@ -141,7 +146,8 @@ def grille(f, regles):
     dates = [r for r in (mk.get("leboncoin"), e.get("neuf"), e.get("occasion")) if r and r.get("dates")]
     g = {"demande": demande, "ref_nom": ref_nom, "ref_prix": ref_prix, "plafond": plafond, "marge_sans": sans, "marge_avec": avec,
          "vetos": vetos, "annonce_min": min(occ) if occ else None,
-         "anciennes": sum(r["anciennes"] for r in dates), "datees": sum(r["dates"] for r in dates), "inverse": None}
+         "anciennes": sum(r["anciennes"] for r in dates), "datees": sum(r["dates"] for r in dates), "inverse": None,
+         "douteuses": douteuses}
     inv = inverse(f)
     if inv:
         autres = [("le moins cher d'Amazon", f["premier"])] + ([(f"le comparateur {c['ou']}", c["prix"])] if c else []) \
@@ -167,6 +173,8 @@ def grille_texte(g):
         t.append(f"- Sens inverse (achat de l'annonce neuve {i['site']} à {_eur(i['prix'])}, coût {_eur(i['cout'])}) : prix de vente maximum "
                  f"{_eur(i['plafond'])} (5 % sous {i['ref_nom']} à {_eur(i['ref_prix'])}) ; marge {_eur(i['marge_sans'])} sans charges, "
                  f"{_eur(i['marge_avec'])} avec charges micro" + ("" if i["possible"] else " : REFUSÉ PAR LE PROGRAMME (marge trop faible)"))
+    for nom, prix in g.get("douteuses") or []:
+        t.append(f"- {nom[0].upper() + nom[1:]} à {_eur(prix)} est ignorée : moins de 70 % du prix Amazon, presque sûrement un autre modèle ou une autre taille")
     if g["annonce_min"]:
         t.append(f"- Annonce la moins chère tous états confondus : {_eur(g['annonce_min'][0])} sur {g['annonce_min'][1]}")
     if g["datees"]:
@@ -250,19 +258,28 @@ def rediger(f, regles=None, ordre=ORDRE_IA):
         return None
     g = grille(f, regles)
     systeme, fiche = SYSTEME + "\n\nTA FORMATION :\n" + formation(), fiche_texte(f) + "\n\n" + grille_texte(g)
+    premier = None
     for ident in ordre:
         conf = agents.get(ident)
         if not conf:
             continue
-        ag = ia.Agent(ident, {**conf, "max_appels": 1, "timeout": 45})
+        ag = ia.Agent(ident, {**conf, "max_appels": 1, "timeout": 60})
         if not ag.cle:
             continue
         b = valider(f, ia.extraire_json(ag.demander(systeme, fiche)), regles, g)
         if b and b["vendre"] and not g["vendable"]:
             b = None
-        if b:
+        if b and premier is None:
             b.update({"ia": ag.nom, "grille": g})
-            return b
+            if not b["vendre"]:
+                return b
+            premier = b          # un OUI engage de l'argent : il faut l'avis d'un 2e expert (une autre IA)
+        elif b:
+            b2 = {"ia": ag.nom, "vendre": b["vendre"], "raisons": b["raisons_expert"]}
+            premier["second"] = b2
+            return premier
+    if premier:
+        return premier
     b = sans_ia(f, g)
     if b:
         b["grille"] = g
@@ -288,6 +305,9 @@ def lignes(f):
     else:
         t.append("❌ <b>Je ne le vends pas</b>")
     t.append(escape(b["raisons_expert"], quote=False))
+    s2 = b.get("second")
+    if s2:
+        t.append("👥 2e expert : " + ("<b>d'accord</b>. " if s2["vendre"] else "<b>pas d'accord, lui ne vend pas</b>. ") + escape(s2["raisons"], quote=False))
     if b.get("condition"):
         t.append("⚠️ Ce qui ferait tout rater : " + escape(b["condition"], quote=False))
     t.append("🛒 <b>L'ACHETEUR devant l'annonce</b>")

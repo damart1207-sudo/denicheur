@@ -216,6 +216,23 @@ class Bilan(unittest.TestCase):
             "vendre": "OUI", "ou": "leboncoin", "prix": 129.9, "raisons": "x", "condition": "Si l'offre à 92 € reste en ligne."}, "acheteur": ac}, self.regles)}})))
         self.assertIn("LE PRODUIT SE VEND", self.b.formation())
 
+    def test_annonce_neuve_trop_basse_ignoree_et_second_expert(self):
+        f = fiche(premier=143.09, second=207.59, ventes_estimees_30j=11, marche={"leboncoin": {"nb": 0}, "vinted": {"nb": 0, "neuf": {"nb": 0}},
+                  "comparateurs_consultes": ["idealo"], "ebay": {"nb": 5, "neuf": {"nb": 5, "min": 46.99, "max": 191.99, "lien_min": "e"}, "occasion": {"nb": 0}}})
+        self.assertIsNone(marche.inverse(f))                       # 46,99 € contre 143,09 € : pas le même produit
+        g = self.b.grille(f, self.regles)
+        self.assertEqual((g["ref_nom"], g["inverse"], len(g["douteuses"]), g["vetos"]), ("le 2e vendeur Amazon", None, 1, []))
+        self.assertIn("presque sûrement un autre modèle", self.b.grille_texte(g))
+        oui = json.dumps({"expert": {"vendre": "OUI", "ou": "leboncoin", "prix": 189, "raisons": "Marge de 45 €.", "condition": "Si l'offre à 143 € reste."},
+                          "acheteur": {"acheter": "NON", "raisons": "Amazon à 143 €."}})
+        non = json.dumps({"expert": {"vendre": "NON", "raisons": "11 ventes par mois, ça dormira."}, "acheteur": {"acheter": "NON", "raisons": "x"}})
+        reponses = iter([oui, non])
+        with patch.dict(os.environ, {"GROQ_API_KEY": "k"}), patch("denicheur.ia.Agent.demander", side_effect=lambda *a: next(reponses)):
+            b = self.b.rediger(f, self.regles)
+        self.assertEqual((b["vendre"], b["prix"], b["second"]["vendre"]), (True, 189.0, False))
+        f["bilan"] = b
+        self.assertIn("2e expert : <b>pas d'accord, lui ne vend pas</b>. 11 ventes par mois", ecart.message(f))
+
     def test_sans_ia_pas_de_bilan(self):
         vide = {k: "" for k in ("GEMINI_API_KEY", "NVIDIA_API_KEY", "ZAI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY")}
         with patch.dict(os.environ, vide):

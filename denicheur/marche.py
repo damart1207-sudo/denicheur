@@ -138,12 +138,14 @@ def ebay_fr(nom, ean, bas, haut):
     res = {}
     for cle, neuf in (("neuf", True), ("occasion", False)):
         vus, annonces = set(), []
-        lots = [(_ebay_appel(tok, {"q": nom}, neuf), False)]
+        lots = []
         if ean:
             try:
                 lots.append((_ebay_appel(tok, {"gtin": ean}, neuf), True))  # code-barres : même produit, sans filtre de titre
             except Exception:
                 pass
+        if not lots or not lots[0][0]:   # pas de code-barres, ou aucune annonce avec ce code : recherche par le nom
+            lots.append((_ebay_appel(tok, {"q": nom}, neuf), False))
         for items, sur in lots:
             for it in items:
                 ident = it.get("itemId")
@@ -299,6 +301,8 @@ def _ligne(nom, r, etat=""):
     return t
 
 
+MEME_MODELE = 0.7  # une annonce « neuve » sous 70 % du moins cher d'Amazon n'est pas crue : autre taille, autre modèle, lot
+                   # incomplet (bâche vidaXL 5 x 8 m à 143 € sur Amazon, « la même » à 46,99 € sur eBay, 17/11/2026)
 INVERSE_MIN = 50   # euros d'écart au moins entre une annonce NEUVE (Vinted, eBay) et le moins cher d'Amazon
 
 
@@ -316,6 +320,7 @@ def inverse(f):
     if (e.get("neuf") or {}).get("nb"):
         p = e["neuf"]["min"]
         c.append({"site": "ebay", "prix": p, "cout": p, "lien": e["neuf"].get("lien_min"), "age": e["neuf"].get("age_min")})
+    c = [x for x in c if x["prix"] >= MEME_MODELE * f["premier"]]   # bien moins cher qu'Amazon : presque toujours un autre modèle
     if not c:
         return None
     b = min(c, key=lambda x: x["cout"])

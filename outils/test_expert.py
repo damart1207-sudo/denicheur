@@ -8,7 +8,7 @@ from concurrent.futures import ThreadPoolExecutor
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from denicheur import bilan, ecart, ia, telegram
 
-IAS = ("gemini", "deepseek", "glm", "gptoss", "qwen", "nemotron_nv", "gemma", "nemotron")
+IAS = ("qwen", "gptoss", "nemotron_nv")
 regles = ecart._lire(os.path.join(ecart.RACINE, "config/regles.json"), {})
 agents = ecart._lire(os.path.join(ecart.RACINE, "config/equipe.json"), {})["agents"]
 base = ecart._lire(ecart.F_ECARTS, {})
@@ -43,7 +43,7 @@ for f in lot:
             print(f"\n--- {ident} ({duree:.0f} s) : " + (json.dumps(b, ensure_ascii=False) if b else "PAS D'AVIS VALABLE — " + erreur))
     f["bilan"] = bilan.rediger(f, regles)
     print("\n>>> bilan retenu :", json.dumps({k: v for k, v in (f["bilan"] or {}).items() if k != "grille"}, ensure_ascii=False))
-    texte = "🎓 Expert formé (grille chiffrée + formation), même affaire rejugée\n" + ecart.message(f)
+    texte = "🎓 Expert formé, avec 2e avis quand il dit oui\n" + ecart.message(f)
     print("Telegram :", telegram.envoyer(texte))
 print("\nCLASSEMENT (avis valables / essais, durée moyenne) :")
 for i, (n, ok, d) in sorted(score.items(), key=lambda x: (-x[1][1], x[1][2])):

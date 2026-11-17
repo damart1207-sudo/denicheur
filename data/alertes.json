@@ -101620,7 +101620,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T08:59+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -101944,6 +101944,18 @@
    "proba_detail": [
     "Amazon 40/mois"
    ]
+  },
+  "verifie_le": "2026-11-17T09:55+00:00",
+  "verdict": {
+   "commentaire": "Réservé aux clients RED by SFR (abonnement obligatoire) et prix de 399 € seulement après 200 € d'offres de remboursement : prix final non garanti pour tout le monde. Rejeté par prudence.",
+   "prix_neuf_min_idealo": 555.55,
+   "source_prix_ref": "achatmoinscher (keepa/amazon.fr plus haut)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  },
  {
@@ -101977,7 +101989,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T09:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -102176,7 +102188,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T09:17+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T09:55+00:00",
+  "verdict": {
+   "commentaire": "EAN 3439600049862 = flacon 100 ml. Moins cher en France : Kapao 94,95 € livré (achatmoinscher), news-parfums 95,99 €. Coût Amazon.es 81 € livré = seulement 14,7 % d'économie (sous 15 %) et revente à perte. Rejeté.",
+   "prix_neuf_min_idealo": 94.95,
+   "source_prix_ref": "achatmoinscher (Kapao, livraison incluse)",
+   "economie_pct": 14.7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "66444ad841",
@@ -102209,7 +102233,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T09:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -102419,7 +102443,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 09:28 UTC : offre active, 109.0 affiché, marchand 173_2 ; mediamarkt.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T09:55+00:00",
+  "verdict": {
+   "commentaire": "Même prix en France (109 € sur Amazon.fr) qu'à MediaMarkt Espagne : aucune économie. Rejeté.",
+   "prix_neuf_min_idealo": 109.0,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "c96d4b96af",
@@ -102465,7 +102501,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T09:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -102675,7 +102711,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 09:29 UTC : offre active, 35.21 affiché, marchand 1650_3 ; fiche amazon.es lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T09:55+00:00",
+  "verdict": {
+   "commentaire": "Offre britannique en livres (35,89 £ chez Amazon Espagne pour le Royaume-Uni) : prix pour la France non vérifiable, coût calculé 57,53 € soit plus cher que le neuf en France (44,99 €). Rejeté.",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -27.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "3c480db886",
@@ -102704,7 +102752,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-17T09:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -102719,6 +102767,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan illisible (HTTP 410) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T09:58+00:00",
+  "verdict": {
+   "commentaire": "Erreur de prix probable chez MediaMarkt Luxembourg (le vendeur annule souvent) ; la page Dealabs est supprimée (HTTP 410) et la livraison en France par MediaMarkt.lu n'est pas prouvée. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "très courte (erreur de prix)",
+   "demande_confirmee": null
+  }
  }
 ]

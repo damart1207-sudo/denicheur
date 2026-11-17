@@ -28,6 +28,8 @@ Rôle 2, ACHETEUR : tu es devant l'annonce de ce produit au prix conseillé par 
 dit NON), sur le site choisi. Tu compares avec ce que tu trouves en deux minutes : comparateurs, Amazon, autres annonces.
 Dis si tu achètes, OUI ou NON, et pourquoi.
 
+La demande se juge d'abord sur les ventes Amazon (50 achats ou plus par mois = forte, moins de 15 ventes sur 30 jours = faible),
+ensuite sur les recherches Google ; un volume « trop peu pour être mesuré » ou « inconnu » ne prouve pas à lui seul une demande faible.
 Règles : n'utilise QUE les chiffres de la fiche, n'invente aucun prix ni aucune donnée ; une information absente de la fiche est
 inconnue, dis-le au lieu de la deviner. « raisons » : 2 phrases au plus, en français simple, en tutoyant, avec les chiffres qui comptent."""
 

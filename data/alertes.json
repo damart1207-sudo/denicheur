@@ -1683,7 +1683,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T22:24+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1897,7 +1897,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 22:26 UTC : offre active, 26.0 affiché, marchand 5_5 ; fiche micromania.fr lue : 24.99, en stock (panier), livraison : livrer en ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Bon plan. Fiche Micromania lue par le robot à 23h26 : Dragon Quest III HD-2D Remake (Switch, version française), 24,99 €, en stock, livraison gratuite en magasin Micromania en 2-3 jours (4,99 € à domicile). Neuf le moins cher ailleurs en France : 34,99 € chez Nexplay (consollection.com, relevé il y a moins d'une heure), Auchan 36,49 € port compris (achatmoinscher). Économie 29 % en retrait magasin. Revente : marge d'environ 9 € seulement, prix idealo absent : pas de statut revente.",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "consollection.com (Nexplay 34,99 €) et achatmoinscher.com (Auchan 36,49 €), recherche web 17/11 23h50",
+   "economie_pct": 28.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday, stock qui part vite (quelques jours au plus)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T22:50+00:00"
  },
  {
   "id": "1f438412c9",
@@ -1943,7 +1955,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T22:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2158,7 +2170,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 22:36 UTC : offre active, 19.99 affiché, marchand 5_5 ; fiche auchan.fr lue : 39.99, en stock (panier), livraison : click & collect ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Fiche Auchan lue par le robot à 23h36 : 39,99 €. Les 19,99 € ne sont qu'une cagnotte de 50 % sur la carte de fidélité Auchan (bon d'achat, carte obligatoire). Neuf le moins cher : 35,94 € (achatmoinscher). Pas une vraie baisse.",
+   "prix_neuf_min_idealo": 35.94,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": -11.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T22:50+00:00"
  },
  {
   "id": "0a97aa65f5",
@@ -2211,7 +2235,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T22:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2426,6 +2450,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 22:36 UTC : offre active, 24.99 affiché, marchand 53_3 ; fiche auchan.fr lue : 51.99, en stock (panier), livraison : click & collect ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Fiche Auchan lue par le robot à 23h36 : 51,99 €. Les 25,99 € ne sont qu'une cagnotte de 50 % sur la carte de fidélité Auchan (bon d'achat, carte obligatoire). Neuf le moins cher : 47,73 € (achatmoinscher). Pas une vraie baisse.",
+   "prix_neuf_min_idealo": 47.73,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": -8.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T22:50+00:00"
  }
 ]

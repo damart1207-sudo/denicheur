@@ -104957,7 +104957,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T16:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -105215,6 +105215,18 @@
    "proba_detail": [
     "Amazon 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-17T16:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : page Amazon.de illisible (anti-robot), offre non confirmée. Le prix de référence Amazon.fr (85,17 €) vient d'un vendeur tiers anormalement cher : moyenne 90 j 62,83 €, plus bas 90 j 35 €. Aucun prix neuf français fiable trouvé pour cette couleur/taille (XL). Vêtement d'une seule taille, demande faible (≈10 ventes/mois). Revente plafonnée à 85 % de 62,83 € ≈ 53 € → marge < 8 €.",
+   "prix_neuf_min_idealo": 62.83,
+   "source_prix_ref": "Keepa Amazon.fr moyenne 90 jours (prix actuel tiers écarté)",
+   "economie_pct": 28,
+   "prix_revente_verifie": 53.4,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

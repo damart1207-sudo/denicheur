@@ -1,0 +1,5116 @@
+{
+ "passage": "midi",
+ "horodatage": "2026-11-17_1255",
+ "date_affichee": "17/11/2026 à 12 h 55",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 33,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 690,
+ "nb_nouvelles": 135,
+ "nb_prefiltres": 102,
+ "nb_tries": 102,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 18
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 42,
+   "remplace": "nemotron_nv"
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 15,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "TimeoutError: The read operation timed out",
+    "coupé pour ce passage (aucune réponse)"
+   ],
+   "choix": 0
+  }
+ },
+ "remplacements": {
+  "gptoss": "nemotron_nv",
+  "qwen": "gemma"
+ },
+ "candidats": [
+  {
+   "id": "43691aad59",
+   "titre": "Casque gamer sans Fil JBL Quantum 910 - Réduction de Bruit Active",
+   "prix": 99.99,
+   "devise": "EUR",
+   "marchand": "Boulanger",
+   "lien": "https://www.dealabs.com/bons-plans/casque-gamer-sans-fil-jbl-quantum-910-reduction-de-bruit-active-3455940",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 125,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/casque-gamer-sans-fil-jbl-quantum-910-reduction-de-bruit-active-3455940"
+   },
+   "meme_produit": {
+    "meme": null,
+    "raison": "non confirmé",
+    "qte_a": null,
+    "qte_b": null,
+    "reference": "jbl quantum 910 wireless"
+   },
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "JBL Quantum 910",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 181.29,
+   "cout_achat": 104.99,
+   "marge_nette": 49.01,
+   "rentabilite": 0.467,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 52 % vs neuf le moins cher"
+   },
+   "score": 78.0,
+   "veille": true,
+   "idealo": {
+    "prix_min": 240.56,
+    "nb_offres": 1,
+    "lien": "https://www.idealo.fr/prix/202151711/jbl-quantum-910-wireless.html",
+    "titre": "JBL Quantum 910 Wireless",
+    "gtin": "6925281928420"
+   },
+   "prix_plancher": {
+    "nom": "JBL Quantum 910",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "JBL Casques gaming  Quantum 910 Wireless",
+       "prix": 206.01,
+       "nb_boutiques": 6,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casques-gaming-jbl-quantum-910-wireless.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 206.01,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casques-gaming-jbl-quantum-910-wireless.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": null,
+    "marque": "JBL",
+    "asin": "B0BJ7KMJKR",
+    "titre": "JBL Quantum 910 Casque de Gaming sans Fil avec Réduction de Bruit Active et Bluetooth, Batterie qui se Recharge en Cours d’Utilisation et Micro-tige, en Noir",
+    "ean": "6925281928420",
+    "pays": "FR",
+    "prix_neuf": null,
+    "prix_amazon": null,
+    "prix_tiers": null,
+    "moyenne_90j": 227.0,
+    "plus_bas_90j": 136.02,
+    "occasion": 109.99,
+    "rang_ventes": 8929,
+    "chutes_rang_30j": 25,
+    "chutes_rang_90j": 85,
+    "ventes_estimees_30j": 25,
+    "remise_sincere": null,
+    "lien": "https://www.amazon.fr/dp/B0BJ7KMJKR",
+    "jetons_restants": 67
+   },
+   "ean": "6925281928420",
+   "asin": "B0BJ7KMJKR",
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": 25,
+   "ebay": {
+    "requete": "JBL Quantum 910",
+    "neuf": null,
+    "occasion": {
+     "nb": 3,
+     "min": 120.3,
+     "p25": 120.3,
+     "mediane": 231.06,
+     "max": 284.45
+    },
+    "exemples": [
+     {
+      "titre": "Casque Jbl Quantum 910 x wirless",
+      "prix": "120.30",
+      "url": "https://www.ebay.fr/itm/389106659848?_skw=JBL+Quantum+910&hash=item5a98907208:g:LZoAAeSwjK9o8iCf"
+     },
+     {
+      "titre": "JBL Quantum 910 Wireless",
+      "prix": "231.06",
+      "url": "https://www.ebay.fr/itm/327136945907?_skw=JBL+Quantum+910&hash=item4c2ae1a6f3:g:VrYAAeSwYbhp9a-t"
+     },
+     {
+      "titre": "[Utilisé] JBL Quantum 910 Wireless",
+      "prix": "284.45",
+      "url": "https://www.ebay.fr/itm/227343233389?_skw=JBL+Quantum+910&hash=item34eeb6716d:g:5h0AAeSwhENqBCim"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 169.0,
+     "IT": 152.53,
+     "ES": 148.45
+    },
+    "meilleur_pays": "DE"
+   },
+   "mot_cle": "jbl quantum 910",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 181.29,
+     "marge_nette": 49.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.29,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 24.29,
+      "provision": 3.0,
+      "marge_nette": 49.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.467
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 181.29,
+     "marge_nette": 49.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.29,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 24.29,
+      "provision": 3.0,
+      "marge_nette": 49.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.467
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 181.29,
+     "marge_nette": 49.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.29,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 24.29,
+      "provision": 3.0,
+      "marge_nette": 49.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.467
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 206.01,
+     "marge_nette": 47.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 206.01,
+      "cout_achat": 104.99,
+      "frais_canal": 22.42,
+      "prelevements": 27.61,
+      "provision": 3.0,
+      "marge_nette": 47.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.457
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 206.01,
+     "marge_nette": 45.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 206.01,
+      "cout_achat": 104.99,
+      "frais_canal": 24.48,
+      "prelevements": 27.61,
+      "provision": 3.0,
+      "marge_nette": 45.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.437
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 206.01,
+     "marge_nette": 45.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 206.01,
+      "cout_achat": 104.99,
+      "frais_canal": 24.54,
+      "prelevements": 27.61,
+      "provision": 3.0,
+      "marge_nette": 45.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.437
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 206.01,
+     "marge_nette": 37.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 206.01,
+      "cout_achat": 104.99,
+      "frais_canal": 33.13,
+      "prelevements": 27.61,
+      "provision": 3.0,
+      "marge_nette": 37.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.355
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 206.01,
+     "marge_nette": 32.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 206.01,
+      "cout_achat": 104.99,
+      "frais_canal": 37.89,
+      "prelevements": 27.61,
+      "provision": 3.0,
+      "marge_nette": 32.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.31
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 199.83,
+   "marge_verifiee": 65.06,
+   "rentabilite_verifiee": 0.62,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 109.99,
+    "haut": 231.06,
+    "position_neuf": 0.91
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 878.3,
+   "rapport_concurrence": {
+    "requete": "JBL Quantum 910",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 6,
+      "total_ebay": 18,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 159.0,
+       "titre": "JBL Quantum 910 Wireless",
+       "lien": "https://www.ebay.de/itm/286664079052?_skw=JBL+Quantum+910&hash=item42be82b6cc:g:gTcAAeSwmd5oVHqz",
+       "vendeur": "mer29671",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 312.49,
+       "titre": "JBL Quantum 910 Wireless Gaming-Headset mit ANC",
+       "lien": "https://www.ebay.de/itm/407356064579?_skw=JBL+Quantum+910&hash=item5ed8504343:g:fswAAeSwy6RqxiMN",
+       "vendeur": "blackdragondistribution",
+       "avis_vendeur": 88
+      }
+     },
+     "IT": {
+      "nb_annonces": 9,
+      "total_ebay": 16,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 144.21,
+       "titre": "Nuove cuffie da gioco over-ear wireless JBL Quantum 910",
+       "lien": "https://www.ebay.it/itm/860026982661?_skw=JBL+Quantum+910&hash=itemc83d9a5105:g:sL8AAeSwQhhqyShS",
+       "vendeur": "paymore_lakewood",
+       "avis_vendeur": 1947
+      },
+      "plus_cher": {
+       "prix": 362.83,
+       "titre": "JBL Quantum 910 Cuffie da gioco Bluetooth wireless con cancellazione del rumore nuove con scatola PC ",
+       "lien": "https://www.ebay.it/itm/205291540351?_skw=JBL+Quantum+910&hash=item2fcc544f7f:g:CFgAAOSw-MtnPMz2",
+       "vendeur": "shoemevintage",
+       "avis_vendeur": 3163
+      }
+     },
+     "ES": {
+      "nb_annonces": 8,
+      "total_ebay": 17,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 143.03,
+       "titre": "Nuevos auriculares inalámbricos para juegos JBL Quantum 910",
+       "lien": "https://www.ebay.es/itm/860026982661?_skw=JBL+Quantum+910&hash=itemc83d9a5105:g:sL8AAeSwQhhqyShS",
+       "vendeur": "paymore_lakewood",
+       "avis_vendeur": 1947
+      },
+      "plus_cher": {
+       "prix": 362.83,
+       "titre": "Auriculares inalámbricos para juegos JBL Quantum 910 Bluetooth con cancelación de ruido nuevos en caja PC ",
+       "lien": "https://www.ebay.es/itm/205291540351?_skw=JBL+Quantum+910&hash=item2fcc544f7f:g:CFgAAOSw-MtnPMz2",
+       "vendeur": "shoemevintage",
+       "avis_vendeur": 3163
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "JBL Quantum 910",
+    "temperature_dealabs": 125,
+    "google_trends": {
+     "interet_moyen": 5,
+     "interet_recent": 77,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41,
+      0,
+      0,
+      46,
+      0,
+      0,
+      0,
+      0,
+      39,
+      0,
+      58,
+      72,
+      99,
+      38,
+      100
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "jbl quantum 910",
+     "jbl quantum 910 wireless",
+     "jbl quantum 910p",
+     "jbl quantum 910x",
+     "jbl quantum 910x wireless for xbox",
+     "jbl quantum 910 test",
+     "jbl quantum 910 application",
+     "jbl quantum 910 xbox",
+     "jbl quantum 910 dongle",
+     "jbl quantum 910 avis"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "344aa63855",
+   "titre": "Siemens EQ6 plus s300 TE653501DE Kaffeevollautomat",
+   "prix": 404.75,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.preisjaeger.at/deals/siemens-eq6-plus-s300-te653501de-kaffeevollautomat-372640",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 115,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.preisjaeger.at/deals/siemens-eq6-plus-s300-te653501de-kaffeevollautomat-372640"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Siemens EQ6 Plus",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 650.0,
+   "cout_achat": 409.75,
+   "marge_nette": 150.15,
+   "rentabilite": 0.366,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Appareil haut de gamme, revente à +240 € sur Leboncoin"
+   },
+   "score": 38.6,
+   "ebay": {
+    "requete": "Siemens EQ6 Plus",
+    "neuf": null,
+    "occasion": {
+     "nb": 4,
+     "min": 390.0,
+     "p25": 435.0,
+     "mediane": 585.0,
+     "max": 750.0
+    },
+    "exemples": [
+     {
+      "titre": "Bac Collecteur D’Eau Original Pour Machine À Café Siemens EQ.6 Plus S700 TE6",
+      "prix": "42.14",
+      "url": "https://www.ebay.fr/itm/840036114661?_skw=Siemens+EQ6+Plus&hash=itemc3960de0e5:g:ybMAAeSwrBFqhvfp"
+     },
+     {
+      "titre": "Chaudière Original 230V 800W pour Machine Café Siemens EQ.6 Plus S700 TE6",
+      "prix": "67.45",
+      "url": "https://www.ebay.fr/itm/840019634459?_skw=Siemens+EQ6+Plus&hash=itemc39512691b:g:Mi8AAeSwgblqdEqp&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kyD5%2FT7TsFS6IlKWva6RLGRYniC7zzSOc%2BbKWDtEP9iBuuEng0D%2BmLgyboTfHGK1Ee5TUV39LCWtsjEx6XI5t%2BYK5D%2BqTHgDxpyfhQ6sbIxm7OuO%2BRyjLdfBn6ETdMiGXVtkxN9TAb%2BKuB%2BQfYfT3thqgktW1hhu0%2BiecCB0h3d6sUnxUTs%2Fm9D4XJfR%2FNwgqFYly1cxgQMpQuK0muaxCzmLqYeRTyrnY8XUjVKsTsliMt5ihd%2BBbSq2WXnBWrLlSRTUWnRkCkJ0lIl8axnyckJgXVQEQ5SArHl9UAq9PT4A%3D%3D"
+     },
+     {
+      "titre": "Distributeur Eau Haute Pression Avec Engrenages Original pour Machine Café",
+      "prix": "57.90",
+      "url": "https://www.ebay.fr/itm/840129347089?_skw=Siemens+EQ6+Plus&hash=itemc39b9c7e11:g:UGsAAeSwWKNqdd3r&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nN5hI4YFm%2FmItPKFAP3i%2Bl0G574nAgoXl3pnYgayZiq%2FAnWavsFD5jAUgkpOPdwBeq3OilM5sSuhaWTb9mBPpO4rKD9Yhhw5T1z9kTug5fnGFKFbDRGKb4ET84PkdmyZ2ybQuyQWBf6tEY8RA3xU18uQY8KL5v8sGDSQPJeXP7GxUrCxHowCpilEW7aZR7U6CqAJgOE9Z63%2FYRWLcbMmLGFcnbaRqGfZjHiiWbnEnKTLf3Pdgz%2ForXDZq%2BtQxeQe%2FPEmpQiPF%2BjhISfRZrAkUaB2y658L2%2F4stysiDSSVCGQ%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 578.34,
+     "IT": 554.08,
+     "ES": 268.37
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 14,
+    "marque": "SIEMENS",
+    "asin": "B076HZ1P4M",
+    "titre": "Siemens, machine à café automatique, système de lait, 12 boissons, nettoyage automatique du système de lait, broyeur en céramique, large écran tactile, EQ6 plus s500, TE655203RW",
+    "ean": "4242003806395",
+    "pays": "FR",
+    "prix_neuf": 565.99,
+    "prix_amazon": 565.99,
+    "prix_tiers": 565.99,
+    "moyenne_90j": 591.49,
+    "plus_bas_90j": 70.43,
+    "occasion": 424.23,
+    "rang_ventes": 47651,
+    "chutes_rang_30j": 18,
+    "chutes_rang_90j": 53,
+    "ventes_estimees_30j": 18,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B076HZ1P4M",
+    "jetons_restants": 232
+   },
+   "asin": "B076HZ1P4M",
+   "ean": "4242003806395",
+   "vendeurs_amazon": 14,
+   "ventes_estimees_30j": 18,
+   "prix_plancher": {
+    "nom": "Siemens EQ6 Plus",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 2,
+      "meilleur": {
+       "titre": "SIEMENS  EQ6 Plus TE654319RW Machine à expresso Antraciet Noir",
+       "prix": 584.99,
+       "nb_boutiques": 8,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/siemens-eq6-plus-te654319rw-machine-a-expresso-antraciet-noir.html"
+      },
+      "autres": [
+       {
+        "titre": "SIEMENS Expresso EQ6 plus extraKlasse Inox foncé 19 bars TE657F09DE",
+        "prix": 1035.0,
+        "nb_boutiques": 2,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/expresso-eq6-plus-extraklasse-inox-fonce-19-bars-te657f09de.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 565.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B076HZ1P4M"
+   },
+   "remise_sincere": true,
+   "mot_cle": "siemens eq6 plus",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 565.99,
+     "marge_nette": 29.78,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 565.99,
+      "cout_achat": 409.75,
+      "frais_canal": 47.62,
+      "prelevements": 75.84,
+      "provision": 3.0,
+      "marge_nette": 29.78,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.073
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 565.99,
+     "marge_nette": 24.12,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 565.99,
+      "cout_achat": 409.75,
+      "frais_canal": 53.28,
+      "prelevements": 75.84,
+      "provision": 3.0,
+      "marge_nette": 24.12,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.059
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 565.99,
+     "marge_nette": 20.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 565.99,
+      "cout_achat": 409.75,
+      "frais_canal": 56.94,
+      "prelevements": 75.84,
+      "provision": 3.0,
+      "marge_nette": 20.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.05
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 498.07,
+     "marge_nette": 18.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 498.07,
+      "cout_achat": 409.75,
+      "frais_canal": 0.0,
+      "prelevements": 66.74,
+      "provision": 3.0,
+      "marge_nette": 18.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.045
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 498.07,
+     "marge_nette": 18.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 498.07,
+      "cout_achat": 409.75,
+      "frais_canal": 0.0,
+      "prelevements": 66.74,
+      "provision": 3.0,
+      "marge_nette": 18.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.045
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 498.07,
+     "marge_nette": 18.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 498.07,
+      "cout_achat": 409.75,
+      "frais_canal": 0.0,
+      "prelevements": 66.74,
+      "provision": 3.0,
+      "marge_nette": 18.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.045
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 565.99,
+     "marge_nette": -2.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 565.99,
+      "cout_achat": 409.75,
+      "frais_canal": 79.93,
+      "prelevements": 75.84,
+      "provision": 3.0,
+      "marge_nette": -2.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.006
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 565.99,
+     "marge_nette": -14.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 565.99,
+      "cout_achat": 409.75,
+      "frais_canal": 91.89,
+      "prelevements": 75.84,
+      "provision": 3.0,
+      "marge_nette": -14.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.035
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 549.01,
+   "marge_verifiee": 62.69,
+   "rentabilite_verifiee": 0.153,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "forte",
+   "occasion": {
+    "bas": 424.23,
+    "haut": 585.0,
+    "position_neuf": 0.95
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 63.1,
+   "rapport_concurrence": {
+    "requete": "Siemens EQ6 Plus",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 5,
+      "total_ebay": 42,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 479.67,
+       "titre": "siemens espresso machine EQ6 plus",
+       "lien": "https://www.ebay.de/itm/336572537431?_skw=Siemens+EQ6+Plus&hash=item4e5d495a57:g:exQAAeSwXSNp-xmJ",
+       "vendeur": "klherm0",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 679.99,
+       "titre": "Siemens Kaffeevollautomat EQ6 plus S300, 11 Getränke, TE653501DE, Silber",
+       "lien": "https://www.ebay.de/itm/800901302324?_skw=Siemens+EQ6+Plus&hash=itemba79700834:g:gmwAAeSwm9Bq85KX",
+       "vendeur": "novamarket007",
+       "avis_vendeur": 1166
+      }
+     },
+     "IT": {
+      "nb_annonces": 2,
+      "total_ebay": 17,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 578.34,
+       "titre": "Siemens TE651319RW - EQ6 Plus macchina da caffè automatica con 5 anni di garanzia",
+       "lien": "https://www.ebay.it/itm/327362612104?_skw=Siemens+EQ6+Plus&hash=item4c38550b88:g:LjQAAeSwlspqrEbS",
+       "vendeur": "homeofkitchen",
+       "avis_vendeur": 1078
+      },
+      "plus_cher": {
+       "prix": 1197.86,
+       "titre": "SIEMENS EQ6 plus S300 Macchina da caffè in grani a tazze, TE653M11GB, Argento",
+       "lien": "https://www.ebay.it/itm/800671806784?_skw=Siemens+EQ6+Plus&hash=itemba6bc23540:g:yGEAAeSw32Nqqsgg",
+       "vendeur": "hfcmarket",
+       "avis_vendeur": 1856
+      }
+     },
+     "ES": {
+      "nb_annonces": 2,
+      "total_ebay": 10,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 578.34,
+       "titre": "Siemens TE651319RW - EQ6 Plus cafetera automática con 5 años de garantía",
+       "lien": "https://www.ebay.es/itm/327362612104?_skw=Siemens+EQ6+Plus&hash=item4c38550b88:g:LjQAAeSwlspqrEbS",
+       "vendeur": "homeofkitchen",
+       "avis_vendeur": 1078
+      },
+      "plus_cher": {
+       "prix": 1197.86,
+       "titre": "Máquina de café Siemens EQ6 plus S300 grano a taza, TE653M11GB, plateada",
+       "lien": "https://www.ebay.es/itm/800671806784?_skw=Siemens+EQ6+Plus&hash=itemba6bc23540:g:yGEAAeSw32Nqqsgg",
+       "vendeur": "hfcmarket",
+       "avis_vendeur": 1856
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Siemens EQ6 Plus",
+    "temperature_dealabs": 115,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "siemens eq6 plus s500",
+     "siemens eq6 plus s700",
+     "siemens eq6 plus",
+     "siemens eq6 plus s300",
+     "siemens eq6 plus s100",
+     "siemens eq6 plus s500 mode d'emploi",
+     "siemens eq6 plus extraklasse",
+     "siemens eq 6 plus s800",
+     "siemens eq6 plus s400",
+     "siemens eq6 plus s100 problème"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "6da663d6c6",
+   "titre": "Monitor ASROCK OLED PGO27QFS,27\",QHD (2560X1440), 240HZ, 1500:1, 0.03MS, 2HDMI+2DP, WiFi+3USB3.2+Type C, Negro",
+   "prix": 292.72,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/monitor-asrock-pgo27qfs27qhd-2560x1440-240hz-15001-003ms-2hdmi2dp-wifi3usb32type-c-negro-2073674",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 189,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/monitor-asrock-pgo27qfs27qhd-2560x1440-240hz-15001-003ms-2hdmi2dp-wifi3usb32type-c-negro-2073674"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "ASROCK OLED PGO27QFS",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 850.0,
+   "cout_achat": 297.72,
+   "marge_nette": 318.53,
+   "rentabilite": 1.07,
+   "demande": 5,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Moniteur OLED haut de gamme, marge brute >440 € même après commission."
+   },
+   "score": 150.7,
+   "ebay": {
+    "requete": "ASROCK OLED PGO27QFS",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "ASROCK OLED PGO27QFS",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "asrock oled pgo27qfs",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "ASROCK OLED PGO27QFS",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 1,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 599.97,
+       "titre": "Asrock PGO27QFS Computerbildschirm 68,6 cm (27\") 2560 x 1440 Pixel Quad HD OLED",
+       "lien": "https://www.ebay.de/itm/278442601357?_skw=ASROCK+OLED+PGO27QFS&hash=item40d478eb8d:g:LmAAAeSwAPhq3dSU",
+       "vendeur": "jb-vertrieb-gmbh",
+       "avis_vendeur": 20321
+      },
+      "plus_cher": {
+       "prix": 599.97,
+       "titre": "Asrock PGO27QFS Computerbildschirm 68,6 cm (27\") 2560 x 1440 Pixel Quad HD OLED",
+       "lien": "https://www.ebay.de/itm/278442601357?_skw=ASROCK+OLED+PGO27QFS&hash=item40d478eb8d:g:LmAAAeSwAPhq3dSU",
+       "vendeur": "jb-vertrieb-gmbh",
+       "avis_vendeur": 20321
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 453.0,
+       "titre": "ASRock 27 Pgo27Qfs QHD OLED HDMI/DP - Flachbildschirm (TFT/LCD) - 68,6 cm",
+       "lien": "https://www.ebay.es/itm/366785179937?_skw=ASROCK+OLED+PGO27QFS&hash=item556619b121:g:x~YAAeSwU-Nq9suc",
+       "vendeur": "digi-techx",
+       "avis_vendeur": 17113
+      },
+      "plus_cher": {
+       "prix": 453.0,
+       "titre": "ASRock 27 Pgo27Qfs QHD OLED HDMI/DP - Flachbildschirm (TFT/LCD) - 68,6 cm",
+       "lien": "https://www.ebay.es/itm/366785179937?_skw=ASROCK+OLED+PGO27QFS&hash=item556619b121:g:x~YAAeSwU-Nq9suc",
+       "vendeur": "digi-techx",
+       "avis_vendeur": 17113
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "ASROCK OLED PGO27QFS",
+    "temperature_dealabs": 189,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "asrock oled pgo27qfs",
+     "asrock phantom gaming oled pgo27qfs 27 1440p 240hz woled monitor",
+     "asrock phantom gaming oled pgo27qfs",
+     "asrock pgo27qfs oled review",
+     "asrock pgo27qfs oled hdr gaming monitor 27",
+     "monitor oled asrock pgo27qfs",
+     "asrock phantom gaming oled pgo27qfs review"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "d71c04e3e9",
+   "titre": "MONITOR MSI MAG 27CQ6F 27\" QHD 180Hz CURVO POR 129 €",
+   "prix": 128.95,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/monitor-msi-mag-27cq6f-27-qhd-180hz-curvo-por-129-eur-2073684",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 201,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/monitor-msi-mag-27cq6f-27-qhd-180hz-curvo-por-129-eur-2073684"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "MSI MAG 27CQ6F",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 320.0,
+   "cout_achat": 133.95,
+   "marge_nette": 92.22,
+   "rentabilite": 0.688,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Moniteur QHD 180 Hz très recherché, marge brute >140 € après frais."
+   },
+   "score": 87.1,
+   "ebay": {
+    "requete": "MSI MAG 27CQ6F",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Ecran PC - MSI - MAG 27CQ6F - 2560 x 1440 - 0.5ms - VA",
+      "prix": "267.85",
+      "url": "https://www.ebay.fr/itm/128126152645?_skw=MSI+MAG+27CQ6F&hash=item1dd4e9efc5:g:t9AAAeSwJbRqyezi"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 149.0,
+     "IT": 194.6,
+     "ES": 191.63
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 20,
+    "marque": "MSI",
+    "asin": "B0CV191394",
+    "titre": "MSI MAG 27CQ6F Écran gaming incurvé 27\" WQHD",
+    "ean": "4711377177900",
+    "pays": "FR",
+    "prix_neuf": 159.9,
+    "prix_amazon": 159.9,
+    "prix_tiers": 159.9,
+    "moyenne_90j": 160.94,
+    "plus_bas_90j": 139.99,
+    "occasion": null,
+    "rang_ventes": 267,
+    "chutes_rang_30j": 43,
+    "chutes_rang_90j": 113,
+    "ventes_estimees_30j": 43,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0CV191394",
+    "jetons_restants": 254
+   },
+   "asin": "B0CV191394",
+   "ean": "4711377177900",
+   "vendeurs_amazon": 20,
+   "ventes_estimees_30j": 43,
+   "prix_plancher": {
+    "nom": "MSI MAG 27CQ6F",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 159.9,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CV191394"
+   },
+   "remise_sincere": true,
+   "mot_cle": "msi mag 27cq6f",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 140.71,
+     "marge_nette": -15.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 140.71,
+      "cout_achat": 133.95,
+      "frais_canal": 0.0,
+      "prelevements": 18.86,
+      "provision": 3.0,
+      "marge_nette": -15.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 140.71,
+     "marge_nette": -15.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 140.71,
+      "cout_achat": 133.95,
+      "frais_canal": 0.0,
+      "prelevements": 18.86,
+      "provision": 3.0,
+      "marge_nette": -15.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 140.71,
+     "marge_nette": -15.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 140.71,
+      "cout_achat": 133.95,
+      "frais_canal": 0.0,
+      "prelevements": 18.86,
+      "provision": 3.0,
+      "marge_nette": -15.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.113
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 159.9,
+     "marge_nette": -17.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.9,
+      "cout_achat": 133.95,
+      "frais_canal": 19.19,
+      "prelevements": 21.43,
+      "provision": 3.0,
+      "marge_nette": -17.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.132
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 159.9,
+     "marge_nette": -18.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.9,
+      "cout_achat": 133.95,
+      "frais_canal": 20.39,
+      "prelevements": 21.43,
+      "provision": 3.0,
+      "marge_nette": -18.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.141
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 159.9,
+     "marge_nette": -19.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.9,
+      "cout_achat": 133.95,
+      "frais_canal": 20.79,
+      "prelevements": 21.43,
+      "provision": 3.0,
+      "marge_nette": -19.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.144
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 159.9,
+     "marge_nette": -25.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.9,
+      "cout_achat": 133.95,
+      "frais_canal": 27.14,
+      "prelevements": 21.43,
+      "provision": 3.0,
+      "marge_nette": -25.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.191
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 159.9,
+     "marge_nette": -29.45,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.9,
+      "cout_achat": 133.95,
+      "frais_canal": 30.98,
+      "prelevements": 21.43,
+      "provision": 3.0,
+      "marge_nette": -29.45,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.22
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 155.1,
+   "marge_verifiee": -29.15,
+   "rentabilite_verifiee": -0.218,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "MSI MAG 27CQ6F",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 267.85,
+       "titre": "Ecran PC - MSI - MAG 27CQ6F - 2560 x 1440 - 0.5ms - VA",
+       "lien": "https://www.ebay.fr/itm/128126152645?_skw=MSI+MAG+27CQ6F&hash=item1dd4e9efc5:g:t9AAAeSwJbRqyezi",
+       "vendeur": "mgt-shop-eu",
+       "avis_vendeur": 248
+      },
+      "plus_cher": {
+       "prix": 267.85,
+       "titre": "Ecran PC - MSI - MAG 27CQ6F - 2560 x 1440 - 0.5ms - VA",
+       "lien": "https://www.ebay.fr/itm/128126152645?_skw=MSI+MAG+27CQ6F&hash=item1dd4e9efc5:g:t9AAAeSwJbRqyezi",
+       "vendeur": "mgt-shop-eu",
+       "avis_vendeur": 248
+      }
+     },
+     "DE": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 199.0,
+       "titre": "MSI MAG 27CQ6F Curved Monitor (27 Zoll WQHD 2560x1440 matt 180Hz 1ms Rapid VA",
+       "lien": "https://www.ebay.de/itm/188304004036?_skw=MSI+MAG+27CQ6F&hash=item2bd7cb13c4:g:iTUAAeSwa3NqtmDe",
+       "vendeur": "notebooks-clever-kaufen",
+       "avis_vendeur": 4774
+      },
+      "plus_cher": {
+       "prix": 199.0,
+       "titre": "MSI MAG 27CQ6F Curved Monitor (27 Zoll WQHD 2560x1440 matt 180Hz 1ms Rapid VA",
+       "lien": "https://www.ebay.de/itm/188304004036?_skw=MSI+MAG+27CQ6F&hash=item2bd7cb13c4:g:iTUAAeSwa3NqtmDe",
+       "vendeur": "notebooks-clever-kaufen",
+       "avis_vendeur": 4774
+      }
+     },
+     "IT": {
+      "nb_annonces": 4,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 193.14,
+       "titre": "Msi MAG 27CQ6F Monitor Gaming Da 27\" WQHD Curvo - Pannello VA Rapid 1500R (2560",
+       "lien": "https://www.ebay.it/itm/287709578850?_skw=MSI+MAG+27CQ6F&hash=item42fcd3c662:g:JLUAAeSw87Bq7eu9",
+       "vendeur": "andpigna22",
+       "avis_vendeur": 41
+      },
+      "plus_cher": {
+       "prix": 335.68,
+       "titre": "MSI MAG 27CQ6F Monitor PC 686 cm 27 2560 x 1440 Pixel Quad HD LCD Nero (MSI MAG",
+       "lien": "https://www.ebay.it/itm/147334672777?_skw=MSI+MAG+27CQ6F&hash=item224dd4b189:i:147334672777",
+       "vendeur": "ldcsrl-it",
+       "avis_vendeur": 7241
+      }
+     },
+     "ES": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 191.63,
+       "titre": "Monitor MSI MAG 27CQ6F 27\" QHD 2K VA 180Hz 0.5ms HDR FreeSync Curvo",
+       "lien": "https://www.ebay.es/itm/128198919084?_skw=MSI+MAG+27CQ6F&hash=item1dd94043ac:g:eZ8AAeSwanNq~DLB",
+       "vendeur": "tecoestech",
+       "avis_vendeur": 504
+      },
+      "plus_cher": {
+       "prix": 335.68,
+       "titre": "Monitor de PC MSI MAG 27CQ6F 686 cm 27 2560 x 1440 píxeles cuatro HD LCD negro (MSI MAG)",
+       "lien": "https://www.ebay.es/itm/147334672777?_skw=MSI+MAG+27CQ6F&hash=item224dd4b189:i:147334672777",
+       "vendeur": "ldcsrl-it",
+       "avis_vendeur": 7241
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "MSI MAG 27CQ6F",
+    "temperature_dealabs": 201,
+    "google_trends": {
+     "interet_moyen": 4,
+     "interet_recent": 41,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      49,
+      0,
+      0,
+      57,
+      0,
+      0,
+      0,
+      73,
+      0,
+      0,
+      100,
+      0,
+      63,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "msi mag 27cq6f",
+     "msi mag 27cq6fa",
+     "msi mag 27cq6f 27",
+     "msi mag 27cq6f noir",
+     "msi mag 27cq6f 27 incurvé 180 hz wqhd",
+     "msi mag 27cq6f mode d' emploi",
+     "msi mag 27cq6f review",
+     "msi mag 27cq6f test"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0F386TDXD-neuf",
+   "titre": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Automatique Poussière,Navigation ",
+   "prix": 179.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0F386TDXD",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 440,
+   "domaine": "autre",
+   "nom_produit": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Aut",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 355.41,
+   "cout_achat": 184.99,
+   "marge_nette": 119.8,
+   "rentabilite": 0.648,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 403.87 €, baisse 55 %, rang 3214"
+   },
+   "score": 64.8,
+   "asin": "B0F386TDXD",
+   "ean": "0693635724047",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 8,
+   "ebay": {
+    "requete": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Aut",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Lefant",
+    "asin": "B0F386TDXD",
+    "titre": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Automatique Poussière,Navigation Laser avec Cartographie,Nettoyage Personnalisé, Évitement d'obstacles PSD,Idéal pour Poils d'animaux",
+    "ean": "0693635724047",
+    "pays": "FR",
+    "prix_neuf": 179.99,
+    "prix_amazon": null,
+    "prix_tiers": 179.99,
+    "moyenne_90j": 401.57,
+    "plus_bas_90j": 179.99,
+    "occasion": null,
+    "rang_ventes": 3213,
+    "chutes_rang_30j": 8,
+    "chutes_rang_90j": 8,
+    "ventes_estimees_30j": 8,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0F386TDXD",
+    "jetons_restants": 253
+   },
+   "prix_plancher": {
+    "nom": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Aut",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 179.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0F386TDXD"
+   },
+   "remise_sincere": true,
+   "mot_cle": "lefant m2s pro robot",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0F386TDXD"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 158.39,
+     "marge_nette": -50.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 158.39,
+      "cout_achat": 184.99,
+      "frais_canal": 0.0,
+      "prelevements": 21.22,
+      "provision": 3.0,
+      "marge_nette": -50.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.275
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 158.39,
+     "marge_nette": -50.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 158.39,
+      "cout_achat": 184.99,
+      "frais_canal": 0.0,
+      "prelevements": 21.22,
+      "provision": 3.0,
+      "marge_nette": -50.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.275
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 158.39,
+     "marge_nette": -50.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 158.39,
+      "cout_achat": 184.99,
+      "frais_canal": 0.0,
+      "prelevements": 21.22,
+      "provision": 3.0,
+      "marge_nette": -50.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.275
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 179.99,
+     "marge_nette": -52.72,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 179.99,
+      "cout_achat": 184.99,
+      "frais_canal": 20.6,
+      "prelevements": 24.12,
+      "provision": 3.0,
+      "marge_nette": -52.72,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.285
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 179.99,
+     "marge_nette": -54.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 179.99,
+      "cout_achat": 184.99,
+      "frais_canal": 22.2,
+      "prelevements": 24.12,
+      "provision": 3.0,
+      "marge_nette": -54.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.294
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 179.99,
+     "marge_nette": -54.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 179.99,
+      "cout_achat": 184.99,
+      "frais_canal": 22.4,
+      "prelevements": 24.12,
+      "provision": 3.0,
+      "marge_nette": -54.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.295
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 179.99,
+     "marge_nette": -61.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 179.99,
+      "cout_achat": 184.99,
+      "frais_canal": 29.75,
+      "prelevements": 24.12,
+      "provision": 3.0,
+      "marge_nette": -61.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.334
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 179.99,
+     "marge_nette": -66.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 179.99,
+      "cout_achat": 184.99,
+      "frais_canal": 33.99,
+      "prelevements": 24.12,
+      "provision": 3.0,
+      "marge_nette": -66.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.357
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 161.99,
+   "marge_verifiee": -47.71,
+   "rentabilite_verifiee": -0.258,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Aut",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Aut",
+    "temperature_dealabs": 440,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "c7d0d0c6c3",
+   "titre": "Eau de Toilette Lalique Encre Noire Sport 100ml",
+   "prix": 18.0,
+   "devise": "EUR",
+   "marchand": "Parfums et Moi",
+   "lien": "https://www.dealabs.com/bons-plans/eau-de-toilette-lalique-encre-noire-sport-100ml-3458874",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/eau-de-toilette-lalique-encre-noire-sport-100ml-3458874"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "beaute-sante",
+   "nom_produit": "Lalique Encre Noire Sport 100ml",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 47.5,
+   "cout_achat": 23.0,
+   "marge_nette": 15.14,
+   "rentabilite": 0.658,
+   "demande": 3.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Parfum de niche à -70% du prix boutique, revente aisée sur Vinted sans frais vendeur, marge nette ~20€.",
+    "gptoss": "Parfum de niche à prix très bas, revente à prix marché, marge nette d’environ 15‑20 €"
+   },
+   "score": 64.5,
+   "ebay": {
+    "requete": "Lalique Encre Noire Sport 100ml",
+    "neuf": {
+     "nb": 10,
+     "min": 28.46,
+     "p25": 32.98,
+     "mediane": 37.32,
+     "max": 83.0
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Encre Noire Sport Eau De Toilette Spray 100 ml By Lalique",
+      "prix": "55.08",
+      "url": "https://www.ebay.fr/itm/377635346654?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item57ecd218de:g:NxoAAeSwWfFq80VD"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 32.98,
+     "DE": 29.46,
+     "IT": 32.99,
+     "ES": 32.98
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Lalique Encre Noire Sport 100ml",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "LALIQUE Encre Noire Sport - Eau de Toilette 100ml",
+       "prix": 29.99,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Parfum-homme/lalique-encre-noire-sport-eau-de-toilette-100ml.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 29.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Parfum-homme/lalique-encre-noire-sport-eau-de-toilette-100ml.html"
+   },
+   "mot_cle": "lalique encre noire sport",
+   "annonces_ebay": 10,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 26.39,
+     "marge_nette": -3.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 23.0,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -3.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.137
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 26.39,
+     "marge_nette": -3.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 23.0,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -3.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.137
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 26.39,
+     "marge_nette": -3.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 23.0,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -3.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.137
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 29.99,
+     "marge_nette": -8.73,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 23.0,
+      "frais_canal": 8.7,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -8.73,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.38
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 29.99,
+     "marge_nette": -10.13,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 23.0,
+      "frais_canal": 10.1,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -10.13,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.44
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 29.99,
+     "marge_nette": -10.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 23.0,
+      "frais_canal": 10.25,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -10.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.447
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 29.99,
+     "marge_nette": -10.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 23.0,
+      "frais_canal": 10.4,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -10.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.453
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 29.99,
+     "marge_nette": -11.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 23.0,
+      "frais_canal": 11.49,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -11.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.501
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 29.09,
+   "marge_verifiee": -0.81,
+   "rentabilite_verifiee": -0.035,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Lalique Encre Noire Sport 100ml",
+    "pays": {
+     "FR": {
+      "nb_annonces": 7,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 28.46,
+       "titre": "Lalique Encre Noire Sport EDT 100ml",
+       "lien": "https://www.ebay.fr/itm/227395299140?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item34f1d0e744:g:lVEAAeSw8Blq8ELI",
+       "vendeur": "perfumtraders",
+       "avis_vendeur": 298358
+      },
+      "plus_cher": {
+       "prix": 56.0,
+       "titre": "2x Lalique Encre Noire Sport EDT 100ml",
+       "lien": "https://www.ebay.fr/itm/227468019838?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item34f626887e:g:pdsAAeSwpzNq8ELJ",
+       "vendeur": "perfumtraders",
+       "avis_vendeur": 298358
+      }
+     },
+     "DE": {
+      "nb_annonces": 12,
+      "total_ebay": 25,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 28.46,
+       "titre": "Lalique Encre Noire Sport EDT 100ml",
+       "lien": "https://www.ebay.de/itm/227393710542?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item34f1b8a9ce:g:lVEAAeSw8Blq8ELI",
+       "vendeur": "perfumtraders",
+       "avis_vendeur": 298358
+      },
+      "plus_cher": {
+       "prix": 56.0,
+       "titre": "2x Lalique Encre Noire Sport EDT 100ml",
+       "lien": "https://www.ebay.de/itm/227468015099?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item34f62675fb:g:pdsAAeSwpzNq8ELJ",
+       "vendeur": "perfumtraders",
+       "avis_vendeur": 298358
+      }
+     },
+     "IT": {
+      "nb_annonces": 7,
+      "total_ebay": 23,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 30.36,
+       "titre": "LALIQUE ENCRE NOIRE SPORT POUR HOMME 100ML EAU DE TOILETTE SPRAY NUOVO E SIGI...",
+       "lien": "https://www.ebay.it/itm/327227227816?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item4c30433ea8:g:NvcAAOSweX5b9YhZ",
+       "vendeur": "theperfumestop",
+       "avis_vendeur": 432282
+      },
+      "plus_cher": {
+       "prix": 55.59,
+       "titre": "LALIQUE Encre Noire Sport Eau de Toilette Profumo Spray per Uomo 100ml *NUOVO*",
+       "lien": "https://www.ebay.it/itm/405401070329?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item5e63c96af9:g:S~wAAOSwaT5nUZCo",
+       "vendeur": "bellas.beauty",
+       "avis_vendeur": 258519
+      }
+     },
+     "ES": {
+      "nb_annonces": 4,
+      "total_ebay": 24,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 32.98,
+       "titre": "Lalique Encre Noire Sport Eau de Toilette 100ml Mens Fragrance",
+       "lien": "https://www.ebay.es/itm/257650920820?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item3bfd310d74:g:aB8AAeSwau1qg~Pw",
+       "vendeur": "onlineretailoutlet",
+       "avis_vendeur": 162331
+      },
+      "plus_cher": {
+       "prix": 39.0,
+       "titre": "ENCRE NOIRE SPORT EDT de Lalique 100ml. ORIGINAL",
+       "lien": "https://www.ebay.es/itm/396643862571?_skw=Lalique+Encre+Noire+Sport+100ml&hash=item5c59d1082b:g:shMAAOSweWFoMCYR",
+       "vendeur": "jfk_bcn",
+       "avis_vendeur": 11110
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Lalique Encre Noire Sport 100ml",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "lalique encre noire sport 100ml edt",
+     "lalique encre noir sport 100ml",
+     "lalique encre noire sport men edt 100ml",
+     "lalique encre noire sport edt 100 ml",
+     "lalique encre noire sport m edt 100ml",
+     "lalique encre noire sport eau de toilette spray 100ml",
+     "lalique encre noire sport for men eau de toilette 100ml",
+     "lalique encre noire sport woda toaletowa dla mężczyzn 100ml"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0C74WYDL2-neuf",
+   "titre": "Moving Out 2 Nintendo Switch",
+   "prix": 25.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0C74WYDL2",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 496,
+   "domaine": "autre",
+   "nom_produit": "Moving Out 2 Nintendo Switch",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 60.7,
+   "cout_achat": 30.99,
+   "marge_nette": 18.58,
+   "rentabilite": 0.6,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 68.98 €, baisse 62 %, rang 6574"
+   },
+   "score": 60.0,
+   "asin": "B0C74WYDL2",
+   "ean": "5056208819598",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 13,
+   "ebay": {
+    "requete": "Moving Out 2 Nintendo Switch",
+    "neuf": {
+     "nb": 5,
+     "min": 45.97,
+     "p25": 46.22,
+     "mediane": 48.14,
+     "max": 56.43
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 103.9,
+     "p25": 103.9,
+     "mediane": 118.13,
+     "max": 127.1
+    },
+    "exemples": [
+     {
+      "titre": "Moving Out Nintendo Switch Game",
+      "prix": "103.90",
+      "url": "https://www.ebay.fr/itm/206701984633?_skw=Moving+Out+2+Nintendo+Switch&hash=item302065fb79:g:2icAAeSwPJpq-RnP"
+     },
+     {
+      "titre": "Nintendo Switch Software Moving Out 2",
+      "prix": "118.13",
+      "url": "https://www.ebay.fr/itm/206705931647?_skw=Moving+Out+2+Nintendo+Switch&hash=item3020a2357f:g:vFAAAeSw42hq-0Lq&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7l4JhSwVkS0kiFUE0gvO9mmLQh7RIBCxrlGYz77Jlpna%2Bxb7uDfDyBlQYIa52j9nE1iGXlpdBD3muCwKjlA9EngK3Sw65LdRqI5c0%2FRQiAG0f5Vg86yTjn80mhO%2FKXqgY5%2BjpThLDo8mAFOvJ5OBzQ%2BTAEpK9y4iB2KNSq0Z5sD2D8lRFHYUlUqhWaSUTXsM7zWIQcrrv17OxvhDr4WtkP02vYdagbT4M0nDKxycOPVixyfWB3hDP1H2ugAfLZ24nGlzphi%2FMYF9ImW7voMlo%2BikPRnxFkHX%2BGanSWaWaUpYVKgUJ3%2B%2FE%2BNYwAR38feM%2B0%3D"
+     },
+     {
+      "titre": "Nintendo Switch Software Moving Out 2",
+      "prix": "127.10",
+      "url": "https://www.ebay.fr/itm/860099974693?_skw=Moving+Out+2+Nintendo+Switch&hash=itemc841f41625:g:pRQAAeSwdzJq5WMR"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 46.22,
+     "DE": 19.91,
+     "IT": 43.88,
+     "ES": 43.52
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Team17",
+    "asin": "B0C74WYDL2",
+    "titre": "Moving Out 2 Nintendo Switch",
+    "ean": "5056208819598",
+    "pays": "FR",
+    "prix_neuf": 25.99,
+    "prix_amazon": null,
+    "prix_tiers": 25.99,
+    "moyenne_90j": 68.97,
+    "plus_bas_90j": 11.34,
+    "occasion": null,
+    "rang_ventes": 6578,
+    "chutes_rang_30j": 13,
+    "chutes_rang_90j": 34,
+    "ventes_estimees_30j": 13,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0C74WYDL2",
+    "jetons_restants": 242
+   },
+   "prix_plancher": {
+    "nom": "Moving Out 2 Nintendo Switch",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "JUST FOR GAMES Moving Out 2 - Jeu Nintendo Switch",
+       "prix": 25.99,
+       "nb_boutiques": 6,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/moving-out-2-jeu-nintendo-switch.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 25.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/moving-out-2-jeu-nintendo-switch.html"
+   },
+   "remise_sincere": true,
+   "mot_cle": "moving out 2 switch",
+   "annonces_ebay": 5,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0C74WYDL2"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 22.87,
+     "marge_nette": -14.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.87,
+      "cout_achat": 30.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.06,
+      "provision": 3.0,
+      "marge_nette": -14.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 22.87,
+     "marge_nette": -14.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.87,
+      "cout_achat": 30.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.06,
+      "provision": 3.0,
+      "marge_nette": -14.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 22.87,
+     "marge_nette": -14.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.87,
+      "cout_achat": 30.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.06,
+      "provision": 3.0,
+      "marge_nette": -14.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 25.99,
+     "marge_nette": -19.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.99,
+      "cout_achat": 30.99,
+      "frais_canal": 8.34,
+      "prelevements": 3.48,
+      "provision": 3.0,
+      "marge_nette": -19.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.64
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 25.99,
+     "marge_nette": -21.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.99,
+      "cout_achat": 30.99,
+      "frais_canal": 9.73,
+      "prelevements": 3.48,
+      "provision": 3.0,
+      "marge_nette": -21.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.684
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 25.99,
+     "marge_nette": -21.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.99,
+      "cout_achat": 30.99,
+      "frais_canal": 9.82,
+      "prelevements": 3.48,
+      "provision": 3.0,
+      "marge_nette": -21.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.687
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 25.99,
+     "marge_nette": -21.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.99,
+      "cout_achat": 30.99,
+      "frais_canal": 10.08,
+      "prelevements": 3.48,
+      "provision": 3.0,
+      "marge_nette": -21.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.696
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 25.99,
+     "marge_nette": -22.37,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 25.99,
+      "cout_achat": 30.99,
+      "frais_canal": 10.89,
+      "prelevements": 3.48,
+      "provision": 3.0,
+      "marge_nette": -22.37,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.722
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 23.39,
+   "marge_verifiee": -13.73,
+   "rentabilite_verifiee": -0.443,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 103.9,
+    "haut": 118.13,
+    "position_neuf": 0.25
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Moving Out 2 Nintendo Switch",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 45.97,
+       "titre": "Moving Out New Price Edition (Nintendo Switch) Japan Import [Multi-Language]",
+       "lien": "https://www.ebay.fr/itm/177231026789?_skw=Moving+Out+2+Nintendo+Switch&hash=item2943cada65:g:kPEAAeSwjv5oYPzE",
+       "vendeur": "michi-jp",
+       "avis_vendeur": 2888
+      },
+      "plus_cher": {
+       "prix": 56.43,
+       "titre": "Moving Out 2 - Nintendo Switch (Nintendo Switch)",
+       "lien": "https://www.ebay.fr/itm/407273638223?_skw=Moving+Out+2+Nintendo+Switch&hash=item5ed366894f:g:w~kAAeSwZe5qxlkn",
+       "vendeur": "rarewaves-united",
+       "avis_vendeur": 481084
+      }
+     },
+     "DE": {
+      "nb_annonces": 7,
+      "total_ebay": 14,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 14.99,
+       "titre": "Moving Out 2 Nintendo Switch Spiel Abenteuer Simulation Mehrspieler Online Koop ",
+       "lien": "https://www.ebay.de/itm/187797587660?_skw=Moving+Out+2+Nintendo+Switch&hash=item2bb99bc6cc:g:xm0AAeSwSIRpLZ7u",
+       "vendeur": "more4gamers",
+       "avis_vendeur": 17357
+      },
+      "plus_cher": {
+       "prix": 54.79,
+       "titre": "Moving Out 2 Juego para Consola Nintendo Switch [PAL ESPAÑA]",
+       "lien": "https://www.ebay.de/itm/336494756394?_skw=Moving+Out+2+Nintendo+Switch&hash=item4e58a6822a:g:rA0AAeSwDUFpWwYZ",
+       "vendeur": "arreglatelo",
+       "avis_vendeur": 28247
+      }
+     },
+     "IT": {
+      "nb_annonces": 15,
+      "total_ebay": 21,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 19.5,
+       "titre": "Moving Out 2 Nintendo Switch codice in scatola NUOVO E SIGILLATO spedizione veloce e gratuita",
+       "lien": "https://www.ebay.it/itm/377214254427?_skw=Moving+Out+2+Nintendo+Switch&hash=item57d3b8bd5b:g:yIUAAeSw8sBq02mr",
+       "vendeur": "maponus-gaming",
+       "avis_vendeur": 10522
+      },
+      "plus_cher": {
+       "prix": 79.68,
+       "titre": "Nintendo Switch Moving Out 2 versione coreana",
+       "lien": "https://www.ebay.it/itm/256630331926?_skw=Moving+Out+2+Nintendo+Switch&hash=item3bc05c1a16:g:wgwAAOSwoklm28LL",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 884
+      }
+     },
+     "ES": {
+      "nb_annonces": 13,
+      "total_ebay": 20,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 19.33,
+       "titre": "Moving Out 2 Nintendo Switch Código en Caja TOTALMENTE NUEVO Y SELLADO Envío Rápido y Gratis",
+       "lien": "https://www.ebay.es/itm/377214254427?_skw=Moving+Out+2+Nintendo+Switch&hash=item57d3b8bd5b:g:yIUAAeSw8sBq02mr",
+       "vendeur": "maponus-gaming",
+       "avis_vendeur": 10522
+      },
+      "plus_cher": {
+       "prix": 79.02,
+       "titre": "Nintendo Switch Moving Out 2 versión coreana",
+       "lien": "https://www.ebay.es/itm/256630331926?_skw=Moving+Out+2+Nintendo+Switch&hash=item3bc05c1a16:g:wgwAAOSwoklm28LL",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 884
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Moving Out 2 Nintendo Switch",
+    "temperature_dealabs": 496,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "moving out 2 nintendo switch",
+     "moving out 2 nintendo switch store",
+     "moving out 2 nintendo switch review",
+     "moving out 2 nintendo switch price",
+     "moving out 2 nintendo switch gameplay",
+     "moving out 2 nintendo switch physical",
+     "moving out 2 nintendo switch online",
+     "moving out 2 nintendo switch key",
+     "moving out 2 nintendo switch game",
+     "moving out 2 nintendo switch size"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "f4e784abcf",
+   "titre": "Star Wars Outlaws Edition Gold sur Nintendo Switch 2",
+   "prix": 24.99,
+   "devise": "EUR",
+   "marchand": "Fnac",
+   "lien": "https://www.dealabs.com/bons-plans/star-wars-outlaws-edition-gold-sur-nintendo-switch-2-3457968",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 117,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/star-wars-outlaws-edition-gold-sur-nintendo-switch-2-3457968"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 29.03,
+   "cout_achat": 29.99,
+   "marge_nette": -7.85,
+   "rentabilite": -0.262,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 24 % vs neuf le moins cher"
+   },
+   "score": 36.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "UBISOFT Star Wars : Outlaws - Gold Edition (NINTENDO SWITCH 2)",
+       "prix": 24.99,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 24.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Ubisoft",
+    "asin": "B0F7LQKRL9",
+    "titre": "Star Wars Outlaws Gold Edition - Nintendo Switch 2",
+    "ean": "3307216304852",
+    "pays": "FR",
+    "prix_neuf": 49.83,
+    "prix_amazon": null,
+    "prix_tiers": 49.83,
+    "moyenne_90j": 49.86,
+    "plus_bas_90j": 49.82,
+    "occasion": 53.5,
+    "rang_ventes": 16527,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 16,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0F7LQKRL9",
+    "jetons_restants": 297
+   },
+   "ean": "3307216304852",
+   "asin": "B0F7LQKRL9",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "ebay": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "neuf": {
+     "nb": 6,
+     "min": 40.79,
+     "p25": 41.92,
+     "mediane": 43.58,
+     "max": 74.72
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "42.30",
+      "url": "https://www.ebay.fr/itm/336475946679?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item4e57877eb7:g:GsAAAeSwAlppyTX2"
+     },
+     {
+      "titre": "Star Wars Outlaws - Gold Edition, Nintendo Switch 2 Nintendo (Nintendo Switch 2)",
+      "prix": "66.14",
+      "url": "https://www.ebay.fr/itm/407284802776?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5ed410e4d8:g:DJcAAeSwLWBqzMTv&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kwJBhj70Od7c5m1CxNxlJQdrRi08nI7yRNjBtQbVHQeWdCVaFep836PQrwx8wLKlipxxslyCZqiULb5i6vLyPOEgltZPmc403Zbe0WwmY9sfz5gMOKePFJB0VkoruE2uJFRA1364Kg9Jkn4xWKmW3Vc4XwhtGAP%2FrM7WemKEnVYqNvR%2BtqgUq%2B6K24Z4lxr2Ivz3jLrw0jz2qsmxFRkzEtqepPCATSFkuFU7YMjbl9ajJ%2BZe8xQZ1Byln1J--Tm6UapbdFND8xfuorEjJUJeIhb0%2FdSvXerKmMXY2jHPAJvkxn1j%2BSEQD0M4G26LIb5HuCq4mqC8Sen6GZTX6TALDI"
+     },
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "44.38",
+      "url": "https://www.ebay.fr/itm/227487194522?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item34f74b1d9a:g:B8gAAeSw0zlqigpi"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 41.92,
+     "DE": 34.47,
+     "IT": 34.46,
+     "ES": 33.68
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "star wars outlaws edition",
+   "annonces_ebay": 6,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 24.99,
+     "marge_nette": -19.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 8.25,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -19.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.654
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 24.99,
+     "marge_nette": -20.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.6,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -20.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.699
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 24.99,
+     "marge_nette": -21.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.75,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.704
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 24.99,
+     "marge_nette": -21.35,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.0,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.35,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.712
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 24.99,
+     "marge_nette": -22.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.74,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -22.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.737
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 22.49,
+   "marge_verifiee": -13.51,
+   "rentabilite_verifiee": -0.45,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 53.5,
+    "haut": 53.5,
+    "position_neuf": 0.47
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "pays": {
+     "FR": {
+      "nb_annonces": 3,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.79,
+       "titre": "Star Wars Outlaws Gold Edition Juego Digital para consola Nintendo Switch 2",
+       "lien": "https://www.ebay.fr/itm/236850780357?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item37256818c5:g:is8AAeSwFyJqHey~",
+       "vendeur": "arreglatelo",
+       "avis_vendeur": 28247
+      },
+      "plus_cher": {
+       "prix": 66.14,
+       "titre": "Star Wars Outlaws - Gold Edition, Nintendo Switch 2 Nintendo (Nintendo Switch 2)",
+       "lien": "https://www.ebay.fr/itm/407284802776?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5ed410e4d8:g:DJcAAeSwLWBqzMTv",
+       "vendeur": "rarewaves-united",
+       "avis_vendeur": 481083
+      }
+     },
+     "DE": {
+      "nb_annonces": 15,
+      "total_ebay": 23,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 29.99,
+       "titre": "Star Wars Outlaws Gold Edition (Nintendo Switch 2) Adventure",
+       "lien": "https://www.ebay.de/itm/227588321962?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item34fd5232aa:g:0pcAAeSwEd5q4w8d",
+       "vendeur": "mediamarkt-jena",
+       "avis_vendeur": 14686
+      },
+      "plus_cher": {
+       "prix": 64.99,
+       "titre": "Star Wars Outlaws - Gold Edition - Nintendo Switch 2 - Neu & OVP",
+       "lien": "https://www.ebay.de/itm/406583151549?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5eaa3e8bbd:g:nOMAAeSwgVxpY0gX",
+       "vendeur": "m-h-e-i-n-e_havefunworld",
+       "avis_vendeur": 1063
+      }
+     },
+     "IT": {
+      "nb_annonces": 49,
+      "total_ebay": 71,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 27.18,
+       "titre": "Star Wars Outlaws Gold Edition Nintendo Switch 2 sigillato in fabbrica",
+       "lien": "https://www.ebay.it/itm/158232975057?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item24d76b96d1:g:82IAAeSwRUZqkZE-",
+       "vendeur": "brett1883",
+       "avis_vendeur": 21575
+      },
+      "plus_cher": {
+       "prix": 99.94,
+       "titre": "Nintendo Switch 2 Star Wars Outlaws Gold Edition versione coreana 1 confezione",
+       "lien": "https://www.ebay.it/itm/257581794258?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item3bf91243d2:g:zkoAAeSwMWtqOfBF",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 884
+      }
+     },
+     "ES": {
+      "nb_annonces": 47,
+      "total_ebay": 68,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 26.96,
+       "titre": "Star Wars Outlaws Gold Edition Nintendo Switch 2 sellado de fábrica",
+       "lien": "https://www.ebay.es/itm/158232975057?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item24d76b96d1:g:82IAAeSwRUZqkZE-",
+       "vendeur": "brett1883",
+       "avis_vendeur": 21575
+      },
+      "plus_cher": {
+       "prix": 99.12,
+       "titre": "Nintendo Switch 2 Star Wars Outlaws Gold Edition Versión Coreana 1 Pack",
+       "lien": "https://www.ebay.es/itm/257581794258?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item3bf91243d2:g:zkoAAeSwMWtqOfBF",
+       "vendeur": "surpass_korea",
+       "avis_vendeur": 884
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "temperature_dealabs": 117,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "star wars outlaws edition gold nintendo switch 2",
+     "star wars outlaws édition gold jeu nintendo switch 2",
+     "star wars outlaws gold edition nintendo switch 2 test",
+     "star wars outlaws gold edition nintendo switch 2 review",
+     "star wars outlaws gold edition nintendo switch 2 game",
+     "star wars outlaws gold edition nintendo switch 2 gameplay",
+     "star wars outlaws gold edition nintendo switch 2 amazon",
+     "star wars outlaws gold edition - nintendo switch 2 digital",
+     "star wars outlaws gold edition gra nintendo switch 2",
+     "ubisoft star wars outlaws gold edition nintendo switch 2"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "d2b0d5a73d",
+   "titre": "Blink Outdoor 4 Kamera (Außenkamera) mit Sync Module Core, Blink Mini 2K+ Innenkamera (neueste Generation) inklusive",
+   "prix": 47.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.mydealz.de/deals/blink-outdoor-4-kamera-aussenkamera-mit-sync-module-core-blink-mini-2k-innenkamera-neueste-generation-inklusive-2873700",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/blink-outdoor-4-kamera-aussenkamera-mit-sync-module-core-blink-mini-2k-innenkamera-neueste-generation-inklusive-2873700"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Blink Outdoor 4 Bundle Sync Mini 2K",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 115.0,
+   "cout_achat": 52.99,
+   "marge_nette": 19.36,
+   "rentabilite": 0.365,
+   "demande": 4.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Bundle caméra + module + mini 2K à 48€ (valeur ~150€), probable erreur de prix Amazon DE, marge énorme si honorée.",
+    "gptoss": "Kit de caméras de sécurité très demandé, marge nette après commissions et frais d'expédition."
+   },
+   "score": 31.5,
+   "ebay": {
+    "requete": "Blink Outdoor 4 Bundle Sync Mini 2K",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Blink Outdoor 4 Bundle Sync Mini 2K",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "blink outdoor 4 bundle",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Blink Outdoor 4 Bundle Sync Mini 2K",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Blink Outdoor 4 Bundle Sync Mini 2K",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "98a284d859",
+   "titre": "Philips Hue Flux Strip Light Base Kit 5 m für 69,99€ (Amazon Prime)",
+   "prix": 69.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.mydealz.de/deals/philips-hue-flux-strip-light-base-kit-5-m-fur-6999eur-amazon-prime-2873702",
+   "pays": "DE",
+   "source": "mydealz-new",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/philips-hue-flux-strip-light-base-kit-5-m-fur-6999eur-amazon-prime-2873702"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Philips Hue Gradient Lightstrip 5m",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 160.0,
+   "cout_achat": 74.99,
+   "marge_nette": 29.58,
+   "rentabilite": 0.394,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Kit bandeau LED gradient 5m à 70€ au lieu de 180€, erreur de prix probable sur Amazon DE, revente neuve très rentable si livré."
+   },
+   "score": 10.5,
+   "ebay": {
+    "requete": "Philips Hue Gradient Lightstrip 5m",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 56.74,
+     "IT": 42.28,
+     "ES": 40.3
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": null,
+    "marque": "Philips",
+    "asin": "B0C4GB48ZJ",
+    "titre": "Philips Lightstrip Hue Play Gradient pour TV 65 pouces, synchronisation de la lumière avec l'écran, fonctionne avec Alexa, Google Assistant et Apple Homekit & Hue Play Câble d'extension 5m",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 114.29,
+    "prix_amazon": 114.29,
+    "prix_tiers": null,
+    "moyenne_90j": 134.3,
+    "plus_bas_90j": 114.29,
+    "occasion": null,
+    "rang_ventes": 117817,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 2,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0C4GB48ZJ",
+    "jetons_restants": 212
+   },
+   "asin": "B0C4GB48ZJ",
+   "ventes_estimees_30j": 1,
+   "prix_plancher": {
+    "nom": "Philips Hue Gradient Lightstrip 5m",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 114.29,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0C4GB48ZJ"
+   },
+   "remise_sincere": true,
+   "mot_cle": "philips hue gradient lightstrip",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 100.58,
+     "marge_nette": 9.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 100.58,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 13.48,
+      "provision": 3.0,
+      "marge_nette": 9.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 100.58,
+     "marge_nette": 9.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 100.58,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 13.48,
+      "provision": 3.0,
+      "marge_nette": 9.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 100.58,
+     "marge_nette": 9.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 100.58,
+      "cout_achat": 74.99,
+      "frais_canal": 0.0,
+      "prelevements": 13.48,
+      "provision": 3.0,
+      "marge_nette": 9.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 114.29,
+     "marge_nette": 4.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 114.29,
+      "cout_achat": 74.99,
+      "frais_canal": 16.0,
+      "prelevements": 15.31,
+      "provision": 3.0,
+      "marge_nette": 4.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.066
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 114.29,
+     "marge_nette": 4.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 114.29,
+      "cout_achat": 74.99,
+      "frais_canal": 16.29,
+      "prelevements": 15.31,
+      "provision": 3.0,
+      "marge_nette": 4.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.063
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 114.29,
+     "marge_nette": 3.84,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 114.29,
+      "cout_achat": 74.99,
+      "frais_canal": 17.14,
+      "prelevements": 15.31,
+      "provision": 3.0,
+      "marge_nette": 3.84,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.051
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 114.29,
+     "marge_nette": -0.22,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 114.29,
+      "cout_achat": 74.99,
+      "frais_canal": 21.21,
+      "prelevements": 15.31,
+      "provision": 3.0,
+      "marge_nette": -0.22,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.003
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 114.29,
+     "marge_nette": -3.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 114.29,
+      "cout_achat": 74.99,
+      "frais_canal": 24.13,
+      "prelevements": 15.31,
+      "provision": 3.0,
+      "marge_nette": -3.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.042
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 102.86,
+   "marge_verifiee": -11.33,
+   "rentabilite_verifiee": -0.151,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Philips Hue Gradient Lightstrip 5m",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 6,
+      "total_ebay": 34,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 112.99,
+       "titre": "Philips Hue Flux Ultra Bright Gradient Lightstrip 5m 4800lm",
+       "lien": "https://www.ebay.de/itm/366590044591?_skw=Philips+Hue+Gradient+Lightstrip+5m&hash=item555a7829af:g:1lwAAeSwOwdqdFtS",
+       "vendeur": "angebot2000",
+       "avis_vendeur": 1688
+      },
+      "plus_cher": {
+       "prix": 176.26,
+       "titre": "Philips Hue Neon Gradient Outdoor Lightstrip 5m 1100lm",
+       "lien": "https://www.ebay.de/itm/298494243076?_skw=Philips+Hue+Gradient+Lightstrip+5m&hash=item457fa4b104:g:zkoAAeSwStVqtBF9",
+       "vendeur": "cyberport",
+       "avis_vendeur": 559506
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 24,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 11,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Hue Gradient Lightstrip 5m",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "philips hue gradient lightstrip 5m",
+     "philips hue flux gradient lightstrip 5m",
+     "philips hue flux ultra bright gradient lightstrip 5m",
+     "philips hue omniglow gradient lightstrip 5m",
+     "philips hue gradient ambiance lightstrip 5m",
+     "philips hue flux gradient outdoor lightstrip 5m",
+     "philips hue neon gradient outdoor lightstrip 5m 1100lm",
+     "philips hue essential flex gradient 5m lightstrip rgbw"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 10,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 44,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0C74WYDL2-neuf",
+   "titre": "Moving Out 2 Nintendo Switch",
+   "temperature": 496,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0C74WYDL2",
+   "date": "2026-11-17T11:53",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0C74WYDL2",
+   "ref_fr": 68.98,
+   "description": "moyenne 90 j 68.98 €, baisse 62 %, rang 6574"
+  },
+  {
+   "id": "keepa-B0HFK6YV9F-neuf",
+   "titre": "Oppo Enco Buds3s Écouteurs True Wireless, 54h Batterie, IP55, Nebula Blue",
+   "temperature": 448,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HFK6YV9F",
+   "date": "2026-11-17T11:53",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0HFK6YV9F",
+   "ref_fr": 45.82,
+   "description": "moyenne 90 j 45.82 €, baisse 56 %, rang 248"
+  },
+  {
+   "id": "keepa-B0F386TDXD-neuf",
+   "titre": "Lefant M2S Pro Robot Aspirateur Laveur 10000Pa avec Station Vidage Automatique Poussière,Navigation ",
+   "temperature": 440,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 179.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F386TDXD",
+   "date": "2026-11-17T06:55",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0F386TDXD",
+   "ref_fr": 403.87,
+   "description": "moyenne 90 j 403.87 €, baisse 55 %, rang 3214"
+  },
+  {
+   "id": "c5c0bfdf7e",
+   "titre": "2N - Cadre d'encastrement 3 modules du Verso IP – 9155016",
+   "temperature": 272,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575459.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 149.99 €, -34 %. 2N - Cadre d'encastrement 3 modules du Verso IP – 9155016"
+  },
+  {
+   "id": "keepa-B0DN5VNZZM-arbDE",
+   "titre": "Foindtower - Housses de coussin décoratives unies en lin, 40,6 x 40,6 cm [Amazon DE]",
+   "temperature": 270,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0DN5VNZZM",
+   "date": "2026-11-17T11:31",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0DN5VNZZM",
+   "ref_fr": 34.44,
+   "ventes_30j": 5,
+   "vendeurs": 2,
+   "description": "Amazon.fr 34.44 € (moyenne 90 j 33.92 €), écart 27 % port compris, ventes 30 j 5, 2 vendeurs FR"
+  },
+  {
+   "id": "b8e01012b6",
+   "titre": "Telekom Netz, Young: Freenet MagentaMobil M Allnet/SMS Flat 100GB 5G bis 300Mbit/s, Roaming mit Schweiz für eff. 2,86€/Monat",
+   "temperature": 265,
+   "categorie": "Telefon- & Internet-Verträge",
+   "marchand": "Media Markt Tarifwelt",
+   "prix": 468.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/telekom-netz-young-freenet-magentamobil-m-allnetsms-flat-100gb-5g-bis-300mbits-roaming-mit-schweiz-fur-eff-286eurmonat-2861004",
+   "date": "Tue, 17 Nov 2026 12:32:46 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "468,79€ - Media Markt Tarifwelt Wer momentan einen Sim Only Tarif sucht und zwischen 18 bis 27 Jahre alt ist bekommt momentan ein sehr starken Tarif zum guten Preis! MagentaMo..."
+  },
+  {
+   "id": "97b8a93bf7",
+   "titre": "CITIZEN Eco-Drive Solar - Reloj de Mujer con Correa de Piel y números Romanos",
+   "temperature": 243,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 179.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/citizen-eco-drive-solar-reloj-de-mujer-con-correa-de-piel-y-numeros-romanos-2073625",
+   "date": "Tue, 17 Nov 2026 12:36:19 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "179,95€ - Amazon El reloj Citizen EM1163-09X para mujer combina una estética atemporal con la última tecnología. Correa de piel marrón de alta calidad ..."
+  },
+  {
+   "id": "d2f20e83e1",
+   "titre": "Lorus Reloj analógico de Cuarzo para Mujer con Correa de Piel RG839CX5",
+   "temperature": 234,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 25.89,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lorus-reloj-analogico-de-cuarzo-para-mujer-con-correa-de-piel-rg839cx5-2073687",
+   "date": "Tue, 17 Nov 2026 12:36:10 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "25,89€ - Amazon Lorus Reloj analógico de Cuarzo para Mujer con Correa de Piel RG839CX5. Precio: 25,89 €. Referencia de Amazon: 35,05 €. Ahorro frente a esa..."
+  },
+  {
+   "id": "a19ad76e7f",
+   "titre": "Karl Lagerfeld camisa negra",
+   "temperature": 223,
+   "categorie": "Moda y accesorios",
+   "marchand": "Showroomprivé",
+   "prix": 13.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/karl-lagerfeld-camisa-negra-2073551",
+   "date": "Tue, 17 Nov 2026 12:33:16 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,90€ - Showroomprivé Camisa de manga larga con botones. Cuello abierto. Logo. Cierre de solapa. Color: negro y blanco Composición: 100 % poliéster"
+  },
+  {
+   "id": "keepa-B0D923Q3VS-arbDE",
+   "titre": "DMVOD Pantalon d'équitation Femme Taille Haute Stretch Leggings Équitation Silicone Antidé [Amazon DE]",
+   "temperature": 220,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 24.04,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0D923Q3VS",
+   "date": "2026-11-15T20:20",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0D923Q3VS",
+   "ref_fr": 39.99,
+   "ventes_30j": 8,
+   "vendeurs": 1,
+   "description": "Amazon.fr 39.99 € (moyenne 90 j 39.99 €), écart 22 % port compris, ventes 30 j 8, 1 vendeurs FR"
+  },
+  {
+   "id": "6598403207",
+   "titre": "Słuchawki Bezprzewodowe JBL Live 770 NC z adaptacyjną redukcją hałasu, Bluetooth 5.3, Mikrofonem, do 65 godzin,Sterowaniem Głosowym, Białe",
+   "temperature": 213,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 62.44,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/sluchawki-bezprzewodowe-jbl-live-770-nc-z-adaptacyjna-redukcja-halasu-bluetooth-53-mikrofonem-do-65-godzinsterowaniem-glosowym-biale-1391659",
+   "date": "Tue, 17 Nov 2026 12:47:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "265,69zł - Amazon.pl Dźwięk przestrzenny: Oprócz legendarnego brzmienia JBL, 40 mm przetworniki oferują wciągający dźwięk JBL Spatial, który zamienia standardowy dźwięk s..."
+  },
+  {
+   "id": "d70180bc55",
+   "titre": "OptoRED - Plugin VST",
+   "temperature": 212,
+   "categorie": "Electrónica",
+   "marchand": null,
+   "prix": 79.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/optored-plugin-vst-2073372",
+   "date": "Tue, 17 Nov 2026 12:37:25 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "Ahora puedes conseguir este plugin compresor valorado en 79€, de forma totalmente gratuita aplicando el cupón en la cesta, para utilizarlo dentro de tu DAW en t..."
+  },
+  {
+   "id": "keepa-B0FCFJSHVC-arbDE",
+   "titre": "CENNBIE Sous-mains Bureau 200x120cm, Tapis de Bureau en Cuir Synthétique, Imperméable et A [Amazon DE]",
+   "temperature": 210,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 79.98,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0FCFJSHVC",
+   "date": "2026-11-16T02:37",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": null,
+   "asin": "B0FCFJSHVC",
+   "ref_fr": 109.98,
+   "ventes_30j": 10,
+   "vendeurs": 1,
+   "description": "Amazon.fr 109.98 € (moyenne 90 j 109.98 €), écart 21 % port compris, ventes 30 j 10, 1 vendeurs FR"
+  },
+  {
+   "id": "5bc7cc752a",
+   "titre": "Kask MTB Mavic Syncro SL Mips - różne kolory i rozmiary",
+   "temperature": 203,
+   "categorie": "Sport i turystyka",
+   "marchand": "Private Sport Shop",
+   "prix": 44.41,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kask-mtb-mavic-syncro-sl-mips-rozne-kolory-i-rozmiary-1391800",
+   "date": "Tue, 17 Nov 2026 12:49:25 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "189zł - Private Sport Shop Kask w tej cenie zdarza się rzadko. Expert szaleje. Mavic z żółtą naklejką na potylicy, która jest musowa w środowisku kolarskim niczym kultowa śliwowi..."
+  },
+  {
+   "id": "d71c04e3e9",
+   "titre": "MONITOR MSI MAG 27CQ6F 27\" QHD 180Hz CURVO POR 129 €",
+   "temperature": 201,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 128.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/monitor-msi-mag-27cq6f-27-qhd-180hz-curvo-por-129-eur-2073684",
+   "date": "Tue, 17 Nov 2026 12:34:23 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "128,95€ - Amazon ¿Os acordáis de ese monitor que anda rondando por 279,95 € en CoolMod? Pues sí: ES ESTE MISMO. En Amazon está a 129,00 €, su precio más bajo de la historia (..."
+  },
+  {
+   "id": "e51920c0b3",
+   "titre": "Pala Bullpadel Di Nenno Xplo 2026",
+   "temperature": 190,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Miravia",
+   "prix": 99.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pala-bullpadel-di-nenno-xplo-2026-2073645",
+   "date": "Tue, 17 Nov 2026 12:50:09 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "99,95€ - Miravia Oferta para la Bullpadel Di Nenno XPLO 2026 , una pala de pádel diseñada para llevar la potencia ofensiva al máximo nivel. Desarrollada en c..."
+  },
+  {
+   "id": "6da663d6c6",
+   "titre": "Monitor ASROCK OLED PGO27QFS,27\",QHD (2560X1440), 240HZ, 1500:1, 0.03MS, 2HDMI+2DP, WiFi+3USB3.2+Type C, Negro",
+   "temperature": 189,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 292.72,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/monitor-asrock-pgo27qfs27qhd-2560x1440-240hz-15001-003ms-2hdmi2dp-wifi3usb32type-c-negro-2073674",
+   "date": "Tue, 17 Nov 2026 12:31:36 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "292,72€ - Amazon MONITOR ASROCK PGO27QFS,27\",QHD (2560X1440),240HZ,1500:1,0.03MS,2HDMI+2DP,WIFI+3USB3.2+TYPE C,NEGRO El Monitor ASROCK O..."
+  },
+  {
+   "id": "0df4a6b085",
+   "titre": "LEGO- Game Boy, 72046",
+   "temperature": 188,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Nintendo Store",
+   "prix": 41.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-game-boy-72046-2073715",
+   "date": "Tue, 17 Nov 2026 12:51:52 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "41,99€ - Nintendo Store La mítica Game Boy convertida en LEGO Características: Set LEGO Super Mario Game Boy (referencia 72046). <..."
+  },
+  {
+   "id": "385f77a9aa",
+   "titre": "2N - Cadre d'encastrement 1 module du Verso IP – 9155011",
+   "temperature": 176,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 156.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575456.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -22 %. 2N - Cadre d'encastrement 1 module du Verso IP – 9155011"
+  },
+  {
+   "id": "e522da0f53",
+   "titre": "2N - Cadre pour installation encastrée 1 module Noir - 9155011B",
+   "temperature": 176,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 156.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582928.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -22 %. 2N - Cadre pour installation encastrée 1 module Noir - 9155011B"
+  },
+  {
+   "id": "9cd94f2555",
+   "titre": "2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014",
+   "temperature": 144,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 82.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575451.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 99.99 €, -18 %. 2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014"
+  },
+  {
+   "id": "2c2006529e",
+   "titre": "2N - Lecteur de carte RFID externe avec connexion USB",
+   "temperature": 144,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 449.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582971.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 549.99 €, -18 %. 2N - Lecteur de carte RFID externe avec connexion USB"
+  },
+  {
+   "id": "24eac9f80e",
+   "titre": "BRAUN Series 9 Pro Premium Elektrorasierer mit 4+1 Scherkopf, Elektrischer Herrenrasierer, ProLift Trimmer, 5-in-1 Reinigungsstation 9486cc",
+   "temperature": 130,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Joybuy",
+   "prix": 199.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/braun-series-9-pro-premium-elektrorasierer-mit-41-scherkopf-elektrischer-herrenrasierer-prolift-trimmer-5-in-1-reinigungsstation-9486cc-2873575",
+   "date": "Tue, 17 Nov 2026 12:38:05 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "199,99€ - Joybuy Black Friday Deal für das glatte Gesicht. Inklusive Spotify Premium um währendessen die Karaoke Skills zu trainieren :D Welchen Rasierer würdet ihr eu..."
+  },
+  {
+   "id": "9018c1e876",
+   "titre": "Clair Obscur: Expedition 33 sur PS5",
+   "temperature": 120,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 31.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/expedition-33-ps5-3458607",
+   "date": "Tue, 17 Nov 2026 12:39:40 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "31,99€ - JoyBuy • JRPG au tour par tour • Jeu sur disque pour PS5 • Textes et voix en français • Jouable hors ligne sur PS5 avec lecteur de disque"
+  },
+  {
+   "id": "cdb685754c",
+   "titre": "Regatta Men's Matteth ISOTEX 15000 Waterproof Breathable Shell Jacket (3 Colours / Size: S-3XL) - Free Delivery for Members",
+   "temperature": 120,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Regatta",
+   "prix": 18.48,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/regatta-mens-matteth-isotex-15000-waterproof-breathable-shell-jacket-3-colours-size-s-3xl-free-delivery-for-members-5035656",
+   "date": "Tue, 17 Nov 2026 11:43:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£18.48 - Regatta Reduced to £21, get Regatta Men's Matteth ISOTEX 15000 Waterproof Breathable Shell Jacket for £18.48 with 12% off code AFRGVCUK12</s..."
+  },
+  {
+   "id": "9cac716e77",
+   "titre": "2N - Cadre pour installation murale double Noir 9155012B",
+   "temperature": 120,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582835.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -15 %. 2N - Cadre pour installation murale double Noir 9155012B"
+  },
+  {
+   "id": "da8430d49b",
+   "titre": "Recycled Velour Lozenge Ottoman with Tray + Free Click and Collect Navy or Olive",
+   "temperature": 118,
+   "categorie": "Home & Living",
+   "marchand": "Dunelm",
+   "prix": 35.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/recycled-velour-lozenge-ottoman-with-tray-free-click-and-collect-navy-or-olive-5035120",
+   "date": "Tue, 17 Nov 2026 11:31:20 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£35 - Dunelm Multi-use ottoman - use as a foot rest and storage Easy and quick to assemble No tools needed Stylish ye..."
+  },
+  {
+   "id": "ca2e65848a",
+   "titre": "Orient Symphony III RA-AC0F07S30B Automatik Uhr / Herrenuhr 42mm 5ATM",
+   "temperature": 115,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Timeshop24",
+   "prix": 142.5,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/orient-ra-ac0f07s30b-automatik-herrenuhr-42mm-5atm-2873479",
+   "date": "Tue, 17 Nov 2026 12:36:27 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "142,50€ - Timeshop24 Die Orient RA-AC0F07S30B ist eine elegante Automatik-Herrenuhr mit klassischem, minimalistischem Design – ideal für Büro, Alltag und formellere Anlässe. <b..."
+  },
+  {
+   "id": "344aa63855",
+   "titre": "Siemens EQ6 plus s300 TE653501DE Kaffeevollautomat",
+   "temperature": 115,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 404.75,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/siemens-eq6-plus-s300-te653501de-kaffeevollautomat-372640",
+   "date": "Tue, 17 Nov 2026 12:42:31 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "404,75€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit den Siemens EQ6 plus s300 TE653501DE Kaffeevollautomat um 404,75€ inklusive Paketsteuer. Der Preisv..."
+  },
+  {
+   "id": "d46aaa3583",
+   "titre": "AOC Agon PRO AG276QZD2AM - 27 inch QHD OLED monitor, 280 Hz, 0.03 ms",
+   "temperature": 112,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 289.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/aoc-agon-pro-ag276qzd2am-27-inch-qhd-oled-monitor-280-hz-003-ms-5034017",
+   "date": "Tue, 17 Nov 2026 11:45:29 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£289.99 - Amazon Take your gaming experience to a whole new level with QD-OLED technology! OLED offers superior sharpness, contrast and color depth, resulting in impe..."
+  },
+  {
+   "id": "121f107012",
+   "titre": "Ninja Sammeldeal: Antihaft-Waffeleisen, CRISPi DualZone Glas Air Fryer, Ninja Foodi MAX Dual Zone 9,5L, Ninja SLUSHi und mehr (Amazon)",
+   "temperature": 112,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 88.1,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/ninja-sammeldeal-antihaft-waffeleisen-crispi-dualzone-glas-air-fryer-ninja-foodi-max-dual-zone-heissluftfritteuse-95l-und-mehr-amazon-372629",
+   "date": "Tue, 17 Nov 2026 12:51:22 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "88,10€ - Amazon Liebe Preisjäger, da es durchaus einige Ninja Angebote bei Amazon gibt, hab ich mal die Produkte zusammengefasst, die es derzeit auch zum besten Preis ..."
+  },
+  {
+   "id": "9bf4e1a114",
+   "titre": "2N - Module de clavier numérique IP -9155031B",
+   "temperature": 112,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 386.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582920.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 449.99 €, -14 %. 2N - Module de clavier numérique IP -9155031B"
+  },
+  {
+   "id": "a4440bb386",
+   "titre": "Bosch Smart Home bis zu 45% - z.B. Twist Smart Home Fernbedienung",
+   "temperature": 110,
+   "categorie": "Elektronik",
+   "marchand": "Bosch",
+   "prix": 82.47,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bosch-smart-home-bis-zu-45-2873456",
+   "date": "Tue, 17 Nov 2026 12:40:07 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "82,47€ - Bosch Die Preise im Shop sind eher \"UVP\" - durch den Rabatt kommen sie aber in attraktivere Bereiche: \"Entdecken Sie die Black-Week-Deals von Bosch Smart H..."
+  },
+  {
+   "id": "286733eb46",
+   "titre": "Erbauer 18V 3 x 4.0Ah Li-Ion EXT Brushless Cordless 6-Piece Power Tool Kit",
+   "temperature": 110,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Screwfix",
+   "prix": 379.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/erbauer-6-peice-powertool-set-v2-brushless-ext-battery-5035357",
+   "date": "Tue, 17 Nov 2026 11:37:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£379.99 - Screwfix Good set of tools at a decent price on black Friday deals On the Screwfix app or the Screwfix website A professional 18V G2 brushles..."
+  },
+  {
+   "id": "87a79b0f14",
+   "titre": "Écran PC gaming 27\" AOC 27G4ZREAD - Fast IPS, 260Hz, 1ms GtG, HDR10, G-Sync, 1920x1080",
+   "temperature": 108,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-gaming-27-aoc-27g4zread-fast-ips-260hz-1ms-gtg-hdr10-g-sync-1920x1080-3458179",
+   "date": "Tue, 17 Nov 2026 12:47:35 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "99€ - Amazon - Dalle Fast IPS – Temps de réponse ultra-rapide avec couleurs précises IPS et larges angles de vision pour des images fluides et éclatantes. - Prise e..."
+  },
+  {
+   "id": "37a8da9f83",
+   "titre": "Robot aspirateur dreame D20 Pro Plus - 13 000 Pa, nettoyage coins, vidage automatique 150 jours, navigation LDS et évitement laser, 5200 mAh",
+   "temperature": 102,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 165.83,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-dreame-d20-pro-plus-13-000-pa-nettoyage-coins-vidage-automatique-150-jours-navigation-lds-et-evitement-laser-5200-mah-3458134",
+   "date": "Tue, 17 Nov 2026 12:51:41 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "165,83€ - Amazon [150 jours de collecte de la poussière sans intervention manuelle] Profitez d'un vidage automatique en toute simplicité grâce au nouveau sac à poussière..."
+  },
+  {
+   "id": "f4d8e33d43",
+   "titre": "Écran PC 27\" Samsung Odyssey OLED G6 (LS27HG612SUXEN) - QHD, OLED, 240 Hz",
+   "temperature": 101,
+   "categorie": "High-Tech",
+   "marchand": "Fnac",
+   "prix": 349.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-odyssey-g6-ls27hg612suxen-27-oled-240hz-3458356",
+   "date": "Tue, 17 Nov 2026 12:53:28 +0100",
+   "source": "dealabs-hot",
+   "pays": "FR",
+   "description": "349,99€ - Fnac Le Samsung Odyssey OLED G6 (G61SH) passe à **349,99 €** chez Fnac pour le Black Friday, vendu et expédié par Fnac (donc cartes cadeaux Fnac-Darty utilisable..."
+  },
+  {
+   "id": "3ecd9fff64",
+   "titre": "🛍️ Oral-B Brosse à Dents Electrique iO 2 avec 1 Brossette de Rechange, Noire ✅ 39,99€ au lieu de 80,00€ ➡️ https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21 Pub",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21",
+   "date": "2026-11-17T11:35",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Oral-B Brosse à Dents Electrique iO 2 avec 1 Brossette de Rechange, Noire ✅ 39,99€ au lieu de 80,00€ ➡️ https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 80.0
+  },
+  {
+   "id": "8055684204",
+   "titre": "🛍️ Cardo Spirit, système de Communication Bluetooth pour Casque de Moto - 1 Unité ✅ 76,90€ au lieu de 109,95€ ➡️ https://www.amazon.fr/dp/B09MQ7R1D8/?tag=pmspt-",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 76.9,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09MQ7R1D8/?tag=pmspt-21",
+   "date": "2026-11-17T11:42",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Cardo Spirit, système de Communication Bluetooth pour Casque de Moto - 1 Unité ✅ 76,90€ au lieu de 109,95€ ➡️ https://www.amazon.fr/dp/B09MQ7R1D8/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 109.95
+  },
+  {
+   "id": "2da58b6fd2",
+   "titre": "🛍️ Tommy Hilfiger Sweat à Capuche zippé en Polaire pour Homme, Reg Zt MW0MW44931, Ivoire pétale, M ✅ 54,40€ au lieu de 129,90€ ➡️ https://www.amazon.fr/dp/B0GF9",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 54.4,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GF9XM4BP/?tag=pmrat-21",
+   "date": "2026-11-17T11:48",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Tommy Hilfiger Sweat à Capuche zippé en Polaire pour Homme, Reg Zt MW0MW44931, Ivoire pétale, M ✅ 54,40€ au lieu de 129,90€ ➡️ https://www.amazon.fr/dp/B0GF9XM4BP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 129.9
+  },
+  {
+   "id": "d7c4b0f49f",
+   "titre": "Bague Plaqué Or Zirconias - Taille 59/60",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Maty",
+   "prix": 24.5,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/bague-plaque-or-zirconias-t5960-3458890",
+   "date": "Tue, 17 Nov 2026 12:52:17 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "24,50€ - Maty Bague plaqué or zirconias Que ce soit pour vous ou pour gâter un être cher, craquer pour cette bague MATY pour femme en plaqué or sera toujours une bonne idée.Cette bague plaqué or zirconias est vendue par MATY au prix de 24,50 €. Cette bague est disponible de la taille 49/50 à la tail"
+  },
+  {
+   "id": "57ef3fdf24",
+   "titre": "Casque Moto intégral MT Helmets Targo S Replica Ryusei Yamanaka 2026 - Du M au XL",
+   "temperature": null,
+   "categorie": "Auto-Moto",
+   "marchand": "TradeInn",
+   "prix": 106.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-moto-integral-mt-helmets-targo-s-replica-ryusei-yamanaka-2026-tailles-du-m-au-xl-3458888",
+   "date": "Tue, 17 Nov 2026 12:49:23 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "106,49€ - TradeInn Libérez le pilote qui sommeille en vous avec le MT Helmets Targo S Replica Ryusei Yamanaka 2026. Ce casque intégral allie un style agressif inspiré de la star du Moto3 Ryusei Yamanaka à une sécurité avancée et un confort suprême. Sa conception aérodynamique assure la stabilité, ta"
+  },
+  {
+   "id": "965af4b217",
+   "titre": "LEGO The Legend of Zelda : Ocarina of Time - Le Combat Final 77093",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": null,
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-the-legend-of-zelda-ocarina-of-time-le-combat-final-77093-3458886",
+   "date": "Tue, 17 Nov 2026 12:49:07 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "83,99€ Excellent prix pour ce set avec de belles figurines !"
+  },
+  {
+   "id": "9d6b3d67ad",
+   "titre": "Ecran PC 32\" AOC AG326UDAM - 4k UHD, QD-OLED, 165 Hz, HDR400 TrueBlack, FreeSync Prem Pro, G-Sync",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 539.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-32-aoc-ag326udam-4k-uhd-qd-oled-165-hz-hdr400-trueblack-freesync-prem-pro-g-sync-3458882",
+   "date": "Tue, 17 Nov 2026 12:47:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "539€ - Amazon À propos de cet article Synchronise le taux de rafraîchissement de l'affichage avec la carte graphique pour éviter les déchirures et les bégaiements de l'écran. AMD FreeSync Premium ; Jeu fluide, fluide et sans déchirure Les haut-parleurs intégrés fournissent une sortie audio sans avoi"
+  },
+  {
+   "id": "a50fd3efea",
+   "titre": "Couteau pliant de poche avec étui ceinture N°8",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Decathlon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/couteau-pliant-de-poche-avec-etui-ceinture-n8-3458881",
+   "date": "Tue, 17 Nov 2026 12:45:22 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Decathlon Avec sa lame en acier inoxydable de 8,5 cm, ce couteau de poche Opinel avec manche en hêtre verni et son étui de transport seront votre compagnon pour la chasse et vos activités extérieures."
+  },
+  {
+   "id": "c35c790dfb",
+   "titre": "Tête Thermostatique Intelligente Tado X VX-SRT02-TC-ML-00 Sans fil pour Radiateur",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "PcComponentes",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/une-tete-thermostatique-tado-x-3458878",
+   "date": "Tue, 17 Nov 2026 12:43:54 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "59,99€ - PcComponentes Meilleur prix à ce jour pour une tête thermostatique Tado X"
+  },
+  {
+   "id": "c7d0d0c6c3",
+   "titre": "Eau de Toilette Lalique Encre Noire Sport 100ml",
+   "temperature": null,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Parfums et Moi",
+   "prix": 18.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/eau-de-toilette-lalique-encre-noire-sport-100ml-3458874",
+   "date": "Tue, 17 Nov 2026 12:38:50 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "18€ - Parfums et Moi Noté 4.17/5 sur Fragrantica Le parfum Encre Noire Sport de Lalique est un parfum boisé-aquatique pour homme qui allie la fraîcheur à la profondeur et à l'élégance. Lancé en 2013, ce parfum est la création de la célèbre parfumeuse Nathalie Lorson. Encre Noire Sport est une varian"
+  },
+  {
+   "id": "000433e835",
+   "titre": "Pack 2 Têtes thermostatiques connectées Tado X VX-SRT02-TC-ML-00",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "PcComponentes",
+   "prix": 119.98,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-deux-tetes-thermostatique-tado-x-3458872",
+   "date": "Tue, 17 Nov 2026 12:38:11 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "119,98€ - PcComponentes Meilleur prix à ce jour pour un lot de 2 têtes."
+  },
+  {
+   "id": "ab8a8e75c2",
+   "titre": "Boîte à outils 35 pièces Parkside",
+   "temperature": null,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Lidl",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lidl-boiteensemble-a-outils-en-plastique-35-pieces-3458868",
+   "date": "Tue, 17 Nov 2026 12:34:59 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Lidl • Boîte à outils en plastique • 35 pièces"
+  },
+  {
+   "id": "e2bb583c5c",
+   "titre": "EA Sports UFC 6 Edition Standard XBOX Series X",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 41.53,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ea-sports-ufc-6-edition-standard-xbox-series-x-3458871",
+   "date": "Tue, 17 Nov 2026 12:34:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "41,53€ - Amazon EA Sports UFC 6 Edition Standard XBOX Series X EA SPORTS™ UFC® 6 est porté par les combattants. Des systèmes de frappes et de mouvements améliorés donnent vie aux stars de l’UFC dans l’Octogone, tandis que de nouveaux modes de jeu proposent une narration immersive qui rend chaque com"
+  },
+  {
+   "id": "613570f748",
+   "titre": "LEGO Party! sur Nintendo Switch",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-party-switch-3458867",
+   "date": "Tue, 17 Nov 2026 12:31:57 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "24,99€ - Amazon LEGO Party! Affrontez vos amis dans des zones de défi loufoques et 60 mini-jeux hilarants inspirés de vos thèmes LEGO préférés tels que LEGO Pirates, LEGO Espace, LEGO NINJAGO et bien plus encore. Rejoignez vos amis en ligne sur n'importe quelle plateforme ou réunissez-vous pour une "
+  },
+  {
+   "id": "98a284d859",
+   "titre": "Philips Hue Flux Strip Light Base Kit 5 m für 69,99€ (Amazon Prime)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/philips-hue-flux-strip-light-base-kit-5-m-fur-6999eur-amazon-prime-2873702",
+   "date": "Tue, 17 Nov 2026 12:51:08 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "69,99€ - Amazon Moinsen, bei Amazon erhaltet ihr das Philips Hue Flux Strip Light Base Kit 5 m zum Bestpreis von 69,99€. Amazon Kunden vergeben im schnitt 4.6 Sterne. Der Preisvergleich liegt bei 85€ . Viel Spaß Der Lightstrip Flux bringt ein feines Lichtband zum Ausleuchten von Innenräumen mit eine"
+  },
+  {
+   "id": "2b6863e092",
+   "titre": "Stanley 1913 Cafe To-Go Travel Mug 0.23L - Twilight Hält 3 Std. heiß - 4 Std. kalt - Spülmaschinenfest (Prime)",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 19.6,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/stanley-1913-cafe-to-go-travel-mug-023l-twilight-halt-3-std-heiss-4-std-kalt-spulmaschinenfest-prime-2873705",
+   "date": "Tue, 17 Nov 2026 12:51:06 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "19,60€ - Amazon LEBENSLANGE GARANTIE: 'Built for Life' ist seit 1913 das Stanley-Versprechen, das die Herstellung von robusten, leistungsfähigen Produkten, die ein Leben lang halten. Stanley-Produkte haben eine lebenslange Garantie gegen Herstellungsfehler. 16 STUNDEN EISGEKÜHLT: Der einzigartige 2-"
+  },
+  {
+   "id": "91a5183234",
+   "titre": "Elden Ring Nightreign Collector's Edition (PS5)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 94.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/elden-ring-nightreign-collectors-edition-ps5-2873703",
+   "date": "Tue, 17 Nov 2026 12:50:06 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "94,99€ - Amazon Nettes Paket für Sammler! Bei Amazon gibt es die Elden Ring Nightreign Collector's Edition für die PS5 gerade zum Bestpreis von 94,99€ inkl. Versand . Im Vergleich zahlt man mindestens 127,61€ . Neben der Steelbook -Variante des Spiels sind noch eine Statue (25cm), 8 Karte n, das Art"
+  },
+  {
+   "id": "b7e606c25c",
+   "titre": "Gowod - Mobility Training App",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": null,
+   "prix": 84.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/gowod-mobbility-training-app-2873684",
+   "date": "Tue, 17 Nov 2026 12:47:44 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "84,99€ Meiner Meinung nach gute App, für alle, die etwas für ihre Flexibilität tun möchten. Die Übungen für jede Sessions werden vor dem Start neu zusammengestellt, das Training wird dadurch nicht so schnell langweilig. Dazu kann vorhandenes Equipment angegeben werden. Und es können Sportarten ausge"
+  },
+  {
+   "id": "7b419a9c17",
+   "titre": "Physische Games - Videospiel Sammeldeal - Playstation 5 und PS4 - Nintendo Switch 2 und 1",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Coolshop",
+   "prix": 34.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/physische-games-videospiel-sammeldeal-playstation-5-und-ps4-nintendo-switch-2-und-1-2873692",
+   "date": "Tue, 17 Nov 2026 12:46:07 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "Coolshop ALLES INKLUSIVE VERSANDKOSTEN bedeutet: mehr bestellungen bei Coolshop (Gratisversand ab 34€) = höhere Ersparnis - OttoUp+ - höhrere Ersparnis usv... PS5 A Plague Tale: Innocence Händler: Amazon Genre: Action-Adventure / Stealth Preis – Vergleichspreis – Ersparnis: 14,99 € – 17,98 € – 2,99 "
+  },
+  {
+   "id": "d2b0d5a73d",
+   "titre": "Blink Outdoor 4 Kamera (Außenkamera) mit Sync Module Core, Blink Mini 2K+ Innenkamera (neueste Generation) inklusive",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 47.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/blink-outdoor-4-kamera-aussenkamera-mit-sync-module-core-blink-mini-2k-innenkamera-neueste-generation-inklusive-2873700",
+   "date": "Tue, 17 Nov 2026 12:46:02 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "47,99€ - Amazon SMART SECURITY-KOMPLETTPAKET FÜR DRINNEN UND DRAUSSEN – Hol dir die kabellose Blink Außenkamera 4 und die Blink Mini 2K+ mit Netzstecker. Behalte über die Blink-App in und um dein Zuhause alles im Blick. BLINK MINI 2K+ INNENKAMERA GRATIS – Das Paket enthält eine Blink Mini 2K+ ohne A"
+  },
+  {
+   "id": "4f83bc46f6",
+   "titre": "Nedis SmartLife WLAN-Steckdose (3680W) mit USB-C + 2x USB-A | Alexa & Google kompatibel | 4,99€ Abholung / 10,98€ Versand",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "notebooksbilliger",
+   "prix": 10.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/nedis-smartlife-wlan-steckdose-3680w-mit-usb-c-2x-usb-a-alexa-google-kompatibel-499eur-abholung-1098eur-versand-2873699",
+   "date": "Tue, 17 Nov 2026 12:45:55 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "10,98€ - notebooksbilliger Auf der Suche nach steuerbaren USB Steckdosen bin ich hierüber gestolpert. Ich kann nicht genau sagen, ob sie einzeln steuerbar sind, gehe aber nicht davon aus. Wer einen Store in der Nähe hat, kommt wahrscheinlich selbst über Ali nicht drunter :-) Düsseldorf : Erkrather S"
+  },
+  {
+   "id": "6c145433df",
+   "titre": "Philips Kaffeevollautomat mit Panarello 3300 Serie (EP3326/90, Schwarz/Chrom, 5 Spezialitäten)",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 299.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/philips-kaffeevollautomat-mit-panarello-3300-serie-ep332690-schwarzchrom-5-spezialitaten-2873697",
+   "date": "Tue, 17 Nov 2026 12:44:58 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "299,97€ - Amazon Erstmals unter der 300-Euro-Grenze: Philips Kaffeevollautomat Serie 3300 (EP3326/90) mit klassischem Milchaufschäumer für nur 299,97 Euro frei Haus! Im Rahmen der frühen Black-Friday-Angebote bei Amazon gibt es den modernen Kaffeevollautomaten der beliebten Philips 3300 Serie (Model"
+  },
+  {
+   "id": "4b85935fcd",
+   "titre": "[AMAZON] Jack & Jones Herren Jeans Jjiglenn Jjoriginal Sq 330 Noos",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 18.18,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-jack-jones-herren-jeans-jjiglenn-jjoriginal-sq-330-noos-2873698",
+   "date": "Tue, 17 Nov 2026 12:43:54 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "18,18€ - Amazon"
+  },
+  {
+   "id": "baf47fe289",
+   "titre": "Ninja MAX PRO Heißluftfritteuse AF180EUCP (6,2 L, Schwarz/Kupfer)",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ninja-max-pro-heissluftfritteuse-af180eucp-62-l-schwarzkupfer-2873693",
+   "date": "Tue, 17 Nov 2026 12:43:20 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "89,99€ - Amazon Neuer Bestpreis für den 6,2L-Airfryer im edlen Kupfer-Design: Ninja MAX PRO (AF180EUCP) für nur 89,99 Euro inklusive Versand! Direkt bei Amazon gibt es im Rahmen der frühen Black-Friday-Angebote die beliebte Ninja MAX PRO Heißluftfritteuse (Modell AF180EUCP) in der eleganten Farbvari"
+  },
+  {
+   "id": "ee5581368c",
+   "titre": "Logitech G203 LIGHTSYNC Gaming-Maus, kabelgebunden, 6 programmierbare Tasten, bis 8000 DPI, RGB, 85 g, weiß | lila 19,99 € | Prime",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 19.74,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/logitech-g203-lightsync-gaming-maus-kabelgebunden-6-programmierbare-tasten-bis-8000-dpi-rgb-85-g-lila-2873695",
+   "date": "Tue, 17 Nov 2026 12:41:42 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "19,74€ - Amazon Bei Amazon bekommt ihr die Logitech G203 Lightspeed gerade für 19,74 € inkl. VSK in weiß. Wer lieber lila mag (z.B. ich), zahlt ein paar Cent mehr, nämlich 19,99 € inkl. VSK. Der nächste Vergleichspreis laut Idealo beträgt 24,95 € bei boettcher. Über die Logitech G203 Lightspeed Kabe"
+  },
+  {
+   "id": "8c05d6c0eb",
+   "titre": "[Decathlon / Arena] arena Ulixes 42L Rucksack für 111,27 € / 111,29 € inkl. Versand",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "DECATHLON",
+   "prix": 111.27,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/decathlon-arena-arena-ulixes-42l-rucksack-fur-11127-eur-11129-eur-inkl-versand-2873691",
+   "date": "Tue, 17 Nov 2026 12:40:47 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "111,27€ - DECATHLON Ich habe den arena Ulixes 42L schon seit ein paar Wochen auf dem Schirm und mich letzte Woche ziemlich geärgert. Da gab es bei Arena schon mal 30 % auf Rucksäcke, aber ich erst kurz nach Mitternacht gecheckt hab, dass die im November jeden Tag andere Angebote haben. Da war der Ra"
+  },
+  {
+   "id": "7fa9b6c462",
+   "titre": "Dynafit Skitourenjacke Damen TLT GORE-TEX ab 129,99 €",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "limango",
+   "prix": 129.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/dynafit-skitourenjacke-damen-tlt-gore-tex-ab-12999-eur-2873694",
+   "date": "Tue, 17 Nov 2026 12:40:20 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "129,99€ - limango XS ab 159,99 € S ab 129,99 € M ab 134.99 € L ab 149,99 € Leichtigkeit ohne Kompromisse: Die wasserdichte TLT GORE-TEX Jacke für Damen ist die erste Wahl für schnelle Skitouren bei wechselhaften Bedingungen. Die vielseitige Regenjacke bietet Dir 100 % zuverlässigen Schutz vor Wind u"
+  },
+  {
+   "id": "de8fc62b8d",
+   "titre": "Bosch Laser-Entfernungsmesser Zamo Messbereich bis 40 m, Laden über USB-C, speichert 10 Werte (Prime)",
+   "temperature": null,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bosch-laser-entfernungsmesser-zamo-messbereich-bis-40-m-laden-uber-usb-c-speichert-10-werte-prime-2873685",
+   "date": "Tue, 17 Nov 2026 12:37:42 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "34,99€ - Amazon Wer aktuell auf der Suche nach einem handlichen und zuverlässigen Laser-Entfernungsmesser ist, sollte sich den Bosch Zamo einmal genauer anschauen. Das Gerät ermöglicht schnelle und präzise Entfernungsmessungen auf Knopfdruck und eignet sich ideal für Renovierungsarbeiten, Heimwerker"
+  },
+  {
+   "id": "b91a17e60c",
+   "titre": "POCO M8 Pro 5G (6,88\" OLED, Snapdragon 7s Gen 4, 50MP, 6500mAh, 100W)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": null,
+   "prix": 228.85,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/poco-m8-pro-5g-688-oled-snapdragon-7s-gen-4-50mp-6500mah-100w-2873683",
+   "date": "Tue, 17 Nov 2026 12:36:56 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "228,85€ Hallo zusammen, bei AliExpress gibt es im Rahmen des 11.11 Sales das brandneue POCO M8 Pro 5G für 228,85€ mit dem Code. Artikel ist im \"Marke+\" Programm (y) (Hinweis aus den Produktdetails: Gemäß EU-Vorschriften liegt dem Lieferumfang standardmäßig kein Steckernetzteil bei, sondern nur das L"
+  },
+  {
+   "id": "10a105e528",
+   "titre": "HyperX Cloud III: Gaming-Headset in Schwarz oder Schwarz/Rot (53-mm-Treiber, USB-C, Mikrofon, 3,5-mm-Klinke) | Amazon/MediaMarkt/Saturn",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/hyperx-cloud-iii-gaming-headset-in-schwarz-oder-schwarzrot-53-mm-treiber-usb-c-mikrofon-35-mm-klinke-amazonmediamarktsaturn-2873681",
+   "date": "Tue, 17 Nov 2026 12:34:51 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "49,99€ - Amazon Bei Amazon , MediaMarkt und Saturn bekommt ihr aktuell folgendes Angebot! :) HyperX Cloud III – Kabelgebundenes Gaming-Headset für 49,99€ (Amazon inkl. Versand / MMS per Abholung) Entweder in Schwarz oder Schwarz/Rot Der aktuelle Preisvergleich liegt bei 59€ inkl. Versand. HyperX Sig"
+  },
+  {
+   "id": "e65d24983a",
+   "titre": "Only&Sons Onceres Herren Sweatshirt diverse Farben",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 18.43,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/onlysons-onceres-herren-sweatshirt-diverse-farben-2873672",
+   "date": "Tue, 17 Nov 2026 12:34:34 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "18,43€ - Amazon Only and Sons Pullover in diversen Farben reduziert. Achtung! Baumwolle+Polyester. Finde sie trotzdem super angenehm zu tragen. Stil Farbe Silver Lining Halsausschnitt Rundhalsausschnitt Stil/Form Sweatshirt Passform keine Angabe Muster Einfarbig Motivfigur Rundhalsausschnitt Thema E"
+  },
+  {
+   "id": "6a99743786",
+   "titre": "ESN Ultrapure Creatine Monohydrate - geschmacksneutral und vegan - 250 g",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 10.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/esn-ultrapure-creatine-monohydrate-geschmacksneutral-und-vegan-250-g-2873679",
+   "date": "Tue, 17 Nov 2026 12:34:19 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "10,79€ - Amazon ESN Ultrapure Creatine Monohydrate – 250 g für 11,99 € Geschmacksneutrales und veganes Kreatin-Monohydrat in mikrofeiner Pulverform. Lässt sich leicht in Wasser oder andere Getränke einrühren. Eine Portion enthält 3 g Kreatin und unterstützt bei täglicher Einnahme die körperliche Lei"
+  },
+  {
+   "id": "d11576a395",
+   "titre": "Kantenfräsw Bosch AdvancedTrimRouter 18V-8",
+   "temperature": null,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Bosch",
+   "prix": 105.69,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kantenfrasw-bosch-advancedtrimrouter-18v-8-2873678",
+   "date": "Tue, 17 Nov 2026 12:32:51 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "105,69€ - Bosch Ich war schon länger auf der Suche nach einer Kantenfräse, durch die Blackweek-Aktion direkt bei Bosch ergibt sich ein guter Kurs. --- \" Fräsen von Kanten, Nuten und Deko-Motiven mit dieser kompakten und kraftvollen Kantenfräse Die AdvancedTrimRouter 18V-8 ist dank ihres kompakten De"
+  },
+  {
+   "id": "1e0bfa2234",
+   "titre": "dé EV Charger 3 Pin Plug with App with code",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": null,
+   "prix": 119.95,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/de-ev-charger-3-pin-plug-with-app-with-code-5036074",
+   "date": "Tue, 17 Nov 2026 11:53:40 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£119.95 • 3-pin plug • Charging current settings: 6 A, 8 A, 10 A or 13 A • Delay timer: 0.5–8 hours • Built-in dual-button controls • Tuya Smart app control Free shipping Use code to get the price Here is a detailed breakdown of its design, technical specs, and smart features: Visual & Build Overvie"
+  },
+  {
+   "id": "bd09134da0",
+   "titre": "Wera Bit-Check 30 PH, PZ, TX, Wood 2, 30PC - 05057432001 - Early Black Friday",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 14.09,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/wera-bit-check-30-ph-pz-tx-wood-2-30pc-05057432001-5036073",
+   "date": "Tue, 17 Nov 2026 11:51:33 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£14.09 - Amazon Wera Bit-Check 30 PH, PZ, TX, Wood 2, 30PC - 05057432001 About this item The Bit-Checks by Wera are extremely compact and are therefore the ideal companion for mobile applications. Upright positionable Bit-Checks convince due to their functionality in a minimum of space Particularly "
+  },
+  {
+   "id": "285483375b",
+   "titre": "RYOBI 18V ONE+ 150mm Brushed Circular Saw",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 53.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ryobi-18v-one-150mm-brushed-circular-saw-5036072",
+   "date": "Tue, 17 Nov 2026 11:48:10 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£53.49 - Amazon RYOBI 18V ONE+ 150mm Brushed Circular Saw (Battery & Charger Excluded) R18CSP-0, Hyper Green, 150mm blade, bevel cutting, cuts ply, wood, timber About this item Ideal for making long straight cuts in timber and plastic, such as trimming timber sheets, kitchen worktops, doors and wind"
+  },
+  {
+   "id": "8248c8bfe7",
+   "titre": "Dreo Smart Whole Room Heater 714S",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 79.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/dreo-smart-whole-room-heater-714s-5036071",
+   "date": "Tue, 17 Nov 2026 11:45:31 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£79.99 - Amazon Dreo Smart Whole Room Heater 714S, 60° Vertical & 90° Horizontal 3D Oscillating Heating, 12 ft/s Long-Range Circulator, 3 Heat & 3 Fan Settings, Space Heaters for Indoor Use, Bedroom, Office, White Amazon product information 3 - : This heater for bedroom delivers 12ft/s airflow with "
+  },
+  {
+   "id": "505ca9fe2e",
+   "titre": "Beats Studio Buds + | True Wireless Noise Cancelling Earbuds, Enhanced Apple & Android Compatibility, Built-in Microphone Early Black Friday",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 89.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/beats-studio-buds-true-wireless-noise-cancelling-earbuds-enhanced-apple-android-compatibility-built-in-microphone-5036070",
+   "date": "Tue, 17 Nov 2026 11:44:10 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£89 - Amazon Beats Studio Buds + | True Wireless Noise Cancelling Earbuds, Enhanced Apple & Android Compatibility, Built-in Microphone, Sweat-Resistant Bluetooth Headphones, Spatial Audio – Black/Gold"
+  },
+  {
+   "id": "8dce26a15b",
+   "titre": "Philips Air Fryer 2000 Series Single basket 6.2L with Viewing Window",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 59.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/philips-air-fryer-2000-series-single-basket-62l-with-viewing-window-5036066",
+   "date": "Tue, 17 Nov 2026 11:35:01 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£59 - Amazon SIMPLE TOUCHSCREEN WITH 13 WAYS TO COOK: Effortlessly select presets for fries, chicken, vegetables, and more, or manually adjust time and temperature for tailored results. RAPIDAIR TECHNOLOGY FOR HEATHIER COOKING: Enjoy golden, crispy outside and juicy inside while reducing up to 90% o"
+  },
+  {
+   "id": "5c4c012479",
+   "titre": "PlayStation VR2 (PSVR2) Sense Controller Charging Station",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 12.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/playstation-vr2-psvr2-sense-controller-charging-station-5036063",
+   "date": "Tue, 17 Nov 2026 11:33:18 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£12.99 - Amazon PlayStation VR2 (PSVR2) Sense Controller Charging Station Now £12.99 + Free Prime Delivery. About this item Always be ready for your next adventure into thrilling new virtual reality worlds with the PlayStation VR2 Sense controller charging station Quickly and easily charge your Play"
+  },
+  {
+   "id": "67484fe0a7",
+   "titre": "Brennenstuhl Primera-Line 10-way Extension Lead (Power strip with 2 switches for 5 sockets each and 2m cable) Black",
+   "temperature": null,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 14.45,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/brennenstuhl-primera-line-10-way-extension-lead-power-strip-with-2-switches-for-5-sockets-each-and-2m-cable-black-5036061",
+   "date": "Tue, 17 Nov 2026 11:33:01 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£14.45 - Amazon Brennenstuhl Primera-Line 10-way Extension Lead (Power strip with 2 switches for 5 sockets each and 2m cable) Black Amazon product information 10-Way extension lead (2 x 5 sockets) with 2 m cable length H05VV-F3G1.25 and integrated extra protection against contact Variable cable outl"
+  },
+  {
+   "id": "b78d6c9089",
+   "titre": "Little Nightmares III - Switch 2",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Xtralife",
+   "prix": 19.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/little-nightmares-iii-switch-2-2073812",
+   "date": "Tue, 17 Nov 2026 12:52:27 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "19,95€ - Xtralife Little Nightmares III - Edición Estándar para Nintendo Switch 2 Precio en oferta: 19,95 € (frente a los 36,95 € anteriores y con un PVPR de 41,99 €, lo que supone un -46% de descuento ). Plataforma: Nintendo Switch 2 (Edición Estándar). Estudio y Editor: Desarrollado por Supermassi"
+  },
+  {
+   "id": "a4d1afaeed",
+   "titre": "Shark Glam rizos, moldeador, secador y plancha con set de 5 cabezales y funda",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "SharkNinja",
+   "prix": 224.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/shark-glam-rizos-moldeador-secador-y-plancha-con-set-de-5-cabezales-y-funda-2073813",
+   "date": "Tue, 17 Nov 2026 12:52:25 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "224,99€ - SharkNinja Moldeador, secador y plancha para rizos • Shark Glam rizos con set comercial de 5 cabezales. • Acabado dorado. • Herramientas para secar, alisar y dar forma al cabello. ✨ Accesorios incluidos • Plancha Silki y cepillo Glossi. • Dos rizadores Coanda de 32 mm. • Boquilla concentra"
+  },
+  {
+   "id": "eecb06c10d",
+   "titre": "eSUN Actualizado PLA Mate Filamento 1.75mm 1KG Blanco Lechoso",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 13.35,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/esun-actualizado-pla-mate-filamento-175mm-1kg-blanco-lechoso-2073811",
+   "date": "Tue, 17 Nov 2026 12:52:23 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "13,35€ - Amazon 【Upgraded Matte PLA】Upgraded Matte PLA es una versión premium de PLA mate ordinario, la adhesión de la cama y la salida de extrusión se han mejorado significativamente. Es compatible con compatible con la mayoría de las impresoras 3D FDM, tales como: Raise3D, Prusa, Voron, Creality 3"
+  },
+  {
+   "id": "e9a519aba1",
+   "titre": "Ratón Gaming Óptico Logitech G203 LIGHTSYNC (8.000 DPI, RGB Personalizable, 6 Botones Programables, Negro)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 18.89,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/raton-gaming-optico-logitech-g203-lightsync-8000-dpi-rgb-personalizable-6-botones-programables-negro-2073809",
+   "date": "Tue, 17 Nov 2026 12:52:22 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "18,89€ - El Corte Inglés ️ ¡Superventas indiscutible en periféricos gaming con este ratón óptico Logitech G203 LIGHTSYNC en color negro, uno de los modelos con mejor relación calidad-precio del mercado para jugar o trabajar! • Sensor Óptico de 8.000 DPI: Seguimiento preciso y respuesta instantánea c"
+  },
+  {
+   "id": "3426116403",
+   "titre": "Hotel Comarruga Platja 3* MP+bebidas y niños -50% desde 33€/pers. (Nov: 17-19, 22-26, 29-30; Dic: 1-3, 8-10, 13-17)",
+   "temperature": null,
+   "categorie": "Viajes",
+   "marchand": "BuscoUnChollo",
+   "prix": 33.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/hotel-comarruga-platja-3-mpbebidas-y-ninos-50-desde-33eurpers-nov-17-19-22-26-29-30-dic-1-3-8-10-13-17-2073807",
+   "date": "Tue, 17 Nov 2026 12:52:21 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "33€ - BuscoUnChollo ¡Escapada a pie de playa en la Costa Dorada a precio de risa! ️☀️ Disfruta del Hotel Comarruga Platja 3* con Media Pensión y bebidas incluidas por solo 33€ por persona y noche ️ Precio chollo: Desde 33€ por persona / noche (66€ habitación doble). Alojamiento: Hotel Comarruga Plat"
+  },
+  {
+   "id": "7d71e4093f",
+   "titre": "WORKPRO 42 en 1 Juego de Destornillador Eléctrico, Set de Precisión con 36 Piezas S2",
+   "temperature": null,
+   "categorie": "Jardín y bricolaje",
+   "marchand": "Amazon",
+   "prix": 21.27,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/workpro-42-en-1-juego-de-destornillador-electrico-set-de-precision-con-36-piezas-s2-2073805",
+   "date": "Tue, 17 Nov 2026 12:52:18 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "21,27€ - Amazon Modo de Par de Torque Dual: El destornillador eléctrico WORKPRO ofrece dos modos para una máxima flexibilidad: en el modo eléctrico gira a una velocidad suave de 180 rpm y con un par de torsión bajo de hasta 0,3 N·m, ideal para reparaciones precisas sin dañar dispositivos delicados. "
+  },
+  {
+   "id": "a37d2f34a2",
+   "titre": "Combo Teclado + Ratón Inalámbricos Logitech MK540 Advanced (Español Ñ, Receptor Unifying, Negro)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/combo-teclado-raton-inalambricos-logitech-mk540-advanced-espanol-n-receptor-unifying-negro-2073803",
+   "date": "Tue, 17 Nov 2026 12:52:17 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "34,99€ - El Corte Inglés ⌨️️ ¡Chollo top en periféricos para oficina y teletrabajo con el combo inalámbrico Logitech MK540 Advanced, un conjunto cómodo, silencioso y ultrarresistente pensado para escribir y trabajar durante horas! • ⌨️ Teclado Completo en Español con Reposamanos: Diseño de tamaño es"
+  },
+  {
+   "id": "7d1aecb598",
+   "titre": "Dron con Camara 4K Juguete Regalo Cumpleaños Navidad para Niño, Negro",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/dron-con-camara-4k-juguete-regalo-cumpleanos-navidad-para-nino-negro-2073810",
+   "date": "Tue, 17 Nov 2026 12:51:18 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "34,99€ - Amazon Este dron está equipado con una cámara 4K de gran angular y transmisión Wi-Fi para capturar imágenes en tiempo real. Es un dispositivo diseñado para principiantes que incluye funciones de asistencia al vuelo, motores sin escobillas para mayor durabilidad y dos baterías que ofrecen ha"
+  },
+  {
+   "id": "10b8f87837",
+   "titre": "Auriculares Gaming Inalámbricos Logitech G PRO X Wireless LIGHTSPEED (Drivers 50 mm, Blue VO!CE, Aluminio/Acero, Negro)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/auriculares-gaming-inalambricos-logitech-g-pro-x-wireless-lightspeed-drivers-50-mm-blue-voce-aluminioacero-negro-2073806",
+   "date": "Tue, 17 Nov 2026 12:49:34 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "99,99€ - El Corte Inglés ¡Chollazo en periféricos competitivos con los auriculares inalámbricos Logitech G PRO X Wireless LIGHTSPEED, desarrollados junto a profesionales de eSports para ofrecer máxima precisión sonora y una construcción indestructible! • ⚡ Tecnología Inalámbrica LIGHTSPEED: Conexión"
+  },
+  {
+   "id": "19e66b7f32",
+   "titre": "Cafetera Create Portatil",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Miravia",
+   "prix": 42.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cafetera-create-portatil-2073804",
+   "date": "Tue, 17 Nov 2026 12:49:25 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "42,95€ - Miravia Disponible en este precio solo en un color"
+  },
+  {
+   "id": "e2d29d2249",
+   "titre": "Oral-B Pro Series 1",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 31.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oral-b-pro-series-1-2073802",
+   "date": "Tue, 17 Nov 2026 12:49:13 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "31,99€ - Amazon Oral-B Pro Series 1 – Cepillo eléctrico ¡Pásate al cepillado eléctrico sin dejarte un dineral! El Oral-B Pro Series 1 cuenta con un cabezal redondo con tecnología de limpieza oscilante-rotatoria, diseñado para llegar mejor a la línea de las encías y eliminar hasta un 100 % más de pla"
+  },
+  {
+   "id": "fd49784e43",
+   "titre": "Auriculares Gaming Inalámbricos Logitech G733 LIGHTSPEED (278 g, RGB LIGHTSYNC, Micrófono Blue VO!CE, Negro)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "El Corte Inglés",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/auriculares-gaming-inalambricos-logitech-g733-lightspeed-278-g-rgb-lightsync-microfono-blue-voce-negro-2073801",
+   "date": "Tue, 17 Nov 2026 12:46:38 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "69,99€ - El Corte Inglés ¡Clásico superventas en periféricos gaming con estos auriculares inalámbricos Logitech G733 LIGHTSPEED en color negro, diseñados para ofrecer máxima comodidad en sesiones maratonianas sin cables! • Ultraligeros (Solo 278 g) y Ergonómicos: Incorporan una diadema de suspensión"
+  },
+  {
+   "id": "d14145bcaa",
+   "titre": "OnePlus Pad GO 2 Versión Global 8+128GB",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 181.25,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/oneplus-pad-go-2-version-global-8128gb-2073800",
+   "date": "Tue, 17 Nov 2026 12:46:18 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "181,25€ - AliExpress Llevo dandole vueltas dos semanas a una tablet buena bonita y barata y entre chat gpt i vosotros me compré esta ganga!!"
+  },
+  {
+   "id": "3d92758f8e",
+   "titre": "Webcam Full HD 1080P 30FPS USB A PC Cámara Foco Fijo 2 Micrófono Incorporado 90°Ángulo de Visión para Windows MacOS Linux Soporta Youtube.",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 17.13,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/webcam-full-hd-1080p-30fps-usb-a-pc-camara-foco-fijo-2-microfono-incorporado-90angulo-de-vision-para-windows-macos-linux-soporta-youtube-2073797",
+   "date": "Tue, 17 Nov 2026 12:44:37 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "17,13€ - Amazon Webcam Full HD 1080P 30FPS USB A PC Cámara Foco Fijo 2 Micrófono Incorporado 90°Ángulo de Visión para Windows MacOS Linux Soporta Youtube Streaming Video Calling Zoom. ✅[ Webcam USB 1080P FHD ] La Webcam USB está equipada con un sensor de imagen CMOS de 2 megapíxeles y soporta una re"
+  },
+  {
+   "id": "480dad589d",
+   "titre": "Smart TV 43\" Samsung UE43M70HAUXXH Mini LED 4K UHD (HDR10+, Tizen OS, Gaming Hub, OTS Lite)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Coolmod",
+   "prix": 313.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/smart-tv-43-samsung-ue43m70hauxxh-mini-led-4k-uhd-hdr10-tizen-os-gaming-hub-ots-lite-2073795",
+   "date": "Tue, 17 Nov 2026 12:44:35 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "313,95€ - Coolmod ✨ ¡Gran oportunidad en imagen y sonido con este televisor Samsung M70H de 43 pulgadas (UE43M70HAUXXH), un modelo compacto que lleva la precisión de la retroiluminación Mini LED a espacios medianos como el dormitorio, despacho o segundo salón! • Tecnología Mini LED y Resolución 4K U"
+  },
+  {
+   "id": "e06fb836e6",
+   "titre": "Tekken 7 PS4",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Game",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/tekken-7-ps4-2073799",
+   "date": "Tue, 17 Nov 2026 12:43:34 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,99€ - Game Buen precio para este Tekken 7, este producto de la marca BNE; llega a PlayStation 4, Xbox One y PC con Unreal Engine 4, cierra la disputa Mishima mediante cinemáticas, reúne más de 30 luchadores, suma a Akuma y añade Rage Arts, Power Crushes y Rage Drives para que ajustes tu estilo de "
+  },
+  {
+   "id": "3c8d64ba63",
+   "titre": "Logitech MX Master 4 for Mac, ratón Bluetooth ergonómico",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/logitech-mx-master-4-for-mac-raton-bluetooth-ergonomico-2073793",
+   "date": "Tue, 17 Nov 2026 12:39:00 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "99€ - Amazon Optimización para Mac: con acabados a juego con Apple, funciones Logi Options+ para macOS (1) y carga USB-C mientras trabajas (cable no incluido), MX Master 4 for Mac es el complemento perfecto para tu setup de Apple Precisión que puedes sentir con el panel háptico; respuesta háptica pe"
+  },
+  {
+   "id": "7515b48355",
+   "titre": "Licor de Whisky drambuie, botella de 1 litro",
+   "temperature": null,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "Amazon",
+   "prix": 26.19,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/licor-de-whisky-drambuie-botella-de-1-litro-2073791",
+   "date": "Tue, 17 Nov 2026 12:38:59 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "26,19€ - Amazon Esto es un canteo chavales, whisky con miel, ¿qué puede salir mal? jajaj. El Drambuie está demasiado bueno, es dulcecito pero sigue teniendo ese sabor a whisky y entra que da gusto. Yo lo probé después de comer con hielo y ahora tengo un problema porque cada vez que vienen mis padres"
+  },
+  {
+   "id": "b32861f200",
+   "titre": "PUMA teamGOAL 23 Mochilla Core",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 16.14,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/puma-teamgoal-23-mochilla-core-2073792",
+   "date": "Tue, 17 Nov 2026 12:38:00 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "16,14€ - Amazon Compartimento para portátil integrado, protege tu dispositivo Ligera y compacta, perfecta para el día a día sin cargar peso Bolsillo frontal con cremallera para acceso rápido a lo esencial La mochila PUMA teamGOAL 23 Core , disponible en Amazon por 16.14 , es una opción práctica y fu"
+  },
+  {
+   "id": "77a72c8dc4",
+   "titre": "Set de Lego Rivendell",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "PcComponentes",
+   "prix": 399.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/set-de-lego-rivendell-2073790",
+   "date": "Tue, 17 Nov 2026 12:37:58 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "399,99€ - PcComponentes Set de LEGO Icons Rivendell de El Señor de Los Anillos. Consta de 6167 piezas, 15 minifiguras de la escena de la reunión de la compañía del Anillo así como de los elfos de Elrond que habitan Rivendell. Recrea la escena con gran cantidad de detalles para exponer."
+  },
+  {
+   "id": "07bfb98b11",
+   "titre": "Pepe Jeans Aris, Mochila + Estuche Unisex Niños, Marino, M",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 29.69,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pepe-jeans-aris-mochila-estuche-unisex-ninos-marino-m-2073789",
+   "date": "Tue, 17 Nov 2026 12:37:00 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "29,69€ - Amazon Mochila de 31 cm x 44 cm x 17,5 cm fabricada en poliéster Compartimento principal con espacio acolchado para llevar el ordenador de hasta 15,6 pulgadas (35,5 cm alto x 26 cm ancho x 3 cm profundo) Bolsillo frontal y estuche a juego incluido para que lleves el material escolar organiz"
+  },
+  {
+   "id": "36fa2a7af6",
+   "titre": "HyperX Cloud Mini negros con cable, auriculares gaming infantiles con micrófono y jack de 3,5 mm",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Game",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/hyperx-cloud-mini-negros-con-cable-auriculares-gaming-infantiles-con-microfono-y-jack-de-35-mm-2073787",
+   "date": "Tue, 17 Nov 2026 12:36:59 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,99€ - Game Auriculares gaming infantiles con cable • HyperX Cloud Mini en negro con detalles rojos. • Recomendados para edades de 8 a 12 años. • Diseño ligero de 130 g. ️ Micrófono y conexión • Micrófono abatible: se silencia al levantarlo. • Jack de 3,5 mm de cuatro polos para dispositivos con en"
+  },
+  {
+   "id": "8808b30214",
+   "titre": "4 x Belkin Localizador SureFind Spot, Buscar Apple y Localizador Google",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/4-x-belkin-localizador-surefind-spot-buscar-apple-y-localizador-google-2073785",
+   "date": "Tue, 17 Nov 2026 12:36:58 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "34,99€ - Amazon COMPATIBILIDAD UNIVERSAL: nuestro tracker SureFind Spot funciona a la perfección con Buscar de Apple y Localizador de Google, por lo que es un localizador Bluetooth universal de verdad, no importa qué móvil uséis tú o tu familia. BLUETOOTH 5.3 PARA ENCONTRAR AL INSTANTE Y CON PRECISI"
+  },
+  {
+   "id": "59ec27da4a",
+   "titre": "Mando por voz Alexa Pro para el Fire TV de Amazon con búsqueda del mando, controles para el televisor y botones retroiluminados.",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 21.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/mando-por-voz-alexa-pro-para-el-fire-tv-de-amazon-con-busqueda-del-mando-controles-para-el-televisor-y-botones-retroiluminados-2073786",
+   "date": "Tue, 17 Nov 2026 12:32:21 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "21,99€ - Amazon Mando por voz Alexa Pro para el Fire TV de Amazon con búsqueda del mando, controles para el televisor y botones retroiluminados (se necesita un dispositivo Fire TV compatible). ✅Se ilumina cuando no hay luz El mando por voz Alexa Pro cuenta con botones retroiluminados que se enciende"
+  }
+ ]
+}

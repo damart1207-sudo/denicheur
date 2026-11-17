@@ -1,0 +1,5920 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-17_0431",
+ "date_affichee": "17/11/2026 à 04 h 31",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 34,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 694,
+ "nb_nouvelles": 250,
+ "nb_prefiltres": 194,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 17
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 39
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 13
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0089JYCOE-arbES",
+   "titre": "Clarks Femme Hamble Oak Derbys, Noir Black Pat, 35.5 EU [Amazon ES]",
+   "prix": 19.3,
+   "devise": "EUR",
+   "marchand": "Amazon.es",
+   "lien": "https://www.amazon.es/dp/B0089JYCOE",
+   "pays": "ES",
+   "source": "keepa-arbitrage",
+   "temperature": 380,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.es/dp/B0089JYCOE"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Clarks Hamble Oak Derby Femme",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 50.0,
+   "cout_achat": 24.3,
+   "marge_nette": 16.0,
+   "rentabilite": 0.658,
+   "demande": 3.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Arbitrage Espagne vers France sur pointure rare 35.5, marque recherchée, marge confortable après TVA et frais de douane forfaitaires.",
+    "gptoss": "Bon prix pour des chaussures Clarks neuves, revente possible à ~45 € sur Leboncoin, marge nette intéressante."
+   },
+   "score": 59.5,
+   "ebay": {
+    "requete": "Clarks Hamble Oak Derby Femme",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 6,
+    "marque": "Clarks",
+    "asin": "B0089JYCOE",
+    "titre": "Clarks Femme Hamble Oak Derbys, Noir Black Pat, 35.5 EU",
+    "ean": "5051039369007",
+    "pays": "FR",
+    "prix_neuf": 42.36,
+    "prix_amazon": 42.36,
+    "prix_tiers": 42.36,
+    "moyenne_90j": 42.05,
+    "plus_bas_90j": 27.82,
+    "occasion": null,
+    "rang_ventes": 76672,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 46,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0089JYCOE",
+    "jetons_restants": 280
+   },
+   "asin": "B0089JYCOE",
+   "ean": "5051039369007",
+   "vendeurs_amazon": 6,
+   "ventes_estimees_30j": 11,
+   "prix_plancher": {
+    "nom": "Clarks Hamble Oak Derby Femme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 42.36,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0089JYCOE"
+   },
+   "remise_sincere": true,
+   "mot_cle": "clarks hamble oak derby",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 37.28,
+     "marge_nette": 4.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.28,
+      "cout_achat": 24.3,
+      "frais_canal": 0.0,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": 4.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.205
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 37.28,
+     "marge_nette": 4.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.28,
+      "cout_achat": 24.3,
+      "frais_canal": 0.0,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": 4.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.205
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 37.28,
+     "marge_nette": 4.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.28,
+      "cout_achat": 24.3,
+      "frais_canal": 0.0,
+      "prelevements": 5.0,
+      "provision": 3.0,
+      "marge_nette": 4.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.205
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 42.36,
+     "marge_nette": -0.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.36,
+      "cout_achat": 24.3,
+      "frais_canal": 9.81,
+      "prelevements": 5.68,
+      "provision": 3.0,
+      "marge_nette": -0.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.018
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 42.36,
+     "marge_nette": -1.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.36,
+      "cout_achat": 24.3,
+      "frais_canal": 10.97,
+      "prelevements": 5.68,
+      "provision": 3.0,
+      "marge_nette": -1.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.065
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 42.36,
+     "marge_nette": -2.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.36,
+      "cout_achat": 24.3,
+      "frais_canal": 11.39,
+      "prelevements": 5.68,
+      "provision": 3.0,
+      "marge_nette": -2.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.083
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 42.36,
+     "marge_nette": -2.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.36,
+      "cout_achat": 24.3,
+      "frais_canal": 11.86,
+      "prelevements": 5.68,
+      "provision": 3.0,
+      "marge_nette": -2.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.102
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 42.36,
+     "marge_nette": -3.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.36,
+      "cout_achat": 24.3,
+      "frais_canal": 13.34,
+      "prelevements": 5.68,
+      "provision": 3.0,
+      "marge_nette": -3.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.163
+    }
+   ],
+   "prix_revente_prudent": 38.12,
+   "marge_verifiee": 5.71,
+   "rentabilite_verifiee": 0.235,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "moyenne",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 17.7,
+   "rapport_concurrence": {
+    "requete": "Clarks Hamble Oak Derby Femme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Clarks Hamble Oak Derby Femme",
+    "temperature_dealabs": 380,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FMJG3W1T-neuf",
+   "titre": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les Bébés de 1 à 36 Mois Pliable Be",
+   "prix": 97.0,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0FMJG3W1T",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 664,
+   "domaine": "autre",
+   "nom_produit": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les B",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 489.73,
+   "cout_achat": 102.0,
+   "marge_nette": 319.11,
+   "rentabilite": 3.129,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 556.51 €, baisse 83 %, rang 55690"
+   },
+   "score": 312.9,
+   "asin": "B0FMJG3W1T",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "ebay": {
+    "requete": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les B",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "OHMG",
+    "asin": "B0FMJG3W1T",
+    "titre": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les Bébés de 1 à 36 Mois Pliable Berceau bébé Mobile Lit d'Appoint,Lit cododo,Inclinaison réglables (Blanc cassé（90 * 60 * 90-115cm）)",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 97.0,
+    "prix_amazon": null,
+    "prix_tiers": 97.0,
+    "moyenne_90j": 556.36,
+    "plus_bas_90j": 78.0,
+    "occasion": null,
+    "rang_ventes": 55739,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 4,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FMJG3W1T",
+    "jetons_restants": 312
+   },
+   "prix_plancher": {
+    "nom": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les B",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 97.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FMJG3W1T"
+   },
+   "remise_sincere": true,
+   "mot_cle": "ohmg 3 in 1",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FMJG3W1T"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 85.36,
+     "marge_nette": -31.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.36,
+      "cout_achat": 102.0,
+      "frais_canal": 0.0,
+      "prelevements": 11.44,
+      "provision": 3.0,
+      "marge_nette": -31.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.305
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 85.36,
+     "marge_nette": -31.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.36,
+      "cout_achat": 102.0,
+      "frais_canal": 0.0,
+      "prelevements": 11.44,
+      "provision": 3.0,
+      "marge_nette": -31.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.305
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 85.36,
+     "marge_nette": -31.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.36,
+      "cout_achat": 102.0,
+      "frais_canal": 0.0,
+      "prelevements": 11.44,
+      "provision": 3.0,
+      "marge_nette": -31.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.305
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 97.0,
+     "marge_nette": -35.73,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.0,
+      "cout_achat": 102.0,
+      "frais_canal": 14.73,
+      "prelevements": 13.0,
+      "provision": 3.0,
+      "marge_nette": -35.73,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.35
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 97.0,
+     "marge_nette": -35.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.0,
+      "cout_achat": 102.0,
+      "frais_canal": 14.79,
+      "prelevements": 13.0,
+      "provision": 3.0,
+      "marge_nette": -35.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.351
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 97.0,
+     "marge_nette": -36.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.0,
+      "cout_achat": 102.0,
+      "frais_canal": 15.76,
+      "prelevements": 13.0,
+      "provision": 3.0,
+      "marge_nette": -36.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.36
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 97.0,
+     "marge_nette": -39.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.0,
+      "cout_achat": 102.0,
+      "frais_canal": 18.96,
+      "prelevements": 13.0,
+      "provision": 3.0,
+      "marge_nette": -39.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.392
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 97.0,
+     "marge_nette": -42.54,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.0,
+      "cout_achat": 102.0,
+      "frais_canal": 21.54,
+      "prelevements": 13.0,
+      "provision": 3.0,
+      "marge_nette": -42.54,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.417
+    }
+   ],
+   "prix_revente_prudent": 87.3,
+   "marge_verifiee": -29.4,
+   "rentabilite_verifiee": -0.288,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les B",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les B",
+    "temperature_dealabs": 664,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "64e3622665",
+   "titre": "Blink Outdoor 4 Cámara con Blink Videotimbre 2K+ cableado (última generación) gratis, módulo de sincronización básico incluido",
+   "prix": 24.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/blink-outdoor-4-camara-con-blink-videotimbre-2k-cableado-ultima-generacion-gratis-modulo-de-sincronizacion-basico-incluido-2073078",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 218,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/blink-outdoor-4-camara-con-blink-videotimbre-2k-cableado-ultima-generacion-gratis-modulo-de-sincronizacion-basico-incluido-2073078"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Blink Outdoor 4 Video Doorbell",
+   "plateforme_revente": "amazon",
+   "prix_revente_estime": 100.0,
+   "cout_achat": 29.99,
+   "marge_nette": 31.62,
+   "rentabilite": 1.054,
+   "demande": 4.5,
+   "concurrence": 2.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron": "Bundle caméra + sonnette 2K à 24,99 € au lieu de ~130 € : erreur de prix évidente, commande probablement annulée.",
+    "gptoss": "Bon prix d'achat avec marge nette après TVA et frais de plateforme."
+   },
+   "score": 156.5,
+   "ebay": {
+    "requete": "Blink Outdoor 4 Video Doorbell",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 45.0,
+     "IT": 25.86,
+     "ES": 21.89
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Blink Outdoor 4 Video Doorbell",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "blink outdoor 4 video",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Blink Outdoor 4 Video Doorbell",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 7,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.0,
+       "titre": "Blink Kamera Outdoor Indoor Mini Video Doorbell Überwachungskamera | Auswahl",
+       "lien": "https://www.ebay.de/itm/860002408654?_skw=Blink+Outdoor+4+Video+Doorbell&hash=itemc83c2358ce:g:6ZAAAeSwqYhqwCyp",
+       "vendeur": "mgcommerce_1",
+       "avis_vendeur": 301
+      },
+      "plus_cher": {
+       "prix": 100.0,
+       "titre": "Blink Video Doorbell und einer Blink Outdoor 4 Kamera",
+       "lien": "https://www.ebay.de/itm/158164055928?_skw=Blink+Outdoor+4+Video+Doorbell&hash=item24d34ff778:g:cOIAAeSwyJFqdgmH",
+       "vendeur": "pantede",
+       "avis_vendeur": 678
+      }
+     },
+     "IT": {
+      "nb_annonces": 6,
+      "total_ebay": 42,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 51.66,
+       "titre": "Kit Sicurezza Smart Blink – Video Doorbell + Telecamera Outdoor 4",
+       "lien": "https://www.ebay.it/itm/227408455965?_skw=Blink+Outdoor+4+Video+Doorbell&hash=item34f299a91d:g:rioAAeSw0dNqQmch",
+       "vendeur": "alessgio_68",
+       "avis_vendeur": 1
+      },
+      "plus_cher": {
+       "prix": 94.3,
+       "titre": "Blink Video Doorbell + Outdoor 4 HD Wireless Alexa Kit Domotica Sicurezza",
+       "lien": "https://www.ebay.it/itm/137130877774?_skw=Blink+Outdoor+4+Video+Doorbell&hash=item1feda3234e:g:7KcAAeSwVbxptU2k",
+       "vendeur": "domedir28",
+       "avis_vendeur": 0
+      }
+     },
+     "ES": {
+      "nb_annonces": 2,
+      "total_ebay": 39,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 59.7,
+       "titre": "Blink Video Doorbell + Outdoor 4 HD Wireless Alexa Kit Domótica Seguridad",
+       "lien": "https://www.ebay.es/itm/187620041433?_skw=Blink+Outdoor+4+Video+Doorbell&hash=item2baf06a2d9:g:lvkAAeSwvPRo4B8K",
+       "vendeur": "e9-store4",
+       "avis_vendeur": 631
+      },
+      "plus_cher": {
+       "prix": 84.0,
+       "titre": "Blink Video Doorbell Timbre Inteligente - Negro + Blink Outdoor 4 Set - Nuevo",
+       "lien": "https://www.ebay.es/itm/147202784447?_skw=Blink+Outdoor+4+Video+Doorbell&hash=item2245f83cbf:g:4KAAAeSwK9ZptJBq",
+       "vendeur": "mariont1873",
+       "avis_vendeur": 313
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Blink Outdoor 4 Video Doorbell",
+    "temperature_dealabs": 218,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "blink outdoor 4+video doorbell",
+     "blink outdoor 4 video doorbell bundle",
+     "blink outdoor 4 vs video doorbell",
+     "blink outdoor 4 camera with blink video doorbell sync module core included",
+     "blink video doorbell outdoor 4 xr wireless smart security cameras",
+     "blink outdoor 4 vs ring doorbell",
+     "blink outdoor 4 camera with blink video doorbell",
+     "blink outdoor 4 camera 0 blink video doorbell",
+     "blink outdoor 4 camera with free blink video doorbell",
+     "amazon blink outdoor 4 camera blink video doorbell"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FFYH4W4K-neuf",
+   "titre": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile, Maison de Toilette, Plateau A",
+   "prix": 31.59,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0FFYH4W4K",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 584,
+   "domaine": "autre",
+   "nom_produit": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile,",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 101.81,
+   "cout_achat": 36.59,
+   "marge_nette": 48.58,
+   "rentabilite": 1.328,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 115.69 €, baisse 73 %, rang 13763"
+   },
+   "score": 132.8,
+   "asin": "B0FFYH4W4K",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 11,
+   "ebay": {
+    "requete": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile,",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0FFYH4W4K",
+    "titre": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile, Maison de Toilette, Plateau Amovible, Grande capacité, Filtre Qui réduit Les Mauvaises odeurs (Jaune, 44,5 * 34,5 * 36,5)",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 31.59,
+    "prix_amazon": null,
+    "prix_tiers": 31.59,
+    "moyenne_90j": 115.67,
+    "plus_bas_90j": 26.99,
+    "occasion": null,
+    "rang_ventes": 13764,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 14,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FFYH4W4K",
+    "jetons_restants": 301
+   },
+   "prix_plancher": {
+    "nom": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile,",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 27.19,
+    "ou": "idealo",
+    "lien": null
+   },
+   "remise_sincere": true,
+   "idealo": {
+    "prix_min": 27.19,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile, Maison de Toilette, Plateau Amovible, Grande capacité, Filtre Qui réduit Les Mauvaises odeurs (gris1, 51 * 36 * 34)",
+    "gtin": null
+   },
+   "mot_cle": "bac litière fermé",
+   "demande_google": {
+    "volume_mensuel": 170,
+    "concurrence": "HIGH",
+    "cpc": 0.37,
+    "trois_derniers_mois": [
+     320,
+     210,
+     210
+    ]
+   },
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FFYH4W4K"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 23.93,
+     "marge_nette": -18.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.93,
+      "cout_achat": 36.59,
+      "frais_canal": 0.0,
+      "prelevements": 3.21,
+      "provision": 3.0,
+      "marge_nette": -18.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.516
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 23.93,
+     "marge_nette": -18.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.93,
+      "cout_achat": 36.59,
+      "frais_canal": 0.0,
+      "prelevements": 3.21,
+      "provision": 3.0,
+      "marge_nette": -18.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.516
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 23.93,
+     "marge_nette": -18.87,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.93,
+      "cout_achat": 36.59,
+      "frais_canal": 0.0,
+      "prelevements": 3.21,
+      "provision": 3.0,
+      "marge_nette": -18.87,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.516
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 27.19,
+     "marge_nette": -24.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 27.19,
+      "cout_achat": 36.59,
+      "frais_canal": 8.45,
+      "prelevements": 3.64,
+      "provision": 3.0,
+      "marge_nette": -24.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.669
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 27.19,
+     "marge_nette": -25.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 27.19,
+      "cout_achat": 36.59,
+      "frais_canal": 9.88,
+      "prelevements": 3.64,
+      "provision": 3.0,
+      "marge_nette": -25.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.709
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 27.19,
+     "marge_nette": -25.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 27.19,
+      "cout_achat": 36.59,
+      "frais_canal": 9.9,
+      "prelevements": 3.64,
+      "provision": 3.0,
+      "marge_nette": -25.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.709
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 27.19,
+     "marge_nette": -26.22,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 27.19,
+      "cout_achat": 36.59,
+      "frais_canal": 10.18,
+      "prelevements": 3.64,
+      "provision": 3.0,
+      "marge_nette": -26.22,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.717
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 27.19,
+     "marge_nette": -27.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 27.19,
+      "cout_achat": 36.59,
+      "frais_canal": 11.07,
+      "prelevements": 3.64,
+      "provision": 3.0,
+      "marge_nette": -27.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.741
+    }
+   ],
+   "prix_revente_prudent": 24.47,
+   "marge_verifiee": -18.4,
+   "rentabilite_verifiee": -0.503,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile,",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile,",
+    "temperature_dealabs": 584,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "a3c1518947",
+   "titre": "Elden Ring Standard Edition PS5",
+   "prix": 18.99,
+   "devise": "EUR",
+   "marchand": "PcComponentes",
+   "lien": "https://www.chollometro.com/ofertas/elden-ring-standard-edition-ps5-2073210",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 202,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/elden-ring-standard-edition-ps5-2073210"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "gaming",
+   "nom_produit": "Elden Ring PS5",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 60.0,
+   "cout_achat": 23.99,
+   "marge_nette": 24.97,
+   "rentabilite": 1.041,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Jeu très demandé, prix d'achat très bas, marge nette même après TVA et frais d'expédition."
+   },
+   "score": 124.9,
+   "ebay": {
+    "requete": "Elden Ring PS5",
+    "neuf": {
+     "nb": 48,
+     "min": 10.79,
+     "p25": 32.36,
+     "mediane": 51.34,
+     "max": 1485.7
+    },
+    "occasion": {
+     "nb": 34,
+     "min": 16.04,
+     "p25": 34.59,
+     "mediane": 46.69,
+     "max": 669.7
+    },
+    "exemples": [
+     {
+      "titre": "Elden Ring (Sony PlayStation 5, 2022)",
+      "prix": "33.25",
+      "url": "https://www.ebay.fr/itm/407349788967?_skw=Elden+Ring+PS5&hash=item5ed7f08127:g:mcYAAeSwSxVq8Sv7"
+     },
+     {
+      "titre": "Elden Ring - PS5 (PlayStation 5) Version Française ",
+      "prix": "40.12",
+      "url": "https://www.ebay.fr/itm/800074632554?_skw=Elden+Ring+PS5&hash=itemba482a0d6a:g:yXEAAeSw-7pqFdZD"
+     },
+     {
+      "titre": "Elden Ring Launch Edition PS5 Complet PAL Sony PlayStation 5",
+      "prix": "69.99",
+      "url": "https://www.ebay.fr/itm/336235890496?_skw=Elden+Ring+PS5&hash=item4e49388740:g:sB0AAeSwWtpo8ONY"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 32.36,
+     "DE": 25.0,
+     "IT": 27.1,
+     "ES": 32.58
+    },
+    "meilleur_pays": "ES"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 14,
+    "marque": "Bandai Namco",
+    "asin": "B097M66Y91",
+    "titre": "Elden Ring (PS5)",
+    "ean": "3391892017229",
+    "pays": "FR",
+    "prix_neuf": 36.99,
+    "prix_amazon": null,
+    "prix_tiers": 36.99,
+    "moyenne_90j": 40.31,
+    "plus_bas_90j": 24.82,
+    "occasion": 32.3,
+    "rang_ventes": 847,
+    "chutes_rang_30j": 39,
+    "chutes_rang_90j": 105,
+    "ventes_estimees_30j": 39,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B097M66Y91",
+    "jetons_restants": 291
+   },
+   "asin": "B097M66Y91",
+   "ean": "3391892017229",
+   "vendeurs_amazon": 14,
+   "ventes_estimees_30j": 39,
+   "prix_plancher": {
+    "nom": "Elden Ring PS5",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 7,
+      "meilleur": {
+       "titre": "Sony Ps5 Elden Ring Game Multicolore",
+       "prix": 18.83,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/sony-ps5-elden-ring-game-multicolore.html"
+      },
+      "autres": [
+       {
+        "titre": "Jeu Vidéo Elden Ring - Ps5 - Le Jeu Vidéo",
+        "prix": 19.99,
+        "nb_boutiques": 10,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/jeu-video-elden-ring-ps5-le-jeu-video.html"
+       },
+       {
+        "titre": "Elden Ring Nightreign PS5",
+        "prix": 22.99,
+        "nb_boutiques": 7,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/elden-ring-nightreign-ps5.html"
+       },
+       {
+        "titre": "Elden Ring Shadow Of The Erdtree Goty Ps5 Bandai Namco",
+        "prix": 45.99,
+        "nb_boutiques": 9,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/elden-ring-shadow-of-the-erdtree-goty-ps5-bandai-namco.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 18.83,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/sony-ps5-elden-ring-game-multicolore.html"
+   },
+   "remise_sincere": true,
+   "mot_cle": "elden ring ps5",
+   "demande_google": {
+    "volume_mensuel": 5400,
+    "concurrence": "HIGH",
+    "cpc": 0.19,
+    "trois_derniers_mois": [
+     5400,
+     4400,
+     5400
+    ]
+   },
+   "annonces_ebay": 48,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 16.57,
+     "marge_nette": -12.64,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 16.57,
+      "cout_achat": 23.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.22,
+      "provision": 3.0,
+      "marge_nette": -12.64,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.527
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 16.57,
+     "marge_nette": -12.64,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 16.57,
+      "cout_achat": 23.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.22,
+      "provision": 3.0,
+      "marge_nette": -12.64,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.527
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 16.57,
+     "marge_nette": -12.64,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 16.57,
+      "cout_achat": 23.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.22,
+      "provision": 3.0,
+      "marge_nette": -12.64,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.527
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 18.83,
+     "marge_nette": -18.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.83,
+      "cout_achat": 23.99,
+      "frais_canal": 7.69,
+      "prelevements": 2.52,
+      "provision": 3.0,
+      "marge_nette": -18.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.766
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 18.83,
+     "marge_nette": -19.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.83,
+      "cout_achat": 23.99,
+      "frais_canal": 8.8,
+      "prelevements": 2.52,
+      "provision": 3.0,
+      "marge_nette": -19.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.812
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 18.83,
+     "marge_nette": -20.0,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.83,
+      "cout_achat": 23.99,
+      "frais_canal": 9.32,
+      "prelevements": 2.52,
+      "provision": 3.0,
+      "marge_nette": -20.0,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.834
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 18.83,
+     "marge_nette": -20.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.83,
+      "cout_achat": 23.99,
+      "frais_canal": 9.51,
+      "prelevements": 2.52,
+      "provision": 3.0,
+      "marge_nette": -20.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.842
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 18.83,
+     "marge_nette": -20.5,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.83,
+      "cout_achat": 23.99,
+      "frais_canal": 9.81,
+      "prelevements": 2.52,
+      "provision": 3.0,
+      "marge_nette": -20.5,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.855
+    }
+   ],
+   "prix_revente_prudent": 16.95,
+   "marge_verifiee": -12.31,
+   "rentabilite_verifiee": -0.513,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "occasion": {
+    "bas": 32.3,
+    "haut": 46.69,
+    "position_neuf": 0.59
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Elden Ring PS5",
+    "pays": {
+     "FR": {
+      "nb_annonces": 40,
+      "total_ebay": 49,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 10.8,
+       "titre": "PS4/PS5, FR/EN Elden Ring 3X BOSS HELP, ANY BOSS, ANY ZONES, ANY LEVEL",
+       "lien": "https://www.ebay.fr/itm/375260101287?_skw=Elden+Ring+PS5&hash=item575f3ebaa7:g:uRsAAOSwUlNlzzjz",
+       "vendeur": "siegwardknight",
+       "avis_vendeur": 3
+      },
+      "plus_cher": {
+       "prix": 70.78,
+       "titre": "PS5 Elden Ring Korean Version",
+       "lien": "https://www.ebay.fr/itm/377334246711?_skw=Elden+Ring+PS5&hash=item57dadfad37:g:TccAAOSwypxn5QLg",
+       "vendeur": "k-wave_store",
+       "avis_vendeur": 4173
+      }
+     },
+     "DE": {
+      "nb_annonces": 112,
+      "total_ebay": 148,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 9.99,
+       "titre": "💎Elden Ring PS4 PS5 Playstation PC Alle Items + Max lvl 713 Waffen Rüstungen 💎",
+       "lien": "https://www.ebay.de/itm/206098710634?_skw=Elden+Ring+PS5&hash=item2ffc70c06a:g:eGwAAeSwkaZpoYrk",
+       "vendeur": "giovanni-game-shop",
+       "avis_vendeur": 161
+      },
+      "plus_cher": {
+       "prix": 71.33,
+       "titre": "Elden Ring ps5 neu versiegelt am selben Tag ⚡schneller Versand 30£ Rabatt auf nächste Bestellung ",
+       "lien": "https://www.ebay.de/itm/315007817082?_skw=Elden+Ring+PS5&hash=item4957edd57a:g:W5MAAOSwmhBjZ77Q",
+       "vendeur": "coolguy321",
+       "avis_vendeur": 233
+      }
+     },
+     "IT": {
+      "nb_annonces": 304,
+      "total_ebay": 390,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 10.79,
+       "titre": "Elden Ring Malenia tazza in ceramica ps4 ps5 xbox series x dark Souls",
+       "lien": "https://www.ebay.it/itm/177045325101?_skw=Elden+Ring+PS5&hash=item2938b9452d:g:n3gAAeSw-WZoDP7q",
+       "vendeur": "guybrushthreepwood1982",
+       "avis_vendeur": 488
+      },
+      "plus_cher": {
+       "prix": 75.25,
+       "titre": "PS5 ELDEN RING SHADOW OF THE ERDTREE EDITION Giappone NUOVO PlayStation 5",
+       "lien": "https://www.ebay.it/itm/158298388510?_skw=Elden+Ring+PS5&hash=item24db51b81e:g:h7kAAOSwKpdnOqlC",
+       "vendeur": "japancosmetics0710",
+       "avis_vendeur": 25184
+      }
+     },
+     "ES": {
+      "nb_annonces": 239,
+      "total_ebay": 323,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 9.99,
+       "titre": "Elden Ring Malenia taza de cerámica ps4 ps5 xbox series x dark Souls",
+       "lien": "https://www.ebay.es/itm/177045325101?_skw=Elden+Ring+PS5&hash=item2938b9452d:g:n3gAAeSw-WZoDP7q",
+       "vendeur": "guybrushthreepwood1982",
+       "avis_vendeur": 488
+      },
+      "plus_cher": {
+       "prix": 75.74,
+       "titre": "ELDEN RING PS5 PLAYSTATION 5 VIDEOJUEGO DE SOFTWARE BANDAI NAMCO NUEVO PRECINTADO",
+       "lien": "https://www.ebay.es/itm/820217497437?_skw=Elden+Ring+PS5&hash=itembef8c5c75d:g:4cAAAeSwwo9q6fTi",
+       "vendeur": "b2cgeek",
+       "avis_vendeur": 1065
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Elden Ring PS5",
+    "temperature_dealabs": 202,
+    "google_trends": {
+     "interet_moyen": 6,
+     "interet_recent": 22,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      98,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      22,
+      23,
+      22,
+      19,
+      31,
+      31,
+      29,
+      26,
+      27,
+      22,
+      29,
+      33,
+      31,
+      24,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "elden ring ps5",
+     "elden ring ps5 prix",
+     "elden ring ps5 occasion",
+     "elden ring ps5 leclerc",
+     "elden ring ps5 digital",
+     "elden ring ps5 micromania",
+     "elden ring ps5 shadow of the erdtree",
+     "elden ring ps5 key",
+     "elden ring ps5 pro",
+     "elden ring ps5 pas cher"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "047ba3fd5a",
+   "titre": "Tischfeuer Tenderflame Table Mountain 180 (Schwarz) für 119,97€ inkl. Versand (PVG / vorher: 399,90€) – Black Friday Sale @ Tenderflame",
+   "prix": 119.97,
+   "devise": "EUR",
+   "marchand": null,
+   "lien": "https://www.mydealz.de/deals/tischfeuer-tenderflame-table-mountain-180-schwarz-fur-11997eur-inkl-versand-pvg-vorher-39990eur-black-friday-sale-at-tenderflame-2873138",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 109,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/tischfeuer-tenderflame-table-mountain-180-schwarz-fur-11997eur-inkl-versand-pvg-vorher-39990eur-black-friday-sale-at-tenderflame-2873138"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Tenderflame Table Mountain",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 350.0,
+   "cout_achat": 124.97,
+   "marge_nette": 175.13,
+   "rentabilite": 1.401,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit design à prix réduit, forte marge"
+   },
+   "score": 98.6,
+   "ebay": {
+    "requete": "Tenderflame Table Mountain",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Tenderflame Table Mountain",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "tenderflame table mountain",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Tenderflame Table Mountain",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Tenderflame Table Mountain",
+    "temperature_dealabs": 109,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "tenderflame table mountain 180",
+     "tenderflame table mountain"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CBMCJZG8-neuf",
+   "titre": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - Vert",
+   "prix": 20.0,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CBMCJZG8",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 512,
+   "domaine": "autre",
+   "nom_produit": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 49.35,
+   "cout_achat": 25.0,
+   "marge_nette": 14.74,
+   "rentabilite": 0.59,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 56.08 €, baisse 64 %, rang 76865"
+   },
+   "score": 59.0,
+   "asin": "B0CBMCJZG8",
+   "ean": "0840325612843",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 7,
+   "ebay": {
+    "requete": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Vesgantti",
+    "asin": "B0CBMCJZG8",
+    "titre": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - Vert",
+    "ean": "0840325612843",
+    "pays": "FR",
+    "prix_neuf": 20.0,
+    "prix_amazon": null,
+    "prix_tiers": 20.0,
+    "moyenne_90j": 56.03,
+    "plus_bas_90j": 20.0,
+    "occasion": null,
+    "rang_ventes": 76822,
+    "chutes_rang_30j": 7,
+    "chutes_rang_90j": 7,
+    "ventes_estimees_30j": 7,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CBMCJZG8",
+    "jetons_restants": 279
+   },
+   "prix_plancher": {
+    "nom": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 20.0,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CBMCJZG8"
+   },
+   "remise_sincere": true,
+   "mot_cle": "vesgantti repose",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0CBMCJZG8"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 17.6,
+     "marge_nette": -12.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.6,
+      "cout_achat": 25.0,
+      "frais_canal": 0.0,
+      "prelevements": 2.36,
+      "provision": 3.0,
+      "marge_nette": -12.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.51
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 17.6,
+     "marge_nette": -12.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.6,
+      "cout_achat": 25.0,
+      "frais_canal": 0.0,
+      "prelevements": 2.36,
+      "provision": 3.0,
+      "marge_nette": -12.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.51
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 17.6,
+     "marge_nette": -12.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.6,
+      "cout_achat": 25.0,
+      "frais_canal": 0.0,
+      "prelevements": 2.36,
+      "provision": 3.0,
+      "marge_nette": -12.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.51
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 20.0,
+     "marge_nette": -18.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.0,
+      "cout_achat": 25.0,
+      "frais_canal": 7.8,
+      "prelevements": 2.68,
+      "provision": 3.0,
+      "marge_nette": -18.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.739
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 20.0,
+     "marge_nette": -19.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.0,
+      "cout_achat": 25.0,
+      "frais_canal": 8.95,
+      "prelevements": 2.68,
+      "provision": 3.0,
+      "marge_nette": -19.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.785
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 20.0,
+     "marge_nette": -20.08,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.0,
+      "cout_achat": 25.0,
+      "frais_canal": 9.4,
+      "prelevements": 2.68,
+      "provision": 3.0,
+      "marge_nette": -20.08,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.803
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 20.0,
+     "marge_nette": -20.28,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.0,
+      "cout_achat": 25.0,
+      "frais_canal": 9.6,
+      "prelevements": 2.68,
+      "provision": 3.0,
+      "marge_nette": -20.28,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.811
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 20.0,
+     "marge_nette": -20.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.0,
+      "cout_achat": 25.0,
+      "frais_canal": 9.99,
+      "prelevements": 2.68,
+      "provision": 3.0,
+      "marge_nette": -20.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.827
+    }
+   ],
+   "prix_revente_prudent": 18.0,
+   "marge_verifiee": -12.41,
+   "rentabilite_verifiee": -0.496,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - ",
+    "temperature_dealabs": 512,
+    "google_trends": {
+     "erreur": "ResponseError: The request failed: Google returned a response with code 400"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B07NY5YDF8-neuf",
+   "titre": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à bille rétractable - En plastiq",
+   "prix": 23.12,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B07NY5YDF8",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 504,
+   "domaine": "autre",
+   "nom_produit": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 54.54,
+   "cout_achat": 28.12,
+   "marge_nette": 16.11,
+   "rentabilite": 0.573,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 61.98 €, baisse 63 %, rang 67452"
+   },
+   "score": 57.3,
+   "asin": "B07NY5YDF8",
+   "ean": "4250278617516",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 4,
+   "ebay": {
+    "requete": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Kaweco",
+    "asin": "B07NY5YDF8",
+    "titre": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à bille rétractable - En plastique de qualité supérieure - Rose - 12 g - Avec mécanisme de courbe cardiaque - 10,5 cm",
+    "ean": "4250278617516",
+    "pays": "FR",
+    "prix_neuf": 23.12,
+    "prix_amazon": null,
+    "prix_tiers": 23.12,
+    "moyenne_90j": 61.97,
+    "plus_bas_90j": 15.25,
+    "occasion": null,
+    "rang_ventes": 67442,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 6,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B07NY5YDF8",
+    "jetons_restants": 278
+   },
+   "prix_plancher": {
+    "nom": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 23.12,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B07NY5YDF8"
+   },
+   "remise_sincere": true,
+   "mot_cle": "kaweco skyline sport stylo",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B07NY5YDF8"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 20.35,
+     "marge_nette": -13.5,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.35,
+      "cout_achat": 28.12,
+      "frais_canal": 0.0,
+      "prelevements": 2.73,
+      "provision": 3.0,
+      "marge_nette": -13.5,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.48
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 20.35,
+     "marge_nette": -13.5,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.35,
+      "cout_achat": 28.12,
+      "frais_canal": 0.0,
+      "prelevements": 2.73,
+      "provision": 3.0,
+      "marge_nette": -13.5,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.48
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 20.35,
+     "marge_nette": -13.5,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.35,
+      "cout_achat": 28.12,
+      "frais_canal": 0.0,
+      "prelevements": 2.73,
+      "provision": 3.0,
+      "marge_nette": -13.5,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.48
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 23.12,
+     "marge_nette": -19.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.12,
+      "cout_achat": 28.12,
+      "frais_canal": 8.08,
+      "prelevements": 3.1,
+      "provision": 3.0,
+      "marge_nette": -19.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.682
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 23.12,
+     "marge_nette": -20.45,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.12,
+      "cout_achat": 28.12,
+      "frais_canal": 9.36,
+      "prelevements": 3.1,
+      "provision": 3.0,
+      "marge_nette": -20.45,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.727
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 23.12,
+     "marge_nette": -20.72,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.12,
+      "cout_achat": 28.12,
+      "frais_canal": 9.62,
+      "prelevements": 3.1,
+      "provision": 3.0,
+      "marge_nette": -20.72,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.737
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 23.12,
+     "marge_nette": -20.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.12,
+      "cout_achat": 28.12,
+      "frais_canal": 9.85,
+      "prelevements": 3.1,
+      "provision": 3.0,
+      "marge_nette": -20.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.745
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 23.12,
+     "marge_nette": -21.56,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 23.12,
+      "cout_achat": 28.12,
+      "frais_canal": 10.46,
+      "prelevements": 3.1,
+      "provision": 3.0,
+      "marge_nette": -21.56,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.767
+    }
+   ],
+   "prix_revente_prudent": 20.81,
+   "marge_verifiee": -13.1,
+   "rentabilite_verifiee": -0.466,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à ",
+    "temperature_dealabs": 504,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "c4efa5958f",
+   "titre": "Invincible VS sur Xbox Series X",
+   "prix": 22.99,
+   "devise": "EUR",
+   "marchand": "Cdiscount",
+   "lien": "https://www.dealabs.com/bons-plans/invincible-vs-jeu-xbox-series-x-3457414",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/invincible-vs-jeu-xbox-series-x-3457414"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Invincible VS Xbox Series X",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 30.44,
+   "cout_achat": 27.99,
+   "marge_nette": -4.63,
+   "rentabilite": -0.165,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 34 % vs neuf le moins cher"
+   },
+   "score": 51.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Invincible VS Xbox Series X",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "Invincible VS - Jeu Xbox Series X",
+       "prix": 22.99,
+       "nb_boutiques": 7,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/invincible-vs-jeu-xbox-series-x.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 22.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/invincible-vs-jeu-xbox-series-x.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 6,
+    "marque": "Skybound",
+    "asin": "B0G612WSL9",
+    "titre": "Invincible VS (Xbox Series X)",
+    "ean": "0810161632039",
+    "pays": "FR",
+    "prix_neuf": 34.59,
+    "prix_amazon": 34.59,
+    "prix_tiers": 34.59,
+    "moyenne_90j": 32.15,
+    "plus_bas_90j": 29.99,
+    "occasion": null,
+    "rang_ventes": 1621,
+    "chutes_rang_30j": 34,
+    "chutes_rang_90j": 99,
+    "ventes_estimees_30j": 34,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0G612WSL9",
+    "jetons_restants": 339
+   },
+   "ean": "0810161632039",
+   "asin": "B0G612WSL9",
+   "vendeurs_amazon": 6,
+   "ventes_estimees_30j": 34,
+   "ebay": {
+    "requete": "Invincible VS Xbox Series X",
+    "neuf": {
+     "nb": 3,
+     "min": 49.99,
+     "p25": 49.99,
+     "mediane": 53.49,
+     "max": 71.88
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Invincible VS Xbox Series X",
+      "prix": "49.99",
+      "url": "https://www.ebay.fr/itm/257299432253?_skw=Invincible+VS+Xbox+Series+X&hash=item3be83dc33d:g:YqYAAeSwndRq8dRj"
+     },
+     {
+      "titre": "INVINCIBLE VS XBOX SERIES X EURO NEW (GAME IN ENGLISH/FRANCAIS/DE/ES/IT)",
+      "prix": "53.49",
+      "url": "https://www.ebay.fr/itm/287338676350?_skw=Invincible+VS+Xbox+Series+X&hash=item42e6b8407e:g:mywAAeSw3w1qCvGw"
+     },
+     {
+      "titre": "Invincible VS - Jeu Xbox Series X",
+      "prix": "71.88",
+      "url": "https://www.ebay.fr/itm/128126158722?_skw=Invincible+VS+Xbox+Series+X&hash=item1dd4ea0782:g:XPkAAeSwG2Vqye0o"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 49.99,
+     "DE": 49.05,
+     "IT": 49.8,
+     "ES": 49.39
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "invincible vs xbox series",
+   "annonces_ebay": 3,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 20.23,
+     "marge_nette": -13.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 27.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -13.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.481
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 22.99,
+     "marge_nette": -19.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 8.07,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -19.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.684
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 22.99,
+     "marge_nette": -20.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.34,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.73
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 22.99,
+     "marge_nette": -20.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.61,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.739
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 22.99,
+     "marge_nette": -20.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 9.84,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -20.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.747
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 22.99,
+     "marge_nette": -21.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 27.99,
+      "frais_canal": 10.44,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -21.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.769
+    }
+   ],
+   "prix_revente_prudent": 20.69,
+   "marge_verifiee": -13.07,
+   "rentabilite_verifiee": -0.467,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "moyenne",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Invincible VS Xbox Series X",
+    "pays": {
+     "FR": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 49.99,
+       "titre": "Invincible VS Xbox Series X",
+       "lien": "https://www.ebay.fr/itm/257299432253?_skw=Invincible+VS+Xbox+Series+X&hash=item3be83dc33d:g:YqYAAeSwndRq8dRj",
+       "vendeur": "justforgames2013",
+       "avis_vendeur": 18866
+      },
+      "plus_cher": {
+       "prix": 71.88,
+       "titre": "Invincible VS - Jeu Xbox Series X",
+       "lien": "https://www.ebay.fr/itm/128126158722?_skw=Invincible+VS+Xbox+Series+X&hash=item1dd4ea0782:g:XPkAAeSwG2Vqye0o",
+       "vendeur": "mgt-shop-eu",
+       "avis_vendeur": 248
+      }
+     },
+     "DE": {
+      "nb_annonces": 7,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 40.72,
+       "titre": "Invincible VS - Xbox Series X - Neu & OVP",
+       "lien": "https://www.ebay.de/itm/307162074871?_skw=Invincible+VS+Xbox+Series+X&hash=item4784494ef7:g:WtgAAeSwNoNqmniq",
+       "vendeur": "re2gamesde",
+       "avis_vendeur": 797
+      },
+      "plus_cher": {
+       "prix": 67.54,
+       "titre": "NEU Xbox Spiel Invincible VS für Series X S Download Code Game Key Email 24h NEW",
+       "lien": "https://www.ebay.de/itm/168616414841?_skw=Invincible+VS+Xbox+Series+X&hash=item2742524e79:g:hKwAAeSw-V9qgNGg",
+       "vendeur": "thommys-things",
+       "avis_vendeur": 4362
+      }
+     },
+     "IT": {
+      "nb_annonces": 15,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 45.19,
+       "titre": "Gioco Invincible VS XBox Series X - Nuovo e Sigillato - SPEDIZIONE VELOCE",
+       "lien": "https://www.ebay.it/itm/257851372412?_skw=Invincible+VS+Xbox+Series+X&hash=item3c0923b37c:g:-lkAAeSwDQhq95jF",
+       "vendeur": "wil78yeah",
+       "avis_vendeur": 607
+      },
+      "plus_cher": {
+       "prix": 77.42,
+       "titre": "Invincible VS Xbox Series X Gioco Disco Action Fighters Versione USA Nuovo NON APERTO",
+       "lien": "https://www.ebay.it/itm/236998238015?_skw=Invincible+VS+Xbox+Series+X&hash=item372e321f3f:g:QucAAeSwuKZqekGN",
+       "vendeur": "fungamingshop",
+       "avis_vendeur": 5548
+      }
+     },
+     "ES": {
+      "nb_annonces": 10,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 49.39,
+       "titre": "INVINCIBLE VS - Microsoft Xbox Series X|S",
+       "lien": "https://www.ebay.es/itm/407109220608?_skw=Invincible+VS+Xbox+Series+X&hash=item5ec999b900:g:dOAAAeSwf79qa9C~",
+       "vendeur": "anigamesstore",
+       "avis_vendeur": 582
+      },
+      "plus_cher": {
+       "prix": 76.78,
+       "titre": "Invincible VS Xbox Series X Juego Disco Luchadores Versión EE. UU. Nuevo SIN ABRIR",
+       "lien": "https://www.ebay.es/itm/236998238015?_skw=Invincible+VS+Xbox+Series+X&hash=item372e321f3f:g:QucAAeSwuKZqekGN",
+       "vendeur": "fungamingshop",
+       "avis_vendeur": 5548
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Invincible VS Xbox Series X",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "invincible vs xbox series x",
+     "invincible vs xbox series x and series s store",
+     "invincible vs xbox series x collector's edition",
+     "invincible vs xbox series x physical copy",
+     "invincible vs xbox series x release date",
+     "invincible vs xbox series x price",
+     "invincible vs xbox series x disc",
+     "invincible vs beta xbox series x",
+     "invincible vs open beta xbox series x",
+     "invincible vs deluxe edition xbox series x"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B071D4M62V-neuf",
+   "titre": "Lexmark Cartouche de Toner Cyan Standard",
+   "prix": 106.1,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B071D4M62V",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 384,
+   "domaine": "autre",
+   "nom_produit": "Lexmark Cartouche de Toner Cyan Standard",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 178.72,
+   "cout_achat": 111.1,
+   "marge_nette": 40.67,
+   "rentabilite": 0.366,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 203.09 €, baisse 48 %, rang 72501"
+   },
+   "score": 36.6,
+   "asin": "B071D4M62V",
+   "ean": "0734646642545",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 0,
+   "ebay": {
+    "requete": "Lexmark Cartouche de Toner Cyan Standard",
+    "neuf": {
+     "nb": 12,
+     "min": 59.87,
+     "p25": 80.81,
+     "mediane": 125.25,
+     "max": 898.46
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Lexmark 20N20Y0 Cartouche de toner 1 pièce(s) Jaune",
+      "prix": "125.01",
+      "url": "https://www.ebay.fr/itm/307252562171?_skw=Lexmark+Cartouche+de+Toner+Cyan+Standard&hash=item4789ae08fb:g:gxUAAeSwvH1q-OZL"
+     },
+     {
+      "titre": "Lexmark 802S-E Corp Toner Cartridge CMYK Pack of 4",
+      "prix": "76.09",
+      "url": "https://www.ebay.fr/itm/128119621803?_skw=Lexmark+Cartouche+de+Toner+Cyan+Standard&hash=item1dd48648ab:g:vx4AAeSwSohqxXgW&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7kUIySHNva9lZQyT9Y4WgmgMdxgOdy3EiKNZ4AMnAT183WqdoPVG308alhfmksGHGgdkGjW687y1wjUOTHWYdY9Y9S4eJRTqP%2FOK8aDEYi2lxr8%2FTW%2B5SLh0RPqOGik2v%2B1pmq76lVBYYAJHo1jPIk%2F8fMn2LFDrn2dh7ORM71trktPNLokwrdEcRxjPTViYy%2BFxbbBZlw5g5o1BCJ8xf4gFVRjXutLpYBT1vCoAo0e5kRtFM37ubVDRS5YLC2HNtdWlLibCKOj1bQX64bmXCGJ%2F3easdP0ofqPggcfnX0ZtFLIOdDfKhar7P9l%2FJ1fD1M%3D"
+     },
+     {
+      "titre": "Lexmark 1.4K MAGENTA CORPORATE TONER CARTRIDGE",
+      "prix": "199.30",
+      "url": "https://www.ebay.fr/itm/178329038342?_skw=Lexmark+Cartouche+de+Toner+Cyan+Standard&hash=item29853d2e06:g:TLcAAeSw87xqXobz&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7llU%2BeIShjJHLYtqvgvooyYwCLOtA%2Bd%2FS2CBdAzY3fVPxGwz8eBtxUIChDmsxT8FCh%2BG4Gqn%2FsK73n%2FePkxV0xjkN1Dy8Lng%2FXLdBitxIWTL4QOSbsq0NbeBsQ4%2Bl1FE8YcMQOkx53e4dSph%2FFQzh8NzT7fFuE519ospbbsExzG4EjtjrOedjoQmHMsFx%2Fw31mjd3ADmx%2BHbL7Pm1DE38hc1jsDawvUhbtX1fkI8jNp99BakBJRk5pK1CoMrnbHLktKOZAlZUxM5DreFTq2pV4ECsojCF3J7qFNXtL9%2BrcRdgfERoR2sC5uvA2l36EEyKk%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 80.81,
+     "DE": null,
+     "IT": 70.27,
+     "ES": 78.12
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Lexmark",
+    "asin": "B071D4M62V",
+    "titre": "Lexmark Cartouche de Toner Cyan Standard",
+    "ean": "0734646642545",
+    "pays": "FR",
+    "prix_neuf": 106.1,
+    "prix_amazon": null,
+    "prix_tiers": 106.1,
+    "moyenne_90j": 202.86,
+    "plus_bas_90j": 35.53,
+    "occasion": null,
+    "rang_ventes": 72502,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B071D4M62V",
+    "jetons_restants": 277
+   },
+   "prix_plancher": {
+    "nom": "Lexmark Cartouche de Toner Cyan Standard",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 98.6,
+    "ou": "idealo",
+    "lien": null
+   },
+   "remise_sincere": true,
+   "idealo": {
+    "prix_min": 98.6,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Lexmark Cartouche de Toner Cyan Standard",
+    "gtin": null
+   },
+   "mot_cle": "toner cyan lexmark",
+   "annonces_ebay": 12,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B071D4M62V"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 86.77,
+     "marge_nette": -38.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 86.77,
+      "cout_achat": 111.1,
+      "frais_canal": 0.0,
+      "prelevements": 11.63,
+      "provision": 3.0,
+      "marge_nette": -38.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.351
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 86.77,
+     "marge_nette": -38.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 86.77,
+      "cout_achat": 111.1,
+      "frais_canal": 0.0,
+      "prelevements": 11.63,
+      "provision": 3.0,
+      "marge_nette": -38.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.351
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 86.77,
+     "marge_nette": -38.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 86.77,
+      "cout_achat": 111.1,
+      "frais_canal": 0.0,
+      "prelevements": 11.63,
+      "provision": 3.0,
+      "marge_nette": -38.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.351
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 98.6,
+     "marge_nette": -43.59,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 98.6,
+      "cout_achat": 111.1,
+      "frais_canal": 14.87,
+      "prelevements": 13.21,
+      "provision": 3.0,
+      "marge_nette": -43.59,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.392
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 98.6,
+     "marge_nette": -43.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 98.6,
+      "cout_achat": 111.1,
+      "frais_canal": 14.9,
+      "prelevements": 13.21,
+      "provision": 3.0,
+      "marge_nette": -43.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.393
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 98.6,
+     "marge_nette": -44.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 98.6,
+      "cout_achat": 111.1,
+      "frais_canal": 15.89,
+      "prelevements": 13.21,
+      "provision": 3.0,
+      "marge_nette": -44.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.401
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 98.6,
+     "marge_nette": -47.88,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 98.6,
+      "cout_achat": 111.1,
+      "frais_canal": 19.17,
+      "prelevements": 13.21,
+      "provision": 3.0,
+      "marge_nette": -47.88,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.431
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 98.6,
+     "marge_nette": -50.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 98.6,
+      "cout_achat": 111.1,
+      "frais_canal": 21.78,
+      "prelevements": 13.21,
+      "provision": 3.0,
+      "marge_nette": -50.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.454
+    }
+   ],
+   "prix_revente_prudent": 80.81,
+   "marge_verifiee": -44.12,
+   "rentabilite_verifiee": -0.397,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Lexmark Cartouche de Toner Cyan Standard",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 64,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 61,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Lexmark Cartouche de Toner Cyan Standard",
+    "temperature_dealabs": 384,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "f4e784abcf",
+   "titre": "Star Wars Outlaws Edition Gold sur Nintendo Switch 2",
+   "prix": 24.99,
+   "devise": "EUR",
+   "marchand": "Fnac",
+   "lien": "https://www.dealabs.com/bons-plans/star-wars-outlaws-edition-gold-sur-nintendo-switch-2-3457968",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 117,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": null,
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 29.03,
+   "cout_achat": 29.99,
+   "marge_nette": -7.85,
+   "rentabilite": -0.262,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 24 % vs neuf le moins cher"
+   },
+   "score": 36.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "UBISOFT Star Wars : Outlaws - Gold Edition (NINTENDO SWITCH 2)",
+       "prix": 24.99,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 24.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/star-wars-outlaws-gold-edition-nintendo-switch-2.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Ubisoft",
+    "asin": "B0F7LQKRL9",
+    "titre": "Star Wars Outlaws Gold Edition - Nintendo Switch 2",
+    "ean": "3307216304852",
+    "pays": "FR",
+    "prix_neuf": 49.83,
+    "prix_amazon": null,
+    "prix_tiers": 49.83,
+    "moyenne_90j": 49.86,
+    "plus_bas_90j": 49.82,
+    "occasion": 53.5,
+    "rang_ventes": 16527,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 16,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0F7LQKRL9",
+    "jetons_restants": 297
+   },
+   "ean": "3307216304852",
+   "asin": "B0F7LQKRL9",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "ebay": {
+    "requete": "Star Wars Outlaws Edition Gold Nintendo Switch 2",
+    "neuf": {
+     "nb": 6,
+     "min": 40.79,
+     "p25": 41.92,
+     "mediane": 43.58,
+     "max": 74.72
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "42.30",
+      "url": "https://www.ebay.fr/itm/336475946679?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item4e57877eb7:g:GsAAAeSwAlppyTX2"
+     },
+     {
+      "titre": "Star Wars Outlaws - Gold Edition, Nintendo Switch 2 Nintendo (Nintendo Switch 2)",
+      "prix": "66.14",
+      "url": "https://www.ebay.fr/itm/407284802776?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item5ed410e4d8:g:DJcAAeSwLWBqzMTv&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kwJBhj70Od7c5m1CxNxlJQdrRi08nI7yRNjBtQbVHQeWdCVaFep836PQrwx8wLKlipxxslyCZqiULb5i6vLyPOEgltZPmc403Zbe0WwmY9sfz5gMOKePFJB0VkoruE2uIu5wXFXnFQKwdDKGg5dZ%2BgrMeFV%2Bla8MRNHBC3jdVkWLHH7ArmlEPnqDhTXu6TcqCIg7BXOZu790DuZIwU1EWnykoM3lKVrjJyKMBhXpREwyuXTo7if2mCK6NLMUUA5%2BK2MCxrmt%2BO4VWF7Ygp8HpRwsIV3a8kudLdxjs2hjHr5hJH3g1dpZTnRONYOjLFjWyl%2Fe7PdYZRt4j542jiR%2FMj"
+     },
+     {
+      "titre": "Star Wars Outlaws - Édition Gold - Nintendo Switch 2",
+      "prix": "44.38",
+      "url": "https://www.ebay.fr/itm/227487194522?_skw=Star+Wars+Outlaws+Edition+Gold+Nintendo+Switch+2&hash=item34f74b1d9a:g:B8gAAeSw0zlqigpi"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 41.92,
+     "DE": 33.23,
+     "IT": 34.44,
+     "ES": 33.61
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "star wars outlaws edition",
+   "annonces_ebay": 6,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 21.99,
+     "marge_nette": -13.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 21.99,
+      "cout_achat": 29.99,
+      "frais_canal": 0.0,
+      "prelevements": 2.95,
+      "provision": 3.0,
+      "marge_nette": -13.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.465
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 24.99,
+     "marge_nette": -19.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 8.25,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -19.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.654
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 24.99,
+     "marge_nette": -20.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.6,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -20.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.699
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 24.99,
+     "marge_nette": -21.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 9.75,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.704
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 24.99,
+     "marge_nette": -21.35,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.0,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -21.35,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.712
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 24.99,
+     "marge_nette": -22.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 24.99,
+      "cout_achat": 29.99,
+      "frais_canal": 10.74,
+      "prelevements": 3.35,
+      "provision": 3.0,
+      "marge_nette": -22.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.737
+    }
+   ],
+   "prix_revente_prudent": 22.49,
+   "marge_verifiee": -13.51,
+   "rentabilite_verifiee": -0.45,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 53.5,
+    "haut": 53.5,
+    "position_neuf": 0.47
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "prix": 49.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 512,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": null,
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Table Langer Pliable",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 90.0,
+   "cout_achat": 54.99,
+   "marge_nette": 19.95,
+   "rentabilite": 0.363,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bonne marge ~35€, produit recherché par jeunes parents"
+   },
+   "score": 32.9,
+   "ebay": {
+    "requete": "Table Langer Pliable",
+    "neuf": {
+     "nb": 23,
+     "min": 45.59,
+     "p25": 75.59,
+     "mediane": 83.99,
+     "max": 174.99
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 26.7,
+     "p25": 26.7,
+     "mediane": 93.04,
+     "max": 102.34
+    },
+    "exemples": [
+     {
+      "titre": "VEVOR Table à langer murale pliable 85 x 57 x 47 cm HDPE gris Station à langer",
+      "prix": "93.04",
+      "url": "https://www.ebay.fr/itm/407281558815?_skw=Table+Langer+Pliable&hash=item5ed3df651f:g:l~QAAeSwn2NqxPMb"
+     },
+     {
+      "titre": "Table à langer pliable VEVOR 85 x 57 x 47 cm PEHD gris pour montage mural",
+      "prix": "102.34",
+      "url": "https://www.ebay.fr/itm/278353268440?_skw=Table+Langer+Pliable&hash=item40cf25ced8:g:C3gAAeSwxn9qw2ts"
+     },
+     {
+      "titre": "Table à langer pliable pour poupon en métal avec jupe en tissu",
+      "prix": "26.70",
+      "url": "https://www.ebay.fr/itm/800666706252?_skw=Table+Langer+Pliable&hash=itemba6b74614c:g:hgUAAeSwXFlqqYId"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 75.59,
+     "DE": null,
+     "IT": 52.5,
+     "ES": 53.34
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0CHMBYWJM",
+    "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x65x99cm, Gris",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 49.99,
+    "prix_amazon": null,
+    "prix_tiers": 49.99,
+    "moyenne_90j": 137.82,
+    "plus_bas_90j": 49.99,
+    "occasion": null,
+    "rang_ventes": 2176,
+    "chutes_rang_30j": 9,
+    "chutes_rang_90j": 18,
+    "ventes_estimees_30j": 9,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+    "jetons_restants": 277
+   },
+   "asin": "B0CHMBYWJM",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 9,
+   "prix_plancher": {
+    "nom": "Table Langer Pliable",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 4,
+      "meilleur": {
+       "titre": "VEVOR Table à Langer Murale en HDPE Station à Langer Horizontale Pliable Capacité 20KG",
+       "prix": 102.9,
+       "nb_boutiques": 5,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-murale-en-hdpe-station-a-langer-horizontale-pliable-capacite-20kg.html"
+      },
+      "autres": [
+       {
+        "titre": "RUBBERMAID Table À Langer Pliable -",
+        "prix": 451.2,
+        "nb_boutiques": 2,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-pliable-rubbermaid.html"
+       },
+       {
+        "titre": "RUBBERMAID Table À Langer Pliable H Ht:55.7 Cm L Ht:86.2 Cm",
+        "prix": 452.4,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-pliable-h-ht-55-7-cm-l-ht-86-2-cm.html"
+       },
+       {
+        "titre": "MATERIEL CHR PRO Table à Langer Horizontale Pliable Magrini - -",
+        "prix": 523.18,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Langer-bebe/table-a-langer-horizontale-pliable-magrini.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 49.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CHMBYWJM"
+   },
+   "remise_sincere": true,
+   "idealo": {
+    "prix_min": 53.9,
+    "nb_offres": 9,
+    "lien": "https://www.idealo.fr/prix/214261043/beaba-camele-o-support-pliable-baignoire-ou-table-a-langer-blanc.html",
+    "titre": "Béaba Camélé'O Support pliable baignoire ou table à langer, blanc",
+    "gtin": "3384349204075"
+   },
+   "ean": "3384349204075",
+   "mot_cle": "table langer pliable",
+   "demande_google": {
+    "volume_mensuel": 90,
+    "concurrence": "HIGH",
+    "cpc": 0.26,
+    "trois_derniers_mois": [
+     110,
+     70,
+     70
+    ]
+   },
+   "annonces_ebay": 23,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.99,
+     "marge_nette": -19.89,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.99,
+      "cout_achat": 54.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.89,
+      "provision": 3.0,
+      "marge_nette": -19.89,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.362
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.99,
+     "marge_nette": -25.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 10.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -25.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.99,
+     "marge_nette": -26.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 11.5,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.476
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.99,
+     "marge_nette": -26.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.0,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -26.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.486
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.99,
+     "marge_nette": -27.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 12.85,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -27.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.501
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.99,
+     "marge_nette": -29.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.99,
+      "cout_achat": 54.99,
+      "frais_canal": 14.49,
+      "prelevements": 6.7,
+      "provision": 3.0,
+      "marge_nette": -29.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.531
+    }
+   ],
+   "prix_revente_prudent": 26.7,
+   "marge_verifiee": -34.87,
+   "rentabilite_verifiee": -0.634,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "occasion": {
+    "bas": 26.7,
+    "haut": 93.04,
+    "position_neuf": 1.87
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  },
+  {
+   "id": "keepa-B00Y4ULDLC-neuf",
+   "titre": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine tissée noir/rouge, 3 m",
+   "prix": 38.11,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B00Y4ULDLC",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 400,
+   "domaine": "autre",
+   "nom_produit": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 67.23,
+   "cout_achat": 43.11,
+   "marge_nette": 12.11,
+   "rentabilite": 0.281,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 76.4 €, baisse 50 %, rang 44449"
+   },
+   "score": 28.1,
+   "asin": "B00Y4ULDLC",
+   "ean": "0665895100886",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 0,
+   "ebay": {
+    "requete": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "Kirlin",
+    "asin": "B00Y4ULDLC",
+    "titre": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine tissée noir/rouge, 3 m",
+    "ean": "0665895100886",
+    "pays": "FR",
+    "prix_neuf": 38.11,
+    "prix_amazon": null,
+    "prix_tiers": 38.11,
+    "moyenne_90j": 76.33,
+    "plus_bas_90j": 12.25,
+    "occasion": null,
+    "rang_ventes": 44444,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B00Y4ULDLC",
+    "jetons_restants": 275
+   },
+   "prix_plancher": {
+    "nom": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 38.11,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B00Y4ULDLC"
+   },
+   "remise_sincere": true,
+   "mot_cle": "kirlin cable iwb",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 33.54,
+     "marge_nette": -17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.54,
+      "cout_achat": 43.11,
+      "frais_canal": 0.0,
+      "prelevements": 4.49,
+      "provision": 3.0,
+      "marge_nette": -17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.396
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 33.54,
+     "marge_nette": -17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.54,
+      "cout_achat": 43.11,
+      "frais_canal": 0.0,
+      "prelevements": 4.49,
+      "provision": 3.0,
+      "marge_nette": -17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.396
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 33.54,
+     "marge_nette": -17.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.54,
+      "cout_achat": 43.11,
+      "frais_canal": 0.0,
+      "prelevements": 4.49,
+      "provision": 3.0,
+      "marge_nette": -17.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.396
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 38.11,
+     "marge_nette": -22.54,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 38.11,
+      "cout_achat": 43.11,
+      "frais_canal": 9.43,
+      "prelevements": 5.11,
+      "provision": 3.0,
+      "marge_nette": -22.54,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.523
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 38.11,
+     "marge_nette": -23.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 38.11,
+      "cout_achat": 43.11,
+      "frais_canal": 10.67,
+      "prelevements": 5.11,
+      "provision": 3.0,
+      "marge_nette": -23.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.551
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 38.11,
+     "marge_nette": -24.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 38.11,
+      "cout_achat": 43.11,
+      "frais_canal": 11.05,
+      "prelevements": 5.11,
+      "provision": 3.0,
+      "marge_nette": -24.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.56
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 38.11,
+     "marge_nette": -24.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 38.11,
+      "cout_achat": 43.11,
+      "frais_canal": 11.3,
+      "prelevements": 5.11,
+      "provision": 3.0,
+      "marge_nette": -24.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.566
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 38.11,
+     "marge_nette": -25.81,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 38.11,
+      "cout_achat": 43.11,
+      "frais_canal": 12.71,
+      "prelevements": 5.11,
+      "provision": 3.0,
+      "marge_nette": -25.81,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.599
+    }
+   ],
+   "prix_revente_prudent": 34.3,
+   "marge_verifiee": -16.41,
+   "rentabilite_verifiee": -0.381,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0CNVPRMZR-neuf",
+   "titre": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+   "prix": 42.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0CNVPRMZR",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 384,
+   "domaine": "autre",
+   "nom_produit": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 72.9,
+   "cout_achat": 47.99,
+   "marge_nette": 12.14,
+   "rentabilite": 0.253,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 82.84 €, baisse 48 %, rang 37257"
+   },
+   "score": 25.3,
+   "asin": "B0CNVPRMZR",
+   "ean": "8721012106505",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 5,
+   "ebay": {
+    "requete": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Roches Volcaniques Pierres de Lave Décoration Aquarium 25 kg Rouge 5-8 mm vidaXL",
+      "prix": "42.99",
+      "url": "https://www.ebay.fr/itm/820233888502?_skw=vidaXL+Roches+volcaniques+10+kg+Rouge+3-5+cm&hash=itembef9bfe2f6:g:wLgAAeSwtJ9q-r~i&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7kZFj%2FMpv1HWmwHDctr8au%2FjRkTfnBTsalktOHg9LoymF%2B74J9f9tLftR6zIgOqFU%2FGyKsDAkLXDEm2Iw3cg7uke8g1tNP6sqkVbndjqDWEGfeclqG%2Bbw44peGzaQCVQJOTgZSEPfvNxsEx8Hk9xILMs5SNbWvl4h%2FUJx%2BD13tuhVXcuJDJmZt2JEuw6wkDI9Z%2B5N3oPEwVuUkrG9IltYFJqT6MCswIL23AHwlpv8BpBApQkAIZ9%2FmvNJlrOBB%2BvOcUJjBIZlmEMvEF1idqcl85q6kRp%2BMJObxD0sKI0RqRN9gWDTDl%2Flq24lcnUuFXhWME4nE26Ed625j7aFT6jW%2BQ"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "vidaXL",
+    "asin": "B0CNVPRMZR",
+    "titre": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+    "ean": "8721012106505",
+    "pays": "FR",
+    "prix_neuf": 42.99,
+    "prix_amazon": null,
+    "prix_tiers": 42.99,
+    "moyenne_90j": 82.83,
+    "plus_bas_90j": 25.33,
+    "occasion": null,
+    "rang_ventes": 37537,
+    "chutes_rang_30j": 5,
+    "chutes_rang_90j": 18,
+    "ventes_estimees_30j": 5,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CNVPRMZR",
+    "jetons_restants": 274
+   },
+   "prix_plancher": {
+    "nom": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 42.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CNVPRMZR"
+   },
+   "remise_sincere": true,
+   "mot_cle": "vidaxl roches volcaniques 3",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 37.83,
+     "marge_nette": -18.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.83,
+      "cout_achat": 47.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.07,
+      "provision": 3.0,
+      "marge_nette": -18.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.38
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 37.83,
+     "marge_nette": -18.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.83,
+      "cout_achat": 47.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.07,
+      "provision": 3.0,
+      "marge_nette": -18.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.38
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 37.83,
+     "marge_nette": -18.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.83,
+      "cout_achat": 47.99,
+      "frais_canal": 0.0,
+      "prelevements": 5.07,
+      "provision": 3.0,
+      "marge_nette": -18.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.38
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 42.99,
+     "marge_nette": -23.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.99,
+      "cout_achat": 47.99,
+      "frais_canal": 9.87,
+      "prelevements": 5.76,
+      "provision": 3.0,
+      "marge_nette": -23.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.492
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 42.99,
+     "marge_nette": -24.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.99,
+      "cout_achat": 47.99,
+      "frais_canal": 11.01,
+      "prelevements": 5.76,
+      "provision": 3.0,
+      "marge_nette": -24.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.516
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 42.99,
+     "marge_nette": -25.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.99,
+      "cout_achat": 47.99,
+      "frais_canal": 11.44,
+      "prelevements": 5.76,
+      "provision": 3.0,
+      "marge_nette": -25.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.525
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 42.99,
+     "marge_nette": -25.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.99,
+      "cout_achat": 47.99,
+      "frais_canal": 11.94,
+      "prelevements": 5.76,
+      "provision": 3.0,
+      "marge_nette": -25.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.536
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 42.99,
+     "marge_nette": -27.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 42.99,
+      "cout_achat": 47.99,
+      "frais_canal": 13.44,
+      "prelevements": 5.76,
+      "provision": 3.0,
+      "marge_nette": -27.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.567
+    }
+   ],
+   "prix_revente_prudent": 38.69,
+   "marge_verifiee": -17.48,
+   "rentabilite_verifiee": -0.364,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 14,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 35,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0FMJG3W1T-neuf",
+   "titre": "OHMG 3 in 1 Berceau Cododo avec Matelas et Moustiquaire Lit pour Les Bébés de 1 à 36 Mois Pliable Be",
+   "temperature": 664,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 97.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FMJG3W1T",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FMJG3W1T",
+   "ref_fr": 556.51,
+   "description": "moyenne 90 j 556.51 €, baisse 83 %, rang 55690"
+  },
+  {
+   "id": "keepa-B0FFYH4W4K-neuf",
+   "titre": "Bac à Litière Fermé, Couvercle Amovible, Anti-Fuite, Nettoyage Facile, Maison de Toilette, Plateau A",
+   "temperature": 584,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 31.59,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FFYH4W4K",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FFYH4W4K",
+   "ref_fr": 115.69,
+   "description": "moyenne 90 j 115.69 €, baisse 73 %, rang 13763"
+  },
+  {
+   "id": "keepa-B0CBMCJZG8-neuf",
+   "titre": "Vesgantti Repose-Pieds Salon en Velours pour Salon, 52 x 40 x 47 cm - Vert",
+   "temperature": 512,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 20.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CBMCJZG8",
+   "date": "2026-11-17T02:04",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CBMCJZG8",
+   "ref_fr": 56.08,
+   "description": "moyenne 90 j 56.08 €, baisse 64 %, rang 76865"
+  },
+  {
+   "id": "keepa-B0CHMBYWJM-neuf",
+   "titre": "Table à Langer Pliable,Table à Langer et Portable,Table à Langer Mobile Avec 4 roues et harnais, 80x",
+   "temperature": 512,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CHMBYWJM",
+   "date": "2026-11-17T00:38",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CHMBYWJM",
+   "ref_fr": 137.97,
+   "description": "moyenne 90 j 137.97 €, baisse 64 %, rang 2177"
+  },
+  {
+   "id": "keepa-B07NY5YDF8-neuf",
+   "titre": "Kaweco SKYLINE SPORT Stylo à bille rétractable Blush Pitaya - Stylo à bille rétractable - En plastiq",
+   "temperature": 504,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 23.12,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07NY5YDF8",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B07NY5YDF8",
+   "ref_fr": 61.98,
+   "description": "moyenne 90 j 61.98 €, baisse 63 %, rang 67452"
+  },
+  {
+   "id": "keepa-B09V57NXW6-seconde_main",
+   "titre": "Oversteel - Elinvar USB Gaming Microphone, cardioïde et omnidirectionnel avec bras et support, illum [Seconde main Amazon]",
+   "temperature": 432,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.94,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09V57NXW6",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B09V57NXW6",
+   "ref_fr": 43.54,
+   "description": "moyenne 90 j 43.54 €, baisse 54 %, rang 32171"
+  },
+  {
+   "id": "keepa-B01BSTVF5K-neuf",
+   "titre": "LEUCHTTURM1917 349303 Carnet Pocket (A6), couverture souple, 123 pages numérotées, ligné, bleu marin",
+   "temperature": 400,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01BSTVF5K",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B01BSTVF5K",
+   "ref_fr": 34.17,
+   "description": "moyenne 90 j 34.17 €, baisse 50 %, rang 2632"
+  },
+  {
+   "id": "keepa-B00791CWWC-neuf",
+   "titre": "Cafetera de aluminio SILVER. 3 TAZAS. Utilización para: GAS, ELECTRICO Y VITROCERÁMICA - KFS 320",
+   "temperature": 400,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.65,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B00791CWWC",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B00791CWWC",
+   "ref_fr": 25.25,
+   "description": "moyenne 90 j 25.25 €, baisse 50 %, rang 19304"
+  },
+  {
+   "id": "keepa-B00Y4ULDLC-neuf",
+   "titre": "KIRLIN Cable IWB-202BFGL-10/BR Premium Plus Câble d'instrument, gaine tissée noir/rouge, 3 m",
+   "temperature": 400,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 38.11,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B00Y4ULDLC",
+   "date": "2026-11-17T00:59",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B00Y4ULDLC",
+   "ref_fr": 76.4,
+   "description": "moyenne 90 j 76.4 €, baisse 50 %, rang 44449"
+  },
+  {
+   "id": "keepa-B0BW1BM6DC-neuf",
+   "titre": "Square Lecteur de Carte Bluetooth sans Contact (2e génération) - Accepte Les paiements sans Contact ",
+   "temperature": 392,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 15.41,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BW1BM6DC",
+   "date": "2026-11-17T00:11",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BW1BM6DC",
+   "ref_fr": 30.23,
+   "description": "moyenne 90 j 30.23 €, baisse 49 %, rang 48479"
+  },
+  {
+   "id": "keepa-B0CNVPRMZR-neuf",
+   "titre": "vidaXL Roches volcaniques 10 kg Rouge 3-5 cm",
+   "temperature": 384,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 42.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CNVPRMZR",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0CNVPRMZR",
+   "ref_fr": 82.84,
+   "description": "moyenne 90 j 82.84 €, baisse 48 %, rang 37257"
+  },
+  {
+   "id": "keepa-B0DPNJB587-neuf",
+   "titre": "JLab JBuds Mini Écouteurs Bluetooth sans Fil - 20h, Tone 728N",
+   "temperature": 384,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 23.74,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DPNJB587",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0DPNJB587",
+   "ref_fr": 46.01,
+   "description": "moyenne 90 j 46.01 €, baisse 48 %, rang 2374"
+  },
+  {
+   "id": "keepa-B08NTG8SLF-neuf",
+   "titre": "Rose & Caramel Purity Excel Dissolvant d'Autobronzant en 60 Secondes 440ml",
+   "temperature": 384,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.7,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08NTG8SLF",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B08NTG8SLF",
+   "ref_fr": 37.55,
+   "description": "moyenne 90 j 37.55 €, baisse 48 %, rang 31013"
+  },
+  {
+   "id": "keepa-B071D4M62V-neuf",
+   "titre": "Lexmark Cartouche de Toner Cyan Standard",
+   "temperature": 384,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 106.1,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B071D4M62V",
+   "date": "2026-11-17T00:11",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B071D4M62V",
+   "ref_fr": 203.09,
+   "description": "moyenne 90 j 203.09 €, baisse 48 %, rang 72501"
+  },
+  {
+   "id": "keepa-B0089JYCOE-arbES",
+   "titre": "Clarks Femme Hamble Oak Derbys, Noir Black Pat, 35.5 EU [Amazon ES]",
+   "temperature": 380,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 19.3,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0089JYCOE",
+   "date": "2026-11-17T00:21",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "5051039369007",
+   "asin": "B0089JYCOE",
+   "ref_fr": 42.36,
+   "ventes_30j": 11,
+   "vendeurs": 6,
+   "description": "Amazon.fr 42.36 € (moyenne 90 j 42.05 €), écart 38 % port compris, ventes 30 j 11, 6 vendeurs FR"
+  },
+  {
+   "id": "keepa-B07YDVPL4N-neuf",
+   "titre": "eSplanade - Laiton de première qualité 4.25 \"en Laiton Pooja Puja Bell Ghanti, pour Objet de Poojan,",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 25.3,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07YDVPL4N",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B07YDVPL4N",
+   "ref_fr": 47.69,
+   "description": "moyenne 90 j 47.69 €, baisse 47 %, rang 15643"
+  },
+  {
+   "id": "keepa-B0G5X7W9MK-neuf",
+   "titre": "KLYNGTSK Jouet intelligent pour chien - Jouet interactif intelligent avec lumière et 3 modes de jeu ",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0G5X7W9MK",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0G5X7W9MK",
+   "ref_fr": 37.58,
+   "description": "moyenne 90 j 37.58 €, baisse 47 %, rang 2527"
+  },
+  {
+   "id": "keepa-B01G7G6IGU-neuf",
+   "titre": "Laisse Ronde Classique en Nylon",
+   "temperature": 376,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 21.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01G7G6IGU",
+   "date": "2026-11-17T00:21",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B01G7G6IGU",
+   "ref_fr": 41.33,
+   "description": "moyenne 90 j 41.33 €, baisse 47 %, rang 41001"
+  },
+  {
+   "id": "keepa-B08NPM9848-neuf",
+   "titre": "Table d'extension Brother WT17",
+   "temperature": 368,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08NPM9848",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B08NPM9848",
+   "ref_fr": 64.74,
+   "description": "moyenne 90 j 64.74 €, baisse 46 %, rang 65160"
+  },
+  {
+   "id": "keepa-B0HMVVNT6C-neuf",
+   "titre": "XIZYO Forme Ondulée Coque pour iPhone 18 Pro, Rose",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HMVVNT6C",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0HMVVNT6C",
+   "ref_fr": 23.8,
+   "description": "moyenne 90 j 23.8 €, baisse 45 %, rang 4868"
+  },
+  {
+   "id": "keepa-B0FTMX11DX-neuf",
+   "titre": "MATT & ROSE Parure de lit Coton LAVÉ Unie avec taies à Volant 100% Coton",
+   "temperature": 360,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FTMX11DX",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FTMX11DX",
+   "ref_fr": 54.1,
+   "description": "moyenne 90 j 54.1 €, baisse 45 %, rang 30008"
+  },
+  {
+   "id": "keepa-B0B7MP5H44-neuf",
+   "titre": "L’Oréal Paris Excellence Cool Crème Blond Foncé Ultra Cendré 6.11 - Coloration Permanente",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 12.3,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0B7MP5H44",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0B7MP5H44",
+   "ref_fr": 22.0,
+   "description": "moyenne 90 j 22.0 €, baisse 44 %, rang 2189"
+  },
+  {
+   "id": "keepa-B0HQ6SW254-neuf",
+   "titre": "Komfortec Jersey Drap Housse 90x200 cm, 100% Coton - Rouge",
+   "temperature": 352,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HQ6SW254",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0HQ6SW254",
+   "ref_fr": 24.96,
+   "description": "moyenne 90 j 24.96 €, baisse 44 %, rang 5526"
+  },
+  {
+   "id": "keepa-B09BB7MYQ3-neuf",
+   "titre": "ROSSIGNOL Poubelle cuisine automatique 45L fabriquée en France",
+   "temperature": 344,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 39.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09BB7MYQ3",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B09BB7MYQ3",
+   "ref_fr": 70.12,
+   "description": "moyenne 90 j 70.12 €, baisse 43 %, rang 21272"
+  },
+  {
+   "id": "keepa-B099KDXWQZ-neuf",
+   "titre": "MAMEIDO Gourde Isotherme 1 l (Pearl Marble Gold)",
+   "temperature": 344,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 19.21,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B099KDXWQZ",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B099KDXWQZ",
+   "ref_fr": 33.93,
+   "description": "moyenne 90 j 33.93 €, baisse 43 %, rang 8340"
+  },
+  {
+   "id": "keepa-B0C2YFWC65-neuf",
+   "titre": "Coup d'Éclat Lot de 6 Ampoules Lift et Lumière",
+   "temperature": 344,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 17.49,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0C2YFWC65",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0C2YFWC65",
+   "ref_fr": 30.65,
+   "description": "moyenne 90 j 30.65 €, baisse 43 %, rang 26335"
+  },
+  {
+   "id": "keepa-B0G81M35YG-neuf",
+   "titre": "LuckyZoo77 Tapis Rafraîchissant Chien L 90×50 cm",
+   "temperature": 336,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0G81M35YG",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0G81M35YG",
+   "ref_fr": 25.68,
+   "description": "moyenne 90 j 25.68 €, baisse 42 %, rang 40427"
+  },
+  {
+   "id": "keepa-B084FL1JCP-neuf",
+   "titre": "Schwarzkopf Perfect Mousse Coloration mousse permanente 388/3-88 Châtain rouge foncé (3 x 93 ml), co",
+   "temperature": 336,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 14.23,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B084FL1JCP",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B084FL1JCP",
+   "ref_fr": 24.39,
+   "description": "moyenne 90 j 24.39 €, baisse 42 %, rang 22157"
+  },
+  {
+   "id": "keepa-B081JWSXK9-neuf",
+   "titre": "SoBuy Bibliothèque Enfant, Meuble Rangement Enfant avec 3 Niveaux et 1 Boîte de Rangement, Étagère L",
+   "temperature": 336,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B081JWSXK9",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B081JWSXK9",
+   "ref_fr": 51.28,
+   "description": "moyenne 90 j 51.28 €, baisse 42 %, rang 13534"
+  },
+  {
+   "id": "keepa-B0FNR7XHJ5-neuf",
+   "titre": "DODO - Housse de Couette 220x240cm - Studio - Bleu - 100% Coton",
+   "temperature": 336,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 39.6,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FNR7XHJ5",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FNR7XHJ5",
+   "ref_fr": 68.46,
+   "description": "moyenne 90 j 68.46 €, baisse 42 %, rang 68055"
+  },
+  {
+   "id": "86a6abb13b",
+   "titre": "Sala de Estar de Los Simpson, Set de Juego con Licencia Oficial",
+   "temperature": 321,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sala-de-estar-de-los-simpson-set-de-juego-con-licencia-oficial-2071819",
+   "date": "Tue, 17 Nov 2026 00:12:06 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,99€ - Amazon Jakks Pacific Diorama de la Sala de Estar de Los Simpson, Set de Juego con Licencia Oficial, Incluye una minifigura de Homer de 6 cm y Accesorios, Divertidas Fu..."
+  },
+  {
+   "id": "keepa-B09TTNJ54Q-arbDE",
+   "titre": "Mitchell Adventure 2 Canne à pêche en composite de verre durable avec guides en acier inox [Amazon DE]",
+   "temperature": 290,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 17.19,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B09TTNJ54Q",
+   "date": "2026-11-17T03:27",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "0022021648313",
+   "asin": "B09TTNJ54Q",
+   "ref_fr": 34.21,
+   "ventes_30j": 12,
+   "vendeurs": 1,
+   "description": "Amazon.fr 34.21 € (moyenne 90 j 33.75 €), écart 29 % port compris, ventes 30 j 12, 1 vendeurs FR"
+  },
+  {
+   "id": "be72e3fdae",
+   "titre": "Jysk 50 zł zniżka za zakupy powyżej 250zl",
+   "temperature": 269,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "JYSK",
+   "prix": 11.75,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/kupony/jysk-50-zl-znizka-za-zakupy-powyzej-250zl-1385245",
+   "date": "Tue, 17 Nov 2026 00:11:35 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "JYSK Jeżeli planujesz jakieś zakupy powyżej 250zl w Jysk to możesz użyć kuponu 50zl off. Kupon można użyć kilka razy ( bez limitu) , na przykład ja kupił..."
+  },
+  {
+   "id": "285632b64f",
+   "titre": "Orient Revival World Map 75th Anniversary automático y zafiro 43,5 mm – Edición limitada a 1.500 unidades",
+   "temperature": 244,
+   "categorie": "Moda y accesorios",
+   "marchand": "timeshop24",
+   "prix": 358.53,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/orient-revival-world-map-75th-anniversary-automatico-y-zafiro-435-mm-edicion-limitada-a-1500-unidades-2073157",
+   "date": "Tue, 17 Nov 2026 00:46:01 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "358,53€ - timeshop24 Orient recupera uno de sus diseños más emblemáticos con esta edición especial Revival World Map, creada para celebrar el 75.º aniversario de la marca japonesa.<..."
+  },
+  {
+   "id": "eecfceb161",
+   "titre": "Seagate Expansion, 5 TB, External Hard Drive HDD, 3.5 Inch, USB 3.0, PC & Notebook, 2 Years Rescue Services (STKM5000400)",
+   "temperature": 243,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 176.73,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/seagate-expansion-5-tb-external-hard-drive-hdd-35-inch-usb-30-pc-notebook-2-years-rescue-services-stkm5000400-2073031",
+   "date": "Tue, 17 Nov 2026 00:11:01 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "176,73€ - Amazon Diseño de unidad portátil elegante y sencillo para hacer fotos, grabar películas, música y más, allá donde vaya. Guarde los archivos c..."
+  },
+  {
+   "id": "3e05d9e3fc",
+   "titre": "2N - Cadre pour l'installation sur la surface 2 modules 9155022B",
+   "temperature": 240,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 140.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582940.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -30 %. 2N - Cadre pour l'installation sur la surface 2 modules 9155022B"
+  },
+  {
+   "id": "18b8ec337d",
+   "titre": "Smartfon Samsung Galaxy S26 FE 5G (bez abonamentu i blokady)",
+   "temperature": 234,
+   "categorie": "Elektronika",
+   "marchand": "T-Mobile",
+   "prix": 587.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/samsung-galaxy-s26-fe-5g-bez-abonamentu-i-blokady-1389671",
+   "date": "Tue, 17 Nov 2026 00:26:27 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "2 499zł - T-Mobile Pewne źródło (T-mobile), 2 lata rękojmi, bezpłatna dostawa, bez abonamentu (trzeba zaznaczyć)."
+  },
+  {
+   "id": "262e84d6c7",
+   "titre": "Bosch amoladora pequeña UniversalGrind 7-125 (750 W; con 2 discos de corte recto y 1 disco de amolado",
+   "temperature": 230,
+   "categorie": "Jardín y bricolaje",
+   "marchand": "Amazon",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bosch-amoladora-pequena-universalgrind-7-125-750-w-con-2-discos-de-corte-recto-y-1-disco-de-amolado-2072948",
+   "date": "Tue, 17 Nov 2026 00:29:59 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "39,99€ - Amazon Bosch amoladora pequeña UniversalGrind 7-125 (750 W; con 2 discos de corte recto y 1 disco de amolado; para amolar, cortar, cepillar y lijar; en embalaje de car..."
+  },
+  {
+   "id": "09a5c8846d",
+   "titre": "Sennheiser Momentum 4 Wireless ANC adaptativa, 60 h de batería, aptX Adaptive, multipunto, drivers 42 mm, carga rápida, Grafito",
+   "temperature": 225,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sennheiser-momentum-4-wireless-anc-adaptativa-60-h-de-bateria-aptx-adaptive-multipunto-drivers-42-mm-carga-rapida-grafito-2073161",
+   "date": "Tue, 17 Nov 2026 00:30:03 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "169€ - Amazon Buen precio para los Sennheiser Momentum 4 Wireless, unos de los auriculares de diadema con cancelación de ruido más completos que hay, ahora en color grafit..."
+  },
+  {
+   "id": "9577f3f044",
+   "titre": "Soporte TV Pared Articulado Inclinable y Giratorio para TV 26-65\", Carga hasta 35kg, MAX VESA con Cable HDMI",
+   "temperature": 223,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 19.6,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/soporte-tv-pared-articulado-inclinable-y-giratorio-para-tv-26-65-carga-hasta-35kg-max-vesa-con-cable-hdmi-2073116",
+   "date": "Tue, 17 Nov 2026 00:28:47 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,60€ - Amazon Soporte Universal para TV: Este soporte de pared para TV se adapta a la mayoría de televisores de 26 a 55 pulgadas, que tiene una capacidad de carga ..."
+  },
+  {
+   "id": "64e3622665",
+   "titre": "Blink Outdoor 4 Cámara con Blink Videotimbre 2K+ cableado (última generación) gratis, módulo de sincronización básico incluido",
+   "temperature": 218,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/blink-outdoor-4-camara-con-blink-videotimbre-2k-cableado-ultima-generacion-gratis-modulo-de-sincronizacion-basico-incluido-2073078",
+   "date": "Tue, 17 Nov 2026 00:28:02 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "24,99€ - Amazon ¡Kit de seguridad Blink por solo 24,99 € en Amazon! Oportunidad muy interesante para montar un sistema de vigilancia en casa por muy poco dinero.<b..."
+  },
+  {
+   "id": "68ddb667be",
+   "titre": "Corberó - Termo Eléctrico Vertical | CTMBA80 | 72L | Panel Mecánico | Tanque esmaltado | Anticorrosión | Termostato Regulable Exterior",
+   "temperature": 214,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/corbero-termo-electrico-vertical-ctmba80-72l-panel-mecanico-tanque-esmaltado-anticorrosion-termostato-regulable-exterior-2072792",
+   "date": "Tue, 17 Nov 2026 02:06:37 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "99€ - Amazon CAPACIDAD AMPLIA DE 80 LITROS – Ideal para hogares con hasta 3 o 4 personas, este modelo proporciona una cantidad generosa de agua caliente para cubr..."
+  },
+  {
+   "id": "b2ac2e69de",
+   "titre": "Auriculares inalámbricos - Sennheiser Momentum 4, Cancelación ruido adaptativa, Autonomía 60h, Bluetooth, Gris",
+   "temperature": 212,
+   "categorie": "Electrónica",
+   "marchand": "MediaMarkt",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/auriculares-inalambricos-sennheiser-momentum-4-cancelacion-ruido-adaptativa-autonomia-60h-bluetooth-gris-2072671",
+   "date": "Tue, 17 Nov 2026 00:29:56 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "169€ - MediaMarkt Consigue una calidad de sonido inigualable con tecnología innovadora para los amantes del sonido con los auriculares inalámbricos Sennheiser Momentum 4. <..."
+  },
+  {
+   "id": "02c116a1b7",
+   "titre": "Placa Base AMD AM5 - GigaByte B650M Aorus Elite AX Ice 12+2+2 Fases, 1xPCIe 5.0 + 2xPCIe 4.0 M.2, Wi-Fi 6E, LAN 2.5GbE",
+   "temperature": 212,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 129.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/placa-base-amd-am5-gigabyte-b650m-aorus-elite-ax-ice-1222-fases-1xpcie-50-2xpcie-40-m2-wi-fi-6e-lan-25gbe-2072903",
+   "date": "Tue, 17 Nov 2026 00:21:49 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "129,90€ - Amazon https://www.gigabyte.com/es/Motherboard/B650M-AORUS-ELITE-A..."
+  },
+  {
+   "id": "9edb531299",
+   "titre": "Hell is Us, RoboCop: Rogue City, Dragon Age: The Veilguar",
+   "temperature": 208,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "PlayStation Store",
+   "prix": 11.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/hell-is-us-robocop-rogue-city-2071232",
+   "date": "Tue, 17 Nov 2026 01:41:56 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,99€ - PlayStation Store La guerra es lo más cercano al infierno en la Tierra, porque esta alberga al peor demonio: la humanidad. En un país aislado y arrasado por luchas inter..."
+  },
+  {
+   "id": "725aeca9f1",
+   "titre": "Gra EA SPORTS FC 27, wersja PL na konsolę Nintendo Switch 2, key card, pudełko, online, wysyłka lub na Switch za 149,99 zl na @media expert",
+   "temperature": 206,
+   "categorie": "Gaming",
+   "marchand": "Media Expert",
+   "prix": 39.95,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/gra-ea-sports-fc-27-na-konsole-nintendo-switch-2-game-key-card-pudelko-online-i-wysylka-na-at-media-expert-1390949",
+   "date": "Tue, 17 Nov 2026 03:54:24 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "169,99zł - Media Expert Gra EA SPORTS FC 27 na konsolę Nintendo Switch 2, game key card, pudełko, online i wysyłka na @media expert (y) U konkurencji 240,58 zl z gwarancja ..."
+  },
+  {
+   "id": "a3c1518947",
+   "titre": "Elden Ring Standard Edition PS5",
+   "temperature": 202,
+   "categorie": "Gaming",
+   "marchand": "PcComponentes",
+   "prix": 18.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/elden-ring-standard-edition-ps5-2073210",
+   "date": "Tue, 17 Nov 2026 03:45:15 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "18,99€ - PcComponentes ELDEN RING es un juego de rol y acción de ambientación fantástica desarrollado por FromSoftware Inc. y producido por BANDAI NAMCO. Está ambientando en un mundo ..."
+  },
+  {
+   "id": "583d2f9f8d",
+   "titre": "UGREEN NAS UPS US2000, Batería 6000 mAh y Protección contra Sobretensiones",
+   "temperature": 201,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ugreen-nas-ups-us2000-bateria-6000-mah-y-proteccion-contra-sobretensiones-2073055",
+   "date": "Tue, 17 Nov 2026 02:24:49 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "59,99€ - Amazon UGREEN NAS UPS US2000, Batería 6000 mAh y Protección contra Sobretensiones Compatible con UGREEN NAS DH2300, DH4300 Plus, DXP2800, DXP2800GT <u..."
+  },
+  {
+   "id": "2fc8fa4b1b",
+   "titre": "ZURU Tytan Magnetic Tiles Set de Construcción Magnético 60 Piezas",
+   "temperature": 197,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zuru-tytan-magnetic-tiles-set-de-construccion-magnetico-60-piezas-2071182",
+   "date": "Tue, 17 Nov 2026 01:48:46 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "14,99€ - Amazon JUEGO MAGNÉTICO DE 60 PIEZAS: Las coloridas piezas de diferentes formas permiten a los niños construir torres, casas e infinitas creaciones en 2D y 3..."
+  },
+  {
+   "id": "acdefc2066",
+   "titre": "Giochi Preziosi ÚNICO Eyes, Muñeca de 25 cm - Sophia, con su Mirada Que te Sigue de los Ojos",
+   "temperature": 193,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 10.67,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/giochi-preziosi-unico-eyes-muneca-de-25-cm-sophia-con-su-mirada-que-te-sigue-de-los-ojos-2058116",
+   "date": "Tue, 17 Nov 2026 02:27:18 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,67€ - Amazon FUNCIÓN ÚNICA: Los ojos únicos de las muñecas que te siguen de la mirada. Colección: Mariposa. Nueva colección de muñecas Unique Eyes,..."
+  },
+  {
+   "id": "24e36cdcb2",
+   "titre": "Videojuego Nioh 3 PS5",
+   "temperature": 189,
+   "categorie": "Gaming",
+   "marchand": "Fnac",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/videojuego-nioh-3-ps5-2073077",
+   "date": "Tue, 17 Nov 2026 04:12:30 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "29,99€ - Fnac El protagonista, Takechiyo Tokugawa, se embarca en una batalla que trasciende el tiempo para cambiar el destino y salvar a Japón, que está gobernado por yoka..."
+  },
+  {
+   "id": "08dc1af86d",
+   "titre": "Armario multiusos de madera Muebles Pitarch Tibet, roble Cambrian (35 x 40 x 180 cm)",
+   "temperature": 184,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Bauhaus",
+   "prix": 28.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/armario-multiusos-de-madera-muebles-pitarch-tibet-roble-cambrian-35-x-40-x-180-cm-2070920",
+   "date": "Tue, 17 Nov 2026 02:36:59 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "28,50€ - Bauhaus El armario multiusos Tibet de Muebles Pitarch es un mueble de almacenamiento vertical y compacto, con 35 cm de fondo, 40 cm de ancho y ..."
+  },
+  {
+   "id": "6684593938",
+   "titre": "Logitech Z150 Sistema de Altavoces Compacto",
+   "temperature": 181,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 16.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/logitech-z150-sistema-de-altavoces-compacto-2072979",
+   "date": "Tue, 17 Nov 2026 01:25:57 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "16,99€ - Amazon Logitech Z150 es un estéreo 2.0 de dos altavoces compactos , con transductores de 2\", 3 W RMS, picos de 6 W, 65 Hz–20 kHz y sin subwo..."
+  },
+  {
+   "id": "10a4d669e0",
+   "titre": "Duronic S125B Surge Protected 4 Way Extension Lead, Multi Plug Adapter with USB USB-C Ports - Sold by Duronic/FBA",
+   "temperature": 152,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 8.07,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/duronic-s125b-surge-protected-4-way-extension-lead-multi-plug-adapter-with-usb-usb-c-ports-5035045",
+   "date": "Mon, 16 Nov 2026 23:45:59 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.07 - Amazon Duronic S125B 4 Way Extension Lead, Multi Plug Adapter with USB USB-C Ports Compact 4 Gang Multi Socket Lead with Switches for Home and Office Us..."
+  },
+  {
+   "id": "44a162434a",
+   "titre": "Levi's Men's Seine Belt (pack of 1) - Early Black Friday",
+   "temperature": 135,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Amazon",
+   "prix": 12.17,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/levis-mens-seine-belt-pack-of-1-5035051",
+   "date": "Tue, 17 Nov 2026 00:39:10 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£12.17 - Amazon Levi's Men's Seine Belt (pack of 1) The Levi's Men's Seine Belt , available for £12.17 on Amazon, is a versatile accessory crafted for t..."
+  },
+  {
+   "id": "61685eb30a",
+   "titre": "Chaussures de randonnée Salomon X Ultra 360 Leather Mid Gore-Tex",
+   "temperature": 131,
+   "categorie": "Sports & Plein air",
+   "marchand": "Amazon",
+   "prix": 89.24,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-de-randonnee-salomon-x-ultra-360-leather-mid-gore-tex-du-40-au-49-3457879",
+   "date": "Tue, 17 Nov 2026 00:34:11 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "89,24€ - Amazon Caractéristiques : Style / Tige : Coupe montante (Mid) en cuir suédé robuste et synthétique Membrane imperméable : Gore-Tex® (mainti..."
+  },
+  {
+   "id": "b6c57e45b2",
+   "titre": "Toshiba Canvio Partner 2TB Portable 2.5’’ External Hard Drive, USB 3.2, Mac & Windows Compatible. (HDTB520EK3AB)",
+   "temperature": 129,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 75.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/toshiba-canvio-partner-2tb-portable-25-external-hard-drive-usb-32-mac-windows-compatible-hdtb520ek3ab-5035355",
+   "date": "Tue, 17 Nov 2026 01:09:07 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£75.99 - Amazon Toshiba Canvio Partner 2TB Portable 2.5’’ External Hard Drive, USB 3.2, Mac & Windows compatible. (HDTB520EK3AB) The Toshiba Canvio Partner ..."
+  },
+  {
+   "id": "55294db840",
+   "titre": "Ratchet & Clank: Rift Apart (PS5)",
+   "temperature": 129,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 22.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ratchet-clank-rift-apart-ps5-5035227",
+   "date": "Tue, 17 Nov 2026 00:07:03 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£22.99 - Amazon Feel in-game actions through the haptic feedback of the DualSense wireless controller. Take full control of advanced weapon mechanics,..."
+  },
+  {
+   "id": "1e6d5a58ec",
+   "titre": "Logitech G PRO 2 LIGHTSPEED Wireless Gaming Mouse for Laptop, PC/Mac, White",
+   "temperature": 127,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 49.97,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/logitech-g-pro-2-lightspeed-wireless-gaming-mouse-for-laptop-pcmac-white-ps4997-amazon-5034684",
+   "date": "Tue, 17 Nov 2026 01:25:22 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£49.97 - Amazon Lowest Price this Year! Amazing Price for this Gaming Classic. DESIGNED WITH PROS. ENGINEERED TO WIN. We built the PR..."
+  },
+  {
+   "id": "ed885178cd",
+   "titre": "Alan Wake 2 Deluxe Edition ►23,99€ | Disc (inkl. Alan Wake Remastered) Playstation 5 | PS5 | Horror Action Adventure | Otto Up",
+   "temperature": 126,
+   "categorie": "Gaming",
+   "marchand": "OTTO",
+   "prix": 23.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/alan-wake-2-deluxe-edition-2399eur-disc-playstation-5-ps5-horror-action-adventure-otto-up-2873332",
+   "date": "Tue, 17 Nov 2026 02:31:30 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "23,99€ - OTTO Alan Wake 2 Deluxe Edition für die Playstation 5 gibt es aktuell für 23,99€ bei Otto mit dem OttoUp Abo <br..."
+  },
+  {
+   "id": "c7396c2a43",
+   "titre": "Interrupteur à Cadran Portatif Philips Hue Tap dial blanc",
+   "temperature": 125,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 32.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/philips-hue-tap-dial-blanc-3458126",
+   "date": "Tue, 17 Nov 2026 00:14:01 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "32,49€ - Amazon Super prix grâce à un coupon à cocher directement sur la page du produit ! À propos de ce produit Ce qui est requis - Rien Ce..."
+  },
+  {
+   "id": "3a8b72de3f",
+   "titre": "Eastpak Tranverz L Koffer / Rollreisetasche (121 L, 79 cm, div. Farben z. B. Sunday Grey & Triple Denim)",
+   "temperature": 122,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 91.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/eastpak-tranverz-l-koffer-rollreisetasche-121-l-79-cm-div-farben-z-b-sunday-grey-triple-denim-2872306",
+   "date": "Tue, 17 Nov 2026 00:10:37 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "91€ - Amazon Reise-Klassiker mit 121 Litern Packvolumen: Robuster Eastpak Tranverz L Rollkoffer in mehreren Farben ab 91,00 Euro frei Haus! Bei A..."
+  },
+  {
+   "id": "c907a34104",
+   "titre": "Wera Kraftform Big Pack 100 VDE, Schraubendreher Set 14-teilig, 05105631001, PRIME",
+   "temperature": 122,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 45.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/wera-kraftform-big-pack-100-vde-schraubendreher-set-14-teilig-05105631001-2872414",
+   "date": "Tue, 17 Nov 2026 00:10:13 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "45,79€ - Amazon Es gibt das VDE Schraubendreher Set zu guten Kurs. Hab gleich zugeschlagen. Hab schon ein paar zu Hause und sind echt top verarbeitet. <b..."
+  },
+  {
+   "id": "fc2a4f7b4b",
+   "titre": "Bosch SDS plus-Adapter mit Bohrfutter [PRIME]",
+   "temperature": 121,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 10.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bosch-sds-plus-adapter-mit-bohrfutter-prime-2873250",
+   "date": "Tue, 17 Nov 2026 00:18:46 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "10,99€ - Amazon Das Bosch Bohrfutter mit SDS-Aufnahme gibt es gerade bei Amazon für 10,99 (mit Prime ohne VSK). Laut idealo der aktuelle Bestpreis seit Monaten. ..."
+  },
+  {
+   "id": "5c4215cbba",
+   "titre": "Chilly's Original Stainless Steel Water Bottle - Pink 500ml",
+   "temperature": 121,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Amazon",
+   "prix": 12.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/chillys-pink-water-flask-500ml-5035435",
+   "date": "Tue, 17 Nov 2026 00:16:36 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£12 - Amazon Very gkkd price for a chillys flask usually over £20 The Chilly's Original Stainless Steel Water Bottle in a vibrant pink hue is availa..."
+  },
+  {
+   "id": "6d7ff2576b",
+   "titre": "SURFOU Kitchen Tap Mixer with Pull-Out Spray",
+   "temperature": 120,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 13.51,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/surfou-kitchen-tap-mixer-with-pull-out-spray-5035216",
+   "date": "Tue, 17 Nov 2026 01:09:50 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£13.51 - Amazon 3 Modes with Pause Function: This pull-out kitchen faucet offers three convenient modes: a gentle aerated stream for everyday use, a powerful spray for ..."
+  },
+  {
+   "id": "30553228c5",
+   "titre": "Boîtier PC Triple Chambre Moyen-Tour Panoramique Corsair AIR 5400 RS-R ARGB",
+   "temperature": 119,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 135.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boitier-pc-triple-chambre-moyen-tour-panoramique-corsair-air-5400-rs-r-argb-3457993",
+   "date": "Tue, 17 Nov 2026 02:04:17 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "135,99€ - Amazon - Des performances de refroidissement supérieures sont possibles grâce à des chambres isolées pour le matériel le plus puissant, y compris le processeur, la ..."
+  },
+  {
+   "id": "bf9ba1eaa3",
+   "titre": "[IKEA Family] HOVET Spiegel, Aluminium, 78x196 cm",
+   "temperature": 119,
+   "categorie": "Home & Living",
+   "marchand": "IKEA",
+   "prix": 119.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ikea-family-hovet-spiegel-aluminium-78x196-cm-2873168",
+   "date": "Tue, 17 Nov 2026 00:46:03 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "119€ - IKEA Auch in anderen Farben erhältlich. Online mit Spedition/Click and Collect mit Zusatzkosten. • Maße: 78 × 196 cm • Aluminium <br /..."
+  },
+  {
+   "id": "35808b2d37",
+   "titre": "RYOBI 18V ONE+ 18 Gauge Nailer (Battery & Charger Excluded)",
+   "temperature": 119,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 135.19,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ryobi-18-guage-brad-nailer-5034747",
+   "date": "Tue, 17 Nov 2026 00:10:24 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£135.19 - Amazon AirStrike Technology delivers true cordless nailing convenience, eliminating the need for noisy compressors, bulky air hoses, or expensive gas cartridge..."
+  },
+  {
+   "id": "b957bda55e",
+   "titre": "Jeu de clés mixtes Bosch Professional - 10 pièces",
+   "temperature": 118,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Amazon.es",
+   "prix": 64.45,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/jeu-de-cles-mixtes-bosch-professional-10-pieces-3457975",
+   "date": "Tue, 17 Nov 2026 00:23:58 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "64,45€ - Amazon.es Set de 10 clés mixtes plates/à cliquet, tailles couvrant un bon panel. - Le set de clés mixtes à usage universel associant clé plate et clé polygonal..."
+  },
+  {
+   "id": "43691aad59",
+   "titre": "Casque gamer sans Fil JBL Quantum 910 - Réduction de Bruit Active",
+   "temperature": 118,
+   "categorie": "High-Tech",
+   "marchand": "Boulanger",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-gamer-sans-fil-jbl-quantum-910-reduction-de-bruit-active-3455940",
+   "date": "Tue, 17 Nov 2026 00:20:38 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "99,99€ - Boulanger Description Ces voix sont-elles derrière vous ? Des pas à gauche ? Entendre votre environnement est crucial, mais un son vraiment immersif qui vous do..."
+  },
+  {
+   "id": "5c0131c893",
+   "titre": "Evercade - The C64 Collection 3 - Game Cartridge",
+   "temperature": 118,
+   "categorie": "Gaming",
+   "marchand": "Very",
+   "prix": 11.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/evercade-the-c64-collection-3-5035448",
+   "date": "Tue, 17 Nov 2026 00:28:08 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£11.99 - Very As well as the Evercade device reduced to it's lowest price I've seen (see deal here > <a href=\"https://www.hotukdeals.com/deals/evercade-data-east-super-..."
+  },
+  {
+   "id": "635becdd0f",
+   "titre": "Set 2 Batteries Smart 20 V, 4 Ah, PAPP 204 A1",
+   "temperature": 117,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Lidl",
+   "prix": 45.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/set-2-batteries-smart-20-v-4-ah-papp-204-a1-3456694",
+   "date": "Tue, 17 Nov 2026 00:27:47 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "45,99€ - Lidl Set 2 Batteries Smart 20 V, 4 Ah, PAPP 204 A1 Offre Combo: 2 batteries pour 45,99 euros soit 22,99 euros la batterie et livrable en locker..."
+  },
+  {
+   "id": "376d3dd16f",
+   "titre": "Metal Gear Solid Delta Snake Eater Deluxe Edition sur PS5",
+   "temperature": 117,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Micromania Zing",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/metal-gear-solid-delta-snake-eater-deluxe-edition-ps5-3457811",
+   "date": "Tue, 17 Nov 2026 00:13:47 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "59,99€ - Micromania Zing Très bon prix ! Contenu de l'édition DELUXE : - Le jeu en version physique - Un boitier steelbook - écusson brodé fox - de..."
+  },
+  {
+   "id": "4cc4da2eaf",
+   "titre": "OPPO Reno15 FS 5G Smartphone CPH2801 Europe 512GB 8GB Twilight Black OEU Joyplus Members (Free To Sign Up)",
+   "temperature": 117,
+   "categorie": "Electronics",
+   "marchand": "Joybuy",
+   "prix": 229.64,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/oppo-reno15-fs-5g-smartphone-cph2801-europe-512gb-8gb-twilight-black-oeu-joyplus-members-free-to-sign-up-5034630",
+   "date": "Tue, 17 Nov 2026 00:44:10 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£229.64 - Joybuy Price dropped on the dark blue to £229.64 for Joyplus member with a free 30 day trial Product Highlights High-performanc..."
+  },
+  {
+   "id": "004be5e592",
+   "titre": "Evercade Data East Super Pocket with 18 Pre-Loaded Games",
+   "temperature": 117,
+   "categorie": "Gaming",
+   "marchand": "Very",
+   "prix": 37.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/evercade-data-east-super-pocket-with-18-pre-loaded-games-5035446",
+   "date": "Tue, 17 Nov 2026 00:01:17 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£37.99 - Very Further to my previous offer with this hand-held console at this price at Amazon (now sold out), also available at Very at £37.99 (credit to <a href=\"/profil..."
+  },
+  {
+   "id": "71e4e9931e",
+   "titre": "Filippo Berio Organic Extra Virgin Olive Oil, 1.5l",
+   "temperature": 117,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 10.92,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/filippo-berio-organic-extra-virgin-olive-oil-15l-5035210",
+   "date": "Mon, 16 Nov 2026 23:35:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.92 - Amazon Brand Name Filippo Berio Flavor Organic Extra Virgin Country of Origin Italy Import Designation Imported Item Form Oil Specialty organi..."
+  },
+  {
+   "id": "37ac5d81d2",
+   "titre": "Pavillon Coleman Event Shelter XL Pro",
+   "temperature": 116,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Amazon",
+   "prix": 172.29,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/coleman-event-shelter-xl-pro-2873245",
+   "date": "Tue, 17 Nov 2026 01:48:27 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "172,29€ - Amazon Die Pro Variante des Coleman Event Shelters. Hält in unserer Gruppe seit Jahren zuverlässig jedes Festival durch. Hat Starkregen und Dauerregen überlebt (ja, da..."
+  },
+  {
+   "id": "5a7026e4d7",
+   "titre": "Boîtier PC Lian-Li & DAN Cases A3-mATX",
+   "temperature": 114,
+   "categorie": "High-Tech",
+   "marchand": "PcComponentes",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boitier-pclian-li-dan-cases-a3-matx-3455913",
+   "date": "Tue, 17 Nov 2026 00:33:15 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "64,99€ - PcComponentes Détails du produit: Format : Mini-tour Format de la carte mère : M-ATX/ITX Façade en maill..."
+  },
+  {
+   "id": "2e9aefb089",
+   "titre": "Aldi Talk (Telefonica Netz): Einmalig zusätzlich 200 GB Datenvolumen kostenlos in den Jahrespaketen S (insg. 500GB) und L (insg. 700GB)",
+   "temperature": 113,
+   "categorie": "Telefon- & Internet-Verträge",
+   "marchand": "ALDI TALK",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aldi-talk-telefonica-netz-einmalig-zusatzlich-200-gb-datenvolumen-kostenlos-in-den-jahrespaketen-s-insg-500gb-und-l-insg-700gb-2873126",
+   "date": "Tue, 17 Nov 2026 00:24:12 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "99,99€ - ALDI TALK Kunden die bis zum 07.12. ein Jahrespaket S oder L buchen, können über die Aldi-Talk-App einmalig 200 GB zusätz­liches Daten­volumen kostenlos aktivieren. Damit..."
+  },
+  {
+   "id": "24af9eca98",
+   "titre": "The Walking Dead: The Telltale Definitive Series (PS4)",
+   "temperature": 113,
+   "categorie": "Gaming",
+   "marchand": "The Game Collection",
+   "prix": 10.95,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/the-walking-dead-the-telltale-definitive-series-ps4-5035048",
+   "date": "Tue, 17 Nov 2026 00:15:23 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.95 - The Game Collection The series that revolutionized storytelling in games. The Walking Dead: the Telltale definitive series contains all 4 seasons, 400 days DLC, and the Walking ..."
+  },
+  {
+   "id": "fbc185cead",
+   "titre": "BG Electrical WP22RCD-01 Double Weatherproof Outdoor Switched Power Socket with Latching RCD, IP66 Rated, 13 Amp - Early Black Friday",
+   "temperature": 113,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 15.89,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/bg-electrical-wp22rcd-01-double-weatherproof-outdoor-switched-power-socket-with-latching-rcd-ip66-rated-13-amp-5035037",
+   "date": "Tue, 17 Nov 2026 00:08:19 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£15.89 - Amazon BG Electrical WP22RCD-01 Double Weatherproof Outdoor Switched Power Socket with Latching RCD, IP66 Rated, 13 Amp The BG Electrical WP22RCD-01 Do..."
+  },
+  {
+   "id": "6d982fcd31",
+   "titre": "Barre de son Sony Bravia Theatre Bar 8 – Dolby Atmos, DTS:X, AirPlay 2, 360 Spatial Sound Mapping",
+   "temperature": 112,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 449.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/barre-de-son-sony-bravia-theatre-bar-8-dolby-atmos-dtsx-airplay-2-360-spatial-sound-mapping-3454592",
+   "date": "Tue, 17 Nov 2026 00:38:07 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "449€ - Amazon > Livraison gratuite ► Caractéristiques et description Son & technologies</st..."
+  },
+  {
+   "id": "047ba3fd5a",
+   "titre": "Tischfeuer Tenderflame Table Mountain 180 (Schwarz) für 119,97€ inkl. Versand (PVG / vorher: 399,90€) – Black Friday Sale @ Tenderflame",
+   "temperature": 109,
+   "categorie": "Home & Living",
+   "marchand": null,
+   "prix": 119.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tischfeuer-tenderflame-table-mountain-180-schwarz-fur-11997eur-inkl-versand-pvg-vorher-39990eur-black-friday-sale-at-tenderflame-2873138",
+   "date": "Tue, 17 Nov 2026 02:51:04 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "119,97€ Moin zusammen, bei Tenderflame läuft aktuell der Black Friday Sale mit Rabatten von bis zu 70 %. Wer für die dunkle Jahreszeit noch nach einem Tisch- o..."
+  },
+  {
+   "id": "7836731d66",
+   "titre": "Champagne Mumm Cordon Rouge Brut - 75 cl (via 10 € en bons d’achat)",
+   "temperature": 105,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Auchan",
+   "prix": 19.5,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/champagne-mumm-cordon-rouge-brut-75-cl-a-2950-eur-10-eur-en-bons-dachat-des-le-1711-3457647",
+   "date": "Tue, 17 Nov 2026 04:08:40 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,50€ - Auchan Conditions de l’offre : Prix : 29,50 € la bouteille de 75 cl. Offre valable du 17 au 22 novembre 2026 .</l..."
+  },
+  {
+   "id": "10943c2371",
+   "titre": "Perceuse à percussion Universal Impact 7500 Bosch",
+   "temperature": 105,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Alternate",
+   "prix": 34.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/bosch-perceuse-a-percussion-universalimpact-7500-3452671",
+   "date": "Tue, 17 Nov 2026 01:12:45 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "34,90€ - Alternate • Perçage à percussion dans la brique, le béton et la pierre • Perçage du bois, du métal, de la céramique et du plastique • Fonction vissage avec rota..."
+  },
+  {
+   "id": "bce8fbe420",
+   "titre": "Amazon Fire TV Stick 4K with Alexa+ and Vega OS + Free Click and Collect",
+   "temperature": 105,
+   "categorie": "Electronics",
+   "marchand": "Argos",
+   "prix": 31.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/amazon-fire-tv-stick-4k-with-alexa-and-vega-os-free-click-and-collect-5034379",
+   "date": "Tue, 17 Nov 2026 00:30:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£31.99 - Argos About this product Fire TV Stick 4K (2026) gives new life to your TV with simple 4K streaming, HDR10+, and fast performance. Includes ..."
+  },
+  {
+   "id": "7ba442311b",
+   "titre": "Clavier sans fil Logitech K400 Plus - Touch TV Avec Contrôle Média et Pavé Tactile, AZERTY, Noir",
+   "temperature": 101,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/clavier-sans-fil-logitech-k400-plus-touch-tv-avec-controle-media-et-pave-tactile-azerty-noir-3456612",
+   "date": "Tue, 17 Nov 2026 04:17:09 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "24,99€ - Amazon Bon prix :) → Vendu et expédié par Amazon. Livraison gratuite à domicile. ❖ Caractér..."
+  },
+  {
+   "id": "a32e8dd6bb",
+   "titre": "Masterplug OLU50134SL-PX Pro-XT Four Socket Open Cable Reel with Winding Handle, 50 Metres - Early Black Friday",
+   "temperature": 101,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Amazon",
+   "prix": 38.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/masterplug-olu50134sl-px-pro-xt-four-socket-open-cable-reel-with-winding-handle-thermal-cut-out-and-power-switch-50-metres-5034981",
+   "date": "Tue, 17 Nov 2026 03:10:52 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£38.99 - Amazon Masterplug OLU50134SL-PX Pro-XT Four Socket Open Cable Reel with Winding Handle, Thermal Cut Out and Power Switch, 50 Metres High Visibility Cable, Gre..."
+  },
+  {
+   "id": "790c009b45",
+   "titre": "🛍️ dreame T15 Pro Heat-A Aspirateur Laveur, Nettoyage des sols à 90 °C ✅ 399,00€ au lieu de 499,00€ ➡️ https://www.amazon.fr/dp/B0HBWYTRGX/?tag=pmrat-21 Publici",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 399.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HBWYTRGX/?tag=pmrat-21",
+   "date": "2026-11-16T23:10",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ dreame T15 Pro Heat-A Aspirateur Laveur, Nettoyage des sols à 90 °C ✅ 399,00€ au lieu de 499,00€ ➡️ https://www.amazon.fr/dp/B0HBWYTRGX/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 499.0
+  },
+  {
+   "id": "e1fac33cd4",
+   "titre": "🛍️ Panasonic SD-YR2550SXE Machine à Pain Auto, Distributeurs de Raisins Secs, de Noix et de Levure, 31 Programmes Auto ✅ 186,00€ au lieu de 239,00€ ➡️ https://w",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 186.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0921SL9SV/?tag=pmrat-21",
+   "date": "2026-11-16T23:17",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Panasonic SD-YR2550SXE Machine à Pain Auto, Distributeurs de Raisins Secs, de Noix et de Levure, 31 Programmes Auto ✅ 186,00€ au lieu de 239,00€ ➡️ https://www.amazon.fr/dp/B0921SL9SV/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 239.0
+  },
+  {
+   "id": "3c05c40e06",
+   "titre": "Lot de 3 boxers homme Calvin Klein 24.5 au lieu de 44.9€ https://www.amazon.fr/dp/B001BEAWZM/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 24.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B001BEAWZM/?tag=chollosyofe0b-20",
+   "date": "2026-11-16T23:16",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Lot de 3 boxers homme Calvin Klein 24.5 au lieu de 44.9€ https://www.amazon.fr/dp/B001BEAWZM/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 44.9
+  },
+  {
+   "id": "634022a6f6",
+   "titre": "Split fiction switch 2",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Nintendo",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/split-fiction-switch-2-3458405",
+   "date": "Tue, 17 Nov 2026 03:51:37 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "29,99€ - Nintendo • Jeu d’action-aventure • Mode coopératif • Univers de science-fiction et de fantasy • Pour Nintendo Switch 2"
+  },
+  {
+   "id": "5f70016742",
+   "titre": "Roborock Qrevo S Pro Set Robot Aspirateur Laveur, Anti-enchevêtrements",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 299.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/roborock-qrevo-s-pro-set-robot-aspirateur-laveur-anti-enchevetrements-3458403",
+   "date": "Tue, 17 Nov 2026 03:18:19 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "299,99€ - Amazon Station d'accueil tout-en-un pour un nettoyage mains libres : Version améliorée du modèle QV 35A, ce robot aspirateur laveur régénère ses serpillières grâce à un auto-nettoyage à haute température (75 °C) et à un séchage à l'air chaud (45 °C). Il assure également la vidange automati"
+  },
+  {
+   "id": "8cbef5a4d8",
+   "titre": "Jeu de Société - Qui est-ce ? (Via Remise Panier)",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 10.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/jeu-de-societe-qui-est-ce-via-remise-au-panier-3458395",
+   "date": "Tue, 17 Nov 2026 01:37:49 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "10,49€ - Amazon La remise se voit en page paiement uniquement Description : LE JEU DE DEVINETTES ORIGINAL : Les enfants pourront s’amuser à deviner le personnage Mystère de leur adversaire pour remporter la partie en posant des questions qui doivent être répondues uniquement par « oui » ou par « non"
+  },
+  {
+   "id": "fc3286bfbe",
+   "titre": "Sélection de Lego en Promotion via Cagnottage - Ex : LEGO City 60511 - Le Train à Vapeur Rétro (via 17.50€ sur la Carte de Fidélité)",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Auchan",
+   "prix": 52.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/selection-de-lego-en-promotion-via-cagnottage-ex-le-train-a-vapeur-retro-lego-city-60511-via-175-sur-la-carte-de-fidelite-3458394",
+   "date": "Tue, 17 Nov 2026 01:21:43 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "52,49€ - Auchan A 89.99 € chez LEGO Profitez dès maintenant de 25 % crédités sur votre carte de fidélité sur les gammes : LEGO Ninjago LEGO City LEGO Friends LEGO DUPLO C’est le moment idéal pour faire plaisir aux petits comme aux grands ou préparer vos prochains cadeaux ! Exemples : LEGO CITY https"
+  }
+ ]
+}

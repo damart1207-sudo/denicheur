@@ -1,62 +1,8 @@
 {
- "tours_ok": 2270,
+ "tours_ok": 2271,
  "tours_echec": 11,
- "dernier_ok": "17/11 06:20",
+ "dernier_ok": "17/11 06:29",
  "evenements": [
-  {
-   "heure": "16/11 03:47",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Auto et Moto: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 03:56",
-   "niveau": "erreur",
-   "etape": "budget temps",
-   "message": "tour arrêté après 24 produits sur 25 (466 s) : le reste sera revu au prochain tour"
-  },
-  {
-   "heure": "16/11 03:56",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Animalerie: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 03:56",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Jardin: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 03:56",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Jeux vidéo: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 04:05",
-   "niveau": "erreur",
-   "etape": "budget temps",
-   "message": "tour arrêté après 13 produits sur 25 (403 s) : le reste sera revu au prochain tour"
-  },
-  {
-   "heure": "16/11 04:05",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "High-Tech: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 04:13",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Cuisine et Maison: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
-  {
-   "heure": "16/11 04:24",
-   "niveau": "erreur",
-   "etape": "moisson étagère",
-   "message": "Fournitures de bureau: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
   {
    "heure": "16/11 04:32",
    "niveau": "erreur",
@@ -1802,12 +1748,66 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "classements",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests | , line 189, in tour\n    top = chine(date=date) if pays == \"CN\" else amazon(pays)\n                                                ^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests\n"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "17/11 06:29",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  ],
  "dernier_resume": {
-  "heure": "17/11 06:16",
-  "annonces": 564,
-  "nouvelles": 246,
+  "heure": "17/11 06:26",
+  "annonces": 567,
+  "nouvelles": 251,
   "examinees": 25,
   "alertes": 0
  }

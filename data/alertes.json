@@ -99879,9 +99879,9 @@
     "Amazon 24/mois"
    ]
   },
-  "verifie_le": "2026-11-17T07:05+00:00",
+  "verifie_le": "2026-11-17T07:50+00:00",
   "verdict": {
-   "commentaire": "À revérifier : moniteur LG 32U721SA-W (blanc) à 199–209 € sur amazon.es (deal Chollometro), mais prix exact sur Amazon non lu et frais de port vers la France inconnus. Aucun prix neuf français fiable trouvé (LDLC et Alternate : plus en vente ; idealo/ledenicheur non lisibles). Indice seulement : Amazon.fr vendeurs tiers 325 €, plus bas 90 j 279 € (Keepa) — l'écart serait ~23 % si confirmé. Revente : marge ~23–26 € soit ~12 % du coût (< 15 %), donc pas de revente.",
+   "commentaire": "À revérifier : moniteur LG 32U721SA-W (blanc) à 199–209 € sur amazon.es (deal Chollometro), mais prix exact sur Amazon non lu et frais de port vers la France inconnus. Aucun prix neuf français fiable trouvé (LDLC et Alternate : plus en vente ; idealo/ledenicheur non lisibles). Indice seulement : Amazon.fr vendeurs tiers 325 €, plus bas 90 j 279 € (Keepa) — l'écart serait ~23 % si confirmé. Revente : marge ~23–26 € soit ~12 % du coût (< 15 %), donc pas de revente. Revérifié 17/11 07:50 UTC : page de l'offre toujours illisible, port vers la France toujours inconnu — reste à revérifier.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": "non vérifié (indice Keepa Amazon.fr : 325 €, plus bas 90 j 279 €)",
    "economie_pct": null,
@@ -100325,7 +100325,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T07:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -100600,7 +100600,19 @@
    "qte_a": null,
    "qte_b": null,
    "reference": "XIAOMI Smartphone -  - Redmi Note 17 Pro 5G - 6Go RAM - 256Go - Noir"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : offre réservée aux clients RED by SFR. Le 179 € n'est atteint qu'après 2 remboursements différés (ODR 50 € + 70 €) : on paie environ 299 € à la commande, plus que le prix neuf le plus bas relevé en France (284,99 €). Pas une vraie économie au moment de l'achat.",
+   "prix_neuf_min_idealo": 284.99,
+   "source_prix_ref": "achatmoinscher (18 boutiques)",
+   "economie_pct": -5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T07:50+00:00"
  },
  {
   "id": "25644bf97f",
@@ -100633,7 +100645,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T07:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -100838,7 +100850,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T07:16+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : Logitech Zone 300 à 39,99 € sur amazon.es (+ port vers la France ≈ 44,99 €), alors qu'Amazon.fr le vend 44,99 € (Keepa). Économie ~11 % au mieux, sous le seuil de 15 %. Revente : marge nulle.",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "Keepa / amazon.fr",
+   "economie_pct": 11,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T07:50+00:00"
  },
  {
   "id": "eb28b16e50",
@@ -100903,7 +100927,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T07:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -101183,7 +101207,19 @@
    "qte_a": null,
    "qte_b": null,
    "reference": "XIAOMI Smartphone -  - Redmi Note 17 Pro 5G - 6Go RAM - 256Go - Noir"
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : réservé aux clients RED by SFR, et le 129 € suppose 2 ODR (50 € + 70 €) plus 50 € de reprise d'un ancien téléphone. Prix payé à la commande ~299 €, au-dessus du neuf le plus bas en France (284,99 €).",
+   "prix_neuf_min_idealo": 284.99,
+   "source_prix_ref": "achatmoinscher (18 boutiques)",
+   "economie_pct": -5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T07:50+00:00"
  },
  {
   "id": "301cf30aec",
@@ -101212,7 +101248,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-17T07:38+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -101242,6 +101278,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 07:41 UTC : offre active, 35.0 affiché, marchand 15_4 ; xxxlutz.at refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : chaise Carryhome chez XXXLutz Autriche. La page du bon plan affiche désormais 35 € (plus 9,90 €), le site du marchand bloque la lecture, et XXXLutz.at ne livre pas en France. Produit sans référence française fiable.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-17T07:50+00:00"
  }
 ]

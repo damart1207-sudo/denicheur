@@ -99933,7 +99933,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T06:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -100143,7 +100143,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T06:15+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T06:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : deal Pepper NL renvoyant vers une recherche Cdiscount (page bloquée, 403) ; couleur/modèle exact inconnu ; prix incohérent (44,95 € annoncé, 54,99 € sur la page) ; frais de port et livraison non confirmés. Le prix de référence 78,99 € est le prix public, pas le plus bas : la DualSense se trouve régulièrement vers 54 € en France en période Black Friday, donc économie réelle < 15 % non prouvée. Revente : marge nette 7,25 € (< 8 €).",
+   "prix_neuf_min_idealo": 54.0,
+   "source_prix_ref": "Amazon.fr, promo Black Friday relevée par journaldugeek.com (prix public 79 €) – pas de prix idealo actuel lisible",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 7.25,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "8a97ad41e4",

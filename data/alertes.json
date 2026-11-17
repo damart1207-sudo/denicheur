@@ -102746,7 +102746,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T12:00+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -103047,7 +103047,19 @@
    "proba_detail": [
     "Amazon 19/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Même produit (Collector PS5, EAN 3391892034653). Prix neuf le plus bas en France : 149 € chez Amazon (Fnac 168,99 € relevé aujourd'hui), soit -33 % pour 99,99 € livré. Mais la page de l'offre (mydealz / Amazon.de) n'a pas pu être ouverte : offre active et livraison en France non confirmées. À revérifier.",
+   "prix_neuf_min_idealo": 149.0,
+   "source_prix_ref": "achatmoinscher.com (Amazon 149 €, Fnac 168,99 €) le 17/11",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-17T12:50+00:00"
  },
  {
   "id": "505ca9fe2e",
@@ -103080,7 +103092,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T12:00+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -103292,7 +103304,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T12:03+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Coût livré 130,82 € (89 £ au Royaume-Uni + frais) : plus cher que le neuf en France (87,99 € sur Amazon.fr). Pas une affaire.",
+   "prix_neuf_min_idealo": 87.99,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": -49,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-17T12:50+00:00"
  },
  {
   "id": "keepa-B0GT91ZLQF-arbES",
@@ -103325,7 +103349,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T12:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -103585,7 +103609,19 @@
    "proba_detail": [
     "Amazon 28/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Produit obscur vendu par un seul vendeur ; le prix Amazon.fr de 82 € n'est pas un prix de référence fiable (moyenne 90 j 60 €, plus bas 43 €) et aucun autre marchand français trouvé. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-17T12:50+00:00"
  },
  {
   "id": "keepa-B000083DOO-neuf",
@@ -103618,7 +103654,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T12:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -103875,6 +103911,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Le prix de référence de 117,35 € vient d'un seul vendeur tiers (plus bas 90 j : 11,17 €, aucune vente estimée) : référence fausse, pas de vraie économie prouvée.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-17T12:50+00:00"
  }
 ]

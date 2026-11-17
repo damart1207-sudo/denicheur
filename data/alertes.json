@@ -102137,7 +102137,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T12:00+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -102440,17 +102440,17 @@
    ]
   },
   "verdict": {
-   "commentaire": "Même produit (Collector PS5, EAN 3391892034653). Prix neuf le plus bas en France : 149 € chez Amazon (Fnac 168,99 € relevé aujourd'hui), soit -33 % pour 99,99 € livré. Mais la page de l'offre (mydealz / Amazon.de) n'a pas pu être ouverte : offre active et livraison en France non confirmées. À revérifier. Nouvel essai à 14h50 : page de l'offre toujours impossible à ouvrir, reste à revérifier.",
+   "commentaire": "Rejeté. Même produit, mais le bon plan renvoie maintenant vers Amazon.com (États-Unis, version US, autre référence) : frais de port et taxes d'import vers la France inconnus, prix final livré non vérifiable. 3e essai sans confirmation : dans le doute, rejet.",
    "prix_neuf_min_idealo": 149.0,
    "source_prix_ref": "achatmoinscher.com (Amazon 149 €, Fnac 168,99 €) le 17/11",
-   "economie_pct": 33,
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-17T13:50+00:00"
+  "verifie_le": "2026-11-17T14:55+00:00"
  },
  {
   "id": "505ca9fe2e",
@@ -103887,7 +103887,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T14:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -104090,7 +104090,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-17T14:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T14:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Batterie Makita BL1850B 5 Ah chez Hornbach Pays-Bas : Hornbach.nl ne livre pas en France (page marchand bloquée, livraison non confirmée). De plus 54,39 € livré contre 63,55 € en France = seulement -14 %, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 63.55,
+   "source_prix_ref": "achatmoinscher.com le 17/11",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "255733ef19",
@@ -104136,7 +104148,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-17T14:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -104312,7 +104324,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:31 UTC : offre active, 85.99 affiché, marchand 173_2 ; coolmod.com refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T14:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Alimentation be quiet! Pure Power 13 M 750W chez Coolmod (Espagne) : Coolmod livre l'Espagne/Portugal, livraison en France non confirmée (page marchand bloquée). Économie annoncée limite (-15 % contre 106,12 €) et prix français non relus aujourd'hui en pleine période Black Friday : dans le doute, rejet.",
+   "prix_neuf_min_idealo": 106.12,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot), recherche web non concluante",
+   "economie_pct": 15,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "45ce6cd352",
@@ -104341,7 +104365,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-17T14:38+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -104371,6 +104395,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 14:40 UTC : offre active, 9.9 affiché, code MOEBEL20, marchand 15_4 ; moebelix.at refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-17T14:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Meuble Möbelix (Autriche), erreur de prix : magasin autrichien qui ne livre pas en France, produit encombrant, page marchand bloquée. Produit exact (variante) et prix français de référence inconnus.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

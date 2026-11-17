@@ -9,7 +9,7 @@ volume de recherche Google (appel groupé DataForSEO, plafonds existants), et DE
 intermédiaire sur Leboncoin : sans charges, et avec les charges de la micro-entreprise (config/regles.json).
 Depuis le 17/11/2026 (demande de David), l'alerte dit aussi si le produit se vend DÉJÀ sur Leboncoin, Vinted et eBay
 (prix de la moins chère à la plus chère), son prix le plus bas dans les comparateurs de prix, et le volume de recherche
-(denicheur/marche.py). Le tour ne fait que retenir les affaires ; `suite()` (python -m denicheur.ecart, lancé juste après
+(denicheur/marche.py), puis le bilan de l'expert e-commerce et de l'acheteur (denicheur/bilan.py). Le tour ne fait que retenir les affaires ; `suite()` (python -m denicheur.ecart, lancé juste après
 la moisson) étudie le marché puis envoie l'alerte Telegram, une seule fois par jour et par prix.
 
 Garde-fous : PRODUITS_TOUR produits par tour (14 jetons Keepa chacun au plus, compris dans l'abonnement), réserve et
@@ -151,6 +151,8 @@ def message(f):
           f"Pour {n} € nets : {_eur(m[f'prix_pour_{n}_net_sans_charges'])} sans charges, {_eur(m[f'prix_pour_{n}_net_avec_charges'])} avec charges"
           + ("" if possible else " (au-dessus du 2e vendeur)"),
           f.get("lien") or ""]
+    from . import bilan
+    t += bilan.lignes(f)
     return "\n".join(t)
 
 
@@ -238,6 +240,13 @@ def suite(maxi=ALERTES_TOUR):
     for f in lot:
         v = vol.get(f["nom_court"])
         f["volume"], f["volume_mot"] = (v["v"], v["mot"]) if v else (None, None)
+    if lot:   # bilan de l'expert puis de l'acheteur, une fois tous les chiffres réunis (les 3 affaires en parallèle)
+        from concurrent.futures import ThreadPoolExecutor
+        from . import bilan, sante
+        with ThreadPoolExecutor(max_workers=3) as pool:
+            for f, b in zip(lot, pool.map(lambda f: sante.protege("bilan", bilan.rediger, f, defaut=None), lot)):
+                f["bilan"] = b
+    for f in lot:
         f["alerte"] = telegram.envoyer(message(f))
         f.pop("a_envoyer")
         envoyes += bool(f["alerte"])

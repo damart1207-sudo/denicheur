@@ -101,6 +101,52 @@ class Texte(unittest.TestCase):
         self.assertIn("introuvable sur idealo et achatmoinscher", ecart.message(f))
 
 
+class Bilan(unittest.TestCase):
+    def setUp(self):
+        from denicheur import bilan
+        self.b = bilan
+        self.regles = ecart._lire(os.path.join(ecart.RACINE, "config/regles.json"), {})
+        self.f = fiche(volume=1900, volume_mot="iiyama gb2771hsu", marche={
+            "leboncoin": {"nb": 2, "min": 80.0, "max": 150.0, "lien_min": "l", "dates": 2, "age_min": 26, "age_recent": 3, "age_ancien": 26, "recentes": 1, "anciennes": 1},
+            "vinted": None, "ebay": {"nb": 0, "neuf": {"nb": 0}, "occasion": {"nb": 0}}, "comparateurs_consultes": ["idealo"],
+            "comparateur_min": {"prix": 139.0, "ou": "idealo", "nb_offres": 12, "lien": None, "ecart": 46.81}})
+
+    def test_fiche_ne_contient_que_les_chiffres_releves(self):
+        t = self.b.fiche_texte(self.f)
+        for attendu in ("92,19 €", "142,59 €", "1900 pour « iiyama gb2771hsu »", "139 € sur idealo (12 offres)",
+                        "la moins chère est en ligne depuis 26 jours", "Vinted : non consulté (inconnu)", "eBay neuf : aucune annonce"):
+            self.assertIn(attendu, t)
+
+    def test_avis_valide_et_marges_recalculees(self):
+        b = self.b.valider(self.f, {"expert": {"vendre": "oui", "ou": "Leboncoin", "prix": "119,00 €", "raisons": "Tu es 47 € sous idealo.", "marge": 999},
+                                    "acheteur": {"acheter": "OUI", "raisons": "20 € de moins qu'idealo."}}, self.regles)
+        self.assertEqual((b["vendre"], b["ou"], b["prix"], b["marge_sans_charges"], b["acheter"]), (True, "leboncoin", 119.0, 26.81, True))
+        self.assertAlmostEqual(b["marge_avec_charges"], round(119 - 92.19 - 119 * 0.134 - 3, 2), places=2)
+        self.f["bilan"] = b
+        t = ecart.message(self.f)
+        self.assertIn("Je le vends</b> : sur <b>Leboncoin</b> à <b>119 €</b>", t)
+        self.assertIn("Oui, j'achète</b> : 20 € de moins qu'idealo.", t)
+
+    def test_avis_rejetes(self):
+        ok = {"acheter": "NON", "raisons": "Trop cher."}
+        for expert in ({"vendre": "OUI", "ou": "leboncoin", "prix": 150, "raisons": "x"},      # au-dessus du 2e vendeur
+                       {"vendre": "OUI", "ou": "leboncoin", "prix": 90, "raisons": "x"},       # sous le prix d'achat
+                       {"vendre": "OUI", "ou": "cdiscount", "prix": 120, "raisons": "x"},      # site hors liste
+                       {"vendre": "PEUT-ÊTRE", "raisons": "x"}, {"vendre": "NON", "raisons": ""}):
+            self.assertIsNone(self.b.valider(self.f, {"expert": expert, "acheteur": ok}, self.regles))
+        self.assertIsNone(self.b.valider(self.f, None, self.regles))
+        b = self.b.valider(self.f, {"expert": {"vendre": "NON", "ou": None, "prix": None, "raisons": "Annonce à 80 € depuis 26 jours."}, "acheteur": ok}, self.regles)
+        self.assertEqual((b["vendre"], b["acheter"], "prix" in b), (False, False, False))
+        self.f["bilan"] = b
+        self.assertIn("Je ne le vends pas", ecart.message(self.f))
+
+    def test_sans_ia_pas_de_bilan(self):
+        with patch.dict(os.environ, {k: "" for k in ("GEMINI_API_KEY", "NVIDIA_API_KEY", "ZAI_API_KEY", "GROQ_API_KEY", "OPENROUTER_API_KEY")}):
+            self.assertIsNone(self.b.rediger(self.f))
+        self.f["bilan"] = None
+        self.assertNotIn("BILAN", ecart.message(self.f))
+
+
 class Suite(unittest.TestCase):
     def test_suite_etudie_enregistre_envoie_une_fois(self):
         with tempfile.TemporaryDirectory() as d:
@@ -116,6 +162,7 @@ class Suite(unittest.TestCase):
                     f["marche"] = {"leboncoin": {"nb": 0}, "vinted": None, "ebay": None, "comparateurs_consultes": []}
             with patch.object(ecart, "F_ECARTS", chemin), patch.object(marche, "etudier", side_effect=etude) as et, \
                     patch.object(marche, "volumes", return_value={"iiyama g-master gb2771hsu-w1 écran": {"v": 320, "mot": "iiyama g-master gb2771hsu-w1"}}), \
+                    patch("denicheur.bilan.rediger", return_value=None), \
                     patch("denicheur.telegram.envoyer", side_effect=lambda t: envois.append(t) or True):
                 self.assertEqual(ecart.suite(), 1)
                 self.assertEqual(ecart.suite(), 0)   # rien à renvoyer

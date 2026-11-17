@@ -27,6 +27,9 @@ PLAFOND_JOUR_USD = {"A": 0.55, "P": 0.30, "B": 0.15, "C": 0.15, "D": 0.10, "E": 
 # Soirée de mise au point du 15/11/2026 uniquement (plusieurs relevés d'essai, débités au plafond avant le débit réel) :
 if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-15":
     PLAFOND_JOUR_USD["T"] = 2.00
+# Journée de mise au point du 17/11/2026 uniquement (essais réels du marché des écarts, débités au plafond avant le débit réel) :
+if datetime.now(timezone.utc).strftime("%Y-%m-%d") == "2026-11-17":
+    PLAFOND_JOUR_USD["E"] = 0.80
 F_BUDGET = os.path.join(RACINE, "data/etat/apify_budget.json")
 # coût réel approximatif : (démarrage, par résultat) en $ — d'après les tarifs Apify relevés le 01/11/2026
 TARIFS = {"idealo": (0.0005, 0.003), "leboncoin": (0.005, 0.0008), "vinted": (0.0, 0.001), "idealo_tendances": (0.0001, 0.0005),

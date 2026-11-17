@@ -1,13 +1,13 @@
 """Test réel du marché des écarts vendeurs (denicheur/marche.py) sur les VRAIES affaires du jour (data/ecarts.json).
-Pour les NB meilleures : Leboncoin, Vinted, eBay, comparateurs, volume de recherche, puis l'alerte complète sur Telegram.
+Pour les NB meilleures : Leboncoin, Vinted, eBay, comparateurs, volume de recherche, bilan de l'expert et de l'acheteur (1 appel d'IA par affaire), puis l'alerte complète sur Telegram.
 Coût : eBay et achatmoinscher gratuits ; Apify 0,05 $ réservés par affaire (≈ 0,03 $ réels), plafond « E » ;
 volume : cache, sinon un appel DataForSEO Labs (≈ 0,013 $) seulement s'il reste du plafond du jour. Aucun jeton Keepa.
 outil = test_ecart_marche"""
 import json, os, sys, time
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from denicheur import apify, dataforseo, ecart, marche, telegram
+from denicheur import apify, bilan, dataforseo, ecart, marche, telegram
 
-NB = int(os.environ.get("NB", "3"))
+NB = int(os.environ.get("NB", "2"))
 base = ecart._lire(ecart.F_ECARTS, {})
 lot = [dict(f) for f in base.get("affaires", []) if f.get("retenu")][:NB]
 print(f"{len(lot)} affaires du {base.get('jour')} ; Apify disponible : {apify.disponible()} ; DataForSEO dépensé : {dataforseo._budget()['depense_usd']} $")
@@ -18,8 +18,10 @@ vol = marche.volumes([f["nom_court"] for f in lot])
 for f in lot:
     v = vol.get(f["nom_court"])
     f["volume"], f["volume_mot"] = (v["v"], v["mot"]) if v else (None, None)
+    f["bilan"] = bilan.rediger(f)
+    print("--- fiche donnée à l'IA ---\n" + bilan.fiche_texte(f) + "\n--- bilan ---\n" + json.dumps(f["bilan"], ensure_ascii=False))
     print(json.dumps({k: f.get(k) for k in ("titre", "nom_court", "ean", "premier", "second", "volume", "volume_mot", "marche")}, ensure_ascii=False, indent=1))
-    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), avec volume de recherche et dates des annonces\n" + ecart.message(f)
+    texte = f"🔁 Affaire du jour (prix relevé à {f['vu'][11:]} UTC), avec le bilan de l'expert et de l'acheteur\n" + ecart.message(f)
     print(texte)
     print("Telegram :", telegram.envoyer(texte))
 # Vinted : le robot donne-t-il une date de publication ? (schéma gratuit + champs d'une annonce de l'étude ci-dessus)

@@ -1,7 +1,7 @@
 {
- "tours_ok": 2235,
+ "tours_ok": 2236,
  "tours_echec": 11,
- "dernier_ok": "17/11 01:11",
+ "dernier_ok": "17/11 01:21",
  "evenements": [
   {
    "heure": "03/11 15:26",
@@ -1610,12 +1610,18 @@
    "niveau": "echec",
    "etape": "tour",
    "message": "tour 4 : code 124 (coupé à 10 min)"
+  },
+  {
+   "heure": "17/11 01:21",
+   "niveau": "erreur",
+   "etape": "moisson prix recherches",
+   "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint | /recherches_prix.py\", line 122, in tour\n    d[\"hype\"].update(prix_europe(asins, etat=etat))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nBudgetKeepaInsuffisant: réserve ou plafond Keepa atteint\n"
   }
  ],
  "dernier_resume": {
-  "heure": "17/11 01:05",
-  "annonces": 569,
-  "nouvelles": 278,
+  "heure": "17/11 01:15",
+  "annonces": 564,
+  "nouvelles": 275,
   "examinees": 25,
   "alertes": 0
  }

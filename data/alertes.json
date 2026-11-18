@@ -1237,7 +1237,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T17:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -1496,6 +1496,18 @@
    "proba_detail": [
     "Amazon 8/mois"
    ]
+  },
+  "verifie_le": "2026-11-18T18:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : la référence Amazon.fr à 163 € est un prix anormal de vendeur tiers (moyenne 90 j 110,81 €, plus bas 22,96 €). Un béret Kangol 507 se trouve bien moins cher en France ; 85 € depuis l'Allemagne n'est pas une affaire.",
+   "prix_neuf_min_idealo": 110.81,
+   "source_prix_ref": "keepa/amazon.fr (moyenne 90 j)",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -1542,7 +1554,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T18:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1769,7 +1781,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T18:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T18:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France (~42,29 €) plus cher que le neuf le moins cher en France (37,17 €).",
+   "prix_neuf_min_idealo": 37.17,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "5526626fe1",
@@ -1815,7 +1839,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T18:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2025,7 +2049,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T18:06+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T18:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : le prix de 79,99 € exige le code HELLO10 réservé aux nouveaux comptes Cdiscount Espagne, page de l'offre non consultable et livraison en France non vérifiée. Neuf le moins cher en France : 104,98 € livré (Cdiscount.fr, relevé brickfact).",
+   "prix_neuf_min_idealo": 104.98,
+   "source_prix_ref": "brickfact.com (Cdiscount.fr livré)",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "7b4466c2c9",
@@ -2071,7 +2107,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T18:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -2251,7 +2287,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T18:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T18:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : la Bosch PSM 100 A est à 42,90 € en France (12 boutiques, achatmoinscher) ; l'offre Amazon.es à 38,49 € + port n'est pas 15 % moins chère. La référence 72,49 € du robot était trop haute.",
+   "prix_neuf_min_idealo": 42.9,
+   "source_prix_ref": "achatmoinscher (top ventes)",
+   "economie_pct": -1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "e9738e90c3",
@@ -2297,7 +2345,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T18:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -2480,6 +2528,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 18:22 UTC : offre active, 229.0 affiché, marchand 81_2 ; allegro.pl refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T18:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût ~248 € depuis Allegro (Pologne) contre 289,99 € en France, soit moins de 15 % d'économie, et livraison en France non vérifiée.",
+   "prix_neuf_min_idealo": 289.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

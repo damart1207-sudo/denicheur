@@ -9799,7 +9799,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T04:21+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 140.02,
@@ -10027,6 +10027,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 04:25 UTC : offre active, 101.24 affiché, marchand 5_5 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T04:45+00:00",
+  "verdict": {
+   "commentaire": "Même set exact (75389, EAN 5702017584454). Offre E.Leclerc lue active à 04:25 UTC (page Dealabs, livraison France oui ; site Leclerc protégé anti-robot). 101,36 € livré contre 134,99 € neuf le moins cher (idealo ; Amazon 141,92 €, Fnac 169,99 €) : -25 %. Prix proche du plus bas 90 j Amazon (101,49 €). Revente non rentable : marge négative partout (meilleure Leboncoin/Vinted ≈ -1,5 €). Set retiré en décembre 2026 : à garder seulement si on mise sur la hausse.",
+   "prix_neuf_min_idealo": 134.99,
+   "source_prix_ref": "idealo.fr (robot, 134,99–140,02 €), contrôlé avec Amazon.fr 141,92 € et Brickfact (Fnac 169,99 €)",
+   "economie_pct": 24.9,
+   "prix_revente_verifie": 118.79,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -1.49,
+   "duree_offre": "inconnue, quelques heures à quelques jours (stock Leclerc)",
+   "demande_confirmee": true
+  }
  }
 ]

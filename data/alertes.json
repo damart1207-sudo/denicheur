@@ -4854,7 +4854,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T22:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5057,7 +5057,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-18T22:50+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T23:55+00:00",
+  "verdict": {
+   "commentaire": "Offre JBL.de (Allemagne) avec cashback : livraison en France non confirmée et prix final dépendant d'un cashback ; marge de revente trop faible (≈5 €). Rejeté dans le doute.",
+   "prix_neuf_min_idealo": 317.07,
+   "source_prix_ref": "achatmoinscher (Amazon FR 349 € via Keepa)",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 5.4,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "chasse-flip-7-vengeance-leboncoin",
@@ -5095,7 +5107,19 @@
    "par": "C"
   },
   "trouve_le": "2026-11-18T23:18+00:00",
-  "statut": "a_verifier"
+  "statut": "rejete",
+  "verifie_le": "2026-11-18T23:55+00:00",
+  "verdict": {
+   "commentaire": "Annonce leboncoin d'occasion sans lien ; coût total 13 € pour un prix neuf de 12,95 € : aucune économie ni marge.",
+   "prix_neuf_min_idealo": 12.95,
+   "source_prix_ref": "idealo.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3b86060d3e",
@@ -5115,7 +5139,7 @@
   "preuve_livraison": null,
   "livraison_fr_confirmee": false,
   "cout_total_confirme": false,
-  "lien_marchand": null,
+  "lien_marchand": "https://www.e.leclerc/fp/lego-batman-l-heritage-du-chevalier-noir-nintendo-switch-2-5051889751021",
   "nom_produit": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
   "cout_achat": 40.75,
   "prix_plancher": {
@@ -5141,7 +5165,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T23:36+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -5324,7 +5348,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:38 UTC : offre active, 35.69 affiché, marchand 36_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T23:55+00:00",
+  "verdict": {
+   "commentaire": "Édition standard Switch 2 vérifiée sur e.leclerc : 35,75 € (Black Friday du 19/11 au 29/11), en stock, retrait magasin gratuit ou livraison domicile 5,90 € (41,65 € livré). Prix neuf le plus bas ailleurs : 50,05 € (Amazon). Revente non rentable.",
+   "prix_neuf_min_idealo": 50.05,
+   "source_prix_ref": "achatmoinscher.com (Amazon 50,05 € port gratuit)",
+   "economie_pct": 17,
+   "prix_revente_verifie": 44.04,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -5.61,
+   "duree_offre": "jusqu'au 29/11/2026",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "48714aaec6",
@@ -5370,7 +5406,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T23:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5571,6 +5607,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:39 UTC : offre active, 212.94 affiché, code ESBF35 + PayPal, marchand 165_2 ; login.aliexpress.us refuse les robots (HTTP 302) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T23:55+00:00",
+  "verdict": {
+   "commentaire": "Offre AliExpress Espagne (coupon ESD1139, promo 11.11, envoi depuis l'Allemagne) : coupon et prix non vérifiables pour la France, offre probablement terminée ; Amazon FR à 249 € (déjà vu à 206,69 €). Rejeté dans le doute.",
+   "prix_neuf_min_idealo": 249.0,
+   "source_prix_ref": "Amazon FR via Keepa / achatmoinscher",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -19.74,
+   "duree_offre": "terminée probablement (promo 11.11)",
+   "demande_confirmee": false
+  }
  }
 ]

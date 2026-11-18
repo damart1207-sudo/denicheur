@@ -1,14 +1,8 @@
 {
- "tours_ok": 2395,
+ "tours_ok": 2396,
  "tours_echec": 11,
- "dernier_ok": "18/11 00:48",
+ "dernier_ok": "18/11 01:03",
  "evenements": [
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "classements",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests | , line 189, in tour\n    top = chine(date=date) if pays == \"CN\" else amazon(pays)\n                                                ^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests\n"
-  },
   {
    "heure": "17/11 05:55",
    "niveau": "erreur",
@@ -1802,13 +1796,19 @@
    "niveau": "erreur",
    "etape": "budget temps",
    "message": "tour arrêté après 22 produits sur 25 (429 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "18/11 01:03",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 12 produits sur 25 (468 s) : le reste sera revu au prochain tour"
   }
  ],
  "dernier_resume": {
-  "heure": "18/11 00:45",
+  "heure": "18/11 00:55",
   "annonces": 562,
-  "nouvelles": 281,
-  "examinees": 25,
-  "alertes": 0
+  "nouvelles": 290,
+  "examinees": 12,
+  "alertes": 5
  }
 }

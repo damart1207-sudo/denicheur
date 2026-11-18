@@ -1,6 +1,6 @@
 {
  "jour": "2026-11-18",
- "examines": 48,
+ "examines": 56,
  "affaires": [
   {
    "asin": "B0DWKBMSWG",
@@ -139,6 +139,275 @@
      "inverse": null,
      "douteuses": [],
      "vendable": false
+    }
+   },
+   "alerte": true
+  },
+  {
+   "asin": "B001AIDGR0",
+   "titre": "Bodum Cafetière à Piston Double Paroi Columbia - 1,5L / 12 Tasses - Acier Inoxydable Mat - Passe au Lave-Vaisselle",
+   "marque": "Bodum",
+   "lien": "https://www.amazon.fr/dp/B001AIDGR0",
+   "moyenne_90j": 147.52,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 64.29,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 167.35,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 20269,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 16,
+   "vu": "2026-11-18T04:45",
+   "retenu": true,
+   "premier": 64.29,
+   "premier_amazon": true,
+   "second": 167.35,
+   "ecart": 103.06,
+   "mot_cle": "bodum cafetière piston double",
+   "nom_court": "bodum cafetière piston double",
+   "ean": "0727015332581",
+   "marges": {
+    "prix_revente": 116.0,
+    "sous_le_second_pct": 31,
+    "marge_sans_charges": 51.71,
+    "marge_avec_charges": 33.17,
+    "charges_micro": 15.54,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 94.29,
+    "prix_pour_30_net_avec_charges": 112.34,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 1,
+      "min": 89.9,
+      "max": 89.9,
+      "lien_min": "https://www.ebay.fr/itm/800911916758?_skw=bodum+cafeti%C3%A8re+piston+double&hash=itemba7a11fed6:g:L3cAAeSwNuBq9wpi",
+      "dates": 1,
+      "age_min": 5,
+      "age_recent": 5,
+      "age_ancien": 5,
+      "recentes": 1,
+      "anciennes": 0
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 1
+    },
+    "achatmoinscher": {
+     "prix_min": 40.04,
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/cafetiere-a-piston-double-paroi-douro-inox-8-tasses-1l-gris-bodum.html"
+    },
+    "leboncoin": {
+     "nb": 2,
+     "min": 25.0,
+     "max": 25.0,
+     "lien_min": "https://www.leboncoin.fr/ad/arts_de_la_table/3298741815",
+     "dates": 2,
+     "age_min": 18,
+     "age_recent": 18,
+     "age_ancien": 157,
+     "recentes": 0,
+     "anciennes": 1
+    },
+    "vinted": {
+     "nb": 1,
+     "min": 35.0,
+     "max": 35.0,
+     "lien_min": "https://www.vinted.fr/items/10418214180-coffret-duo-neuf-bodum-chambord-cafetiere-a-piston-8-tasses-1l-2-verres-double-paroi-pavina",
+     "neuf": {
+      "nb": 1,
+      "min": 35.0,
+      "max": 35.0,
+      "lien_min": "https://www.vinted.fr/items/10418214180-coffret-duo-neuf-bodum-chambord-cafetiere-a-piston-8-tasses-1l-2-verres-double-paroi-pavina"
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 40.04,
+     "ou": "achatmoinscher",
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/cafetiere-a-piston-double-paroi-douro-inox-8-tasses-1l-gris-bodum.html",
+     "ecart": -24.25
+    }
+   },
+   "volume": 1900,
+   "volume_mot": "bodum cafetière piston",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La grille limite le prix de vente à 85,41 €, ce qui ne laisse que 6,68 € de marge nette après les charges de micro-entreprise, bien en dessous de l'objectif de 20 €. De plus, une annonce neuve à 35 € sur Vinted et une occasion à 25 € sur Leboncoin rendent la vente d'un produit neuf à plus de 80 € très difficile.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même modèle neuf à 35 € sur Vinted et en occasion à 25 € sur Leboncoin, ce qui rend le prix de 85 € totalement injustifié. Je préfère attendre une meilleure offre ou acheter l'occasion si l'état est correct.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve eBay",
+     "ref_prix": 89.9,
+     "plafond": 85.41,
+     "marge_sans": 21.12,
+     "marge_avec": 6.68,
+     "vetos": [],
+     "annonce_min": [
+      25.0,
+      "Leboncoin"
+     ],
+     "anciennes": 1,
+     "datees": 3,
+     "inverse": null,
+     "douteuses": [
+      [
+       "une annonce neuve Vinted",
+       35.0
+      ]
+     ],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
+  {
+   "asin": "B087723W3Q",
+   "titre": "Feandrea Arbre à Chat L, Tour de Jeux 158,6 cm",
+   "marque": "Feandrea",
+   "lien": "https://www.amazon.fr/dp/B087723W3Q",
+   "moyenne_90j": 151.62,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 66.99,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 154.8,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 27171,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 11,
+   "vu": "2026-11-18T04:45",
+   "retenu": true,
+   "premier": 66.99,
+   "premier_amazon": true,
+   "second": 154.8,
+   "ecart": 87.81,
+   "mot_cle": "feandrea arbre chat l",
+   "nom_court": "feandrea arbre chat l",
+   "ean": "0194343104317",
+   "marges": {
+    "prix_revente": 111.0,
+    "sous_le_second_pct": 28,
+    "marge_sans_charges": 44.01,
+    "marge_avec_charges": 26.14,
+    "charges_micro": 14.87,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 96.99,
+    "prix_pour_30_net_avec_charges": 115.46,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 1,
+      "min": 105.6,
+      "max": 105.6,
+      "lien_min": "https://www.ebay.fr/itm/407240423834?_skw=feandrea+arbre+chat+l&hash=item5ed16bb99a:g:WlIAAeSw56lqtIQE",
+      "dates": 1,
+      "age_min": 55,
+      "age_recent": 55,
+      "age_ancien": 55,
+      "recentes": 0,
+      "anciennes": 1
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 1
+    },
+    "achatmoinscher": {
+     "prix_min": 35.27,
+     "nb_offres": 3,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Arbre-a-chat/feandrea-arbre-a-chat-hamac-tour-de-jeux-143-cm-gris-clair-pct161w01.html"
+    },
+    "leboncoin": {
+     "nb": 3,
+     "min": 29.0,
+     "max": 40.0,
+     "lien_min": "https://www.leboncoin.fr/ad/accessoires_animaux/3157031366",
+     "dates": 3,
+     "age_min": 256,
+     "age_recent": 6,
+     "age_ancien": 256,
+     "recentes": 2,
+     "anciennes": 1
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 35.27,
+     "ou": "achatmoinscher",
+     "nb_offres": 3,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Arbre-a-chat/feandrea-arbre-a-chat-hamac-tour-de-jeux-143-cm-gris-clair-pct161w01.html",
+     "ecart": -31.72
+    }
+   },
+   "volume": 0,
+   "volume_mot": "feandrea arbre chat l",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La demande est moyenne mais les annonces d'occasion à 29 € existent depuis longtemps, ce qui fixe un plafond bien en dessous du prix de vente maximum. De plus, deux annonces neuves restent en ligne depuis plus de 21 jours, signe que le marché n'absorbe pas le produit.",
+    "acheter": false,
+    "raisons_acheteur": "Je ne l'achèterais pas car je trouve le même arbre à chat d'occasion à 29 € et le neuf proposé serait bien au‑dessus, donc pas intéressant.",
+    "condition": "",
+    "ia": "gpt-oss-120b",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve eBay",
+     "ref_prix": 105.6,
+     "plafond": 100.32,
+     "marge_sans": 33.33,
+     "marge_avec": 16.89,
+     "vetos": [],
+     "annonce_min": [
+      29.0,
+      "Leboncoin"
+     ],
+     "anciennes": 2,
+     "datees": 4,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": true
     }
    },
    "alerte": true
@@ -384,5 +653,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-18T04:34+00:00"
+ "maj": "2026-11-18T04:45+00:00"
 }

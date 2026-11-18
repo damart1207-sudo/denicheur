@@ -43,7 +43,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T16:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -253,7 +253,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T16:51+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : les 25 % sont rendus en tickets E.Leclerc (bon d'achat), pas une baisse du prix payé ; prix réellement payé ~63,90 €, pas 15 % sous le prix neuf le plus bas en France.",
+   "prix_neuf_min_idealo": 63.9,
+   "source_prix_ref": "achatmoinscher (non confirmé idealo)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "86c287a99f",
@@ -299,7 +311,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T16:47+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -485,7 +497,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T16:53+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : jeu dématérialisé sur l'eShop britannique, non achetable/utilisable avec un compte Nintendo français.",
+   "prix_neuf_min_idealo": 38.65,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "777d45a635",
@@ -531,7 +555,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T17:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -707,7 +731,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 17:29 UTC : offre active, 20.28 affiché, code UKNOVBFX3, marchand 1650_3 ; aliexpress.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût réel ~36,99 € (code UK, AliExpress) contre 36,49 € neuf en France : aucune économie.",
+   "prix_neuf_min_idealo": 36.49,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "038cc37145",
@@ -760,7 +796,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T17:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -940,7 +976,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 17:30 UTC : offre active, 39.95 affiché, code JPG10, marchand 47424_2 ; fiche us.thebeautystore.com lue ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : version « Tester » (pas le produit vendu en boutique), envoi depuis le Royaume-Uni avec douane possible et parfum souvent non expédié en France.",
+   "prix_neuf_min_idealo": 84.1,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "6a8e130640",
@@ -986,7 +1034,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T17:32+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1156,6 +1204,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 17:35 UTC : offre active, 54.97 affiché ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T17:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 54,97 € n'est pas 15 % sous le prix neuf le plus bas en France (la DualSense noire se trouve couramment vers 55-60 € en période Black Friday) ; référence 81,62 € d'achatmoinscher jugée non fiable.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "recherche web (non concluante)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

@@ -1412,20 +1412,22 @@
    }
   ],
   "page_offre": {
-   "lu_le": "2026-11-18T17:44+00:00",
+   "lu_le": "2026-11-18T18:13+00:00",
    "lien_deal": "https://www.amazon.de/dp/B015CYARR4",
    "type_page": "marchand direct",
    "lien_marchand": "https://www.amazon.de/dp/B015CYARR4",
    "marchand": {
     "lien": "https://www.amazon.de/dp/B015CYARR4",
-    "code": 503,
+    "code": 200,
     "lu": false,
     "domaine": "amazon.de",
-    "erreur": "HTTP 503",
+    "erreur": "page anti-robot (captcha)",
     "bloque": true
    },
    "livraison_france": "oui",
-   "resume": "amazon.de refuse les robots (HTTP 503) ; fiche Amazon connue par Keepa ; livraison France : oui"
+   "resume": "amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-18T17:44+00:00"
   },
   "denicheur": "A",
   "ebay": {

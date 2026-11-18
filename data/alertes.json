@@ -3621,7 +3621,7 @@
    }
   ],
   "page_offre": {
-   "lu_le": "2026-11-18T19:23+00:00",
+   "lu_le": "2026-11-18T19:55+00:00",
    "lien_deal": "https://www.amazon.es/dp/B0G3511Y2L",
    "type_page": "marchand direct",
    "lien_marchand": "https://www.amazon.es/dp/B0G3511Y2L",
@@ -3634,7 +3634,9 @@
     "bloque": true
    },
    "livraison_france": "oui",
-   "resume": "amazon.es refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
+   "resume": "amazon.es refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-18T19:23+00:00"
   },
   "denicheur": "A",
   "ebay": {
@@ -4034,18 +4036,260 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 19:42 UTC : offre expirée, 999.99 affiché, marchand 42_4 ; fiche hatec.fr lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A",
-  "verifie_le": "2026-11-18T19:55+00:00",
-  "verdict": {
-   "commentaire": "Faux prix (29,99 € pour une TV OLED 65\") : la page Dealabs indique l'offre expirée et le vrai prix affiché est 999,99 €. Rejeté.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "page Dealabs (prix annoncé ailleurs 1399 €)",
-   "economie_pct": null,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": "expirée",
-   "demande_confirmee": false
-  }
+  "denicheur": "A"
+ },
+ {
+  "id": "a74262463a",
+  "titre": "LEGO Star Wars 75447 Le Razor Crest (via 26.76 € cagnottés)",
+  "prix": 80.29,
+  "devise": "EUR",
+  "marchand": "E.Leclerc",
+  "lien": "https://www.dealabs.com/bons-plans/lego-star-wars-75447-le-razor-crest-via-2676-eur-cagnottes-3460715",
+  "pays": "FR",
+  "source": "dealabs-nouveaux",
+  "temperature": null,
+  "categorie": "Famille & Enfants",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "LEGO Star Wars 75447 Le Razor Crest",
+  "cout_achat": 85.29,
+  "prix_plancher": {
+   "nom": "LEGO Star Wars 75447 Le Razor Crest",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 1,
+     "meilleur": {
+      "titre": "LEGO® Star Wars™ 75447 Le Razor Crest™",
+      "prix": 99.99,
+      "nb_boutiques": 16,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-75447-le-razor-crest.html"
+     },
+     "autres": []
+    }
+   },
+   "prix_min": 99.99,
+   "ou": "achatmoinscher",
+   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-star-wars-75447-le-razor-crest.html"
+  },
+  "ecart_vs_neuf_min": 0.803,
+  "economie_pct": 20,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-18T19:50+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": true,
+  "revente_reelle": {},
+  "keepa": {
+   "nb_vendeurs_neuf": 68,
+   "marque": "LEGO",
+   "asin": "B0FPXFTQ9S",
+   "titre": "LEGO Star Wars Le Razor Crest 75447",
+   "ean": "5702018063057",
+   "pays": "FR",
+   "prix_neuf": 99.99,
+   "prix_amazon": 99.99,
+   "prix_tiers": 99.99,
+   "moyenne_90j": 99.92,
+   "plus_bas_90j": 99.19,
+   "occasion": null,
+   "rang_ventes": 1242,
+   "chutes_rang_30j": 49,
+   "chutes_rang_90j": 123,
+   "ventes_estimees_30j": 49,
+   "remise_sincere": false,
+   "lien": "https://www.amazon.fr/dp/B0FPXFTQ9S",
+   "jetons_restants": 327
+  },
+  "asin": "B0FPXFTQ9S",
+  "ean": "5702018063057",
+  "vendeurs_amazon": 68,
+  "ventes_estimees_30j": 49,
+  "demande_forte": {
+   "recherche": "lego star wars",
+   "popularite": 199,
+   "hausse_pct": 111,
+   "nouveau": false,
+   "pays": "FR"
+  },
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 87.99,
+    "marge_nette": -12.09,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.99,
+     "cout_achat": 85.29,
+     "frais_canal": 0.0,
+     "prelevements": 11.79,
+     "provision": 3.0,
+     "marge_nette": -12.09,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.142
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 87.99,
+    "marge_nette": -12.09,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.99,
+     "cout_achat": 85.29,
+     "frais_canal": 0.0,
+     "prelevements": 11.79,
+     "provision": 3.0,
+     "marge_nette": -12.09,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.142
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 87.99,
+    "marge_nette": -12.09,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 87.99,
+     "cout_achat": 85.29,
+     "frais_canal": 0.0,
+     "prelevements": 11.79,
+     "provision": 3.0,
+     "marge_nette": -12.09,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.142
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 99.99,
+    "marge_nette": -16.7,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.99,
+     "cout_achat": 85.29,
+     "frais_canal": 15.0,
+     "prelevements": 13.4,
+     "provision": 3.0,
+     "marge_nette": -16.7,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.196
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 99.99,
+    "marge_nette": -16.7,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.99,
+     "cout_achat": 85.29,
+     "frais_canal": 15.0,
+     "prelevements": 13.4,
+     "provision": 3.0,
+     "marge_nette": -16.7,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.196
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 99.99,
+    "marge_nette": -17.7,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.99,
+     "cout_achat": 85.29,
+     "frais_canal": 16.0,
+     "prelevements": 13.4,
+     "provision": 3.0,
+     "marge_nette": -17.7,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.208
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 99.99,
+    "marge_nette": -21.05,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.99,
+     "cout_achat": 85.29,
+     "frais_canal": 19.35,
+     "prelevements": 13.4,
+     "provision": 3.0,
+     "marge_nette": -21.05,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.247
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 99.99,
+    "marge_nette": -23.69,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 99.99,
+     "cout_achat": 85.29,
+     "frais_canal": 21.99,
+     "prelevements": 13.4,
+     "provision": 3.0,
+     "marge_nette": -23.69,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.278
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-18T19:53+00:00",
+   "lien_deal": "https://www.dealabs.com/bons-plans/lego-star-wars-75447-le-razor-crest-via-2676-eur-cagnottes-3460715",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 86.24,
+   "prix_ailleurs_annonce": 114.99,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "195_3",
+   "description": "La plus grande communaut\\u00e9 d'achat au monde.",
+   "lien_marchand": "https://www.e.leclerc/fp/lego-star-wars-le-razor-crest-75447-5702018063057?cref=om_aff_awin_Ban_8463_2020-12-08-op-remise-30-awin_169249_128321%7C372423%7C757260%7C1104171%7C1129899%7C1129901",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.e.leclerc/fp/lego-star-wars-le-razor-crest-75447-5702018063057?cref=om_aff_awin_Ban_8463_2020-12-08-op-remise-30-awin_169249_128321%7C372423%7C757260%7C1104171%7C1129899%7C1129901",
+    "code": 200,
+    "lu": false,
+    "domaine": "e.leclerc",
+    "erreur": "page anti-robot (captcha)",
+    "bloque": true
+   },
+   "livraison_france": "oui",
+   "resume": "page du bon plan lue à 19:53 UTC : offre active, 86.24 affiché, marchand 195_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
+  },
+  "denicheur": "A"
  }
 ]

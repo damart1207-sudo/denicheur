@@ -4082,7 +4082,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T19:50+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4292,6 +4292,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T19:53+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T20:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le prix de 80,29 € n'est obtenu qu'avec 26,76 € crédités sur la carte de fidélité E.Leclerc (bon d'achat, pas de l'argent). Prix réellement payé chez E.Leclerc ≈ 107-112 € livré, plus cher qu'Amazon (99,99 €) et Fnac (104,99 €). Même en comptant la cagnotte (85,29 € avec frais), l'économie n'est que de 14,7 % (sous les 15 %). Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 99.99,
+   "source_prix_ref": "brickfact.com et bonne-promo.com (Amazon.fr 99,99 €, relevé 18/11), confirmé par Keepa",
+   "economie_pct": 14.7,
+   "prix_revente_verifie": 87.99,
+   "canal": "aucun (Leboncoin/Vinted 87,99 € → -12 €)",
+   "marge_nette_verifiee": -12.09,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  }
 ]

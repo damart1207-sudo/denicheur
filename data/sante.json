@@ -1,14 +1,8 @@
 {
- "tours_ok": 2508,
+ "tours_ok": 2509,
  "tours_echec": 11,
- "dernier_ok": "18/11 18:19",
+ "dernier_ok": "18/11 18:30",
  "evenements": [
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 05:55",
    "niveau": "erreur",
@@ -1802,13 +1796,19 @@
    "niveau": "erreur",
    "etape": "budget temps",
    "message": "tour arrêté après 15 produits sur 25 (423 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "18/11 18:30",
+   "niveau": "erreur",
+   "etape": "moisson hype",
+   "message": "US 1055398: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "18/11 18:15",
-  "annonces": 577,
-  "nouvelles": 349,
+  "heure": "18/11 18:25",
+  "annonces": 575,
+  "nouvelles": 342,
   "examinees": 25,
-  "alertes": 0
+  "alertes": 2
  }
 }

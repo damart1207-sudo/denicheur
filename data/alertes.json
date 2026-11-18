@@ -16788,7 +16788,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -17047,7 +17047,19 @@
    "proba_detail": [
     "Amazon 9/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : page Amazon.es impossible à ouvrir, livraison en France d'un frigo de 166 cm non confirmée. Prix neuf le plus bas en France 548,95 € (Fnac, livré), pas 800,95 € (vendeur tiers Amazon.fr) : économie réelle ~17 % mais offre non vérifiable → dans le doute, rejet.",
+   "prix_neuf_min_idealo": 548.95,
+   "source_prix_ref": "achatmoinscher (Fnac 548,95 €, Cdiscount 570,95 €) + create-store 569,95 €",
+   "economie_pct": 17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "5e559c4324",
@@ -17093,7 +17105,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17306,16 +17318,16 @@
    "premiere_lecture": "2026-11-18T09:51+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-18T09:55+00:00",
+  "verifie_le": "2026-11-18T11:05+00:00",
   "verdict": {
-   "commentaire": "Rejeté : Amazon UK 199,99 £ soit environ 284 € livré en France, contre 299,95 € en France : économie d'environ 5 %, sous le seuil de 15 %.",
-   "prix_neuf_min_idealo": 299.95,
-   "source_prix_ref": "achatmoinscher.com (299,95 €)",
-   "economie_pct": 5.3,
+   "commentaire": "Rejeté : 64 £ sur Amazon UK, mais coût livré en France 96,32 € (port + import), plus cher que le neuf en France (88,90 €).",
+   "prix_neuf_min_idealo": 88.9,
+   "source_prix_ref": "achatmoinscher (10 boutiques)",
+   "economie_pct": -8,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": null,
+   "duree_offre": "inconnue",
    "demande_confirmee": false
   }
  },
@@ -17363,7 +17375,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17573,7 +17585,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T10:26+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : les 240,89 € supposent 80,28 € rendus en Ticket E.Leclerc (fidélité, pas une vraie remise). Prix payé réel ~321 €, plus cher qu'Amazon.fr (297,99 €).",
+   "prix_neuf_min_idealo": 297.99,
+   "source_prix_ref": "keepa/amazon.fr + achatmoinscher",
+   "economie_pct": -8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "822a56835e",
@@ -17619,7 +17643,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -17802,7 +17826,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 10:37 UTC : offre active, 399.0 affiché, marchand 83_5 ; allegro.pl refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : AirPods 4 (sans réduction de bruit) via Amazon.pl à 100,81 € + port ≈ 105,81 € livré, soit seulement ~11 % sous le neuf français (119 €) : sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 119.0,
+   "source_prix_ref": "achatmoinscher (12 boutiques)",
+   "economie_pct": 11,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "b3e5e53062",
@@ -17848,7 +17884,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18056,7 +18092,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 10:37 UTC : offre active, 91.49 affiché, marchand 195_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : prix de 101,24 € obtenu « via 25 % en tickets E.Leclerc » (fidélité). Prix payé réel ~135 €, plus cher que le neuf ailleurs (129,78 €).",
+   "prix_neuf_min_idealo": 129.78,
+   "source_prix_ref": "keepa/amazon.fr + achatmoinscher",
+   "economie_pct": -4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "28dfca4d91",
@@ -18115,7 +18163,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18314,7 +18362,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 10:39 UTC : offre active, 29.99 affiché, marchand 6888_2 ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : 28 £ chez John Lewis UK, mais coût livré en France 46,64 € > neuf en France 43,90 €.",
+   "prix_neuf_min_idealo": 43.9,
+   "source_prix_ref": "achatmoinscher (9 boutiques)",
+   "economie_pct": -6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "f7b5c28f98",
@@ -18360,7 +18420,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:42+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18635,7 +18695,19 @@
    "proba_detail": [
     "Amazon 44/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "À revérifier : référence fiable 199,99 € (Amazon.fr et SharkNinja, livrés) → 126,08 € serait -37 %. Mais ni la page Dealabs ni la page Cdiscount n'ont pu être ouvertes (bonne-promo affiche encore Cdiscount à 254,98 €) : impossible de confirmer que le prix est actif et sans condition (code, CDAV, vendeur marketplace). Non publié.",
+   "prix_neuf_min_idealo": 199.99,
+   "source_prix_ref": "bonne-promo.com + keepa/amazon.fr (199,99 €)",
+   "economie_pct": 37,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (Black Friday)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T11:05+00:00"
  },
  {
   "id": "ec4d027be0",
@@ -18688,7 +18760,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T10:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18898,6 +18970,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 10:56 UTC : offre active, 22.49 affiché, marchand 5534_4 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T11:10+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 20,99 £ sur Amazon UK, mais coût livré en France 36,97 €, à peine 3 % sous le neuf en France (37,99 €) ; version UK, langue française non garantie.",
+   "prix_neuf_min_idealo": 37.99,
+   "source_prix_ref": "achatmoinscher + keepa/amazon.fr (37,99 €)",
+   "economie_pct": 3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

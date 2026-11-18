@@ -14858,7 +14858,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T08:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15068,7 +15068,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-18T08:42+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le prix de 91,01 € n'est obtenu qu'avec 25 % rendus en tickets E.Leclerc (carte de fidélité obligatoire). Prix réellement payé : environ 121 €, identique au prix neuf le plus bas en France (Amazon 120,99 €).",
+   "prix_neuf_min_idealo": 120.99,
+   "source_prix_ref": "Keepa/Amazon.fr et achatmoinscher (120,99 €)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "dd970b3c37",
@@ -15114,7 +15126,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T08:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -15299,7 +15311,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-18T08:43+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Argos (Royaume-Uni), 143 £ soit environ 205 € livré en France, plus cher que le neuf le plus bas en France (173 € sur achatmoinscher). Argos ne livre pas la France.",
+   "prix_neuf_min_idealo": 173.0,
+   "source_prix_ref": "achatmoinscher.com (173 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "aabd103a78",
@@ -15352,7 +15376,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T08:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15579,7 +15603,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-18T08:44+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre sur la boutique Dyson Espagne, réservée aux adresses espagnoles, non livrable en France.",
+   "prix_neuf_min_idealo": 748.93,
+   "source_prix_ref": "achatmoinscher.com (748,93 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "821c0f1db8",
@@ -15625,7 +15661,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15917,6 +15953,18 @@
    "proba_detail": [
     "Amazon 39/mois"
    ]
+  },
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 263,20 € seulement après 65,80 € crédités sur la carte fidélité Carrefour (obligatoire). Prix réellement payé 329 €, le même que la Fnac depuis fin octobre (329 €, Clubic 28/10). Aucune vraie économie.",
+   "prix_neuf_min_idealo": 329.0,
+   "source_prix_ref": "Fnac 329 € (Clubic 28/10/2026), achatmoinscher 389,95 €",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -15950,7 +15998,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16162,7 +16210,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T09:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon Espagne 54,90 € + port ≈ 59,90 €, contre 59,99 € sur Amazon.fr. Économie quasi nulle (< 15 %).",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "Keepa/Amazon.fr (59,99 €)",
+   "economie_pct": 0.2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "46a1b2bd95",
@@ -16208,7 +16268,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16416,7 +16476,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 09:26 UTC : offre active, 41.99 affiché, marchand 195_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : page E.Leclerc lue le 18/11 : prix payé 164,16 €, les 25 % sont rendus en tickets E.Leclerc avec la carte (fidélité obligatoire), offre valable le 18/11 seulement. Le prix payé dépasse le neuf le plus bas (148,74 € achatmoinscher, Amazon 160,99 €).",
+   "prix_neuf_min_idealo": 148.74,
+   "source_prix_ref": "achatmoinscher.com (148,74 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "02af28dc6c",
@@ -16469,7 +16541,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T09:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16679,6 +16751,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 09:27 UTC : offre active, 199.99 affiché, marchand 1650_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T09:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon UK 199,99 £ soit environ 284 € livré en France, contre 299,95 € en France : économie d'environ 5 %, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 299.95,
+   "source_prix_ref": "achatmoinscher.com (299,95 €)",
+   "economie_pct": 5.3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

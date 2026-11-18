@@ -4337,7 +4337,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T21:05+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4550,6 +4550,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T21:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : la page de l'offre (Chollometro → Amazon.es) n'a pas pu être ouverte, donc impossible de confirmer qu'elle est encore active, la couleur exacte (le prix Amazon.fr de référence concerne le coloris « Basilic chaud », les prix varient selon la couleur) et la livraison en France. Revente : marge trop faible (6,85 € max sur Vinted, sous le seuil de 8 €).",
+   "prix_neuf_min_idealo": 51.97,
+   "source_prix_ref": "keepa/amazon.fr (moyenne 90 j : 59,14 €)",
+   "economie_pct": 43,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

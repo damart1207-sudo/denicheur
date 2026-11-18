@@ -18689,9 +18689,9 @@
    ]
   },
   "verdict": {
-   "commentaire": "À revérifier : référence fiable 199,99 € (Amazon.fr et SharkNinja, livrés) → 126,08 € serait -37 %. Mais ni la page Dealabs ni la page Cdiscount n'ont pu être ouvertes (bonne-promo affiche encore Cdiscount à 254,98 €) : impossible de confirmer que le prix est actif et sans condition (code, CDAV, vendeur marketplace). Non publié.",
+   "commentaire": "Toujours à revérifier : référence 199,99 € (Fnac et Cdiscount marketplace, livrés). Le prix de 126,08 € chez Cdiscount reste introuvable (page Dealabs inaccessible, le comparateur kulturegeek affiche Cdiscount à 254,98 €) : prix actif et sans condition non confirmé. Non publié.",
    "prix_neuf_min_idealo": 199.99,
-   "source_prix_ref": "bonne-promo.com + keepa/amazon.fr (199,99 €)",
+   "source_prix_ref": "kulturegeek.fr + keepa/amazon.fr",
    "economie_pct": 37,
    "prix_revente_verifie": null,
    "canal": null,
@@ -18699,7 +18699,7 @@
    "duree_offre": "courte (Black Friday)",
    "demande_confirmee": false
   },
-  "verifie_le": "2026-11-18T11:05+00:00"
+  "verifie_le": "2026-11-18T11:50+00:00"
  },
  {
   "id": "ec4d027be0",
@@ -19008,7 +19008,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T11:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19220,7 +19220,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T11:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T11:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon UK 26,97 £, soit environ 45,22 € livré en France, alors que le jeu neuf est à 31,82 € en France (achatmoinscher) et 39,99 € sur Amazon.fr. Plus cher que chez nous.",
+   "prix_neuf_min_idealo": 31.82,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": -42,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "b0bca74247",
@@ -19266,7 +19278,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T11:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19476,6 +19488,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:40 UTC : offre active, 385.99 affiché, marchand 320_3 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T11:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon UK 29,99 £, soit environ 49,39 € livré en France, alors que le jeu neuf est à 45,32 € en France (achatmoinscher). Aucune économie.",
+   "prix_neuf_min_idealo": 45.32,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": -9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

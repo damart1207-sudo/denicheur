@@ -620,7 +620,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T13:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -897,6 +897,18 @@
    "qte_a": null,
    "qte_b": null,
    "reference": "HONOR Smartphone  600 6,57\"\" 5G Double nano SIM 256 Go Noir"
+  },
+  "verifie_le": "2026-11-18T14:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 229 € seulement pour les clients RED by SFR avec reprise d'un ancien téléphone (70 €). Sans forfait, RED vend ce Honor 600 5G 256 Go 649 €. Prix non accessible à tous.",
+   "prix_neuf_min_idealo": 406.0,
+   "source_prix_ref": "achatmoinscher (13 boutiques)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -943,7 +955,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T13:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1170,7 +1182,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T14:01+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T14:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France ≈ 39,53 €, au-dessus du prix neuf le plus bas en France (37,39 €). Marchand britannique (Hit), livraison France non confirmée. Revente à perte.",
+   "prix_neuf_min_idealo": 37.39,
+   "source_prix_ref": "achatmoinscher (8 boutiques)",
+   "economie_pct": -6,
+   "prix_revente_verifie": 32.9,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -14.04,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "28400548f3",
@@ -1216,7 +1240,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T14:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1426,6 +1450,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T14:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T14:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 99,74 € seulement via 33,25 € crédités sur la carte de fidélité Leclerc (carte obligatoire, avantage en bon d'achat). Prix réellement payé ≈ 133 €, soit 5 % sous le prix neuf le plus bas. Revente à perte.",
+   "prix_neuf_min_idealo": 139.9,
+   "source_prix_ref": "achatmoinscher (10 boutiques)",
+   "economie_pct": 5,
+   "prix_revente_verifie": 123.11,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -1.13,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

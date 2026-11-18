@@ -1,14 +1,8 @@
 {
- "tours_ok": 2464,
+ "tours_ok": 2465,
  "tours_echec": 11,
- "dernier_ok": "18/11 11:27",
+ "dernier_ok": "18/11 11:41",
  "evenements": [
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 05:55",
    "niveau": "erreur",
@@ -1802,13 +1796,19 @@
    "niveau": "erreur",
    "etape": "budget temps",
    "message": "tour arrêté après 12 produits sur 25 (468 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "18/11 11:41",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 15 produits sur 25 (423 s) : le reste sera revu au prochain tour"
   }
  ],
  "dernier_resume": {
-  "heure": "18/11 11:24",
-  "annonces": 588,
-  "nouvelles": 326,
-  "examinees": 25,
-  "alertes": 1
+  "heure": "18/11 11:34",
+  "annonces": 589,
+  "nouvelles": 335,
+  "examinees": 15,
+  "alertes": 3
  }
 }

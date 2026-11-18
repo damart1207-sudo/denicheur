@@ -2502,7 +2502,7 @@
    }
   ],
   "page_offre": {
-   "lu_le": "2026-11-18T18:22+00:00",
+   "lu_le": "2026-11-18T18:48+00:00",
    "lien_deal": "https://www.pepper.pl/promocje/lego-batman-76300-arkham-asylum-1393055",
    "page_deal": {
     "code": 200,
@@ -2519,27 +2519,355 @@
    "type_page": "deal Pepper",
    "marchand": {
     "lien": "https://allegro.pl/affiliate?redirect_url=https%3A%2F%2Fallegro.pl%2Fprodukt%2Fklocki-lego-batman-76300-arkham-asylum-6eeda644-4554-415b-b14d-ba5da2025209%3FofferId%3D18168523330",
-    "code": 403,
+    "code": null,
     "lu": false,
     "domaine": "allegro.pl",
+    "erreur": "TimeoutError: The read operation timed out"
+   },
+   "livraison_france": "non",
+   "resume": "page du bon plan lue à 18:48 UTC : offre active, 229.0 affiché, marchand 81_2 ; allegro.pl refuse les robots (TimeoutError: The read operation timed out) ; livraison France : non",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-18T18:22+00:00"
+  },
+  "denicheur": "A"
+ },
+ {
+  "id": "2d557c0775",
+  "titre": "Doom Dark Ages PS5",
+  "prix": 16.95,
+  "devise": "EUR",
+  "marchand": "Fnac",
+  "lien": "https://www.chollometro.com/ofertas/doom-dark-ages-ps5-2076193",
+  "pays": "ES",
+  "source": "chollometro-nuevos",
+  "temperature": null,
+  "categorie": "Gaming",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "Doom Dark Ages - PS5",
+  "cout_achat": 21.95,
+  "prix_plancher": {
+   "nom": "Doom Dark Ages - PS5",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 2,
+     "meilleur": {
+      "titre": "DOOM : The Dark Ages PS5",
+      "prix": 51.38,
+      "nb_boutiques": 10,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/doom-the-dark-ages-ps5.html"
+     },
+     "autres": [
+      {
+       "titre": "DOOM : The Dark Ages Edition Premium PS5",
+       "prix": 67.9,
+       "nb_boutiques": 6,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/doom-the-dark-ages-edition-premium-ps5.html"
+      }
+     ]
+    }
+   },
+   "prix_min": 51.38,
+   "ou": "achatmoinscher",
+   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/doom-the-dark-ages-ps5.html"
+  },
+  "ecart_vs_neuf_min": 0.33,
+  "economie_pct": 67,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-18T18:44+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": true,
+  "revente_reelle": {},
+  "keepa": {
+   "nb_vendeurs_neuf": null,
+   "marque": "Microsoft",
+   "asin": "B0DWNDMN4K",
+   "titre": "DOOM: The Dark Ages PS5 (Japanese ver)",
+   "ean": "4549576268316",
+   "pays": "FR",
+   "prix_neuf": null,
+   "prix_amazon": null,
+   "prix_tiers": null,
+   "moyenne_90j": null,
+   "plus_bas_90j": 109.9,
+   "occasion": null,
+   "rang_ventes": null,
+   "chutes_rang_30j": 0,
+   "chutes_rang_90j": 0,
+   "ventes_estimees_30j": 0,
+   "remise_sincere": null,
+   "lien": "https://www.amazon.fr/dp/B0DWNDMN4K",
+   "jetons_restants": 245
+  },
+  "asin": "B0DWNDMN4K",
+  "ean": "4549576268316",
+  "vendeurs_amazon": null,
+  "ventes_estimees_30j": 0,
+  "demande_forte": {
+   "recherche": "ps5",
+   "popularite": 13946,
+   "hausse_pct": 134,
+   "nouveau": false,
+   "pays": "FR"
+  },
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 45.21,
+    "marge_nette": 14.2,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.21,
+     "cout_achat": 21.95,
+     "frais_canal": 0.0,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": 14.2,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.647
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 45.21,
+    "marge_nette": 14.2,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.21,
+     "cout_achat": 21.95,
+     "frais_canal": 0.0,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": 14.2,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.647
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 45.21,
+    "marge_nette": 14.2,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 45.21,
+     "cout_achat": 21.95,
+     "frais_canal": 0.0,
+     "prelevements": 6.06,
+     "provision": 3.0,
+     "marge_nette": 14.2,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.647
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 51.38,
+    "marge_nette": 8.92,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 51.38,
+     "cout_achat": 21.95,
+     "frais_canal": 10.62,
+     "prelevements": 6.88,
+     "provision": 3.0,
+     "marge_nette": 8.92,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.406
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 51.38,
+    "marge_nette": 7.95,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 51.38,
+     "cout_achat": 21.95,
+     "frais_canal": 11.6,
+     "prelevements": 6.88,
+     "provision": 3.0,
+     "marge_nette": 7.95,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.362
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 51.38,
+    "marge_nette": 7.43,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 51.38,
+     "cout_achat": 21.95,
+     "frais_canal": 12.11,
+     "prelevements": 6.88,
+     "provision": 3.0,
+     "marge_nette": 7.43,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.338
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 51.38,
+    "marge_nette": 6.52,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 51.38,
+     "cout_achat": 21.95,
+     "frais_canal": 13.03,
+     "prelevements": 6.88,
+     "provision": 3.0,
+     "marge_nette": 6.52,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.297
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 51.38,
+    "marge_nette": 4.85,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 51.38,
+     "cout_achat": 21.95,
+     "frais_canal": 14.7,
+     "prelevements": 6.88,
+     "provision": 3.0,
+     "marge_nette": 4.85,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.221
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-18T18:48+00:00",
+   "lien_deal": "https://www.chollometro.com/ofertas/doom-dark-ages-ps5-2076193",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 17.99,
+   "prix_ailleurs_annonce": null,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "202_2",
+   "description": "La comunidad de compras m\\u00e1s grande del mundo",
+   "lien_marchand": "https://www.fnac.es/Doom-Dark-Ages-PS5-Videojuego-nueve-ocasion?origin=AFF_AWIN_366697",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.fnac.es/Doom-Dark-Ages-PS5-Videojuego-nueve-ocasion?origin=AFF_AWIN_366697",
+    "code": 403,
+    "lu": false,
+    "domaine": "fnac.es",
     "erreur": "HTTP 403",
     "bloque": true
    },
-   "livraison_france": "non",
-   "resume": "page du bon plan lue à 18:22 UTC : offre active, 229.0 affiché, marchand 81_2 ; allegro.pl refuse les robots (HTTP 403) ; livraison France : non"
+   "livraison_france": "inconnue",
+   "resume": "page du bon plan lue à 18:48 UTC : offre active, 17.99 affiché, marchand 202_2 ; fnac.es refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-18T18:55+00:00",
-  "verdict": {
-   "commentaire": "Rejeté : coût ~248 € depuis Allegro (Pologne) contre 289,99 € en France, soit moins de 15 % d'économie, et livraison en France non vérifiée.",
-   "prix_neuf_min_idealo": 289.99,
-   "source_prix_ref": "achatmoinscher",
-   "economie_pct": 14,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": null,
-   "demande_confirmee": false
+  "ebay": {
+   "requete": "Doom Dark Ages - PS5",
+   "neuf": {
+    "nb": 27,
+    "min": 6.99,
+    "p25": 30.0,
+    "mediane": 42.3,
+    "max": 190.79
+   },
+   "occasion": null,
+   "exemples": [
+    {
+     "titre": "DOOM : The Dark Ages - PS5",
+     "prix": "41.99",
+     "url": "https://www.ebay.fr/itm/800930031874?_skw=Doom+Dark+Ages+-+PS5&hash=itemba7b266902:g:nK8AAeSw5oZqw75O"
+    }
+   ],
+   "neuf_par_pays": {
+    "FR": 30.0,
+    "DE": 34.35,
+    "IT": 58.92,
+    "ES": 58.9
+   },
+   "meilleur_pays": "IT"
+  },
+  "controle_prix": {
+   "statut": "inconnu",
+   "prix_page": null,
+   "lien": "https://www.fnac.es/Doom-Dark-Ages-PS5-Videojuego-nueve-ocasion?origin=AFF_AWIN_366697"
+  },
+  "meme_produit": {
+   "meme": null,
+   "raison": "non confirmé",
+   "qte_a": null,
+   "qte_b": null,
+   "reference": "DOOM : The Dark Ages PS5"
+  },
+  "erreur_prix_probable": true,
+  "fiche": {
+   "achat": 21.95,
+   "neuf_min": 51.38,
+   "neuf_ou": "achatmoinscher",
+   "neuf_lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/doom-the-dark-ages-ps5.html",
+   "ecart_pct": 57,
+   "vendeurs": 27,
+   "volume": null,
+   "occ_bas": null,
+   "occ_haut": null,
+   "ventes_30j": 0,
+   "vendre_sur": "leboncoin",
+   "prix_vente": 45.21,
+   "benefice": 14.2,
+   "achat_max": 16.15,
+   "manque": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé",
+    "bénéfice sous 20 €"
+   ],
+   "a_completer": [
+    "volume de recherche",
+    "prix d'occasion"
+   ],
+   "calcul_marge": {
+    "version": 2,
+    "prix_vente": 45.21,
+    "cout_achat": 21.95,
+    "frais_canal": 0.0,
+    "prelevements": 6.06,
+    "provision": 3.0,
+    "marge_nette": 14.2,
+    "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+   },
+   "feu": "orange",
+   "proba_vente_7j": null,
+   "proba_detail": []
   }
  }
 ]

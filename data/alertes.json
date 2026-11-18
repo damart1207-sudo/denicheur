@@ -1496,7 +1496,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T14:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1706,7 +1706,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-18T14:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Le prix de 117,77 € ne s'obtient qu'avec 39,25 € crédités sur la carte de fidélité E.Leclerc (bon d'achat, pas une vraie baisse). Prix payé réellement ≈ 157 €, soit le prix le plus bas déjà constaté en France (achatmoinscher 157,02 €). Pas d'économie réelle ; revente négative (-6 €).",
+   "prix_neuf_min_idealo": 157.02,
+   "source_prix_ref": "achatmoinscher (relevé du robot, 18/11)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": true
+  },
+  "verifie_le": "2026-11-18T15:54+00:00"
  },
  {
   "id": "bdc74e4a00",
@@ -1735,7 +1747,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-18T15:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -1774,7 +1786,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 15:31 UTC : offre active, 64.99 affiché, marchand 2139_1 ; fiche amazon.pl lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Armoire à pharmacie vendue sur Amazon.pl, annoncée comme « erreur de prix » : produit générique sans référence de comparaison en France, livraison en France non confirmée, et erreur de prix probable (commande souvent annulée).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune référence fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-18T15:54+00:00"
  },
  {
   "id": "88b67e027f",
@@ -1820,7 +1844,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T15:29+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2028,7 +2052,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 15:32 UTC : offre active, 139.48 affiché, marchand 36_3 ; amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Page du bon plan Dealabs lue par le robot à 15h32 UTC : offre active, 139,48 € sur Amazon.de, livraison en France : oui (coût retenu 145,17 € avec port). Même produit (EAN 0198158437684). Prix neuf le plus bas en France : 189,99 € (leDénicheur, annonce « dès 189,99 € » ; offres lues aujourd'hui de 225,90 € Fnac à 229,99 € Darty/Fnac ; achatmoinscher 195,24 € ; Amazon.fr 233,10 €, plus bas 90 j 193,13 €). Économie ≥ 23 %. Revente : environ 184 € en neuf sur Leboncoin pro, bénéfice net ≈ 11 € (8 % du coût) et produit peu vendu (≈1 vente/mois sur Amazon) : pas assez pour la revente.",
+   "prix_neuf_min_idealo": 189.99,
+   "source_prix_ref": "leDénicheur (recherche web 18/11) + achatmoinscher 195,24 €",
+   "economie_pct": 23,
+   "prix_revente_verifie": 184.29,
+   "canal": "Leboncoin (France)",
+   "marge_nette_verifiee": 11.43,
+   "duree_offre": "incertaine (prix Amazon.de, peut remonter vite)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-18T15:54+00:00"
  },
  {
   "id": "579ed5b493",
@@ -2074,7 +2110,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T15:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2282,7 +2318,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 15:32 UTC : offre active, 69.19 affiché, marchand 36_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Le prix de 64,25 € suppose 25 % rendus en tickets E.Leclerc (bon d'achat sur carte de fidélité). Prix payé réellement ≈ 85,67 €, plus cher qu'Amazon.fr (83,99 € vendu par Amazon, fiche lue par Keepa). Pas un bon plan.",
+   "prix_neuf_min_idealo": 83.99,
+   "source_prix_ref": "Keepa / Amazon.fr (18/11)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": true
+  },
+  "verifie_le": "2026-11-18T15:54+00:00"
  },
  {
   "id": "cde5f7d9bc",
@@ -2328,7 +2376,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T15:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2623,6 +2671,18 @@
    "proba_detail": [
     "Amazon 43/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Offre du magasin polonais RTV Euro AGD (euro.com.pl) à 199 zł : ce marchand ne livre qu'en Pologne, achat impossible depuis la France. Le prix de 170,45 zł exige en plus le paiement différé polonais Blik. Prix neuf le plus bas en France pour comparaison : 105–118 € (Amazon.fr 117,99 €, Keepa).",
+   "prix_neuf_min_idealo": 117.99,
+   "source_prix_ref": "Keepa / Amazon.fr (18/11)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-18T15:54+00:00"
  }
 ]

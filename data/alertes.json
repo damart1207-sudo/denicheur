@@ -4608,7 +4608,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-18T22:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -4801,6 +4801,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 22:28 UTC : offre active, 841.94 affiché, code SSPOUTTIME24, marchand 2139_1 ; fiche timeshop24.de lue : 204.0 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-18T22:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : modèle exact non prouvé. L'offre est une Bambino « petite seconde » (référence et couleur inconnues, marchand inconnu), alors que le prix de référence (274,99 € achatmoinscher) concerne la FAC00009N0, un autre modèle sans petite seconde. Page de l'offre (Pepper Pologne) non consultable, livraison en France non prouvée. Revente : marge nette ~2 € au mieux, inutile.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable (achatmoinscher = autre modèle)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

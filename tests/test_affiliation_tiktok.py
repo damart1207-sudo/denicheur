@@ -255,6 +255,74 @@ class Calculs(unittest.TestCase):
         finally:
             A.shopping.chercher = ancien
 
+    def test_mots_google(self):
+        self.assertEqual(A.mots_google("SUNCOK Batterie de Cuisine 19 Pièces, Casseroles et Poêles", "SUNCOK"),
+                         [("suncok", "marque"), ("suncok batterie", "marque"), ("suncok batterie de cuisine", "marque"),
+                          ("batterie", "produit"), ("batterie de cuisine", "produit")])
+        self.assertEqual(A.mots_google("DEWINNER Matelas, Matelas à Ressorts Ensachés", "DEWINNER"),
+                         [("dewinner", "marque"), ("dewinner matelas", "marque"), ("matelas", "produit")])
+        medi = A.mots_google("[medicube Officiel] Sérum raffermissant NAD+ EGF | Sérum avec NAD+, EGF & extrait de collagène", "medicube")
+        self.assertEqual([m for m, _ in medi][:2], ["medicube", "medicube nad egf"])   # les sigles du modèle, sans le « + »
+        self.assertFalse(any("+" in m for m, _ in medi))
+        sans = A.mots_google("12 Empty Baskets for Christmas Gifts, with Cellophane Bags", "")
+        self.assertEqual(sans[0], ("empty", "produit"))                    # le nombre du lot est retiré
+        self.assertTrue(all(g == "produit" for _, g in sans))
+        self.assertEqual(len(A.mots_google("Batterie de cuisine Tefal Ingenio Cook Eat set Inox 15p", "", maxi=3)), 3)
+
+    def test_texte_google(self):
+        self.assertEqual(A.texte_google(None), "")
+        self.assertIn("non lu", A.texte_google({"lu": False}))
+        g = {"lu": True, "mots": [{"mot": "medicube", "genre": "marque", "volume": 12100}, {"mot": "medicube sérum", "genre": "marque", "volume": None},
+                                  {"mot": "sérum", "genre": "produit", "volume": 880}]}
+        self.assertEqual(A.texte_google(g), "« medicube » : 12 100 par mois · « sérum » : 880 par mois")
+        self.assertEqual(A.texte_google({"lu": True, "mots": [{"mot": "sopami", "genre": "marque", "volume": None}]}), "aucun volume connu pour « sopami »")
+
+    def test_meilleur_prix_ailleurs(self):
+        p = {"prix_moyen_usd": 76.92, "amazon": {"prix_neuf_eur": 79.99, "lien": "https://www.amazon.fr/dp/X"},
+             "comparaison": {"type": "meme_produit", "min": 66.49, "moins_cher": {"marchand": "ManoMano.fr", "prix": 66.49, "lien": "https://g/x"}}}
+        r = A.meilleur_prix(p, 0.91174)
+        self.assertEqual((r["prix"], r["marchand"], r["prix_tiktok_eur"], r["ecart_eur"]), (66.49, "ManoMano.fr", 70.13, -3.64))
+        self.assertIn("3,64 € de moins ailleurs que sur TikTok", A.texte_meilleur_prix(p, 0.91174))
+        seul = {"prix_moyen_usd": 17.76, "amazon": {"prix_neuf_eur": 26.0}, "comparaison": {"type": "aucune"}}
+        self.assertIn("26,00 € chez Amazon.fr", A.texte_meilleur_prix(seul, 0.91174))
+        self.assertIn("de plus ailleurs que sur TikTok", A.texte_meilleur_prix(seul, 0.91174))
+        self.assertNotIn("TikTok", A.texte_meilleur_prix(seul, None))         # sans taux du jour : pas de comparaison inventée
+        equi = {"prix_moyen_usd": 100, "amazon": None, "comparaison": {"type": "equivalents", "min": 49.49, "max": 219.98, "mediane": 111.0}}
+        self.assertIsNone(A.meilleur_prix(equi, 0.9))                          # des équivalents ne sont pas le même produit
+        self.assertIn("même produit non trouvé ailleurs ; articles du même genre", A.texte_meilleur_prix(equi, 0.9))
+        self.assertEqual(A.texte_meilleur_prix({"prix_moyen_usd": 5}, 0.9), "même produit non trouvé ailleurs")
+
+    def test_demande_google_un_seul_appel_et_jamais_deux_fois(self):
+        appels = []
+        ancien, fichier = A.dataforseo.volumes_labs, A.F_RESERVE
+        A.F_RESERVE = os.path.join(tempfile.mkdtemp(), "r.json")
+        base = A.dataforseo.plafond_du_jour()
+
+        def faux(mots, pays="FR"):
+            appels.append((list(mots), round(A.dataforseo.plafond_du_jour() - base, 4)))
+            return {"landot": 5400, "brosse": 90500}
+        A.dataforseo.volumes_labs = faux
+        try:
+            cfg = {"comparaison": {"reserve_usd": 0.04}, "google": {"actif": True}}
+            f = [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10)), A.lire_produit(ligne("NYX Rouge à lèvres mat", 900, 9, 10))]
+            self.assertEqual(A.demande_google(f, cfg), 2)
+            self.assertEqual(len(appels), 1)                                  # un seul appel pour tous les finalistes
+            self.assertIn("landot", appels[0][0])
+            self.assertGreater(appels[0][1], 0)                               # la réserve est ouverte pendant l'appel…
+            self.assertEqual(A.dataforseo.plafond_du_jour(), base)            # … et refermée après
+            self.assertLess(A.reserve_restante(cfg["comparaison"]), 0.04)     # et comptée dans la réserve du jour
+            self.assertEqual(f[0]["google"]["mots"][0], {"mot": "landot", "genre": "marque", "volume": 5400})
+            self.assertIn("« landot » : 5 400 par mois", A.carte(dict(f[0], marque_sure="LANDOT", listes=["hausses"]), 0.9))
+            self.assertEqual(A.demande_google(f, cfg), 0)                     # déjà lu : rien n'est redemandé ni repayé
+            self.assertEqual(len(appels), 1)
+            A.dataforseo.volumes_labs = lambda mots, pays="FR": None          # budget atteint : « non lu », réessayé plus tard
+            g = [A.lire_produit(ligne("LANDOT Brosse électrique lissante 2 en 1", 1823, 46.2, 10))]
+            self.assertEqual(A.demande_google(g, cfg), 0)
+            self.assertEqual(g[0]["google"], {"lu": False})
+            self.assertEqual(A.demande_google(g, {"google": {"actif": False}}), 0)
+        finally:
+            A.dataforseo.volumes_labs, A.F_RESERVE = ancien, fichier
+
     def test_resumes(self):
         e = A.resume_ebay([{"soldPrice": "213.90", "soldCurrency": "EUR"}, {"soldPrice": "230.00"}, {"soldPrice": None}])
         self.assertEqual((e["nb"], e["min"], e["max"], e["mediane"]), (2, 213.9, 230.0, 221.95))

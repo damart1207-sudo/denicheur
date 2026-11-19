@@ -75,7 +75,7 @@ _RESERVE = 0.0
 def reserve(usd):
     """Petite réserve au-dessus du plafond du jour, valable seulement pendant le bloc « with » (accord de David le
     16/11/2026 : 0,02 $ par relevé d'affiliation pour la comparaison de prix, quand les passages de nuit ont déjà
-    consommé le plafond). C'est à l'outil appelant de compter ce qu'il a déjà pris dans la journée."""
+    consommé le plafond ; 0,04 $ depuis le 19/11/2026 pour y ajouter les volumes Google). C'est à l'outil appelant de compter ce qu'il a déjà pris dans la journée."""
     global _RESERVE
     avant = _RESERVE
     _RESERVE = max(0.0, float(usd))

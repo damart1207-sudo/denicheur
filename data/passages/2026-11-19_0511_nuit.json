@@ -1,0 +1,2020 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-19_0511",
+ "date_affichee": "19/11/2026 à 05 h 11",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 24,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "URLError: <urlopen error timed out>"
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 79,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 650,
+ "nb_nouvelles": 49,
+ "nb_prefiltres": 43,
+ "nb_tries": 43,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 3
+  },
+  "gptoss": {
+   "appels": 4,
+   "reussites": 4,
+   "erreurs": [],
+   "choix": 11
+  },
+  "qwen": {
+   "appels": 4,
+   "reussites": 4,
+   "erreurs": [],
+   "choix": 0
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "keepa-B0DL5B5XRQ-neuf",
+   "titre": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cuir synthétique, pour bureau et ",
+   "prix": 34.37,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 568,
+   "domaine": "autre",
+   "nom_produit": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cui",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 103.65,
+   "cout_achat": 39.37,
+   "marge_nette": 47.39,
+   "rentabilite": 1.204,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 117.78 €, baisse 71 %, rang 7349"
+   },
+   "score": 120.4,
+   "asin": "B0DL5B5XRQ",
+   "ean": null,
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 15,
+   "ebay": {
+    "requete": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cui",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "AFIING",
+    "asin": "B0DL5B5XRQ",
+    "titre": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cuir synthétique, pour bureau et maison (140 x 60 cm, blanc ivoire)",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 40.64,
+    "prix_amazon": 40.64,
+    "prix_tiers": 40.64,
+    "moyenne_90j": 34.36,
+    "plus_bas_90j": 31.74,
+    "occasion": null,
+    "rang_ventes": 7609,
+    "chutes_rang_30j": 15,
+    "chutes_rang_90j": 49,
+    "ventes_estimees_30j": 15,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ",
+    "jetons_restants": 387
+   },
+   "prix_plancher": {
+    "nom": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cui",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 40.64,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ"
+   },
+   "remise_sincere": false,
+   "mot_cle": "afiing grand tapis bureau",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 35.76,
+     "marge_nette": -11.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.76,
+      "cout_achat": 39.37,
+      "frais_canal": 0.0,
+      "prelevements": 4.79,
+      "provision": 3.0,
+      "marge_nette": -11.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.29
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 35.76,
+     "marge_nette": -11.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.76,
+      "cout_achat": 39.37,
+      "frais_canal": 0.0,
+      "prelevements": 4.79,
+      "provision": 3.0,
+      "marge_nette": -11.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.29
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 35.76,
+     "marge_nette": -11.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 35.76,
+      "cout_achat": 39.37,
+      "frais_canal": 0.0,
+      "prelevements": 4.79,
+      "provision": 3.0,
+      "marge_nette": -11.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.29
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 40.64,
+     "marge_nette": -16.83,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.64,
+      "cout_achat": 39.37,
+      "frais_canal": 9.66,
+      "prelevements": 5.45,
+      "provision": 3.0,
+      "marge_nette": -16.83,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.427
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 40.64,
+     "marge_nette": -18.02,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.64,
+      "cout_achat": 39.37,
+      "frais_canal": 10.84,
+      "prelevements": 5.45,
+      "provision": 3.0,
+      "marge_nette": -18.02,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.458
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 40.64,
+     "marge_nette": -18.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.64,
+      "cout_achat": 39.37,
+      "frais_canal": 11.25,
+      "prelevements": 5.45,
+      "provision": 3.0,
+      "marge_nette": -18.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.468
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 40.64,
+     "marge_nette": -18.81,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.64,
+      "cout_achat": 39.37,
+      "frais_canal": 11.63,
+      "prelevements": 5.45,
+      "provision": 3.0,
+      "marge_nette": -18.81,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.478
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 40.64,
+     "marge_nette": -20.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 40.64,
+      "cout_achat": 39.37,
+      "frais_canal": 13.09,
+      "prelevements": 5.45,
+      "provision": 3.0,
+      "marge_nette": -20.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.515
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 36.58,
+   "marge_verifiee": -10.69,
+   "rentabilite_verifiee": -0.272,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cui",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cui",
+    "temperature_dealabs": 568,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0H9Y9KV6D-neuf",
+   "titre": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris Foncé",
+   "prix": 29.99,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0H9Y9KV6D",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 496,
+   "domaine": "autre",
+   "nom_produit": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris F",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.05,
+   "cout_achat": 34.99,
+   "marge_nette": 22.67,
+   "rentabilite": 0.648,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 79.6 €, baisse 62 %, rang 26376"
+   },
+   "score": 64.8,
+   "asin": "B0H9Y9KV6D",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 4,
+   "ebay": {
+    "requete": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris F",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Deconovo",
+    "asin": "B0H9Y9KV6D",
+    "titre": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris Foncé",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 29.99,
+    "prix_amazon": null,
+    "prix_tiers": 29.99,
+    "moyenne_90j": 79.16,
+    "plus_bas_90j": 29.99,
+    "occasion": null,
+    "rang_ventes": 26382,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 4,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0H9Y9KV6D",
+    "jetons_restants": 386
+   },
+   "prix_plancher": {
+    "nom": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris F",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 29.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0H9Y9KV6D"
+   },
+   "remise_sincere": true,
+   "mot_cle": "deconovo rideaux occultants passants",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0H9Y9KV6D"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 26.39,
+     "marge_nette": -15.14,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 34.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -15.14,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.433
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 26.39,
+     "marge_nette": -15.14,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 34.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -15.14,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.433
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 26.39,
+     "marge_nette": -15.14,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 26.39,
+      "cout_achat": 34.99,
+      "frais_canal": 0.0,
+      "prelevements": 3.54,
+      "provision": 3.0,
+      "marge_nette": -15.14,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.433
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 29.99,
+     "marge_nette": -20.72,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 34.99,
+      "frais_canal": 8.7,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -20.72,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.592
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 29.99,
+     "marge_nette": -22.12,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 34.99,
+      "frais_canal": 10.1,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -22.12,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.632
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 29.99,
+     "marge_nette": -22.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 34.99,
+      "frais_canal": 10.25,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -22.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.636
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 29.99,
+     "marge_nette": -22.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 34.99,
+      "frais_canal": 10.4,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -22.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.641
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 29.99,
+     "marge_nette": -23.51,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 29.99,
+      "cout_achat": 34.99,
+      "frais_canal": 11.49,
+      "prelevements": 4.02,
+      "provision": 3.0,
+      "marge_nette": -23.51,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.672
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 26.99,
+   "marge_verifiee": -14.62,
+   "rentabilite_verifiee": -0.418,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris F",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris F",
+    "temperature_dealabs": 496,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "prix": 50.56,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 456,
+   "domaine": "autre",
+   "nom_produit": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 103.95,
+   "cout_achat": 55.56,
+   "marge_nette": 31.46,
+   "rentabilite": 0.566,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 118.13 €, baisse 57 %, rang 770"
+   },
+   "score": 56.6,
+   "asin": "B0BK749DJG",
+   "ean": "4004117625893",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 19,
+   "ebay": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "LEUCHTTURM1917",
+    "asin": "B0BK749DJG",
+    "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red, pointillé",
+    "ean": "4004117625893",
+    "pays": "FR",
+    "prix_neuf": 50.56,
+    "prix_amazon": null,
+    "prix_tiers": 50.56,
+    "moyenne_90j": 118.12,
+    "plus_bas_90j": 21.5,
+    "occasion": null,
+    "rang_ventes": 792,
+    "chutes_rang_30j": 19,
+    "chutes_rang_90j": 45,
+    "ventes_estimees_30j": 19,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+    "jetons_restants": 385
+   },
+   "prix_plancher": {
+    "nom": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 50.56,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "remise_sincere": true,
+   "mot_cle": "leuchtturm1917 367251 carnet notes",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0BK749DJG"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 44.49,
+     "marge_nette": -20.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.49,
+      "cout_achat": 55.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.96,
+      "provision": 3.0,
+      "marge_nette": -20.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 44.49,
+     "marge_nette": -20.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.49,
+      "cout_achat": 55.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.96,
+      "provision": 3.0,
+      "marge_nette": -20.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 44.49,
+     "marge_nette": -20.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.49,
+      "cout_achat": 55.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.96,
+      "provision": 3.0,
+      "marge_nette": -20.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.361
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 50.56,
+     "marge_nette": -25.33,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.56,
+      "cout_achat": 55.56,
+      "frais_canal": 10.55,
+      "prelevements": 6.78,
+      "provision": 3.0,
+      "marge_nette": -25.33,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.456
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 50.56,
+     "marge_nette": -26.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.56,
+      "cout_achat": 55.56,
+      "frais_canal": 11.54,
+      "prelevements": 6.78,
+      "provision": 3.0,
+      "marge_nette": -26.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.474
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 50.56,
+     "marge_nette": -26.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.56,
+      "cout_achat": 55.56,
+      "frais_canal": 12.04,
+      "prelevements": 6.78,
+      "provision": 3.0,
+      "marge_nette": -26.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.483
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 50.56,
+     "marge_nette": -27.7,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.56,
+      "cout_achat": 55.56,
+      "frais_canal": 12.92,
+      "prelevements": 6.78,
+      "provision": 3.0,
+      "marge_nette": -27.7,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.499
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 50.56,
+     "marge_nette": -29.35,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.56,
+      "cout_achat": 55.56,
+      "frais_canal": 14.57,
+      "prelevements": 6.78,
+      "provision": 3.0,
+      "marge_nette": -29.35,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.528
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 45.5,
+   "marge_verifiee": -19.16,
+   "rentabilite_verifiee": -0.345,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, ",
+    "temperature_dealabs": 456,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "3b86060d3e",
+   "titre": "Lego Batman : L'Héritage du Chevalier Noir sur Nintendo Switch 2",
+   "prix": 35.75,
+   "devise": "EUR",
+   "marchand": "E.Leclerc",
+   "lien": "https://www.dealabs.com/bons-plans/lego-batman-lheritage-du-chevalier-noir-sur-nintendo-switch-2-3460936",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.e.leclerc/fp/lego-batman-l-heritage-du-chevalier-noir-nintendo-switch-2-5051889751021"
+   },
+   "meme_produit": null,
+   "lien_marchand": "https://www.e.leclerc/fp/lego-batman-l-heritage-du-chevalier-noir-nintendo-switch-2-5051889751021",
+   "domaine": "autre",
+   "nom_produit": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 44.04,
+   "cout_achat": 40.75,
+   "marge_nette": -5.61,
+   "rentabilite": -0.138,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 29 % vs neuf le moins cher"
+   },
+   "score": 43.5,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "WARNER BROS LEGO Batman : L'Héritage du Chevalier Noir (NINTENDO SWITCH 2)",
+       "prix": 50.05,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/lego-batman-l-heritage-du-chevalier-noir-nintendo-switch-2.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 50.05,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/lego-batman-l-heritage-du-chevalier-noir-nintendo-switch-2.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
+    "neuf": {
+     "nb": 4,
+     "min": 68.3,
+     "p25": 69.95,
+     "mediane": 87.33,
+     "max": 135.9
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "LEGO Batman: L'Héritage du Chevalier Noir - Nintendo Switch 2",
+      "prix": "68.30",
+      "url": "https://www.ebay.fr/itm/336890310932?_skw=LEGO+Batman+L%27H%C3%A9ritage+du+Chevalier+Noir+Nintendo+Switch+2&hash=item4e703a3114:g:rzAAAeSwnvxq8yl5"
+     },
+     {
+      "titre": "LEGO Batman : L’Héritage du Chevalier Noir Deluxe (Switch 2)",
+      "prix": "135.90",
+      "url": "https://www.ebay.fr/itm/407249812375?_skw=LEGO+Batman+L%27H%C3%A9ritage+du+Chevalier+Noir+Nintendo+Switch+2&hash=item5ed1fafb97:g:OjQAAeSwM95quTNz"
+     },
+     {
+      "titre": "LEGO BATMAN : L'HÉRITAGE DU CHEVALIER NOIR SWITCH 2 FR NEW (GAME-KEY CARD) (GAME",
+      "prix": "74.89",
+      "url": "https://www.ebay.fr/itm/287692418785?_skw=LEGO+Batman+L%27H%C3%A9ritage+du+Chevalier+Noir+Nintendo+Switch+2&hash=item42fbcdeee1:g:KEMAAeSwZypq5Mcm"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 69.95,
+     "DE": null,
+     "IT": null,
+     "ES": 69.22
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "lego batman l'héritage chevalier",
+   "annonces_ebay": 4,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 44.04,
+     "marge_nette": -5.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.04,
+      "cout_achat": 40.75,
+      "frais_canal": 0.0,
+      "prelevements": 5.9,
+      "provision": 3.0,
+      "marge_nette": -5.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.138
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 44.04,
+     "marge_nette": -5.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.04,
+      "cout_achat": 40.75,
+      "frais_canal": 0.0,
+      "prelevements": 5.9,
+      "provision": 3.0,
+      "marge_nette": -5.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.138
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 44.04,
+     "marge_nette": -5.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 44.04,
+      "cout_achat": 40.75,
+      "frais_canal": 0.0,
+      "prelevements": 5.9,
+      "provision": 3.0,
+      "marge_nette": -5.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.138
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 50.05,
+     "marge_nette": -10.91,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.05,
+      "cout_achat": 40.75,
+      "frais_canal": 10.5,
+      "prelevements": 6.71,
+      "provision": 3.0,
+      "marge_nette": -10.91,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.268
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 50.05,
+     "marge_nette": -11.91,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.05,
+      "cout_achat": 40.75,
+      "frais_canal": 11.5,
+      "prelevements": 6.71,
+      "provision": 3.0,
+      "marge_nette": -11.91,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.292
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 50.05,
+     "marge_nette": -12.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.05,
+      "cout_achat": 40.75,
+      "frais_canal": 12.0,
+      "prelevements": 6.71,
+      "provision": 3.0,
+      "marge_nette": -12.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.305
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 50.05,
+     "marge_nette": -13.26,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.05,
+      "cout_achat": 40.75,
+      "frais_canal": 12.86,
+      "prelevements": 6.71,
+      "provision": 3.0,
+      "marge_nette": -13.26,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.325
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 50.05,
+     "marge_nette": -14.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 50.05,
+      "cout_achat": 40.75,
+      "frais_canal": 14.5,
+      "prelevements": 6.71,
+      "provision": 3.0,
+      "marge_nette": -14.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.366
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 48.55,
+   "marge_verifiee": -1.71,
+   "rentabilite_verifiee": -0.042,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
+    "pays": {
+     "FR": {
+      "nb_annonces": 2,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 68.3,
+       "titre": "LEGO Batman: L'Héritage du Chevalier Noir - Nintendo Switch 2",
+       "lien": "https://www.ebay.fr/itm/336890310932?_skw=LEGO+Batman+L%27H%C3%A9ritage+du+Chevalier+Noir+Nintendo+Switch+2&hash=item4e703a3114:g:rzAAAeSwnvxq8yl5",
+       "vendeur": "manu-78",
+       "avis_vendeur": 2786
+      },
+      "plus_cher": {
+       "prix": 99.76,
+       "titre": "LEGO Batman: L'Héritage du Chevalier Noir • Jeu Nintendo Switch 2",
+       "lien": "https://www.ebay.fr/itm/128126162167?_skw=LEGO+Batman+L%27H%C3%A9ritage+du+Chevalier+Noir+Nintendo+Switch+2&hash=item1dd4ea14f7:g:gFUAAeSwLZVqye1f",
+       "vendeur": "mgt-shop-eu",
+       "avis_vendeur": 249
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "LEGO Batman L'Héritage du Chevalier Noir Nintendo Switch 2",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "lego batman l héritage du chevalier noir nintendo switch 2"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 4,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 8,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0DL5B5XRQ-neuf",
+   "titre": "AFIING Grand tapis de bureau en cuir, antidérapant, imperméable en cuir synthétique, pour bureau et ",
+   "temperature": 568,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 34.37,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DL5B5XRQ",
+   "date": "2026-11-19T03:31",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0DL5B5XRQ",
+   "ref_fr": 117.78,
+   "description": "moyenne 90 j 117.78 €, baisse 71 %, rang 7349"
+  },
+  {
+   "id": "keepa-B0H9Y9KV6D-neuf",
+   "titre": "Deconovo Rideaux Occultants avec Passants pour Chambre et Salon Gris Foncé",
+   "temperature": 496,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H9Y9KV6D",
+   "date": "2026-11-19T00:03",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0H9Y9KV6D",
+   "ref_fr": 79.6,
+   "description": "moyenne 90 j 79.6 €, baisse 62 %, rang 26376"
+  },
+  {
+   "id": "keepa-B0GDFXT926-neuf",
+   "titre": "Jucames Tissage Naturel Cheveux Humain Naturels Deep Wave Human Hair Bundles Weave Extensions Double",
+   "temperature": 472,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 16.03,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GDFXT926",
+   "date": "2026-11-19T03:31",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0GDFXT926",
+   "ref_fr": 39.29,
+   "description": "moyenne 90 j 39.29 €, baisse 59 %, rang 5842"
+  },
+  {
+   "id": "keepa-B004ZMHX9U-neuf",
+   "titre": "Rhodia 146009C Bloc Agrafé N°14 Black Ligné 11 x 17 cm 80 Feuillets",
+   "temperature": 456,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B004ZMHX9U",
+   "date": "2026-11-19T03:31",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B004ZMHX9U",
+   "ref_fr": 32.42,
+   "description": "moyenne 90 j 32.42 €, baisse 57 %, rang 6117"
+  },
+  {
+   "id": "keepa-B0BK749DJG-neuf",
+   "titre": "LEUCHTTURM1917 367251 Carnet de notes Medium (A5), Couverture rigide, 251 pages numérotées, Fox Red,",
+   "temperature": 456,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 50.56,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BK749DJG",
+   "date": "2026-11-19T00:43",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BK749DJG",
+   "ref_fr": 118.13,
+   "description": "moyenne 90 j 118.13 €, baisse 57 %, rang 770"
+  },
+  {
+   "id": "ce40fb0e8a",
+   "titre": "Nike Air Superfly Chaussure pour femme",
+   "temperature": 400,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-nike-air-superfly-pour-femme-v6MNQ3id/IB5824-001",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 99.99 €, -50 %. Nike IB5824-001 ; couleur Metallic Silver/Anthracite/Volt/Noir"
+  },
+  {
+   "id": "keepa-B08Y5M7FPY-arbDE",
+   "titre": "Clarks Mocassins Bradley pour Homme, Tumb Marron, 6 UK Narrow [Amazon DE]",
+   "temperature": 350,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 43.41,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B08Y5M7FPY",
+   "date": "2026-11-19T03:31",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "5059304112808",
+   "asin": "B08Y5M7FPY",
+   "ref_fr": 77.67,
+   "ventes_30j": 5,
+   "vendeurs": 4,
+   "description": "Amazon.fr 77.67 € (moyenne 90 j 80.73 €), écart 35 % port compris, ventes 30 j 5, 4 vendeurs FR"
+  },
+  {
+   "id": "5689003df2",
+   "titre": "Nike 24.7 PerfectStretch Pantalon chino slim Dri-FIT pour homme",
+   "temperature": 320,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 71.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/pantalon-chino-slim-dri-fit-nike-24-7-perfectstretch-pour-homme-QmzHk9MN/HQ6918-320",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 119.99 €, -40 %. Nike HQ6918-320 ; couleur Light Army/Noir/Steel Green"
+  },
+  {
+   "id": "keepa-B07S59DLXX-arbES",
+   "titre": "Odoland Masque de Ski Magnétique Homme et Femme, Anti-Buée, Anti-UV400 [Amazon ES]",
+   "temperature": 240,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 26.78,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B07S59DLXX",
+   "date": "2026-11-19T03:31",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": null,
+   "asin": "B07S59DLXX",
+   "ref_fr": 44.19,
+   "ventes_30j": 12,
+   "vendeurs": 1,
+   "description": "Amazon.fr 44.19 € (moyenne 90 j 48.07 €), écart 24 % port compris, ventes 30 j 12, 1 vendeurs FR"
+  },
+  {
+   "id": "8f8e1bbbc7",
+   "titre": "Rabanne One Million Parfum 200ml",
+   "temperature": 108,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": null,
+   "prix": 87.89,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/rabanne-one-million-parfum-200ml-427775",
+   "date": "Thu, 19 Nov 2026 05:07:12 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€87,89 Rabanne One Million in Parfum concentratie. Nu voor een goede prijs te koop voor de grote 200ml fles."
+  },
+  {
+   "id": "b6050e5c6c",
+   "titre": "Vidéoprojecteur Xgimi mogo 4",
+   "temperature": 104,
+   "categorie": "High-Tech",
+   "marchand": "Xgimi",
+   "prix": 399.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/xgimi-mogo-4-3460557",
+   "date": "Thu, 19 Nov 2026 05:06:21 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "399€ - Xgimi Promo sur le site xgimi"
+  },
+  {
+   "id": "db08cf33fe",
+   "titre": "Keychron V6 Ultra 8K Wireless, schwarz, LEDs RGB, hot-swap, Keychron Silk POM RED, USB/Bluetooth, DE, Gaming Tastatur",
+   "temperature": 104,
+   "categorie": "Gaming",
+   "marchand": "Galaxus",
+   "prix": 119.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/keychron-v6-ultra-8k-wireless-schwarz-leds-rgb-hot-swap-keychron-silk-pom-red-usbbluetooth-de-gaming-tastatur-2875078",
+   "date": "Thu, 19 Nov 2026 04:35:13 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "119€ - Galaxus Aktuell ist die mechanische Gaming Tastatur von Keychron zum reduzierten Preis erhältlich. Spezifikationen: Layout: DE (Full-Size mit Nummernbloc..."
+  },
+  {
+   "id": "dcbf132ae6",
+   "titre": "Einhell Bohrschrauber TE-CD 18/40 Li + Winkelschleifer TC-AG 18/115 + Stichsäge -JS 18 Power (18 V, inkl. 1 x 4,0 Ah Akku, Ladegerät, Etui)",
+   "temperature": 103,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 134.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/einhell-bohrschrauber-te-cd-1840-li-winkelschleifer-tc-ag-18115-stichsage-js-18-power-18-v-inkl-1-x-40-ah-akku-ladegerat-etui-2875026",
+   "date": "Thu, 19 Nov 2026 04:35:43 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "134,99€ - Amazon Super Erstausrüstung zum Heimwerken. Die Preis/Leistung stimmt und bei Einhell passt die Qualität Power X-Change Werkzeug-Set ..."
+  },
+  {
+   "id": "019a64bf2d",
+   "titre": "Amazon Prime oder Hornbach Tiefpreisgarantie: Gardena Premium Multibrause, 5 Sprühbilder für 22€ bzw. 19,80€ nach TPG",
+   "temperature": 102,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 19.8,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-oder-hornbach-tiefpreisgarantie-gardena-premium-multibrause-5-spruhbilder-fur-22eur-bzw-1980eur-nach-tpg-2874772",
+   "date": "Thu, 19 Nov 2026 04:38:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "19,80€ - Amazon Hallo Freunde der gepflegten Gartenarbeit, antizyklisch kaufen ist ja immer sinnvoll, der nächste Frühling kommt garantiert. Die Brause beobacht..."
+  },
+  {
+   "id": "3f1d1dd3a7",
+   "titre": "Chaussures Nike Air Max Plus VII",
+   "temperature": 100,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Nike",
+   "prix": 94.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nike-air-max-plus-vii-3460637",
+   "date": "Thu, 19 Nov 2026 04:51:05 +0100",
+   "source": "dealabs-hot",
+   "pays": "FR",
+   "description": "94,99€ - Nike Impose ton style avec la Air Max Plus. Ses renforts signature ondulent sur toute la longueur de la chaussure, ajoutant une touche de chaleur à ton look, tand..."
+  },
+  {
+   "id": "b18ba2ad74",
+   "titre": "🛍️ LaCie 5To Rugged Disque Dur Portable ✅ 204,99€ au lieu de 309,99€ ➡️ https://www.amazon.fr/dp/B079H7JVL3/?tag=pmrat-21 Publicité/Lien affilié Le prix peut ch",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 204.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B079H7JVL3/?tag=pmrat-21",
+   "date": "2026-11-19T04:02",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LaCie 5To Rugged Disque Dur Portable ✅ 204,99€ au lieu de 309,99€ ➡️ https://www.amazon.fr/dp/B079H7JVL3/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 309.99
+  },
+  {
+   "id": "f15bfd8a80",
+   "titre": "Mortal Kombat 1 (PS5)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 13.42,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/mortal-kombat-1-ps5-3461110",
+   "date": "Thu, 19 Nov 2026 05:07:21 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "13,42€ - E.Leclerc Bon prix ! Promo Black Friday, peut-être en rupture rapidement ! • Nouveau système de combat • Nouveaux modes de jeu et Fatality • Personnages Kameo appelables pour aider au combat"
+  },
+  {
+   "id": "b3386d7bad",
+   "titre": "Cardan à chocs 1/2 KS TOOL",
+   "temperature": null,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Amazon",
+   "prix": 13.59,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/cardan-a-chocs-12-ks-tool-3461107",
+   "date": "Thu, 19 Nov 2026 05:02:42 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "13,59€ - Amazon Bonjour a tous, un outil top a prix correct! Le ressort a l'intérieur du cardan luis permet d'éviter de bouger (comme un cardan classique) :{"
+  },
+  {
+   "id": "64747dfdaf",
+   "titre": "PAYDAY 3 - Day One Edition (PlayStation 5)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 9.68,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/payday-3-day-one-edition-playstation-5-3461106",
+   "date": "Thu, 19 Nov 2026 05:01:37 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "9,68€ - Amazon Bon prix ! Deal jusqu'au 30/11 !"
+  },
+  {
+   "id": "bebbab7f0e",
+   "titre": "Xbox – Tony Hawk’s Pro Skater 3 + 4 – Edition Standard – Xbox Series X / Xbox One (Disque)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 15.01,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/xbox-tony-hawks-pro-skater-3-4-edition-standard-xbox-series-x-xbox-one-disque-3461105",
+   "date": "Thu, 19 Nov 2026 04:57:38 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "15,01€ - Amazon Super prix ! Deal jusqu'au 30/11 ! À propos de ce produit Précommandez Tony Hawk’s Pro Skater 3 + 4 dès maintenant ! Préparez-vous pour le retour de la franchise légendaire avec Tony Hawk’s Pro Skater 3 + 4. Une expérience revisitée avec plus de skateurs, de nouveaux skateparks, des "
+  },
+  {
+   "id": "0c786e4903",
+   "titre": "Terminator 4K Ultra HD + Blu-ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 11.97,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/terminator-4k-ultra-hd-blu-ray-3461104",
+   "date": "Thu, 19 Nov 2026 04:53:55 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "11,97€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Terminator [4K Ultra HD + Blu-ray] Commentaires client"
+  },
+  {
+   "id": "9d1a05599a",
+   "titre": "Kill Bill - Vol. 1 4K Ultra HD + Blu-ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 11.97,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/kill-bill-vol-1-4k-ultra-hd-blu-ray-3461103",
+   "date": "Thu, 19 Nov 2026 04:51:58 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "11,97€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Kill Bill - Vol. 1 [4K Ultra HD + Blu-ray] Commentaires client"
+  },
+  {
+   "id": "076bdf78d7",
+   "titre": "Paddington au Pérou [4K Ultra HD + Blu-Ray]",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 11.47,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/paddington-au-perou-4k-ultra-hd-blu-ray-3461102",
+   "date": "Thu, 19 Nov 2026 04:50:22 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "11,47€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Paddington au Pérou [4K Ultra HD + Blu-Ray] Commentaires client"
+  },
+  {
+   "id": "849a160030",
+   "titre": "Wicked : Partie II 4K Ultra HD + Blu-ray - Boîtier SteelBook limité",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 12.47,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/wicked-partie-ii-4k-ultra-hd-blu-ray-boitier-steelbook-limite-3461101",
+   "date": "Thu, 19 Nov 2026 04:48:29 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "12,47€ - Amazon Très bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Wicked : Partie II [4K Ultra HD + Blu-ray - Boîtier SteelBook limité] Commentaires client"
+  },
+  {
+   "id": "5d94ed36a3",
+   "titre": "Kill Bill - Vol. 2 4K Ultra HD + Blu-ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 11.97,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/kill-bill-vol-2-4k-ultra-hd-blu-ray-3461100",
+   "date": "Thu, 19 Nov 2026 04:45:48 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "11,97€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Kill Bill - Vol. 2 [4K Ultra HD + Blu-ray] Commentaires client"
+  },
+  {
+   "id": "46d3c22cca",
+   "titre": "Divergente - Coffret Trilogie 4K Ultra HD + Blu-Ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 21.05,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/divergente-coffret-trilogie-4k-ultra-hd-blu-ray-3461099",
+   "date": "Thu, 19 Nov 2026 04:41:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "21,05€ - Amazon Excellent prix ! Deal jusqu'au 30/11 ! À propos de ce produit Saga divergente (la) - blu-ray edition 4k Commentaires client"
+  },
+  {
+   "id": "62a5486fc2",
+   "titre": "Deux sets : Lansay - Laser X Evolution (4 pistolets laser)",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 51.19,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/deux-sets-lansay-laser-x-evolution-4-pistolets-laser-3461098",
+   "date": "Thu, 19 Nov 2026 04:41:14 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "51,19€ - Amazon Pour s'amuser avec un laser game chez soit ! Pour l'achat de deux articles, moins 50% sur le second. Soit 51.13€ les deux boîtes (4 pistolets). Le prix pour un seul set (2 pistolets) est d'environ 50€ sur les autres sites. Il n'y a pas de plastron, plus simple pour les jeunes enfants"
+  },
+  {
+   "id": "96de0c49af",
+   "titre": "The Last of Us-Saisons 1 et 2 [4K Ultra HD] [Blu-ray]",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/the-last-of-us-saisons-1-et-2-4k-ultra-hd-blu-ray-3461096",
+   "date": "Thu, 19 Nov 2026 04:37:33 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "39,99€ - Amazon Excellent prix ! Deal jusqu'au 30/11 ! À propos de ce produit 4K Ultra HD Commentaires client"
+  },
+  {
+   "id": "6e280dab2f",
+   "titre": "Super Mario Bros. le film Blu Ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 8.14,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/super-mario-bros-le-film-blu-ray-3461095",
+   "date": "Thu, 19 Nov 2026 04:35:11 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "8,14€ - Amazon Bon prix À propos de ce produit Super Mario Bros. le film [Blu-ray] [FR Import] Type de produit : ABIS_DVD Marque : Universal Commentaires client"
+  },
+  {
+   "id": "1074daf884",
+   "titre": "Ace Ventura : Détective pour chiens et chats Blu Ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 8.4,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ace-ventura-detective-pour-chiens-et-chats-blu-ray-3461094",
+   "date": "Thu, 19 Nov 2026 04:33:14 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "8,40€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Ace Ventura : Détective pour chiens et chats [Blu-ray] Commentaires client"
+  },
+  {
+   "id": "ff7f27cc5b",
+   "titre": "Ace Ventura en Afrique Blu Ray",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 8.51,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ace-ventura-en-afrique-blu-ray-3461093",
+   "date": "Thu, 19 Nov 2026 04:31:52 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "8,51€ - Amazon Bon prix ! Deal jusqu'au 30/11 ! À propos de ce produit Ace Ventura en Afrique [Blu-ray] Commentaires client"
+  },
+  {
+   "id": "358b445d1f",
+   "titre": "The Illusionist Dry Gin | Der Farbwechsel Gin | 16 Premium Botanicals | Floral & Fruchtig | 45% Vol. | 500ml (Spar-Abo Prime)",
+   "temperature": null,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Amazon",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/the-illusionist-dry-gin-der-farbwechsel-gin-16-premium-botanicals-floral-fruchtig-45-vol-500m-spar-abo-primel-2875333",
+   "date": "Thu, 19 Nov 2026 05:01:02 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "17,99€ - Amazon auf den Preis kommt Ihr im Spar-Abo ABSOLUT EINZIGARTIG - Dieser einzigartige premium Gin wird mit 16 handverlesenen Botanical destilliert. Der tiefblaue Gin veröndert seine Farbe durch die Zugabe von Tonic Water oder anderen sauren Getränken in ein sanftes Rosa. MIT LIEBE ZUM DETAIL"
+  },
+  {
+   "id": "82af272a5a",
+   "titre": "Alexa Tablet 12 Pro, 8 GB RAM, 128 GB, 12 Zoll Nanomatte Display, Tablet 11 für 229,99€, Tablet 8 für 139,99€",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 379.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/alexa-tablet-12-pro-8-gb-ram-128-gb-12-zoll-nanomatte-display-2875332",
+   "date": "Thu, 19 Nov 2026 04:51:47 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "379,99€ - Amazon Alexa Tablet 12 Pro, 8 GB RAM, 128 GB, 12-Zoll Nanomatte-Display Tablet 11 für 229,99€ https://amzn.eu/d/09YGSDO9 Tablet 8 für 139,99€ https://amzn.eu/d/0bmAAxmb Das Alexa Tablet 12 Pro ist bei Amazon für 379,99 € erhältlich und bietet eine beeindruckende Kombination aus Leistung un"
+  },
+  {
+   "id": "d290092a4c",
+   "titre": "Paco Rabanne Invictus Eau de Toilette Geschenkset 200ml 55,99 Euro @Joybuy",
+   "temperature": null,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Joybuy",
+   "prix": 53.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/paco-rabanne-invictus-eau-de-toilette-geschenkset-200ml-5599-euroweniger-moglich-at-joybuy-2875330",
+   "date": "Thu, 19 Nov 2026 04:40:57 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "53,99€ - Joybuy Nabend, beim Stöbern zwecks Weihnachtsgeschenke bin ich auf folgendes Angebot gestolpert: Joybuy verkauft aktuell das Paco Rabanne Invictus Eau de Toilette Geschenkset 200ml für 53,99 Euro mit kostenlosem Versand. Der Preis ist 55,99 Euro, aktuell werden ab 10,- Euro Einkaufswert 2,-"
+  },
+  {
+   "id": "2f03012099",
+   "titre": "AKKO Wireless Mouse Cat Pink Bluetooth Silent Click Tri-Mode 3200 DPI (Pink Angie / Gray Mimo / Orange Kate) - Sold by Akko Official, FBA",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/akko-wireless-mouse-cat-pink-bluetooth-silent-click-tri-mode-3200-dpi-pink-angie-gray-mimo-orange-kate-sold-by-akko-official-fba-5038310",
+   "date": "Thu, 19 Nov 2026 04:06:55 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£19.99 - Amazon There are currently 3 options priced @ £19.99 (as per title) This would make a perfect gift for the cat lovers out there (y) 【Pink Angie CAT THEME 】- Akko cat theme mouse features an adorable cat-shaped design. This Cute PC Mouse adds a playful touch to your computing experience with"
+  },
+  {
+   "id": "a4fac46d0f",
+   "titre": "Baseus GaN Charger Universal Travel Adapter Built in 70W Retractable Cable (stack 2 codes, see OP) - BASEUS Official Store",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "AliExpress",
+   "prix": 22.58,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/baseus-gan-charger-universal-travel-adapter-built-in-70w-retractable-cable-stack-2-codes-see-op-baseus-official-store-5038308",
+   "date": "Thu, 19 Nov 2026 03:56:25 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£22.58 - AliExpress As per title - stack the 2 codes for the discount Brand+, shipped from China For Convenient Charging Everywhere You Go ①【Works in 200+ Countries and Regions】 Includes USA/JP, AUS/CN, UK and EU/KR types of plugs. ②【Fast Charging Retractable Cable】 Enjoy effortless charging anywher"
+  },
+  {
+   "id": "prosp-f08ad71224",
+   "titre": "S&amp;P Kit VMC simple flux hygroréglable S&amp;P Ozeo standard 2",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 229.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-f3b95ea444",
+   "titre": "Leroy Merlin Etagère murale Aperto bois et métal noir, L.38 cm x P.30 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 34.9,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-c1de616476",
+   "titre": "PXWALL 3 panneaux tasseaux MDF décor chêne, fond noir Linee, 260x23,7 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 39.9,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-7f524a8dd4",
+   "titre": "OPTIMUM Kit porte coulissante sur rail, Porte Atelier chêne noir vitrée 83 cm, rail noir",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 189.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-6594f4bf43",
+   "titre": "SDL Lot de 4 Panneaux isolant en liege mur / plafond SDL Lm 5510, Ep.10mm, 0.5x0.5m, R0.219",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 18.32,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-7e87c8de16",
+   "titre": "RENAULAC Peinture mur, plafond blanc velours RENAULAC , 12L",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 34.9,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  },
+  {
+   "id": "prosp-a04c235285",
+   "titre": "INSPIRE Store vénitien bois 27 mm marron, l.50 x H.150 cm, INSPIRE",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Leroy Merlin",
+   "prix": 23.92,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Leroy-Merlin",
+   "date": "2026-11-19",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-04 → 2026-12-01"
+  }
+ ]
+}

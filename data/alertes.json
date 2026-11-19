@@ -19566,7 +19566,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T15:23+00:00",
-  "statut": "a_reverifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -19823,7 +19823,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Xiaomi Watch S4 41mm (bracelet fluoroélastomère) sur Amazon.es : page du bon plan relue par le robot à 16h21 UTC, offre active à 93,59 €, soit environ 98,59 € livré en France. Prix neuf le plus bas en France : 134,04 € (Cdiscount marketplace, 148,23 € livré), 139 € chez E.Leclerc, 140,20 € livré sur Amazon.fr, 160,99 € chez Xiaomi. Économie d'environ 26 %. Revente : marge d'environ 10 € (11 %), insuffisante.",
+   "prix_neuf_min_idealo": 134.04,
+   "source_prix_ref": "bonne-promo.com (Cdiscount 134,04 €, Amazon.fr 140,20 € livré) et clubic.com (E.Leclerc 139 €), relevés le 19/11",
+   "economie_pct": 26,
+   "prix_revente_verifie": 125.06,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 10.22,
+   "duree_offre": "inconnue (Black Friday Amazon.es)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T16:49+00:00"
  },
  {
   "id": "b92f4a4f3d",
@@ -19869,7 +19881,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T15:58+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -20082,7 +20094,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T16:01+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Ponceuse Einhell TC-OS 1520 (150 W) sur Amazon.es à 20,99 € : page du bon plan relue par le robot à 16h31 UTC, offre active, en stock ; environ 25,99 € livré en France. Prix neuf le plus bas en France : 33,95 € (achatmoinscher, 6 boutiques), 34,95 € sur Amazon.fr (Keepa, moyenne 90 j 35,43 €) et ledenicheur. Économie d'environ 23 %. Revente à perte (24 vendeurs sur Amazon.fr).",
+   "prix_neuf_min_idealo": 33.95,
+   "source_prix_ref": "achatmoinscher.com (33,95 €) ; Amazon.fr via Keepa et ledenicheur.fr (34,95 €)",
+   "economie_pct": 23,
+   "prix_revente_verifie": 29.88,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -3.11,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T16:49+00:00"
  },
  {
   "id": "8a5c735c5b",
@@ -20128,7 +20152,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T16:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -20336,7 +20360,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 16:11 UTC : offre active, 29.95 affiché, marchand 173_2 ; mediamarkt.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : offre MediaMarkt Espagne, MediaMarkt.es ne livre pas en France. Prix neuf le plus bas en France : 39,99 € (achatmoinscher). Revente à perte.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T16:49+00:00"
  },
  {
   "id": "ff952793ec",
@@ -20382,7 +20418,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T16:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -20605,6 +20641,18 @@
    "livraison_france": "oui",
    "resume": "fiche nike.com lue : 77.99 EUR, livraison : frais de livraison, retrait gratuit ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Nike Air Force 1 '07 femme (Pure Platinum, IV6039-002) à 77,99 € sur nike.com/fr (fiche lue par le robot à 16h30 UTC). Port offert seulement aux membres Nike, sinon 5 € (82,99 € livré). Contre 95 € neuf le moins cher en France (achatmoinscher, coloris blanc) : 12,6 % d'économie sans compte membre, sous le seuil de 15 %, et prix concurrents incertains en période Black Friday. Dans le doute, rejeté. Revente à perte.",
+   "prix_neuf_min_idealo": 95.0,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T16:49+00:00"
  }
 ]

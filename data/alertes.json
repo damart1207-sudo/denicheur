@@ -15027,7 +15027,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:53+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15315,9 +15315,9 @@
    ]
   },
   "verdict": {
-   "commentaire": "Bon écart de prix (39,55 € livré estimé contre 67,38 € en France) mais la page de l'offre Amazon.de n'a pas pu être ouverte : vendeur, disponibilité et livraison en France non confirmés. À revérifier.",
+   "commentaire": "Rejeté (2e contrôle) : l'offre Amazon.de à 34,55 € n'a toujours pas pu être confirmée (page de l'offre non ouverte, le lien marchand relevé renvoie vers Amazon.com à 99,99 $), livraison en France et prix final non prouvés. Dans le doute, rejet.",
    "prix_neuf_min_idealo": 67.38,
-   "source_prix_ref": "achatmoinscher (Darty marketplace 63,49 € + 3,89 € port, état non précisé ; Amazon 76,63 €)",
+   "source_prix_ref": "achatmoinscher (Darty marketplace 63,49 € + 3,89 € port ; Amazon.fr 99,99 €, moyenne 90 j 85,91 €)",
    "economie_pct": 41,
    "prix_revente_verifie": null,
    "canal": null,
@@ -15325,7 +15325,7 @@
    "duree_offre": "inconnue",
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-19T11:50+00:00"
+  "verifie_le": "2026-11-19T12:50+00:00"
  },
  {
   "id": "6ed3da18d3",
@@ -16234,7 +16234,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T11:54+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16448,16 +16448,16 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Offre Currys UK en retrait magasin (Click & Collect), pas de livraison en France ; coût estimé 43,88 € > 34,99 € en France.",
-   "prix_neuf_min_idealo": 34.99,
-   "source_prix_ref": "achatmoinscher",
-   "economie_pct": -25,
+   "commentaire": "Rejeté : Amazon UK à 26 £ revient à 43,88 € livré en France, plus cher que le neuf en France (40,90 € sur Amazon.fr, plus bas 90 j). Aucune économie.",
+   "prix_neuf_min_idealo": 40.9,
+   "source_prix_ref": "keepa/amazon.fr (B0FK8ZVVD8)",
+   "economie_pct": -7,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-19T11:50+00:00"
+  "verifie_le": "2026-11-19T12:50+00:00"
  }
 ]

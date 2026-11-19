@@ -11663,7 +11663,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T08:42+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -11874,11 +11874,11 @@
    "premiere_lecture": "2026-11-19T08:45+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T08:55+00:00",
+  "verifie_le": "2026-11-19T09:52+00:00",
   "verdict": {
-   "commentaire": "À revérifier : prix intéressant (187,38 € livré contre 244,99 € neuf le moins cher en France, achatmoinscher ; PcComponentes.fr 264,14 € ; Amazon.fr 297 €, plus bas 90 j 199,99 €), mais la page AliExpress (offre espagnole, coupon probable) n'a pas pu être ouverte : livraison en France et prix non confirmés. Revente : marge négative (-3 € au mieux).",
+   "commentaire": "Rejeté : offre AliExpress avec coupon espagnol (ESBF35 + PayPal), page marchand toujours impossible à ouvrir (lien aliexpress.us) : prix final et livraison en France non confirmés. Dans le doute, rejet. Revente : marge négative.",
    "prix_neuf_min_idealo": 244.99,
-   "source_prix_ref": "achatmoinscher.com (+ pccomponentes.fr, keepa/amazon.fr)",
+   "source_prix_ref": "achatmoinscher.com (+ keepa/amazon.fr 297 €)",
    "economie_pct": 23,
    "prix_revente_verifie": null,
    "canal": null,
@@ -12187,7 +12187,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T08:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -12374,7 +12374,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:00+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 45,60 € (+ port) alors que Carrefour la vend 47,99 € livrée en France et Leclerc 45,60 € (+4,90 €) : économie de 5 % seulement, sous le seuil de 15 %. Revente : marge négative (Leboncoin ≈ 3,5 €).",
+   "prix_neuf_min_idealo": 47.99,
+   "source_prix_ref": "achatmoinscher.com (Carrefour, relevé du 19/11)",
+   "economie_pct": 5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "da6e8f4019",
@@ -12420,7 +12432,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T08:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -12630,7 +12642,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:02+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Currys (Royaume-Uni) ne livre pas en France (retrait en magasin) ; avec port/douane le coût (≈56 €) dépasse le prix français (44,99 €).",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "528bebf1de",
@@ -12683,7 +12707,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T09:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -12893,7 +12917,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:09+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Interdiscount.ch (Suisse), qui ne livre pas en France ; page marchand bloquée. Prix neuf France 128-129 € (Amazon.fr). Revente : marge négative.",
+   "prix_neuf_min_idealo": 129.0,
+   "source_prix_ref": "keepa/amazon.fr + achatmoinscher.com",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "42be4080d7",
@@ -12931,7 +12967,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-19T09:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -12964,7 +13000,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:20+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : produit non confirmé, aucun prix de référence en France, livraison en France depuis Kaufland.de inconnue (page bloquée).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "2310f56ea4",
@@ -13010,7 +13058,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T09:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -13222,7 +13270,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:21+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon UK 26 £, soit ≈43,88 € livré en France, plus cher que le neuf en France (35,99 € sur Amazon.fr).",
+   "prix_neuf_min_idealo": 35.99,
+   "source_prix_ref": "keepa/amazon.fr + achatmoinscher.com (34,99 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9551338558",
@@ -13268,7 +13328,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T09:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -13480,6 +13540,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T09:21+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T09:52+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Amazon.es 29,95 € + port ≈ 34,95 € livré, contre 39,99 € livré en France (Amazon.fr, Cdiscount, Micromania) : économie ≈ 13 %, sous le seuil de 15 % ; page Amazon.es non lisible pour confirmer un prix plus bas.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher.com + keepa/amazon.fr",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

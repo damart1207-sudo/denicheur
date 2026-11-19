@@ -1,6 +1,6 @@
 {
  "jour": "2026-11-19",
- "examines": 78,
+ "examines": 79,
  "affaires": [
   {
    "asin": "B001AIDGR0",
@@ -628,6 +628,136 @@
    "alerte": true
   },
   {
+   "asin": "B0DYDJL4DX",
+   "titre": "Cecotec Ventilateur de Plafond 40 W EnergySilence Aero 5600 Classic White",
+   "marque": "Cecotec",
+   "lien": "https://www.amazon.fr/dp/B0DYDJL4DX",
+   "moyenne_90j": 117.79,
+   "nb_offres_neuves": 4,
+   "offres": [
+    {
+     "total": 71.99,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 130.38,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 145.65,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 147.99,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 2820,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 30,
+   "vu": "2026-11-19T14:54",
+   "retenu": true,
+   "premier": 71.99,
+   "premier_amazon": true,
+   "second": 130.38,
+   "ecart": 58.39,
+   "mot_cle": "cecotec ventilateur plafond 40",
+   "nom_court": "cecotec ventilateur plafond 40",
+   "ean": "8435782180534",
+   "marges": {
+    "prix_revente": 101.0,
+    "sous_le_second_pct": 23,
+    "marge_sans_charges": 29.01,
+    "marge_avec_charges": 12.48,
+    "charges_micro": 13.53,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 101.99,
+    "prix_pour_30_net_avec_charges": 121.24,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 5,
+      "min": 107.99,
+      "max": 237.99,
+      "lien_min": "https://www.ebay.fr/itm/168834496654?_skw=cecotec+ventilateur+plafond+40&hash=item274f51f88e:g:N9EAAeSw0fVq6aG1",
+      "dates": 5,
+      "age_min": 16,
+      "age_recent": 16,
+      "age_ancien": 89,
+      "recentes": 0,
+      "anciennes": 3
+     },
+     "occasion": {
+      "nb": 4,
+      "min": 54.49,
+      "max": 99.64,
+      "lien_min": "https://www.ebay.fr/itm/860026361459?_skw=cecotec+ventilateur+plafond+40&hash=itemc83d90d673:g:HNIAAeSwK9BqyNy2",
+      "dates": 4,
+      "age_min": 41,
+      "age_recent": 1,
+      "age_ancien": 41,
+      "recentes": 2,
+      "anciennes": 1
+     },
+     "nb": 9
+    },
+    "achatmoinscher": {
+     "prix_min": null
+    },
+    "leboncoin": {
+     "nb": 0
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ]
+   },
+   "volume": 590,
+   "volume_mot": "cecotec ventilateur plafond",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La demande est moyenne (30 ventes/mois) et les comparateurs ne référencent pas le produit, mais 4 annonces traînent depuis plus de 21 jours sur eBay, ce qui indique un marché stagnant. La marge nette avec charges de micro-entreprise est de seulement 13,85 €, ce qui est sous l'objectif de 20 €.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même produit neuf sur eBay à 107,99 € et en occasion à 54,49 €, donc payer 101 € à un particulier sans garantie officielle est risqué. L'offre Amazon à 71,99 € reste en ligne et me permet d'acheter moins cher avec la protection du site.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "forte",
+     "ref_nom": "une annonce neuve eBay",
+     "ref_prix": 107.99,
+     "plafond": 102.59,
+     "marge_sans": 30.6,
+     "marge_avec": 13.85,
+     "vetos": [],
+     "annonce_min": [
+      54.49,
+      "eBay occasion"
+     ],
+     "anciennes": 4,
+     "datees": 9,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
+  {
    "asin": "B0FXZQBTMB",
    "titre": "vidaXL Bâche 650g / m² Marron 5 x 8 m Toile avec revêtement en PVC",
    "marque": "vidaXL",
@@ -916,5 +1046,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-19T14:48+00:00"
+ "maj": "2026-11-19T14:54+00:00"
 }

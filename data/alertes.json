@@ -16491,7 +16491,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T12:49+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16702,7 +16702,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T12:52+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T13:46+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (Accentum Plus), mais 95,08 € livré en France depuis Amazon.es contre 109,99 € neuf sur Amazon.fr : seulement 13,6 % d'économie (seuil 15 %), et le prix le plus bas en France peut être encore plus bas. Rejeté.",
+   "prix_neuf_min_idealo": 109.99,
+   "source_prix_ref": "Keepa / Amazon.fr (plafond du prix neuf le plus bas FR)",
+   "economie_pct": 13.6,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0DYSTBLR8-neuf",
@@ -16735,7 +16747,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T13:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -16996,6 +17008,18 @@
    "proba_detail": [
     "Amazon 11/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T13:46+00:00",
+  "verdict": {
+   "commentaire": "Fausse économie : le « prix neuf » 1022,95 € est un prix fantaisiste d'un vendeur tiers ; le plus bas sur 90 jours est 19 € et le prix normal est autour de 20-25 €. Aucune vraie remise. Rejeté.",
+   "prix_neuf_min_idealo": 19.0,
+   "source_prix_ref": "Keepa (plus bas 90 jours Amazon.fr)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -17061,7 +17085,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T13:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17254,6 +17278,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan illisible (HTTP 404) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T13:46+00:00",
+  "verdict": {
+   "commentaire": "Offre en magasin local (Expert Freital, Allemagne) : non achetable en ligne ni livrable en France. Rejeté.",
+   "prix_neuf_min_idealo": 31.14,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

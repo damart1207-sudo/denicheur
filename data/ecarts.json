@@ -1,7 +1,147 @@
 {
  "jour": "2026-11-19",
- "examines": 61,
+ "examines": 62,
  "affaires": [
+  {
+   "asin": "B001AIDGR0",
+   "titre": "Bodum Cafetière à Piston Double Paroi Columbia - 1,5L / 12 Tasses - Acier Inoxydable Mat - Passe au Lave-Vaisselle",
+   "marque": "Bodum",
+   "lien": "https://www.amazon.fr/dp/B001AIDGR0",
+   "moyenne_90j": 146.36,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 64.29,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 167.35,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 24568,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 17,
+   "vu": "2026-11-19T09:02",
+   "retenu": true,
+   "premier": 64.29,
+   "premier_amazon": true,
+   "second": 167.35,
+   "ecart": 103.06,
+   "mot_cle": "bodum cafetière piston double",
+   "nom_court": "bodum cafetière piston double",
+   "ean": "0727015332581",
+   "marges": {
+    "prix_revente": 116.0,
+    "sous_le_second_pct": 31,
+    "marge_sans_charges": 51.71,
+    "marge_avec_charges": 33.17,
+    "charges_micro": 15.54,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 94.29,
+    "prix_pour_30_net_avec_charges": 112.34,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 1,
+      "min": 89.9,
+      "max": 89.9,
+      "lien_min": "https://www.ebay.fr/itm/800911916758?_skw=bodum+cafeti%C3%A8re+piston+double&hash=itemba7a11fed6:g:L3cAAeSwNuBq9wpi",
+      "dates": 1,
+      "age_min": 6,
+      "age_recent": 6,
+      "age_ancien": 6,
+      "recentes": 1,
+      "anciennes": 0
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 1
+    },
+    "achatmoinscher": {
+     "prix_min": 40.04,
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/cafetiere-a-piston-double-paroi-douro-inox-8-tasses-1l-gris-bodum.html"
+    },
+    "leboncoin": {
+     "nb": 2,
+     "min": 25.0,
+     "max": 25.0,
+     "lien_min": "https://www.leboncoin.fr/ad/arts_de_la_table/3298741815",
+     "dates": 2,
+     "age_min": 19,
+     "age_recent": 19,
+     "age_ancien": 158,
+     "recentes": 0,
+     "anciennes": 1
+    },
+    "vinted": {
+     "nb": 1,
+     "min": 35.0,
+     "max": 35.0,
+     "lien_min": "https://www.vinted.fr/items/10418214180-coffret-duo-neuf-bodum-chambord-cafetiere-a-piston-8-tasses-1l-2-verres-double-paroi-pavina",
+     "neuf": {
+      "nb": 1,
+      "min": 35.0,
+      "max": 35.0,
+      "lien_min": "https://www.vinted.fr/items/10418214180-coffret-duo-neuf-bodum-chambord-cafetiere-a-piston-8-tasses-1l-2-verres-double-paroi-pavina"
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 40.04,
+     "ou": "achatmoinscher",
+     "nb_offres": 7,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/cafetiere-a-piston-double-paroi-douro-inox-8-tasses-1l-gris-bodum.html",
+     "ecart": -24.25
+    }
+   },
+   "volume": 1900,
+   "volume_mot": "bodum cafetière piston",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La grille limite le prix de vente à 85,41 € pour rester sous l'annonce eBay à 89,90 €, ce qui ne laisse que 6,68 € de marge nette après charges. De plus, une annonce neuve à 35 € sur Vinted et une occasion à 25 € sur Leboncoin rendent la vente d'un produit à 85 € quasi impossible.",
+    "acheter": false,
+    "raisons_acheteur": "Je ne paierais pas 85 € ce produit neuf alors que je le trouve à 35 € sur Vinted et à 25 € sur Leboncoin. L'écart de prix est trop important pour justifier le surcoût, même avec la garantie.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve eBay",
+     "ref_prix": 89.9,
+     "plafond": 85.41,
+     "marge_sans": 21.12,
+     "marge_avec": 6.68,
+     "vetos": [],
+     "annonce_min": [
+      25.0,
+      "Leboncoin"
+     ],
+     "anciennes": 1,
+     "datees": 3,
+     "inverse": null,
+     "douteuses": [
+      [
+       "une annonce neuve Vinted",
+       35.0
+      ]
+     ],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
   {
    "asin": "B087723W3Q",
    "titre": "Feandrea Arbre à Chat L, Tour de Jeux 158,6 cm",
@@ -557,5 +697,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-19T08:53+00:00"
+ "maj": "2026-11-19T09:02+00:00"
 }

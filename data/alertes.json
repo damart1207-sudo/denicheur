@@ -17319,7 +17319,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-19T14:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -17357,7 +17357,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T14:09+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : annoncé comme « erreur de prix » (3 pour le prix de 1) sur Amazon.de, produit exact non identifié et aucun prix neuf de référence fiable en France ; offre probablement annulée ou limitée.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "b765905767",
@@ -17410,7 +17422,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T14:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17637,7 +17649,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T14:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : jeu en téléchargement sur le PlayStation Store britannique (compte UK obligatoire), pas une boîte livrable en France.",
+   "prix_neuf_min_idealo": 49.99,
+   "source_prix_ref": "achatmoinscher / Amazon.fr (Keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "9db8729003",
@@ -17670,7 +17694,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T14:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17871,7 +17895,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 14:25 UTC : offre active, 22.95 affiché, marchand 6944_1 ; mediamarkt.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt Espagne ne livre qu'en Espagne, offre non achetable ni livrable en France.",
+   "prix_neuf_min_idealo": 38.75,
+   "source_prix_ref": "Amazon.fr (Keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "174c8f4027",
@@ -17904,7 +17940,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T14:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18105,6 +18141,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 14:26 UTC : offre active, 282.34 affiché, marchand 3_2 ; mediamarkt.at refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T14:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt Autriche ne livre qu'en Autriche, offre non livrable en France ; revente négative de toute façon (marge -12 €).",
+   "prix_neuf_min_idealo": 109.99,
+   "source_prix_ref": "Amazon.fr (Keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

@@ -8486,7 +8486,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T05:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -8666,7 +8666,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T05:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T06:58+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan relue par le robot à 06h25 : offre active, 49,99 € (+5 € de port, 54,99 € livré) chez Amazon.de. Prix le plus bas relevé en France chez Galaxus.fr : 73,88 € (gris), mais Nothing mène en ce moment ses soldes Black Friday européennes avec ce casque à 49,99 € (article Notebookcheck du 17/11), et Amazon.fr l'a déjà affiché à 49,99 € (Prime) en octobre : l'économie réelle en France n'est pas assurée. Revente : marge Leboncoin ≈ 2 €, insuffisante. Rejeté par prudence.",
+   "prix_neuf_min_idealo": 73.88,
+   "source_prix_ref": "Galaxus.fr (fiche lue le 19/11) ; soldes Nothing à 49,99 € (Notebookcheck 17/11)",
+   "economie_pct": 26,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 2.09,
+   "duree_offre": "quelques jours (Black Friday)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "70c5859035",
@@ -8699,7 +8711,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T06:26+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -8902,7 +8914,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 06:30 UTC : offre active, 534.0 affiché, marchand 12051_1 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T06:58+00:00",
+  "verdict": {
+   "commentaire": "Bon plan Amazon.de réservé aux membres Prime : 176,80 € (181,80 € avec port). Prix le plus bas relevé en France : 250,64 € chez PCcomponentes (comparateur-gamer.fr, mis à jour le 19/11), Galaxus.fr 281,74 €. La référence automatique (86,99 €) correspondait à un lot de toners, pas à l'imprimante. La livraison en France de cette offre Amazon.de n'est pas confirmée et le prix lu sur la page du bon plan ne concorde pas (534 €). Rejeté dans le doute.",
+   "prix_neuf_min_idealo": 250.64,
+   "source_prix_ref": "PCcomponentes via comparateur-gamer.fr (19/11)",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (offre Prime)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "779c6d8317",

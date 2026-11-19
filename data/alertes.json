@@ -43,7 +43,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T18:51+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -231,16 +231,16 @@
    "premiere_lecture": "2026-11-19T18:54+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T22:55+00:00",
+  "verifie_le": "2026-11-19T23:55+00:00",
   "verdict": {
-   "commentaire": "Toujours à revérifier : la page de l'offre (Amazon Espagne) et le prix neuf France n'ont pas pu être relus ce soir (sites bloqués pour l'outil). Livraison en France non confirmée.",
-   "prix_neuf_min_idealo": 249.99,
-   "source_prix_ref": "achatmoinscher (relevé du robot, non relu)",
-   "economie_pct": 20,
+   "commentaire": "Offre Amazon Espagne à 194,22 € (+ port vers la France ≈ 199 €). Le même casque est à 229 € neuf en France (ledenicheur) : économie de 13 %, sous le seuil de 15 %. Pas de revente rentable.",
+   "prix_neuf_min_idealo": 229.0,
+   "source_prix_ref": "ledenicheur.fr (recherche web)",
+   "economie_pct": 13,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": null,
+   "marge_nette_verifiee": -11.23,
+   "duree_offre": "inconnue",
    "demande_confirmee": false
   }
  },
@@ -4685,7 +4685,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T23:19+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4893,7 +4893,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:22 UTC : offre active, 30.5 affiché, marchand 1445_1 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Black Friday E.Leclerc : 31,74 € en stock, offre du 20/11 au 29/11, retrait magasin gratuit ou point relais 4,90 € (36,64 € livré). Ailleurs en neuf : 44,99 € minimum (Micromania, Cdiscount, Fnac, Amazon). Revente non rentable (marge négative).",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "Amazon.fr (keepa) + consollection.com",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -5.46,
+   "duree_offre": "jusqu'au 29/11/2026",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:55+00:00"
  },
  {
   "id": "7793b66195",
@@ -4926,7 +4938,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T23:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5136,7 +5148,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:23 UTC : offre active, 27.19 affiché, marchand 173_2 ; fiche amazon.es lue : 54.9, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Manette DualSense à 54,90 € sur Amazon Espagne (≈ 59,90 € livré) contre 59,99 € neuve sur Amazon.fr : économie de 0 à 8 %, pas un bon plan.",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "Amazon.fr (keepa)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -17.18,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:55+00:00"
  },
  {
   "id": "2230bb40de",
@@ -5182,7 +5206,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T23:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5383,7 +5407,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 23:24 UTC : offre active, 186.89 affiché, marchand 440_1 ; proshop.at refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Proshop Autriche 379 € : livraison en France non confirmée et prix ≈ 384 € contre 448,50 € neuf en France, soit 14 % d'économie, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 448.5,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -37.99,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:55+00:00"
  },
  {
   "id": "82997067be",
@@ -5416,7 +5452,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T23:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5619,6 +5655,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:26 UTC : offre active, 139.0 affiché, marchand 3648_7 ; fiche amazon.com lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Même prix (132,50 €) que le prix neuf le plus bas sur Amazon.fr : aucune économie.",
+   "prix_neuf_min_idealo": 132.5,
+   "source_prix_ref": "Amazon.fr (keepa)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -39.52,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:55+00:00"
  }
 ]

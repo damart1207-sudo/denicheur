@@ -1,20 +1,8 @@
 {
- "tours_ok": 2584,
+ "tours_ok": 2585,
  "tours_echec": 11,
- "dernier_ok": "19/11 05:34",
+ "dernier_ok": "19/11 05:45",
  "evenements": [
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 05:55",
    "niveau": "erreur",
@@ -1802,12 +1790,24 @@
    "niveau": "erreur",
    "etape": "moisson hype",
    "message": "JP 52374051: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "19/11 05:45",
+   "niveau": "erreur",
+   "etape": "classements",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests | , line 189, in tour\n    top = chine(date=date) if pays == \"CN\" else amazon(pays)\n                                                ^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests\n"
+  },
+  {
+   "heure": "19/11 05:45",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 429: Too Many Requests"
   }
  ],
  "dernier_resume": {
-  "heure": "19/11 05:31",
-  "annonces": 574,
-  "nouvelles": 272,
+  "heure": "19/11 05:42",
+  "annonces": 573,
+  "nouvelles": 271,
   "examinees": 25,
   "alertes": 0
  }

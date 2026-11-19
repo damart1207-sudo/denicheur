@@ -9212,7 +9212,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T06:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -9424,7 +9424,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T06:59+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : 249,99 € chez Amazon.de, exactement le même prix qu'Amazon.fr (249,99 €, Keepa). Aucune économie ; revente à perte (marge négative).",
+   "prix_neuf_min_idealo": 249.99,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T07:50+00:00"
  },
  {
   "id": "keepa-B0B3235LFM-arbIT",
@@ -9457,7 +9469,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T07:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -9716,7 +9728,19 @@
    "proba_detail": [
     "Amazon 8/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : le 134 € d'Amazon.fr est un prix de vendeur tiers ; Keepa montre ce même modèle à 56,23 € sur Amazon.fr dans les 90 derniers jours (moyenne 106 €, remise non sincère). Notre coût livré (≈63,79 €) n'est pas 15 % sous le vrai prix français. Une seule pointure (42), ~8 ventes/mois, page Amazon.it non relue : trop incertain.",
+   "prix_neuf_min_idealo": 56.23,
+   "source_prix_ref": "Keepa Amazon.fr (plus bas 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T07:50+00:00"
  },
  {
   "id": "945fb49a39",
@@ -9762,7 +9786,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T07:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -9972,7 +9996,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T07:15+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt Espagne ne livre pas en France (vente réservée à l'Espagne) : offre non achetable depuis la France. Prix FR le plus bas : 44,99 € (achatmoinscher), donc économie de 16 % seulement avant frais de port.",
+   "prix_neuf_min_idealo": 44.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T07:50+00:00"
  },
  {
   "id": "0d8fb3eb97",
@@ -10018,7 +10054,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T07:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -10201,7 +10237,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 07:35 UTC : offre active, 21.4 affiché, marchand 171_4 ; mediamarkt.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt Espagne ne livre pas en France (vente réservée à l'Espagne) : offre non achetable depuis la France. Prix FR le plus bas : 30 € (achatmoinscher) ; avec le port, l'écart devient trop faible. Revente à perte.",
+   "prix_neuf_min_idealo": 30.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T07:50+00:00"
  },
  {
   "id": "d80d402976",
@@ -10247,7 +10295,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T07:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -10455,6 +10503,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 07:39 UTC : offre active, 30.5 affiché, marchand 171_4 ; mediamarkt.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt Espagne ne livre pas en France (vente réservée à l'Espagne) : offre non achetable depuis la France. Prix FR le plus bas : 39,98 € (achatmoinscher) ; revente à perte.",
+   "prix_neuf_min_idealo": 39.98,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T07:50+00:00"
  }
 ]

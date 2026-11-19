@@ -13573,7 +13573,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T09:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -13832,6 +13832,18 @@
    "proba_detail": [
     "Amazon 11/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T10:50+00:00",
+  "verdict": {
+   "commentaire": "Réfrigérateur CREATE Stylance Top 246 L sur Amazon.es à 449,95 €. Livraison en France d'un gros électroménager depuis Amazon.es non confirmée (page Amazon.es non consultable), et le prix de référence Amazon.fr (800,95 €, un seul vendeur tiers) est anormalement haut. Dans le doute : rejet.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (vendeur tiers unique, non fiable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -13878,7 +13890,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14090,7 +14102,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T10:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T10:50+00:00",
+  "verdict": {
+   "commentaire": "Wanderstop Switch 2 à 32,98 € sur Amazon.es, soit 37,98 € livré en France. Prix neuf le plus bas en France : 39,99 € (achatmoinscher). Économie livrée d'environ 5 %, sous le seuil de 15 %. Revente non rentable.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 5,
+   "prix_revente_verifie": 35.19,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -10.51,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "a9abcdf0dc",
@@ -14123,7 +14147,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14333,7 +14357,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 10:31 UTC : offre active, 51.28 affiché, marchand 3352_1 ; fiche amazon.com lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T10:50+00:00",
+  "verdict": {
+   "commentaire": "Thrustmaster TCA Captain Pack X Airbus à 211,49 € sur Amazon.fr : c'est déjà le prix neuf le plus bas en France, aucune économie. Revente à perte.",
+   "prix_neuf_min_idealo": 211.49,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": 186.11,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -58.32,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "e737a4d5b2",
@@ -14386,7 +14422,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14682,6 +14718,18 @@
    "proba_detail": [
     "Amazon 1/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T10:50+00:00",
+  "verdict": {
+   "commentaire": "Dyson V15s Detect Submarine chez MediaMarkt Espagne à 495,04 € : MediaMarkt.es ne livre pas en France. Rejet.",
+   "prix_neuf_min_idealo": 743.15,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -14728,7 +14776,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14931,6 +14979,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 10:37 UTC : offre active, 85.99 affiché, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T10:50+00:00",
+  "verdict": {
+   "commentaire": "Einhell TE-MX 1600-2 CE à 81,99 € sur Amazon.es (≈ 86,99 € livré). Prix neuf le plus bas en France : 118,99 € (achatmoinscher ; Bricozor 126,90 €). Mais impossible de confirmer que l'offre Amazon.es est encore active et livrable en France, et Amazon.fr l'a déjà vendu 49,99 € ces 90 derniers jours. Dans le doute : rejet.",
+   "prix_neuf_min_idealo": 118.99,
+   "source_prix_ref": "achatmoinscher.com + bricozor.com",
+   "economie_pct": 27,
+   "prix_revente_verifie": 104.71,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 0.69,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

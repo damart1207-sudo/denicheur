@@ -43,7 +43,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T18:51+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -230,7 +230,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T18:54+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T19:50+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon Espagne (194,22 € + ~5 € de port = 199,22 €) non ouvrable ce soir : impossible de confirmer qu'elle est encore active et livrée en France, ni le prix neuf le plus bas en France (seule source : achatmoinscher 249,99 €, non relu aujourd'hui). À revérifier.",
+   "prix_neuf_min_idealo": 249.99,
+   "source_prix_ref": "achatmoinscher (relevé du robot, non relu)",
+   "economie_pct": 20,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "cefc4c6ca7",
@@ -276,7 +288,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T19:01+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -481,7 +493,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T19:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T19:50+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon Autriche 44,46 € (+5 € de port = 49,46 €) non ouvrable ce soir : activité et livraison en France non confirmées. Prix neuf France ≈ 64,90 € (achatmoinscher, Amazon.fr 64,95 €, meubles.fr 72,90 € en octobre) : l'économie serait d'environ 24 % si l'offre tient. Revente : marge trop faible. À revérifier.",
+   "prix_neuf_min_idealo": 64.9,
+   "source_prix_ref": "achatmoinscher + Amazon.fr (Keepa)",
+   "economie_pct": 24,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "be411f094f",
@@ -514,7 +538,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T19:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -719,7 +743,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T19:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T19:50+00:00",
+  "verdict": {
+   "commentaire": "Même prix que la référence française (103,35 € chez un seul vendeur tiers sur Amazon.fr) : aucune économie prouvée sous le prix neuf le plus bas, port en plus. Rejeté.",
+   "prix_neuf_min_idealo": 103.35,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0D1LVB3V5-arbDE",
@@ -752,7 +788,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T19:15+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -967,6 +1003,18 @@
    "qte_a": null,
    "qte_b": null,
    "reference": "New Balance Fresh Foam 520 v9 Chaussures de Course pour Femme Black/Castlerock/Metallic Rose 43/M"
+  },
+  "verifie_le": "2026-11-19T19:50+00:00",
+  "verdict": {
+   "commentaire": "Coût 69,93 € livré (Amazon Allemagne) alors que i-run.com vend la même chaussure femme 70 € en France : pas 15 % moins cher. Le prix Amazon.fr 129 € est un vendeur tiers gonflé (moyenne 90 j 111 €, plus bas 77,93 €). Une seule pointure (43), produit non confirmé. Rejeté.",
+   "prix_neuf_min_idealo": 70.0,
+   "source_prix_ref": "i-run.com (page lue)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  }
 ]

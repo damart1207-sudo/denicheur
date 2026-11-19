@@ -231,9 +231,9 @@
    "premiere_lecture": "2026-11-19T18:54+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T19:50+00:00",
+  "verifie_le": "2026-11-19T20:49+00:00",
   "verdict": {
-   "commentaire": "Offre Amazon Espagne (194,22 € + ~5 € de port = 199,22 €) non ouvrable ce soir : impossible de confirmer qu'elle est encore active et livrée en France, ni le prix neuf le plus bas en France (seule source : achatmoinscher 249,99 €, non relu aujourd'hui). À revérifier.",
+   "commentaire": "Offre Amazon Espagne (194,22 € + ~5 € de port = 199,22 €) non ouvrable ce soir : impossible de confirmer qu'elle est encore active et livrée en France, ni le prix neuf le plus bas en France (seule source : achatmoinscher 249,99 €, non relu aujourd'hui). À revérifier. Revérifié le 19/11 au soir : pages de l'offre toujours inaccessibles, reste à revérifier.",
    "prix_neuf_min_idealo": 249.99,
    "source_prix_ref": "achatmoinscher (relevé du robot, non relu)",
    "economie_pct": 20,
@@ -494,9 +494,9 @@
    "premiere_lecture": "2026-11-19T19:04+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T19:50+00:00",
+  "verifie_le": "2026-11-19T20:49+00:00",
   "verdict": {
-   "commentaire": "Offre Amazon Autriche 44,46 € (+5 € de port = 49,46 €) non ouvrable ce soir : activité et livraison en France non confirmées. Prix neuf France ≈ 64,90 € (achatmoinscher, Amazon.fr 64,95 €, meubles.fr 72,90 € en octobre) : l'économie serait d'environ 24 % si l'offre tient. Revente : marge trop faible. À revérifier.",
+   "commentaire": "Offre Amazon Autriche 44,46 € (+5 € de port = 49,46 €) non ouvrable ce soir : activité et livraison en France non confirmées. Prix neuf France ≈ 64,90 € (achatmoinscher, Amazon.fr 64,95 €, meubles.fr 72,90 € en octobre) : l'économie serait d'environ 24 % si l'offre tient. Revente : marge trop faible. À revérifier. Revérifié le 19/11 au soir : pages de l'offre toujours inaccessibles, reste à revérifier.",
    "prix_neuf_min_idealo": 64.9,
    "source_prix_ref": "achatmoinscher + Amazon.fr (Keepa)",
    "economie_pct": 24,
@@ -1063,7 +1063,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T19:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1248,7 +1248,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-19T19:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T20:49+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Boots (Royaume-Uni) ne livre pas en France, et le coût réel livré (279,99 £ ≈ 394 € avec frais) est quasiment égal au prix neuf en France (399 € sur achatmoinscher) : économie d'environ 1 %, loin des 15 % exigés. Le 30 % affiché vient d'une confusion livre/euro.",
+   "prix_neuf_min_idealo": 399.0,
+   "source_prix_ref": "achatmoinscher (relevé du robot)",
+   "economie_pct": 1,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B084T5M67C-arbDE",
@@ -1281,7 +1293,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T20:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -1471,6 +1483,18 @@
    "livraison_france": "oui",
    "resume": "amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T20:49+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le prix de référence Amazon.fr (38,23 €) est gonflé (moyenne 90 j 30,44 €, plus bas 14,50 €) et des boîtes de 500 vis fischer PowerFast II 5x40 équivalentes sont vendues en magasins de bricolage en France (Brico Dépôt) : économie réelle de 15 % non prouvée. Quantité de la boîte allemande non confirmée et offre non ouverte. Revente : marge d'environ 5 €, sous le seuil de 8 €.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source fiable (Amazon.fr via Keepa jugé gonflé)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

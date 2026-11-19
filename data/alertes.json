@@ -3766,7 +3766,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T22:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4039,7 +4039,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : offre chez Media Expert, magasin polonais qui ne livre qu'en Pologne (code promo réservé au site polonais). Pas achetable ni livrable en France.",
+   "prix_neuf_min_idealo": 117.48,
+   "source_prix_ref": "Amazon.fr (Keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:05+00:00"
  },
  {
   "id": "29b5d76f2a",
@@ -4072,7 +4084,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T22:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4282,7 +4294,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 22:44 UTC : offre active, 255.0 affiché, marchand 1158_1 ; fiche amazon.es lue : 267.77, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré ≈ 273 € contre 315 € sur Amazon.fr (ledenicheur, 19/11) : 13 % d'économie seulement, sous le seuil de 15 %. La couleur de l'offre espagnole n'est pas sûre et la livraison en France n'a pas pu être confirmée.",
+   "prix_neuf_min_idealo": 315.0,
+   "source_prix_ref": "ledenicheur.fr (Amazon.fr)",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:05+00:00"
  },
  {
   "id": "47a5a74a79",
@@ -4335,7 +4359,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T22:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -4603,6 +4627,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté comme bon plan importé : la même promo Black Friday existe sur i-run.fr à 59 € (version -60 %), donc pas moins cher qu'en France. Revente trop faible (≈ 12 € de marge, 19 % du coût).",
+   "prix_neuf_min_idealo": 59.0,
+   "source_prix_ref": "i-run.fr (page produit)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-19T23:05+00:00"
  }
 ]

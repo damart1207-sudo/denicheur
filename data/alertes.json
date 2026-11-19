@@ -8242,7 +8242,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T05:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -8428,6 +8428,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 05:40 UTC : offre active, 25.99 affiché, marchand 31_2 ; fiche throwbackgames.de lue : 2995.0, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T05:50+00:00",
+  "verdict": {
+   "commentaire": "Fiche throwbackgames.de à 29,95 € (le deal annonce 25,99/26,95), livraison France non confirmée (port inconnu, coût estimé 31,95 €). Prix neuf le plus bas en France 34,47 € (achatmoinscher) : économie 13 % hors port, ~7 % avec port, sous le seuil de 15 %. Revente à perte. Rejeté.",
+   "prix_neuf_min_idealo": 34.47,
+   "source_prix_ref": "achatmoinscher.com (8 boutiques)",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -8.68,
+   "duree_offre": "vente de novembre, quelques jours",
+   "demande_confirmee": false
+  }
  }
 ]

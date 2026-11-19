@@ -231,11 +231,11 @@
    "premiere_lecture": "2026-11-19T18:54+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T20:49+00:00",
+  "verifie_le": "2026-11-19T21:43+00:00",
   "verdict": {
-   "commentaire": "Offre Amazon Espagne (194,22 € + ~5 € de port = 199,22 €) non ouvrable ce soir : impossible de confirmer qu'elle est encore active et livrée en France, ni le prix neuf le plus bas en France (seule source : achatmoinscher 249,99 €, non relu aujourd'hui). À revérifier. Revérifié le 19/11 au soir : pages de l'offre toujours inaccessibles, reste à revérifier.",
+   "commentaire": "Page du bon plan relue par le robot à 21h24 : offre active chez Amazon Espagne (prix affiché 180,99 €). Livraison en France pas encore confirmée et prix neuf France (249,99 € chez achatmoinscher) non relu aujourd'hui. À revérifier au prochain passage.",
    "prix_neuf_min_idealo": 249.99,
-   "source_prix_ref": "achatmoinscher (relevé du robot, non relu)",
+   "source_prix_ref": "achatmoinscher (relevé du robot)",
    "economie_pct": 20,
    "prix_revente_verifie": null,
    "canal": null,
@@ -494,12 +494,12 @@
    "premiere_lecture": "2026-11-19T19:04+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-19T20:49+00:00",
+  "verifie_le": "2026-11-19T21:43+00:00",
   "verdict": {
-   "commentaire": "Offre Amazon Autriche 44,46 € (+5 € de port = 49,46 €) non ouvrable ce soir : activité et livraison en France non confirmées. Prix neuf France ≈ 64,90 € (achatmoinscher, Amazon.fr 64,95 €, meubles.fr 72,90 € en octobre) : l'économie serait d'environ 24 % si l'offre tient. Revente : marge trop faible. À revérifier. Revérifié le 19/11 au soir : pages de l'offre toujours inaccessibles, reste à revérifier.",
+   "commentaire": "Page du bon plan relue par le robot à 21h24 : offre active chez Amazon Autriche, mais le prix affiché est remonté à 48,39 € (≈ 53 € livré). Fiche Amazon.fr lue par Keepa : 64,95 € (plus bas sur 90 j : 38,97 €). Livraison en France non confirmée. À revérifier.",
    "prix_neuf_min_idealo": 64.9,
-   "source_prix_ref": "achatmoinscher + Amazon.fr (Keepa)",
-   "economie_pct": 24,
+   "source_prix_ref": "Amazon.fr (Keepa) + achatmoinscher",
+   "economie_pct": 18,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
@@ -1548,7 +1548,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:00+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1846,6 +1846,18 @@
    "proba_detail": [
     "Amazon 17/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "Prix de 57,90 € invraisemblable pour cette calculatrice (≈ 165 € neuve en France) alors que la page du bon plan affiche 171,80 € ; vente flash iBOOD Autriche, livraison en France non confirmée. Rejeté par prudence.",
+   "prix_neuf_min_idealo": 163.99,
+   "source_prix_ref": "Amazon.fr (Keepa, moyenne 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -1879,7 +1891,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:10+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -2071,7 +2083,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T21:13+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "Édition allemande du Blu-ray (langue française non garantie). Le prix Amazon.fr de 35,54 € vient d'un seul vendeur tiers et ne représente pas le prix neuf français réel ; plus bas sur 90 j : 14,19 €. Pas une vraie économie.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "Amazon.fr (Keepa, vendeur tiers)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "0f6d8efe23",
@@ -2117,7 +2141,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:30+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -2329,7 +2353,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:33 UTC : offre active, 32.99 affiché, code 5EXTRA, marchand 173_2 ; fiche dyson.es lue : 299.0 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "La page Dyson Espagne lue par le robot affiche d'autres produits (299 € pour un Supersonic) et le prix relevé sur le bon plan (32,99 €) ne correspond pas à l'Airstrait. Dyson.es ne livre pas la France. Rejeté.",
+   "prix_neuf_min_idealo": 399.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0DJDGTZKK-arbDE",
@@ -2362,7 +2398,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -2621,6 +2657,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "Vêtement sans taille ni couleur précisée. Le prix Amazon.fr de 118,23 € vient d'un seul vendeur tiers ; la moyenne sur 90 j est de 41,99 €. Produit pas assez précis, rejeté par prudence.",
+   "prix_neuf_min_idealo": 41.99,
+   "source_prix_ref": "Amazon.fr (Keepa, moyenne 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -2667,7 +2715,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:36+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -2852,7 +2900,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 21:39 UTC : offre active, 453.85 affiché, marchand 2139_1 ; fiche amazon.pl lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan relue par le robot à 21h39 : offre active chez Amazon Pologne (453,85 zł ≈ 107 €, ≈ 112 € livré), livraison en France : oui. Prix neuf France de référence (148,67 € chez achatmoinscher, 2 boutiques seulement) pas assez sûr. À revérifier.",
+   "prix_neuf_min_idealo": 148.67,
+   "source_prix_ref": "achatmoinscher (2 boutiques)",
+   "economie_pct": 25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "a7771445b7",
@@ -2898,7 +2958,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:36+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3108,7 +3168,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 21:39 UTC : offre active, 379.0 affiché, marchand 81_2 ; fiche amazon.pl lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan relue par le robot à 21h39 : offre active chez Amazon Pologne, fiche Amazon.pl lue : 399,99 zł ≈ 94 € (379 zł avec le bon de 50 zł), livraison en France : oui ; ≈ 99 € livré. Prix neuf France le plus bas : 126,59 € (achatmoinscher, 10 boutiques) ; Amazon.fr lu par Keepa : 129,86 € (Amazon lui-même 150 €). Économie ≈ 22 %. Revente : marge trop juste pour être sûre (Amazon.fr est déjà descendu à 103 € ces 90 jours), pas recommandée.",
+   "prix_neuf_min_idealo": 126.59,
+   "source_prix_ref": "achatmoinscher + Amazon.fr (Keepa)",
+   "economie_pct": 22,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "quelques jours (promo Amazon Pologne)",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "5e0ed2ddd9",
@@ -3173,7 +3245,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T21:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3376,6 +3448,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:40 UTC : offre active, 33.05 affiché, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T21:43+00:00",
+  "verdict": {
+   "commentaire": "≈ 38 € livré depuis Amazon Espagne contre 39,99 € neuf en France (achatmoinscher, 13 boutiques) : économie d'environ 5 %, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

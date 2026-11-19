@@ -1,7 +1,144 @@
 {
  "jour": "2026-11-19",
- "examines": 16,
+ "examines": 24,
  "affaires": [
+  {
+   "asin": "B0D9YL1DQN",
+   "titre": "POC Kortal Race MIPS – Casque VTT Enduro avec MIPS & RECCO",
+   "marque": "POC",
+   "lien": "https://www.amazon.fr/dp/B0D9YL1DQN",
+   "moyenne_90j": 188.49,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 134.99,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 222.48,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 9086,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 11,
+   "vu": "2026-11-19T00:23",
+   "retenu": true,
+   "premier": 134.99,
+   "premier_amazon": true,
+   "second": 222.48,
+   "ecart": 87.49,
+   "mot_cle": "poc kortal race mips",
+   "nom_court": "poc kortal race mips",
+   "ean": "7325549833463",
+   "marges": {
+    "prix_revente": 179.0,
+    "sous_le_second_pct": 20,
+    "marge_sans_charges": 44.01,
+    "marge_avec_charges": 17.02,
+    "charges_micro": 23.99,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 164.99,
+    "prix_pour_30_net_avec_charges": 193.98,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 1,
+      "min": 281.07,
+      "max": 281.07,
+      "lien_min": "https://www.ebay.fr/itm/398092789478?_skw=poc+kortal+race+mips&hash=item5cb02de6e6:g:-FoAAeSwMtBqOLmr",
+      "dates": 1,
+      "age_min": 150,
+      "age_recent": 150,
+      "age_ancien": 150,
+      "recentes": 0,
+      "anciennes": 1
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 1
+    },
+    "achatmoinscher": {
+     "prix_min": 161.99,
+     "nb_offres": 2,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-de-velo/casque-vtt-poc-kortal-race-mips-xl-2xl-fluorescent-orange-a.html"
+    },
+    "leboncoin": {
+     "nb": 4,
+     "min": 90.0,
+     "max": 170.0,
+     "lien_min": "https://www.leboncoin.fr/ad/equipements_velos/3309091099",
+     "dates": 4,
+     "age_min": 5,
+     "age_recent": 5,
+     "age_ancien": 875,
+     "recentes": 1,
+     "anciennes": 3
+    },
+    "vinted": {
+     "nb": 12,
+     "min": 120.0,
+     "max": 179.0,
+     "lien_min": "https://www.vinted.fr/items/9845281175-poc-kortal-race-mips",
+     "neuf": {
+      "nb": 4,
+      "min": 130.0,
+      "max": 179.0,
+      "lien_min": "https://www.vinted.fr/items/10734497579-poc-kortal-race-mips"
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 161.99,
+     "ou": "achatmoinscher",
+     "nb_offres": 2,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-de-velo/casque-vtt-poc-kortal-race-mips-xl-2xl-fluorescent-orange-a.html",
+     "ecart": 27.0
+    }
+   },
+   "volume": 170,
+   "volume_mot": "poc kortal race mips",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "Le programme refuse la vente car le prix maximum viable est de 123,50 €, ce qui donne une perte de 11,49 € après frais. De plus, des annonces neuves existent déjà dès 130 € sur Vinted et 90 € sur Leboncoin, ce qui tue toute marge.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même casque neuf dès 130 € sur Vinted et même à 90 € sur Leboncoin, donc ton prix de 179 € est trop élevé. Je préfère attendre une meilleure offre ou acheter l'occasion.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve Vinted",
+     "ref_prix": 130.0,
+     "plafond": 123.5,
+     "marge_sans": -11.49,
+     "marge_avec": -31.04,
+     "vetos": [
+      "en vendant 5 % sous une annonce neuve Vinted (130 €), soit 123,50 €, il reste -11,49 € de marge, moins de 20 €"
+     ],
+     "annonce_min": [
+      90.0,
+      "Leboncoin"
+     ],
+     "anciennes": 4,
+     "datees": 5,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": false
+    }
+   },
+   "alerte": true
+  },
   {
    "asin": "B0FXZQBTMB",
    "titre": "vidaXL Bâche 650g / m² Marron 5 x 8 m Toile avec revêtement en PVC",
@@ -126,5 +263,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-19T00:17+00:00"
+ "maj": "2026-11-19T00:23+00:00"
 }

@@ -1,6 +1,6 @@
 {
  "jour": "2026-11-19",
- "examines": 65,
+ "examines": 66,
  "affaires": [
   {
    "asin": "B001AIDGR0",
@@ -137,6 +137,114 @@
        35.0
       ]
      ],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
+  {
+   "asin": "B0FSQK1CYB",
+   "titre": "Bibliothèque, Meuble Cube de Rangement en Bois (Noyer, 4 Etagen)",
+   "marque": "NewBeth",
+   "lien": "https://www.amazon.fr/dp/B0FSQK1CYB",
+   "moyenne_90j": 129.05,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 43.14,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 138.12,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 97672,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 12,
+   "vu": "2026-11-19T13:16",
+   "retenu": true,
+   "premier": 43.14,
+   "premier_amazon": false,
+   "second": 138.12,
+   "ecart": 94.98,
+   "mot_cle": "newbeth bibliothèque",
+   "nom_court": "newbeth bibliothèque",
+   "ean": null,
+   "marges": {
+    "prix_revente": 91.0,
+    "sous_le_second_pct": 34,
+    "marge_sans_charges": 47.86,
+    "marge_avec_charges": 32.67,
+    "charges_micro": 12.19,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 73.14,
+    "prix_pour_30_net_avec_charges": 87.92,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 0
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 0
+    },
+    "achatmoinscher": {
+     "prix_min": null
+    },
+    "leboncoin": {
+     "nb": 0
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": 154.99,
+     "nb_offres": 1,
+     "lien": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 154.99,
+     "ou": "idealo",
+     "nb_offres": 1,
+     "lien": null,
+     "ecart": 111.85
+    }
+   },
+   "volume": 0,
+   "volume_mot": "newbeth bibliothèque",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "Avec seulement 12 ventes par mois sur Amazon et des recherches Google non mesurées, la demande est trop faible pour garantir une revente rapide. Le produit est encombrant et le prix de 43,14 € est déjà proche du seuil de rentabilité une fois les charges de micro-entreprise déduites.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve ce meuble neuf à 43,14 € directement sur Amazon avec livraison, ce qui rend l'achat via une annonce intermédiaire inutile. De plus, il n'y a aucune preuve de demande réelle pour ce modèle spécifique.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "le 2e vendeur Amazon",
+     "ref_prix": 138.12,
+     "plafond": 131.21,
+     "marge_sans": 88.07,
+     "marge_avec": 67.49,
+     "vetos": [],
+     "annonce_min": null,
+     "anciennes": 0,
+     "datees": 0,
+     "inverse": null,
+     "douteuses": [],
      "vendable": true
     }
    },
@@ -697,5 +805,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-19T13:06+00:00"
+ "maj": "2026-11-19T13:16+00:00"
 }

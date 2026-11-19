@@ -1,20 +1,8 @@
 {
  "tours_ok": 2709,
- "tours_echec": 11,
+ "tours_echec": 12,
  "dernier_ok": "20/11 00:18",
  "evenements": [
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
-  {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 05:55",
    "niveau": "erreur",
@@ -1802,6 +1790,18 @@
    "niveau": "erreur",
    "etape": "affiliation",
    "message": "affiliation : recoupement faux sur SOPAMI balai plat (pub de Kaelro.Outlet, pas la marque)"
+  },
+  {
+   "heure": "20/11 00:26",
+   "niveau": "erreur",
+   "etape": "budget temps",
+   "message": "tour arrêté après 20 produits sur 25 (411 s) : le reste sera revu au prochain tour"
+  },
+  {
+   "heure": "20/11 00:29",
+   "niveau": "echec",
+   "etape": "tour",
+   "message": "tour 1 : code 124 (coupé à 10 min)"
   }
  ],
  "dernier_resume": {

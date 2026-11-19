@@ -15027,7 +15027,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:53+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15313,7 +15313,19 @@
    "proba_detail": [
     "Amazon 32/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Bon écart de prix (39,55 € livré estimé contre 67,38 € en France) mais la page de l'offre Amazon.de n'a pas pu être ouverte : vendeur, disponibilité et livraison en France non confirmés. À revérifier.",
+   "prix_neuf_min_idealo": 67.38,
+   "source_prix_ref": "achatmoinscher (Darty marketplace 63,49 € + 3,89 € port, état non précisé ; Amazon 76,63 €)",
+   "economie_pct": 41,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-19T11:50+00:00"
  },
  {
   "id": "6ed3da18d3",
@@ -15346,7 +15358,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T10:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15651,7 +15663,19 @@
    "proba_detail": [
     "Amazon 33/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Prix de 84,15 € obtenu seulement avec cashback ([CB]) sur la boutique Sony Allemagne, qui ne livre pas en France ; prix final livré en France non confirmé.",
+   "prix_neuf_min_idealo": 138.99,
+   "source_prix_ref": "Amazon.fr (Keepa)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-19T11:50+00:00"
  },
  {
   "id": "0fe774e103",
@@ -15697,7 +15721,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T11:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15907,7 +15931,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:21 UTC : offre active, 26.0 affiché, marchand 6_4 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Coût livré en France estimé 41,06 €, plus cher que le prix neuf en France (35,99 €).",
+   "prix_neuf_min_idealo": 35.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-19T11:50+00:00"
  },
  {
   "id": "78c27dc59b",
@@ -15953,7 +15989,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T11:28+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -16161,6 +16197,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 11:30 UTC : offre active, 28.0 affiché, marchand 6_4 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Currys UK en retrait magasin (Click & Collect), pas de livraison en France ; coût estimé 43,88 € > 34,99 € en France.",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-19T11:50+00:00"
  }
 ]

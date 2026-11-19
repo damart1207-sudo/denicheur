@@ -5652,7 +5652,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T00:09+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -5922,6 +5922,18 @@
    "proba_detail": [
     "Amazon 6/mois"
    ]
+  },
+  "verifie_le": "2026-11-19T00:55+00:00",
+  "verdict": {
+   "commentaire": "À revérifier : le prix Amazon.fr de 185 € est un vendeur tiers anormal (moyenne 90 j : 98,57 €, plus bas 94,40 €). Aucun prix neuf français fiable trouvé pour ce modèle exact (navy, 39,5) chez un autre marchand, et la page Amazon.it n'a pas pu être ouverte (prix et livraison France non confirmés). Pointure unique, ~6 ventes/mois.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable (Keepa moyenne 90 j 98,57 € à titre indicatif)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -5968,7 +5980,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T00:09+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -6190,7 +6202,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T00:16+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T00:55+00:00",
+  "verdict": {
+   "commentaire": "À revérifier : prix neuf le plus bas en France vérifié à 59,99 € (Carrefour, port offert ; Fnac 65,29 €). Leclerc à 37,60 € (≈42,60 € livré estimé) serait 29 % moins cher, mais la page de l'offre n'a pas pu être ouverte : impossible de confirmer qu'elle est encore active et livrable à domicile (souvent retrait magasin chez Leclerc). Pas de revente : Vinted ~37,50 €, Leboncoin ~40 €.",
+   "prix_neuf_min_idealo": 59.99,
+   "source_prix_ref": "achatmoinscher.com (Carrefour 59,99 € livré, 19/11)",
+   "economie_pct": 29,
+   "prix_revente_verifie": 37.5,
+   "canal": "vinted",
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (vente flash Leclerc probable)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "1abec603eb",
@@ -6249,7 +6273,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T00:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -6469,7 +6493,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 00:34 UTC : offre active, 24.85 affiché, marchand 12343_4 ; amazon.co.uk refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T00:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France 44,31 € (Amazon UK) alors que le jeu neuf est à 32,46 € en France (achatmoinscher, 13 boutiques). Plus cher ici qu'en France.",
+   "prix_neuf_min_idealo": 32.46,
+   "source_prix_ref": "achatmoinscher.com (comparateur, 19/11)",
+   "economie_pct": -36.5,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "4022a3e587",
@@ -6515,7 +6551,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T00:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -6730,7 +6766,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 00:40 UTC : offre active, 32.85 affiché, marchand 12343_4 ; amazon.co.uk refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-19T01:05+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France 49,39 € (Amazon UK) alors que le jeu neuf est à 36,99 € en France (achatmoinscher, 7 boutiques). Plus cher ici qu'en France.",
+   "prix_neuf_min_idealo": 36.99,
+   "source_prix_ref": "achatmoinscher.com (19/11)",
+   "economie_pct": -33.5,
+   "prix_revente_verifie": 45.0,
+   "canal": "vinted",
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3ee2ed4788",
@@ -6776,7 +6824,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T00:36+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7017,6 +7065,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-19T01:05+00:00",
+  "verdict": {
+   "commentaire": "À revérifier : prix neuf le plus bas vérifié en France 349,99 € (Boulanger, livraison offerte ; Electro Dépôt 398,98 €, Pixmania 417 €). L'ODR Epson de 60 € existe aussi ailleurs : à ODR égale, Darty 220,23 € contre 289,99 € chez Boulanger, soit ~22-24 % moins cher. Mais la page Darty n'a pas pu être ouverte : prix et stock non confirmés. Il faut avancer 280,23 € avant le remboursement de 60 €.",
+   "prix_neuf_min_idealo": 349.99,
+   "source_prix_ref": "boulanger.com (page lue le 19/11) + auchan.fr marketplace",
+   "economie_pct": 22,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (ODR Epson à durée limitée)",
+   "demande_confirmee": false
   }
  }
 ]

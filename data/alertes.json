@@ -4564,7 +4564,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T16:30+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -4772,6 +4772,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 16:34 UTC : offre active, 20.0 affiché, marchand 1650_3 ; fiche smythstoys.com lue ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T16:45+00:00",
+  "verdict": {
+   "commentaire": "Offre Smyths Royaume-Uni en « Click and collect only » (retrait en magasin UK uniquement, stock très limité) : ni achetable ni livrable en France. Prix final livré en France impossible.",
+   "prix_neuf_min_idealo": 38.0,
+   "source_prix_ref": "achatmoinscher (38 €, 10 boutiques)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (stock très limité)",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -30,7 +30,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T03:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -299,6 +299,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T03:50+00:00",
+  "verdict": {
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 41,31 € chez un seul vendeur tiers, prix gonflé ; le plus bas des 90 derniers jours en France est 10,12 €, sous notre coût livré (16,43 €). Aucun autre marchand français trouvé par recherche web. Pas une vraie économie.",
+   "prix_neuf_min_idealo": 10.12,
+   "source_prix_ref": "Keepa Amazon.fr (plus bas 90 j), recherche web sans autre marchand",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

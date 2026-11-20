@@ -5727,7 +5727,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T18:15+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -5913,16 +5913,16 @@
    "premiere_lecture": "2026-11-20T18:19+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-20T18:50+00:00",
+  "verifie_le": "2026-11-20T19:55+00:00",
   "verdict": {
-   "commentaire": "Offre PcComponentes active et livrable en France, mais prix variable (149 € affiché sur Chollometro, 155,99 € relevé) et page marchande bloquée. Prix neuf français 1 To non confirmé aujourd'hui (seul achatmoinscher à 195,99 €, la version 500 Go est dès 110,90 € sur ledenicheur). Écart ~18 % à confirmer. Revente : marge négative sur Leboncoin/Vinted.",
+   "commentaire": "Offre probablement terminée : comparateur-gamer.fr (mis à jour le 20/11 à 19h) affiche PcComponentes à 208,99 € pour ce SSD, plus 155,99 €. Page Chollometro illisible, impossible de confirmer que l'offre est encore active. Prix neuf FR le plus bas vérifiable ~196 € (achatmoinscher) ; GrosBill 299,99 €, Cybertek 309,99 €. Dans le doute, rejeté. Revente : marge négative.",
    "prix_neuf_min_idealo": 195.99,
-   "source_prix_ref": "achatmoinscher.com (non confirmé ailleurs)",
-   "economie_pct": 18,
+   "source_prix_ref": "achatmoinscher.com / comparateur-gamer.fr",
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": null,
+   "duree_offre": "terminée ou incertaine",
    "demande_confirmee": null
   }
  }

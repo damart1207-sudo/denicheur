@@ -142,19 +142,71 @@ def plus_recherches(n=15):
     m = sorted([x for x in b.get("meilleurs", []) if x.get("recherches_mois")], key=lambda x: -x["recherches_mois"])[:n]
     if not m:
         return False
-    def conc(x):
-        v = x.get("vendeurs")
-        if v is None:
-            return "concurrence inconnue"
-        return ("🟢 peu" if v <= 4 else "🟠 moyenne" if v <= 9 else "🔴 forte") + f" ({v} vendeurs Amazon)"
-    lignes = [f"<b>🔎 Les plus recherchés en France (Google, par mois)</b> — mise à jour du {_e(str(b.get('maj', ''))[:10])}"]
+    lignes = [f"<b>🔎 Les plus recherchés en France</b> — mise à jour du {_e(str(b.get('maj', ''))[:10])}\n"
+              "Chaque chiffre dit d'où il vient (Google France, Amazon France, Amazon USA, idealo, eBay…)."]
     for i, x in enumerate(m, 1):
-        lignes.append(f"\n{i}. <b>{_e(x.get('mot_cle'))}</b>{' · 💎 BINGO' if x.get('bingo') else ''}\n"
-                      f"{x['recherches_mois']:,} recherches/mois".replace(",", " ")
-                      + f" · prix Amazon {_eur(x.get('prix'))} · {conc(x)}"
-                      + (f" · ventes Amazon 30 jours ≈ {x['ventes_30j']}" if x.get("ventes_30j") is not None else ""))
+        lignes.append(f"\n{i}. <b>{_e(x.get('mot_cle'))}</b>{' · 💎 BINGO' if x.get('bingo') else ''}\n" + "\n".join(detail_recherche(x)))
     lignes.append("\n🟢 peu de vendeurs = bonne occasion · 🔴 beaucoup = on évite sauf prix bien plus bas")
-    return envoyer("\n".join(lignes))
+    # message détaillé : plusieurs envois de moins de 3 800 caractères, sans couper un produit au milieu
+    messages, cour = [], ""
+    for bloc in lignes:
+        if cour and len(cour) + len(bloc) + 1 > 3800:
+            messages.append(cour)
+            cour = ""
+        cour = f"{cour}\n{bloc}" if cour else bloc
+    messages.append(cour)
+    ok = [envoyer(t) for t in messages]
+    return all(ok)
+
+
+PAYS = {"FR": "France", "US": "USA", "JP": "Japon", "DE": "Allemagne", "IT": "Italie", "ES": "Espagne", "UK": "Royaume-Uni"}
+
+
+def _pays(code):
+    return PAYS.get(code, code or "?")
+
+
+def detail_recherche(x):
+    """Les lignes d'un produit « plus recherché », chaque chiffre avec sa source et son pays (20/11/2026, demande de David)."""
+    nb = lambda v: f"{v:,}".replace(",", " ")
+    hype = x.get("pays_hype")
+    # anciens fichiers sans les champs *_pays : on les déduit de l'origine
+    p_prix = x.get("prix_pays") or (hype if hype and x.get("vendeurs") == 0 else None if hype else "FR")
+    p_ventes = x.get("ventes_pays") or hype or "FR"
+    r_pays = x.get("recherches_pays") or "FR"
+    out = [f"🔎 Recherches Google {_pays(r_pays)} : {nb(x['recherches_mois'])} par mois"]
+    if hype:
+        out.append(f"🌍 Repéré dans les meilleures ventes d'Amazon {_pays(hype)}")
+    elif x.get("origine") == "etagere":
+        out.append("🛒 Repéré dans les meilleures ventes d'Amazon France")
+    elif x.get("origine") == "radar amazon":
+        out.append("🛒 Repéré par le Radar Keepa sur Amazon France")
+    prix = x.get("prix")
+    if prix is not None and not x.get("prix_pays") and p_prix not in (None, "FR"):
+        from .hype_jour import prix_eur  # ancien fichier : prix resté dans la devise du pays
+        prix = prix_eur({"prix_labas": prix, "pays": p_prix})
+    if prix is not None:
+        out.append(f"💶 Prix Amazon {_pays(p_prix)} : {_eur(prix)}" + (" (converti en euros)" if p_prix not in (None, "FR") else "")
+                   if p_prix else f"💶 Prix Amazon : {_eur(prix)} (pays non précisé)")
+    if x.get("ventes_30j") is not None:
+        out.append(f"📦 Ventes sur 30 jours sur Amazon {_pays(p_ventes)} : ≈ {x['ventes_30j']} (estimation Keepa)")
+    v = x.get("vendeurs")
+    if hype and v == 0:
+        out.append(f"🏪 Amazon France : la fiche {_pays(hype)} n'y est pas vendue (la version française peut exister sous une autre fiche)")
+    elif hype and v is None:
+        out.append(f"🏪 Amazon France : la fiche existe mais se vend peu ; nombre de vendeurs non relevé")
+    elif v is not None:
+        couleur = "🟢 peu" if v <= 4 else "🟠 moyenne" if v <= 9 else "🔴 forte"
+        out.append(f"🏪 Amazon France : {v} vendeurs en neuf ({couleur} concurrence)")
+    else:
+        out.append("🏪 Amazon France : nombre de vendeurs non relevé")
+    if x.get("marchands_france") is not None:
+        out.append(f"🏬 idealo France : {x['marchands_france']} marchands, dès {_eur(x.get('prix_neuf_france'))}")
+    if x.get("annonces_ebay") is not None:
+        out.append(f"🏷️ eBay France : {x['annonces_ebay']} annonces neuves")
+    if x.get("ou_acheter"):
+        out.append(f"💡 Moins cher : {_e(x['ou_acheter'])}")
+    return out
 
 
 if __name__ == "__main__":

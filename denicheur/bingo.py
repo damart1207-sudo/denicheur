@@ -98,15 +98,25 @@ def candidats():
         if not k.endswith(":FR") or not r.get("t") or (r.get("ch30") or 0) < 15:
             continue
         bruts.append((r["t"], {"asin": k.split(":")[0], "titre": r["t"], "ean": r.get("ean"), "prix": r.get("neuf"),
-                               "ventes_30j": r.get("ch30"), "vendeurs": r.get("offres"), "origine": "etagere"}))
+                               "ventes_30j": r.get("ch30"), "vendeurs": r.get("offres"), "origine": "etagere",
+                               "prix_pays": "FR", "ventes_pays": "FR", "vendeurs_pays": "FR"}))
     bruts.sort(key=lambda x: -(x[1].get("ventes_30j") or 0))
     bruts = bruts[:1500]
+    from .hype_jour import prix_eur
     for h in _lire(F_HYPE, {}).get("produits", [])[-300:]:
-        bruts.append((h.get("titre"), {"asin": h["asin"], "titre": h.get("titre"), "prix": h.get("prix_fr") or h.get("prix_labas"),
-                                       "ventes_30j": h.get("ventes_30j_labas"), "vendeurs": 0 if h.get("en_france") == "absent" else None,
-                                       "origine": f"hype {h.get('pays')}", "pays_hype": h.get("pays")}))
+        # Chaque chiffre garde son pays (20/11/2026, demande de David) : les ventes et souvent le prix viennent d'Amazon
+        # USA ou Japon ; « 0 vendeur » veut seulement dire que CETTE fiche étrangère n'est pas vendue sur Amazon France.
+        pays = h.get("pays")
+        prix_ici = h.get("prix_fr")
+        bruts.append((h.get("titre"), {"asin": h["asin"], "titre": h.get("titre"), "prix": prix_ici or prix_eur(h),
+                                       "prix_pays": "FR" if prix_ici else pays,
+                                       "ventes_30j": h.get("ventes_30j_labas"), "ventes_pays": pays,
+                                       "vendeurs": 0 if h.get("en_france") == "absent" else None, "vendeurs_pays": "FR",
+                                       "en_france": h.get("en_france"),
+                                       "origine": f"hype {pays}", "pays_hype": pays}))
     for a in _lire(F_RADAR, {}).get("affaires", [])[:150]:
-        bruts.append((a.get("titre"), {"asin": a["asin"], "titre": a.get("titre"), "prix": a.get("prix"), "vendeurs": None, "origine": "radar amazon"}))
+        bruts.append((a.get("titre"), {"asin": a["asin"], "titre": a.get("titre"), "prix": a.get("prix"), "vendeurs": None,
+                                       "origine": "radar amazon", "prix_pays": "FR"}))
     cache = mots_cles_ia([t for t, _ in bruts])
     out = {}
     for t, c in bruts:
@@ -152,7 +162,7 @@ def jour():
             continue
         vend = c.get("vendeurs")
         score = round(vol / (1 + (vend if isinstance(vend, int) else 10)), 1)
-        lignes.append({**c, "mot_cle": m, "recherches_mois": vol, "concurrence_google": v.get("concurrence"),
+        lignes.append({**c, "mot_cle": m, "recherches_mois": vol, "recherches_pays": "FR", "concurrence_google": v.get("concurrence"),
                        "trois_derniers_mois": v.get("trois_derniers_mois"), "score": score})
     lignes.sort(key=lambda x: -x["score"])
     # concurrence eBay (gratuit) sur les 30 meilleurs

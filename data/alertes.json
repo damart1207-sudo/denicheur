@@ -1833,7 +1833,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T11:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -2026,7 +2026,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:20 UTC : offre active, 349.99 affiché, marchand 24_2 ; fiche intertoys.nl lue : 224.99 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T11:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Intertoys (Pays-Bas) livre uniquement aux Pays-Bas, pas de livraison en France (page Intertoys lue par le robot à 12h20 : 224,99 €, en stock). Prix neuf France de référence : 309,19 € (achatmoinscher, 5 boutiques). Revente : marge nette de 5 € au mieux (Fnac), trop faible.",
+   "prix_neuf_min_idealo": 309.19,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 27,
+   "prix_revente_verifie": null,
+   "canal": "fnac",
+   "marge_nette_verifiee": 5.13,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c5f0ada290",
@@ -2079,7 +2091,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T11:26+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2280,7 +2292,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 11:30 UTC : offre active, 1134.0 affiché, marchand 1539_3 ; allegro.pl refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T11:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Allegro (Pologne), le robot a relu la page du bon plan à 12h30 : offre active à 1 134 zł mais pas de livraison en France. Prix neuf France : 310,75 € (achatmoinscher) ; fiche Amazon.fr lue par Keepa : 311,69 €, plus bas 90 j 267,92 €. Économie réelle trop faible (moins de 15 % sous le plus bas récent) et revente à perte (−27 €).",
+   "prix_neuf_min_idealo": 310.75,
+   "source_prix_ref": "achatmoinscher.com + Keepa Amazon.fr",
+   "economie_pct": 17,
+   "prix_revente_verifie": null,
+   "canal": "fnac",
+   "marge_nette_verifiee": -27.14,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "09c470f327",
@@ -2313,7 +2337,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T11:26+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2514,6 +2538,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 11:30 UTC : offre active, 309.99 affiché, code steelseries-bf1, marchand 2814_1 ; x-kom.pl refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T11:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : x-kom (Pologne) ne livre pas en France (page du bon plan relue à 12h30, offre active à 309,99 zł avec code). Ce n'est pas le même produit exact : clavier polonais QWERTY, alors que la référence Amazon.fr à 129,99 € (Keepa) est en AZERTY français. Revente à perte (−2,71 €).",
+   "prix_neuf_min_idealo": 129.99,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": 28,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -2.71,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

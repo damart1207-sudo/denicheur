@@ -5713,7 +5713,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-19T23:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5923,7 +5923,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-19T23:59+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T00:50+00:00",
+  "verdict": {
+   "commentaire": "Prix livré en France estimé 29,42 € (Amazon.it, port compris) contre 31,82 € au plus bas en France : seulement 8 % d'économie, sous le seuil de 15 %.",
+   "prix_neuf_min_idealo": 31.82,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 8,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0DH8GTC5F-arbDE",
@@ -5956,7 +5968,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T00:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -6216,6 +6228,18 @@
    "proba_detail": [
     "Amazon 9/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T00:50+00:00",
+  "verdict": {
+   "commentaire": "Le prix Amazon.fr de 85,82 € vient d'un vendeur tiers anormalement cher ; ce même jogging a été vendu 35 € sur Amazon.fr ces 90 derniers jours (moyenne 63,84 €). Taille et couleur uniques (XL rose) : pas de vrai bon plan prouvé.",
+   "prix_neuf_min_idealo": 35.0,
+   "source_prix_ref": "Amazon.fr (keepa, plus bas 90 j)",
+   "economie_pct": 0,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -6262,7 +6286,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T00:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -6482,7 +6506,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 00:21 UTC : offre active, 33.96 affiché, marchand 1650_3 ; argos.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T00:50+00:00",
+  "verdict": {
+   "commentaire": "Offre Argos (Royaume-Uni) en retrait en magasin uniquement : pas de livraison en France.",
+   "prix_neuf_min_idealo": 45.96,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": null,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0DMQBKB34-arbDE",
@@ -6515,7 +6551,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T00:32+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -6772,6 +6808,18 @@
    "proba_detail": [
     "Amazon 6/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T00:50+00:00",
+  "verdict": {
+   "commentaire": "Le prix Amazon.fr de 85,98 € vient d'un vendeur tiers ; la paire a été vendue 47,19 € sur Amazon.fr ces 90 jours. Coût livré 40,81 € = 13,5 % d'économie seulement, et une seule pointure (45,5).",
+   "prix_neuf_min_idealo": 47.19,
+   "source_prix_ref": "Amazon.fr (keepa, plus bas 90 j)",
+   "economie_pct": 13,
+   "duree_offre": "inconnue",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -6810,7 +6858,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-20T00:32+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -6841,6 +6889,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 00:36 UTC : offre active, 12.78 affiché, marchand 3_2 ; xxxlutz.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T00:50+00:00",
+  "verdict": {
+   "commentaire": "Erreur de prix probable chez XXXLutz (Allemagne), site qui ne livre pas la France et bloque la vérification : rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune (produit introuvable en France)",
+   "economie_pct": null,
+   "duree_offre": "courte (erreur de prix)",
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "demande_confirmee": false
+  }
  }
 ]

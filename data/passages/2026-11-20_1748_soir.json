@@ -1,0 +1,3840 @@
+{
+ "passage": "soir",
+ "horodatage": "2026-11-20_1748",
+ "date_affichee": "20/11/2026 à 17 h 48",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 168,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 45,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 827,
+ "nb_nouvelles": 114,
+ "nb_prefiltres": 85,
+ "nb_tries": 85,
+ "tri_ok": true,
+ "agents": {
+  "deepseek": {
+   "appels": 3,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 410 (deepseek-ai/deepseek-v4-pro): {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'deepseek-ai/deepseek-v4-pro' has reached its end of life on 2026-08-07T09:00:00Z and is no longer available.\"}\n",
+    "HTTP 410 (deepseek-ai/deepseek-v4-pro): {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'deepseek-ai/deepseek-v4-pro' has reached its end of life on 2026-08-07T09:00:00Z and is no longer available.\"}\n",
+    "HTTP 410 (deepseek-ai/deepseek-v4-pro): {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'deepseek-ai/deepseek-v4-pro' has reached its end of life on 2026-08-07T09:00:00Z and is no longer available.\"}\n"
+   ],
+   "choix": 0
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 32,
+   "remplace": "deepseek"
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 6,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 3,
+   "reussites": 2,
+   "erreurs": [
+    "TimeoutError: The read operation timed out"
+   ],
+   "choix": 7
+  }
+ },
+ "remplacements": {
+  "qwen": "gemma",
+  "gptoss": "deepseek"
+ },
+ "candidats": [
+  {
+   "id": "a83d616978",
+   "titre": "TV QLED 50\" (126 cm) Philips Ambilight Ambiscape 50PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "prix": 379.0,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-50-126-cm-philips-ambilight-ambiscape-50pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081148",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/tv-qled-50-126-cm-philips-ambilight-ambiscape-50pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081148"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Philips Ambiscape 50 QLED",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 750.0,
+   "cout_achat": 384.0,
+   "marge_nette": 262.5,
+   "rentabilite": 0.684,
+   "demande": 5,
+   "concurrence": 5,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon écart de prix entre le plan espagnol et le prix français, marge suffisante après coûts d'import."
+   },
+   "score": 54.7,
+   "ebay": {
+    "requete": "Philips Ambiscape 50 QLED",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "PHILIPS",
+    "asin": "B0HMZSNYYM",
+    "titre": "Philips Téléviseur Ambilight QLED 4K 50\" PQS8701 avec système d'image P5, Dolby Atmos, Titan OS, HDMI VRR et AmbiScape pour impressionner",
+    "ean": "8718863052938",
+    "pays": "FR",
+    "prix_neuf": 522.2,
+    "prix_amazon": null,
+    "prix_tiers": 522.2,
+    "moyenne_90j": 540.86,
+    "plus_bas_90j": 522.2,
+    "occasion": null,
+    "rang_ventes": 167182,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0HMZSNYYM",
+    "jetons_restants": 460
+   },
+   "asin": "B0HMZSNYYM",
+   "ean": "8718863052938",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 0,
+   "prix_plancher": {
+    "nom": "Philips Ambiscape 50 QLED",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 522.2,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0HMZSNYYM"
+   },
+   "remise_sincere": true,
+   "mot_cle": "philips ambiscape 50 qled",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 522.2,
+     "marge_nette": 20.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 522.2,
+      "cout_achat": 384.0,
+      "frais_canal": 44.55,
+      "prelevements": 69.97,
+      "provision": 3.0,
+      "marge_nette": 20.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.054
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 522.2,
+     "marge_nette": 15.45,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 522.2,
+      "cout_achat": 384.0,
+      "frais_canal": 49.78,
+      "prelevements": 69.97,
+      "provision": 3.0,
+      "marge_nette": 15.45,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.04
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 522.2,
+     "marge_nette": 12.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 522.2,
+      "cout_achat": 384.0,
+      "frais_canal": 53.0,
+      "prelevements": 69.97,
+      "provision": 3.0,
+      "marge_nette": 12.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.032
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 459.54,
+     "marge_nette": 10.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 459.54,
+      "cout_achat": 384.0,
+      "frais_canal": 0.0,
+      "prelevements": 61.58,
+      "provision": 3.0,
+      "marge_nette": 10.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.029
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 459.54,
+     "marge_nette": 10.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 459.54,
+      "cout_achat": 384.0,
+      "frais_canal": 0.0,
+      "prelevements": 61.58,
+      "provision": 3.0,
+      "marge_nette": 10.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.029
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 459.54,
+     "marge_nette": 10.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 459.54,
+      "cout_achat": 384.0,
+      "frais_canal": 0.0,
+      "prelevements": 61.58,
+      "provision": 3.0,
+      "marge_nette": 10.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.029
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 522.2,
+     "marge_nette": -9.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 522.2,
+      "cout_achat": 384.0,
+      "frais_canal": 74.24,
+      "prelevements": 69.97,
+      "provision": 3.0,
+      "marge_nette": -9.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.023
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 522.2,
+     "marge_nette": -20.09,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 522.2,
+      "cout_achat": 384.0,
+      "frais_canal": 85.32,
+      "prelevements": 69.97,
+      "provision": 3.0,
+      "marge_nette": -20.09,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.052
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 506.53,
+   "marge_verifiee": 51.65,
+   "rentabilite_verifiee": 0.135,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 28.8,
+   "rapport_concurrence": {
+    "requete": "Philips Ambiscape 50 QLED",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Ambiscape 50 QLED",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "2e59d2e1d8",
+   "titre": "Baskets Adidas Adizero Adios Pro 4 - Clays sous bois (78)",
+   "prix": 105.0,
+   "devise": "EUR",
+   "marchand": "Adidas",
+   "lien": "https://www.dealabs.com/bons-plans/adidas-adizero-adios-pro-4-3463576",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/adidas-adizero-adios-pro-4-3463576"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Adidas Adizero Adios Pro 4",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 172.5,
+   "cout_achat": 110.0,
+   "marge_nette": 36.39,
+   "rentabilite": 0.331,
+   "demande": 4.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Chaussures running carbone à moitié prix, forte demande des coureurs et faible concurrence sur ce modèle.",
+    "gptoss": "Le prix d'achat est bien en dessous du prix de vente habituel de ces baskets neuves."
+   },
+   "score": 44.3,
+   "ebay": {
+    "requete": "Adidas Adizero Adios Pro 4",
+    "neuf": {
+     "nb": 50,
+     "min": 94.3,
+     "p25": 207.9,
+     "mediane": 231.37,
+     "max": 1088.21
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Adidas Adizero Adios Pro 4 43 1/3 EU",
+      "prix": "167.10",
+      "url": "https://www.ebay.fr/itm/178374733594?_skw=Adidas+Adizero+Adios+Pro+4&hash=item2987f66f1a:g:7NQAAeSwHg9qcmTf"
+     },
+     {
+      "titre": "Adidas Adizero Adios Pro 4",
+      "prix": "125.50",
+      "url": "https://www.ebay.fr/itm/397335736775?_skw=Adidas+Adizero+Adios+Pro+4&hash=item5c830e31c7:g:HzsAAeSwANVpKv2N"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 207.9,
+     "DE": 140.0,
+     "IT": 142.25,
+     "ES": 143.0
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "adidas",
+    "asin": "B0DZH9BQLX",
+    "titre": "adidas Adizero Adios Pro 4 Chaussures de course sur route pour homme, noir/argenté, 42 EU",
+    "ean": "4068801213735",
+    "pays": "FR",
+    "prix_neuf": 205.93,
+    "prix_amazon": null,
+    "prix_tiers": 205.93,
+    "moyenne_90j": 271.21,
+    "plus_bas_90j": 203.87,
+    "occasion": null,
+    "rang_ventes": 620087,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0DZH9BQLX",
+    "jetons_restants": 430
+   },
+   "asin": "B0DZH9BQLX",
+   "ean": "4068801213735",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 0,
+   "prix_plancher": {
+    "nom": "Adidas Adizero Adios Pro 4",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 205.93,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0DZH9BQLX"
+   },
+   "remise_sincere": true,
+   "mot_cle": "adidas adizero adios pro",
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 181.22,
+     "marge_nette": 43.94,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.22,
+      "cout_achat": 110.0,
+      "frais_canal": 0.0,
+      "prelevements": 24.28,
+      "provision": 3.0,
+      "marge_nette": 43.94,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.399
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 181.22,
+     "marge_nette": 43.94,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.22,
+      "cout_achat": 110.0,
+      "frais_canal": 0.0,
+      "prelevements": 24.28,
+      "provision": 3.0,
+      "marge_nette": 43.94,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.399
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 181.22,
+     "marge_nette": 43.94,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 181.22,
+      "cout_achat": 110.0,
+      "frais_canal": 0.0,
+      "prelevements": 24.28,
+      "provision": 3.0,
+      "marge_nette": 43.94,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.399
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 205.93,
+     "marge_nette": 42.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 205.93,
+      "cout_achat": 110.0,
+      "frais_canal": 22.42,
+      "prelevements": 27.59,
+      "provision": 3.0,
+      "marge_nette": 42.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 205.93,
+     "marge_nette": 40.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 205.93,
+      "cout_achat": 110.0,
+      "frais_canal": 24.47,
+      "prelevements": 27.59,
+      "provision": 3.0,
+      "marge_nette": 40.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.371
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 205.93,
+     "marge_nette": 40.8,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 205.93,
+      "cout_achat": 110.0,
+      "frais_canal": 24.53,
+      "prelevements": 27.59,
+      "provision": 3.0,
+      "marge_nette": 40.8,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.371
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 205.93,
+     "marge_nette": 32.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 205.93,
+      "cout_achat": 110.0,
+      "frais_canal": 33.12,
+      "prelevements": 27.59,
+      "provision": 3.0,
+      "marge_nette": 32.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.293
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 205.93,
+     "marge_nette": 27.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 205.93,
+      "cout_achat": 110.0,
+      "frais_canal": 37.88,
+      "prelevements": 27.59,
+      "provision": 3.0,
+      "marge_nette": 27.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.25
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 199.75,
+   "marge_verifiee": 59.98,
+   "rentabilite_verifiee": 0.545,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 15.6,
+   "rapport_concurrence": {
+    "requete": "Adidas Adizero Adios Pro 4",
+    "pays": {
+     "FR": {
+      "nb_annonces": 45,
+      "total_ebay": 46,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 94.3,
+       "titre": "adidas adizero adios pro 4 Chaussures course à pied homme jaune/bleu 44",
+       "lien": "https://www.ebay.fr/itm/137775719919?_skw=Adidas+Adizero+Adios+Pro+4&hash=item201412a5ef:g:QBMAAeSw2eNqtYYF",
+       "vendeur": "re_styleshop",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 409.1,
+       "titre": "adidas Adizero Adios Pro 3 M Core Noir Zero Metallic Spark IG6439 Homme US4-14",
+       "lien": "https://www.ebay.fr/itm/206579544414?_skw=Adidas+Adizero+Adios+Pro+4&hash=item301919b15e:g:gTQAAeSwdkFpKpqO",
+       "vendeur": "quu_japan",
+       "avis_vendeur": 3298
+      }
+     },
+     "DE": {
+      "nb_annonces": 189,
+      "total_ebay": 202,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 56.79,
+       "titre": "UK 4,5 ✔ Adidas Adizero Adios Pro 1 White Coral (OG Colourway aus 2020) FX1765",
+       "lien": "https://www.ebay.de/itm/276255574681?_skw=Adidas+Adizero+Adios+Pro+4&hash=item40521d8a99:g:eDoAAeSwS0xoiIW4",
+       "vendeur": "rayners*entertainment",
+       "avis_vendeur": 46461
+      },
+      "plus_cher": {
+       "prix": 419.22,
+       "titre": "JR6373 adidas Adizero Adios Pro 4 Pure Sulfur Lucid Blue Lucid Red (Herren)",
+       "lien": "https://www.ebay.de/itm/256850569448?_skw=Adidas+Adizero+Adios+Pro+4&hash=item3bcd7ca8e8:g:SnIAAeSwKpRrABfQ",
+       "vendeur": "badsneakersjp",
+       "avis_vendeur": 17509
+      }
+     },
+     "IT": {
+      "nb_annonces": 556,
+      "total_ebay": 585,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 55.57,
+       "titre": "Adidas Adizero Adios Pro 4 scarpe da corsa donna blu solare JR4797 nuove taglia",
+       "lien": "https://www.ebay.it/itm/147600748055?_skw=Adidas+Adizero+Adios+Pro+4&hash=item225db0ae17:g:n-wAAeSwvRpqt9V7",
+       "vendeur": "blownsaleenfox",
+       "avis_vendeur": 2005
+      },
+      "plus_cher": {
+       "prix": 419.22,
+       "titre": "JR6373 adidas Adizero Adios Pro 4 Pure Sulfur Lucid Blue Lucid Red (uomo)",
+       "lien": "https://www.ebay.it/itm/256852496907?_skw=Adidas+Adizero+Adios+Pro+4&hash=item3bcd9a120b:g:SLwAAeSwNe9rABex",
+       "vendeur": "badsneakersjp",
+       "avis_vendeur": 17509
+      }
+     },
+     "ES": {
+      "nb_annonces": 576,
+      "total_ebay": 610,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 55.11,
+       "titre": "Adidas Adizero Adios Pro 4 Zapatos para Correr Para Mujer Azul Solar JR4797 Nuevo Talla",
+       "lien": "https://www.ebay.es/itm/147600748055?_skw=Adidas+Adizero+Adios+Pro+4&hash=item225db0ae17:g:n-wAAeSwvRpqt9V7",
+       "vendeur": "blownsaleenfox",
+       "avis_vendeur": 2005
+      },
+      "plus_cher": {
+       "prix": 419.22,
+       "titre": "JR6373 Adidas Adizero Adios Pro 4 Pure Sulfur Lucid Blue Lucid Red (Hombre)",
+       "lien": "https://www.ebay.es/itm/257582309605?_skw=Adidas+Adizero+Adios+Pro+4&hash=item3bf91a20e5:g:QCUAAeSw0ZFrACPw",
+       "vendeur": "badsneakersjp",
+       "avis_vendeur": 17509
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Adizero Adios Pro 4",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 10,
+     "interet_recent": 55,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      90,
+      52,
+      85,
+      0,
+      70,
+      100,
+      70,
+      44,
+      68,
+      67,
+      93,
+      69,
+      69,
+      0,
+      83
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "adidas adizero adios pro 4",
+     "adidas adizero adios pro 4 homme",
+     "adidas adizero adios pro 4 femme",
+     "adidas adizero adios pro 4 rose",
+     "adidas adizero adios pro 4 decathlon",
+     "adidas adizero adios pro 4 avis",
+     "adidas adizero adios pro 4 intersport",
+     "adidas adizero adios pro 4 noir",
+     "adidas adizero adios pro 4 m",
+     "adidas adizero adios pro 4 ekiden"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "f6e544d5a2",
+   "titre": "Buty Męskie Merrell Moab 3 r 40-42, 43.5, 44-46.5, 48-50",
+   "prix": 58.51,
+   "devise": "EUR",
+   "marchand": "MERRELL",
+   "lien": "https://www.pepper.pl/promocje/buty-meskie-merrell-moab-3-r-40-42-435-44-465-48-50-1395581",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 231,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/buty-meskie-merrell-moab-3-r-40-42-435-44-465-48-50-1395581"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Merrell Moab 3",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 107.5,
+   "cout_achat": 63.51,
+   "marge_nette": 26.59,
+   "rentabilite": 0.419,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Chaussures de randonnée Merrell à prix Pologne, très demandées et peu concurrentielles en taille spécifique.",
+    "gptoss": "Chaussures de randonnée populaires, bonne marge sans frais de plateforme."
+   },
+   "score": 44.1,
+   "ebay": {
+    "requete": "Merrell Moab 3",
+    "neuf": {
+     "nb": 50,
+     "min": 94.3,
+     "p25": 121.05,
+     "mediane": 138.09,
+     "max": 213.59
+    },
+    "occasion": {
+     "nb": 5,
+     "min": 30.86,
+     "p25": 47.71,
+     "mediane": 83.9,
+     "max": 132.0
+    },
+    "exemples": [
+     {
+      "titre": "chaussures de randonnée Merrell Moab 3 - pointure 42",
+      "prix": "83.90",
+      "url": "https://www.ebay.fr/itm/407103394933?_skw=Merrell+Moab+3&hash=item5ec940d475:g:PNwAAeSwf79qaGAy"
+     },
+     {
+      "titre": "Merrel Moab 3 Gore-Tex Homme P41,5",
+      "prix": "30.86",
+      "url": "https://www.ebay.fr/itm/135467873594?_skw=Merrell+Moab+3&hash=item1f8a83b53a:g:kDsAAOSwf55nbsGk"
+     },
+     {
+      "titre": "Merrell, bottes de randonnée, taille : 43, modèle : moab 3, noir, hommes #KL6",
+      "prix": "132.00",
+      "url": "https://www.ebay.fr/itm/407376867822?_skw=Merrell+Moab+3&hash=item5ed98db1ee:g:vi0AAeSwK8drAD0c"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 121.05,
+     "DE": 94.95,
+     "IT": 96.43,
+     "ES": 98.5
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 18,
+    "marque": "Merrell",
+    "asin": "B09XR5DJC5",
+    "titre": "Merrell Homme Moab 3 Mid Gtx Chaussures-randonnée-homme, Beluga, 44 EU",
+    "ean": "0194713933363",
+    "pays": "FR",
+    "prix_neuf": 97.39,
+    "prix_amazon": 97.39,
+    "prix_tiers": 97.39,
+    "moyenne_90j": 119.96,
+    "plus_bas_90j": 77.95,
+    "occasion": null,
+    "rang_ventes": 923,
+    "chutes_rang_30j": 36,
+    "chutes_rang_90j": 97,
+    "ventes_estimees_30j": 36,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B09XR5DJC5",
+    "jetons_restants": 420
+   },
+   "asin": "B09XR5DJC5",
+   "ean": "0194713933363",
+   "vendeurs_amazon": 18,
+   "ventes_estimees_30j": 36,
+   "prix_plancher": {
+    "nom": "Merrell Moab 3",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 97.39,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B09XR5DJC5"
+   },
+   "remise_sincere": true,
+   "mot_cle": "merrell moab 3",
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 85.7,
+     "marge_nette": 7.71,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.7,
+      "cout_achat": 63.51,
+      "frais_canal": 0.0,
+      "prelevements": 11.48,
+      "provision": 3.0,
+      "marge_nette": 7.71,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 85.7,
+     "marge_nette": 7.71,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.7,
+      "cout_achat": 63.51,
+      "frais_canal": 0.0,
+      "prelevements": 11.48,
+      "provision": 3.0,
+      "marge_nette": 7.71,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 85.7,
+     "marge_nette": 7.71,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 85.7,
+      "cout_achat": 63.51,
+      "frais_canal": 0.0,
+      "prelevements": 11.48,
+      "provision": 3.0,
+      "marge_nette": 7.71,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.121
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 97.39,
+     "marge_nette": 3.06,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.39,
+      "cout_achat": 63.51,
+      "frais_canal": 14.77,
+      "prelevements": 13.05,
+      "provision": 3.0,
+      "marge_nette": 3.06,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.048
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 97.39,
+     "marge_nette": 3.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.39,
+      "cout_achat": 63.51,
+      "frais_canal": 14.82,
+      "prelevements": 13.05,
+      "provision": 3.0,
+      "marge_nette": 3.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.047
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 97.39,
+     "marge_nette": 2.04,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.39,
+      "cout_achat": 63.51,
+      "frais_canal": 15.79,
+      "prelevements": 13.05,
+      "provision": 3.0,
+      "marge_nette": 2.04,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.032
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 97.39,
+     "marge_nette": -1.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.39,
+      "cout_achat": 63.51,
+      "frais_canal": 19.01,
+      "prelevements": 13.05,
+      "provision": 3.0,
+      "marge_nette": -1.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.019
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 97.39,
+     "marge_nette": -3.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 97.39,
+      "cout_achat": 63.51,
+      "frais_canal": 21.6,
+      "prelevements": 13.05,
+      "provision": 3.0,
+      "marge_nette": -3.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.059
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 94.47,
+   "marge_verifiee": 15.3,
+   "rentabilite_verifiee": 0.241,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "occasion": {
+    "bas": 47.71,
+    "haut": 83.9,
+    "position_neuf": 1.23
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 22.8,
+   "rapport_concurrence": {
+    "requete": "Merrell Moab 3",
+    "pays": {
+     "FR": {
+      "nb_annonces": 104,
+      "total_ebay": 118,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 94.3,
+       "titre": "Chaussures de randonnee Merrell Moab 3 femme neuves 37,5  bleu gris  Vibram",
+       "lien": "https://www.ebay.fr/itm/298711119827?_skw=Merrell+Moab+3&hash=item458c91f7d3:g:BtkAAeSwj5pquPlg",
+       "vendeur": "joasiasl1",
+       "avis_vendeur": 3
+      },
+      "plus_cher": {
+       "prix": 216.0,
+       "titre": "Chaussures Merrell Moab 3 Gtx J036255",
+       "lien": "https://www.ebay.fr/itm/860022901858?_skw=Merrell+Moab+3&hash=itemc83d5c0c62:g:1fQAAeSw585qx4mY",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3951
+      }
+     },
+     "DE": {
+      "nb_annonces": 137,
+      "total_ebay": 702,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 69.0,
+       "titre": "Merrell Moab Moab 3 GTX Damen Wanderschuhe GORE-TEX oliv EUR 42",
+       "lien": "https://www.ebay.de/itm/257842185445?_skw=Merrell+Moab+3&hash=item3c089784e5:g:bOAAAeSwhItq8KO~",
+       "vendeur": "karolina25113",
+       "avis_vendeur": 13
+      },
+      "plus_cher": {
+       "prix": 231.21,
+       "titre": "Merrell Moab 3 Synthetic Mid GORE-TEX Wide Width Walnut 500639W Herren Gr.",
+       "lien": "https://www.ebay.de/itm/820369774193?_skw=Merrell+Moab+3&hash=itembf01d95671:g:HtIAAeSwcNRpU5rh",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18864
+      }
+     },
+     "IT": {
+      "nb_annonces": 31,
+      "total_ebay": 3132,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 29.05,
+       "titre": "Merrell Moab Thermo Hiker Escursionismo Un paio di calze equipaggio M/L UK 9-11,5",
+       "lien": "https://www.ebay.it/itm/267398461825?_skw=Merrell+Moab+3&hash=item3e4230b981:g:IG8AAeSw~LVowW1z",
+       "vendeur": "a-zgenuineltd",
+       "avis_vendeur": 6496
+      },
+      "plus_cher": {
+       "prix": 233.61,
+       "titre": "Nuove scarpe da trekking Merrell uomo Moab 3 impermeabili oliva/gomma 11 W",
+       "lien": "https://www.ebay.it/itm/236506224571?_skw=Merrell+Moab+3&hash=item3710de97bb:g:i~EAAeSwhaRpMLqT",
+       "vendeur": "73cj5",
+       "avis_vendeur": 6927
+      }
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 3733,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 108.12,
+       "titre": "Zapato de trabajo bajo táctico Merrell Moab 2 para hombre impermeable antideslizante J15857",
+       "lien": "https://www.ebay.es/itm/317394461061?_skw=Merrell+Moab+3&hash=item49e62f2185:g:JwIAAeSwOC9o6HeT",
+       "vendeur": "rarecollectives",
+       "avis_vendeur": 148
+      },
+      "plus_cher": {
+       "prix": 233.42,
+       "titre": "Zapato de construcción Merrell Moab Speed 2 impermeable de fibra de carbono para hombre,...",
+       "lien": "https://www.ebay.es/itm/840028709191?_skw=Merrell+Moab+3&hash=itemc3959ce147:g:3F4AAeSwU1Zq0rOn",
+       "vendeur": "belfort_ltd",
+       "avis_vendeur": 37151
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Merrell Moab 3",
+    "temperature_dealabs": 231,
+    "google_trends": {
+     "interet_moyen": 6,
+     "interet_recent": 32,
+     "tendance": "stable",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      27,
+      32,
+      31,
+      25,
+      29,
+      38,
+      30,
+      31,
+      26,
+      43,
+      38,
+      35,
+      27,
+      32,
+      35
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "merrell moab 3",
+     "merrell moab 3 gtx",
+     "merrell moab 3 mid gtx",
+     "merrell moab 3 gtx femme",
+     "merrell moab 3 femme",
+     "merrell moab 3 gtx homme",
+     "merrell moab 3 mid",
+     "merrell moab 3 mid gtx femme",
+     "merrell moab 3 gore-tex",
+     "merrell moab 3 mid gtx homme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "142d54085d",
+   "titre": "TV QLED 55\" (139 cm) Philips Ambilight Ambiscape 55PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "prix": 399.0,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-55-139-cm-philips-ambilight-ambiscape-55pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081145",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/tv-qled-55-139-cm-philips-ambilight-ambiscape-55pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081145"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Philips Ambiscape 55 QLED",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 800.0,
+   "cout_achat": 404.0,
+   "marge_nette": 285.8,
+   "rentabilite": 0.707,
+   "demande": 5,
+   "concurrence": 5,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Écart de prix important, marge nette correcte même avec frais d'importation."
+   },
+   "score": 58.1,
+   "ebay": {
+    "requete": "Philips Ambiscape 55 QLED",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Philips Ambiscape 55 QLED",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "philips ambiscape 55 qled",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Philips Ambiscape 55 QLED",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Ambiscape 55 QLED",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      7,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "8fae20c54f",
+   "titre": "TV QLED 65\" (164 cm) Philips Ambilight Ambiscape 65PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "prix": 499.0,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-65-164-cm-philips-ambilight-ambiscape-65pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081154",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/tv-qled-65-164-cm-philips-ambilight-ambiscape-65pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081154"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "Philips Ambiscape 65 QLED",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 950.0,
+   "cout_achat": 504.0,
+   "marge_nette": 315.7,
+   "rentabilite": 0.626,
+   "demande": 5,
+   "concurrence": 5,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très inférieur au prix de marché français, marge nette intéressante même après TVA, droits et frais de port."
+   },
+   "score": 52.1,
+   "ebay": {
+    "requete": "Philips Ambiscape 65 QLED",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Philips Ambiscape 65 QLED",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "philips ambiscape 65 qled",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Philips Ambiscape 65 QLED",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Ambiscape 65 QLED",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "6e7d44f92c",
+   "titre": "Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche, 40–150 cm, Full Black, Silla Coche ISOFIX Giratoria, 0–12 Años",
+   "prix": 135.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/bebeconfort-revolvefix-plus-360-i-size-silla-coche-40-150-cm-full-black-silla-coche-isofix-giratoria-0-12-anos-2081153",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/bebeconfort-revolvefix-plus-360-i-size-silla-coche-40-150-cm-full-black-silla-coche-isofix-giratoria-0-12-anos-2081153"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Bebeconfort RevolveFix Plus",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 260.0,
+   "cout_achat": 140.99,
+   "marge_nette": 81.17,
+   "rentabilite": 0.576,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Produit de puériculture très recherché, prix d'achat bien en dessous du prix français, marge nette satisfaisante."
+   },
+   "score": 50.4,
+   "ebay": {
+    "requete": "Bebeconfort RevolveFix Plus",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Bebeconfort",
+    "asin": "B0F3P61P8C",
+    "titre": "Bebeconfort RevolveFix Plus 360 i-Size, Siège Auto, 40–150 cm, Full Black",
+    "ean": "8712930021513",
+    "pays": "FR",
+    "prix_neuf": 149.99,
+    "prix_amazon": 149.99,
+    "prix_tiers": 149.99,
+    "moyenne_90j": 194.04,
+    "plus_bas_90j": 149.99,
+    "occasion": null,
+    "rang_ventes": 436,
+    "chutes_rang_30j": 44,
+    "chutes_rang_90j": 105,
+    "ventes_estimees_30j": 44,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0F3P61P8C",
+    "jetons_restants": 440
+   },
+   "asin": "B0F3P61P8C",
+   "ean": "8712930021513",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 44,
+   "prix_plancher": {
+    "nom": "Bebeconfort RevolveFix Plus",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 149.99,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0F3P61P8C"
+   },
+   "remise_sincere": true,
+   "mot_cle": "bebeconfort revolvefix plus",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 131.99,
+     "marge_nette": -29.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 131.99,
+      "cout_achat": 140.99,
+      "frais_canal": 0.0,
+      "prelevements": 17.69,
+      "provision": 3.0,
+      "marge_nette": -29.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.211
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 131.99,
+     "marge_nette": -29.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 131.99,
+      "cout_achat": 140.99,
+      "frais_canal": 0.0,
+      "prelevements": 17.69,
+      "provision": 3.0,
+      "marge_nette": -29.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.211
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 131.99,
+     "marge_nette": -29.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 131.99,
+      "cout_achat": 140.99,
+      "frais_canal": 0.0,
+      "prelevements": 17.69,
+      "provision": 3.0,
+      "marge_nette": -29.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.211
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 149.99,
+     "marge_nette": -32.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.99,
+      "cout_achat": 140.99,
+      "frais_canal": 18.5,
+      "prelevements": 20.1,
+      "provision": 3.0,
+      "marge_nette": -32.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.231
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 149.99,
+     "marge_nette": -33.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.99,
+      "cout_achat": 140.99,
+      "frais_canal": 19.5,
+      "prelevements": 20.1,
+      "provision": 3.0,
+      "marge_nette": -33.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.238
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 149.99,
+     "marge_nette": -34.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.99,
+      "cout_achat": 140.99,
+      "frais_canal": 20.0,
+      "prelevements": 20.1,
+      "provision": 3.0,
+      "marge_nette": -34.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.242
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 149.99,
+     "marge_nette": -39.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.99,
+      "cout_achat": 140.99,
+      "frais_canal": 25.85,
+      "prelevements": 20.1,
+      "provision": 3.0,
+      "marge_nette": -39.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.283
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 149.99,
+     "marge_nette": -43.59,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 149.99,
+      "cout_achat": 140.99,
+      "frais_canal": 29.49,
+      "prelevements": 20.1,
+      "provision": 3.0,
+      "marge_nette": -43.59,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.309
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 134.99,
+   "marge_verifiee": -27.09,
+   "rentabilite_verifiee": -0.192,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Bebeconfort RevolveFix Plus",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Bebeconfort RevolveFix Plus",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "bebeconfort revolvefix plus 360 i-size",
+     "bebeconfort revolvefix plus 360",
+     "bebeconfort evolvefix plus i-size",
+     "bebeconfort revolvefix plus",
+     "bebeconfort evolvefix plus 360 i-size",
+     "bebeconfort evolvefix plus 360 i-size avis",
+     "bebeconfort revolvefix plus 360 i size siège auto pivotant 360",
+     "bebeconfort evolvefix plus 360 i-size test",
+     "bebeconfort evolvefix plus 360 i-size siège auto",
+     "bebeconfort evolvefix plus 360 i-size installation"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FW3PSSFK-neuf",
+   "titre": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Human Hair Bundles Weave Extension",
+   "prix": 46.65,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0FW3PSSFK",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 432,
+   "domaine": "autre",
+   "nom_produit": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Huma",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 88.42,
+   "cout_achat": 51.65,
+   "marge_nette": 21.92,
+   "rentabilite": 0.424,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 100.48 €, baisse 54 %, rang 5436"
+   },
+   "score": 42.4,
+   "asin": "B0FW3PSSFK",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 11,
+   "ebay": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Huma",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Jucames",
+    "asin": "B0FW3PSSFK",
+    "titre": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Human Hair Bundles Weave Extensions Double Weft Couleur Natural Black 30 30 30 Pouces",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 46.65,
+    "prix_amazon": null,
+    "prix_tiers": 46.65,
+    "moyenne_90j": 100.46,
+    "plus_bas_90j": 46.65,
+    "occasion": null,
+    "rang_ventes": 5320,
+    "chutes_rang_30j": 11,
+    "chutes_rang_90j": 17,
+    "ventes_estimees_30j": 11,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FW3PSSFK",
+    "jetons_restants": 419
+   },
+   "prix_plancher": {
+    "nom": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Huma",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 46.65,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FW3PSSFK"
+   },
+   "remise_sincere": true,
+   "mot_cle": "jucames tissage naturel cheveux",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FW3PSSFK"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 41.05,
+     "marge_nette": -19.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.05,
+      "cout_achat": 51.65,
+      "frais_canal": 0.0,
+      "prelevements": 5.5,
+      "provision": 3.0,
+      "marge_nette": -19.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.37
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 41.05,
+     "marge_nette": -19.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.05,
+      "cout_achat": 51.65,
+      "frais_canal": 0.0,
+      "prelevements": 5.5,
+      "provision": 3.0,
+      "marge_nette": -19.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.37
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 41.05,
+     "marge_nette": -19.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.05,
+      "cout_achat": 51.65,
+      "frais_canal": 0.0,
+      "prelevements": 5.5,
+      "provision": 3.0,
+      "marge_nette": -19.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.37
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 46.65,
+     "marge_nette": -24.45,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 46.65,
+      "cout_achat": 51.65,
+      "frais_canal": 10.2,
+      "prelevements": 6.25,
+      "provision": 3.0,
+      "marge_nette": -24.45,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.473
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 46.65,
+     "marge_nette": -25.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 46.65,
+      "cout_achat": 51.65,
+      "frais_canal": 11.27,
+      "prelevements": 6.25,
+      "provision": 3.0,
+      "marge_nette": -25.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.494
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 46.65,
+     "marge_nette": -25.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 46.65,
+      "cout_achat": 51.65,
+      "frais_canal": 11.73,
+      "prelevements": 6.25,
+      "provision": 3.0,
+      "marge_nette": -25.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.503
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 46.65,
+     "marge_nette": -26.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 46.65,
+      "cout_achat": 51.65,
+      "frais_canal": 12.41,
+      "prelevements": 6.25,
+      "provision": 3.0,
+      "marge_nette": -26.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.516
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 46.65,
+     "marge_nette": -28.24,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 46.65,
+      "cout_achat": 51.65,
+      "frais_canal": 13.99,
+      "prelevements": 6.25,
+      "provision": 3.0,
+      "marge_nette": -28.24,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.547
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 41.98,
+   "marge_verifiee": -18.3,
+   "rentabilite_verifiee": -0.354,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Huma",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Huma",
+    "temperature_dealabs": 432,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "3f05d86ae7",
+   "titre": "Bizak Exost Fire Beast, Coche radiocontrol Todoterreno con carrocería metálica, suspensión y Faros LED, Mando 2.4 GHz y batería Recargable,",
+   "prix": 12.99,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.chollometro.com/ofertas/bizak-exost-fire-beast-coche-radiocontrol-todoterreno-con-carroceria-metalica-suspension-y-faros-led-mando-24-ghz-y-bateria-recargable-2081159",
+   "pays": "ES",
+   "source": "chollometro-nuevos",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/bizak-exost-fire-beast-coche-radiocontrol-todoterreno-con-carroceria-metalica-suspension-y-faros-led-mando-24-ghz-y-bateria-recargable-2081159"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Bizak Exost Fire Beast RC",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 38.0,
+   "cout_achat": 17.99,
+   "marge_nette": 11.92,
+   "rentabilite": 0.663,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Petit jouet RC à fort potentiel de revente, coût d'achat très bas, marge nette correcte."
+   },
+   "score": 41.4,
+   "ebay": {
+    "requete": "Bizak Exost Fire Beast RC",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Bizak Exost Fire Beast RC",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "bizak exost fire beast",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Bizak Exost Fire Beast RC",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Bizak Exost Fire Beast RC",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 8,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 28,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0FW3PSSFK-neuf",
+   "titre": "Jucames Tissage Naturel Cheveux Humain Bouclés Naturels Deep Wave Human Hair Bundles Weave Extension",
+   "temperature": 432,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 46.65,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FW3PSSFK",
+   "date": "2026-11-20T16:42",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FW3PSSFK",
+   "ref_fr": 100.48,
+   "description": "moyenne 90 j 100.48 €, baisse 54 %, rang 5436"
+  },
+  {
+   "id": "25c4b73aee",
+   "titre": "Philips Multigroom 5000-serie Alles-in-één 12-delige Trimmer – Scheerapparaat & Tondeuse voor Gezicht, Hoofd & Lichaam, MG5952/30",
+   "temperature": 309,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": "Amazon.nl",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-multigroom-5000-serie-alles-in-een-12-delige-trimmer-scheerapparaat-tondeuse-voor-gezicht-hoofd-lichaam-mg595230-426159",
+   "date": "Fri, 20 Nov 2026 17:36:43 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€39,99 - Amazon.nl Philips Multigroom 5000-serie Alles-in-één 12-delige Trimmer – Scheerapparaat & Tondeuse voor Gezicht, Hoofd & Lichaam, Zelfslijpende, Volledig Metalen ..."
+  },
+  {
+   "id": "c5c0bfdf7e",
+   "titre": "2N - Cadre d'encastrement 3 modules du Verso IP – 9155016",
+   "temperature": 272,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 99.01,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575459.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 149.99 €, -34 %. 2N - Cadre d'encastrement 3 modules du Verso IP – 9155016"
+  },
+  {
+   "id": "9cac716e77",
+   "titre": "2N - Cadre pour installation murale double Noir 9155012B",
+   "temperature": 256,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582835.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -32 %. 2N - Cadre pour installation murale double Noir 9155012B"
+  },
+  {
+   "id": "7f6e6efa46",
+   "titre": "Samsung 27\" Odyssey OLED G5 G50SF QHD 180Hz Gaming Monitor",
+   "temperature": 237,
+   "categorie": "Electrónica",
+   "marchand": "Samsung",
+   "prix": 239.2,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/samsung-27-odyssey-oled-g5-g50sf-qhd-180hz-gaming-monitor-2081097",
+   "date": "Fri, 20 Nov 2026 17:30:22 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "239,20€ - Samsung Al añadir el monitor, seleccionar \"entrega y estrena\" y selecionar culquiera ( no hace falta entregar nada) para que nos haga un descuento directo d..."
+  },
+  {
+   "id": "b068bfaa98",
+   "titre": "SodaStream 2x szklana karafka/butelka 750ml",
+   "temperature": 233,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Amazon.pl",
+   "prix": 12.18,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/sodastream-2x-szklana-karafka-1394843",
+   "date": "Fri, 20 Nov 2026 17:32:38 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "51,81zł - Amazon.pl 2 x szklana karafka SodaStream Pojemność : 2 x 750 ml Produkt SodaStream 2x szklana karafka/butelka dostępny na Amazon za 51,81 to..."
+  },
+  {
+   "id": "f6e544d5a2",
+   "titre": "Buty Męskie Merrell Moab 3 r 40-42, 43.5, 44-46.5, 48-50",
+   "temperature": 231,
+   "categorie": "Sport i turystyka",
+   "marchand": "MERRELL",
+   "prix": 58.51,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-meskie-merrell-moab-3-r-40-42-435-44-465-48-50-1395581",
+   "date": "Fri, 20 Nov 2026 17:36:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "249zł - MERRELL Dzięki wyjątkowemu komfortowi i wszechstronności buty Moab od ponad dekady są kultową pozycją, wybieraną przez podróżników z całego świata. Model ceniony jest p..."
+  },
+  {
+   "id": "19e785288e",
+   "titre": "Smartfon Samsung Galaxy A56 8/128GB grafitowy w Klubie Samsung",
+   "temperature": 211,
+   "categorie": "Elektronika",
+   "marchand": "Samsung",
+   "prix": 281.76,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/smartfon-samsung-galaxy-a56-8128gb-grafitowy-w-klubie-samsung-1395451",
+   "date": "Fri, 20 Nov 2026 17:42:40 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 199zł - Samsung Dostępny tylko kolor grafitowy. Cena po uwzględnieniu dostępu do Klubu Samsung np. z aplikacji żappka. <a href=\"https://www.pepper.pl/..."
+  },
+  {
+   "id": "e522da0f53",
+   "titre": "2N - Cadre pour installation encastrée 1 module Noir - 9155011B",
+   "temperature": 208,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 148.3,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582928.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -26 %. 2N - Cadre pour installation encastrée 1 module Noir - 9155011B"
+  },
+  {
+   "id": "732531350b",
+   "titre": "HOKA Bondi 9. Zapatillas running hombre máxima amortiguación. Tallas 40 a 47",
+   "temperature": 202,
+   "categorie": "Deportes y aire libre",
+   "marchand": "JD Sports",
+   "prix": 90.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/hoka-bondi-9-zapatillas-running-hombre-maxima-amortiguacion-tallas-40-a-47-2080986",
+   "date": "Fri, 20 Nov 2026 17:36:30 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "90€ - JD Sports Las Hoka Bondi 9 son unas zapatillas de running para asfalto pensadas para que sumes kilómetros una y otra vez. Combinan una parte superior de punto estructurad..."
+  },
+  {
+   "id": "902fcc4adc",
+   "titre": "District 9 - 4K Blu-ray + Blu @ Prime",
+   "temperature": 200,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 14.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/district-9-4k-blu-ray-blu-at-prime-2850991",
+   "date": "Fri, 20 Nov 2026 17:40:32 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "14,97€ - Amazon Vor über 20 Jahren nahmen Außerirdische das erste Mal Kontakt mit der Erde auf. Die Menschen rechneten daraufhin mit einem feindlichen Angriff oder einem gig..."
+  },
+  {
+   "id": "d70786d378",
+   "titre": "Beronia Gran Reserva - Vino Tinto D.O.Ca. Rioja - 750 ml",
+   "temperature": 191,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/beronia-gran-reserva-vino-tinto-doca-rioja-750-ml-2062361",
+   "date": "Fri, 20 Nov 2026 17:29:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "14,99€ - Amazon 88% Tempranillo, 9% Graciano, 3% Mazuelo Suele estar a 24€"
+  },
+  {
+   "id": "c46af36b20",
+   "titre": "Nenuco Pack Bebé Mochila de Paseo Rana, con Gama Completa, Colonia, Jabón, y Champú, 3x200ml",
+   "temperature": 184,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 10.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nenuco-pack-bebe-mochila-de-paseo-rana-con-gama-completa-colonia-jabon-y-champu-3x200ml-2068025",
+   "date": "Fri, 20 Nov 2026 17:36:13 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,99€ - Amazon Nenuco Pack Bebé Mochila de Paseo Rana, con Gama Completa, Colonia, Jabón, y Champú, 3x200ml El Nenuco Pack Bebé Mochila de Paseo Rana ..."
+  },
+  {
+   "id": "keepa-B07YJCW3MG-arbDE",
+   "titre": "iClosam Gilet Noel Femme en Tricot Cardigan Femme Chic avec Bouton Chandail Manches Longue [Amazon DE]",
+   "temperature": 180,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B07YJCW3MG",
+   "date": "2026-11-20T16:35",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "0740379241115",
+   "asin": "B07YJCW3MG",
+   "ref_fr": 26.98,
+   "ventes_30j": 5,
+   "vendeurs": 1,
+   "description": "Amazon.fr 26.98 € (moyenne 90 j 32.45 €), écart 18 % port compris, ventes 30 j 5, 1 vendeurs FR"
+  },
+  {
+   "id": "385f77a9aa",
+   "titre": "2N - Cadre d'encastrement 1 module du Verso IP – 9155011",
+   "temperature": 176,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 156.98,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575456.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -22 %. 2N - Cadre d'encastrement 1 module du Verso IP – 9155011"
+  },
+  {
+   "id": "2c2006529e",
+   "titre": "2N - Lecteur de carte RFID externe avec connexion USB",
+   "temperature": 176,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 428.88,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582971.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 549.99 €, -22 %. 2N - Lecteur de carte RFID externe avec connexion USB"
+  },
+  {
+   "id": "fae2660437",
+   "titre": "Full Metal Jacket (4K Ultra-HD) (+ Blu-ray 2D) PRIME",
+   "temperature": 164,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 16.14,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/full-metal-jacket-4k-ultra-hd-blu-ray-2d-prime-2850332",
+   "date": "Fri, 20 Nov 2026 17:39:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "16,14€ - Amazon Full Metal Jacket Eine hervorragende Darstellertruppe marschiert im Gleichschritt an die Front: Stanley Kubrick zeigt in seinem episch..."
+  },
+  {
+   "id": "9cd94f2555",
+   "titre": "2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014",
+   "temperature": 144,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 82.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575451.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 99.99 €, -18 %. 2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014"
+  },
+  {
+   "id": "ca1d68f5ef",
+   "titre": "Maylawn Bath Bombs Gift Set, 12pcs Handmade Fizzy Bubble Bath Bombs S&S £7.67 Sold by Maylawn",
+   "temperature": 117,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 8.07,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/maylawn-bath-bombs-gift-set-12pcs-handmade-fizzy-bubble-bath-bombs-ss-ps767-sold-by-maylawn-5040672",
+   "date": "Fri, 20 Nov 2026 16:38:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.07 - Amazon About this item 【Bath Bombs Gift Set】12 uniquely designed Bath Bombs, handcrafted bath bombs. Each about 60g, 4.8cm in diamete..."
+  },
+  {
+   "id": "1ac639b341",
+   "titre": "Old Pulteney 15 Year Old Single Malt Scotch Whisky, 46% ABV, 70cl with voucher",
+   "temperature": 114,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 46.9,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/old-pultney-15-year-old-ps4690-on-amazon-5040662",
+   "date": "Fri, 20 Nov 2026 16:31:42 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£46.90 - Amazon This has got to be the best price ever for this fantastic malt. 15 year old click on the voucher before check out Old Pulteney 15 Year Old Single ..."
+  },
+  {
+   "id": "4dee4e8833",
+   "titre": "Siemens SN615X03EE inbouwvaatwasser: 60cm, 13 couverts",
+   "temperature": 112,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy NL",
+   "prix": 392.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/siemens-sn615x03ee-inbouwvaatwasser-60cm-13-couverts-428288",
+   "date": "Fri, 20 Nov 2026 17:35:21 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€392 - Joybuy NL • Volledig geïntegreerde vaatwasser • Capaciteit van 13 couverts • Besteklade • AquaStop • VarioSpeed Plus verkort de wastijd tot 66% <..."
+  },
+  {
+   "id": "9bf4e1a114",
+   "titre": "2N - Module de clavier numérique IP -9155031B",
+   "temperature": 112,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 386.08,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582920.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 449.99 €, -14 %. 2N - Module de clavier numérique IP -9155031B"
+  },
+  {
+   "id": "a829490a36",
+   "titre": "Dyson V10 Fluffy Staubsauger (Otto Lieferflat)",
+   "temperature": 110,
+   "categorie": "Elektronik",
+   "marchand": "OTTO",
+   "prix": 222.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/dyson-v10-fluffy-staubsauger-bei-otto-2877296",
+   "date": "Fri, 20 Nov 2026 17:40:53 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "222€ - OTTO Habe ich grad entdeckt, super Preis. Bei OTTO gibt es aktuell den Dyson Cyclone V10 Fluffy für nur 222 € . Der kabellose Akkusau..."
+  },
+  {
+   "id": "abfa849c0b",
+   "titre": "Bialetti New Venus Induction Espressokanne edelstahl",
+   "temperature": 110,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 24.37,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/bialetti-new-venus-induction-espressokanne-edelstahl-372985",
+   "date": "Fri, 20 Nov 2026 14:30:42 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "24,37€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit die Bialetti New Venus Induction Espressokanne edelstahl um 24,37€. Der Preisvergleich beginnt bei <..."
+  },
+  {
+   "id": "46e13bba1a",
+   "titre": "Garmin Varia RTL516 StVZO Radar Rücklicht Rennrad Gravelbike Fahrrad",
+   "temperature": 108,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Bike24",
+   "prix": 104.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/garmin-varia-rtl517-stvzo-radar-rucklicht-2877337",
+   "date": "Fri, 20 Nov 2026 17:41:26 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "104,98€ - Bike24 Heute mal wieder was zum Thema Sicherheit. Bei Bike24 gibt es das Varia in der StVZO Version zum absoluten Bestpreis. Wer das international bevorzugt ..."
+  },
+  {
+   "id": "9d089f9f5e",
+   "titre": "Multipacks Brennenstuhl Rauchmelder-Set RM C 9010, | z.B. 9er-Pack für 44,79 € | 2 Stk. für 10,39 € | austauschbare 9V-Batterie, EN 14604",
+   "temperature": 107,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 44.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/multipacks-brennenstuhl-rauchmelder-set-rm-c-9010-zb-9er-pack-fur-4479-eur-2-stk-fur-1039-eur-austauschbare-9v-batterie-en-14604-2877175",
+   "date": "Fri, 20 Nov 2026 17:42:05 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,79€ - Amazon Bei Amazon sind die Brennenstuhl RM C 9010 Rauchmelder-Sets gerade im Black Friday gut reduziert. Die wohl attraktivsten Packs, also 3..."
+  },
+  {
+   "id": "ff1a8c9597",
+   "titre": "Tales of Eternia Remastered PS5",
+   "temperature": 107,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 20.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tales-of-eternia-remastered-playstation-5-5040048",
+   "date": "Fri, 20 Nov 2026 16:42:19 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£20 - Amazon About this item An Epic Journey with Two Worlds at Stake - Journey to Eternia, a world split into two isolated realms, Inferia..."
+  },
+  {
+   "id": "0fa42044fc",
+   "titre": "Chaussures Nike Air Force 1 ‘07 - Taille du 38,5 au 49,5",
+   "temperature": 105,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Nike",
+   "prix": 71.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/baskets-nike-air-force-1-07-taille-du-385-au-495-3462757",
+   "date": "Fri, 20 Nov 2026 17:46:16 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "71,99€ - Nike <a href=\"https://www.nike.com/fr/t/chaussure-nike-air-force-1-07-pour-homme-n8juM1H2/IH1698-003?nikegos=true&cp=96589367883_search_--g-10690195814-108495202..."
+  },
+  {
+   "id": "b5adebc258",
+   "titre": "Tatonka EDC Pack 30L BC Rucksack in Schwarz",
+   "temperature": 105,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Amazon",
+   "prix": 119.33,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tatonka-edc-pack-30l-bc-rucksack-in-schwarz-2876896",
+   "date": "Fri, 20 Nov 2026 17:44:50 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "119,33€ - Amazon Ich hab ihn noch nie so günstig gesehen, allerdings gilt das nur für die Farbe Schwarz. Der Tatonka EDC Pack 30 BC ist ein robuster, mo..."
+  },
+  {
+   "id": "72f0924909",
+   "titre": "Rowenta X-Pert 6.60 Essential Akku-Staubsauger, 100 W, bis 45 min, kabellos, beutellos, LED-Düse, RH6838",
+   "temperature": 105,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/rowenta-x-pert-660-essential-akku-staubsauger-100-w-bis-45-min-kabellos-beutellos-led-duse-rh6838-2877123",
+   "date": "Fri, 20 Nov 2026 17:42:41 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "89,99€ - Amazon Bei Amazon bekommt ihr den Rowenta X-Pert 6.60 Essential Akku-Staubsauger gerade für 89,99 € inkl. VSK im Angebot. Der nächste Verglei..."
+  },
+  {
+   "id": "bb964105ca",
+   "titre": "LEGO Pokémon Munchlax 72150",
+   "temperature": 104,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 40.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-pokemon-munchlax-72150-5040527",
+   "date": "Fri, 20 Nov 2026 16:30:39 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£40 - Amazon 33% off RRP £59.99"
+  },
+  {
+   "id": "38bc6a70d4",
+   "titre": "INIU 240W USB C to USB C Cable, [2m+2m Orange / Blue £8.02]",
+   "temperature": 103,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 8.01,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/iniu-240w-usb-c-to-usb-c-cable-2m2m-orange-blue-ps802-5039524",
+   "date": "Fri, 20 Nov 2026 16:42:36 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8.01 - Amazon 33% off RRP £11.99 The INIU 240W USB C to USB C Cable, available for £8.01 on Amazon, is designed for those who need reliable and rapid charging capab..."
+  },
+  {
+   "id": "17f865b37a",
+   "titre": "Midea Waschmaschine MF205W100WB-14A 30, EEKL: A, 10 kg - nur Abholung bei Möbelix!",
+   "temperature": 103,
+   "categorie": "Home & Living",
+   "marchand": "Möbelix",
+   "prix": 354.5,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/midea-waschmaschine-mf205w100wb-14a-30-eekl-a-10-kg-nur-abholung-bei-mobelix-372991",
+   "date": "Fri, 20 Nov 2026 17:37:43 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "354,50€ - Möbelix Die Midea Waschmaschine MF205W100WB-14A 30, EEKL: A, 10 kg gibt es bei Möbelix zum Top-Preis - das Gerät hat Energieklasse A nach der neuen ..."
+  },
+  {
+   "id": "4fef410394",
+   "titre": "LEGO Icons Ferrari F2004 en Michael Schumacher 11375",
+   "temperature": 102,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 41.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/4199-met-code-laagste-ooit-428176",
+   "date": "Fri, 20 Nov 2026 17:46:52 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€41,99 - Amazon.nl Met de Code BLACK26 krijg je nog eens 10 euro korting op een hele kooie iconische f1 set. Doe er je voordeel mee Over dit artikel <ul..."
+  },
+  {
+   "id": "1cbb1c4e98",
+   "titre": "🛍️ Apple Magic Keyboard avec Touch ID et pavé numérique pour Les Mac avec Puce Apple - Français - Touches Noires ​​​​​​​ ✅ 177,00€ au lieu de 229,00€ ➡️ https:/",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 177.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DL75JY3J/?tag=pmrat-21",
+   "date": "2026-11-20T16:43",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Apple Magic Keyboard avec Touch ID et pavé numérique pour Les Mac avec Puce Apple - Français - Touches Noires ​​​​​​​ ✅ 177,00€ au lieu de 229,00€ ➡️ https://www.amazon.fr/dp/B0DL75JY3J/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 229.0
+  },
+  {
+   "id": "3058d422cf",
+   "titre": "SSD interne 2,5 PNY CS900 - 1 To",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 118.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ssd-interne-25-pny-1-to-ssd7cs900-1tb-rb-3463577",
+   "date": "Fri, 20 Nov 2026 17:45:49 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "118,99€ - Cdiscount Découvrez le SSD PNY CS900 d'une capacité de 1 To. Avec son format de 2,5 pouces et son interface SATA 6Gb/s, il offre des débits de transfert internes allant jusqu'à 535 Mo/s en lecture et 515 Mo/s en écriture. Grâce à sa mémoire flash NAND 3D triple-level cell (TLC), il garanti"
+  },
+  {
+   "id": "e8a1a1097e",
+   "titre": "Elden Ring sur PS5",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon.es",
+   "prix": 18.83,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/elden-ring-sur-ps5-3463574",
+   "date": "Fri, 20 Nov 2026 17:45:27 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "18,83€ - Amazon.es Description du fabricant Elden Ring L'Ordre d'or a été anéanti. Levez-vous, Sans-éclat, et puisse la grâce guider vos pas. Brandissez la puissance du Cercle d'Elden. Devenez Seigneur de l'Entre-terre. Un nouvel univers de fantasy Explorez l'Entre-terre, un nouveau monde de fantasy"
+  },
+  {
+   "id": "2e59d2e1d8",
+   "titre": "Baskets Adidas Adizero Adios Pro 4 - Clays sous bois (78)",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Adidas",
+   "prix": 105.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/adidas-adizero-adios-pro-4-3463576",
+   "date": "Fri, 20 Nov 2026 17:45:14 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "105€ - Adidas Les adidas Adizero Adios Pro 4 sont disponibles aux Clays sous bois (78), dans le magasin Adidas. Cumuler le prix outlet et les 40% du Black Friday."
+  },
+  {
+   "id": "78e4c4731e",
+   "titre": "Croquettes pour chatons Purina Pro Plan Kitten Healthy Start riche en poulet - 10 kg",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Zooplus",
+   "prix": 49.59,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/croquettes-pour-chatons-purina-pro-plan-kitten-healthy-start-riche-en-poulet-10-kg-3463570",
+   "date": "Fri, 20 Nov 2026 17:42:20 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "49,59€ - Zooplus Croquettes pour chatons (6 semaines à 12 mois), sachet de 10 kg, la composition semble bonne Convient aussi bien aux chatons non stérilisés qu'aux chatons stérilisés Il faut cocher la case \"Je clique pour obtenir -20%\" pour que la remise s'applique Promo dispo aussi pour le sachet d"
+  },
+  {
+   "id": "9dbc3f289e",
+   "titre": "GTA VI sur Xbox - San Guiliano (2B)",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "E.Leclerc",
+   "prix": 60.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/gta-vi-xbox-3463569",
+   "date": "Fri, 20 Nov 2026 17:42:14 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "60€ - E.Leclerc • Boîte officielle sans disque physique, avec un code d’activation numérique"
+  },
+  {
+   "id": "d2b1f73aac",
+   "titre": "Pack tireuse PerfectDraft Pro Black x Tripel Karmeliet + 2 Verres PerfectDraft",
+   "temperature": null,
+   "categorie": "Épicerie & Courses",
+   "marchand": "PerfectDraft",
+   "prix": 249.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pack-tireuse-perfectdraft-pro-black-x-tripel-karmeliet-2-verres-perfectdraft-3463568",
+   "date": "Fri, 20 Nov 2026 17:42:03 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "249€ - PerfectDraft Très bon prix pour ce pack tireuse + fut et verres !!! Le fut est consigné 5€ La PerfectDraft Pro Black vous permet de choisir la température de service de votre bière, réglable de 0 à 12 °C. Facile à utiliser, elle se contrôle depuis l’application PerfectDraft et permet de conse"
+  },
+  {
+   "id": "272ed734d7",
+   "titre": "Multicuiseur intelligent Moulinex Cookeo+ 150 recettes CE851HF0",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "E.Leclerc",
+   "prix": 154.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/multicuiseur-cookeo-moulinex-3463565",
+   "date": "Fri, 20 Nov 2026 17:36:34 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "154€ - E.Leclerc Promo du cookeo chez Leclerc capacité de 6 litres avec des recettes incluses"
+  },
+  {
+   "id": "0868e03c72",
+   "titre": "Manette sans fil PowerA Advantage compatible Nintendo Switch 2",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/manette-sans-fil-advantage-pour-nintendo-switch-2-3463562",
+   "date": "Fri, 20 Nov 2026 17:36:27 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "39,99€ - Amazon Excellent prix (y) (y) :)"
+  },
+  {
+   "id": "4c38021f3a",
+   "titre": "Eau de toilette Mixte Calvin Klein CK Be - 200 ml",
+   "temperature": null,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Notino",
+   "prix": 24.4,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/eau-de-toilette-mixte-calvin-klein-ck-be-200-ml-3463561",
+   "date": "Fri, 20 Nov 2026 17:34:07 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "24,40€ - Notino L'eau de toilette unisexe Calvin Klein CK Be est spécialement conçue pour les rêveuses qui n’ont pour souhait que de fermer les yeux et de pleinement ouvrir leur cœur. léger parfum boisé aux notes florales pour les femmes et les hommes individualistes particulièrement adapté pour un "
+  },
+  {
+   "id": "b96d468809",
+   "titre": "Combo clavier souris sans fil Logitech MK270 - 2.4 GHz, AZERTY, 8 raccourcis, autonomie jusqu'à 24 mois",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/combo-clavier-souris-sans-fil-logitech-mk270-24-ghz-azerty-8-raccourcis-autonomie-jusqua-24-mois-3463560",
+   "date": "Fri, 20 Nov 2026 17:34:06 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Amazon Best-seller intemporel de la bureautique, ce combo clavier-souris sans fil Logitech mise sur la simplicité : un nano-récepteur à brancher, aucune installation, et des piles qui durent des années. ➡ Historique des deals Points clés Connexion sans fil 2.4 GHz fiable jusqu'à 10 mètres v"
+  },
+  {
+   "id": "f6e2383c18",
+   "titre": "Valise diagnostic Auto Topdon ArtiDiag900 lite",
+   "temperature": null,
+   "categorie": "Auto-Moto",
+   "marchand": "Amazon",
+   "prix": 299.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/topdon-artidiag900-lite-diag-auto-3463558",
+   "date": "Fri, 20 Nov 2026 17:32:28 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "299€ - Amazon Grosse promo sur la valise de diag de la marque topdon ArtiDiag900 très pratique pour particulier voir pro de l’automobile À propos de ce produit Mise à niveau matérielle et logicielle de pointe 2026 : MISE À JOUR GRATUITE À VIE / AUCUN ABONNEMENT REQUIS – Écran LCD 8 pouces pour une m"
+  },
+  {
+   "id": "63aee8fb13",
+   "titre": "Sélection de jeux PS5 à 14.95€",
+   "temperature": null,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Action",
+   "prix": 14.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/divers-jeu-ps5-chez-action-15eur-3463557",
+   "date": "Fri, 20 Nov 2026 17:31:37 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,95€ - Action Jeux ps5 chez action si GTA VI est trop cher.."
+  },
+  {
+   "id": "56d9754069",
+   "titre": "Ecov Torso Protector in allen Größen",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Bike-Discount",
+   "prix": 132.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ecov-torso-protector-in-allen-grossen-2877375",
+   "date": "Fri, 20 Nov 2026 17:38:21 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "132,97€ - Bike-Discount Copy/Paste: Evoc Torso Protector - Protektorenweste Der TORSO PROTECTOR ist ein spezieller Rücken- und Brustschutz, der über das Bike-Jersey getragen werden kann. Dank der neu entwickelten LITESHIELD FLEX Protektortechnologie von EVOC bietet er höchsten Level-2 Aufprallschutz"
+  },
+  {
+   "id": "a253339646",
+   "titre": "Decathlon SIMOND Daunenjacke Makalu (Rot) Herren für 119,99 € | M, XL, 2XL",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "DECATHLON",
+   "prix": 124.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/decathlon-simond-daunenjacke-makalu-rot-herren-fur-11999-eur-m-xl-2xl-2877373",
+   "date": "Fri, 20 Nov 2026 17:35:54 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "124,98€ - DECATHLON Hohe Bauschkraft, sehr leicht (nur 610 g in Größe L) und komprimierbar. Diese Daunenjacke ist wasserabweisend und hat robuste Verstärkungen an den Ärmelenden, um dich vor den Elementen zu schützen. Wärmeleistung Empfohlene Nutzungstemperatur: - 27 °C Entenfedern: 90 % Daunen, 10 "
+  },
+  {
+   "id": "3ecba7d7d7",
+   "titre": "https://store.steampowered.com/app/2215430/",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Steam",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/httpsstoresteampoweredcomapp2215430-2877367",
+   "date": "Fri, 20 Nov 2026 17:30:49 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "29,99€ - Steam [Steampowered] Ghost of Tsushima DIRECTOR'S CUT (Steam) für 29,99 € (statt 59,99 €) Servus zusammen! Steampowered haut das epische Open-World-Abenteuer Ghost of Tsushima DIRECTOR'S CUT jetzt für 29,99 € statt 59,99 € raus. Du kriegst die komplette Story rund um den Samurai Jin Sakai u"
+  },
+  {
+   "id": "741d1ebe80",
+   "titre": "RØDE RØDECaster Duo Audio-Produktionslösung, 2 Combo-Buchsen, Touchscreen, 4 Fader, 6 SMART Pads, USB-C",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 336.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/rode-rodecaster-duo-audio-produktionslosung-2-combo-buchsen-touchscreen-4-fader-6-smart-pads-usb-c-2877372",
+   "date": "Fri, 20 Nov 2026 17:30:41 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "336€ - Amazon Das RØDE RØDECaster Duo bekommt ihr bei Amazon gerade für 336 € inkl. VSK im Black Friday. Der nächste Vergleichspreis laut Idealo beträgt 378 € bei Heba. Laut Preisverlauf ist das ein ziemlich guter Kurs für das Modell. Über das RØDE RØDECaster Duo Kompakte Audio-Produktionslösung für"
+  },
+  {
+   "id": "4c07a85f4a",
+   "titre": "The INKEY List Glycolic Acid Exfoliating Body Stick 45g",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 8.34,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/glycolic-body-stick-the-inkey-list-tiktok-viral-product-5040888",
+   "date": "Fri, 20 Nov 2026 16:45:07 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£8.34 - Amazon TikTok Viral product - is the cheapest price it has been all year! 44% off The INKEY List Glycolic Acid Exfoliating Body Stick for Black Friday One of INKEY’s most popular body products, designed to exfoliate rough, bumpy skin and help improve the appearance of KP / “strawberry skin”,"
+  },
+  {
+   "id": "f8f236f6ac",
+   "titre": "Lenovo L27Q-4A 27In 100Hz IPS QHD FreeSync Speakers Monitor - Free C&C Only",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Argos",
+   "prix": 129.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lenovo-l27q-4a-27-qhd-100hz-ips-monitor-with-speakers-5040886",
+   "date": "Fri, 20 Nov 2026 16:43:48 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£129 - Argos The Lenovo L27Q-4A 27 inch QHD 100Hz IPS monitor with speakers is £129.00 at Argos. Argos lists a QHD resolution on an IPS display for sharp text and solid colour accuracy for spreadsheets, photo editing and browsing, with a 100Hz refresh rate that keeps scrolling and window switching s"
+  },
+  {
+   "id": "0d18ad752b",
+   "titre": "Blink Mini 2K+ (Newest Gen), Plug-in Home Security Camera with 2K Video Resolution, 4x Zoom, Built-in Spotlight, 2 Cameras",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 21.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/blink-mini-2k-newest-gen-plug-in-home-security-camera-with-2k-video-resolution-4x-zoom-built-in-spotlight-2-cameras-5040884",
+   "date": "Fri, 20 Nov 2026 16:42:07 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£21.99 - Amazon MEET THE LATEST — Mini 2K+ is our third-generation compact plug-in camera, delivering sharper video and improved audio clarity for always-on protection. 2K VIDEO CLARITY — With 2K video resolution, expansive coverage, and up to 4x zoom, you'll capture more detailed footage thanks to "
+  },
+  {
+   "id": "9be216fddd",
+   "titre": "Reolink TrackFlex Floodlight WiFi, 4K Outdoor Security Camera PTZ Dual Lens",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 169.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/reolink-trackflex-floodlight-wifi-4k-outdoor-security-camera-ptz-dual-lens-5040882",
+   "date": "Fri, 20 Nov 2026 16:40:21 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£169.99 - Amazon 4K Dual-Lens Camera with 6× Hybrid Zoom: See the whole scene and every detail with dual 4K lenses. The wide-angle lens delivers complete coverage, while the tracking lens with 6× hybrid zoom captures sharp close-ups of people, vehicles, pets and packages—even from a distance. 360° A"
+  },
+  {
+   "id": "7541879c57",
+   "titre": "Star Trek: The Next Generation 4 Movie Boxset - 4K UHD",
+   "temperature": null,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon",
+   "prix": 40.78,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/star-trek-the-next-generation-movie-boxset-4k-uhd-5040881",
+   "date": "Fri, 20 Nov 2026 16:39:53 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£40.78 - Amazon Fan favourite STAR TREK characters Picard, Riker, Data, LaForge, Worf, Troi, and Dr. Crusher embark on four iconic, actionpacked big screen adventures, collected here for the first time on 4K UHD™ with HDR-10 and Dolby Vision, and remastered bonus Blu-rays™. The journey begins with o"
+  },
+  {
+   "id": "d7155b9804",
+   "titre": "Jean Paul Gaultier Le Beau Narcisse EDP/Le Beau Paradise Garden EDP £46.50/Le Beau EDT £46.60/Ultra Male EDT Intense 125ml Tester £46.27 W/C",
+   "temperature": null,
+   "categorie": "Health & Beauty",
+   "marchand": "The Beauty Store",
+   "prix": 51.15,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/jean-paul-gaultier-le-beau-narcisse-edple-beau-paradise-garden-edp-ps4650le-beau-edt-ps4660ultra-male-edt-intense-125ml-tester-ps4627-wc-5040880",
+   "date": "Fri, 20 Nov 2026 16:39:12 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£51.15 - The Beauty Store FREE delivery when you spend £50 https://thebeautystore.com/products/jean-paul-gaultier-le-beau-narcisse-eau-de-parfum-spray-125ml-tester?_pos=31&_sid=abde6d6a2&_ss=r https://thebeautystore.com/products/jean-paul-gaultier-le-beau-paradise-garden-eau-de-parfum-spray-125ml-te"
+  },
+  {
+   "id": "4181587603",
+   "titre": "FanWraps Fallout Vault Boy New Vegas Lunchbox & Flask",
+   "temperature": null,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/fanwraps-fallout-vault-boy-new-vegas-lunchbox-flask-5040877",
+   "date": "Fri, 20 Nov 2026 16:38:18 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£14.99 - Amazon Stay prepped in the Mojave — with style. Whether you're trekking across the Mojave Wasteland or just heading to the office, this Fallout: New Vegas Lunchbox and Flask Set is the perfect way to carry your essentials, wasteland-style. The retro-inspired metal lunchbox features art of V"
+  },
+  {
+   "id": "bc37546094",
+   "titre": "Zwift Cog and Click Upgrade Kit",
+   "temperature": null,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Zwift",
+   "prix": 12.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/zwift-cog-and-click-upgrade-kit-5040876",
+   "date": "Fri, 20 Nov 2026 16:37:51 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£12.50 - Zwift • Supports virtual shifting • Compatible with a wide range of indoor cycling trainers"
+  },
+  {
+   "id": "c8e9ce2c00",
+   "titre": "TP 1 8KW All-in-One Diesel Air Parking Heater 12V/24V Portable Diesel Heater LCD Display - with code - Sunster Direct Store",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 58.39,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tp-1-8kw-all-in-one-diesel-air-parking-heater-12v24v-portable-diesel-heater-lcd-display-with-code-sunster-direct-store-5040875",
+   "date": "Fri, 20 Nov 2026 16:35:02 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£58.39 - AliExpress Use code for the discount, by applying it at the checkout Brand+, shipped from UK Product Highlights 1. 8KW High Heating Power — Works for both 12V and 24V systems, fast heating to keep your RV, truck or camper warm in cold weather. 2. Low Fuel Consumption — Fuel consumption only"
+  },
+  {
+   "id": "c72217130b",
+   "titre": "Surfshark Starter subscription 2 years + 4 months EXTRA (£1.07/month) w/code",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "SurfShark VPN",
+   "prix": 35.95,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/surfshark-starter-subscription-2-years-4-months-extra-ps107month-wcode-5040874",
+   "date": "Fri, 20 Nov 2026 16:34:29 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£35.95 - SurfShark VPN The Surfshark Starter subscription is now available with an incredible 92% discount, bringing the price down to just £ 1.07 per month (only £ 35.95 total for the full term) Included VAT. VAT is calculated based on your country - for example, if you live in a region with 0% VAT"
+  },
+  {
+   "id": "e8b0462708",
+   "titre": "Apple Watch Series 12 (GPS) 42mm Aluminium Case w/Sports Band - All Colours / 46mm £379",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Very",
+   "prix": 329.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/apple-watch-series-12-gps-42mm-aluminium-case-wsports-band-all-colours-46mm-ps379-5040872",
+   "date": "Fri, 20 Nov 2026 16:33:23 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£329 - Very £40 off the series 12 with sports bands."
+  },
+  {
+   "id": "e7b5c2400a",
+   "titre": "Superdry Military Short Sleeve Shirt Khaki / Navy | Sizes S-XXL",
+   "temperature": null,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Superdry &amp; Co",
+   "prix": 15.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/superdry-military-short-sleeve-shirt-sizes-s-xxl-5040871",
+   "date": "Fri, 20 Nov 2026 16:32:43 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£15 - Superdry & Co Superdry Military Short Sleeve Shirt Khaki / Navy | Sizes S-XXL Get an authentic look with our Military Short Sleeve Shirt. Designed to bring you a subtly distinctive option, this shirt embraces the military style to create an effortless piece. Whether you wear it by itself or la"
+  },
+  {
+   "id": "5729b794cb",
+   "titre": "Miniml Rinse Aid 5L Refill",
+   "temperature": null,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 17.21,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/miniml-rinse-aid-for-dishwasher-5040870",
+   "date": "Fri, 20 Nov 2026 16:32:25 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£17.21 - Amazon Plant based use less product same impact works with cold washes too"
+  },
+  {
+   "id": "46bb657a9a",
+   "titre": "Men's Slim Fit Chinos | Sizes 29, 30, 32, 36",
+   "temperature": null,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Superdry &amp; Co",
+   "prix": 16.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/superdry-slim-fit-chinos-sizes-29-30-32-36-5040868",
+   "date": "Fri, 20 Nov 2026 16:31:01 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£16.50 - Superdry & Co Superdry Slim Fit Chinos | Sizes 29, 30, 32, 36 The perfect versatile piece to dress up or down for any occasion - the slim-fit Chino trousers. Giving your casualwear a refresh with this wardrobe staple has never looked so good, keeping your comfort and authentic style at its "
+  },
+  {
+   "id": "1a21353aef",
+   "titre": "Escritorio Gaming JUMMICO 140x60 cm Negro (Acabado Fibra de Carbono, Estructura en Z, Pasacables y Soporte para Auriculares)",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 65.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/escritorio-gaming-jummico-140x60-cm-negro-acabado-fibra-de-carbono-estructura-en-z-pasacables-y-soporte-para-auriculares-2081173",
+   "date": "Fri, 20 Nov 2026 17:42:57 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "65,99€ - Amazon ️ Escritorio gaming JUMMICO de 140 x 60 cm en color negro con acabado tipo fibra de carbono y estructura metálica en forma de Z, pensado para setups de PC, consola o teletrabajo con espacio generoso: • Superficie Amplia de 140 x 60 cm: Ofrece espacio suficiente para dos monitores o u"
+  },
+  {
+   "id": "dd4a876220",
+   "titre": "Haier Lavadora Carga Frontal 8 kg Fondo Reducido, X 5 [HW80BP1426357TIB] [Clase de eficiencia energética A]",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 339.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/haier-lavadora-carga-frontal-8-kg-fondo-reducido-x-5-hw80bp1426357tib-clase-de-eficiencia-energetica-a-2081171",
+   "date": "Fri, 20 Nov 2026 17:42:53 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "339€ - Amazon Lavadora de carga frontal Haier X 5 (HW80BP1426357TIB) con gran eficiencia energética, motor silencioso y funciones inteligentes. Destaca especialmente por su fondo reducido de menos de 47 cm , ideal para cocinas o galerías con espacio justo. ✨ Características principales: Capacidad y "
+  },
+  {
+   "id": "d56ec9ef9e",
+   "titre": "Ace Combat 8 PS5",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 48.68,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ace-combat-8-ps5-2081169",
+   "date": "Fri, 20 Nov 2026 17:42:47 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "48,68€ - Amazon Ace Combat 8: Wings Of Theve para PS5"
+  },
+  {
+   "id": "a109ffdc4b",
+   "titre": "Nueva Amazon Alexa Tablet 8, 4 GB de RAM, 64 GB, tablet compacta de 8,7″ con pantalla de gran nitidez, batería de larga duración",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 114.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nueva-amazon-alexa-tablet-8-4-gb-de-ram-64-gb-tablet-compacta-de-87-con-pantalla-de-gran-nitidez-bateria-de-larga-duracion-2081162",
+   "date": "Fri, 20 Nov 2026 17:37:08 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "114€ - Amazon Batería para todo el día y alto rendimiento: hasta 14 horas de reproducción de vídeo. Chip de 8 núcleos con 4 GB de RAM para que todo funcione sin problemas. Dos altavoces estéreo, Wi-Fi 6, cámara trasera de 8 MP y cámara frontal de 5 MP. Tan ligera como un libro de bolsillo: fina y co"
+  },
+  {
+   "id": "87b965bfca",
+   "titre": "Gafas de Sol Hombre HAWKERS Warwick Venm",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 15.43,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/gafas-de-sol-hombre-hawkers-warwick-venm-2081166",
+   "date": "Fri, 20 Nov 2026 17:37:06 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "15,43€ - Amazon Las gafas de sol HAWKERS Warwick Venm combinan la silueta redondeada icónica del modelo Warwick con una moderna construcción frontal al aire en color negro y lentes espejadas en tono oro rosa. Su diseño ligero con patillas negras y logotipo lateral discreto ofrece un estilo actual y "
+  },
+  {
+   "id": "c634a857a5",
+   "titre": "Barra de sonido lg S70TR",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 255.37,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/barra-de-sonido-lg-s70tr-2081164",
+   "date": "Fri, 20 Nov 2026 17:37:03 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "255,37€ - Amazon LG S70TR - Barra de Sonido, Bluetooth, 500W, 5.1.1 Canales con Subwoofer Siente como el sonido fluye a tu alrededor gracias al sonido Dolby ATMOS y su altavoz vertical, Hi-Res Audio 24bit/96kHz"
+  },
+  {
+   "id": "ec358feb2c",
+   "titre": "Beurer IH 49 Nebulizador Portátil, inhalador para niños y adultos, para resfriados, asma y afecciones respiratorias batería recargable",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/beurer-ih-49-nebulizador-portatil-inhalador-para-ninos-y-adultos-para-resfriados-asma-y-afecciones-respiratorias-bateria-recargable-2081163",
+   "date": "Fri, 20 Nov 2026 17:36:54 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "29,99€ - Amazon Beurer IH 49 Nebulizador Portátil, inhalador portátil para niños y adultos, para resfriados, asma y otras afecciones respiratorias, batería recargable, muy silencioso, con estuche"
+  },
+  {
+   "id": "2ebe3e4923",
+   "titre": "Set de 4 sillas Connie",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 67.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/set-de-4-sillas-connie-2081165",
+   "date": "Fri, 20 Nov 2026 17:36:47 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "67,99€ - Amazon Silla comedor en polipropileno Connie Negro combina diseño funcional y estética actual, convirtiéndose en una opción práctica para el comedor o la cocina. El acabado en negro refuerza la sensación de luminosidad y versatilidad en la estancia. Su carácter atemporal permite integrarla "
+  },
+  {
+   "id": "ea2a02f0fe",
+   "titre": "PLAYMOBIL | Monster High | Gimnasio | Gimnasio con Draculaura, Clawd Wolf, Heath Burns y acción de Baloncesto.",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 30.39,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/playmobil-monster-high-gimnasio-gimnasio-con-draculaura-clawd-wolf-heath-burns-y-accion-de-baloncesto-2081161",
+   "date": "Fri, 20 Nov 2026 17:34:44 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "30,39€ - Amazon PLAYMOBIL | Monster High™ | Gimnasio | Gimnasio con Draculaura, Clawd Wolf, Heath Burns y acción de Baloncesto. ✅Gimnasio Monster High con canasta de baloncesto, grada y espeluznantes banderines escolares, perfecto para partidos monstruosos ✅Tres personajes populares, Draculaura con "
+  },
+  {
+   "id": "8171130849",
+   "titre": "Beurer Juego de recompra de electrodos, compuesto por 16 almohadillas de gel autoadhesivas de 45 x 45 mm adecuadas para EMS y TENS de Beurer",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/beurer-juego-de-recompra-de-electrodos-compuesto-por-16-almohadillas-de-gel-autoadhesivas-de-45-x-45-mm-adecuadas-para-ems-y-tens-de-beurer-2081158",
+   "date": "Fri, 20 Nov 2026 17:33:37 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,99€ - Amazon Beurer Juego de recompra de electrodos, compuesto por 16 almohadillas de gel autoadhesivas de 45 x 45 mm, adecuadas para dispositivos EMS y TENS de Beurer El juego de recompra de electrodos de Beurer está disponible en Amazon por 9.99 y es ideal para quienes utilizan dispositivos de e"
+  },
+  {
+   "id": "33fe27b611",
+   "titre": "Nueva Amazon Alexa Tablet 11, 8 GB de RAM, 64 GB, espectacular pantalla 2.5K de 11″, batería para todo el día, con Google Play",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nueva-amazon-alexa-tablet-11-8-gb-de-ram-64-gb-espectacular-pantalla-25k-de-11-bateria-para-todo-el-dia-con-google-play-2081156",
+   "date": "Fri, 20 Nov 2026 17:33:33 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "199€ - Amazon Gran rendimiento y batería para todo el día: hasta 15 horas de reproducción de vídeo. Gran fluidez gracias al chip de 8 núcleos y 8 GB de RAM para ver contenido en streaming, leer y mucho más sin interrupciones. Wi-Fi 6 y cámaras trasera y frontal de 8 MP. Espectacular pantalla con res"
+  },
+  {
+   "id": "3f05d86ae7",
+   "titre": "Bizak Exost Fire Beast, Coche radiocontrol Todoterreno con carrocería metálica, suspensión y Faros LED, Mando 2.4 GHz y batería Recargable,",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bizak-exost-fire-beast-coche-radiocontrol-todoterreno-con-carroceria-metalica-suspension-y-faros-led-mando-24-ghz-y-bateria-recargable-2081159",
+   "date": "Fri, 20 Nov 2026 17:32:25 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "12,99€ - Amazon El Bizak Exost Fire Beast es un coche radiocontrol todoterreno diseñado para ofrecer velocidad, potencia y resistencia sobre todo tipo de superficies. Su estructura combina una carrocería metálica de alta durabilidad con ruedas de gran agarre y sistema de suspensión , logrando una co"
+  },
+  {
+   "id": "8fae20c54f",
+   "titre": "TV QLED 65\" (164 cm) Philips Ambilight Ambiscape 65PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 499.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-65-164-cm-philips-ambilight-ambiscape-65pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081154",
+   "date": "Fri, 20 Nov 2026 17:31:50 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "499€ - El Corte Inglés ✨ Televisor QLED de 65 pulgadas (164 cm) Philips Ambilight Ambiscape 65PQS8701 en color negro, una opción de gran formato pensada para disfrutar de cine en casa, series y contenido diario con iluminación ambiental envolvente: • Iluminación Ambilight / Ambiscape: Proyecta luz d"
+  },
+  {
+   "id": "6e7d44f92c",
+   "titre": "Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche, 40–150 cm, Full Black, Silla Coche ISOFIX Giratoria, 0–12 Años",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 135.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bebeconfort-revolvefix-plus-360-i-size-silla-coche-40-150-cm-full-black-silla-coche-isofix-giratoria-0-12-anos-2081153",
+   "date": "Fri, 20 Nov 2026 17:31:47 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "135,99€ - Amazon Bebeconfort RevolveFix Plus 360 i-Size, Silla Coche, 40–150 cm, Full Black, Silla Coche ISOFIX Giratoria, 0–12 Años. Precio: 135,99 €. Referencia de Amazon: 199,99 €. Ahorro frente a esa referencia: 64,00 € (32,00 %). Características: • Marca: Bebeconfort • Material: poliéster • Fab"
+  },
+  {
+   "id": "34634c3670",
+   "titre": "Beurer XXL Nordic Almohadilla eléctrica esterilla térmica de peluche con 3 ajustes de temperatura y desconexión automática lavable a máquina",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 32.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/beurer-xxl-nordic-almohadilla-electrica-esterilla-termica-de-peluche-con-3-ajustes-de-temperatura-y-desconexion-automatica-lavable-a-maquina-2081150",
+   "date": "Fri, 20 Nov 2026 17:31:42 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "32,99€ - Amazon Beurer HK 123 XXL Nordic Almohadilla eléctrica, esterilla térmica de peluche con 3 ajustes de temperatura y desconexión automática, lavable a máquina, fabricada en Europa, tamaño XXL 60 x 30 cm La almohadilla eléctrica Beurer XXL Nordic , disponible en Amazon por 32.99, es una soluci"
+  },
+  {
+   "id": "87868ae466",
+   "titre": "Tommy Hilfiger Tommy Girl 30 ml, Eau de Toilette para Mujer",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 16.31,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/tommy-hilfiger-tommy-girl-30-ml-eau-de-toilette-para-mujer-2081151",
+   "date": "Fri, 20 Nov 2026 17:31:41 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "16,31€ - Amazon Tommy Hilfiger Tommy Girl 30 ml, Eau de Toilette para Mujer El Tommy Hilfiger Tommy Girl 30 ml, Eau de Toilette para Mujer está disponible en Amazon por 16.31. Esta fragancia es una representación de un viaje por carretera al estilo estadounidense, capturando la esencia de la aventur"
+  },
+  {
+   "id": "e77de64c29",
+   "titre": "Gorra Tommy Hilfiger Hilfiger Varsity",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 9.21,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/gorra-tommy-hilfiger-hilfiger-varsity-2081149",
+   "date": "Fri, 20 Nov 2026 17:31:39 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,21€ - Amazon DISEÑO PREMIUM: El logotipo bordado en la parte delantera, los detalles distintivos de la marca en la parte posterior y el botón en la corona de la gorra proporcionan un toque especial. La visera curvada de la gorra te protege de la la luz intensa. COMODIDAD EXCEPCIONAL: La gorra mode"
+  },
+  {
+   "id": "a83d616978",
+   "titre": "TV QLED 50\" (126 cm) Philips Ambilight Ambiscape 50PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 379.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-50-126-cm-philips-ambilight-ambiscape-50pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081148",
+   "date": "Fri, 20 Nov 2026 17:31:38 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "379€ - El Corte Inglés ✨ Televisor QLED de 50 pulgadas (126 cm) Philips Ambilight Ambiscape 50PQS8701 en color negro, una opción equilibrada y compacta para disfrutar de series, películas y contenido diario con iluminación ambiental envolvente: • Iluminación Ambilight / Ambiscape: Proyecta luz dinám"
+  },
+  {
+   "id": "142d54085d",
+   "titre": "TV QLED 55\" (139 cm) Philips Ambilight Ambiscape 55PQS8701 Negro (4K UHD 60Hz, Motor P5 HDR10+, Smart TV Titan OS, Dolby Atmos y DTS:X)",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 399.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/tv-qled-55-139-cm-philips-ambilight-ambiscape-55pqs8701-negro-4k-uhd-60hz-motor-p5-hdr10-smart-tv-titan-os-dolby-atmos-y-dtsx-2081145",
+   "date": "Fri, 20 Nov 2026 17:31:04 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "399€ - El Corte Inglés ✨ Televisor QLED de 55 pulgadas (139 cm) Philips Ambilight Ambiscape 55PQS8701 en color negro, diseñado para disfrutar de series, películas y contenido cotidiano con iluminación ambiental envolvente: • Iluminación Ambilight / Ambiscape: Proyecta luz dinámica alrededor del tele"
+  },
+  {
+   "id": "546cb6e1a2",
+   "titre": "Asmodee Dobble Catan, Juego de Mesa de Observación y Velocidad Con Símbolos del Mundo de Catan, A Partir de 6 Años, De 2 a 8 Jugadores.",
+   "temperature": null,
+   "categorie": "Cine, libros, cultura y ocio",
+   "marchand": "Amazon",
+   "prix": 13.29,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/asmodee-dobble-catan-juego-de-mesa-de-observacion-y-velocidad-con-simbolos-del-mundo-de-catan-a-partir-de-6-anos-de-2-a-8-jugadores-2081144",
+   "date": "Fri, 20 Nov 2026 17:31:03 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "13,29€ - Amazon Asmodee Dobble Catan, Juego de Mesa de Observación y Velocidad Con Símbolos del Mundo de Catan, A Partir de 6 Años, De 2 a 8 Jugadores, 15 Minutos. ✅CATAN : Esta versión especial de Dobble te transporta a Catan: expande tu territorio, toma puertos y construye carreteras... ✅JUEGO DE "
+  }
+ ]
+}

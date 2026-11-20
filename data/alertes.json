@@ -3388,7 +3388,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T13:17+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3682,12 +3682,12 @@
     "Amazon 3/mois"
    ]
   },
-  "verifie_le": "2026-11-20T14:55+00:00",
+  "verifie_le": "2026-11-20T15:50+00:00",
   "verdict": {
-   "commentaire": "2e contrôle : offre iBOOD Allemagne 29,95 € + 5,95 € de port. Référence exacte du mitigeur (23715003, 33558003 ou 23707003) non indiquée sur la page du deal, livraison en France par iBOOD.de non confirmée, prix FR de référence non confirmé sur idealo (90,29 € achatmoinscher pour 23715003 ; 132 € Amazon.fr pour 33558003). À revérifier ; rejet si toujours pas confirmé.",
+   "commentaire": "3e contrôle : page du bon plan relue à 16h26 (offre iBOOD Allemagne ~38 € port compris). Référence exacte du mitigeur toujours pas indiquée et livraison en France par iBOOD.de toujours non confirmée. Rejeté (dans le doute).",
    "prix_neuf_min_idealo": 90.29,
-   "source_prix_ref": "achatmoinscher (non confirmé)",
-   "economie_pct": 60,
+   "source_prix_ref": "achatmoinscher (23715003)",
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
@@ -3739,7 +3739,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T13:27+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3945,11 +3945,11 @@
    "premiere_lecture": "2026-11-20T13:30+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-20T14:55+00:00",
+  "verifie_le": "2026-11-20T15:50+00:00",
   "verdict": {
-   "commentaire": "2e contrôle : Amazon Espagne 239 € (+~5 € de port), soit ~18 % sous 296,83 € (achatmoinscher). Page de l'offre impossible à ouvrir et prix France Black Friday non confirmé sur idealo : marge trop juste pour conclure. Revente non rentable (marge négative sur tous les canaux). À revérifier ; rejet si toujours pas confirmé.",
+   "commentaire": "3e contrôle : la page du bon plan renvoie maintenant vers Amazon.com (États-Unis, lot « Bundle »), prix final livré en France non confirmé ; écart annoncé (~18 %) trop juste face au prix France Black Friday non vérifié sur idealo. Revente non rentable. Rejeté (dans le doute).",
    "prix_neuf_min_idealo": 296.83,
-   "source_prix_ref": "achatmoinscher (non confirmé)",
+   "source_prix_ref": "achatmoinscher",
    "economie_pct": 18,
    "prix_revente_verifie": null,
    "canal": null,
@@ -3989,7 +3989,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T15:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -4248,6 +4248,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T15:50+00:00",
+  "verdict": {
+   "commentaire": "Bac à litière fermé générique (Belfoyer) à 23,99 € sur Amazon.fr. Le « prix de référence » 123,99 € est celui d'un seul vendeur tiers, anormalement haut pour ce type d'article (bacs fermés comparables vendus 25-40 € en neuf) : fausse remise. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (non fiable : vendeur tiers unique)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -4281,7 +4293,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-20T15:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -4492,6 +4504,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 15:24 UTC : offre active, 349.0 affiché, code BLACK26, marchand 1260_2 ; fiche amazon.nl lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T15:50+00:00",
+  "verdict": {
+   "commentaire": "Fellowes AeraMax SE : Amazon.nl 81,50 € + ~5 € de port = 86,50 € livré en France, alors qu'Amazon.fr le vend lui-même 89,99 € (fiche lue par Keepa). Économie de 4 % seulement, sous le seuil de 15 %. Revente sans marge. Rejeté.",
+   "prix_neuf_min_idealo": 89.99,
+   "source_prix_ref": "keepa/amazon.fr (vendu par Amazon)",
+   "economie_pct": 4,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

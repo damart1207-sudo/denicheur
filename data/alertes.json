@@ -8668,7 +8668,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T22:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -8873,7 +8873,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T22:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T23:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté dans le doute : le lien marchand du bon plan Chollometro (Espagne) mène à une fiche amazon.com (États-Unis) marquée « Renewed » (reconditionnée, ASIN B0B5NJNZ5F), pas au produit neuf B07W8P4PDD ; livraison en France non confirmée et pages non relisibles depuis cette session. Prix neuf le plus bas en France ≈ 51,99 € (Amazon.fr via Keepa ; plus bas 90 j 37,46 €). Revente non rentable (marges nettes négatives sur tous les canaux).",
+   "prix_neuf_min_idealo": 51.99,
+   "source_prix_ref": "Keepa amazon.fr (B07W8P4PDD)",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "27b0f3f60f",
@@ -8919,7 +8931,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T23:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -9178,6 +9190,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-20T23:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre de la boutique Samsung Espagne réservée aux étudiants (programme Éducation, justificatif requis) avec reprise d'un ancien appareil (« entrega y estrena ») et code EDU5 ; la boutique shop.samsung.com/es livre l'Espagne, pas la France, et la page marchand est bloquée par un captcha (non vérifiable). Prix de référence France indicatif : 574 € (achatmoinscher, 13 boutiques), non revérifié.",
+   "prix_neuf_min_idealo": 574.0,
+   "source_prix_ref": "achatmoinscher (13 boutiques)",
+   "economie_pct": 37,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

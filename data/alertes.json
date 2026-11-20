@@ -612,7 +612,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T05:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -869,6 +869,18 @@
    "proba_detail": [
     "Amazon 16/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T05:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté. Le prix de référence de 102 € sur Amazon.fr vient d'un seul vendeur et n'est pas fiable : le même article y était à 55,31 € il y a moins de 90 jours, soit à peu près notre coût livré (54,57 €). Prix Amazon.de non confirmé (page bloquée par captcha). Étiquettes génériques : d'autres marques équivalentes se vendent bien moins cher en France, revente à 90 € irréaliste.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (1 seul vendeur, jugé non fiable) + recherche web",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

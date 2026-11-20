@@ -3106,7 +3106,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T12:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3311,7 +3311,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T12:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T14:05+00:00",
+  "verdict": {
+   "commentaire": "Prix de référence automatique faux (Keepa a trouvé un lot de toners, pas l'imprimante). Coût livré ~229 € depuis Amazon Autriche : l'imprimante HP 178nwg se vend couramment autour de ce prix en France, donc pas 15 % d'économie. Page de l'offre non consultable. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3112a3598a",
@@ -3376,7 +3388,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T13:17+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3667,6 +3679,18 @@
    "proba_detail": [
     "Amazon 3/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T14:05+00:00",
+  "verdict": {
+   "commentaire": "Offre iBOOD Allemagne 29,95 € + 5,95 € de port. Prix FR indicatif 90,29 € (achatmoinscher, non confirmé sur idealo) et livraison en France par iBOOD.de non vérifiable : page de l'offre impossible à ouvrir pendant ce contrôle. À revérifier.",
+   "prix_neuf_min_idealo": 90.29,
+   "source_prix_ref": "achatmoinscher (non confirmé)",
+   "economie_pct": 60,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -3713,7 +3737,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T13:27+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -3916,6 +3940,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 13:30 UTC : offre active, 224.99 affiché, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T14:05+00:00",
+  "verdict": {
+   "commentaire": "Amazon Espagne 239 € (+~5 € de port). Seule référence FR : 296,83 € (achatmoinscher) ; un site de bons plans cite 304,95 € comme plus bas, mais prix idealo/Black Friday France non confirmé et page de l'offre impossible à ouvrir. À revérifier.",
+   "prix_neuf_min_idealo": 296.83,
+   "source_prix_ref": "achatmoinscher (non confirmé)",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

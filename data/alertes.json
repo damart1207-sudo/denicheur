@@ -2586,7 +2586,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T11:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -2798,7 +2798,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-20T11:45+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T12:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le RØDE SmartLav+ est déjà vendu neuf en France dès 27,55 € (ledenicheur.fr, Black Friday), soit moins cher que cette offre Amazon Espagne à 27,70 € + port (32,70 € livrée). Livraison France non confirmée et page de l'offre illisible. Revente : marge négative sur tous les canaux.",
+   "prix_neuf_min_idealo": 27.55,
+   "source_prix_ref": "ledenicheur.fr (recherche web, 20/11)",
+   "economie_pct": -19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue (Black Friday)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9daa499deb",

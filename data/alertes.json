@@ -6131,20 +6131,22 @@
    }
   ],
   "page_offre": {
-   "lu_le": "2026-11-20T00:11+00:00",
+   "lu_le": "2026-11-20T00:37+00:00",
    "lien_deal": "https://www.amazon.de/dp/B0DH8GTC5F",
    "type_page": "marchand direct",
    "lien_marchand": "https://www.amazon.de/dp/B0DH8GTC5F",
    "marchand": {
     "lien": "https://www.amazon.de/dp/B0DH8GTC5F",
-    "code": 200,
+    "code": 503,
     "lu": false,
     "domaine": "amazon.de",
-    "erreur": "page anti-robot (captcha)",
+    "erreur": "HTTP 503",
     "bloque": true
    },
    "livraison_france": "oui",
-   "resume": "amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
+   "resume": "amazon.de refuse les robots (HTTP 503) ; fiche Amazon connue par Keepa ; livraison France : oui",
+   "lectures": 1,
+   "premiere_lecture": "2026-11-20T00:11+00:00"
   },
   "denicheur": "A",
   "ebay": {
@@ -6479,6 +6481,365 @@
    },
    "livraison_france": "non",
    "resume": "page du bon plan lue à 00:21 UTC : offre active, 33.96 affiché, marchand 1650_3 ; argos.co.uk refuse les robots (HTTP 403) ; livraison France : non"
+  },
+  "denicheur": "A"
+ },
+ {
+  "id": "keepa-B0DMQBKB34-arbDE",
+  "titre": "Reebok Baskets Unisexe Zig Hypnotica, Noir, 45.5 EU [Amazon DE]",
+  "prix": 35.81,
+  "devise": "EUR",
+  "marchand": "Amazon.de",
+  "lien": "https://www.amazon.de/dp/B0DMQBKB34",
+  "pays": "DE",
+  "source": "keepa-arbitrage",
+  "temperature": 500,
+  "categorie": "Arbitrage Europe",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "Reebok Baskets Unisexe Zig Hypnotica, Noir, 45.5 EU [Amazon DE]",
+  "cout_achat": 40.81,
+  "prix_plancher": {
+   "prix_min": 85.98,
+   "ou": "keepa/amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0DMQBKB34"
+  },
+  "ecart_vs_neuf_min": 0.416,
+  "economie_pct": 58,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-20T00:32+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": null,
+  "revente_reelle": {},
+  "keepa": {
+   "nb_vendeurs_neuf": 2,
+   "marque": "Reebok",
+   "asin": "B0DMQBKB34",
+   "titre": "Reebok Baskets Unisexe Zig Hypnotica, Noir, 45.5 EU",
+   "ean": "1200161995804",
+   "pays": "FR",
+   "prix_neuf": 85.98,
+   "prix_amazon": null,
+   "prix_tiers": 85.98,
+   "moyenne_90j": 71.45,
+   "plus_bas_90j": 47.19,
+   "occasion": null,
+   "rang_ventes": 94054,
+   "chutes_rang_30j": 6,
+   "chutes_rang_90j": 12,
+   "ventes_estimees_30j": 6,
+   "remise_sincere": false,
+   "lien": "https://www.amazon.fr/dp/B0DMQBKB34",
+   "jetons_restants": 254
+  },
+  "asin": "B0DMQBKB34",
+  "ean": "1200161995804",
+  "vendeurs_amazon": 2,
+  "ventes_estimees_30j": 6,
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 75.66,
+    "marge_nette": 21.71,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 75.66,
+     "cout_achat": 40.81,
+     "frais_canal": 0.0,
+     "prelevements": 10.14,
+     "provision": 3.0,
+     "marge_nette": 21.71,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.532
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 75.66,
+    "marge_nette": 21.71,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 75.66,
+     "cout_achat": 40.81,
+     "frais_canal": 0.0,
+     "prelevements": 10.14,
+     "provision": 3.0,
+     "marge_nette": 21.71,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.532
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 75.66,
+    "marge_nette": 21.71,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 75.66,
+     "cout_achat": 40.81,
+     "frais_canal": 0.0,
+     "prelevements": 10.14,
+     "provision": 3.0,
+     "marge_nette": 21.71,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.532
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 85.98,
+    "marge_nette": 16.91,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 85.98,
+     "cout_achat": 40.81,
+     "frais_canal": 13.74,
+     "prelevements": 11.52,
+     "provision": 3.0,
+     "marge_nette": 16.91,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.414
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 85.98,
+    "marge_nette": 16.63,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 85.98,
+     "cout_achat": 40.81,
+     "frais_canal": 14.02,
+     "prelevements": 11.52,
+     "provision": 3.0,
+     "marge_nette": 16.63,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.407
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 85.98,
+    "marge_nette": 15.77,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 85.98,
+     "cout_achat": 40.81,
+     "frais_canal": 14.88,
+     "prelevements": 11.52,
+     "provision": 3.0,
+     "marge_nette": 15.77,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.386
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 85.98,
+    "marge_nette": 13.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 85.98,
+     "cout_achat": 40.81,
+     "frais_canal": 17.53,
+     "prelevements": 11.52,
+     "provision": 3.0,
+     "marge_nette": 13.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.321
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 85.98,
+    "marge_nette": 10.76,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 85.98,
+     "cout_achat": 40.81,
+     "frais_canal": 19.89,
+     "prelevements": 11.52,
+     "provision": 3.0,
+     "marge_nette": 10.76,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": 0.264
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-20T00:35+00:00",
+   "lien_deal": "https://www.amazon.de/dp/B0DMQBKB34",
+   "type_page": "marchand direct",
+   "lien_marchand": "https://www.amazon.de/dp/B0DMQBKB34",
+   "marchand": {
+    "lien": "https://www.amazon.de/dp/B0DMQBKB34",
+    "code": 503,
+    "lu": false,
+    "domaine": "amazon.de",
+    "erreur": "HTTP 503",
+    "bloque": true
+   },
+   "livraison_france": "oui",
+   "resume": "amazon.de refuse les robots (HTTP 503) ; fiche Amazon connue par Keepa ; livraison France : oui"
+  },
+  "denicheur": "A",
+  "ebay": {
+   "requete": "Reebok Baskets Unisexe Zig Hypnotica, Noir, 45.5 EU [Amazon DE]",
+   "neuf": null,
+   "occasion": null,
+   "exemples": [],
+   "neuf_par_pays": {
+    "FR": null,
+    "DE": null,
+    "IT": null,
+    "ES": null
+   },
+   "meilleur_pays": null
+  },
+  "controle_prix": {
+   "statut": "inconnu",
+   "prix_page": null,
+   "lien": "https://www.amazon.de/dp/B0DMQBKB34"
+  },
+  "meme_produit": {
+   "meme": null,
+   "raison": "non confirmé",
+   "qte_a": null,
+   "qte_b": null,
+   "reference": "Reebok Baskets Unisexe Zig Hypnotica, Noir, 45.5 EU"
+  },
+  "fiche": {
+   "achat": 40.81,
+   "neuf_min": 85.98,
+   "neuf_ou": "keepa/amazon.fr",
+   "neuf_lien": "https://www.amazon.fr/dp/B0DMQBKB34",
+   "ecart_pct": 53,
+   "vendeurs": 2,
+   "volume": null,
+   "occ_bas": null,
+   "occ_haut": null,
+   "ventes_30j": 6,
+   "vendre_sur": "leboncoin",
+   "prix_vente": 75.66,
+   "benefice": 21.71,
+   "achat_max": 42.52,
+   "manque": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "a_completer": [
+    "volume de recherche",
+    "prix d'occasion"
+   ],
+   "calcul_marge": {
+    "version": 2,
+    "prix_vente": 75.66,
+    "cout_achat": 40.81,
+    "frais_canal": 0.0,
+    "prelevements": 10.14,
+    "provision": 3.0,
+    "marge_nette": 21.71,
+    "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+   },
+   "feu": "orange",
+   "proba_vente_7j": null,
+   "indicateurs_demande": "faibles",
+   "proba_detail": [
+    "Amazon 6/mois"
+   ]
+  }
+ },
+ {
+  "id": "cbe69c9aa2",
+  "titre": "Preisfehler: Butlers Geschirr-Set Atlantis (12-tlg.) Beige für 13,98€ (XXXLutz)",
+  "prix": 13.98,
+  "devise": "EUR",
+  "marchand": "XXXLutz",
+  "lien": "https://www.mydealz.de/deals/preisfehler-butlers-geschirr-set-atlantis-12-tlg-beige-fur-1398eur-xxxlutz-2876589",
+  "pays": "DE",
+  "source": "mydealz-new",
+  "temperature": null,
+  "categorie": "Home & Living",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "Butlers Geschirr-Set Atlantis (12-tlg.) Beige",
+  "cout_achat": 18.98,
+  "prix_plancher": {
+   "nom": "Butlers Geschirr-Set Atlantis (12-tlg.) Beige",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 0,
+     "meilleur": null,
+     "autres": []
+    }
+   }
+  },
+  "ecart_vs_neuf_min": null,
+  "economie_pct": null,
+  "type": "bon_plan",
+  "signal_erreur_prix": true,
+  "trouve_le": "2026-11-20T00:32+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": null,
+  "revente_reelle": {},
+  "canaux": null,
+  "page_offre": {
+   "lu_le": "2026-11-20T00:36+00:00",
+   "lien_deal": "https://www.mydealz.de/deals/preisfehler-butlers-geschirr-set-atlantis-12-tlg-beige-fur-1398eur-xxxlutz-2876589",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 12.78,
+   "prix_ailleurs_annonce": 19.88,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "3_2",
+   "description": "The world\\u2019s largest shopping community with Europe\\u2019s leading shopping rewards company.",
+   "lien_marchand": "https://www.xxxlutz.de/p/butlers-geschirrset-12-tlg-atlantis-4-personen-800001210944?emid=6aff961bf818e08266742996",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.xxxlutz.de/p/butlers-geschirrset-12-tlg-atlantis-4-personen-800001210944?emid=6aff961bf818e08266742996",
+    "code": 403,
+    "lu": false,
+    "domaine": "xxxlutz.de",
+    "erreur": "HTTP 403",
+    "bloque": true
+   },
+   "livraison_france": "inconnue",
+   "resume": "page du bon plan lue à 00:36 UTC : offre active, 12.78 affiché, marchand 3_2 ; xxxlutz.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
   "denicheur": "A"
  }

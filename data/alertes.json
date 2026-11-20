@@ -6789,7 +6789,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T20:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -7049,6 +7049,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : marque générique, le prix Amazon.fr de 76,23 € vient d'un vendeur tiers (plus bas 90 j : 43,43 €), aucune référence neuve fiable en France (housses équivalentes vidaXL bien moins chères) ; livraison France depuis Amazon.de non confirmée.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (non fiable) + recherche web",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -7082,7 +7094,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T20:55+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -7342,6 +7354,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : pas le même produit exact (pointure 45 sur Amazon.it, 46,5 sur la fiche Amazon.fr) ; le prix de 103,85 € est celui d'un vendeur tiers, bien au-dessus de la moyenne 90 j (76,98 €) ; la King Liga (gamme intermédiaire) se trouve bien moins cher chez les marchands français (11teamsports, Decathlon).",
+   "prix_neuf_min_idealo": 76.98,
+   "source_prix_ref": "keepa moyenne 90 j + recherche web",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -7375,7 +7399,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T21:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -7565,7 +7589,19 @@
    "livraison_france": "oui",
    "resume": "amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : édition allemande (EAN 4061229694919) ; le prix Amazon.fr de 35,54 € est un import vendu par un tiers (plus bas 90 j : 14,19 €) ; l'édition française existe (EAN 3701432067995) à prix normal ; marge de revente ~2 € seulement.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (vendeur tiers) + prix.net",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "70e3b63c60",
@@ -7598,7 +7634,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T21:29+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -7808,6 +7844,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:33 UTC : offre active, 45.0 affiché, marchand 6_4 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France (72,69 €) plus cher que le neuf en France (65,99 € sur Amazon.fr).",
+   "prix_neuf_min_idealo": 65.99,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

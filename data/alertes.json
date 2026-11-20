@@ -5107,7 +5107,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-20T17:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -5158,7 +5158,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T17:53+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T18:50+00:00",
+  "verdict": {
+   "commentaire": "Probable erreur de prix (annoncée comme telle sur Pepper.pl) chez un vendeur polonais d'huile moteur ; livraison en France non confirmée (bidon de 5 L, port élevé) ; aucun prix neuf français de référence. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "c37cb43c84",
@@ -5211,7 +5223,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T17:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5414,7 +5426,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T17:54+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T18:50+00:00",
+  "verdict": {
+   "commentaire": "El Corte Inglés (Espagne) ne livre pas en France : offre non achetable pour un client français. Rejeté.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher.com (5 boutiques), Amazon.fr 44,99 € via Keepa",
+   "economie_pct": 25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "cf9a7852fe",
@@ -5460,7 +5484,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T18:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5672,7 +5696,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T18:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T18:50+00:00",
+  "verdict": {
+   "commentaire": "Coût livré en France (43,13 €, import depuis Amazon UK) supérieur au prix neuf français le plus bas (34,99 €). Pas une bonne affaire. Rejeté.",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "achatmoinscher.com (10 boutiques)",
+   "economie_pct": -23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "dd5a19e2f1",
@@ -5718,7 +5754,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T18:15+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -5901,6 +5937,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 18:19 UTC : offre active, 149.0 affiché, marchand 202_2 ; pccomponentes.com refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T18:50+00:00",
+  "verdict": {
+   "commentaire": "Offre PcComponentes active et livrable en France, mais prix variable (149 € affiché sur Chollometro, 155,99 € relevé) et page marchande bloquée. Prix neuf français 1 To non confirmé aujourd'hui (seul achatmoinscher à 195,99 €, la version 500 Go est dès 110,90 € sur ledenicheur). Écart ~18 % à confirmer. Revente : marge négative sur Leboncoin/Vinted.",
+   "prix_neuf_min_idealo": 195.99,
+   "source_prix_ref": "achatmoinscher.com (non confirmé ailleurs)",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

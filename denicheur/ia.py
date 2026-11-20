@@ -66,7 +66,7 @@ class Agent:
                     self.erreurs.append("402 paiement exigé : agent coupé pour ce passage")
                     self.appels = 10**6
                     return None
-                if e.code in (429, 503) and i + 1 < len(modeles):
+                if e.code in (404, 410, 429, 503) and i + 1 < len(modeles):  # 404/410 : modèle retiré -> secours
                     time.sleep(5)
                     continue
                 self.erreurs.append(f"HTTP {e.code} ({modele}): {detail}")

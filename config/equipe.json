@@ -23,11 +23,14 @@
       "timeout": 100
     },
     "deepseek": {
-      "nom": "DeepSeek V4.1 Flash",
+      "nom": "DeepSeek V4 Flash",
       "marque": "DeepSeek",
       "base_url": "https://integrate.api.nvidia.com/v1",
-      "modele": "deepseek-ai/deepseek-v4.1-flash",
+      "modele": "deepseek-ai/deepseek-v4-flash",
       "cle_env": "NVIDIA_API_KEY",
+      "modeles_secours": [
+        "deepseek-ai/deepseek-v4-pro"
+      ],
       "max_appels": 6,
       "timeout": 150
     },

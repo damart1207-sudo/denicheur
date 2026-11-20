@@ -6936,7 +6936,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T01:02+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 183.85,
@@ -7245,6 +7245,18 @@
    "proba_detail": [
     "Amazon 30/mois"
    ]
+  },
+  "verifie_le": "2026-11-20T01:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Chollometro lue par le robot à 02h31 : offre active, 109 € chez PcComponentes Espagne (pccomponentes.com, page marchand refusée aux robots). Mais PcComponentes a un site français séparé : sur pccomponentes.fr le même modèle blanc est à 169 €. Rien ne prouve qu'on puisse commander à 109 € avec une adresse en France : dans le doute, rejeté. Prix neuf le plus bas en France : 154,99 € (Cdiscount marketplace, noir) / 169 € en blanc (E.Leclerc, Samsung, Amazon.fr 169,95 €), relevés sur leDénicheur et Comparr. Attention : la fiche idealo indique SM-R630 (référence des Buds3 Pro), donc non retenue.",
+   "prix_neuf_min_idealo": 154.99,
+   "source_prix_ref": "leDénicheur (Cdiscount marketplace) + Comparr / Amazon.fr (Keepa)",
+   "economie_pct": 30,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
   }
  },
  {

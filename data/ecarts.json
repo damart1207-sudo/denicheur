@@ -1,7 +1,131 @@
 {
  "jour": "2026-11-20",
- "examines": 42,
+ "examines": 43,
  "affaires": [
+  {
+   "asin": "B0GQ3PWVVN",
+   "titre": "Electrolux Air Fryer 800 Double Tiroir Dual Zone 11L (4+7) EAFD11B, Noir",
+   "marque": "Electrolux",
+   "lien": "https://www.amazon.fr/dp/B0GQ3PWVVN",
+   "moyenne_90j": 217.42,
+   "nb_offres_neuves": 3,
+   "offres": [
+    {
+     "total": 149.99,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 251.27,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 463.99,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 21122,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 14,
+   "vu": "2026-11-20T05:08",
+   "retenu": true,
+   "premier": 149.99,
+   "premier_amazon": true,
+   "second": 251.27,
+   "ecart": 101.28,
+   "mot_cle": "electrolux air fryer 800",
+   "nom_court": "electrolux air fryer 800",
+   "ean": "7333394095806",
+   "marges": {
+    "prix_revente": 201.0,
+    "sous_le_second_pct": 20,
+    "marge_sans_charges": 51.01,
+    "marge_avec_charges": 21.08,
+    "charges_micro": 26.93,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 179.99,
+    "prix_pour_30_net_avec_charges": 211.3,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 2,
+      "min": 159.99,
+      "max": 229.99,
+      "lien_min": "https://www.ebay.fr/itm/146956697202?_skw=electrolux+air+fryer+800&hash=item22374d3e72:g:ZqUAAeSwzU1qqkBK",
+      "dates": 2,
+      "age_min": 374,
+      "age_recent": 232,
+      "age_ancien": 374,
+      "recentes": 0,
+      "anciennes": 2
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 2
+    },
+    "achatmoinscher": {
+     "prix_min": 198.98,
+     "nb_offres": 4,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Friteuse/air-fryer-serie-800-double-panier-electrolux-eafd11b-global-black.html"
+    },
+    "leboncoin": {
+     "nb": 0
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 198.98,
+     "ou": "achatmoinscher",
+     "nb_offres": 4,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Friteuse/air-fryer-serie-800-double-panier-electrolux-eafd11b-global-black.html",
+     "ecart": 48.99
+    }
+   },
+   "volume": 70,
+   "volume_mot": "electrolux air fryer",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La grille refuse la vente car la marge est de seulement 2 € sans charges, ce qui est bien en dessous de l'objectif de 20 €. De plus, les 2 annonces eBay neuves traînent depuis plus de 21 jours, ce qui indique que le marché ne veut pas de ce produit à ce prix.",
+    "acheter": false,
+    "raisons_acheteur": "Je ne l'achète pas car je trouve le même produit neuf à 149,99 € sur Amazon avec la livraison gratuite et le retour facile. Le prix de 151,99 € proposé par le particulier n'est pas compétitif face à l'offre officielle.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve eBay",
+     "ref_prix": 159.99,
+     "plafond": 151.99,
+     "marge_sans": 2.0,
+     "marge_avec": -21.37,
+     "vetos": [
+      "en vendant 5 % sous une annonce neuve eBay (159,99 €), soit 151,99 €, il reste 2 € de marge, moins de 20 €"
+     ],
+     "annonce_min": null,
+     "anciennes": 2,
+     "datees": 2,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": false
+    }
+   },
+   "alerte": true
+  },
   {
    "asin": "B0D9YL1DQN",
    "titre": "POC Kortal Race MIPS – Casque VTT Enduro avec MIPS & RECCO",
@@ -235,5 +359,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-20T04:57+00:00"
+ "maj": "2026-11-20T05:08+00:00"
 }

@@ -4830,7 +4830,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T17:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -5057,6 +5057,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T17:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T17:46+00:00",
+  "verdict": {
+   "commentaire": "Offre réservée au Klub Samsung Pologne (samsung.com/pl) : livraison en Pologne uniquement, pas livrable en France. De plus, le prix livré (286,76 €) n'est qu'environ 10 % sous le prix neuf vu en France (~318 €), sous le seuil de 15 %. Rejeté.",
+   "prix_neuf_min_idealo": 318.0,
+   "source_prix_ref": "lesmobiles.com (prix neuf France relevé, nov. 2026)",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

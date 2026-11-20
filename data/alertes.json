@@ -29,8 +29,8 @@
   "economie_pct": 72,
   "type": "bon_plan",
   "signal_erreur_prix": false,
-  "trouve_le": "2026-11-20T03:25+00:00",
-  "statut": "rejete",
+  "trouve_le": "2026-11-20T03:59+00:00",
+  "statut": "a_verifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -52,7 +52,7 @@
    "ventes_estimees_30j": 5,
    "remise_sincere": false,
    "lien": "https://www.amazon.fr/dp/B07DDBZQM2",
-   "jetons_restants": 264
+   "jetons_restants": 481
   },
   "asin": "B07DDBZQM2",
   "ean": "4006776104894",
@@ -205,30 +205,20 @@
    }
   ],
   "page_offre": {
-   "lu_le": "2026-11-20T03:28+00:00",
+   "lu_le": "2026-11-20T04:02+00:00",
    "lien_deal": "https://www.amazon.es/dp/B07DDBZQM2",
    "type_page": "marchand direct",
    "lien_marchand": "https://www.amazon.es/dp/B07DDBZQM2",
    "marchand": {
     "lien": "https://www.amazon.es/dp/B07DDBZQM2",
     "code": 200,
-    "lu": true,
+    "lu": false,
     "domaine": "amazon.es",
-    "titre": "Karl Krüger Trieste 17012TR Milk Pan | enamel, 12 cm diameter, 1.0 litres, with spout, full contact base, all types of cookers : Amazon.es: Home & Kitchen",
-    "prix": null,
-    "prix_vus": [
-     9.45,
-     9.0,
-     45.0,
-     1.0,
-     9.45,
-     9.0
-    ],
-    "disponibilite": "en stock (panier)",
-    "extrait": "Karl Krüger Trieste 17012TR Milk Pan | enamel, 12 cm diameter, 1.0 litres, with spout, full contact base, all types of cookers : Amazon.es: Home & Kitchen Skip to Main content About this item About this item About this item Buying options Compare with similar items Videos Reviews Keyboard shortcuts Search ALT + / Basket shift + ALT + C Home shift + ALT + H Orders shift + ALT + O Add to basket shift + ALT + K Product summary shift + ALT + D Show/Hide shortcuts shift + ALT + Z To move between items, use your keyboard's up or down arrows. .es Deliver to United States Home & Kitchen Select the department you want to search in All Departments Black Friday Week Alexa Skills Amazon Devices Amazon G"
+    "erreur": "page anti-robot (captcha)",
+    "bloque": true
    },
    "livraison_france": "oui",
-   "resume": "fiche amazon.es lue, en stock (panier) ; livraison France : oui"
+   "resume": "amazon.es refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
   "denicheur": "A",
   "ebay": {
@@ -299,18 +289,6 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
-  },
-  "verifie_le": "2026-11-20T03:50+00:00",
-  "verdict": {
-   "commentaire": "Fiche Amazon.fr lue par Keepa : 41,31 € chez un seul vendeur tiers, prix gonflé ; le plus bas des 90 derniers jours en France est 10,12 €, sous notre coût livré (16,43 €). Aucun autre marchand français trouvé par recherche web. Pas une vraie économie.",
-   "prix_neuf_min_idealo": 10.12,
-   "source_prix_ref": "Keepa Amazon.fr (plus bas 90 j), recherche web sans autre marchand",
-   "economie_pct": 0,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": "inconnue",
-   "demande_confirmee": false
   }
  }
 ]

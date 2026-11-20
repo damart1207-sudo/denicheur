@@ -1,7 +1,7 @@
 {
- "maj": "2026-11-19T04:03+00:00",
- "nb_candidats": 1051,
- "nb_avec_volume": 844,
+ "maj": "2026-11-20T04:02+00:00",
+ "nb_candidats": 1001,
+ "nb_avec_volume": 827,
  "bingos": [
   {
    "asin": "B00F4CFHFC",
@@ -30,8 +30,8 @@
       "actuel": 0,
       "moyenne": 1.1
      },
-     "JP": {
-      "tendance": "monte",
+     "DE": {
+      "tendance": "baisse",
       "actuel": 0,
       "moyenne": 1.1
      },
@@ -42,9 +42,7 @@
      }
     },
     "verdict": "déjà en France",
-    "monte_dans": [
-     "JP"
-    ]
+    "monte_dans": []
    }
   },
   {
@@ -71,23 +69,23 @@
     "pays": {
      "US": {
       "tendance": "stable",
-      "actuel": 67,
-      "moyenne": 59.4
+      "actuel": 79,
+      "moyenne": 58.8
      },
      "JP": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 11.2
+      "moyenne": 3.1
      },
      "DE": {
       "tendance": "baisse",
-      "actuel": 100,
-      "moyenne": 14.1
+      "actuel": 0,
+      "moyenne": 22.6
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.7
+      "moyenne": 8.3
      }
     },
     "verdict": "déjà en France",
@@ -120,23 +118,23 @@
     "pays": {
      "US": {
       "tendance": "baisse",
-      "actuel": 44,
-      "moyenne": 49.1
+      "actuel": 46,
+      "moyenne": 45.9
      },
      "JP": {
-      "tendance": "stable",
+      "tendance": "baisse",
       "actuel": 0,
       "moyenne": 1.1
      },
      "DE": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 8.4
+      "moyenne": 3.2
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.9
+      "moyenne": 1.7
      }
     },
     "verdict": "déjà en France",
@@ -170,22 +168,28 @@
      "US": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 3.3
+      "moyenne": 10.4
      },
      "JP": {
-      "tendance": "stable",
+      "tendance": "monte",
       "actuel": 0,
       "moyenne": 1.1
      },
      "DE": {
-      "tendance": "stable",
+      "tendance": "baisse",
+      "actuel": 0,
+      "moyenne": 1.1
+     },
+     "FR": {
+      "tendance": "monte",
       "actuel": 0,
       "moyenne": 1.1
      }
     },
-    "verdict": "rien de notable",
+    "verdict": "déjà en France",
     "monte_dans": [
-     "US"
+     "US",
+     "JP"
     ]
    }
   },
@@ -211,35 +215,38 @@
     "mot": "xbox game pass essential",
     "pays": {
      "US": {
-      "tendance": "stable",
-      "actuel": 42,
-      "moyenne": 16.4
+      "tendance": "monte",
+      "actuel": 28,
+      "moyenne": 14.7
      },
      "JP": {
-      "tendance": "baisse",
+      "tendance": "monte",
       "actuel": 0,
-      "moyenne": 1.1
+      "moyenne": 1.2
      },
      "DE": {
       "tendance": "baisse",
       "actuel": 0,
-      "moyenne": 4.3
+      "moyenne": 3.8
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.2
+      "moyenne": 1.8
      }
     },
     "verdict": "déjà en France",
-    "monte_dans": []
+    "monte_dans": [
+     "US",
+     "JP"
+    ]
    }
   },
   {
    "asin": "B0FBWRZPY5",
    "titre": "XGIMI MoGo 2 Pro (New) Mini Videoprojecteur Portable 1080p",
    "ean": "6935670508225",
-   "prix": 384.8,
+   "prix": 299.0,
    "ventes_30j": 63,
    "vendeurs": 2,
    "origine": "etagere",
@@ -307,7 +314,7 @@
    "prix_par_pays": {
     "FR": 29.4,
     "DE": 27.92,
-    "IT": 33.09,
+    "IT": 30.19,
     "ES": 29.28
    }
   },
@@ -360,6 +367,31 @@
    }
   },
   {
+   "asin": "B0B3XCF3L8",
+   "titre": "Mugler Angel Eau de Parfum Femme Ambrée Gourmande et Rechargeable",
+   "ean": "3614273764209",
+   "prix": 80.3,
+   "ventes_30j": 53,
+   "vendeurs": 1,
+   "origine": "etagere",
+   "mot_cle": "mugler angel",
+   "recherches_mois": 1900,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1900,
+    1300,
+    1300
+   ],
+   "score": 950.0,
+   "bingo": true,
+   "prix_par_pays": {
+    "FR": 80.3,
+    "DE": 75.67,
+    "IT": 90.8,
+    "ES": 81.6
+   }
+  },
+  {
    "asin": "B002BLW0D6",
    "titre": "Diesel Only The Brave, Eau de Toilette pour Homme en Spray Vaporisateur, Parfum Frais, 50 ",
    "ean": "0621227477965",
@@ -385,37 +417,11 @@
    "ou_acheter": "Amazon ES à 26.99 € (France 54.83 €)"
   },
   {
-   "asin": "B08S5PFDGV",
-   "titre": "Mugler Angel Eau de Parfum Femme Ambrée Gourmande et Rechargeable",
-   "ean": "3439600056655",
-   "prix": 119.4,
-   "ventes_30j": 52,
-   "vendeurs": 1,
-   "origine": "etagere",
-   "mot_cle": "mugler angel",
-   "recherches_mois": 1900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1900,
-    1300,
-    1300
-   ],
-   "score": 950.0,
-   "bingo": true,
-   "prix_par_pays": {
-    "FR": 119.4,
-    "DE": 95.06,
-    "IT": 126.99,
-    "ES": 88.2
-   },
-   "ou_acheter": "Amazon ES à 88.2 € (France 119.4 €)"
-  },
-  {
    "asin": "B0FNMP8LZX",
    "titre": "DJI Bundle Essentiel Osmo Action 6, caméra d’action 8K à démarrage rapide",
    "ean": "0190021161696",
    "prix": 426.0,
-   "ventes_30j": 52,
+   "ventes_30j": 54,
    "vendeurs": 5,
    "origine": "etagere",
    "mot_cle": "dji osmo action 6",
@@ -480,7 +486,7 @@
    "asin": "B07GNDDNMW",
    "titre": "SIHOO M18 Chaise Ergonomique Bureau, Support Lombaire Réglables, Noir",
    "ean": "0657631745734",
-   "prix": 204.99,
+   "prix": 159.99,
    "ventes_30j": 53,
    "vendeurs": 2,
    "origine": "etagere",
@@ -495,19 +501,19 @@
    "score": 800.0,
    "bingo": true,
    "prix_par_pays": {
-    "FR": 204.99,
+    "FR": 159.99,
     "DE": 123.48,
     "IT": 169.99,
     "ES": 169.99
    },
-   "ou_acheter": "Amazon DE à 123.48 € (France 204.99 €)"
+   "ou_acheter": "Amazon DE à 123.48 € (France 159.99 €)"
   },
   {
    "asin": "B01AR3TISO",
    "titre": "Zylkene Complément Alimentaire | Chiens de Plus de 15 kg | Relaxant pour Situations de Str",
    "ean": "3605874412507",
-   "prix": 38.9,
-   "ventes_30j": 58,
+   "prix": 36.37,
+   "ventes_30j": 57,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "zylkene chien",
@@ -522,30 +528,11 @@
    "annonces_ebay": 10,
    "bingo": true,
    "prix_par_pays": {
-    "FR": 38.9,
-    "DE": 58.19,
+    "FR": 36.37,
+    "DE": 58.06,
     "IT": 35.99,
-    "ES": 38.9
+    "ES": 38.61
    }
-  },
-  {
-   "asin": "B0C95KVZ8X",
-   "titre": "Beats Studio Pro - Casque sans Fil avec Bluetooth et Réduction du Bruit - Audio Spatial pe",
-   "ean": "0194253715399",
-   "prix": 189.0,
-   "ventes_30j": 54,
-   "vendeurs": 3,
-   "origine": "etagere",
-   "mot_cle": "beats studio pro",
-   "recherches_mois": 2900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    2400,
-    2400,
-    1900
-   ],
-   "score": 725.0,
-   "bingo": true
   },
   {
    "asin": "B0CKTYFCJV",
@@ -564,6 +551,25 @@
     1300
    ],
    "score": 650.0,
+   "bingo": true
+  },
+  {
+   "asin": "B0FK4HM645",
+   "titre": "HUAWEI Watch GT 6 Pro 46mm Montres connectées, Écran AMOLED de 1,47 Pouce",
+   "ean": "6942103170157",
+   "prix": 302.39,
+   "ventes_30j": 52,
+   "vendeurs": 3,
+   "origine": "etagere",
+   "mot_cle": "huawei watch gt 6",
+   "recherches_mois": 2400,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1000,
+    1600,
+    2400
+   ],
+   "score": 600.0,
    "bingo": true
   },
   {
@@ -590,7 +596,7 @@
    "titre": "Lexar NM790 SSD 2To avec dissipateur Thermique, M.2 2280 PCIe Gen4 NVMe SSD",
    "ean": "4895217908036",
    "prix": 439.99,
-   "ventes_30j": 55,
+   "ventes_30j": 54,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "lexar nm790",
@@ -628,7 +634,7 @@
    "titre": "Rowenta - Aspirateur sans sac Silence Force Cyclonic Effitech",
    "ean": "3221616094192",
    "prix": 219.99,
-   "ventes_30j": 53,
+   "ventes_30j": 54,
    "vendeurs": 4,
    "origine": "etagere",
    "mot_cle": "rowenta silence force cyclonic",
@@ -684,7 +690,7 @@
    "asin": "B06X3Z9MF3",
    "titre": "De’Longhi Dedica Style - Perfetto Machine à Expresso Compacte, Mousseur de Lait Manuel pou",
    "ean": "8004399331181",
-   "prix": 131.9,
+   "prix": 129.99,
    "ventes_30j": 60,
    "vendeurs": 4,
    "origine": "etagere",
@@ -704,7 +710,7 @@
    "titre": "Reolink 4K 180° Camera Exterieur sans Fil Solaire, ColorX, Argus 4 Pro",
    "ean": "6976930222550",
    "prix": 155.78,
-   "ventes_30j": 54,
+   "ventes_30j": 53,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "reolink argus 4 pro",
@@ -792,25 +798,6 @@
     1300
    ],
    "score": 250.0,
-   "bingo": true
-  },
-  {
-   "asin": "B0D1KK9LS2",
-   "titre": "Bailleul | Cystiphane Fort | Complément alimentaire Cheveux & Ongles |Force & Vitalité | R",
-   "ean": "3660398505883",
-   "prix": 30.87,
-   "ventes_30j": 53,
-   "vendeurs": 5,
-   "origine": "etagere",
-   "mot_cle": "cystiphane fort",
-   "recherches_mois": 1000,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1600,
-    1600,
-    1000
-   ],
-   "score": 166.7,
    "bingo": true
   }
  ],
@@ -852,8 +839,8 @@
       "actuel": 0,
       "moyenne": 1.1
      },
-     "JP": {
-      "tendance": "monte",
+     "DE": {
+      "tendance": "baisse",
       "actuel": 0,
       "moyenne": 1.1
      },
@@ -864,9 +851,7 @@
      }
     },
     "verdict": "déjà en France",
-    "monte_dans": [
-     "JP"
-    ]
+    "monte_dans": []
    }
   },
   {
@@ -893,23 +878,23 @@
     "pays": {
      "US": {
       "tendance": "stable",
-      "actuel": 67,
-      "moyenne": 59.4
+      "actuel": 79,
+      "moyenne": 58.8
      },
      "JP": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 11.2
+      "moyenne": 3.1
      },
      "DE": {
       "tendance": "baisse",
-      "actuel": 100,
-      "moyenne": 14.1
+      "actuel": 0,
+      "moyenne": 22.6
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.7
+      "moyenne": 8.3
      }
     },
     "verdict": "déjà en France",
@@ -942,23 +927,23 @@
     "pays": {
      "US": {
       "tendance": "baisse",
-      "actuel": 44,
-      "moyenne": 49.1
+      "actuel": 46,
+      "moyenne": 45.9
      },
      "JP": {
-      "tendance": "stable",
+      "tendance": "baisse",
       "actuel": 0,
       "moyenne": 1.1
      },
      "DE": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 8.4
+      "moyenne": 3.2
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.9
+      "moyenne": 1.7
      }
     },
     "verdict": "déjà en France",
@@ -992,22 +977,28 @@
      "US": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 3.3
+      "moyenne": 10.4
      },
      "JP": {
-      "tendance": "stable",
+      "tendance": "monte",
       "actuel": 0,
       "moyenne": 1.1
      },
      "DE": {
-      "tendance": "stable",
+      "tendance": "baisse",
+      "actuel": 0,
+      "moyenne": 1.1
+     },
+     "FR": {
+      "tendance": "monte",
       "actuel": 0,
       "moyenne": 1.1
      }
     },
-    "verdict": "rien de notable",
+    "verdict": "déjà en France",
     "monte_dans": [
-     "US"
+     "US",
+     "JP"
     ]
    }
   },
@@ -1033,35 +1024,38 @@
     "mot": "xbox game pass essential",
     "pays": {
      "US": {
-      "tendance": "stable",
-      "actuel": 42,
-      "moyenne": 16.4
+      "tendance": "monte",
+      "actuel": 28,
+      "moyenne": 14.7
      },
      "JP": {
-      "tendance": "baisse",
+      "tendance": "monte",
       "actuel": 0,
-      "moyenne": 1.1
+      "moyenne": 1.2
      },
      "DE": {
       "tendance": "baisse",
       "actuel": 0,
-      "moyenne": 4.3
+      "moyenne": 3.8
      },
      "FR": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 7.2
+      "moyenne": 1.8
      }
     },
     "verdict": "déjà en France",
-    "monte_dans": []
+    "monte_dans": [
+     "US",
+     "JP"
+    ]
    }
   },
   {
    "asin": "B0FBWRZPY5",
    "titre": "XGIMI MoGo 2 Pro (New) Mini Videoprojecteur Portable 1080p",
    "ean": "6935670508225",
-   "prix": 384.8,
+   "prix": 299.0,
    "ventes_30j": 63,
    "vendeurs": 2,
    "origine": "etagere",
@@ -1129,7 +1123,7 @@
    "prix_par_pays": {
     "FR": 29.4,
     "DE": 27.92,
-    "IT": 33.09,
+    "IT": 30.19,
     "ES": 29.28
    }
   },
@@ -1182,6 +1176,31 @@
    }
   },
   {
+   "asin": "B0B3XCF3L8",
+   "titre": "Mugler Angel Eau de Parfum Femme Ambrée Gourmande et Rechargeable",
+   "ean": "3614273764209",
+   "prix": 80.3,
+   "ventes_30j": 53,
+   "vendeurs": 1,
+   "origine": "etagere",
+   "mot_cle": "mugler angel",
+   "recherches_mois": 1900,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1900,
+    1300,
+    1300
+   ],
+   "score": 950.0,
+   "bingo": true,
+   "prix_par_pays": {
+    "FR": 80.3,
+    "DE": 75.67,
+    "IT": 90.8,
+    "ES": 81.6
+   }
+  },
+  {
    "asin": "B002BLW0D6",
    "titre": "Diesel Only The Brave, Eau de Toilette pour Homme en Spray Vaporisateur, Parfum Frais, 50 ",
    "ean": "0621227477965",
@@ -1207,37 +1226,11 @@
    "ou_acheter": "Amazon ES à 26.99 € (France 54.83 €)"
   },
   {
-   "asin": "B08S5PFDGV",
-   "titre": "Mugler Angel Eau de Parfum Femme Ambrée Gourmande et Rechargeable",
-   "ean": "3439600056655",
-   "prix": 119.4,
-   "ventes_30j": 52,
-   "vendeurs": 1,
-   "origine": "etagere",
-   "mot_cle": "mugler angel",
-   "recherches_mois": 1900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1900,
-    1300,
-    1300
-   ],
-   "score": 950.0,
-   "bingo": true,
-   "prix_par_pays": {
-    "FR": 119.4,
-    "DE": 95.06,
-    "IT": 126.99,
-    "ES": 88.2
-   },
-   "ou_acheter": "Amazon ES à 88.2 € (France 119.4 €)"
-  },
-  {
    "asin": "B0FNMP8LZX",
    "titre": "DJI Bundle Essentiel Osmo Action 6, caméra d’action 8K à démarrage rapide",
    "ean": "0190021161696",
    "prix": 426.0,
-   "ventes_30j": 52,
+   "ventes_30j": 54,
    "vendeurs": 5,
    "origine": "etagere",
    "mot_cle": "dji osmo action 6",
@@ -1302,7 +1295,7 @@
    "asin": "B07GNDDNMW",
    "titre": "SIHOO M18 Chaise Ergonomique Bureau, Support Lombaire Réglables, Noir",
    "ean": "0657631745734",
-   "prix": 204.99,
+   "prix": 159.99,
    "ventes_30j": 53,
    "vendeurs": 2,
    "origine": "etagere",
@@ -1317,19 +1310,19 @@
    "score": 800.0,
    "bingo": true,
    "prix_par_pays": {
-    "FR": 204.99,
+    "FR": 159.99,
     "DE": 123.48,
     "IT": 169.99,
     "ES": 169.99
    },
-   "ou_acheter": "Amazon DE à 123.48 € (France 204.99 €)"
+   "ou_acheter": "Amazon DE à 123.48 € (France 159.99 €)"
   },
   {
    "asin": "B01AR3TISO",
    "titre": "Zylkene Complément Alimentaire | Chiens de Plus de 15 kg | Relaxant pour Situations de Str",
    "ean": "3605874412507",
-   "prix": 38.9,
-   "ventes_30j": 58,
+   "prix": 36.37,
+   "ventes_30j": 57,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "zylkene chien",
@@ -1344,30 +1337,11 @@
    "annonces_ebay": 10,
    "bingo": true,
    "prix_par_pays": {
-    "FR": 38.9,
-    "DE": 58.19,
+    "FR": 36.37,
+    "DE": 58.06,
     "IT": 35.99,
-    "ES": 38.9
+    "ES": 38.61
    }
-  },
-  {
-   "asin": "B0C95KVZ8X",
-   "titre": "Beats Studio Pro - Casque sans Fil avec Bluetooth et Réduction du Bruit - Audio Spatial pe",
-   "ean": "0194253715399",
-   "prix": 189.0,
-   "ventes_30j": 54,
-   "vendeurs": 3,
-   "origine": "etagere",
-   "mot_cle": "beats studio pro",
-   "recherches_mois": 2900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    2400,
-    2400,
-    1900
-   ],
-   "score": 725.0,
-   "bingo": true
   },
   {
    "asin": "B0CKTYFCJV",
@@ -1386,6 +1360,25 @@
     1300
    ],
    "score": 650.0,
+   "bingo": true
+  },
+  {
+   "asin": "B0FK4HM645",
+   "titre": "HUAWEI Watch GT 6 Pro 46mm Montres connectées, Écran AMOLED de 1,47 Pouce",
+   "ean": "6942103170157",
+   "prix": 302.39,
+   "ventes_30j": 52,
+   "vendeurs": 3,
+   "origine": "etagere",
+   "mot_cle": "huawei watch gt 6",
+   "recherches_mois": 2400,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1000,
+    1600,
+    2400
+   ],
+   "score": 600.0,
    "bingo": true
   },
   {
@@ -1412,7 +1405,7 @@
    "titre": "Lexar NM790 SSD 2To avec dissipateur Thermique, M.2 2280 PCIe Gen4 NVMe SSD",
    "ean": "4895217908036",
    "prix": 439.99,
-   "ventes_30j": 55,
+   "ventes_30j": 54,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "lexar nm790",
@@ -1450,7 +1443,7 @@
    "titre": "Rowenta - Aspirateur sans sac Silence Force Cyclonic Effitech",
    "ean": "3221616094192",
    "prix": 219.99,
-   "ventes_30j": 53,
+   "ventes_30j": 54,
    "vendeurs": 4,
    "origine": "etagere",
    "mot_cle": "rowenta silence force cyclonic",
@@ -1506,7 +1499,7 @@
    "asin": "B06X3Z9MF3",
    "titre": "De’Longhi Dedica Style - Perfetto Machine à Expresso Compacte, Mousseur de Lait Manuel pou",
    "ean": "8004399331181",
-   "prix": 131.9,
+   "prix": 129.99,
    "ventes_30j": 60,
    "vendeurs": 4,
    "origine": "etagere",
@@ -1526,7 +1519,7 @@
    "titre": "Reolink 4K 180° Camera Exterieur sans Fil Solaire, ColorX, Argus 4 Pro",
    "ean": "6976930222550",
    "prix": 155.78,
-   "ventes_30j": 54,
+   "ventes_30j": 53,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "reolink argus 4 pro",
@@ -1617,25 +1610,6 @@
    "bingo": true
   },
   {
-   "asin": "B0D1KK9LS2",
-   "titre": "Bailleul | Cystiphane Fort | Complément alimentaire Cheveux & Ongles |Force & Vitalité | R",
-   "ean": "3660398505883",
-   "prix": 30.87,
-   "ventes_30j": 53,
-   "vendeurs": 5,
-   "origine": "etagere",
-   "mot_cle": "cystiphane fort",
-   "recherches_mois": 1000,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1600,
-    1600,
-    1000
-   ],
-   "score": 166.7,
-   "bingo": true
-  },
-  {
    "asin": "B0HGHB3V16",
    "titre": "Nintendo Switch 2 + Mario Kart World Bundle (includes 3-month NSO Individual Membership)",
    "prix": 549.99,
@@ -1659,29 +1633,28 @@
     "pays": {
      "US": {
       "tendance": "monte",
-      "actuel": 75,
-      "moyenne": 44.8
+      "actuel": 78,
+      "moyenne": 46.1
      },
      "JP": {
-      "tendance": "monte",
-      "actuel": 22,
-      "moyenne": 35.6
+      "tendance": "stable",
+      "actuel": 17,
+      "moyenne": 34.3
      },
      "DE": {
       "tendance": "monte",
-      "actuel": 53,
-      "moyenne": 36.2
+      "actuel": 59,
+      "moyenne": 37.0
      },
      "FR": {
       "tendance": "monte",
-      "actuel": 66,
-      "moyenne": 36.0
+      "actuel": 59,
+      "moyenne": 35.6
      }
     },
     "verdict": "déjà en France",
     "monte_dans": [
      "US",
-     "JP",
      "DE"
     ]
    }
@@ -1720,29 +1693,27 @@
     "pays": {
      "US": {
       "tendance": "stable",
-      "actuel": 54,
-      "moyenne": 37.1
+      "actuel": 42,
+      "moyenne": 38.0
      },
      "JP": {
-      "tendance": "monte",
+      "tendance": "baisse",
       "actuel": 0,
-      "moyenne": 1.9
+      "moyenne": 1.2
      },
      "DE": {
       "tendance": "baisse",
       "actuel": 0,
-      "moyenne": 27.2
+      "moyenne": 27.4
      },
      "FR": {
-      "tendance": "monte",
+      "tendance": "stable",
       "actuel": 0,
-      "moyenne": 19.8
+      "moyenne": 23.7
      }
     },
-    "verdict": "déjà en France",
-    "monte_dans": [
-     "JP"
-    ]
+    "verdict": "rien de notable",
+    "monte_dans": []
    }
   },
   {
@@ -1768,24 +1739,24 @@
     "mot": "pokemon pokopia",
     "pays": {
      "US": {
-      "tendance": "baisse",
-      "actuel": 47,
-      "moyenne": 49.5
+      "tendance": "stable",
+      "actuel": 46,
+      "moyenne": 48.7
      },
      "JP": {
       "tendance": "monte",
       "actuel": 0,
-      "moyenne": 2.0
+      "moyenne": 1.8
      },
      "DE": {
-      "tendance": "baisse",
+      "tendance": "stable",
       "actuel": 0,
-      "moyenne": 27.5
+      "moyenne": 25.0
      },
      "FR": {
       "tendance": "stable",
       "actuel": 0,
-      "moyenne": 25.5
+      "moyenne": 25.6
      }
     },
     "verdict": "vague à venir en France",
@@ -1915,11 +1886,30 @@
    "bingo": false
   },
   {
+   "asin": "B0DCQVQDQ7",
+   "titre": "GoPro HERO13 Black - Caméra d'action étanche avec vidéo 5.3K60, Photo 27MP + compatibilité",
+   "ean": "0810116381616",
+   "prix": 429.99,
+   "ventes_30j": 59,
+   "vendeurs": 7,
+   "origine": "etagere",
+   "mot_cle": "gopro hero13",
+   "recherches_mois": 8100,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    5400,
+    5400,
+    8100
+   ],
+   "score": 1012.5,
+   "bingo": false
+  },
+  {
    "asin": "B0CCRZPKR1",
    "titre": "Sennheiser MOMENTUM 4 Casque Sans Fil à Réduction de Bruit, Casque Bluetooth pour Appels d",
    "ean": "0810091272619",
    "prix": 169.0,
-   "ventes_30j": 56,
+   "ventes_30j": 59,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "sennheiser momentum 4",
@@ -1992,29 +1982,10 @@
    "bingo": false
   },
   {
-   "asin": "B0D47MDKVP",
-   "titre": "Samsung R630 Galaxy Buds3 Pro, Silver",
-   "ean": "8806095759562",
-   "prix": 150.9,
-   "ventes_30j": 55,
-   "vendeurs": 6,
-   "origine": "etagere",
-   "mot_cle": "samsung galaxy buds3 pro",
-   "recherches_mois": 5400,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1300,
-    720,
-    720
-   ],
-   "score": 771.4,
-   "bingo": false
-  },
-  {
    "asin": "B0F8B2776S",
    "titre": "Amazfit Active 2 Premium Square Montre Connectée Homme NFC, GPS, Cartes",
    "ean": "6972596108818",
-   "prix": 138.6,
+   "prix": 116.4,
    "ventes_30j": 52,
    "vendeurs": 2,
    "origine": "etagere",
@@ -2093,7 +2064,7 @@
    "titre": "Sony WH-1000XM5 Casque Bluetooth sans Fil Premium à réduction de Bruit",
    "ean": "4548736132580",
    "prix": 237.83,
-   "ventes_30j": 64,
+   "ventes_30j": 66,
    "vendeurs": 2,
    "origine": "etagere",
    "mot_cle": "sony wh-1000xm5",
@@ -2187,11 +2158,31 @@
    "bingo": false
   },
   {
+   "asin": "B0F7M3HPBD",
+   "titre": "Bose QuietComfort Ultra Écouteurs (2e génération), écouteurs sans Fil à réduction de Bruit",
+   "ean": "0017817861120",
+   "prix": 231.27,
+   "ventes_30j": 55,
+   "vendeurs": 10,
+   "origine": "etagere",
+   "mot_cle": "bose quietcomfort ultra",
+   "recherches_mois": 12100,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    9900,
+    9900,
+    9900
+   ],
+   "score": 576.2,
+   "annonces_ebay": 50,
+   "bingo": false
+  },
+  {
    "asin": "B0C4TLFZSZ",
    "titre": "Sony WF-1000XM5 Écouteurs sans fil Premium avec réduction de bruit ANC",
    "ean": "4548736143487",
    "prix": 199.0,
-   "ventes_30j": 59,
+   "ventes_30j": 61,
    "vendeurs": 2,
    "origine": "etagere",
    "mot_cle": "sony wf-1000xm5",
@@ -2202,28 +2193,8 @@
     5400,
     5400
    ],
-   "score": 559.3,
-   "annonces_ebay": 44,
-   "bingo": false
-  },
-  {
-   "asin": "B0F7M3HPBD",
-   "titre": "Bose QuietComfort Ultra Écouteurs (2e génération), écouteurs sans Fil à réduction de Bruit",
-   "ean": "0017817861120",
-   "prix": 213.35,
-   "ventes_30j": 56,
-   "vendeurs": 11,
-   "origine": "etagere",
-   "mot_cle": "bose quietcomfort ultra",
-   "recherches_mois": 12100,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    9900,
-    9900,
-    9900
-   ],
    "score": 550.0,
-   "annonces_ebay": 50,
+   "annonces_ebay": 45,
    "bingo": false
   },
   {
@@ -2243,6 +2214,25 @@
     4400
    ],
    "score": 490.9,
+   "bingo": false
+  },
+  {
+   "asin": "B0CG6NR413",
+   "titre": "Garmin vívoactive 5, Montre connectée GPS sport & santé, Noir/Gray, 42mm",
+   "ean": "0753759324902",
+   "prix": 174.99,
+   "ventes_30j": 60,
+   "vendeurs": 55,
+   "origine": "etagere",
+   "mot_cle": "garmin vivoactive 5",
+   "recherches_mois": 27100,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    22200,
+    27100,
+    27100
+   ],
+   "score": 483.9,
    "bingo": false
   },
   {
@@ -2284,45 +2274,6 @@
    "bingo": false
   },
   {
-   "asin": "B0CG6NR413",
-   "titre": "Garmin vívoactive 5, Montre connectée GPS sport & santé, Noir/Gray, 42mm",
-   "ean": "0753759324902",
-   "prix": 174.99,
-   "ventes_30j": 59,
-   "vendeurs": 56,
-   "origine": "etagere",
-   "mot_cle": "garmin vivoactive 5",
-   "recherches_mois": 27100,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    22200,
-    27100,
-    27100
-   ],
-   "score": 475.4,
-   "bingo": false
-  },
-  {
-   "asin": "B0DCQVQDQ7",
-   "titre": "GoPro HERO13 Black - Caméra d'action étanche avec vidéo 5.3K60, Photo 27MP + compatibilité",
-   "ean": "0810116381616",
-   "prix": 429.99,
-   "ventes_30j": 59,
-   "vendeurs": 7,
-   "origine": "etagere",
-   "mot_cle": "gopro hero13",
-   "recherches_mois": 8100,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    5400,
-    5400,
-    8100
-   ],
-   "score": 470.9,
-   "annonces_ebay": 46,
-   "bingo": false
-  },
-  {
    "asin": "B08DV97DVV",
    "titre": "FELIWAY Optimum - Anti-Stress pour Chat - Complexe de phéromones apaisantes pour Une sérén",
    "ean": "3411113030452",
@@ -2346,7 +2297,7 @@
    "titre": "Sony HT-S40R - Barre de Son 5.1ch Home Cinéma avec Enceintes Satellites sans Fil, Noir",
    "ean": "4548736121737",
    "prix": 235.6,
-   "ventes_30j": 62,
+   "ventes_30j": 65,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "sony ht-s40r",
@@ -2384,7 +2335,7 @@
    "titre": "GHB Babyphone Caméra 3.2 inches Bébé Moniteur Babyphone Vidéo LCD Couleur Caméra Bébé Surv",
    "ean": "0611864445120",
    "prix": 42.99,
-   "ventes_30j": 53,
+   "ventes_30j": 52,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "ghb babyphone",
@@ -2419,22 +2370,42 @@
    "bingo": false
   },
   {
-   "asin": "B09TTNF8BT",
-   "titre": "Raspberry Pi 4 Modèle B (4 Go)",
-   "ean": "0614961955509",
-   "prix": 123.21,
-   "ventes_30j": 52,
-   "vendeurs": 17,
-   "origine": "etagere",
-   "mot_cle": "raspberry pi 4",
-   "recherches_mois": 6600,
+   "asin": "B0DT4TYNWZ",
+   "titre": "Lansinoh NaturalWave Baby Bottle Nipples, Slow Flow (S), 4 Count",
+   "prix": 11.84,
+   "ventes_30j": 21,
+   "vendeurs": 0,
+   "origine": "hype US",
+   "pays_hype": "US",
+   "mot_cle": "lansinoh naturalwave",
+   "recherches_mois": 390,
    "concurrence_google": "HIGH",
    "trois_derniers_mois": [
-    6600,
-    5400,
-    5400
+    590,
+    590,
+    480
    ],
-   "score": 366.7,
+   "score": 390.0,
+   "bingo": false
+  },
+  {
+   "asin": "B0D47MDKVP",
+   "titre": "Samsung R630 Galaxy Buds3 Pro, Silver",
+   "ean": "8806095759562",
+   "prix": 179.58,
+   "ventes_30j": 57,
+   "vendeurs": 4,
+   "origine": "etagere",
+   "mot_cle": "samsung galaxy buds3 pro",
+   "recherches_mois": 5400,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1300,
+    720,
+    720
+   ],
+   "score": 360.0,
+   "annonces_ebay": 50,
    "bingo": false
   },
   {
@@ -2442,7 +2413,7 @@
    "titre": "Cacharel Amor Amor Eau de Toilette Femme Florale Fruitée et Ambrée",
    "ean": "0027829232603",
    "prix": 33.1,
-   "ventes_30j": 54,
+   "ventes_30j": 53,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "cacharel amor amor",
@@ -2460,8 +2431,8 @@
    "asin": "B0CHFVWSMZ",
    "titre": "Trou Noir - Jeu de Société Culture générale, Stratégie et Ambiance",
    "ean": "3770011991419",
-   "prix": 25.99,
-   "ventes_30j": 53,
+   "prix": 19.99,
+   "ventes_30j": 52,
    "vendeurs": 9,
    "origine": "etagere",
    "mot_cle": "jeu trou noir",
@@ -2529,8 +2500,8 @@
     2900,
     2400
    ],
-   "score": 300.0,
-   "annonces_ebay": 35,
+   "score": 315.8,
+   "annonces_ebay": 33,
    "bingo": false
   },
   {
@@ -2538,7 +2509,7 @@
    "titre": "KÉRASTASE Blond Absolu - Shampoing Hydratant & Illuminateur - Pour Cheveux Blonds - Méchés",
    "ean": "3474636881260",
    "prix": 42.5,
-   "ventes_30j": 55,
+   "ventes_30j": 54,
    "vendeurs": 7,
    "origine": "etagere",
    "mot_cle": "kerastase blond absolu",
@@ -2614,7 +2585,7 @@
    "titre": "Tapo 2K+ Camera Exterieur sans fil Batterie 10000mAh Autonomie de 300j,C425",
    "ean": "4895252500899",
    "prix": 72.89,
-   "ventes_30j": 54,
+   "ventes_30j": 53,
    "vendeurs": 2,
    "origine": "etagere",
    "mot_cle": "tapo c425",
@@ -2686,6 +2657,25 @@
    "bingo": false
   },
   {
+   "asin": "B0D1CQGFDR",
+   "titre": "Bose Soundlink Max, Grosse Enceinte Bluetooth étanche, Enceinte puissante Rechargeable ave",
+   "ean": "0017817848831",
+   "prix": 279.95,
+   "ventes_30j": 55,
+   "vendeurs": 11,
+   "origine": "etagere",
+   "mot_cle": "bose soundlink max",
+   "recherches_mois": 2900,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    2900,
+    2900,
+    3600
+   ],
+   "score": 241.7,
+   "bingo": false
+  },
+  {
    "asin": "B00TTD9BRC",
    "titre": "CeraVe Moisturizing Cream, Face & Body Moisturizer for Dry Skin, 19oz",
    "prix": 18.96,
@@ -2701,35 +2691,35 @@
     2400,
     2400
    ],
-   "score": 250.0,
-   "annonces_ebay": 43,
+   "score": 240.0,
+   "annonces_ebay": 45,
    "bingo": false
   },
   {
-   "asin": "B0D1CQGFDR",
-   "titre": "Bose Soundlink Max, Grosse Enceinte Bluetooth étanche, Enceinte puissante Rechargeable ave",
-   "ean": "0017817848831",
-   "prix": 279.95,
-   "ventes_30j": 56,
-   "vendeurs": 11,
+   "asin": "B00TXRVC4Y",
+   "titre": "Parfum Femme Boucheron 3386460066082 50 ml",
+   "ean": "3386460066082",
+   "prix": 36.0,
+   "ventes_30j": 52,
+   "vendeurs": 6,
    "origine": "etagere",
-   "mot_cle": "bose soundlink max",
-   "recherches_mois": 2900,
+   "mot_cle": "parfum boucheron femme",
+   "recherches_mois": 1600,
    "concurrence_google": "HIGH",
    "trois_derniers_mois": [
-    2900,
-    2900,
-    3600
+    1900,
+    1600,
+    1000
    ],
-   "score": 241.7,
+   "score": 228.6,
    "bingo": false
   },
   {
    "asin": "B07QKC4WWD",
    "titre": "Logitech G G502 LIGHTSPEED Souris Gamer sans Fil",
    "ean": "5099206082106",
-   "prix": 120.56,
-   "ventes_30j": 54,
+   "prix": 129.43,
+   "ventes_30j": 53,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "logitech g502 lightspeed",
@@ -2787,7 +2777,7 @@
    "asin": "B01MU8TZRV",
    "titre": "SanDisk Extreme PRO 128 Go : une clé USB 3.2 SSD dont les vitesses de lecture vont jusqu'à",
    "ean": "0619659152512",
-   "prix": 107.34,
+   "prix": 107.33,
    "ventes_30j": 56,
    "vendeurs": 10,
    "origine": "etagere",
@@ -2879,11 +2869,30 @@
    "bingo": false
   },
   {
+   "asin": "B014W4YZTQ",
+   "titre": "Peugeot- Coffret Dégustation Whisky - Verre à Whisky & Socle Rafraîchissant + Sous-Verre -",
+   "ean": "4006950266097",
+   "prix": 29.99,
+   "ventes_30j": 69,
+   "vendeurs": 9,
+   "origine": "etagere",
+   "mot_cle": "peugeot verre whisky",
+   "recherches_mois": 1900,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    1600,
+    1300,
+    1300
+   ],
+   "score": 190.0,
+   "bingo": false
+  },
+  {
    "asin": "B0CPFV77W4",
    "titre": "Bose Ultra Open Earbuds, Écouteurs Oreilles Libres avec Technologie OpenAudio, Écouteurs s",
    "ean": "0017817846929",
    "prix": 199.65,
-   "ventes_30j": 58,
+   "ventes_30j": 60,
    "vendeurs": 12,
    "origine": "etagere",
    "mot_cle": "bose ultra open earbuds",
@@ -2934,25 +2943,6 @@
     3600
    ],
    "score": 180.0,
-   "bingo": false
-  },
-  {
-   "asin": "B00TXRVC4Y",
-   "titre": "Parfum Femme Boucheron 3386460066082 50 ml",
-   "ean": "3386460066082",
-   "prix": 37.0,
-   "ventes_30j": 54,
-   "vendeurs": 8,
-   "origine": "etagere",
-   "mot_cle": "parfum boucheron femme",
-   "recherches_mois": 1600,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1900,
-    1600,
-    1000
-   ],
-   "score": 177.8,
    "bingo": false
   },
   {
@@ -3014,25 +3004,6 @@
    "bingo": false
   },
   {
-   "asin": "B014W4YZTQ",
-   "titre": "Peugeot- Coffret Dégustation Whisky - Verre à Whisky & Socle Rafraîchissant + Sous-Verre -",
-   "ean": "4006950266097",
-   "prix": 29.99,
-   "ventes_30j": 72,
-   "vendeurs": 10,
-   "origine": "etagere",
-   "mot_cle": "peugeot verre whisky",
-   "recherches_mois": 1900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    1600,
-    1300,
-    1300
-   ],
-   "score": 172.7,
-   "bingo": false
-  },
-  {
    "asin": "B01N9SPQHQ",
    "titre": "La Roche-Posay Toleriane Double Repair Face Moisturizer, 3.38oz",
    "prix": 19.98,
@@ -3090,25 +3061,6 @@
    "bingo": false
   },
   {
-   "asin": "B09CYX92NB",
-   "titre": "JBL Tune 770NC Casque supra-auriculaire sans fil, autonomie jusqu'à 70 h, Réduction de Bru",
-   "ean": "6925281974526",
-   "prix": 73.82,
-   "ventes_30j": 61,
-   "vendeurs": 21,
-   "origine": "etagere",
-   "mot_cle": "jbl tune 770nc",
-   "recherches_mois": 3600,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    2400,
-    2400,
-    1900
-   ],
-   "score": 163.6,
-   "bingo": false
-  },
-  {
    "asin": "B000C1Z2AU",
    "titre": "Cacharel Noa Eau de Toilette Femme Florale Musquée Douce et Lumineuse",
    "ean": "3360373016358",
@@ -3131,7 +3083,7 @@
    "asin": "B0DQ8V4R88",
    "titre": "ECOVACS WINBOT W2 Pro Omni Robot Nettoyeur de vitres avec Station",
    "ean": "6970135033836",
-   "prix": 399.0,
+   "prix": 339.98,
    "ventes_30j": 53,
    "vendeurs": 9,
    "origine": "etagere",
@@ -3166,11 +3118,30 @@
    "bingo": false
   },
   {
+   "asin": "B09CYX92NB",
+   "titre": "JBL Tune 770NC Casque supra-auriculaire sans fil, autonomie jusqu'à 70 h, Réduction de Bru",
+   "ean": "6925281974526",
+   "prix": 73.82,
+   "ventes_30j": 65,
+   "vendeurs": 22,
+   "origine": "etagere",
+   "mot_cle": "jbl tune 770nc",
+   "recherches_mois": 3600,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    2400,
+    2400,
+    1900
+   ],
+   "score": 156.5,
+   "bingo": false
+  },
+  {
    "asin": "B0D1VH7WMX",
    "titre": "Marshall Minor IV Écouteurs sans Fil Bluetooth, écouteurs - Noir",
    "ean": "7340055398251",
-   "prix": 79.0,
-   "ventes_30j": 57,
+   "prix": 78.99,
+   "ventes_30j": 58,
    "vendeurs": 3,
    "origine": "etagere",
    "mot_cle": "marshall minor iv",
@@ -3185,20 +3156,20 @@
    "bingo": false
   },
   {
-   "asin": "B09YS4KP6W",
-   "titre": "Samsung Odyssey G4, 25\" , 1ms, 240Hz, Dalle IPS, Résolution FHD 1920x1080, 400cd/m2,1000:1",
-   "ean": "8806094341850",
-   "prix": 172.62,
-   "ventes_30j": 52,
+   "asin": "B0D1VN2VB7",
+   "titre": "Marshall Casque Bluetooth Supra-auriculaire Major V, écouteurs sans Fil, Pliables, autonom",
+   "ean": "7340055401104",
+   "prix": 79.0,
+   "ventes_30j": 55,
    "vendeurs": 5,
    "origine": "etagere",
-   "mot_cle": "samsung odyssey g4",
+   "mot_cle": "marshall major v",
    "recherches_mois": 880,
    "concurrence_google": "HIGH",
    "trois_derniers_mois": [
-    720,
-    720,
-    720
+    1000,
+    1000,
+    590
    ],
    "score": 146.7,
    "bingo": false
@@ -3208,7 +3179,7 @@
    "titre": "Marshall Stanmore III Haut-Parleur Bluetooth - Noir",
    "ean": "7340055385121",
    "prix": 299.0,
-   "ventes_30j": 65,
+   "ventes_30j": 64,
    "vendeurs": 4,
    "origine": "etagere",
    "mot_cle": "marshall stanmore iii",
@@ -3303,7 +3274,7 @@
    "titre": "Reolink 4K 360° Caméra Surveillance WiFi Intérieure, E1 Zoom",
    "ean": "6976930229931",
    "prix": 79.99,
-   "ventes_30j": 63,
+   "ventes_30j": 64,
    "vendeurs": 2,
    "origine": "etagere",
    "mot_cle": "reolink e1 zoom",
@@ -3313,44 +3284,6 @@
     390,
     390,
     480
-   ],
-   "score": 130.0,
-   "bingo": false
-  },
-  {
-   "asin": "B0BZD4P25M",
-   "titre": "Reolink 4K Camera Exterieur sans Fil, Suivi Auto, Wi-FI 6, Argus PT Ultra",
-   "ean": "6975253987634",
-   "prix": 109.99,
-   "ventes_30j": 58,
-   "vendeurs": 2,
-   "origine": "etagere",
-   "mot_cle": "reolink argus pt ultra",
-   "recherches_mois": 390,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    480,
-    480,
-    720
-   ],
-   "score": 130.0,
-   "bingo": false
-  },
-  {
-   "asin": "B09VPHVT2Z",
-   "titre": "Anker Batterie Externe 737 (PowerCore 24 K) de 24000mAh avec 3 Ports",
-   "ean": "0194644098728",
-   "prix": 79.99,
-   "ventes_30j": 52,
-   "vendeurs": 2,
-   "origine": "etagere",
-   "mot_cle": "anker 737",
-   "recherches_mois": 390,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    260,
-    320,
-    390
    ],
    "score": 130.0,
    "bingo": false
@@ -3375,22 +3308,22 @@
    "bingo": false
   },
   {
-   "asin": "B0D1VN2VB7",
-   "titre": "Marshall Casque Bluetooth Supra-auriculaire Major V, écouteurs sans Fil, Pliables, autonom",
-   "ean": "7340055401104",
-   "prix": 79.0,
-   "ventes_30j": 55,
-   "vendeurs": 6,
+   "asin": "B0C5L7MZZG",
+   "titre": "Color Wow Dream Coat Extra Strength Spray Anti-Frisottis Bouclés 200ml",
+   "ean": "5060150185748",
+   "prix": 33.84,
+   "ventes_30j": 52,
+   "vendeurs": 14,
    "origine": "etagere",
-   "mot_cle": "marshall major v",
-   "recherches_mois": 880,
+   "mot_cle": "color wow dream coat",
+   "recherches_mois": 1900,
    "concurrence_google": "HIGH",
    "trois_derniers_mois": [
-    1000,
-    1000,
-    590
+    2900,
+    1900,
+    1900
    ],
-   "score": 125.7,
+   "score": 126.7,
    "bingo": false
   },
   {
@@ -3398,7 +3331,7 @@
    "titre": "Jabra Speak 510 Speaker — Portable Bluetooth Speaker, Conference Speaker — Connects to Lap",
    "ean": "0000112342326",
    "prix": 102.9,
-   "ventes_30j": 52,
+   "ventes_30j": 53,
    "vendeurs": 6,
    "origine": "etagere",
    "mot_cle": "jabra speak 510",
@@ -3417,7 +3350,7 @@
    "titre": "Marshall Emberton II Bluetooth Portatif Haut-Parleur, Sans Fil, Résistant à l'eau Enceinte",
    "ean": "7340055391368",
    "prix": 139.9,
-   "ventes_30j": 53,
+   "ventes_30j": 56,
    "vendeurs": 5,
    "origine": "etagere",
    "mot_cle": "marshall emberton ii",
@@ -3448,25 +3381,6 @@
     480
    ],
    "score": 120.0,
-   "bingo": false
-  },
-  {
-   "asin": "B0C5L7MZZG",
-   "titre": "Color Wow Dream Coat Extra Strength Spray Anti-Frisottis Bouclés 200ml",
-   "ean": "5060150185748",
-   "prix": 33.39,
-   "ventes_30j": 52,
-   "vendeurs": 15,
-   "origine": "etagere",
-   "mot_cle": "color wow dream coat",
-   "recherches_mois": 1900,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    2900,
-    1900,
-    1900
-   ],
-   "score": 118.8,
    "bingo": false
   },
   {
@@ -3569,7 +3483,7 @@
    "titre": "BÉABA, Babyphone Vidéo Zen Connect Téléphone, Image Premium, Wi-Fi, Blanc",
    "ean": "3384349302955",
    "prix": 77.9,
-   "ventes_30j": 62,
+   "ventes_30j": 61,
    "vendeurs": 7,
    "origine": "etagere",
    "mot_cle": "beaba zen connect",
@@ -3622,11 +3536,30 @@
    "bingo": false
   },
   {
+   "asin": "B0DSCJ1S33",
+   "titre": "Huggies Little Movers HuggFit 360 Diapers Size 5, 128 Count (2 Packs of 64)",
+   "prix": 50.92,
+   "ventes_30j": 22,
+   "vendeurs": 0,
+   "origine": "hype US",
+   "pays_hype": "US",
+   "mot_cle": "huggies little movers",
+   "recherches_mois": 110,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    90,
+    70,
+    90
+   ],
+   "score": 110.0,
+   "bingo": false
+  },
+  {
    "asin": "B0DCTZ437J",
    "titre": "Babysense Prisma Babyphone Vidéo HD 5\" avec 2 Caméras et Audio, Veilleuse 6 Couleurs, Écra",
    "ean": "7290119470662",
-   "prix": 149.99,
-   "ventes_30j": 72,
+   "prix": 134.99,
+   "ventes_30j": 73,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "babysense prisma",
@@ -3682,7 +3615,7 @@
    "asin": "B0F58Q4CM9",
    "titre": "Xiaomi Mi TV Box S 3nd Gen, 2GB RAM + 32GB ROM, Reproductrice Streaming en 4K Ultra HD, Bl",
    "ean": "5025813999827",
-   "prix": 102.99,
+   "prix": 103.99,
    "ventes_30j": 53,
    "vendeurs": 6,
    "origine": "etagere",
@@ -3702,7 +3635,7 @@
    "titre": "Kärcher Nettoyeur Haute Pression K 4 Power Control, Pression : Max. 130 Bar, Débit : 420 l",
    "ean": "4054278618227",
    "prix": 188.9,
-   "ventes_30j": 55,
+   "ventes_30j": 54,
    "vendeurs": 18,
    "origine": "etagere",
    "mot_cle": "karcher k4 power control",
@@ -3777,8 +3710,8 @@
    "asin": "B0073R1IZ4",
    "titre": "Dremel 3000 Outil Rotatif Multifonction 130W avec 15 Accessoires et 1 Sac, Vitesse Variabl",
    "ean": "8710364060856",
-   "prix": 52.9,
-   "ventes_30j": 53,
+   "prix": 40.83,
+   "ventes_30j": 52,
    "vendeurs": 25,
    "origine": "etagere",
    "mot_cle": "dremel 3000",
@@ -3911,7 +3844,7 @@
    "titre": "AMD Processeurs Ryzen 5 3400G",
    "ean": "0730143309837",
    "prix": 117.69,
-   "ventes_30j": 53,
+   "ventes_30j": 54,
    "vendeurs": 2,
    "origine": "etagere",
    "mot_cle": "amd ryzen 5 3400g",
@@ -3926,11 +3859,30 @@
    "bingo": false
   },
   {
+   "asin": "B0CDPJJRKB",
+   "titre": "eufy Security 4K UHD Caméra intérieure S350",
+   "ean": "0194644126384",
+   "prix": 79.0,
+   "ventes_30j": 52,
+   "vendeurs": 2,
+   "origine": "etagere",
+   "mot_cle": "eufy s350",
+   "recherches_mois": 260,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    210,
+    210,
+    320
+   ],
+   "score": 86.7,
+   "bingo": false
+  },
+  {
    "asin": "B0F8NFVVZD",
    "titre": "PETLIBRO Fontaine à Eau pour Chat en Acier Inoxydable Dockstream, Pompe sans Fil, Ultra Si",
    "ean": "6976166724316",
    "prix": 49.99,
-   "ventes_30j": 58,
+   "ventes_30j": 57,
    "vendeurs": 1,
    "origine": "etagere",
    "mot_cle": "petlibro dockstream",
@@ -3964,25 +3916,6 @@
    "bingo": false
   },
   {
-   "asin": "B0DFMGBZ9Z",
-   "titre": "Beauty of Joseon Aqua Fresh Relief Sun : B5 Riz (Spf50 Pa) Par",
-   "ean": "8809968130277",
-   "prix": 21.6,
-   "ventes_30j": 52,
-   "vendeurs": 1,
-   "origine": "etagere",
-   "mot_cle": "beauty of joseon aqua fresh",
-   "recherches_mois": 170,
-   "concurrence_google": "HIGH",
-   "trois_derniers_mois": [
-    140,
-    210,
-    260
-   ],
-   "score": 85.0,
-   "bingo": false
-  },
-  {
    "asin": "B0D8D5HHTH",
    "titre": "NIVEA Crème de Jour SPF 50 Anti-Taches Luminous 630, 40 ml",
    "ean": null,
@@ -3999,6 +3932,63 @@
     480
    ],
    "score": 84.3,
+   "bingo": false
+  },
+  {
+   "asin": "B08CBJ8W9W",
+   "titre": "PHILIPS machine à café grain 5400, 12 boissons, LatteGo, Noir Chrome | Carafe LatteGo faci",
+   "ean": "8710103931324",
+   "prix": 409.0,
+   "ventes_30j": 63,
+   "vendeurs": 10,
+   "origine": "etagere",
+   "mot_cle": "philips lattego 5400",
+   "recherches_mois": 880,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    390,
+    390,
+    320
+   ],
+   "score": 80.0,
+   "bingo": false
+  },
+  {
+   "asin": "B0BQX82Q17",
+   "titre": "Toshiba Canvio Basics HDTB540XK3CA Disque dur externe portable USB 3.0 Noir 4 To",
+   "ean": "0723844001353",
+   "prix": 199.9,
+   "ventes_30j": 57,
+   "vendeurs": 3,
+   "origine": "etagere",
+   "mot_cle": "toshiba canvio basics",
+   "recherches_mois": 320,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    480,
+    390,
+    480
+   ],
+   "score": 80.0,
+   "bingo": false
+  },
+  {
+   "asin": "B0BTZB7F88",
+   "titre": "AMD Ryzen 7 7800X3D Processeur avec La Technologie 3D V-Cache (Radeon Graphique Intégré, 8",
+   "ean": "0730143314930",
+   "prix": 283.99,
+   "ventes_30j": 55,
+   "vendeurs": 54,
+   "origine": "etagere",
+   "mot_cle": "amd ryzen 7 7800x3d",
+   "recherches_mois": 4400,
+   "concurrence_google": "HIGH",
+   "trois_derniers_mois": [
+    4400,
+    4400,
+    4400
+   ],
+   "score": 80.0,
    "bingo": false
   }
  ]

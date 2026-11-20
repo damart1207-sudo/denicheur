@@ -7890,7 +7890,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T21:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -8102,7 +8102,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-20T21:43+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T22:55+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon Royaume-Uni à 37 £ : une fois livrée en France (port et taxes compris) elle revient à environ 59 €, plus cher que le neuf en France (49,99 €, achatmoinscher, 7 boutiques). Aucune économie.",
+   "prix_neuf_min_idealo": 49.99,
+   "source_prix_ref": "achatmoinscher (7 boutiques)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "8fcd68ab77",
@@ -8148,7 +8160,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T21:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -8343,7 +8355,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T21:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T22:55+00:00",
+  "verdict": {
+   "commentaire": "Offre Aelia Duty Free (Pologne) : boutique d'aéroport en réservation et retrait sur place, pas de livraison en France. Prix final livré en France impossible.",
+   "prix_neuf_min_idealo": 69.58,
+   "source_prix_ref": "achatmoinscher (5 boutiques)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "e1b0733422",
@@ -8363,7 +8387,7 @@
   "preuve_livraison": null,
   "livraison_fr_confirmee": false,
   "cout_total_confirme": false,
-  "lien_marchand": null,
+  "lien_marchand": "https://www.e.leclerc/fp/manette-sans-fil-xbox-pulse-cipher-special-edition-xbox-series-0196388334186",
   "nom_produit": "Manette Xbox Pulse Cipher",
   "cout_achat": 57.0,
   "prix_plancher": {
@@ -8389,7 +8413,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T22:05+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -8599,6 +8623,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T22:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T22:55+00:00",
+  "verdict": {
+   "commentaire": "Manette Xbox édition spéciale Pulse Cipher (EAN 0196388334186) chez E.Leclerc à 52,07 € (Black Friday, du 19/11 au 30/11/2026), page Leclerc lue à 22h50 UTC : offre active, Click & Collect gratuit dans une vingtaine de magasins en France (pas de livraison à domicile). Plus bas prix neuf ailleurs en France : 79,99 € (Techinn, 82,98 € livré ; achatmoinscher) ; Amazon.fr à 110 € (vendeur tiers). Économie 34,9 %. Revente non rentable : même au prix du moins cher (≈77,60 €), marge nette ≈12 € soit ≈23 % du coût, sous les seuils.",
+   "prix_neuf_min_idealo": 79.99,
+   "source_prix_ref": "achatmoinscher (Techinn 79,99 €, 6 boutiques) + page E.Leclerc",
+   "economie_pct": 34.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "jusqu'au 30/11/2026 (Black Friday, stock magasin limité)",
+   "demande_confirmee": false
+  }
  }
 ]

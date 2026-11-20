@@ -30,7 +30,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T09:23+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -291,11 +291,11 @@
     "Amazon 11/mois"
    ]
   },
-  "verifie_le": "2026-11-20T09:49+00:00",
+  "verifie_le": "2026-11-20T10:55+00:00",
   "verdict": {
-   "commentaire": "Crocs Classic Camouflage Clog adulte (211936, Army Green/Multi), pointure 48-49. Prix neuf le plus bas trouvé en France ce matin pour cette pointure : 38,95 € chez Unisportstore (livraison France non précisée) et 43,13 € chez Hardloop.fr (48-49 en stock, port en plus sous 100 €). Notre coût livré 32,50 € serait 17 à 25 % moins cher, mais le prix de 27,50 € sur Amazon.de et la livraison en France ne sont pas encore confirmés par une lecture de la fiche : à relire au prochain tour. Revente : non rentable (plafond 85 % du neuf ≈ 33 €).",
+   "commentaire": "Crocs Classic Camouflage Clog 48-49 sur Amazon.de à 27,50 € (coût livré estimé 32,50 €). Deuxième vérification : la fiche Amazon.de reste illisible (page anti-robot), donc ni le prix ni les frais de livraison vers la France ne sont confirmés. Le neuf le moins cher en France est à 38,95 € (Unisportstore) : l'économie ne serait que d'environ 17 %, trop juste si le port réel dépasse 5 €. Dans le doute : rejeté. Revente non rentable.",
    "prix_neuf_min_idealo": 38.95,
-   "source_prix_ref": "recherche web : unisportstore.com 38,95 € ; hardloop.fr 43,13 € (pointure 48-49 dispo)",
+   "source_prix_ref": "recherche web : unisportstore.com 38,95 € ; hardloop.fr 43,13 €",
    "economie_pct": 17,
    "prix_revente_verifie": null,
    "canal": null,
@@ -829,7 +829,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T09:57+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1016,7 +1016,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T10:01+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T10:55+00:00",
+  "verdict": {
+   "commentaire": "Barre de son Samsung B650F (2025) vendue sur Amazon UK par un vendeur tiers (129 £). Coût livré en France ≈ 186 € (port + taxes après le Brexit), plus cher que le neuf en France à 179,75 € (achatmoinscher, 8 boutiques). Aucune économie : rejeté.",
+   "prix_neuf_min_idealo": 179.75,
+   "source_prix_ref": "achatmoinscher.com (8 boutiques)",
+   "economie_pct": -3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ca35e8650a",
@@ -1062,7 +1074,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T10:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1263,7 +1275,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 10:10 UTC : offre active, 121.03 affiché, code AEES20 + Paypal, marchand 173_2 ; aliexpress.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T10:55+00:00",
+  "verdict": {
+   "commentaire": "Whisky Johnnie Walker Blue Label 70 cl sur AliExpress (expédié d'Espagne) à 117,48 €, coût livré ≈ 122,48 €. Neuf en France à 139,50 € (achatmoinscher) : économie de 12 % seulement, sous le seuil de 15 %. Alcool : envoi transfrontalier incertain. Rejeté.",
+   "prix_neuf_min_idealo": 139.5,
+   "source_prix_ref": "achatmoinscher.com (4 boutiques)",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "447c61298e",
@@ -1296,7 +1320,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T10:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -1504,7 +1528,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 10:11 UTC : offre active, 49.17 affiché, marchand 1448_1 ; amazon.fr refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T10:55+00:00",
+  "verdict": {
+   "commentaire": "Manette Xbox Velocity Green à 45,60 € sur Amazon.fr : c'est déjà le prix neuf le plus bas en France (Keepa, plus bas sur 90 jours). Bonne promo (moyenne 90 j ≈ 55,89 €), mais pas 15 % sous le neuf le moins cher et aucune marge de revente. Rejeté.",
+   "prix_neuf_min_idealo": 45.6,
+   "source_prix_ref": "keepa/amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9d2f859afb",
@@ -1550,7 +1586,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T10:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1733,6 +1769,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 10:25 UTC : offre active, 128.7 affiché, code TOYS10, marchand 1650_3 ; very.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-20T10:55+00:00",
+  "verdict": {
+   "commentaire": "LEGO Harry Potter 76454 chez Very (Royaume-Uni) à 128,70 £. Very ne livre pas en France et le coût livré estimé (≈ 185,61 €) dépasse le neuf en France à 173 € (achatmoinscher, 17 boutiques). Rejeté.",
+   "prix_neuf_min_idealo": 173.0,
+   "source_prix_ref": "achatmoinscher.com (17 boutiques)",
+   "economie_pct": -7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

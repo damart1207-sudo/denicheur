@@ -5962,7 +5962,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-20T19:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -5995,7 +5995,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-20T19:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Kaufland.pl (Pologne) : site du marchand illisible (anti-robot) et livraison en France non confirmée ; aucun prix neuf de référence en France trouvé. Rejeté dans le doute.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-20T20:49+00:00"
  },
  {
   "id": "b7b974576c",
@@ -6028,7 +6040,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T20:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -6240,7 +6252,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-20T20:22+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Hell is Us PS5 à 17,90 € chez Amazon ES, mais le même jeu est déjà à 17,90 € sur amazon.fr (Keepa) : aucune économie.",
+   "prix_neuf_min_idealo": 17.9,
+   "source_prix_ref": "Keepa / amazon.fr",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-20T20:49+00:00"
  },
  {
   "id": "6d1fe9dc0d",
@@ -6286,7 +6310,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T20:30+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -6469,7 +6493,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 20:33 UTC : offre active, 269.99 affiché, marchand 56_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Samsung Odyssey OLED G5 G50SF 27\" chez E.Leclerc : page Dealabs lue à 20h33 UTC, offre active, livraison France. Coût retenu prudemment 299 € + 5 € de port = 304 € (la page affichait même 269,99 €). Plus bas prix neuf en France 360,95 € (achatmoinscher, 11 boutiques) → au moins 15,8 % d'économie. Pas de revente rentable (marges négatives sur tous les canaux).",
+   "prix_neuf_min_idealo": 360.95,
+   "source_prix_ref": "achatmoinscher.com (11 boutiques)",
+   "economie_pct": 15.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (Black Friday, quelques jours)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-20T20:49+00:00"
  },
  {
   "id": "70f5754271",
@@ -6515,7 +6551,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-20T20:35+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -6718,6 +6754,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 20:38 UTC : offre active, 1799.95 affiché, marchand 219_4 ; fiche amazon.it lue : 562.08, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Sapphire PULSE RX 9060 XT 16 Go sur Amazon.it : fiche lue à 20h38 UTC, 562,08 € en stock, livrable en France. Coût retenu 567,08 € avec port. Plus bas prix neuf en France 682,02 € (achatmoinscher, 9 boutiques) ; Cybertek à 749,99 € ce soir. Économie ≈ 16,9 %. Pas de revente rentable (marges négatives).",
+   "prix_neuf_min_idealo": 682.02,
+   "source_prix_ref": "achatmoinscher.com (9 boutiques), recoupé Cybertek 749,99 €",
+   "economie_pct": 16.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "courte (Black Friday, quelques jours)",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-20T20:49+00:00"
  }
 ]

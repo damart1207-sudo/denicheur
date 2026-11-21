@@ -1,14 +1,8 @@
 {
- "tours_ok": 2924,
+ "tours_ok": 2925,
  "tours_echec": 12,
- "dernier_ok": "21/11 08:43",
+ "dernier_ok": "21/11 08:47",
  "evenements": [
-  {
-   "heure": "17/11 06:05",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 06:05",
    "niveau": "erreur",
@@ -1802,12 +1796,18 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 429: Too Many Requests"
+  },
+  {
+   "heure": "21/11 08:47",
+   "niveau": "erreur",
+   "etape": "arbitrage",
+   "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "21/11 08:40",
+  "heure": "21/11 08:44",
   "annonces": 707,
-  "nouvelles": 398,
+  "nouvelles": 369,
   "examinees": 25,
   "alertes": 0
  }

@@ -22,12 +22,6 @@
    "message": "HTTPError: HTTP Error 429: Too Many Requests"
   },
   {
-   "heure": "17/11 05:55",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
-  {
    "heure": "17/11 05:56",
    "niveau": "erreur",
    "etape": "moisson jetons",
@@ -1802,6 +1796,12 @@
    "niveau": "erreur",
    "etape": "moisson prix recherches",
    "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint | /recherches_prix.py\", line 122, in tour\n    d[\"hype\"].update(prix_europe(asins, etat=etat))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nBudgetKeepaInsuffisant: réserve ou plafond Keepa atteint\n"
+  },
+  {
+   "heure": "21/11 05:00",
+   "niveau": "erreur",
+   "etape": "bingo tendances",
+   "message": "TimeoutError: The read operation timed out | ^\n  File \"/home/runner/work/denicheur/denicheur/denicheur/dataforseo.py\", line 216, in decalage_hype\n    t = tendances([mot], p)\n        ^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
   }
  ],
  "dernier_resume": {

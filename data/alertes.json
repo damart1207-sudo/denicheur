@@ -17915,7 +17915,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T21:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -18102,7 +18102,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T21:04+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Version PS5 trouvée dès 24,71 € en France sur ledenicheur (achatmoinscher : 39,99 € Fnac/Micromania). L'offre Amazon Espagne à 33,84 € livrée n'est pas moins chère ; page de l'offre impossible à vérifier.",
+   "prix_neuf_min_idealo": 24.71,
+   "source_prix_ref": "ledenicheur.fr (fiche p=16381425)",
+   "economie_pct": -37,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-21T21:55+00:00"
  },
  {
   "id": "keepa-B0GN189YFJ-arbDE",
@@ -18135,7 +18147,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T21:06+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -18329,7 +18341,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T21:08+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Produit non confirmé identique (édition allemande, audio français incertain). Le 31,25 € d'Amazon.fr est un prix vendeur tiers gonflé (plus bas 90 j : 4,45 €, remise non sincère). Pas de prix de référence fiable en France : rejeté dans le doute.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable (Keepa amazon.fr vendeurs tiers)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-21T21:55+00:00"
  },
  {
   "id": "a22b82c3cf",

@@ -12248,7 +12248,7 @@
    ]
   },
   "verdict": {
-   "commentaire": "Prix neuf France : 110 € sur clarks.com. Page Amazon.it toujours bloquée (anti-robot) à 11h50 : prix et stock non confirmés, à revérifier.",
+   "commentaire": "Prix neuf France : 110 € sur clarks.com. Page Amazon.it toujours illisible à 12h55 : prix, stock et livraison en France non confirmés, à revérifier.",
    "prix_neuf_min_idealo": 110.0,
    "source_prix_ref": "clarks.com (en-fr)",
    "economie_pct": 42,
@@ -12258,7 +12258,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T11:50+00:00"
+  "verifie_le": "2026-11-21T12:55+00:00"
  },
  {
   "id": "keepa-B0FBGCDGFM-arbIT",
@@ -12555,7 +12555,7 @@
    ]
   },
   "verdict": {
-   "commentaire": "Amazon.it en stock mais prix non lu sur la page. Amazon.fr 61,20 € (vendeur tiers, moyenne 90 j 41,08 €). Aucun prix neuf français fiable trouvé par recherche web : à revérifier.",
+   "commentaire": "Page Amazon.it illisible à 12h55. Amazon.fr 61,20 € par un vendeur tiers (moyenne 90 j 41,08 €) : aucun prix neuf français fiable, à revérifier.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": null,
    "economie_pct": null,
@@ -12565,7 +12565,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T11:50+00:00"
+  "verifie_le": "2026-11-21T12:55+00:00"
  },
  {
   "id": "395065e89f",
@@ -14778,7 +14778,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T12:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14983,7 +14983,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T12:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Même produit, mais Amazon.fr le vend 39,95 € et Amazon.nl 32,06 € + port vers la France (~5 €) : environ 7 % d'économie seulement, sous les 15 %.",
+   "prix_neuf_min_idealo": 39.95,
+   "source_prix_ref": "Amazon.fr (Keepa) / achatmoinscher",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T12:55+00:00"
  },
  {
   "id": "d898954aee",
@@ -15029,7 +15041,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T12:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -15215,7 +15227,19 @@
    "premiere_lecture": "2026-11-21T12:13+00:00",
    "expiree_vue_le": "2026-11-21T12:44+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Offre Fnac Espagne : Fnac.es ne livre pas en France. Non achetable depuis la France, rejeté.",
+   "prix_neuf_min_idealo": 30.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T12:55+00:00"
  },
  {
   "id": "20475ca860",
@@ -15261,7 +15285,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T12:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -15464,6 +15488,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 12:25 UTC : offre active, 125.59 affiché, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Même montre, mais 127,41 € sur Amazon.es + port ≈ 132 € contre 152,10 € sur Amazon.fr : environ 13 % d'économie, sous les 15 %. Prix déjà descendu à 97 € en France ces 90 jours.",
+   "prix_neuf_min_idealo": 152.1,
+   "source_prix_ref": "Amazon.fr (Keepa) / achatmoinscher",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T12:55+00:00"
  }
 ]

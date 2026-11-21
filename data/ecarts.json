@@ -1,7 +1,133 @@
 {
  "jour": "2026-11-21",
- "examines": 66,
+ "examines": 67,
  "affaires": [
+  {
+   "asin": "B0DG2SMG7H",
+   "titre": "RingConn Gen 2 Smart Ring, Suivi de l’apnée du Sommeil inédit",
+   "marque": "RingConn",
+   "lien": "https://www.amazon.fr/dp/B0DG2SMG7H",
+   "moyenne_90j": 288.18,
+   "nb_offres_neuves": 2,
+   "offres": [
+    {
+     "total": 194.35,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 339.0,
+     "amazon": false,
+     "fba": true
+    }
+   ],
+   "rang": 459,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 26,
+   "vu": "2026-11-21T12:26",
+   "retenu": true,
+   "premier": 194.35,
+   "premier_amazon": true,
+   "second": 339.0,
+   "ecart": 144.65,
+   "mot_cle": "ringconn gen 2 smart",
+   "nom_court": "ringconn gen 2 smart",
+   "ean": "0810180160254",
+   "marges": {
+    "prix_revente": 267.0,
+    "sous_le_second_pct": 21,
+    "marge_sans_charges": 72.65,
+    "marge_avec_charges": 33.87,
+    "charges_micro": 35.78,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 224.35,
+    "prix_pour_30_net_avec_charges": 262.53,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 0
+     },
+     "occasion": {
+      "nb": 4,
+      "min": 100.0,
+      "max": 242.85,
+      "lien_min": "https://www.ebay.fr/itm/336857674016?_skw=ringconn+gen+2+smart&hash=item4e6e483120:g:ufEAAeSw6pNq2kqL",
+      "dates": 4,
+      "age_min": 30,
+      "age_recent": 16,
+      "age_ancien": 221,
+      "recentes": 0,
+      "anciennes": 3
+     },
+     "nb": 4
+    },
+    "achatmoinscher": {
+     "prix_min": null
+    },
+    "leboncoin": {
+     "nb": 3,
+     "min": 100.0,
+     "max": 165.0,
+     "lien_min": "https://www.leboncoin.fr/ad/telephones_objets_connectes/3308605522",
+     "dates": 3,
+     "age_min": 8,
+     "age_recent": 5,
+     "age_ancien": 184,
+     "recentes": 1,
+     "anciennes": 1
+    },
+    "vinted": {
+     "nb": 6,
+     "min": 120.0,
+     "max": 260.0,
+     "lien_min": "https://www.vinted.fr/items/10892331420-ringconn-gen-2-air-smart-ring-dune-gold-maat-11",
+     "neuf": {
+      "nb": 1,
+      "min": 260.0,
+      "max": 260.0,
+      "lien_min": "https://www.vinted.fr/items/10839449482-ringconn-gen-2-smart-ring-gr-8"
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ]
+   },
+   "volume": 1000,
+   "volume_mot": "ringconn gen 2",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La grille refuse la vente car la marge nette avec charges micro-entreprise n'est que de 16,55 €, ce qui est sous l'objectif de 20 €. De plus, 4 annonces sur 7 traînent depuis plus de 21 jours, ce qui indique que le marché est saturé et que le produit ne part pas vite.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même produit neuf dès 260 € sur Vinted et des occasions à 100 € sur Leboncoin, donc payer plus cher auprès d'un particulier sans garantie officielle n'est pas intéressant. L'offre Amazon à 194,35 € reste en ligne et offre une livraison plus sûre pour ce prix.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "une annonce neuve Vinted",
+     "ref_prix": 260.0,
+     "plafond": 247.0,
+     "marge_sans": 52.65,
+     "marge_avec": 16.55,
+     "vetos": [],
+     "annonce_min": [
+      100.0,
+      "Leboncoin"
+     ],
+     "anciennes": 4,
+     "datees": 7,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
   {
    "asin": "B0DGTTFS5S",
    "titre": "Dometic CFX2 45 - Glacière Électrique à Compression - 45L - Á -22 °C",
@@ -370,5 +496,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-21T12:23+00:00"
+ "maj": "2026-11-21T12:26+00:00"
 }

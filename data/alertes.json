@@ -12553,7 +12553,7 @@
    ]
   },
   "verdict": {
-   "commentaire": "Page Amazon.it toujours inaccessible (2e essai à 9h50) : ni le prix de l'offre ni le prix neuf le plus bas en France n'ont pu être vérifiés.",
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 61,20 € (vendeur tiers, moyenne 90 j 41,08 €). Prix Amazon.it et prix neuf le plus bas en France à confirmer au prochain tour.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": null,
    "economie_pct": null,
@@ -12563,7 +12563,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T08:50+00:00"
+  "verifie_le": "2026-11-21T09:55+00:00"
  },
  {
   "id": "395065e89f",
@@ -12852,7 +12852,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T08:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -13095,7 +13095,19 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Offre MediaMarkt Espagne (492,15 €) : MediaMarkt.es ne livre pas en France, achat impossible depuis la France. Prix neuf le plus bas relevé en France : 695,50 € (achatmoinscher, 12 boutiques).",
+   "prix_neuf_min_idealo": 695.5,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T09:55+00:00"
  },
  {
   "id": "1b936e5669",
@@ -13128,7 +13140,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T08:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -13340,7 +13352,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T08:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 149,95 € vendu par Amazon (moyenne 90 j 148,48 €). Offre Amazon.es à 129,99 € + port ≈ 134,99 € : seulement 10 % d'économie, sous le seuil de 15 %. Revente à perte sur tous les canaux.",
+   "prix_neuf_min_idealo": 149.95,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T09:55+00:00"
  },
  {
   "id": "b6d9cb3389",
@@ -13378,7 +13402,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-21T09:03+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -13411,6 +13435,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T09:05+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Page du bon plan lue par le robot à 10h30 : offre active à 429 € chez Conforama. Prix chez Haier France lu à 10h50 : 939 €. Prix neuf le plus bas des autres marchands français à confirmer au prochain tour.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-21T09:55+00:00"
  }
 ]

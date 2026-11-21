@@ -110,7 +110,7 @@ def liste_de_chasse(d=None, n_bingo=40, n_hype=40):
             if q and q.lower() not in deja:
                 deja.add(q.lower())
                 david.append({"recherche": q, "popularite": None, "hausse_pct": 0, "pays": "FR",
-                              "origine": "david", "cible": c.get("nom")})
+                              "origine": "david", "cible": c.get("nom"), "prix_max": c.get("prix_max")})
     liste = david + liste
     for x in _lire_f("data/bingo.json", {}).get("bingos", [])[:n_bingo]:
         q = x.get("mot_cle") or ""
@@ -125,6 +125,14 @@ def liste_de_chasse(d=None, n_bingo=40, n_hype=40):
             liste.append({"recherche": q, "popularite": x.get("ventes_30j_labas"), "hausse_pct": 0, "pays": "FR",
                           "origine": f"hype {x.get('pays')}", "asin": x.get("asin")})
     return liste
+
+
+def au_dessus_du_prix_max(titre, prix, d=None):
+    """Cible de David avec un prix d'achat maximum (« prix_max ») : vrai si l'offre est PLUS CHÈRE que ce maximum.
+    Au-dessus, la revente ne laisse aucune marge : on n'alerte pas, quel que soit l'écart affiché."""
+    dm = est_demande(titre, d)
+    pm = (dm or {}).get("prix_max")
+    return bool(pm and prix and prix > pm)
 
 
 def est_demande(titre, d=None):
@@ -159,7 +167,8 @@ def chasse_ciblee(regles, n=5):
                                else 1 if str(x.get("origine", "")).startswith("hype") else 2))
     for x in chasse[:n]:
         q = x["recherche"]
-        deja_A = [a for a in vus_A if a.get("prix") and comparateurs.correspond(a["titre"], q)]
+        pm = x.get("prix_max") or 1e9   # prix d'achat maximum fixé par David pour cette cible
+        deja_A = [a for a in vus_A if a.get("prix") and a["prix"] <= pm and comparateurs.correspond(a["titre"], q)]
         pi = apify.prix_idealo(q)
         if not pi:
             continue
@@ -182,7 +191,7 @@ def chasse_ciblee(regles, n=5):
             continue
         rr = apify.revente_reelle(q, pi["prix_min"] * 0.4)
         for canal, r in rr.items():
-            if pi["prix_min"] * 0.3 <= r["min"] <= pi["prix_min"] * 0.75:
+            if pi["prix_min"] * 0.3 <= r["min"] <= min(pi["prix_min"] * 0.75, pm):
                 trouves.append({"recherche": q, "hausse_pct": x["hausse_pct"], "canal": canal, "annonce_min": r["min"],
                                 "lien": r.get("lien_min"), "nb_annonces": r["nb"], "idealo": pi, "par": "C"})
     apify.CONTEXTE["denicheur"] = "A"

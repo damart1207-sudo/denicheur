@@ -64,7 +64,7 @@ def cibles():
     # les produits envoyés par David passent en premier ; liste écrite par Claude : [{"nom": "...", "ref_neuf": 0}]
     for d in _lire(os.path.join(RACINE, "config/cibles_david.json"), []):
         if d.get("nom"):
-            cib[d["nom"]] = {"nom": d["nom"], "ref_neuf": d.get("ref_neuf"), "ref_occasion": d.get("ref_occasion"), "origine": "David"}
+            cib[d["nom"]] = {"nom": d["nom"], "ref_neuf": d.get("ref_neuf"), "ref_occasion": d.get("ref_occasion"), "origine": "David", "prix_max": d.get("prix_max"), "etat": d.get("etat")}
     for b in _lire(os.path.join(RACINE, "data/bingo.json"), {}).get("bingos", [])[:30]:
         ref = b.get("prix_neuf_france") or b.get("prix")
         if ref:
@@ -81,6 +81,20 @@ def cibles():
             nom = re.split(r"[,(|\[\-–:]", r["t"], maxsplit=1)[0].strip()[:50]
             cib.setdefault(nom, {"nom": nom, "ref_neuf": r["neuf"], "ref_occasion": r.get("occ"), "origine": "etagere"})
     return list(cib.values())
+
+
+NEUF = re.compile(r"\bneufs?\b|\bneuve\b|scell|blister|emball|jamais (ouvert|servi|utilis)", re.I)
+
+
+def garde_prix_max(c, a):
+    """Cible avec « prix_max » : l'annonce doit nommer le produit en entier, coûter entre 40 % et 100 % du maximum
+    (plus bas = accessoire ou pièce), et se dire neuve si la cible est marquée « etat : neuf »."""
+    pm = c["prix_max"]
+    if not set(_ascii(c["nom"]).split()) <= set(re.findall(r"[a-z0-9]+", _ascii(a["titre"]))):
+        return False
+    if not (pm * 0.4 <= a["prix"] <= pm):
+        return False
+    return not (c.get("etat") == "neuf" and not NEUF.search(a["titre"]))
 
 
 def reference(c):
@@ -216,6 +230,11 @@ def tour():
                         presse = bool(PRESSE.search(a["titre"]))
                         sous_cote = bool(ref and a["prix"] <= ref * SEUIL and a["prix"] >= (ref or 0) * 0.15)
                         invisible = q != variantes(c["nom"])[0]
+                        pm = c.get("prix_max")
+                        if pm:  # cible de David avec prix d'achat maximum : seul le prix compte (ni trop cher, ni accessoire à 5 €)
+                            if not garde_prix_max(c, a):
+                                continue
+                            sous_cote = True
                         if not (sous_cote or presse or invisible):
                             continue
                         vus[ident] = datetime.now(timezone.utc).strftime("%Y-%m-%d")

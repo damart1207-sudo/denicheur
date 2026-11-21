@@ -155,6 +155,8 @@ def examiner(a, nom, maintenant, regles, deja):
     ecart = round(a["prix"] / pmin, 3) if pmin else None
     if a["id"] in deja:
         return None
+    if demande.au_dessus_du_prix_max(a["titre"], a.get("prix"), DEMANDE):
+        return None  # cible de David avec prix d'achat maximum : plus cher que ce maximum, pas d'alerte
     if not ((ecart is not None and ecart <= SEUIL_ECART and pmin >= 30) or (signal and (ecart is None or ecart <= 0.85))):
         return None
     x = {**{k: a.get(k) for k in ("id", "titre", "prix", "devise", "marchand", "lien", "pays", "source", "temperature", "categorie", "prix_verifie", "prix_page", "prix_carte", "preuve_prix", "preuve_livraison", "livraison_fr_confirmee", "cout_total_confirme", "lien_marchand")},

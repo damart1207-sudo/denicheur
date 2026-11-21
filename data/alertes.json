@@ -12258,7 +12258,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T10:50+00:00"
+  "verifie_le": "2026-11-21T11:50+00:00"
  },
  {
   "id": "keepa-B0FBGCDGFM-arbIT",
@@ -12563,7 +12563,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T10:50+00:00"
+  "verifie_le": "2026-11-21T11:50+00:00"
  },
  {
   "id": "395065e89f",
@@ -14263,7 +14263,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T11:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -14475,7 +14475,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T11:10+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T11:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Mydealz lue par le robot à 12h36 : offre active chez Notino.de, 51,45 € port compris avec le code. Notino.de est la boutique allemande : aucune preuve de livraison en France (Notino a un site français séparé). Prix neuf le plus bas en France : 72,70 € (achatmoinscher). Rejeté : livraison France non confirmée.",
+   "prix_neuf_min_idealo": 72.7,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 29,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "f669bbc4e8",
@@ -14521,7 +14533,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T11:07+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -14706,6 +14718,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T11:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T11:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan Mydealz lue par le robot à 12h36 : offre active chez Cyberport, 189 € avec le code PayPal. Cyberport livre l'Allemagne et l'Autriche, pas la France (aucune preuve du contraire). Prix neuf le plus bas en France : 247,92 € (achatmoinscher). Rejeté : non livrable en France.",
+   "prix_neuf_min_idealo": 247.92,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 23,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

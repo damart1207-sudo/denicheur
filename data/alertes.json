@@ -10434,7 +10434,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T04:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -10693,6 +10693,18 @@
    "proba_detail": [
     "Amazon 4/mois"
    ]
+  },
+  "verifie_le": "2026-11-21T04:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le prix de référence Amazon.fr (41,31 €) vient d'un seul vendeur tiers et n'est pas fiable ; ce même article est descendu à 10,12 € sur Amazon.fr ces 90 derniers jours, donc sous notre coût livré (16,43 €). Aucun prix neuf français fiable trouvé (recherche web sans résultat idealo/ledenicheur), page Amazon.es illisible (captcha), même produit non confirmé, erreur de prix probable. Petite casserole peu demandée (4 ventes/mois).",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable (keepa/amazon.fr 41,31 € vendeur tiers unique, plus bas 90 j 10,12 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

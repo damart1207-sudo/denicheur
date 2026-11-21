@@ -1,0 +1,2261 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-21_0517",
+ "date_affichee": "21/11/2026 à 05 h 17",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 168,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 45,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 80,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 824,
+ "nb_nouvelles": 17,
+ "nb_prefiltres": 12,
+ "nb_tries": 12,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 3
+  },
+  "gptoss": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 9
+  },
+  "qwen": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 0
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "c7fee38a28",
+   "titre": "Adidas Ultraboost 5 Hermanos Koumori CB",
+   "prix": 70.25,
+   "devise": "EUR",
+   "marchand": "adidas",
+   "lien": "https://www.mydealz.de/deals/adidas-ultraboost-5-hermanos-koumori-cb-2877574",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 121,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/adidas-ultraboost-5-hermanos-koumori-cb-2877574"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Adidas Ultraboost 5 Hermanos Koumori",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 75.25,
+   "marge_nette": 34.33,
+   "rentabilite": 0.456,
+   "demande": 4.0,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Collab Ultraboost 5 à 70 € chez Adidas DE (prix public ~180 €), revente aisée sur Vinted sans frais vendeur, marge nette ~45 € après port.",
+    "gptoss": "Sneaker populaire, marge nette après frais."
+   },
+   "score": 43.3,
+   "ebay": {
+    "requete": "Adidas Ultraboost 5 Hermanos Koumori",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "adidas x Hermanos Koumori Ultraboost 5 Carbon Grey Alumina Men Running JS2439",
+      "prix": "166.80",
+      "url": "https://www.ebay.fr/itm/267777269501?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item3e58c4defd:g:e~kAAeSwC9xq~k~W"
+     },
+     {
+      "titre": "Hermanos Koumori x adidas Ultra Boost 5.0 Carbon Tent Green JQ5388 Men's US4-15",
+      "prix": "222.79",
+      "url": "https://www.ebay.fr/itm/206579146305?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item3019139e41:g:HiwAAeSw8n1pl8Ae"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 156.58,
+     "IT": 165.5,
+     "ES": 161.82
+    },
+    "meilleur_pays": "IT"
+   },
+   "prix_plancher": {
+    "nom": "Adidas Ultraboost 5 Hermanos Koumori",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 135.0,
+    "ou": "idealo",
+    "lien": "https://www.idealo.fr/prix/209751885/adidas-ultraboost-5-hermanos-koumori-women-dark-grey-beige-black.html"
+   },
+   "idealo": {
+    "prix_min": 135.0,
+    "nb_offres": 5,
+    "lien": "https://www.idealo.fr/prix/209751885/adidas-ultraboost-5-hermanos-koumori-women-dark-grey-beige-black.html",
+    "titre": "Adidas Ultraboost 5 Hermanos Koumori Women dark grey/beige/black",
+    "gtin": "4068812705458"
+   },
+   "ean": "4068812705458",
+   "mot_cle": "adidas ultraboost 5 hermanos",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 118.8,
+     "marge_nette": 24.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 118.8,
+      "cout_achat": 75.25,
+      "frais_canal": 0.0,
+      "prelevements": 15.92,
+      "provision": 3.0,
+      "marge_nette": 24.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.327
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 118.8,
+     "marge_nette": 24.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 118.8,
+      "cout_achat": 75.25,
+      "frais_canal": 0.0,
+      "prelevements": 15.92,
+      "provision": 3.0,
+      "marge_nette": 24.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.327
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 118.8,
+     "marge_nette": 24.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 118.8,
+      "cout_achat": 75.25,
+      "frais_canal": 0.0,
+      "prelevements": 15.92,
+      "provision": 3.0,
+      "marge_nette": 24.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.327
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 135.0,
+     "marge_nette": 21.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 135.0,
+      "cout_achat": 75.25,
+      "frais_canal": 17.45,
+      "prelevements": 18.09,
+      "provision": 3.0,
+      "marge_nette": 21.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.282
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 135.0,
+     "marge_nette": 20.51,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 135.0,
+      "cout_achat": 75.25,
+      "frais_canal": 18.15,
+      "prelevements": 18.09,
+      "provision": 3.0,
+      "marge_nette": 20.51,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.273
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 135.0,
+     "marge_nette": 19.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 135.0,
+      "cout_achat": 75.25,
+      "frais_canal": 18.8,
+      "prelevements": 18.09,
+      "provision": 3.0,
+      "marge_nette": 19.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.264
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 135.0,
+     "marge_nette": 14.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 135.0,
+      "cout_achat": 75.25,
+      "frais_canal": 23.9,
+      "prelevements": 18.09,
+      "provision": 3.0,
+      "marge_nette": 14.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.196
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 135.0,
+     "marge_nette": 11.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 135.0,
+      "cout_achat": 75.25,
+      "frais_canal": 27.24,
+      "prelevements": 18.09,
+      "provision": 3.0,
+      "marge_nette": 11.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.152
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 130.95,
+   "marge_verifiee": 35.15,
+   "rentabilite_verifiee": 0.467,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 45.7,
+   "rapport_concurrence": {
+    "requete": "Adidas Ultraboost 5 Hermanos Koumori",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 166.8,
+       "titre": "adidas x Hermanos Koumori Ultraboost 5 Carbon Grey Alumina Men Running JS2439",
+       "lien": "https://www.ebay.fr/itm/267777269501?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item3e58c4defd:g:e~kAAeSwC9xq~k~W",
+       "vendeur": "acrossports_fr",
+       "avis_vendeur": 4041
+      },
+      "plus_cher": {
+       "prix": 166.8,
+       "titre": "adidas x Hermanos Koumori Ultraboost 5 Carbon Grey Alumina Men Running JS2439",
+       "lien": "https://www.ebay.fr/itm/267777269501?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item3e58c4defd:g:e~kAAeSwC9xq~k~W",
+       "vendeur": "acrossports_fr",
+       "avis_vendeur": 4041
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 5,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 164.13,
+       "titre": "adidas ULTRABOOST 5 HERMANOS KOUMORI",
+       "lien": "https://www.ebay.it/itm/128173830219?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item1dd7c1704b:g:eCgAAeSwr8Bq6py7",
+       "vendeur": "presto_theshoeman",
+       "avis_vendeur": 8
+      },
+      "plus_cher": {
+       "prix": 170.2,
+       "titre": "Adidas x Hermanos Koumori Ultraboost 5 grigio carbonio allumina uomo corsa JS2439",
+       "lien": "https://www.ebay.it/itm/366605548165?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item555b64ba85:g:918AAeSwpZtq~lFN",
+       "vendeur": "id4shoes",
+       "avis_vendeur": 136383
+      }
+     },
+     "ES": {
+      "nb_annonces": 6,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 147.67,
+       "titre": "adidas x Hermanos Koumori Ultraboost 5 Carbon Grey Alumina Men Running JS2439",
+       "lien": "https://www.ebay.es/itm/318727039068?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item4a359ca85c:g:lOgAAeSw~1Vq~lIL",
+       "vendeur": "acrossports_au",
+       "avis_vendeur": 51715
+      },
+      "plus_cher": {
+       "prix": 168.81,
+       "titre": "Adidas x Hermanos Koumori Ultraboost 5 Gris Carbono Alúmina Hombres Correr JS2439",
+       "lien": "https://www.ebay.es/itm/366605548165?_skw=Adidas+Ultraboost+5+Hermanos+Koumori&hash=item555b64ba85:g:918AAeSwpZtq~lFN",
+       "vendeur": "id4shoes",
+       "avis_vendeur": 136383
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Adidas Ultraboost 5 Hermanos Koumori",
+    "temperature_dealabs": 121,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "adidas ultraboost 5 hermanos koumori",
+     "adidas ultraboost 5 hermanos koumori review",
+     "adidas ultraboost 5 hermanos koumori herren",
+     "adidas ultraboost 5 hermanos koumori hombre",
+     "adidas ultraboost 5 hermanos koumori running",
+     "adidas performance ultraboost 5 hermanos koumori",
+     "adidas ultraboost 5 x hermanos koumori",
+     "adidas ultraboost 5 w hermanos koumori",
+     "laufschuhe adidas ultraboost 5 hermanos koumori",
+     "tênis adidas ultraboost 5 hermanos koumori masculino"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "e1b0733422",
+   "titre": "Manette Xbox Pulse Cipher",
+   "prix": 52.0,
+   "devise": "EUR",
+   "marchand": "E.Leclerc",
+   "lien": "https://www.dealabs.com/bons-plans/manette-xbox-pulse-cipher-3463906",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.e.leclerc/fp/manette-sans-fil-xbox-pulse-cipher-special-edition-xbox-series-0196388334186"
+   },
+   "meme_produit": null,
+   "lien_marchand": "https://www.e.leclerc/fp/manette-sans-fil-xbox-pulse-cipher-special-edition-xbox-series-0196388334186",
+   "domaine": "autre",
+   "nom_produit": "Manette Xbox Pulse Cipher",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.39,
+   "cout_achat": 57.0,
+   "marge_nette": 0.96,
+   "rentabilite": 0.017,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 35 % vs neuf le moins cher"
+   },
+   "score": 52.5,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Manette Xbox Pulse Cipher",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "MICROSOFT Manette Sans Fil Xbox Edition Spéciale Pulse Cipher",
+       "prix": 79.99,
+       "nb_boutiques": 6,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-Xbox-Series-X-S/manette-sans-fil-xbox-edition-speciale-pulse-cipher.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 79.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-Xbox-Series-X-S/manette-sans-fil-xbox-edition-speciale-pulse-cipher.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": null,
+    "marque": "Xbox",
+    "asin": "B0DTLC1G8J",
+    "titre": "Xbox Pulse Cipher Special Edition, Manette sans fil Series X|S, One et Windows Devices",
+    "ean": "0196388334186",
+    "pays": "FR",
+    "prix_neuf": null,
+    "prix_amazon": null,
+    "prix_tiers": null,
+    "moyenne_90j": 113.56,
+    "plus_bas_90j": 57.74,
+    "occasion": null,
+    "rang_ventes": 8305,
+    "chutes_rang_30j": 27,
+    "chutes_rang_90j": 85,
+    "ventes_estimees_30j": 27,
+    "remise_sincere": null,
+    "lien": "https://www.amazon.fr/dp/B0DTLC1G8J",
+    "jetons_restants": 345
+   },
+   "ean": "0196388334186",
+   "asin": "B0DTLC1G8J",
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": 27,
+   "ebay": {
+    "requete": "Manette Xbox Pulse Cipher",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Manette Xbox Series S/X - Pulse Cipher Édition Spéciale - Neuve et Scellée",
+      "prix": "103.66",
+      "url": "https://www.ebay.fr/itm/198786373619?_skw=Manette+Xbox+Pulse+Cipher&hash=item2e489757f3:g:rAEAAeSwoGZq85H9"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": 44.26,
+     "ES": 61.63
+    },
+    "meilleur_pays": "ES"
+   },
+   "mot_cle": "manette xbox pulse cipher",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 70.39,
+     "marge_nette": 0.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.39,
+      "cout_achat": 57.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.43,
+      "provision": 3.0,
+      "marge_nette": 0.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 70.39,
+     "marge_nette": 0.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.39,
+      "cout_achat": 57.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.43,
+      "provision": 3.0,
+      "marge_nette": 0.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 70.39,
+     "marge_nette": 0.96,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.39,
+      "cout_achat": 57.0,
+      "frais_canal": 0.0,
+      "prelevements": 9.43,
+      "provision": 3.0,
+      "marge_nette": 0.96,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.017
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 79.99,
+     "marge_nette": -3.93,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 79.99,
+      "cout_achat": 57.0,
+      "frais_canal": 13.2,
+      "prelevements": 10.72,
+      "provision": 3.0,
+      "marge_nette": -3.93,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.069
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 79.99,
+     "marge_nette": -4.33,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 79.99,
+      "cout_achat": 57.0,
+      "frais_canal": 13.6,
+      "prelevements": 10.72,
+      "provision": 3.0,
+      "marge_nette": -4.33,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.076
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 79.99,
+     "marge_nette": -5.13,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 79.99,
+      "cout_achat": 57.0,
+      "frais_canal": 14.4,
+      "prelevements": 10.72,
+      "provision": 3.0,
+      "marge_nette": -5.13,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.09
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 79.99,
+     "marge_nette": -7.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 79.99,
+      "cout_achat": 57.0,
+      "frais_canal": 16.75,
+      "prelevements": 10.72,
+      "provision": 3.0,
+      "marge_nette": -7.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.131
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 79.99,
+     "marge_nette": -9.72,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 79.99,
+      "cout_achat": 57.0,
+      "frais_canal": 18.99,
+      "prelevements": 10.72,
+      "provision": 3.0,
+      "marge_nette": -9.72,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.171
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 77.59,
+   "marge_verifiee": 7.19,
+   "rentabilite_verifiee": 0.126,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 101.4,
+   "rapport_concurrence": {
+    "requete": "Manette Xbox Pulse Cipher",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 103.66,
+       "titre": "Manette Xbox Series S/X - Pulse Cipher Édition Spéciale - Neuve et Scellée",
+       "lien": "https://www.ebay.fr/itm/198786373619?_skw=Manette+Xbox+Pulse+Cipher&hash=item2e489757f3:g:rAEAAeSwoGZq85H9",
+       "vendeur": "kandaglesh",
+       "avis_vendeur": 618
+      },
+      "plus_cher": {
+       "prix": 103.66,
+       "titre": "Manette Xbox Series S/X - Pulse Cipher Édition Spéciale - Neuve et Scellée",
+       "lien": "https://www.ebay.fr/itm/198786373619?_skw=Manette+Xbox+Pulse+Cipher&hash=item2e489757f3:g:rAEAAeSwoGZq85H9",
+       "vendeur": "kandaglesh",
+       "avis_vendeur": 618
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Manette Xbox Pulse Cipher",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "manette xbox pulse cipher",
+     "manette xbox pulse cipher rouge",
+     "manette microsoft pulse cipher",
+     "manette xbox sans fil pulse cipher",
+     "controller xbox pulse cipher",
+     "xbox controller pulse cipher special edition",
+     "xbox controller pulse cipher red",
+     "xbox controller pulse cipher amazon",
+     "xbox controller pulse cipher review",
+     "xbox controller pulse cypher"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "c1b106fedb",
+   "titre": "UNDER AMOUR CURRY De'Aaron FOX 2 'World Tour' - Azul",
+   "prix": 33.9,
+   "devise": "EUR",
+   "marchand": "Showroomprivé",
+   "lien": "https://www.chollometro.com/ofertas/under-amour-curry-deaaron-fox-2-world-tour-azul-2081557",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 183,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/under-amour-curry-deaaron-fox-2-world-tour-azul-2081557"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Under Armour Curry De'Aaron Fox 2 World Tour",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 38.9,
+   "marge_nette": 31.71,
+   "rentabilite": 0.815,
+   "demande": 3.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Colorway limitée à 34 € sur Showroomprivé (prix public ~130 €), forte demande sneakers basketball, tailles limitées mais marge ~50 € si pointure dispo.",
+    "gptoss": "Chaussure de sport recherchée, marge correcte."
+   },
+   "score": 64.9,
+   "ebay": {
+    "requete": "Under Armour Curry De'Aaron Fox 2 World Tour",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Under Armour Curry De'Aaron Fox 2 World Tour",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "under armour curry 'aaron",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Under Armour Curry De'Aaron Fox 2 World Tour",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Under Armour Curry De'Aaron Fox 2 World Tour",
+    "temperature_dealabs": 183,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0GKFKB9LB-neuf",
+   "titre": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair Bundles Weave Extensions 100g/P",
+   "prix": 49.56,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0GKFKB9LB",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 448,
+   "domaine": "autre",
+   "nom_produit": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair B",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 99.4,
+   "cout_achat": 54.56,
+   "marge_nette": 28.52,
+   "rentabilite": 0.523,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 112.95 €, baisse 56 %, rang 5316"
+   },
+   "score": 52.3,
+   "asin": "B0GKFKB9LB",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 18,
+   "ebay": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair B",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Jucames",
+    "asin": "B0GKFKB9LB",
+    "titre": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair Bundles Weave Extensions 100g/Per Double Weft Color Highlight Brown for Woman 30 32 34 Inch",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 49.56,
+    "prix_amazon": null,
+    "prix_tiers": 49.56,
+    "moyenne_90j": 112.78,
+    "plus_bas_90j": 49.56,
+    "occasion": null,
+    "rang_ventes": 5321,
+    "chutes_rang_30j": 18,
+    "chutes_rang_90j": 23,
+    "ventes_estimees_30j": 18,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0GKFKB9LB",
+    "jetons_restants": 379
+   },
+   "prix_plancher": {
+    "nom": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair B",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 49.56,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0GKFKB9LB"
+   },
+   "remise_sincere": true,
+   "idealo": {
+    "prix_min": 53.0,
+    "nb_offres": 1,
+    "lien": null,
+    "titre": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair Bundles Weave Extensions Double Weft Couleur Highlight Blonde 22 24 26 Pouces",
+    "gtin": null
+   },
+   "mot_cle": "jucames tissage naturel cheveux",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0GKFKB9LB"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 43.61,
+     "marge_nette": -19.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.61,
+      "cout_achat": 54.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.84,
+      "provision": 3.0,
+      "marge_nette": -19.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.363
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 43.61,
+     "marge_nette": -19.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.61,
+      "cout_achat": 54.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.84,
+      "provision": 3.0,
+      "marge_nette": -19.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.363
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 43.61,
+     "marge_nette": -19.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 43.61,
+      "cout_achat": 54.56,
+      "frais_canal": 0.0,
+      "prelevements": 5.84,
+      "provision": 3.0,
+      "marge_nette": -19.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.363
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 49.56,
+     "marge_nette": -25.1,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.56,
+      "cout_achat": 54.56,
+      "frais_canal": 10.46,
+      "prelevements": 6.64,
+      "provision": 3.0,
+      "marge_nette": -25.1,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.46
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 49.56,
+     "marge_nette": -26.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.56,
+      "cout_achat": 54.56,
+      "frais_canal": 11.47,
+      "prelevements": 6.64,
+      "provision": 3.0,
+      "marge_nette": -26.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.479
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 49.56,
+     "marge_nette": -26.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.56,
+      "cout_achat": 54.56,
+      "frais_canal": 11.96,
+      "prelevements": 6.64,
+      "provision": 3.0,
+      "marge_nette": -26.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.488
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 49.56,
+     "marge_nette": -27.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.56,
+      "cout_achat": 54.56,
+      "frais_canal": 12.79,
+      "prelevements": 6.64,
+      "provision": 3.0,
+      "marge_nette": -27.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.503
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 49.56,
+     "marge_nette": -29.07,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 49.56,
+      "cout_achat": 54.56,
+      "frais_canal": 14.42,
+      "prelevements": 6.64,
+      "provision": 3.0,
+      "marge_nette": -29.07,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.533
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 44.6,
+   "marge_verifiee": -18.94,
+   "rentabilite_verifiee": -0.347,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair B",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair B",
+    "temperature_dealabs": 448,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "70f5754271",
+   "titre": "Sapphire PULSE AMD Radeon RX 9060 XT 16GB GDDR6 FSR 4",
+   "prix": 562.08,
+   "devise": "EUR",
+   "marchand": "Amazon.it",
+   "lien": "https://www.chollometro.com/ofertas/9060xt-16gb-2081341",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 241,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/9060xt-16gb-2081341"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Sapphire PULSE AMD Radeon RX 9060 XT 16 Go GDDR6",
+   "plateforme_revente": "fnac",
+   "prix_revente_estime": 682.02,
+   "cout_achat": 567.08,
+   "marge_nette": -35.19,
+   "rentabilite": -0.062,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 18 % vs neuf le moins cher"
+   },
+   "score": 27.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Sapphire PULSE AMD Radeon RX 9060 XT 16 Go GDDR6",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "SAPPHIRE Carte graphique  PULSE AMD Radeon RX 9060 XT 16 Go GDDR6 FSR 4",
+       "prix": 682.02,
+       "nb_boutiques": 8,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-graphique/carte-graphique-sapphire-pulse-amd-radeon-rx-9060-xt-16-go-gddr6-fsr-4.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 682.02,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Carte-graphique/carte-graphique-sapphire-pulse-amd-radeon-rx-9060-xt-16-go-gddr6-fsr-4.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Sapphire",
+    "asin": "B0F9LN5VZ6",
+    "titre": "Sapphire 11350-03-20G Pulse Carte Graphique AMD Radeon™ RX 9060 XT Gaming OC avec 16 Go GDDR6, AMD RDNA 4",
+    "ean": "0840777091784",
+    "pays": "FR",
+    "prix_neuf": 1142.58,
+    "prix_amazon": null,
+    "prix_tiers": 1142.58,
+    "moyenne_90j": 817.65,
+    "plus_bas_90j": 432.63,
+    "occasion": null,
+    "rang_ventes": 48466,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 1,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0F9LN5VZ6",
+    "jetons_restants": 226
+   },
+   "ean": "0840777091784",
+   "asin": "B0F9LN5VZ6",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "ebay": {
+    "requete": "Sapphire PULSE AMD Radeon RX 9060 XT 16 Go GDDR6",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "4895106296381 Graphics card Radeon RX 9060 XT PULSE 16GB GDDR6 128bit DP/2HDMI S",
+      "prix": "815.40",
+      "url": "https://www.ebay.fr/itm/397985020301?_skw=Sapphire+PULSE+AMD+Radeon+RX+9060+XT+16+Go+GDDR6&hash=item5ca9c1798d:g:xr0AAeSwVRdqEzae"
+     },
+     {
+      "titre": "4895106296381 Graphics card Radeon RX 9060 XT PULSE 16GB GDDR6 128bit DP/2HDMI S",
+      "prix": "815.40",
+      "url": "https://www.ebay.fr/itm/157984749526?_skw=Sapphire+PULSE+AMD+Radeon+RX+9060+XT+16+Go+GDDR6&hash=item24c89ff7d6:g:qFAAAeSw8oNqKFQh"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "mot_cle": "sapphire pulse amd radeon",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "LOW",
+    "cpc": null,
+    "trois_derniers_mois": [
+     10,
+     10,
+     10
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 682.02,
+     "marge_nette": -35.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 682.02,
+      "cout_achat": 567.08,
+      "frais_canal": 55.74,
+      "prelevements": 91.39,
+      "provision": 3.0,
+      "marge_nette": -35.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.062
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 682.02,
+     "marge_nette": -42.01,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 682.02,
+      "cout_achat": 567.08,
+      "frais_canal": 62.56,
+      "prelevements": 91.39,
+      "provision": 3.0,
+      "marge_nette": -42.01,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.074
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 682.02,
+     "marge_nette": -46.83,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 682.02,
+      "cout_achat": 567.08,
+      "frais_canal": 67.38,
+      "prelevements": 91.39,
+      "provision": 3.0,
+      "marge_nette": -46.83,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.083
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 600.18,
+     "marge_nette": -50.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 600.18,
+      "cout_achat": 567.08,
+      "frais_canal": 0.0,
+      "prelevements": 80.42,
+      "provision": 3.0,
+      "marge_nette": -50.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.089
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 600.18,
+     "marge_nette": -50.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 600.18,
+      "cout_achat": 567.08,
+      "frais_canal": 0.0,
+      "prelevements": 80.42,
+      "provision": 3.0,
+      "marge_nette": -50.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.089
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 600.18,
+     "marge_nette": -50.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 600.18,
+      "cout_achat": 567.08,
+      "frais_canal": 0.0,
+      "prelevements": 80.42,
+      "provision": 3.0,
+      "marge_nette": -50.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.089
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 682.02,
+     "marge_nette": -74.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 682.02,
+      "cout_achat": 567.08,
+      "frais_canal": 95.01,
+      "prelevements": 91.39,
+      "provision": 3.0,
+      "marge_nette": -74.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.131
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 682.02,
+     "marge_nette": -88.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 682.02,
+      "cout_achat": 567.08,
+      "frais_canal": 109.29,
+      "prelevements": 91.39,
+      "provision": 3.0,
+      "marge_nette": -88.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.156
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 661.56,
+   "marge_verifiee": -51.48,
+   "rentabilite_verifiee": -0.091,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Sapphire PULSE AMD Radeon RX 9060 XT 16 Go GDDR6",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Sapphire PULSE AMD Radeon RX 9060 XT 16 Go GDDR6",
+    "temperature_dealabs": 241,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "sapphire pulse amd radeon rx 9060 xt 16gb gddr6 review",
+     "amd radeon rx 9060 xt 16 go gddr6 sapphire pulse",
+     "sapphire pulse amd radeon rx 9060 xt 16gb 16gb gddr6",
+     "sapphire pulse amd radeon rx 9060 xt gaming 16gb gddr6",
+     "sapphire pulse amd radeon rx 9060 xt 16gb gpu gddr6",
+     "sapphire pulse amd radeon tm rx 9060 xt 16gb gddr6"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "6d1fe9dc0d",
+   "titre": "Ecran PC 27\" Samsung Odyssey OLED G5 G50SF - QHD, 180Hz, OLED, FreeSync, G-SYNC, HDR10",
+   "prix": 299.0,
+   "devise": "EUR",
+   "marchand": "E.Leclerc",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-27-samsung-odyssey-oled-g5-g50sf-qhd-180hz-oled-freesync-g-sync-hdr10-3462723",
+   "pays": "FR",
+   "source": "dealabs-hot",
+   "temperature": 103,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/ecran-pc-27-samsung-odyssey-oled-g5-g50sf-qhd-180hz-oled-freesync-g-sync-hdr10-3462723"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Samsung Odyssey OLED G5 G50SF 27\"",
+   "plateforme_revente": "fnac",
+   "prix_revente_estime": 360.95,
+   "cout_achat": 304.0,
+   "marge_nette": -27.68,
+   "rentabilite": -0.091,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 17 % vs neuf le moins cher"
+   },
+   "score": 25.5,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Samsung Odyssey OLED G5 G50SF 27\"",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "SAMSUNG Ecran PC  ODYSSEY OLED G5 - G50SF - 27 180 Hz - NON ERGO",
+       "prix": 365.99,
+       "nb_boutiques": 11,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Moniteur/ecran-pc-samsung-odyssey-oled-g5-g50sf-27-180-hz-non-ergo.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 360.95,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Moniteur/ecran-pc-samsung-odyssey-oled-g5-g50sf-27-180-hz-non-ergo.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Samsung Odyssey OLED G5 G50SF 27\"",
+    "neuf": {
+     "nb": 4,
+     "min": 164.98,
+     "p25": 233.99,
+     "mediane": 587.81,
+     "max": 766.94
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Monitor Samsung 27\" Odyssey OLED G5 G50SF LS27FG500SUXEN OLED QHD 180Hz HDMI DP",
+      "prix": "441.03",
+      "url": "https://www.ebay.fr/itm/366583691059?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item555a173733:g:9oEAAeSwWXRqcMNy"
+     },
+     {
+      "titre": "compatible avec SAMSUNG Écran gaming pour PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27FG",
+      "prix": "766.94",
+      "url": "https://www.ebay.fr/itm/178531531920?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item29914efc90:g:aQkAAeSwqDxquIrF&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7k3pdFU1AZQrSA9kwwFpFVLCLkCzoNtf66AizbxJobcW1t121kp2yMY2BeL3fmPHewudtgqvsIeLCIEpKbkOrbcj0hQyj%2Fkp2mqT6BDqD6wo3CHDy3AXf1fA5NVIVeVZFrkYRsOuYDR0F3HbD%2Buqki6WPq2Q0rEPqpXUCTqT%2Fw4Y2yR4zRwzg5mkjdHQkFp6BbIFYprUx65Yzsg1aUp5F55htdxXJrURBmsn6LPRpo1TiuowufECU5qzQ8BDrU7jagBaqWDkkUellmwDvNYfOx1n8vRoSP743Tl5dIq8qAklBvGXVLP6hOzavVmDFUARGE%3D"
+     },
+     {
+      "titre": "compatible avec SAMSUNG Écran gaming pour PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27FG",
+      "prix": "734.58",
+      "url": "https://www.ebay.fr/itm/278412759306?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item40d2b1910a:g:gBMAAeSwl2pquIUi"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 233.99,
+     "DE": 335.31,
+     "IT": 435.59,
+     "ES": 394.34
+    },
+    "meilleur_pays": "IT"
+   },
+   "mot_cle": "samsung odyssey oled g5",
+   "annonces_ebay": 4,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 360.95,
+     "marge_nette": -27.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 360.95,
+      "cout_achat": 304.0,
+      "frais_canal": 33.27,
+      "prelevements": 48.37,
+      "provision": 3.0,
+      "marge_nette": -27.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.091
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 360.95,
+     "marge_nette": -31.29,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 360.95,
+      "cout_achat": 304.0,
+      "frais_canal": 36.88,
+      "prelevements": 48.37,
+      "provision": 3.0,
+      "marge_nette": -31.29,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.103
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 317.64,
+     "marge_nette": -31.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 317.64,
+      "cout_achat": 304.0,
+      "frais_canal": 0.0,
+      "prelevements": 42.56,
+      "provision": 3.0,
+      "marge_nette": -31.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.105
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 317.64,
+     "marge_nette": -31.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 317.64,
+      "cout_achat": 304.0,
+      "frais_canal": 0.0,
+      "prelevements": 42.56,
+      "provision": 3.0,
+      "marge_nette": -31.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.105
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 317.64,
+     "marge_nette": -31.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 317.64,
+      "cout_achat": 304.0,
+      "frais_canal": 0.0,
+      "prelevements": 42.56,
+      "provision": 3.0,
+      "marge_nette": -31.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.105
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 360.95,
+     "marge_nette": -32.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 360.95,
+      "cout_achat": 304.0,
+      "frais_canal": 38.49,
+      "prelevements": 48.37,
+      "provision": 3.0,
+      "marge_nette": -32.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.108
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 360.95,
+     "marge_nette": -47.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 360.95,
+      "cout_achat": 304.0,
+      "frais_canal": 53.27,
+      "prelevements": 48.37,
+      "provision": 3.0,
+      "marge_nette": -47.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.157
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 360.95,
+     "marge_nette": -55.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 360.95,
+      "cout_achat": 304.0,
+      "frais_canal": 61.13,
+      "prelevements": 48.37,
+      "provision": 3.0,
+      "marge_nette": -55.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.183
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 233.99,
+   "marge_verifiee": -128.74,
+   "rentabilite_verifiee": -0.423,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Samsung Odyssey OLED G5 G50SF 27\"",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 164.98,
+       "titre": "Filtre de Confidentialité pour Samsung Odyssey OLED G5 G50SF 27\" Anti Espion",
+       "lien": "https://www.ebay.fr/itm/366779167294?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item5565bdf23e:g:zSYAAeSwIWlq-01O",
+       "vendeur": "protectionfilms24",
+       "avis_vendeur": 1021040
+      },
+      "plus_cher": {
+       "prix": 766.94,
+       "titre": "compatible avec SAMSUNG Écran gaming pour PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27FG",
+       "lien": "https://www.ebay.fr/itm/178531531920?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item29914efc90:g:aQkAAeSwqDxquIrF",
+       "vendeur": "sobreruedas-spain",
+       "avis_vendeur": 56655
+      }
+     },
+     "DE": {
+      "nb_annonces": 9,
+      "total_ebay": 13,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 329.0,
+       "titre": "Samsung 27 Zoll Odyssey OLED G5 (G50SF) QHD 180Hz Gaming Monitor",
+       "lien": "https://www.ebay.de/itm/127949187222?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item1dca5da896:g:ZiwAAeSwNHdq~cbd",
+       "vendeur": "samsung-deutschland",
+       "avis_vendeur": 41625
+      },
+      "plus_cher": {
+       "prix": 761.2,
+       "titre": "kompatibel mit SAMSUNG Gaming-Monitor für PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27FG",
+       "lien": "https://www.ebay.de/itm/206586480594?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item30198387d2:i:206586480594",
+       "vendeur": "sobreruedas-spain",
+       "avis_vendeur": 56655
+      }
+     },
+     "IT": {
+      "nb_annonces": 12,
+      "total_ebay": 15,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 162.99,
+       "titre": "Filtro Privacy per Samsung Odyssey OLED G5 G50SF 27\" Anti Spy Protezione",
+       "lien": "https://www.ebay.it/itm/198765965076?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item2e475fef14:g:MDUAAeSwBWdq-0JV",
+       "vendeur": "protectionfilms24",
+       "avis_vendeur": 1021040
+      },
+      "plus_cher": {
+       "prix": 793.81,
+       "titre": "compatibile con SAMSUNG Monitor gaming per PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27F",
+       "lien": "https://www.ebay.it/itm/188992752040?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item2c00d889a8:g:bm8AAeSwiQdquKVJ",
+       "vendeur": "sobreruedas-spain",
+       "avis_vendeur": 56655
+      }
+     },
+     "ES": {
+      "nb_annonces": 7,
+      "total_ebay": 10,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 162.99,
+       "titre": "Filtro Privacidad para Samsung Odyssey OLED G5 G50SF 27\" Anti Espía",
+       "lien": "https://www.ebay.es/itm/366779180201?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item5565be24a9:g:-m4AAeSwKg9q-09g",
+       "vendeur": "protectionfilms24",
+       "avis_vendeur": 1021040
+      },
+      "plus_cher": {
+       "prix": 751.51,
+       "titre": "compatible con SAMSUNG Monitor gaming para PC ODYSSEY-OLED-G5 G50SF 27\" QHD S27F",
+       "lien": "https://www.ebay.es/itm/206584495794?_skw=Samsung+Odyssey+OLED+G5+G50SF+27%22&hash=item3019653eb2:g:bccAAeSwS4hquHsj",
+       "vendeur": "sobreruedas-spain",
+       "avis_vendeur": 56655
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Samsung Odyssey OLED G5 G50SF 27\"",
+    "temperature_dealabs": 103,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "samsung odyssey oled g5 g50sf 27 2k qhd (2560 x 1440) 180hz gaming monitor",
+     "samsung odyssey oled g5 g50sf 27 2k qhd",
+     "samsung odyssey oled g5 g50sf 27 qhd 180hz 0.03ms qd-oled gaming monitor",
+     "samsung odyssey oled g5 g50sf 27 review",
+     "samsung odyssey oled g5 g50sf 27 2k qhd 180hz gaming monitor",
+     "samsung odyssey oled g5 g50sf 27 1440p hdr 180 hz gaming monitor",
+     "samsung odyssey oled g5 g50sf 27 reddit",
+     "samsung odyssey oled g5 g50sf 27 180hz",
+     "samsung odyssey oled g5 g50sf 27 1440p 180hz",
+     "samsung odyssey oled g5 g50sf 27"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 6,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 3,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B0GKFKB9LB-neuf",
+   "titre": "Jucames Tissage Naturel Cheveux Humain Naturels Body Wave Human Hair Bundles Weave Extensions 100g/P",
+   "temperature": 448,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 49.56,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GKFKB9LB",
+   "date": "2026-11-21T00:14",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0GKFKB9LB",
+   "ref_fr": 112.95,
+   "description": "moyenne 90 j 112.95 €, baisse 56 %, rang 5316"
+  },
+  {
+   "id": "keepa-B0BCJ5SRYL-neuf",
+   "titre": "LEAP Horloge d'échecs numérique professionnelle pour jeux de société",
+   "temperature": 368,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 30.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BCJ5SRYL",
+   "date": "2026-11-21T03:32",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0BCJ5SRYL",
+   "ref_fr": 57.39,
+   "description": "moyenne 90 j 57.39 €, baisse 46 %, rang 22387"
+  },
+  {
+   "id": "6d196e79e7",
+   "titre": "Czapka BUFF 100% wełna merino (dwa kolory) - instrukcja darmowej wysyłki w opisie | amazon.de | 14.83 Euro",
+   "temperature": 203,
+   "categorie": "Sport i turystyka",
+   "marchand": "Amazon.de",
+   "prix": 15.48,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/czapka-buff-100-welna-merino-dwa-kolory-instrukcja-darmowej-wysylki-w-opisie-amazonde-1395972",
+   "date": "Sat, 21 Nov 2026 03:10:22 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "65,86zł - Amazon.de Żeby mieć darmową dostawę do DHL Box trzeba go dodać w ustawieniach konta (pamietajcie o zmianie regionu na Niemcy w aplikacji, inaczej możecie nie widzieć okaz..."
+  },
+  {
+   "id": "3b36e3394f",
+   "titre": "Citizen CA0641-16X Eco-Drive Cronógrafo 44 mm – Esfera crema, correa de piel y taquímetro",
+   "temperature": 196,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 140.82,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/citizen-ca0641-16x-eco-drive-cronografo-44-mm-esfera-crema-correa-de-piel-y-taquimetro-2081744",
+   "date": "Sat, 21 Nov 2026 04:33:22 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "140,82€ - Amazon Reloj Citizen de la colección Chrono Sport con un diseño deportivo muy atractivo, inspirado en los cronógrafos clásicos de competición. Destaca especialmente su..."
+  },
+  {
+   "id": "27b0f3f60f",
+   "titre": "ESTUDIANTES - Monitor Gaming 27\" Odyssey OLED G6 G60SF QHD 500Hz",
+   "temperature": 188,
+   "categorie": "Electrónica",
+   "marchand": "Samsung",
+   "prix": 363.52,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/estudiantes-monitor-gaming-27-odyssey-oled-g6-g60sf-qhd-500hz-2081714",
+   "date": "Sat, 21 Nov 2026 05:03:24 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "363,52€ - Samsung Samsung Odyssey OLED G6 G60SF de 27 pulgadas por 360 €. Monitor QD-OLED con resolución QHD (2560 × 1440), 500 Hz de refresco y 0,03 ms de respuesta. ..."
+  },
+  {
+   "id": "c1b106fedb",
+   "titre": "UNDER AMOUR CURRY De'Aaron FOX 2 'World Tour' - Azul",
+   "temperature": 183,
+   "categorie": "Moda y accesorios",
+   "marchand": "Showroomprivé",
+   "prix": 33.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/under-amour-curry-deaaron-fox-2-world-tour-azul-2081557",
+   "date": "Sat, 21 Nov 2026 04:48:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "33,90€ - Showroomprivé Aquí os dejo las tallas disponibles."
+  },
+  {
+   "id": "c7fee38a28",
+   "titre": "Adidas Ultraboost 5 Hermanos Koumori CB",
+   "temperature": 121,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "adidas",
+   "prix": 70.25,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/adidas-ultraboost-5-hermanos-koumori-cb-2877574",
+   "date": "Sat, 21 Nov 2026 00:28:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "70,25€ - adidas Der adidas Ultraboost 5 Hermanos Koumori Laufschuh ist das Ergebnis einer besonderen Partnerschaft mit der mexikanischen Marke Hermanos Koumori, die für ihre in..."
+  },
+  {
+   "id": "f5b69d5cf5",
+   "titre": "🛍️ DREAME H12 Pro Ultra Aspirateur laveur, aspiration 16 000Pa, lavage 60 °C ✅ 132,50€ au lieu de 299,00€ ➡️ https://www.amazon.fr/dp/B0D793B2WV/?tag=pmrat-21 P",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 132.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D793B2WV/?tag=pmrat-21",
+   "date": "2026-11-21T03:30",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ DREAME H12 Pro Ultra Aspirateur laveur, aspiration 16 000Pa, lavage 60 °C ✅ 132,50€ au lieu de 299,00€ ➡️ https://www.amazon.fr/dp/B0D793B2WV/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 299.0
+  },
+  {
+   "id": "69e15eb9ee",
+   "titre": "🛍️ Samsung TV AI 75Q7F3 QLED 4K 75 pouces (189 cm) Smart TV WiFi 2025 ✅ 599,00€ au lieu de 899,99€ ➡️ https://www.amazon.fr/dp/B0F9QB5RQF/?tag=pmrat-21 Publicit",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 599.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F9QB5RQF/?tag=pmrat-21",
+   "date": "2026-11-21T04:17",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Samsung TV AI 75Q7F3 QLED 4K 75 pouces (189 cm) Smart TV WiFi 2025 ✅ 599,00€ au lieu de 899,99€ ➡️ https://www.amazon.fr/dp/B0F9QB5RQF/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 899.99
+  },
+  {
+   "id": "2fda3e613f",
+   "titre": "Calendrier de l'avent Cluedo : Secrets enfouis sous la Neige",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 19.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/calendrier-de-lavent-cluedo-secrets-enfouis-sous-la-neige-3464029",
+   "date": "Sat, 21 Nov 2026 04:46:52 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,49€ - Amazon A partir de 10 ans 24 JOURS DE MYSTÈRE : On est captivé par des énigmes pendant 24 jours avec le Calendrier de l'avent Cluedo : Secrets enfouis sous la neige ! Les familles peuvent rassembler des indices et résoudre le mystère dans ce jeu d'enquête immersif ACTIVITÉ AMUSANTE POUR LA "
+  },
+  {
+   "id": "ee5e7d6a1b",
+   "titre": "Patins de Hockey Bauer X-LS - Du 37.5 au 40.5 et 42 au 45.5",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Decathlon",
+   "prix": 79.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/patins-de-hockey-bauer-x-ls-du-375-au-405-et-42-au-455-3464027",
+   "date": "Sat, 21 Nov 2026 04:40:09 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "79,99€ - Decathlon -20% sur cette marque reconnue en hockey. Peuvent aussi être utilisés pour du patinage occasionnel. Modèle intermédiaire du 37.5 au 40.5 https://www.decathlon.fr/p/patin-de-hockey-bauer-x-ls-adulte-intermediaire-37-5-au-40-5/391133/c1c9c4m9054648 Modèle senior du 42 au 45.5 https:"
+  },
+  {
+   "id": "391060b375",
+   "titre": "DREAME L40 Ultra A Robot Vacuum and Mop with 24,000Pa Suction Power",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 269.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/dreame-l40-ultra-a-robot-vacuum-and-mop-with-24000pa-suction-power-5041436",
+   "date": "Sat, 21 Nov 2026 03:32:55 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£269 - Amazon L40 Ultra A is an entry-level alternative to L40 Ultra. Dual Anti-Tangle System: Say goodbye to hair-tangled brush headaches with this robot vacuum's dual anti-tangle brush system. The TriCut brush automatically snips through tangled human hair and pet fur, then directs the trimmed deb"
+  }
+ ]
+}

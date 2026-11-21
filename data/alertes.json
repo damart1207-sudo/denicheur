@@ -11350,7 +11350,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-21T06:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -11383,6 +11383,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 06:33 UTC : offre active, 11.99 affiché, marchand 3_2 ; fiche amazon.de lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T06:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : chaussettes FALKE Happy lot de 6 (39-42) sur amazon.de à 11,99 € mais 18 € livré en France. Aucun prix neuf français fiable trouvé (idealo absent, recherche web sans prix clair) ; ce lot se trouve couramment autour de ce prix en France, économie de 15 % non prouvée. Vêtement à taille, revente sans intérêt.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source fiable (recherche web Galeries Lafayette / Zalando / ledenicheur sans prix exploitable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

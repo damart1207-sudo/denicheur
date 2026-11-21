@@ -18406,7 +18406,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T21:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18609,6 +18609,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 21:42 UTC : offre active, 36.24 affiché, code Compra Recurrente, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T22:05+00:00",
+  "verdict": {
+   "commentaire": "Page de l'offre (Chollometro / Amazon Espagne) impossible à ouvrir : offre active non confirmée, et l'envoi de parfum d'Amazon Espagne vers la France n'est pas garanti. Prix France de référence non confirmé hors achatmoinscher (50,91 €). Rejeté dans le doute ; revente non rentable (marge négative sur Leboncoin).",
+   "prix_neuf_min_idealo": 50.91,
+   "source_prix_ref": "achatmoinscher.com (non recoupé)",
+   "economie_pct": 25,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

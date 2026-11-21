@@ -11987,7 +11987,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T07:05+00:00",
-  "statut": "a_reverifier",
+  "statut": "bon_plan",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -12250,17 +12250,17 @@
    ]
   },
   "verdict": {
-   "commentaire": "Prix neuf France : 110 € (clarks.com). Page Amazon.it toujours illisible à 15h55 : prix, taille 42, stock et livraison en France non confirmés, à revérifier. 16h55 : pages toujours illisibles (accès refusé), on garde à revérifier. 17h50 : pages encore illisibles, on garde à revérifier.",
+   "commentaire": "Clarks Desert Boot Evo homme, daim Sand, pointure 42 : fiche Amazon.it lue par le robot à 18h37 (heure de Paris) : 58,79 €, en stock, livraison en France ; coût livré estimé 63,79 €. Prix neuf le plus bas en France vérifié : 110 € sur clarks.com (même modèle, même coloris, lu à 18h50) ; Amazon.fr à 134 € (vendeur tiers), Zalando 110 € (coloris noir). Économie 42 %. Revente : plafond 93,50 € (85 % du neuf), marge nette ≈ 14 € après prélèvements, soit 22 % du coût : ni « sûre » ni « bonne ». Publié comme bon plan.",
    "prix_neuf_min_idealo": 110.0,
-   "source_prix_ref": "clarks.com (en-fr)",
+   "source_prix_ref": "clarks.com (en-fr), lu le 21/11 à 18h50",
    "economie_pct": 42,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": null,
-   "duree_offre": null,
-   "demande_confirmee": null
+   "prix_revente_verifie": 93.5,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 14.2,
+   "duree_offre": "quelques heures à quelques jours (semaine du Black Friday, prix déjà vu à 56 € sur 90 jours)",
+   "demande_confirmee": false
   },
-  "verifie_le": "2026-11-21T16:50+00:00"
+  "verifie_le": "2026-11-21T17:55+00:00"
  },
  {
   "id": "keepa-B0FBGCDGFM-arbIT",
@@ -12565,7 +12565,7 @@
    ]
   },
   "verdict": {
-   "commentaire": "Page Amazon.it toujours illisible à 15h55 et pas de prix neuf français fiable (Amazon.fr 61,20 € par un vendeur tiers seulement) : à revérifier. 16h55 : pages toujours illisibles (accès refusé), on garde à revérifier. 17h50 : pages encore illisibles, on garde à revérifier.",
+   "commentaire": "Reebok Court Advance Vulc femme, pointure 37 : fiche Amazon.it lue par le robot à 18h37, en stock et livrable en France, mais le prix de cette taille n'est pas confirmé ; prix neuf français de référence non fiable (Amazon.fr 61,20 € par un vendeur tiers seul, moyenne 90 j 41,08 €). À revérifier au prochain tour.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": null,
    "economie_pct": null,
@@ -12575,7 +12575,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T16:50+00:00"
+  "verifie_le": "2026-11-21T17:55+00:00"
  },
  {
   "id": "395065e89f",
@@ -16322,7 +16322,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T14:02+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -16504,9 +16504,9 @@
   },
   "denicheur": "A",
   "verdict": {
-   "commentaire": "Boss The Scent Eau de Parfum Intense 100 ml à 54,62 € sur Amazon.es : page de l'offre et prix neuf le plus bas en France (Notino, Sephora, leDénicheur) non lisibles ce tour ; 75,94 € sur achatmoinscher à confirmer. Marge de revente négative. À revérifier. 16h55 : pages toujours illisibles (accès refusé), on garde à revérifier. 17h50 : pages encore illisibles, on garde à revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
+   "commentaire": "Boss The Scent Eau de Parfum Intense 100 ml : page du bon plan lue à 18h42, 53,87 € seulement avec l'abonnement « Compra Recurrente » d'Amazon.es, et livraison du parfum en France non confirmée. Référence France 75,94 € (achatmoinscher) non recoupée. Dans le doute : rejeté.",
+   "prix_neuf_min_idealo": 75.94,
+   "source_prix_ref": "achatmoinscher (non recoupé)",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
@@ -16514,7 +16514,7 @@
    "duree_offre": null,
    "demande_confirmee": null
   },
-  "verifie_le": "2026-11-21T16:50+00:00"
+  "verifie_le": "2026-11-21T17:55+00:00"
  },
  {
   "id": "f998198f91",
@@ -17655,7 +17655,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T17:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -17867,6 +17867,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T17:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T17:55+00:00",
+  "verdict": {
+   "commentaire": "Atomfall Xbox Series X : page du bon plan lue à 18h37, 28,99 £ sur Amazon ; coût livré en France ≈ 48,56 €, plus cher que le neuf le moins cher en France (41,64 € sur achatmoinscher). Aucune économie : rejeté.",
+   "prix_neuf_min_idealo": 41.64,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": -17,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  }
 ]

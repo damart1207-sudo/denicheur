@@ -10740,7 +10740,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T05:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -10998,6 +10998,18 @@
    "proba_detail": [
     "Amazon 3/mois"
    ]
+  },
+  "verifie_le": "2026-11-21T05:50+00:00",
+  "verdict": {
+   "commentaire": "Rampe Belfoyer : le prix « de référence » (142,89 €) vient d'un seul vendeur tiers sur la même fiche Amazon ; plus bas sur 90 jours 29 €, remise non sincère selon Keepa. Aucun autre prix neuf fiable trouvé en France pour ce modèle exact, et des escaliers 4 marches équivalents se vendent 40-60 € (Kaufland, ManoMano). Pas de vraie économie : rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (non fiable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -11031,7 +11043,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T05:37+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -11288,6 +11300,18 @@
    "proba_detail": [
     "Amazon 17/mois"
    ]
+  },
+  "verifie_le": "2026-11-21T05:50+00:00",
+  "verdict": {
+   "commentaire": "Étiquettes Ofituria 500 feuilles : le prix Amazon.fr de 102 € est gonflé (plus bas 90 j 55,31 €, remise non sincère). Des boîtes équivalentes de 500 feuilles A4 à 2 étiquettes se trouvent autour de 40-60 € en France (La Poste, LDLC/Agipa). 54,57 € livré depuis Amazon.de n'est pas 15 % sous le vrai prix du marché : rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa/amazon.fr (non fiable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  }
 ]

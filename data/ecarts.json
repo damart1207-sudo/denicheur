@@ -1,7 +1,140 @@
 {
  "jour": "2026-11-21",
- "examines": 52,
+ "examines": 60,
  "affaires": [
+  {
+   "asin": "B0DGTTFS5S",
+   "titre": "Dometic CFX2 45 - Glacière Électrique à Compression - 45L - Á -22 °C",
+   "marque": "Dometic",
+   "lien": "https://www.amazon.fr/dp/B0DGTTFS5S",
+   "moyenne_90j": 572.6,
+   "nb_offres_neuves": 8,
+   "offres": [
+    {
+     "total": 398.11,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 599.0,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 697.55,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 698.18,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 14244,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 14,
+   "vu": "2026-11-21T06:49",
+   "retenu": true,
+   "premier": 398.11,
+   "premier_amazon": true,
+   "second": 599.0,
+   "ecart": 200.89,
+   "mot_cle": "dometic cfx2 45",
+   "nom_court": "dometic cfx2 45",
+   "ean": "0034223508173",
+   "marges": {
+    "prix_revente": 499.0,
+    "sous_le_second_pct": 17,
+    "marge_sans_charges": 100.89,
+    "marge_avec_charges": 31.02,
+    "charges_micro": 66.87,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 428.11,
+    "prix_pour_30_net_avec_charges": 497.82,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 0
+     },
+     "occasion": {
+      "nb": 1,
+      "min": 574.56,
+      "max": 574.56,
+      "lien_min": "https://www.ebay.fr/itm/860154563125?_skw=dometic+cfx2+45&hash=itemc845350a35:g:IJUAAeSwNqlq4KJk",
+      "dates": 1,
+      "age_min": 3,
+      "age_recent": 3,
+      "age_ancien": 3,
+      "recentes": 1,
+      "anciennes": 0
+     },
+     "nb": 1
+    },
+    "achatmoinscher": {
+     "prix_min": null
+    },
+    "leboncoin": {
+     "nb": 0
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": 398.11,
+     "nb_offres": 1,
+     "lien": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 398.11,
+     "ou": "idealo",
+     "nb_offres": 1,
+     "lien": null,
+     "ecart": 0.0
+    }
+   },
+   "volume": 30,
+   "volume_mot": "dometic cfx2 45",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "Le programme refuse la vente car le prix d'achat de 398,11 € est déjà affiché sur idealo, ce qui annule tout avantage concurrentiel. La marge calculée est négative (-19,91 €), ce qui rend l'opération perdante.",
+    "acheter": false,
+    "raisons_acheteur": "Je trouve le même produit neuf à 398,11 € sur idealo avec livraison, ce qui est moins cher que le prix de revente conseillé de 499 €. L'offre Amazon au prix d'achat reste en ligne, donc je n'ai aucune raison de payer plus cher à un particulier.",
+    "condition": "",
+    "ia": "Qwen 3.8 27B",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "le comparateur idealo",
+     "ref_prix": 398.11,
+     "plafond": 378.2,
+     "marge_sans": -19.91,
+     "marge_avec": -73.59,
+     "vetos": [
+      "il est déjà affiché à 398,11 € sur idealo, ton prix d'achat : n'importe qui le trouve à ce prix",
+      "en vendant 5 % sous le comparateur idealo (398,11 €), soit 378,20 €, il reste -19,91 € de marge, moins de 20 €"
+     ],
+     "annonce_min": [
+      574.56,
+      "eBay occasion"
+     ],
+     "anciennes": 0,
+     "datees": 1,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": false
+    }
+   },
+   "alerte": true
+  },
   {
    "asin": "B086P84Y6H",
    "titre": "PORTAL Chariot de Plage Pliable, Chariot de Transport à roulettes Tout Terrain Poignée Réglable Charrette pour Extérieur Camping Pique-Nique",
@@ -114,5 +247,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-21T06:38+00:00"
+ "maj": "2026-11-21T06:50+00:00"
 }

@@ -9660,7 +9660,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T00:46+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -9847,7 +9847,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T00:53+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T01:55+00:00",
+  "verdict": {
+   "commentaire": "STALKER 2 Day One PS5 à 29,99 £ chez Amazon Royaume-Uni : livré en France (port et taxes compris) il revient à environ 49,39 €, alors que le neuf le plus bas en France est à 55 € (achatmoinscher, 3 boutiques). Économie d'environ 10 % seulement, sous le seuil de 15 %. Revente à perte. Rejeté.",
+   "prix_neuf_min_idealo": 55.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0D6RTP1TP-arbDE",
@@ -9880,7 +9892,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T00:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -10072,6 +10084,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T00:59+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T01:55+00:00",
+  "verdict": {
+   "commentaire": "Jean Wrangler Texas Authentic (Verdant Tone) à 24,70 € sur Amazon.de (29,70 € livré). Rejeté dans le doute : fiches Amazon.de et Amazon.fr illisibles depuis cette session, impossible de confirmer que l'offre est active, la taille exacte (prix variable selon la taille) et la livraison en France ; seule référence française : le prix Amazon.fr 47,48 € (Keepa), plus bas 90 j 36,24 €. Revente : marge nette ~3,5 € seulement (insuffisante).",
+   "prix_neuf_min_idealo": 47.48,
+   "source_prix_ref": "keepa/amazon.fr (non relu)",
+   "economie_pct": 37,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

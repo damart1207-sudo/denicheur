@@ -18654,7 +18654,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T22:48+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -18866,7 +18866,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T22:50+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Amazon.pl : coût livré ~191,82 € vs 222,72 € Amazon.fr (Keepa) = 13,9 % seulement, sous le seuil de 15 %. Prix de référence idealo non confirmé ; dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 222.72,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "e476d3f620",
@@ -18899,7 +18911,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T22:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19104,7 +19116,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-21T23:01+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Prix de référence faux : Keepa a associé un socle accessoire (34,19 €), pas l'Echo Dot Max. Offre allemande, aucune économie prouvée vs prix France. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune fiable",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ed87e93914",
@@ -19133,7 +19157,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-21T23:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -19170,7 +19194,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:19 UTC : offre expirée, 9.9 affiché, marchand 189_3 ; fiche amazon.fr lue : 9.98, rupture, livraison : frais de livraison, livraison gratuite ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Deal marqué expiré sur Dealabs ; pas de prix de référence fiable. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "6b9033a5d6",
@@ -19203,7 +19239,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T23:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19411,7 +19447,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 23:20 UTC : offre active, 85.0 affiché, marchand 14_2 ; bol.com refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Le lien du deal vise le MSI MAG 271QPX QD-OLED E2, pas le 272QP X24 (produit différent). Bol.com ne livre pas la France. Rejeté.",
+   "prix_neuf_min_idealo": 404.99,
+   "source_prix_ref": "Keepa Amazon.fr",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "eac40cb393",
@@ -19476,7 +19524,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T23:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19684,7 +19732,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 23:25 UTC : offre active, 459.99 affiché, marchand 3_6 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Le prix 439,20 € s'obtient via 109,80 € crédités sur la carte fidélité Leclerc : on paie 549 €, ce n'est pas une baisse de prix réelle. Rejeté.",
+   "prix_neuf_min_idealo": 521.96,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "fda7fac3ed",
@@ -19743,7 +19803,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-21T23:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -19951,6 +20011,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 23:25 UTC : offre active, 164.99 affiché, marchand 31_2 ; sony.de refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-21T23:43+00:00",
+  "verdict": {
+   "commentaire": "Offre Unidays réservée aux étudiants, cashback, boutique Sony Allemagne sans livraison France confirmée. Rejeté.",
+   "prix_neuf_min_idealo": 249.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

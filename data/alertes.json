@@ -21699,7 +21699,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T08:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -22012,6 +22012,18 @@
    "proba_detail": [
     "Amazon 27/mois"
    ]
+  },
+  "verifie_le": "2026-11-22T08:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté (doute) : le lien marchand du bon plan mène à amazon.com (États-Unis) et à une autre référence (NJ0150-56X, pas la -81X verte) ; livraison en France et prix final livré non confirmés (pages non lisibles ce matin). Prix neuf FR le plus bas relevé : 249,35 € (achatmoinscher), Amazon.fr 265,98 € (plus bas 90 j : 199 €). Revente : marge ≈ 17,55 € sur Fnac, soit ~10 % du coût : sous les seuils « valide » et « bon ».",
+   "prix_neuf_min_idealo": 249.35,
+   "source_prix_ref": "achatmoinscher.com (via robot) ; Keepa Amazon.fr 265,98 €",
+   "economie_pct": 32,
+   "prix_revente_verifie": null,
+   "canal": "fnac",
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

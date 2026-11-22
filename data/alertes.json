@@ -20774,7 +20774,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T03:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -21032,6 +21032,18 @@
    "proba_detail": [
     "Amazon 5/mois"
    ]
+  },
+  "verifie_le": "2026-11-22T03:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le même leurre (Yo-Zuri Crystal Minnow Deep Diver 9 cm) est vendu neuf 19,95 € en France chez Leurre de la pêche, en stock. L'offre Amazon Espagne coûte 33,89 € livrée : plus chère. Le prix Amazon.fr de 69,79 € (vendeur tiers) est gonflé, plus bas 90 j Keepa 15,55 €.",
+   "prix_neuf_min_idealo": 19.95,
+   "source_prix_ref": "leurredelapeche.fr (page marchand lue le 22/11, recherche web)",
+   "economie_pct": -70,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  }
 ]

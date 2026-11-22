@@ -20414,7 +20414,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T00:51+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 276.68,
@@ -20729,6 +20729,18 @@
     "Amazon 2/mois",
     "Google 30/mois"
    ]
+  },
+  "verifie_le": "2026-11-22T01:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : l'offre Chollometro est marquée expirée (vue à 01:29 UTC) et le prix de 165 € n'apparaît plus sur la fiche Amazon.es ; impossible de confirmer que l'offre est encore active. Produit identique (Citizen Promaster BN0260-54L) et livrable en France selon le robot, mais dans le doute on rejette.",
+   "prix_neuf_min_idealo": 276.68,
+   "source_prix_ref": "idealo (robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "terminée",
+   "demande_confirmee": false
   }
  }
 ]

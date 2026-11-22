@@ -20048,7 +20048,7 @@
    "par": "A"
   },
   "trouve_le": "2026-11-21T23:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "page_offre": {
    "lu_le": "2026-11-22T00:29+00:00",
    "lien_deal": "https://www.amazon.fr/dp/B0GC3CJS4Q/?tag=pmrat-21",
@@ -20066,6 +20066,18 @@
    "resume": "amazon.fr refuse les robots (page anti-robot (captcha)) ; livraison France : oui",
    "lectures": 2,
    "premiere_lecture": "2026-11-21T23:55+00:00"
+  },
+  "verifie_le": "2026-11-22T00:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : produit non identifié. Le lien Amazon (B0GC3CJS4Q) est bloqué par un anti-robot et rien ne prouve qu'il s'agit du LEGO 72537 (référence idealo 46,90 €) ; l'annonce Telegram dit seulement « kpop demon hunters ». Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 46.9,
+   "source_prix_ref": "idealo (robot) — produit non confirmé",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  },
  {
@@ -20104,7 +20116,19 @@
    "par": "C"
   },
   "trouve_le": "2026-11-21T23:42+00:00",
-  "statut": "a_verifier"
+  "statut": "rejete",
+  "verifie_le": "2026-11-22T00:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : annonce Leboncoin sans lien, téléphone d'occasion comparé à un prix neuf (139 € sur idealo, Galaxy A16 4G) ; ni le modèle exact (4G/5G, capacité) ni l'état ne sont vérifiables.",
+   "prix_neuf_min_idealo": 139.0,
+   "source_prix_ref": "idealo (robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "be6beb87f1",
@@ -20150,7 +20174,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T00:31+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -20345,6 +20369,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 00:35 UTC : offre active, 37.0 affiché, marchand 1650_3 ; fiche smythstoys.com lue ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T00:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Smyths Toys Royaume-Uni (39,99 £) — Smyths UK ne livre pas en France, achat impossible depuis la France. Prix neuf FR le plus bas relevé : 63,99 € (achatmoinscher).",
+   "prix_neuf_min_idealo": 63.99,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

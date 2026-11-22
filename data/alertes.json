@@ -23848,7 +23848,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T16:07+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -24142,17 +24142,17 @@
     "Amazon 34/mois"
    ]
   },
-  "verifie_le": "2026-11-22T17:55+00:00",
+  "verifie_le": "2026-11-22T19:50+00:00",
   "verdict": {
+   "commentaire": "Prix neuf le plus bas en France : 109,95 € (Rue du Commerce / Auchan). Mais pour la 2e fois, impossible de lire la page Amazon.de ni l'annonce Pepper : offre encore active et livraison en France non confirmées. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 109.95,
+   "source_prix_ref": "Rue du Commerce / Auchan (recherche web)",
+   "economie_pct": 42,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
-   "demande_confirmee": null,
-   "commentaire": "Prix neuf le plus bas en France confirmé : 109,95 € (Rue du Commerce et Boulanger via Auchan, en stock). Offre Amazon.de à 56,31 € (+5 € de port = 64,02 €, soit 42 % moins cher) mais la page Amazon.de et la page Pepper n'ont pas pu être lues : offre encore active et livraison en France non confirmées. À revérifier.",
-   "prix_neuf_min_idealo": 109.95,
-   "source_prix_ref": "Rue du Commerce / Auchan (recherche web)",
-   "economie_pct": 42
+   "demande_confirmee": null
   }
  },
  {
@@ -24463,7 +24463,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T17:24+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -24724,17 +24724,17 @@
     "Amazon 6/mois"
    ]
   },
-  "verifie_le": "2026-11-22T17:55+00:00",
+  "verifie_le": "2026-11-22T19:50+00:00",
   "verdict": {
+   "commentaire": "Pointure 35 seule, peu demandée (~6 ventes/mois). Prix Amazon.fr (65,52 €) au-dessus de sa moyenne 90 j (54,39 €), remise non sincère ; aucun prix neuf français fiable et page Amazon.es illisible. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune source fiable",
+   "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
-   "demande_confirmee": null,
-   "commentaire": "Pointure 35 uniquement, peu demandée (environ 6 ventes/mois). Le prix Amazon.fr (65,52 €) est anormalement haut par rapport à sa moyenne sur 90 jours (54,39 €) ; aucun prix neuf fiable trouvé chez d'autres marchands français, et la page Amazon.es n'a pas pu être lue pour confirmer l'offre. À revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": "aucune source fiable (Amazon.fr moyenne 90 j : 54,39 €)",
-   "economie_pct": null
+   "demande_confirmee": null
   }
  },
  {
@@ -25014,7 +25014,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T19:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -25274,6 +25274,18 @@
    "proba_detail": [
     "Amazon 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-22T19:50+00:00",
+  "verdict": {
+   "commentaire": "Une seule taille (29W/32L), coloris particulier. Prix Amazon.fr (78,73 €, 1 seul vendeur) au-dessus de sa moyenne 90 j (72,42 €), remise non sincère selon Keepa ; plus bas 90 j 49,52 €. Page Amazon.de illisible : offre et livraison en France non confirmées. Rejeté.",
+   "prix_neuf_min_idealo": 72.42,
+   "source_prix_ref": "Keepa moyenne 90 j Amazon.fr",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  },
  {
@@ -25320,7 +25332,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T19:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -25580,6 +25592,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-22T19:50+00:00",
+  "verdict": {
+   "commentaire": "Offre Phone House Espagne (29,99 €) : livraison en France non confirmée (site espagnol, envois en Espagne), annonce Chollometro illisible. Le prix de référence 88,92 € (achatmoinscher, 4 boutiques) n'est pas vérifié. Rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "non vérifié",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  }
 ]

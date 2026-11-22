@@ -1,4 +1,5 @@
 name: Dénicheur
+run-name: ${{ (github.event.inputs.veille == 'true' || github.event.schedule == '23 * * * *') && 'Dénicheur veille' || 'Dénicheur' }}
 
 # Horaires en UTC (= heure fixe de Pékin toute l'année, la Chine ne change jamais d'heure)
 #  toutes les heures (5 tours de 10 min dans un seul lancement) -> veille 24h/24 (très gros bons plans -> data/alertes.json, vérifiés par Claude chaque heure)
@@ -165,8 +166,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           # une seule veille à la fois : si une autre est déjà en file ou en cours, on ne relance pas
-          EN_COURS=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s in_progress --json databaseId --jq 'length' 2>/dev/null || echo 1)
-          EN_FILE=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s queued --json databaseId --jq 'length' 2>/dev/null || echo 0)
+          # seules les veilles comptent (un passage en cours ne doit plus casser la chaîne, 22/11/2026)
+          EN_COURS=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s in_progress --json displayTitle --jq '[.[]|select(.displayTitle=="Dénicheur veille")]|length' 2>/dev/null || echo 1)
+          EN_FILE=$(gh run list -R ${{ github.repository }} -w "Dénicheur" -s queued --json displayTitle --jq '[.[]|select(.displayTitle=="Dénicheur veille")]|length' 2>/dev/null || echo 0)
           echo "en cours: $EN_COURS, en file: $EN_FILE"
           if [ "$EN_COURS" -le 1 ] && [ "$EN_FILE" -eq 0 ]; then
             gh api -X POST repos/${{ github.repository }}/actions/workflows/denicheur.yml/dispatches -f ref=main -f "inputs[veille]=true" && echo "veille suivante lancée"

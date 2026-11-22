@@ -1,14 +1,8 @@
 {
- "tours_ok": 3114,
+ "tours_ok": 3115,
  "tours_echec": 12,
- "dernier_ok": "22/11 13:44",
+ "dernier_ok": "22/11 13:55",
  "evenements": [
-  {
-   "heure": "17/11 06:05",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 06:05",
    "niveau": "erreur",
@@ -1802,12 +1796,18 @@
    "niveau": "erreur",
    "etape": "arbitrage",
    "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
+  },
+  {
+   "heure": "22/11 13:56",
+   "niveau": "erreur",
+   "etape": "moisson hype",
+   "message": "JP 2277721051: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
   }
  ],
  "dernier_resume": {
-  "heure": "22/11 13:42",
+  "heure": "22/11 13:52",
   "annonces": 686,
-  "nouvelles": 583,
+  "nouvelles": 517,
   "examinees": 25,
   "alertes": 0
  }

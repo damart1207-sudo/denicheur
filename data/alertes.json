@@ -27922,7 +27922,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T22:25+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -28182,9 +28182,9 @@
     "Amazon 10/mois"
    ]
   },
-  "verifie_le": "2026-11-22T22:55+00:00",
+  "verifie_le": "2026-11-22T23:50+00:00",
   "verdict": {
-   "commentaire": "Même produit (même ASIN/EAN) à 117,54 € sur Amazon.fr (moyenne 90 j 118,51 €), donc référence fiable ; mais la page Amazon.de n'a pas pu être ouverte : prix pour cette taille (33W/30L), disponibilité et livraison France non confirmés. À revérifier.",
+   "commentaire": "Rejet après 2e contrôle : la page Amazon.de reste bloquée (anti-robot), donc prix pour la taille 33W/30L, disponibilité et livraison en France toujours non confirmés. Référence Amazon.fr 117,54 € (même EAN, moyenne 90 j 118,51 €), mais jean Replay souvent soldé ailleurs ; demande faible (≈10 ventes/mois). Dans le doute, rejet.",
    "prix_neuf_min_idealo": 117.54,
    "source_prix_ref": "Keepa / Amazon.fr",
    "economie_pct": 45,
@@ -28834,7 +28834,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T22:45+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -29037,7 +29037,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-22T22:49+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T23:50+00:00",
+  "verdict": {
+   "commentaire": "Rejet : 29,90 € livré (El Corte Inglés, Espagne) contre 34,95 € neuf en France, soit 14 % d'économie seulement (< 15 %), et livraison en France non confirmée.",
+   "prix_neuf_min_idealo": 34.95,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 14,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "26025ea526",
@@ -29083,7 +29095,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T23:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -29283,7 +29295,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 23:36 UTC : offre active, 13.99 affiché, marchand 3_2 ; fiche mediamarkt.de lue : 12.99 EUR, InStock ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T23:50+00:00",
+  "verdict": {
+   "commentaire": "Rejet : offre MediaMarkt Allemagne en retrait en magasin (« Abholung »), donc pas achetable ni livrable depuis la France.",
+   "prix_neuf_min_idealo": 38.48,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "14b8d4cc36",
@@ -29329,7 +29353,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T23:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -29512,7 +29536,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 23:37 UTC : offre active, 24.9 affiché, marchand 170_1 ; carrefour.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T23:50+00:00",
+  "verdict": {
+   "commentaire": "Rejet : 29,90 € livré (Carrefour Espagne) pour 30 € neuf en France : aucune économie réelle, et livraison en France non confirmée.",
+   "prix_neuf_min_idealo": 30.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "aefa69efc6",
@@ -29558,7 +29594,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T23:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -29758,6 +29794,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 23:38 UTC : offre active, 24.9 affiché, marchand 170_1 ; fiche game.es lue : 24.99 EUR, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T23:50+00:00",
+  "verdict": {
+   "commentaire": "Rejet : 29,99 € livré (Game Espagne) pour 30 € neuf en France : aucune économie réelle, et livraison en France non confirmée.",
+   "prix_neuf_min_idealo": 30.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

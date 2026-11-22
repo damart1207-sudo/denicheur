@@ -22070,7 +22070,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T08:56+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -22294,7 +22294,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-22T09:00+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Même jeu (Elden Ring Tarnished Edition Switch 2), mais le coût livré en France depuis Amazon UK (59,05 €) dépasse le prix neuf le plus bas en France (45,96 € sur achatmoinscher, 9 boutiques). Pas un bon plan, revente perdante (Vinted dès 49,99 €).",
+   "prix_neuf_min_idealo": 45.96,
+   "source_prix_ref": "achatmoinscher (relevé du robot)",
+   "economie_pct": -28,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-22T09:55+00:00"
  },
  {
   "id": "031658772e",
@@ -22340,7 +22352,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T09:20+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -22618,6 +22630,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
-  }
+  },
+  "verdict": {
+   "commentaire": "Même montre (Citizen AW1240-57L), 160,18 € livrée vs 238,15 € neuf le plus bas en France (achatmoinscher) / 243,57 € Amazon.fr : -33 % sur le papier. Rejetée dans le doute : page de l'offre Chollometro/Amazon.es illisible (offre active et livraison France non confirmées), Amazon.fr est déjà descendu à 133,93 € ces 90 jours (remise peu sincère). Revente : ~18 € de marge pour 11 % du coût, 0 vente estimée/mois, sous les seuils.",
+   "prix_neuf_min_idealo": 238.15,
+   "source_prix_ref": "achatmoinscher (relevé du robot), confirmé par Keepa Amazon.fr 243,57 €",
+   "economie_pct": 33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-22T09:55+00:00"
  }
 ]

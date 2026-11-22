@@ -25652,7 +25652,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T19:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -25830,7 +25830,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-22T19:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T20:45+00:00",
+  "verdict": {
+   "commentaire": "Offre réservée à l'application InPost (Pologne, retrait en casier InPost polonais) ; livraison en France non confirmée, page marchand bloquée (403). Revente : marge négative sur tous les canaux. Rejeté.",
+   "prix_neuf_min_idealo": 136.08,
+   "source_prix_ref": "achatmoinscher (1 seule source)",
+   "economie_pct": 22,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -10.28,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B0BGHFSGDF-arbIT",
@@ -25863,7 +25875,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T20:36+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -26053,6 +26065,18 @@
    "livraison_france": "oui",
    "resume": "amazon.it refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T20:45+00:00",
+  "verdict": {
+   "commentaire": "Prix Amazon.it non vérifiable (page anti-robot) ; référence France = une seule fiche Amazon.fr à 1 vendeur, prix gonflé (plus bas 90 j 57,27 €), aucune autre source FR trouvée pour ce produit exact ; des lots équivalents de 200 enveloppes 220x260 existent bien moins cher. Revente : 8,42 € de marge sur leboncoin soit 19,6 % < 30 %. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 71.4,
+   "source_prix_ref": "keepa/amazon.fr (1 vendeur)",
+   "economie_pct": 40,
+   "prix_revente_verifie": null,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 8.42,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

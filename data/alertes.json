@@ -22677,7 +22677,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T10:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -22889,7 +22889,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-22T10:42+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T11:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France estimé 49,26 € (vendeur tiers FBA Amazon UK, page renvoie aussi vers amazon.com), plus cher que le neuf en France (37,20 € sur Amazon.fr, fiche Keepa, plus bas 90 j 34,97 €). Aucune économie.",
+   "prix_neuf_min_idealo": 37.2,
+   "source_prix_ref": "keepa/amazon.fr (B0F194FJTD)",
+   "economie_pct": -32,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -23.91,
+   "duree_offre": "inconnue",
+   "demande_confirmee": true
+  }
  },
  {
   "id": "696188c10b",
@@ -22935,7 +22947,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T11:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -23143,7 +23155,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 11:37 UTC : offre active, 42.99 affiché, marchand 7_3 ; currys.co.uk refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T11:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Currys UK en retrait magasin (Free C&C), Currys ne livre pas la France (page marchand bloquée, livraison France = non). Référence achatmoinscher 81,99 € = coloris rose, pas comparable ; manette noire souvent ~55-60 € en France.",
+   "prix_neuf_min_idealo": 81.99,
+   "source_prix_ref": "achatmoinscher (coloris rose, référence non fiable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "3b1e973d89",
@@ -23208,7 +23232,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T11:34+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -23418,6 +23442,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 11:39 UTC : offre active, 1461.46 affiché, marchand 2471_1 ; fiche amazon.pl lue ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T11:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté (dans le doute) : le prix du bon plan (1461 PLN) est terminé, la fiche Amazon.pl affiche maintenant 1619 PLN ≈ 381 € + port France non confirmé (≈ 386-392 €). Neuf le plus bas en France 462,99 € (achatmoinscher ; Amazon.fr 477,99 €, ledenicheur 483,99 €, plus bas 90 j Amazon.fr 449,90 €) : économie ~15-16,5 %, juste au seuil, et peut tomber sous 15 % avec le port ou une baisse Black Friday en France. Revente négative (-28 € Fnac).",
+   "prix_neuf_min_idealo": 462.99,
+   "source_prix_ref": "achatmoinscher (recoupé ledenicheur 483,99 €, Keepa Amazon.fr 477,99 €)",
+   "economie_pct": 16,
+   "prix_revente_verifie": 462.99,
+   "canal": "fnac",
+   "marge_nette_verifiee": -27.92,
+   "duree_offre": "terminée (prix du deal expiré)",
+   "demande_confirmee": false
+  }
  }
 ]

@@ -1,0 +1,5085 @@
+{
+ "passage": "soir",
+ "horodatage": "2026-11-22_1748",
+ "date_affichee": "22/11/2026 à 17 h 48",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 146,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 45,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 72,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 799,
+ "nb_nouvelles": 100,
+ "nb_prefiltres": 75,
+ "nb_tries": 75,
+ "tri_ok": true,
+ "agents": {
+  "deepseek": {
+   "appels": 2,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 410 (deepseek-ai/deepseek-v4-pro): {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'deepseek-ai/deepseek-v4-pro' has reached its end of life on 2026-08-07T09:00:00Z and is no longer available.\"}\n",
+    "HTTP 410 (deepseek-ai/deepseek-v4-pro): {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'deepseek-ai/deepseek-v4-pro' has reached its end of life on 2026-08-07T09:00:00Z and is no longer available.\"}\n"
+   ],
+   "choix": 0
+  },
+  "gptoss": {
+   "appels": 7,
+   "reussites": 7,
+   "erreurs": [],
+   "choix": 37,
+   "remplace": "deepseek"
+  },
+  "qwen": {
+   "appels": 7,
+   "reussites": 3,
+   "erreurs": [
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested ",
+    "HTTP 429 (qwen/qwen3.8-27b): {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01m0m6hn3ge888rx876cg5tav8` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Requested "
+   ],
+   "choix": 6,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 11
+  }
+ },
+ "remplacements": {
+  "qwen": "gemma",
+  "gptoss": "deepseek"
+ },
+ "candidats": [
+  {
+   "id": "5654698929",
+   "titre": "Veste barbour Men Heritage Liddesdale Quilt Navy (equipementaventure.fr)",
+   "prix": 107.95,
+   "devise": "EUR",
+   "marchand": null,
+   "lien": "https://www.dealabs.com/bons-plans/veste-barbour-men-heritage-liddesdale-quilt-navy-3465458",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/veste-barbour-men-heritage-liddesdale-quilt-navy-3465458"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Barbour Heritage Liddesdale",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 220.0,
+   "cout_achat": 112.95,
+   "marge_nette": 74.57,
+   "rentabilite": 0.66,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Veste Barbour premium à prix bien inférieur au marché, forte demande sur Vinted.",
+    "gptoss": "Veste de marque à prix réduit, bonne marge sur le marché de la seconde main."
+   },
+   "score": 67.8,
+   "ebay": {
+    "requete": "Barbour Heritage Liddesdale",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 220.0,
+     "IT": 145.52,
+     "ES": 142.89
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "Barbour",
+    "asin": "B005HZ07B0",
+    "titre": "Barbour Homme Veste Matelassée Heritage Liddesdale, Navy, XL",
+    "ean": "0884642894797",
+    "pays": "FR",
+    "prix_neuf": 199.95,
+    "prix_amazon": null,
+    "prix_tiers": 199.95,
+    "moyenne_90j": 199.95,
+    "plus_bas_90j": 110.95,
+    "occasion": null,
+    "rang_ventes": 246634,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 8,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B005HZ07B0",
+    "jetons_restants": 256
+   },
+   "asin": "B005HZ07B0",
+   "ean": "0884642894797",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 4,
+   "prix_plancher": {
+    "nom": "Barbour Heritage Liddesdale",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 199.95,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B005HZ07B0"
+   },
+   "remise_sincere": true,
+   "mot_cle": "barbour heritage liddesdale",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 175.96,
+     "marge_nette": 36.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 175.96,
+      "cout_achat": 112.95,
+      "frais_canal": 0.0,
+      "prelevements": 23.58,
+      "provision": 3.0,
+      "marge_nette": 36.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.323
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 175.96,
+     "marge_nette": 36.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 175.96,
+      "cout_achat": 112.95,
+      "frais_canal": 0.0,
+      "prelevements": 23.58,
+      "provision": 3.0,
+      "marge_nette": 36.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.323
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 175.96,
+     "marge_nette": 36.43,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 175.96,
+      "cout_achat": 112.95,
+      "frais_canal": 0.0,
+      "prelevements": 23.58,
+      "provision": 3.0,
+      "marge_nette": 36.43,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.323
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 199.95,
+     "marge_nette": 35.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 199.95,
+      "cout_achat": 112.95,
+      "frais_canal": 22.0,
+      "prelevements": 26.79,
+      "provision": 3.0,
+      "marge_nette": 35.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.312
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 199.95,
+     "marge_nette": 33.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 199.95,
+      "cout_achat": 112.95,
+      "frais_canal": 24.0,
+      "prelevements": 26.79,
+      "provision": 3.0,
+      "marge_nette": 33.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.294
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 199.95,
+     "marge_nette": 33.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 199.95,
+      "cout_achat": 112.95,
+      "frais_canal": 24.0,
+      "prelevements": 26.79,
+      "provision": 3.0,
+      "marge_nette": 33.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.294
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 199.95,
+     "marge_nette": 24.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 199.95,
+      "cout_achat": 112.95,
+      "frais_canal": 32.34,
+      "prelevements": 26.79,
+      "provision": 3.0,
+      "marge_nette": 24.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.22
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 199.95,
+     "marge_nette": 20.22,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 199.95,
+      "cout_achat": 112.95,
+      "frais_canal": 36.98,
+      "prelevements": 26.79,
+      "provision": 3.0,
+      "marge_nette": 20.22,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.179
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 193.95,
+   "marge_verifiee": 52.01,
+   "rentabilite_verifiee": 0.46,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 53.5,
+   "rapport_concurrence": {
+    "requete": "Barbour Heritage Liddesdale",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 8,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 128.6,
+       "titre": "NEU Barbour Heritage Liddesdale Steppmantel Navy UK16 Neu mit Etikett UVP169€ (21",
+       "lien": "https://www.ebay.de/itm/800849218756?_skw=Barbour+Heritage+Liddesdale&hash=itemba76554cc4:g:7fkAAeSwep9nyvNX",
+       "vendeur": "real_retro_stuff",
+       "avis_vendeur": 9287
+      },
+      "plus_cher": {
+       "prix": 249.75,
+       "titre": "Barbour Heritage Liddesdale Quilted Jacke Olive MQU0240 OL71 157203705 [U]",
+       "lien": "https://www.ebay.de/itm/366808056344?_skw=Barbour+Heritage+Liddesdale&hash=item556776c218:g:OgwAAeSwgDpq~rSR",
+       "vendeur": "trenbe",
+       "avis_vendeur": 372
+      }
+     },
+     "IT": {
+      "nb_annonces": 29,
+      "total_ebay": 29,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 116.43,
+       "titre": "Barbour Heritage Liddesdale Giacca Trapuntata Grigio Uomo 2XL Tasche MQU0240",
+       "lien": "https://www.ebay.it/itm/117474728280?_skw=Barbour+Heritage+Liddesdale&hash=item1b5a0a1958:g:xYUAAeSwhKlq1hBi",
+       "vendeur": "kamilaz10",
+       "avis_vendeur": 1249
+      },
+      "plus_cher": {
+       "prix": 328.9,
+       "titre": "Barbour Icons Tartan Heritage Liddesdale Qullted Jacket Classic Tartan",
+       "lien": "https://www.ebay.it/itm/267792504501?_skw=Barbour+Heritage+Liddesdale&hash=item3e59ad56b5:g:jqwAAeSwT0JqyWSO",
+       "vendeur": "sportswearpremium",
+       "avis_vendeur": 410
+      }
+     },
+     "ES": {
+      "nb_annonces": 31,
+      "total_ebay": 31,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 108.26,
+       "titre": "Chaqueta acolchada Barbour Heritage Liddesdale para hombre mediana M verde oliva nueva con etiquetas",
+       "lien": "https://www.ebay.es/itm/940111610668?_skw=Barbour+Heritage+Liddesdale&hash=itemdae304c32c:g:W04AAeSwnxFrAcrf",
+       "vendeur": "vamovementco",
+       "avis_vendeur": 239
+      },
+      "plus_cher": {
+       "prix": 328.9,
+       "titre": "Barbour Icons Tartan Heritage Liddesdale Qullted Jacket Classic Tartan",
+       "lien": "https://www.ebay.es/itm/267792504501?_skw=Barbour+Heritage+Liddesdale&hash=item3e59ad56b5:g:jqwAAeSwT0JqyWSO",
+       "vendeur": "sportswearpremium",
+       "avis_vendeur": 410
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Barbour Heritage Liddesdale",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "barbour heritage liddesdale",
+     "barbour heritage liddesdale quilt",
+     "barbour heritage liddesdale quilted jacket",
+     "barbour heritage liddesdale quilted",
+     "barbour heritage liddesdale review",
+     "barbour heritage liddesdale charcoal",
+     "barbour heritage liddesdale blue",
+     "barbour heritage liddesdale jacket navy",
+     "barbour heritage liddesdale svart",
+     "barbour heritage liddesdale quilted jacket navy"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "40f198db99",
+   "titre": "Zapatillas de trail The north face Vectiv Enduris 4 Race Edition Mujeres- Tallas- 38, 38.5, 39- Descuento con código",
+   "prix": 59.19,
+   "devise": "EUR",
+   "marchand": "Private Sport Shop",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-de-trail-the-north-face-vectiv-enduris-4-race-edition-mujeres-tallas-38-385-39-descuento-con-codigo-2084300",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 190,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/zapatillas-de-trail-the-north-face-vectiv-enduris-4-race-edition-mujeres-tallas-38-385-39-descuento-con-codigo-2084300"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "The North Face Vectiv Enduris",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 102.5,
+   "cout_achat": 64.19,
+   "marge_nette": 21.58,
+   "rentabilite": 0.336,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Chaussures trail The North Face en promo Espagne, marque forte sur Vinted.",
+    "gptoss": "Marge nette intéressante après frais d'import et frais Vinted, forte demande de chaussures de trail."
+   },
+   "score": 34.7,
+   "ebay": {
+    "requete": "The North Face Vectiv Enduris",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Chaussures de trail running The North Face VECTIV Enduris 3 NF0A7W5O hommes 2...",
+      "prix": "150.55",
+      "url": "https://www.ebay.fr/itm/860122600662?_skw=The+North+Face+Vectiv+Enduris&hash=itemc8434d54d6:g:JAwAAeSwiVBq7GgK"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 84.9,
+     "IT": 82.62,
+     "ES": 82.46
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "THE NORTH FACE",
+    "asin": "B0D54BZ618",
+    "titre": "THE NORTH FACE NF0A8AEP73T M VECTIV ENDURIS 4 Homme Hero Blue/Sun Fog EU 42",
+    "ean": "0197643061915",
+    "pays": "FR",
+    "prix_neuf": 162.64,
+    "prix_amazon": null,
+    "prix_tiers": 162.64,
+    "moyenne_90j": 130.43,
+    "plus_bas_90j": 92.99,
+    "occasion": null,
+    "rang_ventes": 144646,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 3,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0D54BZ618",
+    "jetons_restants": 205
+   },
+   "asin": "B0D54BZ618",
+   "ean": "0197643061915",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 1,
+   "prix_plancher": {
+    "nom": "The North Face Vectiv Enduris",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 162.64,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0D54BZ618"
+   },
+   "remise_sincere": true,
+   "mot_cle": "north face vectiv enduris",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 143.12,
+     "marge_nette": 56.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 143.12,
+      "cout_achat": 64.19,
+      "frais_canal": 0.0,
+      "prelevements": 19.18,
+      "provision": 3.0,
+      "marge_nette": 56.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.884
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 143.12,
+     "marge_nette": 56.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 143.12,
+      "cout_achat": 64.19,
+      "frais_canal": 0.0,
+      "prelevements": 19.18,
+      "provision": 3.0,
+      "marge_nette": 56.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.884
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 143.12,
+     "marge_nette": 56.75,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 143.12,
+      "cout_achat": 64.19,
+      "frais_canal": 0.0,
+      "prelevements": 19.18,
+      "provision": 3.0,
+      "marge_nette": 56.75,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.884
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 162.64,
+     "marge_nette": 54.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 162.64,
+      "cout_achat": 64.19,
+      "frais_canal": 19.38,
+      "prelevements": 21.79,
+      "provision": 3.0,
+      "marge_nette": 54.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.845
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 162.64,
+     "marge_nette": 53.02,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 162.64,
+      "cout_achat": 64.19,
+      "frais_canal": 20.64,
+      "prelevements": 21.79,
+      "provision": 3.0,
+      "marge_nette": 53.02,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.826
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 162.64,
+     "marge_nette": 52.65,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 162.64,
+      "cout_achat": 64.19,
+      "frais_canal": 21.01,
+      "prelevements": 21.79,
+      "provision": 3.0,
+      "marge_nette": 52.65,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.82
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 162.64,
+     "marge_nette": 46.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 162.64,
+      "cout_achat": 64.19,
+      "frais_canal": 27.49,
+      "prelevements": 21.79,
+      "provision": 3.0,
+      "marge_nette": 46.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.719
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 162.64,
+     "marge_nette": 42.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 162.64,
+      "cout_achat": 64.19,
+      "frais_canal": 31.39,
+      "prelevements": 21.79,
+      "provision": 3.0,
+      "marge_nette": 42.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.659
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 126.52,
+   "marge_verifiee": 42.38,
+   "rentabilite_verifiee": 0.66,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 43.4,
+   "rapport_concurrence": {
+    "requete": "The North Face Vectiv Enduris",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 26,
+      "total_ebay": 27,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 49.69,
+       "titre": "NEU - The North Face Vectiv Enduris 3 Damen Sneaker - Grau / Orange - UK 3",
+       "lien": "https://www.ebay.de/itm/366220729340?_skw=The+North+Face+Vectiv+Enduris&hash=item554474dbfc:g:~AoAAeSwVQlpm0Un",
+       "vendeur": "hairathomecatherine",
+       "avis_vendeur": 1830
+      },
+      "plus_cher": {
+       "prix": 222.45,
+       "titre": "The North Face Vectiv Enduris 4 Anthracite Grey NF02503-AT Herren Gr.",
+       "lien": "https://www.ebay.de/itm/820383064462?_skw=The+North+Face+Vectiv+Enduris&hash=itembf02a4218e:g:fTAAAeSwXzNrAoIM",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18890
+      }
+     },
+     "IT": {
+      "nb_annonces": 68,
+      "total_ebay": 70,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 50.94,
+       "titre": "NEW - Scarpe da ginnastica The North Face donna Vectiv Enduris 3 - grigio/arancione - UK 3",
+       "lien": "https://www.ebay.it/itm/366220729340?_skw=The+North+Face+Vectiv+Enduris&hash=item554474dbfc:g:~AoAAeSwVQlpm0Un",
+       "vendeur": "hairathomecatherine",
+       "avis_vendeur": 1830
+      },
+      "plus_cher": {
+       "prix": 232.49,
+       "titre": "Sneakers e scarpe da ginnastica uomo The North Face VECTIV Enduris 4",
+       "lien": "https://www.ebay.it/itm/117418843824?_skw=The+North+Face+Vectiv+Enduris&hash=item1b56b55eb0:g:ODUAAeSwaTFrAqGx",
+       "vendeur": "sports-space",
+       "avis_vendeur": 15903
+      }
+     },
+     "ES": {
+      "nb_annonces": 53,
+      "total_ebay": 55,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 50.52,
+       "titre": "NUEVO - Zapatillas de deporte The North Face Vectiv Enduris 3 para mujer - Gris/Naranja - Reino Unido 3",
+       "lien": "https://www.ebay.es/itm/366220729340?_skw=The+North+Face+Vectiv+Enduris&hash=item554474dbfc:g:~AoAAeSwVQlpm0Un",
+       "vendeur": "hairathomecatherine",
+       "avis_vendeur": 1830
+      },
+      "plus_cher": {
+       "prix": 232.49,
+       "titre": "Zapatillas y zapatos deportivos para hombre The North Face VECTIV Enduris 4",
+       "lien": "https://www.ebay.es/itm/117418843824?_skw=The+North+Face+Vectiv+Enduris&hash=item1b56b55eb0:g:ODUAAeSwaTFrAqGx",
+       "vendeur": "sports-space",
+       "avis_vendeur": 15903
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "The North Face Vectiv Enduris",
+    "temperature_dealabs": 190,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "the north face vectiv enduris 4",
+     "the north face vectiv enduris 4 femme",
+     "the north face vectiv enduris 4 homme",
+     "the north face vectiv enduris",
+     "the north face vectiv enduris 3",
+     "the north face vectiv enduris 4 avis",
+     "the north face vectiv enduris 4 test",
+     "the north face vectiv enduris 4 trail running shoes",
+     "the north face vectiv enduris 4 race edition",
+     "the north face vectiv enduris 2"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "2e81e70794",
+   "titre": "Chaussures Nike Jordan Court Connect Low - Divers coloris, tailles 35,5 au 40",
+   "prix": 48.99,
+   "devise": "EUR",
+   "marchand": "Nike",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-jordan-court-connect-low-divers-coloris-tailles-355-au-40-3465456",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-jordan-court-connect-low-divers-coloris-tailles-355-au-40-3465456"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Nike Jordan Court Connect",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 97.5,
+   "cout_achat": 53.99,
+   "marge_nette": 27.45,
+   "rentabilite": 0.508,
+   "demande": 4.0,
+   "concurrence": 3.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "qwen": "Baskets Nike à 49€ contre un prix de revente neuf de 70-80€, forte demande et absence de frais sur Vinted.",
+    "gptoss": "Sneakers populaires, marge intéressante même avec concurrence."
+   },
+   "score": 51.5,
+   "ebay": {
+    "requete": "Nike Jordan Court Connect",
+    "neuf": {
+     "nb": 5,
+     "min": 98.0,
+     "p25": 100.0,
+     "mediane": 108.0,
+     "max": 127.0
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "nike Jordan court connect low neuve blanc et rose EU 35",
+      "prix": "31.90",
+      "url": "https://www.ebay.fr/itm/327447887935?_skw=Nike+Jordan+Court+Connect&hash=item4c3d6a403f:g:T3YAAeSwjllq8bIP"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 100.0,
+     "DE": 85.03,
+     "IT": 59.73,
+     "ES": 60.8
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "NIKE",
+    "asin": "B0H3PNDZZ2",
+    "titre": "Nike Jordan Court Connect Mid Active Baskets pour homme, Noir/gris fumé DK, 45 EU",
+    "ean": "0198958907318",
+    "pays": "FR",
+    "prix_neuf": 99.7,
+    "prix_amazon": null,
+    "prix_tiers": 99.7,
+    "moyenne_90j": null,
+    "plus_bas_90j": 99.7,
+    "occasion": null,
+    "rang_ventes": null,
+    "chutes_rang_30j": 0,
+    "chutes_rang_90j": 0,
+    "ventes_estimees_30j": 0,
+    "remise_sincere": null,
+    "lien": "https://www.amazon.fr/dp/B0H3PNDZZ2",
+    "jetons_restants": 245
+   },
+   "asin": "B0H3PNDZZ2",
+   "ean": "0198958907318",
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 0,
+   "prix_plancher": {
+    "nom": "Nike Jordan Court Connect",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 99.7,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0H3PNDZZ2"
+   },
+   "mot_cle": "nike jordan court connect",
+   "annonces_ebay": 5,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 87.74,
+     "marge_nette": 18.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.74,
+      "cout_achat": 53.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.76,
+      "provision": 3.0,
+      "marge_nette": 18.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.352
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 87.74,
+     "marge_nette": 18.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.74,
+      "cout_achat": 53.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.76,
+      "provision": 3.0,
+      "marge_nette": 18.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.352
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 87.74,
+     "marge_nette": 18.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 87.74,
+      "cout_achat": 53.99,
+      "frais_canal": 0.0,
+      "prelevements": 11.76,
+      "provision": 3.0,
+      "marge_nette": 18.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.352
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 99.7,
+     "marge_nette": 14.38,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.7,
+      "cout_achat": 53.99,
+      "frais_canal": 14.97,
+      "prelevements": 13.36,
+      "provision": 3.0,
+      "marge_nette": 14.38,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.266
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 99.7,
+     "marge_nette": 14.37,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.7,
+      "cout_achat": 53.99,
+      "frais_canal": 14.98,
+      "prelevements": 13.36,
+      "provision": 3.0,
+      "marge_nette": 14.37,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.266
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 99.7,
+     "marge_nette": 13.37,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.7,
+      "cout_achat": 53.99,
+      "frais_canal": 15.98,
+      "prelevements": 13.36,
+      "provision": 3.0,
+      "marge_nette": 13.37,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.248
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 99.7,
+     "marge_nette": 10.04,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.7,
+      "cout_achat": 53.99,
+      "frais_canal": 19.31,
+      "prelevements": 13.36,
+      "provision": 3.0,
+      "marge_nette": 10.04,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.186
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 99.7,
+     "marge_nette": 7.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 99.7,
+      "cout_achat": 53.99,
+      "frais_canal": 21.95,
+      "prelevements": 13.36,
+      "provision": 3.0,
+      "marge_nette": 7.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.137
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 96.71,
+   "marge_verifiee": 26.76,
+   "rentabilite_verifiee": 0.496,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 20.9,
+   "rapport_concurrence": {
+    "requete": "Nike Jordan Court Connect",
+    "pays": {
+     "FR": {
+      "nb_annonces": 5,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 98.0,
+       "titre": "Chaussures Nike Jordan Court Connect Low IQ6046001",
+       "lien": "https://www.ebay.fr/itm/860164926594?_skw=Nike+Jordan+Court+Connect&hash=itemc845d32c82:g:NjEAAeSwSqhrAaZO",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3953
+      },
+      "plus_cher": {
+       "prix": 127.0,
+       "titre": "Chaussures Nike Jordan Court Connect IQ5685001",
+       "lien": "https://www.ebay.fr/itm/257801151612?_skw=Nike+Jordan+Court+Connect&hash=item3c0625647c:g:bh8AAeSw109rAQDH",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3953
+      }
+     },
+     "DE": {
+      "nb_annonces": 45,
+      "total_ebay": 46,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 64.9,
+       "titre": "Nike Jordan Court Connect Low W Beige Gr. 44 UK 9 IQ6828 200",
+       "lien": "https://www.ebay.de/itm/327320712190?_skw=Nike+Jordan+Court+Connect&hash=item4c35d5b3fe:g:F4UAAeSwo5FqiECT",
+       "vendeur": "montesun",
+       "avis_vendeur": 3842
+      },
+      "plus_cher": {
+       "prix": 188.07,
+       "titre": "Nike Jordan Court Connect Low Schwarz Weiß Rot IQ5698-003 Herren US3-14 Neu",
+       "lien": "https://www.ebay.de/itm/206644717611?_skw=Nike+Jordan+Court+Connect&hash=item301cfc282b:g:Np8AAeSwTxJq2ETu",
+       "vendeur": "quu_japan",
+       "avis_vendeur": 3303
+      }
+     },
+     "IT": {
+      "nb_annonces": 51,
+      "total_ebay": 65,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 50.79,
+       "titre": "Nike Jordan Court Connect basse beige/avorio ammortizzate donna UK 9 EU 44 US11,5",
+       "lien": "https://www.ebay.it/itm/267829194125?_skw=Nike+Jordan+Court+Connect&hash=item3e5bdd2d8d:g:MowAAeSwgzNq5j1l",
+       "vendeur": "jdmsparesscotland",
+       "avis_vendeur": 726
+      },
+      "plus_cher": {
+       "prix": 176.51,
+       "titre": "Nike Jordan Court Connect Mid Black Varsity Royal IZ1346-001 taglia uomo",
+       "lien": "https://www.ebay.it/itm/820371133035?_skw=Nike+Jordan+Court+Connect&hash=itembf01ee126b:g:nsoAAeSwfotq7roX",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18890
+      }
+     },
+     "ES": {
+      "nb_annonces": 74,
+      "total_ebay": 87,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 50.38,
+       "titre": "Nike Jordan Court Connect Bajo Beige/Marfil Acolchado Mujer UK 9 EU 44 US11.5",
+       "lien": "https://www.ebay.es/itm/267829194125?_skw=Nike+Jordan+Court+Connect&hash=item3e5bdd2d8d:g:MowAAeSwgzNq5j1l",
+       "vendeur": "jdmsparesscotland",
+       "avis_vendeur": 726
+      },
+      "plus_cher": {
+       "prix": 180.42,
+       "titre": "Nike Jordan Court Connect Zapatillas bajas de terciopelo marrón Stock limitado Todas las tallas",
+       "lien": "https://www.ebay.es/itm/840030606242?_skw=Nike+Jordan+Court+Connect&hash=itemc395b9d3a2:g:ZW0AAeSw4f9q02sK",
+       "vendeur": "allaboutsneakersss",
+       "avis_vendeur": 5742
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Nike Jordan Court Connect",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "nike jordan court connect mid",
+     "nike jordan court connect low",
+     "nike jordan court connect",
+     "air jordan court connect",
+     "air jordan court connect low"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "d8315c3f49",
+   "titre": "Buty hikingowe damskie Merrell Speed Strike 2",
+   "prix": 39.71,
+   "devise": "EUR",
+   "marchand": "MERRELL",
+   "lien": "https://www.pepper.pl/promocje/buty-hikingowe-damskie-merrell-speed-strike-2-1395867",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 240,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/buty-hikingowe-damskie-merrell-speed-strike-2-1395867"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Merrell Speed Strike 2 femme",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 77.5,
+   "cout_achat": 44.71,
+   "marge_nette": 19.41,
+   "rentabilite": 0.434,
+   "demande": 3.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Chaussures de randonnée Merrell bradées depuis la Pologne, très recherchées sur Vinted.",
+    "gptoss": "Chaussures de randonnée populaires, marge intéressante."
+   },
+   "score": 38.0,
+   "ebay": {
+    "requete": "Merrell Speed Strike 2 femme",
+    "neuf": {
+     "nb": 5,
+     "min": 88.79,
+     "p25": 88.79,
+     "mediane": 88.79,
+     "max": 134.0
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Merrell Women's Speed Strike 2 Leather Latte Hiking Shoes J038952",
+      "prix": "88.79",
+      "url": "https://www.ebay.fr/itm/128060222122?_skw=Merrell+Speed+Strike+2+femme&hash=item1dd0fbeaaa:g:gIMAAeSwF5BqmRTQ"
+     },
+     {
+      "titre": "Merrell Women's Speed Strike 2 Trek Pigeon Running Shoes J008152",
+      "prix": "88.79",
+      "url": "https://www.ebay.fr/itm/117393662232?_skw=Merrell+Speed+Strike+2+femme&hash=item1b55352118:g:m-EAAeSwFfJqmRi-"
+     },
+     {
+      "titre": "Merrell Women's Speed Strike 2 Trek Coal Running Shoes J008150",
+      "prix": "88.79",
+      "url": "https://www.ebay.fr/itm/117393644891?_skw=Merrell+Speed+Strike+2+femme&hash=item1b5534dd5b:g:OVUAAeSwGatqmRGS"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 88.79,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 2,
+    "marque": "Merrell",
+    "asin": "B0CQN2MFZG",
+    "titre": "Merrell Femme Speed Strike 2 Thermo Mid Waterproof Botte de randonnée, Monument, 35 EU",
+    "ean": "0195020359457",
+    "pays": "FR",
+    "prix_neuf": 122.29,
+    "prix_amazon": null,
+    "prix_tiers": 122.29,
+    "moyenne_90j": 150.53,
+    "plus_bas_90j": 118.76,
+    "occasion": null,
+    "rang_ventes": 812731,
+    "chutes_rang_30j": 1,
+    "chutes_rang_90j": 4,
+    "ventes_estimees_30j": 1,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0CQN2MFZG",
+    "jetons_restants": 235
+   },
+   "asin": "B0CQN2MFZG",
+   "ean": "0195020359457",
+   "vendeurs_amazon": 2,
+   "ventes_estimees_30j": 1,
+   "prix_plancher": {
+    "nom": "Merrell Speed Strike 2 femme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 122.29,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CQN2MFZG"
+   },
+   "remise_sincere": true,
+   "mot_cle": "merrell speed strike 2",
+   "annonces_ebay": 5,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 107.62,
+     "marge_nette": 45.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.62,
+      "cout_achat": 44.71,
+      "frais_canal": 0.0,
+      "prelevements": 14.42,
+      "provision": 3.0,
+      "marge_nette": 45.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 107.62,
+     "marge_nette": 45.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.62,
+      "cout_achat": 44.71,
+      "frais_canal": 0.0,
+      "prelevements": 14.42,
+      "provision": 3.0,
+      "marge_nette": 45.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.017
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 107.62,
+     "marge_nette": 45.49,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 107.62,
+      "cout_achat": 44.71,
+      "frais_canal": 0.0,
+      "prelevements": 14.42,
+      "provision": 3.0,
+      "marge_nette": 45.49,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.017
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 122.29,
+     "marge_nette": 41.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 122.29,
+      "cout_achat": 44.71,
+      "frais_canal": 16.56,
+      "prelevements": 16.39,
+      "provision": 3.0,
+      "marge_nette": 41.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.931
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 122.29,
+     "marge_nette": 41.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 122.29,
+      "cout_achat": 44.71,
+      "frais_canal": 17.01,
+      "prelevements": 16.39,
+      "provision": 3.0,
+      "marge_nette": 41.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.921
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 122.29,
+     "marge_nette": 40.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 122.29,
+      "cout_achat": 44.71,
+      "frais_canal": 17.78,
+      "prelevements": 16.39,
+      "provision": 3.0,
+      "marge_nette": 40.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.904
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 122.29,
+     "marge_nette": 35.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 122.29,
+      "cout_achat": 44.71,
+      "frais_canal": 22.25,
+      "prelevements": 16.39,
+      "provision": 3.0,
+      "marge_nette": 35.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.804
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 122.29,
+     "marge_nette": 32.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 122.29,
+      "cout_achat": 44.71,
+      "frais_canal": 25.33,
+      "prelevements": 16.39,
+      "provision": 3.0,
+      "marge_nette": 32.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.735
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 86.13,
+   "marge_verifiee": 26.88,
+   "rentabilite_verifiee": 0.601,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 18.3,
+   "rapport_concurrence": {
+    "requete": "Merrell Speed Strike 2 femme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 66,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 70,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Merrell Speed Strike 2 femme",
+    "temperature_dealabs": 240,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "merrell speed strike 2 femme",
+     "merrell speed strike 2 femme avis",
+     "merrell speed strike 2 woman",
+     "merrell speed strike 2 women's black",
+     "merrell speed strike 2 gtx femme",
+     "merrell speed strike 2 gtx femme avis",
+     "merrell speed strike 2 trek femme",
+     "merrell speed strike 2 gtx femme intersport",
+     "merrell speed strike 2 ltr femme",
+     "merrell speed strike 2 mid femme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "32bea54a13",
+   "titre": "New balance 237 trainers navy UK 7, 8 & 10",
+   "prix": 16.0,
+   "devise": "GBP",
+   "marchand": "Jacamo",
+   "lien": "https://www.hotukdeals.com/deals/new-balance-237-trainers-navy-uk-7-8-10-5042980",
+   "pays": "UK",
+   "source": "hotukdeals-new",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.hotukdeals.com/deals/new-balance-237-trainers-navy-uk-7-8-10-5042980"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "New Balance 237",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 55.0,
+   "cout_achat": 30.08,
+   "marge_nette": 14.55,
+   "rentabilite": 0.484,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Prix bien inférieur au neuf, modèle recherché sur Vinted et facile à expédier."
+   },
+   "score": 36.1,
+   "ebay": {
+    "requete": "New Balance 237",
+    "neuf": {
+     "nb": 27,
+     "min": 59.0,
+     "p25": 81.0,
+     "mediane": 99.99,
+     "max": 282.99
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "New Balance 237 Femme Violet Noir Taille 41,5 Très Bon État New Balance",
+      "prix": "46.15",
+      "url": "https://www.ebay.fr/itm/336907116560?_skw=New+Balance+237&hash=item4e713aa010:g:Q5UAAeSwUoZrABe8"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 81.0,
+     "DE": 63.74,
+     "IT": 63.54,
+     "ES": 61.73
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 5,
+    "marque": "New Balance",
+    "asin": "B09YBW4SW2",
+    "titre": "New Balance 237 Chaussure de Gymnastique",
+    "ean": "0196432912230",
+    "pays": "FR",
+    "prix_neuf": 58.09,
+    "prix_amazon": 58.09,
+    "prix_tiers": 58.09,
+    "moyenne_90j": 68.44,
+    "plus_bas_90j": 58.09,
+    "occasion": null,
+    "rang_ventes": 101347,
+    "chutes_rang_30j": 5,
+    "chutes_rang_90j": 11,
+    "ventes_estimees_30j": 5,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B09YBW4SW2",
+    "jetons_restants": 225
+   },
+   "asin": "B09YBW4SW2",
+   "ean": "0196432912230",
+   "vendeurs_amazon": 5,
+   "ventes_estimees_30j": 5,
+   "prix_plancher": {
+    "nom": "New Balance 237",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 58.09,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B09YBW4SW2"
+   },
+   "remise_sincere": true,
+   "mot_cle": "balance 237",
+   "annonces_ebay": 27,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 51.12,
+     "marge_nette": 11.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.12,
+      "cout_achat": 30.08,
+      "frais_canal": 0.0,
+      "prelevements": 6.85,
+      "provision": 3.0,
+      "marge_nette": 11.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.372
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 51.12,
+     "marge_nette": 11.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.12,
+      "cout_achat": 30.08,
+      "frais_canal": 0.0,
+      "prelevements": 6.85,
+      "provision": 3.0,
+      "marge_nette": 11.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.372
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 51.12,
+     "marge_nette": 11.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 51.12,
+      "cout_achat": 30.08,
+      "frais_canal": 0.0,
+      "prelevements": 6.85,
+      "provision": 3.0,
+      "marge_nette": 11.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.372
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 58.09,
+     "marge_nette": 6.0,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 58.09,
+      "cout_achat": 30.08,
+      "frais_canal": 11.23,
+      "prelevements": 7.78,
+      "provision": 3.0,
+      "marge_nette": 6.0,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.199
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 58.09,
+     "marge_nette": 5.16,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 58.09,
+      "cout_achat": 30.08,
+      "frais_canal": 12.07,
+      "prelevements": 7.78,
+      "provision": 3.0,
+      "marge_nette": 5.16,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.172
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 58.09,
+     "marge_nette": 4.58,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 58.09,
+      "cout_achat": 30.08,
+      "frais_canal": 12.65,
+      "prelevements": 7.78,
+      "provision": 3.0,
+      "marge_nette": 4.58,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.152
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 58.09,
+     "marge_nette": 3.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 58.09,
+      "cout_achat": 30.08,
+      "frais_canal": 13.9,
+      "prelevements": 7.78,
+      "provision": 3.0,
+      "marge_nette": 3.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.11
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 58.09,
+     "marge_nette": 1.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 58.09,
+      "cout_achat": 30.08,
+      "frais_canal": 15.7,
+      "prelevements": 7.78,
+      "provision": 3.0,
+      "marge_nette": 1.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.051
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 56.35,
+   "marge_verifiee": 15.72,
+   "rentabilite_verifiee": 0.523,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "moyenne",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 8.8,
+   "rapport_concurrence": {
+    "requete": "New Balance 237",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 59.0,
+       "titre": "BASKET NEW BALANCE NB 237 NEUF POINTURE 44.5",
+       "lien": "https://www.ebay.fr/itm/128067345867?_skw=New+Balance+237&hash=item1dd1689dcb:g:Q-4AAeSwl89qnt6O",
+       "vendeur": "au-boncoin-des-prix",
+       "avis_vendeur": 2066
+      },
+      "plus_cher": {
+       "prix": 59.0,
+       "titre": "BASKET NEW BALANCE NB 237 NEUF POINTURE 44.5",
+       "lien": "https://www.ebay.fr/itm/128067345867?_skw=New+Balance+237&hash=item1dd1689dcb:g:Q-4AAeSwl89qnt6O",
+       "vendeur": "au-boncoin-des-prix",
+       "avis_vendeur": 2066
+      }
+     },
+     "DE": {
+      "nb_annonces": 12,
+      "total_ebay": 85,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 47.0,
+       "titre": "Herren Sneaker New Balance 237 Neue mit Karton Gr. 42  New Balance",
+       "lien": "https://www.ebay.de/itm/800333087091?_skw=New+Balance+237&hash=itemba5791c173:g:qKQAAeSwzIxqVL14",
+       "vendeur": "ewelinhint0",
+       "avis_vendeur": 256
+      },
+      "plus_cher": {
+       "prix": 63.87,
+       "titre": "New Balance 237 Damen Sneaker UK 6,5 Schwarz Grau Turnschuhe Laufschuhe Neu",
+       "lien": "https://www.ebay.de/itm/227570011963?_skw=New+Balance+237&hash=item34fc3acf3b:g:KAcAAeSwOcNqdeql",
+       "vendeur": "ukdeals2121",
+       "avis_vendeur": 3465
+      }
+     },
+     "IT": {
+      "nb_annonces": 69,
+      "total_ebay": 201,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 35.0,
+       "titre": "NEW BALANCE 237 SCARPE SNEAKERS Donna W2378GG Multicolor",
+       "lien": "https://www.ebay.it/itm/188142247067?_skw=New+Balance+237&hash=item2bce26dc9b:g:k40AAeSw9uxpsGsX",
+       "vendeur": "ollisport",
+       "avis_vendeur": 2576
+      },
+      "plus_cher": {
+       "prix": 63.06,
+       "titre": "New Balance Unisex 237 Lifestyle Shoes Sneakers Size Men 4/Wmn 5.5",
+       "lien": "https://www.ebay.it/itm/306864439891?_skw=New+Balance+237&hash=item47728bc253:g:aAcAAeSwiwJp0zMs",
+       "vendeur": "axiomprep",
+       "avis_vendeur": 15577
+      }
+     },
+     "ES": {
+      "nb_annonces": 60,
+      "total_ebay": 218,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 38.61,
+       "titre": "Zapatillas deportivas New Balance 237 Bungee de cuero con cordones blancas/negras/grises EE. UU. 5 IH237CG",
+       "lien": "https://www.ebay.es/itm/287740724404?_skw=New+Balance+237&hash=item42feaf04b4:g:FWwAAeSwIHBq~pjQ",
+       "vendeur": "edwinrecinos7dh",
+       "avis_vendeur": 20
+      },
+      "plus_cher": {
+       "prix": 63.99,
+       "titre": "New Balance 237 Zapatos Mujer 11.5 B Gris Púrpura Correr Informales Tenis W237VA",
+       "lien": "https://www.ebay.es/itm/206304895365?_skw=New+Balance+237&hash=item3008bae185:g:3jMAAeSwHjBqGDlR",
+       "vendeur": "alybalciti_0",
+       "avis_vendeur": 123
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "New Balance 237",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 4,
+     "interet_recent": 50,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      83,
+      0,
+      0,
+      0,
+      69,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      98,
+      100,
+      0,
+      0
+     ],
+     "recherches_liees": [
+      {
+       "query": "new balance 237 femme",
+       "value": 100
+      },
+      {
+       "query": "new balance 237 homme",
+       "value": 38
+      },
+      {
+       "query": "new balance 327",
+       "value": 36
+      },
+      {
+       "query": "new balance 574",
+       "value": 1
+      }
+     ]
+    },
+    "suggestions_google": [
+     "new balance 237",
+     "new balance 237 femme",
+     "new balance 237 homme",
+     "new balance 237 homme noir",
+     "new balance 237 enfant",
+     "new balance 237 femme multicolore",
+     "new balance 237 femme noire",
+     "new balance 237 beige",
+     "new balance 237 noir",
+     "new balance 237 bleu"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "a8f01e8022",
+   "titre": "Makita premier set 38 delig",
+   "prix": 15.38,
+   "devise": "EUR",
+   "marchand": "Amazon.nl",
+   "lien": "https://nl.pepper.com/aanbiedingen/makita-premier-set-38-delig-428662",
+   "pays": "NL",
+   "source": "pepper-nl-hot",
+   "temperature": 112,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://nl.pepper.com/aanbiedingen/makita-premier-set-38-delig-428662"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Makita set 38 pièces",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 92.5,
+   "cout_achat": 20.38,
+   "marge_nette": 56.73,
+   "rentabilite": 2.784,
+   "demande": 3.5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": true,
+   "raisons": {
+    "nemotron_nv": "Set d'outils Makita à prix inhabituellement bas, facile à revendre localement.",
+    "gptoss": "Prix anormalement bas, risque d'annulation par le marchand."
+   },
+   "score": 162.4,
+   "ebay": {
+    "requete": "Makita set 38 pièces",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "prix_plancher": {
+    "nom": "Makita set 38 pièces",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "makita 38",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Makita set 38 pièces",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 15,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Makita set 38 pièces",
+    "temperature_dealabs": 112,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B0FZ96XHRT-neuf",
+   "titre": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumineuses, Roller Réglable Fille G",
+   "prix": 41.8,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B0FZ96XHRT",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 504,
+   "domaine": "autre",
+   "nom_produit": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumin",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 99.07,
+   "cout_achat": 46.8,
+   "marge_nette": 35.99,
+   "rentabilite": 0.769,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 112.58 €, baisse 63 %, rang 33974"
+   },
+   "score": 76.9,
+   "asin": "B0FZ96XHRT",
+   "ean": null,
+   "vendeurs_amazon": 1,
+   "ventes_estimees_30j": 12,
+   "ebay": {
+    "requete": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumin",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 1,
+    "marque": "Belfoyer",
+    "asin": "B0FZ96XHRT",
+    "titre": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumineuses, Roller Réglable Fille Garçon, Patins Sécurisés avec Frein, Taille M-Rosa",
+    "ean": null,
+    "pays": "FR",
+    "prix_neuf": 41.8,
+    "prix_amazon": null,
+    "prix_tiers": 41.8,
+    "moyenne_90j": 111.5,
+    "plus_bas_90j": 37.99,
+    "occasion": null,
+    "rang_ventes": 6872,
+    "chutes_rang_30j": 12,
+    "chutes_rang_90j": 15,
+    "ventes_estimees_30j": 12,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FZ96XHRT",
+    "jetons_restants": 266
+   },
+   "prix_plancher": {
+    "nom": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumin",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 41.8,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0FZ96XHRT"
+   },
+   "remise_sincere": true,
+   "mot_cle": "belfoyer patin a roulettes",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FZ96XHRT"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 36.78,
+     "marge_nette": -17.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.78,
+      "cout_achat": 46.8,
+      "frais_canal": 0.0,
+      "prelevements": 4.93,
+      "provision": 3.0,
+      "marge_nette": -17.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.384
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 36.78,
+     "marge_nette": -17.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.78,
+      "cout_achat": 46.8,
+      "frais_canal": 0.0,
+      "prelevements": 4.93,
+      "provision": 3.0,
+      "marge_nette": -17.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.384
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 36.78,
+     "marge_nette": -17.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 36.78,
+      "cout_achat": 46.8,
+      "frais_canal": 0.0,
+      "prelevements": 4.93,
+      "provision": 3.0,
+      "marge_nette": -17.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.384
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 41.8,
+     "marge_nette": -23.36,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.8,
+      "cout_achat": 46.8,
+      "frais_canal": 9.76,
+      "prelevements": 5.6,
+      "provision": 3.0,
+      "marge_nette": -23.36,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.499
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 41.8,
+     "marge_nette": -24.53,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.8,
+      "cout_achat": 46.8,
+      "frais_canal": 10.93,
+      "prelevements": 5.6,
+      "provision": 3.0,
+      "marge_nette": -24.53,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.524
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 41.8,
+     "marge_nette": -24.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.8,
+      "cout_achat": 46.8,
+      "frais_canal": 11.34,
+      "prelevements": 5.6,
+      "provision": 3.0,
+      "marge_nette": -24.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.533
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 41.8,
+     "marge_nette": -25.39,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.8,
+      "cout_achat": 46.8,
+      "frais_canal": 11.78,
+      "prelevements": 5.6,
+      "provision": 3.0,
+      "marge_nette": -25.39,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.543
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 41.8,
+     "marge_nette": -26.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 41.8,
+      "cout_achat": 46.8,
+      "frais_canal": 13.26,
+      "prelevements": 5.6,
+      "provision": 3.0,
+      "marge_nette": -26.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.574
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 37.62,
+   "marge_verifiee": -17.22,
+   "rentabilite_verifiee": -0.368,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumin",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumin",
+    "temperature_dealabs": 504,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "535206fe85",
+   "titre": "Drukarka Brother DCP-J1360DW urządzenie wielofunkcyjne 3 w 1 | amazon.de | 56,31€",
+   "prix": 59.02,
+   "devise": "EUR",
+   "marchand": "Amazon.de",
+   "lien": "https://www.pepper.pl/promocje/drukarka-brother-dcp-j1360dw-urzadzenie-wielofunkcyjne-3-w-1-amazonde-1397146",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 344,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/drukarka-brother-dcp-j1360dw-urzadzenie-wielofunkcyjne-3-w-1-amazonde-1397146"
+   },
+   "meme_produit": {
+    "meme": null,
+    "raison": "non confirmé",
+    "qte_a": null,
+    "qte_b": null,
+    "reference": "BROTHER  DCP-J1360DW Imprimante à Jet d'encre compacte sans Fil 3-en-1"
+   },
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Brother DCP-J1360DW",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 96.76,
+   "cout_achat": 64.02,
+   "marge_nette": 16.77,
+   "rentabilite": 0.262,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 46 % vs neuf le moins cher"
+   },
+   "score": 69.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Brother DCP-J1360DW",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "BROTHER  DCP-J1360DW Imprimante à Jet d'encre compacte sans Fil 3-en-1",
+       "prix": 109.95,
+       "nb_boutiques": 17,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Imprimante/brother-dcp-j1360dw-imprimante-a-jet-d-encre-compacte-sans-fil-3-en-1.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 109.95,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Imprimante/brother-dcp-j1360dw-imprimante-a-jet-d-encre-compacte-sans-fil-3-en-1.html"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 72,
+    "marque": "Brother",
+    "asin": "B0FB3YQKVJ",
+    "titre": "Brother DCP-J1360DW Imprimante à Jet d'encre compacte sans Fil 3-en-1 (Impression/Copie/Scan) - WiFi - Compacte sans Fil, Eligible au Forfait EcoPro",
+    "ean": "4977766841894",
+    "pays": "FR",
+    "prix_neuf": 109.95,
+    "prix_amazon": 109.95,
+    "prix_tiers": 109.95,
+    "moyenne_90j": 117.38,
+    "plus_bas_90j": 98.74,
+    "occasion": null,
+    "rang_ventes": 304,
+    "chutes_rang_30j": 34,
+    "chutes_rang_90j": 112,
+    "ventes_estimees_30j": 34,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B0FB3YQKVJ",
+    "jetons_restants": 226
+   },
+   "ean": "4977766841894",
+   "asin": "B0FB3YQKVJ",
+   "vendeurs_amazon": 72,
+   "ventes_estimees_30j": 34,
+   "ebay": {
+    "requete": "Brother DCP-J1360DW",
+    "neuf": {
+     "nb": 14,
+     "min": 27.95,
+     "p25": 46.45,
+     "mediane": 69.95,
+     "max": 326.58
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Cartouches pour Brother DCP-J1313DW DCP-J1360DW individuellement C M Y BK ou ...",
+      "prix": "94.47",
+      "url": "https://www.ebay.fr/itm/298729117075?_skw=Brother+DCP-J1360DW&hash=item458da49593:g:81IAAeSwKRpqwLo8"
+     },
+     {
+      "titre": "Cartouches pour Brother DCP-J1260W DCP-J1310DW individuellement C M Y BK ou...",
+      "prix": "12.57",
+      "url": "https://www.ebay.fr/itm/298729163731?_skw=Brother+DCP-J1360DW&hash=item458da54bd3:g:jpMAAeSwbn5qwNT6"
+     },
+     {
+      "titre": "Cartouches pour Brother DCP-J1460DW - remplissage XL, sélection individuelle ...",
+      "prix": "94.47",
+      "url": "https://www.ebay.fr/itm/298729147624?_skw=Brother+DCP-J1360DW&hash=item458da50ce8:g:81IAAeSwKRpqwLo8"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 46.45,
+     "DE": 42.98,
+     "IT": 36.37,
+     "ES": 36.07
+    },
+    "meilleur_pays": "FR"
+   },
+   "mot_cle": "brother dcp",
+   "annonces_ebay": 14,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 96.76,
+     "marge_nette": 16.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 96.76,
+      "cout_achat": 64.02,
+      "frais_canal": 0.0,
+      "prelevements": 12.97,
+      "provision": 3.0,
+      "marge_nette": 16.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.262
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 96.76,
+     "marge_nette": 16.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 96.76,
+      "cout_achat": 64.02,
+      "frais_canal": 0.0,
+      "prelevements": 12.97,
+      "provision": 3.0,
+      "marge_nette": 16.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.262
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 96.76,
+     "marge_nette": 16.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 96.76,
+      "cout_achat": 64.02,
+      "frais_canal": 0.0,
+      "prelevements": 12.97,
+      "provision": 3.0,
+      "marge_nette": 16.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.262
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 109.95,
+     "marge_nette": 12.5,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 109.95,
+      "cout_achat": 64.02,
+      "frais_canal": 15.7,
+      "prelevements": 14.73,
+      "provision": 3.0,
+      "marge_nette": 12.5,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.195
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 109.95,
+     "marge_nette": 12.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 109.95,
+      "cout_achat": 64.02,
+      "frais_canal": 15.9,
+      "prelevements": 14.73,
+      "provision": 3.0,
+      "marge_nette": 12.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.192
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 109.95,
+     "marge_nette": 11.4,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 109.95,
+      "cout_achat": 64.02,
+      "frais_canal": 16.8,
+      "prelevements": 14.73,
+      "provision": 3.0,
+      "marge_nette": 11.4,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.178
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 109.95,
+     "marge_nette": 7.55,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 109.95,
+      "cout_achat": 64.02,
+      "frais_canal": 20.64,
+      "prelevements": 14.73,
+      "provision": 3.0,
+      "marge_nette": 7.55,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.118
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 109.95,
+     "marge_nette": 4.71,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 109.95,
+      "cout_achat": 64.02,
+      "frais_canal": 23.48,
+      "prelevements": 14.73,
+      "provision": 3.0,
+      "marge_nette": 4.71,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.074
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 46.45,
+   "marge_verifiee": -26.79,
+   "rentabilite_verifiee": -0.418,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Brother DCP-J1360DW",
+    "pays": {
+     "FR": {
+      "nb_annonces": 3,
+      "total_ebay": 13,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 32.88,
+       "titre": "Cartouches compatibles Brother LC521 LC521XL LC521VAL 4 couleurs DCP-J1360DW",
+       "lien": "https://www.ebay.fr/itm/840098733298?_skw=Brother+DCP-J1360DW&hash=itemc399c95cf2:g:5h4AAeSwTARq7USG",
+       "vendeur": "custominfo",
+       "avis_vendeur": 2122
+      },
+      "plus_cher": {
+       "prix": 201.98,
+       "titre": "Brother DCP-J1360DW Imprimante multifonction jet d'encre A4",
+       "lien": "https://www.ebay.fr/itm/267808947031?_skw=Brother+DCP-J1360DW&hash=item3e5aa83b57:g:NRgAAeSwwuVq9UdI",
+       "vendeur": "conrad_france",
+       "avis_vendeur": 41026
+      }
+     },
+     "DE": {
+      "nb_annonces": 36,
+      "total_ebay": 100,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 32.88,
+       "titre": "Patronen kompatibel zu Brother LC521 LC521XL LC521VAL 4 Farben DCP-J1360DW",
+       "lien": "https://www.ebay.de/itm/840098754566?_skw=Brother+DCP-J1360DW&hash=itemc399c9b006:g:4rMAAeSwOIRq7UVP",
+       "vendeur": "custominfo",
+       "avis_vendeur": 2122
+      },
+      "plus_cher": {
+       "prix": 215.21,
+       "titre": "Brother DCP-J1360DW Multifunktionsgerät 3in1 Tintenstrahldrucker WLAN Scanner",
+       "lien": "https://www.ebay.de/itm/820216620053?_skw=Brother+DCP-J1360DW&hash=itembef8b86415:g:ENAAAeSwk7Bqx2GA",
+       "vendeur": "dfitko",
+       "avis_vendeur": 16105
+      }
+     },
+     "IT": {
+      "nb_annonces": 27,
+      "total_ebay": 82,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 37.59,
+       "titre": "4 cartucce inchiostro per Brother DCP-J1310DW DCP-J1360DW - 1 set completo compatibile",
+       "lien": "https://www.ebay.it/itm/366703449239?_skw=Brother+DCP-J1360DW&hash=item55613a9497:g:szAAAeSwm4Fqvh8C",
+       "vendeur": "go-inks",
+       "avis_vendeur": 168377
+      },
+      "plus_cher": {
+       "prix": 231.41,
+       "titre": "Brother DCP-J1360DW stampante multifunzione Ad inchiostro A4 1200 x 6000 DPI 16",
+       "lien": "https://www.ebay.it/itm/147188070255?_skw=Brother+DCP-J1360DW&hash=item224517b76f:i:147188070255",
+       "vendeur": "ldcsrl-it",
+       "avis_vendeur": 7248
+      }
+     },
+     "ES": {
+      "nb_annonces": 21,
+      "total_ebay": 45,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 32.88,
+       "titre": "Cartuchos compatibles con Brother LC521 LC521XL LC521VAL 4 DCP-J1360DW Colores",
+       "lien": "https://www.ebay.es/itm/840098777484?_skw=Brother+DCP-J1360DW&hash=itemc399ca098c:g:oCsAAeSw6YVq7UhI",
+       "vendeur": "custominfo",
+       "avis_vendeur": 2122
+      },
+      "plus_cher": {
+       "prix": 231.41,
+       "titre": "Impresora multifunción de tinta Brother DCP-J1360DW A4 1200 x 6000 DPI 16",
+       "lien": "https://www.ebay.es/itm/147188070255?_skw=Brother+DCP-J1360DW&hash=item224517b76f:i:147188070255",
+       "vendeur": "ldcsrl-it",
+       "avis_vendeur": 7248
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Brother DCP-J1360DW",
+    "temperature_dealabs": 344,
+    "google_trends": {
+     "interet_moyen": 4,
+     "interet_recent": 34,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      95,
+      0,
+      70,
+      65,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "brother dcp-j1360dw",
+     "brother dcp-j1360dw avis",
+     "brother dcp-j1360dw cartouche",
+     "brother dcp-j1360dw driver",
+     "brother dcp-j1360dw mode d' emploi",
+     "brother dcp-j1360dw pilote",
+     "brother dcp j1360dw review",
+     "brother dcp j1360dw test",
+     "brother dcp j1360dw ink",
+     "brother dcp j1360dw multifunction printer"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B004L9S1SY-neuf",
+   "titre": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièces",
+   "prix": 20.6,
+   "devise": "EUR",
+   "marchand": "Amazon.fr",
+   "lien": "https://www.amazon.fr/dp/B004L9S1SY",
+   "pays": "FR",
+   "source": "keepa-radar",
+   "temperature": 504,
+   "domaine": "autre",
+   "nom_produit": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièc",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 49.19,
+   "cout_achat": 25.6,
+   "marge_nette": 14.0,
+   "rentabilite": 0.547,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "calcul"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "calcul": "moyenne 90 j 55.9 €, baisse 63 %, rang 57257"
+   },
+   "score": 54.7,
+   "asin": "B004L9S1SY",
+   "ean": "4046719179602",
+   "vendeurs_amazon": 4,
+   "ventes_estimees_30j": 4,
+   "ebay": {
+    "requete": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièc",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 4,
+    "marque": "Perfect-It",
+    "asin": "B004L9S1SY",
+    "titre": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièces",
+    "ean": "4046719179602",
+    "pays": "FR",
+    "prix_neuf": 20.6,
+    "prix_amazon": 20.6,
+    "prix_tiers": 20.6,
+    "moyenne_90j": 19.45,
+    "plus_bas_90j": 9.0,
+    "occasion": null,
+    "rang_ventes": 69707,
+    "chutes_rang_30j": 4,
+    "chutes_rang_90j": 6,
+    "ventes_estimees_30j": 4,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B004L9S1SY",
+    "jetons_restants": 255
+   },
+   "prix_plancher": {
+    "nom": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièc",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 20.6,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B004L9S1SY"
+   },
+   "remise_sincere": false,
+   "mot_cle": "3m perfect",
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B004L9S1SY"
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 18.13,
+     "marge_nette": -12.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.13,
+      "cout_achat": 25.6,
+      "frais_canal": 0.0,
+      "prelevements": 2.43,
+      "provision": 3.0,
+      "marge_nette": -12.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.504
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 18.13,
+     "marge_nette": -12.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.13,
+      "cout_achat": 25.6,
+      "frais_canal": 0.0,
+      "prelevements": 2.43,
+      "provision": 3.0,
+      "marge_nette": -12.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.504
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 18.13,
+     "marge_nette": -12.9,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 18.13,
+      "cout_achat": 25.6,
+      "frais_canal": 0.0,
+      "prelevements": 2.43,
+      "provision": 3.0,
+      "marge_nette": -12.9,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.504
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 20.6,
+     "marge_nette": -18.61,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.6,
+      "cout_achat": 25.6,
+      "frais_canal": 7.85,
+      "prelevements": 2.76,
+      "provision": 3.0,
+      "marge_nette": -18.61,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.727
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 20.6,
+     "marge_nette": -19.79,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.6,
+      "cout_achat": 25.6,
+      "frais_canal": 9.03,
+      "prelevements": 2.76,
+      "provision": 3.0,
+      "marge_nette": -19.79,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.773
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 20.6,
+     "marge_nette": -20.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.6,
+      "cout_achat": 25.6,
+      "frais_canal": 9.44,
+      "prelevements": 2.76,
+      "provision": 3.0,
+      "marge_nette": -20.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.789
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 20.6,
+     "marge_nette": -20.41,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.6,
+      "cout_achat": 25.6,
+      "frais_canal": 9.65,
+      "prelevements": 2.76,
+      "provision": 3.0,
+      "marge_nette": -20.41,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.797
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 20.6,
+     "marge_nette": -20.84,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.6,
+      "cout_achat": 25.6,
+      "frais_canal": 10.08,
+      "prelevements": 2.76,
+      "provision": 3.0,
+      "marge_nette": -20.84,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.814
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 18.54,
+   "marge_verifiee": -12.54,
+   "rentabilite_verifiee": -0.49,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièc",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièc",
+    "temperature_dealabs": 504,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "6bcd17a2ca",
+   "titre": "🛍️ KEEN Homme Newport H2 Corbeau/Aluminium 43 ✅ 53,66€ au lieu de 125,00€ ➡️ https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21 Publicité/Lien affilié Le prix pe",
+   "prix": 53.66,
+   "devise": "EUR",
+   "marchand": "",
+   "lien": "https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21",
+   "pays": "FR",
+   "source": "telegram:promorat",
+   "temperature": 100,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "KEEN Newport H2",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 95.0,
+   "cout_achat": 58.66,
+   "marge_nette": 20.61,
+   "rentabilite": 0.351,
+   "demande": 3.3,
+   "concurrence": 2.7,
+   "consensus": 3,
+   "agents": [
+    "gptoss",
+    "nemotron_nv",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Sandales KEEN Newport H2 à -57 %, modèle iconique facile à revendre sur Vinted.",
+    "qwen": "Baskets de marque à 53€ contre un prix de revente neuf fréquent de 80-90€ sur Vinted, sans frais de vendeur.",
+    "gptoss": "Remise importante, chaussures KEEN très recherchées en été."
+   },
+   "score": 35.5,
+   "ebay": {
+    "requete": "KEEN Newport H2",
+    "neuf": {
+     "nb": 13,
+     "min": 36.59,
+     "p25": 41.75,
+     "mediane": 41.75,
+     "max": 195.51
+    },
+    "occasion": {
+     "nb": 15,
+     "min": 25.15,
+     "p25": 27.35,
+     "mediane": 31.73,
+     "max": 54.7
+    },
+    "exemples": [
+     {
+      "titre": "KEEN Newport H2 Sandales Imperméables Toile Violet/ Rose, US 6 EU 36 UK 3.5",
+      "prix": "35.52",
+      "url": "https://www.ebay.fr/itm/177449387688?_skw=KEEN+Newport+H2&hash=item2950cec6a8:g:CnwAAOSw9BpmjrqS"
+     },
+     {
+      "titre": "KEEN Newport H2 Sandales Imperméables Toile Cuir Bleu Rouge Jaune Jeunes US 2",
+      "prix": "25.37",
+      "url": "https://www.ebay.fr/itm/156240764447?_skw=KEEN+Newport+H2&hash=item2460acde1f:g:8wsAAOSwuNpmXfqQ"
+     },
+     {
+      "titre": "KEEN Newport H2 Sandales Imperméables Enfant, US 2, EU 34",
+      "prix": "20.29",
+      "url": "https://www.ebay.fr/itm/157360180726?_skw=KEEN+Newport+H2&hash=item24a365cdf6:g:ETYAAOSwzE9a4hXW"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 41.75,
+     "DE": 52.77,
+     "IT": 67.34,
+     "ES": 67.07
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 11,
+    "marque": "KEEN",
+    "asin": "B07V9N4NP4",
+    "titre": "KEEN Homme Newport H2 Triple Noir 43",
+    "ean": "0191190472699",
+    "pays": "FR",
+    "prix_neuf": 53.66,
+    "prix_amazon": 53.66,
+    "prix_tiers": 53.66,
+    "moyenne_90j": 61.97,
+    "plus_bas_90j": 36.6,
+    "occasion": null,
+    "rang_ventes": 18668,
+    "chutes_rang_30j": 17,
+    "chutes_rang_90j": 69,
+    "ventes_estimees_30j": 17,
+    "remise_sincere": true,
+    "lien": "https://www.amazon.fr/dp/B07V9N4NP4",
+    "jetons_restants": 215
+   },
+   "asin": "B07V9N4NP4",
+   "ean": "0191190472699",
+   "vendeurs_amazon": 11,
+   "ventes_estimees_30j": 17,
+   "prix_plancher": {
+    "nom": "KEEN Newport H2",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 53.66,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B07V9N4NP4"
+   },
+   "remise_sincere": true,
+   "mot_cle": "keen newport h2",
+   "annonces_ebay": 13,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 47.22,
+     "marge_nette": -20.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.22,
+      "cout_achat": 58.66,
+      "frais_canal": 0.0,
+      "prelevements": 6.33,
+      "provision": 3.0,
+      "marge_nette": -20.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 47.22,
+     "marge_nette": -20.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.22,
+      "cout_achat": 58.66,
+      "frais_canal": 0.0,
+      "prelevements": 6.33,
+      "provision": 3.0,
+      "marge_nette": -20.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 47.22,
+     "marge_nette": -20.77,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 47.22,
+      "cout_achat": 58.66,
+      "frais_canal": 0.0,
+      "prelevements": 6.33,
+      "provision": 3.0,
+      "marge_nette": -20.77,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.354
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 53.66,
+     "marge_nette": -26.02,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.66,
+      "cout_achat": 58.66,
+      "frais_canal": 10.83,
+      "prelevements": 7.19,
+      "provision": 3.0,
+      "marge_nette": -26.02,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.444
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 53.66,
+     "marge_nette": -26.95,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.66,
+      "cout_achat": 58.66,
+      "frais_canal": 11.76,
+      "prelevements": 7.19,
+      "provision": 3.0,
+      "marge_nette": -26.95,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.459
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 53.66,
+     "marge_nette": -27.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.66,
+      "cout_achat": 58.66,
+      "frais_canal": 12.29,
+      "prelevements": 7.19,
+      "provision": 3.0,
+      "marge_nette": -27.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.468
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 53.66,
+     "marge_nette": -28.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.66,
+      "cout_achat": 58.66,
+      "frais_canal": 13.33,
+      "prelevements": 7.19,
+      "provision": 3.0,
+      "marge_nette": -28.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.486
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 53.66,
+     "marge_nette": -30.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 53.66,
+      "cout_achat": 58.66,
+      "frais_canal": 15.04,
+      "prelevements": 7.19,
+      "provision": 3.0,
+      "marge_nette": -30.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.515
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 27.35,
+   "marge_verifiee": -37.97,
+   "rentabilite_verifiee": -0.647,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "forte",
+   "occasion": {
+    "bas": 27.35,
+    "haut": 31.73,
+    "position_neuf": 1.96
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "KEEN Newport H2",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 13,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 41.75,
+       "titre": "Keen Newport H2 Sandales Fermées En Plastique Textile Rose 39",
+       "lien": "https://www.ebay.fr/itm/800768285467?_skw=KEEN+Newport+H2&hash=itemba71825b1b:g:Sw0AAeSw~5tqRMih",
+       "vendeur": "pepegi.eu",
+       "avis_vendeur": 4188
+      },
+      "plus_cher": {
+       "prix": 195.51,
+       "titre": "Sandały Keen Newport H2 M 1022258 Sandały Keen Newport H2 M 1022258 - 43",
+       "lien": "https://www.ebay.fr/itm/158124701023?_skw=KEEN+Newport+H2&hash=item24d0f7755f:g:VPMAAeSwAbdqVehb",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32927
+      }
+     },
+     "DE": {
+      "nb_annonces": 63,
+      "total_ebay": 129,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 30.0,
+       "titre": "Keen Newport Neo H2 Größe 24 Neu",
+       "lien": "https://www.ebay.de/itm/175656308268?_skw=KEEN+Newport+H2&hash=item28e5ee8e2c:g:yAkAAOSwDBFkFh1X",
+       "vendeur": "plt10",
+       "avis_vendeur": 650
+      },
+      "plus_cher": {
+       "prix": 195.51,
+       "titre": "Sandalen  Keen Newport H2 M 1022258 - 43 Keen",
+       "lien": "https://www.ebay.de/itm/158039171110?_skw=KEEN+Newport+H2&hash=item24cbde6026:g:zBEAAeSwoolqQumJ",
+       "vendeur": "katomixshop",
+       "avis_vendeur": 32927
+      }
+     },
+     "IT": {
+      "nb_annonces": 221,
+      "total_ebay": 545,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 27.55,
+       "titre": "NIB Keen Newport H2 Sandals Baby Boys Tots US 4 Water Shoes Brown Green New",
+       "lien": "https://www.ebay.it/itm/224076375518?_skw=KEEN+Newport+H2&hash=item342bfe25de:g:76EAAOSwRvFfCeBo",
+       "vendeur": "allezdeals",
+       "avis_vendeur": 3533
+      },
+      "plus_cher": {
+       "prix": 211.33,
+       "titre": "Sandali donna Keen Newport H2 sandalo",
+       "lien": "https://www.ebay.it/itm/117526192841?_skw=KEEN+Newport+H2&hash=item1b5d1b62c9:g:h-MAAeSwGhBq~CN~",
+       "vendeur": "sports-space",
+       "avis_vendeur": 15903
+      }
+     },
+     "ES": {
+      "nb_annonces": 147,
+      "total_ebay": 553,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 28.67,
+       "titre": "Sandalias Keen Kids Newport H2 Rosa Frambuesa/Risas Talla 7, Nuevas Con Caja",
+       "lien": "https://www.ebay.es/itm/377486943341?_skw=KEEN+Newport+H2&hash=item57e3f9a46d:g:S1oAAeSwoUBqouzM",
+       "vendeur": "bullinachinashop",
+       "avis_vendeur": 191
+      },
+      "plus_cher": {
+       "prix": 199.94,
+       "titre": "Sandalias de agua Keen Newport H2 punta cerrada para hombre",
+       "lien": "https://www.ebay.es/itm/267796920560?_skw=KEEN+Newport+H2&hash=item3e59f0b8f0:g:KeEAAeSwBBdquOJ3",
+       "vendeur": "allavenu",
+       "avis_vendeur": 9470
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "KEEN Newport H2",
+    "temperature_dealabs": 100,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "keen newport h2",
+     "keen newport h2 homme",
+     "keen newport h2 femme",
+     "keen newport h2 enfant",
+     "keen newport h2 sandals",
+     "keen newport h2 kids",
+     "keen newport h2 women's",
+     "keen newport h2 review",
+     "keen newport h2 herren",
+     "keen newport h2 toddler"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "2e5bbfdffa",
+   "titre": "Under Armour Charge Surge 4 Trainers Grey",
+   "prix": 13.0,
+   "devise": "GBP",
+   "marchand": "Jacamo",
+   "lien": "https://www.hotukdeals.com/deals/under-armour-charge-surge-4-trainers-grey-5042932",
+   "pays": "UK",
+   "source": "hotukdeals-hot",
+   "temperature": 162,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": null,
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Under Armour Charge Surge 4",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 25.94,
+   "marge_nette": 10.03,
+   "rentabilite": 0.387,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très bas, revente possible à prix moyen du marché, bonne marge même après TVA et droits."
+   },
+   "score": 23.2,
+   "ebay": {
+    "requete": "Under Armour Charge Surge 4",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 45.35,
+     "IT": 45.05,
+     "ES": 44.55
+    },
+    "meilleur_pays": "DE"
+   },
+   "prix_plancher": {
+    "nom": "Under Armour Charge Surge 4",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "under armour charge surge",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  },
+  {
+   "id": "beb9fa1d81",
+   "titre": "Mocassins en cuir Jack & Jones JFW Walder - Tailles du 40 au 46",
+   "prix": 29.95,
+   "devise": "EUR",
+   "marchand": "iBOOD",
+   "lien": "https://www.dealabs.com/bons-plans/mocassins-en-cuir-jack-jones-jfw-walder-tailles-du-40-au-46-3465449",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": null,
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Jack & Jones Mocassins",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 60.0,
+   "cout_achat": 34.95,
+   "marge_nette": 14.01,
+   "rentabilite": 0.401,
+   "demande": 2.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussures en cuir à prix très bas, marge intéressante pour revente rapide."
+   },
+   "score": 16.5,
+   "ebay": {
+    "requete": "Jack & Jones Mocassins",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa": {
+    "nb_vendeurs_neuf": 3,
+    "marque": "JACK & JONES",
+    "asin": "B0CWLGSPKM",
+    "titre": "Jack & Jones Homme Jfwdax Mocassins en Cuir Style Ln, Noir, 43 EU",
+    "ean": "5715612159248",
+    "pays": "FR",
+    "prix_neuf": 37.74,
+    "prix_amazon": 37.74,
+    "prix_tiers": 37.74,
+    "moyenne_90j": 38.37,
+    "plus_bas_90j": 32.32,
+    "occasion": null,
+    "rang_ventes": 72160,
+    "chutes_rang_30j": 5,
+    "chutes_rang_90j": 9,
+    "ventes_estimees_30j": 5,
+    "remise_sincere": false,
+    "lien": "https://www.amazon.fr/dp/B0CWLGSPKM",
+    "jetons_restants": 185
+   },
+   "asin": "B0CWLGSPKM",
+   "ean": "5715612159248",
+   "vendeurs_amazon": 3,
+   "ventes_estimees_30j": 5,
+   "prix_plancher": {
+    "nom": "Jack & Jones Mocassins",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    },
+    "prix_min": 37.74,
+    "ou": "keepa/amazon.fr",
+    "lien": "https://www.amazon.fr/dp/B0CWLGSPKM"
+   },
+   "remise_sincere": true,
+   "mot_cle": "jack jones mocassins",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 33.21,
+     "marge_nette": -9.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.21,
+      "cout_achat": 34.95,
+      "frais_canal": 0.0,
+      "prelevements": 4.45,
+      "provision": 3.0,
+      "marge_nette": -9.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.263
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 33.21,
+     "marge_nette": -9.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.21,
+      "cout_achat": 34.95,
+      "frais_canal": 0.0,
+      "prelevements": 4.45,
+      "provision": 3.0,
+      "marge_nette": -9.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.263
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 33.21,
+     "marge_nette": -9.19,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 33.21,
+      "cout_achat": 34.95,
+      "frais_canal": 0.0,
+      "prelevements": 4.45,
+      "provision": 3.0,
+      "marge_nette": -9.19,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.263
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 37.74,
+     "marge_nette": -14.66,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.74,
+      "cout_achat": 34.95,
+      "frais_canal": 9.4,
+      "prelevements": 5.06,
+      "provision": 3.0,
+      "marge_nette": -14.66,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.419
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 37.74,
+     "marge_nette": -15.91,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.74,
+      "cout_achat": 34.95,
+      "frais_canal": 10.64,
+      "prelevements": 5.06,
+      "provision": 3.0,
+      "marge_nette": -15.91,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.455
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 37.74,
+     "marge_nette": -16.29,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.74,
+      "cout_achat": 34.95,
+      "frais_canal": 11.02,
+      "prelevements": 5.06,
+      "provision": 3.0,
+      "marge_nette": -16.29,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.466
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 37.74,
+     "marge_nette": -16.52,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.74,
+      "cout_achat": 34.95,
+      "frais_canal": 11.26,
+      "prelevements": 5.06,
+      "provision": 3.0,
+      "marge_nette": -16.52,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.473
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 37.74,
+     "marge_nette": -17.92,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 37.74,
+      "cout_achat": 34.95,
+      "frais_canal": 12.65,
+      "prelevements": 5.06,
+      "provision": 3.0,
+      "marge_nette": -17.92,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.513
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 33.97,
+   "marge_verifiee": -8.53,
+   "rentabilite_verifiee": -0.244,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "faible",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 12,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 27,
+ "annonces_analysees": [
+  {
+   "id": "keepa-B004L9S1SY-neuf",
+   "titre": "3M Perfect-It Mousse de polissage, Vert, alvéolé, 75 mm, 50499, 4 pièces",
+   "temperature": 504,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 20.6,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B004L9S1SY",
+   "date": "2026-11-22T16:40",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B004L9S1SY",
+   "ref_fr": 55.9,
+   "description": "moyenne 90 j 55.9 €, baisse 63 %, rang 57257"
+  },
+  {
+   "id": "keepa-B0FZ96XHRT-neuf",
+   "titre": "Belfoyer Patin à roulettes Enfant Double Rangée PU, Toutes Roues Lumineuses, Roller Réglable Fille G",
+   "temperature": 504,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 41.8,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FZ96XHRT",
+   "date": "2026-11-22T00:10",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FZ96XHRT",
+   "ref_fr": 112.58,
+   "description": "moyenne 90 j 112.58 €, baisse 63 %, rang 33974"
+  },
+  {
+   "id": "keepa-B0FMDMGQ4J-neuf",
+   "titre": "JoyCat Jouet Bebe 0-6 Mois, Livre Sensoriel en Tissu Doux pour Nouveau-né, Livre Eveil Bebe 0 3 6 Mo",
+   "temperature": 456,
+   "categorie": "Amazon",
+   "marchand": "Amazon.fr",
+   "prix": 13.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FMDMGQ4J",
+   "date": "2026-11-22T12:44",
+   "source": "keepa-radar",
+   "pays": "FR",
+   "asin": "B0FMDMGQ4J",
+   "ref_fr": 32.48,
+   "description": "moyenne 90 j 32.48 €, baisse 57 %, rang 7637"
+  },
+  {
+   "id": "ab321711e0",
+   "titre": "2N - Relais de sécurité Helios IP family – 9159010",
+   "temperature": 256,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 170.22,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582816.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -32 %. 2N - Relais de sécurité Helios IP family – 9159010"
+  },
+  {
+   "id": "d0e433a34f",
+   "titre": "2N - Cadre saillie 2 module IP Verso – 9155022",
+   "temperature": 248,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 138.25,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582961.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -31 %. 2N - Cadre saillie 2 module IP Verso – 9155022"
+  },
+  {
+   "id": "d8315c3f49",
+   "titre": "Buty hikingowe damskie Merrell Speed Strike 2",
+   "temperature": 240,
+   "categorie": "Sport i turystyka",
+   "marchand": "MERRELL",
+   "prix": 39.71,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/buty-hikingowe-damskie-merrell-speed-strike-2-1395867",
+   "date": "Sun, 22 Nov 2026 17:31:15 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "169zł - MERRELL Kolejna cena jaką znalazłem to 339 zł. Cena pierwotna 399 zł. Rozmiary dostępne: 36/37,5/38/38,5/40,5/41 Spec..."
+  },
+  {
+   "id": "5a9187c106",
+   "titre": "TopSpin 2K25 (PS5)",
+   "temperature": 232,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 28.52,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00611507.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 39.99 €, -29 %. Jeu PS5 Sport 3 ans et plus"
+  },
+  {
+   "id": "4ec6668f59",
+   "titre": "The Witcher 3: Wild Hunt — Remastered (XBOX/PC)",
+   "temperature": 224,
+   "categorie": "Gaming",
+   "marchand": "Xbox",
+   "prix": 13.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/the-witcher-3-wild-hunt-remastered-xboxpc-2084266",
+   "date": "Sun, 22 Nov 2026 17:41:29 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13€ - Xbox The Witcher 3: Wild Hunt — Remastered moderniza el juego de rol que supuso el cénit de toda una generación con multitud de mejoras de gráficos, rendimiento, ..."
+  },
+  {
+   "id": "e1b0028bc4",
+   "titre": "2N - Cadre pour installation encastrée 3 modules 9155013B",
+   "temperature": 224,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 181.0,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582800.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 249.99 €, -28 %. 2N - Cadre pour installation encastrée 3 modules 9155013B"
+  },
+  {
+   "id": "767b73adbd",
+   "titre": "[ZBIORCZA] FERIE ZIMOWE 2027 – 5 NOCY DLA RODZINY 2+1 JUŻ OD 1610 ZŁ!",
+   "temperature": 219,
+   "categorie": "Podróże",
+   "marchand": "Travelist",
+   "prix": 378.41,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zbiorcza-ferie-zimowe-2027-5-nocy-dla-rodziny-21-juz-od-1610-zl-1395352",
+   "date": "Sun, 22 Nov 2026 17:37:59 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 610,25zł - Travelist ❄️ FERIE ZIMOWE 2027 – 5 NOCY DLA RODZINY 2+1 JUŻ OD 1610 ZŁ! ️ Morze czy góry? Znalazłem 6 propozycji na ferie zimowe dla rodziny 2+1 (2 dorosłych ..."
+  },
+  {
+   "id": "4047bc882a",
+   "titre": "Pompka do amortyzatorów SKS SAM",
+   "temperature": 211,
+   "categorie": "Sport i turystyka",
+   "marchand": "Media Expert",
+   "prix": 9.4,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/pompka-do-amortyzatorow-sks-sam-1397141",
+   "date": "Sun, 22 Nov 2026 17:46:56 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "39,99zł - Media Expert Opis produktu Dane techniczne SKS Pompa zawieszenia do precyzyjnej regulacji ciśnienia powietrza. Kompa..."
+  },
+  {
+   "id": "37d5fce2cb",
+   "titre": "Czarna sukienka mini z kołnierzykiem i marszczeniami",
+   "temperature": 204,
+   "categorie": "Moda",
+   "marchand": "House",
+   "prix": 21.15,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/czarna-sukienka-mini-z-kolnierzykiem-i-marszczeniami-1396907",
+   "date": "Sun, 22 Nov 2026 17:46:40 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "89,99zł - House Sukienka damska o dopasowanym kroju, inspirowana marynarkowym fasonem. Ma długie rękawy, klasyczny kołnierz z klapami i zapięcie na haftki z przodu. W talii uwa..."
+  },
+  {
+   "id": "40f198db99",
+   "titre": "Zapatillas de trail The north face Vectiv Enduris 4 Race Edition Mujeres- Tallas- 38, 38.5, 39- Descuento con código",
+   "temperature": 190,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Private Sport Shop",
+   "prix": 59.19,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-de-trail-the-north-face-vectiv-enduris-4-race-edition-mujeres-tallas-38-385-39-descuento-con-codigo-2084300",
+   "date": "Sun, 22 Nov 2026 17:46:02 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "59,19€ - Private Sport Shop DESCRIPCIÓN Diseñadas tanto para el entrenamiento diario como para lograr tu mejor marca el día de la carrera, las VECTIV™ Enduris 4 s..."
+  },
+  {
+   "id": "8f02a23c4c",
+   "titre": "Adidas POLO VINTAGE 3 STRIPES. Tallas XS a XL",
+   "temperature": 189,
+   "categorie": "Moda y accesorios",
+   "marchand": "adidas",
+   "prix": 22.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/adidas-polo-vintage-3-stripes-tallas-xs-a-xl-2082607",
+   "date": "Sun, 22 Nov 2026 17:32:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "22,50€ - adidas Polo de corte clásico y tejido de piqué, para un estilo de inspiración deportiva Descubre el estilo atemporal con el polo 3 Stripes. Esta pieza central de ..."
+  },
+  {
+   "id": "0d5c9c9686",
+   "titre": "2N - Module clavier interphone IP Verso – 9155031",
+   "temperature": 176,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 351.31,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582767.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 449.99 €, -22 %. 2N - Module clavier interphone IP Verso – 9155031"
+  },
+  {
+   "id": "2e5bbfdffa",
+   "titre": "Under Armour Charge Surge 4 Trainers Grey",
+   "temperature": 162,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Jacamo",
+   "prix": 13.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/under-armour-charge-surge-4-trainers-grey-5042932",
+   "date": "Sun, 22 Nov 2026 16:29:47 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£13 - Jacamo New customers only About this product The Under Armour Charged Surge 4 Running Shoes are versatile trainers designed for comfort and performance..."
+  },
+  {
+   "id": "d2824f987e",
+   "titre": "2N - Kit de sécurité pour porte IP/LTE Verso 9155198SET",
+   "temperature": 160,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 239.12,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582838.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 299.99 €, -20 %. 2N - Kit de sécurité pour porte IP/LTE Verso 9155198SET"
+  },
+  {
+   "id": "604d6dfe04",
+   "titre": "New Balance 373 Suede Trainers 7-12.5",
+   "temperature": 159,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Jacamo",
+   "prix": 20.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/new-balance-373-suede-trainers-7-125-5042903",
+   "date": "Sun, 22 Nov 2026 16:30:43 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£20 - Jacamo Elevate your footwear game with the New Balance 373 Trainers. This sneaker has it all, built for comfort and stylishly cool. Pair them with your favourite jeans..."
+  },
+  {
+   "id": "3b47710f3f",
+   "titre": "2N - Cadre saillie 1 module IP Verso – 9155021",
+   "temperature": 152,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 121.64,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00582848.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 149.99 €, -19 %. 2N - Cadre saillie 1 module IP Verso – 9155021"
+  },
+  {
+   "id": "db9accccf5",
+   "titre": "3M Re Mount",
+   "temperature": 152,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 72.59,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00134292.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 89.99 €, -19 %. Bombe de colle repositionnable"
+  },
+  {
+   "id": "1f3de8a641",
+   "titre": "Hasbro Gaming Simon Electronic Memory Game",
+   "temperature": 143,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 11.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/hasbro-gaming-simon-electronic-memory-game-5042125",
+   "date": "Sun, 22 Nov 2026 16:29:32 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£11.99 - Amazon CLASSIC MEMORY FUN: Test your memory skills with Simon, the ultimate travel game for kids that challenges players to repeat random light and sound se..."
+  },
+  {
+   "id": "18068ad96b",
+   "titre": "2N - Cadre d'encastrement 2 modules du Verso IP - 9155012",
+   "temperature": 136,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 166.2,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00575461.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 199.99 €, -17 %. 2N - Cadre d'encastrement 2 modules du Verso IP - 9155012"
+  },
+  {
+   "id": "86fdde4121",
+   "titre": "3M Colle en aérosol ' Display Mount', 400 ml",
+   "temperature": 136,
+   "categorie": "High-tech",
+   "marchand": "LDLC",
+   "prix": 66.22,
+   "devise": "EUR",
+   "lien": "https://www.ldlc.com/fiche/PB00506899.html",
+   "date": "",
+   "source": "ldlc-promos",
+   "pays": "FR",
+   "description": "prix initial 79.99 €, -17 %. Colle en aérosol"
+  },
+  {
+   "id": "81d997a557",
+   "titre": "Mulholland Drive: 4K UHD Blu-ray",
+   "temperature": 113,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon France",
+   "prix": 9.96,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/mulholland-drive-4k-uhd-blu-ray-5042003",
+   "date": "Sun, 22 Nov 2026 16:45:59 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£9.96 - Amazon France Considered by many as one of the greatest films of the 21st century. Los Angeles, city of angels. Amnesiac and wounded, a mysterious femme fatale ..."
+  },
+  {
+   "id": "a8f01e8022",
+   "titre": "Makita premier set 38 delig",
+   "temperature": 112,
+   "categorie": "Tuin & Doe-het-zelf",
+   "marchand": "Amazon.nl",
+   "prix": 15.38,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/makita-premier-set-38-delig-428662",
+   "date": "Sun, 22 Nov 2026 17:47:40 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€15,38 - Amazon.nl Let op! Wordt mogelijk pas rond half januari bezorgd. Voor wie kan wachten een hele scherpe deal voor deze set! Over dit artikel</strong..."
+  },
+  {
+   "id": "c50f0235a8",
+   "titre": "Café en grains Caffè Borbone Crema Classica 1 kg - Arabica & Robusta, Intensité 8/10",
+   "temperature": 109,
+   "categorie": "Épicerie & Courses",
+   "marchand": "Amazon",
+   "prix": 12.6,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/caffe-borbone-cafe-en-grains-crema-classica-espresso-napolitain-authentique-1kg-intensite-810-3450636",
+   "date": "Sun, 22 Nov 2026 17:33:10 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "12,60€ - Amazon À propos de cet article FORMAT: 1kg - (1000g) RITUEL DE L'ESPRESSO NAPOLITAIN AUTHENTIQUE: Caffè Borbone apporte l'âme de Naples..."
+  },
+  {
+   "id": "e62cbc904c",
+   "titre": "Corsair 3500X Mid-Tower in Weiß – Glasgehäuse mit USB-C (ATX/E-ATX, Platz für GPUs bis 410 mm, 360-mm-Radiatoren, ohne Lüfter)",
+   "temperature": 107,
+   "categorie": "Elektronik",
+   "marchand": "PC Componentes",
+   "prix": 50.39,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/corsair-3500x-mid-tower-in-weiss-glasgehause-mit-usb-c-atxe-atx-platz-fur-gpus-bis-410-mm-360-mm-radiatoren-ohne-lufter-2878482",
+   "date": "Sun, 22 Nov 2026 17:08:10 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "50,39€ - PC Componentes Bei PC Componentes bekommt ihr aktuell folgendes Angebot! :) Corsair 3500X Mid-Tower in Weiß – Glasgehäuse m..."
+  },
+  {
+   "id": "b05525cc12",
+   "titre": "NOCO Boost Plus GB40 Jumpstarter",
+   "temperature": 102,
+   "categorie": "Auto & Motor",
+   "marchand": "Amazon.nl",
+   "prix": 74.47,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/noco-boost-plus-gb40-jumpstarter-428576",
+   "date": "Sun, 22 Nov 2026 17:45:59 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€74,47 - Amazon.nl Ken je dat? Maandagochtend, -5 graden, jij al te laat voor je werk en je auto doet alleen nog maar klik-klik-klik. Terwijl de buren alvast een thermoskan koffie..."
+  },
+  {
+   "id": "6bcd17a2ca",
+   "titre": "🛍️ KEEN Homme Newport H2 Corbeau/Aluminium 43 ✅ 53,66€ au lieu de 125,00€ ➡️ https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21 Publicité/Lien affilié Le prix pe",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 53.66,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21",
+   "date": "2026-11-22T16:46",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ KEEN Homme Newport H2 Corbeau/Aluminium 43 ✅ 53,66€ au lieu de 125,00€ ➡️ https://www.amazon.fr/dp/B008J4T3FM/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 125.0
+  },
+  {
+   "id": "c3a1d19782",
+   "titre": "Roborock Qrevo Edge 2 Robot Aspirateur Laveur 479.99 au lieu de 899.99€ https://www.amazon.fr/dp/B0GMH56TRH/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 479.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GMH56TRH/?tag=chollosyofe0b-20",
+   "date": "2026-11-22T16:35",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Roborock Qrevo Edge 2 Robot Aspirateur Laveur 479.99 au lieu de 899.99€ https://www.amazon.fr/dp/B0GMH56TRH/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 899.99
+  },
+  {
+   "id": "2e81e70794",
+   "titre": "Chaussures Nike Jordan Court Connect Low - Divers coloris, tailles 35,5 au 40",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Nike",
+   "prix": 48.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-jordan-court-connect-low-divers-coloris-tailles-355-au-40-3465456",
+   "date": "Sun, 22 Nov 2026 17:45:21 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "48,99€ - Nike Des frais de livraison standard de 5 € s'appliquent aux commandes de moins de 50 € pour les membres Nike et aux commandes de moins de 99 € pour les personnes qui ne le sont pas. Retrait gratuit en magasin et extension des retours pendant les fêtes. Profite d'un délai de retour prolongé"
+  },
+  {
+   "id": "eb3a3b157f",
+   "titre": "Chariot de Transport Pliable Songmics Charge 180 kg, 4 Roues Renforcées dont 2 Roues Universelles",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Amazon",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chariot-de-transport-pliable-songmics-charge-180-kg-4-roues-renforcees-dont-2-roues-universelles-3465457",
+   "date": "Sun, 22 Nov 2026 17:45:09 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "59,99€ - Amazon Capacité de 180 kg : Doté de rivets, de barres de renfort en bas, d’acier et d’un tissu Oxford, ce chariot de transport supporte jusqu'à 180 kg Pliable et peu encombrant : En tirant simplement la sangle, ce chariot de jardin se plie facilement et se range de manière peu encombrante. "
+  },
+  {
+   "id": "5654698929",
+   "titre": "Veste barbour Men Heritage Liddesdale Quilt Navy (equipementaventure.fr)",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": null,
+   "prix": 107.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/veste-barbour-men-heritage-liddesdale-quilt-navy-3465458",
+   "date": "Sun, 22 Nov 2026 17:44:33 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "107,95€ La veste Barbour Men Heritage Liddesdale est une magnifique veste contemporaine avec une construction en diamant. La veste est composée à 100% de polyamide, ce qui la rend résistante au vent et elle a un intérieur rembourré en coton chaud et en nylon durable. Cela rend la veste très légère e"
+  },
+  {
+   "id": "6fd89f31a3",
+   "titre": "LEGO 77078 - Fortnite Mecha Team Leader",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 142.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-fortnite-77078-chef-de-lequipe-mecha-set-pour-adulte-3465452",
+   "date": "Sun, 22 Nov 2026 17:37:50 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "142,49€ - Amazon Set de construction pour adulte sur le thème du jeu vidéo Fortnite – Créez une figurine collector de jeu vidéo grâce au set de construction Chef de l'équipe Mécha LEGO Fortnite pour adulte Figurine LEGO Fortnite à construire – Riche en détails pour le plus grand bonheur des fans, la"
+  },
+  {
+   "id": "a9f25d37d8",
+   "titre": "Protéine en Poudre Bulk Pure Whey - Vanille, 1kg",
+   "temperature": null,
+   "categorie": "Sports & Plein air",
+   "marchand": "Amazon",
+   "prix": 33.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/bulk-pure-whey-proteine-en-poudre-vanille-1kg-3465451",
+   "date": "Sun, 22 Nov 2026 17:37:16 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "33,99€ - Amazon Notre protéine numéro 1 des ventes offre de sérieux gains. Avec ses 22 g de ou 23 g protéines de lactosérum premium, elle alimente vos séances, pulvérise vos objectifs en protéines et maximise vos résultats*. Nous n’utilisons qu’une protéine de haute qualité et Pure Whey assure le me"
+  },
+  {
+   "id": "beb9fa1d81",
+   "titre": "Mocassins en cuir Jack & Jones JFW Walder - Tailles du 40 au 46",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "iBOOD",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/mocassins-en-cuir-jack-jones-jfw-walder-tailles-du-40-au-46-3465449",
+   "date": "Sun, 22 Nov 2026 17:35:57 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "29,95€ - iBOOD Le mocassin JFW WALDER de Jack & Jones est une chaussure en cuir sans lacets, au look très soigné. Il suffit de les enfiler et c'est parti, voilà le concept. Matériaux et aspect La tige en cuir confère à la chaussure un aspect épuré et soigné, qui s'accorde aussi bien avec un jean qu'"
+  },
+  {
+   "id": "4801c7b68d",
+   "titre": "Robot Aspirateur Roomba Plus 415 - 2-en-1 avec station AutoWash et lingettes de nettoyage rotatives",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 279.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/irobot-roomba-plus-415-robot-aspirateur-2en1-base-autowash-lingettes-rotatives-3465448",
+   "date": "Sun, 22 Nov 2026 17:35:44 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "279,95€ - Amazon Modèle : iRobot Roomba Plus 415 Combo Robot + AutoWash - 20KPa - Base Multifonction - Lavage des lingettes - séchage des lingettes à l'air Chaud - LiDAR Clearview - 75 Jours d'autovidage - Noir Gardez des sols impeccables grâce à un robot aspirateur et laveur de sol avancé conçu pou"
+  },
+  {
+   "id": "0915af5c8c",
+   "titre": "Chaussures Nike Court Borough Low Recraft - Divers coloris, tailles 35,5 au 40",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Nike",
+   "prix": 38.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/chaussures-nike-court-borough-low-recraft-divers-coloris-tailles-355-au-40-3465446",
+   "date": "Sun, 22 Nov 2026 17:34:11 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "38,99€ - Nike Des frais de livraison standard de 5 € s'appliquent aux commandes de moins de 50 € pour les membres Nike et aux commandes de moins de 99 € pour les personnes qui ne le sont pas. Retrait gratuit en magasin et extension des retours pendant les fêtes. Profite d'un délai de retour prolongé"
+  },
+  {
+   "id": "b2faa57d69",
+   "titre": "Bracelet connecté Google Fitbit Air (Vendeur Darty)",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/google-fitbit-air-3465445",
+   "date": "Sun, 22 Nov 2026 17:31:25 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "89,99€ - Cdiscount Points forts Type : Sans écran Système d'exploitation pris en charge : iOS ; Android Assistant intelligent : Coach Health Logiciel préchargé : Coach Health"
+  },
+  {
+   "id": "bfe176dbc6",
+   "titre": "Braun Tondeuse Electrique Homme, Tout-en-Un Series 7 AIO7585 18-en-1, Grise",
+   "temperature": null,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Amazon",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/braun-tondeuse-electrique-homme-tout-en-un-series-7-aio7585-18-en-1-grise-3465444",
+   "date": "Sun, 22 Nov 2026 17:31:23 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "69,99€ - Amazon Le kit le plus complet de la gamme Braun Series 7 passe à 69,99 € pour le Black Friday, vendu et expédié par Amazon. C'est environ 30 € de moins que le prix le plus bas des 30 derniers jours (100,04 €). D'habitude, il tourne autour de 100–110 €. Ce qu'il y a dans la boîte : Une tonde"
+  },
+  {
+   "id": "e5dfb37d53",
+   "titre": "Écouteurs sans fil à conduction osseuse Shokz Open Run Pro 2 - noir",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Decathlon",
+   "prix": 149.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-shokz-de-sport-conduction-osseuse-openrun-pro-2-noir-3465427",
+   "date": "Sun, 22 Nov 2026 17:13:55 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "149,99€ - Decathlon Notre nouveau produit phare, le casque SHOKZ OPENRUN PRO dispose de la 9ème technologie conduction osseuse avec 2 amplificateurs de basses, il vous permet de rester connecté à l'environnement. Personnalisation Shokz - Casque de Sport Officiel de la Fédération Française d'Athlétis"
+  },
+  {
+   "id": "31277a0035",
+   "titre": "Making It So: A Memoir - Patrick Stewart (Picard aus Star Trek) - TB / englisch @ Thalia",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Thalia",
+   "prix": 12.4,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/making-it-so-a-memoir-patrick-stewart-picard-aus-star-trek-tb-englisch-at-thalia-2878791",
+   "date": "Sun, 22 Nov 2026 17:46:19 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "12,40€ - Thalia Buch ist super! THE SUNDAY TIMES BESTSELLER ‘He writes as well as he acts, with insight, truth and passion’ – Sir Ian McKellen ‘Highly entertaining... You don’t need to be a fan of Stewart the man of stage and screen to be as beguiled by the decades of professional acting that follow"
+  },
+  {
+   "id": "818d210cf1",
+   "titre": "Native Instruments Cyber Deals - z.B. alle Komplete Versionen für 50 Prozent Rabatt",
+   "temperature": null,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Native Instruments",
+   "prix": 74.5,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/native-instruments-cyber-deals-zb-alle-komplete-versionen-fur-50-prozent-rabatt-2878789",
+   "date": "Sun, 22 Nov 2026 17:45:09 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "74,50€ - Native Instruments Native Instruments Cyber Sale 2026: Bis zum 31. Dezember 2026 gibt es im NI Online Shop 50% Rabatt auf viele Software-Produkte, darunter Komplete 26, Kontakt 8, Maschine 3, Traktor Pro 4 sowie zahlreiche Instrumente, Effekte und Expansions. Alle Komplete-Bundles haben auc"
+  },
+  {
+   "id": "6ca5688686",
+   "titre": "The Rogue Prince of Persia - Switch 2 [Nintendo Switch 2 - Key Card]",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon.fr",
+   "prix": 21.03,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/the-rogue-prince-of-persia-switch-2-nintendo-switch-2-key-card-2878788",
+   "date": "Sun, 22 Nov 2026 17:43:52 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "21,03€ - Amazon.fr Tauche in ein mitreißendes, episches Abenteuer ein, in dem jede Handlung auf den berauschenden Rhythmus eines packenden Soundtracks abgestimmt ist. Meistere fließende, akrobatische und agile Kampfmechaniken sowie herausfordernde Parkoureinlagen. Erschaffe mit jedem Tod deinen eige"
+  },
+  {
+   "id": "5e6e4772bc",
+   "titre": "Aldi Nord | Pokemon Plüschtier - Pikachu u.a. | 20cm | ab 30.11.2026",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "ALDI Nord",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/aldi-nord-pokemon-pluschtier-pikachu-ua-ab-30112026-2878785",
+   "date": "Sun, 22 Nov 2026 17:41:56 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "12,99€ - ALDI Nord Über Pokémon: Die offiziell lizenzierten Pokémon-Produkte von Jazwares erwecken alle deine Lieblings-Pokémon zum Leben wie nie zuvor! Von unseren actiongeladenen Figuren bis hin zu unseren superweichen und kuscheligen Plüschtieren! Jedes Pokémon-Produkt von Jazwares enthält die Li"
+  },
+  {
+   "id": "287633032d",
+   "titre": "Deutschlandticket für Dezember (D-Ticket) für 49€ nur am 23.11.26 (Neukunden; Handyticket)",
+   "temperature": null,
+   "categorie": "Dienstleistungen & Verträge",
+   "marchand": null,
+   "prix": 49.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/deutschlandticket-fur-dezember-d-ticket-fur-49eur-nur-am-231126-neukunden-handyticket-2878787",
+   "date": "Sun, 22 Nov 2026 17:39:18 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "49€ Deutschlandticket für 49 € statt 63 € im Dezember 2026 Am 23.11.2026 bietet der Verkehrsverbund Warnow (VVW) das Deutschlandticket für Dezember 2026 zum Aktionspreis von 49 € statt 63 € an. Das entspricht einer Ersparnis von 14 € (22,2 %). Aktionsbedingungen: * Bestellung ausschließlich am 23.11"
+  },
+  {
+   "id": "d5cf3599f1",
+   "titre": "Assassin's Creed Mirage PC (Ubisoft Store) mit Code HOLIDAY20",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Ubisoft",
+   "prix": 12.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/assassins-creed-mirage-pc-ubisoft-store-mit-code-holiday20-2878786",
+   "date": "Sun, 22 Nov 2026 17:38:34 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "12€ - Ubisoft Aktuell im Sale für 15€, abzüglich 20% mit dem HOLIDAY20 Code landet man bei 12€ für die Standardversion. Deluxe Edition würde demnach final bei 14,40€ landen. https://store.ubisoft.com/de/assassins-creed-mirage-deluxe-edition/62ea4b5609372571f2736a6b.html Sollte, laut Isthereanydeal d"
+  },
+  {
+   "id": "e368e89ca5",
+   "titre": "[Otto] Apple AirPods Pro 3 für effektiv 180 € (199,90 € minus 10 % Amex Offer über Cadooz)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "OTTO",
+   "prix": 180.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/otto-apple-airpods-pro-3-fur-effektiv-180-eur-19990-eur-minus-10-amex-offer-uber-cadooz-2878783",
+   "date": "Sun, 22 Nov 2026 17:38:29 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "180€ - OTTO Otto hat die AirPods Pro 3 aktuell für 199,99 € (UVP 249 €). Mit einem Umweg über Cadooz kommen noch 10 % obendrauf, wenn du eine Amex hast. Über die Amex Offer bei Cadooz gibt es 10 % Rabatt. Du kaufst bei Cadooz einen 200-€-Wertgutschein, bekommst 10 % von Amex gutgeschrieben, tauschst"
+  },
+  {
+   "id": "675256d521",
+   "titre": "Broste Copenhagen Nordic Vanilla Frühstücksset für 4 P., 12-tlg. Keramik Geschirrset / auch andere Sets stark reduziert- Black Week Sale",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "aspect",
+   "prix": 60.55,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/broste-copenhagen-nordic-vanilla-fruhstucksset-fur-4-p-12-tlg-keramik-geschirrset-auch-andere-sets-stark-reduziert-black-week-sale-2878782",
+   "date": "Sun, 22 Nov 2026 17:36:05 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "60,55€ - aspect Moin, beim Aspect-shop.de gibt es aktuell verschiedene Frühstücksset stark reduziert, teilweise mit 60% Rabatt. Anbei mal 3 Angebote mit PVG. Ab 59€ kostenloser Versand, daher beim ersten Set evtl. etwas für 3,35€ dazulegen, dann kostet es euch insgesamt nur 59€. 1. Broste Copenhagen"
+  },
+  {
+   "id": "cd18035a1a",
+   "titre": "CASIO PRO TREK PRW-6600YB-3ER Funkuhr Quarzuhr Armbanduhr Herrenuhr Solar",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "OTTO",
+   "prix": 284.09,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/casio-pro-trek-prw-6600yb-3er-funkuhr-quarzuhr-armbanduhr-herrenuhr-solar-2878781",
+   "date": "Sun, 22 Nov 2026 17:35:52 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "284,09€ - OTTO Hab gerade einen Wecker bei Otto entdeckt den ich schon länger im Auge habe. 20% extra Rabatt aktivieren. Verkauft durch Otto. Langes Rückgaberecht bis 31.01.2027 . Hab ich mir jetzt zum Wandern gegönnt weil Funk, Solar, Kompass, Temperatur und Barometer. Nix für Spaghetti-Ärmchen. Ni"
+  },
+  {
+   "id": "d67d58dc81",
+   "titre": "Vonhaus 12L Low Energy Dehumidifier with Laundry Mode",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "VonHaus",
+   "prix": 84.69,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/vonhaus-12l-low-energy-dehumidifier-with-laundry-mode-5042998",
+   "date": "Sun, 22 Nov 2026 16:47:13 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£84.69 - VonHaus • Portable dehumidifier Description Looking for the best UK dehumidifier to tackle damp, condensation and laundry drying the cost-efficient way? The Vonhaus portable dehumidifier extracts up to 12 litres of moisture per day at just 6p per hour (based on January 2026 energy rates). W"
+  },
+  {
+   "id": "3680f28689",
+   "titre": "INIU 45W Fast Charging Portable Charger 10000mah",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 10.7,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/iniu-45w-fast-charging-portable-charger-10000mah-5042997",
+   "date": "Sun, 22 Nov 2026 16:47:05 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£10.70 - Amazon 40% Smaller, 36% Lighter: Powered by the industry’s first TinyCell high-density battery technology, this ultra-compact 10,000mAh power bank is 40% smaller and 36% lighter than conventional power banks with the same capacity — giving you the power you need without the extra bulk in yo"
+  },
+  {
+   "id": "10f32a00ff",
+   "titre": "Santa Claus: The Movie - 4K UHD Blu Ray",
+   "temperature": null,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon",
+   "prix": 14.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/santa-claus-the-movie-4k-uhd-blu-ray-5042996",
+   "date": "Sun, 22 Nov 2026 16:46:51 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£14.99 - Amazon In this stunning UHD 4K release of Santa Claus: The Movie, viewers will witness every detail of the film's enchanting landscapes, whimsical characters, and dazzling special effects with unparalleled clarity and vibrancy. It's a Christmas treat for the senses. SANTA CLAUS: THE MOVIE ("
+  },
+  {
+   "id": "75b2da2749",
+   "titre": "amsung 990 PRO NVMe M.2 SSD, 4TB",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon Germany",
+   "prix": 569.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/amsung-990-pro-nvme-m2-ssd-4tb-5042995",
+   "date": "Sun, 22 Nov 2026 16:46:44 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£569 - Amazon Germany Samsung 990 PRO NVMe M.2 SSD, 4TB, PCIe 4.0, 7450MB/s Read, 6900MB/s Write PCIe 4.0, 7,450 MB/s read, 6,900 MB/s write, internal hard drive for gaming and video editing About this item Powerful PCIe 4.0 NVMe SSD for high-end gaming on PC as well as for 4K video and 3D editing, "
+  },
+  {
+   "id": "afeb3c038b",
+   "titre": "Amazon eero 6+ mesh Wi-Fi router",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 83.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/amazon-eero-6-mesh-wi-fi-router-5042993",
+   "date": "Sun, 22 Nov 2026 16:46:17 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£83.99 - Amazon Amazon eero 6+ mesh Wi-Fi router | 1.0 Gbps Ethernet | Coverage up to 140 m2 | Connect 75+ devices | 1-Pack | 2022 release"
+  },
+  {
+   "id": "23bd93b36f",
+   "titre": "Call of Duty: Modern Warfare 4 - Xbox Series X|S",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Loaded",
+   "prix": 39.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/call-of-duty-modern-warfare-4-xbox-series-xs-5042989",
+   "date": "Sun, 22 Nov 2026 16:44:12 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£39.99 - Loaded ABOUT THE GAME War erupts on the Korean Peninsula as North Korea launches a full-scale invasion that threatens to destabilise the world in Call of Duty®: Modern Warfare® 4. A young squad of South Korean soldiers fight to survive on the collapsing front lines, while half a world away "
+  },
+  {
+   "id": "4c4d76da42",
+   "titre": "VORSPRUNG Alpha Max 7.4kW EV Charger Type 2, 5 meter Cable, EV Car Charger, IP65, Smart App, 1 Year Warranty - Sold & shipped by DropNet Ltd",
+   "temperature": null,
+   "categorie": "Car & Motorcycle",
+   "marchand": "B&amp;Q",
+   "prix": 279.95,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/vorsprung-alpha-max-74kw-ev-charger-type-2-5-meter-cable-ev-car-charger-ip65-smart-app-1-year-warranty-5042988",
+   "date": "Sun, 22 Nov 2026 16:44:00 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£279.95 - B&Q • Up to 7.4 kW output with adjustable settings • Monta app control for iOS and Android • App supports scheduled charging and energy usage tracking • OCPP 1.6J compliant • Includes two RFID cards • IP65 rated for water and dust resistance • Suitable for indoor and outdoor use • Includes"
+  },
+  {
+   "id": "626425d688",
+   "titre": "Vorsprung EV Charger Cable 5M, Type 2 32A 7.68kW Electric Vehicle Charging Lead- Sold by Vorsprung / FBA",
+   "temperature": null,
+   "categorie": "Car & Motorcycle",
+   "marchand": "Amazon",
+   "prix": 72.21,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/vorsprung-ev-charger-cable-5m-type-2-32a-768kw-electric-vehicle-charging-lead-sold-by-vorsprung-fba-5042986",
+   "date": "Sun, 22 Nov 2026 16:42:32 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£72.21 - Amazon Free shipping Vorsprung EV Charger Cable – 5M Type 2 32A 7.68kW Electric Vehicle Charging Lead The Vorsprung EV Charger Cable is a 5-metre Type 2 charging lead designed for convenient and reliable electric vehicle charging. Rated at 32A and 7.68kW, it is suitable for Mode 3 single-ph"
+  },
+  {
+   "id": "554e0b6d12",
+   "titre": "WOLFBOX DF60 Powerful Fan Duster Wireless 110000RPM 3-Speed Adjustable - Sold By Wolfbox Auto Store",
+   "temperature": null,
+   "categorie": "Home & Living",
+   "marchand": "AliExpress",
+   "prix": 14.93,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/wolfbox-df60-powerful-fan-duster-wireless-air-blower-air-duster-110000rpm-3-speed-adjustable-portable-fan-5042982",
+   "date": "Sun, 22 Nov 2026 16:40:26 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£14.93 - AliExpress Store Categories WOLFBOX DF60 110000RPM Cordless Air Duster 3-Speed with 5 Nozzles, Fast Charging Product Description WOLFBOX DF60 Electric Air Duster | 110,000 RPM, Cordless & Multi-Nozzle Replace disposable canned air with the WOLFBOX DF60 rechargeable air duster. Engineered fo"
+  },
+  {
+   "id": "32bea54a13",
+   "titre": "New balance 237 trainers navy UK 7, 8 & 10",
+   "temperature": null,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Jacamo",
+   "prix": 16.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/new-balance-237-trainers-navy-uk-7-8-10-5042980",
+   "date": "Sun, 22 Nov 2026 16:39:29 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£16 - Jacamo Elevate your footwear with the New Balance 237 Running Trainers. Specifications Materials Upper: Leather. Inner: Textile. Outsole: Rubber UK 7,8 & 10 available at time of posting"
+  },
+  {
+   "id": "32afc41914",
+   "titre": "EVDANCE EV Charger 3 Pin Plug, Type 2 Charging Cable for EV & PHEV 6m - Sold by Yuanshu Technology / FBA",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 82.33,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/evdance-ev-charger-3-pin-plug-type-2-charging-cable-for-ev-phev-6m-sold-by-yuanshu-technology-fba-5042976",
+   "date": "Sun, 22 Nov 2026 16:36:23 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£82.33 - Amazon Free shipping EFFICIENT CHARGING - Delivers up to 10A / 2.4kW charging power—adding approximately 8 miles of range per hour of charging. NOTE: THIS VERSION DOES NOT SUPPORT THE APP. CURRENT & TIME ADJUSTABLE - Simply adjust the charging current between 6-10A, adjust the charging time"
+  },
+  {
+   "id": "2429cafc07",
+   "titre": "LEGO Lucky Cat 40813",
+   "temperature": null,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 21.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-lucky-cat-40813-5042974",
+   "date": "Sun, 22 Nov 2026 16:36:18 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£21.50 - Amazon HOME DECOR FOR GOOD LUCK – This fun LEGO Lucky Cat building set creates an eye-catching display piece and is said to bring good luck and prosperity to the owner LUCK CAT FIGURE WITH A MOVING PAW – The paw on the animal figure has a pendulum action to replicate the beckoning or waving"
+  },
+  {
+   "id": "6dce11353c",
+   "titre": "COLORFUL BATTLE-AX B850M-PLUS S WIFI7 V14 Motherboard (£89.99 with Joybuy Plus free trial)",
+   "temperature": null,
+   "categorie": "Electronics",
+   "marchand": "Joybuy",
+   "prix": 99.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/colorful-battle-ax-b850m-plus-s-wifi7-v14-motherboard-ps8999-with-joybuy-plus-free-trial-5042971",
+   "date": "Sun, 22 Nov 2026 16:33:40 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£99.99 - Joybuy Good price for a B850M board. Sign up for a free trial for Joybuy plus to get £10 off."
+  },
+  {
+   "id": "cc68815807",
+   "titre": "Kusan: City of Wolves - Nintendo Switch Game - Sold by ao (UK Mainland)",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "eBay",
+   "prix": 21.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/kusan-city-of-wolves-nintendo-switch-game-5042970",
+   "date": "Sun, 22 Nov 2026 16:32:56 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£21 - eBay Welcome to Kusan: City of Wolves, a brutal top-down shooter set in a neon-drenched urban jungle consumed by violence and corruption. Kusan delivers hardcore action where one mistake means death. Master gunplay, perfect your movement, survive the streets and combat arenas ruled by furious "
+  },
+  {
+   "id": "b43fb50812",
+   "titre": "Deer & Oak Tabla de Cortar Cristal Templado XL 40x30 cm Transparente y Gruesa · Resistente al Calor · Patas Antideslizantes",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 17.05,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/deer-oak-tabla-de-cortar-cristal-templado-xl-40x30-cm-transparente-y-gruesa-resistente-al-calor-patas-antideslizantes-2084354",
+   "date": "Sun, 22 Nov 2026 17:44:35 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "17,05€ - Amazon Tablas de cortar de vidrio templado duraderas para cocinas: hechas de vidrio templado resistente al calor para una experiencia de corte higiénica y a prueba de arañazos. PROTECCIÓN Y AHORRO VERSÁTIL PARA ENCIMERA – Funciona como tabla de cortar de vidrio, esterilla térmica, cubierta "
+  },
+  {
+   "id": "ae9dd777b4",
+   "titre": "PARKER IM Bolígrafo | acero inoxidable con detalles cromados | punta mediana con tinta azul | caja para regalo",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 11.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/parker-im-boligrafo-acero-inoxidable-con-detalles-cromados-punta-mediana-con-tinta-azul-caja-para-regalo-2084353",
+   "date": "Sun, 22 Nov 2026 17:44:33 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "11,49€ - Amazon Diseños consolidados, refinados y elegantes combinados con una silueta estilizada y moderna Acabado en acero inoxidable brillante rematado con detalles cromados y el clip de flecha distintivo de PARKER Punta de bolígrafo click-action y tinta QuinkFlow de gran fiabilidad para un traza"
+  },
+  {
+   "id": "e6baf85642",
+   "titre": "Ring Cámara exterior 2K (Outdoor Camera 2K), Con enchufe (última gen.), Fácil instalación por cuenta propia",
+   "temperature": null,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ring-camara-exterior-2k-outdoor-camera-2k-con-enchufe-ultima-gen-facil-instalacion-por-cuenta-propia-2084352",
+   "date": "Sun, 22 Nov 2026 17:44:31 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "49,99€ - Amazon Ring Cámara exterior 2K (Outdoor Camera 2K), Con enchufe (última gen.), Fácil instalación por cuenta propia. Precio: 49,99 €. Referencia de Amazon: 99,99 €. Ahorro frente a esa referencia: 50,00 € (50,01 %). Detalles del producto: • VÍDEO NÍTIDO Y CLARO CON RETINAL 2K: no te pierdas "
+  },
+  {
+   "id": "7706acb416",
+   "titre": "KIKO Milano Unlimited Double Touch 131 | Barra De Labios Líquida En 2 Pasos",
+   "temperature": null,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 9.79,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/kiko-milano-unlimited-double-touch-131-barra-de-labios-liquida-en-2-pasos-2084351",
+   "date": "Sun, 22 Nov 2026 17:41:53 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "9,79€ - Amazon Labial líquido de larga duración en 2 pasos: una extraordinaria combinación de base de color y brillo de labios con acabado intenso y luminoso. El color se fija en los labios para un resultado duradero hasta 12 horas Base de color: su fórmula, enriquecida con una combinación de políme"
+  },
+  {
+   "id": "0ac341a7c8",
+   "titre": "Zapatillas de trail The north face running Summit Vectiv Pro Mujeres- Tallas-37, 37.5, 38, 38.5, 39- Descuento con código",
+   "temperature": null,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Private Sport Shop",
+   "prix": 83.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/zapatillas-de-trail-the-north-face-running-summit-vectiv-pro-mujeres-tallas-37-375-38-385-39-descuento-con-codigo-2084350",
+   "date": "Sun, 22 Nov 2026 17:41:52 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "83,99€ - Private Sport Shop DESCRIPCIÓN Gracias a nuestra tecnología de espuma más reciente y a la placa de fibra de carbono VECTIV 2.0 que aporta estabilidad, las Summit VECTIV Pro para mujer —con su gran amortiguación— se convertirán en tu calzado de referencia para el día de la carrera. Caracterí"
+  },
+  {
+   "id": "5c4f5c45b7",
+   "titre": "Bloques Magneticos Construccion Niños, Construcciones Magneticas Juguetes",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 16.14,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/bloques-magneticos-construccion-ninos-construcciones-magneticas-juguetes-2084349",
+   "date": "Sun, 22 Nov 2026 17:41:07 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "16,14€ - Amazon [Juego de construcción magnético de 40 piezas] Juego de 40 piezas de alta calidad que incluye 24 cuadrados, 16 triángulos equiláteros. [Tamaño compatible] El tamaño del bloque magnético cuadrado es de 6,5 cm y el tamaño del bloque magnético del triángulo equilátero es de 5 cm. La com"
+  },
+  {
+   "id": "33985a8038",
+   "titre": "Armani Exchange Reloj para Hombre de 42 mm de Acero Inoxidable en Tono Dorado, AX2650",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 129.35,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/armani-exchange-reloj-para-hombre-de-42-mm-de-acero-inoxidable-en-tono-dorado-ax2650-2084348",
+   "date": "Sun, 22 Nov 2026 17:41:05 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "129,35€ - Amazon ⌚ Reloj Armani Exchange (Estilo Casual / Urbano) Desde 1991, Armani Exchange diseña colecciones inspiradas en el estilo de vida metropolitano y la cultura musical. Un reloj moderno y elegante para cualquier ocasión. Caja y Esfera Forma: Redonda. Tamaño de la caja: 42 mm. Material: A"
+  },
+  {
+   "id": "017183f146",
+   "titre": "Soporte para plantas de 5 niveles con luz de crecimiento para plantas de interior,estante esquinero de metal, soporte de madera para plantas",
+   "temperature": null,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 36.09,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/soporte-para-plantas-de-5-niveles-con-luz-de-crecimiento-para-plantas-de-interiorestante-esquinero-de-metal-soporte-de-madera-para-plantas-2084346",
+   "date": "Sun, 22 Nov 2026 17:41:01 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "36,09€ - Amazon Soporte para plantas de 5 niveles con luz de crecimiento para plantas de interior, estante esquinero de metal, soporte de madera para plantas del hogar. ✅Sistema de luz de crecimiento de espectro completo: Este soporte para plantas cuenta con LEDs de espectro completo ajustables (300"
+  },
+  {
+   "id": "ed0f1314d3",
+   "titre": "Polo GANT Shield Heavy Rugger negro de manga larga, tallas S y M",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 44.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/polo-gant-shield-heavy-rugger-negro-de-manga-larga-tallas-s-y-m-2084344",
+   "date": "Sun, 22 Nov 2026 17:36:19 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "44,95€ - Amazon Polo GANT Shield Heavy Rugger de manga larga en color negro, con cuello clásico y el emblema de la marca. Tallas S y M a 44,95 € en el momento de comprobarlo. Envío gratis."
+  },
+  {
+   "id": "f151c25d21",
+   "titre": "Kit de Uñas | Set de Manicura para Niñas 7+",
+   "temperature": null,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 20.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/kit-de-unas-set-de-manicura-para-ninas-7-2084343",
+   "date": "Sun, 22 Nov 2026 17:36:15 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "20,49€ - Amazon CREA HASTA 200 MANICURAS: Diseña y personaliza tus uñas fácilmente con este kit de manicura y kit para hacer uñas, pensado para crear diferentes estilos en casa. 4 DISEÑOS PARA ELEGIR: Combina los cartuchos de diseño incluidos para decorar y experimentar; un creativo kit de uñas perf"
+  },
+  {
+   "id": "40ca3cac52",
+   "titre": "Under Armour Hustle Sackpack 00 unisex",
+   "temperature": null,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 13.8,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/under-armour-hustle-sackpack-00-unisex-2084340",
+   "date": "Sun, 22 Nov 2026 17:34:22 +0100",
+   "source": "chollometro-nuevos",
+   "pays": "ES",
+   "description": "13,80€ - Amazon Under Armour Hustle Sackpack 00 unisex La Under Armour Hustle Sackpack 00 unisex es una mochila versátil y ligera, ideal para el uso diario y actividades al aire libre. Disponible en Amazon por 13.80 euros , esta mochila destaca por su diseño funcional y detalles distintivos de la ma"
+  }
+ ]
+}

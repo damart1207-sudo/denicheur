@@ -26619,7 +26619,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T21:01+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -26825,16 +26825,16 @@
    "premiere_lecture": "2026-11-22T21:04+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-22T21:55+00:00",
+  "verifie_le": "2026-11-22T22:55+00:00",
   "verdict": {
-   "commentaire": "Référence fausse (Keepa a trouvé une station de charge, pas la souris) ; page de l'offre et version (USB-C/Lightning, neuf/reconditionné) non vérifiables. À revoir.",
+   "commentaire": "Rejet : la référence Keepa est un autre produit (station de charge Ascrono, pas la Magic Mouse), aucun prix neuf France fiable trouvé, page de l'offre impossible à ouvrir et livraison en France par Amazon.de non confirmée. Dans le doute, rejet.",
    "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
+   "source_prix_ref": "aucune fiable",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
-   "duree_offre": null,
+   "duree_offre": "inconnue",
    "demande_confirmee": false
   }
  },
@@ -27922,7 +27922,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T22:25+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -28179,6 +28179,18 @@
    "proba_detail": [
     "Amazon 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-22T22:55+00:00",
+  "verdict": {
+   "commentaire": "Même produit (même ASIN/EAN) à 117,54 € sur Amazon.fr (moyenne 90 j 118,51 €), donc référence fiable ; mais la page Amazon.de n'a pas pu être ouverte : prix pour cette taille (33W/30L), disponibilité et livraison France non confirmés. À revérifier.",
+   "prix_neuf_min_idealo": 117.54,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": 45,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -28225,7 +28237,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T22:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -28433,7 +28445,19 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 22:28 UTC : offre active, 19.95 affiché, marchand 173_2 ; elcorteingles.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T22:55+00:00",
+  "verdict": {
+   "commentaire": "Rejet : El Corte Inglés ne livre pas en France (livraison Espagne), offre non vérifiable ; revente négative (≈ -2 €).",
+   "prix_neuf_min_idealo": 33.98,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 27,
+   "prix_revente_verifie": 29.9,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -2.01,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "633cc109e5",
@@ -28486,7 +28510,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T22:35+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -28748,6 +28772,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-22T22:55+00:00",
+  "verdict": {
+   "commentaire": "Rejet : offre Allegro (Pologne), livraison en France non confirmée et page impossible à ouvrir ; revente sous les seuils (marge ≈ 27 € soit 11 %).",
+   "prix_neuf_min_idealo": 349.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": 31,
+   "prix_revente_verifie": 349.0,
+   "canal": "fnac",
+   "marge_nette_verifiee": 27.04,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {

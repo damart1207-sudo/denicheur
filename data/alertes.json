@@ -23483,7 +23483,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-22T13:26+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "canaux": null,
   "page_offre": {
@@ -23513,6 +23513,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 13:28 UTC : offre active, 32.99 affiché, marchand 2614_1 ; bol.com refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T13:47+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : canapé d'angle Sweeek « Carl » vendu par Bol.com (Pays-Bas). Bol.com ne livre qu'aux Pays-Bas et en Belgique, pas en France (page marchand bloquée, livraison France : non). En plus, « prijsfout » = erreur de prix probable, risque d'annulation.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "non recherché (offre non livrable en France)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "erreur de prix, quelques heures au plus",
+   "demande_confirmee": false
+  }
  }
 ]

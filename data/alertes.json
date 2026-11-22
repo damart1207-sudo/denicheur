@@ -23578,7 +23578,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-22T14:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -23790,6 +23790,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-22T14:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-22T15:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Amazon (lien marchand amazon.com, US) dont la livraison en France et le coût final livré (~22,90 €) ne sont pas confirmés ; pages du bon plan et du comparateur illisibles pendant la vérification. Revente impossible : marge nette 0,76 € au mieux.",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "achatmoinscher (relevé du robot, non revérifié) ; Keepa Amazon.fr 38,32 €",
+   "economie_pct": 35,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 0.76,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

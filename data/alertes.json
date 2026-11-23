@@ -34862,7 +34862,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T10:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -35040,7 +35040,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-23T10:45+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T11:50+00:00",
+  "verdict": {
+   "commentaire": "Media Expert (Pologne) ne livre qu'en Pologne : offre non achetable ni livrable en France. Rejeté.",
+   "prix_neuf_min_idealo": 199.0,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 21,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "c15722fc61",
@@ -35086,7 +35098,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T10:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -35329,6 +35341,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-23T11:50+00:00",
+  "verdict": {
+   "commentaire": "Carrefour.es livre uniquement en Espagne (péninsule et Baléares) : non livrable en France. Rejeté.",
+   "prix_neuf_min_idealo": 695.43,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 29,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
   }
  }
 ]

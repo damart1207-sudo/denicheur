@@ -70,16 +70,19 @@ def comparer(asins, etat=None):
             continue
         for p in PAYS:
             e = etranger[p].get(asin)
-            # 23/11 (David) : seul le prix « vendu et expédié par Amazon » compte à l'étranger. Les vendeurs tiers
-            # d'Amazon DE/IT/ES ne livrent souvent que leur pays (ex. New Balance 880 v15 sur Amazon.es).
-            if not e or not e.get("amazon"):
+            # 23/11 (David) : à l'étranger, seuls comptent les prix « vendu et expédié par Amazon » ou « expédié par Amazon »
+            # (vendeur tiers mais stock chez Amazon, en général livrable en France). Les vendeurs tiers qui expédient eux-mêmes
+            # ne livrent souvent que leur pays (ex. New Balance 880 v15 sur Amazon.es).
+            achat = min([x for x in (e.get("amazon"), e.get("fba")) if x], default=None) if e else None
+            if not achat:
                 continue
-            cout = round(e["amazon"] + PORT_EUR, 2)
+            mode = "vendu et expédié par Amazon" if achat == e.get("amazon") else "expédié par Amazon"
+            cout = round(achat + PORT_EUR, 2)
             ecart = round(1 - cout / f["neuf"], 3)
             if ecart < ECART_MIN:
                 continue
             lignes.append({"asin": asin, "ean": f.get("ean"), "titre": f.get("t"), "marque": f.get("marque"), "pays_achat": p,
-                           "prix_achat": e["amazon"], "vendu_par_amazon": True, "cout_rendu": cout, "prix_fr": f["neuf"], "moyenne_90j_fr": f.get("m90"),
+                           "prix_achat": achat, "vendu_par_amazon": True, "mode_amazon": mode, "cout_rendu": cout, "prix_fr": f["neuf"], "moyenne_90j_fr": f.get("m90"),
                            "ecart_pct": round(ecart * 100), "ventes_30j_fr": f.get("ch30"), "vendeurs_fr": f.get("offres"),
                            "rang_fr": f.get("rang"), "lien_achat": f"https://www.amazon.{ {'DE': 'de', 'IT': 'it', 'ES': 'es'}[p] }/dp/{asin}",
                            "lien_fr": f"https://www.amazon.fr/dp/{asin}", "vu": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M")})
@@ -139,7 +142,7 @@ def annonces_arbitrage(maxi=80):
                     "prix": l["prix_achat"], "devise": "EUR", "lien": l["lien_achat"], "date": l.get("vu", ""), "source": "keepa-arbitrage",
                     "pays": l["pays_achat"], "ean": l.get("ean"), "asin": l["asin"], "ref_fr": l["prix_fr"],
                     "ventes_30j": l.get("ventes_30j_fr"), "vendeurs": l.get("vendeurs_fr"),
-                    "description": f'vendu et expédié par Amazon.{ {"DE": "de", "IT": "it", "ES": "es"}[l["pays_achat"]] } (livrable en France) · Amazon.fr {l["prix_fr"]} € (moyenne 90 j {l.get("moyenne_90j_fr")} €), écart {l["ecart_pct"]} % port compris, '
+                    "description": f'{l.get("mode_amazon") or "vendu et expédié par Amazon"} (Amazon.{ {"DE": "de", "IT": "it", "ES": "es"}[l["pays_achat"]] }, livrable en France) · Amazon.fr {l["prix_fr"]} € (moyenne 90 j {l.get("moyenne_90j_fr")} €), écart {l["ecart_pct"]} % port compris, '
                                    f'ventes 30 j {l.get("ventes_30j_fr")}, {l.get("vendeurs_fr")} vendeurs FR'})
     return out
 

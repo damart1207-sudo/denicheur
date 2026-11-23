@@ -48,6 +48,7 @@ JETONS_JOUR_MAX = 24000      # au plus par jour (28 800 possibles)
 PRIX_MIN_CENT, PRIX_MAX_CENT = 1200, 45000   # produits entre 12 € et 450 € (ce qu'on sait revendre)
 # index des séries Keepa dans stats.current : 0 Amazon, 1 neuf, 2 occasion, 3 rang, 9 Warehouse (Seconde main), 11 nb offres neuves
 I_AMAZON, I_NEUF, I_OCCASION, I_RANG, I_WAREHOUSE, I_NB_NEUF = 0, 1, 2, 3, 9, 11
+I_NEUF_FBA = 10   # neuf « expédié par Amazon » (vendeur tiers, stock chez Amazon)
 PAYS_HYPE = ("US", "JP")
 DOMAINES = {**keepa.DOMAINES, "JP": 5, "SG": 19, "IN": 10}
 _jetons = {"restants": None, "depenses": 0}
@@ -190,7 +191,7 @@ def resumer(p, pays="FR"):
     return {
         "asin": p.get("asin"), "ean": (p.get("eanList") or [None])[0], "t": (p.get("title") or "")[:90],
         "marque": (p.get("brand") or "")[:30] or None, "cat": p.get("rootCategory"), "pays": pays,
-        "neuf": neuf, "amazon": v(cur, I_AMAZON), "occ": v(cur, I_OCCASION), "wh": v(cur, I_WAREHOUSE),
+        "neuf": neuf, "amazon": v(cur, I_AMAZON), "fba": v(cur, I_NEUF_FBA), "occ": v(cur, I_OCCASION), "wh": v(cur, I_WAREHOUSE),
         "m90": moy90, "m180": moy180, "min90": min([x for x in (mn(I_AMAZON), mn(I_NEUF)) if x], default=None),
         "rang": rang, "r30": a30[I_RANG] if len(a30) > I_RANG and isinstance(a30[I_RANG], int) and a30[I_RANG] > 0 else None,
         "r90": a90[I_RANG] if len(a90) > I_RANG and isinstance(a90[I_RANG], int) and a90[I_RANG] > 0 else None,

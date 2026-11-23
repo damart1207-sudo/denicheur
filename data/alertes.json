@@ -33509,7 +33509,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T08:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -33717,6 +33717,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 08:16 UTC : offre active, 13.93 affiché, marchand 36_3 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T08:55+00:00",
+  "verdict": {
+   "commentaire": "Fiche E.Leclerc lue le 23/11 : 13,47 € (édition standard PS5) mais seulement en retrait magasin / Click&Collect, pas de livraison à domicile, et BonPlanGeek (relevé du 23/11 à 03h05) indique un prix avec carte de fidélité. Pas de prix livré en France à ce tarif : rejeté. Prix neuf livré le plus bas ailleurs : 32,90 € chez Cdiscount (AchatMoinsCher). Revente : marge 3,60 € au mieux (Leboncoin/Vinted), sous le seuil de 8 €.",
+   "prix_neuf_min_idealo": 32.9,
+   "source_prix_ref": "AchatMoinsCher (Cdiscount, livraison gratuite), relevé du 23/11",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Offre Leclerc affichée du 23/11 au 24/12/2026 (retrait magasin)",
+   "demande_confirmee": false
+  }
  }
 ]

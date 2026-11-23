@@ -32420,7 +32420,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T05:17+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -32613,11 +32613,11 @@
    "premiere_lecture": "2026-11-23T05:20+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-23T05:50+00:00",
+  "verifie_le": "2026-11-23T06:50+00:00",
   "verdict": {
-   "commentaire": "Fiche Amazon.fr lue par Keepa : 33,10 € (moyenne 90 j 31,65 €, plus bas 90 j 18 €). Prix Amazon.de de 13,76 € à reconfirmer au prochain tour (le prix varie selon la pointure). Revente trop faible (3,47 € sur Leboncoin/Vinted).",
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 33,10 €, moyenne 90 j 31,65 €, mais déjà descendue à 18,00 € ces 90 derniers jours, donc moins cher que notre coût livré de 18,76 €. Prix Amazon.de non reconfirmé (il change selon la pointure). Revente : 3,47 € de bénéfice seulement. Rejeté.",
    "prix_neuf_min_idealo": 31.65,
-   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j)",
+   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j ; plus bas 90 j 18,00 €)",
    "economie_pct": 41,
    "prix_revente_verifie": null,
    "canal": null,
@@ -32923,7 +32923,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T06:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -33181,6 +33181,18 @@
    "proba_detail": [
     "Amazon 16/mois"
    ]
+  },
+  "verifie_le": "2026-11-23T06:50+00:00",
+  "verdict": {
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 59,95 € chez un vendeur tiers, prix anormalement haut ; moyenne 90 j 40,98 € et plus bas 90 j 26,95 €, sous notre coût livré de 29,59 € (Amazon.it + port). Pointure 39 et coloris précis : prix Amazon.it non reconfirmé et même produit non confirmé. Revente sur Leboncoin plafonnée à 85 % du neuf réel (≈ 34,80 €) : bénéfice quasi nul. Rejeté.",
+   "prix_neuf_min_idealo": 40.98,
+   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j, le prix du jour d'un vendeur tiers étant anormal)",
+   "economie_pct": 28,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  },
  {
@@ -33227,7 +33239,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T06:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -33427,6 +33439,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 06:20 UTC : offre active, 499.0 affiché, code BLACK5, marchand 36_3 ; fiche samsung.com lue : 584.1 EUR, inStock ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T06:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan lue par le robot à 07h20 : offre active, 499 € puis 476,40 € avec le code BLACK5, mais réservée aux étudiants (portail Samsung Étudiants via UNiDAYS) : pas achetable par tout le monde. Fiche samsung.com lue : 584,10 € en stock ; le bon plan cite 529 € ailleurs, soit seulement 10 % d'économie (seuil 15 %). Revente à perte sur tous les canaux. Rejeté.",
+   "prix_neuf_min_idealo": 529.0,
+   "source_prix_ref": "Prix ailleurs cité par la page Dealabs (529 €) ; achatmoinscher 574 €",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday, quelques jours",
+   "demande_confirmee": false
+  }
  }
 ]

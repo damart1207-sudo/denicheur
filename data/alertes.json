@@ -30139,7 +30139,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T00:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -30336,7 +30336,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-23T00:48+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Rejeté : Smyths UK ne livre pas en France, et le coût réel livré (≈74 €) est plus cher que le neuf en France (58,63 €).",
+   "prix_neuf_min_idealo": 58.63,
+   "source_prix_ref": "achatmoinscher (relevé du robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-23T01:50+00:00"
  },
  {
   "id": "3dcad92384",
@@ -30369,7 +30381,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T00:54+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 59.0,
@@ -30631,7 +30643,19 @@
    "proba_detail": [
     "Google 10/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Rejeté : Media Expert (Pologne) ne livre qu'en Pologne, offre non achetable/livrable en France ; prix affiché en euros douteux (site en zlotys).",
+   "prix_neuf_min_idealo": 59.0,
+   "source_prix_ref": "idealo.fr (relevé du robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-23T01:50+00:00"
  },
  {
   "id": "keepa-B0CHW1Q9RL-arbIT",
@@ -30664,7 +30688,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T01:04+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -30924,6 +30948,18 @@
    "proba_detail": [
     "Amazon 15/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "À revérifier : pages Amazon.it et Amazon.fr inaccessibles ce soir, offre active non confirmée ; référence Amazon.fr = vendeur tiers (88,99 €, moyenne 90 j 82,90 €), pas d'autre prix neuf français trouvé.",
+   "prix_neuf_min_idealo": 82.9,
+   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  },
+  "verifie_le": "2026-11-23T01:50+00:00"
  }
 ]

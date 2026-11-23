@@ -29852,7 +29852,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T00:03+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {
    "vinted": {
@@ -30074,6 +30074,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-23T00:07+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T00:46+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Carrefour.es ne livre pas en France (page du bon plan relue à 00h33 UTC, livraison France : non ; site marchand bloqué aux robots). Revente non rentable : marge nette négative (-2,54 € au mieux sur Leboncoin/Vinted).",
+   "prix_neuf_min_idealo": 32.09,
+   "source_prix_ref": "achatmoinscher.com (10 boutiques)",
+   "economie_pct": 41,
+   "prix_revente_verifie": 28.24,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -2.54,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

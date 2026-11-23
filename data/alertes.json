@@ -36195,7 +36195,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T16:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -36403,7 +36403,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 16:21 UTC : offre active, 46.74 affiché, marchand 1650_3 ; amazon.com refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré en France 28,69 € contre 29,25 € neuf sur Amazon.fr (plus bas 90 j : 27,99 €). Économie de 2 % seulement, revente à perte.",
+   "prix_neuf_min_idealo": 29.25,
+   "source_prix_ref": "Keepa / Amazon.fr",
+   "economie_pct": 2,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "71474afaa4",
@@ -36449,7 +36461,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T16:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -36657,7 +36669,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 16:22 UTC : offre active, 47.99 affiché, marchand 6888_2 ; amazon.com refuse les robots (HTTP 503) ; fiche Amazon connue par Keepa ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré depuis Amazon UK 72,50 € alors que le neuf est à 64,99 € en France (Amazon.fr, achatmoinscher). Plus cher qu'en France.",
+   "prix_neuf_min_idealo": 64.99,
+   "source_prix_ref": "Keepa / Amazon.fr + achatmoinscher",
+   "economie_pct": -12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "825bd2438f",
@@ -36703,7 +36727,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T16:24+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -36911,6 +36935,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 16:28 UTC : offre active, 50.99 affiché, code BFKOL10, marchand 3648_7 ; joybuy.fr refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : DualSense blanche à 54,99 € livrée chez JoyBuy, même prix que Micromania (54,99 €, jusqu'au 30/11) et Amazon (55 € en noir, Black Friday). Les références automatiques (édition Fortnite 157,90 €, coloris Rose 81,99 €) n'étaient pas le même produit.",
+   "prix_neuf_min_idealo": 54.99,
+   "source_prix_ref": "Recherche web : Clubic 21/11 (Micromania 54,99 €), BuzzArena 23/11 (Amazon 55 €)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday, jusqu'au 30/11",
+   "demande_confirmee": false
+  }
  }
 ]

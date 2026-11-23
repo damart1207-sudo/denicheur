@@ -33777,7 +33777,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T08:58+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -33989,6 +33989,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-23T09:02+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T09:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté par prudence : même jeu (EAN 5060941710920), 12,55 £ sur Amazon Royaume-Uni d'après Hotukdeals, mais la page Amazon UK n'a pas pu être ouverte : prix, stock et livraison en France non confirmés chez le marchand. Coût livré estimé 25,32 € (port, TVA d'import et droit compris) contre 42,98 € au plus bas en France (Techinn livré, achatmoinscher ; Amazon.fr 45,11 €, Galaxus 45,88 €, Fnac 46,95 €), soit ≈ 41 % d'économie si l'offre est bien livrable. Revente sans intérêt : marge nette 2,15 € au mieux.",
+   "prix_neuf_min_idealo": 42.98,
+   "source_prix_ref": "achatmoinscher (Techinn, livraison comprise) + ledenicheur.fr — recherche web, idealo non joignable",
+   "economie_pct": 41,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 2.15,
+   "duree_offre": "inconnue (offre Black Friday Amazon UK)",
+   "demande_confirmee": false
+  }
  }
 ]

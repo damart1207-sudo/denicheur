@@ -1,14 +1,8 @@
 {
- "tours_ok": 3193,
+ "tours_ok": 3194,
  "tours_echec": 12,
- "dernier_ok": "23/11 01:13",
+ "dernier_ok": "23/11 01:23",
  "evenements": [
-  {
-   "heure": "17/11 06:05",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 06:05",
    "niveau": "erreur",
@@ -1802,11 +1796,17 @@
    "niveau": "erreur",
    "etape": "moisson prix recherches",
    "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint | /recherches_prix.py\", line 122, in tour\n    d[\"hype\"].update(prix_europe(asins, etat=etat))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nBudgetKeepaInsuffisant: réserve ou plafond Keepa atteint\n"
+  },
+  {
+   "heure": "23/11 01:24",
+   "niveau": "erreur",
+   "etape": "moisson prix recherches",
+   "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint | /recherches_prix.py\", line 122, in tour\n    d[\"hype\"].update(prix_europe(asins, etat=etat))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nBudgetKeepaInsuffisant: réserve ou plafond Keepa atteint\n"
   }
  ],
  "dernier_resume": {
-  "heure": "23/11 01:10",
-  "annonces": 680,
+  "heure": "23/11 01:20",
+  "annonces": 678,
   "nouvelles": 427,
   "examinees": 25,
   "alertes": 0

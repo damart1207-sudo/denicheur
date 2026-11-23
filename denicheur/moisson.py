@@ -261,7 +261,7 @@ MOTS_VIDES = {"the", "and", "for", "with", "from", "new", "newest", "model", "pa
 
 def _mots(t):
     import re
-    return [m for m in re.findall(r"[a-z0-9]+", (t or "").lower()) if (len(m) > 2 or m.isdigit()) and m not in MOTS_VIDES]
+    return [m for m in re.findall(r"[^\W_]+", (t or "").lower()) if (len(m) > 2 or m.isdigit()) and m not in MOTS_VIDES]
 
 
 def terme_recherche(titre, marque=None, mots=8):
@@ -274,19 +274,58 @@ def terme_recherche(titre, marque=None, mots=8):
     return t.strip()
 
 
-def ressemblance(titre_labas, titre_fr, marque=None):
-    """Part des mots du titre d'origine retrouvés dans le titre français (0 à 1). 0 si la marque ou un nombre du
-    début du titre (« Echo Show 11 » ≠ « Echo Show 8 ») manque : ce n'est alors pas le même produit."""
-    a, b = _mots(titre_labas), set(_mots(titre_fr))
-    if not a or not b:
-        return 0.0
-    if marque and not set(_mots(marque)) <= b:
-        return 0.0
-    if any(m.isdigit() and m not in b for m in _mots(terme_recherche(titre_labas))):
-        return 0.0
-    if any(m in VARIANTES_NOM and m not in a for m in _mots(titre_fr)[:10]):
-        return 0.0   # « DualSense Edge » n'est pas « DualSense », « Stick Plus » n'est pas « Stick » (test réel du 23/11)
-    return round(sum(1 for m in a if m in b) / len(a), 2)
+ACCESSOIRE = {"pour", "for", "compatible", "conçu", "concu", "für"}   # « Adaptateur pour Echo Show 5 » n'est pas l'Echo Show 5
+
+
+def choisir_par_nom(r, produits, prix_labas_eur, journal=None):
+    """Parmi les résultats d'une recherche Amazon.fr, la fiche française du produit étranger r, ou None.
+    Les titres ne sont pas dans la même langue : on ne compare que les mots « qui voyagent » (présents dans au moins un
+    titre français : marque, nom du modèle, licence), et on exige, dans l'ordre (règles tirées du test réel du 23/11) :
+      - la même marque (champ marque ou titre) ;
+      - le MOT-CLÉ du produit (1er mot qui voyage après la marque : « Jessie », « DualSense », « Quencher ») placé au
+        début du titre et pas derrière « pour » (sinon c'est un accessoire, ou un autre personnage : l'Alien pour Jessie) ;
+      - les mêmes nombres (« Echo Show 11 » ≠ « Echo Show 8 ») et aucune variante en plus (« Edge », « Plus », « Pro »…) ;
+      - au moins 60 % des mots qui voyagent ;
+      - une fiche qui se vend (classement ≤ 20 000) à un prix cohérent (0,5 à 1,8 fois le prix d'origine)."""
+    import re
+    produits = [p for p in produits if isinstance(p, dict) and p.get("asin") != r.get("asin")]
+    vocabulaire = {m for p in produits for m in _mots(p.get("title"))}
+    mots = _mots(r.get("t"))
+    marque = _mots(r.get("marque"))
+    voyagent = [m for m in dict.fromkeys(mots) if m in vocabulaire]
+    cle = next((m for m in voyagent if m not in marque and not m.isdigit() and len(m) >= 4), None)
+    nombres = [m for m in _mots(terme_recherche(r.get("t"))) if m.isdigit()]
+    if not cle or len(voyagent) < 2:
+        return None
+    bons = []
+    for p in produits[:10]:
+        x = resumer(p, "FR")
+        t = _mots(p.get("title"))
+        raison = None
+        if marque and not (set(marque) <= set(t) or _mots(p.get("brand")) == marque):
+            raison = "autre marque"
+        elif cle not in t[:8] or ACCESSOIRE & set(re.findall(r"[^\W_]+", (p.get("title") or "").lower().split(cle)[0])):
+            raison = f"« {cle} » absent du début du titre, ou accessoire"
+        elif any(n not in t for n in nombres):
+            raison = "autre numéro de modèle"
+        elif any(m in VARIANTES_NOM and m not in mots for m in t[:10]):
+            raison = "autre variante"
+        score = round(sum(1 for m in voyagent if m in t) / len(voyagent), 2)
+        if not raison and score < SEUIL_NOM:
+            raison = "titre trop différent"
+        if not raison and (not x.get("neuf") or not x.get("rang") or x["rang"] > RANG_FAIBLE):
+            raison = "pas de prix ou presque aucune vente"
+        if not raison and prix_labas_eur and not (0.5 * prix_labas_eur <= x["neuf"] < ECART_IMPORT * prix_labas_eur):
+            raison = "prix incohérent (lot, accessoire ou import)"
+        if journal is not None:
+            journal.append(f"  {'OUI' if not raison else 'non'} {score} · {x.get('neuf')} € · rang {x.get('rang')} · {(p.get('title') or '')[:60]}"
+                           + (f" [{raison}]" if raison else ""))
+        if not raison:
+            bons.append((score, x))
+    if not bons:
+        return None
+    score, x = max(bons, key=lambda c: (c[0], -c[1]["rang"]))
+    return {**x, "ressemblance": score}
 
 
 def _douteuse(fr, prix_labas_eur, meme_asin):
@@ -372,24 +411,12 @@ def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False, journal=No
         except Exception as e:
             sante.noter("erreur", "fiche france", f"recherche « {terme[:40]} » : {type(e).__name__}: {str(e)[:100]}")
             continue
-        bons = []
         if journal is not None:
             journal.append(f"recherche « {terme} » : {len(d.get('products') or [])} résultats")
-        for p in (d.get("products") or [])[:10]:
-            if not isinstance(p, dict):
-                continue
-            x = resumer(p, "FR")
-            score = ressemblance(r.get("t"), p.get("title"), r.get("marque"))
-            if journal is not None:
-                journal.append(f"  « {terme[:40]} » -> {score} · {x.get('neuf')} € · rang {x.get('rang')} · {(p.get('title') or '')[:70]}")
-            if score < SEUIL_NOM or _douteuse(x, pe, False) or x["rang"] > 5 * RANG_FAIBLE:
-                continue
-            if pe and not (0.4 * pe <= x["neuf"] <= 4 * pe):
-                continue  # accessoire, lot ou autre modèle
-            bons.append((score, x))
-        if bons:
-            score, x = max(bons, key=lambda c: (c[0], -c[1]["rang"]))
-            vues[a] = {**_vue_fr(x, "probable", "nom"), "ressemblance": score, "import": vues[a] if vues[a]["etat"] == "import" else None}
+        x = choisir_par_nom(r, d.get("products") or [], pe, journal)
+        if x:
+            vues[a] = {**_vue_fr(x, "probable", "nom"), "ressemblance": x["ressemblance"],
+                       "import": vues[a] if vues[a]["etat"] == "import" else None}
     return vues
 
 
@@ -536,7 +563,7 @@ def _international(titre):
 def hype(etat):
     """Meilleures ventes d'une catégorie aux USA ou au Japon (50 jetons), fiche des 100 premiers là-bas (100 jetons),
     puis regard sur Amazon.fr (100 jetons) : ce qui cartonne là-bas et n'existe pas / se vend mal en France."""
-    if not _peut(460, etat):  # 50 liste + 100 fiches là-bas + 100 fiches France + ≤ 200 codes-barres
+    if not _peut(260, etat):  # 50 liste + 100 fiches là-bas + 100 fiches France (codes-barres en plus seulement s'il reste des jetons)
         return 0
     pays = PAYS_HYPE[etat.get("pays_suivant", 0) % len(PAYS_HYPE)]
     etat["pays_suivant"] = etat.get("pays_suivant", 0) + 1

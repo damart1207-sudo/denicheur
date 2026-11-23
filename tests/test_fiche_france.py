@@ -60,17 +60,50 @@ class FicheFrance(unittest.TestCase):
         self.assertNotIn("absent", t)
         self.assertIn("à vérifier", t)
 
-    def test_un_autre_modele_n_est_pas_le_meme_produit(self):
-        self.assertEqual(moisson.ressemblance("Amazon Echo Show 11 (newest model)", "Amazon Echo Show 8 (dernier modèle)", "Amazon"), 0.0)
-        self.assertGreaterEqual(moisson.ressemblance("Amazon Echo Show 11 (newest model)", "Amazon Echo Show 11 (dernier modèle)", "Amazon"), 0.6)
+    # ---- résultats RÉELS de la recherche Keepa sur Amazon.fr, relevés le 23/11/2026 (titre, prix, classement) ----
+    def choix(self, labas, prix, resultats):
+        prods = [produit(f"B0FR{i:06d}", t, p or 0, rg, marque=m) for i, (t, p, rg, m) in enumerate(resultats)]
+        return moisson.choisir_par_nom(labas, prods, prix)
 
-    def test_erreurs_du_premier_test_reel(self):
-        """23/11 : la recherche par nom avait pris l'Alien pour Jessie, la DualSense Edge pour la DualSense, le Stick Plus pour le Stick HD."""
-        r = moisson.ressemblance
-        self.assertLess(r(JESSIE_US["t"] + "eatures Sounds and Phrases", "Disney Store Official Figurine Alien parlante interactive, Toy Story", "Disney Store"), moisson.SEUIL_NOM)
-        self.assertEqual(r("PlayStation DualSense™ Wireless Controller – Midnight Black", "Playstation DualSense Edge® Wireless-Controller – Midnight Black", "PlayStation"), 0.0)
-        self.assertEqual(r("Roku Streaming Stick HD with Voice Remote", "Roku® Streaming Stick™ Plus 2025 – Appareil de Streaming", "Roku"), 0.0)
+    def test_jessie_et_pas_l_alien(self):
+        x = self.choix(JESSIE_US, 28.8, [
+            ("Disney Store Official, Figurine Jessie parlante, Toy Story, 36 cm", 41.99, 2365, "Disney Store"),
+            ("Disney Store Official, Figurine Rex parlante, Toy Story, 34 cm", 35.69, 2538, "Disney Store"),
+            ("Disney Store Official Figurine Alien parlante interactive, Toy Story", 33.99, 112, "Disney Store"),
+            ("Disney Store Official Peluche Pile-Poil de taille moyenne, Toy Story", 32.0, 2910, "Disney Store"),
+            ("Mattel Toy Story 5 Figurine Buzz Lightyear Mode Vol", 31.41, 794, "Mattel")])
+        self.assertEqual(x["neuf"], 41.99)
 
+    def test_dualsense_et_pas_la_edge(self):
+        us = moisson.resumer(produit("B0FY6Y9WZT", "PlayStation DualSense™ Wireless Controller – Midnight Black", 54, 1, marque="PlayStation"), "US")
+        x = self.choix(us, 48.6, [
+            ("Playstation DualSense Edge® Wireless-Controller – Midnight Black", 179.99, 109, "PlayStation"),
+            ("Playstation®5-1 TB 2x DualSense® Wireless Controller Bundle", 1329.0, 13, "PlayStation"),
+            ("Playstation Sony, Manette 5 Officielle DualSense, Sans Fil, Midnight Black", 55.99, 2, "PlayStation"),
+            ("Playstation Sony, Manette 5 DualSense Edge, Sans Fil, Touches Arrière", 179.99, 140, "PlayStation")])
+        self.assertEqual(x["neuf"], 55.99)
+
+    def test_un_accessoire_n_est_pas_le_produit(self):
+        us = moisson.resumer(produit("B09B2QTGFY", "Amazon Echo Show 5 (newest model), Smart display", 55, 2, marque="Amazon"), "US")
+        self.assertIsNone(self.choix(us, 49.49, [
+            ("Amazon | Adaptateur secteur de rechange officiel pour Echo Dot et Echo Show 5", 19.99, 49, "Amazon"),
+            ("Adaptateur secteur de rechange pour Amazon Echo Show 5 (3e génération)", 20.39, 186, "Amazon"),
+            ("Support réglable avec port de charge USB-C pour Echo Show 5 (3e génération)", 26.59, 103, "Amazon"),
+            ("Savvies Film Protection pour Amazon Echo Show 5", 5.42, None, "Savvies")]))
+
+    def test_roku_non_vendu_en_france_reste_introuvable(self):
+        us = moisson.resumer(produit("B0DXXYS4BJ", "Roku Streaming Stick HD with Voice Remote", 19, 5, marque="Roku"), "US")
+        self.assertIsNone(self.choix(us, 17.1, [
+            ("Roku® Streaming Stick™ Plus 2025 – Appareil de Streaming Roku 4K et HD", 55.93, 13866, "Roku"),
+            ("Roku Bâton de Diffusion en continu", 45.56, 25178, "Roku"),
+            ("Roku Streaming Stick+ (HD, 4K, HDR) Streaming Device USER GUIDE", 14.34, 702184, None),
+            ("ROKU STREAMING STICK HD USER GUIDE MADE EASY", 15.31, None, None)]))
+
+    def test_annonces_d_import_des_draps_refusees(self):
+        us = moisson.resumer(produit("B06WWRCZXX", "Queen Size 4 Piece Sheet Set - Breathable & Cooling Sheets", 20, 2, marque="CGK Unlimited"), "US")
+        self.assertIsNone(self.choix(us, 18.14, [
+            ("Queen Size 4 Piece Sheet Set - Comfy Breathable & Cooling Sheets - Hotel", 46.66, 65079, "CGK Unlimited"),
+            ("Utopia Bedding Ensemble de Drap 4 Pièces, 180x200cm, Bleu Denim", 23.74, 1405, "Utopia Bedding")]))
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,5 @@
 """Test RÉEL du correctif « vraie fiche française » (23/11/2026), sans aucun envoi Telegram et sans rien écrire dans data/.
-Reprend les 10 produits du dernier top USA enregistré + 15 produits « absents » du fichier hype, et affiche ce que le
+Reprend les 10 produits du dernier top USA enregistré + 8 produits « absents » du fichier hype, et affiche ce que le
 robot dirait maintenant. Coût : ≈ 200 jetons Keepa au plus (compris dans l'abonnement), 0 €.   Lancement : outil = test_fiche_france"""
 import glob
 import json
@@ -12,7 +12,7 @@ from denicheur.telegram import _e, _eur  # noqa: E402
 
 debut = moisson.jetons_restants()
 print("jetons Keepa au départ :", debut)
-if debut < 400:
+if debut < 150:
     sys.exit("pas assez de jetons pour tester sans gêner la veille : relancer plus tard")
 
 dernier = sorted(glob.glob("data/classements/US/*.json"))[-1]
@@ -29,9 +29,12 @@ for x in top:
           "| trouvé par :", (v or {}).get("trouve_par"), "| titre FR :", ((v or {}).get("titre") or "")[:60],
           "| ressemblance :", (v or {}).get("ressemblance"))
 
-print("\n===== 15 produits « absents » du fichier hype (code-barres seulement) =====")
+if (moisson._jetons["restants"] or 0) < 60:
+    print("\njetons dépensés par ce test :", moisson._jetons["depenses"], "| restants :", moisson._jetons["restants"])
+    sys.exit(0)
+print("\n===== 8 produits « absents » du fichier hype (code-barres seulement) =====")
 hype = [h for h in json.load(open("data/hype_etranger.json", encoding="utf-8")).get("produits", [])
-        if h.get("pays") == "US" and h.get("en_france") == "absent"][-15:]
+        if h.get("pays") == "US" and h.get("en_france") == "absent"][-8:]
 labas = moisson.fiches([h["asin"] for h in hype], "US")
 vues = moisson.fiche_france(labas, {r["asin"]: round((r.get("neuf") or 0) * 0.90, 2) or None for r in labas})
 bilan = {}

@@ -31618,7 +31618,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T02:49+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -31878,9 +31878,9 @@
     "Amazon 9/mois"
    ]
   },
-  "verifie_le": "2026-11-23T03:45+00:00",
+  "verifie_le": "2026-11-23T04:45+00:00",
   "verdict": {
-   "commentaire": "Offre Amazon.es non lisible (page anti-robot), prix et stock non confirmés. Seule référence française : un vendeur tiers Amazon.fr à 129,99 € (au-dessus de la moyenne 90 j de 119,91 €, plus bas 85,37 €) ; aucun autre prix neuf français trouvé (recherche web par nom et code EAN sans résultat). Marque générique, demande faible (~9 ventes/mois). À revérifier.",
+   "commentaire": "Deuxième vérification sans résultat : offre Amazon.es toujours non confirmée (prix, stock, livraison France), et aucun prix neuf français fiable hors un vendeur tiers Amazon.fr à 129,99 € (au-dessus de sa moyenne 90 j). Marque générique, demande faible. Dans le doute, rejeté.",
    "prix_neuf_min_idealo": null,
    "source_prix_ref": "keepa/amazon.fr (vendeur tiers, non fiable seul)",
    "economie_pct": null,
@@ -31922,7 +31922,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T04:11+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -32130,6 +32130,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 04:15 UTC : offre active, 44.99 affiché, marchand 5_4 ; fiche smythstoys.com lue ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T04:45+00:00",
+  "verdict": {
+   "commentaire": "Plus cher que la France : 47,99 £ chez Smyths (≈74,23 € livré) contre 55,70 € neuf vendu par Amazon.fr. Aucune économie.",
+   "prix_neuf_min_idealo": 55.7,
+   "source_prix_ref": "keepa/amazon.fr (vendu par Amazon)",
+   "economie_pct": -33,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "sans objet",
+   "demande_confirmee": true
+  }
  }
 ]

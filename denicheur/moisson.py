@@ -253,6 +253,8 @@ def fiches(asins, pays="FR", etat=None):
 # la fiche a été trouvée. Une annonce d'import n'est JAMAIS présentée comme le prix français.
 RANG_FAIBLE = 20000      # au-delà, la fiche ne se vend presque pas en France
 ECART_IMPORT = 1.8       # prix France ≥ 1,8 × prix d'origine sur la MÊME fiche = annonce d'importateur
+SEUIL_NOM = 0.6          # part minimale des mots du titre d'origine retrouvés dans le titre français
+VARIANTES_NOM = {"edge", "plus", "pro", "max", "mini", "ultra", "lite", "slim", "fe", "4k", "xl", "kids", "junior", "elite", "air"}
 MOTS_VIDES = {"the", "and", "for", "with", "from", "new", "newest", "model", "pack", "set", "inch", "les", "des", "pour", "avec",
               "de", "du", "la", "le", "et", "en", "of", "in", "to", "by", "official"}
 
@@ -282,6 +284,8 @@ def ressemblance(titre_labas, titre_fr, marque=None):
         return 0.0
     if any(m.isdigit() and m not in b for m in _mots(terme_recherche(titre_labas))):
         return 0.0
+    if any(m in VARIANTES_NOM and m not in a for m in _mots(titre_fr)[:10]):
+        return 0.0   # « DualSense Edge » n'est pas « DualSense », « Stick Plus » n'est pas « Stick » (test réel du 23/11)
     return round(sum(1 for m in a if m in b) / len(a), 2)
 
 
@@ -301,7 +305,7 @@ def _vue_fr(fr, etat_fiche, par):
             "lien": f"https://www.amazon.fr/dp/{fr.get('asin')}"}
 
 
-def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False):
+def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False, journal=None):
     """labas = résumés des fiches étrangères ; prix_eur = {asin: prix d'origine en euros}.
     Renvoie {asin étranger: vue} avec vue["etat"] :
       « fiche »       vraie fiche française (même ASIN qui se vend, ou autre ASIN trouvé par le code-barres)
@@ -331,6 +335,8 @@ def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False):
         except Exception as e:
             sante.noter("erreur", "fiche france", f"codes-barres : {type(e).__name__}: {str(e)[:120]}")
             continue
+        if journal is not None:
+            journal.append(f"codes-barres : {len(morceau)} envoyés, {len(d.get('products') or [])} fiches reçues")
         for p in (d.get("products") or []):
             if not isinstance(p, dict):
                 continue
@@ -367,12 +373,16 @@ def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False):
             sante.noter("erreur", "fiche france", f"recherche « {terme[:40]} » : {type(e).__name__}: {str(e)[:100]}")
             continue
         bons = []
+        if journal is not None:
+            journal.append(f"recherche « {terme} » : {len(d.get('products') or [])} résultats")
         for p in (d.get("products") or [])[:10]:
             if not isinstance(p, dict):
                 continue
             x = resumer(p, "FR")
             score = ressemblance(r.get("t"), p.get("title"), r.get("marque"))
-            if score < 0.5 or _douteuse(x, pe, False) or x["rang"] > 5 * RANG_FAIBLE:
+            if journal is not None:
+                journal.append(f"  « {terme[:40]} » -> {score} · {x.get('neuf')} € · rang {x.get('rang')} · {(p.get('title') or '')[:70]}")
+            if score < SEUIL_NOM or _douteuse(x, pe, False) or x["rang"] > 5 * RANG_FAIBLE:
                 continue
             if pe and not (0.4 * pe <= x["neuf"] <= 4 * pe):
                 continue  # accessoire, lot ou autre modèle

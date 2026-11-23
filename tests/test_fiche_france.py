@@ -62,7 +62,14 @@ class FicheFrance(unittest.TestCase):
 
     def test_un_autre_modele_n_est_pas_le_meme_produit(self):
         self.assertEqual(moisson.ressemblance("Amazon Echo Show 11 (newest model)", "Amazon Echo Show 8 (dernier modèle)", "Amazon"), 0.0)
-        self.assertGreaterEqual(moisson.ressemblance("Amazon Echo Show 11 (newest model)", "Amazon Echo Show 11 (dernier modèle)", "Amazon"), 0.5)
+        self.assertGreaterEqual(moisson.ressemblance("Amazon Echo Show 11 (newest model)", "Amazon Echo Show 11 (dernier modèle)", "Amazon"), 0.6)
+
+    def test_erreurs_du_premier_test_reel(self):
+        """23/11 : la recherche par nom avait pris l'Alien pour Jessie, la DualSense Edge pour la DualSense, le Stick Plus pour le Stick HD."""
+        r = moisson.ressemblance
+        self.assertLess(r(JESSIE_US["t"] + "eatures Sounds and Phrases", "Disney Store Official Figurine Alien parlante interactive, Toy Story", "Disney Store"), moisson.SEUIL_NOM)
+        self.assertEqual(r("PlayStation DualSense™ Wireless Controller – Midnight Black", "Playstation DualSense Edge® Wireless-Controller – Midnight Black", "PlayStation"), 0.0)
+        self.assertEqual(r("Roku Streaming Stick HD with Voice Remote", "Roku® Streaming Stick™ Plus 2025 – Appareil de Streaming", "Roku"), 0.0)
 
 
 if __name__ == "__main__":

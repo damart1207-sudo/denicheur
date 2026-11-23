@@ -30688,7 +30688,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T01:04+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -30950,17 +30950,17 @@
    ]
   },
   "verdict": {
-   "commentaire": "À revérifier : pages Amazon.it et Amazon.fr inaccessibles ce soir, offre active non confirmée ; référence Amazon.fr = vendeur tiers (88,99 €, moyenne 90 j 82,90 €), pas d'autre prix neuf français trouvé.",
-   "prix_neuf_min_idealo": 82.9,
-   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j)",
+   "commentaire": "Offre Amazon.it non confirmée (page illisible) et prix de référence douteux : 88,99 € est un vendeur tiers Amazon.fr, plus bas 90 j à 72,08 €, aucun prix comparateur fiable en France. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "keepa amazon.fr (non fiable)",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
    "marge_nette_verifiee": null,
    "duree_offre": null,
-   "demande_confirmee": false
+   "demande_confirmee": null
   },
-  "verifie_le": "2026-11-23T01:50+00:00"
+  "verifie_le": "2026-11-23T02:55+00:00"
  },
  {
   "id": "69d56f0035",
@@ -30980,7 +30980,7 @@
   "preuve_livraison": null,
   "livraison_fr_confirmee": false,
   "cout_total_confirme": false,
-  "lien_marchand": null,
+  "lien_marchand": "https://www.ldlc.com/fiche/PB00538039.html",
   "nom_produit": "NZXT H9 Elite Blanc",
   "cout_achat": 104.9,
   "prix_plancher": {
@@ -31006,7 +31006,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T01:53+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -31266,7 +31266,19 @@
    "proba_detail": [
     "Amazon 36/mois"
    ]
-  }
+  },
+  "verdict": {
+   "commentaire": "Vu sur ldlc.com (France) : NZXT H9 Elite Blanc CM-H91EW-01 à 99,90 € au lieu de 187,95 €, en stock, promo jusqu'au 06/12 inclus, retrait boutique possible (livraison estimée ~5 € en plus). Moins cher ailleurs en France : Rue du Commerce 184,99 € livré, Materiel.net 187,95 €. Revente non vérifiée (pas de prix d'occasion confirmé).",
+   "prix_neuf_min_idealo": 184.99,
+   "source_prix_ref": "achatmoinscher.com (Rue du Commerce 184,99 € livré, 13 offres) + materiel.net 187,95 €",
+   "economie_pct": 43,
+   "prix_revente_verifie": null,
+   "canal": "aucun (bon plan achat)",
+   "marge_nette_verifiee": null,
+   "duree_offre": "jusqu'au 06/12/2026",
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-23T02:55+00:00"
  },
  {
   "id": "c3a67f0a53",
@@ -31299,7 +31311,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T02:23+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "idealo": {
    "prix_min": 128.0,
@@ -31545,6 +31557,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 02:27 UTC : offre active, 89.0 affiché, marchand 1650_3 ; fiche costco.co.uk lue : 114.99 GBP, InStock ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verdict": {
+   "commentaire": "Costco UK : réservé aux membres, pas de livraison en France ; coût converti (~139 €) déjà au-dessus du prix neuf français (128 € sur idealo).",
+   "prix_neuf_min_idealo": 128.0,
+   "source_prix_ref": "idealo.fr (38 offres)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  },
+  "verifie_le": "2026-11-23T02:55+00:00"
  }
 ]

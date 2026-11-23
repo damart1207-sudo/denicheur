@@ -1,6 +1,6 @@
 {
  "jour": "2026-11-23",
- "examines": 45,
+ "examines": 53,
  "affaires": [
   {
    "asin": "B086P84Y6H",
@@ -106,6 +106,128 @@
      ],
      "anciennes": 1,
      "datees": 1,
+     "inverse": null,
+     "douteuses": [],
+     "vendable": true
+    }
+   },
+   "alerte": true
+  },
+  {
+   "asin": "B0GMHT4QZX",
+   "titre": "Philips Olas, Plafonnier Ventilateur 3 Pales, Lumière LED, 52\", Blanc-Bois",
+   "marque": "PHILIPS",
+   "lien": "https://www.amazon.fr/dp/B0GMHT4QZX",
+   "moyenne_90j": 174.73,
+   "nb_offres_neuves": 3,
+   "offres": [
+    {
+     "total": 112.98,
+     "amazon": true,
+     "fba": true
+    },
+    {
+     "total": 204.99,
+     "amazon": false,
+     "fba": false
+    },
+    {
+     "total": 264.67,
+     "amazon": false,
+     "fba": false
+    }
+   ],
+   "rang": 2603,
+   "achetes_mois_amazon": null,
+   "ventes_estimees_30j": 14,
+   "vu": "2026-11-23T01:32",
+   "retenu": true,
+   "premier": 112.98,
+   "premier_amazon": true,
+   "second": 204.99,
+   "ecart": 92.01,
+   "mot_cle": "philips olas",
+   "nom_court": "philips olas",
+   "ean": "8721103095923",
+   "marges": {
+    "prix_revente": 159.0,
+    "sous_le_second_pct": 22,
+    "marge_sans_charges": 46.02,
+    "marge_avec_charges": 21.71,
+    "charges_micro": 21.31,
+    "provision": 3.0,
+    "prix_pour_30_net_sans_charges": 142.98,
+    "prix_pour_30_net_avec_charges": 168.57,
+    "30_net_possible_avec_charges": true
+   },
+   "marche": {
+    "ebay": {
+     "neuf": {
+      "nb": 4,
+      "min": 186.98,
+      "max": 216.98,
+      "lien_min": "https://www.ebay.fr/itm/237111194480?_skw=philips+olas&hash=item3734edb370:g:1qgAAeSwQ91q~ds6",
+      "dates": 4,
+      "age_min": 48,
+      "age_recent": 13,
+      "age_ancien": 48,
+      "recentes": 0,
+      "anciennes": 2
+     },
+     "occasion": {
+      "nb": 0
+     },
+     "nb": 4
+    },
+    "achatmoinscher": {
+     "prix_min": 159.31,
+     "nb_offres": 8,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ventilateur/ventilateur-de-plafond-philips-olas-blanc-avec-led-et-telecommande.html"
+    },
+    "leboncoin": {
+     "nb": 0
+    },
+    "vinted": {
+     "nb": 0,
+     "neuf": {
+      "nb": 0
+     }
+    },
+    "idealo": {
+     "prix_min": null
+    },
+    "comparateurs_consultes": [
+     "idealo",
+     "achatmoinscher"
+    ],
+    "comparateur_min": {
+     "prix": 159.31,
+     "ou": "achatmoinscher",
+     "nb_offres": 8,
+     "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ventilateur/ventilateur-de-plafond-philips-olas-blanc-avec-led-et-telecommande.html",
+     "ecart": 46.33
+    }
+   },
+   "volume": 480,
+   "volume_mot": "philips olas",
+   "bilan": {
+    "vendre": false,
+    "raisons_expert": "La demande est faible avec seulement 14 ventes sur 30 jours et la marge nette après charges n'atteint que 15 €, bien en dessous de ton objectif de 30 €. De plus, le prix de vente maximum autorisé est 151,34 €, ce qui ne laisse aucune marge suffisante.",
+    "acheter": false,
+    "raisons_acheteur": "Je n'achèterais pas car le produit se vend peu et le prix proposé ne me donne pas d'économie réelle.",
+    "condition": "",
+    "ia": "gpt-oss-120b",
+    "grille": {
+     "demande": "moyenne",
+     "ref_nom": "le comparateur achatmoinscher",
+     "ref_prix": 159.31,
+     "plafond": 151.34,
+     "marge_sans": 38.36,
+     "marge_avec": 15.08,
+     "vetos": [],
+     "annonce_min": null,
+     "anciennes": 2,
+     "datees": 4,
      "inverse": null,
      "douteuses": [],
      "vendable": true
@@ -445,5 +567,5 @@
    "alerte": true
   }
  ],
- "maj": "2026-11-23T01:22+00:00"
+ "maj": "2026-11-23T01:32+00:00"
 }

@@ -37313,7 +37313,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T18:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -37500,6 +37500,18 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-23T18:43+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T19:50+00:00",
+  "verdict": {
+   "commentaire": "Offre sur Amazon.com (États-Unis, édition américaine) : environ 37,17 € livrée en France, droits de douane éventuels en plus. Le jeu neuf se trouve à 39,99 € en France (6 boutiques) : seulement ~7 % d'économie, sous le seuil de 15 %. Revente à perte sur tous les canaux. Rejeté.",
+   "prix_neuf_min_idealo": 39.99,
+   "source_prix_ref": "achatmoinscher.com (comparateur, relevé du robot) — idealo non joignable",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -9.7,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

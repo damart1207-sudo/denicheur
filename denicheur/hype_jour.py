@@ -276,7 +276,9 @@ def jour(n_envoi=10, envoyer=True):
         rond = ("🔥 VENTES + RECHERCHES EN HAUSSE · " if c.get("double_hausse") else "") + {"vert": "🟢 VERT", "orange": "🟠 ORANGE"}[f["feu"]]
         tend = ("" if f["tendance_fr_pct"] is None else
                 f" ({'📈 +' if f['tendance_fr_pct'] >= 0 else '📉 '}{f['tendance_fr_pct']} % en 3 mois)")
-        fr = (f"absent d'Amazon France" if c.get("en_france") == "absent"
+        fr = ("pas trouvé sur Amazon France (ni cette fiche, ni son code-barres)"
+              + (f" ; un importateur l'annonce à {telegram._eur(c['prix_import_fr'])}, ce n'est pas le prix français" if c.get("prix_import_fr") else "")
+              if c.get("en_france") == "absent"
               else f"mal vendu en France : {telegram._eur(c.get('prix_fr'))}, rang {c.get('rang_fr')}")
         vol = f["volume_fr"]
         lignes.append(

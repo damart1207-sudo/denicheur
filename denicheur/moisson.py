@@ -167,6 +167,23 @@ def _prix(c):
     return round(c / 100, 2) if isinstance(c, (int, float)) and c > 0 else None
 
 
+def _code14(c):
+    c = str(c).strip()
+    return c.zfill(14) if c.isdigit() and len(c) in (8, 12, 13, 14) else None
+
+
+def codes_barres(p, maxi=4):
+    """Codes-barres (EAN puis UPC) d'une fiche Keepa, sans doublon (un UPC = un EAN précédé d'un zéro)."""
+    vus, out = set(), []
+    for champ in ("eanList", "upcList"):
+        for c in (p.get(champ) if isinstance(p.get(champ), list) else []):
+            k = _code14(c)
+            if k and k not in vus:
+                vus.add(k)
+                out.append(str(c).strip())
+    return out[:maxi]
+
+
 def resumer(p, pays="FR"):
     """Fiche Keepa -> résumé de ≈ 200 octets : ce qu'il faut pour se passer de Keepa plus tard."""
     st = p.get("stats") or {}
@@ -188,7 +205,7 @@ def resumer(p, pays="FR"):
     rang = cur[I_RANG] if len(cur) > I_RANG and isinstance(cur[I_RANG], int) and cur[I_RANG] > 0 else None
     nb_neuf = cur[I_NB_NEUF] if len(cur) > I_NB_NEUF and isinstance(cur[I_NB_NEUF], int) and cur[I_NB_NEUF] >= 0 else None
     return {
-        "asin": p.get("asin"), "ean": (p.get("eanList") or [None])[0], "t": (p.get("title") or "")[:90],
+        "asin": p.get("asin"), "ean": (p.get("eanList") or [None])[0], "codes": codes_barres(p), "t": (p.get("title") or "")[:90],
         "marque": (p.get("brand") or "")[:30] or None, "cat": p.get("rootCategory"), "pays": pays,
         "neuf": neuf, "amazon": v(cur, I_AMAZON), "occ": v(cur, I_OCCASION), "wh": v(cur, I_WAREHOUSE),
         "m90": moy90, "m180": moy180, "min90": min([x for x in (mn(I_AMAZON), mn(I_NEUF)) if x], default=None),
@@ -226,6 +243,144 @@ def fiches(asins, pays="FR", etat=None):
     d = _appel("product", {"domain": DOMAINES.get(pays, 4), "asin": ",".join(asins), "stats": 180, "history": 0},
                etat=etat, cout_max=2 * len(asins))
     return [resumer(p, pays) for p in (d.get("products") or []) if isinstance(p, dict)]
+
+
+# ---------- FICHE FRANÇAISE D'UN PRODUIT ÉTRANGER ----------
+# Correctif du 23/11/2026 (Jessie Toy Story : 121 € annoncés « en France » alors que la fiche française est à 40 €).
+# Un même produit a souvent un numéro de fiche (ASIN) différent en France. Chercher l'ASIN américain sur Amazon.fr
+# donne soit rien (« absent » à tort : Echo Show 11), soit l'annonce d'un importateur (prix 2 à 4 fois trop haut).
+# On cherche donc dans l'ordre : même ASIN -> code-barres -> (option) marque + nom, et on dit toujours comment
+# la fiche a été trouvée. Une annonce d'import n'est JAMAIS présentée comme le prix français.
+RANG_FAIBLE = 20000      # au-delà, la fiche ne se vend presque pas en France
+ECART_IMPORT = 1.8       # prix France ≥ 1,8 × prix d'origine sur la MÊME fiche = annonce d'importateur
+MOTS_VIDES = {"the", "and", "for", "with", "from", "new", "newest", "model", "pack", "set", "inch", "les", "des", "pour", "avec",
+              "de", "du", "la", "le", "et", "en", "of", "in", "to", "by", "official"}
+
+
+def _mots(t):
+    import re
+    return [m for m in re.findall(r"[a-z0-9]+", (t or "").lower()) if (len(m) > 2 or m.isdigit()) and m not in MOTS_VIDES]
+
+
+def terme_recherche(titre, marque=None, mots=8):
+    """Début du titre (avant la première parenthèse / virgule / tiret isolé), 8 mots au plus, marque en tête."""
+    import re
+    debut = re.split(r"\s[-–|]\s|[,(\[]", titre or "", maxsplit=1)[0].strip()
+    t = " ".join(debut.split()[:mots])
+    if marque and marque.lower() not in t.lower():
+        t = f"{marque} {t}"
+    return t.strip()
+
+
+def ressemblance(titre_labas, titre_fr, marque=None):
+    """Part des mots du titre d'origine retrouvés dans le titre français (0 à 1). 0 si la marque ou un nombre du
+    début du titre (« Echo Show 11 » ≠ « Echo Show 8 ») manque : ce n'est alors pas le même produit."""
+    a, b = _mots(titre_labas), set(_mots(titre_fr))
+    if not a or not b:
+        return 0.0
+    if marque and not set(_mots(marque)) <= b:
+        return 0.0
+    if any(m.isdigit() and m not in b for m in _mots(terme_recherche(titre_labas))):
+        return 0.0
+    return round(sum(1 for m in a if m in b) / len(a), 2)
+
+
+def _douteuse(fr, prix_labas_eur, meme_asin):
+    """Fiche française qui ne prouve rien : pas de prix, pas de classement de ventes, ou (même ASIN que l'étranger)
+    presque aucune vente / prix très au-dessus du prix d'origine."""
+    if not fr or not fr.get("neuf") or not fr.get("rang"):
+        return True
+    if meme_asin and fr["rang"] > RANG_FAIBLE:
+        return True
+    return bool(meme_asin and prix_labas_eur and fr["neuf"] >= ECART_IMPORT * prix_labas_eur)
+
+
+def _vue_fr(fr, etat_fiche, par):
+    return {"etat": etat_fiche, "trouve_par": par, "asin": fr.get("asin"), "titre": fr.get("t"), "prix": fr.get("neuf"),
+            "rang": fr.get("rang"), "vendeurs": fr.get("offres"), "vendus_mois": fr.get("vendus_mois"),
+            "lien": f"https://www.amazon.fr/dp/{fr.get('asin')}"}
+
+
+def fiche_france(labas, prix_eur, etat=None, par_nom=0, garder=False):
+    """labas = résumés des fiches étrangères ; prix_eur = {asin: prix d'origine en euros}.
+    Renvoie {asin étranger: vue} avec vue["etat"] :
+      « fiche »       vraie fiche française (même ASIN qui se vend, ou autre ASIN trouvé par le code-barres)
+      « probable »    fiche trouvée par la marque et le nom : à vérifier d'un clic (lien fourni)
+      « import »      seule l'annonce d'un importateur existe : son prix n'est pas le prix français
+      « introuvable » rien trouvé (ce n'est PAS une preuve d'absence)
+    Coût Keepa : 1 jeton par fiche (même ASIN), ≈ 1 par code-barres trouvé, 10 par recherche par nom (par_nom au plus)."""
+    labas = [r for r in labas if r.get("asin")]
+    if not labas:
+        return {}
+    ici = {r["asin"]: r for r in fiches([r["asin"] for r in labas], "FR", etat=etat)}
+    # codes-barres -> fiches françaises (une seule requête par 100 codes)
+    de_code = {}
+    for r in labas:
+        for c in (r.get("codes") or ([r["ean"]] if r.get("ean") else []))[:2]:
+            if _code14(c):
+                de_code.setdefault(_code14(c), (c, r["asin"]))
+    par_code = {}
+    lot = list(de_code.values())
+    for i in range(0, len(lot), 100):
+        morceau = lot[i:i + 100]
+        try:
+            d = _appel("product", {"domain": DOMAINES["FR"], "code": ",".join(c for c, _ in morceau), "stats": 180, "history": 0},
+                       etat=etat, cout_max=2 * len(morceau))
+        except BudgetKeepaInsuffisant:
+            break
+        except Exception as e:
+            sante.noter("erreur", "fiche france", f"codes-barres : {type(e).__name__}: {str(e)[:120]}")
+            continue
+        for p in (d.get("products") or []):
+            if not isinstance(p, dict):
+                continue
+            for c in codes_barres(p, maxi=20):
+                if _code14(c) in de_code:
+                    par_code.setdefault(de_code[_code14(c)][1], []).append(resumer(p, "FR"))
+    if garder:  # notre base : on garde aussi les fiches françaises trouvées par le code-barres
+        _garder(list(ici.values()) + [x for l in par_code.values() for x in l])
+    vues, a_chercher = {}, []
+    for r in labas:
+        a, pe = r["asin"], prix_eur.get(r["asin"])
+        cands = [(x, "même fiche" if x["asin"] == a else "code-barres") for x in ([ici[a]] if ici.get(a) else []) + par_code.get(a, [])]
+        bons = [(x, par) for x, par in cands if not _douteuse(x, pe, x["asin"] == a)]
+        if bons:
+            x, par = min(bons, key=lambda c: c[0]["rang"])
+            vues[a] = _vue_fr(x, "fiche", par)
+            continue
+        avec_prix = [x for x, _ in cands if x.get("neuf")]
+        vues[a] = (_vue_fr(min(avec_prix, key=lambda x: x["neuf"]), "import", "même fiche") if avec_prix
+                   else {"etat": "introuvable", "trouve_par": None})
+        a_chercher.append(r)
+    # dernier recours, seulement pour les classements (10 produits) : marque + nom, 10 jetons par recherche
+    for r in a_chercher[:par_nom]:
+        a, pe = r["asin"], prix_eur.get(r["asin"])
+        terme = terme_recherche(r.get("t"), r.get("marque"))
+        if not terme:
+            continue
+        try:
+            d = _appel("search", {"domain": DOMAINES["FR"], "type": "product", "term": terme[:100], "stats": 180, "history": 0},
+                       etat=etat, cout_max=10)
+        except BudgetKeepaInsuffisant:
+            break
+        except Exception as e:
+            sante.noter("erreur", "fiche france", f"recherche « {terme[:40]} » : {type(e).__name__}: {str(e)[:100]}")
+            continue
+        bons = []
+        for p in (d.get("products") or [])[:10]:
+            if not isinstance(p, dict):
+                continue
+            x = resumer(p, "FR")
+            score = ressemblance(r.get("t"), p.get("title"), r.get("marque"))
+            if score < 0.5 or _douteuse(x, pe, False) or x["rang"] > 5 * RANG_FAIBLE:
+                continue
+            if pe and not (0.4 * pe <= x["neuf"] <= 4 * pe):
+                continue  # accessoire, lot ou autre modèle
+            bons.append((score, x))
+        if bons:
+            score, x = max(bons, key=lambda c: (c[0], -c[1]["rang"]))
+            vues[a] = {**_vue_fr(x, "probable", "nom"), "ressemblance": score, "import": vues[a] if vues[a]["etat"] == "import" else None}
+    return vues
 
 
 # ---------- 1. RADAR AMAZON ----------
@@ -371,7 +526,7 @@ def _international(titre):
 def hype(etat):
     """Meilleures ventes d'une catégorie aux USA ou au Japon (50 jetons), fiche des 100 premiers là-bas (100 jetons),
     puis regard sur Amazon.fr (100 jetons) : ce qui cartonne là-bas et n'existe pas / se vend mal en France."""
-    if not _peut(260, etat):
+    if not _peut(460, etat):  # 50 liste + 100 fiches là-bas + 100 fiches France + ≤ 200 codes-barres
         return 0
     pays = PAYS_HYPE[etat.get("pays_suivant", 0) % len(PAYS_HYPE)]
     etat["pays_suivant"] = etat.get("pays_suivant", 0) + 1
@@ -387,23 +542,27 @@ def hype(etat):
         if not asins:
             return 0
         labas = {r["asin"]: r for r in fiches(asins, pays, etat=etat)}
-        ici = {r["asin"]: r for r in fiches(list(labas), "FR", etat=etat)}
+        from .hype_jour import prix_eur
+        vues = fiche_france(list(labas.values()), {a: prix_eur({"pays": pays, "prix_labas": r.get("neuf")}) for a, r in labas.items()}, etat=etat, garder=True)
     except Exception as e:
         sante.noter("erreur", "moisson hype", f"{pays} {cat}: {type(e).__name__}: {str(e)[:120]}")
         return 0
     trouves = []
     for rang_labas, asin in enumerate(asins, 1):
-        a, b = labas.get(asin), ici.get(asin)
-        if not a or (pays == "JP" and not _international(a.get("t"))):
+        a, v = labas.get(asin), vues.get(asin)
+        if not a or not v or (pays == "JP" and not _international(a.get("t"))):
             continue
-        absent = not b or not b.get("neuf")
-        faible = bool(b and b.get("rang") and b["rang"] > 20000)
-        if absent or faible:
-            trouves.append({"asin": asin, "titre": a.get("t"), "marque": a.get("marque"), "pays": pays, "categorie": cat_fr,
-                            "rang_labas": rang_labas, "ventes_30j_labas": a.get("ch30"), "prix_labas": a.get("neuf"),
-                            "en_france": "absent" if absent else "mal vendu", "prix_fr": (b or {}).get("neuf"), "rang_fr": (b or {}).get("rang"),
-                            "lien_fr": f"https://www.amazon.fr/dp/{asin}", "vu": datetime.now(timezone.utc).strftime("%Y-%m-%d")})
-    _garder([r for r in labas.values()] + [r for r in ici.values()])
+        if v["etat"] == "fiche" and v["rang"] <= RANG_FAIBLE:
+            continue  # se vend déjà bien en France (parfois sous un autre numéro de fiche) : ce n'est pas une hype à venir
+        vraie = v["etat"] == "fiche"
+        trouves.append({"asin": asin, "titre": a.get("t"), "marque": a.get("marque"), "pays": pays, "categorie": cat_fr,
+                        "rang_labas": rang_labas, "ventes_30j_labas": a.get("ch30"), "prix_labas": a.get("neuf"),
+                        "en_france": "mal vendu" if vraie else "absent", "prix_fr": v.get("prix") if vraie else None,
+                        "rang_fr": v.get("rang") if vraie else None, "asin_fr": v.get("asin") if vraie else None,
+                        # annonce d'importateur sur la fiche étrangère : gardée pour information, jamais comme prix français
+                        "prix_import_fr": v.get("prix") if v["etat"] == "import" else None,
+                        "lien_fr": v.get("lien") or f"https://www.amazon.fr/dp/{asin}", "vu": datetime.now(timezone.utc).strftime("%Y-%m-%d")})
+    _garder(list(labas.values()))
     h = _lire(F_HYPE, {"produits": []})
     deja = {x["asin"] for x in trouves}
     anciens = [x for x in h.get("produits", []) if x["asin"] not in deja][-600:]

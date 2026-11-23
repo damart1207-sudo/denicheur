@@ -7,7 +7,7 @@ toutes les heures sur les ventes récentes, donc le n° 1 d'une catégorie à 23
 Classement : position dans la catégorie, puis ventes du mois (« achetés le mois dernier »). Pour chaque produit :
 déjà vendu en France ? à quel prix ? combien de vendeurs ?
 Chine : pas de chiffres de ventes accessibles depuis le cloud -> les bons plans les plus populaires de SMZDM (le Dealabs chinois).
-Coût : ≈ 500 jetons Keepa par pays et par jour (compris dans l'abonnement).
+Coût : ≈ 500 à 650 jetons Keepa par pays et par jour (compris dans l'abonnement).
 Appelé à chaque tour de veille ; ne fait quelque chose que dans la fenêtre 23 h 40 - 01 h 00 locale, une fois par jour et par pays."""
 import json
 import os
@@ -56,7 +56,7 @@ def _eur(p, pays):
     return round(p * (100 if pays == "JP" else 1) * TAUX[pays], 2)
 
 
-JETONS_CLASSEMENT = 700   # ≈ 8 catégories × 50 + fiches : à garder en réserve avant chaque photo de 23 h 59
+JETONS_CLASSEMENT = 850   # ≈ 8 catégories × 50 + fiches + fiche française (codes-barres, ≤ 10 recherches par nom) : à garder en réserve avant chaque photo de 23 h 59
 F_RESERVE_TEST = os.path.join(RACINE, "data/etat/reserve_keepa.json")
 
 
@@ -115,11 +115,10 @@ def amazon(pays, n=10, par_cat=15):
                     "prix_eur": _eur(r.get("neuf"), pays), "croissance_ventes_pct": croissance, "rang": r.get("rang")})
     lst.sort(key=lambda x: (x["position"], -(x["vendus_mois"] or 0)))
     top = lst[:n]
-    ici = {r["asin"]: r for r in moisson.fiches([x["asin"] for x in top], "FR")}
+    # Vraie fiche française (correctif du 23/11) : même ASIN, puis code-barres, puis marque + nom. Voir moisson.fiche_france.
+    vues = moisson.fiche_france([labas[x["asin"]] for x in top], {x["asin"]: x["prix_eur"] for x in top}, par_nom=len(top))
     for x in top:
-        r = ici.get(x["asin"])
-        x["france"] = ({"prix": r.get("neuf"), "rang": r.get("rang"), "vendeurs": r.get("offres"), "vendus_mois": r.get("vendus_mois")}
-                       if r and r.get("neuf") else None)
+        x["france"] = vues.get(x["asin"]) or {"etat": "introuvable", "trouve_par": None}
         x["lien"] = f"https://www.amazon.{ {'US': 'com', 'JP': 'co.jp', 'UK': 'co.uk'}[pays] }/dp/{x['asin']}"
     return top
 
@@ -152,6 +151,27 @@ def chine(n=10, date=None):
             for i, x in enumerate(lst)]
 
 
+def ligne_france(fr, eur, _e):
+    """Ce qu'on sait VRAIMENT du produit sur Amazon France. Jamais « absent » sans preuve, jamais un prix d'importateur
+    présenté comme le prix français (Jessie Toy Story, 23/11 : 121 € annoncés, vraie fiche à 40 €)."""
+    fr = fr or {"etat": "introuvable"}
+    etat = fr.get("etat") or ("fiche" if fr.get("prix") else "introuvable")   # anciens fichiers : pas d'état
+
+    def detail(f):
+        v = f.get("vendeurs")
+        return (f"{eur(f.get('prix'))}, {v if v is not None else '?'} vendeur{'s' if v != 1 else ''}"
+                + (f", plus de {f['vendus_mois']} vendus/mois" if f.get("vendus_mois") else "")
+                + (f", n° {f['rang']} des ventes" if f.get("rang") else ""))
+    if etat == "fiche":
+        return f"🇫🇷 en France : {detail(fr)}\n{_e(fr.get('lien'))}"
+    if etat == "probable":
+        return f"🇫🇷 en France (fiche trouvée par le nom, à vérifier d'un clic) : {detail(fr)}\n{_e(fr.get('lien'))}"
+    if etat == "import":
+        return (f"🇫🇷 fiche française non trouvée. Seule une annonce d'importateur existe ({eur(fr.get('prix'))}) : "
+                "ce n'est pas le prix français")
+    return "🇫🇷 pas trouvé sur Amazon France par le robot (ni fiche, ni code-barres, ni nom) : à vérifier avant de chasser"
+
+
 def message(pays, date, top):
     from .telegram import _e, _eur as eur
     if pays == "CN":
@@ -164,15 +184,12 @@ def message(pays, date, top):
         return "\n".join(lignes)
     lignes = [f"<b>{NOMS[pays]} — top 10 des ventes Amazon du {date}</b> (photo à 23 h 59 heure locale)"]
     for i, x in enumerate(top, 1):
-        fr = x.get("france")
-        fr_t = ("🇫🇷 <b>absent d'Amazon France</b> → à chasser" if not fr else
-                f"🇫🇷 en France : {eur(fr['prix'])}, {fr.get('vendeurs') if fr.get('vendeurs') is not None else '?'} vendeurs"
-                + (f", {fr['vendus_mois']} vendus/mois" if fr.get("vendus_mois") else ""))
+        fr_t = ligne_france(x.get("france"), eur, _e)
         cr = x.get("croissance_ventes_pct")
         lignes.append(f"\n{i}. <b>{_e((x.get('titre') or '')[:80])}</b>\n"
                       f"n° {x['position']} en {_e(x['categorie'])} · {eur(x.get('prix_eur'))}"
-                      + (f" · {x['vendus_mois']} vendus le mois dernier" if x.get("vendus_mois") else "")
-                      + (f" · ventes {'📈 +' if cr >= 0 else '📉 '}{cr} % (30 j vs 90 j)" if cr is not None else "")
+                      + (f" · plus de {x['vendus_mois']} vendus le mois dernier" if x.get("vendus_mois") else "")
+                      + (f" · classement des ventes {'📈 +' if cr >= 0 else '📉 '}{cr} % (30 j vs 90 j)" if cr is not None else "")
                       + f"\n{fr_t}\n{_e(x['lien'])}")
     return "\n".join(lignes)
 

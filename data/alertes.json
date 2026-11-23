@@ -32190,7 +32190,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T05:17+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -32373,7 +32373,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 05:20 UTC : offre active, 91.87 affiché, marchand 81_2 ; mediaexpert.pl refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T05:50+00:00",
+  "verdict": {
+   "commentaire": "Media Expert (Pologne) : livraison en point relais polonais, aucune livraison en France confirmée. Et 26,15 € livré contre 30 € neuf en France (achatmoinscher) : seulement 13 % d'économie, sous le seuil de 15 %. Revente : perte (-6 €).",
+   "prix_neuf_min_idealo": 30.0,
+   "source_prix_ref": "achatmoinscher (10 boutiques)",
+   "economie_pct": 13,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "keepa-B09TW6HXLN-arbDE",
@@ -32406,7 +32418,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T05:17+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "keepa": {
@@ -32596,7 +32608,19 @@
    "livraison_france": "oui",
    "resume": "amazon.de refuse les robots (page anti-robot (captcha)) ; fiche Amazon connue par Keepa ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T05:50+00:00",
+  "verdict": {
+   "commentaire": "Fiche Amazon.fr lue par Keepa : 33,10 € (moyenne 90 j 31,65 €, plus bas 90 j 18 €). Prix Amazon.de de 13,76 € à reconfirmer au prochain tour (le prix varie selon la pointure). Revente trop faible (3,47 € sur Leboncoin/Vinted).",
+   "prix_neuf_min_idealo": 31.65,
+   "source_prix_ref": "Keepa Amazon.fr (moyenne 90 j)",
+   "economie_pct": 41,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "a14f904b9f",
@@ -32642,7 +32666,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T05:21+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -32850,6 +32874,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 05:26 UTC : offre active, 44.95 affiché, marchand 1_5 ; e.leclerc refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T05:50+00:00",
+  "verdict": {
+   "commentaire": "Page du bon plan relue à 06h26 : E.Leclerc affiche 44,95 €, pas 20,16 € (le prix bas passe sans doute par le Ticket Leclerc, carte de fidélité). 44,95 € est plus cher que le neuf le moins cher en France (34,03 €, achatmoinscher). Revente : perte.",
+   "prix_neuf_min_idealo": 34.03,
+   "source_prix_ref": "achatmoinscher (12 boutiques)",
+   "economie_pct": 0,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

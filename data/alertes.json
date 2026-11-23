@@ -35399,7 +35399,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T12:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -35624,7 +35624,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-23T12:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T13:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : page Nike non consultable aujourd'hui (offre et frais non confirmés). La référence 111,20 € (achatmoinscher) concerne un autre coloris (blanc). Sur Amazon.fr ce modèle est descendu à 87,50 € ces 90 derniers jours : notre coût de 84,99 € livré n'est que ~3 % en dessous, loin des 15 %. Revente : marge négative (-3,24 €).",
+   "prix_neuf_min_idealo": 87.5,
+   "source_prix_ref": "Amazon.fr (plus bas 90 j, Keepa) ; achatmoinscher 111,20 € autre coloris",
+   "economie_pct": 3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -3.24,
+   "duree_offre": "inconnue (promo Nike)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "720a3778c1",
@@ -35670,7 +35682,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T12:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "keepa": {
@@ -35895,7 +35907,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-23T12:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T13:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : page Nike non consultable aujourd'hui (offre et frais non confirmés). La référence 111,20 € (achatmoinscher) concerne un autre coloris (blanc). Sur Amazon.fr ce modèle est descendu à 87,50 € ces 90 derniers jours : notre coût de 84,99 € livré n'est que ~3 % en dessous, loin des 15 %. Revente : marge négative (-3,24 €).",
+   "prix_neuf_min_idealo": 87.5,
+   "source_prix_ref": "Amazon.fr (plus bas 90 j, Keepa) ; achatmoinscher 111,20 € autre coloris",
+   "economie_pct": 3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -3.24,
+   "duree_offre": "inconnue (promo Nike)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "81d8245233",
@@ -35941,7 +35965,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T13:27+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -36124,6 +36148,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 13:30 UTC : offre active, 179.99 affiché, marchand 83_5 ; empik.com refuse les robots (HTTP 403) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T13:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : Empik (Pologne) livre en France mais facture 65 zł (~15 €) de port, soit ~57 € livré. En France le jeu a déjà été vendu 58,95 € (E.Leclerc) et les comparateurs donnent 69,99-71,21 € (Techinn, PcComponentes) : l'économie réelle n'atteint pas 15 % de façon sûre. Annonce Pepper non consultable (offre active non confirmée). Revente : marge ~3 €, insuffisante.",
+   "prix_neuf_min_idealo": 58.95,
+   "source_prix_ref": "chocobonplan (E.Leclerc 58,95 €) ; achatmoinscher 69,99 €",
+   "economie_pct": 3,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": 3.3,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

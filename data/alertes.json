@@ -43,7 +43,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-23T22:10+00:00",
-  "statut": "a_verifier",
+  "statut": "a_reverifier",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -230,6 +230,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-23T22:14+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-23T22:50+00:00",
+  "verdict": {
+   "commentaire": "Bon produit (M64 Wireless, pas la version Pro) et prix intéressant : 18,73 € (23,73 € livré estimé) contre 34,99 € au plus bas en France (achatmoinscher, 8 boutiques ; LDLC 63,95 € et Rue du Commerce 63,99 € lus ce soir). Mais la page Amazon.pl et le deal Pepper n'ont pas pu être ouverts : offre encore active et livraison en France non confirmées. À revérifier au prochain passage. Revente : marge négative sur tous les canaux (-0,07 € au mieux).",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot) ; contrôlé : LDLC 63,95 €, Rue du Commerce 63,99 €",
+   "economie_pct": 32,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -0.07,
+   "duree_offre": "inconnue (deal Pepper du 23/11 soir)",
+   "demande_confirmee": false
+  }
  }
 ]

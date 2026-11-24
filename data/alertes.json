@@ -352,7 +352,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T02:08+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -537,6 +537,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T02:11+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T02:45+00:00",
+  "verdict": {
+   "commentaire": "Sony HT-A3000 chez Joybuy Allemagne (joybuy.de) : le prix affiché est passé à 318 € (pas 294 €). Livraison en France non confirmée : joybuy.de bloque les robots et Joybuy a un site français séparé (joybuy.fr), les offres .de semblent réservées à l'Allemagne (des services de réexpédition sont proposés pour la France). Revente : marge négative sur tous les canaux. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 390.0,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot, 6 boutiques) — idealo.fr non lu",
+   "economie_pct": 18,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

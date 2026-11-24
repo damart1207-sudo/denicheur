@@ -1,0 +1,95 @@
+{
+ "horodatage": "2026-11-24_1231",
+ "date": "24/11/2026",
+ "auditeur": "Claude",
+ "resume": "1 bonne affaire sur 9 (orange). Écran MSI MAG 272QP QD-OLED à 299,99 € chez Boulanger, 23 % sous tous les autres marchands, revente ≈ 377 € neuf. Rejets : ampoules Philips Hue (marge trop faible face au prix officiel 69,99 €), LEGO déjà au même prix ailleurs, achats étrangers non livrables ou sans marge.",
+ "verdicts": [
+  {
+   "id": "3ca8ed9b18",
+   "verdict": "bon",
+   "commentaire": "Écran MSI MAG 272QP QD-OLED X24 à 299,99 € chez Boulanger (bon plan Dealabs). Comparateur KultureGeek lu à 12h45 : les autres marchands français sont à 389 € (Amazon Marketplace) puis 449,90 € (GrosBill, Cybertek) : nous sommes 23 % sous le moins cher, règle « le moins cher du marché ». Revente neuf scellé à 377 € (3 % sous 389 €) sur Leboncoin vendeur pro : marge ≈ 72 € ; Rebifftout ≈ 66 € ; Cdiscount ≈ 34 € ; eBay ≈ 17 €. Sans prix idealo : « bon » au maximum. La fiche Boulanger affiche aussi 476,44 € par un vendeur partenaire : offre probablement courte, acheter vite et contrôler 299,99 € « vendu par Boulanger » avant de payer.",
+   "prix_revente_verifie": 377.33,
+   "plateforme_verifiee": "leboncoin",
+   "marge_nette_verifiee": 72.34,
+   "mode": "stock",
+   "ou_vendre": "Leboncoin (France, vendeur pro) ou Rebifftout"
+  },
+  {
+   "id": "3978ba5b7f",
+   "verdict": "rejete",
+   "commentaire": "Philips Hue Essential White & Color E27 pack de 4 à 44,99 € sur Amazon.nl (≈ 50 € livré). Prix neuf officiel France lu sur philips-hue.com : 69,99 €. Revente plafonnée à 85 % (59,49 €) : marge ≈ 9 €, soit 19 % du coût, sous le seuil de 30 %. Les prix eBay (80 €) sont des prix demandés."
+  },
+  {
+   "id": "fe54cf30f9",
+   "verdict": "rejete",
+   "commentaire": "Philips Hue Essential GU10 pack de 4 à 47,77 € sur Amazon Autriche (≈ 53 € livré). Neuf France sur philips-hue.com : 69,99 €. Revente plafonnée à 59,49 € : marge ≈ 6,70 €, trop faible."
+  },
+  {
+   "id": "6685aa63ad",
+   "verdict": "rejete",
+   "commentaire": "LEGO Marvel 76342 Daily Bugle contre Mystério à 80,50 € sur Amazon.fr. Achatmoinscher donne déjà 80,50 € comme prix le plus bas en France (15 boutiques) : un marchand vend déjà à notre prix d'achat. Set récent, pas retiré de la vente."
+  },
+  {
+   "id": "d37ded489d",
+   "verdict": "rejete",
+   "commentaire": "Coffret Bosch X-Line 70 pièces à 14,51 € sur Allegro Pologne (≈ 19,50 € livré). En France il est à 22,99 € (achatmoinscher, 10 boutiques) : revente au mieux 22,30 € neuf, marge ≈ 2 €."
+  },
+  {
+   "id": "a5a9fd6b6d",
+   "verdict": "rejete",
+   "commentaire": "Imprimante HP DeskJet 4320 à 23,50 € chez Media Expert (Pologne, magasin qui ne livre pas la France en standard). Neuf eBay France dès 39,90 € : marge négative après port."
+  },
+  {
+   "id": "65dd7553bf",
+   "verdict": "rejete",
+   "commentaire": "Blouson Schott NYC Kenny à 60,93 € sur Amazon.fr, une seule taille (L) en promotion. Vêtement taille unique, aucune annonce de revente comparable trouvée."
+  },
+  {
+   "id": "cc89aa1373",
+   "verdict": "rejete",
+   "commentaire": "Nike Court Vision Low Next Nature à 47,99 € chez Nike. L'occasion se vend 34 à 53 € : notre coût (53 € livré) dépasse le haut de l'occasion."
+  },
+  {
+   "id": "efb824bb4a",
+   "verdict": "rejete",
+   "commentaire": "Friteuse à air Bono Samy 6,5 L à 39 € chez Möbelix (magasin autrichien, pas de livraison en France), marque inconnue en France."
+  }
+ ],
+ "valides": [
+  "3ca8ed9b18"
+ ],
+ "rejetes": [
+  {
+   "id": "3978ba5b7f",
+   "motif": "marge insuffisante"
+  },
+  {
+   "id": "fe54cf30f9",
+   "motif": "marge insuffisante"
+  },
+  {
+   "id": "6685aa63ad",
+   "motif": "déjà au même prix en France"
+  },
+  {
+   "id": "d37ded489d",
+   "motif": "marge insuffisante"
+  },
+  {
+   "id": "a5a9fd6b6d",
+   "motif": "marge négative"
+  },
+  {
+   "id": "65dd7553bf",
+   "motif": "taille unique pour un vêtement"
+  },
+  {
+   "id": "cc89aa1373",
+   "motif": "coût au-dessus du haut de l'occasion"
+  },
+  {
+   "id": "efb824bb4a",
+   "motif": "achat impossible depuis la France"
+  }
+ ]
+}

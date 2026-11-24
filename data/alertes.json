@@ -2783,7 +2783,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T12:53+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -3054,6 +3054,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-24T13:55+00:00",
+  "verdict": {
+   "commentaire": "Produit exact : Nike Air Max 270 femme, référence AH6789-006 (Triple Noir), 79,99 € + 5 € de port sur nike.com (84,99 € livré). Une recherche web montre la même référence chez Kickz France à 71,98 €, prix non confirmable ; sur 123comparer le neuf le moins cher encore actif est Foot Locker à 159,99 €. Dans le doute (possible prix plus bas ailleurs), rejeté.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "recherche web (Kickz FR 71,98 € non confirmé ; 123comparer : Foot Locker 159,99 €)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Friday Nike, jusqu'au 1er décembre",
+   "demande_confirmee": false
   }
  },
  {
@@ -3100,7 +3112,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T12:53+00:00",
-  "statut": "a_verifier",
+  "statut": "bon_plan",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -3371,6 +3383,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-24T13:55+00:00",
+  "verdict": {
+   "commentaire": "Produit exact : Nike Air Max 270 femme, référence HJ3222-001 (Noir/Blanc/Metallic Silver). Fiche nike.com lue à 14h27 (heure de Paris) : 79,99 € (au lieu de 159,99 €, Black Friday Nike jusqu'au 1er décembre), + 5 € de port sous 99 € (gratuit pour les membres Nike), soit 84,99 € livré en France. Prix neuf le plus bas des autres marchands en France (everysize, relevé du 24/11 14h34) : Kaufland 112,92 € port gratuit ; About You 143,10 € ; Foot Store 126,15 € + 7,49 € ; Foot Locker 159,99 €. Économie 25 %. Revente : on serait le moins cher du marché, revente à environ 109,50 € (3 % sous Kaufland) sur Leboncoin, marge nette d'environ 7 € après prélèvements et provision, sous le seuil de 8 € : pas de revente conseillée. Pointures limitées selon le stock.",
+   "prix_neuf_min_idealo": 112.92,
+   "source_prix_ref": "everysize.com (comparateur FR, 24/11 14h34) : Kaufland FR 112,92 € livré",
+   "economie_pct": 25,
+   "prix_revente_verifie": 109.53,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 6.86,
+   "duree_offre": "Black Friday Nike, jusqu'au 1er décembre 9h (selon le bandeau Nike)",
+   "demande_confirmee": false
   }
  },
  {
@@ -3417,7 +3441,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T13:13+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -3602,6 +3626,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T13:16+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T13:55+00:00",
+  "verdict": {
+   "commentaire": "Kingdom Come: Deliverance Royal Edition PS5 chez Media Expert (Pologne, pepper.pl, page lue à 14h41 : 63,89 zł). Media Expert est un magasin polonais qui ne livre pas en France : achat et livraison en France impossibles. Prix neuf le plus bas en France : 39,29 € (achatmoinscher).",
+   "prix_neuf_min_idealo": 39.29,
+   "source_prix_ref": "achatmoinscher (relevé du robot)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

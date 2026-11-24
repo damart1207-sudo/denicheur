@@ -1,14 +1,8 @@
 {
- "tours_ok": 3364,
+ "tours_ok": 3365,
  "tours_echec": 12,
- "dernier_ok": "24/11 01:59",
+ "dernier_ok": "24/11 02:03",
  "evenements": [
-  {
-   "heure": "17/11 06:12",
-   "niveau": "erreur",
-   "etape": "moisson jetons",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests"
-  },
   {
    "heure": "17/11 06:12",
    "niveau": "erreur",
@@ -1802,12 +1796,18 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 402: Payment Required"
+  },
+  {
+   "heure": "24/11 02:03",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 402: Payment Required"
   }
  ],
  "dernier_resume": {
-  "heure": "24/11 01:56",
-  "annonces": 621,
-  "nouvelles": 346,
+  "heure": "24/11 02:00",
+  "annonces": 666,
+  "nouvelles": 356,
   "examinees": 25,
   "alertes": 0
  }

@@ -5241,7 +5241,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-24T19:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -5274,7 +5274,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 19:28 UTC : offre active, 15.99 affiché, marchand 3_2 ; fiche amazon.de lue, en stock (panier) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : annoncé « Preisfehler » (erreur de prix probable, commande souvent annulée) et clavier allemand QWERTZ, pas l'AZERTY vendu en France ; produit exact non confirmé, aucun prix neuf français fiable.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "aucune (recherche web sans prix fiable)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "très courte (erreur de prix)",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "b76f17838c",
@@ -5333,7 +5345,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T19:25+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -5511,6 +5523,18 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 19:30 UTC : offre active, 41.4 affiché, code Compra recurrente, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T19:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : prix réservé à l'abonnement « Compra recurrente » d'Amazon Espagne, lien marchand vers amazon.com (États-Unis), livraison en France non confirmée (parfum souvent non expédié à l'étranger). Coût réel 43,60 € vs 55,87 € (achatmoinscher, 50 ml) ; revente négative (-4 € sur Leboncoin/Vinted).",
+   "prix_neuf_min_idealo": 55.87,
+   "source_prix_ref": "achatmoinscher.com (pas idealo)",
+   "economie_pct": 22.0,
+   "prix_revente_verifie": 49.17,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": -4.02,
+   "duree_offre": "quelques heures à jours",
+   "demande_confirmee": false
+  }
  }
 ]

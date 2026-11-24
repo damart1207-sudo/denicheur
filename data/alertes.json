@@ -1105,7 +1105,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T08:18+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1288,7 +1288,19 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 08:22 UTC : offre active, 22.59 affiché, marchand 36_3 ; carrefour.fr refuse les robots (HTTP 403) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T08:55+00:00",
+  "verdict": {
+   "commentaire": "Produit exact (Hogwarts Legacy Switch 2, EAN 5051889748533). Prix neuf le plus bas en France vérifié : 32,00 € chez Cdiscount (+4,99 € de port). Mais impossible de confirmer que l'offre Carrefour à 20,93 € est encore active ni ses conditions (pages Dealabs et Carrefour illisibles, prix possiblement lié à la carte fidélité ou au magasin). Dans le doute : rejet. Revente à perte (marge -4,54 €).",
+   "prix_neuf_min_idealo": 32.0,
+   "source_prix_ref": "consollection.com (Cdiscount, relevé du jour) ; Amazon 35,75 € (chocobonplan)",
+   "economie_pct": 19,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -4.54,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9035f1d8d0",
@@ -1334,7 +1346,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T08:33+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -1583,6 +1595,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-24T08:55+00:00",
+  "verdict": {
+   "commentaire": "Offre polonaise (RTV Euro AGD, pepper.pl) : ce marchand ne livre pas en France, achat et livraison en France non confirmés. Marque GoGEN quasi absente en France, prix de référence 126,7 € peu fiable. Rejet.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": "achatmoinscher (non fiable, 1 fiche)",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

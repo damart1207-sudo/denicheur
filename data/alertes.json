@@ -1836,18 +1836,242 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 09:30 UTC : offre active, 24.99 affiché, marchand 192_2 ; elcorteingles.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A",
-  "verifie_le": "2026-11-24T09:46+00:00",
-  "verdict": {
-   "commentaire": "Offre El Corte Inglés Espagne : la page indique pas de livraison en France. Coût livré 29,90 € contre 32,09 € neuf le plus bas en France, soit seulement 7 % d'économie (< 15 %). Revente à perte (marge négative sur tous les canaux).",
-   "prix_neuf_min_idealo": 32.09,
-   "source_prix_ref": "achatmoinscher (10 boutiques)",
-   "economie_pct": 7,
-   "prix_revente_verifie": null,
-   "canal": null,
-   "marge_nette_verifiee": -8.44,
-   "duree_offre": "inconnue",
-   "demande_confirmee": false
-  }
+  "denicheur": "A"
+ },
+ {
+  "id": "c759fd9a6a",
+  "titre": "GTA VI (PS5) à 39,99€ avec reprise bonifiée de 40€ chez Micromania",
+  "prix": 39.99,
+  "devise": "EUR",
+  "marchand": "Micromania Zing",
+  "lien": "https://www.dealabs.com/bons-plans/gta-vi-ps5-a-3999eur-avec-reprise-bonifiee-de-40eur-chez-micromania-3467497",
+  "pays": "FR",
+  "source": "dealabs-nouveaux",
+  "temperature": null,
+  "categorie": "Consoles & Jeux vidéo",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "GTA VI PS5",
+  "cout_achat": 44.99,
+  "prix_plancher": {
+   "nom": "GTA VI PS5",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 1,
+     "meilleur": {
+      "titre": "GTA 6 - Grand Theft Auto VI - PS5",
+      "prix": 60.0,
+      "nb_boutiques": 9,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/gta-6-grand-theft-auto-vi-ps5.html"
+     },
+     "autres": []
+    }
+   },
+   "prix_min": 60.0,
+   "ou": "achatmoinscher",
+   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/gta-6-grand-theft-auto-vi-ps5.html"
+  },
+  "ecart_vs_neuf_min": 0.666,
+  "economie_pct": 33,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-24T09:42+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": true,
+  "revente_reelle": {},
+  "demande_forte": {
+   "recherche": "ps5",
+   "popularite": 24890,
+   "hausse_pct": 94,
+   "nouveau": false,
+   "pays": "FR"
+  },
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 52.8,
+    "marge_nette": -2.27,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 52.8,
+     "cout_achat": 44.99,
+     "frais_canal": 0.0,
+     "prelevements": 7.08,
+     "provision": 3.0,
+     "marge_nette": -2.27,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.05
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 52.8,
+    "marge_nette": -2.27,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 52.8,
+     "cout_achat": 44.99,
+     "frais_canal": 0.0,
+     "prelevements": 7.08,
+     "provision": 3.0,
+     "marge_nette": -2.27,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.05
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 52.8,
+    "marge_nette": -2.27,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 52.8,
+     "cout_achat": 44.99,
+     "frais_canal": 0.0,
+     "prelevements": 7.08,
+     "provision": 3.0,
+     "marge_nette": -2.27,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.05
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 60.0,
+    "marge_nette": -7.43,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 60.0,
+     "cout_achat": 44.99,
+     "frais_canal": 11.4,
+     "prelevements": 8.04,
+     "provision": 3.0,
+     "marge_nette": -7.43,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.165
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 60.0,
+    "marge_nette": -8.23,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 60.0,
+     "cout_achat": 44.99,
+     "frais_canal": 12.2,
+     "prelevements": 8.04,
+     "provision": 3.0,
+     "marge_nette": -8.23,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.183
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 60.0,
+    "marge_nette": -8.83,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 60.0,
+     "cout_achat": 44.99,
+     "frais_canal": 12.8,
+     "prelevements": 8.04,
+     "provision": 3.0,
+     "marge_nette": -8.83,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.196
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 60.0,
+    "marge_nette": -10.18,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 60.0,
+     "cout_achat": 44.99,
+     "frais_canal": 14.15,
+     "prelevements": 8.04,
+     "provision": 3.0,
+     "marge_nette": -10.18,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.226
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 60.0,
+    "marge_nette": -12.02,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 60.0,
+     "cout_achat": 44.99,
+     "frais_canal": 15.99,
+     "prelevements": 8.04,
+     "provision": 3.0,
+     "marge_nette": -12.02,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.267
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-24T09:46+00:00",
+   "lien_deal": "https://www.dealabs.com/bons-plans/gta-vi-ps5-a-3999eur-avec-reprise-bonifiee-de-40eur-chez-micromania-3467497",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 72.38,
+   "prix_ailleurs_annonce": null,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "1587_1",
+   "description": "La plus grande communaut\\u00e9 d'achat au monde.",
+   "lien_marchand": "https://www.micromania.fr/p/grand-theft-auto-vi-code-de-telechargement-161836.html",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.micromania.fr/p/grand-theft-auto-vi-code-de-telechargement-161836.html",
+    "code": 200,
+    "lu": true,
+    "domaine": "micromania.fr",
+    "titre": "GTA VI (code De Téléchargement) Ps5 sur PS5, tous les jeux vidéo PS5 sont chez Micromania",
+    "prix": 79.99,
+    "disponibilite": "en stock (panier)",
+    "livraison_mots": [
+     "livrer en"
+    ],
+    "livraison_extrait": "votre panier en cours n’est pas éligible au retrait 1h 🚚 Vous pouvez vous faire livrer en 2 à 3 jours ouvrés dans le magasin de votre choix ! CHANGER DE MAGASIN OPTER POUR LA LIVRAISON MAGASIN Les services Micromania Voir tous les services ",
+    "extrait": "GTA VI (code De Téléchargement) Ps5 sur PS5, tous les jeux vidéo PS5 sont chez Micromania Skip to main content Skip to footer content Black Friday Jeux Vidéo Univers TCG Produits dérivés Occasion Fanzone Magasins Mon miboard 0 Voir tous les résultats Game Grand Theft Auto VI (code De Téléchargement) https://www.micromania.fr/p/grand-theft-auto-vi-code-de-telechargement-161836.html Action PS5 PS5 https://www.micromania.fr/dw/image/v2/BCRB_PRD/on/demandware.static/-/Sites-masterCatalog_Micromania/default/dw1b38d784/images/high-res/161836.jpg?sw=240&sh=240&sm=fit … Accueil Jeux Vidéo Playstation 5 Jeux PS5 Grand Theft Auto VI (code De Téléchargement) Article n° : 161836 161836 Rockstar Games ht"
+   },
+   "prix_remonte": 79.99,
+   "livraison_france": "oui",
+   "resume": "page du bon plan lue à 09:46 UTC : offre active, 72.38 affiché, marchand 1587_1 ; fiche micromania.fr lue : 79.99, en stock (panier), livraison : livrer en ; livraison France : oui"
+  },
+  "denicheur": "A"
  }
 ]

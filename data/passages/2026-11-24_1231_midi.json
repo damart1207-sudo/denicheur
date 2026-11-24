@@ -1,0 +1,4781 @@
+{
+ "passage": "midi",
+ "horodatage": "2026-11-24_1231",
+ "date_affichee": "24/11/2026 à 12 h 31",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 135,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 45,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 736,
+ "nb_nouvelles": 385,
+ "nb_prefiltres": 281,
+ "nb_tries": 160,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 4,
+   "reussites": 4,
+   "erreurs": [],
+   "choix": 21
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 47,
+   "remplace": "nemotron_nv"
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 11,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "TimeoutError: The read operation timed out",
+    "coupé pour ce passage (aucune réponse)"
+   ],
+   "choix": 0
+  }
+ },
+ "remplacements": {
+  "gptoss": "nemotron_nv",
+  "qwen": "gemma"
+ },
+ "candidats": [
+  {
+   "id": "3978ba5b7f",
+   "titre": "Philips Hue Essential White and Color Ambiance E27 4-pack @ Amazon",
+   "prix": 44.99,
+   "devise": "EUR",
+   "marchand": "Amazon.nl",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-hue-essential-white-and-color-ambiance-e27-4-pack-at-amazon-428865",
+   "pays": "NL",
+   "source": "pepper-nl-hot",
+   "temperature": 133,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://nl.pepper.com/aanbiedingen/philips-hue-essential-white-and-color-ambiance-e27-4-pack-at-amazon-428865"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Philips Hue E27 4-pack",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 90.0,
+   "cout_achat": 49.99,
+   "marge_nette": 24.95,
+   "rentabilite": 0.499,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Pack 4 ampoules White & Color à 45 € vs revente 90 € sur Vinted/LBC, produit petit, léger, très recherché domotique."
+   },
+   "score": 56.6,
+   "ebay": {
+    "requete": "Philips Hue E27 4-pack",
+    "neuf": {
+     "nb": 9,
+     "min": 71.99,
+     "p25": 79.99,
+     "mediane": 89.99,
+     "max": 139.99
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Philips Hue Essential Ampoule LED A60 E27 806lm Multicolore Connectée",
+      "prix": "78.99",
+      "url": "https://www.ebay.fr/itm/128131987292?_skw=Philips+Hue+E27+4-pack&hash=item1dd542f75c:g:n8QAAeSwmRFqzYuU"
+     },
+     {
+      "titre": "Ampoule LED Connectée E27 A60 806 lm RGBW Philips Hue Essential",
+      "prix": "135.99",
+      "url": "https://www.ebay.fr/itm/147630799505?_skw=Philips+Hue+E27+4-pack&hash=item225f7b3a91:g:SDIAAeSwTlxqy21N&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7n52dhpvLLK3PVWCaWwMOWKO%2BCrP7iLAVSh0ODiwgAzxoeDwAXhEoLar5XMaQiUBidoZ65LL2JrPtAB7STvwW4bTe3%2BFDQDICeyc%2Fz6XxuXQsSBK%2B9juJwXUQrD08TPIz7DFv6cCedXmvjB%2FHY0cPca9ObUc%2FYKTijAZQtrtEnFE6%2B1EQ1G0%2Bn5DQCa2n3FZ4HW6hMl%2FUAHxR%2BT2qHaQkP8fBj6S50VFwLecSCdVir0oXZUCISzoxD8iECk80HqzGocEMnnxjRj0doIvjlaUPS2pu4gx5CovrEolsC2JhtSjNGYA6o9Ix9scGsAdcRlSqQ%3D"
+     },
+     {
+      "titre": "Philips Hue Essential Ampoule LED Connectée A60 E27 806lm Multicolore",
+      "prix": "89.99",
+      "url": "https://www.ebay.fr/itm/800798482422?_skw=Philips+Hue+E27+4-pack&hash=itemba734f1ff6:g:LuoAAeSwFwBq0Qxk&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mV%2FBSpFCUM4gPJPNhlAJvSu%2FXpjMvh8HcX%2FPEceA4GX5yw7vu8VIOZEImyRKftW9WKxtwX43PmPJIa3Blz0P9OMgk1XT7OkqinLOf3BLFMgidJDAk2gr1o3qg8Um%2Bd%2F8klaBe1tPEog1NaQW7YcZPCsxQ58iIy4bGA1v3HV0yuwrvnwSV2Rp4O%2BSK1LF9mie9CyLON7VlVxejBl0aI4bTTHUWZjXmhcpEb7nrk5iACkWNSPmo2HS7CjbBglvhCNSV1Y9uXdXNSObfLOKxJnh7i4XJiU56kGzumVsOPkvIkCBBIZ5x5q%2FGwVR0mKmztsP4%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 79.99,
+     "DE": 60.78,
+     "IT": 71.56,
+     "ES": 70.97
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Philips Hue E27 4-pack",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "philips hue e27 4",
+   "annonces_ebay": 9,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 79.99,
+   "marge_verifiee": 16.28,
+   "rentabilite_verifiee": 0.326,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 13.2,
+   "rapport_concurrence": {
+    "requete": "Philips Hue E27 4-pack",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 10,
+      "total_ebay": 11,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 45.52,
+       "titre": "Philips Hue White E27 Lampe 4er Pack 4x1055lm, dimmbar, warmweißes Licht",
+       "lien": "https://www.ebay.de/itm/389752564965?_skw=Philips+Hue+E27+4-pack&hash=item5abf102ce5:g:FO0AAeSwh6hptvDk",
+       "vendeur": "gimmeetheloot",
+       "avis_vendeur": 735
+      },
+      "plus_cher": {
+       "prix": 142.37,
+       "titre": "Philips Hue Essential Smart LED A60 Leuchtmittel, White and Color Ambiance, E27 4er Pack ",
+       "lien": "https://www.ebay.de/itm/317581296985?_skw=Philips+Hue+E27+4-pack&hash=item49f1520559:g:CAwAAeSw1MxpJGzl",
+       "vendeur": "ukdaily-26",
+       "avis_vendeur": 12052
+      }
+     },
+     "IT": {
+      "nb_annonces": 1,
+      "total_ebay": 10,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 114.98,
+       "titre": "Philips Hue White Smart Bulb LED 4 Pack [E27 Edison Screw] - 800 Lumens (60W",
+       "lien": "https://www.ebay.it/itm/388871412991?_skw=Philips+Hue+E27+4-pack&hash=item5a8a8adcff:g:s8YAAeSwplVq5AY-",
+       "vendeur": "kudas2495770",
+       "avis_vendeur": 1778
+      },
+      "plus_cher": {
+       "prix": 114.98,
+       "titre": "Philips Hue White Smart Bulb LED 4 Pack [E27 Edison Screw] - 800 Lumens (60W",
+       "lien": "https://www.ebay.it/itm/388871412991?_skw=Philips+Hue+E27+4-pack&hash=item5a8a8adcff:g:s8YAAeSwplVq5AY-",
+       "vendeur": "kudas2495770",
+       "avis_vendeur": 1778
+      }
+     },
+     "ES": {
+      "nb_annonces": 1,
+      "total_ebay": 14,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 58.99,
+       "titre": "Philips Hue Essential Smart LED A60 Lampe, E27, 4er Pack",
+       "lien": "https://www.ebay.es/itm/820179133339?_skw=Philips+Hue+E27+4-pack&hash=itembef67c639b:g:PoQAAeSw2YBquWuc",
+       "vendeur": "somara-37",
+       "avis_vendeur": 15
+      },
+      "plus_cher": {
+       "prix": 58.99,
+       "titre": "Philips Hue Essential Smart LED A60 Lampe, E27, 4er Pack",
+       "lien": "https://www.ebay.es/itm/820179133339?_skw=Philips+Hue+E27+4-pack&hash=itembef67c639b:g:PoQAAeSw2YBquWuc",
+       "vendeur": "somara-37",
+       "avis_vendeur": 15
+      }
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Philips Hue E27 4-pack",
+    "temperature_dealabs": 133,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "philips hue e27 4 pack",
+     "philips hue e27 4 pack color",
+     "philips hue essential e27 4 pack",
+     "philips hue white e27 4 pack",
+     "philips hue ambiance e27 4 pack",
+     "philips hue white ambiance e27 4 pack",
+     "philips hue white & color ambiance e27 4 pack",
+     "philips hue color a60 e27 1100 lumen 4 pack",
+     "philips hue lampen e27 4 pack",
+     "philips hue e27 standaardlamp 4 pack"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "d37ded489d",
+   "titre": "Bosch X-Line, 70 elementowy zestaw wierteł, bitów, nasadek oraz miara 3m",
+   "prix": 14.51,
+   "devise": "EUR",
+   "marchand": "Allegro",
+   "lien": "https://www.pepper.pl/promocje/bosch-x-line-70-elementowy-zestaw-wiertel-bitow-nasadek-oraz-miara-3m-1390337",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 341,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/bosch-x-line-70-elementowy-zestaw-wiertel-bitow-nasadek-oraz-miara-3m-1390337"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "jardin-bricolage",
+   "nom_produit": "Bosch X-Line 70 pièces",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 57.5,
+   "cout_achat": 19.51,
+   "marge_nette": 13.46,
+   "rentabilite": 0.69,
+   "demande": 4.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "qwen"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix d'achat très bas vs prix du marché, bon volume de recherche DIY",
+    "qwen": "Le prix de 14,51 € est très bas pour un coffret Bosch de 70 pièces qui se revend généralement entre 20 et 30 € sur Leboncoin, offrant une marge nette confortable après frais de port."
+   },
+   "score": 79.7,
+   "ebay": {
+    "requete": "Bosch X-Line 70 pièces",
+    "neuf": {
+     "nb": 8,
+     "min": 41.98,
+     "p25": 51.52,
+     "mediane": 55.14,
+     "max": 91.96
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Coffret de perçage et vissage 70 pieces BOSCH X-Line - Forets titane - 34 emb...",
+      "prix": "55.50",
+      "url": "https://www.ebay.fr/itm/277971821027?_skw=Bosch+X-Line+70+pi%C3%A8ces&hash=item40b86961e3:i:277971821027"
+     },
+     {
+      "titre": "Coffret de forets X-LINE 70 pièces + pinces - B 2607017197",
+      "prix": "51.10",
+      "url": "https://www.ebay.fr/itm/178321638953?_skw=Bosch+X-Line+70+pi%C3%A8ces&hash=item2984cc4629:g:CNAAAeSwB-dqW1Gn&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nxxqZJFGFuSdu%2Flpy2UNO6Dwvkku78%2BRH%2FztBDQt%2FywxKIdVkVTsVOyYPH8QlrIiNyWDoOGmVN2ME8RDGhKWt19ysdhs%2FTIv901Gi%2F4aSU5Phq5be6X8FcyWUslHmtMFtWUjExH86iuXLGUZqdxu%2BhWWXWV6pF1cBczzw44JqI4Oy75YKMC4GZAohbgwloKXzDqXiYIOVe6gWSKlzObRdRm9o7aln1BRDSxcDq6LL7Iwjer4zBttVKAmhsUNOtVC%2FF6wc%2BuZGuWS9uN81t5%2FWmIevRJHMssBkAC5Qrf1XR9w%3D%3D"
+     },
+     {
+      "titre": "Jeu de forets x-line 70 pièces + pince 2607017197",
+      "prix": "91.96",
+      "url": "https://www.ebay.fr/itm/188594293628?_skw=Bosch+X-Line+70+pi%C3%A8ces&hash=item2be9188b7c:g:UTsAAeSwejpqR7k-&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mqYHn5LPhhSVVNEzpfoMzvD9RR7pCJwe7Hu961yMZj89%2Fsub1qeyCFWvCE3%2BF1Ynb1KLc%2FWpko34pE%2BPRcD0pVml1Put7mJbcdAgKJ%2Frqcdby1mptUlwQ6dmetMhY8UTQDJh2wFw0K3%2Fep4biH3XedP2ylJjMgjwU%2BqFg6JfhGvkwwB36jhOvHnQRecdUNTN5joWDwk40AhIfGvmyFpyzssqgV3747IWSmldltxuq%2BATxpvPxpsgRit5OVgrydwTWBWDyYrMjIAd4zo7FnDQ7nJjk8MTZU4nmWA3dXejmDLr7JT6mV5DwQ9QeUsSYNc5s%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 51.52,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Bosch X-Line 70 pièces",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "BOSCH Coffret  X-Line 70 pièces",
+       "prix": 22.99,
+       "nb_boutiques": 10,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Forets-fraises-tarauds/coffret-bosch-x-line-70-pieces.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 22.99,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Forets-fraises-tarauds/coffret-bosch-x-line-70-pieces.html"
+   },
+   "mot_cle": "bosch",
+   "annonces_ebay": 8,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 20.23,
+     "marge_nette": -4.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 19.51,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -4.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.256
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 20.23,
+     "marge_nette": -4.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 19.51,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -4.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.256
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 20.23,
+     "marge_nette": -4.99,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.23,
+      "cout_achat": 19.51,
+      "frais_canal": 0.0,
+      "prelevements": 2.71,
+      "provision": 3.0,
+      "marge_nette": -4.99,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.256
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 22.99,
+     "marge_nette": -10.67,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 19.51,
+      "frais_canal": 8.07,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -10.67,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.547
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 22.99,
+     "marge_nette": -11.94,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 19.51,
+      "frais_canal": 9.34,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -11.94,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.612
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 22.99,
+     "marge_nette": -12.21,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 19.51,
+      "frais_canal": 9.61,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -12.21,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.626
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 22.99,
+     "marge_nette": -12.44,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 19.51,
+      "frais_canal": 9.84,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -12.44,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.638
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 22.99,
+     "marge_nette": -13.04,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 22.99,
+      "cout_achat": 19.51,
+      "frais_canal": 10.44,
+      "prelevements": 3.08,
+      "provision": 3.0,
+      "marge_nette": -13.04,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.668
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 22.3,
+   "marge_verifiee": -12.45,
+   "rentabilite_verifiee": -0.638,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Bosch X-Line 70 pièces",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 21,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 20,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 23,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Bosch X-Line 70 pièces",
+    "temperature_dealabs": 341,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "coffret bosch x line 70 pieces",
+     "coffret 70 pièces bosch x line titanium",
+     "bosch x line 70 pièces",
+     "bosch x line 70 piece multi purpose drill bit set",
+     "bosch x line 70 piece set"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "3ca8ed9b18",
+   "titre": "Ecran PC Gamer MSI MAG 272QP 27\" QD-OLED WQHD 240 Hz 0,03ms HDR 2x HDMI 2.1 + USB-C 15W",
+   "prix": 299.99,
+   "devise": "EUR",
+   "marchand": "Boulanger",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-gamer-msi-mag-272qp-27-qd-oled-wqhd-240-hz-003ms-hdr-2x-hdmi-21-usb-c-15w-3467545",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 233,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/ecran-pc-gamer-msi-mag-272qp-27-qd-oled-wqhd-240-hz-003ms-hdr-2x-hdmi-21-usb-c-15w-3467545"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "tech",
+   "nom_produit": "MSI MAG 272QP QD-OLED 240Hz",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 500.0,
+   "cout_achat": 304.99,
+   "marge_nette": 125.01,
+   "rentabilite": 0.41,
+   "demande": 5,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Moniteur gaming QD-OLED haut de gamme à 300€ (prix FR ~430€), forte demande joueurs, revente en main propre évite frais port lourd.",
+    "gptoss": "Écart de prix important, forte demande de moniteurs gaming et revente sans frais."
+   },
+   "score": 57.4,
+   "ebay": {
+    "requete": "MSI MAG 272QP QD-OLED 240Hz",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 376.73,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "MSI MAG 272QP QD-OLED 240Hz",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "msi mag 272qp qd",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "MSI MAG 272QP QD-OLED 240Hz",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 2,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 339.9,
+       "titre": "MSI MAG 272QP QD-OLED X24 26,5 Zoll WQHD 240Hz QD-OLED HDR ready Monitor",
+       "lien": "https://www.ebay.de/itm/336689537114?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=item4e6442a05a:g:oysAAeSwahlqV1x-",
+       "vendeur": "x-kom-gmbh",
+       "avis_vendeur": 37623
+      },
+      "plus_cher": {
+       "prix": 391.09,
+       "titre": "MSI MAG 272QP QD-OLED X24 27\" WQHD 240Hz Gaming Monitor - NEU",
+       "lien": "https://www.ebay.de/itm/880105197910?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=itemccea5b9156:g:5rIAAeSwETZq9Emh",
+       "vendeur": "soulson_3243",
+       "avis_vendeur": 5942
+      }
+     },
+     "IT": {
+      "nb_annonces": 2,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 400.95,
+       "titre": "MSI MAG 272QP QD-OLED X24 27\" WQHD 240Hz Monitor da Gioco - NUOVO",
+       "lien": "https://www.ebay.it/itm/880105197910?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=itemccea5b9156:g:5rIAAeSwETZq9Emh",
+       "vendeur": "soulson_3243",
+       "avis_vendeur": 5942
+      },
+      "plus_cher": {
+       "prix": 954.41,
+       "titre": "MSI MAG 272QP QD OLED X24 26 5 pollici monitor da gioco WQHD 240Hz QD OLED",
+       "lien": "https://www.ebay.it/itm/206658595124?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=item301dcfe934:g:BLAAAeSwP7Nq4T~Y",
+       "vendeur": "japan_ec_store",
+       "avis_vendeur": 261
+      }
+     },
+     "ES": {
+      "nb_annonces": 2,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 328.65,
+       "titre": "Monitor para juegos MSI MAG 272QP QD-OLED X24 27\" WQHD 240Hz - NUEVO",
+       "lien": "https://www.ebay.es/itm/880105197910?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=itemccea5b9156:g:5rIAAeSwETZq9Emh",
+       "vendeur": "soulson_3243",
+       "avis_vendeur": 5942
+      },
+      "plus_cher": {
+       "prix": 954.41,
+       "titre": "Monitor para juegos MSI MAG 272QP QD OLED X24 26 5 pulgadas WQHD 240Hz QD OLED",
+       "lien": "https://www.ebay.es/itm/206658595124?_skw=MSI+MAG+272QP+QD-OLED+240Hz&hash=item301dcfe934:g:BLAAAeSwP7Nq4T~Y",
+       "vendeur": "japan_ec_store",
+       "avis_vendeur": 261
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "MSI MAG 272QP QD-OLED 240Hz",
+    "temperature_dealabs": 233,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "msi mag 272qp qd oled 240hz",
+     "msi mag 272qp qd oled 27 240hz",
+     "msi mag 272qp qd oled x24 wqhd 240hz 27",
+     "msi mag 272qp qd oled x24 qhd 240 hz",
+     "msi mag 272qp 27 qd oled wqhd 240 hz",
+     "msi mag 272qp qd oled x24 gaming monitor qd oled 2k 240hz",
+     "msi mag 272qp qd oled x24 240hz",
+     "msi mag 272qp qd oled 27 240hz gaming monitor",
+     "msi mag 272qp qd oled x24 wqhd 240hz",
+     "msi mag 272qp qd-oled 27 2k 240hz"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "a5a9fd6b6d",
+   "titre": "Urządzenie wielofunkcyjne HP DeskJet 4320 Druk w kolorze wifi",
+   "prix": 23.5,
+   "devise": "EUR",
+   "marchand": "Media Expert",
+   "lien": "https://www.pepper.pl/promocje/urzadzenie-wielofunkcyjne-hp-deskjet-4320-druk-w-kolorze-wifi-1398755",
+   "pays": "PL",
+   "source": "pepper-pl-hot",
+   "temperature": 269,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.pepper.pl/promocje/urzadzenie-wielofunkcyjne-hp-deskjet-4320-druk-w-kolorze-wifi-1398755"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "HP DeskJet 4320",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 28.5,
+   "marge_nette": 21.03,
+   "rentabilite": 0.738,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Imprimante à prix d'achat exceptionnel, marge correcte sur revente"
+   },
+   "score": 49.6,
+   "ebay": {
+    "requete": "HP DeskJet 4320",
+    "neuf": {
+     "nb": 9,
+     "min": 29.95,
+     "p25": 39.9,
+     "mediane": 66.24,
+     "max": 181.87
+    },
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "PREMIUM - Cartouches d'encre compatibles avec imprimantes HP Série 308 XL 308XL+",
+      "prix": "29.95",
+      "url": "https://www.ebay.fr/itm/188969673897?_skw=HP+DeskJet+4320&hash=item2bff7864a9:g:Z8QAAeSw~rVqsw7V"
+     },
+     {
+      "titre": "ENCRE4U - Cartouches d'encre compatibles avec HP 308 XL Imprimantes DeskJet Envy",
+      "prix": "94.95",
+      "url": "https://www.ebay.fr/itm/377516220841?_skw=HP+DeskJet+4320&hash=item57e5b861a9:g:wbEAAeSw~UdqsxRt&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nCLO8j1OkboI1XmVmLxSJk1PXeslH5DhTHUGUc9dknDn5CzAuuhZsRrfzrTU%2FD9Cgph6NWCwy6KD6aikOqalRaEOvJLq541VwZ3HfJNdxrw%2FBbbrEYAi6rdMk2Gua7gtuNJfVoPKNXWxJm8bicMeRcr2k0vh0nnI3vwRVyunxpBR9CQXPn1THM7yBXY0nWFEdD%2FCviu%2FcURud0EEXeeuCHeLfQ8q1xSHAyt5myC2UQd3EVcSC4n0xEsSJQG078jEvOIdurQ3vZxNbS30vpmBqRNjixfy4fCn75yfzJUp4Q8w%3D%3D"
+     },
+     {
+      "titre": "HP Imprimante multifonction à jet d’encre DESKJET-4320",
+      "prix": "181.87",
+      "url": "https://www.ebay.fr/itm/188992364502?_skw=HP+DeskJet+4320&hash=item2c00d29fd6:g:HXQAAeSwY5BquI2z&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lJl0pyp7rR1QNG0e3PPcLO9%2BeD7yR5ZfCt5hPHFWKj2B3ktOPLv6HyyrcKzEBnEfxev3FrYzI4WQdZffH4czPtatLUfEJweBI0bQ4Qt55KrUeF9sLbrXWcLxAP%2FwSKIo6WZyGdzQzNixN%2F7Z1XR8JdnKto%2BdTNPqcN5tzuK%2F7NyzI16KJw8AlpPTSWmO1JVeO%2BTJpydqPyKcVjVa5TIiitRSqFoa%2FJSw83euS3NSGqhg78bnIwfSjy80ynH64lutU%2F2x8DuGAH218CBJQz6dpPWEY5EKVQ36vCeeHCtv0sTw%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 39.9,
+     "DE": 30.81,
+     "IT": 20.8,
+     "ES": 23.86
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "HP DeskJet 4320",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "hp deskjet 4320",
+   "annonces_ebay": 9,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 39.9,
+   "marge_verifiee": -8.48,
+   "rentabilite_verifiee": -0.298,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "HP DeskJet 4320",
+    "pays": {
+     "FR": {
+      "nb_annonces": 4,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 39.9,
+       "titre": "Pack HP 308 pour imprimant HP Deskjet 2910 2920 2921 2923 4310 4320 4322 4330",
+       "lien": "https://www.ebay.fr/itm/188228605571?_skw=HP+DeskJet+4320&hash=item2bd34c9683:g:Su0AAeSwGWdpcJmF",
+       "vendeur": "encre34000",
+       "avis_vendeur": 7845
+      },
+      "plus_cher": {
+       "prix": 66.24,
+       "titre": "HP DeskJet 4320 Imprimante Multifonction Jet D’Encre ADF WiFi",
+       "lien": "https://www.ebay.fr/itm/237158245400?_skw=HP+DeskJet+4320&hash=item3737bba418:g:Y10AAeSwBAFqxQ8Y",
+       "vendeur": "grandingroup",
+       "avis_vendeur": 44232
+      }
+     },
+     "DE": {
+      "nb_annonces": 81,
+      "total_ebay": 98,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 19.26,
+       "titre": "HP 308 / 308e / Schwarz / Farbe Tintenpatronen für HP DeskJet 4310 4320 4322 4327",
+       "lien": "https://www.ebay.de/itm/336586395503?_skw=HP+DeskJet+4320&hash=item4e5e1ccf6f:g:55sAAeSws11qCDv4",
+       "vendeur": "inknation2009",
+       "avis_vendeur": 131501
+      },
+      "plus_cher": {
+       "prix": 92.46,
+       "titre": "HP DeskJet 4320 All in One A4 Thermal Inkjet Drucker 4800 x 1200 DPI",
+       "lien": "https://www.ebay.de/itm/267652530451?_skw=HP+DeskJet+4320&hash=item3e51558113:g:wDMAAeSw~F1p7~Fn",
+       "vendeur": "boomstore",
+       "avis_vendeur": 62025
+      }
+     },
+     "IT": {
+      "nb_annonces": 60,
+      "total_ebay": 80,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 13.0,
+       "titre": "inchiostro ricarica cartucce hp 308 nero e 308 per stampante Deskjet 4320",
+       "lien": "https://www.ebay.it/itm/307289333499?_skw=HP+DeskJet+4320&hash=item478bdf1efb:g:SO4AAeSwgldq~fTV",
+       "vendeur": "ricaricainchiostro",
+       "avis_vendeur": 235
+      },
+      "plus_cher": {
+       "prix": 88.99,
+       "titre": "HP DeskJet 4320 Wireless All-in-One Colore Stampante",
+       "lien": "https://www.ebay.it/itm/198799405439?_skw=HP+DeskJet+4320&hash=item2e495e317f:g:3LEAAeSws9hrBEJi",
+       "vendeur": "trippodoshop",
+       "avis_vendeur": 2638
+      }
+     },
+     "ES": {
+      "nb_annonces": 20,
+      "total_ebay": 29,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 19.59,
+       "titre": "Cartuchos de tinta HP 308/308e/negro/color para HP DeskJet 4310 4320 4322 4327",
+       "lien": "https://www.ebay.es/itm/336586395503?_skw=HP+DeskJet+4320&hash=item4e5e1ccf6f:g:55sAAeSws11qCDv4",
+       "vendeur": "inknation2009",
+       "avis_vendeur": 131501
+      },
+      "plus_cher": {
+       "prix": 82.75,
+       "titre": "Impresora todo en uno inalámbrica HP DeskJet 4320",
+       "lien": "https://www.ebay.es/itm/136664154903?_skw=HP+DeskJet+4320&hash=item1fd1d18317:g:c0wAAeSw0cxo~2MU",
+       "vendeur": "ldcsrl-it",
+       "avis_vendeur": 7255
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "HP DeskJet 4320",
+    "temperature_dealabs": 269,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "hp deskjet 4320",
+     "hp deskjet 4320 cartouche",
+     "hp deskjet 4320 avis",
+     "hp deskjet 4320 a24hmb",
+     "hp deskjet 4320 installation",
+     "hp deskjet 4320 driver",
+     "hp deskjet 4320 wifi",
+     "hp deskjet 4320 all-in-one printer",
+     "hp deskjet 4320 driver download"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "65dd7553bf",
+   "titre": "🛍️ Schott NYC Kenny Blouson Homme Noir (Black Black) Large (Taille Fabricant: L) Lot de ✅ 60,93€ au lieu de 106,30€ ➡️ https://www.amazon.fr/dp/B01LXD8FDS/?tag=",
+   "prix": 60.93,
+   "devise": "EUR",
+   "marchand": "",
+   "lien": "https://www.amazon.fr/dp/B01LXD8FDS/?tag=pmrat-21",
+   "pays": "FR",
+   "source": "telegram:promorat",
+   "temperature": 100,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B01LXD8FDS/?tag=pmrat-21"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Schott NYC Kenny Blouson",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 115.0,
+   "cout_achat": 65.93,
+   "marge_nette": 30.66,
+   "rentabilite": 0.465,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Marque iconique cuir/textile, taille L dispo, Vinted sans frais vendeur, marge nette ~40€ port payé par acheteur."
+   },
+   "score": 43.6,
+   "ebay": {
+    "requete": "Schott NYC Kenny Blouson",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Schott NYC Kenny Blouson",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "schott nyc kenny blouson",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Schott NYC Kenny Blouson",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Schott NYC Kenny Blouson",
+    "temperature_dealabs": 100,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "schott nyc kenny blouson homme",
+     "schott nyc kenny blouson"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "6685aa63ad",
+   "titre": "🛍️ LEGO Marvel Spider-Man contre Mystério : le Daily Bugle 76342, 781 pièces ✅ 80,50€ au lieu de 109,99€ ➡️ https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21 Pu",
+   "prix": 80.5,
+   "devise": "EUR",
+   "marchand": "",
+   "lien": "https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21",
+   "pays": "FR",
+   "source": "telegram:promorat",
+   "temperature": 100,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "vintage-collection",
+   "nom_produit": "LEGO Marvel Daily Bugle",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 145.0,
+   "cout_achat": 85.5,
+   "marge_nette": 37.07,
+   "rentabilite": 0.434,
+   "demande": 4.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Set LEGO retiré de la vente (retired), cote forte collectionneurs, marge ~45€ net après port volumineux."
+   },
+   "score": 43.3,
+   "ebay": {
+    "requete": "LEGO Marvel Daily Bugle",
+    "neuf": {
+     "nb": 18,
+     "min": 64.97,
+     "p25": 145.09,
+     "mediane": 290.93,
+     "max": 897.29
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 371.8,
+     "p25": 371.8,
+     "mediane": 646.07,
+     "max": 857.46
+    },
+    "exemples": [
+     {
+      "titre": "LEGO Marvel Super Heroes 76178 Le Daily Bugle Spider-Man Manuel Uniquement",
+      "prix": "8.66",
+      "url": "https://www.ebay.fr/itm/377575461129?_skw=LEGO+Marvel+Daily+Bugle&hash=item57e9405109:g:ayQAAeSw41Rq0kt7"
+     },
+     {
+      "titre": "LEGO Marvel Super Heroes 76178 sh0717  Ron Barney du Daily Bugle",
+      "prix": "4.91",
+      "url": "https://www.ebay.fr/itm/117503645773?_skw=LEGO+Marvel+Daily+Bugle&hash=item1b5bc3584d:g:Py0AAeSwlspqq~T2"
+     },
+     {
+      "titre": "LEGO Marvel Super Heroes 76178 sh0685 Jambes de Sandma du Daily Bugle",
+      "prix": "3.26",
+      "url": "https://www.ebay.fr/itm/117503643978?_skw=LEGO+Marvel+Daily+Bugle&hash=item1b5bc3514a:g:Z7QAAeSwzc5q-sR9"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 145.09,
+     "DE": 96.84,
+     "IT": 163.83,
+     "ES": 164.13
+    },
+    "meilleur_pays": "ES"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "LEGO Marvel Daily Bugle",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 3,
+      "meilleur": {
+       "titre": "LEGO® Marvel 76342 Spider-Man contre Mystério : le Daily Bugle",
+       "prix": 80.5,
+       "nb_boutiques": 15,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-marvel-76342-spider-man-contre-mysterio-le-daily-bugle.html"
+      },
+      "autres": [
+       {
+        "titre": "Lego Marvel - Spider-Man : L'attaque Du Daily Bugle - 76005",
+        "prix": 349.0,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-marvel-spider-man-l-attaque-du-daily-bugle-76005.html"
+       },
+       {
+        "titre": "LEGO® Marvel 76178 Le Daily Bugle",
+        "prix": 634.37,
+        "nb_boutiques": 6,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-marvel-76178-le-daily-bugle.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 80.5,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Lego/lego-marvel-76342-spider-man-contre-mysterio-le-daily-bugle.html"
+   },
+   "mot_cle": "lego marvel daily bugle",
+   "annonces_ebay": 18,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 70.84,
+     "marge_nette": -27.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.84,
+      "cout_achat": 85.5,
+      "frais_canal": 0.0,
+      "prelevements": 9.49,
+      "provision": 3.0,
+      "marge_nette": -27.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.318
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 70.84,
+     "marge_nette": -27.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.84,
+      "cout_achat": 85.5,
+      "frais_canal": 0.0,
+      "prelevements": 9.49,
+      "provision": 3.0,
+      "marge_nette": -27.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.318
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 70.84,
+     "marge_nette": -27.15,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 70.84,
+      "cout_achat": 85.5,
+      "frais_canal": 0.0,
+      "prelevements": 9.49,
+      "provision": 3.0,
+      "marge_nette": -27.15,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.318
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 80.5,
+     "marge_nette": -32.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 80.5,
+      "cout_achat": 85.5,
+      "frais_canal": 13.25,
+      "prelevements": 10.79,
+      "provision": 3.0,
+      "marge_nette": -32.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.375
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 80.5,
+     "marge_nette": -32.42,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 80.5,
+      "cout_achat": 85.5,
+      "frais_canal": 13.64,
+      "prelevements": 10.79,
+      "provision": 3.0,
+      "marge_nette": -32.42,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.379
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 80.5,
+     "marge_nette": -33.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 80.5,
+      "cout_achat": 85.5,
+      "frais_canal": 14.44,
+      "prelevements": 10.79,
+      "provision": 3.0,
+      "marge_nette": -33.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.389
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 80.5,
+     "marge_nette": -35.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 80.5,
+      "cout_achat": 85.5,
+      "frais_canal": 16.82,
+      "prelevements": 10.79,
+      "provision": 3.0,
+      "marge_nette": -35.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.416
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 80.5,
+     "marge_nette": -37.85,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 80.5,
+      "cout_achat": 85.5,
+      "frais_canal": 19.07,
+      "prelevements": 10.79,
+      "provision": 3.0,
+      "marge_nette": -37.85,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.443
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 72.45,
+   "marge_verifiee": -25.76,
+   "rentabilite_verifiee": -0.301,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 371.8,
+    "haut": 646.07,
+    "position_neuf": 0.22
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "LEGO Marvel Daily Bugle",
+    "pays": {
+     "FR": {
+      "nb_annonces": 6,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 129.66,
+       "titre": "LEGO 76342 Super Héros Marvel - Spider-Man Contre Mysterio: Le Daily Bugle",
+       "lien": "https://www.ebay.fr/itm/940101107570?_skw=LEGO+Marvel+Daily+Bugle&hash=itemdae2647f72:g:EakAAeSwZHxrBQvv",
+       "vendeur": "model_marris",
+       "avis_vendeur": 9272
+      },
+      "plus_cher": {
+       "prix": 229.81,
+       "titre": "LEGO 76342 Marvel Spider-Man vs Mysterio Daily Bugle Building ABS JDM 80209_4",
+       "lien": "https://www.ebay.fr/itm/397590527643?_skw=LEGO+Marvel+Daily+Bugle&hash=item5c923dfe9b:g:lT4AAeSwFVlpidNI",
+       "vendeur": "sakurahills_japan",
+       "avis_vendeur": 502
+      }
+     },
+     "DE": {
+      "nb_annonces": 42,
+      "total_ebay": 51,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 41.49,
+       "titre": "🌈 LEGO Black Cat sh0715 Minifigur sh715 Marvel Spider-Man 76178 Daily Bugle",
+       "lien": "https://www.ebay.de/itm/166675721076?_skw=LEGO+Marvel+Daily+Bugle&hash=item26cea5ab74:g:wVoAAeSwJXJq4d7U",
+       "vendeur": "moonbrick",
+       "avis_vendeur": 248
+      },
+      "plus_cher": {
+       "prix": 293.37,
+       "titre": "LEGO Marvel 76342 Daily Bugle Spider-Man Mysterio 7 Minifiguren 781 Teile 2026",
+       "lien": "https://www.ebay.de/itm/407225901525?_skw=LEGO+Marvel+Daily+Bugle&hash=item5ed08e21d5:g:XwQAAeSwM-xqrLqm",
+       "vendeur": "darl-shop",
+       "avis_vendeur": 10927
+      }
+     },
+     "IT": {
+      "nb_annonces": 76,
+      "total_ebay": 117,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 39.99,
+       "titre": "LEGO® MARVEL Spider-Man Daily Bugle Blade Minifigure sh713 Set 76178",
+       "lien": "https://www.ebay.it/itm/374010751345?_skw=LEGO+Marvel+Daily+Bugle&hash=item5714c72971:g:MjgAAOSw0~FiKM66",
+       "vendeur": "bricks.aficionados",
+       "avis_vendeur": 454
+      },
+      "plus_cher": {
+       "prix": 293.37,
+       "titre": "LEGO Marvel 76342 Daily Bugle Spider-Man Mysterio 7 minifigure 781 pezzi 2026",
+       "lien": "https://www.ebay.it/itm/407226053234?_skw=LEGO+Marvel+Daily+Bugle&hash=item5ed0907272:g:XwQAAeSwM-xqrLqm",
+       "vendeur": "darl-shop",
+       "avis_vendeur": 10927
+      }
+     },
+     "ES": {
+      "nb_annonces": 71,
+      "total_ebay": 115,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 39.99,
+       "titre": "LEGO® MARVEL Spider-Man Daily Bugle Blade Minifigura sh713 Set 76178",
+       "lien": "https://www.ebay.es/itm/374010751345?_skw=LEGO+Marvel+Daily+Bugle&hash=item5714c72971:g:MjgAAOSw0~FiKM66",
+       "vendeur": "bricks.aficionados",
+       "avis_vendeur": 454
+      },
+      "plus_cher": {
+       "prix": 293.37,
+       "titre": "LEGO Marvel 76342 Daily Bugle Spider-Man Mysterio 7 Minifiguras 781pcs 2026",
+       "lien": "https://www.ebay.es/itm/407226199419?_skw=LEGO+Marvel+Daily+Bugle&hash=item5ed092ad7b:g:XwQAAeSwM-xqrLqm",
+       "vendeur": "darl-shop",
+       "avis_vendeur": 10927
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "LEGO Marvel Daily Bugle",
+    "temperature_dealabs": 100,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "lego marvel daily bugle",
+     "lego marvel daily bugle 76178",
+     "lego marvel daily bugle 76342",
+     "lego marvel daily bugle amazon",
+     "lego marvel daily bugle aliexpress",
+     "lego marvel daily bugle mission",
+     "lego marvel daily bugle release date",
+     "lego marvel daily bugle figures",
+     "lego marvel daily bugle set",
+     "lego marvel daily bugle 2026"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "fe54cf30f9",
+   "titre": "Philips Hue Essential Smart LED GU10 Spotlight White and Color Ambiance 4er Pack",
+   "prix": 47.77,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.preisjaeger.at/deals/philips-hue-essential-smart-led-gu10-spotlight-white-and-color-ambiance-4er-pack-373277",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 131,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.preisjaeger.at/deals/philips-hue-essential-smart-led-gu10-spotlight-white-and-color-ambiance-4er-pack-373277"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "maison",
+   "nom_produit": "Philips Hue GU10 4-pack",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 52.77,
+   "marge_nette": 17.84,
+   "rentabilite": 0.338,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Pack 4 spots GU10 Color à 47,77 €, revente ~85 €, même logique que les E27 : forte demande, logistique aisée."
+   },
+   "score": 28.8,
+   "ebay": {
+    "requete": "Philips Hue GU10 4-pack",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Philips Hue Essential Spot LED GU10 345lm Multicolore Connecté",
+      "prix": "83.99",
+      "url": "https://www.ebay.fr/itm/287654535718?_skw=Philips+Hue+GU10+4-pack&hash=item42f98be226:g:5uwAAeSwQspq08IQ"
+     },
+     {
+      "titre": "Philips Hue Essential Spot LED GU10 345lm Multicolore Connecté",
+      "prix": "78.99",
+      "url": "https://www.ebay.fr/itm/920047099221?_skw=Philips+Hue+GU10+4-pack&hash=itemd637149d55:g:v7gAAeSwtwBq0utK&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mvnFO4%2BVoFJwrFZIdXIYnDCXcZQJMWRtTBfqz79kPbWK7F1rBOzyzKwhchMOxmasxNI6AKgw3hUYq13FTQVaMpSRykUyBuR25JSOOzW1No3%2FSU0gzMR4Ufp--nqG%2Bhl0Yg06biZVMUrrNxOXu8buOnzgG82As2zddIWn%2Buy1SkwzlUXi%2BKsSLn%2Fjd07DtjD6OQqfWyk5oXYYjZX5dsWBi2hYDztKw8%2Fx2dVPS4UlJQI3EL3RFF1UXbE180iRzsJbDQxXc7WMbAXbG3h%2BzYT5DWNqfX8kOv16PjhfH6fZWF0jMYNAVQKZqIIV%2BVFZBs2wc%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 29.9,
+     "IT": 69.66,
+     "ES": 69.09
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Philips Hue GU10 4-pack",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "philips hue gu10 4",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Philips Hue GU10 4-pack",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 101.53,
+       "titre": "Philips Hue Essential GU10 Strahler Leuchtmittel, Smart LED Leuchtmittel, 4er Pack",
+       "lien": "https://www.ebay.de/itm/920033362793?_skw=Philips+Hue+GU10+4-pack&hash=itemd636430369:g:CLAAAeSwOuBqzShA",
+       "vendeur": "skylineswiftshop",
+       "avis_vendeur": 1260
+      },
+      "plus_cher": {
+       "prix": 101.53,
+       "titre": "Philips Hue Essential GU10 Strahler Leuchtmittel, Smart LED Leuchtmittel, 4er Pack",
+       "lien": "https://www.ebay.de/itm/920033362793?_skw=Philips+Hue+GU10+4-pack&hash=itemd636430369:g:CLAAAeSwOuBqzShA",
+       "vendeur": "skylineswiftshop",
+       "avis_vendeur": 1260
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 2,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 64.9,
+       "titre": "Philips Hue Essential GU10 LED Spot 4,7W RGBW Pack de 4 Smart - Embalaje ECO",
+       "lien": "https://www.ebay.es/itm/407367432078?_skw=Philips+Hue+GU10+4-pack&hash=item5ed8fdb78e:g:CbYAAeSwjHtq-ys5",
+       "vendeur": "bds_de",
+       "avis_vendeur": 4628
+      },
+      "plus_cher": {
+       "prix": 77.69,
+       "titre": "Philips Hue Essential Smart LED GU10 Spotlight, Blanco y Pack de 4, ",
+       "lien": "https://www.ebay.es/itm/307013533735?_skw=Philips+Hue+GU10+4-pack&hash=item477b6ec027:g:u6gAAeSwS9pqNm~J",
+       "vendeur": "alexmassimo",
+       "avis_vendeur": 2857
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Philips Hue GU10 4-pack",
+    "temperature_dealabs": 131,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "philips hue gu10 4 pack",
+     "philips hue gu10 4 pack color",
+     "philips hue essential gu10 4 pack",
+     "philips hue gu10 white 4 pack",
+     "philips hue gu10 white ambiance 4 pack",
+     "philips hue white and color gu10 4 pack",
+     "philips hue essential white and color gu10 4 pack",
+     "philips hue essential smart led gu10 spotlight bulb 4 pack",
+     "philips hue gu10 colour 4 pack",
+     "philips hue spots gu10 4 pack"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "cc89aa1373",
+   "titre": "Chaussures Nike Court Vision Low Next Nature - Tailles du 35,5 au 45,5",
+   "prix": 47.99,
+   "devise": "EUR",
+   "marchand": "Nike",
+   "lien": "https://www.dealabs.com/bons-plans/nike-court-vision-low-next-nature-a-partir-de-4799-eur-3465817",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 153,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/nike-court-vision-low-next-nature-a-partir-de-4799-eur-3465817"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Nike Court Vision Low",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 52.99,
+   "marge_nette": 17.62,
+   "rentabilite": 0.333,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Chaussures populaires, marge nette intéressante"
+   },
+   "score": 28.4,
+   "ebay": {
+    "requete": "Nike Court Vision Low",
+    "neuf": {
+     "nb": 50,
+     "min": 37.1,
+     "p25": 79.48,
+     "mediane": 89.91,
+     "max": 115.87
+    },
+    "occasion": {
+     "nb": 13,
+     "min": 25.0,
+     "p25": 34.36,
+     "mediane": 52.7,
+     "max": 140.0
+    },
+    "exemples": [
+     {
+      "titre": "Nike Court Vision Low baskets homme basses blanc à lacets confort EU 39",
+      "prix": "31.90",
+      "url": "https://www.ebay.fr/itm/307293734377?_skw=Nike+Court+Vision+Low&hash=item478c2245e9:g:c-wAAeSwK1trAZKU"
+     },
+     {
+      "titre": "Nike Court Vision Low Blanc/Vert/Jaune Homme EU 40 Baskets lacets",
+      "prix": "37.10",
+      "url": "https://www.ebay.fr/itm/147621816493?_skw=Nike+Court+Vision+Low&hash=item225ef228ad:g:jUYAAeSwCCpqxQhl&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kWbs153OSQ1Knm%2FwBgWwcTaWIRg3n3bCpJSjBYvhcsG9W00QzXzbOlrTHwSDOnguXjl8Z8CE2HPqgTjfdpgjf4eEMBPhDDp08%2FaLuPwSXSJC2HNSQZC2x6hJgQtHMK4u2v0Bc0ANayY%2Bd%2BeYMCvLYpUyTutxYa5%2BA47YD2DUSVfRiIHGiTbaOQccYcALhe0RrSB9yq4NO8O7kx78erb2sh0gYaEgqR9C29BYiDP8f2nVt3yUucWoA%2F3IoWm9w3jPxYAXQhYMy4V55%2FoqRIUtMxJcf%2BmdfKeFyN2SQcuwVDBA%3D%3D"
+     },
+     {
+      "titre": "Nike Court Vision Low Next Nature - Pointure 40",
+      "prix": "15.20",
+      "url": "https://www.ebay.fr/itm/940072970764?_skw=Nike+Court+Vision+Low&hash=itemdae0b72a0c:g:hFoAAeSwMHtq7yD2&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7k7RfhlLPAyRXzk2txyyLKZOCeiJ%2FIHbPwTzzxpb0t0kGaBZk3YYgGmFEzSDiEnx9X0TiCiWH4YT2xYCHz4anrAuytnZKhjfcxJ0FEd5GrExONYoyt9Jd2bH2Bh%2BHB2GIv3pgMNIskrNdD5j4Aso%2BwFNUDfuuqh4FRN4PZ9jryWbywPRCAvCC7GVNZCJq9e16U6aBdPh4qPfvkkOyGjWddYYy9KthVBLOf2GMVYqJ0YTLGiUuwIoj0kQrDreQag9%2FA3ZIczUZMyfAYK6A3hJr7FOLw81SjlWQ1F2QiUIjqyrQ%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 79.48,
+     "DE": 40.0,
+     "IT": 49.98,
+     "ES": 49.37
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Nike Court Vision Low",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "nike court vision low",
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 34.36,
+   "marge_verifiee": -26.23,
+   "rentabilite_verifiee": -0.495,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 34.36,
+    "haut": 52.7,
+    "position_neuf": 1.4
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Nike Court Vision Low",
+    "pays": {
+     "FR": {
+      "nb_annonces": 84,
+      "total_ebay": 87,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 37.1,
+       "titre": "Nike Court Vision Low NN Baskets Femme blanc/vert EU 36,5 FV9952-104",
+       "lien": "https://www.ebay.fr/itm/287635029563?_skw=Nike+Court+Vision+Low&hash=item42f8623e3b:g:904AAeSwJfJqx2G4",
+       "vendeur": "astreet25",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 139.0,
+       "titre": "Chaussures Nike Court Vision Low FZ0630010",
+       "lien": "https://www.ebay.fr/itm/257788914252?_skw=Nike+Court+Vision+Low&hash=item3c056aaa4c:g:NS4AAeSw8~9rAP4Q",
+       "vendeur": "takemore_net",
+       "avis_vendeur": 3957
+      }
+     },
+     "DE": {
+      "nb_annonces": 259,
+      "total_ebay": 864,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 31.99,
+       "titre": "Nike Court Vision Low - Sneaker",
+       "lien": "https://www.ebay.de/itm/407377309067?_skw=Nike+Court+Vision+Low&hash=item5ed9946d8b:g:BBgAAeSwOWNrAGvk",
+       "vendeur": "pano.maxx",
+       "avis_vendeur": 2
+      },
+      "plus_cher": {
+       "prix": 187.23,
+       "titre": "Nike Court Vision Low NN Schwarz Weiß DH2987-001 Herren Gr.",
+       "lien": "https://www.ebay.de/itm/820370411128?_skw=Nike+Court+Vision+Low&hash=itembf01e30e78:g:9GEAAeSwCYhq220C",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18934
+      }
+     },
+     "IT": {
+      "nb_annonces": 1028,
+      "total_ebay": 2706,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 33.56,
+       "titre": "Nike Court Vision Low NN Sneakers Uomo Taglia 9.5 Triple Black DH2987-002 Nuove con scatola",
+       "lien": "https://www.ebay.it/itm/227628136663?_skw=Nike+Court+Vision+Low&hash=item34ffb1b8d7:g:sOoAAeSwubdrBIBv",
+       "vendeur": "phedw_9114",
+       "avis_vendeur": 214
+      },
+      "plus_cher": {
+       "prix": 187.23,
+       "titre": "Nike Court Vision Low NN nero bianco DH2987-001 taglia uomo",
+       "lien": "https://www.ebay.it/itm/820371383996?_skw=Nike+Court+Vision+Low&hash=itembf01f1e6bc:g:9GEAAeSwCYhq220C",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18934
+      }
+     },
+     "ES": {
+      "nb_annonces": 731,
+      "total_ebay": 2759,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 33.28,
+       "titre": "Nike Court Vision Low NN Para hombres Talla 9.5 Triple Negro Tenis DH2987-002 NUEVO EN CAJA",
+       "lien": "https://www.ebay.es/itm/227628136663?_skw=Nike+Court+Vision+Low&hash=item34ffb1b8d7:g:sOoAAeSwubdrBIBv",
+       "vendeur": "phedw_9114",
+       "avis_vendeur": 214
+      },
+      "plus_cher": {
+       "prix": 187.23,
+       "titre": "Nike Court Vision Low NN Negro Blanco DH2987-001 Hombres Talla",
+       "lien": "https://www.ebay.es/itm/820371275647?_skw=Nike+Court+Vision+Low&hash=itembf01f03f7f:g:9GEAAeSwCYhq220C",
+       "vendeur": "yumara13",
+       "avis_vendeur": 18934
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Nike Court Vision Low",
+    "temperature_dealabs": 153,
+    "google_trends": {
+     "interet_moyen": 10,
+     "interet_recent": 71,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      51,
+      65,
+      39,
+      46,
+      66,
+      69,
+      54,
+      29,
+      56,
+      65,
+      69,
+      100,
+      79,
+      45,
+      61
+     ],
+     "recherches_liees": [
+      {
+       "query": "nike court vision low homme",
+       "value": 100
+      },
+      {
+       "query": "nike court vision low next nature",
+       "value": 30
+      },
+      {
+       "query": "nike dunk low",
+       "value": 20
+      },
+      {
+       "query": "nike court vision low suede",
+       "value": 14
+      }
+     ]
+    },
+    "suggestions_google": [
+     "nike court vision low",
+     "nike court vision low homme",
+     "nike court vision low femme",
+     "nike court vision low next nature",
+     "nike court vision low se stitched floral",
+     "nike court vision low blanche",
+     "nike court vision low suede",
+     "nike court vision low noir",
+     "nike court vision low beige",
+     "nike court vision low vert"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "efb824bb4a",
+   "titre": "Bono HEISSLUFTFRITTEUSE SAMY 6,5 Liter bei Möbelix im Angebot",
+   "prix": 39.0,
+   "devise": "EUR",
+   "marchand": "Möbelix",
+   "lien": "https://www.preisjaeger.at/deals/bono-heissluftfritteuse-samy-65-liter-bei-mobelix-im-angebot-373274",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 143,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.preisjaeger.at/deals/bono-heissluftfritteuse-samy-65-liter-bei-mobelix-im-angebot-373274"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "cuisine",
+   "nom_produit": "HEISSLUFTFRITTEUSE SAMY",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 44.0,
+   "marge_nette": 13.62,
+   "rentabilite": 0.31,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Petit appareil de cuisine, achat à 39 € et revente à 70 € donne une marge nette confortable, forte demande saisonnière."
+   },
+   "score": 26.5,
+   "ebay": {
+    "requete": "HEISSLUFTFRITTEUSE SAMY",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "HEISSLUFTFRITTEUSE SAMY",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "heissluftfritteuse samy",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "HEISSLUFTFRITTEUSE SAMY",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "HEISSLUFTFRITTEUSE SAMY",
+    "temperature_dealabs": 143,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 9,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 48,
+ "annonces_analysees": [
+  {
+   "id": "822c9561c3",
+   "titre": "Siemens EQ.6 Plus s100 TE651319RW - Volautomatische espressomachine",
+   "temperature": 1734,
+   "categorie": "Home & Living",
+   "marchand": "MediaMarkt",
+   "prix": 369.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/siemens-eq6-plus-s100-te651319rw-volautomatische-espressomachine-425348",
+   "date": "Tue, 24 Nov 2026 11:22:47 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€369 - MediaMarkt Laagste prijs elders: €539,95 .</..."
+  },
+  {
+   "id": "ebe44808a0",
+   "titre": "Konsola Nintendo Switch 2 nowa wersja",
+   "temperature": 845,
+   "categorie": "Gaming",
+   "marchand": "Allegro",
+   "prix": 434.51,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/konsopa-nintendo-switch-2-nowa-wersja-1398916",
+   "date": "Tue, 24 Nov 2026 10:43:10 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 849zł - Allegro Dobra cena na konsole, to wg opisu jest wersja z wymienną bateria, na chwilę wrzutki dostępne ponad 230szt"
+  },
+  {
+   "id": "a59e8667c3",
+   "titre": "REDMI Note 15 5G. 8+512gb , batería de 5520 mAh",
+   "temperature": 779,
+   "categorie": "Electrónica",
+   "marchand": "AliExpress",
+   "prix": 180.98,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/redmi-note-15-5g-8512gb-bateria-de-5520-mah-2087519",
+   "date": "Tue, 24 Nov 2026 11:34:49 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "180,98€ - AliExpress REDMI Note 15 5G, batería de 5520 mAh con diseño delgado, cámara súper nítida de 108 MP, pantalla AMOLED de 6.77\", Snapdragon® 6 Gen 3"
+  },
+  {
+   "id": "d2e8259fa0",
+   "titre": "Bosch Professional moersleutelset 10-delig (8/10/12/13/14/15/16/17/18/19 mm, in tas) @ Amazon NL",
+   "temperature": 609,
+   "categorie": "Tuin & Doe-het-zelf",
+   "marchand": "Amazon.nl",
+   "prix": 64.6,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/prime-bosch-professional-moersleutelset-10-delig-8101213141516171819-mm-in-tas-at-amazon-nl-421490",
+   "date": "Tue, 24 Nov 2026 07:55:55 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€64,60 - Amazon.nl Laagste prijs elders: <a href=\"https://www.google.com/search?q=Bosch+Professional+moersleutelset+10-delig+%288%2F10%2F12%2F13%2F14%2F15%2F16%2F17%2F18%2F19+m..."
+  },
+  {
+   "id": "0a81e6a49d",
+   "titre": "Adidas trainingspak voor baby's en peuters",
+   "temperature": 553,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon.nl",
+   "prix": 22.43,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/adidas-trainingspak-voor-babys-en-peuters-423233",
+   "date": "Tue, 24 Nov 2026 10:18:51 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€22,43 - Amazon.nl Dit zwart-gouden Adidas Essentials Climacool trainingspak voor baby’s en peuters is nu bij Amazon afgeprijsd naar €22,43. Het tweedelige trainingspa..."
+  },
+  {
+   "id": "3048abff75",
+   "titre": "[Pre-order] LEGO 11516 Botanicals Kersenbloesemtakken",
+   "temperature": 520,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/pre-order-lego-11516-botanicals-kersenbloesemtakken-426513",
+   "date": "Tue, 24 Nov 2026 09:13:58 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€24,99 - Amazon.nl Met deze LEGO Botanicals-set haal je alvast een beetje lente in huis. Je bouwt kersenbloesemtakken met witte bloemen en lichtroze knoppen, inclusief een sier..."
+  },
+  {
+   "id": "2c72307e28",
+   "titre": "[3er-Pack - 1500St.] 500ER PACK Spax Mehrzweckschraube 3,5 x 30 mm Verzinkt Holzschrauben Teilgewinde | eBay",
+   "temperature": 489,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "eBay",
+   "prix": 13.02,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/3er-pack-1500st-500er-pack-spax-mehrzweckschraube-35-x-30-mm-verzinkt-holzschrauben-teilgewinde-ebay-2860628",
+   "date": "Tue, 24 Nov 2026 11:18:06 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "13,02€ - eBay Bei eBay bekommt ihr aktuell folgendes Angebot! :) 3x 500ER PACK Spax Mehrzweckschraube 3,5 x 30 mm Verzinkt Holzschrauben Te..."
+  },
+  {
+   "id": "4285d02083",
+   "titre": "tint Aris LED Deckenpanel 120x30 cm, Zigbee, RGBW, dimmbar, inkl. Fernbedienung (eBay)",
+   "temperature": 450,
+   "categorie": "Home & Living",
+   "marchand": "eBay",
+   "prix": 37.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tint-aris-led-deckenpanel-120x30-cm-zigbee-rgbw-dimmbar-inkl-fernbedienung-ebay-2840488",
+   "date": "Tue, 24 Nov 2026 11:20:06 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "37,99€ - eBay Beim Fiducia-Shop bekommt ihr aktuell über eBay folgendes Angebot! :) tint Aris LED Deckenpanel 120x30 cm fü..."
+  },
+  {
+   "id": "5dc14b485b",
+   "titre": "Gardena kraanaansluiting binnenkranen 18210-20 @ Amazon",
+   "temperature": 437,
+   "categorie": "Tuin & Doe-het-zelf",
+   "marchand": "Amazon.nl",
+   "prix": 10.41,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/gardena-kraanaansluiting-binnenkranen-18210-20-at-amazon-420223",
+   "date": "Tue, 24 Nov 2026 10:23:30 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€10,41 - Amazon.nl Deze Gardena kraanaansluiting voor binnenkranen 18210-20 is nu verkrijgbaar voor €10,41 bij Amazon. De laagste prijs elders is <a href=\"https://www.google.co..."
+  },
+  {
+   "id": "359120ec7f",
+   "titre": "Sartenes de acero inoxidable triply Tramontina Grano de 20, 26 y cazuela baja 30 cm",
+   "temperature": 373,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Amazon",
+   "prix": 27.02,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sartenes-de-acero-inoxidable-triply-tramontina-grano-de-20-26-y-cazuela-baja-30-cm-2087553",
+   "date": "Tue, 24 Nov 2026 11:41:56 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "27,02€ - Amazon Sartén de acero inoxidable sin antiadherente. Seguramente la mejor entre calidad y precio de las opciones del mercado. Dejo en la descripción también el mode..."
+  },
+  {
+   "id": "956db9ee6c",
+   "titre": "Kanister metalowy na paliwo 10L do auta, kosiarki (stal tłoczona, 3,5 kg) – 58,75 zł + darmowa dostawa z Allegro Smart",
+   "temperature": 370,
+   "categorie": "Motoryzacja",
+   "marchand": "Allegro",
+   "prix": 13.81,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kanister-metalowy-na-paliwo-10l-do-auta-kosiarki-stal-tloczona-35-kg-5875-zl-darmowa-dostawa-z-allegro-smart-1398773",
+   "date": "Tue, 24 Nov 2026 10:56:05 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "58,75zł - Allegro Wpadł w dobrą cenę klasyczny, metalowy kanister 10L z tłoczonej stali malowanej proszkowo. Cena to 58,75 zł z darmową dostawą ze Smartem. Jak na dysz..."
+  },
+  {
+   "id": "40f2acfe95",
+   "titre": "Microsoft Xbox Series Kontroler bezprzewodowy Carbon Black ( Biały/ Niebieski / Czerwony - zbiorcza ) | PowerA SWITCH2 Pad - opis |",
+   "temperature": 357,
+   "categorie": "Gaming",
+   "marchand": "Ceneo",
+   "prix": 40.37,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/microsoft-xbox-series-kontroler-bezprzewodowy-carbon-black-bialy-niebieski-czerwony-zbiorcza-1398751",
+   "date": "Tue, 24 Nov 2026 10:13:58 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "171,78zł - Ceneo Cena w aplikacji Ceneo! Należy dodać kontroler do koszyka i np ceneo.pl/134626554 D..."
+  },
+  {
+   "id": "463466a422",
+   "titre": "CANYON Shadder GKW-11 (Mechanic RGB Wireless)",
+   "temperature": 355,
+   "categorie": "Gaming",
+   "marchand": "x-kom",
+   "prix": 23.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/canyon-shadder-gkw-11-mechanic-rgb-wireless-1398708",
+   "date": "Tue, 24 Nov 2026 10:14:57 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "99zł - x-kom CANYON Klawiatura gamingowa Shadder GKW-11 Mech RGB Bezprzewodowa CANYON Shadder GKW-11 to bezprzewodowa klawiatura mechaniczna stworzona ..."
+  },
+  {
+   "id": "11ed1e1b6b",
+   "titre": "Koronkowa sukienka mini, gorsetowa fioletowa i różowa",
+   "temperature": 341,
+   "categorie": "Moda",
+   "marchand": "House",
+   "prix": 14.1,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/koronkowa-sukienka-mini-gorsetowa-fioletowa-i-rozowa-1398788",
+   "date": "Tue, 24 Nov 2026 10:51:47 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "59,99zł - House Sukienka z dekoltem w serce, fiszbinami i gorsetowym sznurowaniem na tyle. Z boku ma też zamek, a w środku beżową podszewkę. Na wysokości bioder ma marszczon..."
+  },
+  {
+   "id": "d37ded489d",
+   "titre": "Bosch X-Line, 70 elementowy zestaw wierteł, bitów, nasadek oraz miara 3m",
+   "temperature": 341,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Allegro",
+   "prix": 14.51,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/bosch-x-line-70-elementowy-zestaw-wiertel-bitow-nasadek-oraz-miara-3m-1390337",
+   "date": "Tue, 24 Nov 2026 10:30:33 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "61,75zł - Allegro Zestaw elementów z powłoką TiN (do drewna, kamienia i metalu, w tym taśma miernicza i wiertła płaskie, osprzęt do wiertarki i wkrętarki). TiN t..."
+  },
+  {
+   "id": "4a1f67d701",
+   "titre": "Chess.com plany roczne -50%",
+   "temperature": 336,
+   "categorie": "Usługi i subskrypcje",
+   "marchand": null,
+   "prix": 58.75,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/chesscom-plany-roczne-50-1397570",
+   "date": "Tue, 24 Nov 2026 10:19:34 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "249,99zł Promocja bez kodów, wyłącznie na plany roczne. Oferta dostępna bezpośrednio w aplikacji."
+  },
+  {
+   "id": "d7efb29571",
+   "titre": "Oclean Flow elektryczna, soniczna szczoteczka do zębów (180 dni pracy). W opisie niebieska",
+   "temperature": 334,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Amazon.de",
+   "prix": 21.45,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/oclean-flow-elektryczna-soniczna-szczoteczka-do-zebow-180-dni-pracy-baterii-w-opisie-niebieska-1396734",
+   "date": "Tue, 24 Nov 2026 10:57:31 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "91,26zł - Amazon.de 20.47 €, darmowa dostawa do Paczkomatu i punktów DHL POP. NIebieska za 20,75 € (ok. 92,51 zł) <a href=\"https://www.amazon.de/-/pl/gp/product/B09GX..."
+  },
+  {
+   "id": "2370fb4de6",
+   "titre": "Zestaw Philips Hue White and Colour Ambiance GU10 3szt. + Regulator przyciemniania Dimmer",
+   "temperature": 326,
+   "categorie": "Elektronika",
+   "marchand": "RTV Euro AGD",
+   "prix": 56.4,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zestaw-philips-hue-white-and-colour-ambiance-gu10-3szt-regulator-przyciemniania-dimmer-1398837",
+   "date": "Tue, 24 Nov 2026 11:39:18 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "240zł - RTV Euro AGD Szukałem świateł do salonu i trafiłem na dobrą ofertę na żarówki. W ofercie w zestawie jest od razu ściemniacz. Wdziałem, że są do niego adaptery w interneci..."
+  },
+  {
+   "id": "f92daf0338",
+   "titre": "UGREEN 10-in-1 Stekkerdoos met USB",
+   "temperature": 315,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.nl",
+   "prix": 23.75,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/ugreen-10-in-1-stekkerdoos-met-usb-425145",
+   "date": "Tue, 24 Nov 2026 09:06:53 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€23,75 - Amazon.nl Laagste prijs elders: €40,98 incl. verzendkosten naar NL (of je moet..."
+  },
+  {
+   "id": "6c91a0e938",
+   "titre": "Pad Microsoft Xbox Series czerwony",
+   "temperature": 309,
+   "categorie": "Gaming",
+   "marchand": "Allegro",
+   "prix": 45.38,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/pad-microsoft-xbox-series-czerwony-1398704",
+   "date": "Tue, 24 Nov 2026 10:46:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "193,12zł - Allegro Pad kompatybilny również z Xbox One, PC oraz chmurą"
+  },
+  {
+   "id": "5612917003",
+   "titre": "Bleu de Chanel Parfum perfumy męskie 150ml - tylko w aplikacji.",
+   "temperature": 303,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Flaconi",
+   "prix": 145.47,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/blue-de-chanel-parfum-1398733",
+   "date": "Tue, 24 Nov 2026 11:29:13 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "619zł - Flaconi Bardzo dobra cena na największy flakon od Chanel – Bleu de Chanel Parfum (150 ml). Nuty głowy: skórka cytryny, bergamota, dzięgiel, mięta. Nuty ..."
+  },
+  {
+   "id": "9fc983a1ef",
+   "titre": "Słuchawki TWS CMF by Nothing Buds 2 (ANC, 55h, Pomarańczowe) @ Amazon.de €28,89",
+   "temperature": 292,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.de",
+   "prix": 30.28,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/sluchawki-tws-cmf-by-nothing-buds-2-anc-55h-pomaranczowe-at-amazonde-1398515",
+   "date": "Tue, 24 Nov 2026 10:42:00 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "128,85zł - Amazon.de Porównanie cen: Na Allegro najtańsze o..."
+  },
+  {
+   "id": "f7f0753288",
+   "titre": "Badabulle Tienda Anti-UV SPF 50+ para Playa con Sistema Pop-up",
+   "temperature": 269,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/badabulle-tienda-anti-uv-spf-50-para-playa-con-sistema-pop-up-2087540",
+   "date": "Tue, 24 Nov 2026 11:48:22 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10€ - Amazon PROTECCIÓN 50+: la tienda anti-UV protege a tu bebé de los rayos nocivos del sol, así como del viento y la arena cuando vais a la playa, de merienda ..."
+  },
+  {
+   "id": "a5a9fd6b6d",
+   "titre": "Urządzenie wielofunkcyjne HP DeskJet 4320 Druk w kolorze wifi",
+   "temperature": 269,
+   "categorie": "Elektronika",
+   "marchand": "Media Expert",
+   "prix": 23.5,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/urzadzenie-wielofunkcyjne-hp-deskjet-4320-druk-w-kolorze-wifi-1398755",
+   "date": "Tue, 24 Nov 2026 10:50:36 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "99,99zł - Media Expert Błąd cenowy na kod w Media Expert. Wydaje mi się że za taką kasę warto kupić."
+  },
+  {
+   "id": "fe5b56daf2",
+   "titre": "LEGO Technic 42220 Monster Jam Sparkle Smash z napędem typu pull-back | w opisie 76461, 76332, 75643",
+   "temperature": 264,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Amazon.de",
+   "prix": 15.11,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lego-technic-42220-monster-jam-sparkle-smash-z-napedem-typu-pull-back-w-opisie-76461-76332-75643-1398701",
+   "date": "Tue, 24 Nov 2026 10:35:01 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "64,28zł - Amazon.de Darmowa dostawa do InPost Paczkomat lub Automat DHL BOX lub DHL POP Żabka <a href=\"https://amazon.de/dp/B0FPXD7PQV\" target..."
+  },
+  {
+   "id": "17eec5ecc2",
+   "titre": "Kindle Colorsoft Libro Electrónico 7.05\" 16GB USB Tipo C Wi-Fi 5 Bluetooth 5.0 Negro 2310mAh",
+   "temperature": 263,
+   "categorie": "Electrónica",
+   "marchand": "PcComponentes",
+   "prix": 166.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/kindle-colorsoft-libro-electronico-705-16gb-usb-tipo-c-wi-fi-5-bluetooth-50-negro-2310mah-2072896",
+   "date": "Tue, 24 Nov 2026 11:28:55 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "166,99€ - PcComponentes El libro electrónico Kindle Colorsoft de 7.05 pulgadas está diseñado para lectores exigentes que buscan versatilidad y comodidad. Su <strong..."
+  },
+  {
+   "id": "1474afd28a",
+   "titre": "Planszówkowy Gift Box | 2x gra planszowa",
+   "temperature": 259,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Allegro",
+   "prix": 23.5,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/planszowkowy-gift-box-2x-gra-planszowa-1398005",
+   "date": "Tue, 24 Nov 2026 10:37:59 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "99,99zł - Allegro Siemka! (y) Wrzutka od planszówkowicza, miłośnika turlania kostek - sklep z planszówkami zgrani.pl na al..."
+  },
+  {
+   "id": "aca6b6ae32",
+   "titre": "Frigorífico Americano Samsung RS57DG400EM9EF 583L por 593€ con BF10 + PayPal (560€ con cupón cumpleaños) | (Miembros Samsung Plus)",
+   "temperature": 256,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Samsung",
+   "prix": 593.1,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/frigorifico-americano-samsung-rs57dg400em9ef-583l-por-593eur-con-bf10-paypal-560eur-con-cupon-cumpleanos-miembros-samsung-plus-2087409",
+   "date": "Tue, 24 Nov 2026 11:37:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "593,10€ - Samsung Este americano de Samsung salió hace un par de semanas a 649 y 692 € y se fue arriba. En Samsung Plus está ahora a 729 €. Con el código BF10 se queda e..."
+  },
+  {
+   "id": "27110c1f97",
+   "titre": "Datacolor Spyder X2 Photo Studio Kit",
+   "temperature": 255,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 160.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/datacolor-spyder-x2-photo-studio-kit-2087615",
+   "date": "Tue, 24 Nov 2026 12:08:59 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "160,49€ - Amazon Datacolor® Spyder X2 Photo Studio es el kit de herramientas definitivo para la gestión del color para fotógrafos, proporcionando todo lo esencial nec..."
+  },
+  {
+   "id": "17400eff8d",
+   "titre": "Sylwester w Bukareszcie-Rumunia - loty Kraków - Bukareszt (28.12.2026 - 02.01.2027)",
+   "temperature": 249,
+   "categorie": "Podróże",
+   "marchand": "Ryanair",
+   "prix": 68.2,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/sylwester-w-bukareszcie-rumunia-1366595",
+   "date": "Tue, 24 Nov 2026 12:02:11 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "290,22zł - Ryanair Loty sylwestrowe do Bukaresztu Start z Krakowa w poniedziałek 28 grudnia br. godzina 20:25 Powrót 2 stycznia również do Krakowa godzina 16:05 Ce..."
+  },
+  {
+   "id": "7de8abe4da",
+   "titre": "XoXo Lovely unlimitiert 5G",
+   "temperature": 248,
+   "categorie": "Telefon & Internet",
+   "marchand": "XOXO-Mobile",
+   "prix": 11.83,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/xoxo-lovely-unlimitiert-5g-373271",
+   "date": "Tue, 24 Nov 2026 10:31:40 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "11,83€ - XOXO-Mobile Und es gibt ihn wieder, den XoXo Lovely mit unlimitierten Daten zum grandiosen Preis von 11,83/Monat im Netz von A1. Und wenn Ihr Euch von einem Freund..."
+  },
+  {
+   "id": "525f0932c4",
+   "titre": "Plecak na laptopa Acer Nitro Gaming Multi-Functional 17\" II Torba na laptopa Tracer Balance Pro, Hama Florenz 13,3\" w opisie",
+   "temperature": 244,
+   "categorie": "Moda",
+   "marchand": "RTV Euro AGD",
+   "prix": 9.4,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/plecak-na-laptopa-acer-nitro-gaming-multi-functional-17-ii-torba-na-laptopa-tracer-balance-pro-hama-florenz-133-w-opisie-1398753",
+   "date": "Tue, 24 Nov 2026 11:56:37 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "39,99zł - RTV Euro AGD Torba na laptopa Tracer Balance Pro 15,6\" Czarny 19,99 zł <a href=\"https://www.euro.com.pl/torby-do-laptopow/tracer-balance-pro-15-6-c..."
+  },
+  {
+   "id": "3e09da582c",
+   "titre": "Manette sans fil Xbox pour Xbox Series et PC - Noir ou Blanc",
+   "temperature": 242,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/manette-sans-fil-xbox-pour-xbox-series-et-pc-robot-white-3467536",
+   "date": "Tue, 24 Nov 2026 11:43:51 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "39,99€ - JoyBuy Offre JoyBuy. Source code promo : <a href=\"https://www.dealabs.com/codes-promo/5eur-de-reduction-des-30eur-dachat-sur-le-tout-le-site-3458536\" target=\"..."
+  },
+  {
+   "id": "c1fd6afe93",
+   "titre": "Szlafrok z Koronki Mistery Essence",
+   "temperature": 242,
+   "categorie": "Moda",
+   "marchand": "Tezenis",
+   "prix": 12.92,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/szlafrok-z-koronki-mistery-essence-1398914",
+   "date": "Tue, 24 Nov 2026 12:24:56 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "54,99zł - Tezenis Wykonany z cienkiej koronki w kwiatowy wzór, z szerokim pasem z błyszczącej mikrofibry o satynowym efekcie. rozmiar s.m.l Koronka ..."
+  },
+  {
+   "id": "e28c40703d",
+   "titre": "Armani Stronger With You Powerfully Woda perfumowana dla mężczyzn, 100 ML; 62.20 EUR",
+   "temperature": 240,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "parfumdreams.de",
+   "prix": 64.96,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/armani-stronger-with-you-powerfully-woda-perfumowana-dla-mezczyzn-100-ml-6220-eur-1398614",
+   "date": "Tue, 24 Nov 2026 12:18:34 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "276,43zł - parfumdreams.de PH: perfumehub.pl/gio…yzn Specyfikacja produktu: St..."
+  },
+  {
+   "id": "7ed2995fc7",
+   "titre": "Perfume hombre BOSS Bottled Parfum 100 ml (fragancia amaderada ambarina, notas de cuero y raíz de orris) -50 ml a 38,86€ - 200 ml a 75,65€",
+   "temperature": 234,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 44.58,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/perfume-hombre-boss-bottled-parfum-100-ml-fragancia-amaderada-ambarina-notas-de-cuero-y-raiz-de-orris-50-ml-a-3886eur-200-ml-a-7565eur-2087468",
+   "date": "Tue, 24 Nov 2026 11:46:41 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "44,58€ - Amazon La carismática, profunda y elegante fragancia masculina de Hugo Boss , en su versión de alta concentración BOSS Bottled Parfum en fra..."
+  },
+  {
+   "id": "3ca8ed9b18",
+   "titre": "Ecran PC Gamer MSI MAG 272QP 27\" QD-OLED WQHD 240 Hz 0,03ms HDR 2x HDMI 2.1 + USB-C 15W",
+   "temperature": 233,
+   "categorie": "High-Tech",
+   "marchand": "Boulanger",
+   "prix": 299.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-gamer-msi-mag-272qp-27-qd-oled-wqhd-240-hz-003ms-hdr-2x-hdmi-21-usb-c-15w-3467545",
+   "date": "Tue, 24 Nov 2026 11:47:58 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "299,99€ - Boulanger • Écran de 16 pouces • Résolution Full HD • Rotation à 360° • Connexion Plug-and-Play • Filtre anti-lumière bleue intégré • Compatible ..."
+  },
+  {
+   "id": "609f5af881",
+   "titre": "Karnisz elektryczny 2,16-4,2M | 90-240V",
+   "temperature": 232,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Allegro",
+   "prix": 62.8,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/karnisz-elektryczny-42m-1398511",
+   "date": "Tue, 24 Nov 2026 12:00:06 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "267,23zł - Allegro Główne cechy Funkcja timera: potężna funkcja timera umożliwia ustawienie harmonogramu zgodnie z rytmem życia. Przed pójściem spać możesz ustawić czas włącz..."
+  },
+  {
+   "id": "dab345a060",
+   "titre": "Freidora de aire Ninja CRISPi PRO XL 2 recipientes de cristal, 7 funciones y 2.050 W (varios colores)",
+   "temperature": 228,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "SharkNinja",
+   "prix": 159.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/freidora-de-aire-ninja-crispi-pro-xl-2-recipientes-de-cristal-7-funciones-y-2050-w-varios-colores-2087304",
+   "date": "Tue, 24 Nov 2026 12:07:26 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "159,99€ - SharkNinja Características principales 7 funciones de cocción: Air Fry, Max Crisp, Roast, Bake, Prove, Dehydrate y Re-..."
+  },
+  {
+   "id": "901e29902d",
+   "titre": "Baskets Nike ACG Pegasus Trail - Plusieurs tailles disponbles",
+   "temperature": 227,
+   "categorie": "Sports & Plein air",
+   "marchand": "Nike",
+   "prix": 74.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/baskets-nike-acg-pegasus-trail-tailles-385-a-495-3467210",
+   "date": "Tue, 24 Nov 2026 10:46:23 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "74,99€ - Nike Parcours des kilomètres pittoresques avec un confort amorti et encore plus d'adhérence. Une chaussure conçue pour les sentiers avec la réa..."
+  },
+  {
+   "id": "8a4d27ee5f",
+   "titre": "Tefal Easy Cook & Clean Crêpepfanne 25 cm (Titanium-Antihaft, spülmaschinenfest)",
+   "temperature": 225,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Möbelix",
+   "prix": 11.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tefal-easy-cook-clean-crepepfanne-25-cm-titanium-antihaft-spulmaschinenfest-373255",
+   "date": "Tue, 24 Nov 2026 09:42:49 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "11€ - Möbelix Rechtzeitig vor der Palatschinken-Saison: Die Tefal Easy Cook & Clean Crêpepfanne mit 25 cm kostet bei Möbelix gerade nur 11 € . Die UVP ..."
+  },
+  {
+   "id": "f9af711757",
+   "titre": "Smartfon Infinix NOTE Edge 5G 8/256GB 6,78\" 120Hz 50Mpix Czarny",
+   "temperature": 224,
+   "categorie": "Elektronika",
+   "marchand": "RTV Euro AGD",
+   "prix": 98.7,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/smartfon-infinix-note-edge-5g-8256gb-678-120hz-50mpix-czarny-1398667",
+   "date": "Tue, 24 Nov 2026 10:22:33 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "420zł - RTV Euro AGD Za taka cenę to ocet słodki 8) Dane techniczne Smartfon Infinix NOTE Edge 5G 8/256GB 6,78\" 120Hz 50Mpix Czarny <st..."
+  },
+  {
+   "id": "1c082a3d0f",
+   "titre": "Catan Big Box, Juego de Mesa, Edición 2025 (Incluye Juego Básico, Ampliación para 5-6 Jugadores, 2 Miniexpansiones) (BGCATPLUSP3)",
+   "temperature": 222,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 56.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/catan-big-box-juego-de-mesa-edicion-2025-incluye-juego-basico-ampliacion-para-5-6-jugadores-2-miniexpansiones-bgcatplusp3-2087268",
+   "date": "Tue, 24 Nov 2026 11:51:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "56€ - Amazon Catan Plus Edición: 2023 CONTEXTO ¡Entra por la puerta grande en el mundo de Catan! Esta edición incluye el jue..."
+  },
+  {
+   "id": "c16128ecd8",
+   "titre": "LEGO Harry Potter Ford Anglia Volante Encantado 76470 868 piezas",
+   "temperature": 220,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "PcComponentes",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-harry-potter-ford-anglia-volante-encantado-76470-868-piezas-2087231",
+   "date": "Tue, 24 Nov 2026 11:53:53 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "49,99€ - PcComponentes El LEGO Harry Potter Ford Anglia Volador Encantado 76470 es un set de construcción de la línea Harry Potter que reproduce el coche volador de los Weasley. Tr..."
+  },
+  {
+   "id": "58e7500342",
+   "titre": "LEGO Technic Koenigsegg Sadair's Spear megacar 42232 (Laagste ooit met rentepunten)",
+   "temperature": 219,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Wehkamp",
+   "prix": 314.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-technic-koenigsegg-sadairs-spear-megacar-42232-laagste-ooit-428984",
+   "date": "Tue, 24 Nov 2026 09:51:28 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€314,99 - Wehkamp De laagste prijs ooit voor de LEGO Technic Ko..."
+  },
+  {
+   "id": "23fd0e2c3a",
+   "titre": "IKEA KALLAX Regal Weiß 77 x 147 cm (8 Fächer, hoch oder quer, Neuer gesenkter Preis)",
+   "temperature": 217,
+   "categorie": "Home & Living",
+   "marchand": "IKEA",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/ikea-kallax-regal-weiss-77-x-147-cm-8-facher-hoch-oder-quer-neuer-gesenkter-preis-373251",
+   "date": "Tue, 24 Nov 2026 09:07:50 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "49,99€ - IKEA Der Klassiker unter den IKEA-Regalen ist dauerhaft günstiger: Das KALLAX in Weiß mit 8 Fächern kostet jetzt 49,99 € statt 59,99 €. Es ist ei..."
+  },
+  {
+   "id": "199f51547f",
+   "titre": "Alanya Turcja Riwiera Hotel and Spa 8 dni dwa posiłki 05-12.12 Warszawa Katowice +100zł",
+   "temperature": 216,
+   "categorie": "Podróże",
+   "marchand": "Rainbow",
+   "prix": 322.42,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/alanya-turcja-riwiera-hotel-and-spa-8-dni-dwa-posilki-05-1212-warszawa-katowice-100zl-1390489",
+   "date": "Tue, 24 Nov 2026 11:58:53 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 372zł - Rainbow Hotel w sercu Alanyi oferuje komfortowe zakwaterowanie w gustownie urządzonych wnętrzach. Jego lokalizacja zapewnia łatwy dostęp do promenady wzdłuż morza, i..."
+  },
+  {
+   "id": "30fb16e7a9",
+   "titre": "BESSEY EZ360M-15 Einhandzwinge | 150 mm Spannweite, 360° Drehgriff, Spreizfunktion, 75 kg Spannkraft (Prime)",
+   "temperature": 215,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 15.75,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bessey-ez360m-15-einhandzwinge-150-mm-spannweite-360-drehgriff-spreizfunktion-75-kg-spannkraft-prime-2880364",
+   "date": "Tue, 24 Nov 2026 11:15:45 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "15,75€ - Amazon Es gibt mal wieder die BESSEY EZ360M-15 bei Amazon für 15,75€ . <a href=\"https://www.idealo.de/preisvergleich/Off..."
+  },
+  {
+   "id": "a363a350e1",
+   "titre": "Joma Championship VII Sudadera Hombre",
+   "temperature": 213,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 13.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/joma-championship-vii-sudadera-hombre-2087517",
+   "date": "Tue, 24 Nov 2026 11:49:12 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,49€ - Amazon Acerca de este artículo Ofrece comodidad y libertad de movimiento Tela suave Ajuste ligero </..."
+  },
+  {
+   "id": "1b45a6a1c9",
+   "titre": "Perfume hombre BOSS Bottled Eau de Toilette 50 ml (fragancia masculina amaderada con notas de canela) - 100 ml a 40,90€",
+   "temperature": 212,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 25.19,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/perfume-hombre-boss-bottled-eau-de-toilette-50-ml-fragancia-masculina-amaderada-con-notas-de-canela-100-ml-a-4090eur-2087395",
+   "date": "Tue, 24 Nov 2026 11:57:52 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "25,19€ - Amazon 100 ml a 40,90€. <a href=\"https://www.amazon.es/BOSS-Bottled-Toilette-para-hombre/dp/B01F2LA0ZG/ref=sr_1_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&cri..."
+  },
+  {
+   "id": "37db9e76ac",
+   "titre": "Manette sans fil Nintendo Switch Pro - pour Switch",
+   "temperature": 211,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/manette-sans-fil-nintendo-switch-pro-pour-switch-1-2-3467408",
+   "date": "Tue, 24 Nov 2026 11:17:26 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "49,99€ - JoyBuy Faites passer votre expérience de jeu au niveau supérieur avec la manette Nintendo Pro, conçue pour offrir l'expérience de jeu ultime sur Nintendo Sw..."
+  },
+  {
+   "id": "bac43140d6",
+   "titre": "The Rogue Prince of Persia sur PS5",
+   "temperature": 210,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 14.24,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/the-rogue-prince-of-persia-sur-ps5-3449885",
+   "date": "Tue, 24 Nov 2026 10:57:50 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "14,24€ - Amazon On l'a vu moins cher mais prix tout de même intéressant sur cet opus :) → Livraison gratuite à domicile. <br /..."
+  },
+  {
+   "id": "67783b543e",
+   "titre": "Halloween 1-5 Blu-ray Collection (Uncut) für 29,32€ (Amazon Prime)",
+   "temperature": 210,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 29.32,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/halloween-1-5-blu-ray-collection-uncut-fur-3688eur-amazon-prime-2861275",
+   "date": "Tue, 24 Nov 2026 12:05:18 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "29,32€ - Amazon Moinsen, bei Amazon erhaltet ihr die Halloween 1-5 Blu-ray Collection (Uncut) zum Bestpreis von 36,88€ inkl. Versand mit Prime. Amazon Kunden vergeben im sc..."
+  },
+  {
+   "id": "a94dfed134",
+   "titre": "Funko POP! Rocks: Daft Punk - Discovery 2 Pack",
+   "temperature": 210,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 22.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/funko-pop-rocks-daft-punk-discovery-2-pack-2085874",
+   "date": "Tue, 24 Nov 2026 11:49:33 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "22,50€ - Amazon TAMAÑO COLECCIONABLE IDEAL - Con una altura aproximada de 3,75 pulgadas (9,5 cm), esta minifigura de vinilo complementa otros artículos de colección ..."
+  },
+  {
+   "id": "a9ce212150",
+   "titre": "Sandalias Trekking y Senderismo de mujer Tena V3 - Azul marino",
+   "temperature": 210,
+   "categorie": "Deportes y aire libre",
+   "marchand": "El Corte Inglés",
+   "prix": 15.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sandalias-trekking-y-senderismo-de-mujer-tena-v3-azul-marino-2084853",
+   "date": "Tue, 24 Nov 2026 11:35:09 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "15,99€ - El Corte Inglés sandalias de trekking y senderismo para mujer Izas Tena V3 : Uso recomendado: Senderismo, trekking ligero, cam..."
+  },
+  {
+   "id": "e44203770f",
+   "titre": "Tefal Start'Easy Bratpfanne 24 cm (induktionsgeeignet, Antihaft, spülmaschinenfest)",
+   "temperature": 210,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Möbelix",
+   "prix": 16.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tefal-starteasy-bratpfanne-24-cm-induktionsgeeignet-antihaft-spulmaschinenfest-373257",
+   "date": "Tue, 24 Nov 2026 09:11:58 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "16€ - Möbelix Eine Alltagspfanne für alle Herdarten: Die Tefal Start'Easy Bratpfanne mit 24 cm kostet bei Möbelix gerade 16 € . Die UVP liegt bei 37,99 €. ..."
+  },
+  {
+   "id": "c005842087",
+   "titre": "Battlefield 6 Phantom Edition PS5 | Deutsch",
+   "temperature": 209,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 27.8,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/battlefield-6-phantom-edition-ps5-deutsch-2861424",
+   "date": "Tue, 24 Nov 2026 12:16:13 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "27,80€ - Amazon Battlefield 6 Phantom Edition enthält: Download der Vollversion Battlefield-Pro-Token 1 Token für die erste Spiel-Season einlösbar Ent..."
+  },
+  {
+   "id": "04b6a47e67",
+   "titre": "Console Nintendo Console Switch 2 (Batterie Remplaçable)",
+   "temperature": 204,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 429.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nintendo-console-switch-2-batterie-remplacable-par-lutilisateur-3467502",
+   "date": "Tue, 24 Nov 2026 11:34:14 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "429€ - Amazon À propos de cet article Donnez une nouvelle dimension à vos jeux avec un écran 1080p plus grand, ou connectez la console à un ..."
+  },
+  {
+   "id": "2cd7497363",
+   "titre": "West Ham United FC Umbro Pro Herren Trainings Sweatshirt",
+   "temperature": 204,
+   "categorie": "Moda y accesorios",
+   "marchand": "Deporte-Outlet",
+   "prix": 8.82,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/west-ham-united-fc-umbro-pro-herren-trainings-sweatshirt-2067250",
+   "date": "Tue, 24 Nov 2026 12:25:09 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,82€ - Deporte-Outlet • Marca Umbro • 100 % poliéster • Manga larga • Cuello alto con cremallera frontal corta • Paneles en contraste en hombros y parte superior ..."
+  },
+  {
+   "id": "951a8133ab",
+   "titre": "HASBRO SABLE DE LUZ EZRA BRIDGER FORCE FX ELITE",
+   "temperature": 201,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Tiendas MGI",
+   "prix": 100.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/hasbro-sable-de-luz-ezra-bridger-force-fx-elite-2042580",
+   "date": "Tue, 24 Nov 2026 11:34:40 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "100€ - Tiendas MGI Hasbro Sable de Luz Ezra Bridger Force FX Elite es una réplica premium inspirada en la serie Star Wars: Ahsoka, diseñada especialmente para coleccionistas y fan..."
+  },
+  {
+   "id": "0c18e52082",
+   "titre": "LEGO Disney 43279 Wall-E et Eve - Avec M-O et Hal (Via 12,23€ sur la carte fidélité)",
+   "temperature": 200,
+   "categorie": "Famille & Enfants",
+   "marchand": "E.Leclerc",
+   "prix": 36.67,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/set-de-construction-lego-disney-43279-wall-e-et-eve-avec-m-o-et-hal-via-1223eur-sur-la-carte-fidelite-3467306",
+   "date": "Tue, 24 Nov 2026 10:58:51 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "36,67€ - E.Leclerc Ce set Disney et Pixar permet de construire les robots Wall-E et Eve du film, à poser sur une étagère une fois terminé. Le set s'adresse surtout aux adultes ..."
+  },
+  {
+   "id": "4c86192b4f",
+   "titre": "Emporio Armani Because It's You 100 ml - Eau de parfum",
+   "temperature": 198,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": "Douglas",
+   "prix": 36.3,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/emporio-armani-because-its-you-100-ml-eau-de-parfum-428970",
+   "date": "Tue, 24 Nov 2026 08:00:44 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€36,30 - Douglas Giorgio Armani Emporio Armani Because It's You Eau de Parfum - Damesgeur Because It's You Eau de Parfum van Emporio Armani is een vrolijke, bruisende, simp..."
+  },
+  {
+   "id": "a9543896a5",
+   "titre": "Altra Experience flow 2, del 36 al 42,5",
+   "temperature": 197,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Privé by Zalando",
+   "prix": 59.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/altra-experience-flow-2-del-36-al-425-2086564",
+   "date": "Tue, 24 Nov 2026 11:57:55 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "59,90€ - Privé by Zalando Altra Experience Flow 2 Running · Entrenamiento diario Ligereza, comodidad y pisada natural Las Altra Experience Flow 2 son unas zapatillas de ru..."
+  },
+  {
+   "id": "b64cb796da",
+   "titre": "Cecotec Bolero DressCode 6150 Inverter Waschmaschine 6 kg (Energieklasse A, 1.000 U/min, Dampf, nur 44 cm tief)",
+   "temperature": 189,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 207.25,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/cecotec-bolero-dresscode-6150-inverter-waschmaschine-6-kg-energieklasse-a-1000-umin-dampf-nur-44-cm-tief-373259",
+   "date": "Tue, 24 Nov 2026 09:31:20 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "207,25€ - Amazon Eine schmale Waschmaschine für kleine Bäder und Single-Haushalte: Die Cecotec Bolero DressCode 6150 Inverter kostet bei Amazon gerade 204,85 €. Nach Österrei..."
+  },
+  {
+   "id": "45c6fd6cb7",
+   "titre": "Casque Sonos Ace Noir",
+   "temperature": 188,
+   "categorie": "High-Tech",
+   "marchand": "Boulanger",
+   "prix": 170.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-sonos-ace-3467553",
+   "date": "Tue, 24 Nov 2026 12:00:29 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "170,99€ - Boulanger Casque passant à 170,99€ au lieu de 379.99€ en cumulant la promo actuelle + le code promo AUDIO10 au panier. • Haut-parleurs dynamiques de 40 mm<br /..."
+  },
+  {
+   "id": "ca262b6d80",
+   "titre": "INCAPTO Café en Grano Natural de Especialidad 1kg | Origen Brasil 100% Arábica · 83 Puntos de Cata · Aroma a Cacao, Frutos Secos y Caramelo",
+   "temperature": 188,
+   "categorie": "Supermercado y alimentación",
+   "marchand": "Amazon",
+   "prix": 25.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/incapto-cafe-en-grano-natural-de-especialidad-1kg-origen-brasil-100-arabica-83-puntos-de-cata-aroma-a-cacao-frutos-secos-y-caramelo-2087478",
+   "date": "Tue, 24 Nov 2026 11:59:09 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "25,49€ - Amazon CAFÉ DE BRASIL EN GRANO NATURAL · 83 PUNTOS DE CATA · FINCA FLOR DE CAFÉ, MINAS GERAIS: 100% Arábica variedades Mundo Novo y Catuaí Vermelho, cultiva..."
+  },
+  {
+   "id": "b0377bdc68",
+   "titre": "Ninja CREAMi Deluxe, 10 funciones (2 tarrinas) - Gris/Negro",
+   "temperature": 184,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "SharkNinja",
+   "prix": 152.79,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ninja-creami-deluxe-10-funciones-2-tarrinas-grisnegro-2087345",
+   "date": "Tue, 24 Nov 2026 12:26:24 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "152,79€ - SharkNinja Especificaciones del producto: 10 funciones para preparar helados, postres, bebidas y otros productos ..."
+  },
+  {
+   "id": "345a3f0f72",
+   "titre": "Garmin Forerunner 965",
+   "temperature": 182,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 399.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/garmin-forerunner-965-2087470",
+   "date": "Tue, 24 Nov 2026 12:28:51 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "399,99€ - El Corte Inglés Buen precio para uno de los mejores relojes de running de Garmin. Antes estaba a 529,99 €. Además, te regalan un seguro de 3 meses. Pantalla AM..."
+  },
+  {
+   "id": "5c294e80ef",
+   "titre": "LEGO Classic 10696 - La boîte de briques créatives, 484 pièces (via coupon)",
+   "temperature": 174,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 14.83,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-classic-10696-la-boite-de-briques-creatives-484-pieces-via-coupon-3467392",
+   "date": "Tue, 24 Nov 2026 11:30:49 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "14,83€ - Amazon Bon prix direct pour la boîte de Lego classique ! Via le coupon à activer avant l'ajout au panier. > Vendu et expédié par Amazon <br ..."
+  },
+  {
+   "id": "27ef2b7d11",
+   "titre": "Tefal Daily Cook Bratpfanne 24 cm G7300455 (Edelstahl-Außenseite, Induktion, Thermo-Signal, backofenfest)",
+   "temperature": 174,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "alza",
+   "prix": 13.9,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tefal-daily-cook-bratpfanne-24-cm-g7300455-edelstahl-aussenseite-induktion-thermo-signal-backofenfest-373258",
+   "date": "Tue, 24 Nov 2026 09:42:45 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "13,90€ - alza Eine robuste Alltagspfanne zum kleinen Preis: Die Tefal Daily Cook mit 24 cm kostet bei Alza in der Black Friday Aktion gerade 13,90 € . Die ..."
+  },
+  {
+   "id": "6846352ffc",
+   "titre": "50 % Rabatt auf die Saisonkarte der Wachaubahn",
+   "temperature": 170,
+   "categorie": "Dienstleistungen & Verträge",
+   "marchand": "Wachaubahn",
+   "prix": 76.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/50-rabatt-auf-die-saisonkarte-der-wachaubahn-373270",
+   "date": "Tue, 24 Nov 2026 10:26:25 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "76€ - Wachaubahn Hallo Leute, Halber Preis für die ganze Saison: Wer bis 1. Mai 2027 zuschlägt, holt sich die Saisonkarte für die Wachaubahn mit 50 Prozent Frühbuc..."
+  },
+  {
+   "id": "958de3cd6e",
+   "titre": "Kronenburg Faltpavillon wasserdicht Dachmaß 3x3m UV Schutz 50+ Pavillon verschiedene Farben (Amazon Prime Black Friday)",
+   "temperature": 168,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 84.97,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kronenburg-faltpavillon-wasserdicht-dachmass-3x3m-uv-schutz-50-pavillon-verschiedene-farben-amazon-prime-black-friday-2880342",
+   "date": "Tue, 24 Nov 2026 11:14:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "84,97€ - Amazon Moin, bei Amazon bekommt ihr aktuell folgendes Black Friday Angebot: Kronenburg Faltpavillon wasserdicht Dachmaß 3x3m UV Schutz 50+ Pavillon in verschi..."
+  },
+  {
+   "id": "d0a45d4c80",
+   "titre": "2 Stück Livetastic RELAXSESSEL 90/102/76/101/163 cm in Textil Schwarz, bis 140kg (weiß 10€ teurer)",
+   "temperature": 165,
+   "categorie": "Home & Living",
+   "marchand": "XXXLutz",
+   "prix": 189.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/2-stuck-livetastic-relaxsessel-9010276101163-cm-in-textil-schwarz-bis-140kg-weiss-10eur-teurer-373281",
+   "date": "Tue, 24 Nov 2026 11:40:56 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "189€ - XXXLutz Hey PJ Bei XXXLutz bekommt ihr gerade auf den Livetastic RELAXSESSEL 90/102/76/101/163 cm in Textil Schwarz eine 1+1 Aktion. Somit zahlt ihr für 2 Stüc..."
+  },
+  {
+   "id": "19cd059d8a",
+   "titre": "Vans Asher slip-on sneakers voor heren (twee varianten)",
+   "temperature": 165,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon.nl",
+   "prix": 37.95,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/vans-asher-slip-on-sneakers-twee-varianten-421133",
+   "date": "Tue, 24 Nov 2026 09:39:46 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€37,95 - Amazon.nl Voor Prime-leden zijn deze Vans Asher slip-on sneakers nu afgeprijsd naar €37,95. De sneakers zijn verkrijgbaar in zwart en zwart-wit. <strong..."
+  },
+  {
+   "id": "de87fa7bc9",
+   "titre": "Wandpaneel Akustikpaneel / Lamellenwand SONIC / versch. Farben (Schwarz, Grau, Light, Oiled, Smoked) und Ausführungen (1-12tlg)",
+   "temperature": 162,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "OTTO",
+   "prix": 13.6,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/wandpaneel-akustikpaneel-lamellenwand-sonic-versch-farben-schwarz-grau-light-oiled-smoked-und-ausfuhrungen-1-12tlg-2880394",
+   "date": "Tue, 24 Nov 2026 12:03:10 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "13,60€ - OTTO Moin, bei Otto gibt es aktuell folgendes Angebot: Wandpaneel Akustikpaneel / Lamellenwand SONIC in versch. Farben und Ausführungen für mittlerweil..."
+  },
+  {
+   "id": "7ce55fb1bf",
+   "titre": "Calendrier de l'Avent thés Édition 2026 - Dammann Frères",
+   "temperature": 161,
+   "categorie": "Maison & Habitat",
+   "marchand": "MaxiCoffee",
+   "prix": 20.88,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/calendrier-de-lavent-thes-edition-2026-dammann-freres-3466421",
+   "date": "Tue, 24 Nov 2026 11:05:03 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "20,88€ - MaxiCoffee Bon plan pour les amateurs de thé : le calendrier de l'Avent Dammann Frères 2026 (illustré par Zoé de Las Cases) qui réunit 24 recettes toutes différentes (aucu..."
+  },
+  {
+   "id": "a16ca290bb",
+   "titre": "JOOLA Aluterna Outdoor-Tischtennisplatte (wetterfest, 6 mm Alu-Verbundplatte, klappbar, Rollen)",
+   "temperature": 158,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Amazon",
+   "prix": 473.31,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/joola-aluterna-outdoor-tischtennisplatte-wetterfest-6-mm-alu-verbundplatte-klappbar-rollen-373252",
+   "date": "Tue, 24 Nov 2026 09:29:29 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "473,31€ - Amazon Rechtzeitig für Weihnachten und den nächsten Sommer: Die JOOLA Aluterna Outdoor-Tischtennisplatte kostet bei Amazon gerade 470,92 €. Nach Österreich kommen 2..."
+  },
+  {
+   "id": "0df7ce555b",
+   "titre": "Cyberpunk 2077 Ultimate Edition sur PS5",
+   "temperature": 157,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 32.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/cyberpunk-2077-ultimate-edition-sur-ps5-3467384",
+   "date": "Tue, 24 Nov 2026 11:39:56 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "32,99€ - Amazon Dans l'Édition Ultime, plongez dans chaque histoire que ce monde au futur sombre peut vous offrir, et retrouvez toutes les mises à jour de gameplay e..."
+  },
+  {
+   "id": "4a6286dbee",
+   "titre": "My Baby Lou Babyschaukel Swing für den Türrahmen, Grau/Buche (ab 6 Monate, bis 80 kg, EN 71)",
+   "temperature": 155,
+   "categorie": "Family & Kids",
+   "marchand": "XXXLutz",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/my-baby-lou-babyschaukel-swing-fur-den-turrahmen-graubuche-ab-6-monate-bis-80-kg-en-71-373263",
+   "date": "Tue, 24 Nov 2026 10:28:54 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "19,99€ - XXXLutz Eine Indoor-Schaukel für kleine Kinder: Die My Baby Lou Babyschaukel Swing kostet bei XXXLutz online gerade 19,99 € zum Preisepass-Preis. Di..."
+  },
+  {
+   "id": "59b6a238cb",
+   "titre": "Call of Duty: Modern Warfare 4 sur PS5",
+   "temperature": 153,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Fnac",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/call-of-duty-modern-warfare-4-ps5-3467493",
+   "date": "Tue, 24 Nov 2026 11:54:02 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "49,99€ - Fnac La péninsule coréenne entre en guerre tandis que la Corée du Nord lance une invasion de grande envergure qui pourrait bien bouleverser le monde entier dans C..."
+  },
+  {
+   "id": "cc89aa1373",
+   "titre": "Chaussures Nike Court Vision Low Next Nature - Tailles du 35,5 au 45,5",
+   "temperature": 153,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Nike",
+   "prix": 47.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/nike-court-vision-low-next-nature-a-partir-de-4799-eur-3465817",
+   "date": "Tue, 24 Nov 2026 10:41:46 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "47,99€ - Nike La Nike Court Vision Low Next Nature pour femme est à 47,99 € au lieu de 79,99 € , soit 40 % de réduction , dans le cadre des Bl..."
+  },
+  {
+   "id": "070848323e",
+   "titre": "Beats Studio Pro – Wireless Bluetooth Noise Cancelling Headphones – Personalised Spatial Audio, USB-C (Khaki / Sand Grey)",
+   "temperature": 153,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 99.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/beats-studio-pro-wireless-bluetooth-noise-cancelling-headphones-personalised-spatial-audio-usb-c-5044921",
+   "date": "Tue, 24 Nov 2026 10:13:07 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£99 - Amazon Price has dropped on the khaki audio pro Description Beats Studio Pro Wireless Headphones are designed to keep you immersed in your music for lon..."
+  },
+  {
+   "id": "1c5f22eb7d",
+   "titre": "TNT Sports £15.49 Per Month / 12 Months - Add HBO MAX £3 Extra Per Month",
+   "temperature": 152,
+   "categorie": "Services & Contracts",
+   "marchand": "HBO",
+   "prix": 185.88,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tnt-sports-ps1549-add-hbo-max-ps1849-5044950",
+   "date": "Tue, 24 Nov 2026 10:40:18 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£185.88 - HBO Black Friday offer on TNT sports and HBO Max if you want champions league tonight TNT Sports £25.99 </..."
+  },
+  {
+   "id": "64ac14d4e2",
+   "titre": "Microsoft Xbox Wireless Controller - Shock Blue, Pulse Red, Deep Pink für 44,99€ (Joybuy)",
+   "temperature": 151,
+   "categorie": "Gaming",
+   "marchand": "Joybuy",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/microsoft-xbox-wireless-controller-shock-blue-pulse-red-deep-pink-fur-4499eur-joybuy-2880315",
+   "date": "Tue, 24 Nov 2026 11:37:32 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,99€ - Joybuy Moinsen, bei Joybuy erhaltet ihr den Microsoft Xbox Wireless Controller Shock Blue, Pulse Red, Deep Pink für 44,99€ inkl. Versand. Nutzt den Gutscheincode CL..."
+  },
+  {
+   "id": "b87d4734f9",
+   "titre": "KTC H27D9 - 27\" Monitor | WQHD 2560×1440, 100Hz (OC 120Hz), IPS-Panel, HDR10, Adaptive Sync, 99% sRGB, 95% DCI-P3, 2x HDMI 2.0 & 1x DP 1.4",
+   "temperature": 150,
+   "categorie": "Elektronik",
+   "marchand": "Joybuy",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ktc-h27d9-27-monitor-wqhd-25601440-100hz-oc-120hz-ips-panel-hdr10-adaptive-sync-99-srgb-95-dci-p3-2x-hdmi-20-1x-dp-14-2880301",
+   "date": "Tue, 24 Nov 2026 11:21:04 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "99,99€ - Joybuy Moin Freunde. :) Wer auf der Suche nach einem neuen Monitor ist, bekommt den 27 Zoll KTC H27D9 aktuell bei Joybuy für 99,99€ . <b..."
+  },
+  {
+   "id": "d54a6e6619",
+   "titre": "New Balance CT300 Court Sneaker Beige/Schwarz (CT300MB3, Retro-Tennis-Look)",
+   "temperature": 150,
+   "categorie": "Fashion & Accessories",
+   "marchand": "New Balance",
+   "prix": 50.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/new-balance-ct300-court-sneaker-beigeschwarz-ct300mb3-retro-tennis-look-373261",
+   "date": "Tue, 24 Nov 2026 09:42:41 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "50€ - New Balance Ein zeitloser Sneaker im Retro-Tennis-Look: Der New Balance CT300 in Beige/Schwarz kostet im offiziellen New Balance Onlineshop gerade nur 45 €</stro..."
+  },
+  {
+   "id": "9e530ce444",
+   "titre": "Seconique Nevada 6 Door 2 Drawer Wardrobe in White Gloss (Black - £219.99)",
+   "temperature": 148,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 229.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/seconique-nevada-6-door-2-drawer-wardrobe-in-white-gloss-black-ps21999-5042880",
+   "date": "Tue, 24 Nov 2026 10:41:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£229.99 - Amazon Massive wardrobe for a relatively small price! Take a look at the different colours / styles here: <a href=\"https://www.amazon.co.uk/dp/B08TV3RDLN\" target=\"_..."
+  },
+  {
+   "id": "9e39984e01",
+   "titre": "ESR MagMouse kabellose Maus Weiß (magnetisch am Laptop, Bluetooth und 2,4 GHz, integriertes USB-C-Kabel)",
+   "temperature": 148,
+   "categorie": "Elektronik",
+   "marchand": "Galaxus.at",
+   "prix": 27.9,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/esr-magmouse-kabellose-maus-weiss-magnetisch-am-laptop-bluetooth-und-24-ghz-integriertes-usb-c-kabel-373247",
+   "date": "Tue, 24 Nov 2026 09:24:23 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "27,90€ - Galaxus.at Eine Reisemaus, die ihr einfach magnetisch an den Laptop-Deckel klebt: Die ESR MagMouse in Weiß kostet bei Galaxus gerade 24,90 € . Zum Laden..."
+  },
+  {
+   "id": "5c3d9241cf",
+   "titre": "Lot de 6 brossettes Oral-b - Différentes variétés disponibles (via 23,03€ sur carte fidélité)",
+   "temperature": 147,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Carrefour",
+   "prix": 9.87,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-6-brossettes-oral-b-differentes-varietes-disponibles-via-2303eur-sur-carte-fidelite-3467209",
+   "date": "Tue, 24 Nov 2026 11:48:04 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "9,87€ - Carrefour Lot de 6 brossettes Oral-b (lot de 4 pour iO), disponibles en différentes variétés, à 9,87€ via : <a href=\"https://www.carrefour.f..."
+  },
+  {
+   "id": "722a91201b",
+   "titre": "Philips Rasierer i9000, Elektrischer Nass-und Trockenrasierer für Herren mit integriertem Trimmer",
+   "temperature": 147,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 173.82,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/philips-rasierer-i9000-elektrischer-nass-und-trockenrasierer-fur-herren-mit-integriertem-trimmer-373269",
+   "date": "Tue, 24 Nov 2026 09:55:28 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "173,82€ - Amazon Den Philips Rasierer i9000, Elektrischer Nass-und Trockenrasierer für Herren mit integriertem Trimmer bekommt ihr aktuell zum Tiefstpreis be..."
+  },
+  {
+   "id": "10da2a79db",
+   "titre": "Red Bull 48 blikjes (incl. statiegeld), €0,75 per blik ex. statiegeld met code @ Amazon.nl",
+   "temperature": 147,
+   "categorie": "Boodschappen",
+   "marchand": "Amazon.nl",
+   "prix": 42.98,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/red-bull-48-blikjes-incl-statiegeld-eur075-per-blik-ex-statiegeld-met-code-at-amazonnl-429028",
+   "date": "Tue, 24 Nov 2026 12:09:22 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€42,98 - Amazon.nl Let op: Deze actie werkt alleen wanneer je code BLACK26 nog niet hebt gebruikt. Deze is slechts éénmalig geldig per account. ;) Elders..."
+  },
+  {
+   "id": "fed46fd54c",
+   "titre": "RØDE Wireless ME TX Ultra-kompaktes Drahtlos-Mikrofonsystem",
+   "temperature": 145,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 67.93,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/rode-wireless-me-tx-ultra-kompaktes-drahtlos-mikrofonsystem-373268",
+   "date": "Tue, 24 Nov 2026 11:32:17 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "67,93€ - Amazon Das RØDE Wireless ME TX Ultra-kompaktes Drahtlos-Mikrofonsystem bekommt ihr aktuell um 67,93 Euro bei Amazon. <a href=\"https://geizhal..."
+  },
+  {
+   "id": "efb824bb4a",
+   "titre": "Bono HEISSLUFTFRITTEUSE SAMY 6,5 Liter bei Möbelix im Angebot",
+   "temperature": 143,
+   "categorie": "Home & Living",
+   "marchand": "Möbelix",
+   "prix": 39.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/bono-heissluftfritteuse-samy-65-liter-bei-mobelix-im-angebot-373274",
+   "date": "Tue, 24 Nov 2026 11:37:16 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "39€ - Möbelix Die Bono HEISSLUFTFRITTEUSE SAMY mit 6,5 Liter Fassungsvermögen bekommt ihr aktuell um 39 Euro bei Möbelix. PVG: 79,99 laut internem..."
+  },
+  {
+   "id": "fd0837deca",
+   "titre": "Tefal Virtuo 30 FV2C41 Dampfbügeleisen (2.000 W, 120 g Dampfstoß, Keramiksohle, Tropf-Stopp)",
+   "temperature": 143,
+   "categorie": "Home & Living",
+   "marchand": "Möbelix",
+   "prix": 19.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/tefal-virtuo-30-fv2c41-dampfbugeleisen-2000-w-120-g-dampfstoss-keramiksohle-tropf-stopp-373256",
+   "date": "Tue, 24 Nov 2026 09:42:48 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "19€ - Möbelix Ein einfaches Markenbügeleisen zum kleinen Preis: Das Tefal Virtuo 30 in Pastellblau kostet bei Möbelix gerade 19 € . Die UVP liegt bei 34,99..."
+  },
+  {
+   "id": "3ee7532d9c",
+   "titre": "6TB Seagate Expansion Desktop USB 3.0 Hard Drive (possible extra 10% off with welcome discount)",
+   "temperature": 142,
+   "categorie": "Electronics",
+   "marchand": "Seagate",
+   "prix": 159.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/6tb-seagate-expansion-desktop-usb-30-hard-drive-5045106",
+   "date": "Tue, 24 Nov 2026 11:11:28 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£159.99 - Seagate Decent offer in today's market, possible 10% Off Welcome Off..."
+  },
+  {
+   "id": "3cec0d861b",
+   "titre": "Climatiseur réversible Houme Elèa Flow 12 000 BTU – Inverter, A++/A+, Wi-Fi intégré, R32, garantie compresseur 5 ans (Climamarket)",
+   "temperature": 141,
+   "categorie": "High-Tech",
+   "marchand": null,
+   "prix": 292.72,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/climatiseur-reversible-houme-elea-flow-12-000-btu-inverter-aa-wi-fi-integre-r32-garantie-compresseur-5-ans-climamarket-3466255",
+   "date": "Tue, 24 Nov 2026 11:20:56 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "292,72€ Je n’ai pas encore vu de climatiseur réversible 12 000 BTU avec Wi-Fi intégré moins cher, surtout avec une garantie de 5 ans sur le compresseur annoncée par Cli..."
+  },
+  {
+   "id": "ecc272b4f3",
+   "titre": "LEGO Grote minifiguur van de Kerstman 40820 bouwset @ Amazon",
+   "temperature": 140,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 43.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-grote-minifiguur-van-de-kerstman-40820-bouwset-at-amazon-429000",
+   "date": "Tue, 24 Nov 2026 11:26:54 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€43,99 - Amazon.nl Deze LEGO Grote minifiguur van de Kerstman 40820 bouwset kost nu €43,99 bij Amazon. De laagste prijs elders is <a href=\"https://www.brickwatch.net/nl-NL/set/..."
+  },
+  {
+   "id": "eb903de0de",
+   "titre": "Ariete Handy Force One 2708 Stabstaubsauger mit Kabel (600 W, beutellos, 0,6 l, für Tierhaare)",
+   "temperature": 137,
+   "categorie": "Home & Living",
+   "marchand": "alza",
+   "prix": 47.9,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/ariete-handy-force-one-2708-stabstaubsauger-mit-kabel-600-w-beutellos-06-l-fur-tierhaare-373246",
+   "date": "Tue, 24 Nov 2026 09:43:05 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "47,90€ - alza Ein günstiger Staubsauger mit Kabel für zwischendurch: Den Ariete Handy Force One 2708 gibt es bei Alza in der Black Friday Aktion um 47,90 €</strong..."
+  },
+  {
+   "id": "f9280cca4a",
+   "titre": "Vidéoprojecteur portable Full HD Xgimi Elfin Flip - 400 ISO Lumens, Pied inclinable 150°, HDR10 (Vendeur tiers)",
+   "temperature": 136,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 249.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/videoprojecteur-portable-full-hd-xgimi-elfin-flip-400-iso-lumens-pied-inclinable-150-hdr10-vendeur-tiers-3467044",
+   "date": "Tue, 24 Nov 2026 11:37:54 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "249€ - Cdiscount Le videoprojecteur portable Xgimi Elfin Flip est un concentré de performances et de polyvalence. Avec sa résolution Full HD 1080 FHD, il offre une qualité d'ima..."
+  },
+  {
+   "id": "ab67001e71",
+   "titre": "Lot de 2 Pneus Michelin Pilot Sport 4 - 245/35R18 92Y, Renforcé & Protection Jante (Via 40€ d'ODR)",
+   "temperature": 136,
+   "categorie": "Auto-Moto",
+   "marchand": "Allopneus",
+   "prix": 199.8,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-2-pneus-michelin-pilot-sport-4-22540r18-92y-renforce-protection-jante-via-40eur-dodr-3466206",
+   "date": "Tue, 24 Nov 2026 10:37:21 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "199,80€ - Allopneus Modalité de l'ODR : static.allopneus.com/ima…pdf <..."
+  },
+  {
+   "id": "f2627aa426",
+   "titre": "RUHR.TOPCARD 2027 mit 10 Euro Rabatt",
+   "temperature": 136,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "RUHR.TOPCARD",
+   "prix": 62.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ruhrtopcard-2027-mit-10-euro-rabatt-2880206",
+   "date": "Tue, 24 Nov 2026 11:14:03 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "62€ - RUHR.TOPCARD Verkaufsstart der RUHR.TOPCARD 2027! Am 24.11.2026 um 9:00 Uhr geht's los! Die RUHR.TOPCARD 2027 ist ab sofort erhältlich!<br /..."
+  },
+  {
+   "id": "2a6240bb6f",
+   "titre": "Ninja Foodi Dual Zone Air Fryer 7.6L AF200UK - Air Fry, Max Crisp, Roast, Reheat + 2 Yr Guarantee -W/DFC Code - £89.99 - W/Newsletter Signup",
+   "temperature": 136,
+   "categorie": "Home & Living",
+   "marchand": "SharkNinja",
+   "prix": 90.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/ninja-foodi-dual-zone-air-fryer-76l-af200uk-air-fry-max-crisp-roast-reheat-2-yr-guarantee-wdfc-code-ps8999-wnewsletter-signup-5044899",
+   "date": "Tue, 24 Nov 2026 10:34:21 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£90.99 - SharkNinja Reduced to £99.99, get Ninja Foodi Dual Zone Air Fryer 7.6L AF200UK for £90.99 with code via <a href=\"https://healthservicediscounts.com/nhs..."
+  },
+  {
+   "id": "3720caf7cc",
+   "titre": "LG F4WX701Y Waschmaschine, 11 kg, 1400 U/min, Energieklasse A-40 %, AI Wash, AI DD, TurboWash 360°, Steam, Wi-Fi, Essence White",
+   "temperature": 134,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy",
+   "prix": 459.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/lg-f4wx701y-waschmaschine-11-kg-1400-umin-energieklasse-a-40-ai-wash-ai-dd-turbowash-360-steam-wi-fi-essence-white-2880386",
+   "date": "Tue, 24 Nov 2026 11:30:26 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "459€ - Joybuy Guten Morgen zusammen! ;) AI schreibt jetzt nicht nur eure Einkaufszettel und Bewerbungen, sondern wäscht auch eure Wäsche: Bei <a href=\"https://w..."
+  },
+  {
+   "id": "4424bd7bff",
+   "titre": "Solarway 1000W Balkonkraftwerk mit Deye (800W) Wechselrichter - WLAN/App & 2x 500W bifazialen Glas-Glas-Modulen – Komplettset",
+   "temperature": 134,
+   "categorie": "Garten & Baumarkt",
+   "marchand": "Amazon",
+   "prix": 259.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/solarway-1000w-balkonkraftwerk-800w-mit-deye-wechselrichter-2x-500w-bifazialen-glas-glas-modulen-komplettset-2880318",
+   "date": "Tue, 24 Nov 2026 11:25:19 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "259,99€ - Amazon HaiHo...bei Amazon gerade ein Balkonkraftwerk zum guten Kurs entdeckt! 1000W Module, 800W Deye-Wechselrichter und App-Steuerung – die Sonne darf kommen! </p..."
+  },
+  {
+   "id": "9dfcc96d64",
+   "titre": "Turtle Beach Afterglow Wave kabelloser RGB-Controller für Switch 2, Lila (TMR-Sticks, C-Taste, 2 Rücktasten, Nintendo-Lizenz)",
+   "temperature": 134,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 37.68,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/turtle-beach-afterglow-wave-kabelloser-rgb-controller-fur-switch-2-lila-tmr-sticks-c-taste-2-rucktasten-nintendo-lizenz-373260",
+   "date": "Tue, 24 Nov 2026 09:59:47 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "37,68€ - Amazon Ein offiziell lizenzierter Controller für die Switch 2: Der Turtle Beach Afterglow Wave in Lila kostet bei Amazon gerade 35,28 €. Mit der Paketsteuer zahlt i..."
+  },
+  {
+   "id": "3978ba5b7f",
+   "titre": "Philips Hue Essential White and Color Ambiance E27 4-pack @ Amazon",
+   "temperature": 133,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.nl",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-hue-essential-white-and-color-ambiance-e27-4-pack-at-amazon-428865",
+   "date": "Tue, 24 Nov 2026 07:54:00 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€44,99 - Amazon.nl Deze E27-lampen van Philips Hue kun je instellen op verschillende kleuren en tinten wit. Prijsinformatie: De adviesprij..."
+  },
+  {
+   "id": "8b23e0e6af",
+   "titre": "Tefal Daily Cook Pfanne 24cm für 13,90 € oder 28cm für 17,90 € | +0,98 € Versand für Paketshop/Packstation-Lieferung",
+   "temperature": 132,
+   "categorie": "Home & Living",
+   "marchand": "Alza",
+   "prix": 14.88,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tefal-daily-cook-pfanne-24cm-fur-1390-eur-oder-28cm-fur-1790-eur-098-eur-versand-fur-paketshoppackstation-lieferung-2880213",
+   "date": "Tue, 24 Nov 2026 11:42:30 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "14,88€ - Alza Bei Alza gibt es die Tefal Daily Cook Bratpfanne: in 24cm f..."
+  },
+  {
+   "id": "f721a9dc97",
+   "titre": "Humanic: 25% Rabatt auf fast viele Normalpreis-Artikel ab 40€ Bestellwert",
+   "temperature": 132,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Humanic",
+   "prix": 40.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/gutschein/humanic-25-rabatt-auf-fast-viele-normalpreis-artikel-ab-40eur-bestellwert-373262",
+   "date": "Tue, 24 Nov 2026 09:55:40 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "Humanic Hallo Leute, Bei Humanic erhaltet ihr aktuell 25% Rabatt auf fast viele Normalpreis-Artikel. Wendet hierfür den Gutscheincode VIP25 </str..."
+  },
+  {
+   "id": "89d0c4cc83",
+   "titre": "[Ebay] Philips OneBlade Intimate QP1924/22 hautfreundliche Intimrasur",
+   "temperature": 131,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "eBay",
+   "prix": 20.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ebay-philips-oneblade-intimate-qp192422-hautfreundliche-intimrasur-2880344",
+   "date": "Tue, 24 Nov 2026 11:31:43 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "20,99€ - eBay Als Ebay WOW Deal 20,99 € - vom offiziellen Philips Personal Care Ebay Account - dürfte bisher der beste Preis für die Version sein Einfa..."
+  },
+  {
+   "id": "fe54cf30f9",
+   "titre": "Philips Hue Essential Smart LED GU10 Spotlight White and Color Ambiance 4er Pack",
+   "temperature": 131,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 47.77,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/philips-hue-essential-smart-led-gu10-spotlight-white-and-color-ambiance-4er-pack-373277",
+   "date": "Tue, 24 Nov 2026 11:42:23 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "47,77€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit das Philips Hue Essential Smart LED GU10 Spotlight, 4er Pack um 47,77€ inklusive Paketsteuer. Der Pr..."
+  },
+  {
+   "id": "8d275efb94",
+   "titre": "Assassin's Creed Black Flag Resynced Edition de Lancement sur Xbox Series X",
+   "temperature": 130,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Micromania Zing",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/assassins-creed-black-flag-resynced-edition-de-lancement-sur-xbox-series-x-3466994",
+   "date": "Tue, 24 Nov 2026 10:29:17 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "34,99€ - Micromania Zing Assassin's Creed Black Flag Resynced, édition de lancement sur Xbox Series X, chez Micromania. C'est un remake de Assassin's Creed IV: Black Flag, sort..."
+  },
+  {
+   "id": "b1aa19f04d",
+   "titre": "Safety 1st Flat Step Treppenschutzgitter 73-80 cm Weiß (ohne Bohren, ultraflache Schwelle, Hundegitter)",
+   "temperature": 130,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 30.59,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/safety-1st-flat-step-treppenschutzgitter-73-80-cm-weiss-ohne-bohren-ultraflache-schwelle-hundegitter-373250",
+   "date": "Tue, 24 Nov 2026 09:42:58 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "30,59€ - Amazon Für alle mit Krabbelkindern oder Haustieren: Das Safety 1st Flat Step Treppenschutzgitter kostet bei Amazon gerade 28,19 €. Mit der Paketsteuer zahlt ihr nac..."
+  },
+  {
+   "id": "342b737c9d",
+   "titre": "[Flaconi] Versace Eros Pour Homme Parfum 100ml",
+   "temperature": 129,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "flaconi",
+   "prix": 64.46,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/flaconi-versace-eros-pour-homme-parfum-100ml-2880352",
+   "date": "Tue, 24 Nov 2026 11:19:16 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "64,46€ - flaconi Moin. Bei Flaconi bekommt ihr aktuell das Versace Eros Pour Homme Parfum 100ml für 64,46€ (inkl VSK) mit Sove..."
+  },
+  {
+   "id": "1b81e24906",
+   "titre": "SKROSS Reiseadapter Pro (Prime)",
+   "temperature": 129,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 15.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/skross-reiseadapter-pro-2880204",
+   "date": "Tue, 24 Nov 2026 11:17:49 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "15,99€ - Amazon SKROSS PRO – Weltreiseadapter für über 120 Länder Für alle, die regelmäßig im Ausland unterwegs sind, gibt es aktuell den SKROSS PRO Reiseadapter bei..."
+  },
+  {
+   "id": "a48f11e6cd",
+   "titre": "[Müller] AEG Dampfbügeleisen DB 1720",
+   "temperature": 129,
+   "categorie": "Home & Living",
+   "marchand": "Müller",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/muller-aeg-dampfbugeleisen-db-1720-373233",
+   "date": "Tue, 24 Nov 2026 09:00:49 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "17,99€ - Müller Bei Müller gerade im Sale. Kostenlos click & collect bzw. kostenlos in die Wunschfiliale liefern lassen. 2.200 Watt Dampfstoß von 90 g..."
+  },
+  {
+   "id": "bc7c92e51a",
+   "titre": "Helly Hansen Dubliner Geïsoleerde waterproof heren jas - zwart",
+   "temperature": 127,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon.nl",
+   "prix": 71.95,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/helly-hansen-dubliner-geisoleerde-waterproof-heren-jas-zwart-429024",
+   "date": "Tue, 24 Nov 2026 12:02:50 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€71,95 - Amazon.nl Deze Helly Hansen is nu bij Amazon in de aanbieding voor €71,95. De jas is beschikbaar in maat S t/m XL. Je kunt ook nog eens €10 extra korting krijgen met d..."
+  },
+  {
+   "id": "c65c04f459",
+   "titre": "Gants chauffants moto DXR",
+   "temperature": 126,
+   "categorie": "Auto-Moto",
+   "marchand": "Motoblouz",
+   "prix": 89.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/gants-chauffants-moto-dxr-3466925",
+   "date": "Tue, 24 Nov 2026 11:55:33 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "89€ - Motoblouz Caractéristiques Les gants chauffants DXR BLAZE associent cuir de chèvre et textile pour accompagner les trajets routiers et touring par temps froid...."
+  },
+  {
+   "id": "9a1b32f583",
+   "titre": "CALVIN KLEIN CK One - Unisex Eau de Toilette for All (£15.43 / £13.80 max S&S)",
+   "temperature": 126,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 16.24,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/calvin-klein-ck-one-unisex-eau-de-toilette-for-all-ps1624-or-1543-with-ss-5044320",
+   "date": "Tue, 24 Nov 2026 10:30:23 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£16.24 - Amazon Seems like a great price for 100ml for £16.24 Or £15.43 on Subscribe and save The Calvin Klein CK One unisex Eau de Toilett..."
+  },
+  {
+   "id": "000e238dd6",
+   "titre": "Camera Eufy C37 2K avec panneau solaire + 2 câbles USB-C 100w (vendeur tiers)",
+   "temperature": 125,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 54.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/camera-eufy-c37-2k-avec-panneau-solaire-2-cables-usb-c-100w-3465200",
+   "date": "Tue, 24 Nov 2026 11:54:12 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "54,99€ - Amazon Super prix pour cette cam qui était à 59.90€ la semaine dernière Vous renvoyez les câbles elle revient à 48€ À propos de ce produ..."
+  },
+  {
+   "id": "4baa1fb215",
+   "titre": "Lifetime Bypass Commercial Grade Folding Chair - In Store",
+   "temperature": 125,
+   "categorie": "Home & Living",
+   "marchand": "Costco",
+   "prix": 10.78,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lifetime-bypass-commercial-grade-folding-chair-5044654",
+   "date": "Tue, 24 Nov 2026 10:11:51 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.78 - Costco - Superior strength & durability - Indoor & outdoor use - Made of UV-protected, high-density polyethylene - Stain resistant & ..."
+  },
+  {
+   "id": "c12ed7e87c",
+   "titre": "Nuki Smart Lock Go + Door Sensor",
+   "temperature": 125,
+   "categorie": "Home & Living",
+   "marchand": "tink",
+   "prix": 139.95,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/nuki-smart-lock-go-door-sensor-373272",
+   "date": "Tue, 24 Nov 2026 10:28:39 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "139,95€ - tink Hey PJ Bei tink bekommt ihr als Tagesangebot das Nuki Smart Lock Go + Door Sensor für 139,95€ inkl. Versand. Preisvergleich liegt bei <a href=\"ht..."
+  },
+  {
+   "id": "1e7fe62608",
+   "titre": "Coffret Blu-ray Dragon Ball Partie 1 - Edition Collector",
+   "temperature": 124,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Anime-Store",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/dragon-ball-partie-1-edition-collector-coffret-blu-ray-3466664",
+   "date": "Tue, 24 Nov 2026 11:39:53 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "29,95€ - Anime-Store Contenu additionnel - Livret 16 pages. - 3 postcards exclusifs. DESCRIPTION Son Goku est un petit ga..."
+  },
+  {
+   "id": "222dec71a9",
+   "titre": "FILA Sweatshirt JDN Retro Crew für 7,35€ + 4,95€ VSK (Größen S bis XXL)",
+   "temperature": 124,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "SportSpar",
+   "prix": 12.3,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/fila-sweatshirt-jdn-retro-crew-fur-735eur-495eur-vsk-grossen-s-bis-xxl-2880411",
+   "date": "Tue, 24 Nov 2026 12:05:01 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "12,30€ - SportSpar Bei SportSpar bekommt ihr aktuell das FILA Sweatshirt JDN Retro Crew in dunkelgrau für 7,35€. V..."
+  },
+  {
+   "id": "a7c70fa915",
+   "titre": "Spider-Man: Brand New Day - 4K iTunes - To Buy",
+   "temperature": 124,
+   "categorie": "Culture & Leisure",
+   "marchand": "Apple Store",
+   "prix": 9.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/spider-man-brand-new-day-4k-itunes-5044064",
+   "date": "Tue, 24 Nov 2026 10:40:54 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£9.99 - Apple Store Spider-Man: Brand New Day Best ever price for this release on iTunes, down from £19.99 Presented in 4K with Dolby Vision,..."
+  },
+  {
+   "id": "dc40e41a77",
+   "titre": "Kamado Joe Junior 13.5\" (34cm) Ceramic Charcoal Barbecue Grill + Cover",
+   "temperature": 124,
+   "categorie": "Garden & Do It Yourself",
+   "marchand": "Costco",
+   "prix": 269.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/kamado-joe-junior-135-34cm-ceramic-charcoal-barbecue-grill-cover-5043448",
+   "date": "Tue, 24 Nov 2026 10:40:28 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£269.99 - Costco • 13.5-inch (34 cm) ceramic charcoal barbecue grill • Cover included"
+  },
+  {
+   "id": "28508df203",
+   "titre": "OPPO Pad 5 Wi-Fi Tablet 12.1\", 8GB RAM 128GB ROM, 10050mAh, Starlight Black",
+   "temperature": 123,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 236.87,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/oppo-pad-5-wi-fi-tablet-121-8gb-ram-128gb-rom-10050mah-starlight-black-5045021",
+   "date": "Tue, 24 Nov 2026 10:38:49 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£236.87 - Amazon £60 less than the 5G version if you don't want or need 5G About this item Eye-Comfort Display: Enjoy a spacious 12.1-inc..."
+  },
+  {
+   "id": "72369aac95",
+   "titre": "Berndorf Besteckset 60-teilig Toronto für 12 Personen",
+   "temperature": 123,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Möbelix",
+   "prix": 77.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/berndorf-besteckset-60-teilig-toronto-fur-12-personen-372767",
+   "date": "Tue, 24 Nov 2026 11:37:37 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "77€ - Möbelix Im Möbelix Onlineshop bekommt ihr das Berndorf Besteck Set Toronto 60-teilig um 77 €. Der Normalpreis liegt bei 133€."
+  },
+  {
+   "id": "dd55a2dd38",
+   "titre": "Puma Sneaker Smash V2",
+   "temperature": 122,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 22.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/puma-sneaker-smash-v2-2880015",
+   "date": "Tue, 24 Nov 2026 12:13:17 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "22,99€ - Amazon Bei Amazon bekommt Ihr diese stylischen Sneaker von Puma für 22,99€ in der Größe 42. Die sehen echt super aus in schwarz und sind Mega bequem. Kann ..."
+  },
+  {
+   "id": "7e61b420ab",
+   "titre": "Karcher sc 3 deluxe stoomreiniger",
+   "temperature": 122,
+   "categorie": "Home & Living",
+   "marchand": "Amazon.nl",
+   "prix": 144.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/karcher-sc-3-deluxe-stoomreiniger-428913",
+   "date": "Tue, 24 Nov 2026 08:30:04 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€144,99 - Amazon.nl Stoomreiniger van Kärcher. Bij amazon; met code black26. Over dit artikel Hygiënisch reinigen: De Kärcher SC 3 Deluxe stoomre..."
+  },
+  {
+   "id": "90c877a136",
+   "titre": "Armani Code Homme Refillable Eau de toilette 200ml",
+   "temperature": 122,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": "Douglas",
+   "prix": 56.1,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/armani-code-homme-refillable-eau-de-toilette-200ml-428966",
+   "date": "Tue, 24 Nov 2026 07:53:40 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€56,10 - Douglas Lijkt me een zeer schappelijke prijs voor dit formaat. Wordt verkocht door een externe verkoper via Douglas."
+  },
+  {
+   "id": "7469a81cb1",
+   "titre": "Two Point Museum: Explorer Edition (Nintendo Switch 2) - PEGI 3 - Free Click & Collect only",
+   "temperature": 119,
+   "categorie": "Gaming",
+   "marchand": "Argos",
+   "prix": 18.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/two-point-museum-explorer-edition-nintendo-switch-2-pegi-3-free-click-collect-only-5044933",
+   "date": "Tue, 24 Nov 2026 10:52:45 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£18.99 - Argos Curating a museum is chaotic, and Two Point Museum Explorer Edition lets you experience it firsthand on Nintendo Switch 2. This management simulation puts you i..."
+  },
+  {
+   "id": "f773608b24",
+   "titre": "Spend £50 or More, Get £5 Wallet Credit (Account Specific)",
+   "temperature": 115,
+   "categorie": "Gaming",
+   "marchand": "Playstation Store",
+   "prix": 50.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/spend-ps50-or-more-get-ps5-wall-credit-account-specific-5044982",
+   "date": "Tue, 24 Nov 2026 11:09:05 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£50 - Playstation Store I was offered this promotion while having a look at the latest deals. This is for selected users in participating countries. I don't know the criteri..."
+  },
+  {
+   "id": "2a73155514",
+   "titre": "Paddington Bear Collectors Box 30cm Soft Toy (Collector's Edition) || Paddington Large Classic Boots And Suitcase £20 (Free C&C)",
+   "temperature": 114,
+   "categorie": "Family & Kids",
+   "marchand": "Argos",
+   "prix": 17.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/paddington-bear-collectors-box-30cm-soft-toy-collectors-edition-paddington-large-classic-bootsandsuitcase-ps20-free-cc-5044913",
+   "date": "Tue, 24 Nov 2026 10:53:48 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£17.50 - Argos - Paddington Bear Collectors Box 30cm Soft Toy £17.50 - <a href=\"https://www.waterstones.com/product/paddington-in-collectors-box///5014475021519..."
+  },
+  {
+   "id": "a126bbc15e",
+   "titre": "Hisense 65A7STUK 65 Inch QLED HD Smart TV / 50 Inch £349.99 With Discount At Checkout + 5 Year Warranty",
+   "temperature": 114,
+   "categorie": "Electronics",
+   "marchand": "Costco",
+   "prix": 449.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/hisense-65a7stuk-65-inch-qled-hd-smart-tv-50-inch-ps34999-with-discount-at-checkout-5-year-warranty-5044991",
+   "date": "Tue, 24 Nov 2026 10:37:03 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£449.98 - Costco Both have discounts at checkout, both come with 5 year warranty <a href=\"https://www.costco.co.uk/TVs-Electronics-Security/Televisions-Projectors/Telev..."
+  },
+  {
+   "id": "a49e12e956",
+   "titre": "[RAAAD] Shimano Deore XT RD-M8130-SGS Schaltwerk | Linkglide 1×11, langer Käfig",
+   "temperature": 113,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Raaad.de",
+   "prix": 44.9,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/raaad-shimano-deore-xt-rd-m8130-sgs-schaltwerk-linkglide-111-langer-kafig-2879841",
+   "date": "Tue, 24 Nov 2026 11:15:46 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,90€ - Raaad.de Moin zusammen falls ihr für euer MTB oder E-MTB noch ein XT-Schaltwerk für den Linkglide-Antrieb sucht: Bei RAAAD bekommt ihr das RD-M8130-SG..."
+  },
+  {
+   "id": "03d1180ebe",
+   "titre": "Blu-ray 4k UHD Matrix 4 films déjà-vu collection",
+   "temperature": 112,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 48.24,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/matrix-4k-uhd-4-films-deja-vu-collection-3466041",
+   "date": "Tue, 24 Nov 2026 12:13:42 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "48,24€ - Amazon La trilogie originale Matrix et la suite méta pour 48€ dont 6€ de frais d'importation. Audio Atmos Anglais et Dolby digital français. sous titr..."
+  },
+  {
+   "id": "4242c6aa9c",
+   "titre": "Apple Pencil (USB‑C) Stylus Pen @ Amazon NL",
+   "temperature": 112,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.nl",
+   "prix": 69.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/apple-pencil-usbc-stylus-pen-at-amazon-nl-428988",
+   "date": "Tue, 24 Nov 2026 11:32:57 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€69 - Amazon.nl Laagste prijs elders: €87. <strong..."
+  },
+  {
+   "id": "066229bce6",
+   "titre": "Objectif Sigma 56mm f/1.4 DC DN Contemporary Fujifilm X Mount",
+   "temperature": 111,
+   "categorie": "High-Tech",
+   "marchand": "Digit Photo",
+   "prix": 339.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/objectif-sigma-56mm-f14-dc-dn-contemporary-fujifilm-x-mount-3466927",
+   "date": "Tue, 24 Nov 2026 11:43:20 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "339€ - Digit Photo Focale fixe 56mm ouverture 1.4 en mouture Fujifilm avec une belle réduction de 120€ dans le panier ! Caractéristiques Foc..."
+  },
+  {
+   "id": "46a153d0e2",
+   "titre": "Boîtier Mini Tour Aerocool CS-107-A-BK-V2 - Micro-ATX / Mini-ITX, 3 Ventilateurs 120mm ARGB inclus",
+   "temperature": 110,
+   "categorie": "Maison & Habitat",
+   "marchand": "Rue du Commerce",
+   "prix": 19.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boitier-mini-tour-aerocool-cs-107-a-bk-v2-micro-atx-mini-itx-3-ventilateurs-120mm-argb-inclus-3466094",
+   "date": "Tue, 24 Nov 2026 12:20:32 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,90€ - Rue du Commerce Tout petit prix pour ce boitier PC ! :) ⇨ Idealo <..."
+  },
+  {
+   "id": "d0c3c269d7",
+   "titre": "LEGO Mario Kart – Mario & Standard Kart 72037 (Free C&C)",
+   "temperature": 110,
+   "categorie": "Family & Kids",
+   "marchand": "John Lewis &amp; Partners",
+   "prix": 99.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-mario-kart-mario-standard-kart-72037-5045078",
+   "date": "Tue, 24 Nov 2026 11:14:42 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£99.99 - John Lewis & Partners Gear up for a creative adventure with the LEGO Mario Kart – Mario & Standard Kart (72037) build-and-display model kit for adults. A delightful coll..."
+  },
+  {
+   "id": "8e537cc1e2",
+   "titre": "Doom : The Dark Ages (Steam Deck Verified) PC/Steam",
+   "temperature": 109,
+   "categorie": "Gaming",
+   "marchand": "Loaded",
+   "prix": 16.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/doom-the-dark-ages-steam-deck-verified-pcsteam-5044903",
+   "date": "Tue, 24 Nov 2026 11:08:52 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£16.99 - Loaded THIS EDITION INCLUDES Base Game ABOUT THE GAME DOOM: The Dark Ages is the prequel to the critically acclaimed DOOM (2016) and DOOM Eternal that t..."
+  },
+  {
+   "id": "3a01cfc448",
+   "titre": "Germany 26 Home & Away Jersey, Size XS-L w/code Blue Light Card (free delivery for members)",
+   "temperature": 109,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Adidas",
+   "prix": 21.67,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/germany-26-home-away-jersey-size-xs-l-wcode-blue-light-card-free-delivery-for-members-5044954",
+   "date": "Tue, 24 Nov 2026 10:40:05 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£21.67 - Adidas Buy adidas giftcard from Top Cashback to get get for £19.39 ht..."
+  },
+  {
+   "id": "618cb4796b",
+   "titre": "Anker Nano 45W Foldable USB-C Smartphone Charger, Zolo 10000mAh Power Bank, and 0.9 m Braided USB-C Cable with discount at checkout",
+   "temperature": 107,
+   "categorie": "Electronics",
+   "marchand": "Costco",
+   "prix": 32.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/anker-nano-45w-foldable-usb-c-smartphone-charger-zolo-10000mah-power-bank-and-09-m-braided-usb-c-cable-with-discount-at-checkout-5044986",
+   "date": "Tue, 24 Nov 2026 10:39:02 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£32.99 - Costco Price dropped on this anker bundle Anker Nano 45W Foldable USB-C Charger: Quick Power Boost Experience fast..."
+  },
+  {
+   "id": "352910a3c1",
+   "titre": "Retourvlucht Dusseldorf - Dublin (Ierland) vanaf €62 | inclusief bagage | januari t/m april 2027",
+   "temperature": 106,
+   "categorie": "Reizen",
+   "marchand": null,
+   "prix": 62.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/retourvlucht-dusseldorf-dublin-ierland-vanaf-eur62-inclusief-bagage-januari-tm-april-2027-427536",
+   "date": "Tue, 24 Nov 2026 11:00:50 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€62 Vlieg nu rechtstreeks van Dusseldorf naar Dublin v anaf €62 retour incl. 10kg bagage . De goedkoopste ticket..."
+  },
+  {
+   "id": "9aa11d7684",
+   "titre": "The Last of Us Part I - PC Steam",
+   "temperature": 104,
+   "categorie": "Gaming",
+   "marchand": "Loaded",
+   "prix": 16.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/the-last-of-us-part-i-pc-steam-5043746",
+   "date": "Tue, 24 Nov 2026 11:08:22 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£16.99 - Loaded Experience the emotional storytelling and unforgettable characters in The Last of Us™, winner of over 200 Game of the Year awards. In a ravaged civilization, wh..."
+  },
+  {
+   "id": "09ab19e05c",
+   "titre": "DJI Osmo 360 Action Cam – Standard Combo Set",
+   "temperature": 104,
+   "categorie": "Elektronica",
+   "marchand": "iBOOD",
+   "prix": 269.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/dji-osmo-360-action-cam-standard-combo-set-428961",
+   "date": "Tue, 24 Nov 2026 11:29:22 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€269 - iBOOD De DJI Osmo 360 Standard Combo is een geavanceerde 360 graden actioncamera waarmee je indrukwekkende beelden kunt maken in hoge kwaliteit. De camera filmt in 8K..."
+  },
+  {
+   "id": "f3f30ce309",
+   "titre": "Philips Airfryer 3000 Serie zwart (NA330/00) 6,2 l met kijkvenster",
+   "temperature": 104,
+   "categorie": "Home & Living",
+   "marchand": "Amazon.de",
+   "prix": 71.17,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/philips-airfryer-3000-serie-zwart-na33000-62-l-met-kijkvenster-428819",
+   "date": "Tue, 24 Nov 2026 08:39:18 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€71,17 - Amazon.de Philips Airfryer 3000 Serie - Premium 6,2L Deze heeft al eens eerder op Pepper gestaan voor €89 Nu bij Amazon Duitsland voor totaal €78,16 (€69,99..."
+  },
+  {
+   "id": "38dd35b00a",
+   "titre": "LEGO 11515 Botanicals Boeket pioenrozen - Pre-order @ Amazon",
+   "temperature": 103,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 42.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-11515-botanicals-boeket-pioenrozen-pre-order-at-amazon-428989",
+   "date": "Tue, 24 Nov 2026 11:57:34 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€42,99 - Amazon.nl Op 1 januari 2027 verschijnt er weer een aantal nieuwe LEGO Botanicals-sets, waaronder dit boeket met pioenrozen. De set is nu al vooruit te bestellen bij Am..."
+  },
+  {
+   "id": "4d20029607",
+   "titre": "LEGO Technic 1966 Ford GT40 MKII Race Car 42223",
+   "temperature": 101,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 42.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-technic-1966-ford-gt40-mkii-race-car-42223-5043545",
+   "date": "Tue, 24 Nov 2026 11:21:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£42.99 - Amazon CAR MODEL BUILDING KIT – Build a classic car as you assemble the intricate details of this LEGO Technic 1966 Ford GT40 MKII Race Car model building s..."
+  },
+  {
+   "id": "3efb9cbb92",
+   "titre": "🛍️ soundcore par Anker Q31i Casque Bluetooth sans Fil ✅ 69,99€ au lieu de 89,99€ ➡️ https://www.amazon.fr/dp/B0H9RPTZFQ/?tag=pmrat-21 Publicité/Lien affilié Le ",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H9RPTZFQ/?tag=pmrat-21",
+   "date": "2026-11-24T08:52",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ soundcore par Anker Q31i Casque Bluetooth sans Fil ✅ 69,99€ au lieu de 89,99€ ➡️ https://www.amazon.fr/dp/B0H9RPTZFQ/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 89.99
+  },
+  {
+   "id": "adf79c2274",
+   "titre": "🛍️ YAMAHA PSR-E283 Clavier Portable, Noir ✅ 102,00€ au lieu de 129,00€ ➡️ https://www.amazon.fr/dp/B0CS37C9RP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut ",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 102.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CS37C9RP/?tag=pmrat-21",
+   "date": "2026-11-24T09:09",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ YAMAHA PSR-E283 Clavier Portable, Noir ✅ 102,00€ au lieu de 129,00€ ➡️ https://www.amazon.fr/dp/B0CS37C9RP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 129.0
+  },
+  {
+   "id": "65dd7553bf",
+   "titre": "🛍️ Schott NYC Kenny Blouson Homme Noir (Black Black) Large (Taille Fabricant: L) Lot de ✅ 60,93€ au lieu de 106,30€ ➡️ https://www.amazon.fr/dp/B01LXD8FDS/?tag=",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 60.93,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B01LXD8FDS/?tag=pmrat-21",
+   "date": "2026-11-24T09:21",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Schott NYC Kenny Blouson Homme Noir (Black Black) Large (Taille Fabricant: L) Lot de ✅ 60,93€ au lieu de 106,30€ ➡️ https://www.amazon.fr/dp/B01LXD8FDS/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 106.3
+  },
+  {
+   "id": "75f4f31219",
+   "titre": "🛍️ Lacoste Montre Chronographe à Quartz pour Homme Collection Boston avec Bracelet en Acier Inoxydable Argenté - 2011081 ✅ 122,02€ au lieu de 199,00€ ➡️ https:/",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 122.02,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08H2CV845/?tag=pmspt-21",
+   "date": "2026-11-24T09:25",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Lacoste Montre Chronographe à Quartz pour Homme Collection Boston avec Bracelet en Acier Inoxydable Argenté - 2011081 ✅ 122,02€ au lieu de 199,00€ ➡️ https://www.amazon.fr/dp/B08H2CV845/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 199.0
+  },
+  {
+   "id": "75857b8164",
+   "titre": "🛍️ Le Seigneur des Anneaux - La Trilogie : Versions Longues [Blu-Ray] ✅ 34,99€ au lieu de 49,99€ ➡️ https://www.amazon.fr/dp/B0BZFCNLPT/?tag=pmrat-21 Publicité/",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 34.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BZFCNLPT/?tag=pmrat-21",
+   "date": "2026-11-24T09:41",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Le Seigneur des Anneaux - La Trilogie : Versions Longues [Blu-Ray] ✅ 34,99€ au lieu de 49,99€ ➡️ https://www.amazon.fr/dp/B0BZFCNLPT/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 49.99
+  },
+  {
+   "id": "8ea19ddb26",
+   "titre": "🛍️ Anker eufy C37 2K Caméra surveillance wifi extérieur sans fil ✅ 154,99€ au lieu de 226,00€ ➡️ https://www.amazon.fr/dp/B0GN8YF37G/?tag=pmrat-21 Publicité/Lie",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 154.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GN8YF37G/?tag=pmrat-21",
+   "date": "2026-11-24T09:50",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Anker eufy C37 2K Caméra surveillance wifi extérieur sans fil ✅ 154,99€ au lieu de 226,00€ ➡️ https://www.amazon.fr/dp/B0GN8YF37G/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 226.0
+  },
+  {
+   "id": "539f1bb53b",
+   "titre": "🛍️ Shark PowerPro Aspirateur sans Fil, Technologie FloorDetect, Anti-emmêlement, Système Anti-allergène, Léger, Flexible ✅ 179,99€ au lieu de 279,99€ ➡️ https:/",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 179.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GXC3218L/?tag=pmrat-21",
+   "date": "2026-11-24T10:04",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Shark PowerPro Aspirateur sans Fil, Technologie FloorDetect, Anti-emmêlement, Système Anti-allergène, Léger, Flexible ✅ 179,99€ au lieu de 279,99€ ➡️ https://www.amazon.fr/dp/B0GXC3218L/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 279.99
+  },
+  {
+   "id": "5295c8d0f6",
+   "titre": "🛍️ LEGO City Le tracteur 60498, Jouet pour enfant dès 6 ans, maquette de véhicule de ferme, 204 pièces ✅ 14,98€ au lieu de 19,99€ ➡️ https://www.amazon.fr/dp/B0",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 14.98,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FPXGS8Z3/?tag=pmrat-21",
+   "date": "2026-11-24T10:09",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO City Le tracteur 60498, Jouet pour enfant dès 6 ans, maquette de véhicule de ferme, 204 pièces ✅ 14,98€ au lieu de 19,99€ ➡️ https://www.amazon.fr/dp/B0FPXGS8Z3/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 19.99
+  },
+  {
+   "id": "999c17fb69",
+   "titre": "🛍️ LEGO One Piece Le Navire de la Marine de GARP 75646, 1705 pièces ✅ 118,99€ au lieu de 169,99€ ➡️ https://www.amazon.fr/dp/B0GGSFQR8L/?tag=pmrat-21 Publicité/",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 118.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GGSFQR8L/?tag=pmrat-21",
+   "date": "2026-11-24T10:11",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO One Piece Le Navire de la Marine de GARP 75646, 1705 pièces ✅ 118,99€ au lieu de 169,99€ ➡️ https://www.amazon.fr/dp/B0GGSFQR8L/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 169.99
+  },
+  {
+   "id": "6685aa63ad",
+   "titre": "🛍️ LEGO Marvel Spider-Man contre Mystério : le Daily Bugle 76342, 781 pièces ✅ 80,50€ au lieu de 109,99€ ➡️ https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21 Pu",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 80.5,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21",
+   "date": "2026-11-24T10:14",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO Marvel Spider-Man contre Mystério : le Daily Bugle 76342, 781 pièces ✅ 80,50€ au lieu de 109,99€ ➡️ https://www.amazon.fr/dp/B0FPXG5S99/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 109.99
+  },
+  {
+   "id": "22db0b7efd",
+   "titre": "🛍️ VASAGLE Bureau d'Ordinateur, Table, 100 x 50 x 75 cm, Cadre en Acier, Marron Rustique et Noir Mat ✅ 31,65€ au lieu de 39,99€ ➡️ https://www.amazon.fr/dp/B082",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 31.65,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B08238V32L/?tag=pmspt-21",
+   "date": "2026-11-24T10:25",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ VASAGLE Bureau d'Ordinateur, Table, 100 x 50 x 75 cm, Cadre en Acier, Marron Rustique et Noir Mat ✅ 31,65€ au lieu de 39,99€ ➡️ https://www.amazon.fr/dp/B08238V32L/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 39.99
+  }
+ ]
+}

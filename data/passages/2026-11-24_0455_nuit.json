@@ -1,0 +1,1299 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-24_0455",
+ "date_affichee": "24/11/2026 à 04 h 55",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 136,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 45,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 734,
+ "nb_nouvelles": 22,
+ "nb_prefiltres": 20,
+ "nb_tries": 20,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 1,
+   "reussites": 1,
+   "erreurs": [],
+   "choix": 4
+  },
+  "gptoss": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 11
+  },
+  "qwen": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 2
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "prosp-4c14043c3e",
+   "titre": "KRUPS Machine à capsules Piccolo XS Rouge+",
+   "prix": 28.9,
+   "devise": "EUR",
+   "marchand": "E Leclerc",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/E-Leclerc"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "cuisine",
+   "nom_produit": "KRUPS Piccolo XS",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 70.0,
+   "cout_achat": 33.9,
+   "marge_nette": 23.72,
+   "rentabilite": 0.7,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Petit appareil, bon prix d'achat"
+   },
+   "score": 43.7,
+   "ebay": {
+    "requete": "KRUPS Piccolo XS",
+    "neuf": {
+     "nb": 39,
+     "min": 12.99,
+     "p25": 36.65,
+     "mediane": 54.78,
+     "max": 386.83
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 18.3,
+     "p25": 18.3,
+     "mediane": 26.7,
+     "max": 51.66
+    },
+    "exemples": [
+     {
+      "titre": "Krups Dolce Gusto Piccolo XS machine à café capsule 15 bar Hot&Cold rouge/noir",
+      "prix": "51.66",
+      "url": "https://www.ebay.fr/itm/336808997467?_skw=KRUPS+Piccolo+XS&hash=item4e6b61725b:g:xycAAeSwHJdqs9sh"
+     },
+     {
+      "titre": "☕ Krups Piccolo XS Blanc Dolce Gusto Corps Machine GUASTO Pour Pièces",
+      "prix": "18.30",
+      "url": "https://www.ebay.fr/itm/267825923429?_skw=KRUPS+Piccolo+XS&hash=item3e5bab4565:g:Vk8AAeSwsFtphOtb&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nWPWocmLRmzddMBeefooI13h7oiR3b1R6QWzkmG%2Fwl6brZUHQiRjNLbhnaHv8lqKYEC0W4VNvm6oGcC6TPuCJmFc8Wib4r%2FNJUqfTYfyBQdaUoSeQFBo%2BCL42WUj15O6ANH74ZE1uGpWwPM4YENZ7%2FJnuHPP4eaEWOSrUDKI1K9cjSsOorw%2BcCd9K%2FyJ%2FnQ%2FY69IdlLDTqgB9d961289FqN%2FfZhM%2FKMpiCxcS3qbjVxTOWCm21dVizZdlSg1tiVPhuvxt2kHrAz%2BMmcHr%2BzYN3KkRTQCAwqhwehUewofBG6w%3D%3D"
+     },
+     {
+      "titre": "Porte Capsule Krups Dolce Gusto Piccolo XS MS-625000 - Original",
+      "prix": "10.90",
+      "url": "https://www.ebay.fr/itm/256548255992?_skw=KRUPS+Piccolo+XS&hash=item3bbb77b8f8:g:hCkAAeSwBc5q-cGM&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kCH4wigTdHi6Zee8NiPJipcdGsydW1z9jUhFrA20pwIKCtCO5gp6WEUvgHAfMVBUFTOwYJnhLk0A3UngiOe0z2lpBwZMlaJIZ33zVTBG9HWR22gaV6mv9f0FhI4FH0C6W8oOoIbR5QIh%2FmtUV%2Fqr%2BWScIv2o9kgGdRbhu0BQQ253495RHgUjBXjbhtG8VbsL%2BtmV6aLZXqtzIeCRTD6nL5T3Q5yjyzZll9ziUyU8cvzIVuCw9DMXDlNyaplYBpC9qQM2416fospuWeBbwTLUAwGSxcorGbDNvGOtLNpUJf8Q%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 36.65,
+     "DE": 39.0,
+     "IT": 49.99,
+     "ES": 24.84
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "KRUPS Piccolo XS",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 12,
+      "meilleur": {
+       "titre": "KRUPS Réservoir d'eau dolce gusto piccolo xs cafetière, expresso ms-624830",
+       "prix": 7.35,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/reservoir-d-eau-dolce-gusto-piccolo-xs-cafetiere-expresso-ms-624830.html"
+      },
+      "autres": [
+       {
+        "titre": "HOBBYTECH Plaque Injecteur MS622718 AS13200236 pour Cafetière compatible Dolce Gusto Piccolo XS Krups Delonghi",
+        "prix": 11.29,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/plaque-injecteur-ms622718-as13200236-pour-cafetiere-compatible-dolce-gusto-piccolo-xs-krups-delonghi.html"
+       },
+       {
+        "titre": "KRUPS Expresso  Nescafé Dolce Gusto Piccolo XS YY4395FD Noir",
+        "prix": 29.99,
+        "nb_boutiques": 8,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/expresso-krups-nescafe-dolce-gusto-piccolo-xs-yy4395fd-noir.html"
+       },
+       {
+        "titre": "KRUPS  NESCAFÉ Dolce Gusto Piccolo XS noir KP1A3B10",
+        "prix": 39.9,
+        "nb_boutiques": 11,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/krups-nescafe-dolce-gusto-piccolo-xs-noir-kp1a3b10.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 7.35,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/reservoir-d-eau-dolce-gusto-piccolo-xs-cafetiere-expresso-ms-624830.html"
+   },
+   "mot_cle": "krups piccolo xs",
+   "demande_google": {
+    "volume_mensuel": 590,
+    "concurrence": "HIGH",
+    "cpc": 0.16,
+    "trois_derniers_mois": [
+     480,
+     590,
+     390
+    ]
+   },
+   "annonces_ebay": 39,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 7.35,
+     "marge_nette": -37.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 6.66,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -37.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.097
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 7.35,
+     "marge_nette": -37.84,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 7.31,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -37.84,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.116
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 7.35,
+     "marge_nette": -38.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.09,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -38.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.14
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 7.35,
+     "marge_nette": -39.05,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.51,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -39.05,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.152
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 7.35,
+     "marge_nette": -39.12,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.59,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -39.12,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.154
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 6.62,
+   "marge_verifiee": -31.17,
+   "rentabilite_verifiee": -0.919,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 18.3,
+    "haut": 26.7,
+    "position_neuf": 1.58
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "KRUPS Piccolo XS",
+    "pays": {
+     "FR": {
+      "nb_annonces": 28,
+      "total_ebay": 34,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 14.99,
+       "titre": "Krups Moulinex réservoir d'eau machine à café Dolce Gusto Piccolo XS KP1A PV1A",
+       "lien": "https://www.ebay.fr/itm/187024358443?_skw=KRUPS+Piccolo+XS&hash=item2b8b853c2b:g:xNAAAeSw2Glnyp0x",
+       "vendeur": "pg.service",
+       "avis_vendeur": 109882
+      },
+      "plus_cher": {
+       "prix": 115.81,
+       "titre": "Krups - Nescafé Dolce Gusto Piccolo XS Machine à XS, Rouge et Noir",
+       "lien": "https://www.ebay.fr/itm/407240726317?_skw=KRUPS+Piccolo+XS&hash=item5ed170572d:g:BfoAAeSwy1FqtKoE",
+       "vendeur": "digitalleyshop8052",
+       "avis_vendeur": 597
+      }
+     },
+     "DE": {
+      "nb_annonces": 49,
+      "total_ebay": 58,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 24.43,
+       "titre": "ORIGINAL KRUPS PICCOLO XS DULCE GUSTO KAFFEE WASSERTANK EDG110 EDG210 UK NEU!",
+       "lien": "https://www.ebay.de/itm/185910352245?_skw=KRUPS+Piccolo+XS&hash=item2b491ed975:g:8CIAAOSwPn5kbMBi",
+       "vendeur": "sussex-spares",
+       "avis_vendeur": 123815
+      },
+      "plus_cher": {
+       "prix": 101.1,
+       "titre": "Krups Dolce gusto piccolo xs rot schwarz",
+       "lien": "https://www.ebay.de/itm/307231773522?_skw=KRUPS+Piccolo+XS&hash=item478870d352:g:~JQAAeSw0-drBOV-",
+       "vendeur": "nexecom",
+       "avis_vendeur": 16281
+      }
+     },
+     "IT": {
+      "nb_annonces": 150,
+      "total_ebay": 172,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 14.09,
+       "titre": "Porta Capsule Per Caffè Krups Nescafe Dolce Gusto Piccolo XS KP1A0140 KP1A0540",
+       "lien": "https://www.ebay.it/itm/147260333635?_skw=KRUPS+Piccolo+XS&hash=item2249665e43:g:HLMAAeSw7LZp-I1d",
+       "vendeur": "kga-supplies",
+       "avis_vendeur": 416292
+      },
+      "plus_cher": {
+       "prix": 105.99,
+       "titre": "Krups Piccolo Xs M.d.c. Kp1a3bp1 Nescafè Dolce Gusto Nera",
+       "lien": "https://www.ebay.it/itm/128200096268?_skw=KRUPS+Piccolo+XS&hash=item1dd9523a0c:g:imMAAeSwlT5rBF-o",
+       "vendeur": "omniamarketshop-86",
+       "avis_vendeur": 76
+      }
+     },
+     "ES": {
+      "nb_annonces": 28,
+      "total_ebay": 70,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 15.01,
+       "titre": "Tanque de agua para DolceGusto Piccolo XS KP1A Krups",
+       "lien": "https://www.ebay.es/itm/274749743542?_skw=KRUPS+Piccolo+XS&hash=item3ff85c61b6:g:kiQAAeSwYspqmpKy",
+       "vendeur": "cre_ricambi",
+       "avis_vendeur": 43261
+      },
+      "plus_cher": {
+       "prix": 90.99,
+       "titre": "Krups Piccolo XS, Máquina de cápsulas multibebida, KP1A3ACL, ultracompacta",
+       "lien": "https://www.ebay.es/itm/317936837176?_skw=KRUPS+Piccolo+XS&hash=item4a06832238:g:OMMAAeSwTi5po2pc",
+       "vendeur": "annonynw0",
+       "avis_vendeur": 4
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "KRUPS Piccolo XS",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 10,
+     "interet_recent": 57,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      59,
+      63,
+      57,
+      58,
+      40,
+      61,
+      46,
+      78,
+      76,
+      80,
+      69,
+      100,
+      59,
+      69,
+      0
+     ],
+     "recherches_liees": [
+      {
+       "query": "krups dolce gusto piccolo xs",
+       "value": 100
+      }
+     ]
+    },
+    "suggestions_google": [
+     "krups piccolo xs",
+     "krups piccolo xs avis",
+     "krups piccolo xs dolce gusto",
+     "krups piccolo xs taupe",
+     "krups piccolo xs capsule",
+     "krups piccolo xs dosette",
+     "krups piccolo xs mode d emploi",
+     "krups piccolo xs vs mini me",
+     "krups piccolo xs kp1a3 capsules coffee maker",
+     "krups piccolo xs intermarché"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "36e63540da",
+   "titre": "Columbia Zapatillas de senderismo M Grove Heights",
+   "prix": 47.99,
+   "devise": "EUR",
+   "marchand": "Privalia",
+   "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 182,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Columbia Grove Heights",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 52.99,
+   "marge_nette": 17.62,
+   "rentabilite": 0.333,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Chaussures de randonnée marque connue, marge nette ~25 € après port payé par l'acheteur sur Vinted.",
+    "gptoss": "Bon écart prix vs prix du marché"
+   },
+   "score": 34.4,
+   "ebay": {
+    "requete": "Columbia Grove Heights",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 54.95,
+     "IT": 50.05,
+     "ES": 49.64
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Columbia Grove Heights",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "columbia grove heights",
+   "demande_google": {
+    "volume_mensuel": 20,
+    "concurrence": "HIGH",
+    "cpc": 0.21,
+    "trois_derniers_mois": [
+     50,
+     50,
+     40
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Columbia Grove Heights",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 54.95,
+       "titre": "Columbia Grove Heights Low OD W Damen Wanderschuh Trail Running (YL1041-411) NEU",
+       "lien": "https://www.ebay.de/itm/235019914717?_skw=Columbia+Grove+Heights&hash=item36b8474ddd:g:0UIAAOSwwNligrlO",
+       "vendeur": "dealbuddys",
+       "avis_vendeur": 3314
+      },
+      "plus_cher": {
+       "prix": 86.65,
+       "titre": "Columbia M Grove Heights grau wasserdicht Wandern Turnschuhe Schuhe UK Größe 13",
+       "lien": "https://www.ebay.de/itm/327294791554?_skw=Columbia+Grove+Heights&hash=item4c344a2f82:g:HRMAAeSwRT1qceNY",
+       "vendeur": "yorkshireflipper",
+       "avis_vendeur": 3022
+      }
+     },
+     "IT": {
+      "nb_annonces": 8,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 46.71,
+       "titre": "Scarpa da trail Columbia donna Grove Heights Low OutDry YL1041-033 nuova con scatola",
+       "lien": "https://www.ebay.it/itm/125016780864?_skw=Columbia+Grove+Heights&hash=item1d1b94b040:g:iYIAAOSwxSphnTSq",
+       "vendeur": "avasoutlet2010",
+       "avis_vendeur": 16300
+      },
+      "plus_cher": {
+       "prix": 100.1,
+       "titre": "Stivali da trekking Columbia M Grove Heights Mid da uomo 9,5 grigio ardesia/arancione scuro NUOVI",
+       "lien": "https://www.ebay.it/itm/366363333394?_skw=Columbia+Grove+Heights&hash=item554cf4d312:g:QYAAAeSwtK1p6UGC",
+       "vendeur": "nickelsndiamonds1013",
+       "avis_vendeur": 17466
+      }
+     },
+     "ES": {
+      "nb_annonces": 8,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 46.33,
+       "titre": "Zapato de trail Columbia Grove Heights Low OutDry para mujer YL1041-033 NUEVO EN CAJA",
+       "lien": "https://www.ebay.es/itm/125016780864?_skw=Columbia+Grove+Heights&hash=item1d1b94b040:g:iYIAAOSwxSphnTSq",
+       "vendeur": "avasoutlet2010",
+       "avis_vendeur": 16300
+      },
+      "plus_cher": {
+       "prix": 99.28,
+       "titre": "Columbia M Grove Heights Mid Para hombres 9.5 Botas de Senderismo Gris Pizarra/Naranja Oscuro NUEVAS",
+       "lien": "https://www.ebay.es/itm/366363333394?_skw=Columbia+Grove+Heights&hash=item554cf4d312:g:QYAAAeSwtK1p6UGC",
+       "vendeur": "nickelsndiamonds1013",
+       "avis_vendeur": 17466
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Columbia Grove Heights",
+    "temperature_dealabs": 182,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "columbia grove heights",
+     "columbia grove heights venture",
+     "columbia grove heights x2",
+     "columbia grove heights x2 fs mid outdry",
+     "columbia grove heights outdry",
+     "columbia grove heights x2 low outdry",
+     "columbia grove heights x2 mid",
+     "columbia grove heights fs low",
+     "columbia grove heights mid outdry",
+     "columbia grove heights low outdry"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "prosp-f807d8d9a4",
+   "titre": "Tokyo Laundry Cardigan adulte homme noir",
+   "prix": 19.97,
+   "devise": "EUR",
+   "marchand": "E Leclerc",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/E-Leclerc"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Tokyo Laundry Cardigan",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 24.97,
+   "marge_nette": 11.0,
+   "rentabilite": 0.441,
+   "demande": 2.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Vêtement simple, marge modeste"
+   },
+   "score": 16.5,
+   "ebay": {
+    "requete": "Tokyo Laundry Cardigan",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 27.2,
+     "IT": 27.88,
+     "ES": 27.65
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Tokyo Laundry Cardigan",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "tokyo laundry cardigan",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": null,
+    "trois_derniers_mois": [
+     10,
+     10,
+     0
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Tokyo Laundry Cardigan",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 12,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 12,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Tokyo Laundry Cardigan",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "tokyo laundry cardigan",
+     "tokyo laundry gilet",
+     "tokyo laundry gilet mens",
+     "tokyo laundry gilet kids",
+     "tokyo laundry mens cardigan",
+     "tokyo laundry shawl cardigan",
+     "tokyo laundry gilet women's",
+     "tokyo laundry christmas cardigan"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 3,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 9,
+ "annonces_analysees": [
+  {
+   "id": "36e63540da",
+   "titre": "Columbia Zapatillas de senderismo M Grove Heights",
+   "temperature": 182,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Privalia",
+   "prix": 47.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507",
+   "date": "Tue, 24 Nov 2026 04:28:57 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "47,99€ - Privalia Zapatillas de senderismo \"M Grove Heights™\" Parte superior de malla/cuero impermeable. Construcción de botín con membrana Omni-Tech™ im..."
+  },
+  {
+   "id": "59898efbb3",
+   "titre": "Camera eufy e220 2.2k, 360. (Reconditionné excellent état - vendeur tiers)",
+   "temperature": 102,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/camera-eufy-e220-22k-360-reconditionne-excellent-3465625",
+   "date": "Tue, 24 Nov 2026 04:39:48 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "19,99€ - Amazon Camera eufy intérieure e220 2.2k Reconditionné, excellent état. À propos de ce produit / Commentaires ..."
+  },
+  {
+   "id": "23229a4085",
+   "titre": "🛍️ JBL Live 770NC Casque circum-auriculaire, Réduction de Bruit Adaptative, Smart Ambient, noir ✅ 76,99€ au lieu de 179,99€ ➡️ https://www.amazon.fr/dp/B0CHMN4K",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 76.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CHMN4KVN/?tag=pmrat-21",
+   "date": "2026-11-24T03:47",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ JBL Live 770NC Casque circum-auriculaire, Réduction de Bruit Adaptative, Smart Ambient, noir ✅ 76,99€ au lieu de 179,99€ ➡️ https://www.amazon.fr/dp/B0CHMN4KVN/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 179.99
+  },
+  {
+   "id": "1ab5dd827f",
+   "titre": "Logitech MX Keys S Wireless Keyboard 920-011584 UK QWERTY Bluetooth USB C, Windows, Linux, Chrome, Mac - Like New - Sold By Amazon Resale",
+   "temperature": 97,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 62.65,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/logitech-mx-keys-s-wireless-keyboard-920-011584-uk-qwerty-bluetooth-usb-c-windows-linux-chrome-mac-like-new-sold-by-amazon-resale-5044835",
+   "date": "Tue, 24 Nov 2026 03:45:45 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£62.65 - Amazon 15% deducted at Checkout: Sold by Amazon Resa..."
+  },
+  {
+   "id": "abde482cd0",
+   "titre": "SCUF OMEGA PROTOTYPE",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Scuf Gaming",
+   "prix": 174.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/scuf-omega-prototype-5044882",
+   "date": "Tue, 24 Nov 2026 03:35:41 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£174.99 - Scuf Gaming SCUF OMEGA PROTOTYPE was £219.99 now £174.99. There are other colours but the price may vary depending on the colour variant."
+  },
+  {
+   "id": "prosp-b00d76d28d",
+   "titre": "Travel&#x27;s Valise 45 cm env.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 17.45,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-dd652b06af",
+   "titre": "ASUS PC portable E1504TA-BQ874WS",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 369.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-db328322f8",
+   "titre": "Emma Matelas Hybride &quot;Emma Access&quot; 90x190CM",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 199.5,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-4c14043c3e",
+   "titre": "KRUPS Machine à capsules Piccolo XS Rouge+",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 28.9,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-2237dec55f",
+   "titre": "KRUPS Expresso Broyeur My Coffee",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-684f7a3f46",
+   "titre": "JBL Casque sans fil Tune 680",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-f807d8d9a4",
+   "titre": "Tokyo Laundry Cardigan adulte homme noir",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 19.97,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-f744054c0d",
+   "titre": "Candy Lave-linge frontal",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 259.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-5c338717a8",
+   "titre": "Oppo Smartphone A6k",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 189.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-ff14b80ee6",
+   "titre": "DODO Housse couette économie d&#x27;énergie 140x200 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 22.47,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-5490f75323",
+   "titre": "SAMSUNG Barre de son HW-B750F/ZF",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-2210beeaba",
+   "titre": "Lenovo Tablette Tab",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 149.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-d4d8739989",
+   "titre": "Hisense TV LED 32A4S 32&#x27;&#x27; (pouces) 80 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 159.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-17c7200cbe",
+   "titre": "Sapin nordmann 100/150 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intermarche",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intermarche",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-24 → 2026-12-06"
+  },
+  {
+   "id": "prosp-c14e3b5a99",
+   "titre": "Sapin Nordmann",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intermarche",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intermarche",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-24 → 2026-12-06"
+  }
+ ]
+}

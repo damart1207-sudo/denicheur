@@ -1,7 +1,7 @@
 {
  "passage": "nuit",
- "horodatage": "2026-11-24_0429",
- "date_affichee": "24/11/2026 à 04 h 29",
+ "horodatage": "2026-11-24_0455",
+ "date_affichee": "24/11/2026 à 04 h 55",
  "statut": "Provisoire : en attente de l’audit de Claude",
  "test": false,
  "sources": {
@@ -146,1777 +146,59 @@
    "erreur": null
   }
  },
- "nb_annonces": 718,
- "nb_nouvelles": 242,
- "nb_prefiltres": 182,
- "nb_tries": 96,
+ "nb_annonces": 734,
+ "nb_nouvelles": 22,
+ "nb_prefiltres": 20,
+ "nb_tries": 20,
  "tri_ok": true,
  "agents": {
   "nemotron": {
-   "appels": 3,
-   "reussites": 3,
+   "appels": 1,
+   "reussites": 1,
    "erreurs": [],
-   "choix": 19
+   "choix": 4
   },
   "gptoss": {
-   "appels": 8,
-   "reussites": 8,
-   "erreurs": [],
-   "choix": 41
-  },
-  "qwen": {
-   "appels": 8,
-   "reussites": 8,
+   "appels": 2,
+   "reussites": 2,
    "erreurs": [],
    "choix": 11
+  },
+  "qwen": {
+   "appels": 2,
+   "reussites": 2,
+   "erreurs": [],
+   "choix": 2
   }
  },
  "remplacements": {},
  "candidats": [
   {
-   "id": "1de08f9e51",
-   "titre": "Guitarra Eléctrica Squier by Fender Debut Stratocaster HSS",
-   "prix": 119.99,
+   "id": "prosp-4c14043c3e",
+   "titre": "KRUPS Machine à capsules Piccolo XS Rouge+",
+   "prix": 28.9,
    "devise": "EUR",
-   "marchand": "Amazon",
-   "lien": "https://www.chollometro.com/ofertas/guitarra-electrica-squier-by-fender-debut-stratocaster-hss-2087004",
-   "pays": "ES",
-   "source": "chollometro-hot",
-   "temperature": 326,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.chollometro.com/ofertas/guitarra-electrica-squier-by-fender-debut-stratocaster-hss-2087004"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "autre",
-   "nom_produit": "Squier Fender Debut Stratocaster",
-   "plateforme_revente": "ebay",
-   "prix_revente_estime": 430.0,
-   "cout_achat": 124.99,
-   "marge_nette": 182.14,
-   "rentabilite": 1.457,
-   "demande": 5,
-   "concurrence": 3.0,
-   "consensus": 1,
-   "agents": [
-    "gptoss"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "gptoss": "Marge nette élevée (≈250 €) après frais eBay, forte demande de guitares d'entrée de gamme."
-   },
-   "score": 174.8,
-   "ebay": {
-    "requete": "Squier Fender Debut Stratocaster",
-    "neuf": {
-     "nb": 4,
-     "min": 360.7,
-     "p25": 360.75,
-     "mediane": 364.32,
-     "max": 370.7
-    },
-    "occasion": null,
-    "exemples": [
-     {
-      "titre": "Squier by Fender Debut Collection™ Stratocaster® HT HSS guitare électrique La...",
-      "prix": "360.70",
-      "url": "https://www.ebay.fr/itm/880038376958?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce65ff5fe:g:aVsAAeSwDlxq2Hgg"
-     },
-     {
-      "titre": "Guitare électrique Squier by Fender Debut Collection™ Stratocaster® HSS avec ...",
-      "prix": "370.70",
-      "url": "https://www.ebay.fr/itm/880037574524?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce653b77c:g:3LkAAeSwYAhq2Hgr"
-     },
-     {
-      "titre": "Guitare électrique Squier by Fender Debut Collection™ Stratocaster® HSS avec ...",
-      "prix": "360.89",
-      "url": "https://www.ebay.fr/itm/880038383522?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce6600fa2:g:s4kAAeSwpKRq2Hgn"
-     }
-    ],
-    "neuf_par_pays": {
-     "FR": 360.75,
-     "DE": 250.05,
-     "IT": 210.24,
-     "ES": 178.18
-    },
-    "meilleur_pays": "FR"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Squier Fender Debut Stratocaster",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "squier fender debut stratocaster",
-   "annonces_ebay": 4,
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "moins_cher_du_marche": false,
-   "prix_revente_prudent": 360.75,
-   "marge_verifiee": 131.17,
-   "rentabilite_verifiee": 1.049,
-   "passe_verif": true,
-   "feu": "orange",
-   "concurrence_amazon": "inconnue",
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 134.6,
-   "rapport_concurrence": {
-    "requete": "Squier Fender Debut Stratocaster",
-    "pays": {
-     "FR": {
-      "nb_annonces": 4,
-      "total_ebay": 4,
-      "niveau": "peu",
-      "moins_cher": {
-       "prix": 360.7,
-       "titre": "Squier by Fender Debut Collection™ Stratocaster® HT HSS guitare électrique La...",
-       "lien": "https://www.ebay.fr/itm/880038376958?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce65ff5fe:g:aVsAAeSwDlxq2Hgg",
-       "vendeur": "lamitie_store",
-       "avis_vendeur": 7524
-      },
-      "plus_cher": {
-       "prix": 370.7,
-       "titre": "Guitare électrique Squier by Fender Debut Collection™ Stratocaster® HSS avec ...",
-       "lien": "https://www.ebay.fr/itm/880037574524?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce653b77c:g:3LkAAeSwYAhq2Hgr",
-       "vendeur": "lamitie_store",
-       "avis_vendeur": 7524
-      }
-     },
-     "DE": {
-      "nb_annonces": 5,
-      "total_ebay": 5,
-      "niveau": "peu",
-      "moins_cher": {
-       "prix": 250.05,
-       "titre": "Squier by Fender Debut Stratocaster HSS E-Gitarre, Dakota Red",
-       "lien": "https://www.ebay.de/itm/880085647898?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce931421a:g:pvYAAeSwvr1q7H7p",
-       "vendeur": "colettemcburney",
-       "avis_vendeur": 2956
-      },
-      "plus_cher": {
-       "prix": 308.92,
-       "titre": "Squier by Fender Debut Collection™ Stratocaster® HSS E-Gitarre mit Lorbeer",
-       "lien": "https://www.ebay.de/itm/880038384421?_skw=Squier+Fender+Debut+Stratocaster&hash=itemcce6601325:g:3LkAAeSwYAhq2Hgr",
-       "vendeur": "lamitie_store",
-       "avis_vendeur": 7524
-      }
-     },
-     "IT": {
-      "nb_annonces": 16,
-      "total_ebay": 21,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 194.78,
-       "titre": "Fender Squier Debut Series Stratocaster Chitarra elettrica principianti Sea Foam Green",
-       "lien": "https://www.ebay.it/itm/257338450748?_skw=Squier+Fender+Debut+Stratocaster&hash=item3bea91233c:g:IHAAAeSw431pfiBF",
-       "vendeur": "theshiningdimes",
-       "avis_vendeur": 4457
-      },
-      "plus_cher": {
-       "prix": 472.74,
-       "titre": "\tFender Squier Debut Series Stratocaster Kit Chitarra Elettrica Chitarra Principiante\t",
-       "lien": "https://www.ebay.it/itm/377187236615?_skw=Squier+Fender+Debut+Stratocaster&hash=item57d21c7b07:g:VfMAAeSwSzpqB5V7",
-       "vendeur": "xtremetaan",
-       "avis_vendeur": 9953
-      }
-     },
-     "ES": {
-      "nb_annonces": 13,
-      "total_ebay": 16,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 159.66,
-       "titre": "Guitarra Eléctrica Fender Squier Serie Debut Stratocaster Principiante Verde Espuma de Mar",
-       "lien": "https://www.ebay.es/itm/257338450748?_skw=Squier+Fender+Debut+Stratocaster&hash=item3bea91233c:g:IHAAAeSw431pfiBF",
-       "vendeur": "theshiningdimes",
-       "avis_vendeur": 4457
-      },
-      "plus_cher": {
-       "prix": 332.61,
-       "titre": "Squier by Fender Debut Collection™ Stratocaster® HT HSS Electric Guitar with Lau",
-       "lien": "https://www.ebay.es/itm/407343486980?_skw=Squier+Fender+Debut+Stratocaster&hash=item5ed7905804:g:e4QAAeSwRGNrBCGo",
-       "vendeur": "kobaryo-y0",
-       "avis_vendeur": 146
-      }
-     }
-    },
-    "niveau_global": "moyen"
-   },
-   "rapport_demande": {
-    "requete": "Squier Fender Debut Stratocaster",
-    "temperature_dealabs": 326,
-    "google_trends": {
-     "interet_moyen": 0,
-     "tendance": "aucune recherche mesurable"
-    },
-    "suggestions_google": [
-     "squier fender debut stratocaster",
-     "fender squier debut stratocaster hss dakota red",
-     "fender squier debut stratocaster hss ht black",
-     "fender squier debut stratocaster hss ht sunburst",
-     "fender squier debut stratocaster hss daphne blue",
-     "fender squier debut stratocaster sss black",
-     "fender squier stratocaster debut series",
-     "fender squier debut series stratocaster hss",
-     "fender squier debut series stratocaster ht hss",
-     "fender squier debut stratocaster sunburst"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "35e96a2586",
-   "titre": "Reebok Energen Tech Plus 3 Zapatillas de running para mujer",
-   "prix": 26.0,
-   "devise": "EUR",
-   "marchand": "Reebok",
-   "lien": "https://www.chollometro.com/ofertas/reebok-energen-tech-plus-3-zapatillas-de-running-para-mujer-2086385",
-   "pays": "ES",
-   "source": "chollometro-hot",
-   "temperature": 225,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.chollometro.com/ofertas/reebok-energen-tech-plus-3-zapatillas-de-running-para-mujer-2086385"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "sport",
-   "nom_produit": "Reebok Energen Tech Plus 3",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 70.0,
-   "cout_achat": 31.0,
-   "marge_nette": 26.62,
-   "rentabilite": 0.859,
-   "demande": 4.0,
-   "concurrence": 3.0,
-   "consensus": 1,
-   "agents": [
-    "gptoss"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "gptoss": "Prix d'achat 26€ très bas comparé à 70‑80€ de revente habituelle pour ces baskets de running."
-   },
-   "score": 73.3,
-   "ebay": {
-    "requete": "Reebok Energen Tech Plus 3",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": 73.52,
-     "IT": 70.94,
-     "ES": 70.37
-    },
-    "meilleur_pays": "DE"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Reebok Energen Tech Plus 3",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "reebok energen tech plus",
-   "demande_google": {
-    "volume_mensuel": 10,
-    "concurrence": "HIGH",
-    "cpc": 0.3,
-    "trois_derniers_mois": [
-     10,
-     10,
-     10
-    ]
-   },
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Reebok Energen Tech Plus 3",
-    "pays": {
-     "FR": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "DE": {
-      "nb_annonces": 30,
-      "total_ebay": 30,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 63.97,
-       "titre": "Reebok ENERGEN TECH PLUS 3 Unisex Weiß Sneakers Sportschuhe Alltag (100273044)",
-       "lien": "https://www.ebay.de/itm/137774045228?_skw=Reebok+Energen+Tech+Plus+3&hash=item2013f9182c:g:cAEAAeSwzFpqtQZO",
-       "vendeur": "idobuy_eu",
-       "avis_vendeur": 15223
-      },
-      "plus_cher": {
-       "prix": 83.03,
-       "titre": "Reebok ENERGEN TECH PLUS 3 TRANQUIL BLUE/FTWR WHITE",
-       "lien": "https://www.ebay.de/itm/327455810671?_skw=Reebok+Energen+Tech+Plus+3&hash=item4c3de3246f:g:wZwAAeSwq3Zq-EmC",
-       "vendeur": "bush-wear",
-       "avis_vendeur": 35269
-      }
-     },
-     "IT": {
-      "nb_annonces": 10,
-      "total_ebay": 10,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 42.19,
-       "titre": "Scarpe da corsa Reebok Energen Tech Plus neutre taglia 3,5",
-       "lien": "https://www.ebay.it/itm/317606420738?_skw=Reebok+Energen+Tech+Plus+3&hash=item49f2d16102:g:97IAAeSwzxBoURMC",
-       "vendeur": "wildeals-a*company",
-       "avis_vendeur": 337
-      },
-      "plus_cher": {
-       "prix": 85.12,
-       "titre": "Reebok ENERGEN TECH PLUS 3 NERO/BIANCO",
-       "lien": "https://www.ebay.it/itm/327455803252?_skw=Reebok+Energen+Tech+Plus+3&hash=item4c3de30774:g:y4gAAeSwvG9q-Egr",
-       "vendeur": "bush-wear",
-       "avis_vendeur": 35269
-      }
-     },
-     "ES": {
-      "nb_annonces": 10,
-      "total_ebay": 10,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 41.85,
-       "titre": "Zapatos para correr Reebok Energen Tech Plus neutros talla 3,5",
-       "lien": "https://www.ebay.es/itm/317606420738?_skw=Reebok+Energen+Tech+Plus+3&hash=item49f2d16102:g:97IAAeSwzxBoURMC",
-       "vendeur": "wildeals-a*company",
-       "avis_vendeur": 337
-      },
-      "plus_cher": {
-       "prix": 84.41,
-       "titre": "Reebok ENERGEN TECH PLUS 3 AZUL TRANQUILO/FTWR BLANCO",
-       "lien": "https://www.ebay.es/itm/327455810671?_skw=Reebok+Energen+Tech+Plus+3&hash=item4c3de3246f:g:wZwAAeSwq3Zq-EmC",
-       "vendeur": "bush-wear",
-       "avis_vendeur": 35269
-      }
-     }
-    },
-    "niveau_global": "moyen"
-   },
-   "rapport_demande": {
-    "requete": "Reebok Energen Tech Plus 3",
-    "temperature_dealabs": 225,
-    "google_trends": {
-     "interet_moyen": 0,
-     "tendance": "aucune recherche mesurable"
-    },
-    "suggestions_google": [
-     "reebok energen tech plus 3",
-     "reebok energen tech plus 3 review",
-     "reebok energen tech plus 3 men's running shoes black",
-     "tenis reebok energen tech plus 3",
-     "кроссовки reebok energen tech plus 3"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "a6eefde83f",
-   "titre": "Kingdom Come : Deliverance II Day One Edition sur Xbox Series (Sélection de villes)",
-   "prix": 16.8,
-   "devise": "EUR",
-   "marchand": "E.Leclerc",
-   "lien": "https://www.dealabs.com/bons-plans/kingdom-come-deliverance-ii-day-one-edition-sur-xbox-series-3466588",
+   "marchand": "E Leclerc",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
    "pays": "FR",
-   "source": "dealabs-tendance",
-   "temperature": 125,
+   "source": "prospectus",
+   "temperature": 0,
    "preuve_prix": null,
    "preuve_livraison": null,
    "controle_prix": {
     "statut": "inconnu",
     "prix_page": null,
-    "lien": "https://www.dealabs.com/bons-plans/kingdom-come-deliverance-ii-day-one-edition-sur-xbox-series-3466588"
+    "lien": "https://www.bonial.fr/Enseignes/E-Leclerc"
    },
    "meme_produit": null,
    "lien_marchand": null,
-   "domaine": "gaming",
-   "nom_produit": "Kingdom Come Deliverance II Day One Edition Xbox Series",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 42.5,
-   "cout_achat": 21.8,
-   "marge_nette": 12.01,
-   "rentabilite": 0.551,
-   "demande": 4.0,
-   "concurrence": 2.5,
-   "consensus": 2,
-   "agents": [
-    "gptoss",
-    "nemotron"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "nemotron": "Jeu récent très demandé, édition Day One avec bonus, prix Leclerc 16,80€ bien sous cote occasion (45-55€), marge nette >30€ sur Vinted/LBC sans frais.",
-    "gptoss": "Bon prix d'achat, revente possible en occasion avec marge"
-   },
-   "score": 63.6,
-   "ebay": {
-    "requete": "Kingdom Come Deliverance II Day One Edition Xbox Series",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": 46.59,
-     "IT": 54.45,
-     "ES": 54.0
-    },
-    "meilleur_pays": "IT"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Kingdom Come Deliverance II Day One Edition Xbox Series",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 1,
-      "meilleur": {
-       "titre": "Kingdom Come: Deliverance II - Day One Edition - Jeu Xbox Series X",
-       "prix": 24.99,
-       "nb_boutiques": 8,
-       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/kingdom-come-deliverance-ii-day-one-edition-jeu-xbox-series-x.html"
-      },
-      "autres": []
-     }
-    },
-    "prix_min": 24.99,
-    "ou": "achatmoinscher",
-    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Xbox-Series-X/kingdom-come-deliverance-ii-day-one-edition-jeu-xbox-series-x.html"
-   },
-   "mot_cle": "kingdom come deliverance ii",
-   "demande_google": {
-    "volume_mensuel": 12100,
-    "concurrence": "LOW",
-    "cpc": 0.38,
-    "trois_derniers_mois": [
-     9900,
-     6600,
-     9900
-    ]
-   },
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": [
-    {
-     "profil": "petit_budget",
-     "profil_nom": "Petit budget (occasion)",
-     "canal": "leboncoin",
-     "prix_vente": 21.99,
-     "marge_nette": -5.76,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 21.99,
-      "cout_achat": 21.8,
-      "frais_canal": 0.0,
-      "prelevements": 2.95,
-      "provision": 3.0,
-      "marge_nette": -5.76,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.264
-    },
-    {
-     "profil": "petit_budget",
-     "profil_nom": "Petit budget (occasion)",
-     "canal": "vinted",
-     "prix_vente": 21.99,
-     "marge_nette": -5.76,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 21.99,
-      "cout_achat": 21.8,
-      "frais_canal": 0.0,
-      "prelevements": 2.95,
-      "provision": 3.0,
-      "marge_nette": -5.76,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.264
-    },
-    {
-     "profil": "petit_budget",
-     "profil_nom": "Petit budget (occasion)",
-     "canal": "facebook",
-     "prix_vente": 21.99,
-     "marge_nette": -5.76,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 21.99,
-      "cout_achat": 21.8,
-      "frais_canal": 0.0,
-      "prelevements": 2.95,
-      "provision": 3.0,
-      "marge_nette": -5.76,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.264
-    },
-    {
-     "profil": "impulsion",
-     "profil_nom": "Achat coup de cœur (vidéo)",
-     "canal": "tiktok",
-     "prix_vente": 24.99,
-     "marge_nette": -11.41,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 24.99,
-      "cout_achat": 21.8,
-      "frais_canal": 8.25,
-      "prelevements": 3.35,
-      "provision": 3.0,
-      "marge_nette": -11.41,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.523
-    },
-    {
-     "profil": "confiance",
-     "profil_nom": "Acheteurs prudents (gros sites)",
-     "canal": "ebay",
-     "prix_vente": 24.99,
-     "marge_nette": -12.76,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 24.99,
-      "cout_achat": 21.8,
-      "frais_canal": 9.6,
-      "prelevements": 3.35,
-      "provision": 3.0,
-      "marge_nette": -12.76,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.585
-    },
-    {
-     "profil": "confiance",
-     "profil_nom": "Acheteurs prudents (gros sites)",
-     "canal": "fnac",
-     "prix_vente": 24.99,
-     "marge_nette": -12.91,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 24.99,
-      "cout_achat": 21.8,
-      "frais_canal": 9.75,
-      "prelevements": 3.35,
-      "provision": 3.0,
-      "marge_nette": -12.91,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.592
-    },
-    {
-     "profil": "confiance",
-     "profil_nom": "Acheteurs prudents (gros sites)",
-     "canal": "cdiscount",
-     "prix_vente": 24.99,
-     "marge_nette": -13.16,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 24.99,
-      "cout_achat": 21.8,
-      "frais_canal": 10.0,
-      "prelevements": 3.35,
-      "provision": 3.0,
-      "marge_nette": -13.16,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.604
-    },
-    {
-     "profil": "confiance",
-     "profil_nom": "Acheteurs prudents (gros sites)",
-     "canal": "amazon",
-     "prix_vente": 24.99,
-     "marge_nette": -13.9,
-     "calcul_marge": {
-      "version": 2,
-      "prix_vente": 24.99,
-      "cout_achat": 21.8,
-      "frais_canal": 10.74,
-      "prelevements": 3.35,
-      "provision": 3.0,
-      "marge_nette": -13.9,
-      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
-     },
-     "rentabilite": -0.638
-    }
-   ],
-   "moins_cher_du_marche": false,
-   "prix_revente_prudent": 22.49,
-   "marge_verifiee": -5.32,
-   "rentabilite_verifiee": -0.244,
-   "passe_verif": false,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Kingdom Come Deliverance II Day One Edition Xbox Series",
-    "pays": {
-     "FR": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "DE": {
-      "nb_annonces": 2,
-      "total_ebay": 2,
-      "niveau": "peu",
-      "moins_cher": {
-       "prix": 52.03,
-       "titre": "Kingdom Come Deliverance II 2 Day One Edition Microsoft Xbox Series X NEU&OVP",
-       "lien": "https://www.ebay.de/itm/375959881198?_skw=Kingdom+Come+Deliverance+II+Day+One+Edition+Xbox+Series&hash=item5788f485ee:g:j7UAAeSwAT5pdeV2",
-       "vendeur": "schilli*1",
-       "avis_vendeur": 111027
-      },
-      "plus_cher": {
-       "prix": 53.99,
-       "titre": "Kingdom Come Deliverance II 2 Day One Edition Microsoft Xbox Series X NEU&OVP",
-       "lien": "https://www.ebay.de/itm/327426375841?_skw=Kingdom+Come+Deliverance+II+Day+One+Edition+Xbox+Series&hash=item4c3c2200a1:g:Oi0AAeSwe6lq4MXp",
-       "vendeur": "a2a-outlet",
-       "avis_vendeur": 270
-      }
-     },
-     "IT": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "ES": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     }
-    },
-    "niveau_global": "peu"
-   },
-   "rapport_demande": {
-    "requete": "Kingdom Come Deliverance II Day One Edition Xbox Series",
-    "temperature_dealabs": 125,
-    "google_trends": {
-     "interet_moyen": 0,
-     "tendance": "aucune recherche mesurable"
-    },
-    "suggestions_google": [
-     "kingdom come deliverance ii day one edition xbox series/x",
-     "kingdom come deliverance 2 day one edition xbox series x"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "85dc072300",
-   "titre": "Zapatillas Hombre Reebok Relora (Tallas 38.5 a 45.5)",
-   "prix": 26.0,
-   "devise": "EUR",
-   "marchand": "Reebok",
-   "lien": "https://www.chollometro.com/ofertas/zapatillas-hombre-reebok-relora-tallas-385-a-455-2086824",
-   "pays": "ES",
-   "source": "chollometro-hot",
-   "temperature": 269,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.chollometro.com/ofertas/zapatillas-hombre-reebok-relora-tallas-385-a-455-2086824"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "mode",
-   "nom_produit": "Reebok Relora chaussures homme",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 70.0,
-   "cout_achat": 31.0,
-   "marge_nette": 26.62,
-   "rentabilite": 0.859,
-   "demande": 4.0,
-   "concurrence": 4.0,
-   "consensus": 1,
-   "agents": [
-    "gptoss"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "gptoss": "Prix d’achat très bas (26 €) pour une paire de marque, revente à 70 € donne une marge nette intéressante."
-   },
-   "score": 61.8,
-   "ebay": {
-    "requete": "Reebok Relora chaussures homme",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [
-     {
-      "titre": "Chaussures Reebok Relora 100262388",
-      "prix": "74.00",
-      "url": "https://www.ebay.fr/itm/860051405701?_skw=Reebok+Relora+chaussures+homme&hash=itemc83f0efb85:g:svIAAeSwd-9q~-Xx"
-     }
-    ],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": null,
-     "IT": null,
-     "ES": null
-    },
-    "meilleur_pays": null
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Reebok Relora chaussures homme",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "reebok relora chaussures homme",
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Reebok Relora chaussures homme",
-    "pays": {
-     "FR": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "DE": {
-      "nb_annonces": 0,
-      "total_ebay": 1,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "IT": {
-      "nb_annonces": 0,
-      "total_ebay": 2,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "ES": {
-      "nb_annonces": 0,
-      "total_ebay": 3,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     }
-    },
-    "niveau_global": "peu"
-   },
-   "rapport_demande": {
-    "requete": "Reebok Relora chaussures homme",
-    "temperature_dealabs": 269,
-    "google_trends": {
-     "interet_moyen": 0,
-     "tendance": "aucune recherche mesurable"
-    },
-    "suggestions_google": []
-   },
-   "bingo": null
-  },
-  {
-   "id": "a71eb8a187",
-   "titre": "2 x Sonos Era 100 SL Wireless Smart Speaker (Free C&C and additional £5 off w/marketing code)",
-   "prix": 258.0,
-   "devise": "GBP",
-   "marchand": "Argos",
-   "lien": "https://www.hotukdeals.com/deals/2-sonons-era-100-sl-black-and-save-an-additional-ps40-free-cc-and-additional-ps5-off-wmarketing-code-5044740",
-   "pays": "UK",
-   "source": "hotukdeals-hot",
-   "temperature": 123,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.hotukdeals.com/deals/2-sonons-era-100-sl-black-and-save-an-additional-ps40-free-cc-and-additional-ps5-off-wmarketing-code-5044740"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "tech",
-   "nom_produit": "Sonos Era 100 SL Speakers",
-   "plateforme_revente": "ebay",
-   "prix_revente_estime": 750.0,
-   "cout_achat": 364.04,
-   "marge_nette": 178.61,
-   "rentabilite": 0.491,
-   "demande": 5,
-   "concurrence": 3.0,
-   "consensus": 1,
-   "agents": [
-    "gptoss"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "gptoss": "Offre deux fois moins chère que le prix retail, forte demande et marge nette importante après frais et TVA."
-   },
-   "score": 58.9,
-   "ebay": {
-    "requete": "Sonos Era 100 SL Speakers",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": 226.28,
-     "IT": 150.18,
-     "ES": 123.57
-    },
-    "meilleur_pays": "DE"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Sonos Era 100 SL Speakers",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "sonos era 100 sl",
-   "demande_google": {
-    "volume_mensuel": 880,
-    "concurrence": "HIGH",
-    "cpc": 0.82,
-    "trois_derniers_mois": [
-     1600,
-     1300,
-     1300
-    ]
-   },
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Sonos Era 100 SL Speakers",
-    "pays": {
-     "FR": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "DE": {
-      "nb_annonces": 0,
-      "total_ebay": 5,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "IT": {
-      "nb_annonces": 0,
-      "total_ebay": 37,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "ES": {
-      "nb_annonces": 0,
-      "total_ebay": 31,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     }
-    },
-    "niveau_global": "peu"
-   },
-   "rapport_demande": {
-    "requete": "Sonos Era 100 SL Speakers",
-    "temperature_dealabs": 123,
-    "google_trends": {
-     "interet_moyen": 0,
-     "tendance": "aucune recherche mesurable"
-    },
-    "suggestions_google": [
-     "sonos era 100 sl speakers",
-     "sonos era 100 sl speaker white",
-     "sonos era 100 sl smart speaker",
-     "sonos era 100 sl smart speaker white",
-     "sonos era 100 sl speaker black",
-     "sonos era 100 sl speaker review",
-     "sonos era 100 sl speaker stands",
-     "sonos era 100 sl rear speakers",
-     "sonos era 100 sl as computer speakers",
-     "sonos era 100 sl multiroom speaker zwart"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "6d8d9f118a",
-   "titre": "Reebok Zapatillas de Baloncesto Angel Reese 1",
-   "prix": 42.0,
-   "devise": "EUR",
-   "marchand": "Reebok",
-   "lien": "https://www.chollometro.com/ofertas/reebok-zapatillas-de-baloncesto-angel-reese-1-2086743",
-   "pays": "ES",
-   "source": "chollometro-hot",
-   "temperature": 230,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.chollometro.com/ofertas/reebok-zapatillas-de-baloncesto-angel-reese-1-2086743"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "mode",
-   "nom_produit": "Reebok Angel Reese 1",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 82.5,
-   "cout_achat": 47.0,
-   "marge_nette": 21.45,
-   "rentabilite": 0.456,
-   "demande": 4.0,
-   "concurrence": 3.0,
-   "consensus": 2,
-   "agents": [
-    "gptoss",
-    "nemotron"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "nemotron": "Chaussure signature WNBA à 42€ vs 110€ prix public, forte demande sneakers femme/homme.",
-    "gptoss": "Prix d'achat 42€ bien inférieur au prix de revente moyen de 80€ sur Vinted, marge nette après frais intéressante."
-   },
-   "score": 45.6,
-   "ebay": {
-    "requete": "Reebok Angel Reese 1",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [
-     {
-      "titre": "Reebok Angel Reese 1 baskets pour hommes en synthétique blanc",
-      "prix": "149.99",
-      "url": "https://www.ebay.fr/itm/307159170787?_skw=Reebok+Angel+Reese+1&hash=item47841cfee3:g:Y84AAeSw1jdq9ZYR"
-     }
-    ],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": 178.55,
-     "IT": 73.96,
-     "ES": 72.92
-    },
-    "meilleur_pays": "DE"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Reebok Angel Reese 1",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "reebok angel reese 1",
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Reebok Angel Reese 1",
-    "pays": {
-     "FR": {
-      "nb_annonces": 1,
-      "total_ebay": 1,
-      "niveau": "peu",
-      "moins_cher": {
-       "prix": 149.99,
-       "titre": "Reebok Angel Reese 1 baskets pour hommes en synthétique blanc",
-       "lien": "https://www.ebay.fr/itm/307159170787?_skw=Reebok+Angel+Reese+1&hash=item47841cfee3:g:Y84AAeSw1jdq9ZYR",
-       "vendeur": "victorioussales22",
-       "avis_vendeur": 274475
-      },
-      "plus_cher": {
-       "prix": 149.99,
-       "titre": "Reebok Angel Reese 1 baskets pour hommes en synthétique blanc",
-       "lien": "https://www.ebay.fr/itm/307159170787?_skw=Reebok+Angel+Reese+1&hash=item47841cfee3:g:Y84AAeSw1jdq9ZYR",
-       "vendeur": "victorioussales22",
-       "avis_vendeur": 274475
-      }
-     },
-     "DE": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "IT": {
-      "nb_annonces": 44,
-      "total_ebay": 50,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 55.61,
-       "titre": "Sneaker da basket donna Reebok Angel Reese 1 100262836 taglia 8,5 nuove con scatola",
-       "lien": "https://www.ebay.it/itm/920153690164?_skw=Reebok+Angel+Reese+1&hash=itemd63d6f1034:g:BYAAAeSwkvdq1FMR",
-       "vendeur": "mr1star",
-       "avis_vendeur": 6635
-      },
-      "plus_cher": {
-       "prix": 153.5,
-       "titre": "Reebok Angel Reese 1 Mebounds 100262827 Taglia Uomo",
-       "lien": "https://www.ebay.it/itm/205755354570?_skw=Reebok+Angel+Reese+1&hash=item2fe7f98dca:g:gKUAAeSwjW5q5Q5l",
-       "vendeur": "swaxbox",
-       "avis_vendeur": 54604
-      }
-     },
-     "ES": {
-      "nb_annonces": 44,
-      "total_ebay": 51,
-      "niveau": "moyen",
-      "moins_cher": {
-       "prix": 55.15,
-       "titre": "Zapatilla deportiva de baloncesto para dama Reebok Angel Reese 1 100262836 talla 8,5 nueva en caja",
-       "lien": "https://www.ebay.es/itm/920153690164?_skw=Reebok+Angel+Reese+1&hash=itemd63d6f1034:g:BYAAAeSwkvdq1FMR",
-       "vendeur": "mr1star",
-       "avis_vendeur": 6635
-      },
-      "plus_cher": {
-       "prix": 152.24,
-       "titre": "Reebok Angel Reese 1 Mebounds 100262827 Hombre Talla",
-       "lien": "https://www.ebay.es/itm/205755354570?_skw=Reebok+Angel+Reese+1&hash=item2fe7f98dca:g:gKUAAeSwjW5q5Q5l",
-       "vendeur": "swaxbox",
-       "avis_vendeur": 54616
-      }
-     }
-    },
-    "niveau_global": "moyen"
-   },
-   "rapport_demande": {
-    "requete": "Reebok Angel Reese 1",
-    "temperature_dealabs": 230,
-    "google_trends": {
-     "interet_moyen": 1,
-     "interet_recent": 0,
-     "tendance": "en baisse",
-     "courbe": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      100,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "recherches_liees": []
-    },
-    "suggestions_google": [
-     "reebok angel reese 1",
-     "reebok angel reese 1 test",
-     "reebok angel reese 1 expressive pink",
-     "reebok angel reese 1 barbie",
-     "reebok angel reese 1 gala green",
-     "reebok angel reese 1 navy halo",
-     "reebok angel reese 1 unisex",
-     "reebok angel reese 1 basketball",
-     "reebok angel reese 1 basketball shoes",
-     "reebok angel reese 1 review"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "00e9f2aef5",
-   "titre": "Chaussures pour Ado Nike Dunk Low Suede",
-   "prix": 49.99,
-   "devise": "EUR",
-   "marchand": "Nike",
-   "lien": "https://www.dealabs.com/bons-plans/nike-dunk-low-suede-3467164",
-   "pays": "FR",
-   "source": "dealabs-nouveaux",
-   "temperature": null,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.dealabs.com/bons-plans/nike-dunk-low-suede-3467164"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "mode",
-   "nom_produit": "Nike Dunk Low Suede Junior",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 95.0,
-   "cout_achat": 54.99,
-   "marge_nette": 24.28,
-   "rentabilite": 0.442,
-   "demande": 4.0,
-   "concurrence": 4.0,
-   "consensus": 2,
-   "agents": [
-    "gptoss",
-    "nemotron"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "nemotron": "Remise 50% sur modèle populaire, revente aisée en neuf sur Vinted, marge nette ~20€ après port.",
-    "gptoss": "Chaussure très recherchée, marge brute >60 € sans frais vendeur sur Vinted."
-   },
-   "score": 39.8,
-   "ebay": {
-    "requete": "Nike Dunk Low Suede Junior",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": null,
-     "IT": 124.57,
-     "ES": 123.55
-    },
-    "meilleur_pays": "IT"
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Nike Dunk Low Suede Junior",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "nike dunk low suede",
-   "demande_google": {
-    "volume_mensuel": 260,
-    "concurrence": "HIGH",
-    "cpc": 0.72,
-    "trois_derniers_mois": [
-     210,
-     170,
-     170
-    ]
-   },
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Nike Dunk Low Suede Junior",
-    "pays": {
-     "FR": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "DE": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "IT": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "ES": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     }
-    },
-    "niveau_global": "peu"
-   },
-   "rapport_demande": {
-    "requete": "Nike Dunk Low Suede Junior",
-    "temperature_dealabs": null,
-    "google_trends": {
-     "interet_moyen": 1,
-     "interet_recent": 0,
-     "tendance": "en baisse",
-     "courbe": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      100,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "recherches_liees": []
-    },
-    "suggestions_google": [
-     "nike dunk low suede junior",
-     "nike dunk low suede junior grey",
-     "nike dunk low suede junior beige",
-     "nike dunk low suede kids",
-     "nike dunk low suede big kids"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "5c3c61271d",
-   "titre": "🛍️ roborock F25 ACE Pro JetFoaming Aspirateur Laveur sans Fil 25kPa ✅ 338,00€ au lieu de 599,00€ ➡️ https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21 Publicité/",
-   "prix": 338.0,
-   "devise": "EUR",
-   "marchand": "",
-   "lien": "https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21",
-   "pays": "FR",
-   "source": "telegram:promorat",
-   "temperature": 100,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "maison",
-   "nom_produit": "Roborock F25 ACE Pro Aspirateur Laveur",
+   "domaine": "cuisine",
+   "nom_produit": "KRUPS Piccolo XS",
    "plateforme_revente": "leboncoin",
-   "prix_revente_estime": 529.5,
-   "cout_achat": 343.0,
-   "marge_nette": 112.55,
-   "rentabilite": 0.328,
-   "demande": 4.0,
-   "concurrence": 2.5,
-   "consensus": 2,
-   "agents": [
-    "gptoss",
-    "nemotron"
-   ],
-   "mode": "stock",
-   "erreur_prix": false,
-   "raisons": {
-    "nemotron": "Haut de gamme récent (2026), prix 338€ vs 550-599€, forte marge absolue (~100€ nette LBC), encombrant mais valeur élevée justifie l'effort.",
-    "gptoss": "Marge nette d'environ 150 € après frais, forte demande d'aspirateurs robots"
-   },
-   "score": 36.7,
-   "ebay": {
-    "requete": "Roborock F25 ACE Pro Aspirateur Laveur",
-    "neuf": null,
-    "occasion": null,
-    "exemples": [
-     {
-      "titre": "Aspirateur balai laveur - ROBOROCK F25 ACE Pro - Aspiration de 25 000 Pa - 430 t",
-      "prix": "768.16",
-      "url": "https://www.ebay.fr/itm/840078795042?_skw=Roborock+F25+ACE+Pro+Aspirateur+Laveur&hash=itemc398992122:g:T3AAAeSwZHxrBPB9"
-     }
-    ],
-    "neuf_par_pays": {
-     "FR": null,
-     "DE": null,
-     "IT": null,
-     "ES": null
-    },
-    "meilleur_pays": null
-   },
-   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
-   "prix_plancher": {
-    "nom": "Roborock F25 ACE Pro Aspirateur Laveur",
-    "sources": {
-     "achatmoinscher": {
-      "nb_produits": 0,
-      "meilleur": null,
-      "autres": []
-     }
-    }
-   },
-   "mot_cle": "roborock f25 ace pro",
-   "livraison_fr_confirmee": false,
-   "cout_total_confirme": false,
-   "canaux": null,
-   "feu": "rouge",
-   "concurrence_amazon": "inconnue",
-   "marge_verifiee": 0,
-   "passe_verif": false,
-   "verification_blocages": [
-    "prix marchand non confirmé récemment pour cette offre",
-    "même produit exact non confirmé",
-    "livraison en France non confirmée",
-    "coût total livré non confirmé"
-   ],
-   "score_vente": 0.0,
-   "rapport_concurrence": {
-    "requete": "Roborock F25 ACE Pro Aspirateur Laveur",
-    "pays": {
-     "FR": {
-      "nb_annonces": 1,
-      "total_ebay": 1,
-      "niveau": "peu",
-      "moins_cher": {
-       "prix": 768.16,
-       "titre": "Aspirateur balai laveur - ROBOROCK F25 ACE Pro - Aspiration de 25 000 Pa - 430 t",
-       "lien": "https://www.ebay.fr/itm/840078795042?_skw=Roborock+F25+ACE+Pro+Aspirateur+Laveur&hash=itemc398992122:g:T3AAAeSwZHxrBPB9",
-       "vendeur": "market25-fr",
-       "avis_vendeur": 3
-      },
-      "plus_cher": {
-       "prix": 768.16,
-       "titre": "Aspirateur balai laveur - ROBOROCK F25 ACE Pro - Aspiration de 25 000 Pa - 430 t",
-       "lien": "https://www.ebay.fr/itm/840078795042?_skw=Roborock+F25+ACE+Pro+Aspirateur+Laveur&hash=itemc398992122:g:T3AAAeSwZHxrBPB9",
-       "vendeur": "market25-fr",
-       "avis_vendeur": 3
-      }
-     },
-     "DE": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "IT": {
-      "nb_annonces": 0,
-      "total_ebay": 1,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     },
-     "ES": {
-      "nb_annonces": 0,
-      "total_ebay": 0,
-      "niveau": "peu",
-      "moins_cher": null,
-      "plus_cher": null
-     }
-    },
-    "niveau_global": "peu"
-   },
-   "rapport_demande": {
-    "requete": "Roborock F25 ACE Pro Aspirateur Laveur",
-    "temperature_dealabs": 100,
-    "google_trends": {
-     "interet_moyen": 2,
-     "interet_recent": 0,
-     "tendance": "en baisse",
-     "courbe": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      62,
-      0,
-      100,
-      53,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-     ],
-     "recherches_liees": []
-    },
-    "suggestions_google": [
-     "roborock f25 ace pro aspirateur laveur",
-     "roborock f25 ace pro aspirateur laveur sans fil",
-     "roborock f25 ace pro jetfoaming aspirateur laveur sans fil 25kpa",
-     "roborock f25 ace aspirateur laveur",
-     "roborock f25 ace aspirateur laveur sans fil 20 000 pa",
-     "roborock f25 ace aspirateur laveur sans fil",
-     "roborock f25 ace combo aspirateur laveur",
-     "roborock f25 ace combo aspirateur laveur complete",
-     "aspirateur laveur roborock f25 ace pro avec nettoyage jetfoaming",
-     "aspirateur laveur roborock f25 ace pro avis"
-    ]
-   },
-   "bingo": null
-  },
-  {
-   "id": "c9a8659614",
-   "titre": "Chaqueta corta acolchada resistente al agua (beige/negro)",
-   "prix": 39.99,
-   "devise": "EUR",
-   "marchand": "Springfield",
-   "lien": "https://www.chollometro.com/ofertas/chaqueta-corta-acolchada-resistente-al-agua-beigenegro-2086658",
-   "pays": "ES",
-   "source": "chollometro-hot",
-   "temperature": 215,
-   "preuve_prix": null,
-   "preuve_livraison": null,
-   "controle_prix": {
-    "statut": "inconnu",
-    "prix_page": null,
-    "lien": "https://www.chollometro.com/ofertas/chaqueta-corta-acolchada-resistente-al-agua-beigenegro-2086658"
-   },
-   "meme_produit": null,
-   "lien_marchand": null,
-   "domaine": "mode",
-   "nom_produit": "Springfield Veste Acolchée",
-   "plateforme_revente": "vinted",
-   "prix_revente_estime": 80.0,
-   "cout_achat": 44.99,
-   "marge_nette": 21.29,
-   "rentabilite": 0.473,
+   "prix_revente_estime": 70.0,
+   "cout_achat": 33.9,
+   "marge_nette": 23.72,
+   "rentabilite": 0.7,
    "demande": 3.0,
    "concurrence": 3.0,
    "consensus": 1,
@@ -1926,25 +208,529 @@
    "mode": "stock",
    "erreur_prix": false,
    "raisons": {
-    "gptoss": "Veste imperméable à 40€ alors que le même modèle se vend 80‑90€ sur Vinted, marge nette correcte."
+    "gptoss": "Petit appareil, bon prix d'achat"
    },
-   "score": 26.5,
+   "score": 43.7,
    "ebay": {
-    "requete": "Springfield Veste Acolchée",
+    "requete": "KRUPS Piccolo XS",
+    "neuf": {
+     "nb": 39,
+     "min": 12.99,
+     "p25": 36.65,
+     "mediane": 54.78,
+     "max": 386.83
+    },
+    "occasion": {
+     "nb": 3,
+     "min": 18.3,
+     "p25": 18.3,
+     "mediane": 26.7,
+     "max": 51.66
+    },
+    "exemples": [
+     {
+      "titre": "Krups Dolce Gusto Piccolo XS machine à café capsule 15 bar Hot&Cold rouge/noir",
+      "prix": "51.66",
+      "url": "https://www.ebay.fr/itm/336808997467?_skw=KRUPS+Piccolo+XS&hash=item4e6b61725b:g:xycAAeSwHJdqs9sh"
+     },
+     {
+      "titre": "☕ Krups Piccolo XS Blanc Dolce Gusto Corps Machine GUASTO Pour Pièces",
+      "prix": "18.30",
+      "url": "https://www.ebay.fr/itm/267825923429?_skw=KRUPS+Piccolo+XS&hash=item3e5bab4565:g:Vk8AAeSwsFtphOtb&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7nWPWocmLRmzddMBeefooI13h7oiR3b1R6QWzkmG%2Fwl6brZUHQiRjNLbhnaHv8lqKYEC0W4VNvm6oGcC6TPuCJmFc8Wib4r%2FNJUqfTYfyBQdaUoSeQFBo%2BCL42WUj15O6ANH74ZE1uGpWwPM4YENZ7%2FJnuHPP4eaEWOSrUDKI1K9cjSsOorw%2BcCd9K%2FyJ%2FnQ%2FY69IdlLDTqgB9d961289FqN%2FfZhM%2FKMpiCxcS3qbjVxTOWCm21dVizZdlSg1tiVPhuvxt2kHrAz%2BMmcHr%2BzYN3KkRTQCAwqhwehUewofBG6w%3D%3D"
+     },
+     {
+      "titre": "Porte Capsule Krups Dolce Gusto Piccolo XS MS-625000 - Original",
+      "prix": "10.90",
+      "url": "https://www.ebay.fr/itm/256548255992?_skw=KRUPS+Piccolo+XS&hash=item3bbb77b8f8:g:hCkAAeSwBc5q-cGM&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kCH4wigTdHi6Zee8NiPJipcdGsydW1z9jUhFrA20pwIKCtCO5gp6WEUvgHAfMVBUFTOwYJnhLk0A3UngiOe0z2lpBwZMlaJIZ33zVTBG9HWR22gaV6mv9f0FhI4FH0C6W8oOoIbR5QIh%2FmtUV%2Fqr%2BWScIv2o9kgGdRbhu0BQQ253495RHgUjBXjbhtG8VbsL%2BtmV6aLZXqtzIeCRTD6nL5T3Q5yjyzZll9ziUyU8cvzIVuCw9DMXDlNyaplYBpC9qQM2416fospuWeBbwTLUAwGSxcorGbDNvGOtLNpUJf8Q%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 36.65,
+     "DE": 39.0,
+     "IT": 49.99,
+     "ES": 24.84
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "KRUPS Piccolo XS",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 12,
+      "meilleur": {
+       "titre": "KRUPS Réservoir d'eau dolce gusto piccolo xs cafetière, expresso ms-624830",
+       "prix": 7.35,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/reservoir-d-eau-dolce-gusto-piccolo-xs-cafetiere-expresso-ms-624830.html"
+      },
+      "autres": [
+       {
+        "titre": "HOBBYTECH Plaque Injecteur MS622718 AS13200236 pour Cafetière compatible Dolce Gusto Piccolo XS Krups Delonghi",
+        "prix": 11.29,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/plaque-injecteur-ms622718-as13200236-pour-cafetiere-compatible-dolce-gusto-piccolo-xs-krups-delonghi.html"
+       },
+       {
+        "titre": "KRUPS Expresso  Nescafé Dolce Gusto Piccolo XS YY4395FD Noir",
+        "prix": 29.99,
+        "nb_boutiques": 8,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/expresso-krups-nescafe-dolce-gusto-piccolo-xs-yy4395fd-noir.html"
+       },
+       {
+        "titre": "KRUPS  NESCAFÉ Dolce Gusto Piccolo XS noir KP1A3B10",
+        "prix": 39.9,
+        "nb_boutiques": 11,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Cafetiere-machine-a-cafe/krups-nescafe-dolce-gusto-piccolo-xs-noir-kp1a3b10.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 7.35,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Accessoires-cafetiere/reservoir-d-eau-dolce-gusto-piccolo-xs-cafetiere-expresso-ms-624830.html"
+   },
+   "mot_cle": "krups piccolo xs",
+   "demande_google": {
+    "volume_mensuel": 590,
+    "concurrence": "HIGH",
+    "cpc": 0.16,
+    "trois_derniers_mois": [
+     480,
+     590,
+     390
+    ]
+   },
+   "annonces_ebay": 39,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 6.47,
+     "marge_nette": -31.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 6.47,
+      "cout_achat": 33.9,
+      "frais_canal": 0.0,
+      "prelevements": 0.87,
+      "provision": 3.0,
+      "marge_nette": -31.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.923
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 7.35,
+     "marge_nette": -37.2,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 6.66,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -37.2,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.097
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 7.35,
+     "marge_nette": -37.84,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 7.31,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -37.84,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.116
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 7.35,
+     "marge_nette": -38.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.09,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -38.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.14
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 7.35,
+     "marge_nette": -39.05,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.51,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -39.05,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.152
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 7.35,
+     "marge_nette": -39.12,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 7.35,
+      "cout_achat": 33.9,
+      "frais_canal": 8.59,
+      "prelevements": 0.98,
+      "provision": 3.0,
+      "marge_nette": -39.12,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -1.154
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 6.62,
+   "marge_verifiee": -31.17,
+   "rentabilite_verifiee": -0.919,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 18.3,
+    "haut": 26.7,
+    "position_neuf": 1.58
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "KRUPS Piccolo XS",
+    "pays": {
+     "FR": {
+      "nb_annonces": 28,
+      "total_ebay": 34,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 14.99,
+       "titre": "Krups Moulinex réservoir d'eau machine à café Dolce Gusto Piccolo XS KP1A PV1A",
+       "lien": "https://www.ebay.fr/itm/187024358443?_skw=KRUPS+Piccolo+XS&hash=item2b8b853c2b:g:xNAAAeSw2Glnyp0x",
+       "vendeur": "pg.service",
+       "avis_vendeur": 109882
+      },
+      "plus_cher": {
+       "prix": 115.81,
+       "titre": "Krups - Nescafé Dolce Gusto Piccolo XS Machine à XS, Rouge et Noir",
+       "lien": "https://www.ebay.fr/itm/407240726317?_skw=KRUPS+Piccolo+XS&hash=item5ed170572d:g:BfoAAeSwy1FqtKoE",
+       "vendeur": "digitalleyshop8052",
+       "avis_vendeur": 597
+      }
+     },
+     "DE": {
+      "nb_annonces": 49,
+      "total_ebay": 58,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 24.43,
+       "titre": "ORIGINAL KRUPS PICCOLO XS DULCE GUSTO KAFFEE WASSERTANK EDG110 EDG210 UK NEU!",
+       "lien": "https://www.ebay.de/itm/185910352245?_skw=KRUPS+Piccolo+XS&hash=item2b491ed975:g:8CIAAOSwPn5kbMBi",
+       "vendeur": "sussex-spares",
+       "avis_vendeur": 123815
+      },
+      "plus_cher": {
+       "prix": 101.1,
+       "titre": "Krups Dolce gusto piccolo xs rot schwarz",
+       "lien": "https://www.ebay.de/itm/307231773522?_skw=KRUPS+Piccolo+XS&hash=item478870d352:g:~JQAAeSw0-drBOV-",
+       "vendeur": "nexecom",
+       "avis_vendeur": 16281
+      }
+     },
+     "IT": {
+      "nb_annonces": 150,
+      "total_ebay": 172,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 14.09,
+       "titre": "Porta Capsule Per Caffè Krups Nescafe Dolce Gusto Piccolo XS KP1A0140 KP1A0540",
+       "lien": "https://www.ebay.it/itm/147260333635?_skw=KRUPS+Piccolo+XS&hash=item2249665e43:g:HLMAAeSw7LZp-I1d",
+       "vendeur": "kga-supplies",
+       "avis_vendeur": 416292
+      },
+      "plus_cher": {
+       "prix": 105.99,
+       "titre": "Krups Piccolo Xs M.d.c. Kp1a3bp1 Nescafè Dolce Gusto Nera",
+       "lien": "https://www.ebay.it/itm/128200096268?_skw=KRUPS+Piccolo+XS&hash=item1dd9523a0c:g:imMAAeSwlT5rBF-o",
+       "vendeur": "omniamarketshop-86",
+       "avis_vendeur": 76
+      }
+     },
+     "ES": {
+      "nb_annonces": 28,
+      "total_ebay": 70,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 15.01,
+       "titre": "Tanque de agua para DolceGusto Piccolo XS KP1A Krups",
+       "lien": "https://www.ebay.es/itm/274749743542?_skw=KRUPS+Piccolo+XS&hash=item3ff85c61b6:g:kiQAAeSwYspqmpKy",
+       "vendeur": "cre_ricambi",
+       "avis_vendeur": 43261
+      },
+      "plus_cher": {
+       "prix": 90.99,
+       "titre": "Krups Piccolo XS, Máquina de cápsulas multibebida, KP1A3ACL, ultracompacta",
+       "lien": "https://www.ebay.es/itm/317936837176?_skw=KRUPS+Piccolo+XS&hash=item4a06832238:g:OMMAAeSwTi5po2pc",
+       "vendeur": "annonynw0",
+       "avis_vendeur": 4
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "KRUPS Piccolo XS",
+    "temperature_dealabs": 0,
+    "google_trends": {
+     "interet_moyen": 10,
+     "interet_recent": 57,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      59,
+      63,
+      57,
+      58,
+      40,
+      61,
+      46,
+      78,
+      76,
+      80,
+      69,
+      100,
+      59,
+      69,
+      0
+     ],
+     "recherches_liees": [
+      {
+       "query": "krups dolce gusto piccolo xs",
+       "value": 100
+      }
+     ]
+    },
+    "suggestions_google": [
+     "krups piccolo xs",
+     "krups piccolo xs avis",
+     "krups piccolo xs dolce gusto",
+     "krups piccolo xs taupe",
+     "krups piccolo xs capsule",
+     "krups piccolo xs dosette",
+     "krups piccolo xs mode d emploi",
+     "krups piccolo xs vs mini me",
+     "krups piccolo xs kp1a3 capsules coffee maker",
+     "krups piccolo xs intermarché"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "36e63540da",
+   "titre": "Columbia Zapatillas de senderismo M Grove Heights",
+   "prix": 47.99,
+   "devise": "EUR",
+   "marchand": "Privalia",
+   "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 182,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "sport",
+   "nom_produit": "Columbia Grove Heights",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 85.0,
+   "cout_achat": 52.99,
+   "marge_nette": 17.62,
+   "rentabilite": 0.333,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Chaussures de randonnée marque connue, marge nette ~25 € après port payé par l'acheteur sur Vinted.",
+    "gptoss": "Bon écart prix vs prix du marché"
+   },
+   "score": 34.4,
+   "ebay": {
+    "requete": "Columbia Grove Heights",
     "neuf": null,
     "occasion": null,
     "exemples": [],
     "neuf_par_pays": {
      "FR": null,
-     "DE": null,
-     "IT": null,
-     "ES": null
+     "DE": 54.95,
+     "IT": 50.05,
+     "ES": 49.64
     },
-    "meilleur_pays": null
+    "meilleur_pays": "DE"
    },
    "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
    "prix_plancher": {
-    "nom": "Springfield Veste Acolchée",
+    "nom": "Columbia Grove Heights",
     "sources": {
      "achatmoinscher": {
       "nb_produits": 0,
@@ -1953,7 +739,17 @@
      }
     }
    },
-   "mot_cle": "springfield veste acolchée",
+   "mot_cle": "columbia grove heights",
+   "demande_google": {
+    "volume_mensuel": 20,
+    "concurrence": "HIGH",
+    "cpc": 0.21,
+    "trois_derniers_mois": [
+     50,
+     50,
+     40
+    ]
+   },
    "livraison_fr_confirmee": false,
    "cout_total_confirme": false,
    "canaux": null,
@@ -1969,7 +765,186 @@
    ],
    "score_vente": 0.0,
    "rapport_concurrence": {
-    "requete": "Springfield Veste Acolchée",
+    "requete": "Columbia Grove Heights",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 3,
+      "total_ebay": 3,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 54.95,
+       "titre": "Columbia Grove Heights Low OD W Damen Wanderschuh Trail Running (YL1041-411) NEU",
+       "lien": "https://www.ebay.de/itm/235019914717?_skw=Columbia+Grove+Heights&hash=item36b8474ddd:g:0UIAAOSwwNligrlO",
+       "vendeur": "dealbuddys",
+       "avis_vendeur": 3314
+      },
+      "plus_cher": {
+       "prix": 86.65,
+       "titre": "Columbia M Grove Heights grau wasserdicht Wandern Turnschuhe Schuhe UK Größe 13",
+       "lien": "https://www.ebay.de/itm/327294791554?_skw=Columbia+Grove+Heights&hash=item4c344a2f82:g:HRMAAeSwRT1qceNY",
+       "vendeur": "yorkshireflipper",
+       "avis_vendeur": 3022
+      }
+     },
+     "IT": {
+      "nb_annonces": 8,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 46.71,
+       "titre": "Scarpa da trail Columbia donna Grove Heights Low OutDry YL1041-033 nuova con scatola",
+       "lien": "https://www.ebay.it/itm/125016780864?_skw=Columbia+Grove+Heights&hash=item1d1b94b040:g:iYIAAOSwxSphnTSq",
+       "vendeur": "avasoutlet2010",
+       "avis_vendeur": 16300
+      },
+      "plus_cher": {
+       "prix": 100.1,
+       "titre": "Stivali da trekking Columbia M Grove Heights Mid da uomo 9,5 grigio ardesia/arancione scuro NUOVI",
+       "lien": "https://www.ebay.it/itm/366363333394?_skw=Columbia+Grove+Heights&hash=item554cf4d312:g:QYAAAeSwtK1p6UGC",
+       "vendeur": "nickelsndiamonds1013",
+       "avis_vendeur": 17466
+      }
+     },
+     "ES": {
+      "nb_annonces": 8,
+      "total_ebay": 8,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 46.33,
+       "titre": "Zapato de trail Columbia Grove Heights Low OutDry para mujer YL1041-033 NUEVO EN CAJA",
+       "lien": "https://www.ebay.es/itm/125016780864?_skw=Columbia+Grove+Heights&hash=item1d1b94b040:g:iYIAAOSwxSphnTSq",
+       "vendeur": "avasoutlet2010",
+       "avis_vendeur": 16300
+      },
+      "plus_cher": {
+       "prix": 99.28,
+       "titre": "Columbia M Grove Heights Mid Para hombres 9.5 Botas de Senderismo Gris Pizarra/Naranja Oscuro NUEVAS",
+       "lien": "https://www.ebay.es/itm/366363333394?_skw=Columbia+Grove+Heights&hash=item554cf4d312:g:QYAAAeSwtK1p6UGC",
+       "vendeur": "nickelsndiamonds1013",
+       "avis_vendeur": 17466
+      }
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Columbia Grove Heights",
+    "temperature_dealabs": 182,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "columbia grove heights",
+     "columbia grove heights venture",
+     "columbia grove heights x2",
+     "columbia grove heights x2 fs mid outdry",
+     "columbia grove heights outdry",
+     "columbia grove heights x2 low outdry",
+     "columbia grove heights x2 mid",
+     "columbia grove heights fs low",
+     "columbia grove heights mid outdry",
+     "columbia grove heights low outdry"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "prosp-f807d8d9a4",
+   "titre": "Tokyo Laundry Cardigan adulte homme noir",
+   "prix": 19.97,
+   "devise": "EUR",
+   "marchand": "E Leclerc",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "pays": "FR",
+   "source": "prospectus",
+   "temperature": 0,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.bonial.fr/Enseignes/E-Leclerc"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Tokyo Laundry Cardigan",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 24.97,
+   "marge_nette": 11.0,
+   "rentabilite": 0.441,
+   "demande": 2.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Vêtement simple, marge modeste"
+   },
+   "score": 16.5,
+   "ebay": {
+    "requete": "Tokyo Laundry Cardigan",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 27.2,
+     "IT": 27.88,
+     "ES": 27.65
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Tokyo Laundry Cardigan",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "tokyo laundry cardigan",
+   "demande_google": {
+    "volume_mensuel": 10,
+    "concurrence": "HIGH",
+    "cpc": null,
+    "trois_derniers_mois": [
+     10,
+     10,
+     0
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Tokyo Laundry Cardigan",
     "pays": {
      "FR": {
       "nb_annonces": 0,
@@ -1980,21 +955,21 @@
      },
      "DE": {
       "nb_annonces": 0,
-      "total_ebay": 1,
+      "total_ebay": 9,
       "niveau": "peu",
       "moins_cher": null,
       "plus_cher": null
      },
      "IT": {
       "nb_annonces": 0,
-      "total_ebay": 3,
+      "total_ebay": 12,
       "niveau": "peu",
       "moins_cher": null,
       "plus_cher": null
      },
      "ES": {
       "nb_annonces": 0,
-      "total_ebay": 3,
+      "total_ebay": 12,
       "niveau": "peu",
       "moins_cher": null,
       "plus_cher": null
@@ -2003,13 +978,22 @@
     "niveau_global": "peu"
    },
    "rapport_demande": {
-    "requete": "Springfield Veste Acolchée",
-    "temperature_dealabs": 215,
+    "requete": "Tokyo Laundry Cardigan",
+    "temperature_dealabs": 0,
     "google_trends": {
      "interet_moyen": 0,
      "tendance": "aucune recherche mesurable"
     },
-    "suggestions_google": []
+    "suggestions_google": [
+     "tokyo laundry cardigan",
+     "tokyo laundry gilet",
+     "tokyo laundry gilet mens",
+     "tokyo laundry gilet kids",
+     "tokyo laundry mens cardigan",
+     "tokyo laundry shawl cardigan",
+     "tokyo laundry gilet women's",
+     "tokyo laundry christmas cardigan"
+    ]
    },
    "bingo": null
   }
@@ -2024,1378 +1008,292 @@
   ]
  },
  "verification_ebay": {
-  "faits": 9,
+  "faits": 3,
   "erreurs": []
  },
- "ecartes_sous_seuil": 42,
+ "ecartes_sous_seuil": 9,
  "annonces_analysees": [
   {
-   "id": "cad6f293dd",
-   "titre": "Louis Delaunay Brut Champagne 75cl - Clubcard Price (Buy 6 For £45)",
-   "temperature": 347,
-   "categorie": "Groceries",
-   "marchand": "Tesco",
-   "prix": 10.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/louis-delaunay-brut-champagne-75cl-clubcard-price-buy-6-for-ps45-5043952",
-   "date": "Tue, 24 Nov 2026 00:10:02 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£10 - Tesco This must be one of the cheapest Champagnes on sale this Christmas. Tesco's have reduced it from £16.00 to £10.00 Clubcard Price. When included in a pu..."
-  },
-  {
-   "id": "1de08f9e51",
-   "titre": "Guitarra Eléctrica Squier by Fender Debut Stratocaster HSS",
-   "temperature": 326,
-   "categorie": "Cine, libros, cultura y ocio",
-   "marchand": "Amazon",
-   "prix": 119.99,
+   "id": "36e63540da",
+   "titre": "Columbia Zapatillas de senderismo M Grove Heights",
+   "temperature": 182,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Privalia",
+   "prix": 47.99,
    "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/guitarra-electrica-squier-by-fender-debut-stratocaster-hss-2087004",
-   "date": "Tue, 24 Nov 2026 01:36:08 +0100",
+   "lien": "https://www.chollometro.com/ofertas/columbia-zapatillas-de-senderismo-m-grove-heights-2086507",
+   "date": "Tue, 24 Nov 2026 04:28:57 +0100",
    "source": "chollometro-hot",
    "pays": "ES",
-   "description": "119,99€ - Amazon La guitarra eléctrica Squier by Fender Debut Stratocaster HSS está diseñada especialmente para principiantes con un cuerpo ligero y mástil fácil de tocar. Equip..."
+   "description": "47,99€ - Privalia Zapatillas de senderismo \"M Grove Heights™\" Parte superior de malla/cuero impermeable. Construcción de botín con membrana Omni-Tech™ im..."
   },
   {
-   "id": "9aa5c500a2",
-   "titre": "Nike 24.7 PerfectStretch Pantalon chino slim Dri-FIT pour homme",
-   "temperature": 320,
-   "categorie": "Mode / sneakers",
-   "marchand": "Nike",
-   "prix": 68.99,
-   "devise": "EUR",
-   "lien": "https://www.nike.com/fr/t/pantalon-chino-slim-dri-fit-nike-24-7-perfectstretch-pour-homme-QmzHk9MN/HQ6918-325",
-   "date": "",
-   "source": "nike-promos",
-   "pays": "FR",
-   "description": "prix initial 114.99 €, -40 %. Nike HQ6918-325 ; couleur Cargo Khaki/Sequoia"
-  },
-  {
-   "id": "9cac716e77",
-   "titre": "2N - Cadre pour installation murale double Noir 9155012B",
-   "temperature": 288,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 160.31,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00582835.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 249.99 €, -36 %. 2N - Cadre pour installation murale double Noir 9155012B"
-  },
-  {
-   "id": "f21d139f81",
-   "titre": "Juego ¿Quién es quién? edición Pokémon",
-   "temperature": 273,
-   "categorie": "Juguetes, familia e hijos",
-   "marchand": "Amazon",
-   "prix": 18.49,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/juego-quien-es-quien-edicion-pokemon-2086951",
-   "date": "Tue, 24 Nov 2026 01:04:20 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "18,49€ - Amazon Incluye 2 marcos, 2 hojas de personajes Pokémon por ambos lados e instrucciones El Juego ¿Quién es quién? edición Pokémon está disponib..."
-  },
-  {
-   "id": "c5c0bfdf7e",
-   "titre": "2N - Cadre d'encastrement 3 modules du Verso IP – 9155016",
-   "temperature": 272,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 99.01,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00575459.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 149.99 €, -34 %. 2N - Cadre d'encastrement 3 modules du Verso IP – 9155016"
-  },
-  {
-   "id": "85dc072300",
-   "titre": "Zapatillas Hombre Reebok Relora (Tallas 38.5 a 45.5)",
-   "temperature": 269,
-   "categorie": "Moda y accesorios",
-   "marchand": "Reebok",
-   "prix": 26.0,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/zapatillas-hombre-reebok-relora-tallas-385-a-455-2086824",
-   "date": "Tue, 24 Nov 2026 00:28:26 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "26€ - Reebok Tallas disponibles La Relora está pensada para quienes buscan una zapatilla igual de cómoda para una carrera corta que para moverse durante el día, ..."
-  },
-  {
-   "id": "f84dcbee19",
-   "titre": "Kidde K5CO Carbon Monoxide Detector Alarm with 10-Year Sensor Life - Sold by Safelincs / FBA",
-   "temperature": 268,
-   "categorie": "Garden & Do It Yourself",
-   "marchand": "Amazon",
-   "prix": 10.95,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/kidde-k5co-carbon-monoxide-detector-alarm-with-10-year-sensor-life-sold-by-safelincs-fba-5038204",
-   "date": "Tue, 24 Nov 2026 00:30:06 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£10.95 - Amazon Reduced to only £10.95 It was £12.99 3 days ago with 300+ heat Kidde K5CO Carbon Monoxide Detector Alarm with 10-Year Sensor Life Battery Powere..."
-  },
-  {
-   "id": "54789121b1",
-   "titre": "Führerscheinerweiterug B196 Motorrad fahren mit Autoführerschein Dortmund, Marl, Recklinghausen, Herten",
-   "temperature": 262,
-   "categorie": "Auto & Motorrad",
-   "marchand": null,
-   "prix": 499.0,
-   "devise": "EUR",
-   "lien": "https://www.mydealz.de/deals/fuhrerscheinerweiterug-b196-motorrad-fahren-mit-autofuhrerschein-dortmund-marl-recklinghausen-herten-2880086",
-   "date": "Tue, 24 Nov 2026 00:53:44 +0100",
-   "source": "mydealz-hot",
-   "pays": "DE",
-   "description": "499€ Mein erster Deal, es kann etwas fehlen. Gerne nachfragen. Da ich den ÖPNV nicht mehr ertragen kann und mir ein Auto nicht leisten kann wollte ich ..."
-  },
-  {
-   "id": "680906cff1",
-   "titre": "H&S Menthol Fresh Champú Anticaspa Anti-picor, Efecto Refrescante, 2x1L",
-   "temperature": 249,
-   "categorie": "Salud y belleza",
-   "marchand": "Amazon",
-   "prix": 13.24,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/hs-menthol-fresh-champu-anticaspa-anti-picor-efecto-refrescante-2x1l-2061487",
-   "date": "Tue, 24 Nov 2026 00:30:04 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "13,24€ - Amazon Precio con Compra Recurrente Hasta un 100 % de protección anticaspa*: Elimina la caspa d..."
-  },
-  {
-   "id": "ee96c908e5",
-   "titre": "Audibax Neo STM-20 - Soportes para monitores de estudio y altavoces",
-   "temperature": 246,
-   "categorie": "Electrónica",
-   "marchand": "Amazon",
-   "prix": 25.75,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/audibax-neo-stm-20-soportes-para-monitores-de-estudio-y-altavoces-2086633",
-   "date": "Tue, 24 Nov 2026 00:52:52 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "25,75€ - Amazon Mínimo histórico para estos soportes para monitor de estudio, un auténtico mega chollaco del cuál me doy el lujazo de compartiros. DETALLES: <br /..."
-  },
-  {
-   "id": "dfafe137cc",
-   "titre": "H&S DermaXPro Calmante Champú Anticaspa para Picor Cuero Cabelludo",
-   "temperature": 245,
-   "categorie": "Salud y belleza",
+   "id": "59898efbb3",
+   "titre": "Camera eufy e220 2.2k, 360. (Reconditionné excellent état - vendeur tiers)",
+   "temperature": 102,
+   "categorie": "High-Tech",
    "marchand": "Amazon",
    "prix": 19.99,
    "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/hs-dermaxpro-calmante-champu-anticaspa-para-picor-cuero-cabelludo-2045470",
-   "date": "Tue, 24 Nov 2026 00:30:23 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "19,99€ - Amazon H&S DermaXPro Calmante Champú Anticaspa para Picor Cuero Cabelludo CHAMPÚ CALMANTE ANTICASPA. Alivia al instante el cuero cabelludo seco y ..."
-  },
-  {
-   "id": "3e05d9e3fc",
-   "titre": "2N - Cadre pour l'installation sur la surface 2 modules 9155022B",
-   "temperature": 240,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 140.02,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00582940.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 199.99 €, -30 %. 2N - Cadre pour l'installation sur la surface 2 modules 9155022B"
-  },
-  {
-   "id": "7fb55719df",
-   "titre": "3M Lot de 500 ScotchPad languettes de suspension 51x51 mm Trou Trapèze",
-   "temperature": 240,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 105.31,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00508934.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 149.99 €, -30 %. Machine/Etiquette de prix"
-  },
-  {
-   "id": "7322578888",
-   "titre": "H&S Citrus Fresh Champú Anticaspa para Pelo Graso Aroma a Cítricos, 2x1L",
-   "temperature": 238,
-   "categorie": "Salud y belleza",
-   "marchand": "Amazon",
-   "prix": 13.97,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/hs-citrus-fresh-champu-anticaspa-para-pelo-graso-aroma-a-citricos-2x1l-2064159",
-   "date": "Tue, 24 Nov 2026 00:30:01 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "13,97€ - Amazon EFICAZ PROTECCIÓN Y PREVENCIÓN ANTICASPA. Hasta 100% de protección anticaspa*, clínicamente probado. *caspa visible, con uso regular Ú..."
-  },
-  {
-   "id": "6d8d9f118a",
-   "titre": "Reebok Zapatillas de Baloncesto Angel Reese 1",
-   "temperature": 230,
-   "categorie": "Moda y accesorios",
-   "marchand": "Reebok",
-   "prix": 42.0,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/reebok-zapatillas-de-baloncesto-angel-reese-1-2086743",
-   "date": "Tue, 24 Nov 2026 01:20:17 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "42€ - Reebok Zapatillas de baloncesto de la colección Angel Reese: rendimiento y estilo Las zapatillas Angel Reese 1 son una audaz fusión de innovación en rendimiento y dise..."
-  },
-  {
-   "id": "df3f2ff130",
-   "titre": "Zegarek męski Citizen CA4624-56X (zakup w aplikacji Ceneo)(uzupełnienie puli z kodami o 10.00)",
-   "temperature": 230,
-   "categorie": "Moda",
-   "marchand": "Ceneo",
-   "prix": 173.29,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/zegarek-meski-citizen-ca4624-56xzakup-w-aplikacji-ceneo-1397712",
-   "date": "Tue, 24 Nov 2026 00:39:28 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "737,40zł - Ceneo Zakup w aplikacji Ceneo z kuponem 30black Ceneo uzupełnia pulę codziennie o godz 10.00 Citizen CA4624-56X Eco-Drive Modern Chrono to propozycja ..."
-  },
-  {
-   "id": "bc113e3544",
-   "titre": "Smartfon realme GT 7T 12GB / 512GB 5G Racing Yellow (start 23 listopada 19:00)",
-   "temperature": 226,
-   "categorie": "Elektronika",
-   "marchand": "Allegro",
-   "prix": 375.76,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/smartfon-realme-gt-7t-12gb-512gb-5g-racing-yellow-start-23-listopada-1900-1397634",
-   "date": "Tue, 24 Nov 2026 00:49:46 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "1 599zł - Allegro Start oferty 23 listopada 19:00 Darmowa dostawa ze Smartem Specyfikacja: Ekran: 6,8\" AMOLED 120Hz (..."
-  },
-  {
-   "id": "35e96a2586",
-   "titre": "Reebok Energen Tech Plus 3 Zapatillas de running para mujer",
-   "temperature": 225,
-   "categorie": "Deportes y aire libre",
-   "marchand": "Reebok",
-   "prix": 26.0,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/reebok-energen-tech-plus-3-zapatillas-de-running-para-mujer-2086385",
-   "date": "Tue, 24 Nov 2026 00:52:14 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "26€ - Reebok Las Energen Tech Plus 3 están diseñadas para priorizar la comodidad durante las carreras diarias, con una construcción centrada en una amortiguación conforta..."
-  },
-  {
-   "id": "443535e49c",
-   "titre": "H&S Apple Fresh Champú Anticaspa, Todo Tipo de Pelo y Cuero Cabelludo, 2x1L(C.R.)",
-   "temperature": 225,
-   "categorie": "Salud y belleza",
-   "marchand": "Amazon",
-   "prix": 14.72,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/hs-apple-fresh-champu-anticaspa-todo-tipo-de-pelo-y-cuero-cabelludo-2x1lcr-2068783",
-   "date": "Tue, 24 Nov 2026 00:30:00 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "14,72€ - Amazon EFICAZ PROTECCIÓN Y PREVENCIÓN ANTICASPA. Hasta 100% de protección anticaspa*, clínicamente probado. *caspa visible, con uso regular' ÚSALO A DIARIO PARA M..."
-  },
-  {
-   "id": "c9a8659614",
-   "titre": "Chaqueta corta acolchada resistente al agua (beige/negro)",
-   "temperature": 215,
-   "categorie": "Moda y accesorios",
-   "marchand": "Springfield",
-   "prix": 39.99,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/chaqueta-corta-acolchada-resistente-al-agua-beigenegro-2086658",
-   "date": "Tue, 24 Nov 2026 00:21:09 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "39,99€ - Springfield Chaqueta corta acolchada repelente al agua con capucha. Ajustada. Cuello subido. Capucha ajustable.Cierre frontal con cremallera. Bolsillos laterales con cremal..."
-  },
-  {
-   "id": "b9c919dcca",
-   "titre": "Lodówka Amica FY5339.6GDFB Pełny No Frost 181,7cm, dwudrzwiowa",
-   "temperature": 213,
-   "categorie": "Dom i mieszkanie",
-   "marchand": "RTV Euro AGD",
-   "prix": 239.63,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/lodowka-amica-fy53396gdfb-pelny-no-frost-1817cm-dwudrzwiowa-1398628",
-   "date": "Tue, 24 Nov 2026 01:47:46 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "1 019,70zł - RTV Euro AGD Amica FY5339.6GDFB za 1019,70 zł Kod: RBF24301120262C Standardowo ~3000 zł Darmowa dostawa ..."
-  },
-  {
-   "id": "7e60461725",
-   "titre": "Wyspy Kanaryjskie, Teneryfa | 4* Hotel Blue Sea Puerto Resort | 03.12-10.12, all inclusive, wylot z Okęcia/Katowic/Poznania",
-   "temperature": 212,
-   "categorie": "Podróże",
-   "marchand": "Itaka",
-   "prix": 523.81,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/wyspy-kanaryjskie-teneryfa-4-hotel-blue-sea-puerto-resort-0312-1012-all-inclusive-wylot-z-okeciakatowicpoznania-1398331",
-   "date": "Tue, 24 Nov 2026 03:16:41 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "2 229zł - Itaka Wyloty: Katowice godz. 12:00 Poznań godz. 10:30 Warszawa-Okęcie godz. 08:30 Przyjemny, bardzo popularny wśród naszych Klientów, p..."
-  },
-  {
-   "id": "d292e32f79",
-   "titre": "Słuchawki bezprzewodowe Panasonic RB-HX330BDEK (ANC, Bluetooth 5.3, 55 h, 40 mm) @ MediaMarkt",
-   "temperature": 211,
-   "categorie": "Elektronika",
-   "marchand": "MediaMarkt",
-   "prix": 16.21,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/sluchawki-bezprzewodowe-panasonic-rb-hx330bdek-anc-bluetooth-53-55-h-40-mm-at-mediamarkt-1398150",
-   "date": "Tue, 24 Nov 2026 00:43:21 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "69zł - MediaMarkt Słuchawki bezprzewodowe Panasonic RB-HX330BDEK w MediaMarkt za 69 zł. To wokółuszne słuchawki z aktywną redukcją szumów, Bluetooth 5.3 i czasem pracy..."
-  },
-  {
-   "id": "8cfd984145",
-   "titre": "Vanish Oxi Action - Quitamanchas especial manchas de Mascota en alfombras y tapicerías, spray, sin lejía - Pack de 6 x 750 ml",
-   "temperature": 209,
-   "categorie": "Supermercado y alimentación",
-   "marchand": "Amazon",
-   "prix": 10.8,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/2-x-vanish-oxi-action-quitamanchas-especial-manchas-de-mascota-en-alfombras-y-tapicerias-spray-sin-lejia-pack-de-3-x-750-ml-2084462",
-   "date": "Tue, 24 Nov 2026 00:27:47 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "10,80€ - Amazon Quitamanchas sin lejía en formato spray que elimina las manchas ocasionadas por las mascotas en alfombras y tapicerías Gracias a su fórmula Oxi Action, eli..."
-  },
-  {
-   "id": "e522da0f53",
-   "titre": "2N - Cadre pour installation encastrée 1 module Noir - 9155011B",
-   "temperature": 208,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 148.3,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00582928.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 199.99 €, -26 %. 2N - Cadre pour installation encastrée 1 module Noir - 9155011B"
-  },
-  {
-   "id": "0d2c6932f2",
-   "titre": "Słuchawki Apple EarPods z wtyczką słuchawkową 3,5 mm",
-   "temperature": 207,
-   "categorie": "Elektronika",
-   "marchand": "Amazon.pl",
-   "prix": 10.69,
-   "devise": "EUR",
-   "lien": "https://www.pepper.pl/promocje/apple-earpods-z-wtyczka-sluchawkowa-35-mm-1398551",
-   "date": "Tue, 24 Nov 2026 02:20:16 +0100",
-   "source": "pepper-pl-hot",
-   "pays": "PL",
-   "description": "45,49zł - Amazon.pl Wysyła i sprzedaje Amazon. Darmowa dostawa z Amazon Prime. W odróżnieniu od tradycyjnych okrągłych słuchawek EarPods precyzyjnie odzwie..."
-  },
-  {
-   "id": "6960e2a01a",
-   "titre": "Zapatillas Mujer Skechers Max Cushioning Zirrus Slip-ins (Calce Sin Manos, ULTRA GO)",
-   "temperature": 200,
-   "categorie": "Moda y accesorios",
-   "marchand": "Amazon",
-   "prix": 54.99,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/zapatillas-mujer-skechers-max-cushioning-zirrus-slip-ins-calce-sin-manos-ultra-go-2086571",
-   "date": "Tue, 24 Nov 2026 02:54:56 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "54,99€ - Amazon ☁️ Zapatillas deportivas para mujer Skechers Max Cushioning Zirrus Slip-ins, un modelo diseñado para ofrecer la máxima comodidad al caminar gracias a su plataf..."
-  },
-  {
-   "id": "e56add7d77",
-   "titre": "Nature's Variety No Grain Pienso para Gatos Esterilizados con Pavo - 7kg",
-   "temperature": 194,
-   "categorie": "Supermercado y alimentación",
-   "marchand": "Amazon",
-   "prix": 38.24,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/natures-variety-no-grain-pienso-para-gatos-esterilizados-con-pavo-7kg-2084293",
-   "date": "Tue, 24 Nov 2026 01:38:57 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "38,24€ - Amazon Aplicar compra recurrente + check de 6,93€ Comida completa y equilibrada para gatos adultos esterilizados Sin cereales: con carb..."
-  },
-  {
-   "id": "8be4a3c81c",
-   "titre": "Sony WH-CH530 Auriculares inalambricos",
-   "temperature": 193,
-   "categorie": "Electrónica",
-   "marchand": "Amazon",
-   "prix": 42.5,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/sony-wh-ch530-auriculares-inalambricos-2087046",
-   "date": "Tue, 24 Nov 2026 03:04:05 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "42,50€ - Amazon Presentamos los Sony WH-CH530 Auriculares Inalámbricos Bluetooth Disfruta de un sonido rico y equilibrado con la mejora de audio DSEE, hasta 55 horas de batería..."
-  },
-  {
-   "id": "d228e645cc",
-   "titre": "Guatafac - Juegos de Mesa Adultos - Fiestas y Previas",
-   "temperature": 192,
-   "categorie": "Juguetes, familia e hijos",
-   "marchand": "Amazon",
-   "prix": 17.09,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/guatafac-juegos-de-mesa-adultos-fiestas-y-previas-2086883",
-   "date": "Tue, 24 Nov 2026 03:21:39 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "17,09€ - Amazon ¡8 SEGUNDOS DE LOCURA! Juego de mesa divertido y sin filtros. Responde rápido a preguntas absurdas y locas antes de que se acabe el tiempo. ¡Risas ..."
-  },
-  {
-   "id": "f788653cc5",
-   "titre": "Final Fantasy VII Remake Edition PlayStation 5",
-   "temperature": 184,
-   "categorie": "Gaming",
-   "marchand": "El Corte Inglés",
-   "prix": 19.9,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/final-fantasy-vii-remake-edition-playstation-5-2085063",
-   "date": "Tue, 24 Nov 2026 02:07:31 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "19,90€ - El Corte Inglés Revive uno de los RPG más emblemáticos de la historia con FINAL FANTASY VII REMAKE INTERGRADE, una versión mejorada y ampliada de la aventura de Cloud Strife..."
-  },
-  {
-   "id": "2c2006529e",
-   "titre": "2N - Lecteur de carte RFID externe avec connexion USB",
-   "temperature": 184,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 421.15,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00582971.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 549.99 €, -23 %. 2N - Lecteur de carte RFID externe avec connexion USB"
-  },
-  {
-   "id": "f3cac50efa",
-   "titre": "Assassin´s Creed Black Flag Resynded PlayStation 5 (Recogida Tienda Gratis)",
-   "temperature": 182,
-   "categorie": "Gaming",
-   "marchand": "El Corte Inglés",
-   "prix": 39.9,
-   "devise": "EUR",
-   "lien": "https://www.chollometro.com/ofertas/assassins-creed-black-flag-resynded-playstation-5-recogida-tienda-gratis-2086596",
-   "date": "Tue, 24 Nov 2026 00:58:12 +0100",
-   "source": "chollometro-hot",
-   "pays": "ES",
-   "description": "39,90€ - El Corte Inglés Assassin´s Creed Black Flag Resynded PlayStation 5 Assassin's Creed Black Flag Resynded es un videojuego de acción de mundo abierto para PlayStation ..."
-  },
-  {
-   "id": "385f77a9aa",
-   "titre": "2N - Cadre d'encastrement 1 module du Verso IP – 9155011",
-   "temperature": 176,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 156.98,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00575456.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 199.99 €, -22 %. 2N - Cadre d'encastrement 1 module du Verso IP – 9155011"
-  },
-  {
-   "id": "9cd94f2555",
-   "titre": "2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014",
-   "temperature": 168,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 78.67,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00575451.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 99.99 €, -21 %. 2N - Boîte d'installation encastré pour Helios Verso IP  – 9155014"
-  },
-  {
-   "id": "604663f274",
-   "titre": "LEGO City 60498 Traktor",
-   "temperature": 160,
-   "categorie": "Family & Kids",
-   "marchand": "Proshop",
-   "prix": 11.89,
-   "devise": "EUR",
-   "lien": "https://www.mydealz.de/deals/lego-city-60498-traktor-2880039",
-   "date": "Tue, 24 Nov 2026 00:27:37 +0100",
-   "source": "mydealz-hot",
-   "pays": "DE",
-   "description": "11,89€ - Proshop Das LEGO® City Traktor-Bauset bringt Farm-Spielspaß zum Leben – mit einem detailreichen türkisfarbenen Traktor, 4 großen Gummireifen und einer Bauern-Minifigur ..."
-  },
-  {
-   "id": "6be85810fb",
-   "titre": "Nike 24.7 PerfectStretch Pantalon chino slim Dri-FIT pour homme",
-   "temperature": 160,
-   "categorie": "Mode / sneakers",
-   "marchand": "Nike",
-   "prix": 95.99,
-   "devise": "EUR",
-   "lien": "https://www.nike.com/fr/t/pantalon-chino-slim-dri-fit-nike-24-7-perfectstretch-pour-homme-QmzHk9MN/HQ6918-010",
-   "date": "",
-   "source": "nike-promos",
-   "pays": "FR",
-   "description": "prix initial 119.99 €, -20 %. Nike HQ6918-010 ; couleur Noir/Noir/Dark Smoke Grey"
-  },
-  {
-   "id": "7f64ee2dec",
-   "titre": "DAZ Cherry and Blossom 120 Washes",
-   "temperature": 159,
-   "categorie": "Groceries",
-   "marchand": "FarmFoods",
-   "prix": 9.99,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/daz-cherry-and-blossom-120-washes-5044309",
-   "date": "Tue, 24 Nov 2026 00:10:01 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£9.99 - FarmFoods DAZ BLOSSOM CHEERY 120 WASHES Daz Powder Laundry Detergent Whites & Colours"
-  },
-  {
-   "id": "716b2860c1",
-   "titre": "Manette sans fil Sony DualSense - Midnight Black, PS5 et PC",
-   "temperature": 148,
-   "categorie": "Consoles & Jeux vidéo",
-   "marchand": "Cdiscount",
-   "prix": 54.99,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/manette-sans-fil-sony-dualsense-midnight-black-ps5-et-pc-3467062",
-   "date": "Tue, 24 Nov 2026 01:10:37 +0100",
+   "lien": "https://www.dealabs.com/bons-plans/camera-eufy-e220-22k-360-reconditionne-excellent-3465625",
+   "date": "Tue, 24 Nov 2026 04:39:48 +0100",
    "source": "dealabs-tendance",
    "pays": "FR",
-   "description": "54,99€ - Cdiscount Découvrez une expérience de jeu plus complète et immersive avec la manette de jeu DualSense™ pour PS5 et PC. Profitez d'un retour haptique immersif, de gâche..."
+   "description": "19,99€ - Amazon Camera eufy intérieure e220 2.2k Reconditionné, excellent état. À propos de ce produit / Commentaires ..."
   },
   {
-   "id": "60a0358631",
-   "titre": "[Amazon Prime] Braun Series 3 Elektrorasierer Scherkopf, 32B, Kompatibel mit Braun Series 3 und Series 3+ ProSkin Rasierern",
-   "temperature": 131,
-   "categorie": "Beauty & Gesundheit",
-   "marchand": "Amazon",
-   "prix": 18.71,
-   "devise": "EUR",
-   "lien": "https://www.mydealz.de/deals/amazon-prime-braun-series-3-elektrorasierer-scherkopf-32b-kompatibel-mit-braun-series-3-und-series-3-proskin-rasierern-2880032",
-   "date": "Tue, 24 Nov 2026 00:39:47 +0100",
-   "source": "mydealz-hot",
-   "pays": "DE",
-   "description": "18,71€ - Amazon Moin. Bei Amazon bekommt ihr aktuell den Braun Series 3 Elektrorasierer Ersatz-Scherkopf 32B für 18,71€ (inkl..."
-  },
-  {
-   "id": "0ec577a128",
-   "titre": "DIOR Sauvage Eau De Parfum 100ml",
-   "temperature": 128,
-   "categorie": "Beauty & Gezondheid",
-   "marchand": "parfumdreams",
-   "prix": 82.3,
-   "devise": "EUR",
-   "lien": "https://nl.pepper.com/aanbiedingen/dior-sauvage-eau-de-parfum-100ml-428950",
-   "date": "Tue, 24 Nov 2026 01:50:58 +0100",
-   "source": "pepper-nl-hot",
-   "pays": "NL",
-   "description": "€82,30 - parfumdreams DIOR Sauvage EDP 100ml voor €82 absoluut de laagste prijs ooit. Nog niet eerder zo laag geweest. Ja, ik weet het. Het is een hele bekende geur maar d..."
-  },
-  {
-   "id": "bbb76e5432",
-   "titre": "Ecran PC 25\" Samsung Odyssey G4 G40EH - FHD, 300Hz",
-   "temperature": 127,
-   "categorie": "High-Tech",
-   "marchand": "Amazon",
-   "prix": 99.99,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/samsung-odyssey-g4-g40eh-ecran-gaming-plat-25-fhd-300hz-3466532",
-   "date": "Tue, 24 Nov 2026 02:21:47 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "99,99€ - Amazon Belle promo sur cet écran, petite astuce, vous pouvez ajouter un produit avec et profiter de 15 euros en bon d'achat Amazon en janvier (Prime seulement). <..."
-  },
-  {
-   "id": "a6eefde83f",
-   "titre": "Kingdom Come : Deliverance II Day One Edition sur Xbox Series (Sélection de villes)",
-   "temperature": 125,
-   "categorie": "Consoles & Jeux vidéo",
-   "marchand": "E.Leclerc",
-   "prix": 16.8,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/kingdom-come-deliverance-ii-day-one-edition-sur-xbox-series-3466588",
-   "date": "Tue, 24 Nov 2026 01:02:45 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "16,80€ - E.Leclerc Test de rpgjeuxvideo -> htt..."
-  },
-  {
-   "id": "1b7709f7b0",
-   "titre": "Blu-ray L'Arme Fatale - l'Intégrale 4 Films",
-   "temperature": 124,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Amazon",
-   "prix": 15.0,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/larme-fatale-lintegrale-4-films-blu-ray-3466917",
-   "date": "Tue, 24 Nov 2026 01:00:50 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "15€ - Amazon Très bon prix !"
-  },
-  {
-   "id": "86e7d824a3",
-   "titre": "Scie sauteuse Bosch Pro - GST 8000 E",
-   "temperature": 124,
-   "categorie": "Jardin & Bricolage",
-   "marchand": "Amazon",
-   "prix": 77.9,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/scie-sauteuse-bosch-pro-gst-8000-e-3465934",
-   "date": "Tue, 24 Nov 2026 00:51:05 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "77,90€ - Amazon Alimentation : Filaire (230 V) Puissance absorbée : 710 W Cadence de coupe à vide : 500 – 3 100 courses/min (variateur de vitesse) Hauteur de c..."
-  },
-  {
-   "id": "046744d4d4",
-   "titre": "Lampe de Poche Miniature Olight Oclip Pro EDC - Rechargeable, 500LM, 120M",
-   "temperature": 124,
-   "categorie": "Sports & Plein air",
-   "marchand": "Amazon",
-   "prix": 30.3,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/olight-oclip-pro-lampe-de-poche-edc-miniature-rechargeable-500lm-120m-3465000",
-   "date": "Tue, 24 Nov 2026 00:27:44 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "30,30€ - Amazon Caractéristique spécialeLumens élevés, Magnétique, Mode de lumière réglable, Rechargeable, Résistant au choc CouleurZombie Green Source d'alimentation..."
-  },
-  {
-   "id": "4598b1bf52",
-   "titre": "Castrol EDGE 5W-30 LL Advanced Full Synthetic Engine Oil, 5L",
-   "temperature": 124,
-   "categorie": "Car & Motorcycle",
-   "marchand": "Costco",
-   "prix": 33.58,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/castrol-edge-5w-30-ll-advanced-full-synthetic-engine-oil-5l-5043368",
-   "date": "Tue, 24 Nov 2026 00:13:32 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£33.58 - Costco Great deal on 5L engine oil at Costco. £33.58 for 5 Litres"
-  },
-  {
-   "id": "1256730822",
-   "titre": "Air fryer en verre 4-en-1 Ninja Crispi Cyberspace",
-   "temperature": 123,
-   "categorie": "Maison & Habitat",
-   "marchand": "SharkNinja",
-   "prix": 109.99,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/air-fryer-en-verre-4-en-1-ninja-crispi-cyberspace-3466995",
-   "date": "Tue, 24 Nov 2026 03:32:37 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "109,99€ - SharkNinja Le Ninja CRISPi 4-en-1 est un air fryer compact et original qui se démarque grâce à ses récipients en verre CleanCrisp. Avec son moteur Po..."
-  },
-  {
-   "id": "a71eb8a187",
-   "titre": "2 x Sonos Era 100 SL Wireless Smart Speaker (Free C&C and additional £5 off w/marketing code)",
-   "temperature": 123,
-   "categorie": "Electronics",
-   "marchand": "Argos",
-   "prix": 258.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/2-sonons-era-100-sl-black-and-save-an-additional-ps40-free-cc-and-additional-ps5-off-wmarketing-code-5044740",
-   "date": "Tue, 24 Nov 2026 00:52:43 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£258 - Argos Sonos Era 100 SL Wireless Smart Speaker - Black Purchase 2 Sonons Era 100 SL Black and Save an additional £40 Save further with ..."
-  },
-  {
-   "id": "92cb86f99d",
-   "titre": "SONGMICS Hard Shell Suitcase, ABS Luggage Trolley with TSA Lock, 4 Double Spinner Wheels with Strap, Cabin Suitcase 55 cm, in Black",
-   "temperature": 123,
-   "categorie": "Fashion & Accessories",
-   "marchand": "Amazon",
-   "prix": 22.79,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/songmics-hard-shell-suitcase-abs-luggage-trolley-with-tsa-lock-4-double-spinner-wheels-with-strap-cabin-suitcase-55-cm-in-black-5044739",
-   "date": "Tue, 24 Nov 2026 00:05:17 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£22.79 - Amazon SONGMICS Hard Shell Suitcase, ABS Luggage Trolley with TSA Lock, 4 Double Spinner Wheels with Strap, Cabin Suitcase 55 cm, in Black <..."
-  },
-  {
-   "id": "c6ef9faa16",
-   "titre": "Coffret Blu-ray 4K The Batman, Joker Ultra HD",
-   "temperature": 122,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Fnac",
-   "prix": 17.5,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/coffret-the-batman-joker-blu-ray-4k-ultra-hd-3465984",
-   "date": "Tue, 24 Nov 2026 01:44:05 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "17,50€ - Fnac Coffret The Batman, Joker Blu-ray 4K Ultra HD Au prix inclusif de 17.50€ Contenu Contient : The Batman <..."
-  },
-  {
-   "id": "48a5a56771",
-   "titre": "LEGO Disney et Pixar 43301 - Serre-Livres Zigzag de Toy Story (via 26,76€ de fidélité)",
-   "temperature": 121,
-   "categorie": "Famille & Enfants",
-   "marchand": "E.Leclerc",
-   "prix": 80.3,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/lego-disney-et-pixar-43301-serre-livres-zigzag-de-toy-story-via-2676eur-de-fidelite-3449580",
-   "date": "Tue, 24 Nov 2026 01:06:52 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "80,30€ - E.Leclerc • SET DE CONSTRUCTION COLLECTOR POUR ADULTE DISNEY ET PIXAR – Les fans adultes partageront leur passion pour la saga et ses personnages avec ce kit LEGO ǀ Di..."
-  },
-  {
-   "id": "dd5b014f09",
-   "titre": "Germany FC 26 Home Jersey",
-   "temperature": 120,
-   "categorie": "Sports & Outdoors",
-   "marchand": "Adidas",
-   "prix": 25.5,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/germany-26-home-jersey-5044470",
-   "date": "Tue, 24 Nov 2026 00:50:51 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£25.50 - Adidas Cheer on your team in this slim-fit jersey with an EQT collar for a classic look. When it comes to football, heritage and innovation go hand in hand. O..."
-  },
-  {
-   "id": "45dd009c8b",
-   "titre": "Jouet Lego 42234 Voiture de Sport Dodge Viper GTS-R",
-   "temperature": 119,
-   "categorie": "Famille & Enfants",
-   "marchand": "Cultura",
-   "prix": 38.99,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/lego-42234-lego-technic-voiture-de-sport-dodge-viper-gts-r-3466937",
-   "date": "Tue, 24 Nov 2026 00:28:22 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "38,99€ - Cultura Très bon prix ! Remise -40% au panier"
-  },
-  {
-   "id": "9a02f5716f",
-   "titre": "LIVERPOOL FC 26/27 HOME & THIRD JERSEY, All Sizes w/code Blue Light Code (Free delivery for members)",
-   "temperature": 118,
-   "categorie": "Sports & Outdoors",
-   "marchand": "Adidas",
-   "prix": 50.57,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/liverpool-fc-2627-home-third-jersey-all-sizes-wcode-blue-light-code-free-delivery-for-members-5044748",
-   "date": "Tue, 24 Nov 2026 01:15:23 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£50.57 - Adidas Buy £50.57 adidas gift card from TopCashback for £5.31 cash-back to make £45.26 <a href=\"https://top-giftcards.topcashback.co.uk/pr..."
-  },
-  {
-   "id": "713bd4ba69",
-   "titre": "Cronos sur PS5 - Leclerc Olivet (45)",
-   "temperature": 117,
-   "categorie": "Consoles & Jeux vidéo",
-   "marchand": "E.Leclerc",
-   "prix": 23.35,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/cronos-ps5-3455531",
-   "date": "Tue, 24 Nov 2026 00:45:14 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "23,35€ - E.Leclerc Cronos Ps5 en promo au Leclerc olivet (45) à 23,35€ (37,75 - 14,4 en bon immédiat) Stock d’une dizaine de jeux"
-  },
-  {
-   "id": "94da7ed021",
-   "titre": "4 x Glossybox Mystery Box",
-   "temperature": 116,
-   "categorie": "Health & Beauty",
-   "marchand": "Glossybox",
-   "prix": 26.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/4-x-glossy-box-mystery-boxes-one-off-purchase-ps26-free-delivery-5043040",
-   "date": "Tue, 24 Nov 2026 01:08:58 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£26 - Glossybox Any 4 for £26 worth £50 each"
-  },
-  {
-   "id": "98b0ba86a5",
-   "titre": "Nike Air Max Shoe Sale e.g Women's SC 4-7.5 | Men's 90 G Waterproof Golf Shoes 6.5-12 £59.99 (More in Description)",
-   "temperature": 114,
-   "categorie": "Fashion & Accessories",
-   "marchand": "SportPursuit",
-   "prix": 39.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/nike-air-max-shoe-sale-eg-womens-sc-4-75-mens-90-g-waterproof-golf-shoes-65-12-ps5999-more-in-description-5044735",
-   "date": "Tue, 24 Nov 2026 00:32:11 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£39 - SportPursuit A few good deals with the Air Max range, some in more limited sizes. Examples below. <a href=\"https://www.sportpursuit.com/catalog/p..."
-  },
-  {
-   "id": "9bf4e1a114",
-   "titre": "2N - Module de clavier numérique IP -9155031B",
-   "temperature": 112,
-   "categorie": "High-tech",
-   "marchand": "LDLC",
-   "prix": 386.08,
-   "devise": "EUR",
-   "lien": "https://www.ldlc.com/fiche/PB00582920.html",
-   "date": "",
-   "source": "ldlc-promos",
-   "pays": "FR",
-   "description": "prix initial 449.99 €, -14 %. 2N - Module de clavier numérique IP -9155031B"
-  },
-  {
-   "id": "52db9c7e1f",
-   "titre": "Amazon Basics 25W Qi2.2 Certified Wireless Charging Pad, MagSafe Compatible, Case-Friendly, 5ft Cable, Black (Adapter Not Included)",
-   "temperature": 111,
-   "categorie": "Electronics",
-   "marchand": "Amazon",
-   "prix": 10.69,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/amazon-basics-25w-qi22-certified-wireless-charging-pad-magsafe-compatible-case-friendly-5ft-cable-black-adapter-not-included-5044349",
-   "date": "Tue, 24 Nov 2026 00:33:37 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£10.69 - Amazon A compact, lightweight wireless charging pad from Amazon Basics, certified to the latest Qi2.2 standard and delivering up to 25W of fast wir..."
-  },
-  {
-   "id": "494bb1d6ca",
-   "titre": "Sony HT-A3000 Soundbar, Dolby Atmos, dts:x, 3.1 Kanal, Passthrough, Acoustic Center Sync with Bravia XR",
-   "temperature": 107,
-   "categorie": "Elektronik",
-   "marchand": "Joybuy",
-   "prix": 294.0,
-   "devise": "EUR",
-   "lien": "https://www.mydealz.de/deals/sony-ht-a3000-soundbar-dolby-atmos-dtsx-31-kanal-passthrough-acoustic-center-sync-with-bravia-xr-2880007",
-   "date": "Tue, 24 Nov 2026 03:03:59 +0100",
-   "source": "mydealz-hot",
-   "pays": "DE",
-   "description": "294€ - Joybuy Nächster VGP bei Alza Evtl. Mit personalisierten Gutscheinen noch günstiger? Test: https://hifi.de/test/sony-ht-a3000-test-148555 Stif..."
-  },
-  {
-   "id": "eac5e91dd2",
-   "titre": "4 x Fully Fitted Continental Sports Contact 5 Tyres: 225/40 R18 92Y (XL, RP, Mercedes) / 2 Tyres - £176.38 - w/Code",
-   "temperature": 107,
-   "categorie": "Car & Motorcycle",
-   "marchand": "National Tyres &amp; Autocare",
-   "prix": 313.57,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/4-x-fully-fitted-continental-sports-contact-5-tyres-22540-r18-92y-xl-rp-mercedes-2-tyres-ps17638-wcode-5043951",
-   "date": "Tue, 24 Nov 2026 03:08:54 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£313.57 - National Tyres & Autocare BLACK FRIDAY SALE Very good price for fully fitted premium tyres USE code PR20 to reduce 20% off for 4 tyres Use PR10 to reduce 10% off ..."
-  },
-  {
-   "id": "e111b0a94c",
-   "titre": "Russell Hobbs Electric 0.85L Travel Kettle, Compact, Worldwide Use, Includes 2 Cups and Spoons",
-   "temperature": 107,
-   "categorie": "Home & Living",
-   "marchand": "Amazon",
-   "prix": 12.35,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/russell-hobbs-electric-085l-travel-kettle-compact-worldwide-use-includes-2-cups-and-spoons-ideal-for-caravan-and-camping-5042507",
-   "date": "Tue, 24 Nov 2026 02:34:14 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£12.35 - Amazon Russell Hobbs Electric 0.85L Travel Kettle, Compact, 1000W, 23840 Dual Voltage for Worldwide Use, Includes 2 Cups and Spoons, Ideal for Caravan and Cam..."
-  },
-  {
-   "id": "3e860e8965",
-   "titre": "Dolce & Gabbana Light Blue Pour Homme Eau De Toilette 40ml",
-   "temperature": 107,
-   "categorie": "Health & Beauty",
-   "marchand": "Justmylook",
-   "prix": 17.99,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/dolce-gabbana-light-blue-pour-homme-eau-de-toilette-40ml-5044629",
-   "date": "Tue, 24 Nov 2026 00:26:55 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£17.99 - Justmylook Free delivery if spending £25 or more. • Eau de toilette • 40 ml • Citrus and aromatic fragrance • Top notes: grapefruit, bergamot, Si..."
-  },
-  {
-   "id": "f08527720c",
-   "titre": "Lenovo N27q 27\" QHD 100Hz IPS Monitor",
-   "temperature": 106,
-   "categorie": "Electronics",
-   "marchand": "Amazon",
-   "prix": 89.99,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/lenovo-n27q-27-qhd-100hz-ips-monitor-5042554",
-   "date": "Tue, 24 Nov 2026 02:32:48 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£89.99 - Amazon The Lenovo N27q 27 inch QHD monitor is £89.99 at Amazon. It has a 27 inch IPS panel with a QHD resolution of 2560 x 1440 and a 100Hz refresh rate (48 t..."
-  },
-  {
-   "id": "5a783a4fae",
-   "titre": "Sélection de Coffrets Blu-Ray 4K en promotion - Ex : Coffret John Wick Les 4 Films",
-   "temperature": 105,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Amazon",
-   "prix": 41.72,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/selection-de-coffrets-blu-ray-4k-en-promotion-3466043",
-   "date": "Tue, 24 Nov 2026 03:04:09 +0100",
-   "source": "dealabs-tendance",
-   "pays": "FR",
-   "description": "41,72€ - Amazon Tous les coffrets en 1 seul lien ;) <a href=\"https://www.amazon.fr/s?k=blu-ray+4K+coffret&rh=p_n_deal_type:26902975031,p_n_feature_two_browse-bin:6..."
-  },
-  {
-   "id": "f7e7e3a95d",
-   "titre": "TCL 55V6D-UK 55 Inch 4K HDR, Fire TV, HDR10+, Dolby Atmos, DTS:X, Game Master, Motion Clarity (2026 New Model) - Sold & Shipped by AO",
-   "temperature": 105,
-   "categorie": "Electronics",
-   "marchand": "Amazon",
-   "prix": 279.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/tcl-55v6d-uk-55-inch-4k-hdr-fire-tv-hdr10-dolby-atmos-dtsx-game-master-motion-clarity-2026-new-model-free-wall-mounting-5044642",
-   "date": "Tue, 24 Nov 2026 02:21:42 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£279 - Amazon 4K HDR - True-to-Life: Experience stunning - 4K HDR picture quality. Enjoy brighter highlights, deeper blacks and richer colours, reveal..."
-  },
-  {
-   "id": "9f9f98ea34",
-   "titre": "Under Armour Rival Knit Tracksuit Black - Size 2XL & 3XL Only",
-   "temperature": 103,
-   "categorie": "Fashion & Accessories",
-   "marchand": "JD Williams",
-   "prix": 18.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/under-armour-rival-knit-tracksuit-black-2xl-3xl-only-5043022",
-   "date": "Tue, 24 Nov 2026 03:02:06 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£18 - JD Williams • Sweat-wicking material • Smooth tricot knit exterior • Soft interior • Open hand pockets • Mesh hand pockets • Encased elastic waistb..."
-  },
-  {
-   "id": "bffaf6da89",
-   "titre": "Hisense 58\" 58E6STUK 4K Freely AI Smart TV (Dolby Vision, 2026 model) - Free C&C",
-   "temperature": 102,
-   "categorie": "Electronics",
-   "marchand": "Argos",
-   "prix": 379.0,
-   "devise": "GBP",
-   "lien": "https://www.hotukdeals.com/deals/hisense-58-58e6stuk-4k-freely-ai-smart-tv-dolby-vision-2026-model-5044609",
-   "date": "Tue, 24 Nov 2026 03:10:00 +0000",
-   "source": "hotukdeals-hot",
-   "pays": "UK",
-   "description": "£379 - Argos The Hisense 58 inch 58E6STUK 4K Ultra HD smart TV, a 2026 model with Freely, is £379 at Argos. Hisense says its AI 4K Upscaler uses deep learning model..."
-  },
-  {
-   "id": "1b9616b4f0",
-   "titre": "FIREFLY iSUP 4.0 11'6 SUP-Board Komplettset für 319,99 € statt 450 € VGP | Code BLACK20 | Intersport Club",
-   "temperature": 101,
-   "categorie": "Sport & Outdoor",
-   "marchand": "INTERSPORT",
-   "prix": 319.9,
-   "devise": "EUR",
-   "lien": "https://www.mydealz.de/deals/firefly-isup-40-116-sup-board-komplettset-fur-31999-eur-statt-450-eur-vgp-code-black20-2878658",
-   "date": "Mon, 23 Nov 2026 23:46:54 +0100",
-   "source": "mydealz-hot",
-   "pays": "DE",
-   "description": "319,90€ - INTERSPORT Bei Intersport bekommt ihr aktuell das FIREFLY iSUP 4.0 11'6 SUP-Set mit dem Code BLACK20 für 319,99 ..."
-  },
-  {
-   "id": "687378aedf",
-   "titre": "🛍️ XIAOMI TV 32 2026, HD Smart TV Fire OS14 Alexa Voice Control L32MB-FAVEU ✅ 139,00€ au lieu de 189,00€ ➡️ https://www.amazon.fr/dp/B0H44KWKRS/?tag=pmrat-21 Pu",
+   "id": "23229a4085",
+   "titre": "🛍️ JBL Live 770NC Casque circum-auriculaire, Réduction de Bruit Adaptative, Smart Ambient, noir ✅ 76,99€ au lieu de 179,99€ ➡️ https://www.amazon.fr/dp/B0CHMN4K",
    "temperature": 100,
    "categorie": "",
    "marchand": "",
-   "prix": 139.0,
+   "prix": 76.99,
    "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0H44KWKRS/?tag=pmrat-21",
-   "date": "2026-11-23T23:22",
+   "lien": "https://www.amazon.fr/dp/B0CHMN4KVN/?tag=pmrat-21",
+   "date": "2026-11-24T03:47",
    "source": "telegram:promorat",
    "pays": "FR",
-   "description": "🛍️ XIAOMI TV 32 2026, HD Smart TV Fire OS14 Alexa Voice Control L32MB-FAVEU ✅ 139,00€ au lieu de 189,00€ ➡️ https://www.amazon.fr/dp/B0H44KWKRS/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 189.0
-  },
-  {
-   "id": "5c3c61271d",
-   "titre": "🛍️ roborock F25 ACE Pro JetFoaming Aspirateur Laveur sans Fil 25kPa ✅ 338,00€ au lieu de 599,00€ ➡️ https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21 Publicité/",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 338.0,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21",
-   "date": "2026-11-23T23:29",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ roborock F25 ACE Pro JetFoaming Aspirateur Laveur sans Fil 25kPa ✅ 338,00€ au lieu de 599,00€ ➡️ https://www.amazon.fr/dp/B0FSZNC4NV/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 599.0
-  },
-  {
-   "id": "bd832f5327",
-   "titre": "🛍️ EA SPORTS FC 27 Edition Standard PlayStation 5, Disque I Jeu Vidéo, Français ✅ 40,39€ au lieu de 79,99€ ➡️ https://www.amazon.fr/dp/B0H7JVDYM7/?tag=pmrat-21 ",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 40.39,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0H7JVDYM7/?tag=pmrat-21",
-   "date": "2026-11-23T23:49",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ EA SPORTS FC 27 Edition Standard PlayStation 5, Disque I Jeu Vidéo, Français ✅ 40,39€ au lieu de 79,99€ ➡️ https://www.amazon.fr/dp/B0H7JVDYM7/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 79.99
-  },
-  {
-   "id": "b273791f52",
-   "titre": "🛍️ AMD Ryzen 7 7800X3D Processeur avec La Technologie 3D V-Cache ✅ 283,99€ au lieu de 496,99€ ➡️ https://www.amazon.fr/dp/B0BTZB7F88/?tag=pmrat-21 Publicité/Lie",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 283.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0BTZB7F88/?tag=pmrat-21",
-   "date": "2026-11-24T00:16",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ AMD Ryzen 7 7800X3D Processeur avec La Technologie 3D V-Cache ✅ 283,99€ au lieu de 496,99€ ➡️ https://www.amazon.fr/dp/B0BTZB7F88/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 496.99
-  },
-  {
-   "id": "99395fae35",
-   "titre": "🛍️ Ninja Double Stack XL Air Fryer, Friteuse sans huile Verticale, Noir/Cuivre, Capacité de 9,5L ✅ 169,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0CZY2",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 169.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0CZY23DYB/?tag=pmrat-21",
-   "date": "2026-11-24T00:26",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Ninja Double Stack XL Air Fryer, Friteuse sans huile Verticale, Noir/Cuivre, Capacité de 9,5L ✅ 169,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0CZY23DYB/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 269.99
-  },
-  {
-   "id": "0735d55243",
-   "titre": "🛍️ Comfee Déshumidificateur 16L/24h, Taille de pièce environ 80m³ (32m²), Compatible APP, Mode Intelligent, Minuterie 24H ✅ 139,99€ au lieu de 179,99€ ➡️ https:",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 139.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0GX68M1B5/?tag=pmrat-21",
-   "date": "2026-11-24T00:47",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Comfee Déshumidificateur 16L/24h, Taille de pièce environ 80m³ (32m²), Compatible APP, Mode Intelligent, Minuterie 24H ✅ 139,99€ au lieu de 179,99€ ➡️ https://www.amazon.fr/dp/B0GX68M1B5/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "description": "🛍️ JBL Live 770NC Casque circum-auriculaire, Réduction de Bruit Adaptative, Smart Ambient, noir ✅ 76,99€ au lieu de 179,99€ ➡️ https://www.amazon.fr/dp/B0CHMN4KVN/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
    "erreur_prix_signalee": false,
    "prix_avant": 179.99
   },
   {
-   "id": "71cc054f39",
-   "titre": "🛍️ Ninja Foodi MAX Dual Zone Air Fryer, 2 Tiroirs, 9,5L, 6-en-1, Sans Huile, Cuivre/Noir Exclusivité ✅ 149,99€ au lieu de 207,45€ ➡️ https://www.amazon.fr/dp/B0",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 149.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B09ZYLM43B/?tag=pmrat-21",
-   "date": "2026-11-24T00:54",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Ninja Foodi MAX Dual Zone Air Fryer, 2 Tiroirs, 9,5L, 6-en-1, Sans Huile, Cuivre/Noir Exclusivité ✅ 149,99€ au lieu de 207,45€ ➡️ https://www.amazon.fr/dp/B09ZYLM43B/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 207.45
-  },
-  {
-   "id": "7cd803912a",
-   "titre": "🛍️ Momcozy Inserts de Téterelle 21 mm pour Tire-Lait M5/M6/M9, Lot de 4 ✅ 11,99€ au lieu de 14,99€ ➡️ https://www.amazon.fr/dp/B0FGJBLPND/?tag=pmrat-21 Publicit",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 11.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0FGJBLPND/?tag=pmrat-21",
-   "date": "2026-11-24T01:31",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Momcozy Inserts de Téterelle 21 mm pour Tire-Lait M5/M6/M9, Lot de 4 ✅ 11,99€ au lieu de 14,99€ ➡️ https://www.amazon.fr/dp/B0FGJBLPND/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 14.99
-  },
-  {
-   "id": "0ed67b1a27",
-   "titre": "🛍️ Dyson V8 Origin Aspirateur Balai sans Fil Puissant, Aspirateur à Main 2026 ✅ 229,00€ au lieu de 379,00€ ➡️ https://www.amazon.fr/dp/B0GVP7XY36/?tag=pmrat-21 ",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 229.0,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0GVP7XY36/?tag=pmrat-21",
-   "date": "2026-11-24T01:41",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Dyson V8 Origin Aspirateur Balai sans Fil Puissant, Aspirateur à Main 2026 ✅ 229,00€ au lieu de 379,00€ ➡️ https://www.amazon.fr/dp/B0GVP7XY36/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 379.0
-  },
-  {
-   "id": "6c00784e4a",
-   "titre": "🛍️ Apple Pencil Pro:Outils avancés, précision au pixel près, sensibilité à l’inclinaison et à la pression ✅ 109,00€ au lieu de 149,00€ ➡️ https://www.amazon.fr/",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 109.0,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B0D3J7CKFR/?tag=pmrat-21",
-   "date": "2026-11-24T02:42",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Apple Pencil Pro:Outils avancés, précision au pixel près, sensibilité à l’inclinaison et à la pression ✅ 109,00€ au lieu de 149,00€ ➡️ https://www.amazon.fr/dp/B0D3J7CKFR/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 149.0
-  },
-  {
-   "id": "29135e3fe4",
-   "titre": "🛍️ Philips Lumea série 8000, Épilateur à lumière pulsée, alternative à l'épilation laser, technologie SenseIQ ✅ 269,99€ au lieu de 579,99€ ➡️ https://www.amazon",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 269.99,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B07HX2KMXK/?tag=pmrat-21",
-   "date": "2026-11-24T03:03",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ Philips Lumea série 8000, Épilateur à lumière pulsée, alternative à l'épilation laser, technologie SenseIQ ✅ 269,99€ au lieu de 579,99€ ➡️ https://www.amazon.fr/dp/B07HX2KMXK/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 579.99
-  },
-  {
-   "id": "fb0605ae6a",
-   "titre": "🛍️ MSI MPG 271QR QD-OLED X50 Écran gaming 26.5” WQHD ✅ 567,43€ au lieu de 899,99€ ➡️ https://www.amazon.fr/dp/B097PLXF1K/?tag=pmrat-21 Publicité/Lien affilié Le",
-   "temperature": 100,
-   "categorie": "",
-   "marchand": "",
-   "prix": 567.43,
-   "devise": "EUR",
-   "lien": "https://www.amazon.fr/dp/B097PLXF1K/?tag=pmrat-21",
-   "date": "2026-11-24T03:26",
-   "source": "telegram:promorat",
-   "pays": "FR",
-   "description": "🛍️ MSI MPG 271QR QD-OLED X50 Écran gaming 26.5” WQHD ✅ 567,43€ au lieu de 899,99€ ➡️ https://www.amazon.fr/dp/B097PLXF1K/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
-   "erreur_prix_signalee": false,
-   "prix_avant": 899.99
-  },
-  {
-   "id": "3514cce9cd",
-   "titre": "[Prime] Switch Ethernet Ugreen - 2.5G, 5 Ports (vendeur tiers)",
-   "temperature": null,
-   "categorie": "High-Tech",
+   "id": "1ab5dd827f",
+   "titre": "Logitech MX Keys S Wireless Keyboard 920-011584 UK QWERTY Bluetooth USB C, Windows, Linux, Chrome, Mac - Like New - Sold By Amazon Resale",
+   "temperature": 97,
+   "categorie": "Electronics",
    "marchand": "Amazon",
-   "prix": 28.49,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/prime-switch-ethernet-ugreen-25g-5-ports-vendeur-tiers-3467177",
-   "date": "Tue, 24 Nov 2026 04:20:37 +0100",
-   "source": "dealabs-nouveaux",
-   "pays": "FR",
-   "description": "28,49€ - Amazon UGREEN Switch Ethernet 2.5G 5 Ports Hub RJ45 Plug Play 100/1000/2500Mbps Commutateur 5 Ports 2,5 Gigabit : Ce commutateur Ethernet Gigabit à 5 ports permet à plusieurs appareils d'accéder simultanément à Internet sans avoir à… Fonctionnement Silencieux : Ce commutateur Ethernet sans "
+   "prix": 62.65,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/logitech-mx-keys-s-wireless-keyboard-920-011584-uk-qwerty-bluetooth-usb-c-windows-linux-chrome-mac-like-new-sold-by-amazon-resale-5044835",
+   "date": "Tue, 24 Nov 2026 03:45:45 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£62.65 - Amazon 15% deducted at Checkout: Sold by Amazon Resa..."
   },
   {
-   "id": "5b621072c6",
-   "titre": "Garmin Fenix 8 sapphire",
+   "id": "abde482cd0",
+   "titre": "SCUF OMEGA PROTOTYPE",
    "temperature": null,
-   "categorie": "High-Tech",
-   "marchand": "Luna-Time",
-   "prix": 599.0,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/garmin-fenix-8-sapphire-3467176",
-   "date": "Tue, 24 Nov 2026 04:15:33 +0100",
-   "source": "dealabs-nouveaux",
-   "pays": "FR",
-   "description": "599€ - Luna-Time • Marque : Garmin • Catégorie : appareil connecté portable • Genre : unisexe • Boîtier noir • Verre saphir • Bracelet en silicone • Diamètre : 47 mm"
+   "categorie": "Gaming",
+   "marchand": "Scuf Gaming",
+   "prix": 174.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/scuf-omega-prototype-5044882",
+   "date": "Tue, 24 Nov 2026 03:35:41 +0000",
+   "source": "hotukdeals-new",
+   "pays": "UK",
+   "description": "£174.99 - Scuf Gaming SCUF OMEGA PROTOTYPE was £219.99 now £174.99. There are other colours but the price may vary depending on the colour variant."
   },
   {
-   "id": "ac7fc5f725",
-   "titre": "Kit Créatif Pen Creator Studio K-Pop Demon Hunters CLEMENTONI (via 12,5€ sur la carte de fidélité)",
-   "temperature": null,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Carrefour",
-   "prix": 12.5,
+   "id": "prosp-b00d76d28d",
+   "titre": "Travel&#x27;s Valise 45 cm env.",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 17.45,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/kit-creatif-pen-creator-studio-k-pop-demon-hunters-clementoni-3467175",
-   "date": "Tue, 24 Nov 2026 04:04:57 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "12,50€ - Carrefour CRÉE TES STYLOS - K-POP DEMON HUNTERS : Un bel atelier pour créer et décorer des stylos avec les K-Pop Demon Hunters !"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "0cfe3a7be7",
-   "titre": "Jeu d’embouts 32 pièces DEWALT",
-   "temperature": null,
-   "categorie": "Jardin & Bricolage",
-   "marchand": "Amazon",
-   "prix": 15.49,
+   "id": "prosp-dd652b06af",
+   "titre": "ASUS PC portable E1504TA-BQ874WS",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 369.0,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/jeu-dembouts-32-pieces-dewalt-3467174",
-   "date": "Tue, 24 Nov 2026 03:59:54 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "15,49€ - Amazon DEWALT EXTREME FLEXTORQ Jeu d’embouts de vissage, 32 pièces, DT70523T-QZ avec embouts compatibles avec les applications à choc, coffret compact et porte-embout pour un meilleur contrôle. À propos de ce produit Très utile pour tous les types de bricolage : Cette boîte DEWALT de visser"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "1c43824657",
-   "titre": "NVIDIA GeForce RTX 5060 8Go",
-   "temperature": null,
-   "categorie": "High-Tech",
-   "marchand": "Lenovo",
-   "prix": 398.0,
+   "id": "prosp-db328322f8",
+   "titre": "Emma Matelas Hybride &quot;Emma Access&quot; 90x190CM",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 199.5,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/nvidia-geforce-rtx-5060-8go-3467173",
-   "date": "Tue, 24 Nov 2026 03:17:35 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "398€ - Lenovo • 8 Go de mémoire GDDR7 • Bande passante de 448 Gb/s • Prise en charge des images 4K • Résolution de 7 680 × 4 320 à 60 Hz • 4 caloducs en cuivre • Refroidissement à deux ventilateurs • Interface PCIe 5.0 x8"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "1ee144ffa6",
-   "titre": "NiPoGi E3B Mini PC Ryzen 7 7736U, 24 Go RAM / 512 Go SSD à 531,99€ au lieu de 559,99€",
-   "temperature": null,
-   "categorie": "High-Tech",
-   "marchand": "Amazon",
-   "prix": 531.99,
+   "id": "prosp-4c14043c3e",
+   "titre": "KRUPS Machine à capsules Piccolo XS Rouge+",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 28.9,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/nipogi-e3b-mini-pc-ryzen-7-7736u-24-go-ram-512-go-ssd-a-53199eur-au-lieu-de-55999eur-3467172",
-   "date": "Tue, 24 Nov 2026 03:13:10 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "531,99€ - Amazon Processeur AMD Ryzen 7 7736U : 8 cœurs et 16 threads, avec une fréquence pouvant atteindre 4,70 GHz. Mémoire vive de 24 Go LPDDR5 : fréquence de 5 500 MT/s pour une utilisation fluide avec plusieurs applications. Stockage SSD M.2 de 512 Go : démarrage rapide et espace pour les fichi"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "83a37e3351",
-   "titre": "Du 27 au 30 novembre 2026 inclus, bénéficiez de 15€ de remise immédiate par tranche de 100€ d'achats, sur présentation du code BLACK26",
-   "temperature": null,
-   "categorie": "Auto-Moto",
-   "marchand": "Norauto",
-   "prix": 15.0,
+   "id": "prosp-2237dec55f",
+   "titre": "KRUPS Expresso Broyeur My Coffee",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 199.0,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/codes-promo/du-27-au-30-novembre-2026-inclus-beneficiez-de-15eur-de-remise-immediate-par-tranche-de-100eur-dachats-sur-presentation-du-code-black26-3467169",
-   "date": "Tue, 24 Nov 2026 02:43:42 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "Norauto Du 27 au 30 novembre 2026 inclus, bénéficiez de 15€ de remise immédiate par tranche de 100€ d'achats, sur présentation du code BLACK26 dans les centres Norauto participants * à l'opération et sur norauto.fr (en saisissant le code BLACK26 dans le champ \"code avantage\" du panier), hors frais d"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "985dec7652",
-   "titre": "Assassin's Creed The Ezio Collection - AC II + AC Brotherhood + AC Revelations + DLCs sur Nintendo Switch",
-   "temperature": null,
-   "categorie": "Consoles & Jeux vidéo",
-   "marchand": "Amazon",
-   "prix": 18.49,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/assassins-creed-the-ezio-collection-ac-ii-ac-brotherhood-ac-revelations-dlcs-sur-nintendo-switch-3467168",
-   "date": "Tue, 24 Nov 2026 02:34:49 +0100",
-   "source": "dealabs-nouveaux",
-   "pays": "FR",
-   "description": "18,49€ - Amazon Assassin's Creed®: The Ezio Collection comprend les campagnes en solo et tous les DLC en solo de trois jeux : Assassin's Creed® II, Assassin's Creed® Brotherhood et Assassin's Creed® Revelations, ainsi que deux courtes vidéos. Préparez-vous à vivre - ou revivre - l'intégralité de la "
-  },
-  {
-   "id": "f5c161b882",
-   "titre": "[Unidays] 20% de Réduction sur tout le site",
-   "temperature": null,
-   "categorie": "Sports & Plein air",
-   "marchand": "On",
-   "prix": 35.0,
-   "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/unidays-20-sur-tout-le-site-3467165",
-   "date": "Tue, 24 Nov 2026 01:26:51 +0100",
-   "source": "dealabs-nouveaux",
-   "pays": "FR",
-   "description": "On Remise étudiant Unidays code de reduction de 20% sur tout le site livraison gratuite des 35€ Génération de 1 code toute les 24h"
-  },
-  {
-   "id": "00e9f2aef5",
-   "titre": "Chaussures pour Ado Nike Dunk Low Suede",
-   "temperature": null,
-   "categorie": "Mode & Accessoires",
-   "marchand": "Nike",
+   "id": "prosp-684f7a3f46",
+   "titre": "JBL Casque sans fil Tune 680",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
    "prix": 49.99,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/nike-dunk-low-suede-3467164",
-   "date": "Tue, 24 Nov 2026 01:25:36 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "49,99€ - Nike Cette star de ta collection de sneakers, inspirée du basket, est dotée d'empiècements classiques, d'un amorti et d'une semelle d'usure old-school. Elle est fidèle à l'esprit classique de Nike. Avantages Le cuir véritable et le cuir synthétique en font une chaussure résistante au look c"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "692625f240",
-   "titre": "Coffret Blu-Ray 4K - Retour vers Le Futur - Trilogie",
-   "temperature": null,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Fnac",
-   "prix": 27.99,
+   "id": "prosp-f807d8d9a4",
+   "titre": "Tokyo Laundry Cardigan adulte homme noir",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 19.97,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/coffret-blu-ray-4k-retour-vers-le-futur-trilogie-3467162",
-   "date": "Tue, 24 Nov 2026 01:11:35 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "27,99€ - Fnac Contient : ➡️ Retour vers le futur (1985) : L'action se déroule en 1985... mais pas pour très longtemps. Car le jeune Marty McFly va bientôt être propulsé dans le passé, plus précisément en 1955, à bord d'une DeLorean fonctionnant au plutonium, un bolide créé par le génie excentrique D"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "c6d31d043a",
-   "titre": "Lot de 2 Lampes d'extérieur Osram Endura Style Solar Wall Circle - 6 W, IP44",
-   "temperature": null,
-   "categorie": "Maison & Habitat",
-   "marchand": "iBOOD",
-   "prix": 24.95,
+   "id": "prosp-f744054c0d",
+   "titre": "Candy Lave-linge frontal",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 259.0,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/2-x-lampes-dexterieur-osram-endura-style-solar-wall-circle-6-w-ip44-3467161",
-   "date": "Tue, 24 Nov 2026 01:08:30 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "24,95€ - iBOOD 2 lampes solaires murales et d'extérieur Osram Type: Endura Style Solar Wall Circle Lampe d'extérieur (6 W) Quantité: 2 pièces Garantie: 2 ans Fonctionne entièrement à l'énergie solaire Convient à un usage extérieur (IP44) Avec une température de couleur de 3000 K Caractéristiques Ali"
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
   },
   {
-   "id": "b300d2dd5e",
-   "titre": "Jouet Lego K-Pop Demon Hunters Derpy le tigre et Suzy la pie - 72537 (via 24€ sur la Carte de Fidélité)",
-   "temperature": null,
-   "categorie": "Culture & Divertissement",
-   "marchand": "Carrefour",
-   "prix": 23.99,
+   "id": "prosp-5c338717a8",
+   "titre": "Oppo Smartphone A6k",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 189.0,
    "devise": "EUR",
-   "lien": "https://www.dealabs.com/bons-plans/lego-k-pop-demon-hunters-derpy-le-tigre-et-suzy-la-pie-72537-via-24eur-sur-la-carte-de-fidelite-3467159",
-   "date": "Tue, 24 Nov 2026 00:58:49 +0100",
-   "source": "dealabs-nouveaux",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
    "pays": "FR",
-   "description": "23,99€ - Carrefour A AJOUTER AU PANIER POUR VOIR APAPRAITRE LE CAGNOTTAGE Les fans du film KPop Demon Hunters donnent vie à un adorable duo grâce au jeu de construction LEGO Derpy le tigre et Suzy la pie (72537). Filles et garçons vont adorer assembler cette maquette amusante, inspirée de la K-pop, "
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-ff14b80ee6",
+   "titre": "DODO Housse couette économie d&#x27;énergie 140x200 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 22.47,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-5490f75323",
+   "titre": "SAMSUNG Barre de son HW-B750F/ZF",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 169.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-2210beeaba",
+   "titre": "Lenovo Tablette Tab",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 149.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-d4d8739989",
+   "titre": "Hisense TV LED 32A4S 32&#x27;&#x27; (pouces) 80 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "E Leclerc",
+   "prix": 159.0,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/E-Leclerc",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-17 → 2026-11-28"
+  },
+  {
+   "id": "prosp-17c7200cbe",
+   "titre": "Sapin nordmann 100/150 cm",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intermarche",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intermarche",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-24 → 2026-12-06"
+  },
+  {
+   "id": "prosp-c14e3b5a99",
+   "titre": "Sapin Nordmann",
+   "temperature": 0,
+   "categorie": "",
+   "marchand": "Intermarche",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.bonial.fr/Enseignes/Intermarche",
+   "date": "2026-11-24",
+   "source": "prospectus",
+   "pays": "FR",
+   "description": "en magasin, valable 2026-11-24 → 2026-12-06"
   }
  ]
 }

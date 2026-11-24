@@ -860,7 +860,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T06:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1047,6 +1047,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T06:42+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T07:45+00:00",
+  "verdict": {
+   "commentaire": "Offre Amazon UK à 34,99 £ (fiche marchande sur amazon.com), livraison en France non confirmée ; coût livré estimé 56,29 € > prix neuf le plus bas en France 44,16 €. Pas d'économie, revente à perte.",
+   "prix_neuf_min_idealo": 44.16,
+   "source_prix_ref": "achatmoinscher (10 boutiques)",
+   "economie_pct": -27,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -25.64,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

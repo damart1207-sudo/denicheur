@@ -1882,7 +1882,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T09:42+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -2070,7 +2070,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T09:46+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T10:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 39,99 € seulement en rapportant en magasin un jeu éligible (reprise 40 €). Sans reprise, la fiche Micromania affiche 79,99 € (72,38 € sur le bon plan), au-dessus du neuf le moins cher (60 €).",
+   "prix_neuf_min_idealo": 60.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "a5a9fd6b6d",
@@ -2108,7 +2120,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": true,
   "trouve_le": "2026-11-24T09:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": null,
   "revente_reelle": {},
   "canaux": null,
@@ -2141,7 +2153,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T09:55+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T10:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre polonaise Media Expert (magasin qui ne livre pas la France), prix de la page 100,99 € et non 23,50 €, aucun prix de référence français trouvé.",
+   "prix_neuf_min_idealo": null,
+   "source_prix_ref": null,
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "15bb353986",
@@ -2187,7 +2211,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T09:52+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -2375,7 +2399,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T09:56+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T10:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : 39,99 € seulement en rapportant en magasin un jeu éligible (reprise 40 €). Sans reprise, prix Micromania 79,99 €, au-dessus du neuf le moins cher (60 €).",
+   "prix_neuf_min_idealo": 60.0,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
+  }
  },
  {
   "id": "a59e8667c3",
@@ -2440,7 +2476,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T10:16+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -2689,6 +2725,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-24T10:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : le 180,98 € dépend d'un code promo espagnol (ESBF35) ; la page affiche maintenant 266,50 €, le lien AliExpress mène à la version américaine et le prix final livré en France n'est pas confirmé. Neuf le moins cher en France : 269,90 €.",
+   "prix_neuf_min_idealo": 269.9,
+   "source_prix_ref": "achatmoinscher",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": null
   }
  }
 ]

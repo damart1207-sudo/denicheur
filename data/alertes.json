@@ -5523,18 +5523,237 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 19:30 UTC : offre active, 41.4 affiché, code Compra recurrente, marchand 173_2 ; fiche amazon.com lue, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A",
-  "verifie_le": "2026-11-24T19:50+00:00",
-  "verdict": {
-   "commentaire": "Rejeté : prix réservé à l'abonnement « Compra recurrente » d'Amazon Espagne, lien marchand vers amazon.com (États-Unis), livraison en France non confirmée (parfum souvent non expédié à l'étranger). Coût réel 43,60 € vs 55,87 € (achatmoinscher, 50 ml) ; revente négative (-4 € sur Leboncoin/Vinted).",
-   "prix_neuf_min_idealo": 55.87,
-   "source_prix_ref": "achatmoinscher.com (pas idealo)",
-   "economie_pct": 22.0,
-   "prix_revente_verifie": 49.17,
-   "canal": "leboncoin",
-   "marge_nette_verifiee": -4.02,
-   "duree_offre": "quelques heures à jours",
-   "demande_confirmee": false
-  }
+  "denicheur": "A"
+ },
+ {
+  "id": "f0a2634015",
+  "titre": "Słuchawki Audio-Technica M50xBT2",
+  "prix": 140.76,
+  "devise": "EUR",
+  "marchand": "Amazon.pl",
+  "lien": "https://www.pepper.pl/promocje/sluchawki-audio-technica-m50xbt2-1398748",
+  "pays": "PL",
+  "source": "pepper-pl-hot",
+  "temperature": 249,
+  "categorie": "Elektronika",
+  "prix_verifie": null,
+  "prix_page": null,
+  "prix_carte": null,
+  "preuve_prix": null,
+  "preuve_livraison": null,
+  "livraison_fr_confirmee": false,
+  "cout_total_confirme": false,
+  "lien_marchand": null,
+  "nom_produit": "Audio-Technica M50xBT2",
+  "cout_achat": 145.76,
+  "prix_plancher": {
+   "nom": "Audio-Technica M50xBT2",
+   "sources": {
+    "achatmoinscher": {
+     "nb_produits": 1,
+     "meilleur": {
+      "titre": "AUDIO TECHNICA Casque  ATH-M50xBT2",
+      "prix": 171.3,
+      "nb_boutiques": 8,
+      "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casque-audio-technica-ath-m50xbt2.html"
+     },
+     "autres": []
+    }
+   },
+   "prix_min": 171.3,
+   "ou": "achatmoinscher",
+   "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Casque-audio/casque-audio-technica-ath-m50xbt2.html"
+  },
+  "ecart_vs_neuf_min": 0.822,
+  "economie_pct": 18,
+  "type": "bon_plan",
+  "signal_erreur_prix": false,
+  "trouve_le": "2026-11-24T19:40+00:00",
+  "statut": "a_verifier",
+  "meme_produit_ia": true,
+  "revente_reelle": {},
+  "canaux": [
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "leboncoin",
+    "prix_vente": 150.74,
+    "marge_nette": -18.22,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 150.74,
+     "cout_achat": 145.76,
+     "frais_canal": 0.0,
+     "prelevements": 20.2,
+     "provision": 3.0,
+     "marge_nette": -18.22,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.125
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "vinted",
+    "prix_vente": 150.74,
+    "marge_nette": -18.22,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 150.74,
+     "cout_achat": 145.76,
+     "frais_canal": 0.0,
+     "prelevements": 20.2,
+     "provision": 3.0,
+     "marge_nette": -18.22,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.125
+   },
+   {
+    "profil": "petit_budget",
+    "profil_nom": "Petit budget (occasion)",
+    "canal": "facebook",
+    "prix_vente": 150.74,
+    "marge_nette": -18.22,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 150.74,
+     "cout_achat": 145.76,
+     "frais_canal": 0.0,
+     "prelevements": 20.2,
+     "provision": 3.0,
+     "marge_nette": -18.22,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.125
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "fnac",
+    "prix_vente": 171.3,
+    "marge_nette": -20.41,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 171.3,
+     "cout_achat": 145.76,
+     "frais_canal": 19.99,
+     "prelevements": 22.95,
+     "provision": 3.0,
+     "marge_nette": -20.41,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.14
+   },
+   {
+    "profil": "impulsion",
+    "profil_nom": "Achat coup de cœur (vidéo)",
+    "canal": "tiktok",
+    "prix_vente": 171.3,
+    "marge_nette": -21.83,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 171.3,
+     "cout_achat": 145.76,
+     "frais_canal": 21.42,
+     "prelevements": 22.95,
+     "provision": 3.0,
+     "marge_nette": -21.83,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.15
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "cdiscount",
+    "prix_vente": 171.3,
+    "marge_nette": -22.12,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 171.3,
+     "cout_achat": 145.76,
+     "frais_canal": 21.7,
+     "prelevements": 22.95,
+     "provision": 3.0,
+     "marge_nette": -22.12,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.152
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "ebay",
+    "prix_vente": 171.3,
+    "marge_nette": -29.03,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 171.3,
+     "cout_achat": 145.76,
+     "frais_canal": 28.62,
+     "prelevements": 22.95,
+     "provision": 3.0,
+     "marge_nette": -29.03,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.199
+   },
+   {
+    "profil": "confiance",
+    "profil_nom": "Acheteurs prudents (gros sites)",
+    "canal": "amazon",
+    "prix_vente": 171.3,
+    "marge_nette": -33.1,
+    "calcul_marge": {
+     "version": 2,
+     "prix_vente": 171.3,
+     "cout_achat": 145.76,
+     "frais_canal": 32.69,
+     "prelevements": 22.95,
+     "provision": 3.0,
+     "marge_nette": -33.1,
+     "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+    },
+    "rentabilite": -0.227
+   }
+  ],
+  "page_offre": {
+   "lu_le": "2026-11-24T19:44+00:00",
+   "lien_deal": "https://www.pepper.pl/promocje/sluchawki-audio-technica-m50xbt2-1398748",
+   "page_deal": {
+    "code": 200,
+    "lu": true
+   },
+   "expiree": false,
+   "prix_page": 649.0,
+   "prix_ailleurs_annonce": 1249.99,
+   "port_page": null,
+   "code_promo": null,
+   "marchand_page": "11_2",
+   "description": "The world\\u2019s largest shopping community with Europe\\u2019s leading shopping rewards company.",
+   "lien_marchand": "https://www.amazon.pl/dp/B09BYFHL25",
+   "type_page": "deal Pepper",
+   "marchand": {
+    "lien": "https://www.amazon.pl/dp/B09BYFHL25",
+    "code": 200,
+    "lu": true,
+    "domaine": "amazon.pl",
+    "titre": "Audio-Technica M50xBT2 Bezprzewodowe Słuchawki Czarny : Amazon.pl: Elektronika",
+    "prix": null,
+    "prix_vus": [
+     599.0,
+     1599.0,
+     599.0,
+     599.0,
+     599.0,
+     645.04
+    ],
+    "extrait": "Audio-Technica M50xBT2 Bezprzewodowe Słuchawki Czarny : Amazon.pl: Elektronika Przejdź do Główna zawartość Informacje o tym produkcie Informacje o tym produkcie Informacje o tym produkcie Opcje zakupu Porównaj z podobnymi produktami Filmy Recenzje Skróty klawiszowe Wyszukiwanie klawisz Alt + / Koszyk klawisz Shift + klawisz Alt + C Strona główna klawisz Shift + klawisz Alt + H Zamówienia klawisz Shift + klawisz Alt + O Dodaj do koszyka klawisz Shift + klawisz Alt + K Streszczenie opisu produktu klawisz Shift + klawisz Alt + D Pokaż lub ukryj skróty klawisz Shift + klawisz Alt + Z Aby poruszać się między produktami, użyj strzałek w górę lub w dół na klawiaturze. .pl Dostawa do: Warszawa 00277"
+   },
+   "livraison_france": "oui",
+   "resume": "page du bon plan lue à 19:44 UTC : offre active, 649.0 affiché, marchand 11_2 ; fiche amazon.pl lue ; livraison France : oui"
+  },
+  "denicheur": "A"
  }
 ]

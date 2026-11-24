@@ -5569,7 +5569,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T19:40+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -5756,6 +5756,18 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-24T19:44+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T20:50+00:00",
+  "verdict": {
+   "commentaire": "Produit exact (ATH-M50xBT2). Coût livré 145,76 € (Amazon.pl) contre 171,30 € neuf le plus bas en France (achatmoinscher, 8 boutiques) : économie 14,9 %, sous le seuil de 15 %. Revente négative (-18 €). Rejeté.",
+   "prix_neuf_min_idealo": 171.3,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 14.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -18.22,
+   "duree_offre": "Black Friday, quelques jours",
+   "demande_confirmee": false
+  }
  }
 ]

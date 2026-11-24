@@ -4243,7 +4243,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T15:39+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -4438,7 +4438,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-24T15:42+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré 53 € (Amazon.nl) contre 58,95 € neuf en France (achatmoinscher, 7 boutiques) = seulement 10 % d'économie, sous le seuil de 15 %. Revente non rentable.",
+   "prix_neuf_min_idealo": 58.95,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ff9feefb91",
@@ -4484,7 +4496,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T15:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -4669,7 +4681,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T15:46+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : coût livré 54,90 € (MediaMarkt Espagne, livraison en France non confirmée) contre 62,64 € neuf en France (achatmoinscher) = 12 % d'économie, sous le seuil de 15 %. Revente non rentable.",
+   "prix_neuf_min_idealo": 62.64,
+   "source_prix_ref": "achatmoinscher.com",
+   "economie_pct": 12,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "ad3dfb1707",
@@ -4715,7 +4739,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T15:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -4917,6 +4941,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-24T15:47+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T16:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre réservée aux étudiants (pas achetable par tous), page de l'offre non lisible, fiche Samsung.fr affichée en rupture de stock ; prix de référence achatmoinscher 574 € non confirmé (l'écran a déjà été vu à 426 € chez Samsung). Revente négative sur tous les canaux. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 574.0,
+   "source_prix_ref": "achatmoinscher.com (non confirmé)",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

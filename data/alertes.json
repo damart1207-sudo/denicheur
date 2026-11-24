@@ -1653,7 +1653,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T09:27+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -1836,6 +1836,18 @@
    "livraison_france": "non",
    "resume": "page du bon plan lue à 09:30 UTC : offre active, 24.99 affiché, marchand 192_2 ; elcorteingles.es refuse les robots (HTTP 403) ; livraison France : non"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-24T09:46+00:00",
+  "verdict": {
+   "commentaire": "Offre El Corte Inglés Espagne : la page indique pas de livraison en France. Coût livré 29,90 € contre 32,09 € neuf le plus bas en France, soit seulement 7 % d'économie (< 15 %). Revente à perte (marge négative sur tous les canaux).",
+   "prix_neuf_min_idealo": 32.09,
+   "source_prix_ref": "achatmoinscher (10 boutiques)",
+   "economie_pct": 7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": -8.44,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

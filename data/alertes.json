@@ -6134,7 +6134,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T21:50+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -6320,15 +6320,15 @@
    "premiere_lecture": "2026-11-24T21:52+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-24T22:55+00:00",
+  "verifie_le": "2026-11-24T23:55+00:00",
   "verdict": {
-   "commentaire": "Pages de l'offre (pepper.pl / boutique polonaise UNIBLO) et du comparateur inaccessibles depuis la session : offre active et livraison en France non confirmées. À revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
+   "commentaire": "Rejeté. Offre polonaise (pepper.pl, boutique UNIBLO) illisible depuis la session pour la 2e fois : offre active et livraison en France non confirmées. Revente : marge d'environ 2 €, trop faible. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 59.49,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot, non relu)",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": null,
+   "marge_nette_verifiee": 2.25,
    "duree_offre": null,
    "demande_confirmee": false
   }
@@ -6377,7 +6377,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T22:14+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -6548,15 +6548,15 @@
    "premiere_lecture": "2026-11-24T22:15+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-24T22:55+00:00",
+  "verifie_le": "2026-11-24T23:55+00:00",
   "verdict": {
-   "commentaire": "Pages de l'offre (chollometro, marchand inconnu) et du comparateur inaccessibles depuis la session : offre active, marchand et livraison en France non confirmés. À revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
+   "commentaire": "Rejeté. Offre espagnole (chollometro, marchand inconnu) illisible depuis la session pour la 2e fois : marchand, offre active et livraison en France non confirmés. En France, la fiche Auchan (vendeur Multishop) affiche 87,07 € livré ; achatmoinscher indiquait 71,99 €. Revente : marge d'environ 7 €, sous le seuil. Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 71.99,
+   "source_prix_ref": "achatmoinscher.com (relevé du robot, non relu) ; Auchan marketplace 87,07 € lu le 25/11",
    "economie_pct": null,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": null,
+   "marge_nette_verifiee": 6.87,
    "duree_offre": null,
    "demande_confirmee": false
   }
@@ -6605,7 +6605,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T22:28+00:00",
-  "statut": "a_reverifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -6797,15 +6797,15 @@
    "premiere_lecture": "2026-11-24T22:32+00:00"
   },
   "denicheur": "A",
-  "verifie_le": "2026-11-24T22:55+00:00",
+  "verifie_le": "2026-11-24T23:55+00:00",
   "verdict": {
-   "commentaire": "Pages Dealabs/Auchan et comparateur inaccessibles depuis la session : offre non confirmée ; prix de référence achatmoinscher (54,99 €) non revérifié, ce jeu a déjà été vu vers 40 € plusieurs fois. À revérifier.",
-   "prix_neuf_min_idealo": null,
-   "source_prix_ref": null,
-   "economie_pct": null,
+   "commentaire": "Rejeté. Fiche Auchan lue : 39,99 € (au lieu de 69,99 €), mais seulement en retrait magasin, sans livraison à domicile ni stock affichés : offre livrable non confirmée. Prix neuf le plus bas lu sur achatmoinscher : 54,99 € chez Micromania (livraison offerte), mais ce jeu a été signalé à 37,60 € chez Leclerc récemment : la référence n'est pas sûre. Revente : marge négative (-6 €). Dans le doute, rejet.",
+   "prix_neuf_min_idealo": 54.99,
+   "source_prix_ref": "achatmoinscher.com (lu le 25/11 vers 0h50) : Micromania 54,99 € livré",
+   "economie_pct": 27,
    "prix_revente_verifie": null,
    "canal": null,
-   "marge_nette_verifiee": null,
+   "marge_nette_verifiee": -6.08,
    "duree_offre": null,
    "demande_confirmee": false
   }

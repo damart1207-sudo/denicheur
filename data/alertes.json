@@ -5815,7 +5815,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-24T20:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -6076,6 +6076,18 @@
    "feu": "orange",
    "proba_vente_7j": null,
    "proba_detail": []
+  },
+  "verifie_le": "2026-11-24T21:50+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : MediaMarkt.be ne livre qu'en Belgique (pas de livraison directe en France, seulement via réexpéditeur payant) ; page marchand bloquée (403), prix et stock non confirmés. En France, le Pixel 10 256 Go s'est déjà vu autour de 599 € (Dealabs), donc écart incertain.",
+   "prix_neuf_min_idealo": 599.0,
+   "source_prix_ref": "recherche web (Dealabs / ledenicheur), non confirmé idealo",
+   "economie_pct": 16,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
   }
  }
 ]

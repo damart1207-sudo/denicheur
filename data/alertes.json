@@ -8678,7 +8678,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T10:43+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -8863,7 +8863,19 @@
    "lectures": 2,
    "premiere_lecture": "2026-11-25T10:47+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T11:50+00:00",
+  "verdict": {
+   "commentaire": "El Corte Inglés (Espagne) ne livre pas en France de façon confirmée ; et 104,99 € livré contre 119 € en France = seulement 11,8 % d'économie (< 15 %).",
+   "prix_neuf_min_idealo": 119.0,
+   "source_prix_ref": "achatmoinscher (12 boutiques)",
+   "economie_pct": 11.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "29851758a3",
@@ -8909,7 +8921,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T11:19+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -9096,7 +9108,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-25T11:21+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T11:50+00:00",
+  "verdict": {
+   "commentaire": "Amazon UK : coût livré ~223 € (conversion + port/taxes), plus cher que le prix neuf en France (188 €).",
+   "prix_neuf_min_idealo": 188.0,
+   "source_prix_ref": "achatmoinscher (17 boutiques)",
+   "economie_pct": -18.8,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "9e3060269b",
@@ -9149,7 +9173,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T11:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -9349,7 +9373,19 @@
    "livraison_france": "inconnue",
    "resume": "page du bon plan lue à 11:25 UTC : offre active, 22.0 affiché, marchand 1650_3 ; fiche store.playstation.com lue : 22.49 GBP, en stock (panier) ; livraison France : inconnue"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T11:50+00:00",
+  "verdict": {
+   "commentaire": "Jeu dématérialisé PlayStation Store UK : réservé aux comptes britanniques, non achetable avec un compte français ; ~39 € contre 45,90 € en France (< 15 %).",
+   "prix_neuf_min_idealo": 45.9,
+   "source_prix_ref": "achatmoinscher (11 boutiques)",
+   "economie_pct": 14.9,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  },
  {
   "id": "a6eb7363ae",
@@ -9414,7 +9450,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T11:22+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -9590,6 +9626,18 @@
    "livraison_france": "oui",
    "resume": "page du bon plan lue à 11:26 UTC : offre active, 283.99 affiché, code 11FRBF60, marchand 36_3 ; aliexpress.com refuse les robots (page anti-robot (captcha)) ; livraison France : oui"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T11:50+00:00",
+  "verdict": {
+   "commentaire": "AliExpress, version probablement « tray » (sans boîte ni garantie AMD France), remise liée à un code PayPal limité dans le temps ; page de l'offre non consultable pour vérifier qu'elle est encore active. Dans le doute, rejeté.",
+   "prix_neuf_min_idealo": 359.0,
+   "source_prix_ref": "achatmoinscher (20 boutiques, version boîte)",
+   "economie_pct": 23.7,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": null,
+   "demande_confirmee": false
+  }
  }
 ]

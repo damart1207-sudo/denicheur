@@ -1,14 +1,8 @@
 {
- "tours_ok": 3593,
+ "tours_ok": 3594,
  "tours_echec": 12,
- "dernier_ok": "25/11 10:10",
+ "dernier_ok": "25/11 10:19",
  "evenements": [
-  {
-   "heure": "21/11 05:00",
-   "niveau": "erreur",
-   "etape": "bingo tendances",
-   "message": "TimeoutError: The read operation timed out | ^\n  File \"/home/runner/work/denicheur/denicheur/denicheur/dataforseo.py\", line 216, in decalage_hype\n    t = tendances([mot], p)\n        ^^^^^^^^^^^^^^^^^^^\nTimeoutError: The read operation timed out\n"
-  },
   {
    "heure": "21/11 05:42",
    "niveau": "erreur",
@@ -1802,12 +1796,18 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 402: Payment Required"
+  },
+  {
+   "heure": "25/11 10:19",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 402: Payment Required"
   }
  ],
  "dernier_resume": {
-  "heure": "25/11 10:07",
-  "annonces": 700,
-  "nouvelles": 400,
+  "heure": "25/11 10:17",
+  "annonces": 703,
+  "nouvelles": 416,
   "examinees": 25,
   "alertes": 0
  }

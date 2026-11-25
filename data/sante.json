@@ -1,14 +1,8 @@
 {
- "tours_ok": 3592,
+ "tours_ok": 3593,
  "tours_echec": 12,
- "dernier_ok": "25/11 10:06",
+ "dernier_ok": "25/11 10:10",
  "evenements": [
-  {
-   "heure": "21/11 02:01",
-   "niveau": "erreur",
-   "etape": "moisson prix recherches",
-   "message": "BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint | /recherches_prix.py\", line 122, in tour\n    d[\"hype\"].update(prix_europe(asins, etat=etat))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nBudgetKeepaInsuffisant: réserve ou plafond Keepa atteint\n"
-  },
   {
    "heure": "21/11 05:00",
    "niveau": "erreur",
@@ -1802,13 +1796,19 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 402: Payment Required"
+  },
+  {
+   "heure": "25/11 10:10",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 402: Payment Required"
   }
  ],
  "dernier_resume": {
-  "heure": "25/11 10:04",
+  "heure": "25/11 10:07",
   "annonces": 700,
-  "nouvelles": 434,
+  "nouvelles": 400,
   "examinees": 25,
-  "alertes": 1
+  "alertes": 0
  }
 }

@@ -1,0 +1,5574 @@
+{
+ "passage": "midi",
+ "horodatage": "2026-11-25_1229",
+ "date_affichee": "25/11/2026 à 12 h 29",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 142,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 746,
+ "nb_nouvelles": 390,
+ "nb_prefiltres": 276,
+ "nb_tries": 160,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 4,
+   "reussites": 4,
+   "erreurs": [],
+   "choix": 25
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 16,
+   "remplace": "gemma"
+  },
+  "gemma": {
+   "appels": 1000000,
+   "reussites": 0,
+   "erreurs": [
+    "HTTP 429 (google/gemma-4-31b-it:free): {\"error\":{\"message\":\"Provider returned error\",\"code\":429,\"metadata\":{\"raw\":\"google/gemma-4-31b-it:free is temporarily rate-limited upstream. Please retry shortly, or add your own provider key to use y",
+    "coupé pour ce passage"
+   ],
+   "choix": 0
+  },
+  "nemotron_nv": {
+   "appels": 4,
+   "reussites": 4,
+   "erreurs": [],
+   "choix": 15
+  }
+ },
+ "remplacements": {
+  "qwen": "gemma"
+ },
+ "candidats": [
+  {
+   "id": "720a3778c1",
+   "titre": "Nike Air Max 270 Chaussure pour femme",
+   "prix": 79.99,
+   "devise": "EUR",
+   "marchand": "Nike",
+   "lien": "https://www.nike.com/fr/t/chaussure-nike-air-max-270-pour-femme-dKITiW6l/HJ3222-001",
+   "pays": "FR",
+   "source": "nike-promos",
+   "temperature": 400,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.nike.com/fr/t/chaussure-nike-air-max-270-pour-femme-dKITiW6l/HJ3222-001"
+   },
+   "meme_produit": {
+    "meme": null,
+    "raison": "non confirmé",
+    "qte_a": null,
+    "qte_b": null,
+    "reference": "NIKE Chaussure  Air Max 270 pour femme - Blanc"
+   },
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Nike Air Max 270 Chaussure pour femme",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 139.92,
+   "cout_achat": 84.99,
+   "marge_nette": 33.18,
+   "rentabilite": 0.39,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 50 % vs neuf le moins cher"
+   },
+   "score": 75.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Nike Air Max 270 Chaussure pour femme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "NIKE Chaussure  Air Max 270 pour femme - Blanc",
+       "prix": 159.0,
+       "nb_boutiques": 2,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Chaussures-de-running-femme/chaussure-nike-air-max-270-pour-femme-blanc.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 159.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Chaussures-de-running-femme/chaussure-nike-air-max-270-pour-femme-blanc.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Nike Air Max taille 7, jaune  ",
+      "prix": "52.53",
+      "url": "https://www.ebay.fr/itm/283206581604?_skw=Nike+Air+Max+270+Chaussure+pour+femme&hash=item41f06d7d64:g:wAcAAOSwjCVbv~K5"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 105.05,
+     "IT": 96.95,
+     "ES": 72.25
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "mot_cle": "nike air max 270",
+   "demande_google": {
+    "volume_mensuel": 1900,
+    "concurrence": "HIGH",
+    "cpc": 0.28,
+    "trois_derniers_mois": [
+     1300,
+     1600,
+     2400
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 159.0,
+     "marge_nette": 30.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 19.13,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 30.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.36
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 159.0,
+     "marge_nette": 29.39,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 20.31,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 29.39,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.346
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 159.0,
+     "marge_nette": 28.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 20.72,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 28.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.341
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 159.0,
+     "marge_nette": 22.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 27.02,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 22.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.267
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 159.0,
+     "marge_nette": 18.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 30.84,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 18.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.222
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 154.23,
+   "marge_verifiee": 45.57,
+   "rentabilite_verifiee": 0.536,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 115.5,
+   "rapport_concurrence": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 109,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 1498,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 209,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "temperature_dealabs": 400,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "nike air max 270 chaussure pour femme",
+     "nike air max 270 basket femme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "be75b39a15",
+   "titre": "Chaqueta de moto touring RST Alpha 5 | Clase AA | Forro térmico extraíble 125gr | Impermeable | 2 colores, de S a 3XL en ambos",
+   "prix": 72.24,
+   "devise": "EUR",
+   "marchand": "tradeinn",
+   "lien": "https://www.chollometro.com/ofertas/chaqueta-de-moto-touring-rst-alpha-5-clase-aa-forro-termico-extraible-125gr-impermeable-2-colores-de-s-a-3xl-en-ambos-2089174",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 229,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/chaqueta-de-moto-touring-rst-alpha-5-clase-aa-forro-termico-extraible-125gr-impermeable-2-colores-de-s-a-3xl-en-ambos-2089174"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "auto-moto",
+   "nom_produit": "RST Veste moto Alpha 5 Touring",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 145.0,
+   "cout_achat": 77.24,
+   "marge_nette": 45.33,
+   "rentabilite": 0.587,
+   "demande": 3.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Remise ~60 % sur prix public (180-200 €), marque réputée, stock multi-tailles/couleurs chez Tradeinn ES, livraison UE simple, forte demande motards.",
+    "nemotron_nv": "Veste moto RST Alpha 5 à 72,24 € ES contre environ 150 € neuf, mais la taille spécifique limite la rotation."
+   },
+   "score": 52.1,
+   "ebay": {
+    "requete": "RST Veste moto Alpha 5 Touring",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "RST Veste moto Alpha 5 Touring",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "rst veste moto alpha",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "RST Veste moto Alpha 5 Touring",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 70,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 71,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 76,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "RST Veste moto Alpha 5 Touring",
+    "temperature_dealabs": 229,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  },
+  {
+   "id": "89b5216cf1",
+   "titre": "Sonic Racing: CrossWorlds sur Switch, Xbox Series X ou PS4",
+   "prix": 20.18,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.dealabs.com/bons-plans/sonic-racing-crossworlds-sur-switch-xbox-series-x-ou-ps4-3468523",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 141,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/sonic-racing-crossworlds-sur-switch-xbox-series-x-ou-ps4-3468523"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "gaming",
+   "nom_produit": "Sonic Racing CrossWorlds",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 45.0,
+   "cout_achat": 25.18,
+   "marge_nette": 10.79,
+   "rentabilite": 0.429,
+   "demande": 5,
+   "concurrence": 1,
+   "consensus": 1,
+   "agents": [
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Précommande à 20 € pour un jeu attendu fin 2025 (prix sortie ~50 €), marge massive potentielle day-one, risque faible car vendu par Amazon FR."
+   },
+   "score": 48.0,
+   "ebay": {
+    "requete": "Sonic Racing CrossWorlds",
+    "neuf": {
+     "nb": 50,
+     "min": 21.01,
+     "p25": 47.04,
+     "mediane": 60.6,
+     "max": 207.09
+    },
+    "occasion": {
+     "nb": 9,
+     "min": 28.68,
+     "p25": 36.01,
+     "mediane": 46.01,
+     "max": 133.9
+    },
+    "exemples": [
+     {
+      "titre": "SEGA Sonic Racing: CrossWorlds Nintendo Switch PAL 2025 PEGI 3",
+      "prix": "28.68",
+      "url": "https://www.ebay.fr/itm/318866061855?_skw=Sonic+Racing+CrossWorlds&hash=item4a3de5fa1f:g:KwsAAeSwr9JqptbO"
+     },
+     {
+      "titre": "SONIC RACING: CROSSWORLDS SWITCH UK OCCASION (GAME IN ENGLISH/FRANCAIS/DE/ES/IT)",
+      "prix": "42.79",
+      "url": "https://www.ebay.fr/itm/287684544096?_skw=Sonic+Racing+CrossWorlds&hash=item42fb55c660:g:kewAAeSwhe5q4L4m"
+     },
+     {
+      "titre": "PS5/ Sonic Racing CrossWorlds/VF/TBE/sans rayures",
+      "prix": "31.80",
+      "url": "https://www.ebay.fr/itm/178420134432?_skw=Sonic+Racing+CrossWorlds&hash=item298aab3220:g:060AAeSwJK9qhH4G"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 47.04,
+     "DE": 34.72,
+     "IT": 39.64,
+     "ES": 36.12
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Sonic Racing CrossWorlds",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 8,
+      "meilleur": {
+       "titre": "Sonic Racing: CrossWorlds (PS4)",
+       "prix": 20.16,
+       "nb_boutiques": 11,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-4/sonic-racing-crossworlds-ps4.html"
+      },
+      "autres": [
+       {
+        "titre": "SEGA Sonic Racing: CrossWorlds (SWITCH)",
+        "prix": 20.18,
+        "nb_boutiques": 10,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/sonic-racing-crossworlds-switch.html"
+       },
+       {
+        "titre": "Sonic Racing: CrossWorlds (PS5)",
+        "prix": 29.99,
+        "nb_boutiques": 11,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-5/sonic-racing-crossworlds-ps5.html"
+       },
+       {
+        "titre": "UNISEX Jeu de Course - SEGA - Sonic Racing : Crossworlds - Nintendo Switch - 23 Personnages - 45 Véhicules",
+        "prix": 35.49,
+        "nb_boutiques": 2,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-Nintendo-Switch/jeu-de-course-sega-sonic-racing-crossworlds-nintendo-switch-23-personnages-45-vehicules.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 20.16,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Jeux-video-PlayStation-4/sonic-racing-crossworlds-ps4.html"
+   },
+   "mot_cle": "sonic racing crossworlds",
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 17.74,
+     "marge_nette": -12.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.74,
+      "cout_achat": 25.18,
+      "frais_canal": 0.0,
+      "prelevements": 2.38,
+      "provision": 3.0,
+      "marge_nette": -12.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.509
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 17.74,
+     "marge_nette": -12.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.74,
+      "cout_achat": 25.18,
+      "frais_canal": 0.0,
+      "prelevements": 2.38,
+      "provision": 3.0,
+      "marge_nette": -12.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.509
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 17.74,
+     "marge_nette": -12.82,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 17.74,
+      "cout_achat": 25.18,
+      "frais_canal": 0.0,
+      "prelevements": 2.38,
+      "provision": 3.0,
+      "marge_nette": -12.82,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.509
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 20.16,
+     "marge_nette": -18.54,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.16,
+      "cout_achat": 25.18,
+      "frais_canal": 7.81,
+      "prelevements": 2.7,
+      "provision": 3.0,
+      "marge_nette": -18.54,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.736
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 20.16,
+     "marge_nette": -19.69,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.16,
+      "cout_achat": 25.18,
+      "frais_canal": 8.97,
+      "prelevements": 2.7,
+      "provision": 3.0,
+      "marge_nette": -19.69,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.782
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 20.16,
+     "marge_nette": -20.13,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.16,
+      "cout_achat": 25.18,
+      "frais_canal": 9.41,
+      "prelevements": 2.7,
+      "provision": 3.0,
+      "marge_nette": -20.13,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.799
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 20.16,
+     "marge_nette": -20.33,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.16,
+      "cout_achat": 25.18,
+      "frais_canal": 9.61,
+      "prelevements": 2.7,
+      "provision": 3.0,
+      "marge_nette": -20.33,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.807
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 20.16,
+     "marge_nette": -20.74,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 20.16,
+      "cout_achat": 25.18,
+      "frais_canal": 10.01,
+      "prelevements": 2.7,
+      "provision": 3.0,
+      "marge_nette": -20.74,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.824
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 18.14,
+   "marge_verifiee": -12.47,
+   "rentabilite_verifiee": -0.495,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 36.01,
+    "haut": 46.01,
+    "position_neuf": 0.56
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Sonic Racing CrossWorlds",
+    "pays": {
+     "FR": {
+      "nb_annonces": 39,
+      "total_ebay": 39,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 21.01,
+       "titre": "Carrera GO!!! Miles \"Tails\" Prower (Sonic Racing: CrossWorlds)",
+       "lien": "https://www.ebay.fr/itm/267853803935?_skw=Sonic+Racing+CrossWorlds&hash=item3e5d54b19f:g:vMEAAeSwv8NrBsCk",
+       "vendeur": "slotcar-union",
+       "avis_vendeur": 7490
+      },
+      "plus_cher": {
+       "prix": 72.78,
+       "titre": "Sonic Racing - CrossWorlds Jeu Nintendo Switch 2 Neuf + Boîte D’origine",
+       "lien": "https://www.ebay.fr/itm/366787322969?_skw=Sonic+Racing+CrossWorlds&hash=item55663a6459:g:c7AAAeSwYFxpxUrC",
+       "vendeur": "cmal2_gmbh",
+       "avis_vendeur": 217902
+      }
+     },
+     "DE": {
+      "nb_annonces": 112,
+      "total_ebay": 120,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 12.0,
+       "titre": "Knuckles Sonic Racing Crossworlds refreshener Gamescom 2025 - Duftbaum NEU",
+       "lien": "https://www.ebay.de/itm/236397645569?_skw=Sonic+Racing+CrossWorlds&hash=item370a65cf01:g:Ov0AAeSwMr9o85wU",
+       "vendeur": "20sampo04",
+       "avis_vendeur": 189
+      },
+      "plus_cher": {
+       "prix": 81.13,
+       "titre": "PS5 Spiel - Sonic The Hedgehog Racing: CrossWorlds - Playstation 5 - Neu & Sealed",
+       "lien": "https://www.ebay.de/itm/158243418750?_skw=Sonic+Racing+CrossWorlds&hash=item24d80af27e:g:Yk4AAeSwEQFqlbih",
+       "vendeur": "gamexl",
+       "avis_vendeur": 636
+      }
+     },
+     "IT": {
+      "nb_annonces": 363,
+      "total_ebay": 466,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 11.12,
+       "titre": "Nintendo Switch Sonic Racing Crossworlds. SCATOLA VUOTA NO GIOCO",
+       "lien": "https://www.ebay.it/itm/227402416151?_skw=Sonic+Racing+CrossWorlds&hash=item34f23d8017:g:SegAAeSw9SNqO~bO",
+       "vendeur": "hp325",
+       "avis_vendeur": 6747
+      },
+      "plus_cher": {
+       "prix": 80.65,
+       "titre": "4.9 NINTENDO SWITCH2 Sonic Racing: CrossWorlds Japan NUOVO",
+       "lien": "https://www.ebay.it/itm/158302274133?_skw=Sonic+Racing+CrossWorlds&hash=item24db8d0255:g:xswAAeSw2yNpr3W9",
+       "vendeur": "japancosmetics0710",
+       "avis_vendeur": 25244
+      }
+     },
+     "ES": {
+      "nb_annonces": 351,
+      "total_ebay": 444,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 11.02,
+       "titre": "Nintendo Switch Sonic Racing Crossworlds. CAJA VACÍA SIN JUEGO",
+       "lien": "https://www.ebay.es/itm/227402416151?_skw=Sonic+Racing+CrossWorlds&hash=item34f23d8017:g:SegAAeSw9SNqO~bO",
+       "vendeur": "hp325",
+       "avis_vendeur": 6747
+      },
+      "plus_cher": {
+       "prix": 80.43,
+       "titre": "Sonic Racing: CrossWorlds Launch Edition Juego Nuevo (2026 Racing)",
+       "lien": "https://www.ebay.es/itm/920025035572?_skw=Sonic+Racing+CrossWorlds&hash=itemd635c3f334:g:UiIAAeSwq4Fpxjsc",
+       "vendeur": "katerusa1",
+       "avis_vendeur": 45055
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Sonic Racing CrossWorlds",
+    "temperature_dealabs": 141,
+    "google_trends": {
+     "interet_moyen": 4,
+     "interet_recent": 15,
+     "tendance": "stable",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      18,
+      13,
+      15,
+      18,
+      19,
+      11,
+      17,
+      14,
+      15,
+      16,
+      20,
+      21,
+      12,
+      9,
+      18
+     ],
+     "recherches_liees": [
+      {
+       "query": "sonic racing crossworlds switch",
+       "value": 100
+      },
+      {
+       "query": "sonic racing crossworlds switch 2",
+       "value": 77
+      },
+      {
+       "query": "sonic racing crossworlds ps5",
+       "value": 62
+      },
+      {
+       "query": "sonic racing crossworlds mods",
+       "value": 46
+      },
+      {
+       "query": "sonic racing crossworlds dlc",
+       "value": 40
+      },
+      {
+       "query": "sonic racing crossworlds ps4",
+       "value": 28
+      },
+      {
+       "query": "sonic racing crossworlds season pass 2",
+       "value": 17
+      },
+      {
+       "query": "sonic racing crossworlds year one edition",
+       "value": 9
+      }
+     ]
+    },
+    "suggestions_google": [
+     "sonic racing crossworlds",
+     "sonic racing crossworlds switch 2",
+     "sonic racing crossworlds ps5",
+     "sonic racing crossworlds switch",
+     "sonic racing crossworlds ps4",
+     "sonic racing crossworlds mods",
+     "sonic racing crossworlds dlc",
+     "sonic racing crossworlds characters",
+     "sonic racing crossworlds test",
+     "sonic racing crossworlds season pass 2"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "96b1d9712a",
+   "titre": "Cosori Airfryer, Max 230°C, 4,7L 7-in-1 Heißluftfritteuse inklusive Rezeptbuch",
+   "prix": 45.76,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.preisjaeger.at/deals/cosori-airfryer-max-230c-47l-7-in-1-heissluftfritteuse-inklusive-rezeptbuch-373350",
+   "pays": "AT",
+   "source": "preisjaeger-hot",
+   "temperature": 208,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.preisjaeger.at/deals/cosori-airfryer-max-230c-47l-7-in-1-heissluftfritteuse-inklusive-rezeptbuch-373350"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "cuisine",
+   "nom_produit": "Cosori Air Fryer",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 89.0,
+   "cout_achat": 50.76,
+   "marge_nette": 23.31,
+   "rentabilite": 0.459,
+   "demande": 5,
+   "concurrence": 4.0,
+   "consensus": 1,
+   "agents": [
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron_nv": "Cosori Airfryer à 45,76 € AT contre environ 89 € en France, produit très demandé et facile à expédier."
+   },
+   "score": 44.1,
+   "ebay": {
+    "requete": "Cosori Air Fryer",
+    "neuf": {
+     "nb": 49,
+     "min": 18.99,
+     "p25": 33.69,
+     "mediane": 37.99,
+     "max": 429.88
+    },
+    "occasion": {
+     "nb": 16,
+     "min": 19.62,
+     "p25": 33.57,
+     "mediane": 48.0,
+     "max": 174.0
+    },
+    "exemples": [
+     {
+      "titre": "FRITEUSE SANS HUILE COSORI AIR FRYER 5,5 L/ CS158-AF.",
+      "prix": "51.60",
+      "url": "https://www.ebay.fr/itm/820395441636?_skw=Cosori+Air+Fryer&hash=itembf0360fde4:g:Ne4AAeSwlxRrBoGM"
+     },
+     {
+      "titre": "COSORI Friteuse à air chaud Airfryer, 12 en 1 Air Fryer XXL 6,2 l",
+      "prix": "33.30",
+      "url": "https://www.ebay.fr/itm/357971301702?_skw=Cosori+Air+Fryer&hash=item5358c09546:g:~kMAAeSwTwRpLeuI&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7m0TgKibO8F3Zrqt6PQ07fwauo7mcUKfMuRQKHbLYk7CVWZpqZ9beBkmzD6HZkpyE%2BKpE0MNgi2BB1PnckR0Zj9MUB2ziwqkMK7qJDv2JY1OS3iIHxZ1LFALfeBYIjl5JCE9%2FEjLn1iITWODqnPIqguxPzkRLUYp9JIOHBMjXx7Dk101pf%2BixZmVcZWMBHOkpOpZ3W3zwFCphPieuxdKgGyvu1%2B54G6FLK2UH1%2FNr5NAsfQ7XxIO0%2Fp%2B39beB79m9ncEPBv3ANeaNfhoLOi1IZnsl%2FoZU21W2b9CUfL04cNQg%3D%3D"
+     },
+     {
+      "titre": "FRITEUSE SANS HUILE COSORI AIR FRYER 5,5L CS158-AF",
+      "prix": "63.00",
+      "url": "https://www.ebay.fr/itm/820395440675?_skw=Cosori+Air+Fryer&hash=itembf0360fa23:g:NT0AAeSwxktrBoFx"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 33.69,
+     "DE": 78.94,
+     "IT": 61.14,
+     "ES": 49.75
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Cosori Air Fryer",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "COSORI  Premium Chef Edition Air Fryer 1700w 5.5l Argenté 5.5 Liters / EU Plug",
+       "prix": 156.23,
+       "nb_boutiques": 3,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Friteuse/cosori-premium-chef-edition-air-fryer-1700w-5-5l-argente-5-5-liters-eu-plug.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 156.23,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Friteuse/cosori-premium-chef-edition-air-fryer-1700w-5-5l-argente-5-5-liters-eu-plug.html"
+   },
+   "mot_cle": "cosori air fryer",
+   "demande_google": {
+    "volume_mensuel": 18100,
+    "concurrence": "HIGH",
+    "cpc": 0.19,
+    "trois_derniers_mois": [
+     18100,
+     18100,
+     18100
+    ]
+   },
+   "annonces_ebay": 49,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 137.48,
+     "marge_nette": 65.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 137.48,
+      "cout_achat": 50.76,
+      "frais_canal": 0.0,
+      "prelevements": 18.42,
+      "provision": 3.0,
+      "marge_nette": 65.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.286
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 137.48,
+     "marge_nette": 65.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 137.48,
+      "cout_achat": 50.76,
+      "frais_canal": 0.0,
+      "prelevements": 18.42,
+      "provision": 3.0,
+      "marge_nette": 65.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.286
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 137.48,
+     "marge_nette": 65.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 137.48,
+      "cout_achat": 50.76,
+      "frais_canal": 0.0,
+      "prelevements": 18.42,
+      "provision": 3.0,
+      "marge_nette": 65.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.286
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 156.23,
+     "marge_nette": 62.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 156.23,
+      "cout_achat": 50.76,
+      "frais_canal": 18.94,
+      "prelevements": 20.93,
+      "provision": 3.0,
+      "marge_nette": 62.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.233
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 156.23,
+     "marge_nette": 61.47,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 156.23,
+      "cout_achat": 50.76,
+      "frais_canal": 20.06,
+      "prelevements": 20.93,
+      "provision": 3.0,
+      "marge_nette": 61.47,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.211
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 156.23,
+     "marge_nette": 61.04,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 156.23,
+      "cout_achat": 50.76,
+      "frais_canal": 20.5,
+      "prelevements": 20.93,
+      "provision": 3.0,
+      "marge_nette": 61.04,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.203
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 156.23,
+     "marge_nette": 54.88,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 156.23,
+      "cout_achat": 50.76,
+      "frais_canal": 26.66,
+      "prelevements": 20.93,
+      "provision": 3.0,
+      "marge_nette": 54.88,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.081
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 156.23,
+     "marge_nette": 51.11,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 156.23,
+      "cout_achat": 50.76,
+      "frais_canal": 30.42,
+      "prelevements": 20.93,
+      "provision": 3.0,
+      "marge_nette": 51.11,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 1.007
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 33.57,
+   "marge_verifiee": -24.69,
+   "rentabilite_verifiee": -0.486,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 33.57,
+    "haut": 48.0,
+    "position_neuf": 1.36
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Cosori Air Fryer",
+    "pays": {
+     "FR": {
+      "nb_annonces": 32,
+      "total_ebay": 53,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 26.28,
+       "titre": "CaiTang Papier Cuisson Air Fryer pour Ninja 10.4L/ Cosori 10L, 10.4+5.2L",
+       "lien": "https://www.ebay.fr/itm/407240810962?_skw=Cosori+Air+Fryer&hash=item5ed171a1d2:g:SuEAAeSwhcFqtLRX",
+       "vendeur": "digitalleyshop8052",
+       "avis_vendeur": 603
+      },
+      "plus_cher": {
+       "prix": 173.96,
+       "titre": "Cosori Air Fryer 6L TurboBlaze Revêtement en Céramique sans PFAS 6L, Noir",
+       "lien": "https://www.ebay.fr/itm/147582584472?_skw=Cosori+Air+Fryer&hash=item225c9b8698:g:JccAAeSwD91qrYb6",
+       "vendeur": "digitalleyshop1100",
+       "avis_vendeur": 1439
+      }
+     },
+     "DE": {
+      "nb_annonces": 175,
+      "total_ebay": 501,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 23.15,
+       "titre": "Silikon Air Fryer Korb Liner 2er Pack Antihaft für COSORI 62L NA230 23x23cm",
+       "lien": "https://www.ebay.de/itm/336524360388?_skw=Cosori+Air+Fryer&hash=item4e5a6a3ac4:g:mbsAAeSwt4Jp1jxR",
+       "vendeur": "sincerelysales99",
+       "avis_vendeur": 20188
+      },
+      "plus_cher": {
+       "prix": 176.99,
+       "titre": "Cosori Hot Air Fryer, 2 Compartments, 6-in-1, Dual Zone, XXL, 8.5 L, Two Chamber",
+       "lien": "https://www.ebay.de/itm/396889963198?_skw=Cosori+Air+Fryer&hash=item5c687c3abe:g:TRIAAeSwTwdof3re",
+       "vendeur": "tob-244866",
+       "avis_vendeur": 0
+      }
+     },
+     "IT": {
+      "nb_annonces": 244,
+      "total_ebay": 536,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 23.4,
+       "titre": "Air Fryer inserti in silicone progettati per COSORI CAF-R901 21,5 cm x 16,5 cm x 7 cm",
+       "lien": "https://www.ebay.it/itm/377485674211?_skw=Cosori+Air+Fryer&hash=item57e3e646e3:g:Kl0AAeSw~-lqolAD",
+       "vendeur": "superstoremall",
+       "avis_vendeur": 3223
+      },
+      "plus_cher": {
+       "prix": 182.7,
+       "titre": "COSORI Friggitrice ad Aria Turbo Blaze 6 Litri, Air Fryer con DC",
+       "lien": "https://www.ebay.it/itm/147210768482?_skw=Cosori+Air+Fryer&hash=item2246721062:g:MZUAAeSwY1BpcLjs",
+       "vendeur": "sixi-store",
+       "avis_vendeur": 51
+      }
+     },
+     "ES": {
+      "nb_annonces": 299,
+      "total_ebay": 549,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 23.09,
+       "titre": "For Cosori 6 2L Air Fryer Silicone Waffle Plates 2Pcs for NA229 NA230 and AF141",
+       "lien": "https://www.ebay.es/itm/377274639943?_skw=Cosori+Air+Fryer&hash=item57d7522647:g:iAgAAeSwEHxqM5qG",
+       "vendeur": "beginner2023",
+       "avis_vendeur": 3159
+      },
+      "plus_cher": {
+       "prix": 135.42,
+       "titre": "COSORI Freidora de Aire 5,5 L, Air Fryer con 100 Recetas en Español",
+       "lien": "https://www.ebay.es/itm/235502557700?_skw=Cosori+Air+Fryer&hash=item36d50bda04:g:biwAAOSwiLBmDAH5",
+       "vendeur": "gegalleg0",
+       "avis_vendeur": 0
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Cosori Air Fryer",
+    "temperature_dealabs": 208,
+    "google_trends": {
+     "interet_moyen": 24,
+     "interet_recent": 48,
+     "tendance": "stable",
+     "courbe": [
+      30,
+      27,
+      25,
+      33,
+      39,
+      23,
+      22,
+      21,
+      27,
+      27,
+      18,
+      29,
+      30,
+      17,
+      22,
+      0,
+      0,
+      24,
+      27,
+      33,
+      22,
+      18,
+      28,
+      24,
+      28,
+      100,
+      0,
+      0,
+      0,
+      16,
+      0,
+      18,
+      26,
+      29,
+      19,
+      0,
+      17,
+      16,
+      16,
+      0,
+      35,
+      28,
+      0,
+      0,
+      0,
+      28,
+      36,
+      18,
+      17,
+      0,
+      22,
+      22,
+      22,
+      0,
+      18,
+      24,
+      0,
+      25,
+      29,
+      23,
+      22,
+      20,
+      0,
+      22,
+      0,
+      28,
+      32,
+      25,
+      26,
+      0,
+      30,
+      24,
+      28,
+      21,
+      40,
+      33,
+      20,
+      27,
+      45,
+      28,
+      32,
+      46,
+      45,
+      39,
+      41,
+      36,
+      42,
+      43,
+      60,
+      64,
+      46,
+      41,
+      39
+     ],
+     "recherches_liees": [
+      {
+       "query": "cosori air fryer 10l",
+       "value": 100
+      },
+      {
+       "query": "recette air fryer cosori",
+       "value": 54
+      },
+      {
+       "query": "airfryer cosori",
+       "value": 40
+      },
+      {
+       "query": "airfryer",
+       "value": 36
+      },
+      {
+       "query": "air fryer cosori dual blaze",
+       "value": 33
+      },
+      {
+       "query": "cosori dual blaze",
+       "value": 33
+      },
+      {
+       "query": "cosori dual blaze twinfry",
+       "value": 12
+      },
+      {
+       "query": "black friday cosori air fryer",
+       "value": 9
+      }
+     ]
+    },
+    "suggestions_google": [
+     "cosori air fryer",
+     "cosori air fryer 10l",
+     "cosori air fryer 10l twinfry",
+     "cosori air fryer avis",
+     "cosori air fryer ceramique",
+     "cosori air fryer 10l carrefour",
+     "cosori air fryer twinfry 10l double résistance",
+     "cosori air fryer turbo tower 10 8l",
+     "cosori air fryer 10.8l turbo tower pro",
+     "cosori air fryer 10l twinfry pro ceramic"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "a6eb7363ae",
+   "titre": "[Via Paypal] Processeur AMD Ryzen 7 9800X3D - 8 cœurs, 5,2 GHz, 96 Mo L3, TDP 120 W, AM5",
+   "prix": 268.9,
+   "devise": "EUR",
+   "marchand": "AliExpress",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-processeur-amd-ryzen-7-9800x3d-8-coeurs-52-ghz-96-mo-l3-tdp-120-w-am5-3468717",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 262,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/via-paypal-processeur-amd-ryzen-7-9800x3d-8-coeurs-52-ghz-96-mo-l3-tdp-120-w-am5-3468717"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "AMD Ryzen 7 9800X3D",
+   "plateforme_revente": "fnac",
+   "prix_revente_estime": 359.0,
+   "cout_achat": 273.9,
+   "marge_nette": 0.86,
+   "rentabilite": 0.003,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 25 % vs neuf le moins cher"
+   },
+   "score": 37.5,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "AMD Ryzen 7 9800X3D",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 6,
+      "meilleur": {
+       "titre": "AMD  Ryzen 7 9800X3D (4.7 GHz)",
+       "prix": 359.0,
+       "nb_boutiques": 20,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Processeur/amd-ryzen-7-9800x3d-4-7-ghz.html"
+      },
+      "autres": [
+       {
+        "titre": "AMD  Ryzen 7 9800X3D (4.7 GHz / 5.2 GHz) - Tray",
+        "prix": 385.0,
+        "nb_boutiques": 9,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Processeur/amd-ryzen-7-9800x3d-4-7-ghz-5-2-ghz-tray.html"
+       },
+       {
+        "titre": "AMD Processeur -  - Ryzen 7 9800X3D - 4,7 GHz - 8 coeurs - 120W",
+        "prix": 431.29,
+        "nb_boutiques": 5,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Processeur/processeur-amd-ryzen-7-9800x3d-4-7-ghz-8-coeurs-120w.html"
+       },
+       {
+        "titre": "SEDATECH  PC Gamer Vision XL AMD Ryzen 7 9800X3D RTX5070",
+        "prix": 2889.9,
+        "nb_boutiques": 3,
+        "lien": "https://www.achatmoinscher.com/comparateur-de-prix-PC-de-bureau/sedatech-pc-gamer-vision-xl-amd-ryzen-7-9800x3d-rtx5070.html"
+       }
+      ]
+     }
+    },
+    "prix_min": 359.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Processeur/amd-ryzen-7-9800x3d-4-7-ghz.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "AMD Ryzen 7 9800X3D",
+    "neuf": {
+     "nb": 37,
+     "min": 343.3,
+     "p25": 489.35,
+     "mediane": 728.56,
+     "max": 15558.66
+    },
+    "occasion": {
+     "nb": 6,
+     "min": 344.0,
+     "p25": 396.26,
+     "mediane": 1036.18,
+     "max": 2556.7
+    },
+    "exemples": [
+     {
+      "titre": "AMD Ryzen 7 9800X3D - Used",
+      "prix": "344.00",
+      "url": "https://www.ebay.fr/itm/960197421382?_skw=AMD+Ryzen+7+9800X3D&hash=itemdf9039e946:g:9K4AAeSwIAdq52MR"
+     },
+     {
+      "titre": "PC gamer AMD Ryzen 7 9800X3D",
+      "prix": "2250.70",
+      "url": "https://www.ebay.fr/itm/226851735618?_skw=AMD+Ryzen+7+9800X3D&hash=item34d16ac842:g:lvMAAeSwOzFoakw~"
+     },
+     {
+      "titre": "Processeur AMD Ryzen 7 9800X3D 8 coeurs / 16 threads (5.2 GHz) sans ventirad",
+      "prix": "413.68",
+      "url": "https://www.ebay.fr/itm/287177431511?_skw=AMD+Ryzen+7+9800X3D&hash=item42dd1bd9d7:g:d78AAeSwJMhpp0MQ"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 489.35,
+     "DE": 427.35,
+     "IT": 379.0,
+     "ES": 424.97
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "mot_cle": "amd ryzen 7 9800x3d",
+   "annonces_ebay": 37,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 359.0,
+     "marge_nette": 0.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 359.0,
+      "cout_achat": 273.9,
+      "frais_canal": 33.13,
+      "prelevements": 48.11,
+      "provision": 3.0,
+      "marge_nette": 0.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.003
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 359.0,
+     "marge_nette": -2.73,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 359.0,
+      "cout_achat": 273.9,
+      "frais_canal": 36.72,
+      "prelevements": 48.11,
+      "provision": 3.0,
+      "marge_nette": -2.73,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.01
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 315.92,
+     "marge_nette": -3.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 315.92,
+      "cout_achat": 273.9,
+      "frais_canal": 0.0,
+      "prelevements": 42.33,
+      "provision": 3.0,
+      "marge_nette": -3.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.012
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 315.92,
+     "marge_nette": -3.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 315.92,
+      "cout_achat": 273.9,
+      "frais_canal": 0.0,
+      "prelevements": 42.33,
+      "provision": 3.0,
+      "marge_nette": -3.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.012
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 315.92,
+     "marge_nette": -3.31,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 315.92,
+      "cout_achat": 273.9,
+      "frais_canal": 0.0,
+      "prelevements": 42.33,
+      "provision": 3.0,
+      "marge_nette": -3.31,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.012
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 359.0,
+     "marge_nette": -4.32,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 359.0,
+      "cout_achat": 273.9,
+      "frais_canal": 38.31,
+      "prelevements": 48.11,
+      "provision": 3.0,
+      "marge_nette": -4.32,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.016
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 359.0,
+     "marge_nette": -19.03,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 359.0,
+      "cout_achat": 273.9,
+      "frais_canal": 53.02,
+      "prelevements": 48.11,
+      "provision": 3.0,
+      "marge_nette": -19.03,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.069
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 359.0,
+     "marge_nette": -26.85,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 359.0,
+      "cout_achat": 273.9,
+      "frais_canal": 60.84,
+      "prelevements": 48.11,
+      "provision": 3.0,
+      "marge_nette": -26.85,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.098
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 348.23,
+   "marge_verifiee": -7.71,
+   "rentabilite_verifiee": -0.028,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 396.26,
+    "haut": 1036.18,
+    "position_neuf": 0.68
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "AMD Ryzen 7 9800X3D",
+    "pays": {
+     "FR": {
+      "nb_annonces": 19,
+      "total_ebay": 21,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 343.3,
+       "titre": "AMD Processeur Ryzen 7 9800X3D 8 Coeurs Jusqu'a 5.2 Ghz Socket AM5 120W TDP NEUF",
+       "lien": "https://www.ebay.fr/itm/206722904160?_skw=AMD+Ryzen+7+9800X3D&hash=item3021a53060:g:JRAAAeSwbUVq8dux",
+       "vendeur": "zizou42",
+       "avis_vendeur": 444
+      },
+      "plus_cher": {
+       "prix": 994.75,
+       "titre": "Processeur AMD 100-100001084WOF AMD Ryzen 7 9800X3D AMD AM5",
+       "lien": "https://www.ebay.fr/itm/157717855867?_skw=AMD+Ryzen+7+9800X3D&hash=item24b8b77e7b:g:x3YAAeSwhrZp5lzN",
+       "vendeur": "nexgen33",
+       "avis_vendeur": 2
+      }
+     },
+     "DE": {
+      "nb_annonces": 69,
+      "total_ebay": 94,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 324.99,
+       "titre": "AMD Ryzen 7 9800X3D - NEU - Tray CPU - 8/16 Kerne",
+       "lien": "https://www.ebay.de/itm/800916459305?_skw=AMD+Ryzen+7+9800X3D&hash=itemba7a574f29:g:~FkAAeSwS~Nq-H06",
+       "vendeur": "oscarsmarketplace",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 1066.93,
+       "titre": "AUFRÜST PC AMD Ryzen 7 9800X3D Radeon RX Grafik/32GB DDR5 Computer System",
+       "lien": "https://www.ebay.de/itm/316620781825?_skw=AMD+Ryzen+7+9800X3D&hash=item49b811b901:g:xoYAAOSw7s1jlLBs",
+       "vendeur": "securecheap",
+       "avis_vendeur": 15776
+      }
+     },
+     "IT": {
+      "nb_annonces": 74,
+      "total_ebay": 115,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 339.0,
+       "titre": "AMD Ryzen 7 9800X3D - 8 core - da 4,70 GHz a 5,2 GH - socket AM5 - tray | nuovo",
+       "lien": "https://www.ebay.it/itm/940091818754?_skw=AMD+Ryzen+7+9800X3D&hash=itemdae1d6c302:g:KHAAAeSwgTRq-G4y",
+       "vendeur": "teamfernandez",
+       "avis_vendeur": 379
+      },
+      "plus_cher": {
+       "prix": 799.5,
+       "titre": "Pacchetto PC kit aggiornamento set AMD Ryzen 7 9800X3D + scheda madre ASUS gaming + RAM DDR5",
+       "lien": "https://www.ebay.it/itm/135658423707?_skw=AMD+Ryzen+7+9800X3D&hash=item1f95df459b:g:lHkAAOSwHVhn6BJ1",
+       "vendeur": "2010fliegende1",
+       "avis_vendeur": 1615
+      }
+     },
+     "ES": {
+      "nb_annonces": 63,
+      "total_ebay": 74,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 338.44,
+       "titre": "AMD Ryzen 7 9800X3D | CPU de escritorio AM5 | Procesador de 8 núcleos | TOTALMENTE NUEVO",
+       "lien": "https://www.ebay.es/itm/880106007418?_skw=AMD+Ryzen+7+9800X3D&hash=itemccea67eb7a:g:TEkAAeSwBDpqcwtm",
+       "vendeur": "888_trading",
+       "avis_vendeur": 132
+      },
+      "plus_cher": {
+       "prix": 968.68,
+       "titre": "Procesador AMD 100-100001084WOF AMD Ryzen 7 9800X3D AMD AM5",
+       "lien": "https://www.ebay.es/itm/157717855867?_skw=AMD+Ryzen+7+9800X3D&hash=item24b8b77e7b:g:x3YAAeSwhrZp5lzN",
+       "vendeur": "nexgen33",
+       "avis_vendeur": 2
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "AMD Ryzen 7 9800X3D",
+    "temperature_dealabs": 262,
+    "google_trends": {
+     "interet_moyen": 12,
+     "interet_recent": 43,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      48,
+      0,
+      0,
+      0,
+      0,
+      0,
+      49,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      60,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      88,
+      0,
+      0,
+      0,
+      68,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      78,
+      0,
+      0,
+      0,
+      0,
+      86,
+      0,
+      0,
+      0,
+      0,
+      0,
+      64,
+      54,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      92,
+      25,
+      16,
+      22,
+      26,
+      14,
+      18,
+      20,
+      24,
+      19,
+      24,
+      36,
+      88,
+      24
+     ],
+     "recherches_liees": [
+      {
+       "query": "processeur amd ryzen 7 9800x3d",
+       "value": 100
+      },
+      {
+       "query": "amd ryzen 7 9800x3d 4.7 ghz 8 coeurs 16 threads",
+       "value": 17
+      },
+      {
+       "query": "amd ryzen 7 7800x3d vs amd ryzen 7 9800x3d",
+       "value": 10
+      }
+     ]
+    },
+    "suggestions_google": [
+     "amd ryzen 7 9800x3d",
+     "amd ryzen 7 9800x3d processeur",
+     "amd ryzen 7 9800x3d prix",
+     "amd ryzen 7 9800x3d (4.7 ghz / 5.2 ghz)",
+     "amd ryzen 7 9800x3d (4.7 ghz)",
+     "amd ryzen 7 9800x3d vs amd ryzen 7 7800x3d",
+     "amd ryzen 7 9800x3d avis",
+     "amd ryzen 7 9800x3d benchmark",
+     "amd ryzen 7 9800x3d vs amd ryzen 7 9850x3d",
+     "amd ryzen 7 9800x3d (4.7 ghz) - version tray"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "29851758a3",
+   "titre": "Apple AirPods Pro 3 Wireless Earbuds",
+   "prix": 155.98,
+   "devise": "GBP",
+   "marchand": "Amazon",
+   "lien": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wireless-earbuds-5046518",
+   "pays": "UK",
+   "source": "hotukdeals-new",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.hotukdeals.com/deals/apple-airpods-pro-3-wireless-earbuds-5046518"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Apple AirPods Pro 3",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 165.44,
+   "cout_achat": 223.25,
+   "marge_nette": -82.98,
+   "rentabilite": -0.372,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 17 % vs neuf le moins cher"
+   },
+   "score": 25.5,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Apple AirPods Pro 3",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "APPLE  AirPods Pro 3 avec Boîtier de charge MagSafe (USB-C)",
+       "prix": 188.0,
+       "nb_boutiques": 17,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/apple-airpods-pro-3-avec-boitier-de-charge-magsafe-usb-c.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 188.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/apple-airpods-pro-3-avec-boitier-de-charge-magsafe-usb-c.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Apple AirPods Pro 3",
+    "neuf": {
+     "nb": 26,
+     "min": 90.14,
+     "p25": 184.52,
+     "mediane": 208.18,
+     "max": 425.2
+    },
+    "occasion": {
+     "nb": 39,
+     "min": 68.3,
+     "p25": 83.9,
+     "mediane": 107.82,
+     "max": 425.2
+    },
+    "exemples": [
+     {
+      "titre": "Apple AirPods Pro 3",
+      "prix": "47.50",
+      "url": "https://www.ebay.fr/itm/198823767150?_skw=Apple+AirPods+Pro+3&hash=item2e4ad1ec6e:g:IioAAeSwkLVq66AC"
+     },
+     {
+      "titre": "Apple AirPods Pro 3",
+      "prix": "99.50",
+      "url": "https://www.ebay.fr/itm/800791754556?_skw=Apple+AirPods+Pro+3&hash=itemba72e8773c:g:nTcAAeSwF-5qznZb&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7l4%2FmujMpAWsNfBfYNtAWm1WylYCGDWQcBEuaVHSE2jO%2BmypZMjNoPIu89Cu80xNTvLLOJabxZzSpMjL47Hf%2Bfgna0v1%2BrOMlOiH5Ys7qyeeavCyiS4NVfKmJc32Iv1VsNSUa4G0Yrs32TnBQU4qCMG1m4yeZrg1zfbXrXEgLcoilLQWS%2B%2BSagGfOqMZ4Qtc8opHrpg%2Bwr7xMstCwo6aEvYFC1rslj6awb1I7Qe6RyNgUsex%2BMm267RkGPhrMw2OLr5elynsdwdUZj35lP7lOcMSYtWdXsFoQmIBr%2FOr7uwuw%3D%3D"
+     },
+     {
+      "titre": "Apple AirPods Pro 3 Blanc intra-auriculaires sans fil Bluetooth USB-C micro",
+      "prix": "156.70",
+      "url": "https://www.ebay.fr/itm/840054453198?_skw=Apple+AirPods+Pro+3&hash=itemc39725b3ce:g:IqsAAeSwe8hq2edK&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7liIEmA5S2fRNp9IjJbWuOaSe95OtozP078P2KwszjCR1PRaKDW32MDa89DAnBaJTxU9lt74FZfoM9I8GrwOOfBIXOzBQwc5Uznplkg8Kq9Ct98H5s%2FevN5W6xTy7fr50rgPoBuavzu5P1opSKY3gOizNQxDzNqs355cMqWWJZhRnxB8cJzBrmV1cxymuterywUpYatTenHWAT85gBCMNp1NJhPnTxjRi9aGp%2BPJGHmGX8MvOIhwjV3ep%2F%2BGxzbstyMWg5E%2FsMzSe8FnwzzuHtmXj1LXvOKTMsm6AxNrVXkHg%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 184.52,
+     "DE": 175.88,
+     "IT": 91.18,
+     "ES": 106.75
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "mot_cle": "apple airpods pro 3",
+   "demande_google": {
+    "volume_mensuel": 3600,
+    "concurrence": "HIGH",
+    "cpc": 0.48,
+    "trois_derniers_mois": [
+     3600,
+     3600,
+     2900
+    ]
+   },
+   "annonces_ebay": 26,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 165.44,
+     "marge_nette": -82.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 165.44,
+      "cout_achat": 223.25,
+      "frais_canal": 0.0,
+      "prelevements": 22.17,
+      "provision": 3.0,
+      "marge_nette": -82.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.372
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 165.44,
+     "marge_nette": -82.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 165.44,
+      "cout_achat": 223.25,
+      "frais_canal": 0.0,
+      "prelevements": 22.17,
+      "provision": 3.0,
+      "marge_nette": -82.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.372
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 165.44,
+     "marge_nette": -82.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 165.44,
+      "cout_achat": 223.25,
+      "frais_canal": 0.0,
+      "prelevements": 22.17,
+      "provision": 3.0,
+      "marge_nette": -82.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.372
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 188.0,
+     "marge_nette": -84.6,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 188.0,
+      "cout_achat": 223.25,
+      "frais_canal": 21.16,
+      "prelevements": 25.19,
+      "provision": 3.0,
+      "marge_nette": -84.6,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.379
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 188.0,
+     "marge_nette": -86.36,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 188.0,
+      "cout_achat": 223.25,
+      "frais_canal": 22.92,
+      "prelevements": 25.19,
+      "provision": 3.0,
+      "marge_nette": -86.36,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.387
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 188.0,
+     "marge_nette": -86.48,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 188.0,
+      "cout_achat": 223.25,
+      "frais_canal": 23.04,
+      "prelevements": 25.19,
+      "provision": 3.0,
+      "marge_nette": -86.48,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.387
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 188.0,
+     "marge_nette": -94.23,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 188.0,
+      "cout_achat": 223.25,
+      "frais_canal": 30.79,
+      "prelevements": 25.19,
+      "provision": 3.0,
+      "marge_nette": -94.23,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.422
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 188.0,
+     "marge_nette": -98.63,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 188.0,
+      "cout_achat": 223.25,
+      "frais_canal": 35.19,
+      "prelevements": 25.19,
+      "provision": 3.0,
+      "marge_nette": -98.63,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.442
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 83.9,
+   "marge_verifiee": -153.59,
+   "rentabilite_verifiee": -0.688,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 83.9,
+    "haut": 107.82,
+    "position_neuf": 1.86
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Apple AirPods Pro 3",
+    "pays": {
+     "FR": {
+      "nb_annonces": 16,
+      "total_ebay": 26,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 156.7,
+       "titre": "Apple AirPods Pro 2ᵉ Génération avec Boîtier de Charge sans Fil MagSafe (USB‑C)",
+       "lien": "https://www.ebay.fr/itm/306493605196?_skw=Apple+AirPods+Pro+3&hash=item475c71454c:g:bYoAAOSwDGNlHY6B",
+       "vendeur": "pa275943",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 425.2,
+       "titre": "Apple AirPods Pro 3 ANC Audio Adaptatif Capteur Cardiaque Temps Réel Blanc",
+       "lien": "https://www.ebay.fr/itm/940036971962?_skw=Apple+AirPods+Pro+3&hash=itemdade91ddba:g:cPcAAeSwlUBrBn4R",
+       "vendeur": "simpletek-italia",
+       "avis_vendeur": 31590
+      }
+     },
+     "DE": {
+      "nb_annonces": 67,
+      "total_ebay": 200,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 108.5,
+       "titre": "Apple AirPods Pro 3 (3rd Gen) White Wireless Earbuds USB-C ANC, Transparency",
+       "lien": "https://www.ebay.de/itm/920169760088?_skw=Apple+AirPods+Pro+3&hash=itemd63e644558:g:QLcAAeSwkrtrAhs2",
+       "vendeur": "mar157088",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 479.0,
+       "titre": "Apple W129354745 MFHP4ZM_A Airpods Pro (3Rd Generation)  Headset True Wirele ~E~",
+       "lien": "https://www.ebay.de/itm/198821302800?_skw=Apple+AirPods+Pro+3&hash=item2e4aac5210:g:c1MAAeSwvUVrBYS-",
+       "vendeur": "guru2000",
+       "avis_vendeur": 88464
+      }
+     },
+     "IT": {
+      "nb_annonces": 120,
+      "total_ebay": 332,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 78.7,
+       "titre": "Apple AirPods Pro 2ª gen USB-C ANC microfono auricolari Bluetooth bianchi",
+       "lien": "https://www.ebay.it/itm/158360760319?_skw=Apple+AirPods+Pro+3&hash=item24df096fff:g:XdkAAeSwB9hqu4E1",
+       "vendeur": "gabr_4593",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 479.0,
+       "titre": "Apple W129354745 MFHP4ZM_A Airpods Pro (3a Generazione) Headset True Wireless ~E~",
+       "lien": "https://www.ebay.it/itm/198821302800?_skw=Apple+AirPods+Pro+3&hash=item2e4aac5210:g:c1MAAeSwvUVrBYS-",
+       "vendeur": "guru2000",
+       "avis_vendeur": 88464
+      }
+     },
+     "ES": {
+      "nb_annonces": 208,
+      "total_ebay": 254,
+      "niveau": "nombreux",
+      "moins_cher": {
+       "prix": 80.0,
+       "titre": "Apple AirPods Pro con Estuche de Carga Inalámbrico MagSafe - Blanco",
+       "lien": "https://www.ebay.es/itm/188462516200?_skw=Apple+AirPods+Pro+3&hash=item2be13dc7e8:g:rREAAeSwp2JqH963",
+       "vendeur": "ser-359772",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 546.23,
+       "titre": "Apple AirPods Pro 3 personalizados enchapados en oro 24K detalles con estuche de carga",
+       "lien": "https://www.ebay.es/itm/237190365853?_skw=Apple+AirPods+Pro+3&hash=item3739a5c29d:g:ilQAAeSwMbtq~bIr",
+       "vendeur": "debillaslux",
+       "avis_vendeur": 1067
+      }
+     }
+    },
+    "niveau_global": "nombreux"
+   },
+   "rapport_demande": {
+    "requete": "Apple AirPods Pro 3",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 11,
+     "interet_recent": 67,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      65,
+      83,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      78,
+      0,
+      0,
+      0,
+      34,
+      29,
+      25,
+      38,
+      46,
+      38,
+      43,
+      46,
+      41,
+      45,
+      49,
+      77,
+      70,
+      69,
+      53
+     ],
+     "recherches_liees": [
+      {
+       "query": "apple watch",
+       "value": 100
+      },
+      {
+       "query": "black friday apple",
+       "value": 36
+      },
+      {
+       "query": "apple store",
+       "value": 34
+      },
+      {
+       "query": "black friday airpods",
+       "value": 31
+      },
+      {
+       "query": "black friday airpods pro 3",
+       "value": 31
+      },
+      {
+       "query": "black friday",
+       "value": 27
+      }
+     ]
+    },
+    "suggestions_google": [
+     "apple airpods pro 3",
+     "apple airpods pro 3 blanc",
+     "apple airpods pro 3 date de sortie",
+     "apple airpods pro 3 écouteurs sans fil",
+     "apple airpods pro 3 leclerc",
+     "apple airpods pro 3 reconditionné",
+     "apple airpods pro 3 prix",
+     "apple airpods pro 3 amazon",
+     "apple airpods pro 3 fnac",
+     "apple airpods pro 3 avis"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "6029750d15",
+   "titre": "Apple AirPods 4 - Auriculares inalámbricos Bluetooth y Estuche de carga - Blanco",
+   "prix": 99.99,
+   "devise": "EUR",
+   "marchand": "El Corte Inglés",
+   "lien": "https://www.chollometro.com/ofertas/apple-airpods-4-auriculares-inalambricos-bluetooth-y-estuche-de-carga-blanco-2089101",
+   "pays": "ES",
+   "source": "chollometro-hot",
+   "temperature": 184,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.chollometro.com/ofertas/apple-airpods-4-auriculares-inalambricos-bluetooth-y-estuche-de-carga-blanco-2089101"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Apple AirPods 4 Blanc",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 104.72,
+   "cout_achat": 104.99,
+   "marge_nette": -17.3,
+   "rentabilite": -0.165,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 16 % vs neuf le moins cher"
+   },
+   "score": 24.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Apple AirPods 4 Blanc",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "APPLE  AirPods 4 (2024) - Écouteurs sans fil - Blanc",
+       "prix": 119.0,
+       "nb_boutiques": 13,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/apple-airpods-4-2024-ecouteurs-sans-fil-blanc.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 119.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Ecouteurs/apple-airpods-4-2024-ecouteurs-sans-fil-blanc.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Apple AirPods 4 Blanc",
+    "neuf": {
+     "nb": 35,
+     "min": 52.7,
+     "p25": 99.5,
+     "mediane": 125.5,
+     "max": 360.3
+    },
+    "occasion": {
+     "nb": 49,
+     "min": 41.99,
+     "p25": 61.54,
+     "mediane": 83.9,
+     "max": 228.46
+    },
+    "exemples": [
+     {
+      "titre": "Apple AirPods 4 Blanc sans ANC - Boîtier USB-C + boîte d'origine - Très bon état",
+      "prix": "68.30",
+      "url": "https://www.ebay.fr/itm/377611438326?_skw=Apple+AirPods+4+Blanc&hash=item57eb6548f6:g:HwQAAeSwYsZq5nWY"
+     },
+     {
+      "titre": "Apple AirPods 4 Blanc Bluetooth intra-auriculaires réduction active du bruit",
+      "prix": "78.70",
+      "url": "https://www.ebay.fr/itm/920149822123?_skw=Apple+AirPods+4+Blanc&hash=itemd63d340aab:g:plAAAeSwJD9q-1m2&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7kP0GXWnKRqjXq0Vg1DaBmFxP0spECPJdlpoXuGeMyoqOSsnvfbmuhihWY2SyKwGJQUKwRxngQFim9UYpDogWM2ziKP3XHoI4Z5AHxno25v9Mbr49Xq3t1AhyeQD5piekSO8NAo11HuLjQt1oyiJTYqyPoyq%2FNSoz7sHQEEM99Mp7GMVy5np6BGBD4x3KKLkf1dgfeuwkrtjgHKrPOXDD2R8lLrD1OAa9akFexqAZkDpHeKvTz1%2FPI9vxHiT%2BiLRX1%2B8bxBtfxaPCfinbh%2BJcV1TK%2FOjB%2FXUp%2BPNMWRnLieVg%3D%3D"
+     },
+     {
+      "titre": "Apple AirPods 4",
+      "prix": "83.90",
+      "url": "https://www.ebay.fr/itm/800791775903?_skw=Apple+AirPods+4+Blanc&hash=itemba72e8ca9f:g:afUAAeSwGMFqzniE&amdata=enc%3AAQALAAAA8Of5zIIojhOf%2BkQK%2Bxzjn7lEHvxMSX9mjIARAFHjKTZS%2FuGXdm0QYXkXyUlbjC1VfaNJXJOGo5iM%2BaKLOEUP4qPennHhK9oEiOjvDIvAQVs4EL7LWLE66jHtuSZVOnL1UBk6czJHn4nTdE6iXnIJwJQcm1JhHsUX9ytjRrMzCg3M29GRCKoL4%2Fr1XcyN48Gw3Igm%2FLxxlKQ%2Bmg1WjNPx0WUFlO8foWb5Pt8%2FIqqAu0Br4CNRSShGMdUCGxUG8Td6bp2hzCx4Qic8%2FKpUoInLzuPZKeMBWYQn4TbTuKzhCTIAVyoe1SJiR5xrsEmTfxWLTg%3D%3D"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 99.5,
+     "DE": 66.38,
+     "IT": 62.07,
+     "ES": 61.22
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "mot_cle": "apple airpods 4",
+   "demande_google": {
+    "volume_mensuel": 4400,
+    "concurrence": "HIGH",
+    "cpc": 0.31,
+    "trois_derniers_mois": [
+     1900,
+     2900,
+     2900
+    ]
+   },
+   "annonces_ebay": 35,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 104.72,
+     "marge_nette": -17.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.72,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.03,
+      "provision": 3.0,
+      "marge_nette": -17.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 104.72,
+     "marge_nette": -17.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.72,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.03,
+      "provision": 3.0,
+      "marge_nette": -17.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 104.72,
+     "marge_nette": -17.3,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 104.72,
+      "cout_achat": 104.99,
+      "frais_canal": 0.0,
+      "prelevements": 14.03,
+      "provision": 3.0,
+      "marge_nette": -17.3,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.165
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 119.0,
+     "marge_nette": -21.27,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.0,
+      "cout_achat": 104.99,
+      "frais_canal": 16.33,
+      "prelevements": 15.95,
+      "provision": 3.0,
+      "marge_nette": -21.27,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.203
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 119.0,
+     "marge_nette": -21.65,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.0,
+      "cout_achat": 104.99,
+      "frais_canal": 16.71,
+      "prelevements": 15.95,
+      "provision": 3.0,
+      "marge_nette": -21.65,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.206
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 119.0,
+     "marge_nette": -22.46,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.0,
+      "cout_achat": 104.99,
+      "frais_canal": 17.52,
+      "prelevements": 15.95,
+      "provision": 3.0,
+      "marge_nette": -22.46,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.214
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 119.0,
+     "marge_nette": -26.76,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.0,
+      "cout_achat": 104.99,
+      "frais_canal": 21.82,
+      "prelevements": 15.95,
+      "provision": 3.0,
+      "marge_nette": -26.76,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.255
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 119.0,
+     "marge_nette": -29.78,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 119.0,
+      "cout_achat": 104.99,
+      "frais_canal": 24.84,
+      "prelevements": 15.95,
+      "provision": 3.0,
+      "marge_nette": -29.78,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": -0.284
+    }
+   ],
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 61.54,
+   "marge_verifiee": -54.7,
+   "rentabilite_verifiee": -0.521,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 61.54,
+    "haut": 83.9,
+    "position_neuf": 1.62
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Apple AirPods 4 Blanc",
+    "pays": {
+     "FR": {
+      "nb_annonces": 10,
+      "total_ebay": 33,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 99.5,
+       "titre": "Apple AirPods 4 Blanc sans réduction du bruits.",
+       "lien": "https://www.ebay.fr/itm/206525008328?_skw=Apple+AirPods+4+Blanc&hash=item3015d989c8:g:SO8AAeSwC5xqlFa1",
+       "vendeur": "mea-vintage-rare",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 360.3,
+       "titre": "Apple AirPods Pro 3 Écouteurs sans Fil, réduction Active du Bruit, Blanc",
+       "lien": "https://www.ebay.fr/itm/147582097777?_skw=Apple+AirPods+4+Blanc&hash=item225c941971:g:dEMAAeSwmuBqrTyT",
+       "vendeur": "digitalleyshop1100",
+       "avis_vendeur": 1439
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 92,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 257,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 310,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Apple AirPods 4 Blanc",
+    "temperature_dealabs": 184,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "apple airpods 4 blanc avec boîtier de charge usb‐c ecouteurs sans fil",
+     "apple airpods 4 blanc",
+     "apple airpods 4 blanc avec boîtier de charge usb c",
+     "apple airpods 4 blanc avec boîtier",
+     "apple airpods 4 blanc avec réduction active du bruit",
+     "apple airpods 4 blanc avec boîtier de charge",
+     "apple airpods 4 blanco",
+     "apple airpods 4 blanco precio",
+     "apple airpods 4 anc blanc",
+     "apple airpods 4 sans fil blanc"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "keepa-B007K5A6PC-arbIT",
+   "titre": "SPIDI Sport S.r.l. (EU) - Pantalon imperméable moto Supers Sandstorm - Noir - 2XL [Amazon IT]",
+   "prix": 92.56,
+   "devise": "EUR",
+   "marchand": "Amazon.it",
+   "lien": "https://www.amazon.it/dp/B007K5A6PC",
+   "pays": "IT",
+   "source": "keepa-arbitrage",
+   "temperature": 240,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.amazon.it/dp/B007K5A6PC"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "auto-moto",
+   "nom_produit": "SPIDI Pantalon moto Supers Sandstorm",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 150.0,
+   "cout_achat": 97.56,
+   "marge_nette": 29.34,
+   "rentabilite": 0.301,
+   "demande": 3.0,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "nemotron",
+    "nemotron_nv"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Prix Amazon IT bien sous la cote neuve (~200 €), taille 2XL niche peu concurrente, revente aisée sur Vinted/Leboncoin sans frais vendeur.",
+    "nemotron_nv": "Pantalon moto SPIDI étanche à 92,56 € IT contre environ 150 € neuf, niche rentable malgré la taille 2XL."
+   },
+   "score": 21.3,
+   "ebay": {
+    "requete": "SPIDI Pantalon moto Supers Sandstorm",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "SPIDI Pantalon moto Supers Sandstorm",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "spidi pantalon moto supers",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "SPIDI Pantalon moto Supers Sandstorm",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "SPIDI Pantalon moto Supers Sandstorm",
+    "temperature_dealabs": 240,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": []
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 8,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 35,
+ "annonces_analysees": [
+  {
+   "id": "53743b9547",
+   "titre": "[Telekom-Netz] freenet Black Week: monatlich kündbar 200GB freenet Telekom Tarif inkl. Allnet für 16,99€ mtl. | Lifetime Preis | 0€ AG",
+   "temperature": 2830,
+   "categorie": "Telefon- & Internet-Verträge",
+   "marchand": "freenet",
+   "prix": 16.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/telekom-netz-freenet-black-friday-monatlich-kundbar-200gb-freenet-telekom-tarif-inkl-allnet-fur-1699eur-mtl-lifetime-preis-1999eur-ag-2868829",
+   "date": "Wed, 25 Nov 2026 11:00:49 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "16,99€ - freenet Moin Moin, heute startet der erste Black Week SIM-Only-Tarif aus dem Hause freenet! (party) Gerade für Personen die sich aktuell im SIM Onl..."
+  },
+  {
+   "id": "849aff6727",
+   "titre": "Kontroler bezprzewodowy Xbox - Robot White / Czarny 144,41zl ( Dualsense Nova Pink/PowerA Advantage do Nintendo Switch 2 - opis)",
+   "temperature": 1101,
+   "categorie": "Gaming",
+   "marchand": "Amazon.pl",
+   "prix": 34.78,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kontroler-bezprzewodowy-xbox-robot-white-sony-playstation-5-dualsense-nova-pink-kontroler-powera-advantage-do-nintendo-switch-2-opis-1399940",
+   "date": "Wed, 25 Nov 2026 10:27:49 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "148zł - Amazon.pl Cena po użyciu kodu rabatowego amazon.pl/Kon..."
+  },
+  {
+   "id": "c3b27e47f6",
+   "titre": "Robot Vacuum Megathread: All The latest Black Friday Deals",
+   "temperature": 1006,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 109.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/robot-vacuum-megathread-all-the-latest-black-friday-deals-5028300",
+   "date": "Wed, 25 Nov 2026 11:13:42 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£109.99 - Amazon As you can see looking HERE A gazillion (Yes a gazillion) R..."
+  },
+  {
+   "id": "d3d0950a29",
+   "titre": "10€ Coupon in der MediaMarkt App - ohne Einkauf!",
+   "temperature": 759,
+   "categorie": "Elektronik",
+   "marchand": "MediaMarkt",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/gutschein/10eur-coupon-in-der-mediamarkt-app-373344",
+   "date": "Wed, 25 Nov 2026 07:46:38 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "MediaMarkt Du bist schon myMediaMarkt Mitglied, aber die App hast du noch nicht auf deinem Handy? Jetzt ist der perfekte Moment dafür! Lade die MediaMarkt-App her..."
+  },
+  {
+   "id": "8531b16434",
+   "titre": "Kod rabatowy Amazon.pl 70 zł za wydane 150 zł (dla nowych kont) 1750 kodów // łączy się z kodem BFW2026 -50/250 zł",
+   "temperature": 696,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 16.45,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/kupony/kod-rabatowy-amazonpl-70-zl-za-wydane-150-zl-dla-nowych-kont-1750-kodow-1399975",
+   "date": "Wed, 25 Nov 2026 10:55:15 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "Amazon.pl Jakby ktoś chciał 50zł/150zl działa na stare konta również. <a href=\"https://www.pepper.pl/kupony/amazonpl-50-zl-znizki-od-150-zl-takze..."
+  },
+  {
+   "id": "076885667c",
+   "titre": "Kettlebell w bardzo dobrej cenie",
+   "temperature": 482,
+   "categorie": "Sport i turystyka",
+   "marchand": "Amazon.pl",
+   "prix": 25.69,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/kettlebell-w-bardzo-dobrej-cenie-1399971",
+   "date": "Wed, 25 Nov 2026 10:56:52 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "109,30zł - Amazon.pl Znalazłem fajna ofertę na 16kg Kettla. W tej cenie ciężko znaleźć nawet używany. Z kodem ANETA50 zapłaciłem 109,40 Produkt Kettlebell</stro..."
+  },
+  {
+   "id": "8ee0cdacd0",
+   "titre": "PlayStation 5 Disc Drive",
+   "temperature": 430,
+   "categorie": "Gaming",
+   "marchand": "CDiscount",
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/playstation-5-disc-drive-429174",
+   "date": "Wed, 25 Nov 2026 07:41:23 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€64,99 - CDiscount Nog op zoek naar een disc-drive voor bij de Playstation 5? PlayStation 5 Disc Drive voor €64,99! Via de kortingscode SQUEEZIE15 ..."
+  },
+  {
+   "id": "62e8fcd3bf",
+   "titre": "Nintendo Switch 2 Pro Controller",
+   "temperature": 420,
+   "categorie": "Gaming",
+   "marchand": "Amazon.pl",
+   "prix": 62.27,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/nintendo-switch-2-pro-controller-1399988",
+   "date": "Wed, 25 Nov 2026 11:06:28 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "264,99zł - Amazon.pl Kod ANETA50 zbija cenę o 50 zł + dodatkowe 50 zł na przyszłe zakupy. Kontroler Pro Nintendo Switch 2, dostępny na Amazon za 264,99, to zaawansow..."
+  },
+  {
+   "id": "keepa-B0GN189YFJ-arbDE",
+   "titre": "Michael Jacksons - This Is It [Blu-ray] [Amazon DE]",
+   "temperature": 420,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 11.04,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0GN189YFJ",
+   "date": "2026-11-21T21:05",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4020628653699",
+   "asin": "B0GN189YFJ",
+   "ref_fr": 31.25,
+   "ventes_30j": 20,
+   "vendeurs": 5,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 31.25 € (moyenne 90 j 30.3 €), écart 42 % port compris, ventes 30 j 20, 5 vendeurs FR"
+  },
+  {
+   "id": "cd6876567c",
+   "titre": "Jordan Spizike Low FC Chaussure pour pré-ado",
+   "temperature": 400,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 62.49,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-jordan-spizike-low-fc-pour-pre-ado-kbzVn1Ah/IV6808-001",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 124.99 €, -50 %. Nike IV6808-001 ; couleur Phantom/Sail/Old Royal/University Red"
+  },
+  {
+   "id": "0b74a853da",
+   "titre": "Kod 70/150 amazon.pl dla nowych kont",
+   "temperature": 373,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 16.45,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/kupony/kod-70150-amazonpl-dla-nowych-kont-1399983",
+   "date": "Wed, 25 Nov 2026 12:04:41 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "Amazon.pl Kod 70/150 dla nowych użytkowników Amazon.pl . Łączy się z kodem BFW2026. Produkty sprzedawane i wysył..."
+  },
+  {
+   "id": "c6feb0467d",
+   "titre": "Czapka BUFF heavyweight MERINO (16.38 €) [Czarna troche drożej w opisie] | amazon.de *zmieńcie region w apce na Niemcy*",
+   "temperature": 351,
+   "categorie": "Moda",
+   "marchand": "Amazon.de",
+   "prix": 17.2,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/czapka-buff-heavyweight-merino-1638-eur-amazonde-1399875",
+   "date": "Wed, 25 Nov 2026 11:00:22 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "73,20zł - Amazon.de Żeby mieć darmową dostawę do DHL Box trzeba go dodać w ustawieniach konta (pamietajcie o zmianie regionu na Niemcy w aplikacji, inaczej możecie nie w..."
+  },
+  {
+   "id": "c1b347f751",
+   "titre": "Apple AirPods Pro 3",
+   "temperature": 351,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 182.9,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/apple-airpods-pro-3-373347",
+   "date": "Wed, 25 Nov 2026 08:41:40 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "182,90€ - Amazon Kabellose In‑Ear Kopfhörer, Aktive Geräuschunterdrückung, Herzfrequenzmessung, Hörgerätefunktion, Bluetooth Kopfhörer, 3D Audio, Hi‑Fi Sound, Laden über USB‑C..."
+  },
+  {
+   "id": "keepa-B0FYQY2TRK-arbES",
+   "titre": "Vans Brooklyn LS, Daim/Toile Mystic Moss [Amazon ES]",
+   "temperature": 350,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 44.79,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0FYQY2TRK",
+   "date": "2026-11-21T21:43",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0198268740278",
+   "asin": "B0FYQY2TRK",
+   "ref_fr": 79.75,
+   "ventes_30j": 9,
+   "vendeurs": 2,
+   "description": "vendu et expédié par Amazon (Amazon.es, livrable en France) · Amazon.fr 79.75 € (moyenne 90 j 74.72 €), écart 35 % port compris, ventes 30 j 9, 2 vendeurs FR"
+  },
+  {
+   "id": "5d46d50bef",
+   "titre": "Bosch 7x Zestaw wierteł EXPERT SDS plus-7X",
+   "temperature": 345,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Amazon.pl",
+   "prix": 23.5,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/bosch-7x-zestaw-wiertel-expert-sds-plus-7x-1399824",
+   "date": "Wed, 25 Nov 2026 10:47:44 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "100zł - Amazon.pl Dodatkowo produkt można połączyć z obowiązującą promocją: „Przy zakupach o minimalnej wartości 250 zł otrzymujesz rabat w wysokości 50 zł.” Inf..."
+  },
+  {
+   "id": "d34f454bc8",
+   "titre": "Gra PS5 ASTRO BOT Playstation 5 / Dla nowych kont 119,34 zł z kodem deal70 lub drop70",
+   "temperature": 343,
+   "categorie": "Gaming",
+   "marchand": "Amazon.pl",
+   "prix": 32.74,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/gra-ps5-astro-bot-playstation-5-dla-nowych-kont-11934-zl-z-kodem-deal70-lub-drop70-1400034",
+   "date": "Wed, 25 Nov 2026 11:59:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "139,34zł - Amazon.pl Astro Bot to dynamiczna gra platformowa 3D, w ktorej malego robota wysylasz na misje ratunkowa po ponad piecdziesieciu planetach, aby odbudowac statek matke ..."
+  },
+  {
+   "id": "a4061339e6",
+   "titre": "Horno multifunción Serie 6000 SurroundCook con Display LED",
+   "temperature": 333,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "AEG",
+   "prix": 186.15,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/horno-multifuncion-serie-6000-surroundcook-con-display-led-2087935",
+   "date": "Wed, 25 Nov 2026 11:49:11 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "186,15€ - AEG Aplica el cupón CHOLLOBLACK15 Dimensiones y Capacidad Medidas del hueco (mm): ..."
+  },
+  {
+   "id": "4298525dc0",
+   "titre": "LEGO Star Wars Piernikowa maszyna krocząca AT-AT 40806",
+   "temperature": 331,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Amazon.pl",
+   "prix": 28.67,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/lego-star-wars-piernikowa-maszyna-kroczaca-at-at-40806-1399962",
+   "date": "Wed, 25 Nov 2026 11:20:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "121,99zł - Amazon.pl Zabawka konstrukcyjna LEGO Star Wars Piernikowa maszyna krocząca AT-AT (40806) pobudzi wyobraźnię dzieci i zapewni kreatywną zabawę fanom serii Gwiezdne Wojny. ..."
+  },
+  {
+   "id": "7798dfe289",
+   "titre": "Amazon.pl 70/150 dla nowych kont",
+   "temperature": 323,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 16.45,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/kupony/amazonpl-70150-dla-nowych-kont-1399957",
+   "date": "Wed, 25 Nov 2026 11:56:44 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "Amazon.pl Kod rabatowy 70/150 dla nowych użytkowników Amazon.pl. Można łączyć z 50/250 BFW2026. Limit 1750 użyć. Na produkty sprzedawane i wysyłane przez Amazo..."
+  },
+  {
+   "id": "703476b3fe",
+   "titre": "Nike Metcon 10 AMP Chaussure de training pour homme",
+   "temperature": 320,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 89.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-de-training-nike-metcon-10-amp-pour-homme-KVNayU12/IO8083-100",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 149.99 €, -40 %. Nike IO8083-100 ; couleur Pale Ivory/College Grey/Gum Medium Brown/Iron Grey"
+  },
+  {
+   "id": "8ae75def11",
+   "titre": "Jordan Spizike Low Chaussure pour homme",
+   "temperature": 320,
+   "categorie": "Mode / sneakers",
+   "marchand": "Nike",
+   "prix": 101.99,
+   "devise": "EUR",
+   "lien": "https://www.nike.com/fr/t/chaussure-jordan-spizike-low-pour-homme-gB9Cov0D/IX0358-100",
+   "date": "",
+   "source": "nike-promos",
+   "pays": "FR",
+   "description": "prix initial 169.99 €, -40 %. Nike IX0358-100 ; couleur Blanc/Grey Fog/Pink Foam/Obsidian"
+  },
+  {
+   "id": "keepa-B0D1KH5T92-arbES",
+   "titre": "CRESSI Combinaison Wahoo Homme Une Pièce Bleu/Bleu Clair 2 mm XXXL/7 - [Amazon ES]",
+   "temperature": 310,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 53.72,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0D1KH5T92",
+   "date": "2026-11-21T21:19",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0194482061113",
+   "asin": "B0D1KH5T92",
+   "ref_fr": 87.5,
+   "ventes_30j": 8,
+   "vendeurs": 1,
+   "description": "vendu et expédié par Amazon (Amazon.es, livrable en France) · Amazon.fr 87.5 € (moyenne 90 j 79.99 €), écart 31 % port compris, ventes 30 j 8, 1 vendeurs FR"
+  },
+  {
+   "id": "56249b0aca",
+   "titre": "Ultra smukły soundbar Samsung HW-S800D (3.1.2, 10 głośników, bezprzewodowy Dolby Atmos, Q-Symphony)",
+   "temperature": 305,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.it",
+   "prix": 239.27,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/ultra-smukly-soundbar-samsung-hw-s800d-312-10-glosnikow-bezprzewodowy-dolby-atmos-q-symphony-1398340",
+   "date": "Wed, 25 Nov 2026 11:00:38 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 018,17zł - Amazon.it Robaczek wśród soundbarów. Cena jego to 229,00 € + koszta wysylki 19,49 €. Soundbar Samsung HW-S800D 3.1.2 Wi-Fi Bluetooth AirPlay Dolby Atmos DT..."
+  },
+  {
+   "id": "keepa-B0CP86C142-arbDE",
+   "titre": "Reusch Gants de gardien enfants | protège-doigts, grip fiable [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 17.61,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0CP86C142",
+   "date": "2026-11-21T20:10",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4060485481547",
+   "asin": "B0CP86C142",
+   "ref_fr": 34.95,
+   "ventes_30j": 6,
+   "vendeurs": 2,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 34.95 € (moyenne 90 j 34.79 €), écart 30 % port compris, ventes 30 j 6, 2 vendeurs FR"
+  },
+  {
+   "id": "keepa-B096SR659H-arbDE",
+   "titre": "Mammut Chaussure de randonnée et de Trekking Mercury IV Mid GTX® Homme [Amazon DE]",
+   "temperature": 300,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 111.15,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B096SR659H",
+   "date": "2026-11-21T18:26",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "7619876084477",
+   "asin": "B096SR659H",
+   "ref_fr": 168.94,
+   "ventes_30j": 5,
+   "vendeurs": 5,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 168.94 € (moyenne 90 j 149.54 €), écart 30 % port compris, ventes 30 j 5, 5 vendeurs FR"
+  },
+  {
+   "id": "42d0e1c974",
+   "titre": "Lidl: -20% auf alles; Filialen: Zell am See, Pressbaum, Wolfsberg, Saalfelden, Amstetten 27.11-18.12 (nur einzele Tage pro Filiale)",
+   "temperature": 293,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Lidl",
+   "prix": 80.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/lidl-20-auf-alles-filiale-zell-am-see-pressbaum-wolfsberg-saalfelden-2711-412-373348",
+   "date": "Wed, 25 Nov 2026 08:47:34 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "80€ - Lidl Hallo, bei Lidl gibt es diverse Aktionen zur Neu- oder Wiedereröffnung von Filialen. siehe <a href=\"https://www.lidl.at/c/neueroeffnungen/s1..."
+  },
+  {
+   "id": "dcb34217f4",
+   "titre": "Ecran PC 27\" MSI MAG272QP - WQHD 2560 x 1440, QD-OLED, 240 Hz, 0,03ms",
+   "temperature": 288,
+   "categorie": "High-Tech",
+   "marchand": "Electro Dépôt",
+   "prix": 299.98,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ecran-pc-gamer-27-msi-mag272qpqdoledx24-oled240hz003ms-3468668",
+   "date": "Wed, 25 Nov 2026 11:02:57 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "299,98€ - Electro Dépôt 1 centime de moins que l’offre de boulanger ça peut changer la donne pour vos plafonds sur cette période de Noël Marque <a href=\"https://www..."
+  },
+  {
+   "id": "c073140161",
+   "titre": "Wolnostojąca kuchenka mikrofalowa AMICA AMGF20E1S QuickStart za 199zł @ Media Markt",
+   "temperature": 287,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "MediaMarkt",
+   "prix": 46.77,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/wolnostojaca-kuchenka-mikrofalowa-amica-amgf20e1s-quickstart-za-199zl-at-media-markt-1399300",
+   "date": "Wed, 25 Nov 2026 10:50:26 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "199zł - MediaMarkt Wolnostojąca kuchenka mikrofalowa AMICA AMGF20E1S QuickStart za 199zł. Przecena z 350zł. Średnia z ostatniego półrocza wg <..."
+  },
+  {
+   "id": "cd1ba72ce4",
+   "titre": "Zaginiona wyspa Arnak: Kręte ścieżki (64,83 zł z GNC Allegro) | gra planszowa | BGG 8,7",
+   "temperature": 287,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Empik",
+   "prix": 16.83,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zaginiona-wyspa-arnak-krete-sciezki-6483-z-gnc-allegro-1399603",
+   "date": "Wed, 25 Nov 2026 10:36:18 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "71,60zł - Empik To nie jest samodzielna gra! Do rozgrywki wymagana jest podstawowa wersja gry: Zaginiona wyspa Arnak. Jeżeli cena nie wchodzi to sprawdź przejście pr..."
+  },
+  {
+   "id": "12e8fbeef1",
+   "titre": "Baraja de cartas Coco inspirada en la película",
+   "temperature": 286,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 9.28,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/baraja-de-cartas-coco-inspirada-en-la-pelicula-2089303",
+   "date": "Wed, 25 Nov 2026 11:17:18 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "9,28€ - Amazon Tarjetas de diseño personalizado y tarjetas de corte con Miguel y sus antepasados Estuche holográfico con sorpresas impresas en el interior Bicycle Ac..."
+  },
+  {
+   "id": "5c8fe5dee4",
+   "titre": "EIS Deluxe Adventkalender + 2 Gratis Tagestips + 6 gratis Klassiker",
+   "temperature": 285,
+   "categorie": "Elektronik",
+   "marchand": "EIS.at",
+   "prix": 42.96,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/eis-deluxe-adventkalender-2-gratis-tagestips-6-gratis-klassiker-373349",
+   "date": "Wed, 25 Nov 2026 09:22:46 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "42,96€ - EIS.at Hallo Leute, Für eine doppelt besinnliche Weihnachtszeit lässt es Druckerzubehör ääähhh.... EIS heute wieder richtig bei euch im Karton rappeln. D..."
+  },
+  {
+   "id": "keepa-B0F637MPSK-arbDE",
+   "titre": "PUMA Baskets Club II Era Mixte, Emerald Ice-White, 48 EU [Amazon DE]",
+   "temperature": 280,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 32.95,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B0F637MPSK",
+   "date": "2026-11-21T20:34",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "4069161829802",
+   "asin": "B0F637MPSK",
+   "ref_fr": 55.85,
+   "ventes_30j": 10,
+   "vendeurs": 3,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 55.85 € (moyenne 90 j 49.99 €), écart 28 % port compris, ventes 30 j 10, 3 vendeurs FR"
+  },
+  {
+   "id": "83866e65f9",
+   "titre": "(Segunda mano Aceptable) Harry Potter and the Goblet of Fire: A sumptuously illustrated gift book with magical interactive surprises Inglés",
+   "temperature": 278,
+   "categorie": "Cine, libros, cultura y ocio",
+   "marchand": "Amazon",
+   "prix": 10.38,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/segunda-mano-aceptable-harry-potter-and-the-goblet-of-fire-a-sumptuously-illustrated-gift-book-with-magical-interactive-surprises-ingles-2089178",
+   "date": "Wed, 25 Nov 2026 11:16:27 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "10,38€ - Amazon Estado Aceptable idioma en Inglés El cuarto libro fascinante de la serie interactiva ilustrada de Harry Potter, que cobra vida a todo ..."
+  },
+  {
+   "id": "a6eb7363ae",
+   "titre": "[Via Paypal] Processeur AMD Ryzen 7 9800X3D - 8 cœurs, 5,2 GHz, 96 Mo L3, TDP 120 W, AM5",
+   "temperature": 274,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 268.9,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-processeur-amd-ryzen-7-9800x3d-8-coeurs-52-ghz-96-mo-l3-tdp-120-w-am5-3468717",
+   "date": "Wed, 25 Nov 2026 11:25:54 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "268,90€ - AliExpress De retour <3 Code promo à indiquer au panier. Payez avec PayPal pour d'obtenir ce prix fin..."
+  },
+  {
+   "id": "73361e4976",
+   "titre": "Karta pamięci micro SD Express 256GB - Nintendo Switch 2 (możliwa niższa cena - opis)",
+   "temperature": 272,
+   "categorie": "Gaming",
+   "marchand": "Amazon.pl",
+   "prix": 44.39,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/karta-pamieci-micro-sd-express-256gb-nintendo-switch-2-mozliwa-nizsza-cena-opis-1399986",
+   "date": "Wed, 25 Nov 2026 11:47:14 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "188,89zł - Amazon.pl Kod ANETA50 zbija cenę o 50zł Dodatkowo cenę można zbić o kolejne 50zł (w sumie 100zł taniej) kodem \" B..."
+  },
+  {
+   "id": "b13c390d54",
+   "titre": "MALTA - 6 nocy za 1861zł! Hotel & SPA 4,5*, bezpośrednio przy plaży, dwa posiłki plus, wylot z Warszawy Modlin (1-7 marca)",
+   "temperature": 266,
+   "categorie": "Podróże",
+   "marchand": "TUI",
+   "prix": 437.33,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/malta-6-nocy-za-1861zl-hotel-spa-45-bezposrednio-przy-plazy-dwa-posilki-plus-wylot-z-warszawy-modlin-1-7-marca-1397111",
+   "date": "Wed, 25 Nov 2026 10:33:51 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 861zł - TUI • Obiekt 4,5-gwiazdkowy • Położony przy piaszczystej plaży Ghadira Bay Hotel db Seabank Resort & Spa znajduje się w miejscowości Melli..."
+  },
+  {
+   "id": "87c04e1b30",
+   "titre": "Garmin fēnix 8 AMOLED 47mm, odnowiony, amazon.pl",
+   "temperature": 260,
+   "categorie": "Elektronika",
+   "marchand": "Amazon.pl",
+   "prix": 514.88,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/garmin-fenix-8-amoled-47mm-amazonpl-1399884",
+   "date": "Wed, 25 Nov 2026 11:39:50 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "2 190,98zł - Amazon.pl Informacje o tym produkcie Ekran dotykowy AMOLED i szkło Corning Gorilla (1,4') Czas pracy: do 16 dni w trybie ..."
+  },
+  {
+   "id": "keepa-B07JYSHQJL-arbDE",
+   "titre": "Dockers Pantalon décontracté pour Homme - - 34 W/36 L [Amazon DE]",
+   "temperature": 260,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 52.43,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B07JYSHQJL",
+   "date": "2026-11-21T21:53",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "5400816396697",
+   "asin": "B07JYSHQJL",
+   "ref_fr": 80.0,
+   "ventes_30j": 6,
+   "vendeurs": 3,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 80.0 € (moyenne 90 j 97.84 €), écart 26 % port compris, ventes 30 j 6, 3 vendeurs FR"
+  },
+  {
+   "id": "7e63f5c33d",
+   "titre": "Guitarra Eléctrica Squier by Fender Debut Stratocaster - SSS",
+   "temperature": 252,
+   "categorie": "Cine, libros, cultura y ocio",
+   "marchand": "Amazon",
+   "prix": 119.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/squier-by-fender-debut-stratocaster-guitarra-electrica-principiantes-roja-2089277",
+   "date": "Wed, 25 Nov 2026 11:20:13 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "119,99€ - Amazon Muy buen precio de Black Friday en Amazon para esta guitarra eléctrica Fender Squier Debut Series Stratocaster en color Dakota Red</..."
+  },
+  {
+   "id": "3d361910b2",
+   "titre": "Rapoo 9010M draadloos toetsenbord en muis set (zwart) @ Joybuy",
+   "temperature": 252,
+   "categorie": "Elektronica",
+   "marchand": "Joybuy NL",
+   "prix": 14.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/rapoo-9010m-draadloos-toetsenbord-en-muis-set-zwart-at-joybuy-423816",
+   "date": "Wed, 25 Nov 2026 08:47:03 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€14,99 - Joybuy NL Deze Rapoo 9010M draadloos toetsenbord en muis set (zwart) kost nu €14,99 bij Joybuy. De prijs is normaal gesproken <a href=\"https://www.google.com/search?q=..."
+  },
+  {
+   "id": "19aca2d5f5",
+   "titre": "Patelnia ceramiczna ZWIEGER 28 cm",
+   "temperature": 249,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Amazon.pl",
+   "prix": 25.85,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zwieger-patelnia-ceramiczna-28-cm-1397193",
+   "date": "Wed, 25 Nov 2026 11:27:54 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "109,99zł - Amazon.pl Informacje o tym produkcie Ceramiczna patelnia do intensywnego aromatu wędzenia – ta ceramiczna patelnia indukcyjna o średnicy..."
+  },
+  {
+   "id": "6029750d15",
+   "titre": "Apple AirPods 4 - Auriculares inalámbricos Bluetooth y Estuche de carga - Blanco",
+   "temperature": 247,
+   "categorie": "Electrónica",
+   "marchand": "El Corte Inglés",
+   "prix": 99.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/apple-airpods-4-auriculares-inalambricos-bluetooth-y-estuche-de-carga-blanco-2089101",
+   "date": "Wed, 25 Nov 2026 11:38:51 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "99,99€ - El Corte Inglés Apple AirPods 4 - Auriculares inalámbricos Bluetooth y Estuche de carga - Blanco"
+  },
+  {
+   "id": "900218815d",
+   "titre": "Klocki Cobi Fso 125P Kombi 90 el.",
+   "temperature": 246,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Empik",
+   "prix": 10.34,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/samochod-fso-125p-kombi-90-kl-1398193",
+   "date": "Wed, 25 Nov 2026 10:30:39 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "43,99zł - Empik Cobi Historical Collection, licencja FSO - klockowy model FSO 125p Kombi w skali 1:35 Wiek 5+ - zestaw zawiera 90 elementów do zbudowania samochodu Tr..."
+  },
+  {
+   "id": "9749ba102e",
+   "titre": "Funko Pop! Football: Bayern Munich - Berni The Bear",
+   "temperature": 244,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 8.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/funko-pop-football-bayern-munich-berni-the-bear-2089306",
+   "date": "Wed, 25 Nov 2026 11:21:21 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8€ - Amazon Funko Pop! Football: Bayern Munich - Berni The Bear es una figura de vinilo de 9,7 cm que reproduce a la mascota oficial del Bayern. Llega con ..."
+  },
+  {
+   "id": "keepa-B007K5A6PC-arbIT",
+   "titre": "SPIDI Sport S.r.l. (EU) - Pantalon imperméable moto Supers Sandstorm - Noir - 2XL [Amazon IT]",
+   "temperature": 240,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.it",
+   "prix": 92.56,
+   "devise": "EUR",
+   "lien": "https://www.amazon.it/dp/B007K5A6PC",
+   "date": "2026-11-21T20:30",
+   "source": "keepa-arbitrage",
+   "pays": "IT",
+   "ean": "8030161129229",
+   "asin": "B007K5A6PC",
+   "ref_fr": 131.33,
+   "ventes_30j": 18,
+   "vendeurs": 3,
+   "description": "vendu et expédié par Amazon (Amazon.it, livrable en France) · Amazon.fr 131.33 € (moyenne 90 j 127.79 €), écart 24 % port compris, ventes 30 j 18, 3 vendeurs FR"
+  },
+  {
+   "id": "8695122143",
+   "titre": "Narzędzie wielofunkcyjne/ Multitool 19 w 1 Leatherman Signal Srebrny / Zielony",
+   "temperature": 239,
+   "categorie": "Ogród i majsterkowanie",
+   "marchand": "Allegro",
+   "prix": 100.66,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/leatherman-signal-srebrny-zielony-1399571",
+   "date": "Wed, 25 Nov 2026 11:26:53 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "428,35zł - Allegro Lepszej ceny osobiście nigdy nie widziałem, ALE sprzedawca nie jest super na 100% Opinie ma różne. Cena raczej okazyjna, kolory: srebrny i zielony. ..."
+  },
+  {
+   "id": "0fbec73749",
+   "titre": "[Via PayPal] Processeur AMD Ryzen 7 7800X3D - 8 Cœurs / 16 Threads, jusqu’à 5 GHz, 96 Mo Cache 3D V-Cache, Socket AM5, sans ventilateur",
+   "temperature": 238,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 181.41,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-processeur-amd-ryzen-7-7800x3d-8-coeurs-16-threads-jusqua-5-ghz-96-mo-cache-3d-v-cache-socket-am5-sans-ventilateur-3468702",
+   "date": "Wed, 25 Nov 2026 11:25:23 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "181,41€ - AliExpress Excellent prix à venir ! :) Code promo à indiquer au panier. Payez avec PayPal pour obtenir le prix final. ..."
+  },
+  {
+   "id": "78fb4340e7",
+   "titre": "Ninja CRISPi PRO Szklany air fryer XL 7 w 1 Cyberprzestrzeń AS101EUCY",
+   "temperature": 238,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "Shark Ninja",
+   "prix": 159.8,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/ninja-crispi-pro-szklany-air-fryer-xl-7-w-1-cyberprzestrzen-as101eucy-1398286",
+   "date": "Wed, 25 Nov 2026 11:25:07 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "679,99zł - Shark Ninja Z okazji blackfriday cena na stronie producenta wynosi 799,99. Po zapisaniu się do newslettera dostajemy -15% na pierwsze zakupy, co daje nam cenę 679,9..."
+  },
+  {
+   "id": "e4bab8b305",
+   "titre": "Głośnik Bluetooth JVC XS-E325B 20W Czarny",
+   "temperature": 235,
+   "categorie": "Elektronika",
+   "marchand": "RTV Euro AGD",
+   "prix": 23.26,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/glosnik-bluetooth-jvc-xs-e325b-20w-czarny-1399760",
+   "date": "Wed, 25 Nov 2026 11:56:14 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "99zł - RTV Euro AGD Ponownie dostępny głośnik bluetooth JVC, tym razem za 99 pln. Chyba już nie ma złudzeń czy wybrać ten czy JB... :) I nie, tutaj Wam nic nie anulują przy zamówi..."
+  },
+  {
+   "id": "0b47c23f65",
+   "titre": "Tapis de souris de jeu XXL Impactrion - 90 x 40 cm",
+   "temperature": 232,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 13.93,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/tapis-de-souris-de-jeu-xxl-impactrion-90-x-40-cm-3468471",
+   "date": "Wed, 25 Nov 2026 11:19:18 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "13,93€ - Amazon ➡️ProLine : le VX est le premier tapis de souris de notre collection spécialisée de tapis de souris. Alors que les tapis de souris BaseLine offrent u..."
+  },
+  {
+   "id": "d5dd2152a3",
+   "titre": "LEGO Icons Flor de Pascua",
+   "temperature": 230,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "El Corte Inglés",
+   "prix": 34.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-icons-flor-de-pascua-2089198",
+   "date": "Wed, 25 Nov 2026 11:46:33 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "34,95€ - El Corte Inglés Construye tu propia flor de Pascua con este set LEGO Botanicals de 608 piezas. Incluye una reproducción detallada de la tradicional planta navideña,..."
+  },
+  {
+   "id": "be75b39a15",
+   "titre": "Chaqueta de moto touring RST Alpha 5 | Clase AA | Forro térmico extraíble 125gr | Impermeable | 2 colores, de S a 3XL en ambos",
+   "temperature": 229,
+   "categorie": "Coches y motos",
+   "marchand": "tradeinn",
+   "prix": 72.24,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/chaqueta-de-moto-touring-rst-alpha-5-clase-aa-forro-termico-extraible-125gr-impermeable-2-colores-de-s-a-3xl-en-ambos-2089174",
+   "date": "Wed, 25 Nov 2026 11:28:55 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "72,24€ - tradeinn La Alpha 5 está diseñada para ofrecer todas las características esenciales que necesitas, sin compromisos. Está diseñada con un gran énfasis en la segu..."
+  },
+  {
+   "id": "d218bf2f62",
+   "titre": "Roborock RockNeo Q105 Robotmaaier voor Gazons tot 500 m²",
+   "temperature": 225,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy NL",
+   "prix": 600.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/roborock-rockneo-q105-robotmaaier-voor-gazons-tot-500-m2-424140",
+   "date": "Wed, 25 Nov 2026 11:47:38 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€600 - Joybuy NL Gebruik de kortingscode ' RO10' om op deze prijs uit te komen. :) Laagste prijs elders: <a href=\"https://tweakers.net/pricewatch/unsort..."
+  },
+  {
+   "id": "88db02d90a",
+   "titre": "Onimusha: Way of the Sword - Nintendo Switch 2",
+   "temperature": 222,
+   "categorie": "Gaming",
+   "marchand": "Allegro",
+   "prix": 47.78,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/onimusha-way-of-the-sword-nintendo-switch-2-1398801",
+   "date": "Wed, 25 Nov 2026 11:46:57 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "203,30zł - Allegro Onimusha Way of the Sword NS2 Język gry: POLSKI (napisy) Język okładki: taka jak na zdjeciu</p..."
+  },
+  {
+   "id": "e6e1d9c71c",
+   "titre": "Skechers Mujer Graceful Get Connected Trainers",
+   "temperature": 220,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Amazon",
+   "prix": 28.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/skechers-mujer-graceful-get-connected-trainers-2089396",
+   "date": "Wed, 25 Nov 2026 12:20:48 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "28,99€ - Amazon Forro de tela suave para zapatos Plantilla acolchada de espuma viscoelástica Suela flexible ligera que absorbe los golpes Suela de tracción flexi..."
+  },
+  {
+   "id": "da381a854c",
+   "titre": "DJI Neo 2 Motion Fly More Combo met RC Motion 3, een N3 bril en een ringlight voor smartphones @ Joybuy",
+   "temperature": 220,
+   "categorie": "Elektronica",
+   "marchand": "Joybuy NL",
+   "prix": 459.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/dji-neo-2-motion-fly-more-combo-met-rc-motion-3-een-n3-bril-en-een-ringlight-voor-smartphones-at-joybuy-424802",
+   "date": "Wed, 25 Nov 2026 11:46:25 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€459 - Joybuy NL Gebruik de kortingscode 'NEO1' om op deze prijs uit te komen. Laagste prijs elders: <a href=\"https://tweakers.net/pricewatch/2290266/dji-neo-2-motion-fl..."
+  },
+  {
+   "id": "keepa-B0CJ2C7QP5-arbES",
+   "titre": "Skechers Homme Summits Key Pace Slip-In ENTRAINEUSE, Charcoal Mesh/Black Trim, 39 EU Large [Amazon ES]",
+   "temperature": 220,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.es",
+   "prix": 54.35,
+   "devise": "EUR",
+   "lien": "https://www.amazon.es/dp/B0CJ2C7QP5",
+   "date": "2026-11-21T21:53",
+   "source": "keepa-arbitrage",
+   "pays": "ES",
+   "ean": "0197627149332",
+   "asin": "B0CJ2C7QP5",
+   "ref_fr": 78.88,
+   "ventes_30j": 5,
+   "vendeurs": 2,
+   "description": "vendu et expédié par Amazon (Amazon.es, livrable en France) · Amazon.fr 78.88 € (moyenne 90 j 77.04 €), écart 22 % port compris, ventes 30 j 5, 2 vendeurs FR"
+  },
+  {
+   "id": "1030e40ac8",
+   "titre": "Ciclocomputador Garmin Edge 840 Solar GPS (pantalla táctil y botones, carga Power Glass, GNSS multibanda, Topo)",
+   "temperature": 219,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Decathlon",
+   "prix": 332.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ciclocomputador-garmin-edge-840-solar-gps-pantalla-tactil-y-botones-carga-power-glass-gnss-multibanda-topo-2088919",
+   "date": "Wed, 25 Nov 2026 11:19:32 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "332,49€ - Decathlon El ciclocomputador GPS avanzado con carga solar concebido para ciclistas de carretera, montaña y gravel que buscan rendimiento analítico, navegación de alta ..."
+  },
+  {
+   "id": "646e1cb0ef",
+   "titre": "Funko Pop! Movies: Harry Potter - Harry Potter",
+   "temperature": 215,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 8.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/funko-pop-movies-harry-potter-harry-potter-2089364",
+   "date": "Wed, 25 Nov 2026 12:15:47 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8€ - Amazon TAMAÑO COLECCIONABLE IDEAL - Con una altura aproximada de 3,75 pulgadas (9,5 cm), esta minifigura de vinilo complementa otros artículos de colección ..."
+  },
+  {
+   "id": "7897b06d7a",
+   "titre": "JACK & JONES Wide-fit Jeans JXTOKYO Wide HW MR6002 DNM Noos",
+   "temperature": 215,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 17.95,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/jack-jones-wide-fit-jeans-jxtokyo-wide-hw-mr6002-dnm-noos-2088034",
+   "date": "Wed, 25 Nov 2026 11:26:23 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "17,95€ - Amazon Cintura alta que define tu silueta sin comprimir Corte holgado en pierna que permite movimiento sin renunciar al estilo Algodón 100% ..."
+  },
+  {
+   "id": "8ceffb5f04",
+   "titre": "Meta Glasses, Gafas con IA Fury, Negra, Lentes en marrón degradado Cuadrada, cámara 12 MP",
+   "temperature": 211,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 231.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/meta-glasses-gafas-con-ia-fury-negra-lentes-en-marron-degradado-cuadrada-camara-12-mp-2089222",
+   "date": "Wed, 25 Nov 2026 12:07:28 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "231€ - Amazon DISEÑO ICÓNICO, TECNOLOGÍA AVANZADA – Descubre el diseño icónico y la tecnología más avanzada con las Meta Glasses. Haz fotos y vídeos, escucha música, llama en..."
+  },
+  {
+   "id": "b311eab46c",
+   "titre": "Amazon Echo Show 8 (devolviendo el Ring)",
+   "temperature": 208,
+   "categorie": "Electrónica",
+   "marchand": "Amazon",
+   "prix": 83.8,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/amazon-echo-show-8-devolviendo-el-ring-2089253",
+   "date": "Wed, 25 Nov 2026 12:07:21 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "83,80€ - Amazon Compras el pack de Amazon con el Echo Show 8 (última generación, blanco glaciar) + Ring Videotimbre 2K con batería por 159,98€ y devuelves el Ring: Amazon te..."
+  },
+  {
+   "id": "34d4c6cbaf",
+   "titre": "Videojuego MotoGP 26 para Nintendo Switch 2 CIB (temporada oficial 2026, todos los pilotos y circuitos, modo trayectoria, online)",
+   "temperature": 208,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 23.88,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/videojuego-motogp-26-para-nintendo-switch-2-cib-temporada-oficial-2026-todos-los-pilotos-y-circuitos-modo-trayectoria-online-2075311",
+   "date": "Wed, 25 Nov 2026 11:18:13 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "23,88€ - Amazon La entrega oficial del Campeonato del Mundo de Motociclismo desarrollada por Milestone concebida para vivir toda la adrenalina de la velocidad sobre dos rued..."
+  },
+  {
+   "id": "96b1d9712a",
+   "titre": "Cosori Airfryer, Max 230°C, 4,7L 7-in-1 Heißluftfritteuse inklusive Rezeptbuch",
+   "temperature": 208,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 45.76,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/cosori-airfryer-max-230c-47l-7-in-1-heissluftfritteuse-inklusive-rezeptbuch-373350",
+   "date": "Wed, 25 Nov 2026 09:19:32 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "45,76€ - Amazon Den Cosori Airfryer, Max 230°C, 4,7L 7-in-1 Heißluftfritteuse bekommt ihr aktuell um 45,76 Euro bei Amazon zum Black Friday. Keepa-Schnitt d..."
+  },
+  {
+   "id": "be4e6d073f",
+   "titre": "POP Funko Movies: Masters of The Universe - Skeletor",
+   "temperature": 207,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 8.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pop-funko-movies-masters-of-the-universe-skeletor-2089407",
+   "date": "Wed, 25 Nov 2026 12:19:39 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8€ - Amazon TAMAÑO COLECCIONABLE IDEAL - Con una altura aproximada de 3,75 pulgadas (9,5 cm), esta minifigura de vinilo complementa otros artículos de colección ..."
+  },
+  {
+   "id": "926e8922dd",
+   "titre": "Pokémon Glow in The Dark | Juego de Mesa +7 Años",
+   "temperature": 207,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 21.33,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/pokemon-glow-in-the-dark-juego-de-mesa-7-anos-2089114",
+   "date": "Wed, 25 Nov 2026 11:55:34 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "21,33€ - Amazon LABERINTO: Uno de los juegos clásicos más queridos en el mundo; cada competidor gira en el laberinto buscando su objetivo secreto, la dificultad de e..."
+  },
+  {
+   "id": "858ef4fbe2",
+   "titre": "Funko POP! Star Wars: Mandalorian & Grogu - Clang",
+   "temperature": 205,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 8.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/funko-pop-star-wars-mandalorian-grogu-clang-2089314",
+   "date": "Wed, 25 Nov 2026 12:15:13 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8€ - Amazon TAMAÑO COLECCIONABLE IDEAL - Con una altura aproximada de 3,75 pulgadas (9,5 cm), esta minifigura de vinilo complementa otros artículos de colección ..."
+  },
+  {
+   "id": "a41044ba2c",
+   "titre": "(Black Friday) Airpods Pro 3 (DE)",
+   "temperature": 205,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.de",
+   "prix": 182.01,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/black-friday-airpods-pro-3-de-429260",
+   "date": "Wed, 25 Nov 2026 11:40:57 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€182,01 - Amazon.de Net wanneer je dacht dat de prijs niet nog lager kon, is het toch lager gegaan. Bij Amazon.de, Mediamarkt en Saturn in Duitsland is de prijs inmiddels €179,-."
+  },
+  {
+   "id": "4f9bc4fb27",
+   "titre": "Cámara instantánea - Fujifilm Instax mini Evo Cinema, 62mm x 46mm, Pantalla LCD TFT en color de 1.54\", Temporizador, Negro",
+   "temperature": 201,
+   "categorie": "Electrónica",
+   "marchand": "MediaMarkt",
+   "prix": 199.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/camara-instantanea-fujifilm-instax-mini-evo-cinema-62mm-x-46mm-pantalla-lcd-tft-en-color-de-154-temporizador-negro-2088351",
+   "date": "Wed, 25 Nov 2026 11:52:51 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "199€ - MediaMarkt Descubre la cámara instantánea Fujifilm Instax mini Evo Cinema, un dispositivo híbrido revolucionario que combina tres funciones en una: cámara instantánea, ..."
+  },
+  {
+   "id": "694bf2e04b",
+   "titre": "Rama łóżka HASLEV ze schowkiem 160x200",
+   "temperature": 201,
+   "categorie": "Dom i mieszkanie",
+   "marchand": "JYSK",
+   "prix": 245.57,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/rama-lozka-haslev-ze-schowkiem-160x200-1398838",
+   "date": "Wed, 25 Nov 2026 12:27:18 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "1 045zł - JYSK Tkanina. Ze schowkiem i spodem z podnośnikiem hydraulicznym. Pasuje do materaców sprężynowych i piankowych 160x200 cm. Ze spodem żebrowym. Bez materaców. S18..."
+  },
+  {
+   "id": "keepa-B07JHZ6L4W-arbDE",
+   "titre": "Amazon Essentials Pantalon Chino Décontracté et Extensible, Coupe Skinny Homme, Gris Pierr [Amazon DE]",
+   "temperature": 200,
+   "categorie": "Arbitrage Europe",
+   "marchand": "Amazon.de",
+   "prix": 11.4,
+   "devise": "EUR",
+   "lien": "https://www.amazon.de/dp/B07JHZ6L4W",
+   "date": "2026-11-21T21:53",
+   "source": "keepa-arbitrage",
+   "pays": "DE",
+   "ean": "0193548337483",
+   "asin": "B07JHZ6L4W",
+   "ref_fr": 23.0,
+   "ventes_30j": 9,
+   "vendeurs": 1,
+   "description": "vendu et expédié par Amazon (Amazon.de, livrable en France) · Amazon.fr 23.0 € (moyenne 90 j 23.5 €), écart 20 % port compris, ventes 30 j 9, 1 vendeurs FR"
+  },
+  {
+   "id": "7a061a4b93",
+   "titre": "CATAN : El Juego de Cartas",
+   "temperature": 198,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 11.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/catan-el-juego-de-cartas-2089095",
+   "date": "Wed, 25 Nov 2026 12:18:12 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "11,90€ - Amazon Estrategia clásica en formato compacto: Vive la esencia de Catan en versión cartas, combinando gestión de recursos, comercio y expansión de asentam..."
+  },
+  {
+   "id": "f58562dee7",
+   "titre": "Luz Emergencia Baliza V16 Homologada DGT con Geolocalización, Baliza Coche Conectada DGT 3.0, Datos Incluidos hasta 10/2040",
+   "temperature": 196,
+   "categorie": "Coches y motos",
+   "marchand": "Amazon",
+   "prix": 8.79,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/luz-emergencia-baliza-v16-homologada-dgt-con-geolocalizacion-baliza-coche-conectada-dgt-30-datos-incluidos-hasta-102040-2089301",
+   "date": "Wed, 25 Nov 2026 12:09:10 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,79€ - Amazon ✅ Homologada por la DGT y obligatoria en 2026: Baliza V16 ZTE certificada oficialmente (LCOE 2025070683G1), cumple la normativa vigente para garantiz..."
+  },
+  {
+   "id": "cf2b63c64d",
+   "titre": "Nike: recopilación de ofertas hasta -50 % desde 12,49 €",
+   "temperature": 190,
+   "categorie": "Moda y accesorios",
+   "marchand": "Nike",
+   "prix": 12.49,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nike-recopilacion-de-ofertas-hasta-50-desde-1249-eur-2088770",
+   "date": "Wed, 25 Nov 2026 12:16:04 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "Nike Ofertas de Nike en nike.com/es, ordenadas de más barato a más caro. Precio anterior y precio actual según la web de Nike. Los precios y las tallas disponible..."
+  },
+  {
+   "id": "7c9d7e1244",
+   "titre": "LEGO Harry Potter Caldero: Aula de Pociones Secretas 76464 – 652 piezas, Snape, Hermione y Patronus nutria",
+   "temperature": 186,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 29.39,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/lego-harry-potter-caldero-aula-de-pociones-secretas-76464-652-piezas-snape-hermione-y-patronus-nutria-2089379",
+   "date": "Wed, 25 Nov 2026 12:25:44 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "29,39€ - Amazon Adéntrate en las clases de pociones de Hogwarts con el LEGO Harry Potter Caldero: Aula de Pociones Secretas 76464 . Este set permite construi..."
+  },
+  {
+   "id": "83ad575119",
+   "titre": "PUMA Zapatillas de Running Pounce Lite 2 Unisex. Tallas 37,38, 38'5, 41,42, 43, 44'5, 47. Varios colores",
+   "temperature": 185,
+   "categorie": "Deportes y aire libre",
+   "marchand": "Amazon",
+   "prix": 27.53,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/puma-zapatillas-de-running-pounce-lite-2-unisex-tallas-3738-385-4142-43-445-47-2089043",
+   "date": "Wed, 25 Nov 2026 11:54:56 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "27,53€ - Amazon Diseñado para: running Ajuste: estándar Cierre: cordones Pronación: neutra Promedio de kilómetros: 800 km Drop del talón a los dedos: 1..."
+  },
+  {
+   "id": "08d49404f1",
+   "titre": "Nike Manoa Herren Leder Winterstiefel in braun oder schwarz (Gr. 40-47)",
+   "temperature": 182,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Deichmann",
+   "prix": 55.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/nike-manoa-herren-leder-winterstiefel-in-braun-oder-schwarz-gr-40-47-2881217",
+   "date": "Wed, 25 Nov 2026 11:11:57 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "55€ - Deichmann Hallo zusammen, wer auf der Suche nach robusten, alltagstauglichen Boots mit einem klassischen Outdoor-Look ist, sollte sich die Nike Manoa Leat..."
+  },
+  {
+   "id": "c9f7f40688",
+   "titre": "ESCADA Magnestism Eau de parfum 75ml",
+   "temperature": 181,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 21.64,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/escada-magnestism-eau-de-parfum-75ml-2089400",
+   "date": "Wed, 25 Nov 2026 12:19:07 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "21,64€ - Amazon tambien 50ml ESCADA MAGNETISM es misterio y fascinación; una fragancia cautivadora y sofisticada. Una moderna co..."
+  },
+  {
+   "id": "729d13b051",
+   "titre": "Wochenend-Flüge 11.–14.12. ab 34 € hin & retour – z.B. Venedig, Rom, Neapel, Barcelona, Malta, Mailand ab Wien & Bratislava",
+   "temperature": 180,
+   "categorie": "Reisen",
+   "marchand": "Ryanair",
+   "prix": 33.82,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/wochenend-fluge-11-1412-ab-34-eur-hin-retour-zb-venedig-rom-neapel-barcelona-malta-mailand-ab-wien-bratislava-373313",
+   "date": "Wed, 25 Nov 2026 05:53:12 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "33,82€ - Ryanair Hin- und Retourflüge für das Wochenende 11.–14. Dezember ab Wien und Bratislava – 21 Reisen, zuerst ab Wien, dann gemischt, dann ab Bratislava, jeweils die g..."
+  },
+  {
+   "id": "4255052b74",
+   "titre": "Mémoire RAM pour ordinateur de bureau JUHOR RAM DDR5 16 Go 6000 MHz 32 Go (16 Go x 2) PC5",
+   "temperature": 179,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 384.7,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/juhor-ram-ddr5-32go-2x16-6000mhz-cl38-3468700",
+   "date": "Wed, 25 Nov 2026 11:46:46 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "384,70€ - AliExpress Ram DDR5 de la marque JUHOR en 32GO au total (2 barrettes de 16) Cadencé en 6000Mhz latence néanmoins inconnue (CL30 à CL38 selon gemini) Tension 1.35..."
+  },
+  {
+   "id": "93985bd727",
+   "titre": "[19,54€ eff.] (Prime) SanDisk 128GB Ultra microSDXC Speicherkarte (Adapter, Lesen 140 MB/s, UHS-I, C10, U1, A1) + 5fach Payback",
+   "temperature": 175,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/1954eur-eff-prime-sandisk-128gb-ultra-microsdxc-speicherkarte-adapter-lesen-140-mbs-uhs-i-c10-u1-a1-5fach-payback-2881316",
+   "date": "Wed, 25 Nov 2026 11:41:27 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "19,99€ - Amazon Bei Amazon bekommt ihr aktuell die SanDisk 128GB Ultra microSDXC Speicherkarte im Angebot: PAYBACK (5fac..."
+  },
+  {
+   "id": "6c4db11ead",
+   "titre": "Gants de moto été homme Furygan Jet D3O Evo - Paume 100% cuir, Coques D3O, Compatibles écrans tactiles",
+   "temperature": 171,
+   "categorie": "Auto-Moto",
+   "marchand": "Amazon",
+   "prix": 34.17,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/gants-de-moto-ete-homme-furygan-jet-d3o-evo-paume-100-cuir-coques-d3o-compatibles-ecrans-tactiles-3468237",
+   "date": "Wed, 25 Nov 2026 11:03:26 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "34,17€ - Amazon Belle remise repérée sur Amazon dans le cadre des offres Black Friday sur les gants de moto été Furygan Jet D3O Evo..."
+  },
+  {
+   "id": "d66586cb4e",
+   "titre": "LEGO Harry Potter - Buchstütze: Hogwarts Express",
+   "temperature": 167,
+   "categorie": "Family & Kids",
+   "marchand": "INTERSPAR",
+   "prix": 50.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/lego-harry-potter-buchstutze-hogwarts-express-373355",
+   "date": "Wed, 25 Nov 2026 10:28:00 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "50€ - INTERSPAR Hey PJ Bei INterspar bekommt ihr gerade die LEGO Harry Potter - Buchstütze: Hogwarts Express für 50€ inkl. Versand. Um auf den Preis zu kommen, erstell..."
+  },
+  {
+   "id": "5ba9b4c910",
+   "titre": "Cozze 17'' Pizzaofen Premium [Gutschein+Payback, ggf. 10€ Newsletter]",
+   "temperature": 164,
+   "categorie": "Home & Living",
+   "marchand": "Dehner",
+   "prix": 389.38,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/cozze-17-pizzaofen-premium-gutscheinpayback-ggf-10eur-newsletter-2881220",
+   "date": "Wed, 25 Nov 2026 11:12:03 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "389,38€ - Dehner Habe gestern meinen Idealo Alarm bekommen. Sieht nach einem aktuellen Bestpreis aus. Laut Idealo war der Preis zuletzt mal im Oktober bzw. September bei 399€..."
+  },
+  {
+   "id": "1d0fb9ab09",
+   "titre": "GTA: San Andreas – Definitive [Google Play Store]",
+   "temperature": 159,
+   "categorie": "Elektronica",
+   "marchand": "Google Play",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/gta-san-andreas-definitive-google-play-store-429211",
+   "date": "Wed, 25 Nov 2026 11:34:36 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€10 - Google Play De prijs van \"GTA: San Andreas – Definitive\" is tot en met 2 december verlaagd naar €10. De normale prijs bedraagt €19,99. Bij meer dan 50.000 downloa..."
+  },
+  {
+   "id": "9a1c2523b7",
+   "titre": "Zendure Smart Meter P1 ZDZHP1-bk-nl",
+   "temperature": 153,
+   "categorie": "Elektronica",
+   "marchand": null,
+   "prix": 34.95,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/zendure-smart-meter-p1-zdzhp1-bk-nl-429164",
+   "date": "Wed, 25 Nov 2026 08:12:29 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€34,95 Ik zag via Pepper net deze deal via een andere pepperaar die via Bol de actie had. Die is verlopen en zag net deze voorbij komen dus wie weet maak ik mensen wee..."
+  },
+  {
+   "id": "59b54eafbe",
+   "titre": "SANDISK 256 GB Ultra Dual Drive Go USB-Stick, USB-C/A 3.2 Gen1, R400 M/s",
+   "temperature": 146,
+   "categorie": "Elektronik",
+   "marchand": "MediaMarkt",
+   "prix": 35.0,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/sandisk-256-gb-ultra-dual-drive-go-usb-stick-usb-ca-32-gen1-r400-ms-373354",
+   "date": "Wed, 25 Nov 2026 10:35:57 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "35€ - MediaMarkt Hey PJ Bei MediaMarkt bekommt ihr gerade die SANDISK 256 GB Ultra Dual Drive Go USB-Stick, USB-C/A 3.2 Gen1, R400 M/s für 35€ inkl. Versand. Pre..."
+  },
+  {
+   "id": "d1cb92a7dd",
+   "titre": "Elden Ring + DLC Shadow of the Erdtree sur PS5",
+   "temperature": 144,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 38.91,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/elden-ring-shadow-of-the-erdtree-sur-ps5-3468710",
+   "date": "Wed, 25 Nov 2026 12:06:45 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "38,91€ - Amazon Excellent prix (party) Description : RENIÉ PAR LA GRACE Le Royaume des ombres. Un lieu occulté par l'Arbre-Monde. Celui où la déesse Marik..."
+  },
+  {
+   "id": "7da090602d",
+   "titre": "FELIXX Powerbank Pro 10 10.000 mAh schwarz",
+   "temperature": 143,
+   "categorie": "Elektronik",
+   "marchand": "Pagro / Libro",
+   "prix": 8.76,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/felixx-powerbank-pro-10-10000-mah-schwarz-373346",
+   "date": "Wed, 25 Nov 2026 09:12:13 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "8,76€ - Pagro / Libro Bei Pagro/Libro bekommt ihr die FELIXX Powerbank Pro 10 10.000 mAh schwarz um 8,76 Euro statt wie bisher 19,99 Euro. Hinter der Marke steckt..."
+  },
+  {
+   "id": "699e9a63d3",
+   "titre": "[Blu-ray] Batman : La Série TV Animée - 4 saisons",
+   "temperature": 142,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/batman-la-serie-tv-animee-4-saisons-blu-ray-3467202",
+   "date": "Wed, 25 Nov 2026 10:50:41 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "29,99€ - Amazon Batman : La Série TV Animée - 4 saisons Intégrale de la série Saisons 1 à 4 + épisodes bonus (109 épisodes de 22 minutes) <..."
+  },
+  {
+   "id": "d9f71241ce",
+   "titre": "LEGO Technic 42238 - Moto Ducati Desmo 450 MX Factory (via 20€ de remise au panier)",
+   "temperature": 142,
+   "categorie": "Famille & Enfants",
+   "marchand": "Cultura",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-42238-moto-ducati-desmo-450-mx-factory-via-20-eur-de-remise-au-panier-3467249",
+   "date": "Wed, 25 Nov 2026 10:36:15 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "29,99€ - Cultura A 49.99 € chez LEGO 10% supplémentaires ..."
+  },
+  {
+   "id": "dedc99273a",
+   "titre": "Ghost of Tsushima Director's Cut sur PS5",
+   "temperature": 141,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 26.11,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/ghost-of-tsushima-directors-cut-sur-ps5-3468621",
+   "date": "Wed, 25 Nov 2026 12:06:13 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "26,11€ - JoyBuy Découvrez la version longue de Ghost Of Tsushima dans cette version d'auteur comprenant tous les contenus additionnels sortis à ce jour, ainsi que du..."
+  },
+  {
+   "id": "89b5216cf1",
+   "titre": "Sonic Racing: CrossWorlds sur Switch, Xbox Series X ou PS4",
+   "temperature": 141,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "Amazon",
+   "prix": 20.18,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sonic-racing-crossworlds-sur-switch-xbox-series-x-ou-ps4-3468523",
+   "date": "Wed, 25 Nov 2026 11:53:43 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "20,18€ - Amazon Réponse de SEGA à Mario Kart, ce jeu de course transporte 23 pilotes de l'univers Sonic à travers 24 circuits et 15 CrossWorlds, des dimensions parallèles ac..."
+  },
+  {
+   "id": "caf35986f6",
+   "titre": "Casque filaire Beyerdynamic DT770 Pro X LB Black Edition",
+   "temperature": 141,
+   "categorie": "High-Tech",
+   "marchand": "SonoVente.com",
+   "prix": 159.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/beyerdynamic-dt770-pro-x-lb-black-edition-3468386",
+   "date": "Wed, 25 Nov 2026 11:40:49 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "159€ - SonoVente.com Bon prix pour ce modèle emblématique de chez Beyerdynamic en édition limitée. Description Le casque beyerdynamic DT 770 ..."
+  },
+  {
+   "id": "b87054cd0c",
+   "titre": "UGREEN M.2 SSD Gehäuse USB 3.2 Gen 2, 10 Gbps, für NVMe und SATA, Aluminium mit Kühlkissen, grau",
+   "temperature": 141,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 17.09,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/ugreen-m2-ssd-gehause-usb-32-gen-2-10-gbps-fur-nvme-und-sata-aluminium-mit-kuhlkissen-grau-2881317",
+   "date": "Wed, 25 Nov 2026 12:04:50 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "17,09€ - Amazon Bei Amazon bekommt ihr das UGREEN M.2 SSD Gehäuse gerade für 17,09 € inkl. VSK. Nutzt dafür den Direkt-Rabatt an der ..."
+  },
+  {
+   "id": "2ced56fb18",
+   "titre": "Sunlu PP2.0 gratis bei Kauf von reduziertem technischen 3D Druck Filament - effektiv ab 14€/kg - für viele 3D Drucker geeignet- Amazon Prime",
+   "temperature": 140,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 33.38,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/sunlu-pp20-gratis-bei-kauf-von-reduziertem-technischen-3d-druck-filament-effektiv-ab-14eurkg-fur-viele-3d-drucker-geeignet-amazon-prime-2881163",
+   "date": "Wed, 25 Nov 2026 11:03:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "33,38€ - Amazon Dealzusammenfassung - Artikel: SUNLU technische 3D Druck Filamente + 1 kg PP 2.0 gratis - Dealpreis: ab 33,38 € - Vergleichsprei..."
+  },
+  {
+   "id": "25f1ecb995",
+   "titre": "Déshumidificateur 20 L avec extraction maximale et mode lavage - probreeze.com",
+   "temperature": 139,
+   "categorie": "High-Tech",
+   "marchand": null,
+   "prix": 118.8,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pro-breeze-deshumidificateur-d-air-20ljour-3466856",
+   "date": "Wed, 25 Nov 2026 10:43:02 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "118,80€ -25% en cochant la case sous le prix sur le site et -12% avec le code Leparisien-12 Je pense que ca marche pour d'autres produits du sites mais j'..."
+  },
+  {
+   "id": "c3cde9faf3",
+   "titre": "TCL Mini LED Smart TV C6K 50\" / 55\" £419.98 / 65\" £549.99 / 75\" £749.98 / 85\" £949.99 / 98\" £1549.99 - 5 Year Warranty",
+   "temperature": 138,
+   "categorie": "Electronics",
+   "marchand": "Costco",
+   "prix": 329.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/tcl-mini-led-smart-tv-c6k-50-55-ps41998-65-ps54999-75-ps74998-85-ps94999-98-ps154999-5-year-warranty-5046261",
+   "date": "Wed, 25 Nov 2026 10:46:16 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£329.98 - Costco - 4K UHD, with HDR10, HDR10+, HLG and Dolby Vision - Dolby Atmos, DTS Virtual-X - AiPQ Processor - 5 Year Warranty Included QLED..."
+  },
+  {
+   "id": "3613e36443",
+   "titre": "Salomon Men's Examotion GORE-TEX Hiking Shoes, Size 8 / Sizes 9-11 £63 W/Code",
+   "temperature": 135,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Lovell Sports",
+   "prix": 47.25,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/salomon-mens-examotion-gore-tex-hiking-shoes-size-8-sizes-9-11-ps63-wcode-5045860",
+   "date": "Wed, 25 Nov 2026 10:27:31 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£47.25 - Lovell Sports Price drop on size 8, with an extra 10% off all available sizes 8-11 With Code. Whether you're exploring the trails or wandering into the wildern..."
+  },
+  {
+   "id": "5cbb7bb579",
+   "titre": "adidas Runfalcon 6 Cloudfoam Laufschuh Gr. 38 2/3 - 49 1/3",
+   "temperature": 134,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Amazon",
+   "prix": 31.43,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/adidas-runfalcon-6-cloudfoam-laufschuh-gr-38-23-49-13-373339",
+   "date": "Wed, 25 Nov 2026 09:12:48 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "31,43€ - Amazon Geizhals Info zu..."
+  },
+  {
+   "id": "cbc1c2f566",
+   "titre": "Target Darts Corona Vision Dartboard Lighting System, Black Frame - Sold by Target Darts / FBA",
+   "temperature": 132,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Amazon",
+   "prix": 45.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/target-darts-corona-vision-dartboard-lighting-system-black-frame-sold-by-target-darts-fba-5043732",
+   "date": "Wed, 25 Nov 2026 10:44:00 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£45 - Amazon LED DARTBOARD LIGHT SURROUND: The lighting system boasts a 360-degree LED design that provides complete and even illumination for your dartboard. This d..."
+  },
+  {
+   "id": "070ed707ea",
+   "titre": "Sure Shot Elite Pro 7ft Pool Table",
+   "temperature": 131,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Costco",
+   "prix": 349.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/sure-shot-elite-pro-7ft-pool-table-5040258",
+   "date": "Wed, 25 Nov 2026 10:44:10 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£349.98 - Costco £100 off from Monday - High Quality Cloth For Smooth Gameplay - Automatic Ball Return System - Robust & Durable Construction - Adjus..."
+  },
+  {
+   "id": "a1de6405f2",
+   "titre": "Gisada Ambassador Men Eau De Parfum 100ml",
+   "temperature": 131,
+   "categorie": "Beauty & Gezondheid",
+   "marchand": "ICI Paris XL",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/gisada-ambassador-men-eau-de-parfum-100ml-429161",
+   "date": "Wed, 25 Nov 2026 10:31:09 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€59,99 - ICI Paris XL Gisada Ambassador Men Eau De Parfum 100 ml, een hele lekkere geur nu voor maar €60! Zag hem laatst hier nog voor €75, nu dus nog goedkoper! <br ..."
+  },
+  {
+   "id": "12a47cc404",
+   "titre": "Casque SONY WH-1000XM6 ANC Noir - Réduction de Bruit Active, Bluetooth, Autonomie 40h, Pliable, Sans Chargeur",
+   "temperature": 130,
+   "categorie": "High-Tech",
+   "marchand": "Boulanger",
+   "prix": 284.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/casque-sony-wh-1000xm6-anc-noir-reduction-de-bruit-active-bluetooth-autonomie-40h-pliable-3467648",
+   "date": "Wed, 25 Nov 2026 11:41:24 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "284,99€ - Boulanger Le Sony WH-1000XM6 est un casque circum-aural fermé qui combine Bluetooth et une prise audio de 3,5 mm. Sa réduction de bruit active s’appuie sur douze micro..."
+  },
+  {
+   "id": "d353db51c9",
+   "titre": "(Prime) Neutrogena Handcreme konzentriert unparfümiert, 6 x 50 ml",
+   "temperature": 130,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 11.38,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/prime-neutrogena-handcreme-konzentriert-unparfumiert-6-x-50-ml-373325",
+   "date": "Wed, 25 Nov 2026 09:50:40 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "11,38€ - Amazon Preis im Spar-Abo mit Versand ohne Eile. Amazon Durchschnitt: 16,06€ Bewertungen</..."
+  },
+  {
+   "id": "fd7fb0171f",
+   "titre": "Bosch SMV4HVX03E Inbouwvaatwasser met besteklade - 13 couverts",
+   "temperature": 130,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy NL",
+   "prix": 469.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/bosch-smv4hvx03e-inbouwvaatwasser-met-besteklade-13-couverts-429173",
+   "date": "Wed, 25 Nov 2026 11:45:10 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€469 - Joybuy NL Belangrijkste kenmerken: • Ruime indeling: Geschikt voor 13 couverts met een handige bovenste besteklade (VarioLade) en een in hoogte verstelbare bovenkorf..."
+  },
+  {
+   "id": "02df27dc0c",
+   "titre": "Bruichladdich Islay Barley 2014 Single Malt Whisky 0,7l 50%",
+   "temperature": 129,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "Weisshaus Shop",
+   "prix": 44.06,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/bruichladdich-islay-barley-2014-single-malt-whisky-07l-50-2881200",
+   "date": "Wed, 25 Nov 2026 11:55:29 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,06€ - Weisshaus Shop Whiskybase 85.23 https://www.whisk..."
+  },
+  {
+   "id": "c78fd99e6d",
+   "titre": "Einkochautomat Heis, ca.27l (Versand kostenlos) / Schwarz / Weiß",
+   "temperature": 129,
+   "categorie": "Lebensmittel & Haushalt",
+   "marchand": "mömax",
+   "prix": 44.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/einkochautomatca-ca27l-versand-kostenlos-heis-schwarz-weiss-2881152",
+   "date": "Wed, 25 Nov 2026 11:46:51 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,99€ - mömax Einkochautomat Heis Schwarz/Weiß ca. 27l. für 44,99€ Versandkosten-FREI Mömax ist eine Verkaufsmarke der Möbelkette: xxLUT..."
+  },
+  {
+   "id": "ecfd4462c0",
+   "titre": "Lego 40806 Star Wars Gingerbread AT-AT (Discount at Checkout)",
+   "temperature": 126,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon Spain",
+   "prix": 35.94,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-40806-star-wars-gingerbread-at-at-5046167",
+   "date": "Wed, 25 Nov 2026 10:59:09 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£35.94 - Amazon Spain Discount at checkout About this item STAR WARS CHRISTMAS CRAFTS: Relive adventures from the classic t..."
+  },
+  {
+   "id": "fc653053a8",
+   "titre": "Peugeot Paris Peper- en Zoutstel Hout | 18 cm | Zwart @ iBOOD",
+   "temperature": 126,
+   "categorie": "Home & Living",
+   "marchand": "iBOOD",
+   "prix": 29.95,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/peugeot-paris-peper-en-zoutstel-hout-18-cm-zwart-at-ibood-429236",
+   "date": "Wed, 25 Nov 2026 11:18:28 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€29,95 - iBOOD Laagste prijs elders: €52,74.<..."
+  },
+  {
+   "id": "2237efaa43",
+   "titre": "Logitech MX Master 4, Ergonomic Wireless Mouse Advanced Performance Haptic Feedback 2 Colours - £79.99 With Marketing Sign Up Free C&C",
+   "temperature": 125,
+   "categorie": "Electronics",
+   "marchand": "Argos",
+   "prix": 84.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/logitech-mx-master-4-ergonomic-wireless-mouse-advanced-performance-haptic-feedback-2-colours-ps7999-with-marketing-sign-up-free-cc-5046252",
+   "date": "Wed, 25 Nov 2026 11:19:49 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£84.99 - Argos £5 off with marketing sign up HERE , takes it down to £79.99 <a href=\"ht..."
+  },
+  {
+   "id": "0bcb9f59ac",
+   "titre": "Eventim black Friday tot 50% korting (bijv 4 tickets 101 Dalmatiërs de musical in Scheveningen voor 101 euro)",
+   "temperature": 125,
+   "categorie": "Cultuur & Vrije Tijd",
+   "marchand": "Eventim",
+   "prix": 101.0,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/eventim-black-friday-tot-50-korting-bijv-4-tickets-101-dalmatiers-de-musical-in-scheveningen-voor-101-euro-429153",
+   "date": "Wed, 25 Nov 2026 08:02:12 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€101 - Eventim SCOOR JOUW EVENTIM BLACK FRIDAY DEAL Pak deze week tot wel 50% korting op tickets voor de leukste musicals, shows, concerten en meer!"
+  },
+  {
+   "id": "86ca12d21c",
+   "titre": "Jack & Jones Herren Merino Strickpullover (XL, L) nur noch M schwarz PRIME",
+   "temperature": 123,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 20.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/jack-jones-herren-merino-strickpullover-schwarz-prime-2881218",
+   "date": "Wed, 25 Nov 2026 11:08:16 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "20,79€ - Amazon Ahoi, Bei Amazon erhaltet ihr gerade den schwarzen Strickpullover von Jack & Jones aus 100% Merino in (XL, L) nur noch M zu einem guten Kurs. Der ..."
+  },
+  {
+   "id": "e887dae335",
+   "titre": "Carte graphique SOYO GeForce RTX 3070 8 Go GDDR6 (243,43€ via PayPal)",
+   "temperature": 122,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 263.43,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/carte-graphique-soyo-geforce-rtx-3070-8-go-gddr6-expediee-depuis-la-france-a-26343eur-24343eur-via-paypal-sur-aliexpress-3468655",
+   "date": "Wed, 25 Nov 2026 10:58:58 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "263,43€ - AliExpress Salut la commu, Mise à jour sur la SOYO GeForce RTX 3070 8 Go : le code de -40 € passe désormais dessus, ce qui la fait tomber à un tarif beaucoup plus..."
+  },
+  {
+   "id": "93e314bfb8",
+   "titre": "TCL Kühlschrank 90L",
+   "temperature": 122,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy",
+   "prix": 89.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/tcl-kuhlschrank-90l-2881320",
+   "date": "Wed, 25 Nov 2026 12:01:22 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "89€ - Joybuy Auf der Suche nach einem kleinen Kühlschrank für die Arbeit, bin ich auf dieses Angebot gestoßen. Für 89€ inkl Versand gibt es diesen 90L Kühlschrank (ohne..."
+  },
+  {
+   "id": "0b148bbd35",
+   "titre": "Boitier PC Corsair Frame 4000X RS - Moyen-Tour, 4 x RS120 Inclus, Blanc",
+   "temperature": 121,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 88.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/corsair-frame-4000x-rs-boitier-pc-moyen-tour-4-x-rs120-inclus-blanc-3468215",
+   "date": "Wed, 25 Nov 2026 12:02:51 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "88,99€ - Amazon Matériau Verre trempé Panneau avant RGB - Le panneau avant unique est ventilé pour un excellent flux d'air et dispose d'un éclairage RGB..."
+  },
+  {
+   "id": "b84dd09897",
+   "titre": "MSI MAG PANO M100L PZ - Weiß Micro-ATX PC-Gehäuse (Prime)",
+   "temperature": 121,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 37.5,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/msi-mag-pano-m100l-pz-weiss-micro-atx-pc-gehause-2881256",
+   "date": "Wed, 25 Nov 2026 12:11:15 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "37,50€ - Amazon MSI MAG PANO M100L PZ – Weiß | Micro-ATX PC-Gehäuse Beeindruckendes Panorama-Design, starke Kühlung und spektakuläre RGB-Beleuchtung! <..."
+  },
+  {
+   "id": "dff0b10005",
+   "titre": "Kids (1995) - Blu-ray - IMDb 7,0 @ Prime",
+   "temperature": 120,
+   "categorie": "Kultur & Freizeit",
+   "marchand": "Amazon",
+   "prix": 10.4,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/kids-1995-blu-ray-imdb-70-at-prime-2881104",
+   "date": "Wed, 25 Nov 2026 10:55:32 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "10,40€ - Amazon Telly und Jennie küssen sich. Jennie hat noch nie mit einem Jungen geschlafen. Jungfrauen \"knacken\" - darauf steht der 17jährige Telly. \"Jungfrauen sind geil..."
+  },
+  {
+   "id": "135b1bed2e",
+   "titre": "Breville 3-in-1 Ultimate Snack Maker (Toastie, Waffle and Panini) Black",
+   "temperature": 120,
+   "categorie": "Home & Living",
+   "marchand": "Amazon",
+   "prix": 29.73,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/breville-3-in-1-ultimate-snack-maker-toastie-waffle-and-panini-black-5044135",
+   "date": "Wed, 25 Nov 2026 10:37:51 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£29.73 - Amazon The Breville 3-in-1 Ultimate Snack Maker in Black is £29.73 at Amazon. It makes deep filled toasties, fluffy waffles and crisp paninis with removable n..."
+  },
+  {
+   "id": "98403a18bf",
+   "titre": "Pollin: 10% auf das komplette Sortiment z.B. Crucial UDIMM 8GB, DDR5-5600, CL46-45-45, 1RX16 für 150,06€ statt 172,17€",
+   "temperature": 120,
+   "categorie": "Elektronik",
+   "marchand": "Pollin",
+   "prix": 150.06,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/gutschein/pollin-10-auf-das-komplette-sortiment-zb-crucial-udimm-8gb-ddr5-5600-cl46-45-45-1rx16-fur-15006eur-statt-17217eur-373357",
+   "date": "Wed, 25 Nov 2026 11:17:05 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "Pollin Hey PJ Bei Pollin bekommt ihr zur Black Week 10% Rabatt auf das komplette Sortiment. Nutzt dazu den Code BLACK10 im Warenkorb. V..."
+  },
+  {
+   "id": "002adc1ed9",
+   "titre": "Disque dur externe 3.5\" Seagate 2026 Edition (STNP24000400) - 24 To, MicroB vers USB-C",
+   "temperature": 119,
+   "categorie": "High-Tech",
+   "marchand": "Seagate",
+   "prix": 599.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/disque-dur-externe-35-seagate-2026-edition-stnp24000400-24-to-microb-vers-usb-c-3468586",
+   "date": "Wed, 25 Nov 2026 12:16:35 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "599,99€ - Seagate Choisir le 24 To à 599.99€ Reviens à 25€ le To Livraison gratuite"
+  },
+  {
+   "id": "91c0a353ca",
+   "titre": "Samsung Galaxy Tab A11 64GB Tablet 90Hz £63.15 With Code & Trade Of Any S Series Tablet + Free Book Cover Via GoCertify / EPP",
+   "temperature": 119,
+   "categorie": "Electronics",
+   "marchand": "Samsung",
+   "prix": 118.15,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/samsung-galaxy-tab-a11-64gb-tablet-90hz-ps6315-with-code-trade-of-any-s-series-tablet-free-book-cover-via-gocertify-epp-5046437",
+   "date": "Wed, 25 Nov 2026 11:19:42 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£118.15 - Samsung If you have an old S series tablet lying around, i have an old Siii for example, you can get this with a case for £63.15, by trading your tablet in choosing ..."
+  },
+  {
+   "id": "e948de3508",
+   "titre": "Stoic Men's Mountain Wool Insulated Puffer Jacket Sizes S-3XL",
+   "temperature": 118,
+   "categorie": "Fashion & Accessories",
+   "marchand": "Alpine Trek",
+   "prix": 22.39,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/stoic-mens-mountain-wool-insulated-puffer-jacket-sizes-s-3xl-5045931",
+   "date": "Wed, 25 Nov 2026 10:55:37 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£22.39 - Alpine Trek Pure winter comfort The MountainWool120 StorboSt. Jacket from Stoic offers you optimal weather protection in the cold..."
+  },
+  {
+   "id": "d49aa379a1",
+   "titre": "Plex Pass -40% mit Code FANFRIDAY40 (Lifetime, 5 Jahre, Jahres- & Monatsabo)",
+   "temperature": 118,
+   "categorie": "Elektronik",
+   "marchand": "Plex.TV",
+   "prix": 413.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/plex-pass-40-mit-code-fanfriday40-lifetime-5-jahre-jahres-monatsabo-373351",
+   "date": "Wed, 25 Nov 2026 12:13:44 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "413,99€ - Plex.TV Plex hat wieder seine Fan-Friday-Aktion gestartet. Mit dem Gutscheincode FANFRIDAY40 gibt es aktuell 40 % Rabatt auf alle Plex-Pass-..."
+  },
+  {
+   "id": "f4cd586afb",
+   "titre": "Wasgij adventskalender 2026",
+   "temperature": 118,
+   "categorie": "Home & Living",
+   "marchand": "Amazon.nl",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/wasgij-adventskalender-2026-429168",
+   "date": "Wed, 25 Nov 2026 12:03:29 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€17,99 - Amazon.nl Wasgij adventskalender 2026. Open vanaf 1 december elke dag een vakje met een puzzel van 56 stukjes. Nu extra voordelig. Te gebruiken met d..."
+  },
+  {
+   "id": "fc050ca8b8",
+   "titre": "UGREEN FineTrack Slim Tracker-kaart met draadloos opladen (iOS)",
+   "temperature": 118,
+   "categorie": "Elektronica",
+   "marchand": "Amazon.nl",
+   "prix": 18.04,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/ugreen-finetrack-slim-tracker-kaart-met-draadloos-opladen-ios-428748",
+   "date": "Wed, 25 Nov 2026 09:25:58 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€18,04 - Amazon.nl Weer in de aanbieding bij Amazon ivm Black Friday. Krijgt een 4.4/5 bij Amazon. Integratie met iOS blijkt heel goed te werken. Handig formaat voor i..."
+  },
+  {
+   "id": "a8a41af37b",
+   "titre": "MSI FORCE GC200 Wired PC Controller with Hall Effect Triggers, White",
+   "temperature": 116,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 13.78,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/msi-force-gc200-wired-pc-controller-with-hall-effect-triggers-white-5046089",
+   "date": "Wed, 25 Nov 2026 11:18:41 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£13.78 - Amazon The MSI FORCE GC200 wired PC gamepad controller in White is £13.78 at Amazon. It has magnetic Hall Effect triggers for better precision, so you can use..."
+  },
+  {
+   "id": "0a8f2c7594",
+   "titre": "Breville 3 in 1 Sandwich, Waffle and Panini Maker, VST098 instore",
+   "temperature": 116,
+   "categorie": "Home & Living",
+   "marchand": "Costco",
+   "prix": 23.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/breville-3-in-1-sandwich-waffle-and-panini-maker-vst098-5045716",
+   "date": "Wed, 25 Nov 2026 11:16:35 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£23.98 - Costco Make deliciously deep-filled toasties, fluffy waffles and crisp paninis with the Breville 3-in-1 Ultimate Snack Maker. The deep-fill sandwich plates ..."
+  },
+  {
+   "id": "067b96c5f9",
+   "titre": "Magic: The Gathering Reality Fracture Bundle",
+   "temperature": 116,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Amazon.nl",
+   "prix": 40.82,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/magic-the-gathering-reality-fracture-bundle-429130",
+   "date": "Wed, 25 Nov 2026 10:26:05 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€40,82 - Amazon.nl Magic: The Gathering Reality Fracture - Bundle bevat 9 Play-boosters, 30 landkaarten, 1 gelamineerde alt-art promokaart + exclusieve accessoires (English Versio..."
+  },
+  {
+   "id": "5fd30df5ca",
+   "titre": "[Prime] UGREEN MagFlow Air Ultra Slim Powerbank Magsafe Qi2 5000mAh USB-C Qi2 15W (3 Farben) 0.86cm(127g) Zertifiziert PD 20W ATL Zellen",
+   "temperature": 115,
+   "categorie": "Elektronik",
+   "marchand": "Amazon",
+   "prix": 35.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-ugreen-magflow-air-ultra-slim-powerbank-magsafe-qi2-5000mah-usb-c-qi2-15w-3-farben-086cm127g-zertifiziert-pd-20w-atl-zellen-2881308",
+   "date": "Wed, 25 Nov 2026 12:02:28 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "35,99€ - Amazon Hallo MyDealzer.‍♂️ Aktuell gibt es ja bereits viele BlackFriday Angebote und UGREEN dreht nun auch wieder an der Preisschraube. Wenn ih..."
+  },
+  {
+   "id": "648f751cc4",
+   "titre": "iPhone 13 mini blau Zustand gut 128GB",
+   "temperature": 114,
+   "categorie": "Elektronik",
+   "marchand": "reBuy",
+   "prix": 239.17,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/iphone-13-mini-blau-zustand-gut-2880898",
+   "date": "Wed, 25 Nov 2026 12:14:04 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "239,17€ - reBuy Das iPhone 13 mini gibt es auf rebuy inklusive Versand Gebühren für 233€ im Zustand gut für alle wo ein handliches iPhone wollen"
+  },
+  {
+   "id": "fed53dc623",
+   "titre": "Caddytek CaddyLite Auto+360 Golf Trolley - Instore",
+   "temperature": 114,
+   "categorie": "Sports & Outdoors",
+   "marchand": "Costco",
+   "prix": 95.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/caddytek-caddylite-auto360-golf-trolley-instore-5045839",
+   "date": "Wed, 25 Nov 2026 11:12:44 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£95.98 - Costco - Auto Folding Mechanism For Compact Storage - Smooth Rolling 3 Wheel Design - Lightweight & Durable Aluminium Frame - Foot Brake For S..."
+  },
+  {
+   "id": "6af3dc9e17",
+   "titre": "Google Pixel 11 256GB + 10GB iD Data, £14.99 + £139 Upfront + Unltd Mins / Texts (24m) All Colours",
+   "temperature": 113,
+   "categorie": "Broadband & Phone Contracts",
+   "marchand": "iD Mobile",
+   "prix": 545.56,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/google-pixel-11-256gb-10gb-id-data-ps1499-ps139-upfront-unltd-mins-texts-24m-all-colours-5046275",
+   "date": "Wed, 25 Nov 2026 11:19:47 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£545.56 - iD Mobile If you simply want to pay the cheapest contract price, and are happy with 10GB then this is worth a look, total cost is £545.56 which includes £1.80 April in..."
+  },
+  {
+   "id": "665302433e",
+   "titre": "Barre de Son 2.1 Samsung HW-T420/XN - 150W, Bluetooth, Caisson de basse filaire 6,5\"",
+   "temperature": 112,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 89.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/barre-de-son-21-samsung-hw-t420xn-150w-bluetooth-caisson-de-basse-filaire-65-3460650",
+   "date": "Wed, 25 Nov 2026 12:10:11 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "89€ - Cdiscount Samsung HW-T420/XN - Barre de son 2.1 - 150W - Bluetooth - Caisson de basse filaire 6,5\" La solution la plus simple et pratique d'optimiser votre son..."
+  },
+  {
+   "id": "4e91b2acdc",
+   "titre": "H&M -25 % Black Friday App-Pre Access nur heute ab 70€ MBW",
+   "temperature": 112,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "H&amp;M",
+   "prix": 70.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/hm-25-black-friday-app-pre-access-ab-heute-2881302",
+   "date": "Wed, 25 Nov 2026 12:07:29 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "H&M Ab heute und nur in der App gibts 25% Black Friday Pre Access. Ab 70 € Einkaufswert mit dem Code: Black25 Viel Spaß beim Shoppen ;) Gülti..."
+  },
+  {
+   "id": "fbecfa9f35",
+   "titre": "Lego Cosy Plants 10371 + Alle Lego (en speelgoed) 2e halve prijs! | Trekpleister",
+   "temperature": 112,
+   "categorie": "Familie & Kinderen",
+   "marchand": "Trekpleister",
+   "prix": 17.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/lego-cosy-plants-10371-alle-lego-en-speelgoed-2e-halve-prijs-trekpleister-429166",
+   "date": "Wed, 25 Nov 2026 11:56:28 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€17,99 - Trekpleister Lego Botanicals Cosy Plants 10371 vanaf dinsdag 1 december te koop bij de Trekpleister voor €17,99. Dezelfde week (30 november - 6 december) ge..."
+  },
+  {
+   "id": "68f627e985",
+   "titre": "Travel Luggage Suitcase Set 4 Pieces - Black/ White/Blue/Purple/Pink. Sold & shipped by GREET DREAM LTD",
+   "temperature": 111,
+   "categorie": "Fashion & Accessories",
+   "marchand": "The Range",
+   "prix": 69.99,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/travel-luggage-suitcase-set-4-pieces-black-whitebluepurplepink-sold-by-greet-dream-ltd-5045310",
+   "date": "Wed, 25 Nov 2026 10:43:50 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£69.99 - The Range Blue : https://www.therange.co.uk/p/travel-lugga..."
+  },
+  {
+   "id": "1b717485f8",
+   "titre": "RollerCoaster Tycoon 3: Complete Edition für Nintendo Switch (DLC in Box)",
+   "temperature": 111,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 17.52,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/rollercoaster-tycoon-3-complete-edition-fur-nintendo-switch-dlc-in-box-373359",
+   "date": "Wed, 25 Nov 2026 11:55:52 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "17,52€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit das Spiel RollerCoaster Tycoon 3: Complete Edition für Nintendo Switch um 17,52€. Der Preisvergleich..."
+  },
+  {
+   "id": "d2f4bdaf84",
+   "titre": "CORSAIR CLIPPER PRO MINI 60 SOCD Gaming-Tastatur mit Hall-Effekt",
+   "temperature": 110,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 72.98,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/corsair-clipper-pro-mini-60-socd-gaming-tastatur-mit-hall-effekt-373311",
+   "date": "Wed, 25 Nov 2026 08:41:09 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "72,98€ - Amazon Hallo Leute, Bei Amazon erhaltet ihr derzeit die CORSAIR CLIPPER PRO MINI 60 SOCD Gaming-Tastatur mit Hall-Effekt um 72,98€. Der Preisvergleich b..."
+  },
+  {
+   "id": "6d35045e21",
+   "titre": "Turtle Beach Rematch Advanced Nintendo Switch/Nintendo Switch 2 controller in Donkey Kongstijl",
+   "temperature": 110,
+   "categorie": "Gaming",
+   "marchand": "Bol",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/turtle-beach-rematch-advanced-nintendo-switchnintendo-switch-2-controller-in-donkey-kongstijl-429079",
+   "date": "Wed, 25 Nov 2026 08:32:48 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€39,99 - Bol Laagste prijs elders: €49,99 ..."
+  },
+  {
+   "id": "4a44783d8e",
+   "titre": "[Prime] Jack & Jones Regular Fit Chino Hose 97% Baumwolle normaler Schnitt Chinohose",
+   "temperature": 109,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 18.95,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/prime-jack-jones-regular-fit-chino-hose-97-baumwolle-normaler-schnitt-chinohose-2881244",
+   "date": "Wed, 25 Nov 2026 12:07:02 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "18,95€ - Amazon Hallo MyDealzer.‍♂️ Aufgrund der vielen Anti Slim-Fit Kommis zuletzt habe ich mal geschaut welche Regular / lässigen Modelle aktuell im Sale sind u..."
+  },
+  {
+   "id": "9450a005a5",
+   "titre": "[Via PayPal] Mini PC FIREBAT AM02 - Ryzen 5 6600H, 16 Go LPDDR5, 512 Go SSD, triple écran 4K, Windows 11",
+   "temperature": 106,
+   "categorie": "High-Tech",
+   "marchand": "AliExpress",
+   "prix": 207.76,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/via-paypal-mini-pc-firebat-am02-ryzen-5-6600h-16-go-lpddr5-512-go-ssd-triple-ecran-4k-windows-11-3468699",
+   "date": "Wed, 25 Nov 2026 12:21:32 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "207,76€ - AliExpress De retour pour le Black Friday ! :) Code promo à indiquer au panier. Payez avec PayPal pour obtenir le prix fi..."
+  },
+  {
+   "id": "897f63249e",
+   "titre": "The Last of Us Part I Remake sur PS5",
+   "temperature": 103,
+   "categorie": "Consoles & Jeux vidéo",
+   "marchand": "JoyBuy",
+   "prix": 26.14,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/the-last-of-us-part-i-remake-sur-ps5-3468632",
+   "date": "Wed, 25 Nov 2026 12:22:13 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "26,14€ - JoyBuy Jeu PS5 d’action-aventure : redécouvrez le jeu qui a conquis le cœur des joueurs et avec lequel tout a commencé, refaçonné pour la console PlayStatio..."
+  },
+  {
+   "id": "1003cafd0b",
+   "titre": "Pokémon-Tonies Bisasam um 12,99 € inkl. Versand bei MediaMarkt – auch einzeln",
+   "temperature": 103,
+   "categorie": "Gaming",
+   "marchand": "MediaMarkt",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.preisjaeger.at/deals/pokemon-tonies-bisasam-um-1299-eur-inkl-versand-bei-mediamarkt-auch-einzeln-373317",
+   "date": "Wed, 25 Nov 2026 12:25:16 +0100",
+   "source": "preisjaeger-hot",
+   "pays": "AT",
+   "description": "12,99€ - MediaMarkt Der Preis gilt schon für ein Stück, ohne Gutschein und ohne Mindestbestellwert. Bei Einzelbestellung spart ihr gegenüber dem berechneten Vergleichspreis 2,37 €...."
+  },
+  {
+   "id": "128852de17",
+   "titre": "PARKSIDE PERFORMANCE 20 V Accu-schroefboormachine - 60 Nm (Excl. accu en lader)",
+   "temperature": 103,
+   "categorie": "Tuin & Doe-het-zelf",
+   "marchand": "Lidl",
+   "prix": 29.99,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/parkside-performance-20-v-accu-schroefboormachine-60-nm-excl-accu-en-lader-429194",
+   "date": "Wed, 25 Nov 2026 12:26:37 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€29,99 - Lidl Schroefboormachine – sterke, borstelloze motor en Kickback Control voor het zwaardere werk. Borstelloze motor: slijt minder snel en gaat extra lang mee<br ..."
+  },
+  {
+   "id": "8894c6243d",
+   "titre": "Midea vrijstaande vaatwasser",
+   "temperature": 103,
+   "categorie": "Home & Living",
+   "marchand": "Joybuy NL",
+   "prix": 318.98,
+   "devise": "EUR",
+   "lien": "https://nl.pepper.com/aanbiedingen/midea-vrijstaande-vaatwasser-429238",
+   "date": "Wed, 25 Nov 2026 12:11:17 +0100",
+   "source": "pepper-nl-hot",
+   "pays": "NL",
+   "description": "€318,98 - Joybuy NL Ultrastil 38 dB nachtprogramma - vrijwel geruisloze werking, ideaal voor open woonruimtes en ongestoord nachtelijk gebruik. lon DishFresh - natu..."
+  },
+  {
+   "id": "eb161d4cbe",
+   "titre": "Monster Hunter Wilds Deluxe Edition - NINTENDO SWITCH 2 - Pre Order - Price at Checkout",
+   "temperature": 102,
+   "categorie": "Gaming",
+   "marchand": "Currys",
+   "prix": 31.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/monster-hunter-wilds-deluxe-edition-nintendo-switch-2-pre-order-price-at-checkout-5046281",
+   "date": "Wed, 25 Nov 2026 11:24:51 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£31.49 - Currys Monster Hunter Wilds Deluxe Edition for Nintendo Switch 2 throws you into the untamed Forbidden Lands, where gigantic monsters rule the wild..."
+  },
+  {
+   "id": "9a951a74ed",
+   "titre": "Samsung Galaxy Tab A11+ Wifi Tablet 128GB 11-inch £111.15 With Trade Of Any iPad With Code + Free Book Cover Via GoCertify / EPP, 2 colours",
+   "temperature": 101,
+   "categorie": "Electronics",
+   "marchand": "Samsung",
+   "prix": 185.15,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/samsung-galaxy-tab-a11-wifi-tablet-128gb-11-inch-display-ps11115-with-trade-of-any-ipad-with-code-free-book-cover-via-gocertify-epp-5046441",
+   "date": "Wed, 25 Nov 2026 11:27:53 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£185.15 - Samsung Similar to the A11 deal i just posted, but if you have any iPad to trade, you can get this down to £111 with code TABTRADE after trading in, and TABA for a f..."
+  },
+  {
+   "id": "4ad14f114c",
+   "titre": "🛍️ ARCOS Ecopro Ciseaux de Cuisine Multifonctions en Acier Inoxydable 200mm, Argent ✅ 9,56€ au lieu de 14,95€ ➡️ https://www.amazon.fr/dp/B00CFN1M6Q/?tag=pmrat-",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 9.56,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B00CFN1M6Q/?tag=pmrat-21",
+   "date": "2026-11-25T08:58",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ ARCOS Ecopro Ciseaux de Cuisine Multifonctions en Acier Inoxydable 200mm, Argent ✅ 9,56€ au lieu de 14,95€ ➡️ https://www.amazon.fr/dp/B00CFN1M6Q/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 14.95
+  },
+  {
+   "id": "89913d52a0",
+   "titre": "🛍️ SONGMICS Abattant WC Forme O, Déclipsable, Frein de Chute, Plastique PP, 44,3 x 37,2 x 4,9 cm, Blanc ✅ 16,99€ au lieu de 35,99€ ➡️ https://www.amazon.fr/dp/B",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 16.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FY1B988B/?tag=pmrat-21",
+   "date": "2026-11-25T09:00",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ SONGMICS Abattant WC Forme O, Déclipsable, Frein de Chute, Plastique PP, 44,3 x 37,2 x 4,9 cm, Blanc ✅ 16,99€ au lieu de 35,99€ ➡️ https://www.amazon.fr/dp/B0FY1B988B/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 35.99
+  },
+  {
+   "id": "484b17e371",
+   "titre": "🛍️ Braun IPL Silk·Expert Pro 5 PL5157 ✅ 279,99€ au lieu de 401,78€ ➡️ https://www.amazon.fr/dp/B09QQS92GP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut chan",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 279.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B09QQS92GP/?tag=pmrat-21",
+   "date": "2026-11-25T09:03",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Braun IPL Silk·Expert Pro 5 PL5157 ✅ 279,99€ au lieu de 401,78€ ➡️ https://www.amazon.fr/dp/B09QQS92GP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 401.78
+  },
+  {
+   "id": "da41466497",
+   "titre": "🛍️ LEGO Architecture Le château de Neuschwanstein 21063, 3455 pièces ✅ 169,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0DWDX63HC/?tag=pmrat-21 Publicité",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 169.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DWDX63HC/?tag=pmrat-21",
+   "date": "2026-11-25T09:13",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO Architecture Le château de Neuschwanstein 21063, 3455 pièces ✅ 169,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0DWDX63HC/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 269.99
+  },
+  {
+   "id": "50659767da",
+   "titre": "🛍️ WORKPRO Ensemble de Clés à Cliquet 1/4\" de Dégagement Rapide avec 72 Dents et Douilles en Cr-V 14 Pièces ✅ 8,54€ au lieu de 14,99€ ➡️ https://www.amazon.fr/d",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 8.54,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B015WH41CI/?tag=pmspt-21",
+   "date": "2026-11-25T09:25",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ WORKPRO Ensemble de Clés à Cliquet 1/4\" de Dégagement Rapide avec 72 Dents et Douilles en Cr-V 14 Pièces ✅ 8,54€ au lieu de 14,99€ ➡️ https://www.amazon.fr/dp/B015WH41CI/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 14.99
+  },
+  {
+   "id": "2b3d738e82",
+   "titre": "🛍️ Exacompta - Réf. 14000H - 10 boites de classement avec élastiques CARTOBOX ✅ 19,39€ au lieu de 32,90€ ➡️ https://www.amazon.fr/dp/B0022QUUD2/?tag=pmrat-21 Pu",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 19.39,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0022QUUD2/?tag=pmrat-21",
+   "date": "2026-11-25T09:36",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Exacompta - Réf. 14000H - 10 boites de classement avec élastiques CARTOBOX ✅ 19,39€ au lieu de 32,90€ ➡️ https://www.amazon.fr/dp/B0022QUUD2/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 32.9
+  },
+  {
+   "id": "e16f1d0492",
+   "titre": "🛍️ HyperX Cloud III S - Casque Gaming sans Fil, Noir et Rouge ✅ 85,99€ au lieu de 149,99€ ➡️ https://www.amazon.fr/dp/B0F6NYQTJP/?tag=pmrat-21 Publicité/Lien af",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 85.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F6NYQTJP/?tag=pmrat-21",
+   "date": "2026-11-25T09:38",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ HyperX Cloud III S - Casque Gaming sans Fil, Noir et Rouge ✅ 85,99€ au lieu de 149,99€ ➡️ https://www.amazon.fr/dp/B0F6NYQTJP/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 149.99
+  },
+  {
+   "id": "ea085581eb",
+   "titre": "🛍️ Sony WH-CH720N - Casque Bluetooth sans Fil à réduction de Bruit, Bleu ✅ 54,99€ au lieu de 69,99€ ➡️ https://www.amazon.fr/dp/B0BTDT8V59/?tag=pmrat-21 Publici",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 54.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BTDT8V59/?tag=pmrat-21",
+   "date": "2026-11-25T09:54",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Sony WH-CH720N - Casque Bluetooth sans Fil à réduction de Bruit, Bleu ✅ 54,99€ au lieu de 69,99€ ➡️ https://www.amazon.fr/dp/B0BTDT8V59/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 69.99
+  },
+  {
+   "id": "731ea067fc",
+   "titre": "🛍️ ASUS TUF Gaming B850-E WiFi – Carte mère Gaming AMD ATX ✅ 134,99€ au lieu de 188,33€ ➡️ https://www.amazon.fr/dp/B0F1Z3YZN4/?tag=pmrat-21 Publicité/Lien affi",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 134.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F1Z3YZN4/?tag=pmrat-21",
+   "date": "2026-11-25T09:58",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ ASUS TUF Gaming B850-E WiFi – Carte mère Gaming AMD ATX ✅ 134,99€ au lieu de 188,33€ ➡️ https://www.amazon.fr/dp/B0F1Z3YZN4/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 188.33
+  },
+  {
+   "id": "88173f322f",
+   "titre": "🛍️ Cecotec Micro-ondes 28L Proclean 2800 Convection 2200W, Plateau 315mm ✅ 115,99€ au lieu de 179,00€ ➡️ https://www.amazon.fr/dp/B0FKNLPCHW/?tag=pmrat-21 Publi",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 115.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0FKNLPCHW/?tag=pmrat-21",
+   "date": "2026-11-25T10:08",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Cecotec Micro-ondes 28L Proclean 2800 Convection 2200W, Plateau 315mm ✅ 115,99€ au lieu de 179,00€ ➡️ https://www.amazon.fr/dp/B0FKNLPCHW/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 179.0
+  },
+  {
+   "id": "9b4aaf7400",
+   "titre": "🛍️ Ergobaby Porte-bébé Omni 360 Cool Air Mesh 4 positions pour nouveau-né à tout-petit (0-3 ans), gris perle ✅ 109,99€ au lieu de 179,90€ ➡️ https://www.amazon.",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 109.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07BTXTR5B/?tag=pmspt-21",
+   "date": "2026-11-25T10:25",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Ergobaby Porte-bébé Omni 360 Cool Air Mesh 4 positions pour nouveau-né à tout-petit (0-3 ans), gris perle ✅ 109,99€ au lieu de 179,90€ ➡️ https://www.amazon.fr/dp/B07BTXTR5B/?tag=pmspt-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 179.9
+  },
+  {
+   "id": "c7e66f7f6e",
+   "titre": "🛍️ Columbia Klamath Range II Half Zip, Polaire pour Homme, Collegiate Navy Solid, taille XL ✅ 24,00€ au lieu de 40,00€ ➡️ https://www.amazon.fr/dp/B00DSN2XJW/?t",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 24.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B00DSN2XJW/?tag=pmrat-21",
+   "date": "2026-11-25T10:27",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Columbia Klamath Range II Half Zip, Polaire pour Homme, Collegiate Navy Solid, taille XL ✅ 24,00€ au lieu de 40,00€ ➡️ https://www.amazon.fr/dp/B00DSN2XJW/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 40.0
+  }
+ ]
+}

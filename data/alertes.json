@@ -6854,7 +6854,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T00:44+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "demande_forte": {
@@ -7039,7 +7039,19 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-25T00:47+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T01:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre Smyths Royaume-Uni (34,99 £), Smyths ne livre pas la France ; et coût réel livré estimé 56,29 €, plus cher que le neuf en France (51,39 € sur achatmoinscher, 11 boutiques). Aucune économie.",
+   "prix_neuf_min_idealo": 51.39,
+   "source_prix_ref": "achatmoinscher (comparateur France)",
+   "economie_pct": -10,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  },
  {
   "id": "69d8adaa9d",
@@ -7085,7 +7097,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T00:54+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7263,6 +7275,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-25T00:57+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T01:55+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : clavier vendu sur Amazon Allemagne/Autriche en version allemande (QWERTZ), pas le même produit que la version française AZERTY à 34,99 € ; la page de l'offre affiche un autre prix (72,98) et un lien amazon.com bloqué, livraison France non prouvée. Revente : marge nette ~1 €, trop faible.",
+   "prix_neuf_min_idealo": 34.99,
+   "source_prix_ref": "achatmoinscher (version AZERTY, comparateur France)",
+   "economie_pct": null,
+   "prix_revente_verifie": 30.79,
+   "canal": "leboncoin",
+   "marge_nette_verifiee": 1.14,
+   "duree_offre": "inconnue",
+   "demande_confirmee": false
+  }
  }
 ]

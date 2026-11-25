@@ -7576,7 +7576,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T07:12+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -7838,6 +7838,18 @@
    "proba_detail": [
     "Google 10/mois"
    ]
+  },
+  "verifie_le": "2026-11-25T07:43+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : vendeur polonais Morele.net, la page de l'offre indique « livraison France : non » et Morele ne livre qu'en Pologne. Prix 399 PLN (code BLACK26) non achetable ni livrable en France ; même produit exact aussi non confirmé.",
+   "prix_neuf_min_idealo": 146.99,
+   "source_prix_ref": "achatmoinscher (2 boutiques), non vérifié sur idealo",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "Black Weeks Morele (quelques jours)",
+   "demande_confirmee": false
   }
  }
 ]

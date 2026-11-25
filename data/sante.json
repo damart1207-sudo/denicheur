@@ -1,14 +1,8 @@
 {
- "tours_ok": 3610,
+ "tours_ok": 3611,
  "tours_echec": 12,
- "dernier_ok": "25/11 12:35",
+ "dernier_ok": "25/11 12:46",
  "evenements": [
-  {
-   "heure": "21/11 06:50",
-   "niveau": "erreur",
-   "etape": "classements",
-   "message": "HTTPError: HTTP Error 429: Too Many Requests | , line 189, in tour\n    top = chine(date=date) if pays == \"CN\" else amazon(pays)\n                                                ^^^^^^^^^^^^\nurllib.error.HTTPError: HTTP Error 429: Too Many Requests\n"
-  },
   {
    "heure": "21/11 06:50",
    "niveau": "erreur",
@@ -1802,12 +1796,18 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 402: Payment Required"
+  },
+  {
+   "heure": "25/11 12:46",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 402: Payment Required"
   }
  ],
  "dernier_resume": {
-  "heure": "25/11 12:32",
-  "annonces": 695,
-  "nouvelles": 416,
+  "heure": "25/11 12:42",
+  "annonces": 696,
+  "nouvelles": 413,
   "examinees": 25,
   "alertes": 0
  }

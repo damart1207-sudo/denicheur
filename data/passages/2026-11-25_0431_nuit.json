@@ -1,0 +1,3073 @@
+{
+ "passage": "nuit",
+ "horodatage": "2026-11-25_0431",
+ "date_affichee": "25/11/2026 à 04 h 31",
+ "statut": "Provisoire : en attente de l’audit de Claude",
+ "test": false,
+ "sources": {
+  "dealabs-tendance": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "dealabs-nouveaux": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "lesnumeriques-bonsplans": {
+   "ok": true,
+   "nb": 40,
+   "erreur": null
+  },
+  "dealabs-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "mydealz-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hotukdeals-new": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "chollometro-nuevos": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-pl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "preisjaeger-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "pepper-nl-hot": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "nike-promos": {
+   "ok": true,
+   "nb": 146,
+   "erreur": null
+  },
+  "ldlc-promos": {
+   "ok": true,
+   "nb": 44,
+   "erreur": null
+  },
+  "pepper-it-hot": {
+   "ok": false,
+   "nb": 0,
+   "erreur": "XML illisible: mismatched tag: line 152, column 2"
+  },
+  "pc-david": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "tg-promorat": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "tg-bonsplans": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "prospectus-magasins": {
+   "ok": true,
+   "nb": 200,
+   "erreur": null
+  },
+  "keepa-radar": {
+   "ok": true,
+   "nb": 0,
+   "erreur": null
+  },
+  "keepa-arbitrage": {
+   "ok": true,
+   "nb": 60,
+   "erreur": null
+  },
+  "hype:smzdm-haitao": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:ppomppu-kr": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:ppomppu-kr-etranger": {
+   "ok": true,
+   "nb": 15,
+   "erreur": null
+  },
+  "hype:kakaku-jp": {
+   "ok": true,
+   "nb": 20,
+   "erreur": null
+  },
+  "hype:ozbargain-au": {
+   "ok": true,
+   "nb": 30,
+   "erreur": null
+  },
+  "hype:slickdeals-us": {
+   "ok": true,
+   "nb": 25,
+   "erreur": null
+  }
+ },
+ "nb_annonces": 742,
+ "nb_nouvelles": 232,
+ "nb_prefiltres": 151,
+ "nb_tries": 96,
+ "tri_ok": true,
+ "agents": {
+  "nemotron": {
+   "appels": 3,
+   "reussites": 3,
+   "erreurs": [],
+   "choix": 19
+  },
+  "gptoss": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 54
+  },
+  "qwen": {
+   "appels": 8,
+   "reussites": 8,
+   "erreurs": [],
+   "choix": 13
+  }
+ },
+ "remplacements": {},
+ "candidats": [
+  {
+   "id": "720a3778c1",
+   "titre": "Nike Air Max 270 Chaussure pour femme",
+   "prix": 79.99,
+   "devise": "EUR",
+   "marchand": "Nike",
+   "lien": "https://www.nike.com/fr/t/chaussure-nike-air-max-270-pour-femme-dKITiW6l/HJ3222-001",
+   "pays": "FR",
+   "source": "nike-promos",
+   "temperature": 400,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.nike.com/fr/t/chaussure-nike-air-max-270-pour-femme-dKITiW6l/HJ3222-001"
+   },
+   "meme_produit": {
+    "meme": null,
+    "raison": "non confirmé",
+    "qte_a": null,
+    "qte_b": null,
+    "reference": "NIKE Chaussure  Air Max 270 pour femme - Blanc"
+   },
+   "lien_marchand": null,
+   "domaine": "autre",
+   "nom_produit": "Nike Air Max 270 Chaussure pour femme",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 139.92,
+   "cout_achat": 84.99,
+   "marge_nette": 33.18,
+   "rentabilite": 0.39,
+   "demande": 3,
+   "concurrence": 3,
+   "consensus": 1,
+   "agents": [
+    "veille"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "veille": "économie 50 % vs neuf le moins cher"
+   },
+   "score": 75.0,
+   "veille": true,
+   "idealo": null,
+   "prix_plancher": {
+    "nom": "Nike Air Max 270 Chaussure pour femme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 1,
+      "meilleur": {
+       "titre": "NIKE Chaussure  Air Max 270 pour femme - Blanc",
+       "prix": 159.0,
+       "nb_boutiques": 2,
+       "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Chaussures-de-running-femme/chaussure-nike-air-max-270-pour-femme-blanc.html"
+      },
+      "autres": []
+     }
+    },
+    "prix_min": 159.0,
+    "ou": "achatmoinscher",
+    "lien": "https://www.achatmoinscher.com/comparateur-de-prix-Chaussures-de-running-femme/chaussure-nike-air-max-270-pour-femme-blanc.html"
+   },
+   "keepa": null,
+   "ean": null,
+   "asin": null,
+   "vendeurs_amazon": null,
+   "ventes_estimees_30j": null,
+   "ebay": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Nike Air Max taille 7, jaune  ",
+      "prix": "52.83",
+      "url": "https://www.ebay.fr/itm/283206581604?_skw=Nike+Air+Max+270+Chaussure+pour+femme&hash=item41f06d7d64:g:wAcAAOSwjCVbv~K5"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 105.0,
+     "IT": 96.91,
+     "ES": 97.48
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "mot_cle": "nike air max 270",
+   "demande_google": {
+    "volume_mensuel": 1900,
+    "concurrence": "HIGH",
+    "cpc": 0.28,
+    "trois_derniers_mois": [
+     1300,
+     1600,
+     2400
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": [
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "leboncoin",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "vinted",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "petit_budget",
+     "profil_nom": "Petit budget (occasion)",
+     "canal": "facebook",
+     "prix_vente": 139.92,
+     "marge_nette": 33.18,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 139.92,
+      "cout_achat": 84.99,
+      "frais_canal": 0.0,
+      "prelevements": 18.75,
+      "provision": 3.0,
+      "marge_nette": 33.18,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.39
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "fnac",
+     "prix_vente": 159.0,
+     "marge_nette": 30.57,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 19.13,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 30.57,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.36
+    },
+    {
+     "profil": "impulsion",
+     "profil_nom": "Achat coup de cœur (vidéo)",
+     "canal": "tiktok",
+     "prix_vente": 159.0,
+     "marge_nette": 29.39,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 20.31,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 29.39,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.346
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "cdiscount",
+     "prix_vente": 159.0,
+     "marge_nette": 28.98,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 20.72,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 28.98,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.341
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "ebay",
+     "prix_vente": 159.0,
+     "marge_nette": 22.68,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 27.02,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 22.68,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.267
+    },
+    {
+     "profil": "confiance",
+     "profil_nom": "Acheteurs prudents (gros sites)",
+     "canal": "amazon",
+     "prix_vente": 159.0,
+     "marge_nette": 18.86,
+     "calcul_marge": {
+      "version": 2,
+      "prix_vente": 159.0,
+      "cout_achat": 84.99,
+      "frais_canal": 30.84,
+      "prelevements": 21.31,
+      "provision": 3.0,
+      "marge_nette": 18.86,
+      "perimetre": "après prélèvements et provision, avant frais mensuels et temps de travail"
+     },
+     "rentabilite": 0.222
+    }
+   ],
+   "moins_cher_du_marche": true,
+   "prix_revente_prudent": 154.23,
+   "marge_verifiee": 45.57,
+   "rentabilite_verifiee": 0.536,
+   "passe_verif": true,
+   "feu": "orange",
+   "concurrence_amazon": "inconnue",
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 115.5,
+   "rapport_concurrence": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 113,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 1498,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 213,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Nike Air Max 270 Chaussure pour femme",
+    "temperature_dealabs": 400,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "nike air max 270 chaussure pour femme",
+     "nike air max 270 basket femme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "ef8ecf2f13",
+   "titre": "Mercedes AMG Petronas adidas F1 Special Edition Singapore GP Trainers (Sizes 6 to 9) W/Code",
+   "prix": 56.0,
+   "devise": "GBP",
+   "marchand": "F1 Store",
+   "lien": "https://www.hotukdeals.com/deals/mercedes-amg-petronas-adidas-f1-special-edition-singapore-gp-trainers-sizes-6-to-9-wcode-5045499",
+   "pays": "UK",
+   "source": "hotukdeals-hot",
+   "temperature": 120,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.hotukdeals.com/deals/mercedes-amg-petronas-adidas-f1-special-edition-singapore-gp-trainers-sizes-6-to-9-wcode-5045499"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Mercedes AMG Petronas F1 Trainers Singapore GP",
+   "plateforme_revente": "ebay",
+   "prix_revente_estime": 215.0,
+   "cout_achat": 85.28,
+   "marge_nette": 63.61,
+   "rentabilite": 0.746,
+   "demande": 5,
+   "concurrence": 1.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Édition limitée F1 Singapore GP, forte demande sneakers collectors, marge >100€ net si code non unitaire.",
+    "gptoss": "Sneakers édition limitée, revente autour de 250 €."
+   },
+   "score": 125.1,
+   "ebay": {
+    "requete": "Mercedes AMG Petronas F1 Trainers Singapore GP",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Mercedes AMG Petronas F1 Trainers Singapore GP",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "mercedes amg petronas f1",
+   "demande_google": {
+    "volume_mensuel": 170,
+    "concurrence": "MEDIUM",
+    "cpc": 0.85,
+    "trois_derniers_mois": [
+     140,
+     140,
+     140
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Mercedes AMG Petronas F1 Trainers Singapore GP",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Mercedes AMG Petronas F1 Trainers Singapore GP",
+    "temperature_dealabs": 120,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "mercedes amg petronas adidas f1 special edition singapore gp trainers"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "71c188634e",
+   "titre": "Adidas DFB Trainingsjacke 1994 - Größen M & 3XL (CB)",
+   "prix": 44.37,
+   "devise": "EUR",
+   "marchand": "adidas",
+   "lien": "https://www.mydealz.de/deals/adidas-dfb-trainingsjacke-1994-grossen-m-3xl-cb-2880998",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 157,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/adidas-dfb-trainingsjacke-1994-grossen-m-3xl-cb-2880998"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Adidas DFB Trainingsjacke 1994",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 92.5,
+   "cout_achat": 49.37,
+   "marge_nette": 27.74,
+   "rentabilite": 0.562,
+   "demande": 4.5,
+   "concurrence": 2.5,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Veste rétro football très recherchée collectionneurs, marge nette ~40€ après frais Vinted sur tailles M et 3XL.",
+    "gptoss": "Veste vintage football, forte demande et marge nette"
+   },
+   "score": 77.5,
+   "ebay": {
+    "requete": "Adidas DFB Trainingsjacke 1994",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 54.23,
+     "IT": 79.99,
+     "ES": null
+    },
+    "meilleur_pays": "IT"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Adidas DFB Trainingsjacke 1994",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "adidas dfb trainingsjacke 1994",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Adidas DFB Trainingsjacke 1994",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 3,
+      "total_ebay": 4,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 79.99,
+       "titre": "Adidas Original DFB Deutschland Trainingsjacke weiß 1994 Retro Style Gr.L",
+       "lien": "https://www.ebay.de/itm/377373281488?_skw=Adidas+DFB+Trainingsjacke+1994&hash=item57dd334cd0:g:~ikAAeSw2~5qZ4Vr",
+       "vendeur": "musketier1980",
+       "avis_vendeur": 80
+      },
+      "plus_cher": {
+       "prix": 105.0,
+       "titre": "adidas Deutschland Trainingsjacke 1994 DFB Retro Jacke Weiß Schwarz Rot Gold NEU",
+       "lien": "https://www.ebay.de/itm/227507672431?_skw=Adidas+DFB+Trainingsjacke+1994&hash=item34f883956f:g:LegAAeSwMfVqnEds",
+       "vendeur": "teniswill",
+       "avis_vendeur": 1347
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Adidas DFB Trainingsjacke 1994",
+    "temperature_dealabs": 157,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "adidas dfb trainingsjacke 1994",
+     "adidas dfb jacke 1994",
+     "adidas dfb jacke 94",
+     "adidas dfb retro jacke 1994"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "aadddafaf6",
+   "titre": "Lit parapluie Bébéconfort Soft Dreams – 60 x 120 cm, 0-15 kg, matelas et sac de transport inclus",
+   "prix": 34.08,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.dealabs.com/bons-plans/lit-parapluie-bebeconfort-soft-dreams-60-x-120-cm-0-15-kg-matelas-et-sac-de-transport-inclus-3468427",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/lit-parapluie-bebeconfort-soft-dreams-60-x-120-cm-0-15-kg-matelas-et-sac-de-transport-inclus-3468427"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "puericulture-jouets",
+   "nom_produit": "Bébéconfort Soft Dreams Lit Parapluie",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 65.0,
+   "cout_achat": 39.08,
+   "marge_nette": 14.21,
+   "rentabilite": 0.364,
+   "demande": 4.5,
+   "concurrence": 2.0,
+   "consensus": 2,
+   "agents": [
+    "gptoss",
+    "nemotron"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "nemotron": "Prix d'achat 65% sous le prix marché neuf, produit compact, forte demande sur Vinted/LBC sans frais vendeur.",
+    "gptoss": "Achat 34 €, revente 60 € sur Leboncoin, forte demande bébé."
+   },
+   "score": 54.1,
+   "ebay": {
+    "requete": "Bébéconfort Soft Dreams Lit Parapluie",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Lit parapluie BebeConfort Soft Dreams 60x120 cm 0-15 kg",
+      "prix": "42.99",
+      "url": "https://www.ebay.fr/itm/860157871919?_skw=B%C3%A9b%C3%A9confort+Soft+Dreams+Lit+Parapluie&hash=itemc84567872f:g:AEoAAeSwPolqx2sF"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": null
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Bébéconfort Soft Dreams Lit Parapluie",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "bébéconfort soft dreams lit",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Bébéconfort Soft Dreams Lit Parapluie",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Bébéconfort Soft Dreams Lit Parapluie",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 0,
+     "tendance": "aucune recherche mesurable"
+    },
+    "suggestions_google": [
+     "bebeconfort soft dreams lit parapluie",
+     "bebeconfort soft dreams lit parapluie bébé 0 3 ans",
+     "bebeconfort soft dreams lit parapluie bébé",
+     "lit parapluie bebeconfort soft dreams avis",
+     "bebeconfort lit parapluie soft dreams mineral gray"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "106a9b2e57",
+   "titre": "Survêtement Homme Under Armour Ua Knit Track Suit - Taille Du XS au XXL",
+   "prix": 37.5,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.dealabs.com/bons-plans/under-armour-ua-knit-track-suit-survetement-homme-taille-du-xs-au-xxl-3467978",
+   "pays": "FR",
+   "source": "dealabs-tendance",
+   "temperature": 120,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/under-armour-ua-knit-track-suit-survetement-homme-taille-du-xs-au-xxl-3467978"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "Under Armour survêtement homme",
+   "plateforme_revente": "vinted",
+   "prix_revente_estime": 75.0,
+   "cout_achat": 42.5,
+   "marge_nette": 19.45,
+   "rentabilite": 0.458,
+   "demande": 4.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Prix de revente moyen 75 € avec faible frais, marge nette >30 €."
+   },
+   "score": 41.5,
+   "ebay": {
+    "requete": "Under Armour survêtement homme",
+    "neuf": {
+     "nb": 50,
+     "min": 26.7,
+     "p25": 31.56,
+     "mediane": 50.05,
+     "max": 146.3
+    },
+    "occasion": {
+     "nb": 50,
+     "min": 15.8,
+     "p25": 24.5,
+     "mediane": 36.53,
+     "max": 120.35
+    },
+    "exemples": [
+     {
+      "titre": "Under Armour Survêtement homme noir 2 pièces veste zippée + pantalon logo col",
+      "prix": "52.70",
+      "url": "https://www.ebay.fr/itm/377671530045?_skw=Under+Armour+surv%C3%AAtement+homme&hash=item57eefa363d:g:bHsAAeSwXxJrBNZP"
+     },
+     {
+      "titre": "Under Armour survêtement homme gris 2 pièces veste zippée + pantalon XL",
+      "prix": "25.00",
+      "url": "https://www.ebay.fr/itm/318925078946?_skw=Under+Armour+surv%C3%AAtement+homme&hash=item4a416a81a2:g:UzYAAeSwmIRquTBA&amdata=enc%3AAQALAAABAOf5zIIojhOf%2BkQK%2Bxzjn7mlM%2Fn4dSkCeBIg6FOx4L01FGC%2FOtAweb6fiKAvN6ptg4PWJd%2B6R8%2FNHwVcSJ2rOLGJ4F5iJ%2BDeUp8UrzrGaSDc3Gvf%2FlkH6oMnbYNZtnCnI0Eoz45CjQdepooz3hyikqP15CP31GEFXphbrxjUn9Wr4O71uVja9eAm95Q6fmb9nHv6ij0tImIH39vqokK%2FehI6LCq3UQJXnv%2B6f6xFVAdO3DC50UcXCZ00bqmEUp6FRU92Yx1cby1im6yKpAcsIY3pG06ZFSmtLt3bVKLzg46jBSK%2BIKGpOXtJBji4b%2BwdNjDn2CsRZmdtHoiTBgTjN6Q%3D"
+     },
+     {
+      "titre": "Under Armour survêtement homme XL 2 pièces capuche zippée blanc/noir",
+      "prix": "120.35",
+      "url": "https://www.ebay.fr/itm/168882622819?_skw=Under+Armour+surv%C3%AAtement+homme&hash=item2752305163:g:0v0AAeSwpEprBHtX"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": 31.56,
+     "DE": null,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "FR"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Under Armour survêtement homme",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "under armour survêtement homme",
+   "demande_google": {
+    "volume_mensuel": 590,
+    "concurrence": "HIGH",
+    "cpc": 0.49,
+    "trois_derniers_mois": [
+     590,
+     590,
+     590
+    ]
+   },
+   "annonces_ebay": 50,
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "moins_cher_du_marche": false,
+   "prix_revente_prudent": 24.5,
+   "marge_verifiee": -24.28,
+   "rentabilite_verifiee": -0.571,
+   "passe_verif": false,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "occasion": {
+    "bas": 24.5,
+    "haut": 36.53,
+    "position_neuf": 1.53
+   },
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Under Armour survêtement homme",
+    "pays": {
+     "FR": {
+      "nb_annonces": 27,
+      "total_ebay": 152,
+      "niveau": "moyen",
+      "moins_cher": {
+       "prix": 26.7,
+       "titre": "Under Armour HeatGear veste survêtement zippée à capuche noir homme L",
+       "lien": "https://www.ebay.fr/itm/318834728039?_skw=Under+Armour+surv%C3%AAtement+homme&hash=item4a3c07dc67:g:KpkAAeSw-~ZqnZtw",
+       "vendeur": "sacoulea0",
+       "avis_vendeur": 0
+      },
+      "plus_cher": {
+       "prix": 147.18,
+       "titre": "Under Armour - Ensemble Ensemble de survêtement RIVAL - Homme (GT39702)",
+       "lien": "https://www.ebay.fr/itm/336813410825?_skw=Under+Armour+surv%C3%AAtement+homme&hash=item4e6ba4ca09:g:06YAAeSwhzBq9aSt",
+       "vendeur": "pertemba",
+       "avis_vendeur": 335836
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 67,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 272,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 324,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "moyen"
+   },
+   "rapport_demande": {
+    "requete": "Under Armour survêtement homme",
+    "temperature_dealabs": 120,
+    "google_trends": {
+     "interet_moyen": 10,
+     "interet_recent": 63,
+     "tendance": "stable",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      61,
+      70,
+      45,
+      78,
+      84,
+      61,
+      56,
+      70,
+      59,
+      43,
+      75,
+      91,
+      100,
+      60,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "under armour survêtement homme",
+     "under armour survêtement homme gris",
+     "under armour survêtement homme bleu",
+     "under armour survêtement homme vert",
+     "under armour survêtement homme noir",
+     "under armour survêtement homme coton",
+     "under armour survêtement homme beige",
+     "under armour survêtement homme pas cher",
+     "under armour survêtement homme 2026",
+     "under armour ensemble homme"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "c8ea1109bf",
+   "titre": "Friteuse TEFAL Easy Pro - 2200W - 3L",
+   "prix": 38.62,
+   "devise": "EUR",
+   "marchand": "Action",
+   "lien": "https://www.dealabs.com/bons-plans/friteuse-tefal-easy-pro-2200w-3l-3468407",
+   "pays": "FR",
+   "source": "dealabs-nouveaux",
+   "temperature": null,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.dealabs.com/bons-plans/friteuse-tefal-easy-pro-2200w-3l-3468407"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "cuisine",
+   "nom_produit": "Tefal Easy Pro Friteuse",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 80.0,
+   "cout_achat": 43.62,
+   "marge_nette": 22.66,
+   "rentabilite": 0.519,
+   "demande": 3.0,
+   "concurrence": 2.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Bon écart de prix, appareil de cuisine recherché, marge suffisante même avec frais de port."
+   },
+   "score": 36.5,
+   "ebay": {
+    "requete": "Tefal Easy Pro Friteuse",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [
+     {
+      "titre": "Tefal Easy Pro friteuse inox 1,2 kg, 150-190°C, zone froide, cuve amovible",
+      "prix": "75.90",
+      "url": "https://www.ebay.fr/itm/880149071410?_skw=Tefal+Easy+Pro+Friteuse&hash=itemccecf90632:g:lpMAAeSwAd5rBW3Y"
+     }
+    ],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 77.21,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "Tefal Easy Pro Friteuse",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "tefal easy pro friteuse",
+   "demande_google": {
+    "volume_mensuel": 320,
+    "concurrence": "HIGH",
+    "cpc": 0.12,
+    "trois_derniers_mois": [
+     390,
+     480,
+     480
+    ]
+   },
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "Tefal Easy Pro Friteuse",
+    "pays": {
+     "FR": {
+      "nb_annonces": 1,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 75.9,
+       "titre": "Tefal Easy Pro friteuse inox 1,2 kg, 150-190°C, zone froide, cuve amovible",
+       "lien": "https://www.ebay.fr/itm/880149071410?_skw=Tefal+Easy+Pro+Friteuse&hash=itemccecf90632:g:lpMAAeSwAd5rBW3Y",
+       "vendeur": "vassfof_94",
+       "avis_vendeur": 1
+      },
+      "plus_cher": {
+       "prix": 75.9,
+       "titre": "Tefal Easy Pro friteuse inox 1,2 kg, 150-190°C, zone froide, cuve amovible",
+       "lien": "https://www.ebay.fr/itm/880149071410?_skw=Tefal+Easy+Pro+Friteuse&hash=itemccecf90632:g:lpMAAeSwAd5rBW3Y",
+       "vendeur": "vassfof_94",
+       "avis_vendeur": 1
+      }
+     },
+     "DE": {
+      "nb_annonces": 0,
+      "total_ebay": 2,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 6,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 7,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "Tefal Easy Pro Friteuse",
+    "temperature_dealabs": null,
+    "google_trends": {
+     "interet_moyen": 4,
+     "interet_recent": 40,
+     "tendance": "en hausse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      79,
+      100,
+      0,
+      0,
+      0,
+      0,
+      95,
+      0,
+      67,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "tefal easy pro friteuse",
+     "tefal easy pro fr3330 friteuse",
+     "friteuse tefal easy pro 3l",
+     "friteuse tefal easy pro notice",
+     "friteuse tefal easy pro avis",
+     "friteuse tefal easy pro carrefour",
+     "friteuse tefal easy pro prix",
+     "friteuse tefal easy pro 3l avis",
+     "friteuse tefal easy pro 4l",
+     "friteuse tefal easy pro premium"
+    ]
+   },
+   "bingo": null
+  },
+  {
+   "id": "e970ba063e",
+   "titre": "EASTPAK Tranverz M Koffer 78L (67 x 35,5 x 30 cm), mittelgroßer Reisekoffer in grau (prime)",
+   "prix": 78.0,
+   "devise": "EUR",
+   "marchand": "Amazon",
+   "lien": "https://www.mydealz.de/deals/eastpak-tranverz-m-koffer-78l-67-x-355-x-30-cm-mittelgrosser-reisekoffer-prime-2879186",
+   "pays": "DE",
+   "source": "mydealz-hot",
+   "temperature": 107,
+   "preuve_prix": null,
+   "preuve_livraison": null,
+   "controle_prix": {
+    "statut": "inconnu",
+    "prix_page": null,
+    "lien": "https://www.mydealz.de/deals/eastpak-tranverz-m-koffer-78l-67-x-355-x-30-cm-mittelgrosser-reisekoffer-prime-2879186"
+   },
+   "meme_produit": null,
+   "lien_marchand": null,
+   "domaine": "mode",
+   "nom_produit": "EASTPAK Tranverz M Koffer",
+   "plateforme_revente": "leboncoin",
+   "prix_revente_estime": 130.0,
+   "cout_achat": 83.0,
+   "marge_nette": 26.58,
+   "rentabilite": 0.32,
+   "demande": 3.0,
+   "concurrence": 3.0,
+   "consensus": 1,
+   "agents": [
+    "gptoss"
+   ],
+   "mode": "stock",
+   "erreur_prix": false,
+   "raisons": {
+    "gptoss": "Valise de bonne qualité à prix très compétitif, marge correcte."
+   },
+   "score": 21.8,
+   "ebay": {
+    "requete": "EASTPAK Tranverz M Koffer",
+    "neuf": null,
+    "occasion": null,
+    "exemples": [],
+    "neuf_par_pays": {
+     "FR": null,
+     "DE": 101.0,
+     "IT": null,
+     "ES": null
+    },
+    "meilleur_pays": "DE"
+   },
+   "keepa_erreur": "HTTPError: HTTP Error 402: Payment Required",
+   "prix_plancher": {
+    "nom": "EASTPAK Tranverz M Koffer",
+    "sources": {
+     "achatmoinscher": {
+      "nb_produits": 0,
+      "meilleur": null,
+      "autres": []
+     }
+    }
+   },
+   "mot_cle": "eastpak tranverz koffer",
+   "livraison_fr_confirmee": false,
+   "cout_total_confirme": false,
+   "canaux": null,
+   "feu": "rouge",
+   "concurrence_amazon": "inconnue",
+   "marge_verifiee": 0,
+   "passe_verif": false,
+   "verification_blocages": [
+    "prix marchand non confirmé récemment pour cette offre",
+    "même produit exact non confirmé",
+    "livraison en France non confirmée",
+    "coût total livré non confirmé"
+   ],
+   "score_vente": 0.0,
+   "rapport_concurrence": {
+    "requete": "EASTPAK Tranverz M Koffer",
+    "pays": {
+     "FR": {
+      "nb_annonces": 0,
+      "total_ebay": 0,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "DE": {
+      "nb_annonces": 4,
+      "total_ebay": 9,
+      "niveau": "peu",
+      "moins_cher": {
+       "prix": 116.95,
+       "titre": "EASTPAK Trolley Koffer TRANVERZ M EK62 Checker Grey 78L mit TSA Schloss",
+       "lien": "https://www.ebay.de/itm/198714924601?_skw=EASTPAK+Tranverz+M+Koffer&hash=item2e44551e39:g:TkcAAeSw1LJqz1qm",
+       "vendeur": "sport-riegel",
+       "avis_vendeur": 26651
+      },
+      "plus_cher": {
+       "prix": 159.95,
+       "titre": "Eastpak Tranverz L Koffer Reisekoffer Reisen Rollkoffer Trolley TSA M.MetalBlack",
+       "lien": "https://www.ebay.de/itm/117512434469?_skw=EASTPAK+Tranverz+M+Koffer&hash=item1b5c497325:g:pkMAAeSwARRq8b2u",
+       "vendeur": "concept-n",
+       "avis_vendeur": 124364
+      }
+     },
+     "IT": {
+      "nb_annonces": 0,
+      "total_ebay": 5,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     },
+     "ES": {
+      "nb_annonces": 0,
+      "total_ebay": 1,
+      "niveau": "peu",
+      "moins_cher": null,
+      "plus_cher": null
+     }
+    },
+    "niveau_global": "peu"
+   },
+   "rapport_demande": {
+    "requete": "EASTPAK Tranverz M Koffer",
+    "temperature_dealabs": 107,
+    "google_trends": {
+     "interet_moyen": 1,
+     "interet_recent": 0,
+     "tendance": "en baisse",
+     "courbe": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      100,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+     ],
+     "recherches_liees": []
+    },
+    "suggestions_google": [
+     "eastpak tranverz m koffer 78l",
+     "eastpak tranverz m koffer",
+     "eastpak tranverz m koffer 67 cm 78 l",
+     "eastpak tranverz cnnct m koffer"
+    ]
+   },
+   "bingo": null
+  }
+ ],
+ "verification": {
+  "faits": 0,
+  "erreurs": [
+   "HTTP 402 (gemini-3.8-flash)",
+   "HTTP 402 (gemini-flash-latest)",
+   "HTTP 402 (gemini-3.5-flash)",
+   "HTTP 402 : vérification arrêtée (tous les modèles)"
+  ]
+ },
+ "verification_ebay": {
+  "faits": 7,
+  "erreurs": []
+ },
+ "ecartes_sous_seuil": 50,
+ "annonces_analysees": [
+  {
+   "id": "d6d1f6ea40",
+   "titre": "8p off per litre of fuel when spending £60 instore (exclusions apply)",
+   "temperature": 866,
+   "categorie": "Car & Motorcycle",
+   "marchand": "Sainsbury's",
+   "prix": 60.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/8p-off-per-litre-of-fuel-when-spending-ps60-instore-exclusions-apply-5044840",
+   "date": "Wed, 25 Nov 2026 00:10:03 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£60 - Sainsbury's From Wednesday 25th November until Tuesday 1st December , customers who spend £60 or more on qualifying products in a single transaction at S..."
+  },
+  {
+   "id": "86652adb0f",
+   "titre": "Juego de mesa Exit",
+   "temperature": 621,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Aldi",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/juego-de-mesa-exit-2049196",
+   "date": "Wed, 25 Nov 2026 00:10:01 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "9,99€ - Aldi A partir del 25 de noviembre Modelos disponibles: · El Señor de los Anillos -Sombras sobre la Tierra Media · El bosque encantado · ..."
+  },
+  {
+   "id": "04e5fa9a99",
+   "titre": "RAVENSBURGER Juegos de cartas - Surtidos - Minecraft, Super mario, Stitch, etc",
+   "temperature": 404,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Aldi",
+   "prix": 8.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ravensburger-juegos-de-cartas-surtidos-minecraft-super-mario-sticht-etc-2043801",
+   "date": "Wed, 25 Nov 2026 00:10:02 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,99€ - Aldi Surtido de juegos que Desarrollan el pensamiento estratégico y la memoria. Modelos disponibles: · That's not a hat: a partir de 8 años. · That..."
+  },
+  {
+   "id": "08bba078f8",
+   "titre": "Vodafone Netz: Google Pixel 10a 128GB & 85€ Amazon mit Otelo Allnet/SMS Flat 150GB 5G für 19,99€/Monat & 1€, 50€ Wechselbonus",
+   "temperature": 333,
+   "categorie": "Telefon- & Internet-Verträge",
+   "marchand": "LogiTel",
+   "prix": 430.76,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/vodafone-netz-google-pixel-10a-128gb-20eur-wunschgutschein-mit-otelo-allnetsms-flat-150gb-5g-fur-1999eurmonat-1eur-50eur-wechselbonus-2878624",
+   "date": "Wed, 25 Nov 2026 00:45:29 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "430,76€ - LogiTel Update 25.11. Jetzt mit<a href=\"https://www.logitel.de/angebot/aktion/blackweek-otelo-2249-mit-google-pixel-10a-85-amazon-gutschein.html?\" t..."
+  },
+  {
+   "id": "87dc2c42a1",
+   "titre": "RAVENSBURGER Set 3 Puzzles y Memory (Pokemon, Disney, Super Mario o Paw Patrol)",
+   "temperature": 299,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Aldi",
+   "prix": 12.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/ravensburger-set-3-puzzles-y-memory-pokemon-disney-super-mario-o-paw-patrol-2043797",
+   "date": "Wed, 25 Nov 2026 00:10:01 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "12,99€ - Aldi Incluye 3 puzles y juego de memoria Piezas: 25/36/49. 18 x 18 cm. A partir de 4 años. Títulos disponibles: · Pokémon · Patrulla..."
+  },
+  {
+   "id": "5211bff2b8",
+   "titre": "Cargador para Cepillo Dental eléctrico de Pared Oral-B Braun | Compatible con Modelos Oral-B/Braun |Inalámbrico |Ahorro de Espacio y energía",
+   "temperature": 297,
+   "categorie": "Salud y belleza",
+   "marchand": "Amazon",
+   "prix": 16.96,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/cargador-para-cepillo-dental-electrico-de-pared-oral-b-braun-compatible-con-modelos-oral-bbraun-inalambrico-ahorro-de-espacio-y-energia-2088634",
+   "date": "Wed, 25 Nov 2026 00:45:20 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "16,96€ - Amazon Cargador para Cepillo Dental eléctrico de Pared Oral-B Braun | Compatible con Modelos Oral-B/Braun | Inalámbrico | Ahorro de Espacio y energía | Cargador Dental..."
+  },
+  {
+   "id": "fe5a39edf4",
+   "titre": "Freidora de aire de cristal portátil Ninja CRISPi, 4 funciones (3 recipientes) - Verde",
+   "temperature": 282,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "SharkNinja",
+   "prix": 119.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/freidora-de-aire-de-cristal-portatil-ninja-crispi-4-funciones-3-recipientes-verde-2088444",
+   "date": "Wed, 25 Nov 2026 00:21:59 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "119,99€ - SharkNinja Especificaciones del producto: Diseño compacto y portátil Fabricada en vidrio <..."
+  },
+  {
+   "id": "fa662fe44a",
+   "titre": "Fisher-Price Libro Suave Sensorial Juguete Bebé",
+   "temperature": 240,
+   "categorie": "Juguetes, familia e hijos",
+   "marchand": "Amazon",
+   "prix": 8.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/fisher-price-libro-suave-sensorial-juguete-bebe-2057953",
+   "date": "Wed, 25 Nov 2026 00:18:53 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "8,99€ - Amazon Libro blandito con 4 páginas inspiradas en las estaciones del año y actividades sensoriales para entretener al bebé. ¡Juego boca abajo y juego sentado! El ..."
+  },
+  {
+   "id": "97209ebf62",
+   "titre": "Perfumy Azzaro The Most Wanted Parfum 150 ml",
+   "temperature": 237,
+   "categorie": "Zdrowie i uroda",
+   "marchand": "Amazon.de",
+   "prix": 62.18,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/perfumy-azzaro-the-most-wanted-parfum-1399639",
+   "date": "Wed, 25 Nov 2026 01:59:48 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "264,58zł - Amazon.de Wersja 150 ml w bardzo dobrej cenie na niemieckim Amazonie. Darmowa dostawa do punktu DHL (np. Żabka, automat DHL). Trochę dłużej trzeba jednak poczekać na d..."
+  },
+  {
+   "id": "99d444213b",
+   "titre": "Gra planszowa Civolution BGG 8.2 wersja PL darmowa dostawa/możliwe 190,52 z kodem BLACKWEEK",
+   "temperature": 223,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "InPost",
+   "prix": 47.59,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/gra-planszowa-civolution-bgg-82-wersja-pl-darmowa-dostawamozliwe-19052-z-kodem-blackweek-1398932",
+   "date": "Wed, 25 Nov 2026 00:24:23 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "202,52zł - InPost Wystarczy wpisać Civolution w aplikacji InPost z Vonhalskim. Do koszyka można dodać też pakiet kart promocyjnych z tego samego sklepu. K..."
+  },
+  {
+   "id": "e0eb4d730b",
+   "titre": "Zdalnie sterowany FlixBus Carson 500404312",
+   "temperature": 221,
+   "categorie": "Rodzina i dzieci",
+   "marchand": "Amazon.pl",
+   "prix": 16.23,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/zdalnie-sterowany-flixbus-carson-500404312-1399093",
+   "date": "Wed, 25 Nov 2026 03:29:20 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "69,08zł - Amazon.pl Wysyła i Sprzedaje Amazon . Oryginalny design Flixbus – zdalnie sterowany nano RC Bus ma bardzo szczegółowy nadruk na karoser..."
+  },
+  {
+   "id": "53465712a6",
+   "titre": "Chaqueta 100% lino cremallera. TODAS LAS TALLAS DISPONIBLES",
+   "temperature": 216,
+   "categorie": "Moda y accesorios",
+   "marchand": "Mango Outlet",
+   "prix": 13.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/chaqueta-100-lino-cremallera-todas-las-tallas-disponibles-2087747",
+   "date": "Wed, 25 Nov 2026 00:47:16 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "13,99€ - Mango Outlet TODAS LAS TALLAS DISPONIBLES Envío gratis a partir de 30€ Regular fit. Tejido 100% lino. Bolsillo de parche en el pecho. Cierre delantero con cre..."
+  },
+  {
+   "id": "0f7b2ead28",
+   "titre": "Fotel materiałowy SENSE7 Spellcaster Senshi Edition @ Morele",
+   "temperature": 212,
+   "categorie": "Elektronika",
+   "marchand": "Morele.net",
+   "prix": 93.77,
+   "devise": "EUR",
+   "lien": "https://www.pepper.pl/promocje/fotel-materialowy-sense7-spellcaster-senshi-edition-at-morele-1397995",
+   "date": "Wed, 25 Nov 2026 01:41:22 +0100",
+   "source": "pepper-pl-hot",
+   "pays": "PL",
+   "description": "399zł - Morele.net Fotel materiałowy SENSE7 Spellcaster Senshi Edition za 399 zł w Morele.net <..."
+  },
+  {
+   "id": "97fea26536",
+   "titre": "Sillón relax manual DEVON color marrón",
+   "temperature": 206,
+   "categorie": "Hogar, vivienda y oficina",
+   "marchand": "Conforama",
+   "prix": 189.0,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/sillon-relax-manual-devon-color-marron-2088700",
+   "date": "Wed, 25 Nov 2026 00:59:14 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "189€ - Conforama -Recogida en tienda gratis. Descubre el confort y la elegancia con el Sillón Relax Manual DEVON marròn. Imagina llegar a casa después de un largo día y ..."
+  },
+  {
+   "id": "8ae536dad1",
+   "titre": "Moto Buds 2 (Audio Hi-Res, ANC Dynamic, Up to 48 Playback, Moto Ai, Lightweight and Water Repellent Design)",
+   "temperature": 204,
+   "categorie": "Electrónica",
+   "marchand": "Amazon.it",
+   "prix": 23.5,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/moto-buds-2-audio-hi-res-anc-dynamic-up-to-48-playback-moto-ai-lightweight-and-water-repellent-design-2088289",
+   "date": "Wed, 25 Nov 2026 01:15:47 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "23,50€ - Amazon.it Disfruta de un sonido detallado y una cancelación activa de ruido eficaz con los Motorola Moto Buds 2 , diseñados para un uso diario cómodo y..."
+  },
+  {
+   "id": "2eaa4d14c9",
+   "titre": "Nacom The Walking Dead Streets of Survival PlayStation 5 - Sin especificar",
+   "temperature": 197,
+   "categorie": "Gaming",
+   "marchand": "El Corte Inglés",
+   "prix": 19.9,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/nacom-the-walking-dead-streets-of-survival-playstation-5-sin-especificar-2087513",
+   "date": "Wed, 25 Nov 2026 00:58:42 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "19,90€ - El Corte Inglés Con 12 niveles inspirados en el arco All Out War , The Walking Dead: Streets of Survival es un beat 'em up de ..."
+  },
+  {
+   "id": "2b2ee8da13",
+   "titre": "Beurer BM 35 Oberarm-Blutdruckmessgerät für 22,99€ (Prime/Otto flat)",
+   "temperature": 188,
+   "categorie": "Beauty & Gesundheit",
+   "marchand": "Amazon",
+   "prix": 22.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/beurer-bm-35-oberarm-blutdruckmessgerat-fur-2299eur-primeotto-flat-2874743",
+   "date": "Wed, 25 Nov 2026 01:18:50 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "22,99€ - Amazon auch bei <a href=\"https://www.otto.de/p/beurer-oberarm-blutdruckmessgeraet-bm-35-mit-farbigem-risikoindikator-durchschnittswertberechnung-mit-arrhythmie-erke..."
+  },
+  {
+   "id": "f49b42e7ff",
+   "titre": "Joma - Chándal Hombre para: HOMBRE. Varios colores",
+   "temperature": 180,
+   "categorie": "Moda y accesorios",
+   "marchand": "Amazon",
+   "prix": 24.99,
+   "devise": "EUR",
+   "lien": "https://www.chollometro.com/ofertas/joma-chandal-hombre-para-hombre-varios-colores-2087946",
+   "date": "Wed, 25 Nov 2026 03:33:20 +0100",
+   "source": "chollometro-hot",
+   "pays": "ES",
+   "description": "24,99€ - Amazon PERFECTO PARA ENTRENAR - Chaqueta con cremallera y pantalones largos, ideal para entrenamientos en climas fríos o para uso diario con la máxima comodidad C..."
+  },
+  {
+   "id": "71c188634e",
+   "titre": "Adidas DFB Trainingsjacke 1994 - Größen M & 3XL (CB)",
+   "temperature": 157,
+   "categorie": "Sport & Outdoor",
+   "marchand": "adidas",
+   "prix": 44.37,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/adidas-dfb-trainingsjacke-1994-grossen-m-3xl-cb-2880998",
+   "date": "Wed, 25 Nov 2026 00:29:01 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "44,37€ - adidas Lass eine legendäre Ära des Fußballs wieder aufleben mit der DFB Trainingsjacke 1994. Sie ist vom legendären DFB Trikot von 1994 inspiriert und bringt eine o..."
+  },
+  {
+   "id": "6c1944a461",
+   "titre": "Smartwatch Garmin Fenix 8 Saphire 47mm",
+   "temperature": 139,
+   "categorie": "High-Tech",
+   "marchand": "Luna-Time",
+   "prix": 599.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/garmin-fenix-8-saphire-47mm-3468040",
+   "date": "Wed, 25 Nov 2026 00:14:39 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "599€ - Luna-Time ATTENTION ! : Passez d’abord par le site Idealo afin de cliquer sur le premier lien de Luna time pour bénéficier de la remise à 599€ sur ce modèle en Saphire. <..."
+  },
+  {
+   "id": "51695d358d",
+   "titre": "4x Fully Fitted Goodyear EAGLE F1 ASYMMETRIC 3 225/45 R17 91W EV RP Tyres - With Code",
+   "temperature": 139,
+   "categorie": "Car & Motorcycle",
+   "marchand": "National Tyres &amp; Autocare",
+   "prix": 310.37,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/4x-fully-fitted-goodyear-eagle-f1-asymmetric-3-22545-r17-91w-ev-rp-tyres-with-code-5045138",
+   "date": "Wed, 25 Nov 2026 00:08:53 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£310.37 - National Tyres & Autocare Crackling price !!. Black Friday Deal Very good price for 4 tyres Fully Fitted price of 4 tyres Use code PR20 for 4 ty..."
+  },
+  {
+   "id": "be5e2f8ae2",
+   "titre": "Pepsi Max - 24x330ml MultiPack Cans - Clubcard Price",
+   "temperature": 136,
+   "categorie": "Groceries",
+   "marchand": "Tesco",
+   "prix": 8.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/pepsi-max-24x330ml-multipack-cans-clubcard-price-5045293",
+   "date": "Wed, 25 Nov 2026 00:14:33 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£8 - Tesco Club card price of £8 from £12.25 starts from 25/11 to 31/12 Description: Carbonated Low Calorie Cola Flavoured Soft Drink with Sweeteners<..."
+  },
+  {
+   "id": "890472e74d",
+   "titre": "Hisense 50 Inch 50A6STUK 4K Ultra HD AI Smart TV | AI 4K Upscaler, AI Smooth Motion, Game Mode Plus",
+   "temperature": 129,
+   "categorie": "Electronics",
+   "marchand": "Amazon",
+   "prix": 269.8,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/hisense-50-inch-50a6stuk-4k-ultra-hd-ai-smart-tv-ai-4k-upscaler-ai-smooth-motion-game-mode-plus-5045799",
+   "date": "Tue, 24 Nov 2026 23:47:21 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£269.80 - Amazon About this item AI 4K Upscaler: Bring your favorite content to life in 4K quality. Deep‑learning models analyse textures and edges in lower res..."
+  },
+  {
+   "id": "35684cdb36",
+   "titre": "TELEKOM Magenta Moments - Bloom & Wild 30% Rabatt",
+   "temperature": 128,
+   "categorie": "Home & Living",
+   "marchand": "Magenta Moments",
+   "prix": 33.92,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/telekom-magenta-moments-bloom-wild-30-rabatt-2880978",
+   "date": "Wed, 25 Nov 2026 00:55:42 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "33,92€ - Magenta Moments Mit der Magenta Moments App von der TELEKOM gibt es 30% auf das gesamte Sortiment von Bloom % Wild bis zum 31.12.2026 Mindestbestellwert sind 30 €, d..."
+  },
+  {
+   "id": "02b7f2e834",
+   "titre": "Boîte de briques Lego Duplo 10913 (Via coupon)",
+   "temperature": 122,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 14.83,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/la-boite-de-briques-lego-duplo-10913-via-coupon-3467411",
+   "date": "Wed, 25 Nov 2026 00:58:18 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "14,83€ - Amazon Un très bon prix en remise immédiate ! La remise se voit au paiement ! À 29.99 € chez LEGO Ce jouet d’éveil am..."
+  },
+  {
+   "id": "d61ba56e85",
+   "titre": "Original Source Mint & Tea Tree Shower Gel 4 x 1000ml, XXL MEGA Value, Pump Bottle (£10.92 / £9.76 with S&S)",
+   "temperature": 122,
+   "categorie": "Health & Beauty",
+   "marchand": "Amazon",
+   "prix": 11.5,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/original-source-mint-tea-tree-shower-gel-4-x-1000ml-xxl-mega-value-pump-bottle-ps1092-ps976-with-ss-5045972",
+   "date": "Tue, 24 Nov 2026 23:42:42 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£11.50 - Amazon £2.88 for 1 litre ORIGINAL SOURCE: We capture the intensity nature has to offer. Original Source is made with 100% natural fragran..."
+  },
+  {
+   "id": "106a9b2e57",
+   "titre": "Survêtement Homme Under Armour Ua Knit Track Suit - Taille Du XS au XXL",
+   "temperature": 120,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 37.5,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/under-armour-ua-knit-track-suit-survetement-homme-taille-du-xs-au-xxl-3467978",
+   "date": "Wed, 25 Nov 2026 02:21:33 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "37,50€ - Amazon Le survêtement Under Armour UA Knit Track Suit est un ensemble de sport pour homme conçu pour accompagner les activités physiques et les moments de détente. Son..."
+  },
+  {
+   "id": "ef8ecf2f13",
+   "titre": "Mercedes AMG Petronas adidas F1 Special Edition Singapore GP Trainers (Sizes 6 to 9) W/Code",
+   "temperature": 120,
+   "categorie": "Fashion & Accessories",
+   "marchand": "F1 Store",
+   "prix": 56.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/mercedes-amg-petronas-adidas-f1-special-edition-singapore-gp-trainers-sizes-6-to-9-wcode-5045499",
+   "date": "Wed, 25 Nov 2026 00:09:58 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£56 - F1 Store Join the world of motorsport-inspired style with the Adizero Evo SL Mercedes AMG Petrona F1 Team Shoes, designed exclusively for the Mercedes AMG Petronas F1..."
+  },
+  {
+   "id": "4c98656f5b",
+   "titre": "Sac Bandoulière Eastpak THE ONE , 2.5 L - Army Olive (Vert)",
+   "temperature": 118,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 13.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/eastpak-the-one-sac-bandouliere-25-l-army-olive-vert-3467793",
+   "date": "Wed, 25 Nov 2026 02:17:30 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "13€ - Amazon Le EASTPAK sac à épaule bandoulière est fait pour tous les fans du look sportif et à la pointe de la technologie. Le sac a suffisamment de compartiments zipp..."
+  },
+  {
+   "id": "cb163d2e80",
+   "titre": "Lenovo Lenovo L16 16\" Tragbarer Monitor mit WUXGA-Auflösung BLACKFRIDAY1 + CB 12%",
+   "temperature": 116,
+   "categorie": "Elektronik",
+   "marchand": "Lenovo",
+   "prix": 123.51,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/lenovo-lenovo-l16-16-tragbarer-monitor-mit-wuxga-auflosung-blackfriday1-cb-12-2880988",
+   "date": "Wed, 25 Nov 2026 01:36:44 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "123,51€ - Lenovo Black Friday Deal direkt bei Lenovo. Mit Corporate Benefits gibt es nochmal zusätzliche 12%. Endpreis dann bei 123,51. Lenovo L16 – mobiler 16-..."
+  },
+  {
+   "id": "adbc1c4621",
+   "titre": "Acqua di Giò Profondo Eau de Parfum 100ml +15ml Holiday Fragrance Gift Set - w/Code, Free C&C",
+   "temperature": 116,
+   "categorie": "Health & Beauty",
+   "marchand": "John Lewis &amp; Partners",
+   "prix": 66.25,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/acqua-di-gio-profondo-eau-de-parfum-100ml-15ml-holiday-fragrance-gift-set-5042417",
+   "date": "Tue, 24 Nov 2026 23:58:14 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£66.25 - John Lewis & Partners A pretty good deal you get the following: Acqua di Giò Profondo Eau de Parfum, 100ml Acqua di Giò Profondo Eau de Parfum Travel Size,..."
+  },
+  {
+   "id": "e550db3ea9",
+   "titre": "Paysafecard - 10€ zurück bei Google Play Einkauf",
+   "temperature": 114,
+   "categorie": "Versicherung & Finanzen",
+   "marchand": "paysafecard",
+   "prix": 10.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/paysafecard-10eur-zuruck-bei-google-play-einkauf-2880948",
+   "date": "Wed, 25 Nov 2026 02:25:28 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "paysafecard Erhalte 10€ zurück bei einem Einkauf bei Google Play. Folgend die AGBs für Neukunden und für Bestandskunden PaysafeCard Teilnah..."
+  },
+  {
+   "id": "fcbdbb6c9f",
+   "titre": "Vestal Premium Vodka 37.6% 70cl",
+   "temperature": 113,
+   "categorie": "Groceries",
+   "marchand": "Amazon",
+   "prix": 12.49,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/vestal-premium-vodka-376-70cl-5045884",
+   "date": "Tue, 24 Nov 2026 23:44:54 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£12.49 - Amazon Cheap vodka, handy for mixing Vestal Premium Vodka | 37.6% | 70cl | Smooth & Rich | Full Bodied | Ideal over Ice or Cocktails Full of ..."
+  },
+  {
+   "id": "0f0e2cbba0",
+   "titre": "Last Action Hero (1993) [4K Ultra HD Blu-ray]",
+   "temperature": 112,
+   "categorie": "Culture & Leisure",
+   "marchand": "Amazon France",
+   "prix": 10.39,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/last-action-hero-1993-4k-ultra-hd-blu-ray-5043813",
+   "date": "Tue, 24 Nov 2026 23:58:11 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.39 - Amazon France https://www.blu-ray.com/movies/Last-Action-Hero-4K-Blu-ray/33424..."
+  },
+  {
+   "id": "6a7fd0a668",
+   "titre": "VIOFO A149 Pro Duo - Dashcam",
+   "temperature": 108,
+   "categorie": "Auto & Motorrad",
+   "marchand": "VIOFO",
+   "prix": 215.96,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/viofo-a149-pro-duo-2880911",
+   "date": "Wed, 25 Nov 2026 01:22:17 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "215,96€ - VIOFO GUTSCHEINCODE VIOFO10 - Wichtig ohne Hardwire Kit und Speicherkarte. Die haben einen Aufpreis. Rabatt gilt aber auch auf die Artikel • Frontkamera: 4..."
+  },
+  {
+   "id": "90cf488488",
+   "titre": "Up to £120 off Fitted Goodyear Tyres | 2 x Goodyear Eagle F1 ASY 3 - 225/40 R18 92Y XL / 4 x Vector ALL Season 4 - 225/40 R18 92Y - £327.92",
+   "temperature": 108,
+   "categorie": "Car & Motorcycle",
+   "marchand": "Costco",
+   "prix": 149.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/up-to-ps120-off-fitted-goodyear-tyres-2-x-goodyear-22540-r18-92y-eagle-f1-asy-3-xl-4-x-vector-all-season-4-22540-r18-92y-ps32792-5043514",
+   "date": "Wed, 25 Nov 2026 00:55:57 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£149.98 - Costco Up to £120 off Fitted Goodyear Tyres - Offer valid from 23 Nov to 6th Dec 2026 + £10 voucher until 30 Nov - Free fitting If..."
+  },
+  {
+   "id": "386efc261d",
+   "titre": "Boîtier PC MSI Mag Pano M100L PZ",
+   "temperature": 107,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 46.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/boitier-pc-msi-mag-pano-m100l-pz-3466914",
+   "date": "Wed, 25 Nov 2026 03:44:44 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "46,49€ - Amazon Le MAG PANO M100L PZ est un boîtier pour PC qui convient parfaitement aux cartes mères Micro-ATX et Mini-ITX. Il est conçu pour être compatible avec ..."
+  },
+  {
+   "id": "5d2e8a4e50",
+   "titre": "Clavier sans fil Logitech MX Keys S - Bluetooth, Rétroéclairé, Touches silencieuses",
+   "temperature": 107,
+   "categorie": "High-Tech",
+   "marchand": "Cdiscount",
+   "prix": 69.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/clavier-sans-fil-logitech-mx-keys-s-bluetooth-retroeclaire-touches-silencieuses-3452894",
+   "date": "Wed, 25 Nov 2026 03:43:32 +0100",
+   "source": "dealabs-tendance",
+   "pays": "FR",
+   "description": "69,99€ - Cdiscount Bon prix ! Caractéristiques & Spécifications Expérience de Frappe Fluide : Les touches concaves, similaires à celle..."
+  },
+  {
+   "id": "e970ba063e",
+   "titre": "EASTPAK Tranverz M Koffer 78L (67 x 35,5 x 30 cm), mittelgroßer Reisekoffer in grau (prime)",
+   "temperature": 107,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Amazon",
+   "prix": 78.0,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/eastpak-tranverz-m-koffer-78l-67-x-355-x-30-cm-mittelgrosser-reisekoffer-prime-2879186",
+   "date": "Wed, 25 Nov 2026 01:18:14 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "78€ - Amazon Solider Koffer zu sehr gutem Preis. PVG bezieht sich auf idealo (vgl.: <a href=\"https://www.idealo.de/preisvergleich/OffersOfProduct/201702012_-tranverz-m-ek..."
+  },
+  {
+   "id": "be460e9786",
+   "titre": "22-25 January, 3 nights B&B at 3* Explorers Hotel Disneyland Paris, Paris flights from Manchester based on 2 adults 2 kids (£130pp)",
+   "temperature": 107,
+   "categorie": "Travel",
+   "marchand": "On The Beach",
+   "prix": 520.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/22-25-january-3-nights-bb-at-3-explorers-hotel-disneyland-paris-paris-flights-from-manchester-based-on-2-adults-2-kids-ps130pp-5045858",
+   "date": "Wed, 25 Nov 2026 00:18:45 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£520 - On The Beach Great deal for a family trip to Disneyland Paris About this hotel Hotel highlights Super fun themed rooms, including pirates, knight..."
+  },
+  {
+   "id": "fcd8448145",
+   "titre": "Star Elite High Back Padded Fabric Folding Chair (single) - Instore",
+   "temperature": 105,
+   "categorie": "Home & Living",
+   "marchand": "Costco",
+   "prix": 10.78,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/star-elite-high-back-padded-fabric-folding-chair-single-instore-5045836",
+   "date": "Wed, 25 Nov 2026 00:26:24 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£10.78 - Costco Linked to the 4 pack online, so you can see the reviews. But able to buy singularly instore for this price, if interested - Grey & black striped fa..."
+  },
+  {
+   "id": "7112159a0a",
+   "titre": "Amazon Sammeldeal | Babyspielzeug & Babyzubehör im Black Friday Sale u. a. Fisher-Price, MAM & Bebeconfort z.B. Minitoilette für 18,98€",
+   "temperature": 101,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 18.98,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-sammeldeal-babyspielzeug-babyzubehor-im-black-friday-sale-u-a-fisher-price-mam-bebeconfort-zb-minitoilette-fur-1898eur-2880697",
+   "date": "Wed, 25 Nov 2026 01:23:17 +0100",
+   "source": "mydealz-hot",
+   "pays": "DE",
+   "description": "18,98€ - Amazon Zwischen den vielen Black-Friday- und Spielzeugangeboten gehen die wirklich praktischen Sachen für Babys und Kleinkinder of..."
+  },
+  {
+   "id": "259cc236dd",
+   "titre": "LEGO Star Wars The Force Burner Snowspeeder 75414",
+   "temperature": 101,
+   "categorie": "Family & Kids",
+   "marchand": "Amazon",
+   "prix": 26.98,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/lego-star-wars-the-force-burner-snowspeeder-75414-5045346",
+   "date": "Tue, 24 Nov 2026 23:43:35 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£26.98 - Amazon LEGO Star Wars The Force Burner Snowspeeder 75414 Star Wars building toy for kids – Turn up the heat with LEGO Star Wars The Force..."
+  },
+  {
+   "id": "28623cf261",
+   "titre": "Elden Ring Nightreign (PS4)",
+   "temperature": 101,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 12.0,
+   "devise": "GBP",
+   "lien": "https://www.hotukdeals.com/deals/elden-ring-nightreign-ps4-5045849",
+   "date": "Tue, 24 Nov 2026 23:43:34 +0000",
+   "source": "hotukdeals-hot",
+   "pays": "UK",
+   "description": "£12 - Amazon Elden Ring Nightreign for PS4 is £12 at Amazon. It is a standalone adventure set in the Elden Ring universe that reimagines the core design of the game..."
+  },
+  {
+   "id": "c3dddbaf2c",
+   "titre": "🛍️ Kärcher Nettoyeur Vapeur SC 3 Deluxe, Pression Vapeur : 3,5 bar, Préchauffage : 30 s, Puissance : 1 900 W ✅ 150,69€ au lieu de 209,99€ ➡️ https://www.amazon.",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 150.69,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CQTJCF6F/?tag=pmrat-21",
+   "date": "2026-11-24T23:12",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Kärcher Nettoyeur Vapeur SC 3 Deluxe, Pression Vapeur : 3,5 bar, Préchauffage : 30 s, Puissance : 1 900 W ✅ 150,69€ au lieu de 209,99€ ➡️ https://www.amazon.fr/dp/B0CQTJCF6F/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 209.99
+  },
+  {
+   "id": "0d48d34803",
+   "titre": "🛍️ Playstation Sony, Manette 5 Officielle DualSense, Sans Fil, Couleur : Midnight Black ✅ 55,99€ au lieu de 78,99€ ➡️ https://www.amazon.fr/dp/B094WLFGD3/?tag=p",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 55.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B094WLFGD3/?tag=pmrat-21",
+   "date": "2026-11-24T23:19",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Playstation Sony, Manette 5 Officielle DualSense, Sans Fil, Couleur : Midnight Black ✅ 55,99€ au lieu de 78,99€ ➡️ https://www.amazon.fr/dp/B094WLFGD3/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 78.99
+  },
+  {
+   "id": "942fa5ff04",
+   "titre": "🛍️ LEGO Architecture Notre-Dame de Paris 21061, 4383 pièces ✅ 141,30€ au lieu de 229,99€ ➡️ https://www.amazon.fr/dp/B0CWH1M12W/?tag=pmrat-21 Publicité/Lien aff",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 141.3,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CWH1M12W/?tag=pmrat-21",
+   "date": "2026-11-24T23:53",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO Architecture Notre-Dame de Paris 21061, 4383 pièces ✅ 141,30€ au lieu de 229,99€ ➡️ https://www.amazon.fr/dp/B0CWH1M12W/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 229.99
+  },
+  {
+   "id": "e2dd336465",
+   "titre": "🛍️ Garmin fēnix 8, Montre GPS Multisports AMOLED, Acier Grey/Noir, 47mm ✅ 530,00€ au lieu de 799,99€ ➡️ https://www.amazon.fr/dp/B0DC6ZD31R/?tag=pmrat-21 Public",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 530.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DC6ZD31R/?tag=pmrat-21",
+   "date": "2026-11-25T00:13",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Garmin fēnix 8, Montre GPS Multisports AMOLED, Acier Grey/Noir, 47mm ✅ 530,00€ au lieu de 799,99€ ➡️ https://www.amazon.fr/dp/B0DC6ZD31R/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 799.99
+  },
+  {
+   "id": "79348d8084",
+   "titre": "🛍️ dreame L50 Ultra AE-A Robot aspirateur Laveur, 28 000 Pa, 100 Jours de vidage Automatique ✅ 429,00€ au lieu de 599,00€ ➡️ https://www.amazon.fr/dp/B0H2FKQRNG",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 429.0,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0H2FKQRNG/?tag=pmrat-21",
+   "date": "2026-11-25T00:16",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ dreame L50 Ultra AE-A Robot aspirateur Laveur, 28 000 Pa, 100 Jours de vidage Automatique ✅ 429,00€ au lieu de 599,00€ ➡️ https://www.amazon.fr/dp/B0H2FKQRNG/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 599.0
+  },
+  {
+   "id": "e4c040525c",
+   "titre": "🛍️ Jacob Delafon Colonne de Douche Mécanique EO, Tête 22,5cm, Chrome ✅ 204,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0GNNDSYYR/?tag=pmrat-21 Publicité",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 204.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0GNNDSYYR/?tag=pmrat-21",
+   "date": "2026-11-25T00:37",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Jacob Delafon Colonne de Douche Mécanique EO, Tête 22,5cm, Chrome ✅ 204,99€ au lieu de 269,99€ ➡️ https://www.amazon.fr/dp/B0GNNDSYYR/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 269.99
+  },
+  {
+   "id": "883779313e",
+   "titre": "🛍️ Oral-B Brosse à Dents Electrique iO 3, 3 Brossettes de Rechange, Noire ✅ 59,99€ au lieu de 110,00€ ➡️ https://www.amazon.fr/dp/B0D5D3WRXW/?tag=pmrat-21 Publi",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0D5D3WRXW/?tag=pmrat-21",
+   "date": "2026-11-25T01:07",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Oral-B Brosse à Dents Electrique iO 3, 3 Brossettes de Rechange, Noire ✅ 59,99€ au lieu de 110,00€ ➡️ https://www.amazon.fr/dp/B0D5D3WRXW/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 110.0
+  },
+  {
+   "id": "3b6d7bfd70",
+   "titre": "🛍️ Oral-B Brosse à Dents Electrique iO 2 avec 1 Brossette de Rechange, Noire ✅ 39,99€ au lieu de 80,00€ ➡️ https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21 Pub",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21",
+   "date": "2026-11-25T01:11",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Oral-B Brosse à Dents Electrique iO 2 avec 1 Brossette de Rechange, Noire ✅ 39,99€ au lieu de 80,00€ ➡️ https://www.amazon.fr/dp/B0DP1MRNXM/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 80.0
+  },
+  {
+   "id": "03f3515667",
+   "titre": "🛍️ 5L Humidificateur D'air Chambre Plante, Dificateur 22dB Calme, pour 40m² ✅ 39,99€ au lieu de 49,99€ ➡️ https://www.amazon.fr/dp/B0HKVTY7K6/?tag=pmrat-21 Publ",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 39.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0HKVTY7K6/?tag=pmrat-21",
+   "date": "2026-11-25T01:28",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ 5L Humidificateur D'air Chambre Plante, Dificateur 22dB Calme, pour 40m² ✅ 39,99€ au lieu de 49,99€ ➡️ https://www.amazon.fr/dp/B0HKVTY7K6/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 49.99
+  },
+  {
+   "id": "b56c28d615",
+   "titre": "🛍️ Ninja Air Fryer Dual Zone MAX numérique, Friteuse à air chaud, Gris Métal, DZ400EU ✅ 139,99€ au lieu de 229,99€ ➡️ https://www.amazon.fr/dp/B0F4KHWH9M/?tag=p",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 139.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F4KHWH9M/?tag=pmrat-21",
+   "date": "2026-11-25T01:31",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Ninja Air Fryer Dual Zone MAX numérique, Friteuse à air chaud, Gris Métal, DZ400EU ✅ 139,99€ au lieu de 229,99€ ➡️ https://www.amazon.fr/dp/B0F4KHWH9M/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 229.99
+  },
+  {
+   "id": "10b1525339",
+   "titre": "🛍️ DREAME X50 Ultra Complete Robot Aspirateur Avec Station, 20 000 Pa, 6 cm d'Escalade ✅ 569,05€ au lieu de 999,00€ ➡️ https://www.amazon.fr/dp/B0DPB7RN2L/?tag=",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 569.05,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0DPB7RN2L/?tag=pmrat-21",
+   "date": "2026-11-25T02:39",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ DREAME X50 Ultra Complete Robot Aspirateur Avec Station, 20 000 Pa, 6 cm d'Escalade ✅ 569,05€ au lieu de 999,00€ ➡️ https://www.amazon.fr/dp/B0DPB7RN2L/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 999.0
+  },
+  {
+   "id": "9b03c98ca0",
+   "titre": "🛍️ LEGO Harry Potter Le château et Le domaine de Poudlard 76419, 2660 pièces ✅ 107,99€ au lieu de 169,99€ ➡️ https://www.amazon.fr/dp/B0BV7BYNYD/?tag=pmrat-21 P",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 107.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0BV7BYNYD/?tag=pmrat-21",
+   "date": "2026-11-25T02:59",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ LEGO Harry Potter Le château et Le domaine de Poudlard 76419, 2660 pièces ✅ 107,99€ au lieu de 169,99€ ➡️ https://www.amazon.fr/dp/B0BV7BYNYD/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 169.99
+  },
+  {
+   "id": "8474993042",
+   "titre": "🛍️ BISSELL SpotClean HydroSteam Shampouineuse Canapé 1000W 3689N ✅ 179,99€ au lieu de 279,99€ ➡️ https://www.amazon.fr/dp/B0CLDPGTYN/?tag=pmrat-21 Publicité/Lie",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 179.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0CLDPGTYN/?tag=pmrat-21",
+   "date": "2026-11-25T03:16",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ BISSELL SpotClean HydroSteam Shampouineuse Canapé 1000W 3689N ✅ 179,99€ au lieu de 279,99€ ➡️ https://www.amazon.fr/dp/B0CLDPGTYN/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 279.99
+  },
+  {
+   "id": "8721eb5e5b",
+   "titre": "🛍️ Amzfast Écran PC Gamer 27 Pouces 280Hz/QHD Moniteur Incurvé 2K(2560 x 1440), Haut parleur intégré, sRGB 135% ✅ 199,49€ au lieu de 267,99€ ➡️ https://www.amaz",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 199.49,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B0F32V383N/?tag=pmrat-21",
+   "date": "2026-11-25T03:27",
+   "source": "telegram:promorat",
+   "pays": "FR",
+   "description": "🛍️ Amzfast Écran PC Gamer 27 Pouces 280Hz/QHD Moniteur Incurvé 2K(2560 x 1440), Haut parleur intégré, sRGB 135% ✅ 199,49€ au lieu de 267,99€ ➡️ https://www.amazon.fr/dp/B0F32V383N/?tag=pmrat-21 Publicité/Lien affilié Le prix peut changer.",
+   "erreur_prix_signalee": false,
+   "prix_avant": 267.99
+  },
+  {
+   "id": "053256689d",
+   "titre": "Souris Gaming Sans Fil Logitech G502 X PLUS 79.99 au lieu de 149.99€ https://www.amazon.fr/dp/B07W7MJ46M/?tag=chollosyofe0b-20 ⠀",
+   "temperature": 100,
+   "categorie": "",
+   "marchand": "",
+   "prix": 79.99,
+   "devise": "EUR",
+   "lien": "https://www.amazon.fr/dp/B07W7MJ46M/?tag=chollosyofe0b-20",
+   "date": "2026-11-25T01:20",
+   "source": "telegram:bonsplans",
+   "pays": "FR",
+   "description": "Souris Gaming Sans Fil Logitech G502 X PLUS 79.99 au lieu de 149.99€ https://www.amazon.fr/dp/B07W7MJ46M/?tag=chollosyofe0b-20 ⠀",
+   "erreur_prix_signalee": false,
+   "prix_avant": 149.99
+  },
+  {
+   "id": "8569afc113",
+   "titre": "[Prime] Cafetière Nescafé Dolce Gusto Krups Genio S Machine à café 0,8 L - 15 bars, Gris",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 58.11,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/prime-cafetiere-nescafe-dolce-gusto-krups-genio-s-machine-a-cafe-08-l-15-bars-gris-3468437",
+   "date": "Wed, 25 Nov 2026 04:26:31 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "58,11€ - Amazon Moins cher que le dernier deal ( 59,98 € en octobre 2026 ). Krups - Nescafé Dolce Gusto Genio S Machine à café 0,8 L - 15 bars - Gris DESIGN ULTRA-COMPACT : machine à café haute pression (15 bars), compacte, compatible avec les capsules NESCAFE Dolce Gusto QUALITÉ PROFESSIONNELLE : u"
+  },
+  {
+   "id": "b93b9c15ca",
+   "titre": "[Prime] Batterie Worx PowerShare Pro 20V 4 Ah WA3644",
+   "temperature": null,
+   "categorie": "Jardin & Bricolage",
+   "marchand": "Amazon",
+   "prix": 35.97,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/prime-batterie-worx-powershare-pro-20v-4-ah-wa3644-3468436",
+   "date": "Wed, 25 Nov 2026 04:23:55 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "35,97€ - Amazon Même prix que le dernier deal ( 35,98 € en octobre 2026 ). WORX Batterie PowerShare Pro 20V 4 Ah WA3644 Batterie lithium-ion 20V 4.0Ah haute capacité, idéale pour les outils sans fil WORX demandant puissance et autonomie prolongée Technologie POWERSHARE PRO exclusive : une seule batt"
+  },
+  {
+   "id": "2c67e2c2ec",
+   "titre": "Lego Speed Champions 77254 Voiture de Course Ferrari SF90 XX Stradale",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lego-speed-champions-77254-voiture-de-course-ferrari-sf90-xx-stradale-3468435",
+   "date": "Wed, 25 Nov 2026 04:21:18 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Amazon LEGO Speed Champions Voiture de course Ferrari SF90 XX Stradale 77254 JOUET VOITURE FERRARI ROUGE – La Voiture de course Ferrari SF90 XX Stradale LEGO Speed Champions permet aux garçons & aux filles dès 9 ans de construire… DÉTAILS AUTHENTIQUES – Éléments fidèles à l’original, dont u"
+  },
+  {
+   "id": "e63c66f5ea",
+   "titre": "Robot aspirateur laveur Dreame MOVA Mobius 60 avec station MopSwap, 30 000 Pa et serpillières auto-interchangeables (via code BLACK20)",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "ManoMano",
+   "prix": 549.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-laveur-dreame-mova-mobius-60-avec-station-mopswap-30-000-pa-et-serpillieres-auto-interchangeables-via-code-black20-3468434",
+   "date": "Wed, 25 Nov 2026 04:10:38 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "549€ - ManoMano Très belle offre chez ManoMano (via la boutique officielle Dreame) à l'occasion du Black Friday sur le MOVA Mobius 60 . Ce robot aspirateur laveur haut de gamme tombe à 549 € en appliquant le code promo BLACK20 au panier (-20 € de remise). Son principal atout est sa station MopSwap™ "
+  },
+  {
+   "id": "c3689c43dc",
+   "titre": "Robot aspirateur laveur MOVA Mobius 60 avec station tout-en-un et serpillières auto-interchangeables (via code BLACK15)",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Boulanger",
+   "prix": 554.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/robot-aspirateur-laveur-mova-mobius-60-avec-station-tout-en-un-et-serpillieres-auto-interchangeables-via-code-black15-3468433",
+   "date": "Wed, 25 Nov 2026 04:04:57 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "554€ - Boulanger Très grosse baisse de prix chez Boulanger à l'occasion du Black Friday sur le MOVA Mobius 60 , un robot aspirateur laveur haut de gamme très complet qui passe à 554 € en appliquant le code promo BLACK15 au panier (-15 € dès 200 € d'achat). Egalement disponible en retrait gratuit en "
+  },
+  {
+   "id": "62cfcb2bcb",
+   "titre": "Machine à Glaces et Sorbetière Ninja Creamy Deluxe",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Cdiscount",
+   "prix": 154.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/machine-a-glaces-et-sorbetiere-ninja-creamy-deluxe-3468431",
+   "date": "Wed, 25 Nov 2026 03:45:35 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "154,99€ - Cdiscount Jamais vu un prix aussi bas sur Dealabs. :) Prix final avec le code BLACK15 10 programmes (crème glacée, sorbet, glace allégée, glace italienne, milkshake, frappé, boisson glacée, granité, yaourt glacé, extras), 2 bacs de 709 ml, soit env. 1,4 L au total, technologie Creamify Adv"
+  },
+  {
+   "id": "6db08164fe",
+   "titre": "Sun - Tablettes Lave-vaisselle, Tout en 1, Regular, 86 Pastilles",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 10.22,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/sun-tablettes-lave-vaisselle-tout-en-1-regular-86-pastilles-3468428",
+   "date": "Wed, 25 Nov 2026 03:44:04 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "10,22€ - Amazon Tablette vaisselle milieu de gamme 0,12€ la pièce"
+  },
+  {
+   "id": "aadddafaf6",
+   "titre": "Lit parapluie Bébéconfort Soft Dreams – 60 x 120 cm, 0-15 kg, matelas et sac de transport inclus",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 34.08,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lit-parapluie-bebeconfort-soft-dreams-60-x-120-cm-0-15-kg-matelas-et-sac-de-transport-inclus-3468427",
+   "date": "Wed, 25 Nov 2026 03:41:45 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "34,08€ - Amazon Bon petit prix pour ce lit parapluie Bébéconfort, pratique pour les vacances, les déplacements ou pour laisser un lit d’appoint chez les grands-parents. Deux coloris disponibles : Gray Mist : 34,08 € Tinted Graphite : 34,99 € Caractéristiques : De la naissance à environ 3 ans (15 kg "
+  },
+  {
+   "id": "18cb039a44",
+   "titre": "Lot de 10 boîtes alimentaires en verre Good for You - 5 × 1 040 ml + 5 × 370 ml (vendeur tiers)",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Amazon",
+   "prix": 37.49,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lot-de-10-boites-alimentaires-en-verre-good-for-you-5-1-040-ml-5-370-ml-vendeur-tiers-3468423",
+   "date": "Wed, 25 Nov 2026 03:29:58 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "37,49€ - Amazon Même prix que le dernier deal ( 37,49 € en octobre 2026 ). GOOD FOR YOU 10 Boîtes Repas Alimentaires - Conservation Verre Hermétiques Les tailles exactes, avant de commander - 5 grandes boîtes de 1040 ml (20,8 x 16 x 6,9 cm) pour un repas complet et 5 petites de 370 ml (15,5 x 11,5 x"
+  },
+  {
+   "id": "c5ac5fbb15",
+   "titre": "Jouet Lego Botanicals L’orchidée Miniature 10343",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Amazon",
+   "prix": 19.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/jouet-lego-botanicals-lorchidee-miniature-10343-3468422",
+   "date": "Wed, 25 Nov 2026 03:27:20 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "19,99€ - Amazon LEGO Botanicals L’orchidée miniature 10343 SET DE CONSTRUCTION POUR ADULTE AVEC PLANTE ARTIFICIELLE – Laissez libre cours à votre créativité avec ce set LEGO Botanicals L’orchidée miniature, qui invite… DÉCORATION INTÉRIEURE – Une fois achevée, cette plante LEGO est un magnifique obj"
+  },
+  {
+   "id": "5e2e611774",
+   "titre": "Blu-ray 4K Ultra HD Oppenheimer - Blu-ray inclus",
+   "temperature": null,
+   "categorie": "Culture & Divertissement",
+   "marchand": "Amazon",
+   "prix": 12.47,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/blu-ray-4k-ultra-hd-oppenheimer-blu-ray-inclus-3468419",
+   "date": "Wed, 25 Nov 2026 03:24:44 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "12,47€ - Amazon Moins cher que le dernier deal ( 13,47 € en août 2026 ). Synopsis : Robert Oppenheimer au laboratoire national d'Oak Ridge, en 1946. Le film présente une narration non linéaire, entrelaçant différentes périodes de la vie de Robert Oppenheimer: ses années de Cambridge à Los Alamos, so"
+  },
+  {
+   "id": "3dd5dbe202",
+   "titre": "Pèse-personne Beurer GS 120 compact en verre avec effet miroir élégant",
+   "temperature": null,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Amazon",
+   "prix": 9.99,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/pese-personne-beurer-gs-120-compact-en-verre-avec-effet-miroir-elegant-3468418",
+   "date": "Wed, 25 Nov 2026 03:22:08 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "9,99€ - Amazon Même prix que le dernier deal ( 9,99 € en septembre 2026 ). Beurer GS 120 Pèse-personne compact en verre avec effet miroir élégant, format compact peu encombrant, 27 x 26 cm, affichage LCD bien lisible, hauteur des chiffres 22 mm, balance numérique plate FORMAT PRÉCIEUX : Le pèse-pers"
+  },
+  {
+   "id": "6bbb98cfd6",
+   "titre": "Plaid XXL Studio Home - 300 x 280cm - diverses couleurs",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Action",
+   "prix": 14.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/plaid-xxl-studio-home-300-x-280cm-diverses-couleurs-3468417",
+   "date": "Wed, 25 Nov 2026 03:21:28 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,95€ - Action PROMOTION SEMAINE ACTION • Dimensions : 300 × 280 cm • Couleurs : brun et gris • Matière : polyester • Textile : velours • Type : couverture • Lavage en machine jusqu’à 30 °C • Ne pas repasser • Ne pas sécher au sèche-linge"
+  },
+  {
+   "id": "c00de5065b",
+   "titre": "Montre pour enfant avec GPS Silvergear - diverses couleurs",
+   "temperature": null,
+   "categorie": "Famille & Enfants",
+   "marchand": "Action",
+   "prix": 14.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/montre-pour-enfant-avec-gps-silvergear-diverses-couleurs-3468416",
+   "date": "Wed, 25 Nov 2026 03:18:00 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,95€ - Action Avec fonction GPS, appel et lampe de poche Fonctionne avec une carte sim (non incluse) Rechargeable par cable USB (inclus)"
+  },
+  {
+   "id": "c6ad5349b8",
+   "titre": "LG - S90TR - Barre de Son 7.1.3, 670 W, Dolby Atmos, DTS:X, Hi-ResAudio, 13 Haut-Parleurs, WOW Synergie",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Amazon",
+   "prix": 399.0,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lg-s90tr-barre-de-son-713-670-w-dolby-atmos-dtsx-hi-resaudio-13-haut-parleurs-wow-synergie-3468415",
+   "date": "Wed, 25 Nov 2026 03:15:49 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "399€ - Amazon Même prix qu'à électro dépôt mais garantie prime + livraison offerte La qualité sonore comme si vous étiez au cinéma La barre de son LG est compatible Dolby Atmos et DTS:X, pour vous proposer un son digne du cinéma, directement dans votre salon Système 7.1.3 ultra Immersif Le son subli"
+  },
+  {
+   "id": "6d5e1f6abb",
+   "titre": "Parure de lit en fausse fourrure - 200 x 200 - diverses couleurs",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Action",
+   "prix": 14.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/parure-de-lit-en-fausse-fourrure-200-x-200-diverses-couleurs-3468413",
+   "date": "Wed, 25 Nov 2026 03:12:38 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,95€ - Action • Dimensions : 200 × 200 cm • Matière : polyester • Couleurs indiquées : brun et blanc • Comprend 2 taies d’oreiller • Fermeture à boutons • Ensemble de 3 pièces • Lavage en machine à 30 °C maximum • Ne pas repasser • Ne pas sécher au sèche-linge"
+  },
+  {
+   "id": "aacd05a53f",
+   "titre": "Lampadaire - 135cm - divers modèles",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Action",
+   "prix": 8.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/lampadaire-135cm-divers-modeles-3468411",
+   "date": "Wed, 25 Nov 2026 03:09:27 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "8,95€ - Action Promotion semaine Action Lampadaire Divers modèles 135cm"
+  },
+  {
+   "id": "7a91426f57",
+   "titre": "Drone Sky Cam Gear2play",
+   "temperature": null,
+   "categorie": "High-Tech",
+   "marchand": "Action",
+   "prix": 14.95,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/drone-sky-cam-gear2play-3468410",
+   "date": "Wed, 25 Nov 2026 03:05:25 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "14,95€ - Action Promotion semaine Action Prend des photos et des vidéos Commande via Wifi Batterie rechargeable incluse"
+  },
+  {
+   "id": "3ae98dc271",
+   "titre": "One million lucky - eau de toilette - 100ml",
+   "temperature": null,
+   "categorie": "Santé & Cosmétiques",
+   "marchand": "Nocibé",
+   "prix": 38.7,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/one-million-lucky-eau-de-toilette-100ml-3468408",
+   "date": "Wed, 25 Nov 2026 02:58:38 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "38,70€ - Nocibé Parfum boisé, épicé Note de tête pamplemousse, prune Note de cœur jasmin, miel, Noisette, cashmere, Bois de cèdre Note de fond mousse de chêne, patchouli, vétiver Intensité du parfum modéré"
+  },
+  {
+   "id": "c8ea1109bf",
+   "titre": "Friteuse TEFAL Easy Pro - 2200W - 3L",
+   "temperature": null,
+   "categorie": "Maison & Habitat",
+   "marchand": "Action",
+   "prix": 38.62,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/friteuse-tefal-easy-pro-2200w-3l-3468407",
+   "date": "Wed, 25 Nov 2026 02:55:00 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "38,62€ - Action PROMOTION SEMAINE ACTION 2200W 3 litres"
+  },
+  {
+   "id": "64a537d368",
+   "titre": "Crocs noirs - tailles 28 à 38",
+   "temperature": null,
+   "categorie": "Mode & Accessoires",
+   "marchand": "Amazon",
+   "prix": 26.39,
+   "devise": "EUR",
+   "lien": "https://www.dealabs.com/bons-plans/crocs-noirs-tailles-28-a-38-3468405",
+   "date": "Wed, 25 Nov 2026 02:45:59 +0100",
+   "source": "dealabs-nouveaux",
+   "pays": "FR",
+   "description": "26,39€ - Amazon Sangles de talon pivotantes pour un ajustement plus sûr Facile à nettoyer Personnalisable avec les breloques Jibbitz Confort emblématique Crocs : léger. Flexible. Confort à 360 degrés. Spécifications Dimensions du produit (L x l x h): 20,32 x 10,16 x 17,78 cm Date de mise en ligne su"
+  },
+  {
+   "id": "fe54fb2421",
+   "titre": "Black Friday 2026 : Le chargeur Anker Zolo 140 W \"5 étoiles\" à 59,99 € (-33%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 59.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/chargeur/black-friday-2026-le-chargeur-anker-zolo-140-w-5-etoiles-a-59-99-33-n268489.html",
+   "date": "2026-11-25T04:08:26+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement noté 5/5 par notre rédaction, le chargeur Anker Zolo 140 W permet d'alimenter plusieurs appareils en même temps grâce à sa connectique complète et son écran de contrôle. Le Black Friday 2026 fait descendre son prix à 59,99 € chez Amazon Marketplace, soit une baisse d'environ 33 % et 30,"
+  },
+  {
+   "id": "ca0800bd26",
+   "titre": "Black Friday 2026 : La liseuse Amazon Kindle Paperwhite (2024) 16 Go à 144,99 € (-17%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 144.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/liseuse/black-friday-2026-la-liseuse-amazon-kindle-paperwhite-2024-16-go-a-144-99-17-n268488.html",
+   "date": "2026-11-25T03:17:22+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement notée 4,5/5 par notre rédaction, l'Amazon Kindle Paperwhite (2024) améliore le confort de lecture grâce à un écran plus contrasté, une réactivité accrue et une résistance à l'eau IPX8. Le Black Friday 2026 est l'occasion de se l'offrir moins cher : elle passe à 144,99 € chez Amazon et B"
+  },
+  {
+   "id": "9e99034034",
+   "titre": "Black Friday 2026 : Le casque Bluetooth Sony WH-1000XM4C Argent Platine \"5 étoiles\" à 198,99 € (-20%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 198.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/casque-bluetooth/black-friday-2026-le-casque-bluetooth-sony-wh-1000xm4c-argent-platine-5-etoiles-a-198-99-20-n268487.html",
+   "date": "2026-11-25T03:07:28+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "À l'occasion du Black Friday, le Sony WH-1000XM4C passe à 198,99 € chez Amazon, soit une baisse d'environ 20 % par rapport à son prix habituel de 249,99 €. Doté d'une réduction de bruit active toujours efficace et d'une restitution sonore claire et naturelle, ce casque sans fil affiche une note actu"
+  },
+  {
+   "id": "70bd6a0833",
+   "titre": "Black Friday 2026 : La centrale vapeur Calor Pro Express Ultimate GV9563C0 \"5 étoiles\" à 169,98 € (-24%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 169.98,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/centrale-vapeur/black-friday-2026-la-centrale-vapeur-calor-pro-express-ultimate-gv9563c0-5-etoiles-a-169-98-24-n268486.html",
+   "date": "2026-11-25T02:05:01+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement notée 5/5 par notre rédaction, la centrale vapeur Calor Pro Express Ultimate GV9563C0 assure un défroissage très efficace grâce à un fer agile et rapide pour traiter d'importants volumes de linge. Le Black Friday fait descendre son prix à 169,98 € chez Amazon, soit une baisse d'environ "
+  },
+  {
+   "id": "121531046e",
+   "titre": "Black Friday 2026 : Le casque Bluetooth Sennheiser Momentum 4 Wireless Noir à 159,98 €",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 159.98,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/casque-bluetooth/black-friday-2026-le-casque-bluetooth-sennheiser-momentum-4-wireless-noir-a-159-98-n268485.html",
+   "date": "2026-11-25T02:04:45+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement noté 4,5/5 par notre rédaction, le Sennheiser Momentum 4 Wireless délivre une restitution sonore naturelle et équilibrée tout en assurant un confort d'écoute appréciable. Pour le Black Friday, son prix tombe à 159,98 € chez Amazon, soit une baisse d'environ 6 % et 11,01 € d'économie."
+  },
+  {
+   "id": "b9a3e1d00f",
+   "titre": "Black Friday 2026 : Le rasoir électrique Panasonic ER-GY60-H \"5 étoiles\" à 64,99 € (-14%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 64.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/rasoir-electrique/black-friday-2026-le-rasoir-electrique-panasonic-er-gy60-h-5-etoiles-a-64-99-14-n268484.html",
+   "date": "2026-11-25T02:04:27+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement noté 5/5 par notre rédaction, le rasoir - tondeuse Panasonic ER-GY60-H s'avère particulièrement efficace pour sculpter la barbe et tondre le corps grâce à son peigne pour zones sensibles. Le Black Friday 2026 est l'occasion de se l'offrir moins cher : il passe à 64,99 € chez Amazon, soi"
+  },
+  {
+   "id": "ce47f16194",
+   "titre": "Black Friday 2026 : L'objet connecté Netatmo Têtes thermostatiques connectées pour radiateur Vanne additionnelle \"5 étoiles\" à 45,99 € (-21%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 45.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/objet-connecte/black-friday-2026-l-objet-connecte-netatmo-tetes-thermostatiques-connectees-pour-radiateur-vanne-additionnelle-5-etoiles-a-45-99-21-n268483.html",
+   "date": "2026-11-25T01:03:50+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement notées 5/5 par notre rédaction, les Netatmo Têtes thermostatiques connectées pour radiateur permettent de régler la température pièce par pièce via une application simple à programmer. Le Black Friday 2026 fait descendre leur prix à 45,99 € chez Amazon, soit une baisse d'environ 21 % et"
+  },
+  {
+   "id": "bcb0f514bd",
+   "titre": "Black Friday 2026 : La barre de son Samsung HW-Q800H à 449,00 € (-10%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 449.0,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/barre-de-son/black-friday-2026-la-barre-de-son-samsung-hw-q800h-a-449-00-10-n268479.html",
+   "date": "2026-11-25T01:01:28+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "À l'occasion du Black Friday, la Samsung HW-Q800H passe à 449,00 € chez Boulanger.com, soit 50,00 € d'économie et une baisse d'environ 10 %. Dotée d'une restitution sonore équilibrée et d'une large scène frontale, cette barre de son affiche une note actuelle de 4,5/5 dans nos tests."
+  },
+  {
+   "id": "8b60e57159",
+   "titre": "Black Friday 2026 : La montre connectée Garmin Vivoactive 6 à 199,99 € (-15%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 199.99,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/montre-connectee/black-friday-2026-la-montre-connectee-garmin-vivoactive-6-a-199-99-15-n268478.html",
+   "date": "2026-11-25T00:01:37+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "À l'occasion du Black Friday, la montre connectée Garmin Vivoactive 6 passe à 199,99 € chez Boulanger.com, soit une baisse d'environ 15 % et 34,65 € d'économie. Dotée d'un écran Oled lisible et de 10 jours d'autonomie pour suivre son activité quotidienne, elle affiche une note actuelle de 4,5/5 dans"
+  },
+  {
+   "id": "586b1e5dec",
+   "titre": "Black Friday 2026 : Le nettoyeur de sol Mova M10 \"5 étoiles\" à 129,00 € (-17%)",
+   "temperature": null,
+   "categorie": "",
+   "marchand": null,
+   "prix": 129.0,
+   "devise": "EUR",
+   "lien": "https://www.lesnumeriques.com/nettoyeur-sol/black-friday-2026-le-nettoyeur-de-sol-mova-m10-5-etoiles-a-129-00-17-n268477.html",
+   "date": "2026-11-25T00:01:18+01:00",
+   "source": "lesnumeriques-bonsplans",
+   "pays": "FR",
+   "description": "Actuellement noté 5/5 par notre rédaction, le nettoyeur de sol Mova M10 supprime efficacement les taches tout en passant sous les meubles grâce à sa tête maniable. Le Black Friday 2026 fait descendre son prix à 129,00 € chez Amazon, soit une baisse d'environ 17 % pour une économie de 26,67 €."
+  },
+  {
+   "id": "cb63d57549",
+   "titre": "MOUSE: P.I. For Hire - PS5 PlayStation 5 | Amazon Prime",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 22.79,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/mouse-pi-for-hire-ps5-playstation-5-amazon-prime-2881075",
+   "date": "Wed, 25 Nov 2026 03:33:05 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "22,79€ - Amazon MOUSE: P.I. For Hire ist als physische Standard-Edition für die PlayStation 5 bei Amazon.de erhältlich. Mouse: P.I. For Hire - Launch Trailer | PS5 Games [shortcode id=\"20347020\"/] Wichtigste Details zur PS5-Version Genre & Setting. Ein rasantes Einzelspieler-Ego-Shooter-Abenteuer (F"
+  },
+  {
+   "id": "b7045eab6c",
+   "titre": "Star Wars: Galactic Racer Deluxe Edition (PS5) PlayStation 5 | Amazon Prime",
+   "temperature": null,
+   "categorie": "Gaming",
+   "marchand": "Amazon",
+   "prix": 49.99,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/star-wars-galactic-racer-deluxe-edition-ps5-playstation-5-amazon-prime-2881072",
+   "date": "Wed, 25 Nov 2026 03:15:52 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "49,99€ - Amazon Die Star Wars: Galactic Racer Deluxe Edition (PS5) ist regulär mit Prime-Versand bei Amazon.de erhältlich und am 6. Oktober 2026 erschienen. Inhalt der Deluxe Edition Neben dem Hauptspiel auf Disc bietet diese Edition physische und digitale Boni: Physische Extras. Eine Metallhülle (S"
+  },
+  {
+   "id": "a4d9c68bbf",
+   "titre": "Quertee t shirt von 4€, 8+ VSK=0",
+   "temperature": null,
+   "categorie": "Fashion & Accessoires",
+   "marchand": "Qwertee",
+   "prix": 9.15,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/quertee-t-shirt-von-4eur-8-vsk0-2881070",
+   "date": "Wed, 25 Nov 2026 02:51:47 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "9,15€ - Qwertee • T-Shirt mit Grafik • Limitierte Edition ENDLICH IST ER DA: DER UNGLAUBLICHE BLACK FRIDAY SALE! Bis zu 75% RABATT! -T-Shirts schon ab £4/€4/$5! Über 250 Designs im Tee Shop reduziert! Black Friday InsaniTEE!!! ZUFALLS-T-Shirts für €4! - 60 % RABATT AUF ALLE PRINTS = €4 pro Stück! GR"
+  },
+  {
+   "id": "962826a94c",
+   "titre": "[Amazon Prime] ROCKBROS 2in1 Fahrradklingel als Lenkerstopfen Endkappen",
+   "temperature": null,
+   "categorie": "Sport & Outdoor",
+   "marchand": "Amazon",
+   "prix": 13.59,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/amazon-prime-rockbros-2in1-fahrradklingel-als-lenkerstopfen-endkappen-2881065",
+   "date": "Wed, 25 Nov 2026 01:47:57 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "13,59€ - Amazon Info zu diesem Artikel 2in1 Design – Schön und funktional: Mehr als nur eine laute Fahrradklingel – sie ist zugleich ein stilvoller, unauffälliger Lenkerendstopfen. Das eingelassene Design fügt sich nahtlos in den Lenker ein – für ein aufgeräumtes Erscheinungsbild und einen klaren, h"
+  },
+  {
+   "id": "217f438b45",
+   "titre": "AdGuard Black Friday: 50% auf Jahreslizenz / 45% auf Lifetime (Werbeblocker, VPN, DNS für alle Geräte inkl. Android TV & Apps)",
+   "temperature": null,
+   "categorie": "Elektronik",
+   "marchand": "AdGuard",
+   "prix": 41.25,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/adguard-black-friday-50-auf-jahreslizenz-45-auf-lifetime-werbeblocker-vpn-dns-fur-alle-gerate-inkl-android-tv-apps-2881064",
+   "date": "Wed, 25 Nov 2026 01:40:56 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "41,25€ - AdGuard Was bringt AdGuard? Werbefreies Surfen auf Smartphone, PC und Tablet Werbeblocker in Apps & Games (nicht nur im Browser!) Schutz für mehrere Geräte (ideal für Familie) Nutzung auch auf Android TV & Linux Tracking- und Malware-Schutz inklusive Zusätzliche Adguard Rabatte gibt's auch "
+  },
+  {
+   "id": "2bca89f1fc",
+   "titre": "Liqui Moly 4087 Klimareglergerät-Reiniger 250 ml - prime",
+   "temperature": null,
+   "categorie": "Auto & Motorrad",
+   "marchand": "Amazon",
+   "prix": 13.01,
+   "devise": "EUR",
+   "lien": "https://www.mydealz.de/deals/liqui-moly-4087-klimareglergerat-reiniger-250-ml-at-amazonde-bestpreis-2881061",
+   "date": "Wed, 25 Nov 2026 01:18:44 +0100",
+   "source": "mydealz-new",
+   "pays": "DE",
+   "description": "13,01€ - Amazon Antizyklisch kaufen! Zudem Idealo-Bestpreis, gut für DIY geeignet finde ich. Besser als der Billigmist bei Tedi, kommt aber natürlich nicht an eine hochwertige Profi-Reinigung in der Werkstatt (das kostet halt 3-stellig) ran. Aber wer den Verdampfer damit alle 2 Jahre säubert, bevor "
+  }
+ ]
+}

@@ -7917,7 +7917,7 @@
   "type": "bon_plan",
   "signal_erreur_prix": false,
   "trouve_le": "2026-11-25T08:01+00:00",
-  "statut": "a_verifier",
+  "statut": "rejete",
   "meme_produit_ia": true,
   "revente_reelle": {},
   "canaux": [
@@ -8125,6 +8125,18 @@
    "lectures": 1,
    "premiere_lecture": "2026-11-25T08:03+00:00"
   },
-  "denicheur": "A"
+  "denicheur": "A",
+  "verifie_le": "2026-11-25T08:45+00:00",
+  "verdict": {
+   "commentaire": "Rejeté : offre de MediaMarkt Pologne (Pepper.pl), MediaMarkt.pl ne livre qu'en Pologne, donc non achetable ni livrable en France. En plus, la revente donnerait une marge négative (-0,85 €).",
+   "prix_neuf_min_idealo": 79.99,
+   "source_prix_ref": "achatmoinscher (9 boutiques), non vérifié sur idealo",
+   "economie_pct": null,
+   "prix_revente_verifie": null,
+   "canal": null,
+   "marge_nette_verifiee": null,
+   "duree_offre": "promo MediaMarkt PL (quelques jours)",
+   "demande_confirmee": false
+  }
  }
 ]

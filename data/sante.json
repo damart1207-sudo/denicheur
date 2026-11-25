@@ -1,14 +1,8 @@
 {
- "tours_ok": 3591,
+ "tours_ok": 3592,
  "tours_echec": 12,
- "dernier_ok": "25/11 09:56",
+ "dernier_ok": "25/11 10:06",
  "evenements": [
-  {
-   "heure": "20/11 15:26",
-   "niveau": "erreur",
-   "etape": "moisson hype",
-   "message": "US 3760911: BudgetKeepaInsuffisant: réserve ou plafond Keepa atteint"
-  },
   {
    "heure": "21/11 02:01",
    "niveau": "erreur",
@@ -1802,13 +1796,19 @@
    "niveau": "erreur",
    "etape": "moisson jetons",
    "message": "HTTPError: HTTP Error 402: Payment Required"
+  },
+  {
+   "heure": "25/11 10:06",
+   "niveau": "erreur",
+   "etape": "moisson jetons",
+   "message": "HTTPError: HTTP Error 402: Payment Required"
   }
  ],
  "dernier_resume": {
-  "heure": "25/11 09:54",
+  "heure": "25/11 10:04",
   "annonces": 700,
-  "nouvelles": 416,
+  "nouvelles": 434,
   "examinees": 25,
-  "alertes": 0
+  "alertes": 1
  }
 }
